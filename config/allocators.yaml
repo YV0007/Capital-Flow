@@ -1,21 +1,44 @@
 # Watchlist: who each research agent tracks.
-# tier: key   -> counts toward "key investor" signal rules
+# tier: key   -> counts toward "key investor" signal rules (map Tier-1 allocators)
 #       watch -> tracked, lower weight
-# Populate from the ab-investment Capital Flow Map universe + expand over time.
+#
+# Seeded from the ab-investment Capital Flow Map universe (capital-SOURCE side only —
+# pure targets like fab-equipment / power names are beneficiaries, not allocators).
+# Agents will discover and append new allocators over time.
 
-corporate:
-  # e.g. - { name: Nvidia, tier: key, country: US }
-  []
+corporate:   # strategics / hyperscalers / silicon that deploy capital
+  - { name: Microsoft, tier: key, country: US }
+  - { name: Amazon, tier: key, country: US }
+  - { name: Alphabet, tier: key, country: US }        # Google
+  - { name: Meta, tier: key, country: US }
+  - { name: Oracle, tier: key, country: US }
+  - { name: NVIDIA, tier: key, country: US }
 
 vc:
-  []
+  - { name: Sequoia, tier: key, country: US }
+  - { name: Andreessen Horowitz, tier: key, country: US }   # a16z
+  - { name: Thrive Capital, tier: key, country: US }
+  - { name: Founders Fund, tier: key, country: US }
+  - { name: Khosla Ventures, tier: key, country: US }
+  - { name: Coatue, tier: key, country: US }
+  - { name: Altimeter, tier: watch, country: US }
 
 individuals:
-  []
+  - { name: Sam Altman, tier: watch, country: US }
+  - { name: Jensen Huang, tier: watch, country: US }
+  - { name: Peter Thiel, tier: watch, country: US }
 
-alt_managers:
-  # e.g. - { name: Brookfield, tier: key, country: CA }
-  []
+alt_managers:   # PE / infra / credit / mega-funds
+  - { name: SoftBank, tier: key, country: JP }
+  - { name: Blackstone, tier: key, country: US }
+  - { name: BlackRock, tier: key, country: US }       # BlackRock / GIP
+  - { name: DigitalBridge, tier: key, country: US }
+  - { name: Brookfield, tier: key, country: CA }
+  - { name: KKR, tier: watch, country: US }
+  - { name: Blue Owl, tier: watch, country: US }
 
 sovereigns:
-  []
+  - { name: MGX, tier: key, country: AE }             # Abu Dhabi
+  - { name: Mubadala, tier: key, country: AE }
+  - { name: Saudi PIF, tier: key, country: SA }
+  - { name: US Government, tier: watch, country: US }

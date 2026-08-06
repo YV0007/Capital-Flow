@@ -2,9 +2,21 @@
 # Each rule: id, description, and parameters. The SQL lives in themes.py keyed by rule id.
 
 sectors:
-  # canonical sector slugs — every event must map to one of these
-  # e.g. ai-compute, photonics, power, cooling, memory, networking, robotics
-  []
+  # Canonical sector slugs — every event must map to one of these (the "where
+  # capital lands" taxonomy for the AI buildout). Derived from the Capital Flow
+  # Map groups. Unknown sectors are ingested but flagged as a warning.
+  - ai-labs         # frontier model builders (OpenAI, Anthropic, xAI, Mistral, SSI)
+  - ai-compute      # GPU / accelerator silicon (NVIDIA, AMD, custom ASIC)
+  - semiconductors  # broader chips + foundry (TSMC, Broadcom, Intel)
+  - fab-equipment   # litho / etch / deposition / packaging (ASML, AMAT, Lam, TEL, BESI)
+  - cloud-hyperscale # hyperscaler compute capacity
+  - neocloud        # GPU landlords / vendor-financed compute (CoreWeave, Crusoe, Lambda)
+  - datacenters     # physical DC builds & operators (Stargate, Compass, Aligned, Switch)
+  - power-energy    # turbines, grid gear, cooling (GE Vernova, Eaton, Vertiv, Schneider)
+  - nuclear         # SMR / fusion / uranium (Oklo, Helion, Westinghouse, Cameco)
+  - networking      # optical interconnect / photonics
+  - robotics        # embodiment / humanoids
+  - defense-tech    # defense outside the prime-contractor route (Anduril)
 
 rules:
   - id: sector_swarm
