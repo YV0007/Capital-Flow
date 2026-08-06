@@ -1,0 +1,56 @@
+# Network-level tracking — elite investor networks tracked as coordinated signals.
+# These members are ingested as class=individual with a `network` tag (in addition to
+# the general solo investors in allocators.yaml). Overlapping names are enriched here
+# (this file wins on tier + network). tier: core = highest priority, counts toward
+# key-tier signals; watch = tracked, lower weight.
+
+members:
+  # ---- PayPal Mafia (core) ----
+  - { name: Peter Thiel,   tier: core,  country: US, network: paypal_mafia, relationship: cofounder,        associated_vehicles: [Founders Fund, Thiel Capital, Mithril Capital, Thiel Foundation], focus: [frontier_ai, defense_tech, sovereign_technology, hard_tech, enterprise_software, biotech], tracking_mode: continuous }
+  - { name: Elon Musk,     tier: core,  country: US, network: paypal_mafia, relationship: cofounder,        associated_vehicles: [xAI, SpaceX, Tesla, personal_investments], focus: [frontier_ai, robotics, space, manufacturing, energy], tracking_mode: continuous }
+  - { name: Max Levchin,   tier: core,  country: US, network: paypal_mafia, relationship: cofounder,        associated_vehicles: [SciFi VC, Affirm, personal_investments], focus: [fintech, applied_ai, infrastructure_software], tracking_mode: weekly }
+  - { name: David Sacks,   tier: core,  country: US, network: paypal_mafia, relationship: former_executive, associated_vehicles: [Craft Ventures, personal_investments], focus: [enterprise_ai, saas, defense_tech, developer_tools], tracking_mode: continuous }
+  - { name: Keith Rabois,  tier: core,  country: US, network: paypal_mafia, relationship: former_executive, associated_vehicles: [Khosla Ventures, Founders Fund, personal_investments], focus: [enterprise_software, defense_tech, fintech, ai_enabled_services], tracking_mode: continuous }
+  - { name: Reid Hoffman,  tier: core,  country: US, network: paypal_mafia, relationship: former_executive, associated_vehicles: [Greylock, personal_investments], focus: [enterprise_ai, frontier_models, consumer_ai, networks], tracking_mode: continuous }
+  - { name: Roelof Botha,  tier: core,  country: US, network: paypal_mafia, relationship: former_cfo,       associated_vehicles: [Sequoia Capital], focus: [ai_infrastructure, enterprise_software, fintech, developer_tools], tracking_mode: continuous }
+  - { name: Luke Nosek,    tier: core,  country: US, network: paypal_mafia, relationship: cofounder,        associated_vehicles: [Gigafund, Founders Fund], focus: [space, frontier_technology, energy, infrastructure], tracking_mode: weekly }
+  - { name: Ken Howery,    tier: watch, country: US, network: paypal_mafia, relationship: cofounder,        associated_vehicles: [Founders Fund, personal_investments], focus: [defense_tech, infrastructure, frontier_technology], tracking_mode: event_driven }
+  - { name: Jawed Karim,   tier: watch, country: US, network: paypal_mafia, relationship: former_employee,  associated_vehicles: [YVentures, personal_investments], focus: [consumer_technology, developer_tools, deep_tech], tracking_mode: event_driven }
+  - { name: Steve Chen,    tier: watch, country: US, network: paypal_mafia, relationship: former_employee,  associated_vehicles: [personal_investments], focus: [consumer_technology, media, applied_ai], tracking_mode: event_driven }
+  - { name: Premal Shah,   tier: watch, country: US, network: paypal_mafia, relationship: former_employee,  associated_vehicles: [personal_investments], focus: [impact_technology, fintech], tracking_mode: event_driven }
+
+  # ---- Thiel / Founders Fund extended network (core) ----
+  - { name: Joe Lonsdale,       tier: core,  country: US, network: thiel_extended, relationship: palantir_cofounder,      associated_vehicles: [8VC, personal_investments], focus: [defense_ai, government_software, industrial_ai, healthcare_infrastructure], tracking_mode: continuous }
+  - { name: Trae Stephens,      tier: core,  country: US, network: thiel_extended, relationship: founders_fund_partner,   associated_vehicles: [Founders Fund, Anduril], focus: [defense_ai, autonomous_systems, robotics, national_security], tracking_mode: continuous }
+  - { name: Brian Singerman,    tier: watch, country: US, network: thiel_extended, relationship: founders_fund_network,   associated_vehicles: [Founders Fund, personal_or_new_vehicle], focus: [frontier_technology, healthcare, defense, ai], tracking_mode: weekly }
+  - { name: Delian Asparouhov,  tier: core,  country: US, network: thiel_extended, relationship: founders_fund_partner,   associated_vehicles: [Founders Fund, Varda Space Industries], focus: [space, defense, industrial_technology, advanced_manufacturing], tracking_mode: continuous }
+  - { name: Palmer Luckey,      tier: core,  country: US, network: thiel_extended, relationship: repeat_founder,          associated_vehicles: [Anduril, personal_investments], focus: [defense_ai, autonomous_systems, robotics, hardware], tracking_mode: continuous }
+  - { name: Alexandr Wang,      tier: core,  country: US, network: thiel_extended, relationship: network_backed_founder,  associated_vehicles: [personal_investments, affiliated_corporate_vehicle], focus: [ai_data, defense_ai, frontier_models, government_ai], tracking_mode: continuous }
+  - { name: Nat Friedman,       tier: core,  country: US, network: thiel_extended, relationship: frequent_coinvestor,     associated_vehicles: [NFDG, AI Grant, personal_investments], focus: [developer_tools, scientific_ai, ai_infrastructure, frontier_talent], tracking_mode: continuous }
+  - { name: Daniel Gross,       tier: core,  country: US, network: thiel_extended, relationship: frequent_coinvestor,     associated_vehicles: [NFDG, personal_investments], focus: [frontier_ai, ai_infrastructure, developer_tools, research_labs], tracking_mode: continuous }
+
+  # ---- Thiel Fellowship alumni (capital / founder signals) ----
+  - { name: Dylan Field,     tier: core,  country: US,          network: thiel_fellowship, relationship: fellowship_alumnus, associated_vehicles: [Figma, personal_investments], focus: [design_software, creative_ai, developer_tools, collaborative_software], tracking_mode: continuous }
+  - { name: Austin Russell,  tier: core,  country: US,          network: thiel_fellowship, relationship: fellowship_alumnus, associated_vehicles: [Luminar, personal_investments], focus: [autonomy, sensors, robotics, advanced_hardware], tracking_mode: weekly }
+  - { name: Vitalik Buterin, tier: watch, country: Canada,      network: thiel_fellowship, relationship: fellowship_alumnus, associated_vehicles: [personal_investments, Ethereum_ecosystem], focus: [decentralized_infrastructure, cryptography, coordination_systems, ai_crypto_intersection], tracking_mode: event_driven }
+  - { name: Laura Deming,    tier: core,  country: US,          network: thiel_fellowship, relationship: fellowship_alumnus, associated_vehicles: [The Longevity Fund], focus: [biotech, longevity, scientific_ai, healthcare], tracking_mode: weekly }
+  - { name: Ritesh Agarwal,  tier: watch, country: India,       network: thiel_fellowship, relationship: fellowship_alumnus, associated_vehicles: [OYO, personal_investments], focus: [consumer_platforms, hospitality_technology, emerging_markets], tracking_mode: event_driven }
+  - { name: Boyan Slat,      tier: watch, country: Netherlands,  network: thiel_fellowship, relationship: fellowship_alumnus, associated_vehicles: [The Ocean Cleanup], focus: [climate_technology, robotics, autonomous_systems, environmental_infrastructure], tracking_mode: event_driven }
+  - { name: Lucy Guo,        tier: core,  country: US,          network: thiel_fellowship, relationship: fellowship_alumnus, associated_vehicles: [Backend Capital, Passes, personal_investments], focus: [ai_startups, developer_tools, creator_economy, consumer_ai], tracking_mode: continuous }
+
+# Per-network metrics to compute over time (documentation of intent; the engine
+# evaluates the tractable subset below).
+network_tracking:
+  - { network: paypal_mafia,    priority: core, metrics: [new_investments, follow_on_investments, disclosed_capital, repeat_coinvestors, repeat_founders, board_seats, new_funds, new_spvs, sector_concentration, sector_rotation, public_market_beneficiaries] }
+  - { network: thiel_extended,  priority: core, metrics: [new_investments, network_coinvestment, founders_fund_participation, defense_and_government_links, repeat_founders, capital_by_theme, public_supplier_readthrough] }
+  - { network: thiel_fellowship, priority: core, metrics: [new_company_formation, alumni_funding_rounds, alumni_personal_investments, follow_on_funding, tier_one_coinvestors, new_sector_entry, founder_to_investor_transition] }
+
+# Network signal rules. `network_convergence` is evaluated by engine/themes.py today.
+# The others are declared (intent captured) and fire once the supporting data is
+# modeled — same pattern as the history-dependent rules in rules.yaml.
+network_signal_rules:
+  - { signal: network_convergence,        condition: "3+ members of one network put confirmed capital in the same sector within a window", window_days: 180, min_members: 3, weight: 5, status: active }
+  - { signal: thiel_repeat_conviction,    condition: "Founders Fund / Thiel vehicle invests in the same theme 3+ times",                weight: 5, status: declared }
+  - { signal: fellowship_breakout,        condition: "fellowship alumnus raises a round with 2+ tier-one allocators",                    weight: 4, status: declared }
+  - { signal: defense_network_convergence, condition: "Thiel network + strategic corporate or government capital in one theme",           weight: 5, status: declared }
+  - { signal: private_to_public_spillover, condition: "network capital clusters in a theme with under-recognized public suppliers",       weight: 5, status: declared }

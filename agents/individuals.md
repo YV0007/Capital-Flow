@@ -10,6 +10,14 @@ vehicles (family offices, personal SPVs, angel checks). Attribute to the PERSON,
 their firm — a personal Thiel check is this agent; Founders Fund deploying is the VC
 side; a CEO's company buying is the corporate side.
 
+## Networks (config/networks.yaml)
+Some individuals belong to tracked **networks** (PayPal Mafia, Thiel extended, Thiel
+Fellowship). Read `config/networks.yaml` too — it lists each member's `network`,
+`associated_vehicles`, and `focus`. When you find an event, note in `notes` if it is a
+**network coinvestment** (2+ members in the same deal) or flows through a member's named
+vehicle — that feeds the network-convergence signal. The engine reads the member's
+network from config; you don't set it, but surfacing coinvestment in notes helps.
+
 ## Search approach — DO NOT lead with SEC filings
 Individuals rarely trigger filings, so a filing-first sweep misses most of them. Work
 in this order:

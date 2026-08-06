@@ -32,11 +32,11 @@ def _sector_swarm(con, week, p):
                   SUM(COALESCE(e.amount_usd,0)) AS total,
                   GROUP_CONCAT(e.id) AS ids
            FROM events e JOIN allocators a ON a.id = e.allocator_id
-           WHERE a.tier = ? AND e.disclosed_date >= date('now', ?)
+           WHERE a.tier IN ('key','core') AND e.disclosed_date >= date('now', ?)
                  AND e.status IN ('verified','verified_alpha')
            GROUP BY e.sector
            HAVING inv >= ?""",
-        (p.get("allocator_tier", "key"), win, p.get("min_allocators", 5)),
+        (win, p.get("min_allocators", 5)),
     ).fetchall()
     out = []
     for r in rows:
@@ -74,7 +74,7 @@ def _first_entry(con, week, p):
     rows = con.execute(
         """SELECT e.id, e.allocator_id, e.sector, e.disclosed_date, a.name
            FROM events e JOIN allocators a ON a.id = e.allocator_id
-           WHERE a.tier = ?""", (p.get("allocator_tier", "key"),)).fetchall()
+           WHERE a.tier IN ('key','core')""").fetchall()
     by_alloc = defaultdict(list)
     for r in rows:
         by_alloc[(r["allocator_id"], r["name"])].append(r)
@@ -92,6 +92,29 @@ def _first_entry(con, week, p):
                 ids = [e["id"] for e in sevs]
                 out.append((f"{name} enters {sector} (first time)", sector,
                             "first_entry", json.dumps(ids), 1.0))
+    return out
+
+
+def _network_convergence(con, week, p):
+    """N+ members of one elite network putting confirmed capital into the same sector
+    within a window — the coordinated-network signal (config/networks.yaml)."""
+    win = f"-{p.get('window_days', 180)} days"
+    rows = con.execute(
+        """SELECT a.network AS network, e.sector AS sector,
+                  COUNT(DISTINCT a.id) AS members, GROUP_CONCAT(e.id) AS ids
+           FROM events e JOIN allocators a ON a.id = e.allocator_id
+           WHERE a.network IS NOT NULL AND e.status IN ('verified','verified_alpha')
+                 AND e.disclosed_date >= date('now', ?)
+           GROUP BY a.network, e.sector
+           HAVING members >= ?""",
+        (win, p.get("min_members", 3)),
+    ).fetchall()
+    out = []
+    for r in rows:
+        ids = [int(x) for x in r["ids"].split(",")]
+        out.append((f"{r['network']}: {r['members']} members converge on {r['sector']} "
+                    f"({p.get('window_days', 180)}d)", r["sector"], "network_convergence",
+                    json.dumps(ids), float(p.get("weight", 5))))
     return out
 
 
@@ -118,6 +141,15 @@ def run(week: str) -> dict:
                    VALUES (?,?,?,?,?,?)""",
                 (week, theme, sector, rule, evidence, strength))
             fired.append(theme)
+    # Network rules live in config/networks.yaml; evaluate the active ones.
+    for nr in db.load_networks()["rules"]:
+        if nr.get("signal") == "network_convergence" and nr.get("status") == "active":
+            for theme, sector, rule, evidence, strength in _network_convergence(con, week, nr):
+                con.execute(
+                    """INSERT INTO themes (run_week, theme, sector, rule, evidence, strength)
+                       VALUES (?,?,?,?,?,?)""",
+                    (week, theme, sector, rule, evidence, strength))
+                fired.append(theme)
     con.commit()
     con.close()
     return {"fired": fired}

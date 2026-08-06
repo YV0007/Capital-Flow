@@ -65,8 +65,29 @@ def load_config() -> dict:
     }
 
 
+def load_networks() -> dict:
+    """Load config/networks.yaml → {members: [...], rules: [...]}."""
+    p = CONFIG_DIR / "networks.yaml"
+    if not p.exists():
+        return {"members": [], "rules": []}
+    d = yaml.safe_load(p.read_text()) or {}
+    return {"members": d.get("members") or [], "rules": d.get("network_signal_rules") or []}
+
+
+def _upsert_allocator(con, name, cls, tier, country, network):
+    con.execute(
+        """INSERT INTO allocators (name, class, tier, country, network) VALUES (?,?,?,?,?)
+           ON CONFLICT(name) DO UPDATE SET
+             class=excluded.class, tier=excluded.tier, country=excluded.country,
+             network=COALESCE(excluded.network, allocators.network)""",
+        (name, cls, tier, country, network),
+    )
+
+
 def sync_allocators(con: sqlite3.Connection, cfg: dict) -> None:
-    """Upsert the config watchlist into the allocators table (name is the key)."""
+    """Upsert the config watchlist into the allocators table (name is the key).
+    allocators.yaml first, then networks.yaml members (which enrich individuals
+    with a network tag and win on tier)."""
     key_map = {"corporate": "corporate", "vc": "vc", "individuals": "individual",
                "alt_managers": "alt_manager", "sovereigns": "sovereign"}
     allocs = cfg.get("allocators") or {}
@@ -75,12 +96,11 @@ def sync_allocators(con: sqlite3.Connection, cfg: dict) -> None:
         if not cls or not rows:
             continue
         for r in rows:
-            con.execute(
-                """INSERT INTO allocators (name, class, tier, country) VALUES (?,?,?,?)
-                   ON CONFLICT(name) DO UPDATE SET
-                     class=excluded.class, tier=excluded.tier, country=excluded.country""",
-                (r["name"], cls, r.get("tier", "watch"), r.get("country")),
-            )
+            _upsert_allocator(con, r["name"], cls, r.get("tier", "watch"),
+                              r.get("country"), None)
+    for m in load_networks()["members"]:
+        _upsert_allocator(con, m["name"], "individual", m.get("tier", "watch"),
+                          m.get("country"), m.get("network"))
     con.commit()
 
 

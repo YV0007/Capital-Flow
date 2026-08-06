@@ -9,7 +9,8 @@ CREATE TABLE IF NOT EXISTS allocators (
     name          TEXT NOT NULL UNIQUE,
     class         TEXT NOT NULL CHECK (class IN
                     ('corporate','vc','individual','alt_manager','sovereign')),
-    tier          TEXT NOT NULL DEFAULT 'watch' CHECK (tier IN ('key','watch')),
+    tier          TEXT NOT NULL DEFAULT 'watch' CHECK (tier IN ('core','key','watch')),
+    network       TEXT,   -- elite-network tag for individuals (paypal_mafia, thiel_extended, …)
     country       TEXT,
     notes         TEXT,
     created_at    TEXT NOT NULL DEFAULT (datetime('now'))

@@ -25,7 +25,8 @@ STALE_DAYS = 180  # entities with no activity beyond this are flagged stale (not
 
 def _build_map(con) -> dict:
     events = con.execute(
-        """SELECT e.*, a.name AS allocator, a.class AS allocator_class, a.tier AS allocator_tier
+        """SELECT e.*, a.name AS allocator, a.class AS allocator_class,
+                  a.tier AS allocator_tier, a.network AS allocator_network
            FROM events e JOIN allocators a ON a.id = e.allocator_id""").fetchall()
 
     nodes = {}
@@ -44,9 +45,10 @@ def _build_map(con) -> dict:
         a_id = f"alloc:{e['allocator']}"
         t_id = f"target:{e['target']}"
         a = touch(a_id, label=e["allocator"], kind="allocator",
-                  cls=e["allocator_class"], tier=e["allocator_tier"], sector=None)
+                  cls=e["allocator_class"], tier=e["allocator_tier"], sector=None,
+                  network=e["allocator_network"])
         t = touch(t_id, label=e["target"], kind="target",
-                  cls=e["target_type"], tier=None, sector=e["sector"])
+                  cls=e["target_type"], tier=None, sector=e["sector"], network=None)
         for n in (a, t):
             n["deals"] += 1
             n["capital"] += amt
