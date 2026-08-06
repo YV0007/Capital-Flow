@@ -61,19 +61,20 @@ The dashboard is NOT a passive consumer of a data feed. The handoff is a self-co
 (or small set) that a Claude session in `ab-investment` reads to **reconstruct** the Capital
 Flow Map — adding new entities, retiring stale ones, adjusting visuals.
 
-Planned shape (to be finalized):
-- `handoff/capital_map.json` — current map state: entities, flows, aggregates, sector zones,
-  with per-entity metadata (first_seen, last_activity, signal strength).
-- `handoff/CHANGELOG.md` — what changed since last handoff (new/updated/stale entities).
-- `handoff/RULES.md` — reconstruction rules for the consuming Claude session: when to add an
-  entity to the map, when to remove old content, when to keep it, display criteria and
-  thresholds. Written later, versioned here.
+Shape (implemented by `engine/handoff.py`, rules in `handoff/RULES.md` v1):
+- `handoff/capital_map.json` — current map state: nodes (allocators + targets) with
+  first_seen / last_activity / capital / stale, flows (edges), sector aggregates + signals.
+- `handoff/CHANGELOG.md` — new and stale entities since the last handoff.
+- `handoff/RULES.md` — reconstruction rules for the consuming Claude session: inclusion,
+  emphasis, staleness/removal, change handling. v1 written; thresholds tunable.
 
-Open questions (decide later): exact entity-inclusion criteria, staleness/removal rules,
-visual-adjustment latitude given to the consuming session, delivery mechanism (manual file
-drop vs. committed artifact the dashboard session pulls).
+Still to finalize with the user: exact node-drop policy, visual-adjustment latitude for
+the consuming session, delivery mechanism (manual drop vs. committed artifact pulled).
 
 ## Build plan
-1. Structure ✅  2. Database + schema  3. Scheduler  4. Research agents  5. Validation
-6. Theme engine  7. Beneficiary engine  8. Weekly report  9. Handoff contract + rules
-10. Dashboard reconstruction workflow  11. Automation
+1. Structure ✅  2. Database + schema ✅  3. Scheduler ⏳ (B2)  4. Research agent briefs ✅
+5. Validation/ingest ✅  6. Theme engine ✅  7. Beneficiary engine ✅ (loader + mapper brief)
+8. Weekly report ✅  9. Handoff contract + rules ✅ (v1)  10. Dashboard reconstruction
+workflow ⏳ (dashboard side)  11. Automation ⏳ (B2)
+
+Remaining: live agent runs (pilot), scheduling (B2), and the dashboard-side consumer.
