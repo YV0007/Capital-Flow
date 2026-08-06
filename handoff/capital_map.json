@@ -948,7 +948,13 @@
       "deals": 5,
       "capital": 102500000000.0,
       "allocators": 5,
-      "signals": []
+      "signals": [
+        {
+          "theme": "ai-labs: 3 key allocators in 30d",
+          "rule": "sector_swarm",
+          "strength": 3.0
+        }
+      ]
     },
     "cloud-hyperscale": {
       "deals": 1,
@@ -966,7 +972,13 @@
       "deals": 5,
       "capital": 515000000.0,
       "allocators": 3,
-      "signals": []
+      "signals": [
+        {
+          "theme": "defense-tech: 3 key allocators in 30d",
+          "rule": "sector_swarm",
+          "strength": 3.0
+        }
+      ]
     },
     "neocloud": {
       "deals": 1,

@@ -20,8 +20,9 @@ sectors:
 
 rules:
   - id: sector_swarm
-    description: "N distinct key allocators invested in the same sector within a window"
-    min_allocators: 5
+    description: "N distinct key allocators put CONFIRMED capital (verified/verified_alpha)
+      into the same sector within a window. Candidates don't count."
+    min_allocators: 3
     window_days: 30
     allocator_tier: key
 

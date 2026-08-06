@@ -25,12 +25,15 @@ def _rule(cfg, rule_id, default):
 
 def _sector_swarm(con, week, p):
     win = f"-{p.get('window_days', 30)} days"
+    # Count only CONFIRMED capital (verified / verified_alpha) — candidates are leads,
+    # not committed money, and shouldn't trigger an alpha signal.
     rows = con.execute(
         """SELECT e.sector AS sector, COUNT(DISTINCT e.allocator_id) AS inv,
                   SUM(COALESCE(e.amount_usd,0)) AS total,
                   GROUP_CONCAT(e.id) AS ids
            FROM events e JOIN allocators a ON a.id = e.allocator_id
            WHERE a.tier = ? AND e.disclosed_date >= date('now', ?)
+                 AND e.status IN ('verified','verified_alpha')
            GROUP BY e.sector
            HAVING inv >= ?""",
         (p.get("allocator_tier", "key"), win, p.get("min_allocators", 5)),

@@ -1,7 +1,8 @@
 # Capital Flow — Weekly Report 2026-W32
 
 ## Signals fired
-_No signal rules fired this week._
+- **ai-labs: 3 key allocators in 30d**  _(rule: sector_swarm, strength 3.0)_
+- **defense-tech: 3 key allocators in 30d**  _(rule: sector_swarm, strength 3.0)_
 
 ## New verified events (19)
 | Allocator | Target | Sector | Type | Amount | Status | Tier |
@@ -38,9 +39,43 @@ _No signal rules fired this week._
 | networking | $300M | 2 | 2 |
 | nuclear | $200M | 1 | 1 |
 
-## Public beneficiaries mapped (34)
+## Public beneficiaries mapped (68)
 | Ticker | Company | From flow | Confidence |
 |---|---|---|:-:|
+| NVDA | NVIDIA | Amazon→OpenAI | high |
+| TSM | Taiwan Semiconductor | Amazon→OpenAI | medium |
+| AVGO | Broadcom | Amazon→OpenAI | medium |
+| AMZN | Amazon | Amazon→OpenAI | medium |
+| TSM | Taiwan Semiconductor | NVIDIA→Safe Superintelligence | high |
+| MU | Micron | NVIDIA→Safe Superintelligence | medium |
+| NBIS | Nebius Group | NVIDIA→Nebius Group | high |
+| NVDA | NVIDIA | NVIDIA→Nebius Group | medium |
+| VRT | Vertiv | Meta→Sturgeon County Data Center (Alberta) | high |
+| ETN | Eaton | Meta→Sturgeon County Data Center (Alberta) | medium |
+| GEV | GE Vernova | Meta→Sturgeon County Data Center (Alberta) | medium |
+| NVDA | NVIDIA | Meta→Sturgeon County Data Center (Alberta) | medium |
+| GFS | GlobalFoundries | US Government→GlobalFoundries | high |
+| AVGO | Broadcom | US Government→GlobalFoundries | low |
+| NVDA | NVIDIA | MGX→MGX Fund I | low |
+| VRT | Vertiv | BlackRock→Aligned Data Centers | high |
+| ETN | Eaton | BlackRock→Aligned Data Centers | medium |
+| GEV | GE Vernova | BlackRock→Aligned Data Centers | medium |
+| NVDA | NVIDIA | BlackRock→Aligned Data Centers | medium |
+| VRT | Vertiv | BlackRock→Meta El Paso data center JV | high |
+| ETN | Eaton | BlackRock→Meta El Paso data center JV | medium |
+| GEV | GE Vernova | BlackRock→Meta El Paso data center JV | medium |
+| NVDA | NVIDIA | BlackRock→Meta El Paso data center JV | medium |
+| SRE | Sempra | KKR→KKR Global Infrastructure Investors V | medium |
+| VRT | Vertiv | KKR→KKR Global Infrastructure Investors V | low |
+| GEV | GE Vernova | KKR→KKR Global Infrastructure Investors V | low |
+| BE | Bloom Energy | Brookfield→Bloom Energy on-site power partnership | high |
+| NVDA | NVIDIA | SoftBank→OpenAI | medium |
+| TSM | Taiwan Semiconductor | SoftBank→OpenAI | low |
+| TSM | Taiwan Semiconductor | Sequoia→Etched | high |
+| MU | Micron | Sequoia→Etched | medium |
+| TSM | Taiwan Semiconductor | Andreessen Horowitz→Etched | high |
+| MU | Micron | Andreessen Horowitz→Etched | medium |
+| NVDA | NVIDIA | Andreessen Horowitz→Atoms | low |
 | NVDA | NVIDIA | Amazon→OpenAI | high |
 | TSM | Taiwan Semiconductor | Amazon→OpenAI | medium |
 | AVGO | Broadcom | Amazon→OpenAI | medium |
