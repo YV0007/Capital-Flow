@@ -22,11 +22,20 @@ def current_week() -> str:
 
 def main(week: str) -> None:
     # Agent research stage runs before this script (or will be invoked here later).
-    ingest.ingest_week(week)
-    themes.run(week)
-    beneficiaries.run(week)
-    report.run(week)
-    handoff.run(week)
+    print(f"== Capital Flow pipeline: {week} ==")
+    s = ingest.ingest_week(week)
+    print(f"[ingest]  +{s['inserted']} new, {s['updated']} updated, "
+          f"{s['skipped']} skipped, {s['warnings']} warnings")
+    for p in s["problems"]:
+        print("          ", p)
+    t = themes.run(week)
+    print(f"[themes]  {len(t['fired'])} fired: {'; '.join(t['fired']) or '—'}")
+    b = beneficiaries.run(week)
+    print(f"[benefic] {b['linked']} linked, {b['unmatched']} unmatched")
+    rp = report.run(week)
+    print(f"[report]  {rp}")
+    h = handoff.run(week)
+    print(f"[handoff] {h['nodes']} nodes, {h['flows']} flows -> handoff/capital_map.json")
 
 
 if __name__ == "__main__":
