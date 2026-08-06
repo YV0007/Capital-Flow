@@ -1,25 +1,24 @@
-# Corporate allocators — 2026-W32 (window ~2026-07-06 to 2026-08-06)
+# Corporate Allocators — 2026-W32 (window ~Jul 7 – Aug 6, 2026)
+
+Watchlist: Microsoft, Amazon, Alphabet (Google), Meta, Oracle, NVIDIA.
 
 ## What moved
-Corporate/hyperscaler capital this cycle concentrated on **frontier AI labs** and **compute infrastructure**, with the two biggest strategics (Amazon, NVIDIA) each deploying at the top of the stack.
+Two clean, Tier-1-confirmed balance-sheet allocation events in-window, both AI-lab/data-center plays:
 
-**4 verified events, 1 candidate.** Aggregate disclosed capital across verified rows ≈ **$66B** (dominated by the Amazon–OpenAI completion).
+1. **NVIDIA → Safe Superintelligence (Jul 27).** Strategic equity stake in Ilya Sutskever's SSI, paired with Vera Rubin compute to 10x SSI's compute over 12 months. NVIDIA's official newsroom PR **confirms the investment but withholds the amount**; the widely cited ~$5bn is a Bloomberg estimate (cash + compute commitments), so it is flagged `amount_estimated=1`. Recorded as `minority_stake`, sector `ai-labs`.
+2. **Meta → Meta/BlackRock El Paso data-center JV (Jul 28).** SPV to build+own a ~1GW AI campus in El Paso, TX (~$14bn total dev cost). BlackRock-managed funds hold 80%, Meta 20%; Meta contributes land+construction assets (~$2.3bn) and takes a ~$1bn distribution at close, with ~$12.5bn of debt financing. Tier-1 Meta IR PR. Recorded as `spv`, sector `datacenters`. (Note: this is also a BlackRock/alt-managers event from the 80% side — dedupe downstream.)
 
-### Verified (Tier-1 confirmed)
-1. **Amazon → OpenAI, $50B completed (disclosed 2026-07-31, SEC filing).** Amazon finalized its full $50B commitment (Series C Preferred): $15B in Q1, $13.7B in Q2, and the remaining $21.3B wired after June 30, unlocking the milestone-gated tranche. Paired with OpenAI's ~$100B AWS spend commitment over 8 years and AWS becoming exclusive third-party cloud for OpenAI's "Frontier" program. Largest single corporate check of the cycle and a decisive move to bind OpenAI's compute to AWS/Trainium.
-2. **NVIDIA → Safe Superintelligence (disclosed 2026-07-27, official NVIDIA PR).** Strategic investment + access to the next-gen Vera Rubin platform. NVIDIA confirmed the investment officially but did **not** disclose the amount; the widely-cited **$5B is a Bloomberg estimate** (flagged amount_estimated=1).
-3. **NVIDIA → Nebius Group (Schedule 13G, ref 2026-07-13 / filed 2026-07-20).** 9.3% beneficial ownership (22.26M Class A shares incl. a pre-funded warrant), tracing to a ~$2B March investment that became public via the 13G this cycle. Reinforces NVIDIA's pattern of taking equity up and down the neocloud stack.
-4. **Meta → Sturgeon County, Alberta data center (disclosed 2026-07-06, Meta PR).** ~CAD $13B (~US$9.17B) balance-sheet build; 1GW scalable to 1.8GW; Meta's first Canadian DC.
+## Signals to note
+- **NVIDIA's circular-financing playbook continues.** SSI joins OpenAI, xAI, Poolside, Corning, IREN, Marvell — NVIDIA seeding demand for its own next-gen silicon. Watch for equity-plus-compute structures becoming the default.
+- **Hyperscalers increasingly fund data centers off balance sheet via JVs/SPVs** (Meta/BlackRock El Paso; earlier Meta/BlackRock $14bn, Meta Louisiana). Capital intensity is being shifted to asset managers while the hyperscaler keeps a minority + offtake.
 
-### Candidate
-- **Microsoft → "Microsoft Frontier Company," $2.5B (2026-07-02).** A new *internal* operating unit for enterprise AI deployment. Kept as candidate: it is an internal business rather than a third-party target (borderline as external capital allocation), it sits just outside the tight 30-day window, and it rests on a single Tier-3 source.
+## Excluded (deliberately, with reasons)
+- **Amazon → Anthropic $5bn/up-to-$25bn** — disclosed **Apr 20 2026**, out of window.
+- **Microsoft → Nscale/Aker $6.2bn compute rental** — announced **Sep 2025**, out of window (search engines mis-dated it to 2026).
+- **Alphabet's $124bn Anthropic / $94bn SpaceX "stakes"** — Q2 **mark-to-market** disclosures (unrealized gains), not new capital deployed.
+- **Alphabet $84.75bn equity raise / Oracle $50bn equity+debt plan** — these are allocators **raising** capital, not deploying it. Not events.
+- **Amazon $50bn US-gov AI, and $650–725bn 2026 capex figures** — own-infrastructure capex, not allocations into external targets.
+- **Microsoft ← OpenAI 27% stake** — recap completed **Oct 2025**, out of window.
 
-## Biggest signals to watch
-- **NVIDIA as an equity allocator, not just a chip vendor** — two disclosed stakes in one cycle (SSI, Nebius) plus reported talks on a **$250B OpenAI infrastructure backstop** (2026-07-27, "in talks" only — not recorded as an event). If that backstop firms up it would be the largest corporate commitment on the board.
-- **Amazon/OpenAI** completion cements a three-way hyperscaler split of OpenAI backing (Amazon $50B, NVIDIA $30B closed in March, SoftBank $30B) — watch for a follow-on or an OpenAI IPO trigger.
-
-## Confidence & coverage gaps
-- **Confidence: high** on the 4 verified rows — each has a Tier-1 anchor (SEC filing or official company PR). The one soft spot is the **SSI dollar amount** ($5B is an estimate; the *existence* of the investment is Tier-1 confirmed).
-- **Amazon–OpenAI amount** represents the full $50B commitment now in place; only ~$21.3B was fresh cash inside this window — downstream may prefer to weight by the in-window tranche.
-- **Coverage gaps:** No discrete capital-allocation event found for **Oracle** or **Alphabet** in-window. Oracle's activity was aggregate FY27 capex guidance ($90–95B) and a Google Gemini partnership (no capital committed) plus a $7B Pentagon *contract* (revenue, not allocation) — none qualify. Alphabet's $80B+ equity raise (June) is capital *raised*, not deployed. Meta's reported Hyperion/Louisiana 5GW expansion surfaced in an August roundup but lacked a firm figure/primary source, so it was left out rather than filed as shaky.
-- **Recency limit:** search results skew to already-well-covered mega-deals; smaller corporate-VC checks (NVentures, M12, GV) in-window were hard to pin to a primary source and were not force-fit.
+## Confidence & limitations
+High confidence on the two verified rows (both Tier-1 issuer PRs). Key limitation: NVIDIA/SSI **dollar amount is unofficial** (estimate flagged). Most in-window "hyperscaler AI investment" headlines this window were capex, capital-raising, or mark-to-market stake revaluations rather than fresh capital into targets — hence low event count. No EDGAR 8-K full-text hits added beyond issuer PRs for new in-window deals. 0 candidate-tier leads worth storing.

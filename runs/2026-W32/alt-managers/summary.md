@@ -1,25 +1,61 @@
-# Alternative Managers — ISO Week 2026-W32 (disclosures ~2026-07-06 to 2026-08-06)
+# Alternative Managers — Week 2026-W32
 
-**Coverage:** 5 verified/verified_alpha events, 4 candidates. Allocator class: `alt_manager`.
+Window: events disclosed ~2026-07-06 to 2026-08-06 (plus a few flagship signals
+from the last days of June kept for continuity). Watchlist: SoftBank, Blackstone,
+BlackRock/GIP, DigitalBridge, Brookfield, KKR, Blue Owl.
 
-## What moved this week
-The alt-manager balance sheet behind the AI buildout kept deploying at record scale, splitting cleanly into **equity closes** (confirmed, Tier-1) and **debt being tied up** (in-flight, candidate).
+**Result: 7 verified/verified_alpha events, 1 candidate.** The alt-manager balance
+sheet is now the primary financing layer of the AI buildout — every large power,
+datacenter, and neocloud-adjacent deal this week routed through one of these names.
 
-### Biggest signals
-1. **BlackRock/GIP is the week's dominant allocator.** Two Tier-1 confirmed deals inside ~7 days: (a) the AIP + MGX + GIP consortium **closed the ~$40B Aligned Data Centers acquisition** (2026-07-21) — AIP's first investment, +$5B growth capital; and (b) Meta's **$14B El Paso ~1GW AI campus** where BlackRock takes **80% for ~$4.9B equity + $12.5B debt** (2026-07-28). BlackRock is now simultaneously an operator-scale owner and a debt arranger of the buildout.
-2. **KKR closed its largest-ever infra fund — $19.2B Global Infrastructure Investors V** (2026-08-03, Tier-1). Already >$9B committed incl. Gulf Data Hub and Global Technical Realty (data centers) plus power (EDF, Sempra). Fresh dry powder aimed at digital/energy infra.
-3. **The debt binge is visible in real time.** Three separate ~$3–5.9B data-center loans were being *tied up / marketed* in-window — Blackstone AirTrunk SYD3 (~US$3B), Blackstone/QTS–Microsoft ($5.4B, Goldman pitching), Blue Owl/Stack ($5.9B). All logged as candidates because none had closed; together they signal the financing layer is straining but still clearing.
+## The three biggest signals
 
-### Committed vs. target (per brief)
-- **Committed / closed:** Aligned ($40B EV), Meta El Paso (BlackRock $4.9B equity), KKR Fund V ($19.2B final close). `amount_estimated=0`.
-- **Program targets, not single closes:** Brookfield–Bloom Energy on-site power "up to $25B" (`amount_estimated=1`); AirTrunk A$4.3B loan is a press estimate (`amount_estimated=1`).
-- **SoftBank** in-window activity was the **$40B OpenAI bridge-loan syndication** (21 new lenders, ~$7B allocated, 2026-07-27) — the *debt behind* an already-committed equity stake, marked `verified_alpha` (Tier-3 only).
+1. **BlackRock's $40bn Aligned Data Centers close (Jul 21).** GIP-led consortium
+   (with MGX + AIP) closed the largest data-center acquisition on record — 51
+   campuses / 6.4GW — and deployed an extra $5bn growth capital at close. Confirmed
+   by Aligned's own release (Tier-1). Note: the sovereign agent logs the same deal
+   from MGX's side; here it is captured from the BlackRock/alt-manager side.
+
+2. **Meta El Paso JV — BlackRock takes 80% (disclosed ~Jul 28).** A second
+   BlackRock datacenter vehicle: ~$14bn, ~1GW "Project Sopaipilla," BlackRock ~$4.9bn
+   cash for 80%, Meta 20% + offtake, ~$12.5bn debt raise led by JPMorgan/Morgan
+   Stanley pricing late July. Structurally mirrors the Meta-Blue Owl Hyperion (LA)
+   deal — the hyperscaler-carve-out-to-private-capital model is now repeatable.
+
+3. **Power is the bottleneck being financed.** Brookfield's 5x expansion of its
+   Bloom Energy framework to $25bn (from $5bn) to finance fuel-cell onsite power is
+   the clearest tell — capital is chasing *deployable electrons* ahead of grid
+   interconnect. Flagged amount_estimated=1: it is a framework, not a committed close.
+
+## Also captured
+- **Blackstone / QTS $3.25bn leveraged loan** (upsized, dropped the $1bn bond) —
+  datacenter project/leverage finance, "Project Magnolia" (verified_alpha, Tier 2/3).
+- **SoftBank / OpenAI $40bn** — second $10bn tranche drawn ~Jul 1; syndicate
+  expanded +21 lenders (~$7bn) Jul 27 (verified_alpha, Tier 3).
+- **Blue Owl / Kirkwood Infrastructure Group** — new wholly-owned fiber platform for
+  hyperscale datacenters (Tier-1, amount undisclosed).
+- **DigitalBridge / Nippon Gateway Infrastructure** — JV with JEXI seeded by NEC
+  Japan datacenter assets (Tier-1, amount undisclosed).
+
+## Candidate (not committed)
+- **Blackstone ~$30bn Japan AI datacenters** — a stated 3-5yr *plan* (Jonathan Gray,
+  Nikkei interview), >1GW ambition. Program/target only, single-source → candidate.
 
 ## Confidence & limitations
-Confidence is **high on the verified rows** (all Tier-1 fund/company PRs, cross-checked). The candidate loans rest on Tier-3 (Bloomberg) reporting of deals still being arranged — directionally reliable, amounts approximate. The Brookfield–Bloom $25B expansion disclosed 2026-06-30 sits ~5 weeks back, marginally outside the 30-day window; included for buildout weight and flagged. SEC EDGAR full-text was not directly queried this run (Tier-1 PRs sufficed); worth a confirming pass on the BAM 8-K and any BX/OWL 8-Ks next week.
+Confidence high: 4 of 7 events carry Tier-1 confirmation (fund/company releases);
+the rest are verified_alpha with ≥2 Tier 2-3 sources agreeing. Two amounts are
+flagged estimated (Brookfield framework, El Paso project value with debt still
+pricing). Businesswire and PitchBook fetches were blocked (timeout/403) but each
+finding is independently corroborated by accessible sources.
 
-## Coverage gaps / watch next week
-- **DigitalBridge:** no clean in-window capital deployment found; the firm is mid-acquisition by SoftBank (~$4B, expected 2H26 close) and comparatively quiet. Watch for the SoftBank deal close and any Switch/Vantage/DataBank raises.
-- **Watch the three in-flight loans** (AirTrunk, QTS/Microsoft, Stack) to convert candidate → verified once priced/closed.
-- **SoftBank** direct equity into OpenAI/Stargate vehicles (vs. loan mechanics) and any new Stargate SPV.
-- **Brookfield BAIIF / Radiant** deployments and the NAVER–NVIDIA Korea sovereign-AI expansion (proposed; no firm Brookfield $ yet, so not recorded).
+## Deliberately excluded (out of window)
+- **KKR Helix Digital Infrastructure** ($10bn+, Nvidia/Vistra/Kuwait) — launched
+  Jun 10-11, ~8 weeks old. Watch for its first deployed deals next week.
+- **Blackstone / Google $5bn TPU AI venture** — May 2026.
+
+## Watch next week
+- Pricing/close of the El Paso ~$12.5bn debt and whether the BlackRock-80% template
+  repeats for another hyperscaler.
+- First capital deployments out of KKR Helix and Brookfield's AI Infrastructure Fund.
+- SoftBank's Oct $10bn OpenAI tranche and any DigitalBridge close now that its own
+  $4bn SoftBank take-private (announced Dec 2025) is set to complete in 2H26.

@@ -1,63 +1,11 @@
 {
   "generated": "2026-08-06",
   "totals": {
-    "nodes": 46,
-    "flows": 33,
-    "sectors": 10
+    "nodes": 37,
+    "flows": 25,
+    "sectors": 12
   },
   "nodes": [
-    {
-      "label": "OpenAI",
-      "kind": "target",
-      "cls": "private",
-      "tier": null,
-      "sector": "ai-labs",
-      "id": "target:OpenAI",
-      "deals": 2,
-      "capital": 90000000000.0,
-      "first_seen": "2026-07-27",
-      "last_activity": "2026-07-31",
-      "stale": false
-    },
-    {
-      "label": "Amazon",
-      "kind": "allocator",
-      "cls": "corporate",
-      "tier": "key",
-      "sector": null,
-      "id": "alloc:Amazon",
-      "deals": 1,
-      "capital": 50000000000.0,
-      "first_seen": "2026-07-31",
-      "last_activity": "2026-07-31",
-      "stale": false
-    },
-    {
-      "label": "MGX",
-      "kind": "allocator",
-      "cls": "sovereign",
-      "tier": "key",
-      "sector": null,
-      "id": "alloc:MGX",
-      "deals": 1,
-      "capital": 49000000000.0,
-      "first_seen": "2026-07-01",
-      "last_activity": "2026-07-01",
-      "stale": false
-    },
-    {
-      "label": "MGX Fund I",
-      "kind": "target",
-      "cls": "fund",
-      "tier": null,
-      "sector": "datacenters",
-      "id": "target:MGX Fund I",
-      "deals": 1,
-      "capital": 49000000000.0,
-      "first_seen": "2026-07-01",
-      "last_activity": "2026-07-01",
-      "stale": false
-    },
     {
       "label": "BlackRock",
       "kind": "allocator",
@@ -66,7 +14,7 @@
       "sector": null,
       "id": "alloc:BlackRock",
       "deals": 2,
-      "capital": 44900000000.0,
+      "capital": 54000000000.0,
       "first_seen": "2026-07-21",
       "last_activity": "2026-07-28",
       "stale": false
@@ -98,6 +46,45 @@
       "stale": false
     },
     {
+      "label": "OpenAI",
+      "kind": "target",
+      "cls": "private",
+      "tier": null,
+      "sector": "ai-labs",
+      "id": "target:OpenAI",
+      "deals": 1,
+      "capital": 40000000000.0,
+      "first_seen": "2026-07-27",
+      "last_activity": "2026-07-27",
+      "stale": false
+    },
+    {
+      "label": "Blackstone",
+      "kind": "allocator",
+      "cls": "alt_manager",
+      "tier": "key",
+      "sector": null,
+      "id": "alloc:Blackstone",
+      "deals": 2,
+      "capital": 33250000000.0,
+      "first_seen": "2026-06-30",
+      "last_activity": "2026-07-15",
+      "stale": false
+    },
+    {
+      "label": "Japan AI data centers",
+      "kind": "target",
+      "cls": "project",
+      "tier": null,
+      "sector": "datacenters",
+      "id": "target:Japan AI data centers",
+      "deals": 1,
+      "capital": 30000000000.0,
+      "first_seen": "2026-06-30",
+      "last_activity": "2026-06-30",
+      "stale": false
+    },
+    {
       "label": "Brookfield",
       "kind": "allocator",
       "cls": "alt_manager",
@@ -111,12 +98,12 @@
       "stale": false
     },
     {
-      "label": "Bloom Energy on-site power partnership",
+      "label": "Bloom Energy",
       "kind": "target",
-      "cls": "project",
+      "cls": "public",
       "tier": null,
       "sector": "power-energy",
-      "id": "target:Bloom Energy on-site power partnership",
+      "id": "target:Bloom Energy",
       "deals": 1,
       "capital": 25000000000.0,
       "first_seen": "2026-06-30",
@@ -124,29 +111,16 @@
       "stale": false
     },
     {
-      "label": "KKR",
-      "kind": "allocator",
-      "cls": "alt_manager",
-      "tier": "watch",
-      "sector": null,
-      "id": "alloc:KKR",
-      "deals": 1,
-      "capital": 19200000000.0,
-      "first_seen": "2026-08-03",
-      "last_activity": "2026-08-03",
-      "stale": false
-    },
-    {
-      "label": "KKR Global Infrastructure Investors V",
+      "label": "Meta El Paso data center JV (Project Sopaipilla)",
       "kind": "target",
-      "cls": "fund",
+      "cls": "project",
       "tier": null,
       "sector": "datacenters",
-      "id": "target:KKR Global Infrastructure Investors V",
+      "id": "target:Meta El Paso data center JV (Project Sopaipilla)",
       "deals": 1,
-      "capital": 19200000000.0,
-      "first_seen": "2026-08-03",
-      "last_activity": "2026-08-03",
+      "capital": 14000000000.0,
+      "first_seen": "2026-07-28",
+      "last_activity": "2026-07-28",
       "stale": false
     },
     {
@@ -157,35 +131,74 @@
       "sector": null,
       "id": "alloc:Meta",
       "deals": 1,
-      "capital": 9170000000.0,
-      "first_seen": "2026-07-06",
-      "last_activity": "2026-07-06",
+      "capital": 14000000000.0,
+      "first_seen": "2026-07-28",
+      "last_activity": "2026-07-28",
       "stale": false
     },
     {
-      "label": "Sturgeon County Data Center (Alberta)",
+      "label": "Meta-BlackRock El Paso data center JV",
       "kind": "target",
       "cls": "project",
       "tier": null,
       "sector": "datacenters",
-      "id": "target:Sturgeon County Data Center (Alberta)",
+      "id": "target:Meta-BlackRock El Paso data center JV",
       "deals": 1,
-      "capital": 9170000000.0,
-      "first_seen": "2026-07-06",
-      "last_activity": "2026-07-06",
+      "capital": 14000000000.0,
+      "first_seen": "2026-07-28",
+      "last_activity": "2026-07-28",
       "stale": false
     },
     {
-      "label": "Blackstone",
+      "label": "Coatue",
       "kind": "allocator",
-      "cls": "alt_manager",
+      "cls": "vc",
       "tier": "key",
       "sector": null,
-      "id": "alloc:Blackstone",
+      "id": "alloc:Coatue",
+      "deals": 3,
+      "capital": 11120000000.0,
+      "first_seen": "2026-07-07",
+      "last_activity": "2026-07-17",
+      "stale": false
+    },
+    {
+      "label": "Coatue Retail Fund",
+      "kind": "target",
+      "cls": "fund",
+      "tier": null,
+      "sector": "ai-diversified",
+      "id": "target:Coatue Retail Fund",
+      "deals": 1,
+      "capital": 8000000000.0,
+      "first_seen": "2026-07-17",
+      "last_activity": "2026-07-17",
+      "stale": false
+    },
+    {
+      "label": "Peter Thiel",
+      "kind": "allocator",
+      "cls": "individual",
+      "tier": "watch",
+      "sector": null,
+      "id": "alloc:Peter Thiel",
       "deals": 2,
-      "capital": 8400000000.0,
-      "first_seen": "2026-07-22",
-      "last_activity": "2026-07-29",
+      "capital": 6024585000.0,
+      "first_seen": "2026-07-17",
+      "last_activity": "2026-07-23",
+      "stale": false
+    },
+    {
+      "label": "Founders Fund Growth Fund IV",
+      "kind": "target",
+      "cls": "fund",
+      "tier": null,
+      "sector": "ai-labs",
+      "id": "target:Founders Fund Growth Fund IV",
+      "deals": 1,
+      "capital": 6024585000.0,
+      "first_seen": "2026-07-17",
+      "last_activity": "2026-07-17",
       "stale": false
     },
     {
@@ -195,75 +208,10 @@
       "tier": "key",
       "sector": null,
       "id": "alloc:NVIDIA",
-      "deals": 2,
-      "capital": 7000000000.0,
-      "first_seen": "2026-07-20",
+      "deals": 1,
+      "capital": 5000000000.0,
+      "first_seen": "2026-07-27",
       "last_activity": "2026-07-27",
-      "stale": false
-    },
-    {
-      "label": "Blue Owl",
-      "kind": "allocator",
-      "cls": "alt_manager",
-      "tier": "watch",
-      "sector": null,
-      "id": "alloc:Blue Owl",
-      "deals": 2,
-      "capital": 5900000000.0,
-      "first_seen": "2026-07-08",
-      "last_activity": "2026-07-30",
-      "stale": false
-    },
-    {
-      "label": "Stack Infrastructure",
-      "kind": "target",
-      "cls": "project",
-      "tier": null,
-      "sector": "datacenters",
-      "id": "target:Stack Infrastructure",
-      "deals": 1,
-      "capital": 5900000000.0,
-      "first_seen": "2026-07-30",
-      "last_activity": "2026-07-30",
-      "stale": false
-    },
-    {
-      "label": "Khosla Ventures",
-      "kind": "allocator",
-      "cls": "vc",
-      "tier": "key",
-      "sector": null,
-      "id": "alloc:Khosla Ventures",
-      "deals": 1,
-      "capital": 5500000000.0,
-      "first_seen": "2026-07-23",
-      "last_activity": "2026-07-23",
-      "stale": false
-    },
-    {
-      "label": "Khosla Ventures new fund family",
-      "kind": "target",
-      "cls": "fund",
-      "tier": null,
-      "sector": "ai-labs",
-      "id": "target:Khosla Ventures new fund family",
-      "deals": 1,
-      "capital": 5500000000.0,
-      "first_seen": "2026-07-23",
-      "last_activity": "2026-07-23",
-      "stale": false
-    },
-    {
-      "label": "QTS Data Centers",
-      "kind": "target",
-      "cls": "project",
-      "tier": null,
-      "sector": "datacenters",
-      "id": "target:QTS Data Centers",
-      "deals": 1,
-      "capital": 5400000000.0,
-      "first_seen": "2026-07-29",
-      "last_activity": "2026-07-29",
       "stale": false
     },
     {
@@ -280,16 +228,42 @@
       "stale": false
     },
     {
-      "label": "Meta El Paso data center JV",
+      "label": "Galaxy Digital",
+      "kind": "allocator",
+      "cls": "corporate",
+      "tier": "watch",
+      "sector": null,
+      "id": "alloc:Galaxy Digital",
+      "deals": 1,
+      "capital": 3507000000.0,
+      "first_seen": "2026-07-28",
+      "last_activity": "2026-07-28",
+      "stale": false
+    },
+    {
+      "label": "Galaxy Helios Data Centers II (Dickens County TX)",
       "kind": "target",
       "cls": "project",
       "tier": null,
       "sector": "datacenters",
-      "id": "target:Meta El Paso data center JV",
+      "id": "target:Galaxy Helios Data Centers II (Dickens County TX)",
       "deals": 1,
-      "capital": 4900000000.0,
+      "capital": 3507000000.0,
       "first_seen": "2026-07-28",
       "last_activity": "2026-07-28",
+      "stale": false
+    },
+    {
+      "label": "QTS Realty Trust",
+      "kind": "target",
+      "cls": "private",
+      "tier": null,
+      "sector": "datacenters",
+      "id": "target:QTS Realty Trust",
+      "deals": 1,
+      "capital": 3250000000.0,
+      "first_seen": "2026-07-15",
+      "last_activity": "2026-07-15",
       "stale": false
     },
     {
@@ -297,64 +271,12 @@
       "kind": "target",
       "cls": "private",
       "tier": null,
-      "sector": "ai-compute",
+      "sector": "ai-data-platform",
       "id": "target:Databricks",
-      "deals": 2,
-      "capital": 3001955000.0,
-      "first_seen": "2026-07-13",
-      "last_activity": "2026-07-16",
-      "stale": false
-    },
-    {
-      "label": "AirTrunk SYD3",
-      "kind": "target",
-      "cls": "project",
-      "tier": null,
-      "sector": "datacenters",
-      "id": "target:AirTrunk SYD3",
       "deals": 1,
       "capital": 3000000000.0,
-      "first_seen": "2026-07-22",
-      "last_activity": "2026-07-22",
-      "stale": false
-    },
-    {
-      "label": "Coatue",
-      "kind": "allocator",
-      "cls": "vc",
-      "tier": "key",
-      "sector": null,
-      "id": "alloc:Coatue",
-      "deals": 1,
-      "capital": 3000000000.0,
-      "first_seen": "2026-07-16",
-      "last_activity": "2026-07-16",
-      "stale": false
-    },
-    {
-      "label": "Microsoft",
-      "kind": "allocator",
-      "cls": "corporate",
-      "tier": "key",
-      "sector": null,
-      "id": "alloc:Microsoft",
-      "deals": 1,
-      "capital": 2500000000.0,
-      "first_seen": "2026-07-02",
-      "last_activity": "2026-07-02",
-      "stale": false
-    },
-    {
-      "label": "Microsoft Frontier Company",
-      "kind": "target",
-      "cls": "private",
-      "tier": null,
-      "sector": "cloud-hyperscale",
-      "id": "target:Microsoft Frontier Company",
-      "deals": 1,
-      "capital": 2500000000.0,
-      "first_seen": "2026-07-02",
-      "last_activity": "2026-07-02",
+      "first_seen": "2026-07-17",
+      "last_activity": "2026-07-17",
       "stale": false
     },
     {
@@ -364,23 +286,10 @@
       "tier": "key",
       "sector": null,
       "id": "alloc:Andreessen Horowitz",
-      "deals": 4,
-      "capital": 2225000000.0,
-      "first_seen": "2026-07-15",
+      "deals": 3,
+      "capital": 2160000000.0,
+      "first_seen": "2026-07-22",
       "last_activity": "2026-07-23",
-      "stale": false
-    },
-    {
-      "label": "Nebius Group",
-      "kind": "target",
-      "cls": "public",
-      "tier": null,
-      "sector": "neocloud",
-      "id": "target:Nebius Group",
-      "deals": 1,
-      "capital": 2000000000.0,
-      "first_seen": "2026-07-20",
-      "last_activity": "2026-07-20",
       "stale": false
     },
     {
@@ -392,8 +301,8 @@
       "id": "alloc:Altimeter",
       "deals": 1,
       "capital": 2000000000.0,
-      "first_seen": "2026-07-06",
-      "last_activity": "2026-07-06",
+      "first_seen": "2026-07-07",
+      "last_activity": "2026-07-07",
       "stale": false
     },
     {
@@ -401,12 +310,12 @@
       "kind": "target",
       "cls": "private",
       "tier": null,
-      "sector": "ai-labs",
+      "sector": "ai-services-rollup",
       "id": "target:Thrive Holdings",
       "deals": 1,
       "capital": 2000000000.0,
-      "first_seen": "2026-07-06",
-      "last_activity": "2026-07-06",
+      "first_seen": "2026-07-07",
+      "last_activity": "2026-07-07",
       "stale": false
     },
     {
@@ -416,23 +325,10 @@
       "tier": null,
       "sector": "robotics",
       "id": "target:Atoms",
-      "deals": 2,
-      "capital": 1701335000.0,
-      "first_seen": "2026-07-15",
+      "deals": 1,
+      "capital": 1700000000.0,
+      "first_seen": "2026-07-22",
       "last_activity": "2026-07-22",
-      "stale": false
-    },
-    {
-      "label": "Etched",
-      "kind": "target",
-      "cls": "private",
-      "tier": null,
-      "sector": "ai-compute",
-      "id": "target:Etched",
-      "deals": 5,
-      "capital": 609239960.0,
-      "first_seen": "2026-07-13",
-      "last_activity": "2026-07-23",
       "stale": false
     },
     {
@@ -443,22 +339,35 @@
       "sector": null,
       "id": "alloc:Sequoia",
       "deals": 3,
-      "capital": 525000000.0,
-      "first_seen": "2026-07-15",
-      "last_activity": "2026-07-23",
+      "capital": 1460000000.0,
+      "first_seen": "2026-07-22",
+      "last_activity": "2026-08-04",
       "stale": false
     },
     {
-      "label": "US Government",
-      "kind": "allocator",
-      "cls": "sovereign",
-      "tier": "watch",
-      "sector": null,
-      "id": "alloc:US Government",
-      "deals": 2,
-      "capital": 500000000.0,
-      "first_seen": "2026-07-21",
-      "last_activity": "2026-07-29",
+      "label": "Valar Atomics",
+      "kind": "target",
+      "cls": "private",
+      "tier": null,
+      "sector": "nuclear",
+      "id": "target:Valar Atomics",
+      "deals": 1,
+      "capital": 1000000000.0,
+      "first_seen": "2026-08-04",
+      "last_activity": "2026-08-04",
+      "stale": false
+    },
+    {
+      "label": "Etched",
+      "kind": "target",
+      "cls": "private",
+      "tier": null,
+      "sector": "semiconductors",
+      "id": "target:Etched",
+      "deals": 3,
+      "capital": 600000000.0,
+      "first_seen": "2026-07-23",
+      "last_activity": "2026-07-23",
       "stale": false
     },
     {
@@ -475,107 +384,42 @@
       "stale": false
     },
     {
-      "label": "GlobalFoundries",
-      "kind": "target",
-      "cls": "public",
-      "tier": null,
-      "sector": "networking",
-      "id": "target:GlobalFoundries",
-      "deals": 1,
-      "capital": 300000000.0,
-      "first_seen": "2026-07-29",
-      "last_activity": "2026-07-29",
-      "stale": false
-    },
-    {
-      "label": "Advanced nuclear reactor developers (Oklo / X-Energy et al.)",
+      "label": "Norm Ai",
       "kind": "target",
       "cls": "private",
       "tier": null,
-      "sector": "nuclear",
-      "id": "target:Advanced nuclear reactor developers (Oklo / X-Energy et al.)",
-      "deals": 1,
-      "capital": 200000000.0,
-      "first_seen": "2026-07-21",
-      "last_activity": "2026-07-21",
+      "sector": "ai-applications",
+      "id": "target:Norm Ai",
+      "deals": 2,
+      "capital": 240000000.0,
+      "first_seen": "2026-07-07",
+      "last_activity": "2026-07-07",
       "stale": false
     },
     {
-      "label": "Senra Systems",
-      "kind": "target",
-      "cls": "private",
-      "tier": null,
-      "sector": "defense-tech",
-      "id": "target:Senra Systems",
-      "deals": 3,
-      "capital": 195000000.0,
-      "first_seen": "2026-07-15",
-      "last_activity": "2026-07-15",
-      "stale": false
-    },
-    {
-      "label": "Founders Fund",
+      "label": "Khosla Ventures",
       "kind": "allocator",
       "cls": "vc",
       "tier": "key",
       "sector": null,
-      "id": "alloc:Founders Fund",
+      "id": "alloc:Khosla Ventures",
       "deals": 1,
-      "capital": 65000000.0,
-      "first_seen": "2026-07-15",
-      "last_activity": "2026-07-15",
+      "capital": 120000000.0,
+      "first_seen": "2026-07-07",
+      "last_activity": "2026-07-07",
       "stale": false
     },
     {
-      "label": "CGF2021 LLC (Etched Angels III May 2026 series)",
+      "label": "Blue Owl",
       "kind": "allocator",
-      "cls": "vc",
+      "cls": "alt_manager",
       "tier": "watch",
       "sector": null,
-      "id": "alloc:CGF2021 LLC (Etched Angels III May 2026 series)",
+      "id": "alloc:Blue Owl",
       "deals": 1,
-      "capital": 8760410.0,
-      "first_seen": "2026-07-13",
-      "last_activity": "2026-07-13",
-      "stale": false
-    },
-    {
-      "label": "Moreno VC LLC (Databricks Mar-2025 series SPV)",
-      "kind": "allocator",
-      "cls": "vc",
-      "tier": "watch",
-      "sector": null,
-      "id": "alloc:Moreno VC LLC (Databricks Mar-2025 series SPV)",
-      "deals": 1,
-      "capital": 1955000.0,
-      "first_seen": "2026-07-13",
-      "last_activity": "2026-07-13",
-      "stale": false
-    },
-    {
-      "label": "LFG VC LLC (LFG Atoms series SPV)",
-      "kind": "allocator",
-      "cls": "vc",
-      "tier": "watch",
-      "sector": null,
-      "id": "alloc:LFG VC LLC (LFG Atoms series SPV)",
-      "deals": 1,
-      "capital": 1335000.0,
-      "first_seen": "2026-07-15",
-      "last_activity": "2026-07-15",
-      "stale": false
-    },
-    {
-      "label": "CGF2021 LLC (Etched Angels IV July 2026 series)",
-      "kind": "allocator",
-      "cls": "vc",
-      "tier": "watch",
-      "sector": null,
-      "id": "alloc:CGF2021 LLC (Etched Angels IV July 2026 series)",
-      "deals": 1,
-      "capital": 479550.0,
-      "first_seen": "2026-07-15",
-      "last_activity": "2026-07-15",
+      "capital": 0.0,
+      "first_seen": "2026-07-08",
+      "last_activity": "2026-07-08",
       "stale": false
     },
     {
@@ -592,70 +436,59 @@
       "stale": false
     },
     {
-      "label": "Peter Thiel",
+      "label": "DigitalBridge",
+      "kind": "allocator",
+      "cls": "alt_manager",
+      "tier": "key",
+      "sector": null,
+      "id": "alloc:DigitalBridge",
+      "deals": 1,
+      "capital": 0.0,
+      "first_seen": "2026-07-01",
+      "last_activity": "2026-07-01",
+      "stale": false
+    },
+    {
+      "label": "Nippon Gateway Infrastructure",
+      "kind": "target",
+      "cls": "private",
+      "tier": null,
+      "sector": "datacenters",
+      "id": "target:Nippon Gateway Infrastructure",
+      "deals": 1,
+      "capital": 0.0,
+      "first_seen": "2026-07-01",
+      "last_activity": "2026-07-01",
+      "stale": false
+    },
+    {
+      "label": "Sam Altman",
       "kind": "allocator",
       "cls": "individual",
       "tier": "watch",
       "sector": null,
-      "id": "alloc:Peter Thiel",
+      "id": "alloc:Sam Altman",
       "deals": 1,
       "capital": 0.0,
-      "first_seen": "2026-07-23",
-      "last_activity": "2026-07-23",
+      "first_seen": "2026-06-26",
+      "last_activity": "2026-06-26",
+      "stale": false
+    },
+    {
+      "label": "Alfred",
+      "kind": "target",
+      "cls": "private",
+      "tier": null,
+      "sector": "robotics",
+      "id": "target:Alfred",
+      "deals": 1,
+      "capital": 0.0,
+      "first_seen": "2026-06-26",
+      "last_activity": "2026-06-26",
       "stale": false
     }
   ],
   "flows": [
-    {
-      "source": "alloc:Amazon",
-      "target": "target:OpenAI",
-      "sector": "ai-labs",
-      "event_type": "corporate_investment",
-      "amount": 50000000000.0,
-      "status": "verified",
-      "date": "2026-07-31",
-      "tier": 1
-    },
-    {
-      "source": "alloc:NVIDIA",
-      "target": "target:Safe Superintelligence",
-      "sector": "ai-labs",
-      "event_type": "minority_stake",
-      "amount": 5000000000.0,
-      "status": "verified",
-      "date": "2026-07-27",
-      "tier": 1
-    },
-    {
-      "source": "alloc:NVIDIA",
-      "target": "target:Nebius Group",
-      "sector": "neocloud",
-      "event_type": "minority_stake",
-      "amount": 2000000000.0,
-      "status": "verified",
-      "date": "2026-07-20",
-      "tier": 1
-    },
-    {
-      "source": "alloc:Meta",
-      "target": "target:Sturgeon County Data Center (Alberta)",
-      "sector": "datacenters",
-      "event_type": "corporate_investment",
-      "amount": 9170000000.0,
-      "status": "verified",
-      "date": "2026-07-06",
-      "tier": 1
-    },
-    {
-      "source": "alloc:Microsoft",
-      "target": "target:Microsoft Frontier Company",
-      "sector": "cloud-hyperscale",
-      "event_type": "corporate_investment",
-      "amount": 2500000000.0,
-      "status": "candidate",
-      "date": "2026-07-02",
-      "tier": 3
-    },
     {
       "source": "alloc:BlackRock",
       "target": "target:Aligned Data Centers",
@@ -667,34 +500,54 @@
       "tier": 1
     },
     {
-      "source": "alloc:BlackRock",
-      "target": "target:Meta El Paso data center JV",
-      "sector": "datacenters",
-      "event_type": "spv",
-      "amount": 4900000000.0,
-      "status": "verified",
-      "date": "2026-07-28",
-      "tier": 1
-    },
-    {
-      "source": "alloc:KKR",
-      "target": "target:KKR Global Infrastructure Investors V",
-      "sector": "datacenters",
-      "event_type": "fund_launch",
-      "amount": 19200000000.0,
-      "status": "verified",
-      "date": "2026-08-03",
-      "tier": 1
-    },
-    {
       "source": "alloc:Brookfield",
-      "target": "target:Bloom Energy on-site power partnership",
+      "target": "target:Bloom Energy",
       "sector": "power-energy",
       "event_type": "project_finance",
       "amount": 25000000000.0,
       "status": "verified",
       "date": "2026-06-30",
       "tier": 1
+    },
+    {
+      "source": "alloc:Blue Owl",
+      "target": "target:Kirkwood Infrastructure Group",
+      "sector": "networking",
+      "event_type": "spv",
+      "amount": null,
+      "status": "verified",
+      "date": "2026-07-08",
+      "tier": 1
+    },
+    {
+      "source": "alloc:DigitalBridge",
+      "target": "target:Nippon Gateway Infrastructure",
+      "sector": "datacenters",
+      "event_type": "acquisition",
+      "amount": null,
+      "status": "verified",
+      "date": "2026-07-01",
+      "tier": 1
+    },
+    {
+      "source": "alloc:Blackstone",
+      "target": "target:QTS Realty Trust",
+      "sector": "datacenters",
+      "event_type": "project_finance",
+      "amount": 3250000000.0,
+      "status": "verified_alpha",
+      "date": "2026-07-15",
+      "tier": 2
+    },
+    {
+      "source": "alloc:BlackRock",
+      "target": "target:Meta El Paso data center JV (Project Sopaipilla)",
+      "sector": "datacenters",
+      "event_type": "project_finance",
+      "amount": 14000000000.0,
+      "status": "verified_alpha",
+      "date": "2026-07-28",
+      "tier": 3
     },
     {
       "source": "alloc:SoftBank",
@@ -708,88 +561,58 @@
     },
     {
       "source": "alloc:Blackstone",
-      "target": "target:AirTrunk SYD3",
+      "target": "target:Japan AI data centers",
       "sector": "datacenters",
       "event_type": "project_finance",
-      "amount": 3000000000.0,
+      "amount": 30000000000.0,
       "status": "candidate",
-      "date": "2026-07-22",
+      "date": "2026-06-30",
       "tier": 3
     },
     {
-      "source": "alloc:Blackstone",
-      "target": "target:QTS Data Centers",
+      "source": "alloc:NVIDIA",
+      "target": "target:Safe Superintelligence",
+      "sector": "ai-labs",
+      "event_type": "minority_stake",
+      "amount": 5000000000.0,
+      "status": "verified",
+      "date": "2026-07-27",
+      "tier": 1
+    },
+    {
+      "source": "alloc:Meta",
+      "target": "target:Meta-BlackRock El Paso data center JV",
+      "sector": "datacenters",
+      "event_type": "spv",
+      "amount": 14000000000.0,
+      "status": "verified",
+      "date": "2026-07-28",
+      "tier": 1
+    },
+    {
+      "source": "alloc:Peter Thiel",
+      "target": "target:Founders Fund Growth Fund IV",
+      "sector": "ai-labs",
+      "event_type": "fund_launch",
+      "amount": 6024585000.0,
+      "status": "verified",
+      "date": "2026-07-17",
+      "tier": 1
+    },
+    {
+      "source": "alloc:Galaxy Digital",
+      "target": "target:Galaxy Helios Data Centers II (Dickens County TX)",
       "sector": "datacenters",
       "event_type": "project_finance",
-      "amount": 5400000000.0,
-      "status": "candidate",
-      "date": "2026-07-29",
-      "tier": 3
-    },
-    {
-      "source": "alloc:Blue Owl",
-      "target": "target:Stack Infrastructure",
-      "sector": "datacenters",
-      "event_type": "project_finance",
-      "amount": 5900000000.0,
-      "status": "candidate",
-      "date": "2026-07-30",
-      "tier": 3
-    },
-    {
-      "source": "alloc:Blue Owl",
-      "target": "target:Kirkwood Infrastructure Group",
-      "sector": "networking",
-      "event_type": "spv",
-      "amount": null,
-      "status": "candidate",
-      "date": "2026-07-08",
-      "tier": 1
-    },
-    {
-      "source": "alloc:LFG VC LLC (LFG Atoms series SPV)",
-      "target": "target:Atoms",
-      "sector": "robotics",
-      "event_type": "spv",
-      "amount": 1335000.0,
-      "status": "candidate",
-      "date": "2026-07-15",
-      "tier": 1
-    },
-    {
-      "source": "alloc:CGF2021 LLC (Etched Angels IV July 2026 series)",
-      "target": "target:Etched",
-      "sector": "ai-compute",
-      "event_type": "spv",
-      "amount": 479550.0,
-      "status": "candidate",
-      "date": "2026-07-15",
-      "tier": 1
-    },
-    {
-      "source": "alloc:CGF2021 LLC (Etched Angels III May 2026 series)",
-      "target": "target:Etched",
-      "sector": "ai-compute",
-      "event_type": "spv",
-      "amount": 8760410.0,
-      "status": "candidate",
-      "date": "2026-07-13",
-      "tier": 1
-    },
-    {
-      "source": "alloc:Moreno VC LLC (Databricks Mar-2025 series SPV)",
-      "target": "target:Databricks",
-      "sector": "ai-compute",
-      "event_type": "spv",
-      "amount": 1955000.0,
-      "status": "candidate",
-      "date": "2026-07-13",
+      "amount": 3507000000.0,
+      "status": "verified",
+      "date": "2026-07-28",
       "tier": 1
     },
     {
       "source": "alloc:Peter Thiel",
       "target": "target:Etched",
-      "sector": "ai-compute",
+      "sector": "semiconductors",
       "event_type": "minority_stake",
       "amount": null,
       "status": "candidate",
@@ -797,204 +620,184 @@
       "tier": 3
     },
     {
-      "source": "alloc:US Government",
-      "target": "target:GlobalFoundries",
-      "sector": "networking",
-      "event_type": "grant",
-      "amount": 300000000.0,
-      "status": "verified",
-      "date": "2026-07-29",
-      "tier": 1
-    },
-    {
-      "source": "alloc:MGX",
-      "target": "target:MGX Fund I",
-      "sector": "datacenters",
-      "event_type": "fund_launch",
-      "amount": 49000000000.0,
-      "status": "verified_alpha",
-      "date": "2026-07-01",
-      "tier": 3
-    },
-    {
-      "source": "alloc:US Government",
-      "target": "target:Advanced nuclear reactor developers (Oklo / X-Energy et al.)",
-      "sector": "nuclear",
-      "event_type": "grant",
-      "amount": 200000000.0,
+      "source": "alloc:Sam Altman",
+      "target": "target:Alfred",
+      "sector": "robotics",
+      "event_type": "funding_round",
+      "amount": null,
       "status": "candidate",
-      "date": "2026-07-21",
+      "date": "2026-06-26",
       "tier": 3
     },
     {
       "source": "alloc:Sequoia",
-      "target": "target:Etched",
-      "sector": "ai-compute",
+      "target": "target:Valar Atomics",
+      "sector": "nuclear",
       "event_type": "funding_round",
-      "amount": 300000000.0,
+      "amount": 1000000000.0,
       "status": "verified",
-      "date": "2026-07-23",
-      "tier": 1
-    },
-    {
-      "source": "alloc:Andreessen Horowitz",
-      "target": "target:Etched",
-      "sector": "ai-compute",
-      "event_type": "funding_round",
-      "amount": 300000000.0,
-      "status": "verified",
-      "date": "2026-07-23",
+      "date": "2026-08-04",
       "tier": 1
     },
     {
       "source": "alloc:Sequoia",
-      "target": "target:Senra Systems",
-      "sector": "defense-tech",
+      "target": "target:Etched",
+      "sector": "semiconductors",
       "event_type": "funding_round",
-      "amount": 65000000.0,
-      "status": "verified",
-      "date": "2026-07-15",
-      "tier": 1
+      "amount": 300000000.0,
+      "status": "verified_alpha",
+      "date": "2026-07-23",
+      "tier": 3
     },
     {
       "source": "alloc:Andreessen Horowitz",
-      "target": "target:Senra Systems",
-      "sector": "defense-tech",
+      "target": "target:Etched",
+      "sector": "semiconductors",
       "event_type": "funding_round",
-      "amount": 65000000.0,
-      "status": "verified",
-      "date": "2026-07-15",
-      "tier": 1
+      "amount": 300000000.0,
+      "status": "verified_alpha",
+      "date": "2026-07-23",
+      "tier": 3
     },
     {
-      "source": "alloc:Founders Fund",
-      "target": "target:Senra Systems",
+      "source": "alloc:Andreessen Horowitz",
+      "target": "target:Cathedral",
       "sector": "defense-tech",
       "event_type": "funding_round",
-      "amount": 65000000.0,
-      "status": "verified",
-      "date": "2026-07-15",
-      "tier": 1
+      "amount": 160000000.0,
+      "status": "verified_alpha",
+      "date": "2026-07-22",
+      "tier": 3
+    },
+    {
+      "source": "alloc:Sequoia",
+      "target": "target:Cathedral",
+      "sector": "defense-tech",
+      "event_type": "funding_round",
+      "amount": 160000000.0,
+      "status": "verified_alpha",
+      "date": "2026-07-22",
+      "tier": 3
     },
     {
       "source": "alloc:Andreessen Horowitz",
       "target": "target:Atoms",
       "sector": "robotics",
-      "event_type": "equity",
+      "event_type": "funding_round",
       "amount": 1700000000.0,
       "status": "verified_alpha",
       "date": "2026-07-22",
       "tier": 3
     },
     {
-      "source": "alloc:Sequoia",
-      "target": "target:Cathedral",
-      "sector": "defense-tech",
+      "source": "alloc:Khosla Ventures",
+      "target": "target:Norm Ai",
+      "sector": "ai-applications",
       "event_type": "funding_round",
-      "amount": 160000000.0,
-      "status": "verified_alpha",
-      "date": "2026-07-22",
-      "tier": 3
+      "amount": 120000000.0,
+      "status": "verified",
+      "date": "2026-07-07",
+      "tier": 1
     },
     {
-      "source": "alloc:Andreessen Horowitz",
-      "target": "target:Cathedral",
-      "sector": "defense-tech",
+      "source": "alloc:Coatue",
+      "target": "target:Norm Ai",
+      "sector": "ai-applications",
       "event_type": "funding_round",
-      "amount": 160000000.0,
-      "status": "verified_alpha",
-      "date": "2026-07-22",
-      "tier": 3
+      "amount": 120000000.0,
+      "status": "verified",
+      "date": "2026-07-07",
+      "tier": 1
     },
     {
       "source": "alloc:Coatue",
       "target": "target:Databricks",
-      "sector": "ai-compute",
+      "sector": "ai-data-platform",
       "event_type": "funding_round",
       "amount": 3000000000.0,
       "status": "candidate",
-      "date": "2026-07-16",
-      "tier": 1
-    },
-    {
-      "source": "alloc:Khosla Ventures",
-      "target": "target:Khosla Ventures new fund family",
-      "sector": "ai-labs",
-      "event_type": "fund_launch",
-      "amount": 5500000000.0,
-      "status": "candidate",
-      "date": "2026-07-23",
+      "date": "2026-07-17",
       "tier": 3
     },
     {
       "source": "alloc:Altimeter",
       "target": "target:Thrive Holdings",
-      "sector": "ai-labs",
+      "sector": "ai-services-rollup",
       "event_type": "minority_stake",
       "amount": 2000000000.0,
       "status": "candidate",
-      "date": "2026-07-06",
+      "date": "2026-07-07",
+      "tier": 3
+    },
+    {
+      "source": "alloc:Coatue",
+      "target": "target:Coatue Retail Fund",
+      "sector": "ai-diversified",
+      "event_type": "fund_launch",
+      "amount": 8000000000.0,
+      "status": "candidate",
+      "date": "2026-07-17",
       "tier": 3
     }
   ],
   "sectors": {
-    "ai-compute": {
-      "deals": 7,
-      "capital": 3611194960.0,
-      "allocators": 7,
+    "ai-applications": {
+      "deals": 2,
+      "capital": 240000000.0,
+      "allocators": 2,
       "signals": []
     },
-    "ai-labs": {
-      "deals": 5,
-      "capital": 102500000000.0,
-      "allocators": 5,
-      "signals": [
-        {
-          "theme": "ai-labs: 3 key allocators in 30d",
-          "rule": "sector_swarm",
-          "strength": 3.0
-        }
-      ]
-    },
-    "cloud-hyperscale": {
+    "ai-data-platform": {
       "deals": 1,
-      "capital": 2500000000.0,
+      "capital": 3000000000.0,
       "allocators": 1,
       "signals": []
     },
-    "datacenters": {
-      "deals": 8,
-      "capital": 136570000000.0,
-      "allocators": 6,
+    "ai-diversified": {
+      "deals": 1,
+      "capital": 8000000000.0,
+      "allocators": 1,
       "signals": []
     },
-    "defense-tech": {
-      "deals": 5,
-      "capital": 515000000.0,
+    "ai-labs": {
+      "deals": 3,
+      "capital": 51024585000.0,
       "allocators": 3,
-      "signals": [
-        {
-          "theme": "defense-tech: 3 key allocators in 30d",
-          "rule": "sector_swarm",
-          "strength": 3.0
-        }
-      ]
+      "signals": []
     },
-    "neocloud": {
+    "ai-services-rollup": {
       "deals": 1,
       "capital": 2000000000.0,
       "allocators": 1,
       "signals": []
     },
-    "networking": {
+    "datacenters": {
+      "deals": 7,
+      "capital": 104757000000.0,
+      "allocators": 5,
+      "signals": [
+        {
+          "theme": "datacenters: 3 key allocators in 30d",
+          "rule": "sector_swarm",
+          "strength": 3.0
+        }
+      ]
+    },
+    "defense-tech": {
       "deals": 2,
-      "capital": 300000000.0,
+      "capital": 320000000.0,
       "allocators": 2,
+      "signals": []
+    },
+    "networking": {
+      "deals": 1,
+      "capital": 0,
+      "allocators": 1,
       "signals": []
     },
     "nuclear": {
       "deals": 1,
-      "capital": 200000000.0,
+      "capital": 1000000000.0,
       "allocators": 1,
       "signals": []
     },
@@ -1006,8 +809,14 @@
     },
     "robotics": {
       "deals": 2,
-      "capital": 1701335000.0,
+      "capital": 1700000000.0,
       "allocators": 2,
+      "signals": []
+    },
+    "semiconductors": {
+      "deals": 3,
+      "capital": 600000000.0,
+      "allocators": 3,
       "signals": []
     }
   }
