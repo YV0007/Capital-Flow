@@ -1,0 +1,24 @@
+# Signal rules — evaluated by engine/themes.py as SQL over the events table.
+# Each rule: id, description, and parameters. The SQL lives in themes.py keyed by rule id.
+
+sectors:
+  # canonical sector slugs — every event must map to one of these
+  # e.g. ai-compute, photonics, power, cooling, memory, networking, robotics
+  []
+
+rules:
+  - id: sector_swarm
+    description: "N distinct key allocators invested in the same sector within a window"
+    min_allocators: 5
+    window_days: 30
+    allocator_tier: key
+
+  - id: capital_acceleration
+    description: "Sector's rolling 90d capital total grew vs prior 90d by factor X"
+    growth_factor: 2.0
+    window_days: 90
+
+  - id: first_entry
+    description: "A key allocator entered a sector it had no prior events in"
+    allocator_tier: key
+    lookback_days: 365

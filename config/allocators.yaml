@@ -1,0 +1,21 @@
+# Watchlist: who each research agent tracks.
+# tier: key   -> counts toward "key investor" signal rules
+#       watch -> tracked, lower weight
+# Populate from the ab-investment Capital Flow Map universe + expand over time.
+
+corporate:
+  # e.g. - { name: Nvidia, tier: key, country: US }
+  []
+
+vc:
+  []
+
+individuals:
+  []
+
+alt_managers:
+  # e.g. - { name: Brookfield, tier: key, country: CA }
+  []
+
+sovereigns:
+  []

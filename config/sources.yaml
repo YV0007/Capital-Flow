@@ -1,0 +1,23 @@
+# Source registry by tier. Tier 5 discovers leads; Tier 1 confirms.
+# Agents must check every source marked mandatory: true for their class.
+
+tier1:  # confirms — official
+  - { name: SEC EDGAR, url: "https://www.sec.gov/cgi-bin/browse-edgar", mandatory: true }
+  # company IR pages, official PRs, portfolio pages, government DBs
+
+tier2:  # data platforms
+  - { name: Crunchbase, url: "https://www.crunchbase.com" }
+  - { name: Dealroom, url: "https://dealroom.co" }
+  # PitchBook, Preqin, AlphaSense, FactSet, Capital IQ, Bloomberg, Harmonic
+
+tier3:  # quality press
+  - { name: Reuters, url: "https://www.reuters.com" }
+  # FT, WSJ, Bloomberg News, The Information
+
+tier4:  # specialist analysis
+  - { name: SemiAnalysis, url: "https://semianalysis.com" }
+  # Stratechery, conference talks
+
+tier5:  # lead discovery only — never store unverified as verified
+  []
+  # podcasts, YouTube, X, LinkedIn, blogs
