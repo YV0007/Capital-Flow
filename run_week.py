@@ -12,7 +12,7 @@ deterministic Python. Scheduling (build step 3) will wrap this script.
 import sys
 from datetime import date
 
-from engine import ingest, themes, beneficiaries, report, handoff
+from engine import ingest, themes, beneficiaries, report, handoff, deliver
 
 
 def current_week() -> str:
@@ -20,7 +20,7 @@ def current_week() -> str:
     return f"{y}-W{w:02d}"
 
 
-def main(week: str) -> None:
+def main(week: str, do_deliver: bool = False, do_push: bool = False) -> None:
     # Agent research stage runs before this script (or will be invoked here later).
     print(f"== Capital Flow pipeline: {week} ==")
     s = ingest.ingest_week(week)
@@ -36,7 +36,14 @@ def main(week: str) -> None:
     print(f"[report]  {rp}")
     h = handoff.run(week)
     print(f"[handoff] {h['nodes']} nodes, {h['flows']} flows -> handoff/capital_map.json")
+    if do_deliver or do_push:
+        d = deliver.run(week, push=do_push)
+        print(f"[deliver] {d}")
 
 
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else current_week())
+    # Usage: python run_week.py [week] [--deliver] [--push]
+    # --deliver copies capitalMap.json into ab-investment; --push also commits + pushes to main.
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    week = args[0] if args else current_week()
+    main(week, do_deliver="--deliver" in sys.argv, do_push="--push" in sys.argv)

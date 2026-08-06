@@ -199,16 +199,20 @@ run — you can surface a "what changed this week" note from it if useful (optio
    animation — and should match the dark institutional aesthetic. You have **zero data
    latitude**: never invent entities, flows, amounts, or statuses, and never override a
    status. Render the file faithfully; style it freely.
-3. **Delivery mechanism:** the engine writes `capital_map.json` to
-   **`src/data/capitalMap.json`** in this repo; the component imports it at build time and
-   Vercel redeploys on push. A user-provided file (manual upload) overwrites the same path
-   and renders identically. (Future option if data-only updates without redeploys are ever
-   wanted: switch to a runtime `fetch()` of the JSON from a static host — not needed now.)
+3. **Delivery mechanism — AUTO-PUSH:** the engine's scheduled run **auto-commits**
+   `capitalMap.json` directly to this repo's **`main`** at **`src/data/capitalMap.json`**
+   and pushes; Vercel auto-deploys. It commits *only that one file*, so it won't disturb
+   other work in progress. **There is no review gate — verified agent data goes straight to
+   production.** Consequences for you: treat `src/data/capitalMap.json` as **engine-owned**
+   — never hand-edit it (the next run overwrites it), and build the component to import it
+   directly. A user-provided file (manual upload) overwrites the same path and renders
+   identically.
 
 ---
 
 ## 6. Update timing the user expects
-- **Weekly (default):** the engine runs and refreshes `capitalMap.json` automatically.
+- **Weekly (default):** the engine runs, refreshes `capitalMap.json`, and **auto-commits
+  + pushes it to `main`** — Vercel deploys, no manual step.
 - **On-demand:** the user can ask for a refresh at any time; same output, same path.
 - **Manual upload:** the user can hand over a `capital_map.json` directly and have it
   implemented — just replace `src/data/capitalMap.json` and rebuild. (Low priority, but

@@ -45,9 +45,9 @@ tune the thresholds as the data grows.
   after two consecutive weekly updates stale + no verified flow; keep in data always.
 - **Visual latitude:** the dashboard session owns visuals completely; zero data latitude
   (never invent or override entities/flows/amounts/status).
-- **Delivery:** engine writes `capital_map.json` → `ab-investment/src/data/capitalMap.json`,
-  imported at build time; Vercel redeploys on push. A user-uploaded file overwrites the
-  same path and renders identically.
+- **Delivery — auto-push:** the engine auto-commits `capital_map.json` →
+  `ab-investment/src/data/capitalMap.json` directly to `main` and pushes (only that file);
+  Vercel deploys. No review gate. A user-uploaded file overwrites the same path identically.
 
 The full consumer specification lives in **handoff/DASHBOARD_BRIEF.md** — hand that entire
 file to an ab-investment Claude Code session to rebuild the map.
