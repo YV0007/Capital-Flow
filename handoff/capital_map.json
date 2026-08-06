@@ -1,8 +1,8 @@
 {
   "generated": "2026-08-06",
   "totals": {
-    "nodes": 49,
-    "flows": 35,
+    "nodes": 50,
+    "flows": 36,
     "sectors": 12
   },
   "nodes": [
@@ -196,9 +196,9 @@
       "sector": null,
       "network": "paypal_mafia",
       "id": "alloc:Peter Thiel",
-      "deals": 2,
-      "capital": 6024585000.0,
-      "first_seen": "2026-07-17",
+      "deals": 3,
+      "capital": 6164585000.0,
+      "first_seen": "2026-05-14",
       "last_activity": "2026-07-23",
       "stale": false
     },
@@ -424,6 +424,20 @@
       "capital": 240000000.0,
       "first_seen": "2026-07-07",
       "last_activity": "2026-07-07",
+      "stale": false
+    },
+    {
+      "label": "Panthalassa",
+      "kind": "target",
+      "cls": "private",
+      "tier": null,
+      "sector": "datacenters",
+      "network": null,
+      "id": "target:Panthalassa",
+      "deals": 1,
+      "capital": 140000000.0,
+      "first_seen": "2026-05-14",
+      "last_activity": "2026-05-14",
       "stale": false
     },
     {
@@ -935,6 +949,16 @@
       "tier": 3
     },
     {
+      "source": "alloc:Peter Thiel",
+      "target": "target:Panthalassa",
+      "sector": "datacenters",
+      "event_type": "funding_round",
+      "amount": 140000000.0,
+      "status": "candidate",
+      "date": "2026-05-14",
+      "tier": 3
+    },
+    {
       "source": "alloc:Sequoia",
       "target": "target:Valar Atomics",
       "sector": "nuclear",
@@ -1083,9 +1107,9 @@
       "signals": []
     },
     "datacenters": {
-      "deals": 7,
-      "capital": 104757000000.0,
-      "allocators": 5,
+      "deals": 8,
+      "capital": 104897000000.0,
+      "allocators": 6,
       "signals": [
         {
           "theme": "datacenters: 3 key allocators in 30d",

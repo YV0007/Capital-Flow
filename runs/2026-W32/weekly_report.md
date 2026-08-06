@@ -87,13 +87,14 @@
 | GEV | GE Vernova | Galaxy Digital→Galaxy Helios Data Centers II (Dickens County TX) | medium |
 | NVDA | NVIDIA | Galaxy Digital→Galaxy Helios Data Centers II (Dickens County TX) | medium |
 
-## Candidates to watch (10)
+## Candidates to watch (11)
 - Coatue → Databricks (ai-data-platform, funding_round)
 - Coatue → Coatue Retail Fund (ai-diversified, fund_launch)
 - Jeff Bezos → Flourish (ai-labs, funding_round)
 - Reid Hoffman → Prentis (ai-labs, fund_launch)
 - Altimeter → Thrive Holdings (ai-services-rollup, minority_stake)
 - Blackstone → Japan AI data centers (datacenters, project_finance)
+- Peter Thiel → Panthalassa (datacenters, funding_round)
 - Jeff Bezos → Prometheus (robotics, funding_round)
 - Jeff Bezos → Generalist AI (robotics, funding_round)
 - Peter Thiel → Etched (semiconductors, funding_round)
