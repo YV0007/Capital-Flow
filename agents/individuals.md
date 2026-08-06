@@ -1,23 +1,45 @@
 # Individuals Agent
 
 **Read `agents/CONTEXT.md` first.** Then read the `individuals:` block of
-`config/allocators.yaml` — your watchlist.
+`config/allocators.yaml` — your watchlist (~40 solo investors across Silicon Valley
+investors, founder-investors, corporate CEOs, deep-tech specialists, and global macro).
 
 ## Who you track
-Named elite individuals deploying personal capital: Sam Altman, Jensen Huang,
-Peter Thiel — plus prominent founders/angels discovered making notable AI bets.
-Their vehicles count (family offices, personal SPVs, angel checks).
+Named elite individuals deploying **personal** capital and their single-principal
+vehicles (family offices, personal SPVs, angel checks). Attribute to the PERSON, not
+their firm — a personal Thiel check is this agent; Founders Fund deploying is the VC
+side; a CEO's company buying is the corporate side.
+
+## Search approach — DO NOT lead with SEC filings
+Individuals rarely trigger filings, so a filing-first sweep misses most of them. Work
+in this order:
+1. **Round-announcement angel lists (primary).** Search recent AI funding rounds and
+   read the "backed by / angels / investors include…" lines in the PR + TechCrunch /
+   The Information / Axios coverage. One round often names several watchlist people at
+   once — this is your highest-yield source. Search broadly ("AI startup angel round
+   July 2026", "backed by <name>", "<name> invests").
+2. **Form D related-persons (Tier-1 confirm).** SEC Form D lists named "related
+   persons" — this is how a personal GP/fund commitment gets confirmed. Use curl with a
+   User-Agent (efts.sec.gov 403s on plain fetch): `curl -A "capital-flow research you@example.com" "https://efts.sec.gov/LATEST/search-index?q=%22<name>%22&forms=D"`.
+3. **Investor/person trackers** — Crunchbase / PitchBook person profiles for recent
+   personal deals.
+4. **Form 4 / 13D-G** only when the person crosses a *public*-company stake threshold.
+
+Use a slightly wider window for this class — look back ~45 days (personal deals surface
+with more lag), but date each event accurately.
 
 ## What to look for
-- `equity`, `minority_stake`, `spv`, `funding_round` participation as an angel.
-
-## Mandatory checks per name
-- SEC Form 4 / 13D/G when the individual crosses a public-stake threshold (Tier 1).
-- Interviews, podcasts, X, LinkedIn (Tier 5) for leads — then chase a higher-tier confirm.
+`equity`, `minority_stake`, `spv`, angel `funding_round` participation, and personal
+`fund_launch` (a named personal fund/vehicle raise).
 
 ## Class gotchas
-- Hardest class to verify. Be honest: most output here is `candidate` or
-  `verified_alpha`, rarely `verified`. Do not inflate status.
-- Attribute to the person, not the vehicle, but record the vehicle in `notes`.
-- Distinguish the individual's *personal* capital from their company's — a bet Sam
-  Altman makes personally is this agent; OpenAI deploying capital is the corporate side.
+- Hardest class to verify. `verified_alpha` is the NORM here; `verified` needs a Form D
+  related-person or an official PR naming the person. Do not inflate status; amounts are
+  usually undisclosed (leave `amount_usd` blank, don't guess).
+- Attribute to the person; record the vehicle (family office / SPV) in `notes`.
+- The "corporate CEO" names on the list mostly move capital *through their company*, not
+  personally — only record a personal check if you can actually source it; otherwise a
+  CEO's activity belongs to the corporate agent, not here.
+- Efficiency: with ~40 names, sweep by recent-rounds and tracker searches that surface
+  many names at once rather than 40 sequential deep-dives. Prioritize the strongest,
+  best-sourced bets over exhaustive coverage.

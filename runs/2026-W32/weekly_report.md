@@ -1,9 +1,10 @@
 # Capital Flow — Weekly Report 2026-W32
 
 ## Signals fired
+- **ai-labs: 4 key allocators in 30d**  _(rule: sector_swarm, strength 4.0)_
 - **datacenters: 3 key allocators in 30d**  _(rule: sector_swarm, strength 3.0)_
 
-## New verified events (19)
+## New verified events (25)
 | Allocator | Target | Sector | Type | Amount | Status | Tier |
 |---|---|---|---|--:|---|:-:|
 | BlackRock | Aligned Data Centers | datacenters | acquisition | $40.0B | verified | T1 |
@@ -25,18 +26,24 @@
 | Coatue | Norm Ai | ai-applications | funding_round | $120M | verified | T1 |
 | Blue Owl | Kirkwood Infrastructure Group | networking | spv | — | verified | T1 |
 | DigitalBridge | Nippon Gateway Infrastructure | datacenters | acquisition | — | verified | T1 |
+| Elad Gil | Odyssey | ai-labs | funding_round | — | verified_alpha | T3 |
+| Garry Tan | Odyssey | ai-labs | funding_round | — | verified_alpha | T3 |
+| Garry Tan | Monogram | ai-labs | funding_round | — | verified_alpha | T3 |
+| Jeff Bezos | General Intuition | ai-labs | funding_round | — | verified_alpha | T3 |
+| Eric Schmidt | General Intuition | ai-labs | funding_round | — | verified_alpha | T3 |
+| Jeff Bezos | CuspAI | ai-labs | funding_round | — | verified_alpha | T3 |
 
 ## Top sectors — last 30 days
 | Sector | Capital | Deals | Distinct allocators |
 |---|--:|--:|--:|
 | datacenters | $74.8B | 5 | 4 |
-| ai-labs | $51.0B | 3 | 3 |
+| ai-labs | $51.0B | 6 | 6 |
 | ai-diversified | $8.0B | 1 | 1 |
 | ai-data-platform | $3.0B | 1 | 1 |
 | ai-services-rollup | $2.0B | 1 | 1 |
 | robotics | $1.7B | 1 | 1 |
 | nuclear | $1.0B | 1 | 1 |
-| semiconductors | $600M | 3 | 3 |
+| semiconductors | $600M | 4 | 4 |
 | defense-tech | $320M | 2 | 2 |
 | ai-applications | $240M | 2 | 2 |
 
@@ -80,10 +87,14 @@
 | GEV | GE Vernova | Galaxy Digital→Galaxy Helios Data Centers II (Dickens County TX) | medium |
 | NVDA | NVIDIA | Galaxy Digital→Galaxy Helios Data Centers II (Dickens County TX) | medium |
 
-## Candidates to watch (6)
+## Candidates to watch (10)
 - Coatue → Databricks (ai-data-platform, funding_round)
 - Coatue → Coatue Retail Fund (ai-diversified, fund_launch)
+- Jeff Bezos → Flourish (ai-labs, funding_round)
+- Reid Hoffman → Prentis (ai-labs, fund_launch)
 - Altimeter → Thrive Holdings (ai-services-rollup, minority_stake)
 - Blackstone → Japan AI data centers (datacenters, project_finance)
-- Sam Altman → Alfred (robotics, funding_round)
-- Peter Thiel → Etched (semiconductors, minority_stake)
+- Jeff Bezos → Prometheus (robotics, funding_round)
+- Jeff Bezos → Generalist AI (robotics, funding_round)
+- Peter Thiel → Etched (semiconductors, funding_round)
+- Stanley Druckenmiller → Etched (semiconductors, funding_round)

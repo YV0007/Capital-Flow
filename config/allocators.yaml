@@ -23,10 +23,55 @@ vc:
   - { name: Coatue, tier: key, country: US }
   - { name: Altimeter, tier: watch, country: US }
 
-individuals:
-  - { name: Sam Altman, tier: watch, country: US }
+individuals:   # solo investors — personal capital & single-principal vehicles
+  # -- Silicon Valley investors --
+  - { name: Peter Thiel, tier: key, country: US }
+  - { name: Marc Andreessen, tier: key, country: US }
+  - { name: Ben Horowitz, tier: watch, country: US }
+  - { name: Vinod Khosla, tier: key, country: US }
+  - { name: Josh Kushner, tier: watch, country: US }
+  - { name: Philippe Laffont, tier: watch, country: US }
+  - { name: Brad Gerstner, tier: watch, country: US }
+  - { name: Neil Mehta, tier: watch, country: US }
+  - { name: Elad Gil, tier: key, country: US }
+  - { name: Nat Friedman, tier: key, country: US }
+  - { name: Daniel Gross, tier: key, country: US }
+  - { name: Joe Lonsdale, tier: key, country: US }
+  - { name: Keith Rabois, tier: key, country: US }
+  - { name: Reid Hoffman, tier: key, country: US }
+  - { name: Garry Tan, tier: watch, country: US }
+  # -- Founder-investors --
+  - { name: Sam Altman, tier: key, country: US }
+  - { name: Jeff Bezos, tier: key, country: US }
+  - { name: Eric Schmidt, tier: key, country: US }
+  - { name: Patrick Collison, tier: watch, country: US }
+  - { name: John Collison, tier: watch, country: US }
+  - { name: Ali Ghodsi, tier: watch, country: US }
+  - { name: Dylan Field, tier: watch, country: US }
+  - { name: Alexandr Wang, tier: watch, country: US }
+  # -- Corporate capital allocators (CEOs — mostly a proxy for their firm's direction) --
+  - { name: Satya Nadella, tier: watch, country: US }
+  - { name: Sundar Pichai, tier: watch, country: US }
+  - { name: Andy Jassy, tier: watch, country: US }
+  - { name: Mark Zuckerberg, tier: watch, country: US }
   - { name: Jensen Huang, tier: watch, country: US }
-  - { name: Peter Thiel, tier: watch, country: US }
+  - { name: Lisa Su, tier: watch, country: US }
+  - { name: C.C. Wei, tier: watch, country: TW }
+  - { name: Cristiano Amon, tier: watch, country: US }
+  - { name: Larry Ellison, tier: watch, country: US }
+  # -- Deep-tech specialists --
+  - { name: Peter Barrett, tier: watch, country: US }
+  - { name: Bill Gurley, tier: watch, country: US }
+  - { name: Mike Maples Jr., tier: watch, country: US }
+  - { name: Trae Stephens, tier: key, country: US }
+  - { name: Hemant Taneja, tier: watch, country: US }
+  - { name: Bill Janeway, tier: watch, country: US }
+  # -- Global capital (macro / hedge — mostly public positions, not angel checks) --
+  - { name: Masayoshi Son, tier: key, country: JP }
+  - { name: Stanley Druckenmiller, tier: watch, country: US }
+  - { name: Bill Ackman, tier: watch, country: US }
+  - { name: David Tepper, tier: watch, country: US }
+  - { name: Ray Dalio, tier: watch, country: US }
 
 alt_managers:   # PE / infra / credit / mega-funds
   - { name: SoftBank, tier: key, country: JP }

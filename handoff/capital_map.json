@@ -1,8 +1,8 @@
 {
   "generated": "2026-08-06",
   "totals": {
-    "nodes": 37,
-    "flows": 25,
+    "nodes": 49,
+    "flows": 35,
     "sectors": 12
   },
   "nodes": [
@@ -179,7 +179,7 @@
       "label": "Peter Thiel",
       "kind": "allocator",
       "cls": "individual",
-      "tier": "watch",
+      "tier": "key",
       "sector": null,
       "id": "alloc:Peter Thiel",
       "deals": 2,
@@ -364,7 +364,7 @@
       "tier": null,
       "sector": "semiconductors",
       "id": "target:Etched",
-      "deals": 3,
+      "deals": 4,
       "capital": 600000000.0,
       "first_seen": "2026-07-23",
       "last_activity": "2026-07-23",
@@ -407,6 +407,32 @@
       "capital": 120000000.0,
       "first_seen": "2026-07-07",
       "last_activity": "2026-07-07",
+      "stale": false
+    },
+    {
+      "label": "Jeff Bezos",
+      "kind": "allocator",
+      "cls": "individual",
+      "tier": "key",
+      "sector": null,
+      "id": "alloc:Jeff Bezos",
+      "deals": 5,
+      "capital": 100000000.0,
+      "first_seen": "2026-06-25",
+      "last_activity": "2026-07-20",
+      "stale": false
+    },
+    {
+      "label": "Flourish",
+      "kind": "target",
+      "cls": "private",
+      "tier": null,
+      "sector": "ai-labs",
+      "id": "target:Flourish",
+      "deals": 1,
+      "capital": 100000000.0,
+      "first_seen": "2026-07-02",
+      "last_activity": "2026-07-02",
       "stale": false
     },
     {
@@ -462,29 +488,159 @@
       "stale": false
     },
     {
-      "label": "Sam Altman",
+      "label": "Elad Gil",
+      "kind": "allocator",
+      "cls": "individual",
+      "tier": "key",
+      "sector": null,
+      "id": "alloc:Elad Gil",
+      "deals": 1,
+      "capital": 0.0,
+      "first_seen": "2026-06-17",
+      "last_activity": "2026-06-17",
+      "stale": false
+    },
+    {
+      "label": "Odyssey",
+      "kind": "target",
+      "cls": "private",
+      "tier": null,
+      "sector": "ai-labs",
+      "id": "target:Odyssey",
+      "deals": 2,
+      "capital": 0.0,
+      "first_seen": "2026-06-17",
+      "last_activity": "2026-06-17",
+      "stale": false
+    },
+    {
+      "label": "Garry Tan",
       "kind": "allocator",
       "cls": "individual",
       "tier": "watch",
       "sector": null,
-      "id": "alloc:Sam Altman",
-      "deals": 1,
+      "id": "alloc:Garry Tan",
+      "deals": 2,
       "capital": 0.0,
-      "first_seen": "2026-06-26",
-      "last_activity": "2026-06-26",
+      "first_seen": "2026-06-17",
+      "last_activity": "2026-07-07",
       "stale": false
     },
     {
-      "label": "Alfred",
+      "label": "Monogram",
+      "kind": "target",
+      "cls": "private",
+      "tier": null,
+      "sector": "ai-labs",
+      "id": "target:Monogram",
+      "deals": 1,
+      "capital": 0.0,
+      "first_seen": "2026-07-07",
+      "last_activity": "2026-07-07",
+      "stale": false
+    },
+    {
+      "label": "General Intuition",
+      "kind": "target",
+      "cls": "private",
+      "tier": null,
+      "sector": "ai-labs",
+      "id": "target:General Intuition",
+      "deals": 2,
+      "capital": 0.0,
+      "first_seen": "2026-06-25",
+      "last_activity": "2026-06-25",
+      "stale": false
+    },
+    {
+      "label": "Eric Schmidt",
+      "kind": "allocator",
+      "cls": "individual",
+      "tier": "key",
+      "sector": null,
+      "id": "alloc:Eric Schmidt",
+      "deals": 1,
+      "capital": 0.0,
+      "first_seen": "2026-06-25",
+      "last_activity": "2026-06-25",
+      "stale": false
+    },
+    {
+      "label": "CuspAI",
+      "kind": "target",
+      "cls": "private",
+      "tier": null,
+      "sector": "ai-labs",
+      "id": "target:CuspAI",
+      "deals": 1,
+      "capital": 0.0,
+      "first_seen": "2026-07-20",
+      "last_activity": "2026-07-20",
+      "stale": false
+    },
+    {
+      "label": "Prometheus",
       "kind": "target",
       "cls": "private",
       "tier": null,
       "sector": "robotics",
-      "id": "target:Alfred",
+      "id": "target:Prometheus",
       "deals": 1,
       "capital": 0.0,
-      "first_seen": "2026-06-26",
-      "last_activity": "2026-06-26",
+      "first_seen": "2026-07-02",
+      "last_activity": "2026-07-02",
+      "stale": false
+    },
+    {
+      "label": "Generalist AI",
+      "kind": "target",
+      "cls": "private",
+      "tier": null,
+      "sector": "robotics",
+      "id": "target:Generalist AI",
+      "deals": 1,
+      "capital": 0.0,
+      "first_seen": "2026-07-02",
+      "last_activity": "2026-07-02",
+      "stale": false
+    },
+    {
+      "label": "Reid Hoffman",
+      "kind": "allocator",
+      "cls": "individual",
+      "tier": "key",
+      "sector": null,
+      "id": "alloc:Reid Hoffman",
+      "deals": 1,
+      "capital": 0.0,
+      "first_seen": "2026-07-24",
+      "last_activity": "2026-07-24",
+      "stale": false
+    },
+    {
+      "label": "Prentis",
+      "kind": "target",
+      "cls": "private",
+      "tier": null,
+      "sector": "ai-labs",
+      "id": "target:Prentis",
+      "deals": 1,
+      "capital": 0.0,
+      "first_seen": "2026-07-24",
+      "last_activity": "2026-07-24",
+      "stale": false
+    },
+    {
+      "label": "Stanley Druckenmiller",
+      "kind": "allocator",
+      "cls": "individual",
+      "tier": "watch",
+      "sector": null,
+      "id": "alloc:Stanley Druckenmiller",
+      "deals": 1,
+      "capital": 0.0,
+      "first_seen": "2026-07-23",
+      "last_activity": "2026-07-23",
       "stale": false
     }
   ],
@@ -610,23 +766,123 @@
       "tier": 1
     },
     {
+      "source": "alloc:Elad Gil",
+      "target": "target:Odyssey",
+      "sector": "ai-labs",
+      "event_type": "funding_round",
+      "amount": null,
+      "status": "verified_alpha",
+      "date": "2026-06-17",
+      "tier": 3
+    },
+    {
+      "source": "alloc:Garry Tan",
+      "target": "target:Odyssey",
+      "sector": "ai-labs",
+      "event_type": "funding_round",
+      "amount": null,
+      "status": "verified_alpha",
+      "date": "2026-06-17",
+      "tier": 3
+    },
+    {
+      "source": "alloc:Garry Tan",
+      "target": "target:Monogram",
+      "sector": "ai-labs",
+      "event_type": "funding_round",
+      "amount": null,
+      "status": "verified_alpha",
+      "date": "2026-07-07",
+      "tier": 3
+    },
+    {
+      "source": "alloc:Jeff Bezos",
+      "target": "target:General Intuition",
+      "sector": "ai-labs",
+      "event_type": "funding_round",
+      "amount": null,
+      "status": "verified_alpha",
+      "date": "2026-06-25",
+      "tier": 3
+    },
+    {
+      "source": "alloc:Eric Schmidt",
+      "target": "target:General Intuition",
+      "sector": "ai-labs",
+      "event_type": "funding_round",
+      "amount": null,
+      "status": "verified_alpha",
+      "date": "2026-06-25",
+      "tier": 3
+    },
+    {
+      "source": "alloc:Jeff Bezos",
+      "target": "target:CuspAI",
+      "sector": "ai-labs",
+      "event_type": "funding_round",
+      "amount": null,
+      "status": "verified_alpha",
+      "date": "2026-07-20",
+      "tier": 3
+    },
+    {
+      "source": "alloc:Jeff Bezos",
+      "target": "target:Prometheus",
+      "sector": "robotics",
+      "event_type": "funding_round",
+      "amount": null,
+      "status": "candidate",
+      "date": "2026-07-02",
+      "tier": 3
+    },
+    {
+      "source": "alloc:Jeff Bezos",
+      "target": "target:Generalist AI",
+      "sector": "robotics",
+      "event_type": "funding_round",
+      "amount": null,
+      "status": "candidate",
+      "date": "2026-07-02",
+      "tier": 2
+    },
+    {
+      "source": "alloc:Jeff Bezos",
+      "target": "target:Flourish",
+      "sector": "ai-labs",
+      "event_type": "funding_round",
+      "amount": 100000000.0,
+      "status": "candidate",
+      "date": "2026-07-02",
+      "tier": 3
+    },
+    {
+      "source": "alloc:Reid Hoffman",
+      "target": "target:Prentis",
+      "sector": "ai-labs",
+      "event_type": "fund_launch",
+      "amount": null,
+      "status": "candidate",
+      "date": "2026-07-24",
+      "tier": 3
+    },
+    {
       "source": "alloc:Peter Thiel",
       "target": "target:Etched",
       "sector": "semiconductors",
-      "event_type": "minority_stake",
+      "event_type": "funding_round",
       "amount": null,
       "status": "candidate",
       "date": "2026-07-23",
       "tier": 3
     },
     {
-      "source": "alloc:Sam Altman",
-      "target": "target:Alfred",
-      "sector": "robotics",
+      "source": "alloc:Stanley Druckenmiller",
+      "target": "target:Etched",
+      "sector": "semiconductors",
       "event_type": "funding_round",
       "amount": null,
       "status": "candidate",
-      "date": "2026-06-26",
+      "date": "2026-07-23",
       "tier": 3
     },
     {
@@ -760,10 +1016,16 @@
       "signals": []
     },
     "ai-labs": {
-      "deals": 3,
-      "capital": 51024585000.0,
-      "allocators": 3,
-      "signals": []
+      "deals": 11,
+      "capital": 51124585000.0,
+      "allocators": 8,
+      "signals": [
+        {
+          "theme": "ai-labs: 4 key allocators in 30d",
+          "rule": "sector_swarm",
+          "strength": 4.0
+        }
+      ]
     },
     "ai-services-rollup": {
       "deals": 1,
@@ -808,15 +1070,15 @@
       "signals": []
     },
     "robotics": {
-      "deals": 2,
+      "deals": 3,
       "capital": 1700000000.0,
       "allocators": 2,
       "signals": []
     },
     "semiconductors": {
-      "deals": 3,
+      "deals": 4,
       "capital": 600000000.0,
-      "allocators": 3,
+      "allocators": 4,
       "signals": []
     }
   }
