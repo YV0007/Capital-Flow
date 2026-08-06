@@ -40,8 +40,14 @@ tune the thresholds as the data grows.
   carrying a signal.
 - Never silently remove an entity that was visible last cycle — if dropped, note it.
 
-## Open items to finalize with the user
-- Exact node-drop policy (2 handoffs? a hard date?).
-- How much visual latitude the dashboard session has (restyle vs. data-only updates).
-- Delivery mechanism: committed `handoff/` artifact the dashboard pulls, vs. manual
-  file drop. (See ARCHITECTURE.md "Handoff contract".)
+## Finalized decisions (see handoff/DASHBOARD_BRIEF.md §5)
+- **Node-drop policy:** de-emphasize on first stale (180d); drop from the visual only
+  after two consecutive weekly updates stale + no verified flow; keep in data always.
+- **Visual latitude:** the dashboard session owns visuals completely; zero data latitude
+  (never invent or override entities/flows/amounts/status).
+- **Delivery:** engine writes `capital_map.json` → `ab-investment/src/data/capitalMap.json`,
+  imported at build time; Vercel redeploys on push. A user-uploaded file overwrites the
+  same path and renders identically.
+
+The full consumer specification lives in **handoff/DASHBOARD_BRIEF.md** — hand that entire
+file to an ab-investment Claude Code session to rebuild the map.
