@@ -66,6 +66,19 @@ def run(week: str) -> str:
         L.append("_No activity in the last 30 days._")
     L.append("")
 
+    th = con.execute(
+        """SELECT theme, COUNT(*) n, SUM(COALESCE(amount_usd,0)) total,
+                  COUNT(DISTINCT allocator_id) allocs FROM events
+           WHERE theme IS NOT NULL AND disclosed_date >= date('now','-30 days')
+           GROUP BY theme ORDER BY total DESC""").fetchall()
+    if th:
+        L.append("## Themes — last 30 days")
+        L.append("| Theme | Capital | Deals | Distinct allocators |")
+        L.append("|---|--:|--:|--:|")
+        for t in th:
+            L.append(f"| {t['theme']} | {_fmt_amt(t['total'])} | {t['n']} | {t['allocs']} |")
+        L.append("")
+
     bens = con.execute(
         """SELECT b.ticker, b.company, b.confidence, a.name allocator, e.target
            FROM beneficiaries b JOIN events e ON e.id=b.event_id
@@ -88,6 +101,41 @@ def run(week: str) -> str:
     if not cands:
         L.append("_None._")
     L.append("")
+
+    # Coverage check (C5/WS2): key & core allocators that produced nothing this run.
+    silent = con.execute(
+        """SELECT a.name, a.class, a.tier FROM allocators a
+           WHERE a.tier IN ('key','core')
+             AND NOT EXISTS (SELECT 1 FROM events e
+                             WHERE e.allocator_id = a.id AND e.run_week = ?)
+           ORDER BY a.tier, a.class, a.name""", (week,)).fetchall()
+    total_kc = con.execute(
+        "SELECT COUNT(*) FROM allocators WHERE tier IN ('key','core')").fetchone()[0]
+    covered = total_kc - len(silent)
+    L.append(f"## Coverage — {covered}/{total_kc} key & core allocators produced events")
+    if silent:
+        L.append(f"_Silent this run ({len(silent)}) — verify these are genuinely quiet, "
+                 f"not missed:_")
+        L.append("")
+        by_class = {}
+        for s in silent:
+            by_class.setdefault(s["class"], []).append(s["name"])
+        for cls, names in sorted(by_class.items()):
+            L.append(f"- **{cls}**: {', '.join(names)}")
+    else:
+        L.append("_Every key & core allocator produced at least one event._")
+    L.append("")
+
+    # New allocators discovered co-investing (WS1) — promote to the watchlist.
+    disc = con.execute(
+        """SELECT name, suggested_class, seen_with, rationale FROM universe_candidates
+           WHERE run_week = ? ORDER BY name""", (week,)).fetchall()
+    if disc:
+        L.append(f"## Discovered allocators — promote to watchlist? ({len(disc)})")
+        for d in disc:
+            L.append(f"- **{d['name']}** ({d['suggested_class'] or '?'}) — seen with "
+                     f"{d['seen_with'] or '—'}. {d['rationale'] or ''}")
+        L.append("")
 
     con.close()
     out = "\n".join(L)

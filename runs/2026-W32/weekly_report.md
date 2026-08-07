@@ -3,8 +3,10 @@
 ## Signals fired
 - **NVDA (NVIDIA): 9 private flows converge**  _(rule: beneficiary_concentration, strength 9.0)_
 - **VRT (Vertiv): 6 private flows converge**  _(rule: beneficiary_concentration, strength 6.0)_
+- **ai_infrastructure: 5 key allocators converge (30d)**  _(rule: theme_swarm, strength 5.0)_
 - **ETN (Eaton): 5 private flows converge**  _(rule: beneficiary_concentration, strength 5.0)_
 - **ai-labs: 4 key allocators in 30d**  _(rule: sector_swarm, strength 4.0)_
+- **frontier_ai: 4 key allocators converge (30d)**  _(rule: theme_swarm, strength 4.0)_
 - **GEV (GE Vernova): 4 private flows converge**  _(rule: beneficiary_concentration, strength 4.0)_
 - **TSM (Taiwan Semiconductor): 4 private flows converge**  _(rule: beneficiary_concentration, strength 4.0)_
 - **datacenters: 3 key allocators in 30d**  _(rule: sector_swarm, strength 3.0)_
@@ -46,13 +48,23 @@
 |---|--:|--:|--:|
 | datacenters | $74.8B | 5 | 4 |
 | ai-labs | $51.0B | 5 | 5 |
-| ai-diversified | $8.0B | 1 | 1 |
-| ai-data-platform | $3.0B | 1 | 1 |
+| ai-applications | $8.0B | 1 | 1 |
+| ai-data | $3.0B | 1 | 1 |
 | robotics | $1.7B | 1 | 1 |
 | nuclear | $1.0B | 1 | 1 |
 | semiconductors | $600M | 4 | 4 |
 | defense-tech | $320M | 2 | 2 |
 | networking | $0 | 1 | 1 |
+
+## Themes — last 30 days
+| Theme | Capital | Deals | Distinct allocators |
+|---|--:|--:|--:|
+| ai_infrastructure | $75.4B | 10 | 9 |
+| frontier_ai | $51.0B | 5 | 5 |
+| ai_applications | $11.0B | 2 | 1 |
+| robotics_embodiment | $1.7B | 1 | 1 |
+| energy_for_ai | $1.0B | 1 | 1 |
+| defense_ai | $320M | 2 | 2 |
 
 ## Public beneficiaries mapped (36)
 | Ticker | Company | From flow | Confidence |
@@ -95,14 +107,22 @@
 | NVDA | NVIDIA | Galaxy Digital→Galaxy Helios Data Centers II (Dickens County TX) | medium |
 
 ## Candidates to watch (11)
-- Coatue → Databricks (ai-data-platform, funding_round)
-- Coatue → Coatue Retail Fund (ai-diversified, fund_launch)
+- Altimeter → Thrive Holdings (ai-applications, minority_stake)
+- Coatue → Coatue Retail Fund (ai-applications, fund_launch)
+- Coatue → Databricks (ai-data, funding_round)
 - Jeff Bezos → Flourish (ai-labs, funding_round)
 - Reid Hoffman → Prentis (ai-labs, fund_launch)
-- Altimeter → Thrive Holdings (ai-services-rollup, minority_stake)
 - Blackstone → Japan AI data centers (datacenters, project_finance)
 - Peter Thiel → Panthalassa (datacenters, funding_round)
 - Jeff Bezos → Prometheus (robotics, funding_round)
 - Jeff Bezos → Generalist AI (robotics, funding_round)
 - Peter Thiel → Etched (semiconductors, funding_round)
 - Stanley Druckenmiller → Etched (semiconductors, funding_round)
+
+## Coverage — 16/46 key & core allocators produced events
+_Silent this run (30) — verify these are genuinely quiet, not missed:_
+
+- **corporate**: Alphabet, Amazon, Microsoft, Oracle
+- **individual**: Alexandr Wang, Austin Russell, Daniel Gross, David Sacks, Delian Asparouhov, Dylan Field, Elon Musk, Joe Lonsdale, Keith Rabois, Laura Deming, Lucy Guo, Luke Nosek, Max Levchin, Nat Friedman, Palmer Luckey, Roelof Botha, Trae Stephens, Marc Andreessen, Masayoshi Son, Sam Altman, Vinod Khosla
+- **sovereign**: MGX, Mubadala, Saudi PIF
+- **vc**: Founders Fund, Thrive Capital

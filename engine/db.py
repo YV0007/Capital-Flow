@@ -21,7 +21,7 @@ HANDOFF_DIR = ROOT / "handoff"
 EVENT_COLUMNS = [
     "event_date", "disclosed_date", "allocator", "allocator_class", "target",
     "target_type", "sector", "subsector", "event_type", "amount_usd",
-    "amount_estimated", "status", "source_tier", "source_url", "origin_id", "notes",
+    "amount_estimated", "status", "source_tier", "source_url", "origin_id", "theme", "notes",
 ]
 
 EVENT_TYPES = {
@@ -62,6 +62,8 @@ def load_config() -> dict:
         "sources": _load("sources.yaml"),
         "rules": rules.get("rules", []),
         "sectors": set(rules.get("sectors") or []),
+        "themes": set(rules.get("themes") or []),
+        "theme_defaults": rules.get("theme_defaults") or {},
     }
 
 

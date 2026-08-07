@@ -3,8 +3,9 @@
   "totals": {
     "nodes": 50,
     "flows": 36,
-    "sectors": 12
+    "sectors": 10
   },
+  "confidence_threshold": 60,
   "nodes": [
     {
       "label": "BlackRock",
@@ -179,7 +180,7 @@
       "kind": "target",
       "cls": "fund",
       "tier": null,
-      "sector": "ai-diversified",
+      "sector": "ai-applications",
       "network": null,
       "id": "target:Coatue Retail Fund",
       "deals": 1,
@@ -291,7 +292,7 @@
       "kind": "target",
       "cls": "private",
       "tier": null,
-      "sector": "ai-data-platform",
+      "sector": "ai-data",
       "network": null,
       "id": "target:Databricks",
       "deals": 1,
@@ -333,7 +334,7 @@
       "kind": "target",
       "cls": "private",
       "tier": null,
-      "sector": "ai-services-rollup",
+      "sector": "ai-applications",
       "network": null,
       "id": "target:Thrive Holdings",
       "deals": 1,
@@ -1107,7 +1108,7 @@
     {
       "source": "alloc:Coatue",
       "target": "target:Databricks",
-      "sector": "ai-data-platform",
+      "sector": "ai-data",
       "event_type": "funding_round",
       "amount": 3000000000.0,
       "status": "candidate",
@@ -1119,7 +1120,7 @@
     {
       "source": "alloc:Altimeter",
       "target": "target:Thrive Holdings",
-      "sector": "ai-services-rollup",
+      "sector": "ai-applications",
       "event_type": "minority_stake",
       "amount": 2000000000.0,
       "status": "candidate",
@@ -1131,7 +1132,7 @@
     {
       "source": "alloc:Coatue",
       "target": "target:Coatue Retail Fund",
-      "sector": "ai-diversified",
+      "sector": "ai-applications",
       "event_type": "fund_launch",
       "amount": 8000000000.0,
       "status": "candidate",
@@ -1143,20 +1144,14 @@
   ],
   "sectors": {
     "ai-applications": {
-      "deals": 2,
-      "capital": 240000000.0,
-      "allocators": 2,
+      "deals": 4,
+      "capital": 10240000000.0,
+      "allocators": 3,
       "signals": []
     },
-    "ai-data-platform": {
+    "ai-data": {
       "deals": 1,
       "capital": 3000000000.0,
-      "allocators": 1,
-      "signals": []
-    },
-    "ai-diversified": {
-      "deals": 1,
-      "capital": 8000000000.0,
       "allocators": 1,
       "signals": []
     },
@@ -1171,17 +1166,16 @@
           "strength": 4.0
         },
         {
+          "theme": "frontier_ai: 4 key allocators converge (30d)",
+          "rule": "theme_swarm",
+          "strength": 4.0
+        },
+        {
           "theme": "ai-labs: smart money \u2014 Elad Gil led, 2 followed in 21d",
           "rule": "smart_money_follow",
           "strength": 3.0
         }
       ]
-    },
-    "ai-services-rollup": {
-      "deals": 1,
-      "capital": 2000000000.0,
-      "allocators": 1,
-      "signals": []
     },
     "datacenters": {
       "deals": 8,
@@ -1197,6 +1191,11 @@
           "theme": "VRT (Vertiv): 6 private flows converge",
           "rule": "beneficiary_concentration",
           "strength": 6.0
+        },
+        {
+          "theme": "ai_infrastructure: 5 key allocators converge (30d)",
+          "rule": "theme_swarm",
+          "strength": 5.0
         },
         {
           "theme": "ETN (Eaton): 5 private flows converge",
@@ -1266,6 +1265,106 @@
           "strength": 3.0
         }
       ]
+    }
+  },
+  "themes": {
+    "ai_applications": {
+      "deals": 5,
+      "capital": 13240000000.0,
+      "allocators": 3,
+      "signals": []
+    },
+    "ai_infrastructure": {
+      "deals": 13,
+      "capital": 105497000000.0,
+      "allocators": 10,
+      "signals": [
+        {
+          "theme": "datacenters: 3 key allocators in 30d",
+          "rule": "sector_swarm",
+          "strength": 3.0
+        },
+        {
+          "theme": "ai_infrastructure: 5 key allocators converge (30d)",
+          "rule": "theme_swarm",
+          "strength": 5.0
+        },
+        {
+          "theme": "datacenters: smart money \u2014 DigitalBridge led, 2 followed in 21d",
+          "rule": "smart_money_follow",
+          "strength": 3.0
+        },
+        {
+          "theme": "ETN (Eaton): 5 private flows converge",
+          "rule": "beneficiary_concentration",
+          "strength": 5.0
+        },
+        {
+          "theme": "GEV (GE Vernova): 4 private flows converge",
+          "rule": "beneficiary_concentration",
+          "strength": 4.0
+        },
+        {
+          "theme": "NVDA (NVIDIA): 9 private flows converge",
+          "rule": "beneficiary_concentration",
+          "strength": 9.0
+        },
+        {
+          "theme": "VRT (Vertiv): 6 private flows converge",
+          "rule": "beneficiary_concentration",
+          "strength": 6.0
+        }
+      ]
+    },
+    "defense_ai": {
+      "deals": 2,
+      "capital": 320000000.0,
+      "allocators": 2,
+      "signals": []
+    },
+    "energy_for_ai": {
+      "deals": 2,
+      "capital": 26000000000.0,
+      "allocators": 2,
+      "signals": []
+    },
+    "frontier_ai": {
+      "deals": 11,
+      "capital": 51124585000.0,
+      "allocators": 8,
+      "signals": [
+        {
+          "theme": "ai-labs: 4 key allocators in 30d",
+          "rule": "sector_swarm",
+          "strength": 4.0
+        },
+        {
+          "theme": "frontier_ai: 4 key allocators converge (30d)",
+          "rule": "theme_swarm",
+          "strength": 4.0
+        },
+        {
+          "theme": "ai-labs: smart money \u2014 Elad Gil led, 2 followed in 21d",
+          "rule": "smart_money_follow",
+          "strength": 3.0
+        },
+        {
+          "theme": "MU (Micron): 3 private flows converge",
+          "rule": "beneficiary_concentration",
+          "strength": 3.0
+        },
+        {
+          "theme": "TSM (Taiwan Semiconductor): 4 private flows converge",
+          "rule": "beneficiary_concentration",
+          "strength": 4.0
+        }
+      ]
+    },
+    "robotics_embodiment": {
+      "deals": 3,
+      "capital": 1700000000.0,
+      "allocators": 2,
+      "signals": []
     }
   }
 }

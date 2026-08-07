@@ -24,6 +24,14 @@ def _num(v):
 # Admiralty-style two-axis confidence (docs/ENHANCEMENT_STRATEGY.md §6).
 # reliability A–E from source tier; credibility 1–5 from the agent's status
 # (a corroboration proxy until C4 has agents supply it directly).
+# Non-canonical sector slugs seen from agents → canonical taxonomy.
+SECTOR_ALIASES = {
+    "ai-data-platform": "ai-data",
+    "ai-services-rollup": "ai-applications",
+    "ai-diversified": "ai-applications",
+    "ai-app": "ai-applications",
+}
+
 _RELIABILITY = {1: "A", 2: "B", 3: "C", 4: "D", 5: "E"}
 _REL_WEIGHT = {"A": 100, "B": 80, "C": 60, "D": 40, "E": 20}
 _CRED_WEIGHT = {1: 100, 2: 85, 3: 65, 4: 40, 5: 20}
@@ -41,7 +49,7 @@ def _grade(tier: int, status: str):
     return reliability, credibility, score
 
 
-def _validate(row: dict, agent: str, sectors: set):
+def _validate(row: dict, agent: str, sectors: set, themes: set = None, theme_defaults: dict = None):
     """Return (clean|None, class|None, errors, warnings)."""
     errors, warnings = [], []
     disclosed = (row.get("disclosed_date") or "").strip()
@@ -84,6 +92,8 @@ def _validate(row: dict, agent: str, sectors: set):
     elif cls not in db.CLASSES:
         errors.append(f"bad allocator_class '{cls}'")
 
+    # Fold known non-canonical sector slugs agents have produced into the taxonomy.
+    sector = SECTOR_ALIASES.get(sector, sector)
     if sectors and sector and sector not in sectors:
         warnings.append(f"sector '{sector}' not in canonical taxonomy")
 
@@ -103,6 +113,12 @@ def _validate(row: dict, agent: str, sectors: set):
         "origin_id": (row.get("origin_id") or "").strip() or None,
         "allocator": allocator,
     }
+    # Theme (WS5): agent-supplied if canonical, else defaulted from sector.
+    theme = (row.get("theme") or "").strip() or None
+    if theme and themes and theme not in themes:
+        warnings.append(f"theme '{theme}' not canonical")
+        theme = None
+    clean["theme"] = theme or (theme_defaults or {}).get(sector)
     reliability, credibility, score = _grade(tier, status)
     clean["source_reliability"] = reliability
     clean["info_credibility"] = credibility
@@ -116,13 +132,13 @@ def _upsert_event(con, e: dict, allocator_id: int, week: str, agent: str):
     try:
         con.execute(
             """INSERT INTO events (event_date, disclosed_date, allocator_id, target,
-                 target_type, sector, subsector, event_type, amount_usd, amount_estimated,
-                 status, source_tier, source_url, source_reliability, info_credibility,
-                 confidence_score, origin_id, run_week, agent, notes)
+                 target_type, sector, subsector, theme, event_type, amount_usd,
+                 amount_estimated, status, source_tier, source_url, source_reliability,
+                 info_credibility, confidence_score, origin_id, run_week, agent, notes)
                VALUES (:event_date,:disclosed_date,:aid,:target,:target_type,:sector,
-                 :subsector,:event_type,:amount_usd,:amount_estimated,:status,:source_tier,
-                 :source_url,:source_reliability,:info_credibility,:confidence_score,
-                 :origin_id,:week,:agent,:notes)""",
+                 :subsector,:theme,:event_type,:amount_usd,:amount_estimated,:status,
+                 :source_tier,:source_url,:source_reliability,:info_credibility,
+                 :confidence_score,:origin_id,:week,:agent,:notes)""",
             {**e, "aid": allocator_id, "week": week, "agent": agent},
         )
         return "inserted"
@@ -200,7 +216,9 @@ def ingest_week(week: str) -> dict:
                 continue
             with fpath.open(newline="") as f:
                 for i, row in enumerate(csv.DictReader(f), start=2):
-                    clean, cls, errs, warns = _validate(row, agent, cfg["sectors"])
+                    clean, cls, errs, warns = _validate(
+                        row, agent, cfg["sectors"], cfg.get("themes"),
+                        cfg.get("theme_defaults"))
                     stats["warnings"] += len(warns)
                     for w in warns:
                         problems.append(f"{agent}/{fname}:{i} WARN {w}")

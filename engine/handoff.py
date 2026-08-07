@@ -21,6 +21,7 @@ from datetime import date, datetime
 from . import db
 
 STALE_DAYS = 180  # entities with no activity beyond this are flagged stale (not dropped)
+CONFIDENCE_THRESHOLD = 60  # D3: main-map floor; flows scoring below this belong in "Watch"
 
 
 def _build_map(con) -> dict:
@@ -82,12 +83,32 @@ def _build_map(con) -> dict:
         sectors[t["sector"]]["signals"].append(
             {"theme": t["theme"], "rule": t["rule"], "strength": t["strength"]})
 
+    # Theme aggregates (WS5) — the cross-cutting dimension alongside sectors.
+    themes_agg = {}
+    for t in con.execute(
+        """SELECT theme, COUNT(*) n, SUM(COALESCE(amount_usd,0)) total,
+                  COUNT(DISTINCT allocator_id) allocs FROM events
+           WHERE theme IS NOT NULL GROUP BY theme""").fetchall():
+        themes_agg[t["theme"]] = {"deals": t["n"], "capital": t["total"],
+                                  "allocators": t["allocs"], "signals": []}
+    for t in con.execute(
+        """SELECT th.theme AS label, th.rule, th.strength, e.theme AS ev_theme
+           FROM themes th JOIN events e
+             ON e.id = CAST(json_extract(th.evidence, '$[0]') AS INTEGER)
+           WHERE e.theme IS NOT NULL""").fetchall():
+        if t["ev_theme"] in themes_agg:
+            themes_agg[t["ev_theme"]]["signals"].append(
+                {"theme": t["label"], "rule": t["rule"], "strength": t["strength"]})
+
     return {
         "generated": today,
         "totals": {"nodes": len(nodes), "flows": len(flows), "sectors": len(sectors)},
+        # D3: flows at or above this confidence score belong on the main map; below → Watch.
+        "confidence_threshold": CONFIDENCE_THRESHOLD,
         "nodes": sorted(nodes.values(), key=lambda n: -n["capital"]),
         "flows": flows,
         "sectors": sectors,
+        "themes": themes_agg,
     }
 
 

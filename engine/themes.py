@@ -119,6 +119,24 @@ def _network_convergence(con, week, p):
     return out
 
 
+def _theme_swarm(con, week, p):
+    """Like sector_swarm but on the cross-cutting THEME dimension (WS5) — catches
+    convergence that spans sectors (e.g. energy_for_ai across power + nuclear)."""
+    win = f"-{p.get('window_days', 30)} days"
+    rows = con.execute(
+        """SELECT e.theme AS theme, COUNT(DISTINCT e.allocator_id) AS inv,
+                  GROUP_CONCAT(e.id) AS ids, MIN(e.sector) AS sector
+           FROM events e JOIN allocators a ON a.id = e.allocator_id
+           WHERE e.theme IS NOT NULL AND a.tier IN ('key','core')
+                 AND e.status IN ('verified','verified_alpha')
+                 AND e.disclosed_date >= date('now', ?)
+           GROUP BY e.theme HAVING inv >= ?""",
+        (win, p.get("min_allocators", 4))).fetchall()
+    return [(f"{r['theme']}: {r['inv']} key allocators converge ({p.get('window_days',30)}d)",
+             r["sector"], "theme_swarm", json.dumps([int(x) for x in r["ids"].split(",")]),
+             float(r["inv"])) for r in rows]
+
+
 def _smart_money_follow(con, week, p):
     """A key/core allocator enters a sector, then N+ others follow shortly after —
     the 'smart money leads, the rest chase' pattern."""
@@ -185,6 +203,7 @@ def _beneficiary_concentration(con, week, p):
 
 RULES = {
     "sector_swarm": _sector_swarm,
+    "theme_swarm": _theme_swarm,
     "capital_acceleration": _capital_acceleration,
     "first_entry": _first_entry,
     "smart_money_follow": _smart_money_follow,

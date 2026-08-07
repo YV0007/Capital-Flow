@@ -17,6 +17,40 @@ sectors:
   - networking      # optical interconnect / photonics
   - robotics        # embodiment / humanoids
   - defense-tech    # defense outside the prime-contractor route (Anduril)
+  - ai-applications # application/vertical-layer AI (legal, enterprise, consumer)
+  - ai-data         # data platforms & labeling that feed models (Databricks, Scale)
+
+themes:
+  # Cross-cutting investment themes — ORTHOGONAL to `sectors` above. A deal has one
+  # structural sector (where it sits in the stack) and one theme (what narrative it
+  # belongs to). Signals and consensus form around themes.
+  - frontier_ai          # frontier model labs & training runs
+  - ai_infrastructure    # compute, datacenters, networking, the physical stack
+  - ai_applications      # application/vertical-layer AI (legal, data platforms, SaaS)
+  - defense_ai           # defense, national security, autonomy
+  - energy_for_ai        # power, nuclear, grid built to serve compute
+  - robotics_embodiment  # robotics, physical AI, autonomous systems
+  - sovereign_ai         # state-backed AI capacity and national champions
+  - biotech_ai           # AI for bio, longevity, scientific discovery
+  - space                # space & orbital infrastructure
+  - crypto_ai            # crypto/decentralized compute × AI
+
+# Default sector -> theme mapping used when an agent doesn't supply a theme.
+theme_defaults:
+  ai-labs: frontier_ai
+  ai-compute: ai_infrastructure
+  semiconductors: ai_infrastructure
+  fab-equipment: ai_infrastructure
+  cloud-hyperscale: ai_infrastructure
+  neocloud: ai_infrastructure
+  datacenters: ai_infrastructure
+  networking: ai_infrastructure
+  power-energy: energy_for_ai
+  nuclear: energy_for_ai
+  robotics: robotics_embodiment
+  defense-tech: defense_ai
+  ai-applications: ai_applications
+  ai-data: ai_applications
 
 rules:
   - id: sector_swarm
@@ -25,6 +59,12 @@ rules:
     min_allocators: 3
     window_days: 30
     allocator_tier: key
+
+  - id: theme_swarm
+    description: "N distinct key allocators converge on the same THEME within a window
+      (cross-sector convergence — e.g. energy_for_ai across power + nuclear)"
+    min_allocators: 4
+    window_days: 30
 
   - id: capital_acceleration
     description: "Sector's rolling 90d capital total grew vs prior 90d by factor X"

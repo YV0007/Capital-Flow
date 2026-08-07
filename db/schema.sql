@@ -48,6 +48,7 @@ CREATE TABLE IF NOT EXISTS events (
     target_type      TEXT CHECK (target_type IN ('private','public','fund','project','asset')),
     sector           TEXT NOT NULL,       -- canonical sector slug (see config/rules.yaml)
     subsector        TEXT,
+    theme            TEXT,                -- cross-cutting theme, orthogonal to sector (WS5)
     event_type       TEXT NOT NULL CHECK (event_type IN
                        ('equity','funding_round','follow_on','acquisition','minority_stake',
                         'fund_launch','spv','grant','project_finance','corporate_investment',
