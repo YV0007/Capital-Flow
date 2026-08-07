@@ -1,37 +1,138 @@
 allocator,target,event_type,disclosed_date,ticker,company,rationale,confidence
-NVIDIA,Safe Superintelligence,minority_stake,2026-07-27,TSM,Taiwan Semiconductor,"Sole leading-edge foundry for the Vera Rubin GPUs SSI's compute is built on",high
-NVIDIA,Safe Superintelligence,minority_stake,2026-07-27,MU,Micron,"HBM memory supplier for the Vera Rubin accelerators SSI will run",medium
-Meta,Meta-BlackRock El Paso data center JV,spv,2026-07-28,VRT,Vertiv,"Power and thermal management for the ~1GW El Paso AI campus",high
-Meta,Meta-BlackRock El Paso data center JV,spv,2026-07-28,ETN,Eaton,"Electrical distribution/power infrastructure for the ~1GW hyperscale build",medium
-Meta,Meta-BlackRock El Paso data center JV,spv,2026-07-28,GEV,GE Vernova,"Power-generation and grid equipment for the ~1GW load",medium
-Meta,Meta-BlackRock El Paso data center JV,spv,2026-07-28,NVDA,NVIDIA,"Accelerators that populate Meta's El Paso AI compute campus",medium
-Sequoia,Valar Atomics,funding_round,2026-08-04,LEU,Centrus Energy,"US HALEU fuel supplier for the microreactors Valar mass-produces",low
-Sequoia,Valar Atomics,funding_round,2026-08-04,NVDA,NVIDIA,"Factory-nuclear reactors are built to power NVIDIA AI compute (a Valar reactor already ran an NVIDIA chip)",low
-Sequoia,Etched,funding_round,2026-07-23,TSM,Taiwan Semiconductor,"Fabs Etched's Sohu transformer-only inference ASIC at scale",high
-Sequoia,Etched,funding_round,2026-07-23,MU,Micron,"HBM memory for Etched's inference silicon (SK Hynix co-invested as memory partner)",medium
-Andreessen Horowitz,Etched,funding_round,2026-07-23,TSM,Taiwan Semiconductor,"Fabs Etched's Sohu transformer-only inference ASIC at scale",high
-Andreessen Horowitz,Etched,funding_round,2026-07-23,MU,Micron,"HBM memory supplier for Etched's inference hardware ramp",medium
-Andreessen Horowitz,Atoms,funding_round,2026-07-22,NVDA,NVIDIA,"Industrial-robotics/automation platform depends on NVIDIA compute for its AI stack (thematic)",low
-BlackRock,Aligned Data Centers,acquisition,2026-07-21,VRT,Vertiv,"Power/cooling supplier as the $40B platform expands its 51 campuses / 6.4GW",high
-BlackRock,Aligned Data Centers,acquisition,2026-07-21,ETN,Eaton,"Electrical distribution across Aligned's growing 6.4GW footprint",medium
-BlackRock,Aligned Data Centers,acquisition,2026-07-21,GEV,GE Vernova,"Power generation and grid equipment for capacity expansion",medium
-BlackRock,Aligned Data Centers,acquisition,2026-07-21,NVDA,NVIDIA,"Accelerators filling the 6.4GW of hyperscale-colocation capacity",medium
-Brookfield,Bloom Energy,project_finance,2026-06-30,BE,Bloom Energy,"Direct named partner; up-to-$25B framework builds/finances Bloom fuel-cell onsite power for AI datacenters",high
-Blue Owl,Kirkwood Infrastructure Group,spv,2026-07-08,GLW,Corning,"Optical fiber/cable supplier for Kirkwood's 200+ miles of new hyperscale fiber build",high
-Blue Owl,Kirkwood Infrastructure Group,spv,2026-07-08,CIEN,Ciena,"Optical networking/transport gear for the hyperscale fiber-connectivity platform",medium
-DigitalBridge,Nippon Gateway Infrastructure,acquisition,2026-07-01,VRT,Vertiv,"Power/cooling supplier as the new Japan colocation platform scales via greenfield + M&A",medium
-DigitalBridge,Nippon Gateway Infrastructure,acquisition,2026-07-01,NVDA,NVIDIA,"Accelerators that fill the Japan AI-colocation capacity (thematic)",low
-Blackstone,QTS Realty Trust,project_finance,2026-07-15,VRT,Vertiv,"Power/cooling supplier for QTS's 'Project Magnolia' datacenter buildout the loan refinances",high
-Blackstone,QTS Realty Trust,project_finance,2026-07-15,ETN,Eaton,"Electrical infrastructure across the QTS datacenter portfolio",medium
-Blackstone,QTS Realty Trust,project_finance,2026-07-15,NVDA,NVIDIA,"Accelerators populating QTS hyperscale capacity (thematic)",low
-BlackRock,Meta El Paso data center JV (Project Sopaipilla),project_finance,2026-07-28,VRT,Vertiv,"Power and thermal systems for the ~1GW El Paso AI campus",high
-BlackRock,Meta El Paso data center JV (Project Sopaipilla),project_finance,2026-07-28,ETN,Eaton,"Electrical infrastructure for the ~1GW hyperscale build",medium
-BlackRock,Meta El Paso data center JV (Project Sopaipilla),project_finance,2026-07-28,GEV,GE Vernova,"Power-generation equipment for the ~1GW load",medium
-BlackRock,Meta El Paso data center JV (Project Sopaipilla),project_finance,2026-07-28,NVDA,NVIDIA,"Accelerators that populate the El Paso AI compute campus",medium
-SoftBank,OpenAI,follow_on,2026-07-27,NVDA,NVIDIA,"$40B financing behind SoftBank's OpenAI equity ultimately funds OpenAI's NVIDIA compute",medium
-SoftBank,OpenAI,follow_on,2026-07-27,TSM,Taiwan Semiconductor,"Foundry for the accelerators and custom silicon OpenAI's capital buys",low
-SoftBank,OpenAI,follow_on,2026-07-27,AVGO,Broadcom,"OpenAI custom AI accelerator co-design partner and datacenter networking supplier",low
-Galaxy Digital,Galaxy Helios Data Centers II (Dickens County TX),project_finance,2026-07-28,VRT,Vertiv,"Power/cooling for the 400MW / 260MW-critical-IT Helios AI campus the notes finance",high
-Galaxy Digital,Galaxy Helios Data Centers II (Dickens County TX),project_finance,2026-07-28,ETN,Eaton,"Electrical distribution for the Dickens County AI datacenter build",medium
-Galaxy Digital,Galaxy Helios Data Centers II (Dickens County TX),project_finance,2026-07-28,GEV,GE Vernova,"Power-generation equipment for the 400MW campus",medium
-Galaxy Digital,Galaxy Helios Data Centers II (Dickens County TX),project_finance,2026-07-28,NVDA,NVIDIA,"Accelerators filling the Helios AI compute capacity",medium
+Amazon,OpenAI Group PBC,follow_on,2026-07-31,NVDA,NVIDIA,OpenAI's equity capital is spent overwhelmingly on accelerator capacity; Amazon's $35bn Series C funds the compute build,medium
+Amazon,OpenAI Group PBC,follow_on,2026-07-31,AVGO,Broadcom,Co-designs OpenAI's custom inference accelerator and supplies the Ethernet/scale-up networking for its clusters,medium
+Amazon,OpenAI Group PBC,follow_on,2026-07-31,TSM,Taiwan Semiconductor,Sole leading-edge foundry for both the merchant GPUs and the custom OpenAI silicon this capital buys,medium
+Amazon,OpenAI Group PBC,follow_on,2026-07-31,MU,Micron,HBM content scales with every accelerator OpenAI's funded capacity adds,low
+Amazon,Anthropic,follow_on,2026-07-31,AVGO,Broadcom,Co-designs the Google TPU generation Anthropic trains on; TPU volume is a direct read-through from Anthropic funding,medium
+Amazon,Anthropic,follow_on,2026-07-31,TSM,Taiwan Semiconductor,"Fabs the Trainium, TPU and GPU silicon Anthropic's compute is built on",medium
+Amazon,Anthropic,follow_on,2026-07-31,MRVL,Marvell Technology,"Custom-silicon and interconnect content in AWS Trainium, the platform Amazon's Anthropic capital is tied to",low
+NVIDIA,NAVER Corporation,minority_stake,2026-07-27,035420.KS,NAVER Corporation,Direct public recipient - NVIDIA's $1bn buys ~4.5% via a third-party share allotment,high
+NVIDIA,NAVER Corporation,minority_stake,2026-07-27,VRT,Vertiv,Power and thermal systems for scaling the GAK Sejong AI factory from 55MW to 200MW by 2028,medium
+NVIDIA,NAVER Corporation,minority_stake,2026-07-27,ETN,Eaton,Electrical distribution gear for the AI-factory capacity expansion,low
+NVIDIA,Safe Superintelligence,minority_stake,2026-07-27,TSM,Taiwan Semiconductor,Sole leading-edge foundry for the Vera Rubin platform SSI's order-of-magnitude compute step is built on,high
+NVIDIA,Safe Superintelligence,minority_stake,2026-07-27,MU,Micron,HBM supplier for the Vera Rubin accelerators SSI gains access to,medium
+NVIDIA,Safe Superintelligence,minority_stake,2026-07-27,VRT,Vertiv,Rack power and liquid cooling required by Vera Rubin-class density,low
+NVIDIA,Nebius Group N.V.,minority_stake,2026-07-20,NBIS,Nebius Group,"Direct public target - NVIDIA's 9.3% position, first disclosed on the 13G, repriced the stock ~+19%",high
+NVIDIA,Nebius Group N.V.,minority_stake,2026-07-20,VRT,Vertiv,Power/cooling supplier as Nebius builds out the GPU-cloud capacity the NVIDIA capital underwrites,medium
+Meta,"Sturgeon County data center (Alberta, Canada)",corporate_investment,2026-07-08,VRT,Vertiv,Power and thermal management for a 1GW AI-optimized campus (headroom to 1.8GW),high
+Meta,"Sturgeon County data center (Alberta, Canada)",corporate_investment,2026-07-08,ETN,Eaton,Medium/low-voltage electrical distribution across a 1GW greenfield build,medium
+Meta,"Sturgeon County data center (Alberta, Canada)",corporate_investment,2026-07-08,GEV,GE Vernova,Generation and grid equipment to serve 1GW of new Alberta load,medium
+Meta,"Sturgeon County data center (Alberta, Canada)",corporate_investment,2026-07-08,PWR,Quanta Services,Electrical and substation construction for a greenfield gigawatt campus,medium
+Meta,"Sturgeon County data center (Alberta, Canada)",corporate_investment,2026-07-08,NVDA,NVIDIA,Accelerators that populate Meta's 33rd data center once energized,medium
+Meta,Richland Parish / Hyperion data center (Louisiana),follow_on,2026-07-13,VRT,Vertiv,Power/cooling content scales with a ~5x expansion to ~5GW of IT capacity,high
+Meta,Richland Parish / Hyperion data center (Louisiana),follow_on,2026-07-13,GEV,GE Vernova,Gas turbines for the dedicated generation Entergy is building to serve Hyperion,medium
+Meta,Richland Parish / Hyperion data center (Louisiana),follow_on,2026-07-13,ETR,Entergy,Serving utility for the Hyperion campus - $50bn+ of load growth lands in its rate base,medium
+Meta,Richland Parish / Hyperion data center (Louisiana),follow_on,2026-07-13,ETN,Eaton,Electrical distribution across ~10m sq ft of new hyperscale capacity,medium
+Meta,Richland Parish / Hyperion data center (Louisiana),follow_on,2026-07-13,PWR,Quanta Services,"Transmission, substation and electrical construction at ~7,500 peak construction jobs of scale",medium
+Meta,Richland Parish / Hyperion data center (Louisiana),follow_on,2026-07-13,NVDA,NVIDIA,Accelerators filling 5GW of Meta AI training capacity,medium
+Meta,Meta-BlackRock El Paso data center venture,spv,2026-07-28,VRT,Vertiv,Power and thermal systems for the ~1GW El Paso compute campus,high
+Meta,Meta-BlackRock El Paso data center venture,spv,2026-07-28,ETN,Eaton,Electrical infrastructure for a ~$14bn 1GW development,medium
+Meta,Meta-BlackRock El Paso data center venture,spv,2026-07-28,GEV,GE Vernova,Generation and grid equipment for ~1GW of new Texas load,medium
+Meta,Meta-BlackRock El Paso data center venture,spv,2026-07-28,NVDA,NVIDIA,Accelerators that populate the El Paso campus Meta leases back,medium
+Meta,Meta-BlackRock El Paso data center venture,spv,2026-07-28,BLK,BlackRock,Takes the 80% interest - Meta's carve-out adds fee-bearing infrastructure AUM to BlackRock/GIP,medium
+Alphabet,Proxima Fusion,corporate_investment,2026-07-07,BRKR,Bruker,HTS superconducting wire and magnet metrology feed the stellarator magnet supply chain the Alpha demonstrator needs,low
+Alphabet,Proxima Fusion,corporate_investment,2026-07-07,LIN,Linde,Cryogenic systems and industrial gases required to operate a superconducting stellarator,low
+Microsoft,Mistral AI,corporate_investment,2026-07-21,NVDA,NVIDIA,Explicitly named - the multibillion commitment funds thousands of Vera Rubin chips for Mistral in Europe,high
+Microsoft,Mistral AI,corporate_investment,2026-07-21,TSM,Taiwan Semiconductor,Foundry for the Vera Rubin silicon the commitment buys,medium
+Microsoft,Mistral AI,corporate_investment,2026-07-21,VRT,Vertiv,Power/cooling for Mistral's European footprint targeting 200MW by 2027 and 1GW by 2030,medium
+Microsoft,Mistral AI,corporate_investment,2026-07-21,SBGSY,Schneider Electric,European-incumbent electrical and prefab datacenter infrastructure for a 200MW-to-1GW EU build,low
+NVIDIA,Volta Infra Holdings,corporate_investment,2026-08-04,BTDR,Bitdeer Technologies,Named delivery site - Volta's first capacity runs through Bitdeer's 133MW Norway facility,high
+NVIDIA,Volta Infra Holdings,corporate_investment,2026-08-04,DELL,Dell Technologies,Server/rack supplier to the venture; Michael Dell invested alongside NVIDIA in the same round,high
+NVIDIA,Volta Infra Holdings,corporate_investment,2026-08-04,VRT,Vertiv,"Power and cooling for the Norway, Texas and Wyoming GPU capacity Volta is financing",medium
+Sequoia,Valar Atomics,funding_round,2026-08-03,LEU,Centrus Energy,Only US-licensed HALEU enricher - fuel supply is the binding constraint on factory-built microreactors,low
+Sequoia,Valar Atomics,funding_round,2026-08-03,BWXT,BWX Technologies,US nuclear component fabrication and fuel capability that a mass-production reactor programme must draw on,low
+Sequoia,Etched,funding_round,2026-07-23,TSM,Taiwan Semiconductor,Fabs the Sohu transformer-only inference ASIC the $300m scales into production,high
+Sequoia,Etched,funding_round,2026-07-23,MU,Micron,"HBM content per Sohu rack; SK Hynix co-invested as the memory partner, confirming HBM-heavy design",medium
+Sequoia,Etched,funding_round,2026-07-23,VRT,Vertiv,Etched ships full racks with cooling/interconnect - thermal supply chain benefits from the production ramp,low
+Andreessen Horowitz,Etched,funding_round,2026-07-23,TSM,Taiwan Semiconductor,Fabs the Sohu inference ASIC at the frontier node,high
+Andreessen Horowitz,Etched,funding_round,2026-07-23,MU,Micron,HBM supplier for Etched's inference hardware ramp,medium
+Andreessen Horowitz,Atoms,funding_round,2026-07-22,NVDA,NVIDIA,Physical-AI/industrial automation holdco built on GPU-trained models and edge robotics compute,low
+Andreessen Horowitz,Hadrian,funding_round,2026-08-06,FANUY,FANUC,Robots and CNC controls are the core capital equipment of Hadrian's highly automated precision factories,medium
+Andreessen Horowitz,Hadrian,funding_round,2026-08-06,SIEGY,Siemens,"Factory automation, CAM/PLM software and drives underpinning automated machining cells",low
+Founders Fund,Hadrian,funding_round,2026-08-06,FANUY,FANUC,Robots and CNC controls are the core capital equipment of Hadrian's highly automated precision factories,medium
+Founders Fund,Hadrian,funding_round,2026-08-06,SIEGY,Siemens,"Factory automation, CAM/PLM software and drives underpinning automated machining cells",low
+Altimeter,Hadrian,funding_round,2026-08-06,FANUY,FANUC,Robots and CNC controls are the core capital equipment of Hadrian's highly automated precision factories,medium
+Altimeter,Hadrian,funding_round,2026-08-06,SIEGY,Siemens,"Factory automation, CAM/PLM software and drives underpinning automated machining cells",low
+BlackRock,Aligned Data Centers,acquisition,2026-07-21,VRT,Vertiv,Power/cooling supplier across 50+ campuses and >5GW operational-plus-planned as the platform scales,high
+BlackRock,Aligned Data Centers,acquisition,2026-07-21,ETN,Eaton,Electrical distribution across Aligned's US and LatAm footprint,medium
+BlackRock,Aligned Data Centers,acquisition,2026-07-21,GEV,GE Vernova,Generation and grid equipment for multi-GW capacity additions,medium
+BlackRock,Aligned Data Centers,acquisition,2026-07-21,PWR,Quanta Services,Electrical/substation construction for the campus expansion programme,medium
+BlackRock,Project Sopaipilla Holdings (Meta El Paso data center JV),project_finance,2026-07-28,VRT,Vertiv,Power and thermal systems for the 1GW El Paso campus the ~$14bn funds,high
+BlackRock,Project Sopaipilla Holdings (Meta El Paso data center JV),project_finance,2026-07-28,ETN,Eaton,Electrical infrastructure for a 1GW compute campus online 2028,medium
+BlackRock,Project Sopaipilla Holdings (Meta El Paso data center JV),project_finance,2026-07-28,GEV,GE Vernova,Generation and grid equipment for 1GW of new load,medium
+BlackRock,Project Sopaipilla Holdings (Meta El Paso data center JV),project_finance,2026-07-28,NVDA,NVIDIA,Accelerators that fill the 1GW campus Meta leases,medium
+BlackRock,Project Sopaipilla Holdings (Meta El Paso data center JV),project_finance,2026-07-28,JPM,JPMorgan Chase,Co-arranger of the ~$12.5bn Sopaipilla debt raise - fee income from the largest AI project-bond of the window,low
+BlackRock,Summit Ridge Energy,acquisition,2026-07-14,FSLR,First Solar,US-made modules for a >3GW community/commercial solar pipeline with domestic-content economics,medium
+BlackRock,Summit Ridge Energy,acquisition,2026-07-14,NXT,Nextracker,Trackers and mounting for the distributed-generation pipeline GIP is capitalizing,low
+BlackRock,Summit Ridge Energy,acquisition,2026-07-14,FLNC,Fluence Energy,Storage systems paired with the solar-plus-storage portfolio being expanded,low
+Blackstone,"Williams Power Innovation JV (Socrates, Apollo, Aquila, Socrates the Younger, Neo)",minority_stake,2026-07-13,WMB,Williams Companies,Direct public counterparty - retains 51% plus control and receives ~$0.9bn of additional consideration,high
+Blackstone,"Williams Power Innovation JV (Socrates, Apollo, Aquila, Socrates the Younger, Neo)",minority_stake,2026-07-13,GEV,GE Vernova,Gas turbine and grid equipment for five behind-the-meter generation projects incl. 682MW Neo,medium
+Blackstone,"Williams Power Innovation JV (Socrates, Apollo, Aquila, Socrates the Younger, Neo)",minority_stake,2026-07-13,ETN,Eaton,Electrical balance-of-plant tying behind-the-meter generation to datacenter load,medium
+Blackstone,"Williams Power Innovation JV (Socrates, Apollo, Aquila, Socrates the Younger, Neo)",minority_stake,2026-07-13,PWR,Quanta Services,Construction of the generation and interconnection assets across the five projects,medium
+KKR,"Williams Power Innovation JV (Socrates, Apollo, Aquila, Socrates the Younger, Neo)",minority_stake,2026-07-13,WMB,Williams Companies,Direct public counterparty of the $5.34bn 49% JV commitment KKR participates in,high
+KKR,"Williams Power Innovation JV (Socrates, Apollo, Aquila, Socrates the Younger, Neo)",minority_stake,2026-07-13,GEV,GE Vernova,Turbine and grid supply for the behind-the-meter generation fleet,medium
+KKR,KKR Global Infrastructure Investors V,fund_launch,2026-08-03,KKR,KKR & Co.,$19.2bn final close - KKR's largest infra fund - directly grows fee-bearing AUM toward a ~$120bn infra platform,medium
+KKR,EDF power solutions North America,acquisition,2026-06-30,FSLR,First Solar,US-made modules for the ~5.6GW renewables platform KKR now owns and intends to grow,medium
+KKR,EDF power solutions North America,acquisition,2026-06-30,NXT,Nextracker,Trackers for the utility-scale solar pipeline inside the acquired portfolio,medium
+KKR,EDF power solutions North America,acquisition,2026-06-30,GEV,GE Vernova,Onshore wind turbines and service for the wind share of the 5.6GW fleet,medium
+KKR,EDF power solutions North America,acquisition,2026-06-30,PWR,Quanta Services,Renewables EPC and interconnection work as the platform builds out,low
+KKR,SK-KKR Korea renewable energy platform,acquisition,2026-07-01,BE,Bloom Energy,SK ecoplant is Bloom's Korean manufacturing/distribution partner - the platform's fuel-cell assets are Bloom-based,medium
+KKR,SK-KKR Korea renewable energy platform,acquisition,2026-07-01,GEV,GE Vernova,Wind turbines and grid equipment for a 1.7GW-to-10GW Korean renewables pipeline,low
+Brookfield,Bloom Energy,project_finance,2026-06-30,BE,Bloom Energy,Direct public target - the framework rises fivefold to $25bn to build and finance Bloom onsite fuel-cell power,high
+Brookfield,Aypa Power,acquisition,2026-07-22,FLNC,Fluence Energy,Merchant BESS integrator to North America's largest standalone storage developer as Brookfield funds the pipeline,medium
+Brookfield,Aypa Power,acquisition,2026-07-22,BX,Blackstone,"Seller - Blackstone Energy Transition Partners monetizes Aypa at ~$7bn EV, a realized exit for a public manager",medium
+Brookfield,Aypa Power,acquisition,2026-07-22,TSLA,Tesla,Megapack remains the volume grid-battery product for large North American storage developers,low
+Brookfield,NAVER GAK Sejong AI factory (Korea national AI factory),project_finance,2026-07-27,NVDA,NVIDIA,Programme funds NVIDIA DSX AI-factory deployment scaling 55MW to 200MW by 2028 with a 1GW path,high
+Brookfield,NAVER GAK Sejong AI factory (Korea national AI factory),project_finance,2026-07-27,VRT,Vertiv,Power and liquid cooling for a 200MW-to-1GW AI factory,medium
+Brookfield,NAVER GAK Sejong AI factory (Korea national AI factory),project_finance,2026-07-27,035420.KS,NAVER Corporation,Public campus owner - up to $9bn of exclusive external capital de-risks NAVER's own build,medium
+Brookfield,DOE Paducah Site AI data center campus (Western Kentucky),project_finance,2026-07-29,NEE,NextEra Energy,Named by DOE to build and own the dedicated generation - up to 2GW gas plus 2.6GW BESS,high
+Brookfield,DOE Paducah Site AI data center campus (Western Kentucky),project_finance,2026-07-29,GEV,GE Vernova,"Gas turbines for up to 2GW of dedicated generation paid for by the project, not ratepayers",high
+Brookfield,DOE Paducah Site AI data center campus (Western Kentucky),project_finance,2026-07-29,VRT,Vertiv,Power/cooling for >1.2GW of compute across the campus,medium
+Brookfield,DOE Paducah Site AI data center campus (Western Kentucky),project_finance,2026-07-29,ETN,Eaton,Electrical distribution for up to 1.8GW of utility capacity,medium
+Brookfield,DOE Paducah Site AI data center campus (Western Kentucky),project_finance,2026-07-29,PWR,Quanta Services,"Generation, substation and transmission construction across a brownfield federal site",medium
+Brookfield,DOE Paducah Site AI data center campus (Western Kentucky),project_finance,2026-07-29,NVDA,NVIDIA,Accelerators filling >1.2GW of compute once the campus energizes,medium
+Brookfield,DOE Paducah Site AI data center campus (Western Kentucky),project_finance,2026-07-29,FLNC,Fluence Energy,Grid-scale storage integration for up to 2.6GW of dedicated BESS,low
+Blue Owl,Kirkwood Infrastructure Group,spv,2026-07-08,GLW,Corning,High-count optical fiber and cable for 200+ miles of new hyperscale conduit across Louisiana and Mississippi,high
+Blue Owl,Kirkwood Infrastructure Group,spv,2026-07-08,CIEN,Ciena,Optical transport gear lighting the long-haul routes the platform builds for hyperscalers,medium
+Blue Owl,Kirkwood Infrastructure Group,spv,2026-07-08,DY,Dycom Industries,Specialty contractor for conduit and long-haul fiber construction at this scale,medium
+DigitalBridge,Nippon Gateway Infrastructure (NGI),acquisition,2026-07-01,VRT,Vertiv,Power/cooling as the new Japan colocation platform grows via greenfield plus M&A,medium
+DigitalBridge,Nippon Gateway Infrastructure (NGI),acquisition,2026-07-01,ETN,Eaton,Electrical distribution for Greater Tokyo and Osaka capacity additions,low
+DigitalBridge,DigitalBridge Credit II,fund_launch,2026-07-15,DBRG,DigitalBridge Group,Public GP - cumulative $711m sold with ~$61m of new in-window commitments adds fee-bearing credit AUM,medium
+SoftBank,OpenAI,follow_on,2026-07-01,NVDA,NVIDIA,The $10bn tranche funds OpenAI compute; SoftBank's debt-financed equity converts directly into accelerator demand,medium
+SoftBank,OpenAI,follow_on,2026-07-01,AVGO,Broadcom,OpenAI custom-accelerator co-design partner and supplier of the cluster networking,medium
+SoftBank,OpenAI,follow_on,2026-07-01,TSM,Taiwan Semiconductor,Foundry for both the merchant and custom silicon OpenAI's capital consumes,medium
+SoftBank,OpenAI,follow_on,2026-07-01,ARM,Arm Holdings,SoftBank-controlled and listed; Arm CPU IP sits in the Grace/Vera hosts and custom AI systems this axis buys,medium
+SoftBank,SB Neo,spv,2026-07-02,NVDA,NVIDIA,A merchant US neocloud selling training and inference compute is a direct GPU purchaser at scale,high
+SoftBank,SB Neo,spv,2026-07-02,VRT,Vertiv,Power/cooling for the 10GW-scale SoftBank energy and AI footprint SB Neo monetizes,medium
+SoftBank,SB Neo,spv,2026-07-02,ARM,Arm Holdings,SoftBank-controlled listed asset; Arm-based hosts and the group's AI stack benefit from the neocloud build,low
+Blackstone,QTS Realty Trust,project_finance,2026-07-15,VRT,Vertiv,Power and thermal supplier across the QTS portfolio the upsized $3.25bn loan refinances and extends,high
+Blackstone,QTS Realty Trust,project_finance,2026-07-15,ETN,Eaton,Electrical infrastructure across the QTS datacenter estate,medium
+Blackstone,QTS Realty Trust,project_finance,2026-07-15,PWR,Quanta Services,Electrical and substation construction for QTS's development pipeline,medium
+MGX,Aligned Data Centers,minority_stake,2026-07-21,VRT,Vertiv,"Power/cooling across the acquired 51-campus, >6.4GW Aligned platform",medium
+MGX,Aligned Data Centers,minority_stake,2026-07-21,ETN,Eaton,Electrical distribution across the Americas footprint,medium
+MGX,Aligned Data Centers,minority_stake,2026-07-21,NVDA,NVIDIA,Accelerators that ultimately fill Aligned's AI-ready capacity,low
+MGX,Aligned Data Centers,follow_on,2026-07-21,VRT,Vertiv,The $5bn of growth capital at close converts directly into power and thermal equipment orders,high
+MGX,Aligned Data Centers,follow_on,2026-07-21,ETN,Eaton,Electrical gear for the AI-ready capacity the growth capital funds,medium
+MGX,Aligned Data Centers,follow_on,2026-07-21,GEV,GE Vernova,Generation and grid equipment for multi-GW capacity additions,medium
+MGX,Aligned Data Centers,follow_on,2026-07-21,NVDA,NVIDIA,Accelerators populating the newly funded AI-ready halls,medium
+US Government,GlobalFoundries,grant,2026-07-29,GFS,GlobalFoundries,"Direct public recipient of the $300m CHIPS R&D letter of intent, the largest of the seven",high
+US Government,GlobalFoundries,grant,2026-07-29,AMAT,Applied Materials,3D hybrid bonding and advanced packaging toolsets are the equipment layer of the funded CPO/NPO roadmap,medium
+US Government,GlobalFoundries,grant,2026-07-29,BESIY,BE Semiconductor Industries,Hybrid-bonding and advanced die-attach equipment for co-packaged optics assembly,low
+US Government,Kepler Computing,grant,2026-07-29,AMAT,Applied Materials,Ferroelectric/high-performance memory processes depend on advanced deposition and integration toolsets,low
+US Government,Aeluma,grant,2026-07-29,ALMU,Aeluma,"Direct public recipient - Nasdaq-listed, $30m LOI for indium-phosphide-free photonic substrates on silicon",high
+US Government,Genesis Mission first project cohort (278 projects),grant,2026-07-22,NVDA,NVIDIA,DOE/NNSA lab AI workloads across 278 awards run on GPU systems; 87 awards are lab-led,medium
+US Government,Genesis Mission first project cohort (278 projects),grant,2026-07-22,HPE,Hewlett Packard Enterprise,Prime integrator of DOE's exascale and AI systems the Genesis workloads execute on,medium
+US Government,Genesis Mission first project cohort (278 projects),grant,2026-07-22,AMD,Advanced Micro Devices,"CPU/GPU silicon inside DOE's flagship lab systems (Frontier, El Capitan) targeted by AI-for-science awards",medium
+US Government,Prometheus project (Idaho National Laboratory and partners),grant,2026-07-22,BWXT,BWX Technologies,Nuclear fuel fabrication and reactor component manufacturing are the physical layer of an AI-for-nuclear-deployment programme,medium
+US Government,Prometheus project (Idaho National Laboratory and partners),grant,2026-07-22,LEU,Centrus Energy,HALEU enrichment feeds the advanced-reactor fuel cycle the award targets with AI-assisted fabrication,low
+Saudi PIF,Electronic Arts,acquisition,2026-08-04,JPM,JPMorgan Chase,Sole debt commitment party and agent on ~$20bn of financing for the largest LBO on record - underwriting and syndication fees,medium
+Saudi PIF,Lucid Group,follow_on,2026-07-06,LCID,Lucid Group,Direct public recipient - $800m delayed-draw term loan drawn from PIF affiliate Ayar Third Investment,high
+Saudi PIF,Brookfield Middle East Partners (BMEP),fund_launch,2026-07-27,BAM,Brookfield Asset Management,Public GP of the PIF-anchored ~$2bn first close - directly adds fee-bearing AUM in a new regional strategy,medium
+Galaxy Digital,Galaxy Helios Data Centers II (Dickens County TX),project_finance,2026-07-28,CRWV,CoreWeave,Anchor tenant of the Helios campus - the $3.507bn notes fund the halls CoreWeave contracted,high
+Galaxy Digital,Galaxy Helios Data Centers II (Dickens County TX),project_finance,2026-07-28,VRT,Vertiv,Power and thermal systems for 400MW utility / 260MW critical IT across eight data halls,high
+Galaxy Digital,Galaxy Helios Data Centers II (Dickens County TX),project_finance,2026-07-28,ETN,Eaton,Electrical distribution for the Dickens County build,medium
+Galaxy Digital,Galaxy Helios Data Centers II (Dickens County TX),project_finance,2026-07-28,GEV,GE Vernova,Generation and grid equipment for 400MW of new West Texas load,medium
+Galaxy Digital,Galaxy Helios Data Centers II (Dickens County TX),project_finance,2026-07-28,PWR,Quanta Services,Substation and electrical construction on a ~260-acre greenfield campus,medium
+Galaxy Digital,Galaxy Helios Data Centers II (Dickens County TX),project_finance,2026-07-28,NVDA,NVIDIA,Accelerators filling 260MW of critical IT once the halls energize,medium
+Galaxy Digital,Galaxy Helios Data Centers II (Dickens County TX),project_finance,2026-07-28,MS,Morgan Stanley,Lead initial purchaser on the 9.875% senior secured notes - fee income from AI-datacenter high-yield issuance,low
+Jeff Bezos,CuspAI,funding_round,2026-07-20,NVDA,NVIDIA,Named partner in CuspAI's AI Materials Foundry; materials foundation models are GPU-training-intensive,medium

@@ -19,6 +19,12 @@ sectors:
   - defense-tech    # defense outside the prime-contractor route (Anduril)
   - ai-applications # application/vertical-layer AI (legal, enterprise, consumer)
   - ai-data         # data platforms & labeling that feed models (Databricks, Scale)
+  # Non-AI sectors — sovereigns/alt-managers allocate here too and it's real capital
+  # (e.g. PIF/EA gaming take-private, Lucid). Tracked, but outside the AI buildout.
+  - gaming
+  - ev-automotive
+  - private-credit
+  - diversified-pe
 
 themes:
   # Cross-cutting investment themes — ORTHOGONAL to `sectors` above. A deal has one

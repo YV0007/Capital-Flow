@@ -1,61 +1,86 @@
-# Individuals — ISO Week 2026-W32 (lookback ~45d to 2026-08-06)
+# Individuals — ISO Week 2026-W32 (personal capital; ~45-day lookback to 2026-08-07)
 
 ## Headline
-Personal capital-allocation flow this window is dominated by **AI-lab / world-model
-angel rounds** and the **Bezos family office (Bezos Expeditions)**, which was the single
-most active personal allocator. The push to expand coverage across the **new elite-network
-members** (Musk, Sacks, Levchin, Lonsdale, Delian, Palmer Luckey, Nat Friedman, Daniel
-Gross, Lucy Guo, Laura Deming) surfaced plenty of network *activity* but very little that
-qualifies as fresh, sourceable **personal** capital inside the window — an honest negative
-result worth logging.
+Two things moved this window. First, **new vehicle formation inside the Thiel lineage**:
+Brian Singerman and Lee Linden registered **two** new Texas pooled vehicles on the same day
+(2026-07-28), and David Sacks filed **Craft Ventures V** on 2026-08-07 — all Tier-1 Form Ds,
+all with the principal named as a related person. Second, the **Bezos family office remains the
+single most active personal allocator on the watchlist**, and it closed the window with a brand-new
+deal: **LifeMine Therapeutics' $188M Series E on 2026-08-05**, entering *alongside Gates Frontier*.
+Bezos and Gates now sit in the same cap table twice in two months.
+
+The honest counter-signal: an exhaustive EDGAR Form D related-person sweep across ~48 watchlist
+and network names returned **zero** personal-capital confirms. Every Tier-1 hit was a firm
+vehicle (a16z funds, Altimeter, Greenoaks, General Catalyst, Khosla Ventures SPV). That is the
+expected shape of this class, not a gap in coverage.
 
 ## Counts
-- verified_alpha: 6 rows (Elad Gil x Odyssey; Garry Tan x Odyssey; Garry Tan x Monogram;
-  Jeff Bezos x General Intuition; Eric Schmidt x General Intuition; Jeff Bezos x CuspAI)
-- candidate: 8 rows (Bezos x Prometheus / Generalist AI / Flourish; Reid Hoffman x Prentis;
-  Peter Thiel x Etched; Druckenmiller x Etched; Thiel GP-commit x Founders Fund Growth IV;
-  Peter Thiel x Panthalassa)
-- verified (Tier-1): 0 — no Form D named an individual related-person this window.
+- **verified: 3** — all Tier-1 Form D fund/vehicle launches (Singerman x2, Sacks).
+- **verified_alpha: 7** — Bezos x LifeMine / CuspAI / General Intuition; Eric Schmidt x General
+  Intuition; Garry Tan x Monogram; Elad Gil + Garry Tan x Odyssey.
+- **candidate: 11** — Thiel / Dylan Field / Druckenmiller x Etched; Hoffman x SkillBench and
+  x Prentis; Bezos x Prometheus / Generalist AI / Flourish; Khosla+Rabois x Khosla Ventures MM SPV;
+  Thiel x Panthalassa; Patrick Collison x Radical Numerics.
+- **discovered allocators: 15**; **sources logged: 100** (49 of them Tier-1 EDGAR queries).
 
 ## Which names produced events
-- **Strongest signal — Jeff Bezos (Bezos Expeditions):** co-led CuspAI's $450M Series B
-  (AI materials discovery, chipmaking-materials angle) on 2026-07-20 — the cleanest in-window
-  personal event. Plus June cluster (General Intuition, Prometheus self-founding, Generalist
-  AI, Flourish ~$100M) consolidated by CNBC's 2026-07-02 family-office roundup.
-- **Elad Gil, Garry Tan, Eric Schmidt:** angel/family-office checks into AI-lab rounds
-  (Odyssey, Monogram, General Intuition).
-- **Peter Thiel (paypal_mafia):** named in Etched's $300M Series C (prior-vs-new-check
-  ambiguity -> candidate); personal GP slice of Founders Fund Growth IV; and (out of window,
-  2026-05-14) personally LED Panthalassa's $140M wave-powered ocean-datacenter round — a
-  notable personal datacenters/power-energy bet kept as a candidate for the theme.
-- **Reid Hoffman (paypal_mafia):** co-founded new AI lab Prentis, "in talks to raise $100M"
-  — capital not yet closed, candidate.
+- **Jeff Bezos (Bezos Expeditions)** — 3 verified_alpha + 3 candidates. The most active personal
+  allocator by a distance: LifeMine ($188M Series E, NEW this week), CuspAI ($450M Series B, co-led,
+  $2.6B val), General Intuition ($320M Series A). Thematically he is buying **AI-for-science**
+  (materials, biology) rather than model labs.
+- **Brian Singerman (thiel_extended)** — two new vehicles registered in one day, the cleanest
+  Tier-1 signal of the week. GPx Fund I ($500M, 2025) had Peter Thiel as a lead LP; a Thiel re-up
+  into these vehicles is plausible but **not confirmed** and is not recorded as an event.
+- **David Sacks (paypal_mafia)** — Craft Ventures V + Feeder V filed 2026-08-07. Firm vehicle, so
+  flagged for VC-agent overlap, but the filing confirms he is still personally the controlling GP.
+- **Garry Tan** — the most repeat-active pure angel: Odyssey **and** Monogram in one window.
+- **Eric Schmidt, Elad Gil** — one clean angel position each (General Intuition; Odyssey).
+- **Reid Hoffman** — a genuinely new, *unreported* find: **SkillBench, Inc.** Form D (2026-08-06),
+  $17.1M offered / **$15.07M sold**, first sale 2026-07-23, with Hoffman one of only three named
+  related persons. No press coverage exists; trackers still show SkillBench's last round as a
+  $430K seed in 2024. Kept as candidate because related-person status proves governance, not a
+  personal check — this is the highest-value thing to chase next week.
+- **Peter Thiel** — no confirmed *new* personal check in-window. Etched is cap-table language, not
+  a fresh commitment; Panthalassa (his best 2026 personal lead) is 85 days out.
 
-## New network members — negative findings (logged, not padded)
-- **Joe Lonsdale:** 8VC Fund 7 closed at $1.5B (defense/healthcare/industrial AI). This is
-  the *firm's* institutional fund -> VC-agent territory; his personal GP slice is undisclosed,
-  so no individual row. Sourced and logged as a network capital signal.
-- **Nat Friedman + Daniel Gross:** the big move was Meta hiring both and partially buying out
-  NFDG — that is *corporate* (Meta) capital, not their personal deployment. No individual row.
-- **Elad Gil solo fund ($1.5B "Cosmic/Aleph 3"):** confirmed dated **July 2025**, out of window.
-- **Musk, Sacks, Levchin, Palmer Luckey, Delian, Lucy Guo, Laura Deming, Alexandr Wang:** no
-  fresh, sourceable *personal* angel check inside the window. Their in-window activity ran
-  through corporate/firm vehicles (xAI/SpaceX, Craft, Anduril, Founders Fund) = other agents.
+## Network coinvestment flags
+1. **Etched Series C (2026-07-23, ai-compute, $10.3B)** — **Peter Thiel (paypal_mafia)** and
+   **Dylan Field (thiel_fellowship)** on the same cap table. Two networks, one deal. Both graded
+   candidate on evidence, but this is the convergence-relevant one.
+2. **Generalist AI ($400M, robotics)** — Bezos Expeditions alongside **8VC**, Joe Lonsdale's
+   (thiel_extended) vehicle: tracked-individual family-office money next to a network member's firm.
+3. **Khosla Ventures MM SPV ($60.5M, fully sold, first sale 2026-07-21)** — **Vinod Khosla** and
+   **Keith Rabois (paypal_mafia)** as co-named related persons on one Tier-1 filing. Firm capital,
+   so out of scope here — **handed off to the VC agent**.
+4. **Non-network but real:** Bezos + Eric Schmidt in General Intuition; Elad Gil + Garry Tan in
+   Odyssey; Bezos + Gates in LifeMine.
 
-## Network coinvestment / convergence
-- No clean **network_convergence** (3+ members, one sector, one window) this cycle.
-- One cross-signal worth flagging: **Generalist AI** round included both **Bezos Expeditions**
-  (individual) and **8VC** (Joe Lonsdale, thiel_extended) — individual x network-vehicle
-  co-participation in robot-foundation-models.
-- **Thiel** appears in two candidate rows (Etched semis, Panthalassa datacenters) + Founders
-  Fund Growth IV — a persistent personal-conviction thread across semis/compute/power, but
-  spread across sectors rather than converging.
+## Negative results worth logging
+Zero sourceable in-window **personal** capital for: Sam Altman (Alfred, via Hydrazine, is
+2026-06-01 — outside), Elon Musk, Masayoshi Son (all SoftBank corporate), Marc Andreessen / Ben
+Horowitz (a16z fund filings only), Vinod Khosla personally, Nat Friedman, Daniel Gross, Palmer
+Luckey, Trae Stephens, Delian Asparouhov, Ken Howery, Luke Nosek, Max Levchin, Alexandr Wang,
+Lucy Guo, Austin Russell, Laura Deming, Vitalik Buterin, and the entire corporate-CEO block
+(Nadella, Pichai, Jassy, Zuckerberg, Huang, Su, Wei, Amon, Ellison) — their capital moves through
+their companies and belongs to the corporate agent.
 
-## Confidence + limitations
-Moderate confidence on the 6 verified_alpha rows (multi-source Tier 2-3, no Tier-1 individual
-confirm; Form D searches returned only an SPV feeder for General Intuition, none for CuspAI).
-Amounts almost all undisclosed (only Bezos/Flourish ~$100M reported). Main limitation: personal
-checks by the newest network names are largely invisible until a round PR or Form D names them,
-and this window produced none — the coverage gap is real, not laziness. Watch next week: any
-Prentis close (Hoffman), a Craft/Sacks or SciFi/Levchin named angel round, and Form D feeders
-tied to the June/July AI-lab rounds.
+## Confidence & limitations
+Grades are honest: `verified` is used **only** where a Form D names the person as a related person,
+`verified_alpha` where two or more independent Tier 2–4 outlets name the individual in a round, and
+everything with prior-vs-new-check ambiguity, an out-of-window disclosure, or firm-capital confusion
+sits in `candidate` with the reason written into `notes`. Amounts are blank on 19 of 21 rows because
+personal check sizes are essentially never disclosed — the one populated figure (Bezos/Flourish
+~$100M) carries `amount_estimated=1`. The main blind spot is that press angel lists describe cap
+tables, not round-by-round participation, so participation timing is the weakest field in this class.
+
+## Watch next week
+1. **SkillBench** — chase a round announcement or an amended Form D that separates Hoffman's
+   personal position from Greylock. Best chance of converting a candidate to verified.
+2. **GPx TX LP / Quiet Select TX LP** — both show $0 sold. A Form D/A with sales, or an LP list
+   naming Thiel, would turn vehicle formation into a real allocation.
+3. **Q2-2026 13Fs, due 2026-08-14** — the only way to test the Druckenmiller/Etched claim and to
+   pick up Ackman, Tepper and Dalio, who produced nothing this window.
+4. **Bezos x Gates convergence** — two shared cap tables in eight weeks. If a third lands, the
+   family-office pair is a tradable cluster in AI-for-science.
+5. **Khosla Ventures "MM" SPV** — identify the portfolio company; a $60.5M fully-sold single-deal
+   SPV with Khosla and Rabois both named is worth a target ID.
