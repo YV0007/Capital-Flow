@@ -90,6 +90,37 @@ CREATE TABLE IF NOT EXISTS universe_candidates (
     UNIQUE (name, run_week)
 );
 
+-- Leads (WS2/C7): raw signals — a filing hit, a rumor — that an agent should chase.
+-- Nothing is dropped silently; a lead is either promoted to an event or dismissed
+-- with a reason, so due diligence is auditable.
+CREATE TABLE IF NOT EXISTS leads (
+    id          INTEGER PRIMARY KEY,
+    source      TEXT NOT NULL,          -- 'edgar' | 'agent' | 'manual'
+    entity      TEXT,                   -- allocator/company the lead concerns
+    form_type   TEXT,                   -- 8-K, D, 13D/G, 4 ... when from a filing
+    title       TEXT,
+    url         TEXT,
+    filed_date  TEXT,
+    status      TEXT NOT NULL DEFAULT 'new'
+                  CHECK (status IN ('new','investigating','promoted','dismissed')),
+    resolution  TEXT,                   -- why dismissed / which event it became
+    run_week    TEXT NOT NULL,
+    created_at  TEXT NOT NULL DEFAULT (datetime('now')),
+    UNIQUE (url, entity)
+);
+
+-- Coverage (C5/WS2): what each agent actually checked per allocator, per run —
+-- the expected-vs-found reconciliation that makes "we didn't miss it" measurable.
+CREATE TABLE IF NOT EXISTS coverage (
+    run_week     TEXT NOT NULL,
+    agent        TEXT NOT NULL,
+    allocator    TEXT NOT NULL,
+    sources_checked INTEGER DEFAULT 0,
+    events_found INTEGER DEFAULT 0,
+    checked_at   TEXT NOT NULL DEFAULT (datetime('now')),
+    UNIQUE (run_week, agent, allocator)
+);
+
 -- Source log: every source consulted per run, whether or not it yielded events.
 CREATE TABLE IF NOT EXISTS source_log (
     id          INTEGER PRIMARY KEY,

@@ -126,6 +126,19 @@ def run(week: str) -> str:
         L.append("_Every key & core allocator produced at least one event._")
     L.append("")
 
+    # Open leads (WS2/C7) — filing hits an agent should chase.
+    leads = con.execute(
+        """SELECT entity, form_type, filed_date, url FROM leads
+           WHERE status = 'new' ORDER BY filed_date DESC LIMIT 25""").fetchall()
+    open_n = con.execute("SELECT COUNT(*) FROM leads WHERE status='new'").fetchone()[0]
+    if open_n:
+        L.append(f"## Open leads to chase ({open_n})")
+        for x in leads:
+            L.append(f"- `{x['form_type']}` **{x['entity']}** ({x['filed_date']}) — {x['url']}")
+        if open_n > len(leads):
+            L.append(f"- _…and {open_n - len(leads)} more._")
+        L.append("")
+
     # New allocators discovered co-investing (WS1) — promote to the watchlist.
     disc = con.execute(
         """SELECT name, suggested_class, seen_with, rationale FROM universe_candidates

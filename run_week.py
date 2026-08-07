@@ -20,9 +20,15 @@ def current_week() -> str:
     return f"{y}-W{w:02d}"
 
 
-def main(week: str, do_deliver: bool = False, do_push: bool = False) -> None:
+def main(week: str, do_deliver: bool = False, do_push: bool = False,
+         do_sweep: bool = False) -> None:
     # Agent research stage runs before this script (or will be invoked here later).
     print(f"== Capital Flow pipeline: {week} ==")
+    if do_sweep:  # network call — opt-in so offline runs stay deterministic
+        from engine import edgar
+        sw = edgar.sweep(week)
+        print(f"[edgar]   {sw['entities']} entities swept, {sw['leads_new']} new leads, "
+              f"{sw['errors']} errors")
     s = ingest.ingest_week(week)
     print(f"[ingest]  +{s['inserted']} new, {s['updated']} updated, "
           f"{s['skipped']} skipped, {s['warnings']} warnings")
@@ -46,4 +52,5 @@ if __name__ == "__main__":
     # --deliver copies capitalMap.json into ab-investment; --push also commits + pushes to main.
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     week = args[0] if args else current_week()
-    main(week, do_deliver="--deliver" in sys.argv, do_push="--push" in sys.argv)
+    main(week, do_deliver="--deliver" in sys.argv, do_push="--push" in sys.argv,
+         do_sweep="--sweep" in sys.argv)

@@ -19,20 +19,36 @@ from engine import db  # noqa: E402
 TICKERS_URL = "https://www.sec.gov/files/company_tickers.json"
 UA = "capital-flow research contact@example.com"
 
+# Corporate suffixes/noise to strip before matching ("NVIDIA CORP" -> "nvidia").
+_SUFFIXES = {"corp", "corporation", "inc", "incorporated", "co", "company", "ltd",
+             "limited", "plc", "lp", "llc", "group", "holdings", "holding", "the",
+             "sa", "nv", "ag", "&"}
+
+
+def _strip(name: str) -> str:
+    words = [w.strip(".,") for w in db._normalize(name).split()]
+    kept = [w for w in words if w not in _SUFFIXES]
+    return " ".join(kept or words)
+
 
 def run() -> dict:
     con = db.connect()
     db.sync_allocators(con, db.load_config())
     req = urllib.request.Request(TICKERS_URL, headers={"User-Agent": UA})
     data = json.loads(urllib.request.urlopen(req, timeout=30).read())
-    # {index: {cik_str, ticker, title}} -> normalized title -> (cik, ticker)
-    by_title = {db._normalize(v["title"]): (str(v["cik_str"]).zfill(10), v["ticker"])
-                for v in data.values()}
+    # {index: {cik_str, ticker, title}} -> stripped title -> (cik, ticker).
+    # SEC titles carry corporate suffixes ("NVIDIA CORP") our canonical names don't.
+    by_title = {}
+    for v in data.values():
+        key = _strip(v["title"])
+        by_title.setdefault(key, (str(v["cik_str"]).zfill(10), v["ticker"]))
 
     attached = 0
-    for a in con.execute("SELECT id, name FROM allocators WHERE class IN ('corporate',)").fetchall():
+    for a in con.execute(
+        "SELECT id, name FROM allocators WHERE class IN ('corporate','alt_manager','vc')"
+    ).fetchall():
         canonical = db.resolve_name(a["name"])
-        hit = by_title.get(db._normalize(canonical))
+        hit = by_title.get(_strip(canonical))
         if not hit:
             continue
         cik, ticker = hit
