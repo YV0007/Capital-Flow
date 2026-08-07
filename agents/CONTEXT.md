@@ -89,11 +89,43 @@ biggest signals, and what to watch next week.
 > the agent Write tool blocks report-style markdown ("report file") and will fail. The
 > CSVs are fine via Write. This keeps unattended/scheduled runs from breaking.
 
+## Strong due diligence — escalate a weak lead, don't quit
+A rumor (podcast, X post, single blog) is a **lead**, not a dead end and not an event.
+Do NOT check SEC, find nothing, and stop. Run this escalation loop before you drop a lead:
+
+1. **Find the origin.** Locate the *first* source of the claim. N outlets all citing one
+   origin count as **one** source, not N (circular-reporting guard). Put the origin URL in
+   the `origin_id` column.
+2. **Primary hunt:** SEC Form D (+ related persons), 8-K (items 1.01/2.01), 13D/G, Form 4;
+   company PR/IR/blog (+ Wayback for silent edits); official gov DB.
+3. **Registry & legal:** OpenCorporates entity + new subsidiaries/SPVs, state filings, UCC
+   liens (debt), court records, HSR/CFIUS for large or cross-border deals.
+4. **Corroborating exhaust:** LinkedIn headcount/role changes, job postings for the funded
+   initiative, domain/trademark registration, permits/procurement (datacenters, energy),
+   customs/shipping (hardware). The *counterparty* often discloses what the principal won't.
+5. **Triangulate & weigh hypotheses:** require ≥2 **independent** confirmations for
+   `verified_alpha`, a primary for `verified`. Ask what else could explain it (old round
+   resurfacing? mark-to-market? PR spin?) and pick what the evidence best fits.
+6. **Grade honestly, never drop silently.** If you can't confirm, file it as `candidate`
+   with the reason in `notes` — a documented candidate is data; a silent drop is a miss.
+
+"Don't give up yet" moves: reverse from the beneficiary; check the *vehicle* not just the
+person; find the *debt* behind the equity; diff quarterly 13Fs; read Form D *amendments*.
+
+## Universe discovery — feed the watchlist
+When you see a NOT-yet-tracked allocator co-investing alongside a tracked name, record it in
+`runs/<week>/<agent>/discovered_allocators.csv` (header: `name,suggested_class,seen_with,
+rationale`). This is how the universe grows — the user promotes these to the watchlist.
+
 ## Operating loop
 1. Read this file, then your class brief, then config/allocators.yaml (your class)
    and config/sources.yaml.
 2. For each allocator on your watchlist: check its mandatory Tier-1 sources, then
    search broadly (Tiers 2–5) for new capital movements.
-3. Verify each candidate — try to confirm with a higher tier before storing.
-4. Write the four output files. Deduping and storage are handled downstream by the
-   Python engine — your job is coverage + accuracy, not database hygiene.
+3. For any weak lead, run the **escalation loop** above before dropping it.
+4. Verify each candidate — try to confirm with a higher tier before storing. Set `status`
+   by corroboration: `verified` = a primary source; `verified_alpha` = ≥2 independent
+   sources; `candidate` = single/uncorroborated. Fill `origin_id` when a claim traces to one origin.
+5. Write the output files (the four core + `discovered_allocators.csv` when you find new
+   allocators). Deduping, entity-resolution and grading are handled downstream — your job is
+   coverage + accuracy, not database hygiene.

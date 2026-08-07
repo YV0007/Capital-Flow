@@ -21,7 +21,7 @@ HANDOFF_DIR = ROOT / "handoff"
 EVENT_COLUMNS = [
     "event_date", "disclosed_date", "allocator", "allocator_class", "target",
     "target_type", "sector", "subsector", "event_type", "amount_usd",
-    "amount_estimated", "status", "source_tier", "source_url", "notes",
+    "amount_estimated", "status", "source_tier", "source_url", "origin_id", "notes",
 ]
 
 EVENT_TYPES = {

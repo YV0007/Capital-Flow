@@ -75,6 +75,20 @@ CREATE INDEX IF NOT EXISTS idx_events_sector_date ON events (sector, disclosed_d
 CREATE INDEX IF NOT EXISTS idx_events_allocator   ON events (allocator_id, disclosed_date);
 CREATE INDEX IF NOT EXISTS idx_events_status      ON events (status);
 
+-- New allocators discovered co-investing with tracked names — the self-extending
+-- universe (docs/ENHANCEMENT_STRATEGY.md WS1). You promote these to the watchlist.
+CREATE TABLE IF NOT EXISTS universe_candidates (
+    id              INTEGER PRIMARY KEY,
+    name            TEXT NOT NULL,
+    suggested_class TEXT,
+    seen_with       TEXT,               -- the tracked allocator it co-invested with
+    rationale       TEXT,
+    run_week        TEXT NOT NULL,
+    agent           TEXT,
+    created_at      TEXT NOT NULL DEFAULT (datetime('now')),
+    UNIQUE (name, run_week)
+);
+
 -- Source log: every source consulted per run, whether or not it yielded events.
 CREATE TABLE IF NOT EXISTS source_log (
     id          INTEGER PRIMARY KEY,

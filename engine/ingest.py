@@ -152,6 +152,22 @@ def _upsert_event(con, e: dict, allocator_id: int, week: str, agent: str):
         return "unchanged"
 
 
+def _ingest_discovered(con, week: str, agent: str, path):
+    """Load an agent's discovered_allocators.csv into universe_candidates."""
+    with path.open(newline="") as f:
+        for row in csv.DictReader(f):
+            name = (row.get("name") or "").strip()
+            if not name:
+                continue
+            con.execute(
+                """INSERT OR IGNORE INTO universe_candidates
+                     (name, suggested_class, seen_with, rationale, run_week, agent)
+                   VALUES (?,?,?,?,?,?)""",
+                (name, (row.get("suggested_class") or "").strip() or None,
+                 (row.get("seen_with") or "").strip() or None,
+                 (row.get("rationale") or "").strip() or None, week, agent))
+
+
 def _ingest_source_log(con, week: str, agent: str, path):
     with path.open(newline="") as f:
         for row in csv.DictReader(f):
@@ -197,6 +213,9 @@ def ingest_week(week: str) -> dict:
         slog = agent_dir / "source_log.csv"
         if slog.exists():
             _ingest_source_log(con, week, agent, slog)
+        disc = agent_dir / "discovered_allocators.csv"
+        if disc.exists():
+            _ingest_discovered(con, week, agent, disc)
 
     con.commit()
     con.close()
