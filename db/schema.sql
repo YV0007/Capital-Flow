@@ -16,6 +16,28 @@ CREATE TABLE IF NOT EXISTS allocators (
     created_at    TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
+-- Entity resolution (docs/ENHANCEMENT_STRATEGY.md WS4). allocators is the canonical
+-- entity table; these satellites route aliases to it, attach external IDs, and link
+-- principals to their vehicles / parents to subsidiaries.
+CREATE TABLE IF NOT EXISTS entity_aliases (
+    alias          TEXT PRIMARY KEY,        -- normalized (lower, single-spaced) alias
+    canonical_name TEXT NOT NULL            -- the allocators.name it resolves to
+);
+
+CREATE TABLE IF NOT EXISTS entity_external_ids (
+    allocator_id INTEGER NOT NULL REFERENCES allocators(id),
+    kind         TEXT NOT NULL CHECK (kind IN ('lei','cik','ticker','opencorporates')),
+    value        TEXT NOT NULL,
+    UNIQUE (allocator_id, kind, value)
+);
+
+CREATE TABLE IF NOT EXISTS entity_relationships (
+    parent_id  INTEGER NOT NULL REFERENCES allocators(id),
+    child_name TEXT NOT NULL,               -- vehicle / subsidiary (may not be its own allocator)
+    kind       TEXT NOT NULL,               -- 'vehicle' | 'subsidiary' | 'fund'
+    UNIQUE (parent_id, child_name, kind)
+);
+
 -- One row = one verified or candidate capital allocation event.
 CREATE TABLE IF NOT EXISTS events (
     id               INTEGER PRIMARY KEY,

@@ -1,0 +1,19 @@
+# Entity aliases — every alias resolves to a canonical allocator name on ingest, so
+# fragmented spellings collapse to one entity (fixes signal miscounts). Matching is
+# case/space-insensitive. Format:  Canonical Name: [alias, alias, ...]
+
+Alphabet: [Google, "Alphabet / Google", "Alphabet (Google)", "Google / Alphabet"]
+Amazon: ["Amazon / AWS", AWS, "Amazon Web Services", "Amazon.com"]
+Meta: ["Meta Platforms", Facebook, "Meta / Facebook"]
+Microsoft: ["Microsoft Corporation", MSFT]
+NVIDIA: [Nvidia, "NVIDIA Corporation", NVDA]
+Oracle: ["Oracle Corporation"]
+BlackRock: ["BlackRock / GIP", "BlackRock/GIP", GIP, "Global Infrastructure Partners", "BlackRock (GIP)"]
+Andreessen Horowitz: [a16z, "Andreessen Horowitz (a16z)", "a16z (Andreessen Horowitz)"]
+SoftBank: ["SoftBank Group", "SoftBank Vision Fund", "SoftBank Group Corp"]
+Saudi PIF: [PIF, "Public Investment Fund", "Saudi Public Investment Fund"]
+MGX: ["MGX (Abu Dhabi)", "MGX Abu Dhabi"]
+Mubadala: ["Mubadala Investment Company"]
+Brookfield: ["Brookfield Asset Management", "Brookfield Infrastructure"]
+KKR: ["Kohlberg Kravis Roberts"]
+Blue Owl: ["Blue Owl Capital"]

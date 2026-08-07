@@ -65,6 +65,34 @@ def load_config() -> dict:
     }
 
 
+def _normalize(name: str) -> str:
+    return " ".join((name or "").lower().split())
+
+
+_ALIAS_CACHE = None
+
+
+def load_aliases() -> dict:
+    """{normalized_alias: canonical_name} from config/aliases.yaml (cached)."""
+    global _ALIAS_CACHE
+    if _ALIAS_CACHE is not None:
+        return _ALIAS_CACHE
+    p = CONFIG_DIR / "aliases.yaml"
+    out = {}
+    if p.exists():
+        for canonical, aliases in (yaml.safe_load(p.read_text()) or {}).items():
+            for a in (aliases or []):
+                out[_normalize(a)] = canonical
+            out[_normalize(canonical)] = canonical  # canonical maps to itself
+    _ALIAS_CACHE = out
+    return out
+
+
+def resolve_name(name: str) -> str:
+    """Route an alias to its canonical allocator name; passthrough if unknown."""
+    return load_aliases().get(_normalize(name), name)
+
+
 def load_networks() -> dict:
     """Load config/networks.yaml → {members: [...], rules: [...]}."""
     p = CONFIG_DIR / "networks.yaml"
@@ -98,14 +126,34 @@ def sync_allocators(con: sqlite3.Connection, cfg: dict) -> None:
         for r in rows:
             _upsert_allocator(con, r["name"], cls, r.get("tier", "watch"),
                               r.get("country"), None)
-    for m in load_networks()["members"]:
+    members = load_networks()["members"]
+    for m in members:
         _upsert_allocator(con, m["name"], "individual", m.get("tier", "watch"),
                           m.get("country"), m.get("network"))
+    # Persist aliases (for inspection/audit) and seed principal -> vehicle links.
+    for norm_alias, canonical in load_aliases().items():
+        con.execute("INSERT OR REPLACE INTO entity_aliases (alias, canonical_name) VALUES (?,?)",
+                    (norm_alias, canonical))
+    for m in members:
+        vehicles = m.get("associated_vehicles") or []
+        if not vehicles:
+            continue
+        row = con.execute("SELECT id FROM allocators WHERE name = ?", (m["name"],)).fetchone()
+        if not row:
+            continue
+        for v in vehicles:
+            if v in ("personal_investments", "affiliated_corporate_vehicle",
+                     "personal_or_new_vehicle"):
+                continue
+            con.execute(
+                """INSERT OR IGNORE INTO entity_relationships (parent_id, child_name, kind)
+                   VALUES (?,?,?)""", (row["id"], v, "vehicle"))
     con.commit()
 
 
 def get_or_create_allocator(con, name: str, cls: str, tier: str = "watch") -> int:
-    """Resolve an allocator name to id, inserting a watch-tier row if unseen."""
+    """Resolve an allocator name (through aliases) to an id, inserting if unseen."""
+    name = resolve_name(name)
     row = con.execute("SELECT id FROM allocators WHERE name = ?", (name,)).fetchone()
     if row:
         return row["id"]
