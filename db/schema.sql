@@ -55,6 +55,14 @@ CREATE TABLE IF NOT EXISTS events (
                         'sovereign_investment')),
     amount_usd       REAL,                -- NULL if undisclosed
     amount_estimated INTEGER NOT NULL DEFAULT 0,  -- 1 if amount is an estimate
+    -- Structured deal detail (C3/WS3) — makes events comparable, not just readable.
+    capital_role     TEXT,                -- lead | participant | sole
+    instrument       TEXT,                -- equity | debt | convertible | grant | jv | safe
+    stage            TEXT,                -- seed | series a..x | growth | buyout
+    round_total_usd  REAL,                -- the full round (vs this allocator's slice)
+    ownership_pct    REAL,
+    valuation_usd    REAL,
+    co_investors     TEXT,                -- free text / comma list
     status           TEXT NOT NULL DEFAULT 'candidate' CHECK (status IN
                        ('candidate','verified','verified_alpha')),
     source_tier      INTEGER NOT NULL CHECK (source_tier BETWEEN 1 AND 5),

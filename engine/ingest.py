@@ -119,6 +119,14 @@ def _validate(row: dict, agent: str, sectors: set, themes: set = None, theme_def
         warnings.append(f"theme '{theme}' not canonical")
         theme = None
     clean["theme"] = theme or (theme_defaults or {}).get(sector)
+    # Structured deal detail (C3) — optional; agents fill what the source supports.
+    for f in ("capital_role", "instrument", "stage", "co_investors"):
+        clean[f] = (row.get(f) or "").strip() or None
+    for f in ("round_total_usd", "ownership_pct", "valuation_usd"):
+        try:
+            clean[f] = _num(row.get(f))
+        except ValueError:
+            clean[f] = None
     reliability, credibility, score = _grade(tier, status)
     clean["source_reliability"] = reliability
     clean["info_credibility"] = credibility
@@ -134,11 +142,15 @@ def _upsert_event(con, e: dict, allocator_id: int, week: str, agent: str):
             """INSERT INTO events (event_date, disclosed_date, allocator_id, target,
                  target_type, sector, subsector, theme, event_type, amount_usd,
                  amount_estimated, status, source_tier, source_url, source_reliability,
-                 info_credibility, confidence_score, origin_id, run_week, agent, notes)
+                 info_credibility, confidence_score, origin_id, capital_role, instrument,
+                 stage, round_total_usd, ownership_pct, valuation_usd, co_investors,
+                 run_week, agent, notes)
                VALUES (:event_date,:disclosed_date,:aid,:target,:target_type,:sector,
                  :subsector,:theme,:event_type,:amount_usd,:amount_estimated,:status,
                  :source_tier,:source_url,:source_reliability,:info_credibility,
-                 :confidence_score,:origin_id,:week,:agent,:notes)""",
+                 :confidence_score,:origin_id,:capital_role,:instrument,:stage,
+                 :round_total_usd,:ownership_pct,:valuation_usd,:co_investors,
+                 :week,:agent,:notes)""",
             {**e, "aid": allocator_id, "week": week, "agent": agent},
         )
         return "inserted"

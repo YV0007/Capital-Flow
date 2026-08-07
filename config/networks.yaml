@@ -50,7 +50,7 @@ network_tracking:
 # modeled — same pattern as the history-dependent rules in rules.yaml.
 network_signal_rules:
   - { signal: network_convergence,        condition: "3+ members of one network put confirmed capital in the same sector within a window", window_days: 180, min_members: 3, weight: 5, status: active }
-  - { signal: thiel_repeat_conviction,    condition: "Founders Fund / Thiel vehicle invests in the same theme 3+ times",                weight: 5, status: declared }
+  - { signal: thiel_repeat_conviction,    condition: "a network member backs the same theme 3+ times", min_repeats: 3, weight: 5, status: active }
   - { signal: fellowship_breakout,        condition: "fellowship alumnus raises a round with 2+ tier-one allocators",                    weight: 4, status: declared }
-  - { signal: defense_network_convergence, condition: "Thiel network + strategic corporate or government capital in one theme",           weight: 5, status: declared }
+  - { signal: defense_network_convergence, condition: "2+ network members AND 2+ strategic (corporate/sovereign) allocators in one sector", window_days: 180, min_network: 2, min_strategic: 2, weight: 5, status: active }
   - { signal: private_to_public_spillover, condition: "network capital clusters in a theme with under-recognized public suppliers",       weight: 5, status: declared }

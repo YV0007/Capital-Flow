@@ -201,6 +201,45 @@ def _beneficiary_concentration(con, week, p):
     return out
 
 
+def _thiel_repeat_conviction(con, week, p):
+    """A network member (or their vehicle) backs the same theme 3+ times — repeat
+    conviction is a stronger tell than a single large check."""
+    rows = con.execute(
+        """SELECT a.name AS name, a.network AS network, e.theme AS theme,
+                  COUNT(*) AS n, GROUP_CONCAT(e.id) AS ids, MIN(e.sector) AS sector
+           FROM events e JOIN allocators a ON a.id = e.allocator_id
+           WHERE a.network IS NOT NULL AND e.theme IS NOT NULL
+                 AND e.status IN ('verified','verified_alpha')
+           GROUP BY a.id, e.theme HAVING n >= ?""", (p.get("min_repeats", 3),)).fetchall()
+    return [(f"{r['name']}: repeat conviction — {r['n']}x into {r['theme']}",
+             r["sector"], "repeat_conviction",
+             json.dumps([int(x) for x in r["ids"].split(",")]), float(r["n"]))
+            for r in rows]
+
+
+def _defense_network_convergence(con, week, p):
+    """Network capital + strategic corporate/government capital landing in one sector —
+    the pattern behind defense/national-security build-outs."""
+    rows = con.execute(
+        """SELECT e.sector AS sector,
+                  COUNT(DISTINCT CASE WHEN a.network IS NOT NULL THEN a.id END) AS net_n,
+                  COUNT(DISTINCT CASE WHEN a.class IN ('corporate','sovereign')
+                                      THEN a.id END) AS strat_n,
+                  GROUP_CONCAT(e.id) AS ids
+           FROM events e JOIN allocators a ON a.id = e.allocator_id
+           WHERE e.status IN ('verified','verified_alpha')
+                 AND e.disclosed_date >= date('now', ?)
+           GROUP BY e.sector
+           HAVING net_n >= ? AND strat_n >= ?""",
+        (f"-{p.get('window_days', 180)} days", p.get("min_network", 2),
+         p.get("min_strategic", 2))).fetchall()
+    return [(f"{r['sector']}: network + strategic capital converge "
+             f"({r['net_n']} network, {r['strat_n']} strategic)", r["sector"],
+             "defense_network_convergence",
+             json.dumps([int(x) for x in r["ids"].split(",")]),
+             float(r["net_n"] + r["strat_n"])) for r in rows]
+
+
 RULES = {
     "sector_swarm": _sector_swarm,
     "theme_swarm": _theme_swarm,
@@ -229,14 +268,21 @@ def run(week: str) -> dict:
                 (week, theme, sector, rule, evidence, strength))
             fired.append(theme)
     # Network rules live in config/networks.yaml; evaluate the active ones.
+    network_rules = {
+        "network_convergence": _network_convergence,
+        "thiel_repeat_conviction": _thiel_repeat_conviction,
+        "defense_network_convergence": _defense_network_convergence,
+    }
     for nr in db.load_networks()["rules"]:
-        if nr.get("signal") == "network_convergence" and nr.get("status") == "active":
-            for theme, sector, rule, evidence, strength in _network_convergence(con, week, nr):
-                con.execute(
-                    """INSERT INTO themes (run_week, theme, sector, rule, evidence, strength)
-                       VALUES (?,?,?,?,?,?)""",
-                    (week, theme, sector, rule, evidence, strength))
-                fired.append(theme)
+        fn = network_rules.get(nr.get("signal"))
+        if not fn or nr.get("status") != "active":
+            continue
+        for theme, sector, rule, evidence, strength in fn(con, week, nr):
+            con.execute(
+                """INSERT INTO themes (run_week, theme, sector, rule, evidence, strength)
+                   VALUES (?,?,?,?,?,?)""",
+                (week, theme, sector, rule, evidence, strength))
+            fired.append(theme)
     con.commit()
     con.close()
     return {"fired": fired}

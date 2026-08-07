@@ -76,6 +76,12 @@ Field rules:
 - `source_url` the confirming link.
 - `notes` lead/participant, vehicle name, caveats.
 
+**Optional structured columns** (fill what the source actually supports — never guess):
+`theme` (a canonical theme from config/rules.yaml), `capital_role` (lead|participant|sole),
+`instrument` (equity|debt|convertible|grant|jv|safe), `stage` (seed|series a…|growth|buyout),
+`round_total_usd` (the FULL round, vs `amount_usd` = this allocator's slice),
+`ownership_pct`, `valuation_usd`, `co_investors`, `origin_id` (the claim's first source).
+
 **source_log.csv** — every source you actually checked, header:
 ```
 source_url,source_tier,yielded

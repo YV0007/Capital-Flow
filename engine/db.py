@@ -21,7 +21,10 @@ HANDOFF_DIR = ROOT / "handoff"
 EVENT_COLUMNS = [
     "event_date", "disclosed_date", "allocator", "allocator_class", "target",
     "target_type", "sector", "subsector", "event_type", "amount_usd",
-    "amount_estimated", "status", "source_tier", "source_url", "origin_id", "theme", "notes",
+    "amount_estimated", "status", "source_tier", "source_url", "origin_id", "theme",
+    # C3 structured detail (optional — fill what the source supports)
+    "capital_role", "instrument", "stage", "round_total_usd", "ownership_pct",
+    "valuation_usd", "co_investors", "notes",
 ]
 
 EVENT_TYPES = {
