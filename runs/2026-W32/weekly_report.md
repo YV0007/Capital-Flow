@@ -1,8 +1,16 @@
 # Capital Flow — Weekly Report 2026-W32
 
 ## Signals fired
+- **NVDA (NVIDIA): 9 private flows converge**  _(rule: beneficiary_concentration, strength 9.0)_
+- **VRT (Vertiv): 6 private flows converge**  _(rule: beneficiary_concentration, strength 6.0)_
+- **ETN (Eaton): 5 private flows converge**  _(rule: beneficiary_concentration, strength 5.0)_
 - **ai-labs: 4 key allocators in 30d**  _(rule: sector_swarm, strength 4.0)_
+- **GEV (GE Vernova): 4 private flows converge**  _(rule: beneficiary_concentration, strength 4.0)_
+- **TSM (Taiwan Semiconductor): 4 private flows converge**  _(rule: beneficiary_concentration, strength 4.0)_
 - **datacenters: 3 key allocators in 30d**  _(rule: sector_swarm, strength 3.0)_
+- **ai-labs: smart money — Elad Gil led, 2 followed in 21d**  _(rule: smart_money_follow, strength 3.0)_
+- **datacenters: smart money — DigitalBridge led, 2 followed in 21d**  _(rule: smart_money_follow, strength 3.0)_
+- **MU (Micron): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
 
 ## New verified events (25)
 | Allocator | Target | Sector | Type | Amount | Status | Conf |

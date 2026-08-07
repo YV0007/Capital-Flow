@@ -28,10 +28,10 @@ def main(week: str, do_deliver: bool = False, do_push: bool = False) -> None:
           f"{s['skipped']} skipped, {s['warnings']} warnings")
     for p in s["problems"]:
         print("          ", p)
-    t = themes.run(week)
-    print(f"[themes]  {len(t['fired'])} fired: {'; '.join(t['fired']) or '—'}")
     b = beneficiaries.run(week)
     print(f"[benefic] {b['linked']} linked, {b['unmatched']} unmatched")
+    t = themes.run(week)  # after beneficiaries so beneficiary_concentration can see them
+    print(f"[themes]  {len(t['fired'])} fired: {'; '.join(t['fired']) or '—'}")
     rp = report.run(week)
     print(f"[report]  {rp}")
     h = handoff.run(week)

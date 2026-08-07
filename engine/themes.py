@@ -12,6 +12,7 @@ Rules implemented:
 
 import json
 from collections import defaultdict
+from datetime import date, timedelta
 
 from . import db
 
@@ -118,10 +119,77 @@ def _network_convergence(con, week, p):
     return out
 
 
+def _smart_money_follow(con, week, p):
+    """A key/core allocator enters a sector, then N+ others follow shortly after —
+    the 'smart money leads, the rest chase' pattern."""
+    win, follow, min_f = (p.get("window_days", 90), p.get("follow_days", 21),
+                          p.get("min_followers", 2))
+    rows = con.execute(
+        """SELECT e.sector AS sector, e.allocator_id AS aid, e.disclosed_date AS d,
+                  e.id AS id, a.name AS name
+           FROM events e JOIN allocators a ON a.id = e.allocator_id
+           WHERE a.tier IN ('key','core') AND e.status IN ('verified','verified_alpha')
+                 AND e.disclosed_date >= date('now', ?)
+           ORDER BY e.sector, e.disclosed_date""", (f"-{win} days",)).fetchall()
+    by_sector = defaultdict(list)
+    for r in rows:
+        by_sector[r["sector"]].append(r)
+    out = []
+    for sector, evs in by_sector.items():
+        leader = evs[0]
+        end = (date.fromisoformat(leader["d"]) + timedelta(days=follow)).isoformat()
+        followers = {e["aid"] for e in evs
+                     if e["aid"] != leader["aid"] and leader["d"] < e["d"] <= end}
+        if len(followers) >= min_f:
+            ids = [e["id"] for e in evs if e["d"] <= end]
+            out.append((f"{sector}: smart money — {leader['name']} led, "
+                        f"{len(followers)} followed in {follow}d", sector,
+                        "smart_money_follow", json.dumps(ids), float(len(followers) + 1)))
+    return out
+
+
+def _stealth_accumulation(con, week, p):
+    """N+ stakes into one target within a window — quiet accumulation."""
+    win, min_stakes = p.get("window_days", 90), p.get("min_stakes", 3)
+    rows = con.execute(
+        """SELECT e.target AS target, COUNT(*) AS n, GROUP_CONCAT(e.id) AS ids,
+                  MIN(e.sector) AS sector
+           FROM events e
+           WHERE e.event_type IN ('minority_stake','equity','follow_on')
+                 AND e.status IN ('verified','verified_alpha')
+                 AND e.disclosed_date >= date('now', ?)
+           GROUP BY e.target HAVING n >= ?""", (f"-{win} days", min_stakes)).fetchall()
+    return [(f"{r['target']}: stealth accumulation — {r['n']} stakes in {win}d",
+             r["sector"] or "unknown", "stealth_accumulation",
+             json.dumps([int(x) for x in r["ids"].split(",")]), float(r["n"])) for r in rows]
+
+
+def _beneficiary_concentration(con, week, p):
+    """N+ private flows map to one public beneficiary ticker — the public read-through."""
+    min_flows = p.get("min_flows", 3)
+    rows = con.execute(
+        """SELECT b.ticker AS ticker, b.company AS company,
+                  COUNT(DISTINCT b.event_id) AS flows, GROUP_CONCAT(DISTINCT b.event_id) AS ids
+           FROM beneficiaries b GROUP BY b.ticker HAVING flows >= ?""", (min_flows,)).fetchall()
+    out = []
+    for r in rows:
+        ids = [int(x) for x in r["ids"].split(",")]
+        ph = ",".join("?" * len(ids))
+        sec = con.execute(f"SELECT sector, COUNT(*) c FROM events WHERE id IN ({ph}) "
+                          f"GROUP BY sector ORDER BY c DESC LIMIT 1", ids).fetchone()
+        out.append((f"{r['ticker']} ({r['company']}): {r['flows']} private flows converge",
+                    sec["sector"] if sec else "unknown", "beneficiary_concentration",
+                    json.dumps(ids), float(r["flows"])))
+    return out
+
+
 RULES = {
     "sector_swarm": _sector_swarm,
     "capital_acceleration": _capital_acceleration,
     "first_entry": _first_entry,
+    "smart_money_follow": _smart_money_follow,
+    "stealth_accumulation": _stealth_accumulation,
+    "beneficiary_concentration": _beneficiary_concentration,
 }
 
 

@@ -1169,6 +1169,11 @@
           "theme": "ai-labs: 4 key allocators in 30d",
           "rule": "sector_swarm",
           "strength": 4.0
+        },
+        {
+          "theme": "ai-labs: smart money \u2014 Elad Gil led, 2 followed in 21d",
+          "rule": "smart_money_follow",
+          "strength": 3.0
         }
       ]
     },
@@ -1184,8 +1189,33 @@
       "allocators": 6,
       "signals": [
         {
+          "theme": "NVDA (NVIDIA): 9 private flows converge",
+          "rule": "beneficiary_concentration",
+          "strength": 9.0
+        },
+        {
+          "theme": "VRT (Vertiv): 6 private flows converge",
+          "rule": "beneficiary_concentration",
+          "strength": 6.0
+        },
+        {
+          "theme": "ETN (Eaton): 5 private flows converge",
+          "rule": "beneficiary_concentration",
+          "strength": 5.0
+        },
+        {
+          "theme": "GEV (GE Vernova): 4 private flows converge",
+          "rule": "beneficiary_concentration",
+          "strength": 4.0
+        },
+        {
           "theme": "datacenters: 3 key allocators in 30d",
           "rule": "sector_swarm",
+          "strength": 3.0
+        },
+        {
+          "theme": "datacenters: smart money \u2014 DigitalBridge led, 2 followed in 21d",
+          "rule": "smart_money_follow",
           "strength": 3.0
         }
       ]
@@ -1224,7 +1254,18 @@
       "deals": 4,
       "capital": 600000000.0,
       "allocators": 4,
-      "signals": []
+      "signals": [
+        {
+          "theme": "TSM (Taiwan Semiconductor): 4 private flows converge",
+          "rule": "beneficiary_concentration",
+          "strength": 4.0
+        },
+        {
+          "theme": "MU (Micron): 3 private flows converge",
+          "rule": "beneficiary_concentration",
+          "strength": 3.0
+        }
+      ]
     }
   }
 }

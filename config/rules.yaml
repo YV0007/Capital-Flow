@@ -35,3 +35,18 @@ rules:
     description: "A key allocator entered a sector it had no prior events in"
     allocator_tier: key
     lookback_days: 365
+
+  - id: smart_money_follow
+    description: "A key/core allocator enters a sector, then N+ others follow within follow_days"
+    window_days: 90
+    follow_days: 21
+    min_followers: 2
+
+  - id: stealth_accumulation
+    description: "N+ stakes (minority/equity/follow-on) into one target within a window"
+    window_days: 90
+    min_stakes: 3
+
+  - id: beneficiary_concentration
+    description: "N+ private flows map to one public beneficiary ticker"
+    min_flows: 3
