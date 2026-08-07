@@ -258,6 +258,23 @@ check the counterparty's filings (the other side often discloses); use Wayback o
 
 ---
 
+## 6a. EXECUTION STATUS (updated 2026-08-07)
+
+**Shipped:**
+- ✅ **C1** two-axis confidence (A–E × 1–5 + 0–100 score) on every event — `257c599`
+- ✅ **C2** entity resolution v1 (alias collapse, principal→vehicle links, ID enrichment) — `10a7fdf`
+- ✅ **C4** agent DD upgrade (escalation loop, circular-reporting guard, universe discovery) — `7812b37`
+- ✅ **C6** three new signals (smart-money-follow, stealth-accumulation, beneficiary-concentration) — `93f35ad`
+- ✅ **WS5** theme dimension + `theme_swarm`; **C5** coverage reconciliation; taxonomy closed (0 warnings) — `2bbd126`
+- ✅ **D2** theme taxonomy set (10 themes); **D3** map confidence floor = 60
+
+**Effect on 2026-W32:** signals went **2 → 12**; every event classified on sector *and*
+theme; coverage now measured (16/46 key+core produced events, 30 silent and listed).
+
+**Remaining:** C5-full (per-allocator expected-vs-found — needs agents to log which
+allocators they checked), C3 (structured event fields), C7 (`leads` table), WS2 standing
+EDGAR net, WS7 alt-data pre-signals, GLEIF/LEI bulk enrichment, remaining network rules.
+
 ## 7. Roadmap — Now / Next / Later
 
 **Now (highest leverage, low regret):**
