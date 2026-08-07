@@ -34,16 +34,19 @@ def run(week: str) -> str:
 
     new = con.execute(
         """SELECT a.name allocator, e.target, e.sector, e.event_type, e.amount_usd,
-                  e.status, e.source_tier FROM events e JOIN allocators a ON a.id=e.allocator_id
+                  e.status, e.source_tier, e.source_reliability, e.info_credibility,
+                  e.confidence_score
+           FROM events e JOIN allocators a ON a.id=e.allocator_id
            WHERE e.run_week=? AND e.status IN ('verified','verified_alpha')
-           ORDER BY e.amount_usd DESC NULLS LAST""", (week,)).fetchall()
+           ORDER BY e.confidence_score DESC, e.amount_usd DESC NULLS LAST""", (week,)).fetchall()
     L.append(f"## New verified events ({len(new)})")
     if new:
-        L.append("| Allocator | Target | Sector | Type | Amount | Status | Tier |")
+        L.append("| Allocator | Target | Sector | Type | Amount | Status | Conf |")
         L.append("|---|---|---|---|--:|---|:-:|")
         for e in new:
+            grade = f"{e['source_reliability']}{e['info_credibility']}·{e['confidence_score']}"
             L.append(f"| {e['allocator']} | {e['target']} | {e['sector']} | {e['event_type']} "
-                     f"| {_fmt_amt(e['amount_usd'])} | {e['status']} | T{e['source_tier']} |")
+                     f"| {_fmt_amt(e['amount_usd'])} | {e['status']} | {grade} |")
     else:
         L.append("_None._")
     L.append("")

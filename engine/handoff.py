@@ -59,6 +59,9 @@ def _build_map(con) -> dict:
             "source": a_id, "target": t_id, "sector": e["sector"],
             "event_type": e["event_type"], "amount": e["amount_usd"],
             "status": e["status"], "date": e["disclosed_date"], "tier": e["source_tier"],
+            "confidence": e["confidence_score"],
+            "grade": (f"{e['source_reliability']}{e['info_credibility']}"
+                      if e["source_reliability"] else None),
         })
 
     today = date.today().isoformat()

@@ -21,6 +21,26 @@ def _num(v):
     return float(v)
 
 
+# Admiralty-style two-axis confidence (docs/ENHANCEMENT_STRATEGY.md §6).
+# reliability A–E from source tier; credibility 1–5 from the agent's status
+# (a corroboration proxy until C4 has agents supply it directly).
+_RELIABILITY = {1: "A", 2: "B", 3: "C", 4: "D", 5: "E"}
+_REL_WEIGHT = {"A": 100, "B": 80, "C": 60, "D": 40, "E": 20}
+_CRED_WEIGHT = {1: 100, 2: 85, 3: 65, 4: 40, 5: 20}
+
+
+def _grade(tier: int, status: str):
+    """Return (reliability_letter, credibility_1_5, confidence_score_0_100)."""
+    reliability = _RELIABILITY.get(tier, "E")
+    credibility = {"verified": 2, "verified_alpha": 3, "candidate": 4}.get(status, 4)
+    if status == "verified" and tier == 1:
+        credibility = 1                      # primary-confirmed
+    elif status == "candidate" and tier == 5:
+        credibility = 5                      # bare rumor
+    score = round(0.5 * _REL_WEIGHT[reliability] + 0.5 * _CRED_WEIGHT[credibility])
+    return reliability, credibility, score
+
+
 def _validate(row: dict, agent: str, sectors: set):
     """Return (clean|None, class|None, errors, warnings)."""
     errors, warnings = [], []
@@ -80,8 +100,13 @@ def _validate(row: dict, agent: str, sectors: set):
         "status": status, "source_tier": tier,
         "source_url": (row.get("source_url") or "").strip() or None,
         "notes": (row.get("notes") or "").strip() or None,
+        "origin_id": (row.get("origin_id") or "").strip() or None,
         "allocator": allocator,
     }
+    reliability, credibility, score = _grade(tier, status)
+    clean["source_reliability"] = reliability
+    clean["info_credibility"] = credibility
+    clean["confidence_score"] = score
     return clean, cls, [], warnings
 
 
@@ -92,10 +117,12 @@ def _upsert_event(con, e: dict, allocator_id: int, week: str, agent: str):
         con.execute(
             """INSERT INTO events (event_date, disclosed_date, allocator_id, target,
                  target_type, sector, subsector, event_type, amount_usd, amount_estimated,
-                 status, source_tier, source_url, run_week, agent, notes)
+                 status, source_tier, source_url, source_reliability, info_credibility,
+                 confidence_score, origin_id, run_week, agent, notes)
                VALUES (:event_date,:disclosed_date,:aid,:target,:target_type,:sector,
                  :subsector,:event_type,:amount_usd,:amount_estimated,:status,:source_tier,
-                 :source_url,:week,:agent,:notes)""",
+                 :source_url,:source_reliability,:info_credibility,:confidence_score,
+                 :origin_id,:week,:agent,:notes)""",
             {**e, "aid": allocator_id, "week": week, "agent": agent},
         )
         return "inserted"
@@ -108,15 +135,18 @@ def _upsert_event(con, e: dict, allocator_id: int, week: str, agent: str):
         better_status = db.STATUS_RANK[e["status"]] > db.STATUS_RANK[cur["status"]]
         better_tier = e["source_tier"] < cur["source_tier"]
         if better_status or better_tier:
+            merged_status = e["status"] if better_status else cur["status"]
+            merged_tier = min(e["source_tier"], cur["source_tier"])
+            reliability, credibility, score = _grade(merged_tier, merged_status)
             con.execute(
                 """UPDATE events SET
-                     status = CASE WHEN ? THEN ? ELSE status END,
-                     source_tier = MIN(source_tier, ?),
+                     status = ?, source_tier = ?,
+                     source_reliability = ?, info_credibility = ?, confidence_score = ?,
                      amount_usd = COALESCE(amount_usd, ?),
                      source_url = COALESCE(source_url, ?)
                    WHERE id = ?""",
-                (better_status, e["status"], e["source_tier"], e["amount_usd"],
-                 e["source_url"], cur["id"]),
+                (merged_status, merged_tier, reliability, credibility, score,
+                 e["amount_usd"], e["source_url"], cur["id"]),
             )
             return "updated"
         return "unchanged"

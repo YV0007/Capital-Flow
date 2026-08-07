@@ -1,9 +1,9 @@
-# Handoff changelog — 2026-08-06
+# Handoff changelog — 2026-08-07
 
 - nodes: 50  flows: 36  sectors: 12
 
-## New entities (1)
-- target:Panthalassa
+## New entities (0)
+_none_
 
 ## Stale entities — no activity in 180d (0)
 _none_

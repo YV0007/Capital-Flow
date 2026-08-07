@@ -36,6 +36,12 @@ CREATE TABLE IF NOT EXISTS events (
                        ('candidate','verified','verified_alpha')),
     source_tier      INTEGER NOT NULL CHECK (source_tier BETWEEN 1 AND 5),
     source_url       TEXT,
+    -- Admiralty-style two-axis confidence (see docs/ENHANCEMENT_STRATEGY.md §6).
+    -- reliability A–E ← source tier; credibility 1–5 ← status/corroboration; score 0–100.
+    source_reliability TEXT CHECK (source_reliability IN ('A','B','C','D','E')),
+    info_credibility   INTEGER CHECK (info_credibility BETWEEN 1 AND 5),
+    confidence_score   INTEGER,
+    origin_id          TEXT,               -- claim origin (circular-reporting guard; agent-set later)
     run_week         TEXT NOT NULL,       -- e.g. '2026-W32', which run ingested it
     agent            TEXT NOT NULL,       -- which research agent found it
     notes            TEXT,

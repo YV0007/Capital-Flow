@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-06",
+  "generated": "2026-08-07",
   "totals": {
     "nodes": 50,
     "flows": 36,
@@ -716,7 +716,9 @@
       "amount": 40000000000.0,
       "status": "verified",
       "date": "2026-07-21",
-      "tier": 1
+      "tier": 1,
+      "confidence": 100,
+      "grade": "A1"
     },
     {
       "source": "alloc:Brookfield",
@@ -726,7 +728,9 @@
       "amount": 25000000000.0,
       "status": "verified",
       "date": "2026-06-30",
-      "tier": 1
+      "tier": 1,
+      "confidence": 100,
+      "grade": "A1"
     },
     {
       "source": "alloc:Blue Owl",
@@ -736,7 +740,9 @@
       "amount": null,
       "status": "verified",
       "date": "2026-07-08",
-      "tier": 1
+      "tier": 1,
+      "confidence": 100,
+      "grade": "A1"
     },
     {
       "source": "alloc:DigitalBridge",
@@ -746,7 +752,9 @@
       "amount": null,
       "status": "verified",
       "date": "2026-07-01",
-      "tier": 1
+      "tier": 1,
+      "confidence": 100,
+      "grade": "A1"
     },
     {
       "source": "alloc:Blackstone",
@@ -756,7 +764,9 @@
       "amount": 3250000000.0,
       "status": "verified_alpha",
       "date": "2026-07-15",
-      "tier": 2
+      "tier": 2,
+      "confidence": 72,
+      "grade": "B3"
     },
     {
       "source": "alloc:BlackRock",
@@ -766,7 +776,9 @@
       "amount": 14000000000.0,
       "status": "verified_alpha",
       "date": "2026-07-28",
-      "tier": 3
+      "tier": 3,
+      "confidence": 62,
+      "grade": "C3"
     },
     {
       "source": "alloc:SoftBank",
@@ -776,7 +788,9 @@
       "amount": 40000000000.0,
       "status": "verified_alpha",
       "date": "2026-07-27",
-      "tier": 3
+      "tier": 3,
+      "confidence": 62,
+      "grade": "C3"
     },
     {
       "source": "alloc:Blackstone",
@@ -786,7 +800,9 @@
       "amount": 30000000000.0,
       "status": "candidate",
       "date": "2026-06-30",
-      "tier": 3
+      "tier": 3,
+      "confidence": 50,
+      "grade": "C4"
     },
     {
       "source": "alloc:NVIDIA",
@@ -796,7 +812,9 @@
       "amount": 5000000000.0,
       "status": "verified",
       "date": "2026-07-27",
-      "tier": 1
+      "tier": 1,
+      "confidence": 100,
+      "grade": "A1"
     },
     {
       "source": "alloc:Meta",
@@ -806,7 +824,9 @@
       "amount": 14000000000.0,
       "status": "verified",
       "date": "2026-07-28",
-      "tier": 1
+      "tier": 1,
+      "confidence": 100,
+      "grade": "A1"
     },
     {
       "source": "alloc:Peter Thiel",
@@ -816,7 +836,9 @@
       "amount": 6024585000.0,
       "status": "verified",
       "date": "2026-07-17",
-      "tier": 1
+      "tier": 1,
+      "confidence": 100,
+      "grade": "A1"
     },
     {
       "source": "alloc:Galaxy Digital",
@@ -826,7 +848,9 @@
       "amount": 3507000000.0,
       "status": "verified",
       "date": "2026-07-28",
-      "tier": 1
+      "tier": 1,
+      "confidence": 100,
+      "grade": "A1"
     },
     {
       "source": "alloc:Elad Gil",
@@ -836,7 +860,9 @@
       "amount": null,
       "status": "verified_alpha",
       "date": "2026-06-17",
-      "tier": 3
+      "tier": 3,
+      "confidence": 62,
+      "grade": "C3"
     },
     {
       "source": "alloc:Garry Tan",
@@ -846,7 +872,9 @@
       "amount": null,
       "status": "verified_alpha",
       "date": "2026-06-17",
-      "tier": 3
+      "tier": 3,
+      "confidence": 62,
+      "grade": "C3"
     },
     {
       "source": "alloc:Garry Tan",
@@ -856,7 +884,9 @@
       "amount": null,
       "status": "verified_alpha",
       "date": "2026-07-07",
-      "tier": 3
+      "tier": 3,
+      "confidence": 62,
+      "grade": "C3"
     },
     {
       "source": "alloc:Jeff Bezos",
@@ -866,7 +896,9 @@
       "amount": null,
       "status": "verified_alpha",
       "date": "2026-06-25",
-      "tier": 3
+      "tier": 3,
+      "confidence": 62,
+      "grade": "C3"
     },
     {
       "source": "alloc:Eric Schmidt",
@@ -876,7 +908,9 @@
       "amount": null,
       "status": "verified_alpha",
       "date": "2026-06-25",
-      "tier": 3
+      "tier": 3,
+      "confidence": 62,
+      "grade": "C3"
     },
     {
       "source": "alloc:Jeff Bezos",
@@ -886,7 +920,9 @@
       "amount": null,
       "status": "verified_alpha",
       "date": "2026-07-20",
-      "tier": 3
+      "tier": 3,
+      "confidence": 62,
+      "grade": "C3"
     },
     {
       "source": "alloc:Jeff Bezos",
@@ -896,7 +932,9 @@
       "amount": null,
       "status": "candidate",
       "date": "2026-07-02",
-      "tier": 3
+      "tier": 3,
+      "confidence": 50,
+      "grade": "C4"
     },
     {
       "source": "alloc:Jeff Bezos",
@@ -906,7 +944,9 @@
       "amount": null,
       "status": "candidate",
       "date": "2026-07-02",
-      "tier": 2
+      "tier": 2,
+      "confidence": 60,
+      "grade": "B4"
     },
     {
       "source": "alloc:Jeff Bezos",
@@ -916,7 +956,9 @@
       "amount": 100000000.0,
       "status": "candidate",
       "date": "2026-07-02",
-      "tier": 3
+      "tier": 3,
+      "confidence": 50,
+      "grade": "C4"
     },
     {
       "source": "alloc:Reid Hoffman",
@@ -926,7 +968,9 @@
       "amount": null,
       "status": "candidate",
       "date": "2026-07-24",
-      "tier": 3
+      "tier": 3,
+      "confidence": 50,
+      "grade": "C4"
     },
     {
       "source": "alloc:Peter Thiel",
@@ -936,7 +980,9 @@
       "amount": null,
       "status": "candidate",
       "date": "2026-07-23",
-      "tier": 3
+      "tier": 3,
+      "confidence": 50,
+      "grade": "C4"
     },
     {
       "source": "alloc:Stanley Druckenmiller",
@@ -946,7 +992,9 @@
       "amount": null,
       "status": "candidate",
       "date": "2026-07-23",
-      "tier": 3
+      "tier": 3,
+      "confidence": 50,
+      "grade": "C4"
     },
     {
       "source": "alloc:Peter Thiel",
@@ -956,7 +1004,9 @@
       "amount": 140000000.0,
       "status": "candidate",
       "date": "2026-05-14",
-      "tier": 3
+      "tier": 3,
+      "confidence": 50,
+      "grade": "C4"
     },
     {
       "source": "alloc:Sequoia",
@@ -966,7 +1016,9 @@
       "amount": 1000000000.0,
       "status": "verified",
       "date": "2026-08-04",
-      "tier": 1
+      "tier": 1,
+      "confidence": 100,
+      "grade": "A1"
     },
     {
       "source": "alloc:Sequoia",
@@ -976,7 +1028,9 @@
       "amount": 300000000.0,
       "status": "verified_alpha",
       "date": "2026-07-23",
-      "tier": 3
+      "tier": 3,
+      "confidence": 62,
+      "grade": "C3"
     },
     {
       "source": "alloc:Andreessen Horowitz",
@@ -986,7 +1040,9 @@
       "amount": 300000000.0,
       "status": "verified_alpha",
       "date": "2026-07-23",
-      "tier": 3
+      "tier": 3,
+      "confidence": 62,
+      "grade": "C3"
     },
     {
       "source": "alloc:Andreessen Horowitz",
@@ -996,7 +1052,9 @@
       "amount": 160000000.0,
       "status": "verified_alpha",
       "date": "2026-07-22",
-      "tier": 3
+      "tier": 3,
+      "confidence": 62,
+      "grade": "C3"
     },
     {
       "source": "alloc:Sequoia",
@@ -1006,7 +1064,9 @@
       "amount": 160000000.0,
       "status": "verified_alpha",
       "date": "2026-07-22",
-      "tier": 3
+      "tier": 3,
+      "confidence": 62,
+      "grade": "C3"
     },
     {
       "source": "alloc:Andreessen Horowitz",
@@ -1016,7 +1076,9 @@
       "amount": 1700000000.0,
       "status": "verified_alpha",
       "date": "2026-07-22",
-      "tier": 3
+      "tier": 3,
+      "confidence": 62,
+      "grade": "C3"
     },
     {
       "source": "alloc:Khosla Ventures",
@@ -1026,7 +1088,9 @@
       "amount": 120000000.0,
       "status": "verified",
       "date": "2026-07-07",
-      "tier": 1
+      "tier": 1,
+      "confidence": 100,
+      "grade": "A1"
     },
     {
       "source": "alloc:Coatue",
@@ -1036,7 +1100,9 @@
       "amount": 120000000.0,
       "status": "verified",
       "date": "2026-07-07",
-      "tier": 1
+      "tier": 1,
+      "confidence": 100,
+      "grade": "A1"
     },
     {
       "source": "alloc:Coatue",
@@ -1046,7 +1112,9 @@
       "amount": 3000000000.0,
       "status": "candidate",
       "date": "2026-07-17",
-      "tier": 3
+      "tier": 3,
+      "confidence": 50,
+      "grade": "C4"
     },
     {
       "source": "alloc:Altimeter",
@@ -1056,7 +1124,9 @@
       "amount": 2000000000.0,
       "status": "candidate",
       "date": "2026-07-07",
-      "tier": 3
+      "tier": 3,
+      "confidence": 50,
+      "grade": "C4"
     },
     {
       "source": "alloc:Coatue",
@@ -1066,7 +1136,9 @@
       "amount": 8000000000.0,
       "status": "candidate",
       "date": "2026-07-17",
-      "tier": 3
+      "tier": 3,
+      "confidence": 50,
+      "grade": "C4"
     }
   ],
   "sectors": {
