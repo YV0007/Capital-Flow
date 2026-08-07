@@ -271,9 +271,14 @@ check the counterparty's filings (the other side often discloses); use Wayback o
 **Effect on 2026-W32:** signals went **2 → 12**; every event classified on sector *and*
 theme; coverage now measured (16/46 key+core produced events, 30 silent and listed).
 
-**Remaining:** C5-full (per-allocator expected-vs-found — needs agents to log which
-allocators they checked), C3 (structured event fields), C7 (`leads` table), WS2 standing
-EDGAR net, WS7 alt-data pre-signals, GLEIF/LEI bulk enrichment, remaining network rules.
+- ✅ **WS2+C7** standing EDGAR net (`engine/edgar.py`) + `leads` & `coverage` tables — `a8cb909`
+- ✅ **C3** structured deal fields; **network rules** repeat_conviction + defense_convergence — `e34ab26`
+
+**Everything in the Now/Next roadmap is shipped.** Remaining (Later phase, deliberately
+deferred): WS7 alt-data pre-signals (hiring, permits, power-interconnect queues), GLEIF/LEI
+bulk enrichment, non-US registries, `fellowship_breakout` (needs alumni-round modeling),
+and C5-full per-allocator expected-vs-found (needs agents to log allocators checked — the
+`coverage` table and EDGAR half already do this; the agent half lands on the next run).
 
 ## 7. Roadmap — Now / Next / Later
 
