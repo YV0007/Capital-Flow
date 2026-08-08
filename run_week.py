@@ -21,7 +21,7 @@ def current_week() -> str:
 
 
 def main(week: str, do_deliver: bool = False, do_push: bool = False,
-         do_sweep: bool = False) -> None:
+         do_sweep: bool = False, do_logos: bool = True) -> None:
     # Agent research stage runs before this script (or will be invoked here later).
     print(f"== Capital Flow pipeline: {week} ==")
     if do_sweep:  # network call — opt-in so offline runs stay deterministic
@@ -43,14 +43,17 @@ def main(week: str, do_deliver: bool = False, do_push: bool = False,
     h = handoff.run(week)
     print(f"[handoff] {h['nodes']} nodes, {h['flows']} flows -> handoff/capital_map.json")
     if do_deliver or do_push:
-        d = deliver.run(week, push=do_push)
+        # deliver also refreshes dashboard logos for this cycle's new entities
+        # (network call, best-effort — see engine/deliver.py).
+        d = deliver.run(week, push=do_push, refresh_logos_first=do_logos)
         print(f"[deliver] {d}")
 
 
 if __name__ == "__main__":
-    # Usage: python run_week.py [week] [--deliver] [--push]
+    # Usage: python run_week.py [week] [--deliver] [--push] [--sweep] [--no-logos]
     # --deliver copies capitalMap.json into ab-investment; --push also commits + pushes to main.
+    # --no-logos skips the dashboard logo refresh (offline / data-only runs).
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     week = args[0] if args else current_week()
     main(week, do_deliver="--deliver" in sys.argv, do_push="--push" in sys.argv,
-         do_sweep="--sweep" in sys.argv)
+         do_sweep="--sweep" in sys.argv, do_logos="--no-logos" not in sys.argv)

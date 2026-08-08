@@ -1,15 +1,25 @@
 """Deliver: push the handoff into the ab-investment dashboard repo.
 
 Auto-push model (decided): the scheduled/weekly run copies handoff/capital_map.json
-into the dashboard repo at src/data/capitalMap.json, commits ONLY that file, and
-pushes to main. Vercel auto-deploys on push. There is no review gate — whatever the
-agents verified goes live — so agent accuracy discipline is what protects production.
+into the dashboard repo at src/data/capitalMap.json, commits it, and pushes to
+main. Vercel auto-deploys on push. There is no review gate — whatever the agents
+verified goes live — so agent accuracy discipline is what protects production.
+
+LOGO REFRESH. Every cycle brings entities the dashboard has never seen, and a
+node with no logo falls back to a monogram tile. So after copying the map we run
+the dashboard's scripts/fetch_logos.py in incremental mode: it walks the NEW map,
+resolves a domain for anything without one, verifies the page really belongs to
+that entity, and downloads the sharpest icon it can find. Anything unverifiable
+stays a monogram — a wrong logo is worse than none. Pass refresh_logos=False to
+skip (offline runs, or when you want a data-only commit).
 
 Safety properties:
-- Commits only the single capitalMap.json path (never sweeps up unrelated changes in
-  the dashboard working tree).
+- Commits only the delivery paths (map, logo manifest, logo files, entity
+  reference) — never sweeps up unrelated dashboard work in progress.
 - Gated: nothing here runs unless explicitly invoked (run_week.py --deliver/--push).
   `push=False` copies the file but does not commit/push.
+- The logo step is best-effort: a network failure there never blocks delivery of
+  the data itself.
 
 Config: the dashboard repo path comes from env AB_INVESTMENT_PATH, defaulting to the
 known local checkout.
@@ -25,6 +35,11 @@ from . import db
 AB_PATH = Path(os.environ.get(
     "AB_INVESTMENT_PATH", "/Users/macbook/Desktop/BASE/Code/ab-investment"))
 DEST_REL = "src/data/capitalMap.json"
+LOGO_SCRIPT = "scripts/fetch_logos.py"
+# Everything a delivery is allowed to touch in the dashboard repo.
+COMMIT_PATHS = [DEST_REL, "src/data/logoManifest.json",
+                "src/data/entityReference.json", "public/logos"]
+LOGO_TIMEOUT = 900          # 15 min ceiling; the script is incremental so it's usually seconds
 
 
 def _git(args, cwd):
@@ -32,7 +47,22 @@ def _git(args, cwd):
                           capture_output=True, text=True)
 
 
-def run(week: str, push: bool = False) -> dict:
+def refresh_logos() -> dict:
+    """Fetch logos for entities the dashboard doesn't have one for yet."""
+    script = AB_PATH / LOGO_SCRIPT
+    if not script.exists():
+        return {"ran": False, "note": f"{LOGO_SCRIPT} not found"}
+    try:
+        p = subprocess.run(["python3", str(script)], cwd=AB_PATH,
+                           capture_output=True, text=True, timeout=LOGO_TIMEOUT)
+    except subprocess.TimeoutExpired:
+        return {"ran": False, "note": "timed out"}
+    tail = (p.stdout or "").strip().splitlines()
+    return {"ran": p.returncode == 0, "summary": tail[-1] if tail else "",
+            "note": (p.stderr or "").strip()[:200] or None}
+
+
+def run(week: str, push: bool = False, refresh_logos_first: bool = True) -> dict:
     src = db.HANDOFF_DIR / "capital_map.json"
     if not src.exists():
         raise FileNotFoundError(f"no handoff to deliver: {src} (run the pipeline first)")
@@ -44,21 +74,24 @@ def run(week: str, push: bool = False) -> dict:
     dest.parent.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(src, dest)
 
-    if not push:
-        return {"copied_to": str(dest), "pushed": False}
+    # Logos come AFTER the copy so the script sees this cycle's new entities.
+    logos = refresh_logos() if refresh_logos_first else {"ran": False, "note": "skipped"}
 
-    _git(["add", DEST_REL], AB_PATH)
-    # Commit only if the data file actually changed.
-    status = _git(["status", "--porcelain", DEST_REL], AB_PATH).stdout.strip()
+    if not push:
+        return {"copied_to": str(dest), "pushed": False, "logos": logos}
+
+    _git(["add", "--", *COMMIT_PATHS], AB_PATH)
+    # Commit only if something in the delivery set actually changed.
+    status = _git(["status", "--porcelain", "--", *COMMIT_PATHS], AB_PATH).stdout.strip()
     if not status:
-        return {"copied_to": str(dest), "pushed": False, "note": "no change"}
-    _git(["commit", "-m", f"Capital Flow data update: {week}", "--", DEST_REL], AB_PATH)
+        return {"copied_to": str(dest), "pushed": False, "note": "no change", "logos": logos}
+    _git(["commit", "-m", f"Capital Flow data update: {week}", "--", *COMMIT_PATHS], AB_PATH)
     _git(["push", "origin", "HEAD:main"], AB_PATH)
-    return {"copied_to": str(dest), "pushed": True, "week": week}
+    return {"copied_to": str(dest), "pushed": True, "week": week, "logos": logos}
 
 
 if __name__ == "__main__":
     import sys
     wk = sys.argv[1]
     do_push = "--push" in sys.argv
-    print(run(wk, push=do_push))
+    print(run(wk, push=do_push, refresh_logos_first="--no-logos" not in sys.argv))
