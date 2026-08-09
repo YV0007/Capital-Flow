@@ -1,0 +1,260 @@
+[
+  {
+    "target": "Richland Parish / Hyperion data center (Louisiana)",
+    "description": "Meta's flagship AI data center campus in Richland Parish, northeast Louisiana: nearly 10 million sq ft on a 2,250-acre site with 5 GW of IT capacity, planned as the largest facility in Meta's fleet and home to Hyperion, its largest AI training cluster. Meta's commitment exceeds $50B, with ~7,500 peak construction jobs.",
+    "website": "https://datacenters.atmeta.com/richland-parish-data-center/",
+    "read_more": {
+      "label": "CNBC",
+      "url": "https://www.cnbc.com/2026/07/13/meta-louisiana-data-center-investment-reaches-50-billion-amid-ai-push.html"
+    },
+    "sources": [
+      "https://www.opportunitylouisiana.gov/news/meta-commits-more-than-50-billion-for-north-louisiana-project-becoming-one-of-the-largest-data-centers-in-history",
+      "https://datacenters.atmeta.com/richland-parish-data-center/",
+      "https://www.cnbc.com/2026/07/13/meta-louisiana-data-center-investment-reaches-50-billion-amid-ai-push.html"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "OpenAI Group PBC",
+    "description": "The for-profit public benefit corporation of OpenAI, created in the company's October 2025 recapitalization and controlled by the nonprofit OpenAI Foundation; outside investors hold their stakes through this entity. Amazon's final $21.3B tranche (disclosed in its July 2026 10-Q) completed a $50B investment for a ~5% stake, alongside an AWS cloud agreement.",
+    "website": "https://openai.com",
+    "read_more": {
+      "label": "Amazon News",
+      "url": "https://www.aboutamazon.com/news/aws/openai-amazon-partnership-explained"
+    },
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+      "https://www.aboutamazon.com/news/aws/openai-amazon-partnership-explained",
+      "https://www.pymnts.com/news/artificial-intelligence/2026/amazon-completes-50-billion-dollar-investment-openai/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "OpenAI",
+    "description": "San Francisco AI lab behind ChatGPT and the GPT model family, the most heavily capitalized private AI company. SoftBank's $10B second tranche, executed July 1, 2026 through Vision Fund 2 into OpenAI Group PBC, is part of a $30B follow-on committed in February 2026, with a final $10B tranche due by October 2026.",
+    "website": "https://openai.com",
+    "read_more": {
+      "label": "SoftBank Group",
+      "url": "https://group.softbank/en/news/press/20260701"
+    },
+    "sources": [
+      "https://group.softbank/en/news/press/20260701",
+      "https://www.aboutamazon.com/news/aws/openai-amazon-partnership-explained"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Akita 500MW AI data center (Japan)",
+    "description": "Proposed 500MW AI data center in Akita prefecture, developed by US startup BitGrid with Japanese IT firm S2, targeting operation in the early 2030s; it would be Japan's largest data center. Abu Dhabi's Mubadala (via AI vehicle MGX) is reported to be weighing up to JPY 1 trillion (~$6.3B); total project cost could reach ~JPY 2 trillion.",
+    "website": null,
+    "read_more": {
+      "label": "The Japan Times",
+      "url": "https://www.japantimes.co.jp/business/2026/08/06/uae-fund-data-center/"
+    },
+    "sources": [
+      "https://www.japantimes.co.jp/business/2026/08/06/uae-fund-data-center/",
+      "https://www.bloomberg.com/news/articles/2026-08-06/uae-fund-weighs-6-3-billion-ai-data-center-investment-in-japan",
+      "https://globalswf.com/news/mubadala-weighs-record-us-6-3-billion-japan-ai-data-centre-investment"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Brookfield AI Infrastructure strategy",
+    "description": "Brookfield Asset Management's dedicated AI infrastructure investment strategy (Brookfield Artificial Intelligence Infrastructure Fund, targeting ~$10B of equity), which anchors its $100B AI infrastructure program. A first close reported August 5, 2026 brought commitments to $5B, with NVIDIA and KIA among the backers; its first investment was the Bloom Energy power partnership.",
+    "website": null,
+    "read_more": {
+      "label": "Brookfield Asset Management",
+      "url": "https://bam.brookfield.com/press-releases/brookfield-launches-100-billion-ai-infrastructure-program"
+    },
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1937926/000117184326005272/exh_991.htm",
+      "https://bam.brookfield.com/press-releases/brookfield-launches-100-billion-ai-infrastructure-program",
+      "https://www.datacenterdynamics.com/en/news/brookfield-launches-100bn-ai-infrastructure-fund-secures-nvidia-and-kia-as-backers/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "QTS Realty Trust",
+    "description": "One of the largest US data center platforms, taken private by Blackstone in 2021 for ~$10B and central to its AI infrastructure bet. In July 2026 QTS closed an upsized $3.25B seven-year term loan B (JPMorgan-led, priced S+225) backed by 12 completed, fully leased data centers known as Project Magnolia, with Microsoft among the tenants.",
+    "website": "https://www.qtsdatacenters.com",
+    "read_more": {
+      "label": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-08/blackstone-s-qts-taps-us-loan-market-in-data-center-backed-deal"
+    },
+    "sources": [
+      "https://pitchbook.com/news/articles/blackstones-qts-secures-upsized-3-25b-leveraged-loan",
+      "https://www.bloomberg.com/news/articles/2026-07-08/blackstone-s-qts-taps-us-loan-market-in-data-center-backed-deal",
+      "https://finance.yahoo.com/technology/ai/articles/qts-expands-ai-loan-3-192527428.html"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Thrive Holdings",
+    "description": "Holding company launched in 2025 by Josh Kushner's Thrive Capital that acquires controlling stakes in traditional services businesses (initially accounting and IT services) and rebuilds their operations around AI; OpenAI holds an ownership stake. Raised roughly $2B in July 2026 from SoftBank, Altimeter and D1 Capital, following an earlier $1B from Thrive-affiliated institutions.",
+    "website": null,
+    "read_more": {
+      "label": "The Information",
+      "url": "https://www.theinformation.com/articles/softbank-altimeter-d1-invest-thrive-holdings-2-billion-financing"
+    },
+    "sources": [
+      "https://www.theinformation.com/articles/softbank-altimeter-d1-invest-thrive-holdings-2-billion-financing",
+      "https://www.pymnts.com/news/artificial-intelligence/2026/thrive-holdings-raises-2-billion-to-buy-and-rewire-services-firms-with-ai/",
+      "https://www.bloomberg.com/news/articles/2026-03-26/kushner-s-thrive-holdings-in-talks-to-raise-at-least-2-billion"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Valar Atomics",
+    "description": "Nuclear startup building standardized small modular reactors through vertically integrated manufacturing, targeting power for AI, industry and national security. Its Ward 250 reactor reached self-sustaining criticality in June 2026 — the first reactor taken critical outside a national lab by a company. Raised a $1B Series B led by Sequoia, plus a $200M credit facility from Erebor Bank and J.P. Morgan.",
+    "website": "https://www.valaratomics.com",
+    "read_more": {
+      "label": "Valar Atomics",
+      "url": "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia"
+    },
+    "sources": [
+      "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "DigitalBridge Credit II",
+    "description": "Second vintage of DigitalBridge's digital-infrastructure credit fund series, lending (first-lien, second-lien and junior debt) to data center, fiber, tower and related digital infrastructure companies; managed from Boca Raton by the firm led by Marc Ganzi. A July 2026 Form D amendment reports $711.4M sold across its onshore, offshore, Ontario and Luxembourg parallel vehicles.",
+    "website": null,
+    "read_more": {
+      "label": "DigitalBridge",
+      "url": "https://www.digitalbridge.com/news/2023-11-27-digitalbridge-announces-total-commitments-of-11-billion-for-digital-infrastructure-credit-strategy"
+    },
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/2014474/000201447426000004/primary_doc.xml",
+      "https://www.digitalbridge.com/news/2023-11-27-digitalbridge-announces-total-commitments-of-11-billion-for-digital-infrastructure-credit-strategy",
+      "https://pitchbook.com/profiles/fund/25504-75F"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "GlobalFoundries",
+    "description": "US-headquartered contract semiconductor manufacturer (NASDAQ: GFS) with fabs in Malta NY, Burlington VT, Dresden and Singapore, serving automotive, IoT and data center markets. Signed a letter of intent with the US Commerce Department for a $300M CHIPS R&D award to develop silicon photonics and co-packaged optics (its SCALE platform) for AI data centers.",
+    "website": "https://gf.com",
+    "read_more": {
+      "label": "GlobalFoundries",
+      "url": "https://gf.com/news-and-events/news/globalfoundries-signs-letter-of-intent-with-the-us-department-of-commerce-for-a-300-million-award-to-accelerate-us-silicon-photonics-leadership/"
+    },
+    "sources": [
+      "https://gf.com/news-and-events/news/globalfoundries-signs-letter-of-intent-with-the-us-department-of-commerce-for-a-300-million-award-to-accelerate-us-silicon-photonics-leadership/",
+      "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "State Affairs",
+    "description": "AI-powered policy and regulatory intelligence platform combining a newsroom covering all 50 states and the federal government with structured legislative data; used by a third of state and federal elected officials plus enterprises like Walmart and Mastercard. Co-founded by CEO Evan Burns; announced $70M in total funding (July 2026) from Founders Fund, Khosla Ventures, Tru Arrow and others.",
+    "website": "https://stateaffairs.com",
+    "read_more": {
+      "label": "PR Newswire",
+      "url": "https://www.prnewswire.com/news-releases/state-affairs-raises-70-million-to-help-institutions-navigate-the-policy-and-regulatory-economy-302824501.html"
+    },
+    "sources": [
+      "https://www.prnewswire.com/news-releases/state-affairs-raises-70-million-to-help-institutions-navigate-the-policy-and-regulatory-economy-302824501.html"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Extropic",
+    "description": "AI hardware startup founded by Guillaume Verdon building thermodynamic sampling units (TSUs) — probabilistic chips that use natural thermal fluctuations to run simulation, optimization and AI workloads at a fraction of conventional computing's energy cost. Received a Commerce Department letter of intent for up to $75M under the CHIPS program in July 2026.",
+    "website": "https://extropic.ai",
+    "read_more": {
+      "label": "NIST",
+      "url": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million"
+    },
+    "sources": [
+      "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million",
+      "https://extropic.ai/",
+      "https://www.prnewswire.com/news-releases/extropic-emerges-from-stealth-aiming-to-revolutionize-generative-ai-with-physics-based-ai-processors-302090040.html"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Altimeter Himalaya Fund I, L.P.",
+    "description": "Boston-based venture capital fund vehicle from Brad Gerstner's Altimeter Capital; its July 2026 Form D reports $40M raised and fully subscribed (first sale June 29, 2026), with Gerstner, Matthew Tolve and John Kiernan III as related persons. No public announcement found — the 'Himalaya' vehicle's specific strategy is undisclosed.",
+    "website": null,
+    "read_more": {
+      "label": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/2139124/000213912426000001/primary_doc.xml"
+    },
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/2139124/000213912426000001/primary_doc.xml",
+      "https://www.altimeter.com/home"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Summit Ridge Energy",
+    "description": "Leading US commercial and community solar operator founded in 2017, which develops, owns and operates 275+ distributed solar and storage facilities (3+ GW) across the Midwest, Mid-Atlantic and New England, having raised over $7B in project capital. BlackRock's Global Infrastructure Partners agreed in July 2026 to acquire a majority, controlling interest.",
+    "website": "https://srenergy.com",
+    "read_more": {
+      "label": "GlobeNewswire",
+      "url": "https://www.globenewswire.com/news-release/2026/07/14/3326975/0/en/global-infrastructure-partners-agrees-to-acquire-summit-ridge-energy.html"
+    },
+    "sources": [
+      "https://www.globenewswire.com/news-release/2026/07/14/3326975/0/en/global-infrastructure-partners-agrees-to-acquire-summit-ridge-energy.html",
+      "https://srenergy.com/projects/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Proxima Fusion",
+    "description": "Munich-based stellarator fusion company, the first spinout of the Max Planck Institute for Plasma Physics, building on the Wendelstein 7-X program toward its Stellaris commercial fusion plant. Raised EUR 411M ($468M) in July 2026 at a EUR 2.4B valuation, led by XTX Ventures and East X Ventures with Google and RWE as strategic investors — Europe's best-funded fusion company.",
+    "website": "https://www.proximafusion.com",
+    "read_more": {
+      "label": "Proxima Fusion",
+      "url": "https://www.proximafusion.com/press-news/proxima-fusion-raises-eu411-million-to-build-europes-commercial-fusion-champion"
+    },
+    "sources": [
+      "https://www.proximafusion.com/press-news/proxima-fusion-raises-eu411-million-to-build-europes-commercial-fusion-champion"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Nippon Gateway Infrastructure (NGI)",
+    "description": "Enterprise-focused colocation data center platform in Japan, formed July 2026 by DigitalBridge and Japan Extensive Infrastructure (JEXI). Launched with data center assets acquired from NEC in Greater Tokyo and Greater Osaka (NEC remains a key customer), led by CEO Hiroshi Ogasawara, with plans to expand through acquisitions and new development across Japan's major markets.",
+    "website": null,
+    "read_more": {
+      "label": "DigitalBridge",
+      "url": "https://www.digitalbridge.com/news/2026-07-01-digitalbridge-and-jexi-announce-formation-of-nippon-gateway-infrastructure-a-new-data-center-platform-in-japan"
+    },
+    "sources": [
+      "https://www.digitalbridge.com/news/2026-07-01-digitalbridge-and-jexi-announce-formation-of-nippon-gateway-infrastructure-a-new-data-center-platform-in-japan"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "General Intuition",
+    "description": "AI research lab spun out of gaming clip platform Medal, training world models and agents for spatial-temporal reasoning on hundreds of millions of hours of gameplay footage with embedded controller-action labels; led by CEO Pim de Witte. Raised $320M at a $2.3B valuation in June 2026, led by Khosla Ventures with Jeff Bezos, Eric Schmidt and General Catalyst participating.",
+    "website": "https://www.generalintuition.com/",
+    "read_more": {
+      "label": "TechCrunch",
+      "url": "https://techcrunch.com/2026/06/25/general-intuitions-2-3b-bet-that-video-games-can-train-ai-agents-for-the-real-world/"
+    },
+    "sources": [
+      "https://techcrunch.com/2026/06/25/general-intuitions-2-3b-bet-that-video-games-can-train-ai-agents-for-the-real-world/",
+      "https://www.generalintuition.com/",
+      "https://medal.tv/blog/posts/medal-x-general-intuition-how-clips-and-gameplay-actions-create-spatial-intelligence"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Andreessen Horowitz LSV Fund V-B, L.P.",
+    "description": "Parallel vehicle of Andreessen Horowitz's fifth late-stage venture fund (LSV Fund V), the a16z strategy that backs growth-stage technology companies; the LSV series began with a $2B fund in 2019. Its July 2026 Form D (Menlo Park; Marc Andreessen and Ben Horowitz as related persons) reports an indefinite offering amount with no sales yet at filing.",
+    "website": null,
+    "read_more": {
+      "label": "Andreessen Horowitz",
+      "url": "https://a16z.com/late-stage-venture/"
+    },
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/2107845/000110465926084286/primary_doc.xml",
+      "https://a16z.com/late-stage-venture/",
+      "https://pitchbook.com/profiles/fund/29123-56F"
+    ],
+    "as_of": "2026-08-09"
+  }
+]

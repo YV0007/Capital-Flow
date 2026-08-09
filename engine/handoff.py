@@ -67,6 +67,27 @@ def _build_map(con) -> dict:
                       if e["source_reliability"] else None),
         })
 
+    # Target references (engine-owned "what this is"): description + links emitted
+    # directly on target nodes. The dashboard's local entityReference.json yields
+    # precedence to these fields (per its own _note).
+    refs = {r["target"]: r for r in con.execute("SELECT * FROM target_references")}
+    for n in nodes.values():
+        if n["kind"] != "target":
+            continue
+        r = refs.get(n["label"])
+        if not r:
+            continue
+        n["description"] = r["description"]
+        links = []
+        if r["website"]:
+            dom = r["website"].split("//")[-1].split("/")[0].removeprefix("www.")
+            links.append({"kind": "website", "label": dom, "url": r["website"]})
+        if r["read_more_url"]:
+            links.append({"kind": "read_more", "label": r["read_more_label"] or "Read more",
+                          "url": r["read_more_url"]})
+        n["links"] = links
+        n["reference_as_of"] = r["as_of"]
+
     today = date.today().isoformat()
     for n in nodes.values():
         stale_before = (datetime.fromisoformat(today).toordinal() - STALE_DAYS)

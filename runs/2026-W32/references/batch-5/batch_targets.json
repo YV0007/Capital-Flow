@@ -1,0 +1,237 @@
+[
+  {
+    "target": "Aligned Data Centers",
+    "target_type": "private",
+    "sector": "datacenters",
+    "allocators": [
+      "BlackRock",
+      "MGX"
+    ],
+    "last_event": "2026-07-21",
+    "capital_usd": 40000000000.0,
+    "deal_source_urls": [
+      "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/"
+    ]
+  },
+  {
+    "target": "TeraWulf Justified Data Campus (Kentucky)",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Anthropic"
+    ],
+    "last_event": "2026-08-05",
+    "capital_usd": 19000000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1083301/000108330126000162/a_wulfearningsreleaseq22026.htm"
+    ]
+  },
+  {
+    "target": "Sturgeon County data center (Alberta, Canada)",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Meta"
+    ],
+    "last_event": "2026-07-08",
+    "capital_usd": 9170000000.0,
+    "deal_source_urls": [
+      "https://about.fb.com/news/2026/07/breaking-ground-on-metas-first-data-center-in-canada/"
+    ]
+  },
+  {
+    "target": "Khosla Ventures 2026 fund family",
+    "target_type": "fund",
+    "sector": "ai-applications",
+    "allocators": [
+      "Khosla Ventures"
+    ],
+    "last_event": "2026-07-23",
+    "capital_usd": 5500000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2074230/000207423025000001/primary_doc.xml"
+    ]
+  },
+  {
+    "target": "Mubadala Capital (credit platform)",
+    "target_type": "fund",
+    "sector": "private-credit",
+    "allocators": [
+      "Mubadala"
+    ],
+    "last_event": "2026-07-06",
+    "capital_usd": 4650000000.0,
+    "deal_source_urls": [
+      "https://finance.yahoo.com/markets/stocks/articles/mubadala-capital-completes-integration-mubadala-100000955.html"
+    ]
+  },
+  {
+    "target": "Aypa Power",
+    "target_type": "private",
+    "sector": "power-energy",
+    "allocators": [
+      "Brookfield"
+    ],
+    "last_event": "2026-07-22",
+    "capital_usd": 3000000000.0,
+    "deal_source_urls": [
+      "https://www.globenewswire.com/news-release/2026/07/22/3331786/0/en/brookfield-to-acquire-aypa-power-the-leading-north-american-battery-storage-platform-from-blackstone-energy-transition-partners.html"
+    ]
+  },
+  {
+    "target": "ABB Robotics acquisition financing",
+    "target_type": "asset",
+    "sector": "robotics",
+    "allocators": [
+      "SoftBank"
+    ],
+    "last_event": "2026-07-21",
+    "capital_usd": 1750000000.0,
+    "deal_source_urls": [
+      "https://group.softbank/en/news/press/20251008"
+    ]
+  },
+  {
+    "target": "NAVER Corporation",
+    "target_type": "public",
+    "sector": "datacenters",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-07-27",
+    "capital_usd": 1000000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1937926/000117184326004879/exh_991.htm"
+    ]
+  },
+  {
+    "target": "Greenoaks Prime Radiant Founders LP",
+    "target_type": "fund",
+    "sector": "ai-applications",
+    "allocators": [
+      "Greenoaks"
+    ],
+    "last_event": "2026-07-14",
+    "capital_usd": 576519835.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2141341/000184073526000020/primary_doc.xml"
+    ]
+  },
+  {
+    "target": "Kepler Computing",
+    "target_type": "private",
+    "sector": "semiconductors",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-07-29",
+    "capital_usd": 245000000.0,
+    "deal_source_urls": [
+      "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million"
+    ]
+  },
+  {
+    "target": "Greenoaks Prime Radiant Founders Offshore LP",
+    "target_type": "fund",
+    "sector": "ai-applications",
+    "allocators": [
+      "Greenoaks"
+    ],
+    "last_event": "2026-07-14",
+    "capital_usd": 115480165.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2141340/000214134026000002/primary_doc.xml"
+    ]
+  },
+  {
+    "target": "Prometheus project (Idaho National Laboratory and partners)",
+    "target_type": "project",
+    "sector": "nuclear",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-07-22",
+    "capital_usd": 60000000.0,
+    "deal_source_urls": [
+      "https://inl.gov/news-release/genesis-mission-funds-ai-innovation-to-speed-up-safe-affordable-nuclear-energy/"
+    ]
+  },
+  {
+    "target": "Ambrook",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Thrive Capital"
+    ],
+    "last_event": "2026-08-04",
+    "capital_usd": 30000000.0,
+    "deal_source_urls": [
+      "https://ambrook.com/series-b"
+    ]
+  },
+  {
+    "target": "Savannah River Site AI data center",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-07-20",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.energy.gov/nnsa/articles/nnsa-selects-amentum-ai-data-center-and-energy-project-savannah-river-site"
+    ]
+  },
+  {
+    "target": "Prentis",
+    "target_type": "fund",
+    "sector": "ai-applications",
+    "allocators": [
+      "Reid Hoffman"
+    ],
+    "last_event": "2026-07-24",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://efts.sec.gov/LATEST/search-index?q=%22Prentis%22&forms=D"
+    ]
+  },
+  {
+    "target": "Mistral AI",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "Microsoft"
+    ],
+    "last_event": "2026-07-21",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://news.microsoft.com/source/2026/07/21/microsoft-and-mistral-expand-strategic-partnership-to-give-enterprises-and-regulated-industries-frontier-ai-they-can-control/"
+    ]
+  },
+  {
+    "target": "France sovereign AI infrastructure framework",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Brookfield"
+    ],
+    "last_event": "2026-08-05",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1937926/000117184326005272/exh_991.htm"
+    ]
+  },
+  {
+    "target": "Andreessen Horowitz Fund X-B - AI Applications, L.P.",
+    "target_type": "fund",
+    "sector": "ai-applications",
+    "allocators": [
+      "Andreessen Horowitz"
+    ],
+    "last_event": "2026-07-16",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2107847/000110465926084290/primary_doc.xml"
+    ]
+  }
+]

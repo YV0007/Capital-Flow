@@ -67,3 +67,15 @@ file to an ab-investment Claude Code session to rebuild the map.
 - `audit` — the §6 verification verdict shipped with the data (`passed`,
   `error_count`, `warning_count`, `stats.source_url_coverage`). The engine blocks
   its own delivery when the audit fails, so a payload you receive always passed.
+
+## Target references on nodes (v3.1, added 2026-08-09)
+- Target nodes may now carry `description` (1–3 sentences: what the entity is),
+  `links` (`kind: website` and `kind: read_more` — ONE good article, labeled with
+  its publication), and `reference_as_of`.
+- These are engine-researched and engine-owned. Where present, they take
+  precedence over the dashboard's local `entityReference.json` (as that file's
+  own `_note` anticipates). The local file remains only a fallback for nodes the
+  engine has not referenced yet; do not hand-curate entries for nodes that
+  already carry engine data.
+- Render `description` in the "About / what this is" card and `links` beneath it
+  (website chip + read-more chip), as in the existing Atoms-style layout.

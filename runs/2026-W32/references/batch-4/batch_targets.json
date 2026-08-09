@@ -1,0 +1,241 @@
+[
+  {
+    "target": "MGX Fund I",
+    "target_type": "fund",
+    "sector": "ai-compute",
+    "allocators": [
+      "MGX"
+    ],
+    "last_event": "2026-07-01",
+    "capital_usd": 49000000000.0,
+    "deal_source_urls": [
+      "https://www.mgx.ae/news-insights/mgx-pleased-confirm-final-close-mgx-fund-i-49-billion-total-commitments-significantly"
+    ]
+  },
+  {
+    "target": "KKR Global Infrastructure Investors V",
+    "target_type": "fund",
+    "sector": "datacenters",
+    "allocators": [
+      "KKR"
+    ],
+    "last_event": "2026-08-03",
+    "capital_usd": 19200000000.0,
+    "deal_source_urls": [
+      "https://www.businesswire.com/news/home/20260803095185/en/KKR-Closes-$19.2-Billion-Infrastructure-Fund"
+    ]
+  },
+  {
+    "target": "Anthropic",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "Amazon"
+    ],
+    "last_event": "2026-07-31",
+    "capital_usd": 10000000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm"
+    ]
+  },
+  {
+    "target": "STACK Infrastructure Melbourne (third campus)",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Blue Owl"
+    ],
+    "last_event": "2026-07-30",
+    "capital_usd": 5900000000.0,
+    "deal_source_urls": [
+      "https://www.bloomberg.com/news/articles/2026-07-30/blue-owl-s-stack-seeks-5-9-billion-loan-extending-ai-debt-boom"
+    ]
+  },
+  {
+    "target": "Project Sopaipilla Holdings (Meta El Paso data center JV)",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "BlackRock"
+    ],
+    "last_event": "2026-07-28",
+    "capital_usd": 4900000000.0,
+    "deal_source_urls": [
+      "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-New-Strategic-Venture-with-BlackRock-to-Develop-Data-Center-in-El-Paso/default.aspx"
+    ]
+  },
+  {
+    "target": "Databricks",
+    "target_type": "private",
+    "sector": "ai-data",
+    "allocators": [
+      "Coatue"
+    ],
+    "last_event": "2026-07-16",
+    "capital_usd": 3000000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001587468&type=D&dateb=&owner=include&count=40"
+    ]
+  },
+  {
+    "target": "Nebius Group N.V.",
+    "target_type": "public",
+    "sector": "neocloud",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-07-20",
+    "capital_usd": 2000000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000062/primary_doc.xml"
+    ]
+  },
+  {
+    "target": "U.S. semiconductor fabrication facility (unnamed)",
+    "target_type": "project",
+    "sector": "semiconductors",
+    "allocators": [
+      "Brookfield"
+    ],
+    "last_event": "2026-08-05",
+    "capital_usd": 1000000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1937926/000117184326005272/exh_991.htm"
+    ]
+  },
+  {
+    "target": "Etched",
+    "target_type": "private",
+    "sector": "ai-compute",
+    "allocators": [
+      "Sequoia",
+      "Andreessen Horowitz",
+      "Peter Thiel",
+      "Dylan Field"
+    ],
+    "last_event": "2026-07-27",
+    "capital_usd": 600000000.0,
+    "deal_source_urls": [
+      "https://www.globenewswire.com/news-release/2026/07/23/3332366/0/en/etched-raises-300m-at-a-10-3b-valuation-to-scale-production-of-frontier-scale-inference-hardware.html",
+      "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/",
+      "https://www.tryfundable.ai/blog/top-funding-rounds-week-of-2026-07-27"
+    ]
+  },
+  {
+    "target": "Genesis Mission first project cohort (278 projects)",
+    "target_type": "project",
+    "sector": "ai-applications",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-07-22",
+    "capital_usd": 293000000.0,
+    "deal_source_urls": [
+      "https://www.energy.gov/articles/secretary-energy-chris-wright-announces-first-genesis-mission-projects-selected-accelerate"
+    ]
+  },
+  {
+    "target": "Multibeam Corporation",
+    "target_type": "private",
+    "sector": "fab-equipment",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-07-29",
+    "capital_usd": 140000000.0,
+    "deal_source_urls": [
+      "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million"
+    ]
+  },
+  {
+    "target": "Khosla Ventures MM SPV, LLC",
+    "target_type": "fund",
+    "sector": "ai-applications",
+    "allocators": [
+      "Vinod Khosla"
+    ],
+    "last_event": "2026-08-05",
+    "capital_usd": 60500000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2148181/000214818126000001/xslFormDX01/primary_doc.xml"
+    ]
+  },
+  {
+    "target": "OBSIDIA Semiconductors",
+    "target_type": "private",
+    "sector": "semiconductors",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-07-29",
+    "capital_usd": 34000000.0,
+    "deal_source_urls": [
+      "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million"
+    ]
+  },
+  {
+    "target": "SkillBench",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Reid Hoffman"
+    ],
+    "last_event": "2026-08-06",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2035925/000203592526000003/primary_doc.xml"
+    ]
+  },
+  {
+    "target": "Prometheus",
+    "target_type": "private",
+    "sector": "robotics",
+    "allocators": [
+      "Jeff Bezos"
+    ],
+    "last_event": "2026-07-02",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://techcrunch.com/2026/06/11/jeff-bezoss-prometheus-raises-12b-to-build-an-artificial-general-engineer-for-the-physical-world/"
+    ]
+  },
+  {
+    "target": "Monogram",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Garry Tan"
+    ],
+    "last_event": "2026-07-07",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.thesaasnews.com/news/monogram-raises-40m-seed/"
+    ]
+  },
+  {
+    "target": "GPx TX LP",
+    "target_type": "fund",
+    "sector": "ai-labs",
+    "allocators": [
+      "Brian Singerman"
+    ],
+    "last_event": "2026-07-28",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2147127/000123191926000804/primary_doc.xml"
+    ]
+  },
+  {
+    "target": "Andreessen Horowitz Fund X-B - AI Infrastructure, L.P.",
+    "target_type": "fund",
+    "sector": "datacenters",
+    "allocators": [
+      "Andreessen Horowitz"
+    ],
+    "last_event": "2026-07-16",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2107841/000110465926084291/primary_doc.xml"
+    ]
+  }
+]

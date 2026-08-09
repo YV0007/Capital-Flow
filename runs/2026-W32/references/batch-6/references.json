@@ -1,0 +1,217 @@
+[
+  {
+    "target": "Electronic Arts",
+    "description": "Major video-game publisher (EA Sports FC, Madden, Battlefield, The Sims) taken private on 2026-08-04 in a $55B all-cash buyout — the largest LBO on record — by Saudi Arabia's PIF (~93.4%), Silver Lake and Jared Kushner's Affinity Partners, at $210/share with ~$20B of JPMorgan-arranged debt.",
+    "website": "https://www.ea.com",
+    "read_more": {"label": "CNBC", "url": "https://www.cnbc.com/2026/08/05/saudi-wealth-fund-jared-kushner-ea-sports-deal.html"},
+    "sources": [
+      "https://www.cnbc.com/2026/08/05/saudi-wealth-fund-jared-kushner-ea-sports-deal.html",
+      "https://www.sec.gov/Archives/edgar/data/712515/000114036126031157/ef20079099_8k.htm",
+      "https://peinsights.substack.com/p/silver-lake-and-pif-close-55bn-ea"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Westinghouse nuclear reactor deployment (Brookfield/Cameco)",
+    "description": "Strategic partnership between the US Government and Westinghouse's owners Brookfield (51%) and Cameco (49%) to deploy at least $80B of new AP1000/AP300 reactors in the US, with the government arranging financing and permitting in exchange for 20% of Westinghouse cash distributions above $17.5B plus an IPO warrant.",
+    "website": "https://westinghousenuclear.com/strategic-partnership/",
+    "read_more": {"label": "Utility Dive", "url": "https://www.utilitydive.com/news/westinghouse-cameco-brookfield-nuclear/803999/"},
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1937926/000117184326005272/exh_991.htm",
+      "https://www.utilitydive.com/news/westinghouse-cameco-brookfield-nuclear/803999/",
+      "https://www.cameco.com/media/news/united-states-government-brookfield-and-cameco-announce-transformational-partnership"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "NAVER GAK Sejong AI factory (Korea national AI factory)",
+    "description": "Sovereign AI factory buildout at NAVER's GAK Sejong hyperscale data center in South Korea, expanding an NVIDIA DSX deployment from 55MW to 200MW by 2028 (with a 1GW ambition); Brookfield is funding up to $9B, NVIDIA investing $1B in NAVER, and NAVER covering the remainder.",
+    "website": "https://datacenter.navercorp.com/en",
+    "read_more": {"label": "Brookfield", "url": "https://bam.brookfield.com/press-releases/naver-nvidia-and-brookfield-expand-koreas-national-ai-factory-infrastructure"},
+    "sources": [
+      "https://bam.brookfield.com/press-releases/naver-nvidia-and-brookfield-expand-koreas-national-ai-factory-infrastructure",
+      "https://nvidianews.nvidia.com/news/naver-nvidia-and-brookfield-to-expand-koreas-national-ai-factory-infrastructure-buildout",
+      "https://datacentremagazine.com/news/how-naver-nvidia-brookfield-plan-to-build-a-200mw-ai-hub"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Williams Power Innovation JV (Socrates, Apollo, Aquila, Socrates the Younger, Neo)",
+    "description": "Joint venture holding five Williams Companies behind-the-meter power projects (Socrates, Apollo, Aquila, Socrates the Younger, Neo) serving AI/data-center demand; Blackstone Credit & Insurance with Apollo and KKR insurance vehicles committed $5.34B for a 49% noncontrolling stake, with Williams retaining 51% and operational control.",
+    "website": null,
+    "read_more": {"label": "Williams Companies", "url": "https://www.williams.com/2026/07/13/williams-announces-5-34-billion-investment-in-power-innovation-joint-venture-from-blackstone/"},
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/0000107263/000119312526301533/d152507dex991.htm",
+      "https://www.williams.com/2026/07/13/williams-announces-5-34-billion-investment-in-power-innovation-joint-venture-from-blackstone/",
+      "https://www.blackstone.com/news/press/williams-announces-5-34-billion-investment-in-power-innovation-joint-venture-from-blackstone/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "EDF power solutions North America",
+    "description": "North American clean-power arm of French utility EDF (formerly EDF Renewables North America), a top-ten US renewable-energy owner with wind, solar and battery-storage assets built over ~40 years; KKR agreed on 2026-06-30 to acquire the business for $4.2B plus up to $390M in earnouts, its largest renewables deal.",
+    "website": "https://www.edf-re.com/",
+    "read_more": {"label": "Utility Dive", "url": "https://www.utilitydive.com/news/kkr-to-buy-edf-power-solutions-north-american-operations-for-42b/824599/"},
+    "sources": [
+      "https://www.businesswire.com/news/home/20260630667572/en/KKR-to-Acquire-EDF-power-solutions-North-American-Operations-for-$4.2-Billion",
+      "https://www.utilitydive.com/news/kkr-to-buy-edf-power-solutions-north-american-operations-for-42b/824599/",
+      "https://www.edf-re.com/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "AirTrunk SYD3 (Western Sydney)",
+    "description": "400+MW hyperscale data center in Kemps Creek, Western Sydney, operated by Blackstone-owned AirTrunk — billed as Asia-Pacific's largest by capacity and the first phase of a larger campus; Blackstone finalized a ~A$4.3B (US$3B) five-year syndicated construction loan for the project in July 2026.",
+    "website": "https://airtrunk.com/location/syd3-sydney-west/",
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-07-22/blackstone-tying-up-3-billion-airtrunk-loan-as-data-center-debt-binge-woes-grow"},
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2026-07-22/blackstone-tying-up-3-billion-airtrunk-loan-as-data-center-debt-binge-woes-grow",
+      "https://airtrunk.com/location/syd3-sydney-west/",
+      "https://www.mingtiandi.com/real-estate/crelist/roundup-blackstones-airtrunk-seeks-3b-loan-for-syd3/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "ABB Robotics",
+    "description": "Industrial-robotics division of Swiss engineering group ABB, one of the world's largest industrial robot makers, being acquired by SoftBank Group for $5.4B (announced October 2025, closing expected mid-to-late 2026) as part of SoftBank's AI-plus-robotics push; banks wrapped a $1.75B-equivalent acquisition loan in July 2026.",
+    "website": "https://new.abb.com/products/robotics",
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-07-21/banks-wrap-up-loan-backing-softbank-s-5-4-billion-robotics-bet"},
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2026-07-21/banks-wrap-up-loan-backing-softbank-s-5-4-billion-robotics-bet",
+      "https://group.softbank/en/news/press/20251008",
+      "https://finance.yahoo.com/news/abb-sell-robots-business-softbank-053628068.html"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Lucid Group",
+    "description": "US luxury electric-vehicle maker (Air sedan, Gravity SUV) majority-owned by Saudi Arabia's PIF; on 2026-07-06 it drew $800M from delayed-draw term loan facilities provided by PIF affiliate Ayar Third Investment, its second 2026 draw, lifting pro-forma liquidity to about $4.7B after a Q2 delivery miss.",
+    "website": "https://lucidmotors.com",
+    "read_more": {"label": "SEC EDGAR", "url": "https://www.sec.gov/Archives/edgar/data/1811210/000162828026047248/lcid-20260706.htm"},
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1811210/000162828026047248/lcid-20260706.htm",
+      "https://www.stocktitan.net/sec-filings/LCID/8-k-lucid-group-inc-reports-material-event-d85c3eb72fb2.html",
+      "https://coincentral.com/lucid-lcid-stock-rallies-after-800-million-pif-financing-q2-delivery-miss/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Coatue Growth Fund VI Private Investors Cayman, L.P.",
+    "description": "Cayman-domiciled feeder vehicle for Coatue Growth Fund VI, Coatue Management's sixth growth-stage fund targeting late-stage technology and AI companies; a Form D filed 2026-07-15 reported roughly $527M raised into this offshore vehicle (a parallel US feeder reported ~$778M).",
+    "website": null,
+    "read_more": {"label": "SEC EDGAR", "url": "https://www.sec.gov/Archives/edgar/data/2143818/000214381826000001/primary_doc.xml"},
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/2143818/000214381826000001/primary_doc.xml",
+      "https://formds.com/issuers/coatue-growth-fund-vi-private-investors-us-llc",
+      "https://pitchbook.com/profiles/fund/30500-47F"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Norm Ai",
+    "description": "New York legal-AI company building regulatory and legal AI agents, plus an AI-native law firm (Norm Law) where human attorneys supervise its agents on outcome-based pricing; raised a $120M Series C led by Khosla Ventures at a $1.2B valuation in July 2026, with Blackstone, Bain Capital Ventures and Coatue participating.",
+    "website": "https://www.norm.ai/",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/07/07/ai-law-startup-norm-raises-120m-hits-unicorn-valuation/"},
+    "sources": [
+      "https://www.prnewswire.com/news-releases/norm-ai-raises-120-million-at-a-1-2-billion-valuation-led-by-khosla-ventures-to-deliver-the-full-stack-model-for-legal-ai-302819152.html",
+      "https://techcrunch.com/2026/07/07/ai-law-startup-norm-raises-120m-hits-unicorn-valuation/",
+      "https://www.norm.ai/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Neo Security",
+    "description": "\"Agentic Software Control\" security company founded by SentinelOne, Wiz and Palo Alto Networks veterans, giving SecOps teams inventory, posture and policy control over AI agents, AI-enabled apps, browsers and identities; emerged from stealth in July 2026 with $100M from Andreessen Horowitz and Bessemer, plus Craft and Merlin Ventures.",
+    "website": "https://www.neo.ai",
+    "read_more": {"label": "GlobeNewswire", "url": "https://www.globenewswire.com/news-release/2026/07/20/3329638/0/en/neo-launches-with-100m-to-secure-ai-software-across-the-enterprise.html"},
+    "sources": [
+      "https://www.globenewswire.com/news-release/2026/07/20/3329638/0/en/neo-launches-with-100m-to-secure-ai-software-across-the-enterprise.html",
+      "https://www.neo.ai/news/neo-launches-100m",
+      "https://www.hpcwire.com/off-the-wire/neo-launches-with-100m-to-secure-ai-software-across-the-enterprise/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Convex",
+    "description": "All-in-one TypeScript backend platform (database, functions, real-time sync, workflow) founded in 2021 by ex-Dropbox infrastructure engineers, now positioned as the reliable backend for AI-agent-written software; raised a $57M Series B led by Insight Partners with a16z, Spark Capital and Justin Kan participating, bringing total funding to $110.5M.",
+    "website": "https://www.convex.dev",
+    "read_more": {"label": "Convex", "url": "https://news.convex.dev/convex-raises-57m/"},
+    "sources": [
+      "https://news.convex.dev/convex-raises-57m/",
+      "https://www.prnewswire.com/news-releases/convex-raises-57m-series-b-led-by-insight-partners-to-scale-the-reliable-backend-for-the-ai-era-302841686.html",
+      "https://www.unite.ai/convex-raises-57m-series-b-to-build-the-backend-for-agent-written-software/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Aeluma",
+    "description": "Nasdaq-listed semiconductor company (ALMU) in Goleta, California developing photonic and electronic chips on large-diameter substrates for AI interconnects, mobile, defense and quantum; signed a CHIPS R&D Office letter of intent with the Commerce Department in July 2026 for up to $30M to develop indium-phosphide-free photodetector and laser technology.",
+    "website": "https://www.aeluma.com",
+    "read_more": {"label": "GlobeNewswire", "url": "https://www.globenewswire.com/news-release/2026/07/29/3335059/0/en/Aeluma-and-Department-of-Commerce-Sign-CHIPS-Research-Development-Office-CRDO-Letter-of-Intent-for-up-to-30-Million-to-Accelerate-U-S-Leadership-in-AI-and-Advanced-Computing.html"},
+    "sources": [
+      "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million",
+      "https://www.globenewswire.com/news-release/2026/07/29/3335059/0/en/Aeluma-and-Department-of-Commerce-Sign-CHIPS-Research-Development-Office-CRDO-Letter-of-Intent-for-up-to-30-Million-to-Accelerate-U-S-Leadership-in-AI-and-Advanced-Computing.html",
+      "https://www.aeluma.com/news-media/press-releases/detail/110/aeluma-and-department-of-commerce-sign-chips-research"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "SB Neo",
+    "description": "US neocloud company established July 2026 by SoftBank Corp. (51%) and SoftBank Group (49%) to rent GPU cloud capacity to American enterprises and hyperscalers from fiscal 2027, scaling toward 10GW of AI data-center capacity and building on SoftBank's Japanese GPU cloud and Infrinia AI Cloud OS stack.",
+    "website": null,
+    "read_more": {"label": "SoftBank Group", "url": "https://group.softbank/en/news/press/20260702"},
+    "sources": [
+      "https://group.softbank/en/news/press/20260702",
+      "https://www.softbank.jp/en/corp/news/press/sbkk/2026/20260702_01/",
+      "https://www.digitimes.com/news/a20260703PD227/market-telecom-data-center-subsidiary-capacity.html"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Panthalassa",
+    "description": "Portland, Oregon company (founded 2016) building autonomous wave-powered floating platforms that generate ocean energy and run onboard AI inference compute with seawater cooling; raised a $140M Series B led by Peter Thiel at a reported ~$1B valuation to build its Oregon pilot plant for Ocean-3 series nodes, with commercial systems planned for 2027.",
+    "website": "https://panthalassa.com",
+    "read_more": {"label": "Fortune", "url": "https://fortune.com/2026/05/14/peter-thiel-leading-investment-ocean-data-center-panthalassa/"},
+    "sources": [
+      "https://fortune.com/2026/05/14/peter-thiel-leading-investment-ocean-data-center-panthalassa/",
+      "https://www.geekwire.com/2026/data-centers-at-sea-oregons-panthalassa-nets-140m-led-by-peter-thiel-for-wave-powered-ai/",
+      "https://panthalassa.com"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "LifeMine Therapeutics",
+    "description": "Clinical-stage biotech (Cambridge, MA; founded by Greg Verdine) that mines fungal genomes for drug candidates via its \"Top-Down Drug Discovery\" platform; raised $263M (a $188M Series E plus $75M Series D) in August 2026 from Bezos Expeditions, Gates Frontier and RA Capital to advance LIFE-001, a novel calcineurin-activation inhibitor for preventing organ-transplant rejection.",
+    "website": "https://www.lifeminetx.com",
+    "read_more": {"label": "BioPharma Dive", "url": "https://www.biopharmadive.com/news/lifemine-organ-transplant-rejection-drug-greg-verdine-financing/827145/"},
+    "sources": [
+      "https://www.biospace.com/business/lifemine-raises-263m-in-mission-to-improve-organ-transplant-aftercare",
+      "https://www.biopharmadive.com/news/lifemine-organ-transplant-rejection-drug-greg-verdine-financing/827145/",
+      "https://pharmaphorum.com/news/lifemine-gets-263m-transplant-drug-and-other-financings"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "CuspAI",
+    "description": "Cambridge (UK)-based AI-for-materials-discovery company whose generative search engine predicts viable molecular and chemical structures, used by ASML, Meta, Samsung and Hyundai; raised a $450M Series B at a $2.6B valuation in July 2026 led by Kleiner Perkins and NEA, with Bezos Expeditions among new investors — up from a $520M valuation nine months earlier.",
+    "website": "https://cusp.ai/",
+    "read_more": {"label": "Tech Funding News", "url": "https://techfundingnews.com/cuspai-400m-series-b-2-6b-valuation-bezos-materials-search/"},
+    "sources": [
+      "https://techfundingnews.com/cuspai-400m-series-b-2-6b-valuation-bezos-materials-search/",
+      "https://finance.yahoo.com/technology/ai/articles/cuspai-raises-450-million-series-121902705.html",
+      "https://www.citybiz.co/article/876671/jeff-bezos-nea-join-cuspais-450m-series-b-to-accelerate-materials-discovery/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Altimeter Kilauea Fund II, L.P.",
+    "description": "Delaware venture-capital vehicle formed in 2026 by Brad Gerstner's Altimeter Capital (Boston), which filed a Form D on 2026-07-28 for a $40M offering ($2M minimum, no sales yet at filing). The specific underlying investment behind the \"Kilauea\" vehicle is not disclosed in the filing.",
+    "website": null,
+    "read_more": {"label": "SEC EDGAR", "url": "https://www.sec.gov/Archives/edgar/data/2141877/000214187726000001/primary_doc.xml"},
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/2141877/000214187726000001/primary_doc.xml",
+      "https://en.wikipedia.org/wiki/Altimeter_Capital"
+    ],
+    "as_of": "2026-08-09"
+  }
+]

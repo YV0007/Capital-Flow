@@ -1,7 +1,7 @@
 # Audit report — 2026-W32 (2026-08-09)
 
 **Verdict: PASS**
-Checked 128 events, 115 track-record rows, 43 profiles.
+Checked 128 events, 115 track-record rows, 43 profiles, 108 target references.
 
 ## Errors (0)
 _none_

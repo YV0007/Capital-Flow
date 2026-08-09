@@ -1,0 +1,262 @@
+[
+  {
+    "target": "MGX Fund I",
+    "description": "Inaugural fund of MGX, the Abu Dhabi AI investment firm anchored by Mubadala and G42; closed July 2026 at $49B against a $45B target, one of the largest dedicated AI vehicles ever raised. Invests across the AI stack — semiconductors, AI infrastructure, and AI companies — with prior bets on OpenAI, Anthropic, xAI and the Aligned Data Centres consortium.",
+    "website": "https://www.mgx.ae",
+    "read_more": {
+      "label": "MGX",
+      "url": "https://www.mgx.ae/news-insights/mgx-pleased-confirm-final-close-mgx-fund-i-49-billion-total-commitments-significantly"
+    },
+    "sources": [
+      "https://www.thenationalnews.com/business/markets/2026/07/01/abu-dhabis-ai-investment-firm-mgx-raises-49bn-for-new-fund/",
+      "https://www.pymnts.com/news/investment-tracker/2026/mgx-pursues-ai-infrastructure-investments-with-49-billion-fund/",
+      "https://www.mgx.ae/news-insights/mgx-pleased-confirm-final-close-mgx-fund-i-49-billion-total-commitments-significantly"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "KKR Global Infrastructure Investors V",
+    "description": "KKR's fifth and largest global infrastructure fund, closed August 2026 at $19.2B; a Core+ vehicle targeting critical infrastructure in North America and Western Europe. Over $9B already committed, including digital-infrastructure positions such as Global Technical Realty and Gulf Data Hub.",
+    "website": null,
+    "read_more": {
+      "label": "Business Wire",
+      "url": "https://www.businesswire.com/news/home/20260803095185/en/KKR-Closes-$19.2-Billion-Infrastructure-Fund"
+    },
+    "sources": [
+      "https://www.businesswire.com/news/home/20260803095185/en/KKR-Closes-$19.2-Billion-Infrastructure-Fund",
+      "https://www.datacenterdynamics.com/en/news/kkr-closes-global-infrastructure-investors-v-fund-with-192bn-to-spend-on-infrastructure/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Anthropic",
+    "description": "AI research and safety company behind the Claude model family, founded in 2021 by former OpenAI researchers. Amazon, its largest backer, has invested over $13B and in April 2026 committed up to $20B more tied to commercial milestones; Anthropic in turn committed ~$100B to AWS over a decade and up to 5GW of Trainium capacity.",
+    "website": "https://www.anthropic.com",
+    "read_more": {
+      "label": "CNBC",
+      "url": "https://www.cnbc.com/2026/04/20/amazon-invest-up-to-25-billion-in-anthropic-part-of-ai-infrastructure.html"
+    },
+    "sources": [
+      "https://www.aboutamazon.com/news/company-news/amazon-invests-additional-5-billion-anthropic-ai",
+      "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000024/amzn-20260630xex991.htm",
+      "https://www.cnbc.com/2026/04/20/amazon-invest-up-to-25-billion-in-anthropic-part-of-ai-infrastructure.html"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "STACK Infrastructure Melbourne (third campus)",
+    "description": "Third Melbourne data-center campus of STACK Infrastructure, the Blue Owl-managed digital infrastructure platform; STACK is seeking an A$8.5B (US$5.9B) syndicated loan to fund the build — potentially one of the largest data-center financings in Australia. Talks with banks were at an early stage as of late July 2026.",
+    "website": null,
+    "read_more": {
+      "label": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-30/blue-owl-s-stack-seeks-5-9-billion-loan-extending-ai-debt-boom"
+    },
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2026-07-30/blue-owl-s-stack-seeks-5-9-billion-loan-extending-ai-debt-boom",
+      "https://www.mingtiandi.com/real-estate/crelist/blue-owls-stack-seeks-5-9b-loan-for-melbourne-data-centre-and-more-apac-real-estate-headlines/",
+      "https://theedgemalaysia.com/node/812689"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Project Sopaipilla Holdings (Meta El Paso data center JV)",
+    "description": "Joint venture between Meta (20%) and BlackRock-managed funds (80%) to develop a 1GW data center in El Paso, Texas — ~$14B total development cost funded with ~$4.9B BlackRock cash, ~$2.3B of Meta land and construction assets, and $12.5B of debt. Meta leases the entire campus, with capacity expected online from 2028.",
+    "website": null,
+    "read_more": {
+      "label": "Meta Investor Relations",
+      "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-New-Strategic-Venture-with-BlackRock-to-Develop-Data-Center-in-El-Paso/default.aspx"
+    },
+    "sources": [
+      "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-New-Strategic-Venture-with-BlackRock-to-Develop-Data-Center-in-El-Paso/default.aspx"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Databricks",
+    "description": "Data and AI platform company (the 'lakehouse') founded by the creators of Apache Spark and led by Ali Ghodsi. In July 2026 it announced a ~$3B strategic round led by existing investor Coatue at a $188B valuation — its second raise of 2026, up 40% from the $134B mark set in February.",
+    "website": "https://www.databricks.com",
+    "read_more": {
+      "label": "Databricks",
+      "url": "https://www.databricks.com/company/newsroom/press-releases/databricks-raising-strategic-round-funding-188-billion-valuation"
+    },
+    "sources": [
+      "https://www.databricks.com/company/newsroom/press-releases/databricks-raising-strategic-round-funding-188-billion-valuation",
+      "https://techcrunch.com/2026/07/17/databricks-hits-188b-valuation-extending-its-run-as-ais-favorite-second-act/",
+      "https://money.usnews.com/investing/news/articles/2026-07-16/databricks-valued-at-188-billion-after-coatue-led-investment-wsj-reports"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Nebius Group N.V.",
+    "description": "Amsterdam-headquartered, Nasdaq-listed AI cloud ('neocloud') provider that emerged from the former Yandex N.V. NVIDIA invested $2B via pre-funded warrants in a March 2026 private placement — a ~9.3% stake disclosed in a July 13D filing — alongside a partnership targeting more than 5GW of NVIDIA-powered AI capacity by 2030.",
+    "website": "https://nebius.com",
+    "read_more": {
+      "label": "NVIDIA Newsroom",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-and-nebius-partner-to-scale-full-stack-ai-cloud"
+    },
+    "sources": [
+      "https://nvidianews.nvidia.com/news/nvidia-and-nebius-partner-to-scale-full-stack-ai-cloud",
+      "https://www.cnbc.com/2026/03/11/nebius-nvidia-ai-cloud.html",
+      "https://www.investing.com/news/stock-market-news/nvidia-discloses-93-stake-in-neocloud-computing-firm-nebius-4801817"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "U.S. semiconductor fabrication facility (unnamed)",
+    "description": "Unnamed U.S. chip fab receiving a $1.0B incremental construction funding from Brookfield in Q2 2026, per Brookfield Asset Management's results release. Brookfield's flagship fab exposure is its semiconductor co-investment partnership with Intel (up to $15B for 49% of Intel's Arizona fab expansion), with which this funding is consistent, though the release does not name the facility.",
+    "website": null,
+    "read_more": {
+      "label": "Brookfield Asset Management",
+      "url": "https://bam.brookfield.com/press-releases/brookfield-asset-management-announces-record-second-quarter-results"
+    },
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1937926/000117184326005272/exh_991.htm",
+      "https://renx.ca/brookfield-to-invest-15b-in-massive-u-s-intel-chip-factory"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Etched",
+    "description": "AI inference hardware company founded by Gavin Uberti and Rob Wachen, building rack-scale inference clusters (with technologies like Low Voltage Inference and Cluster Scale Memory) after starting with its transformer-specialized Sohu chip. Raised a $300M Series C led by Sequoia at a $10.3B valuation in July 2026, with a16z, Jane Street and SK Hynix; over $1B raised in total.",
+    "website": "https://www.etched.com",
+    "read_more": {
+      "label": "TechCrunch",
+      "url": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/"
+    },
+    "sources": [
+      "https://www.globenewswire.com/news-release/2026/07/23/3332366/0/en/etched-raises-300m-at-a-10-3b-valuation-to-scale-production-of-frontier-scale-inference-hardware.html",
+      "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Genesis Mission first project cohort (278 projects)",
+    "description": "First cohort of 278 projects selected under the Genesis Mission, the U.S. Department of Energy's AI-for-science initiative — 87 led by DOE/NNSA national labs, 168 by universities and 19 by companies, spanning nuclear energy, fusion, critical minerals and intelligent chip design. DOE called it the largest response to a funding opportunity in its history.",
+    "website": "https://www.energy.gov/genesis-mission",
+    "read_more": {
+      "label": "U.S. Department of Energy",
+      "url": "https://www.energy.gov/articles/secretary-energy-chris-wright-announces-first-genesis-mission-projects-selected-accelerate"
+    },
+    "sources": [
+      "https://www.energy.gov/articles/secretary-energy-chris-wright-announces-first-genesis-mission-projects-selected-accelerate"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Multibeam Corporation",
+    "description": "Santa Clara semiconductor-equipment maker founded in 2010 and led by David K. Lam (Lam Research's founding CEO), building multi-column e-beam lithography systems for advanced packaging, chip-ID security and photonics. Received a $140M letter of intent under the CHIPS R&D program in July 2026 for advanced packaging technology to assemble and stack multiple chips.",
+    "website": "https://multibeamcorp.com",
+    "read_more": {
+      "label": "NIST",
+      "url": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million"
+    },
+    "sources": [
+      "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million",
+      "https://multibeamcorp.com/about/",
+      "https://en.wikipedia.org/wiki/Multibeam_Corporation"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Khosla Ventures MM SPV, LLC",
+    "description": "Delaware special-purpose vehicle formed by Khosla Ventures in 2026 (Vinod Khosla, Samir Kaul and Sven Strohband listed as managing directors), which raised $60.5M per an August 2026 Form D. The underlying portfolio company ('MM') is not disclosed in the filing; the vehicle is structured as a venture capital fund.",
+    "website": null,
+    "read_more": {
+      "label": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/2148181/000214818126000001/xslFormDX01/primary_doc.xml"
+    },
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/2148181/000214818126000001/primary_doc.xml"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "OBSIDIA Semiconductors",
+    "description": "San Francisco hardware-security company building non-invasive counterfeit and malicious-component detection for AI and defense chip supply chains; its ReelScan platform uses RF fingerprinting to authenticate ICs on component reels. Received a $34M letter of intent under the CHIPS R&D program in July 2026.",
+    "website": "https://obsidiasemi.com",
+    "read_more": {
+      "label": "NIST",
+      "url": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million"
+    },
+    "sources": [
+      "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million",
+      "https://obsidiasemi.com/",
+      "https://www.techtimes.com/articles/322397/20260731/memory-fakes-thermodynamic-compute-chips-act-bets-874m-six-ai-stack-gaps.htm"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "SkillBench",
+    "description": "Santa Barbara startup (formerly Tacitly, Inc.) building AI-enabled workforce skill measurement and optimization for enterprises adopting generative AI; co-founded by researchers Matt Beane (UCSB) and Juho Kim (KAIST), with Reid Hoffman on the board per its August 2026 Form D, which reports ~$15.1M sold of a ~$17.1M offering.",
+    "website": "https://skillbench.com",
+    "read_more": {
+      "label": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/2035925/000203592526000003/xslFormDX01/primary_doc.xml"
+    },
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/2035925/000203592526000003/primary_doc.xml",
+      "https://skillbench.com",
+      "https://apply.workable.com/skillbench-inc/j/CF4E04CA78/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Prometheus",
+    "description": "Physical-AI company (Project Prometheus) co-founded and co-led by Jeff Bezos and former Verily co-founder Vik Bajaj, building an 'artificial general engineer' to automate design and manufacturing of complex physical systems — jet engines to drug compounds. Launched late 2025 with $6.2B and raised a further $12B at a $41B valuation in mid-2026.",
+    "website": "https://www.prometheus.ai",
+    "read_more": {
+      "label": "TechCrunch",
+      "url": "https://techcrunch.com/2026/06/11/jeff-bezoss-prometheus-raises-12b-to-build-an-artificial-general-engineer-for-the-physical-world/"
+    },
+    "sources": [
+      "https://techcrunch.com/2026/06/11/jeff-bezoss-prometheus-raises-12b-to-build-an-artificial-general-engineer-for-the-physical-world/",
+      "https://builtin.com/articles/what-is-project-prometheus"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Monogram",
+    "description": "AI interface startup from Udemy and Carbon Health founder Eren Bali (with Edouard Tabet and Murat Akbal) that answers queries with generated visual, interactive interfaces instead of chat text; launched from stealth July 2026 with an iOS app and a $40M seed led by DST Global and Lux Capital, with angels including Garry Tan and Arthur Mensch.",
+    "website": "https://www.monogram.ai",
+    "read_more": {
+      "label": "The SaaS News",
+      "url": "https://www.thesaasnews.com/news/monogram-raises-40m-seed/"
+    },
+    "sources": [
+      "https://www.thesaasnews.com/news/monogram-raises-40m-seed/",
+      "https://www.monogram.ai/blog/introducing-monogram",
+      "https://app.dealroom.co/news/feed/monogram-raises-40m-seed-to-build-visual-ai-interface-beyond-chatbots"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "GPx TX LP",
+    "description": "Delaware limited partnership formed in 2026 by GPx, the venture firm of ex-Founders Fund GP Brian Singerman and Quiet Capital's Lee Linden (backed by Peter Thiel); the July 2026 Form D lists an indefinite offering with no sales yet. The 'TX' vehicle's specific purpose is undisclosed — GPx's model backs emerging seed managers and leads later-stage rounds in their breakout companies.",
+    "website": null,
+    "read_more": {
+      "label": "Venture Capital Journal",
+      "url": "https://www.venturecapitaljournal.com/ex-founders-fund-gp-brian-singerman-and-quiet-capital-co-founder-lee-linden-raising-new-fund/"
+    },
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/2147127/000123191926000804/primary_doc.xml",
+      "https://www.venturecapitaljournal.com/ex-founders-fund-gp-brian-singerman-and-quiet-capital-co-founder-lee-linden-raising-new-fund/",
+      "https://traded.co/vc/deal/gpx-raises-500-million-to-support-emerging-vcs-and-lead-later-stage-investments/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Andreessen Horowitz Fund X-B - AI Infrastructure, L.P.",
+    "description": "Delaware venture fund vehicle in a16z's Fund X family dedicated to AI infrastructure, per a July 2026 Form D (indefinite offering; Marc Andreessen and Ben Horowitz as principals). Part of a16z's ~$3B AI-infrastructure strategy within its $15B early-2026 raise, backing systems that help technical teams build, secure and deploy AI.",
+    "website": null,
+    "read_more": {
+      "label": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/features/2026-01-19/andreessen-horowitz-makes-a-3-billion-bet-against-the-ai-bubble"
+    },
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/2107841/000110465926084291/primary_doc.xml",
+      "https://www.bloomberg.com/news/features/2026-01-19/andreessen-horowitz-makes-a-3-billion-bet-against-the-ai-bubble",
+      "https://theaiinsider.tech/2026/02/05/andreessen-horowitz-raises-15b-allocates-1-7b-to-ai-infrastructure-strategy/"
+    ],
+    "as_of": "2026-08-09"
+  }
+]

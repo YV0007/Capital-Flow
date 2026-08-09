@@ -1,0 +1,217 @@
+[
+  {
+    "target": "OpenAI southern Ohio 10GW data center",
+    "description": "Proposed 10GW OpenAI data-center campus on a former uranium-enrichment site in Pike County, Ohio (~50 miles south of Columbus), developed by SoftBank's SB Energy. NVIDIA is in talks to provide an up-to-$250B guarantee/backstop so OpenAI can lease the site — part of a project that could exceed $500B including up to $350B of chip financing; a first ~800MW phase is targeted for 2028.",
+    "website": null,
+    "read_more": {"label": "CNBC", "url": "https://www.cnbc.com/2026/07/27/nvidia-and-openai-in-talks-for-up-to-250-billion-dollar-ai-backstop.html"},
+    "sources": [
+      "https://www.forbes.com/sites/tylerroush/2026/07/27/nvidia-and-openai-discussing-500-billion-data-center-heres-what-we-know/",
+      "https://www.cnbc.com/2026/07/27/nvidia-and-openai-in-talks-for-up-to-250-billion-dollar-ai-backstop.html",
+      "https://www.datacenterdynamics.com/en/news/nvidia-considers-250bn-backstop-for-openais-planned-10gw-ohio-data-center-report/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Japan AI data centers (programme)",
+    "description": "Blackstone programme to invest $30B in AI data centers in Japan over three to five years, disclosed to Nikkei by president and COO Jonathan Gray, who argued the risk is a compute shortage, not a bubble. Blackstone has already built 500MW+ of data-center capacity in Japan and is discussing facilities exceeding 1GW.",
+    "website": null,
+    "read_more": {"label": "Nikkei Asia", "url": "https://asia.nikkei.com/editor-s-picks/interview/blackstone-to-invest-30bn-in-japan-ai-data-centers-president"},
+    "sources": [
+      "https://asia.nikkei.com/editor-s-picks/interview/blackstone-to-invest-30bn-in-japan-ai-data-centers-president",
+      "https://aibusiness.com/data-centers/blackstone-commits-30b-japan-s-ai-battle-heats-up",
+      "https://www.investing.com/news/stock-market-news/blackstone-plans-30-billion-investment-in-japan-ai-data-centres-nikkei-reports-4756110"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Saudi PIF strategic investments (US export credit facility)",
+    "description": "MOU between Saudi Arabia's Public Investment Fund and the Export-Import Bank of the United States creating a framework for up to $15B in long-term financing for PIF portfolio companies procuring US-origin goods and services, covering advanced technology, space and aviation, infrastructure, future mobility, water and minerals.",
+    "website": "https://www.pif.gov.sa",
+    "read_more": {"label": "Arab News", "url": "https://www.arabnews.com/node/2652224/business-economy"},
+    "sources": [
+      "https://www.pif.gov.sa/en/news-and-insights/press-releases/2026/pif-us-exim-15-billion-usd-mou-export-credit/",
+      "https://www.arabnews.com/node/2652224/business-economy",
+      "https://www.thenationalnews.com/business/2026/07/24/saudi-arabias-pif-and-us-exim-bank-sign-mou-worth-up-to-15bn/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Coatue retail fund",
+    "description": "Coatue Innovative Strategies Fund (CTEK), Coatue's first retail-only vehicle: a tender-offer fund with a $50K minimum investing in high-growth public and private tech companies (including Anthropic). Launched May 2025 with $1B anchored by the family offices of Jeff Bezos and Michael Dell; raised about $8B in its first 15 months.",
+    "website": "https://www.coatuectek.com",
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-07-17/coatue-s-first-retail-only-fund-raises-8-billion-in-15-months"},
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2026-07-17/coatue-s-first-retail-only-fund-raises-8-billion-in-15-months",
+      "https://www.businesswire.com/news/home/20260512881904/en/Coatues-CTEK-Joins-CAIS-Bringing-Public-Private-Innovation-Strategies-to-Independent-Advisors",
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002044519&type=&dateb=&owner=include&count=40"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Volta AI Infrastructure Program",
+    "description": "A $5B non-dilutive financing program between AI-factory developer Volta and asset manager Azora ($20B+ AUM) that lets institutional investors fund Volta's AI facilities at cost, with returns from long-term contracted cash flows. Announced as Volta exited stealth at a $2.4B valuation (backed by Azora, a16z, Altimeter and NVIDIA) alongside a $10B AI-lab partnership; the first project is a 133MW NVIDIA-powered AI factory in Norway.",
+    "website": "https://volta.com",
+    "read_more": {"label": "Volta", "url": "https://volta.com/news/volta-launches-the-utility-of-compute/"},
+    "sources": [
+      "https://volta.com/news/volta-launches-the-utility-of-compute/",
+      "https://www.businesswire.com/news/home/20260804493428/en/Volta-Emerges-From-Stealth-With-$10-Billion-AI-Lab-Partnership-and-$5-Billion-AI-Infrastructure-Program",
+      "https://aibusiness.com/data-centers/infrastructure-startup-build-10-billion-ai-factory-norway"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Hadrian",
+    "description": "Advanced-manufacturing company founded by Chris Power building highly automated factories (AI, robotics, process engineering) for US defense and aerospace parts, expanding into munitions, shipbuilding and autonomous systems. Raised a $1.37B Series D at a $7.87B valuation, anchor co-led by JPMorgan's Strategic Investment Group with WCM, Washington Harbour, Valor, 137 Ventures and Baillie Gifford; operates ~3M sq ft across California, Arizona and Alabama.",
+    "website": "https://www.hadrian.co",
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-08-06/defense-startup-hadrian-valued-at-7-87-billion-in-new-round"},
+    "sources": [
+      "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+      "https://www.bloomberg.com/news/articles/2026-08-06/defense-startup-hadrian-valued-at-7-87-billion-in-new-round",
+      "https://www.washingtontechnology.com/companies/2026/08/hadrian-fetches-137b-add-more-automation-intensive-factories/415251/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Microsoft Frontier Company",
+    "description": "New Microsoft operating unit for enterprise AI transformation, backed by a $2.5B commitment and 6,000 industry and engineering experts embedded inside customer organizations to design, deploy and improve AI systems at scale. Led by president Rodrigo Kede Lima; early engagements include LSEG, Unilever, Land O'Lakes and Novo Nordisk.",
+    "website": null,
+    "read_more": {"label": "CNBC", "url": "https://www.cnbc.com/2026/07/02/microsoft-commits-2point5-billion-6000-employees-ai-implementation-unit.html"},
+    "sources": [
+      "https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/",
+      "https://www.cnbc.com/2026/07/02/microsoft-commits-2point5-billion-6000-employees-ai-implementation-unit.html"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Atoms",
+    "description": "Industrial-AI company from Uber co-founder Travis Kalanick (rebranded from City Storage Systems, the CloudKitchens parent), building software, sensors, robotics and AI to automate whole industrial sectors — food production, mining, construction and heavy transport. Raised $1.7B led by a16z, with Ben Horowitz joining the board and Uber, Bain Capital Ventures and Fifth Wall participating.",
+    "website": "https://atoms.co",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/07/22/travis-kalanicks-robotics-company-raises-1-7b-led-by-a16z/"},
+    "sources": [
+      "https://atoms.co/unfinished-business",
+      "https://techcrunch.com/2026/07/22/travis-kalanicks-robotics-company-raises-1-7b-led-by-a16z/",
+      "https://www.pymnts.com/news/artificial-intelligence/2026/uber-co-founder-kalanicks-atoms-secures-1-7-billion-to-build-physical-ai/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Chai Discovery",
+    "description": "San Francisco AI-for-drug-discovery company (founded 2024 by Joshua Meier, Jack Dent, Matthew McPartlon and Jacques Boitreaud) building foundation models that predict and reprogram molecular interactions for pre-clinical drug design. Raised a $400M Series C at a $3.8B valuation led by Index Ventures with Kleiner Perkins, Sequoia and Dimension; has collaborations with Eli Lilly and Pfizer.",
+    "website": "https://www.chaidiscovery.com",
+    "read_more": {"label": "SiliconANGLE", "url": "https://siliconangle.com/2026/07/14/chai-discovery-nabs-400m-series-c-ai-designed-antibodies-reach-big-pharma/"},
+    "sources": [
+      "https://www.businesswire.com/news/home/20260713849009/en/Chai-Discovery-Announces-$400M-Series-C-to-Advance-AI-Driven-Molecular-Design",
+      "https://siliconangle.com/2026/07/14/chai-discovery-nabs-400m-series-c-ai-designed-antibodies-reach-big-pharma/",
+      "https://www.biospace.com/press-releases/chai-discovery-announces-400m-series-c-to-advance-ai-driven-molecular-design"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Gravis Robotics AG",
+    "description": "Zurich-based autonomy company (2022 ETH Zurich spinout, founded by Ryan Luke Johns, Dominic Jud, Marco Tranzatto and Burak Cizmeci) whose hardware and software let excavators and other earthmoving equipment operate autonomously. SoftBank is weighing building a substantial stake via a new holding company (Roze) through staged share purchases and capital injections at a valuation above $500M; the startup previously raised $23M.",
+    "website": "https://gravisrobotics.com",
+    "read_more": {"label": "Swissinfo", "url": "https://www.swissinfo.ch/eng/softbank-weighs-deal-for-robotics-startup-gravis/91794315"},
+    "sources": [
+      "https://www.swissinfo.ch/eng/softbank-weighs-deal-for-robotics-startup-gravis/91794315",
+      "https://sifted.eu/articles/softbank-gravis-robotics",
+      "https://thenextweb.com/news/softbank-gravis-robotics-deal"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Glow",
+    "description": "AI-era endpoint-security company founded by Roi Tiger (CEO, ex-Meta), Omer Singer (CTO, ex-Snowflake cybersecurity strategy) and Ophir Arie (ex-Claroty), rethinking endpoint protection for enterprises where employees and autonomous AI agents both operate on the network. Emerged from stealth July 2026 with $180M at a $1.2B valuation, led by Sequoia, Cyberstarts, Greenoaks and Redpoint.",
+    "website": "https://www.glow.io",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/07/22/glow-emerges-from-stealth-at-1-2b-valuation-to-challenge-endpoint-security-in-the-ai-era/"},
+    "sources": [
+      "https://www.glow.io/news/glow-emerges-from-stealth-with-180-million",
+      "https://techcrunch.com/2026/07/22/glow-emerges-from-stealth-at-1-2b-valuation-to-challenge-endpoint-security-in-the-ai-era/",
+      "https://www.calcalistech.com/ctechnews/article/hky511mc4gx"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Flourish",
+    "description": "AI research company (founded 2025 by ex-Amazon S-team executive Rob Williams and CTRL-Labs founder/neuroscientist Thomas Reardon) hunting for the brain's 'core algorithm' to build brain-inspired, energy-efficient, continuously learning AI ('Cortex AI'). Closed a $500M round at a $2.5B valuation with Jeff Bezos contributing close to $100M, alongside GV, Lux Capital and Catalio.",
+    "website": null,
+    "read_more": {"label": "SiliconANGLE", "url": "https://siliconangle.com/2026/06/04/ai-startup-flourish-reportedly-raises-500m-round-backed-jeff-bezos/"},
+    "sources": [
+      "https://techfundingnews.com/bezos-flourish-500m-brain-inspired-ai-power-crisis/",
+      "https://siliconangle.com/2026/06/04/ai-startup-flourish-reportedly-raises-500m-round-backed-jeff-bezos/",
+      "https://thenextweb.com/news/flourish-reardon-brain-inspired-ai-efficiency"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Thintronics",
+    "description": "Semiconductor materials company developing ultra-low-loss inter-layer dielectrics (ILD) for next-generation chip interconnects and advanced packaging — a market where ~98% of advanced substrate ILD supply comes from one foreign company. Received a Commerce Department letter of intent for up to $50M under the CHIPS R&D program's $874M July 2026 announcement, with Commerce taking a minority equity stake as a condition.",
+    "website": "https://thintronics.com",
+    "read_more": {"label": "NIST", "url": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million"},
+    "sources": [
+      "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million",
+      "https://finance.yahoo.com/technology/ai/articles/thintronics-announces-letter-intent-department-100000624.html",
+      "https://www.hpcwire.com/off-the-wire/commerce-department-announces-874m-chips-rd-initiative-across-7-companies/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Ellis",
+    "description": "AI-native operations platform for private credit from Cadre co-founder Ryan Williams, using AI agents to automate credit managers' reconciliation, LP reporting, SBIC compliance and document workflows. Emerged from stealth July 2026 with $10M+ seed led by First Round Capital, with Khosla Ventures, 645 Ventures, Harlem Capital and Slow Ventures participating.",
+    "website": "https://www.ellis.ai",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/07/31/repeat-founder-ryan-williams-raises-10m-seed-for-an-ai-startup-for-private-credit-managers/"},
+    "sources": [
+      "https://www.businesswire.com/news/home/20260730538995/en/Ellis-Emerges-From-Stealth-With-More-Than-$10-Million-to-Build-the-AI-Native-Operating-Foundation-for-Private-Credit",
+      "https://techcrunch.com/2026/07/31/repeat-founder-ryan-williams-raises-10m-seed-for-an-ai-startup-for-private-credit-managers/",
+      "https://www.ellis.ai/press/ellis-emerges-from-stealth"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Radical Numerics",
+    "description": "San Francisco AI research lab building 'general biological intelligence' — models that read, write and design across DNA, RNA and proteins — founded by Eric Nguyen, Michael Poli, Stefano Massaroli and Armin Thomas (Stanford / Liquid AI alumni). Launched June 2026 with a $50M seed led by Emergence Capital, following pre-seed backing involving Patrick Collison; previewing its Omnii genomic language model.",
+    "website": "https://www.radicalnumerics.ai",
+    "read_more": {"label": "Business Wire", "url": "https://www.businesswire.com/news/home/20260615558179/en/AI-Lab-Radical-Numerics-Launches-with-$50M-Seed-Round-To-Build-General-Biological-Intelligence"},
+    "sources": [
+      "https://www.businesswire.com/news/home/20260615558179/en/AI-Lab-Radical-Numerics-Launches-with-$50M-Seed-Round-To-Build-General-Biological-Intelligence",
+      "https://www.radicalnumerics.ai/blog/radical-numerics-seed",
+      "https://www.finsmes.com/2026/06/radical-numerics-raises-50m-in-seed-funding.html"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Paducah AI/HPC innovation campus",
+    "description": "Planned AI/HPC campus redeveloping parts of the DOE's Paducah Site (a Cold War uranium-enrichment facility) in western Kentucky under DOE's American Energy Hubs initiative: over $100B in expected private investment, ~8,000 construction jobs. Brookfield develops and operates the 1.8GW-capacity campus; NextEra builds up to 2GW of gas generation and 2.6GW of battery storage adjacent, with full build-out targeted for the early 2030s.",
+    "website": null,
+    "read_more": {"label": "U.S. Department of Energy", "url": "https://www.energy.gov/articles/energy-department-announces-partnership-expand-reliable-affordable-energy-access-and-power"},
+    "sources": [
+      "https://www.energy.gov/articles/energy-department-announces-partnership-expand-reliable-affordable-energy-access-and-power",
+      "https://www.powermag.com/brookfield-nextera-to-develop-100b-data-center-campus-at-does-paducah-site-paired-with-4-6-gw-of-dedicated-generation/",
+      "https://www.datacenterknowledge.com/data-center-construction/brookfield-nextera-launch-100b-ai-campus-at-doe-s-paducah-site"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Kirkwood Infrastructure Group",
+    "description": "Fiber-infrastructure developer launched July 2026 as a wholly owned venture of funds managed by Blue Owl's Digital Infrastructure strategy, building conduit and high-count fiber networks connecting hyperscale data centers across the US. Led by CEO Scott Bergs; launched with the integration of Florida's South Reach Networks (400 miles of network, 40 data centers) plus 200+ miles under construction in Louisiana and Mississippi.",
+    "website": "https://www.kirkwoodinfra.com",
+    "read_more": {"label": "Blue Owl", "url": "https://www.blueowl.com/news/funds-managed-blue-owl-digital-infrastructure-strategy-launch-kirkwood-infrastructure-group"},
+    "sources": [
+      "https://www.blueowl.com/news/funds-managed-blue-owl-digital-infrastructure-strategy-launch-kirkwood-infrastructure-group",
+      "https://www.bloomberg.com/news/articles/2026-07-08/blue-owl-unveils-infrastructure-venture-catering-to-data-centers",
+      "https://www.bisnow.com/national/news/data-center-development/blue-owl-launching-data-center-infrastructure-venture-135369"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Craft Ventures V, LP",
+    "description": "Fifth flagship early-stage venture fund of Craft Ventures, the San Francisco B2B SaaS-focused firm co-founded by David Sacks (PayPal founding COO, Yammer founder, and until March 2026 White House AI and crypto czar). Delaware LP formed 2026; Form D filed August 7, 2026 with an indefinite offering amount and first sale yet to occur, with Sacks listed as managing member of the general partner.",
+    "website": "https://www.craftventures.com",
+    "read_more": {"label": "SEC EDGAR", "url": "https://www.sec.gov/Archives/edgar/data/2140032/000214003226000001/primary_doc.xml"},
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/2140032/000214003226000001/primary_doc.xml",
+      "https://www.craftventures.com/team/david-sacks",
+      "https://en.wikipedia.org/wiki/David_Sacks"
+    ],
+    "as_of": "2026-08-09"
+  }
+]

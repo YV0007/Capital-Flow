@@ -194,6 +194,23 @@ CREATE TABLE IF NOT EXISTS track_records (
     UNIQUE (allocator_id, fiscal_year, metric, scope)
 );
 
+-- Target references (spec §5 extension): what each TARGET entity is — the
+-- engine-owned replacement for the dashboard's hand-curated entityReference.json.
+-- Researched by agents/target-profiler.md; ingested by engine/references.py;
+-- emitted as description/links on target nodes in the handoff (which the
+-- dashboard treats as taking precedence over its local file).
+CREATE TABLE IF NOT EXISTS target_references (
+    target        TEXT PRIMARY KEY,   -- exact events.target string
+    description   TEXT NOT NULL,      -- 1-3 sentences: what it is, who's behind it
+    website       TEXT,               -- official site (null for projects with none)
+    read_more_url TEXT,               -- ONE good article to read about it
+    read_more_label TEXT,             -- publication name for the link
+    sources       TEXT,               -- JSON array of URLs consulted
+    as_of         TEXT NOT NULL,
+    run_week      TEXT NOT NULL,
+    updated_at    TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
 -- Detected themes: output of the theme engine, one row per (theme, run_week).
 CREATE TABLE IF NOT EXISTS themes (
     id          INTEGER PRIMARY KEY,

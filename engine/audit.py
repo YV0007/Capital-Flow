@@ -20,6 +20,8 @@ WARNINGS (ship, but surfaced):
   W3  key/core allocator with events but no canonical profile (§5 coverage gap)
   W4  profile strategy text without strategy_source_url attribution
   W5  verified event sourced from tier >= 4 (weak source for a 'verified' claim)
+  W6  target with >= $1B confirmed capital but no engine reference ("what this
+      is" description + read-more link) — a visible blank card on the dashboard
 """
 
 import json
@@ -85,6 +87,19 @@ def _check_profiles(con, warnings):
     return con.execute("SELECT COUNT(*) c FROM allocator_profiles").fetchone()["c"]
 
 
+def _check_references(con, warnings):
+    gaps = con.execute(
+        """SELECT e.target, SUM(COALESCE(e.amount_usd,0)) cap
+           FROM events e
+           WHERE e.status IN ('verified','verified_alpha')
+             AND NOT EXISTS (SELECT 1 FROM target_references t
+                             WHERE t.target = e.target)
+           GROUP BY e.target HAVING cap >= 1e9 ORDER BY cap DESC""").fetchall()
+    for g in gaps:
+        warnings.append(f"W6 {g['target']}: ${g['cap']/1e9:.1f}B target with no reference")
+    return con.execute("SELECT COUNT(*) c FROM target_references").fetchone()["c"]
+
+
 def _stats(con):
     s = {r["status"]: r["c"] for r in con.execute(
         "SELECT status, COUNT(*) c FROM events GROUP BY status").fetchall()}
@@ -108,12 +123,13 @@ def run(week: str) -> dict:
     n_events = _check_events(con, cfg["sectors"], errors, warnings)
     n_tr = _check_track_records(con, errors)
     n_prof = _check_profiles(con, warnings)
+    n_refs = _check_references(con, warnings)
     stats = _stats(con)
     con.close()
 
     verdict = {"generated": date.today().isoformat(), "week": week,
                "checked": {"events": n_events, "track_records": n_tr,
-                           "profiles": n_prof},
+                           "profiles": n_prof, "target_references": n_refs},
                "errors": errors, "warnings": warnings, "stats": stats,
                "passed": not errors}
 
@@ -121,7 +137,8 @@ def run(week: str) -> dict:
     out.mkdir(parents=True, exist_ok=True)
     L = [f"# Audit report — {week} ({verdict['generated']})", "",
          f"**Verdict: {'PASS' if verdict['passed'] else 'FAIL — delivery blocked'}**",
-         f"Checked {n_events} events, {n_tr} track-record rows, {n_prof} profiles.", "",
+         f"Checked {n_events} events, {n_tr} track-record rows, {n_prof} profiles, "
+         f"{n_refs} target references.", "",
          f"## Errors ({len(errors)})"]
     L += [f"- {e}" for e in errors] or ["_none_"]
     L += ["", f"## Warnings ({len(warnings)})"]

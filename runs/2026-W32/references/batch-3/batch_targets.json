@@ -1,0 +1,238 @@
+[
+  {
+    "target": "Richland Parish / Hyperion data center (Louisiana)",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Meta"
+    ],
+    "last_event": "2026-07-13",
+    "capital_usd": 50000000000.0,
+    "deal_source_urls": [
+      "https://www.opportunitylouisiana.gov/news/meta-commits-more-than-50-billion-for-north-louisiana-project-becoming-one-of-the-largest-data-centers-in-history"
+    ]
+  },
+  {
+    "target": "OpenAI Group PBC",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "Amazon"
+    ],
+    "last_event": "2026-07-31",
+    "capital_usd": 21300000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm"
+    ]
+  },
+  {
+    "target": "OpenAI",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "SoftBank"
+    ],
+    "last_event": "2026-07-01",
+    "capital_usd": 10000000000.0,
+    "deal_source_urls": [
+      "https://group.softbank/en/news/press/20260701"
+    ]
+  },
+  {
+    "target": "Akita 500MW AI data center (Japan)",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Mubadala"
+    ],
+    "last_event": "2026-08-06",
+    "capital_usd": 6300000000.0,
+    "deal_source_urls": [
+      "https://efts.sec.gov/LATEST/search-index?q=%22Mubadala%22"
+    ]
+  },
+  {
+    "target": "Brookfield AI Infrastructure strategy",
+    "target_type": "fund",
+    "sector": "datacenters",
+    "allocators": [
+      "Brookfield"
+    ],
+    "last_event": "2026-08-05",
+    "capital_usd": 5000000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1937926/000117184326005272/exh_991.htm"
+    ]
+  },
+  {
+    "target": "QTS Realty Trust",
+    "target_type": "private",
+    "sector": "datacenters",
+    "allocators": [
+      "Blackstone"
+    ],
+    "last_event": "2026-07-15",
+    "capital_usd": 3250000000.0,
+    "deal_source_urls": [
+      "https://pitchbook.com/news/articles/blackstones-qts-secures-upsized-3-25b-leveraged-loan"
+    ]
+  },
+  {
+    "target": "Thrive Holdings",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Altimeter"
+    ],
+    "last_event": "2026-07-06",
+    "capital_usd": 2000000000.0,
+    "deal_source_urls": [
+      "https://efts.sec.gov/LATEST/search-index?q=%22Thrive+Holdings%22"
+    ]
+  },
+  {
+    "target": "Valar Atomics",
+    "target_type": "private",
+    "sector": "nuclear",
+    "allocators": [
+      "Sequoia"
+    ],
+    "last_event": "2026-08-03",
+    "capital_usd": 1000000000.0,
+    "deal_source_urls": [
+      "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia"
+    ]
+  },
+  {
+    "target": "DigitalBridge Credit II",
+    "target_type": "fund",
+    "sector": "datacenters",
+    "allocators": [
+      "DigitalBridge"
+    ],
+    "last_event": "2026-07-15",
+    "capital_usd": 711350516.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2014474/000201447426000004/primary_doc.xml"
+    ]
+  },
+  {
+    "target": "GlobalFoundries",
+    "target_type": "public",
+    "sector": "networking",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-07-29",
+    "capital_usd": 300000000.0,
+    "deal_source_urls": [
+      "https://gf.com/news-and-events/news/globalfoundries-signs-letter-of-intent-with-the-us-department-of-commerce-for-a-300-million-award-to-accelerate-us-silicon-photonics-leadership/"
+    ]
+  },
+  {
+    "target": "State Affairs",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Founders Fund",
+      "Khosla Ventures"
+    ],
+    "last_event": "2026-07-14",
+    "capital_usd": 140000000.0,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/state-affairs-raises-70-million-to-help-institutions-navigate-the-policy-and-regulatory-economy-302824501.html"
+    ]
+  },
+  {
+    "target": "Extropic",
+    "target_type": "private",
+    "sector": "ai-compute",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-07-29",
+    "capital_usd": 75000000.0,
+    "deal_source_urls": [
+      "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million"
+    ]
+  },
+  {
+    "target": "Altimeter Himalaya Fund I, L.P.",
+    "target_type": "fund",
+    "sector": "ai-applications",
+    "allocators": [
+      "Altimeter"
+    ],
+    "last_event": "2026-07-14",
+    "capital_usd": 40000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2139124/000213912426000001/primary_doc.xml"
+    ]
+  },
+  {
+    "target": "Summit Ridge Energy",
+    "target_type": "private",
+    "sector": "power-energy",
+    "allocators": [
+      "BlackRock"
+    ],
+    "last_event": "2026-07-14",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.globenewswire.com/news-release/2026/07/14/3326975/0/en/global-infrastructure-partners-agrees-to-acquire-summit-ridge-energy.html"
+    ]
+  },
+  {
+    "target": "Proxima Fusion",
+    "target_type": "private",
+    "sector": "nuclear",
+    "allocators": [
+      "Alphabet"
+    ],
+    "last_event": "2026-07-07",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.proximafusion.com/press-news/proxima-fusion-raises-eu411-million-to-build-europes-commercial-fusion-champion"
+    ]
+  },
+  {
+    "target": "Nippon Gateway Infrastructure (NGI)",
+    "target_type": "private",
+    "sector": "datacenters",
+    "allocators": [
+      "DigitalBridge"
+    ],
+    "last_event": "2026-07-01",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.digitalbridge.com/news/2026-07-01-digitalbridge-and-jexi-announce-formation-of-nippon-gateway-infrastructure-a-new-data-center-platform-in-japan"
+    ]
+  },
+  {
+    "target": "General Intuition",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "Jeff Bezos",
+      "Eric Schmidt"
+    ],
+    "last_event": "2026-06-25",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://techcrunch.com/2026/06/25/general-intuitions-2-3b-bet-that-video-games-can-train-ai-agents-for-the-real-world/"
+    ]
+  },
+  {
+    "target": "Andreessen Horowitz LSV Fund V-B, L.P.",
+    "target_type": "fund",
+    "sector": "ai-applications",
+    "allocators": [
+      "Andreessen Horowitz"
+    ],
+    "last_event": "2026-07-16",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2107845/000110465926084286/primary_doc.xml"
+    ]
+  }
+]

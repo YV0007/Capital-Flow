@@ -50,6 +50,8 @@ run and is gitignored (regenerable from CSVs + schema).
   investors), thesis shares (theme distribution) — each with a `basis` string.
 - `allocators` — one canonical summary per allocator: event rollup + researched
   profile (source-attributed) + per-fiscal-year track record with `provisional` flags.
+- target nodes carry `description` + `links` (website + one read-more article) —
+  the engine-owned "what this is" card, superseding dashboard-side curation.
 - `audit` — the §6 verification verdict; audit errors block delivery.
 
 ## Signal rules (config/rules.yaml)

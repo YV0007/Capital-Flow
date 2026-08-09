@@ -44,6 +44,12 @@ allocator-profiler batches (`agents/allocator-profiler.md`) writing
 to ingest them (idempotent). The audit pass warns on key allocators with events but
 no profile; audit ERRORS block `--deliver`/`--push`.
 
+**Step 3c — target references (new entities each cycle).** For map targets without
+a reference, generate batch inputs (target + sector + allocators + deal URLs) under
+`runs/<week>/references/batch-N/batch_targets.json`, launch target-profiler agents
+(`agents/target-profiler.md`) writing `references.json` beside them, then re-run the
+pipeline to ingest. The audit warns (W6) on ≥$1B targets without a reference.
+
 **Step 4 — beneficiaries (optional but recommended).** Run the beneficiary-mapper
 pass (`agents/beneficiary-mapper.md`) to write `runs/<week>/beneficiaries.csv`, then
 re-run `python run_week.py 2026-W32` to link them (idempotent — safe to re-run).

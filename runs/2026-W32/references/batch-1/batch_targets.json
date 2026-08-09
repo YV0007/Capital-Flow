@@ -1,0 +1,239 @@
+[
+  {
+    "target": "OpenAI southern Ohio 10GW data center",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-07-27",
+    "capital_usd": 250000000000.0,
+    "deal_source_urls": [
+      "https://www.forbes.com/sites/tylerroush/2026/07/27/nvidia-and-openai-discussing-500-billion-data-center-heres-what-we-know/"
+    ]
+  },
+  {
+    "target": "Japan AI data centers (programme)",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Blackstone"
+    ],
+    "last_event": "2026-06-30",
+    "capital_usd": 30000000000.0,
+    "deal_source_urls": [
+      "https://asia.nikkei.com/editor-s-picks/interview/blackstone-to-invest-30bn-in-japan-ai-data-centers-president"
+    ]
+  },
+  {
+    "target": "Saudi PIF strategic investments (US export credit facility)",
+    "target_type": "fund",
+    "sector": "diversified-pe",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-07-24",
+    "capital_usd": 15000000000.0,
+    "deal_source_urls": [
+      "https://www.pif.gov.sa/en/news-and-insights/press-releases/2026/pif-us-exim-15-billion-usd-mou-export-credit/"
+    ]
+  },
+  {
+    "target": "Coatue retail fund",
+    "target_type": "fund",
+    "sector": "ai-applications",
+    "allocators": [
+      "Coatue"
+    ],
+    "last_event": "2026-07-17",
+    "capital_usd": 8000000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002044519&type=&dateb=&owner=include&count=40"
+    ]
+  },
+  {
+    "target": "Volta AI Infrastructure Program",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Azora"
+    ],
+    "last_event": "2026-08-04",
+    "capital_usd": 5000000000.0,
+    "deal_source_urls": [
+      "https://volta.com/news/volta-launches-the-utility-of-compute/"
+    ]
+  },
+  {
+    "target": "Hadrian",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "Andreessen Horowitz",
+      "Founders Fund",
+      "Altimeter"
+    ],
+    "last_event": "2026-08-06",
+    "capital_usd": 4110000000.0,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html"
+    ]
+  },
+  {
+    "target": "Microsoft Frontier Company",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Microsoft"
+    ],
+    "last_event": "2026-07-02",
+    "capital_usd": 2500000000.0,
+    "deal_source_urls": [
+      "https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/"
+    ]
+  },
+  {
+    "target": "Atoms",
+    "target_type": "private",
+    "sector": "robotics",
+    "allocators": [
+      "Andreessen Horowitz"
+    ],
+    "last_event": "2026-07-22",
+    "capital_usd": 1700000000.0,
+    "deal_source_urls": [
+      "https://atoms.co/unfinished-business"
+    ]
+  },
+  {
+    "target": "Chai Discovery",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Sequoia",
+      "Thrive Capital"
+    ],
+    "last_event": "2026-07-13",
+    "capital_usd": 800000000.0,
+    "deal_source_urls": [
+      "https://www.businesswire.com/news/home/20260713849009/en/Chai-Discovery-Announces-$400M-Series-C-to-Advance-AI-Driven-Molecular-Design"
+    ]
+  },
+  {
+    "target": "Gravis Robotics AG",
+    "target_type": "private",
+    "sector": "robotics",
+    "allocators": [
+      "SoftBank"
+    ],
+    "last_event": "2026-07-24",
+    "capital_usd": 500000000.0,
+    "deal_source_urls": [
+      "https://www.swissinfo.ch/eng/softbank-weighs-deal-for-robotics-startup-gravis/91794315"
+    ]
+  },
+  {
+    "target": "Glow",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Sequoia"
+    ],
+    "last_event": "2026-07-22",
+    "capital_usd": 180000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=Glow&type=D&dateb=&owner=include&count=40"
+    ]
+  },
+  {
+    "target": "Flourish",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "Jeff Bezos"
+    ],
+    "last_event": "2026-07-02",
+    "capital_usd": 100000000.0,
+    "deal_source_urls": [
+      "https://techfundingnews.com/bezos-flourish-500m-brain-inspired-ai-power-crisis/"
+    ]
+  },
+  {
+    "target": "Thintronics",
+    "target_type": "private",
+    "sector": "semiconductors",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-07-29",
+    "capital_usd": 50000000.0,
+    "deal_source_urls": [
+      "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million"
+    ]
+  },
+  {
+    "target": "Ellis",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Khosla Ventures"
+    ],
+    "last_event": "2026-07-30",
+    "capital_usd": 10000000.0,
+    "deal_source_urls": [
+      "https://www.businesswire.com/news/home/20260730538995/en/Ellis-Emerges-From-Stealth-With-More-Than-$10-Million-to-Build-the-AI-Native-Operating-Foundation-for-Private-Credit"
+    ]
+  },
+  {
+    "target": "Radical Numerics",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "Patrick Collison"
+    ],
+    "last_event": "2026-06-15",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.businesswire.com/news/home/20260615558179/en/AI-Lab-Radical-Numerics-Launches-with-$50M-Seed-Round-To-Build-General-Biological-Intelligence"
+    ]
+  },
+  {
+    "target": "Paducah AI/HPC innovation campus",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-07-29",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.energy.gov/articles/energy-department-announces-partnership-expand-reliable-affordable-energy-access-and-power"
+    ]
+  },
+  {
+    "target": "Kirkwood Infrastructure Group",
+    "target_type": "private",
+    "sector": "networking",
+    "allocators": [
+      "Blue Owl"
+    ],
+    "last_event": "2026-07-08",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.blueowl.com/news/funds-managed-blue-owl-digital-infrastructure-strategy-launch-kirkwood-infrastructure-group"
+    ]
+  },
+  {
+    "target": "Craft Ventures V, LP",
+    "target_type": "fund",
+    "sector": "ai-applications",
+    "allocators": [
+      "David Sacks"
+    ],
+    "last_event": "2026-08-07",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2140032/000214003226000001/primary_doc.xml"
+    ]
+  }
+]

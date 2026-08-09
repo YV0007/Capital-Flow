@@ -1,0 +1,265 @@
+[
+  {
+    "target": "Aligned Data Centers",
+    "description": "Dallas-based hyperscale data center developer with 51 campuses and 6.4+ GW of operational and planned capacity across the US and Latin America, known for its patented water-saving cooling. Acquired at a ~$40B enterprise value by AIP, MGX and BlackRock's GIP (closed July 2026) — the largest data center deal on record — with $5B of additional growth capital committed.",
+    "website": "https://aligneddc.com",
+    "read_more": {
+      "label": "Data Center Dynamics",
+      "url": "https://www.datacenterdynamics.com/en/news/aligned-data-centers-sold-to-blackrock-and-mgx-in-record-breaking-40bn-deal/"
+    },
+    "sources": [
+      "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/",
+      "https://www.datacenterdynamics.com/en/news/aligned-data-centers-sold-to-blackrock-and-mgx-in-record-breaking-40bn-deal/",
+      "https://www.businesswire.com/news/home/20260720395324/en/AIP-MGX-and-BlackRocks-GIP-Close-Acquisition-of-Aligned-Data-Centers"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "TeraWulf Justified Data Campus (Kentucky)",
+    "description": "TeraWulf's 790-acre AI data center campus on a former aluminum smelter site in Hawesville, Kentucky, with existing power and fiber infrastructure. Anthropic signed a 20-year, ~$19B lease (up to ~$33B with extensions) for ~401 MW of critical IT capacity, ramping to full capacity by early 2028.",
+    "website": "https://www.terawulf.com/our-sites",
+    "read_more": {
+      "label": "Data Center Frontier",
+      "url": "https://www.datacenterfrontier.com/hyperscale/article/55389531/terawulfs-19b-anthropic-lease-puts-its-brownfield-ai-strategy-to-the-test"
+    },
+    "sources": [
+      "https://investors.terawulf.com/news-events/press-releases/detail/142/terawulf-announces-anthropic-lease-at-justified-data-campus-and-sale-of-majority-interest-in-abernathy-joint-venture-to-fluidstack",
+      "https://www.datacenterfrontier.com/hyperscale/article/55389531/terawulfs-19b-anthropic-lease-puts-its-brownfield-ai-strategy-to-the-test",
+      "https://www.cnbc.com/2026/07/06/anthropic-terawulf-data-center-ai.html"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Sturgeon County data center (Alberta, Canada)",
+    "description": "Meta's first Canadian data center: a 1 GW, AI-optimized facility in Sturgeon County, Alberta (its 33rd globally and largest outside the US), representing a CAD $13B (~$9.2B USD) investment. Power comes via a long-term tolling agreement with Pembina Pipeline's planned Greenlight Electricity Centre gas plant; groundbreaking was July 2026.",
+    "website": null,
+    "read_more": {
+      "label": "Meta Newsroom",
+      "url": "https://about.fb.com/news/2026/07/breaking-ground-on-metas-first-data-center-in-canada/"
+    },
+    "sources": [
+      "https://about.fb.com/news/2026/07/breaking-ground-on-metas-first-data-center-in-canada/",
+      "https://www.theglobeandmail.com/business/article-meta-ai-data-centre-sturgeon-county-alberta/",
+      "https://www.sturgeoncounty.ca/meta-breaks-ground-on-new-13b-data-centre-in-sturgeon-county/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Khosla Ventures 2026 fund family",
+    "description": "Vinod Khosla's venture firm is raising a family of new funds targeting up to $5.5B — roughly $1B for seed, $2B for early-stage and $2.5B for an opportunity fund — its largest fundraise ever, with most capital aimed at early-stage AI startups. Form D filings were made in July 2026; amounts are targets, not a completed close.",
+    "website": "https://www.khoslaventures.com",
+    "read_more": {
+      "label": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-23/khosla-ventures-in-talks-to-raise-5-5-billion-in-new-funds"
+    },
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2026-07-23/khosla-ventures-in-talks-to-raise-5-5-billion-in-new-funds",
+      "https://www.sec.gov/Archives/edgar/data/2074230/000207423025000001/primary_doc.xml",
+      "https://techfundingnews.com/openais-early-backer-khosla-ventures-targets-largest-fund-ever-at-5-5b-with-most-going-to-early-stage-ai-startups/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Mubadala Capital (credit platform)",
+    "description": "The alternative asset management arm of Abu Dhabi's Mubadala Investment Company. In July 2026 it completed the transfer of Mubadala's ~$25B credit portfolio onto its platform under a long-term management agreement, opening the credit business to third-party investors for the first time, with Mubadala committing $4.65B of incremental capital to grow it.",
+    "website": "https://www.mubadalacapital.ae",
+    "read_more": {
+      "label": "Business Wire",
+      "url": "https://www.businesswire.com/news/home/20260706677713/en/Mubadala-Capital-Completes-Integration-of-Mubadala-Investment-Companys-Credit-Business"
+    },
+    "sources": [
+      "https://www.businesswire.com/news/home/20260706677713/en/Mubadala-Capital-Completes-Integration-of-Mubadala-Investment-Companys-Credit-Business",
+      "https://finance.yahoo.com/markets/stocks/articles/mubadala-capital-completes-integration-mubadala-100000955.html"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Aypa Power",
+    "description": "North America's largest standalone battery-storage independent power producer, with ~6.5 GW of operating, under-construction and contracted capacity and a 20+ GW development pipeline across the US and Canada. Brookfield agreed in July 2026 to acquire it from Blackstone Energy Transition Partners at a ~$7B enterprise value (~$3B equity).",
+    "website": "https://aypa.com",
+    "read_more": {
+      "label": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-22/brookfield-agrees-to-7-billion-deal-for-battery-storage-firm-aypa"
+    },
+    "sources": [
+      "https://www.globenewswire.com/news-release/2026/07/22/3331786/0/en/brookfield-to-acquire-aypa-power-the-leading-north-american-battery-storage-platform-from-blackstone-energy-transition-partners.html",
+      "https://www.bloomberg.com/news/articles/2026-07-22/brookfield-agrees-to-7-billion-deal-for-battery-storage-firm-aypa",
+      "https://bep.brookfield.com/press-releases/bep/brookfield-acquire-aypa-power-leading-north-american-battery-storage-platform"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "ABB Robotics acquisition financing",
+    "description": "A $1.75B-equivalent syndicated loan package (USD and EUR term loans from a four-bank group) backing SoftBank's $5.375B acquisition of ABB's industrial robotics division — a ~7,000-employee business with $2.3B of 2024 revenue that SoftBank is buying as part of its 'Physical AI' push; the deal is expected to close mid-to-late 2026.",
+    "website": "https://new.abb.com/products/robotics",
+    "read_more": {
+      "label": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/technology/ai/articles/softbanks-5-4-billion-robotics-210713807.html"
+    },
+    "sources": [
+      "https://group.softbank/en/news/press/20251008",
+      "https://finance.yahoo.com/technology/ai/articles/softbanks-5-4-billion-robotics-210713807.html",
+      "https://www.therobotreport.com/abb-group-sells-abb-robotics-softbank-5-3b/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "NAVER Corporation",
+    "description": "South Korea's dominant internet company (search, commerce, cloud), now building sovereign AI infrastructure. In July 2026 NVIDIA announced a planned $1B investment for a ~4.5% stake, alongside up to $9B of Brookfield funding, to expand NAVER's NVIDIA DSX AI factory at its GAK Sejong data center from 55 MW to 200 MW by 2028, with a stated path to 1 GW.",
+    "website": "https://www.navercorp.com",
+    "read_more": {
+      "label": "Korea JoongAng Daily",
+      "url": "https://www.koreajoongangdaily.com/business/nvidia-to-acquire-45-stake-in-naver-with-1-billion-investment/12792522"
+    },
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1937926/000117184326004879/exh_991.htm",
+      "https://www.koreajoongangdaily.com/business/nvidia-to-acquire-45-stake-in-naver-with-1-billion-investment/12792522",
+      "https://nvidianews.nvidia.com/news/naver-nvidia-and-brookfield-to-expand-koreas-national-ai-factory-infrastructure-buildout"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Greenoaks Prime Radiant Founders LP",
+    "description": "A code-named Greenoaks deal vehicle: a Delaware LP formed in 2026 and renamed from 'Greenoaks Generations Founders LP' per its amended Form D, which reports $576.5M raised from 11 investors (first sale June 26, 2026). Promoters are Greenoaks partners Neil Mehta and Benjamin Peretz; the underlying deal target is undisclosed.",
+    "website": null,
+    "read_more": {
+      "label": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/2141341/000184073526000020/primary_doc.xml"
+    },
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/2141341/000184073526000020/primary_doc.xml",
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002141341&type=D&dateb=&owner=include&count=40"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Kepler Computing",
+    "description": "Moraga, California semiconductor startup developing a new class of AI memory using 3D-stacked ferroelectric technology that puts compute logic directly adjacent to weight storage, targeting the memory bottleneck in AI accelerators. Selected by the Commerce Department in July 2026 for up to $245M in CHIPS Act R&D incentives (letter of intent), the second-largest of seven awards.",
+    "website": "https://keplercompute.com",
+    "read_more": {
+      "label": "NIST",
+      "url": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million"
+    },
+    "sources": [
+      "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million",
+      "https://keplercompute.com/",
+      "https://www.techtimes.com/articles/322397/20260731/memory-fakes-thermodynamic-compute-chips-act-bets-874m-six-ai-stack-gaps.htm"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Greenoaks Prime Radiant Founders Offshore LP",
+    "description": "The offshore sleeve of Greenoaks' code-named 'Prime Radiant' deal vehicle, renamed from 'Greenoaks Generations Founders Offshore LP' per its amended Form D, which reports $115.5M raised from 4 investors (first sale June 26, 2026). Runs parallel to the $576.5M onshore Greenoaks Prime Radiant Founders LP; the underlying deal target is undisclosed.",
+    "website": null,
+    "read_more": {
+      "label": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/2141340/000214134026000002/primary_doc.xml"
+    },
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/2141340/000214134026000002/primary_doc.xml",
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002141340&type=D&dateb=&owner=include&count=40"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Prometheus project (Idaho National Laboratory and partners)",
+    "description": "A DOE Genesis Mission initiative led by Idaho National Laboratory with a 32-partner consortium (Oak Ridge, Argonne, Sandia, plus X-energy, TerraPower, Oklo, NVIDIA and AWS among 20+ industry partners) using AI to design, license, build and operate nuclear reactors — targeting 2x schedule compression and >50% cost reduction. Awarded a $60M three-year Phase II grant in July 2026, the largest single Genesis Mission award, with $200M+ in industry cost share.",
+    "website": null,
+    "read_more": {
+      "label": "Data Center Dynamics",
+      "url": "https://www.datacenterdynamics.com/en/news/idaho-national-laboratory-nvidia-aws-x-energy-launch-prometheus-project-under-genesis-mission/"
+    },
+    "sources": [
+      "https://inl.gov/news-release/genesis-mission-funds-ai-innovation-to-speed-up-safe-affordable-nuclear-energy/",
+      "https://www.datacenterdynamics.com/en/news/idaho-national-laboratory-nvidia-aws-x-energy-launch-prometheus-project-under-genesis-mission/",
+      "https://www.ans.org/news/2026-07-23/article-8240/nuclear-is-prominent-in-genesis-mission-projects/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Ambrook",
+    "description": "Financial-management software startup ('QuickBooks for the real economy') founded in 2020 by Mackenzie Burnett, Dan Schlosser and Jeff Anders — bookkeeping, payments and cash management for farms, ranches, trucking, construction and property businesses, now 8,000+ customers. Raised a $30M Series B in August 2026 led by Lachy Groom with Thrive Capital and Thomson Reuters Ventures participating, bringing total funding to $59M.",
+    "website": "https://ambrook.com",
+    "read_more": {
+      "label": "Upstarts Media",
+      "url": "https://www.upstartsmedia.com/p/ambrook-raises-30m-series-b-real-economy"
+    },
+    "sources": [
+      "https://ambrook.com/series-b",
+      "https://www.upstartsmedia.com/p/ambrook-raises-30m-series-b-real-economy",
+      "https://www.morningagclips.com/ambrook-raises-30m-series-b-to-expand-ai-financial-management-platform-for-americas-independent-businesses/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Savannah River Site AI data center",
+    "description": "A planned 1 GW AI data center with ~2 GW of dedicated on-site generation (natural gas transitioning to nuclear) on federal land at the DOE/NNSA Savannah River Site in South Carolina. NNSA selected site operator Amentum in July 2026 to negotiate a phased land-lease public-private partnership; no lease award is final yet and no dollar figures have been disclosed.",
+    "website": null,
+    "read_more": {
+      "label": "U.S. DOE / NNSA",
+      "url": "https://www.energy.gov/nnsa/articles/nnsa-selects-amentum-ai-data-center-and-energy-project-savannah-river-site"
+    },
+    "sources": [
+      "https://www.energy.gov/nnsa/articles/nnsa-selects-amentum-ai-data-center-and-energy-project-savannah-river-site",
+      "https://www.amentum.com/news/amentum-selected-for-the-department-of-energy-ai-data-center-and-energy-generation-project/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Prentis",
+    "description": "AI research lab founded in April 2026 by Ritankar Das (CEO) with Reid Hoffman and Mark Pincus as co-founders, training computer-use models (its Hive-32B) that automate office workflows like insurance claims processing. Reported in talks to raise $100M at a ~$1B valuation, with up to $50M in signed customer contracts and 25+ hires from OpenAI, DeepMind and Meta.",
+    "website": "https://prentis.ai",
+    "read_more": {
+      "label": "TechCrunch",
+      "url": "https://techcrunch.com/2026/07/24/prentis-new-ai-lab-co-founded-by-reid-hoffman-mark-pincus-in-talks-to-raise-100m/"
+    },
+    "sources": [
+      "https://techcrunch.com/2026/07/24/prentis-new-ai-lab-co-founded-by-reid-hoffman-mark-pincus-in-talks-to-raise-100m/",
+      "https://finance.yahoo.com/technology/ai/articles/prentis-ai-lab-co-founded-222558055.html"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Mistral AI",
+    "description": "Paris-based frontier AI lab known for high-performance open-weight models and its Le Chat assistant, positioned as Europe's leading independent AI company. In July 2026 Microsoft announced an expanded strategic partnership described as a multibillion-dollar commitment, covering European GPU capacity, Mistral models in Microsoft Foundry/Copilot Studio, and sovereign deployments for regulated industries.",
+    "website": "https://mistral.ai",
+    "read_more": {
+      "label": "Microsoft Source",
+      "url": "https://news.microsoft.com/source/2026/07/21/microsoft-and-mistral-expand-strategic-partnership-to-give-enterprises-and-regulated-industries-frontier-ai-they-can-control/"
+    },
+    "sources": [
+      "https://news.microsoft.com/source/2026/07/21/microsoft-and-mistral-expand-strategic-partnership-to-give-enterprises-and-regulated-industries-frontier-ai-they-can-control/",
+      "https://mistral.ai"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "France sovereign AI infrastructure framework",
+    "description": "Brookfield's AI infrastructure framework agreement with the French government, announced at the February 2025 Paris AI Action Summit at €20B and expanded to €30B (confirmed in Brookfield's Q2 2026 results) to enable French sovereign AI infrastructure — mostly data centers built and operated by Brookfield portfolio company Data4, including campuses at E-Valley Cambrai and Escaudain in Hauts-de-France, plus power and network investments.",
+    "website": null,
+    "read_more": {
+      "label": "Data Center Dynamics",
+      "url": "https://www.datacenterdynamics.com/en/news/brookfield-ups-french-data-center-investment-by-10-billion/"
+    },
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1937926/000117184326005272/exh_991.htm",
+      "https://www.datacenterdynamics.com/en/news/brookfield-ups-french-data-center-investment-by-10-billion/",
+      "https://bam.brookfield.com/press-releases/brookfield-invest-eu20-billion-frances-ai-infrastructure"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Andreessen Horowitz Fund X-B - AI Applications, L.P.",
+    "description": "A newly registered Andreessen Horowitz venture fund vehicle dedicated to AI applications — the 'X-B' sleeve of a16z's Fund X family and successor to Fund IX - AI Applications. Its initial Form D (filed July 16, 2026) reports an indefinite offering with no sales yet, signaling a16z is raising its next AI applications fund; fund size is undisclosed.",
+    "website": "https://a16z.com",
+    "read_more": {
+      "label": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/2107847/000110465926084290/primary_doc.xml"
+    },
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/2107847/000110465926084290/primary_doc.xml",
+      "https://marketcast.smartkarma.com/company/andreessen-horowitz-fund-x-b-ai-applications-lp"
+    ],
+    "as_of": "2026-08-09"
+  }
+]

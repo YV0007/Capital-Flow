@@ -1,0 +1,238 @@
+[
+  {
+    "target": "Electronic Arts",
+    "target_type": "public",
+    "sector": "gaming",
+    "allocators": [
+      "Saudi PIF"
+    ],
+    "last_event": "2026-08-04",
+    "capital_usd": 33600000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/712515/000114036126031157/ef20079099_8k.htm"
+    ]
+  },
+  {
+    "target": "Westinghouse nuclear reactor deployment (Brookfield/Cameco)",
+    "target_type": "project",
+    "sector": "nuclear",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-08-05",
+    "capital_usd": 17500000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1937926/000117184326005272/exh_991.htm"
+    ]
+  },
+  {
+    "target": "NAVER GAK Sejong AI factory (Korea national AI factory)",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Brookfield"
+    ],
+    "last_event": "2026-07-27",
+    "capital_usd": 9000000000.0,
+    "deal_source_urls": [
+      "https://bam.brookfield.com/press-releases/naver-nvidia-and-brookfield-expand-koreas-national-ai-factory-infrastructure"
+    ]
+  },
+  {
+    "target": "Williams Power Innovation JV (Socrates, Apollo, Aquila, Socrates the Younger, Neo)",
+    "target_type": "project",
+    "sector": "power-energy",
+    "allocators": [
+      "Blackstone",
+      "KKR"
+    ],
+    "last_event": "2026-07-13",
+    "capital_usd": 5340000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/0000107263/000119312526301533/d152507dex991.htm"
+    ]
+  },
+  {
+    "target": "EDF power solutions North America",
+    "target_type": "asset",
+    "sector": "power-energy",
+    "allocators": [
+      "KKR"
+    ],
+    "last_event": "2026-06-30",
+    "capital_usd": 4200000000.0,
+    "deal_source_urls": [
+      "https://www.businesswire.com/news/home/20260630667572/en/KKR-to-Acquire-EDF-power-solutions-North-American-Operations-for-$4.2-Billion"
+    ]
+  },
+  {
+    "target": "AirTrunk SYD3 (Western Sydney)",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Blackstone"
+    ],
+    "last_event": "2026-07-22",
+    "capital_usd": 3000000000.0,
+    "deal_source_urls": [
+      "https://www.bloomberg.com/news/articles/2026-07-22/blackstone-tying-up-3-billion-airtrunk-loan-as-data-center-debt-binge-woes-grow"
+    ]
+  },
+  {
+    "target": "ABB Robotics",
+    "target_type": "asset",
+    "sector": "robotics",
+    "allocators": [
+      "SoftBank"
+    ],
+    "last_event": "2026-07-21",
+    "capital_usd": 1750000000.0,
+    "deal_source_urls": [
+      "https://www.bloomberg.com/news/articles/2026-07-21/banks-wrap-up-loan-backing-softbank-s-5-4-billion-robotics-bet"
+    ]
+  },
+  {
+    "target": "Lucid Group",
+    "target_type": "public",
+    "sector": "ev-automotive",
+    "allocators": [
+      "Saudi PIF"
+    ],
+    "last_event": "2026-07-06",
+    "capital_usd": 800000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1811210/000162828026047248/lcid-20260706.htm"
+    ]
+  },
+  {
+    "target": "Coatue Growth Fund VI Private Investors Cayman, L.P.",
+    "target_type": "fund",
+    "sector": "ai-applications",
+    "allocators": [
+      "Coatue"
+    ],
+    "last_event": "2026-07-15",
+    "capital_usd": 526955000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2143818/000214381826000001/primary_doc.xml"
+    ]
+  },
+  {
+    "target": "Norm Ai",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Khosla Ventures",
+      "Coatue"
+    ],
+    "last_event": "2026-07-07",
+    "capital_usd": 240000000.0,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/norm-ai-raises-120-million-at-a-1-2-billion-valuation-led-by-khosla-ventures-to-deliver-the-full-stack-model-for-legal-ai-302819152.html"
+    ]
+  },
+  {
+    "target": "Neo Security",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Andreessen Horowitz"
+    ],
+    "last_event": "2026-07-20",
+    "capital_usd": 100000000.0,
+    "deal_source_urls": [
+      "https://www.globenewswire.com/news-release/2026/07/20/3329638/0/en/neo-launches-with-100m-to-secure-ai-software-across-the-enterprise.html"
+    ]
+  },
+  {
+    "target": "Convex",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Andreessen Horowitz"
+    ],
+    "last_event": "2026-08-04",
+    "capital_usd": 57000000.0,
+    "deal_source_urls": [
+      "https://news.convex.dev/convex-raises-57m/"
+    ]
+  },
+  {
+    "target": "Aeluma",
+    "target_type": "public",
+    "sector": "semiconductors",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-07-29",
+    "capital_usd": 30000000.0,
+    "deal_source_urls": [
+      "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million"
+    ]
+  },
+  {
+    "target": "SB Neo",
+    "target_type": "private",
+    "sector": "neocloud",
+    "allocators": [
+      "SoftBank"
+    ],
+    "last_event": "2026-07-02",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://group.softbank/en/news/press/20260702"
+    ]
+  },
+  {
+    "target": "Panthalassa",
+    "target_type": "private",
+    "sector": "datacenters",
+    "allocators": [
+      "Peter Thiel"
+    ],
+    "last_event": "2026-05-14",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://fortune.com/2026/05/14/peter-thiel-leading-investment-ocean-data-center-panthalassa/"
+    ]
+  },
+  {
+    "target": "LifeMine Therapeutics",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Jeff Bezos"
+    ],
+    "last_event": "2026-08-05",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.biospace.com/business/lifemine-raises-263m-in-mission-to-improve-organ-transplant-aftercare"
+    ]
+  },
+  {
+    "target": "CuspAI",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "Jeff Bezos"
+    ],
+    "last_event": "2026-07-20",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://techfundingnews.com/cuspai-400m-series-b-2-6b-valuation-bezos-materials-search/"
+    ]
+  },
+  {
+    "target": "Altimeter Kilauea Fund II, L.P.",
+    "target_type": "fund",
+    "sector": "ai-applications",
+    "allocators": [
+      "Altimeter"
+    ],
+    "last_event": "2026-07-28",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2141877/000214187726000001/primary_doc.xml"
+    ]
+  }
+]

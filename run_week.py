@@ -13,7 +13,7 @@ import sys
 from datetime import date
 
 from engine import (audit, beneficiaries, deliver, handoff, ingest, profiles,
-                    report, themes)
+                    references, report, themes)
 
 
 def current_week() -> str:
@@ -41,6 +41,10 @@ def main(week: str, do_deliver: bool = False, do_push: bool = False,
     print(f"[profile] {p['profiles']} profiles, {p['track_rows']} track-record rows, "
           f"{p['skipped']} skipped")
     for w in p.get("warnings", []):
+        print("          WARN", w)
+    r = references.ingest_week(week)  # target "what this is" cards (engine-owned)
+    print(f"[refs]    {r['references']} target references, {r['skipped']} skipped")
+    for w in r.get("warnings", []):
         print("          WARN", w)
     t = themes.run(week)  # after beneficiaries so beneficiary_concentration can see them
     print(f"[themes]  {len(t['fired'])} fired: {'; '.join(t['fired']) or '—'}")

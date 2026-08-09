@@ -1,0 +1,203 @@
+[
+  {
+    "target": "DOE Paducah Site AI data center campus (Western Kentucky)",
+    "description": "$100B privately funded AI data-center campus (the 'Paducah American Energy Hub') on the Department of Energy's former uranium-enrichment site in Paducah, Kentucky. Brookfield develops and operates the campus (1.8 GW utility / 1.2+ GW compute capacity) while NextEra Energy builds up to 4.6 GW of dedicated gas and battery generation; completion targeted for 2032.",
+    "website": null,
+    "read_more": {"label": "U.S. Department of Energy", "url": "https://www.energy.gov/articles/energy-department-announces-partnership-expand-reliable-affordable-energy-access-and-power"},
+    "sources": [
+      "https://www.prnewswire.com/news-releases/doe-site-in-western-kentucky-revitalized-with-data-center-campus-and-dedicated-energy-project-creating-jobs-and-protecting-residents-and-businesses-from-costs-302837752.html",
+      "https://www.energy.gov/articles/energy-department-announces-partnership-expand-reliable-affordable-energy-access-and-power"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Bloom Energy",
+    "description": "Silicon Valley maker of solid-oxide fuel-cell systems for onsite power generation, serving data centers, utilities, semiconductor fabs and other industrial customers (NYSE: BE). In June 2026 Brookfield expanded its financing partnership with Bloom fivefold, from $5B to $25B, to build and finance fuel-cell-powered 'rapid power' for AI infrastructure under Brookfield's AI Infrastructure Fund.",
+    "website": "https://www.bloomenergy.com",
+    "read_more": {"label": "Bloom Energy", "url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Brookfield-and-Bloom-Energy-Expand-AI-Infrastructure-Partnership-to-25-Billion-Fivefold-Increase-to-Build-and-Finance-Rapid-Power-for-AI-Infrastructure/default.aspx"},
+    "sources": [
+      "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Brookfield-and-Bloom-Energy-Expand-AI-Infrastructure-Partnership-to-25-Billion-Fivefold-Increase-to-Build-and-Finance-Rapid-Power-for-AI-Infrastructure/default.aspx"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "KIC strategic investment account (AI / data centers / strategic industries)",
+    "description": "Planned ~20 trillion won (~$14B) strategic investment account inside Korea Investment Corporation, South Korea's $232B sovereign wealth fund — KIC's first mandate to invest domestically, targeting AI, data centers, semiconductors, robotics and other strategic industries. Enabling legislation goes to the National Assembly in August 2026, with operations expected from 2027; state banks (KDB, KEXIM, IBK) provide a further 16 trillion won.",
+    "website": "https://www.kic.kr",
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-07-30/korea-plans-14-billion-for-wealth-fund-s-ai-bets-after-rout"},
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2026-07-30/korea-plans-14-billion-for-wealth-fund-s-ai-bets-after-rout",
+      "https://www.upi.com/amp/Top_News/World-News/2026/07/31/sovereign-wealth-fund-korea-investment-corporation-ai-semiconductors-strategic-investment/2841785543229/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Brookfield Infrastructure Fund VI (flagship)",
+    "description": "Brookfield Asset Management's sixth flagship global infrastructure fund, investing in transport, energy, data and utility assets. BAM's Q2 2026 results (a record $77B quarterly fundraise) reported $7.9B raised for the flagship infrastructure strategy, with the fund reported to be targeting a circa $20B first close and roughly $30B overall.",
+    "website": null,
+    "read_more": {"label": "Infrastructure Investor", "url": "https://www.infrastructureinvestor.com/brookfield-eyes-circa-20bn-first-close-for-fund-vi-exclusive/"},
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1937926/000117184326005272/exh_991.htm",
+      "https://www.infrastructureinvestor.com/brookfield-eyes-circa-20bn-first-close-for-fund-vi-exclusive/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Safe Superintelligence",
+    "description": "AI research lab founded in 2024 by former OpenAI chief scientist Ilya Sutskever (with Daniel Levy), pursuing a single goal — safe superintelligence — with no product released to date. In July 2026 NVIDIA agreed to invest $5B and give SSI access to its next-generation Vera Rubin platform, expanding the lab's compute capacity roughly tenfold over 12 months.",
+    "website": "https://ssi.inc",
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-07-27/nvidia-makes-substantial-investment-in-sutskever-s-ai-startup"},
+    "sources": [
+      "https://nvidianews.nvidia.com/news/ilya-sutskevers-safe-superintelligence-inc-and-nvidia-announce-long-term-strategic-partnership",
+      "https://www.bloomberg.com/news/articles/2026-07-27/nvidia-makes-substantial-investment-in-sutskever-s-ai-startup",
+      "https://techcrunch.com/2026/07/27/ilya-sutskevers-safe-superintelligence-partners-with-nvidia-to-scale-its-ai-research/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Base Power",
+    "description": "Austin-based distributed-energy company that installs large home batteries (its new US-made 39.2/78.4 kWh 'Base Core') and aggregates them into grid capacity, operating as a power provider in Texas and Illinois. Raised a $1B Series D at a $13B valuation in August 2026 led by Ribbit, Addition, Valor and JPMorganChase, with Thrive, a16z, Lightspeed and CapitalG reinvesting; total raised exceeds $2.5B.",
+    "website": "https://www.basepowercompany.com",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/08/03/base-power-raises-another-1b-to-save-the-grid-using-backyard-batteries/"},
+    "sources": [
+      "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+      "https://techcrunch.com/2026/08/03/base-power-raises-another-1b-to-save-the-grid-using-backyard-batteries/",
+      "https://pv-magazine-usa.com/2026/08/04/base-power-launches-39-2-kwh-u-s-made-base-core-home-battery-secures-1-billion-in-new-funding/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Meta-BlackRock El Paso data center venture",
+    "description": "Joint venture announced July 2026 to develop a ~$14B, 1 GW AI data-center campus in El Paso, Texas: BlackRock-managed funds own 80% (contributing ~$4.9B cash, partly funded by a $12.5B debt financing) and Meta 20% (contributing land and construction-in-progress valued at ~$2.3B). Meta manages construction and will be sole initial occupant; capacity comes online from 2028.",
+    "website": null,
+    "read_more": {"label": "CNBC", "url": "https://www.cnbc.com/2026/07/28/meta-blackrock-partner-on-14-billion-el-paso-data-center.html"},
+    "sources": [
+      "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-New-Strategic-Venture-with-BlackRock-to-Develop-Data-Center-in-El-Paso/default.aspx",
+      "https://www.cnbc.com/2026/07/28/meta-blackrock-partner-on-14-billion-el-paso-data-center.html",
+      "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "SK-KKR Korea renewable energy platform",
+    "description": "South Korea's largest renewable energy platform, a 2 trillion won (~$1.3B) venture launched by SK Inc. and KKR in mid-2026, consolidating wind, solar and fuel-cell assets from SK affiliates (SK Innovation, SK ecoplant, SK eternix) — 1.7 GW operating with a pipeline toward 10 GW. KKR (via its Asia Pacific infrastructure strategy) holds management control; the platform targets clean-power demand from AI data centers and chip fabs.",
+    "website": null,
+    "read_more": {"label": "CNBC", "url": "https://www.cnbc.com/2026/07/01/kkr-sk-launch-1-3-billion-south-korea-renewable-energy-platform-ai-data-centers.html"},
+    "sources": [
+      "https://www.businesswire.com/news/home/20260625373798/en/SK-and-KKR-Launch-Koreas-Largest-Renewable-Energy-Platform",
+      "https://www.cnbc.com/2026/07/01/kkr-sk-launch-1-3-billion-south-korea-renewable-energy-platform-ai-data-centers.html",
+      "https://www.esgtoday.com/kkr-sk-launch-1-3-billion-renewable-energy-platform-in-south-korea/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Coatue Growth Fund VI Private Investors US, LLC",
+    "description": "Delaware feeder vehicle (Form D filed July 2026, administered by J.P. Morgan Private Investments) that channels J.P. Morgan private clients into Coatue Growth Fund VI, Coatue Management's sixth growth-stage venture fund. The filing reports $778.23M sold in an indefinite offering, with first sale July 2, 2026.",
+    "website": null,
+    "read_more": {"label": "SEC EDGAR", "url": "https://www.sec.gov/Archives/edgar/data/2143819/000214381926000001/primary_doc.xml"},
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/2143819/000214381926000001/primary_doc.xml"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Cathedral",
+    "description": "Stealth military-cybersecurity startup founded by four DOGE alumni (Gavin Kliger — former Pentagon chief data officer — Luke Farritor, Marko Elez, Jack Stein), building AI-driven offensive and defensive cyber tools it aims to sell to the US government. Raised $160M in July 2026 at a $1.4B valuation, co-led by Andreessen Horowitz and Sequoia, both taking board seats; no disclosed revenue or contracts yet.",
+    "website": null,
+    "read_more": {"label": "The Next Web", "url": "https://thenextweb.com/news/cathedral-doge-alumni-military-cyber-startup-1-4-billion"},
+    "sources": [
+      "https://thenextweb.com/news/cathedral-doge-alumni-military-cyber-startup-1-4-billion",
+      "https://www.usnews.com/news/top-news/articles/2026-07-22/exclusive-doge-alumni-launch-military-cyber-startup-with-1-4-billion-valuation",
+      "https://www.citybiz.co/article/878111/andreessen-horowitz-sequoia-capital-lead-160m-round-for-former-doge-staffs-venture/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "HappyRobot",
+    "description": "Enterprise AI company whose platform deploys autonomous agents to automate workflows in logistics, supply chain, insurance, energy and financial services; customers include DHL, Kuehne + Nagel, Naturgy and Uber. Raised a $150M Series C in August 2026 at a $1.2B post-money valuation, led by Prysm Capital and co-led by Eurazeo (a16z is an earlier backer), bringing total funding to ~$200M.",
+    "website": "https://www.happyrobot.ai",
+    "read_more": {"label": "HappyRobot", "url": "https://www.happyrobot.ai/blog/happyrobot-seriesc-fundraising-announcement"},
+    "sources": [
+      "https://www.happyrobot.ai/blog/happyrobot-seriesc-fundraising-announcement"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Singularity Defense",
+    "description": "Los Angeles defense startup (founded by Jack Oswald and Shail Giroux) building low-cost missile/drone interceptors, with a manufacturing team drawn from Tesla and Toyota applying automotive assembly-line methods to scale production. Emerged from two years in stealth in July 2026 with an $80M Series A at a $400M valuation, co-led by Khosla Ventures and Felicis, with NEA, Menlo Ventures, Y Combinator and others participating.",
+    "website": "https://www.singularityus.com",
+    "read_more": {"label": "Defense Daily", "url": "https://www.defensedaily.com/singularity-startup-developing-low-cost-air-defense-systems-exits-stealth-with-80-million-round/business-financial/"},
+    "sources": [
+      "https://www.businesswire.com/news/home/20260714185502/en/Singularity-Emerges-from-Stealth-with-$80M-Series-A-at-$400M-Valuation-to-Deploy-Air-Defense-at-Scale",
+      "https://www.defensedaily.com/singularity-startup-developing-low-cost-air-defense-systems-exits-stealth-with-80-million-round/business-financial/",
+      "https://www.axios.com/2026/07/14/singularity-air-defense-seriesa-venture-oswald"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "P-1 AI",
+    "description": "San Mateo-based engineering-AI startup co-founded by former Airbus CTO Paul Eremenko, building 'Archie', an agentic AI mechanical/electrical engineer for industrial teams in data-center, automotive and aerospace & defense design. Announced a $50M Series A led by NEA in July 2026 (Jeff Immelt joining the board), following a $23M seed led by Radical Ventures in 2025.",
+    "website": "https://p-1.ai",
+    "read_more": {"label": "Yahoo Finance (GlobeNewswire)", "url": "https://finance.yahoo.com/technology/ai/articles/engineering-ai-startup-p-1-123500705.html"},
+    "sources": [
+      "https://finance.yahoo.com/technology/ai/articles/engineering-ai-startup-p-1-123500705.html",
+      "https://www.citybiz.co/article/884348/p-1-ai-raises-50m-series-a-led-by-nea-to-push-industrial-ai/",
+      "https://p-1.ai"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Volta Infra Holdings",
+    "description": "AI-cloud financing startup ('the utility of compute') founded in 2026 by ex-Brookfield infrastructure executives Ricard Boada and Sofia Gumuzio, arranging capital alongside GPU capacity so AI labs can afford NVIDIA hardware. Raised $300M at a $2.4B valuation led by a16z and Altimeter, with NVIDIA and Michael Dell backing plus $5B financing via Azora; ~1 GW of power secured and a $10B six-year compute contract signed.",
+    "website": "https://volta.com",
+    "read_more": {"label": "The Next Web", "url": "https://thenextweb.com/news/volta-ai-cloud-300m-nvidia-dell-2-4bn"},
+    "sources": [
+      "https://thenextweb.com/news/volta-ai-cloud-300m-nvidia-dell-2-4bn",
+      "https://volta.com/news/volta-launches-the-utility-of-compute/"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Quiet Select TX LP",
+    "description": "New pooled investment vehicle from San Francisco-based Quiet Capital (Form D filed July 28, 2026; GP: Quiet Select TX GP LLC), with Quiet Capital founder Lee Linden and former Founders Fund partner Brian Singerman listed as related persons. Indefinite offering size with no sales at filing; the 'Select' naming pattern suggests a deal-specific co-invest vehicle, but the underlying target is not disclosed in the filing.",
+    "website": null,
+    "read_more": {"label": "SEC EDGAR", "url": "https://www.sec.gov/Archives/edgar/data/2147584/000123191926000805/primary_doc.xml"},
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/2147584/000123191926000805/primary_doc.xml"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Odyssey",
+    "description": "AI lab founded in 2023 by autonomous-vehicle veterans Oliver Cameron (ex-Voyage/Cruise) and Jeff Hawke (ex-Wayve), building general-purpose 'world models' — causal, multimodal simulations of the physical world for gaming, robotics and interactive video. Raised a $310M Series B in June 2026 at a $1.45B valuation led by Natural Capital, with Amazon, AMD Ventures, GV and angels including Elad Gil and Garry Tan.",
+    "website": "https://odyssey.ml",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/06/17/world-model-maker-odyssey-nabs-1-45b-valuation-backed-by-amazon-and-other-big-names/"},
+    "sources": [
+      "https://techcrunch.com/2026/06/17/world-model-maker-odyssey-nabs-1-45b-valuation-backed-by-amazon-and-other-big-names/",
+      "https://odyssey.ml/about"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Generalist AI",
+    "description": "San Francisco robotics-AI company founded in 2024 by ex-DeepMind researchers Pete Florence and Andy Zeng with Andrew Barry (ex-Boston Dynamics), building general-purpose 'robot brain' models (GEN-1, April 2026) trained on data from its robot-training gloves. Raised $400M in June 2026 at a $2B valuation led by Radical Ventures, with NVIDIA and Bezos Expeditions among returning backers; total funding exceeds $500M.",
+    "website": "https://generalistai.com",
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-06-04/nvidia-backed-robotics-startup-generalist-ai-valued-at-2-billion"},
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2026-06-04/nvidia-backed-robotics-startup-generalist-ai-valued-at-2-billion",
+      "https://www.therobotreport.com/generalist-raises-400m-to-scale-its-general-purpose-ai-models/",
+      "https://www.sec.gov/Archives/edgar/data/2137708/000213770826000003/primary_doc.xml"
+    ],
+    "as_of": "2026-08-09"
+  },
+  {
+    "target": "Brookfield Middle East Partners (BMEP)",
+    "description": "Brookfield's Middle East private-equity fund, which held a ~$2B first close in July 2026 with Saudi Arabia's Public Investment Fund as strategic anchor and Brookfield committing $500M. Targets buyouts and minority growth-equity deals in financial services, industrials, technology and healthcare across GCC markets, with 50% of investments earmarked for Saudi Arabia.",
+    "website": null,
+    "read_more": {"label": "Arab News", "url": "https://www.arabnews.com/node/2652475/business-economy"},
+    "sources": [
+      "https://www.arabnews.com/node/2652475/business-economy"
+    ],
+    "as_of": "2026-08-09"
+  }
+]
