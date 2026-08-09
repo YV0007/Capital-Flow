@@ -51,3 +51,19 @@ tune the thresholds as the data grows.
 
 The full consumer specification lives in **handoff/DASHBOARD_BRIEF.md** — hand that entire
 file to an ab-investment Claude Code session to rebuild the map.
+
+## New payload blocks (v3 — spec §4/§5/§6, added 2026-08-09)
+- `aggregates.top_sector` / `aggregates.top_company` / `aggregates.thesis_shares` —
+  derived views computed by the engine (each carries a `basis` string). Render them
+  as-is; NEVER recompute derived numbers on the dashboard side.
+- `allocators` — the canonical allocator summary (one per allocator): event-derived
+  rollup (deals, capital, sectors, thesis_shares, recency) + `profile` (background,
+  focus, style, thesis, latest_investments_summary, strategy + `strategy_source_url`
+  attribution, `sources`) + `track_record` (per fiscal year; each row has
+  `provisional` and `source_url`). Use for BOTH aggregate views and the detail
+  panel. Always show a "provisional / unaudited" marker when `provisional: true`,
+  and keep source attribution visible or one tap away.
+- `nodes[].country` — allocator national affiliation for flag rendering.
+- `audit` — the §6 verification verdict shipped with the data (`passed`,
+  `error_count`, `warning_count`, `stats.source_url_coverage`). The engine blocks
+  its own delivery when the audit fails, so a payload you receive always passed.

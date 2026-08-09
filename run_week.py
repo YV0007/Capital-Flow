@@ -12,7 +12,8 @@ deterministic Python. Scheduling (build step 3) will wrap this script.
 import sys
 from datetime import date
 
-from engine import ingest, themes, beneficiaries, report, handoff, deliver
+from engine import (audit, beneficiaries, deliver, handoff, ingest, profiles,
+                    report, themes)
 
 
 def current_week() -> str:
@@ -36,12 +37,25 @@ def main(week: str, do_deliver: bool = False, do_push: bool = False,
         print("          ", p)
     b = beneficiaries.run(week)
     print(f"[benefic] {b['linked']} linked, {b['unmatched']} unmatched")
+    p = profiles.ingest_week(week)  # allocator intelligence (§5), when batches exist
+    print(f"[profile] {p['profiles']} profiles, {p['track_rows']} track-record rows, "
+          f"{p['skipped']} skipped")
+    for w in p.get("warnings", []):
+        print("          WARN", w)
     t = themes.run(week)  # after beneficiaries so beneficiary_concentration can see them
     print(f"[themes]  {len(t['fired'])} fired: {'; '.join(t['fired']) or '—'}")
     rp = report.run(week)
     print(f"[report]  {rp}")
-    h = handoff.run(week)
+    v = audit.run(week)  # §6: periodic verification pass, gates delivery
+    print(f"[audit]   {'PASS' if v['passed'] else 'FAIL'} — {len(v['errors'])} errors, "
+          f"{len(v['warnings'])} warnings -> runs/{week}/audit_report.md")
+    for e in v["errors"]:
+        print("          ERR", e)
+    h = handoff.run(week, audit_verdict=v)
     print(f"[handoff] {h['nodes']} nodes, {h['flows']} flows -> handoff/capital_map.json")
+    if (do_deliver or do_push) and not v["passed"]:
+        print("[deliver] BLOCKED: audit failed — fix errors and re-run")
+        sys.exit(1)
     if do_deliver or do_push:
         # deliver also refreshes dashboard logos for this cycle's new entities
         # (network call, best-effort — see engine/deliver.py).

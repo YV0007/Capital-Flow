@@ -76,5 +76,9 @@ the consuming session, delivery mechanism (manual drop vs. committed artifact pu
 5. Validation/ingest ✅  6. Theme engine ✅  7. Beneficiary engine ✅ (loader + mapper brief)
 8. Weekly report ✅  9. Handoff contract + rules ✅ (v1)  10. Dashboard reconstruction
 workflow ⏳ (dashboard side)  11. Automation ⏳ (B2)
+12. Derived aggregates (§4: top sector / top company / thesis shares) ✅ engine/aggregates.py
+13. Allocator intelligence (§5, Cluster C) ✅ agents/allocator-profiler.md +
+    engine/profiles.py → allocator_profiles + track_records (provisional-flagged, sourced)
+14. Audit gate (§6) ✅ engine/audit.py — every run; errors block --deliver/--push
 
-Remaining: live agent runs (pilot), scheduling (B2), and the dashboard-side consumer.
+Remaining: scheduling (B2) and the dashboard-side consumer of the v3 blocks.

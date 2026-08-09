@@ -151,6 +151,46 @@ CREATE TABLE IF NOT EXISTS beneficiaries (
     created_at  TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
+-- Canonical allocator intelligence (spec §5, Cluster C). One row per allocator —
+-- reused by the dashboard's aggregates AND its detail panel. Researched by the
+-- allocator-profiler agent; ingested by engine/profiles.py. Text fields are
+-- source-attributed via sources (JSON array of URLs) + strategy_source_url.
+CREATE TABLE IF NOT EXISTS allocator_profiles (
+    allocator_id        INTEGER PRIMARY KEY REFERENCES allocators(id),
+    background          TEXT,     -- who they are: history, scale, position
+    focus               TEXT,     -- what they invest in
+    style               TEXT,     -- how they invest (concentration, stage, pace)
+    thesis              TEXT,     -- their stated worldview / rationale
+    latest_summary      TEXT,     -- the logic behind recent decisions
+    strategy            TEXT,     -- strategy from their own site / public statements
+    strategy_source_url TEXT,     -- where strategy was scraped from (attribution)
+    sources             TEXT,     -- JSON array of source URLs backing the profile
+    track_record_note   TEXT,     -- honesty note when return data is sparse/absent
+    as_of               TEXT NOT NULL,   -- research date
+    run_week            TEXT NOT NULL,   -- which run produced/refreshed it
+    updated_at          TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+-- Track record per allocator per fiscal year (spec §5). Never invented: rows exist
+-- only where a source supports them. provisional=1 for YTD / unaudited / estimates.
+CREATE TABLE IF NOT EXISTS track_records (
+    id           INTEGER PRIMARY KEY,
+    allocator_id INTEGER NOT NULL REFERENCES allocators(id),
+    fiscal_year  TEXT NOT NULL,    -- '2021'..'2025', or 'YTD2026'
+    metric       TEXT NOT NULL,    -- stock_total_return_pct | fund_net_return_pct |
+                                   -- fund_irr_pct | tvpi | reported_return_pct |
+                                   -- aum_usd_bn | hit_rate_pct | moic
+    value        REAL,
+    unit         TEXT,             -- 'pct' | 'x' | 'usd_bn'
+    provisional  INTEGER NOT NULL DEFAULT 0,  -- 1 = YTD / unaudited / estimate
+    source_tier  INTEGER CHECK (source_tier BETWEEN 1 AND 5),
+    source_url   TEXT,
+    notes        TEXT,
+    run_week     TEXT NOT NULL,
+    created_at   TEXT NOT NULL DEFAULT (datetime('now')),
+    UNIQUE (allocator_id, fiscal_year, metric)
+);
+
 -- Detected themes: output of the theme engine, one row per (theme, run_week).
 CREATE TABLE IF NOT EXISTS themes (
     id          INTEGER PRIMARY KEY,

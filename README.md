@@ -30,7 +30,8 @@ agents ──CSV──▶ runs/<week>/ ──▶ run_week.py ──▶ db/capita
 | `config/sources.yaml` | tiered source registry |
 | `config/rules.yaml` | 12-sector taxonomy + signal rules |
 | `db/schema.sql` | SQLite schema (events is the source of truth) |
-| `engine/*.py` | ingest, themes, beneficiaries, report, handoff |
+| `engine/*.py` | ingest, themes, beneficiaries, profiles, aggregates, audit, report, handoff |
+| `agents/allocator-profiler.md` | Cluster-C brief: canonical allocator summaries + sourced track records |
 | `run_week.py` | orchestrates the deterministic pipeline |
 | `tools/smoke_test.py` | end-to-end self-test on synthetic data |
 | `handoff/RULES.md` | how the dashboard reconstructs the map from the handoff |
@@ -42,6 +43,14 @@ python run_week.py 2026-W32       # run the deterministic pipeline for a week
 ```
 Requires Python 3.11+ and `pyyaml`. The SQLite DB (`db/capital.db`) is created on first
 run and is gitignored (regenerable from CSVs + schema).
+
+## Derived payload (spec §4–§6)
+`handoff/capital_map.json` ships, alongside nodes/flows/sectors/themes:
+- `aggregates` — top sector (capital-weighted), top company (by distinct tracked
+  investors), thesis shares (theme distribution) — each with a `basis` string.
+- `allocators` — one canonical summary per allocator: event rollup + researched
+  profile (source-attributed) + per-fiscal-year track record with `provisional` flags.
+- `audit` — the §6 verification verdict; audit errors block delivery.
 
 ## Signal rules (config/rules.yaml)
 - **sector_swarm** — ≥5 distinct key allocators into one sector within 30 days.

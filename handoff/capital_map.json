@@ -1,9 +1,1165 @@
 {
-  "generated": "2026-08-07",
+  "generated": "2026-08-09",
   "totals": {
     "nodes": 147,
     "flows": 128,
     "sectors": 17
+  },
+  "aggregates": {
+    "top_sector": {
+      "top": {
+        "sector": "datacenters",
+        "capital_usd": 276431350516.0,
+        "deals": 20,
+        "allocators": 11
+      },
+      "ranked": [
+        {
+          "sector": "datacenters",
+          "capital_usd": 276431350516.0,
+          "deals": 20,
+          "allocators": 11
+        },
+        {
+          "sector": "ai-compute",
+          "capital_usd": 49075000000.0,
+          "deals": 2,
+          "allocators": 2
+        },
+        {
+          "sector": "ai-labs",
+          "capital_usd": 46300000000.0,
+          "deals": 12,
+          "allocators": 9
+        },
+        {
+          "sector": "power-energy",
+          "capital_usd": 42840000000.0,
+          "deals": 11,
+          "allocators": 8
+        },
+        {
+          "sector": "gaming",
+          "capital_usd": 33600000000.0,
+          "deals": 1,
+          "allocators": 1
+        },
+        {
+          "sector": "nuclear",
+          "capital_usd": 18560000000.0,
+          "deals": 4,
+          "allocators": 3
+        },
+        {
+          "sector": "ai-applications",
+          "capital_usd": 6597685000.0,
+          "deals": 26,
+          "allocators": 14
+        },
+        {
+          "sector": "private-credit",
+          "capital_usd": 4650000000.0,
+          "deals": 1,
+          "allocators": 1
+        }
+      ],
+      "basis": "confirmed events (verified/verified_alpha), capital-weighted; undisclosed amounts count as 0"
+    },
+    "top_company": {
+      "top": {
+        "target": "Base Power",
+        "investors": 4,
+        "capital_usd": 4000000000.0,
+        "sectors": [
+          "power-energy"
+        ]
+      },
+      "ranked": [
+        {
+          "target": "Base Power",
+          "investors": 4,
+          "capital_usd": 4000000000.0,
+          "sectors": [
+            "power-energy"
+          ]
+        },
+        {
+          "target": "Hadrian",
+          "investors": 3,
+          "capital_usd": 4110000000.0,
+          "sectors": [
+            "defense-tech"
+          ]
+        },
+        {
+          "target": "Volta Infra Holdings",
+          "investors": 3,
+          "capital_usd": 0,
+          "sectors": [
+            "neocloud"
+          ]
+        },
+        {
+          "target": "Aligned Data Centers",
+          "investors": 2,
+          "capital_usd": 40000000000.0,
+          "sectors": [
+            "datacenters"
+          ]
+        },
+        {
+          "target": "Williams Power Innovation JV (Socrates, Apollo, Aquila, Socrates the Younger, Neo)",
+          "investors": 2,
+          "capital_usd": 5340000000.0,
+          "sectors": [
+            "power-energy"
+          ]
+        },
+        {
+          "target": "Chai Discovery",
+          "investors": 2,
+          "capital_usd": 800000000.0,
+          "sectors": [
+            "ai-applications"
+          ]
+        },
+        {
+          "target": "Etched",
+          "investors": 2,
+          "capital_usd": 600000000.0,
+          "sectors": [
+            "semiconductors"
+          ]
+        },
+        {
+          "target": "Cathedral",
+          "investors": 2,
+          "capital_usd": 320000000.0,
+          "sectors": [
+            "defense-tech"
+          ]
+        }
+      ],
+      "basis": "confirmed events; ranked by distinct tracked allocators, then capital behind the target"
+    },
+    "thesis_shares": {
+      "by_deals": {
+        "ai_applications": 0.232,
+        "ai_infrastructure": 0.333,
+        "biotech_ai": 0.03,
+        "defense_ai": 0.061,
+        "energy_for_ai": 0.152,
+        "frontier_ai": 0.101,
+        "robotics_embodiment": 0.03,
+        "sovereign_ai": 0.061
+      },
+      "by_capital": {
+        "ai_applications": 0.012,
+        "ai_infrastructure": 0.599,
+        "biotech_ai": 0.002,
+        "defense_ai": 0.01,
+        "energy_for_ai": 0.136,
+        "frontier_ai": 0.102,
+        "robotics_embodiment": 0.008,
+        "sovereign_ai": 0.131
+      },
+      "basis": "share of confirmed events per canonical theme (the stated rationale dimension of config/rules.yaml); by_capital ignores undisclosed amounts"
+    }
+  },
+  "allocators": {
+    "Saudi PIF": {
+      "class": "sovereign",
+      "tier": "key",
+      "country": "SA",
+      "network": null,
+      "deals": 3,
+      "confirmed_deals": 3,
+      "capital_usd": 34400000000.0,
+      "first_seen": "2026-07-06",
+      "last_activity": "2026-08-04",
+      "sectors": {
+        "gaming": {
+          "deals": 1,
+          "capital_usd": 33600000000.0
+        },
+        "ev-automotive": {
+          "deals": 1,
+          "capital_usd": 800000000.0
+        },
+        "diversified-pe": {
+          "deals": 1,
+          "capital_usd": 0.0
+        }
+      },
+      "thesis_shares": {},
+      "profile": null,
+      "track_record": []
+    },
+    "Thrive Capital": {
+      "class": "vc",
+      "tier": "key",
+      "country": "US",
+      "network": null,
+      "deals": 3,
+      "confirmed_deals": 3,
+      "capital_usd": 1430000000.0,
+      "first_seen": "2026-07-13",
+      "last_activity": "2026-08-04",
+      "sectors": {
+        "power-energy": {
+          "deals": 1,
+          "capital_usd": 1000000000.0
+        },
+        "ai-applications": {
+          "deals": 2,
+          "capital_usd": 430000000.0
+        }
+      },
+      "thesis_shares": {
+        "energy_for_ai": 0.333,
+        "ai_applications": 0.333,
+        "biotech_ai": 0.333
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "DigitalBridge": {
+      "class": "alt_manager",
+      "tier": "key",
+      "country": "US",
+      "network": null,
+      "deals": 2,
+      "confirmed_deals": 2,
+      "capital_usd": 711350516.0,
+      "first_seen": "2026-07-01",
+      "last_activity": "2026-07-15",
+      "sectors": {
+        "datacenters": {
+          "deals": 2,
+          "capital_usd": 711350516.0
+        }
+      },
+      "thesis_shares": {
+        "ai_infrastructure": 1.0
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "Meta": {
+      "class": "corporate",
+      "tier": "key",
+      "country": "US",
+      "network": null,
+      "deals": 3,
+      "confirmed_deals": 3,
+      "capital_usd": 61470000000.0,
+      "first_seen": "2026-07-08",
+      "last_activity": "2026-07-28",
+      "sectors": {
+        "datacenters": {
+          "deals": 3,
+          "capital_usd": 61470000000.0
+        }
+      },
+      "thesis_shares": {
+        "ai_infrastructure": 1.0
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "David Sacks": {
+      "class": "individual",
+      "tier": "core",
+      "country": "US",
+      "network": "paypal_mafia",
+      "deals": 1,
+      "confirmed_deals": 1,
+      "capital_usd": 0.0,
+      "first_seen": "2026-08-07",
+      "last_activity": "2026-08-07",
+      "sectors": {
+        "ai-applications": {
+          "deals": 1,
+          "capital_usd": 0.0
+        }
+      },
+      "thesis_shares": {
+        "ai_applications": 1.0
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "Amazon": {
+      "class": "corporate",
+      "tier": "key",
+      "country": "US",
+      "network": null,
+      "deals": 2,
+      "confirmed_deals": 2,
+      "capital_usd": 31300000000.0,
+      "first_seen": "2026-07-31",
+      "last_activity": "2026-07-31",
+      "sectors": {
+        "ai-labs": {
+          "deals": 2,
+          "capital_usd": 31300000000.0
+        }
+      },
+      "thesis_shares": {
+        "frontier_ai": 1.0
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "Founders Fund": {
+      "class": "vc",
+      "tier": "key",
+      "country": "US",
+      "network": null,
+      "deals": 3,
+      "confirmed_deals": 2,
+      "capital_usd": 1440000000.0,
+      "first_seen": "2026-07-14",
+      "last_activity": "2026-08-06",
+      "sectors": {
+        "defense-tech": {
+          "deals": 1,
+          "capital_usd": 1370000000.0
+        },
+        "ai-applications": {
+          "deals": 1,
+          "capital_usd": 70000000.0
+        }
+      },
+      "thesis_shares": {
+        "defense_ai": 0.5,
+        "ai_applications": 0.5
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "Microsoft": {
+      "class": "corporate",
+      "tier": "key",
+      "country": "US",
+      "network": null,
+      "deals": 2,
+      "confirmed_deals": 2,
+      "capital_usd": 2500000000.0,
+      "first_seen": "2026-07-02",
+      "last_activity": "2026-07-21",
+      "sectors": {
+        "ai-applications": {
+          "deals": 1,
+          "capital_usd": 2500000000.0
+        },
+        "ai-labs": {
+          "deals": 1,
+          "capital_usd": 0.0
+        }
+      },
+      "thesis_shares": {
+        "ai_applications": 0.5,
+        "sovereign_ai": 0.5
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "Sequoia": {
+      "class": "vc",
+      "tier": "key",
+      "country": "US",
+      "network": null,
+      "deals": 5,
+      "confirmed_deals": 5,
+      "capital_usd": 2040000000.0,
+      "first_seen": "2026-07-13",
+      "last_activity": "2026-08-03",
+      "sectors": {
+        "nuclear": {
+          "deals": 1,
+          "capital_usd": 1000000000.0
+        },
+        "ai-applications": {
+          "deals": 2,
+          "capital_usd": 580000000.0
+        },
+        "semiconductors": {
+          "deals": 1,
+          "capital_usd": 300000000.0
+        },
+        "defense-tech": {
+          "deals": 1,
+          "capital_usd": 160000000.0
+        }
+      },
+      "thesis_shares": {
+        "biotech_ai": 0.2,
+        "defense_ai": 0.2,
+        "energy_for_ai": 0.2,
+        "ai_infrastructure": 0.2,
+        "ai_applications": 0.2
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "SoftBank": {
+      "class": "alt_manager",
+      "tier": "key",
+      "country": "JP",
+      "network": null,
+      "deals": 5,
+      "confirmed_deals": 3,
+      "capital_usd": 11750000000.0,
+      "first_seen": "2026-07-01",
+      "last_activity": "2026-07-24",
+      "sectors": {
+        "ai-labs": {
+          "deals": 1,
+          "capital_usd": 10000000000.0
+        },
+        "robotics": {
+          "deals": 1,
+          "capital_usd": 1750000000.0
+        },
+        "neocloud": {
+          "deals": 1,
+          "capital_usd": 0.0
+        }
+      },
+      "thesis_shares": {
+        "frontier_ai": 0.333,
+        "ai_infrastructure": 0.333,
+        "robotics_embodiment": 0.333
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "Anthropic": {
+      "class": "corporate",
+      "tier": "watch",
+      "country": null,
+      "network": null,
+      "deals": 1,
+      "confirmed_deals": 1,
+      "capital_usd": 19000000000.0,
+      "first_seen": "2026-08-05",
+      "last_activity": "2026-08-05",
+      "sectors": {
+        "datacenters": {
+          "deals": 1,
+          "capital_usd": 19000000000.0
+        }
+      },
+      "thesis_shares": {
+        "ai_infrastructure": 1.0
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "Vinod Khosla": {
+      "class": "individual",
+      "tier": "key",
+      "country": "US",
+      "network": null,
+      "deals": 1,
+      "confirmed_deals": 1,
+      "capital_usd": 60500000.0,
+      "first_seen": "2026-08-05",
+      "last_activity": "2026-08-05",
+      "sectors": {
+        "ai-applications": {
+          "deals": 1,
+          "capital_usd": 60500000.0
+        }
+      },
+      "thesis_shares": {
+        "ai_applications": 1.0
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "Coatue": {
+      "class": "vc",
+      "tier": "key",
+      "country": "US",
+      "network": null,
+      "deals": 6,
+      "confirmed_deals": 4,
+      "capital_usd": 2425185000.0,
+      "first_seen": "2026-07-07",
+      "last_activity": "2026-08-03",
+      "sectors": {
+        "ai-applications": {
+          "deals": 3,
+          "capital_usd": 1425185000.0
+        },
+        "power-energy": {
+          "deals": 1,
+          "capital_usd": 1000000000.0
+        }
+      },
+      "thesis_shares": {
+        "energy_for_ai": 0.25,
+        "ai_applications": 0.75
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "Stanley Druckenmiller": {
+      "class": "individual",
+      "tier": "watch",
+      "country": "US",
+      "network": null,
+      "deals": 1,
+      "confirmed_deals": 0,
+      "capital_usd": 0,
+      "first_seen": "2026-07-27",
+      "last_activity": "2026-07-27",
+      "sectors": {},
+      "thesis_shares": {},
+      "profile": null,
+      "track_record": []
+    },
+    "Mubadala": {
+      "class": "sovereign",
+      "tier": "key",
+      "country": "AE",
+      "network": null,
+      "deals": 2,
+      "confirmed_deals": 1,
+      "capital_usd": 4650000000.0,
+      "first_seen": "2026-07-06",
+      "last_activity": "2026-08-06",
+      "sectors": {
+        "private-credit": {
+          "deals": 1,
+          "capital_usd": 4650000000.0
+        }
+      },
+      "thesis_shares": {},
+      "profile": null,
+      "track_record": []
+    },
+    "Korea Investment Corporation": {
+      "class": "sovereign",
+      "tier": "watch",
+      "country": null,
+      "network": null,
+      "deals": 1,
+      "confirmed_deals": 0,
+      "capital_usd": 0,
+      "first_seen": "2026-07-30",
+      "last_activity": "2026-07-30",
+      "sectors": {},
+      "thesis_shares": {},
+      "profile": null,
+      "track_record": []
+    },
+    "Azora": {
+      "class": "alt_manager",
+      "tier": "watch",
+      "country": null,
+      "network": null,
+      "deals": 1,
+      "confirmed_deals": 1,
+      "capital_usd": 5000000000.0,
+      "first_seen": "2026-08-04",
+      "last_activity": "2026-08-04",
+      "sectors": {
+        "datacenters": {
+          "deals": 1,
+          "capital_usd": 5000000000.0
+        }
+      },
+      "thesis_shares": {
+        "ai_infrastructure": 1.0
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "Brookfield": {
+      "class": "alt_manager",
+      "tier": "key",
+      "country": "CA",
+      "network": null,
+      "deals": 8,
+      "confirmed_deals": 8,
+      "capital_usd": 150900000000.0,
+      "first_seen": "2026-06-30",
+      "last_activity": "2026-08-05",
+      "sectors": {
+        "datacenters": {
+          "deals": 5,
+          "capital_usd": 121900000000.0
+        },
+        "power-energy": {
+          "deals": 2,
+          "capital_usd": 28000000000.0
+        },
+        "semiconductors": {
+          "deals": 1,
+          "capital_usd": 1000000000.0
+        }
+      },
+      "thesis_shares": {
+        "energy_for_ai": 0.25,
+        "sovereign_ai": 0.25,
+        "ai_infrastructure": 0.5
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "NVIDIA": {
+      "class": "corporate",
+      "tier": "key",
+      "country": "US",
+      "network": null,
+      "deals": 5,
+      "confirmed_deals": 4,
+      "capital_usd": 8000000000.0,
+      "first_seen": "2026-07-20",
+      "last_activity": "2026-08-04",
+      "sectors": {
+        "ai-labs": {
+          "deals": 1,
+          "capital_usd": 5000000000.0
+        },
+        "neocloud": {
+          "deals": 2,
+          "capital_usd": 2000000000.0
+        },
+        "datacenters": {
+          "deals": 1,
+          "capital_usd": 1000000000.0
+        }
+      },
+      "thesis_shares": {
+        "frontier_ai": 0.25,
+        "sovereign_ai": 0.25,
+        "ai_infrastructure": 0.5
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "Patrick Collison": {
+      "class": "individual",
+      "tier": "watch",
+      "country": "US",
+      "network": null,
+      "deals": 1,
+      "confirmed_deals": 0,
+      "capital_usd": 0,
+      "first_seen": "2026-06-15",
+      "last_activity": "2026-06-15",
+      "sectors": {},
+      "thesis_shares": {},
+      "profile": null,
+      "track_record": []
+    },
+    "KKR": {
+      "class": "alt_manager",
+      "tier": "watch",
+      "country": "US",
+      "network": null,
+      "deals": 4,
+      "confirmed_deals": 4,
+      "capital_usd": 24700000000.0,
+      "first_seen": "2026-06-30",
+      "last_activity": "2026-08-03",
+      "sectors": {
+        "datacenters": {
+          "deals": 1,
+          "capital_usd": 19200000000.0
+        },
+        "power-energy": {
+          "deals": 3,
+          "capital_usd": 5500000000.0
+        }
+      },
+      "thesis_shares": {
+        "energy_for_ai": 0.75,
+        "ai_infrastructure": 0.25
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "BlackRock": {
+      "class": "alt_manager",
+      "tier": "key",
+      "country": "US",
+      "network": null,
+      "deals": 3,
+      "confirmed_deals": 3,
+      "capital_usd": 44900000000.0,
+      "first_seen": "2026-07-14",
+      "last_activity": "2026-07-28",
+      "sectors": {
+        "datacenters": {
+          "deals": 2,
+          "capital_usd": 44900000000.0
+        },
+        "power-energy": {
+          "deals": 1,
+          "capital_usd": 0.0
+        }
+      },
+      "thesis_shares": {
+        "energy_for_ai": 0.333,
+        "ai_infrastructure": 0.667
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "Andreessen Horowitz": {
+      "class": "vc",
+      "tier": "key",
+      "country": "US",
+      "network": null,
+      "deals": 12,
+      "confirmed_deals": 12,
+      "capital_usd": 4837000000.0,
+      "first_seen": "2026-07-16",
+      "last_activity": "2026-08-06",
+      "sectors": {
+        "robotics": {
+          "deals": 1,
+          "capital_usd": 1700000000.0
+        },
+        "defense-tech": {
+          "deals": 2,
+          "capital_usd": 1530000000.0
+        },
+        "power-energy": {
+          "deals": 1,
+          "capital_usd": 1000000000.0
+        },
+        "ai-applications": {
+          "deals": 5,
+          "capital_usd": 307000000.0
+        },
+        "semiconductors": {
+          "deals": 1,
+          "capital_usd": 300000000.0
+        },
+        "datacenters": {
+          "deals": 1,
+          "capital_usd": 0.0
+        },
+        "neocloud": {
+          "deals": 1,
+          "capital_usd": 0.0
+        }
+      },
+      "thesis_shares": {
+        "defense_ai": 0.167,
+        "energy_for_ai": 0.083,
+        "ai_infrastructure": 0.25,
+        "ai_applications": 0.417,
+        "robotics_embodiment": 0.083
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "Khosla Ventures": {
+      "class": "vc",
+      "tier": "key",
+      "country": "US",
+      "network": null,
+      "deals": 5,
+      "confirmed_deals": 4,
+      "capital_usd": 280000000.0,
+      "first_seen": "2026-07-07",
+      "last_activity": "2026-07-30",
+      "sectors": {
+        "ai-applications": {
+          "deals": 3,
+          "capital_usd": 200000000.0
+        },
+        "defense-tech": {
+          "deals": 1,
+          "capital_usd": 80000000.0
+        }
+      },
+      "thesis_shares": {
+        "defense_ai": 0.25,
+        "ai_applications": 0.75
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "Alphabet": {
+      "class": "corporate",
+      "tier": "key",
+      "country": "US",
+      "network": null,
+      "deals": 1,
+      "confirmed_deals": 1,
+      "capital_usd": 0.0,
+      "first_seen": "2026-07-07",
+      "last_activity": "2026-07-07",
+      "sectors": {
+        "nuclear": {
+          "deals": 1,
+          "capital_usd": 0.0
+        }
+      },
+      "thesis_shares": {
+        "energy_for_ai": 1.0
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "Peter Thiel": {
+      "class": "individual",
+      "tier": "core",
+      "country": "US",
+      "network": "paypal_mafia",
+      "deals": 2,
+      "confirmed_deals": 0,
+      "capital_usd": 0,
+      "first_seen": "2026-05-14",
+      "last_activity": "2026-07-23",
+      "sectors": {},
+      "thesis_shares": {},
+      "profile": null,
+      "track_record": []
+    },
+    "Brian Singerman": {
+      "class": "individual",
+      "tier": "watch",
+      "country": "US",
+      "network": "thiel_extended",
+      "deals": 2,
+      "confirmed_deals": 2,
+      "capital_usd": 0.0,
+      "first_seen": "2026-07-28",
+      "last_activity": "2026-07-28",
+      "sectors": {
+        "ai-labs": {
+          "deals": 2,
+          "capital_usd": 0.0
+        }
+      },
+      "thesis_shares": {
+        "frontier_ai": 1.0
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "Reid Hoffman": {
+      "class": "individual",
+      "tier": "core",
+      "country": "US",
+      "network": "paypal_mafia",
+      "deals": 2,
+      "confirmed_deals": 0,
+      "capital_usd": 0,
+      "first_seen": "2026-07-24",
+      "last_activity": "2026-08-06",
+      "sectors": {},
+      "thesis_shares": {},
+      "profile": null,
+      "track_record": []
+    },
+    "Jeff Bezos": {
+      "class": "individual",
+      "tier": "key",
+      "country": "US",
+      "network": null,
+      "deals": 6,
+      "confirmed_deals": 4,
+      "capital_usd": 0.0,
+      "first_seen": "2026-06-25",
+      "last_activity": "2026-08-05",
+      "sectors": {
+        "ai-labs": {
+          "deals": 2,
+          "capital_usd": 0.0
+        },
+        "robotics": {
+          "deals": 1,
+          "capital_usd": 0.0
+        },
+        "ai-applications": {
+          "deals": 1,
+          "capital_usd": 0.0
+        }
+      },
+      "thesis_shares": {
+        "ai_applications": 0.25,
+        "frontier_ai": 0.25,
+        "biotech_ai": 0.25,
+        "robotics_embodiment": 0.25
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "MGX": {
+      "class": "sovereign",
+      "tier": "key",
+      "country": "AE",
+      "network": null,
+      "deals": 3,
+      "confirmed_deals": 3,
+      "capital_usd": 49000000000.0,
+      "first_seen": "2026-07-01",
+      "last_activity": "2026-07-21",
+      "sectors": {
+        "ai-compute": {
+          "deals": 1,
+          "capital_usd": 49000000000.0
+        },
+        "datacenters": {
+          "deals": 2,
+          "capital_usd": 0.0
+        }
+      },
+      "thesis_shares": {
+        "sovereign_ai": 0.333,
+        "ai_infrastructure": 0.667
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "Blue Owl": {
+      "class": "alt_manager",
+      "tier": "watch",
+      "country": "US",
+      "network": null,
+      "deals": 2,
+      "confirmed_deals": 1,
+      "capital_usd": 0.0,
+      "first_seen": "2026-07-08",
+      "last_activity": "2026-07-30",
+      "sectors": {
+        "networking": {
+          "deals": 1,
+          "capital_usd": 0.0
+        }
+      },
+      "thesis_shares": {
+        "ai_infrastructure": 1.0
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "Greenoaks": {
+      "class": "vc",
+      "tier": "watch",
+      "country": null,
+      "network": null,
+      "deals": 2,
+      "confirmed_deals": 2,
+      "capital_usd": 692000000.0,
+      "first_seen": "2026-07-14",
+      "last_activity": "2026-07-14",
+      "sectors": {
+        "ai-applications": {
+          "deals": 2,
+          "capital_usd": 692000000.0
+        }
+      },
+      "thesis_shares": {
+        "ai_applications": 1.0
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "US Government": {
+      "class": "sovereign",
+      "tier": "watch",
+      "country": "US",
+      "network": null,
+      "deals": 13,
+      "confirmed_deals": 10,
+      "capital_usd": 18727000000.0,
+      "first_seen": "2026-07-20",
+      "last_activity": "2026-08-05",
+      "sectors": {
+        "nuclear": {
+          "deals": 2,
+          "capital_usd": 17560000000.0
+        },
+        "semiconductors": {
+          "deals": 4,
+          "capital_usd": 359000000.0
+        },
+        "networking": {
+          "deals": 1,
+          "capital_usd": 300000000.0
+        },
+        "ai-applications": {
+          "deals": 1,
+          "capital_usd": 293000000.0
+        },
+        "fab-equipment": {
+          "deals": 1,
+          "capital_usd": 140000000.0
+        },
+        "ai-compute": {
+          "deals": 1,
+          "capital_usd": 75000000.0
+        }
+      },
+      "thesis_shares": {
+        "energy_for_ai": 0.2,
+        "sovereign_ai": 0.1,
+        "ai_infrastructure": 0.7
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "Elad Gil": {
+      "class": "individual",
+      "tier": "key",
+      "country": "US",
+      "network": null,
+      "deals": 1,
+      "confirmed_deals": 1,
+      "capital_usd": 0.0,
+      "first_seen": "2026-06-17",
+      "last_activity": "2026-06-17",
+      "sectors": {
+        "ai-labs": {
+          "deals": 1,
+          "capital_usd": 0.0
+        }
+      },
+      "thesis_shares": {
+        "frontier_ai": 1.0
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "Garry Tan": {
+      "class": "individual",
+      "tier": "watch",
+      "country": "US",
+      "network": null,
+      "deals": 2,
+      "confirmed_deals": 2,
+      "capital_usd": 0.0,
+      "first_seen": "2026-06-17",
+      "last_activity": "2026-07-07",
+      "sectors": {
+        "ai-labs": {
+          "deals": 1,
+          "capital_usd": 0.0
+        },
+        "ai-applications": {
+          "deals": 1,
+          "capital_usd": 0.0
+        }
+      },
+      "thesis_shares": {
+        "ai_applications": 0.5,
+        "frontier_ai": 0.5
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "Dylan Field": {
+      "class": "individual",
+      "tier": "core",
+      "country": "US",
+      "network": "thiel_fellowship",
+      "deals": 1,
+      "confirmed_deals": 0,
+      "capital_usd": 0,
+      "first_seen": "2026-07-23",
+      "last_activity": "2026-07-23",
+      "sectors": {},
+      "thesis_shares": {},
+      "profile": null,
+      "track_record": []
+    },
+    "Blackstone": {
+      "class": "alt_manager",
+      "tier": "key",
+      "country": "US",
+      "network": null,
+      "deals": 4,
+      "confirmed_deals": 2,
+      "capital_usd": 8590000000.0,
+      "first_seen": "2026-06-30",
+      "last_activity": "2026-07-22",
+      "sectors": {
+        "power-energy": {
+          "deals": 1,
+          "capital_usd": 5340000000.0
+        },
+        "datacenters": {
+          "deals": 1,
+          "capital_usd": 3250000000.0
+        }
+      },
+      "thesis_shares": {
+        "energy_for_ai": 0.5,
+        "ai_infrastructure": 0.5
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "Eric Schmidt": {
+      "class": "individual",
+      "tier": "key",
+      "country": "US",
+      "network": null,
+      "deals": 1,
+      "confirmed_deals": 1,
+      "capital_usd": 0.0,
+      "first_seen": "2026-06-25",
+      "last_activity": "2026-06-25",
+      "sectors": {
+        "ai-labs": {
+          "deals": 1,
+          "capital_usd": 0.0
+        }
+      },
+      "thesis_shares": {
+        "frontier_ai": 1.0
+      },
+      "profile": null,
+      "track_record": []
+    },
+    "Altimeter": {
+      "class": "vc",
+      "tier": "watch",
+      "country": "US",
+      "network": null,
+      "deals": 6,
+      "confirmed_deals": 5,
+      "capital_usd": 2410000000.0,
+      "first_seen": "2026-07-06",
+      "last_activity": "2026-08-06",
+      "sectors": {
+        "defense-tech": {
+          "deals": 1,
+          "capital_usd": 1370000000.0
+        },
+        "power-energy": {
+          "deals": 1,
+          "capital_usd": 1000000000.0
+        },
+        "ai-applications": {
+          "deals": 2,
+          "capital_usd": 40000000.0
+        },
+        "neocloud": {
+          "deals": 1,
+          "capital_usd": 0.0
+        }
+      },
+      "thesis_shares": {
+        "defense_ai": 0.2,
+        "energy_for_ai": 0.2,
+        "ai_applications": 0.4,
+        "ai_infrastructure": 0.2
+      },
+      "profile": null,
+      "track_record": []
+    }
   },
   "confidence_threshold": 60,
   "nodes": [
@@ -14,6 +1170,7 @@
       "tier": "key",
       "sector": null,
       "network": null,
+      "country": "US",
       "id": "alloc:NVIDIA",
       "deals": 5,
       "capital": 258000000000.0,
@@ -28,6 +1185,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:OpenAI southern Ohio 10GW data center",
       "deals": 1,
       "capital": 250000000000.0,
@@ -42,6 +1200,7 @@
       "tier": "key",
       "sector": null,
       "network": null,
+      "country": "CA",
       "id": "alloc:Brookfield",
       "deals": 8,
       "capital": 150900000000.0,
@@ -56,6 +1215,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:DOE Paducah Site AI data center campus (Western Kentucky)",
       "deals": 1,
       "capital": 100000000000.0,
@@ -70,6 +1230,7 @@
       "tier": "key",
       "sector": null,
       "network": null,
+      "country": "US",
       "id": "alloc:Meta",
       "deals": 3,
       "capital": 61470000000.0,
@@ -84,6 +1245,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:Richland Parish / Hyperion data center (Louisiana)",
       "deals": 1,
       "capital": 50000000000.0,
@@ -98,6 +1260,7 @@
       "tier": "key",
       "sector": null,
       "network": null,
+      "country": "AE",
       "id": "alloc:MGX",
       "deals": 3,
       "capital": 49000000000.0,
@@ -112,6 +1275,7 @@
       "tier": null,
       "sector": "ai-compute",
       "network": null,
+      "country": null,
       "id": "target:MGX Fund I",
       "deals": 1,
       "capital": 49000000000.0,
@@ -126,6 +1290,7 @@
       "tier": "key",
       "sector": null,
       "network": null,
+      "country": "US",
       "id": "alloc:BlackRock",
       "deals": 3,
       "capital": 44900000000.0,
@@ -140,6 +1305,7 @@
       "tier": "key",
       "sector": null,
       "network": null,
+      "country": "US",
       "id": "alloc:Blackstone",
       "deals": 4,
       "capital": 41590000000.0,
@@ -154,6 +1320,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:Aligned Data Centers",
       "deals": 3,
       "capital": 40000000000.0,
@@ -168,6 +1335,7 @@
       "tier": "key",
       "sector": null,
       "network": null,
+      "country": "SA",
       "id": "alloc:Saudi PIF",
       "deals": 3,
       "capital": 34400000000.0,
@@ -182,6 +1350,7 @@
       "tier": "watch",
       "sector": null,
       "network": null,
+      "country": "US",
       "id": "alloc:US Government",
       "deals": 13,
       "capital": 33727000000.0,
@@ -196,6 +1365,7 @@
       "tier": null,
       "sector": "gaming",
       "network": null,
+      "country": null,
       "id": "target:Electronic Arts",
       "deals": 1,
       "capital": 33600000000.0,
@@ -210,6 +1380,7 @@
       "tier": "key",
       "sector": null,
       "network": null,
+      "country": "US",
       "id": "alloc:Amazon",
       "deals": 2,
       "capital": 31300000000.0,
@@ -224,6 +1395,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:Japan AI data centers (programme)",
       "deals": 1,
       "capital": 30000000000.0,
@@ -238,6 +1410,7 @@
       "tier": null,
       "sector": "power-energy",
       "network": null,
+      "country": null,
       "id": "target:Bloom Energy",
       "deals": 1,
       "capital": 25000000000.0,
@@ -252,6 +1425,7 @@
       "tier": "watch",
       "sector": null,
       "network": null,
+      "country": "US",
       "id": "alloc:KKR",
       "deals": 4,
       "capital": 24700000000.0,
@@ -266,6 +1440,7 @@
       "tier": null,
       "sector": "ai-labs",
       "network": null,
+      "country": null,
       "id": "target:OpenAI Group PBC",
       "deals": 1,
       "capital": 21300000000.0,
@@ -280,6 +1455,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:KKR Global Infrastructure Investors V",
       "deals": 1,
       "capital": 19200000000.0,
@@ -294,6 +1470,7 @@
       "tier": "watch",
       "sector": null,
       "network": null,
+      "country": null,
       "id": "alloc:Anthropic",
       "deals": 1,
       "capital": 19000000000.0,
@@ -308,6 +1485,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:TeraWulf Justified Data Campus (Kentucky)",
       "deals": 1,
       "capital": 19000000000.0,
@@ -322,6 +1500,7 @@
       "tier": null,
       "sector": "nuclear",
       "network": null,
+      "country": null,
       "id": "target:Westinghouse nuclear reactor deployment (Brookfield/Cameco)",
       "deals": 1,
       "capital": 17500000000.0,
@@ -336,6 +1515,7 @@
       "tier": null,
       "sector": "diversified-pe",
       "network": null,
+      "country": null,
       "id": "target:Saudi PIF strategic investments (US export credit facility)",
       "deals": 1,
       "capital": 15000000000.0,
@@ -350,6 +1530,7 @@
       "tier": "key",
       "sector": null,
       "network": null,
+      "country": "JP",
       "id": "alloc:SoftBank",
       "deals": 5,
       "capital": 14000000000.0,
@@ -364,6 +1545,7 @@
       "tier": "watch",
       "sector": null,
       "network": null,
+      "country": null,
       "id": "alloc:Korea Investment Corporation",
       "deals": 1,
       "capital": 14000000000.0,
@@ -378,6 +1560,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:KIC strategic investment account (AI / data centers / strategic industries)",
       "deals": 1,
       "capital": 14000000000.0,
@@ -392,6 +1575,7 @@
       "tier": "key",
       "sector": null,
       "network": null,
+      "country": "US",
       "id": "alloc:Coatue",
       "deals": 6,
       "capital": 13425185000.0,
@@ -406,6 +1590,7 @@
       "tier": "key",
       "sector": null,
       "network": null,
+      "country": "AE",
       "id": "alloc:Mubadala",
       "deals": 2,
       "capital": 10950000000.0,
@@ -420,6 +1605,7 @@
       "tier": null,
       "sector": "ai-labs",
       "network": null,
+      "country": null,
       "id": "target:OpenAI",
       "deals": 1,
       "capital": 10000000000.0,
@@ -434,6 +1620,7 @@
       "tier": null,
       "sector": "ai-labs",
       "network": null,
+      "country": null,
       "id": "target:Anthropic",
       "deals": 1,
       "capital": 10000000000.0,
@@ -448,6 +1635,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:Sturgeon County data center (Alberta, Canada)",
       "deals": 1,
       "capital": 9170000000.0,
@@ -462,6 +1650,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:NAVER GAK Sejong AI factory (Korea national AI factory)",
       "deals": 1,
       "capital": 9000000000.0,
@@ -476,6 +1665,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:Coatue retail fund",
       "deals": 1,
       "capital": 8000000000.0,
@@ -490,6 +1680,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:Brookfield Infrastructure Fund VI (flagship)",
       "deals": 1,
       "capital": 7900000000.0,
@@ -504,6 +1695,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:Akita 500MW AI data center (Japan)",
       "deals": 1,
       "capital": 6300000000.0,
@@ -518,6 +1710,7 @@
       "tier": "watch",
       "sector": null,
       "network": null,
+      "country": "US",
       "id": "alloc:Blue Owl",
       "deals": 2,
       "capital": 5900000000.0,
@@ -532,6 +1725,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:STACK Infrastructure Melbourne (third campus)",
       "deals": 1,
       "capital": 5900000000.0,
@@ -546,6 +1740,7 @@
       "tier": "key",
       "sector": null,
       "network": null,
+      "country": "US",
       "id": "alloc:Khosla Ventures",
       "deals": 5,
       "capital": 5780000000.0,
@@ -560,6 +1755,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:Khosla Ventures 2026 fund family",
       "deals": 1,
       "capital": 5500000000.0,
@@ -574,6 +1770,7 @@
       "tier": null,
       "sector": "power-energy",
       "network": null,
+      "country": null,
       "id": "target:Williams Power Innovation JV (Socrates, Apollo, Aquila, Socrates the Younger, Neo)",
       "deals": 2,
       "capital": 5340000000.0,
@@ -588,6 +1785,7 @@
       "tier": null,
       "sector": "ai-labs",
       "network": null,
+      "country": null,
       "id": "target:Safe Superintelligence",
       "deals": 1,
       "capital": 5000000000.0,
@@ -602,6 +1800,7 @@
       "tier": "watch",
       "sector": null,
       "network": null,
+      "country": null,
       "id": "alloc:Azora",
       "deals": 1,
       "capital": 5000000000.0,
@@ -616,6 +1815,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:Volta AI Infrastructure Program",
       "deals": 1,
       "capital": 5000000000.0,
@@ -630,6 +1830,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:Brookfield AI Infrastructure strategy",
       "deals": 1,
       "capital": 5000000000.0,
@@ -644,6 +1845,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:Project Sopaipilla Holdings (Meta El Paso data center JV)",
       "deals": 1,
       "capital": 4900000000.0,
@@ -658,6 +1860,7 @@
       "tier": "key",
       "sector": null,
       "network": null,
+      "country": "US",
       "id": "alloc:Andreessen Horowitz",
       "deals": 12,
       "capital": 4837000000.0,
@@ -672,6 +1875,7 @@
       "tier": null,
       "sector": "private-credit",
       "network": null,
+      "country": null,
       "id": "target:Mubadala Capital (credit platform)",
       "deals": 1,
       "capital": 4650000000.0,
@@ -686,6 +1890,7 @@
       "tier": "watch",
       "sector": null,
       "network": null,
+      "country": "US",
       "id": "alloc:Altimeter",
       "deals": 6,
       "capital": 4410000000.0,
@@ -700,6 +1905,7 @@
       "tier": null,
       "sector": "power-energy",
       "network": null,
+      "country": null,
       "id": "target:EDF power solutions North America",
       "deals": 1,
       "capital": 4200000000.0,
@@ -714,6 +1920,7 @@
       "tier": null,
       "sector": "defense-tech",
       "network": null,
+      "country": null,
       "id": "target:Hadrian",
       "deals": 3,
       "capital": 4110000000.0,
@@ -728,6 +1935,7 @@
       "tier": null,
       "sector": "power-energy",
       "network": null,
+      "country": null,
       "id": "target:Base Power",
       "deals": 4,
       "capital": 4000000000.0,
@@ -742,6 +1950,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:QTS Realty Trust",
       "deals": 1,
       "capital": 3250000000.0,
@@ -756,6 +1965,7 @@
       "tier": null,
       "sector": "power-energy",
       "network": null,
+      "country": null,
       "id": "target:Aypa Power",
       "deals": 1,
       "capital": 3000000000.0,
@@ -770,6 +1980,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:AirTrunk SYD3 (Western Sydney)",
       "deals": 1,
       "capital": 3000000000.0,
@@ -784,6 +1995,7 @@
       "tier": null,
       "sector": "ai-data",
       "network": null,
+      "country": null,
       "id": "target:Databricks",
       "deals": 1,
       "capital": 3000000000.0,
@@ -798,6 +2010,7 @@
       "tier": "key",
       "sector": null,
       "network": null,
+      "country": "US",
       "id": "alloc:Microsoft",
       "deals": 2,
       "capital": 2500000000.0,
@@ -812,6 +2025,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:Microsoft Frontier Company",
       "deals": 1,
       "capital": 2500000000.0,
@@ -826,6 +2040,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:Meta-BlackRock El Paso data center venture",
       "deals": 1,
       "capital": 2300000000.0,
@@ -840,6 +2055,7 @@
       "tier": "key",
       "sector": null,
       "network": null,
+      "country": "US",
       "id": "alloc:Sequoia",
       "deals": 5,
       "capital": 2040000000.0,
@@ -854,6 +2070,7 @@
       "tier": null,
       "sector": "neocloud",
       "network": null,
+      "country": null,
       "id": "target:Nebius Group N.V.",
       "deals": 1,
       "capital": 2000000000.0,
@@ -868,6 +2085,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:Thrive Holdings",
       "deals": 1,
       "capital": 2000000000.0,
@@ -882,6 +2100,7 @@
       "tier": null,
       "sector": "robotics",
       "network": null,
+      "country": null,
       "id": "target:ABB Robotics",
       "deals": 1,
       "capital": 1750000000.0,
@@ -896,6 +2115,7 @@
       "tier": null,
       "sector": "robotics",
       "network": null,
+      "country": null,
       "id": "target:ABB Robotics acquisition financing",
       "deals": 1,
       "capital": 1750000000.0,
@@ -910,6 +2130,7 @@
       "tier": null,
       "sector": "robotics",
       "network": null,
+      "country": null,
       "id": "target:Atoms",
       "deals": 1,
       "capital": 1700000000.0,
@@ -924,6 +2145,7 @@
       "tier": "key",
       "sector": null,
       "network": null,
+      "country": "US",
       "id": "alloc:Founders Fund",
       "deals": 3,
       "capital": 1490000000.0,
@@ -938,6 +2160,7 @@
       "tier": "key",
       "sector": null,
       "network": null,
+      "country": "US",
       "id": "alloc:Thrive Capital",
       "deals": 3,
       "capital": 1430000000.0,
@@ -952,6 +2175,7 @@
       "tier": null,
       "sector": "power-energy",
       "network": null,
+      "country": null,
       "id": "target:SK-KKR Korea renewable energy platform",
       "deals": 1,
       "capital": 1300000000.0,
@@ -966,6 +2190,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:NAVER Corporation",
       "deals": 1,
       "capital": 1000000000.0,
@@ -980,6 +2205,7 @@
       "tier": null,
       "sector": "semiconductors",
       "network": null,
+      "country": null,
       "id": "target:U.S. semiconductor fabrication facility (unnamed)",
       "deals": 1,
       "capital": 1000000000.0,
@@ -994,6 +2220,7 @@
       "tier": null,
       "sector": "nuclear",
       "network": null,
+      "country": null,
       "id": "target:Valar Atomics",
       "deals": 1,
       "capital": 1000000000.0,
@@ -1008,6 +2235,7 @@
       "tier": null,
       "sector": "ev-automotive",
       "network": null,
+      "country": null,
       "id": "target:Lucid Group",
       "deals": 1,
       "capital": 800000000.0,
@@ -1022,6 +2250,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:Chai Discovery",
       "deals": 2,
       "capital": 800000000.0,
@@ -1036,6 +2265,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:Coatue Growth Fund VI Private Investors US, LLC",
       "deals": 1,
       "capital": 778230000.0,
@@ -1050,6 +2280,7 @@
       "tier": "key",
       "sector": null,
       "network": null,
+      "country": "US",
       "id": "alloc:DigitalBridge",
       "deals": 2,
       "capital": 711350516.0,
@@ -1064,6 +2295,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:DigitalBridge Credit II",
       "deals": 1,
       "capital": 711350516.0,
@@ -1078,6 +2310,7 @@
       "tier": "watch",
       "sector": null,
       "network": null,
+      "country": null,
       "id": "alloc:Greenoaks",
       "deals": 2,
       "capital": 692000000.0,
@@ -1092,6 +2325,7 @@
       "tier": null,
       "sector": "ai-compute",
       "network": null,
+      "country": null,
       "id": "target:Etched",
       "deals": 5,
       "capital": 600000000.0,
@@ -1106,6 +2340,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:Greenoaks Prime Radiant Founders LP",
       "deals": 1,
       "capital": 576519835.0,
@@ -1120,6 +2355,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:Coatue Growth Fund VI Private Investors Cayman, L.P.",
       "deals": 1,
       "capital": 526955000.0,
@@ -1134,6 +2370,7 @@
       "tier": null,
       "sector": "robotics",
       "network": null,
+      "country": null,
       "id": "target:Gravis Robotics AG",
       "deals": 1,
       "capital": 500000000.0,
@@ -1148,6 +2385,7 @@
       "tier": null,
       "sector": "defense-tech",
       "network": null,
+      "country": null,
       "id": "target:Cathedral",
       "deals": 2,
       "capital": 320000000.0,
@@ -1162,6 +2400,7 @@
       "tier": null,
       "sector": "networking",
       "network": null,
+      "country": null,
       "id": "target:GlobalFoundries",
       "deals": 1,
       "capital": 300000000.0,
@@ -1176,6 +2415,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:Genesis Mission first project cohort (278 projects)",
       "deals": 1,
       "capital": 293000000.0,
@@ -1190,6 +2430,7 @@
       "tier": null,
       "sector": "semiconductors",
       "network": null,
+      "country": null,
       "id": "target:Kepler Computing",
       "deals": 1,
       "capital": 245000000.0,
@@ -1204,6 +2445,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:Norm Ai",
       "deals": 2,
       "capital": 240000000.0,
@@ -1218,6 +2460,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:Glow",
       "deals": 1,
       "capital": 180000000.0,
@@ -1232,6 +2475,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:HappyRobot",
       "deals": 1,
       "capital": 150000000.0,
@@ -1246,6 +2490,7 @@
       "tier": null,
       "sector": "fab-equipment",
       "network": null,
+      "country": null,
       "id": "target:Multibeam Corporation",
       "deals": 1,
       "capital": 140000000.0,
@@ -1260,6 +2505,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:State Affairs",
       "deals": 2,
       "capital": 140000000.0,
@@ -1274,6 +2520,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:Greenoaks Prime Radiant Founders Offshore LP",
       "deals": 1,
       "capital": 115480165.0,
@@ -1288,6 +2535,7 @@
       "tier": "key",
       "sector": null,
       "network": null,
+      "country": "US",
       "id": "alloc:Jeff Bezos",
       "deals": 6,
       "capital": 100000000.0,
@@ -1302,6 +2550,7 @@
       "tier": null,
       "sector": "ai-labs",
       "network": null,
+      "country": null,
       "id": "target:Flourish",
       "deals": 1,
       "capital": 100000000.0,
@@ -1316,6 +2565,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:Neo Security",
       "deals": 1,
       "capital": 100000000.0,
@@ -1330,6 +2580,7 @@
       "tier": null,
       "sector": "defense-tech",
       "network": null,
+      "country": null,
       "id": "target:Singularity Defense",
       "deals": 1,
       "capital": 80000000.0,
@@ -1344,6 +2595,7 @@
       "tier": null,
       "sector": "ai-compute",
       "network": null,
+      "country": null,
       "id": "target:Extropic",
       "deals": 1,
       "capital": 75000000.0,
@@ -1358,6 +2610,7 @@
       "tier": "key",
       "sector": null,
       "network": null,
+      "country": "US",
       "id": "alloc:Vinod Khosla",
       "deals": 1,
       "capital": 60500000.0,
@@ -1372,6 +2625,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:Khosla Ventures MM SPV, LLC",
       "deals": 1,
       "capital": 60500000.0,
@@ -1386,6 +2640,7 @@
       "tier": null,
       "sector": "nuclear",
       "network": null,
+      "country": null,
       "id": "target:Prometheus project (Idaho National Laboratory and partners)",
       "deals": 1,
       "capital": 60000000.0,
@@ -1400,6 +2655,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:Convex",
       "deals": 1,
       "capital": 57000000.0,
@@ -1414,6 +2670,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:P-1 AI",
       "deals": 1,
       "capital": 50000000.0,
@@ -1428,6 +2685,7 @@
       "tier": null,
       "sector": "semiconductors",
       "network": null,
+      "country": null,
       "id": "target:Thintronics",
       "deals": 1,
       "capital": 50000000.0,
@@ -1442,6 +2700,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:Altimeter Himalaya Fund I, L.P.",
       "deals": 1,
       "capital": 40000000.0,
@@ -1456,6 +2715,7 @@
       "tier": null,
       "sector": "semiconductors",
       "network": null,
+      "country": null,
       "id": "target:OBSIDIA Semiconductors",
       "deals": 1,
       "capital": 34000000.0,
@@ -1470,6 +2730,7 @@
       "tier": null,
       "sector": "semiconductors",
       "network": null,
+      "country": null,
       "id": "target:Aeluma",
       "deals": 1,
       "capital": 30000000.0,
@@ -1484,6 +2745,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:Ambrook",
       "deals": 1,
       "capital": 30000000.0,
@@ -1498,6 +2760,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:Ellis",
       "deals": 1,
       "capital": 10000000.0,
@@ -1512,6 +2775,7 @@
       "tier": null,
       "sector": "power-energy",
       "network": null,
+      "country": null,
       "id": "target:Summit Ridge Energy",
       "deals": 1,
       "capital": 0.0,
@@ -1526,6 +2790,7 @@
       "tier": null,
       "sector": "networking",
       "network": null,
+      "country": null,
       "id": "target:Kirkwood Infrastructure Group",
       "deals": 1,
       "capital": 0.0,
@@ -1540,6 +2805,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:Nippon Gateway Infrastructure (NGI)",
       "deals": 1,
       "capital": 0.0,
@@ -1554,6 +2820,7 @@
       "tier": null,
       "sector": "neocloud",
       "network": null,
+      "country": null,
       "id": "target:SB Neo",
       "deals": 1,
       "capital": 0.0,
@@ -1568,6 +2835,7 @@
       "tier": "key",
       "sector": null,
       "network": null,
+      "country": "US",
       "id": "alloc:Alphabet",
       "deals": 1,
       "capital": 0.0,
@@ -1582,6 +2850,7 @@
       "tier": null,
       "sector": "nuclear",
       "network": null,
+      "country": null,
       "id": "target:Proxima Fusion",
       "deals": 1,
       "capital": 0.0,
@@ -1596,6 +2865,7 @@
       "tier": null,
       "sector": "ai-labs",
       "network": null,
+      "country": null,
       "id": "target:Mistral AI",
       "deals": 1,
       "capital": 0.0,
@@ -1610,6 +2880,7 @@
       "tier": null,
       "sector": "neocloud",
       "network": null,
+      "country": null,
       "id": "target:Volta Infra Holdings",
       "deals": 3,
       "capital": 0.0,
@@ -1624,6 +2895,7 @@
       "tier": null,
       "sector": "robotics",
       "network": null,
+      "country": null,
       "id": "target:Generalist AI",
       "deals": 1,
       "capital": 0.0,
@@ -1638,6 +2910,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:France sovereign AI infrastructure framework",
       "deals": 1,
       "capital": 0.0,
@@ -1652,6 +2925,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:Andreessen Horowitz Fund X-B - AI Infrastructure, L.P.",
       "deals": 1,
       "capital": 0.0,
@@ -1666,6 +2940,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:Andreessen Horowitz Fund X-B - AI Applications, L.P.",
       "deals": 1,
       "capital": 0.0,
@@ -1680,6 +2955,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:Andreessen Horowitz LSV Fund V-B, L.P.",
       "deals": 1,
       "capital": 0.0,
@@ -1694,6 +2970,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:Altimeter Kilauea Fund II, L.P.",
       "deals": 1,
       "capital": 0.0,
@@ -1708,6 +2985,7 @@
       "tier": "core",
       "sector": null,
       "network": "paypal_mafia",
+      "country": "US",
       "id": "alloc:Reid Hoffman",
       "deals": 2,
       "capital": 0.0,
@@ -1722,6 +3000,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:Prentis",
       "deals": 1,
       "capital": 0.0,
@@ -1736,6 +3015,7 @@
       "tier": "watch",
       "sector": null,
       "network": "thiel_extended",
+      "country": "US",
       "id": "alloc:Brian Singerman",
       "deals": 2,
       "capital": 0.0,
@@ -1750,6 +3030,7 @@
       "tier": null,
       "sector": "ai-labs",
       "network": null,
+      "country": null,
       "id": "target:GPx TX LP",
       "deals": 1,
       "capital": 0.0,
@@ -1764,6 +3045,7 @@
       "tier": null,
       "sector": "ai-labs",
       "network": null,
+      "country": null,
       "id": "target:Quiet Select TX LP",
       "deals": 1,
       "capital": 0.0,
@@ -1778,6 +3060,7 @@
       "tier": "core",
       "sector": null,
       "network": "paypal_mafia",
+      "country": "US",
       "id": "alloc:David Sacks",
       "deals": 1,
       "capital": 0.0,
@@ -1792,6 +3075,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:Craft Ventures V, LP",
       "deals": 1,
       "capital": 0.0,
@@ -1806,6 +3090,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:LifeMine Therapeutics",
       "deals": 1,
       "capital": 0.0,
@@ -1820,6 +3105,7 @@
       "tier": null,
       "sector": "ai-labs",
       "network": null,
+      "country": null,
       "id": "target:CuspAI",
       "deals": 1,
       "capital": 0.0,
@@ -1834,6 +3120,7 @@
       "tier": null,
       "sector": "ai-labs",
       "network": null,
+      "country": null,
       "id": "target:General Intuition",
       "deals": 2,
       "capital": 0.0,
@@ -1848,6 +3135,7 @@
       "tier": "key",
       "sector": null,
       "network": null,
+      "country": "US",
       "id": "alloc:Eric Schmidt",
       "deals": 1,
       "capital": 0.0,
@@ -1862,6 +3150,7 @@
       "tier": "watch",
       "sector": null,
       "network": null,
+      "country": "US",
       "id": "alloc:Garry Tan",
       "deals": 2,
       "capital": 0.0,
@@ -1876,6 +3165,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:Monogram",
       "deals": 1,
       "capital": 0.0,
@@ -1890,6 +3180,7 @@
       "tier": "key",
       "sector": null,
       "network": null,
+      "country": "US",
       "id": "alloc:Elad Gil",
       "deals": 1,
       "capital": 0.0,
@@ -1904,6 +3195,7 @@
       "tier": null,
       "sector": "ai-labs",
       "network": null,
+      "country": null,
       "id": "target:Odyssey",
       "deals": 2,
       "capital": 0.0,
@@ -1918,6 +3210,7 @@
       "tier": "core",
       "sector": null,
       "network": "paypal_mafia",
+      "country": "US",
       "id": "alloc:Peter Thiel",
       "deals": 2,
       "capital": 0.0,
@@ -1932,6 +3225,7 @@
       "tier": "core",
       "sector": null,
       "network": "thiel_fellowship",
+      "country": "US",
       "id": "alloc:Dylan Field",
       "deals": 1,
       "capital": 0.0,
@@ -1946,6 +3240,7 @@
       "tier": "watch",
       "sector": null,
       "network": null,
+      "country": "US",
       "id": "alloc:Stanley Druckenmiller",
       "deals": 1,
       "capital": 0.0,
@@ -1960,6 +3255,7 @@
       "tier": null,
       "sector": "ai-applications",
       "network": null,
+      "country": null,
       "id": "target:SkillBench",
       "deals": 1,
       "capital": 0.0,
@@ -1974,6 +3270,7 @@
       "tier": null,
       "sector": "robotics",
       "network": null,
+      "country": null,
       "id": "target:Prometheus",
       "deals": 1,
       "capital": 0.0,
@@ -1988,6 +3285,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:Panthalassa",
       "deals": 1,
       "capital": 0.0,
@@ -2002,6 +3300,7 @@
       "tier": "watch",
       "sector": null,
       "network": null,
+      "country": "US",
       "id": "alloc:Patrick Collison",
       "deals": 1,
       "capital": 0.0,
@@ -2016,6 +3315,7 @@
       "tier": null,
       "sector": "ai-labs",
       "network": null,
+      "country": null,
       "id": "target:Radical Numerics",
       "deals": 1,
       "capital": 0.0,
@@ -2030,6 +3330,7 @@
       "tier": null,
       "sector": "diversified-pe",
       "network": null,
+      "country": null,
       "id": "target:Brookfield Middle East Partners (BMEP)",
       "deals": 1,
       "capital": 0.0,
@@ -2044,6 +3345,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:Paducah AI/HPC innovation campus",
       "deals": 1,
       "capital": 0.0,
@@ -2058,6 +3360,7 @@
       "tier": null,
       "sector": "datacenters",
       "network": null,
+      "country": null,
       "id": "target:Savannah River Site AI data center",
       "deals": 1,
       "capital": 0.0,
@@ -4041,6 +5344,56 @@
           "strength": 18.0
         }
       ]
+    }
+  },
+  "audit": {
+    "generated": "2026-08-09",
+    "week": "2026-W32",
+    "passed": true,
+    "checked": {
+      "events": 128,
+      "track_records": 0,
+      "profiles": 0
+    },
+    "error_count": 0,
+    "warning_count": 27,
+    "warnings": [
+      "W3 Alphabet: key allocator with events but no profile",
+      "W3 Amazon: key allocator with events but no profile",
+      "W3 Andreessen Horowitz: key allocator with events but no profile",
+      "W3 BlackRock: key allocator with events but no profile",
+      "W3 Blackstone: key allocator with events but no profile",
+      "W3 Brookfield: key allocator with events but no profile",
+      "W3 Coatue: key allocator with events but no profile",
+      "W3 David Sacks: key allocator with events but no profile",
+      "W3 DigitalBridge: key allocator with events but no profile",
+      "W3 Dylan Field: key allocator with events but no profile",
+      "W3 Elad Gil: key allocator with events but no profile",
+      "W3 Eric Schmidt: key allocator with events but no profile",
+      "W3 Founders Fund: key allocator with events but no profile",
+      "W3 Jeff Bezos: key allocator with events but no profile",
+      "W3 Khosla Ventures: key allocator with events but no profile",
+      "W3 MGX: key allocator with events but no profile",
+      "W3 Meta: key allocator with events but no profile",
+      "W3 Microsoft: key allocator with events but no profile",
+      "W3 Mubadala: key allocator with events but no profile",
+      "W3 NVIDIA: key allocator with events but no profile",
+      "W3 Peter Thiel: key allocator with events but no profile",
+      "W3 Reid Hoffman: key allocator with events but no profile",
+      "W3 Saudi PIF: key allocator with events but no profile",
+      "W3 Sequoia: key allocator with events but no profile",
+      "W3 SoftBank: key allocator with events but no profile"
+    ],
+    "stats": {
+      "events": 128,
+      "by_status": {
+        "candidate": 25,
+        "verified": 87,
+        "verified_alpha": 16
+      },
+      "source_url_coverage": 1.0,
+      "estimated_amounts": 26,
+      "provisional_track_rows": 0
     }
   }
 }

@@ -38,6 +38,12 @@ This validates + dedupes into `db/capital.db`, fires the signal rules, writes
 `runs/<week>/weekly_report.md`, and regenerates `handoff/capital_map.json` +
 `handoff/CHANGELOG.md`.
 
+**Step 3b — allocator profiles (Cluster C, refresh periodically).** Launch
+allocator-profiler batches (`agents/allocator-profiler.md`) writing
+`runs/<week>/profiles/<batch>/profiles.json`, then re-run `python run_week.py <week>`
+to ingest them (idempotent). The audit pass warns on key allocators with events but
+no profile; audit ERRORS block `--deliver`/`--push`.
+
 **Step 4 — beneficiaries (optional but recommended).** Run the beneficiary-mapper
 pass (`agents/beneficiary-mapper.md`) to write `runs/<week>/beneficiaries.csv`, then
 re-run `python run_week.py 2026-W32` to link them (idempotent — safe to re-run).
