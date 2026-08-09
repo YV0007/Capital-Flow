@@ -162,9 +162,139 @@
 | defense_ai | $4.2B | 6 | 5 |
 | biotech_ai | $800M | 3 | 3 |
 
-## Public beneficiaries mapped (1040)
+## Public beneficiaries mapped (1170)
 | Ticker | Company | From flow | Confidence |
 |---|---|---|:-:|
+| NVDA | NVIDIA | Amazon→OpenAI Group PBC | medium |
+| AVGO | Broadcom | Amazon→OpenAI Group PBC | medium |
+| TSM | Taiwan Semiconductor | Amazon→OpenAI Group PBC | medium |
+| MU | Micron | Amazon→OpenAI Group PBC | low |
+| AVGO | Broadcom | Amazon→Anthropic | medium |
+| TSM | Taiwan Semiconductor | Amazon→Anthropic | medium |
+| MRVL | Marvell Technology | Amazon→Anthropic | low |
+| 035420.KS | NAVER Corporation | NVIDIA→NAVER Corporation | high |
+| VRT | Vertiv | NVIDIA→NAVER Corporation | medium |
+| ETN | Eaton | NVIDIA→NAVER Corporation | low |
+| TSM | Taiwan Semiconductor | NVIDIA→Safe Superintelligence | high |
+| MU | Micron | NVIDIA→Safe Superintelligence | medium |
+| VRT | Vertiv | NVIDIA→Safe Superintelligence | low |
+| NBIS | Nebius Group | NVIDIA→Nebius Group N.V. | high |
+| VRT | Vertiv | NVIDIA→Nebius Group N.V. | medium |
+| VRT | Vertiv | Meta→Sturgeon County data center (Alberta, Canada) | high |
+| ETN | Eaton | Meta→Sturgeon County data center (Alberta, Canada) | medium |
+| GEV | GE Vernova | Meta→Sturgeon County data center (Alberta, Canada) | medium |
+| PWR | Quanta Services | Meta→Sturgeon County data center (Alberta, Canada) | medium |
+| NVDA | NVIDIA | Meta→Sturgeon County data center (Alberta, Canada) | medium |
+| VRT | Vertiv | Meta→Richland Parish / Hyperion data center (Louisiana) | high |
+| GEV | GE Vernova | Meta→Richland Parish / Hyperion data center (Louisiana) | medium |
+| ETR | Entergy | Meta→Richland Parish / Hyperion data center (Louisiana) | medium |
+| ETN | Eaton | Meta→Richland Parish / Hyperion data center (Louisiana) | medium |
+| PWR | Quanta Services | Meta→Richland Parish / Hyperion data center (Louisiana) | medium |
+| NVDA | NVIDIA | Meta→Richland Parish / Hyperion data center (Louisiana) | medium |
+| VRT | Vertiv | Meta→Meta-BlackRock El Paso data center venture | high |
+| ETN | Eaton | Meta→Meta-BlackRock El Paso data center venture | medium |
+| GEV | GE Vernova | Meta→Meta-BlackRock El Paso data center venture | medium |
+| NVDA | NVIDIA | Meta→Meta-BlackRock El Paso data center venture | medium |
+| BLK | BlackRock | Meta→Meta-BlackRock El Paso data center venture | medium |
+| BRKR | Bruker | Alphabet→Proxima Fusion | low |
+| LIN | Linde | Alphabet→Proxima Fusion | low |
+| NVDA | NVIDIA | Microsoft→Mistral AI | high |
+| TSM | Taiwan Semiconductor | Microsoft→Mistral AI | medium |
+| VRT | Vertiv | Microsoft→Mistral AI | medium |
+| SBGSY | Schneider Electric | Microsoft→Mistral AI | low |
+| BTDR | Bitdeer Technologies | NVIDIA→Volta Infra Holdings | high |
+| DELL | Dell Technologies | NVIDIA→Volta Infra Holdings | high |
+| VRT | Vertiv | NVIDIA→Volta Infra Holdings | medium |
+| LEU | Centrus Energy | Sequoia→Valar Atomics | low |
+| BWXT | BWX Technologies | Sequoia→Valar Atomics | low |
+| TSM | Taiwan Semiconductor | Sequoia→Etched | high |
+| MU | Micron | Sequoia→Etched | medium |
+| VRT | Vertiv | Sequoia→Etched | low |
+| TSM | Taiwan Semiconductor | Andreessen Horowitz→Etched | high |
+| MU | Micron | Andreessen Horowitz→Etched | medium |
+| NVDA | NVIDIA | Andreessen Horowitz→Atoms | low |
+| FANUY | FANUC | Andreessen Horowitz→Hadrian | medium |
+| SIEGY | Siemens | Andreessen Horowitz→Hadrian | low |
+| FANUY | FANUC | Founders Fund→Hadrian | medium |
+| SIEGY | Siemens | Founders Fund→Hadrian | low |
+| FANUY | FANUC | Altimeter→Hadrian | medium |
+| SIEGY | Siemens | Altimeter→Hadrian | low |
+| VRT | Vertiv | BlackRock→Aligned Data Centers | high |
+| ETN | Eaton | BlackRock→Aligned Data Centers | medium |
+| GEV | GE Vernova | BlackRock→Aligned Data Centers | medium |
+| PWR | Quanta Services | BlackRock→Aligned Data Centers | medium |
+| VRT | Vertiv | BlackRock→Project Sopaipilla Holdings (Meta El Paso data center JV) | high |
+| ETN | Eaton | BlackRock→Project Sopaipilla Holdings (Meta El Paso data center JV) | medium |
+| GEV | GE Vernova | BlackRock→Project Sopaipilla Holdings (Meta El Paso data center JV) | medium |
+| NVDA | NVIDIA | BlackRock→Project Sopaipilla Holdings (Meta El Paso data center JV) | medium |
+| JPM | JPMorgan Chase | BlackRock→Project Sopaipilla Holdings (Meta El Paso data center JV) | low |
+| FSLR | First Solar | BlackRock→Summit Ridge Energy | medium |
+| NXT | Nextracker | BlackRock→Summit Ridge Energy | low |
+| FLNC | Fluence Energy | BlackRock→Summit Ridge Energy | low |
+| WMB | Williams Companies | Blackstone→Williams Power Innovation JV (Socrates, Apollo, Aquila, Socrates the Younger, Neo) | high |
+| GEV | GE Vernova | Blackstone→Williams Power Innovation JV (Socrates, Apollo, Aquila, Socrates the Younger, Neo) | medium |
+| ETN | Eaton | Blackstone→Williams Power Innovation JV (Socrates, Apollo, Aquila, Socrates the Younger, Neo) | medium |
+| PWR | Quanta Services | Blackstone→Williams Power Innovation JV (Socrates, Apollo, Aquila, Socrates the Younger, Neo) | medium |
+| WMB | Williams Companies | KKR→Williams Power Innovation JV (Socrates, Apollo, Aquila, Socrates the Younger, Neo) | high |
+| GEV | GE Vernova | KKR→Williams Power Innovation JV (Socrates, Apollo, Aquila, Socrates the Younger, Neo) | medium |
+| KKR | KKR & Co. | KKR→KKR Global Infrastructure Investors V | medium |
+| FSLR | First Solar | KKR→EDF power solutions North America | medium |
+| NXT | Nextracker | KKR→EDF power solutions North America | medium |
+| GEV | GE Vernova | KKR→EDF power solutions North America | medium |
+| PWR | Quanta Services | KKR→EDF power solutions North America | low |
+| BE | Bloom Energy | KKR→SK-KKR Korea renewable energy platform | medium |
+| GEV | GE Vernova | KKR→SK-KKR Korea renewable energy platform | low |
+| BE | Bloom Energy | Brookfield→Bloom Energy | high |
+| FLNC | Fluence Energy | Brookfield→Aypa Power | medium |
+| BX | Blackstone | Brookfield→Aypa Power | medium |
+| TSLA | Tesla | Brookfield→Aypa Power | low |
+| NVDA | NVIDIA | Brookfield→NAVER GAK Sejong AI factory (Korea national AI factory) | high |
+| VRT | Vertiv | Brookfield→NAVER GAK Sejong AI factory (Korea national AI factory) | medium |
+| 035420.KS | NAVER Corporation | Brookfield→NAVER GAK Sejong AI factory (Korea national AI factory) | medium |
+| NEE | NextEra Energy | Brookfield→DOE Paducah Site AI data center campus (Western Kentucky) | high |
+| GEV | GE Vernova | Brookfield→DOE Paducah Site AI data center campus (Western Kentucky) | high |
+| VRT | Vertiv | Brookfield→DOE Paducah Site AI data center campus (Western Kentucky) | medium |
+| ETN | Eaton | Brookfield→DOE Paducah Site AI data center campus (Western Kentucky) | medium |
+| PWR | Quanta Services | Brookfield→DOE Paducah Site AI data center campus (Western Kentucky) | medium |
+| NVDA | NVIDIA | Brookfield→DOE Paducah Site AI data center campus (Western Kentucky) | medium |
+| FLNC | Fluence Energy | Brookfield→DOE Paducah Site AI data center campus (Western Kentucky) | low |
+| GLW | Corning | Blue Owl→Kirkwood Infrastructure Group | high |
+| CIEN | Ciena | Blue Owl→Kirkwood Infrastructure Group | medium |
+| DY | Dycom Industries | Blue Owl→Kirkwood Infrastructure Group | medium |
+| VRT | Vertiv | DigitalBridge→Nippon Gateway Infrastructure (NGI) | medium |
+| ETN | Eaton | DigitalBridge→Nippon Gateway Infrastructure (NGI) | low |
+| DBRG | DigitalBridge Group | DigitalBridge→DigitalBridge Credit II | medium |
+| NVDA | NVIDIA | SoftBank→OpenAI | medium |
+| AVGO | Broadcom | SoftBank→OpenAI | medium |
+| TSM | Taiwan Semiconductor | SoftBank→OpenAI | medium |
+| ARM | Arm Holdings | SoftBank→OpenAI | medium |
+| NVDA | NVIDIA | SoftBank→SB Neo | high |
+| VRT | Vertiv | SoftBank→SB Neo | medium |
+| ARM | Arm Holdings | SoftBank→SB Neo | low |
+| VRT | Vertiv | Blackstone→QTS Realty Trust | high |
+| ETN | Eaton | Blackstone→QTS Realty Trust | medium |
+| PWR | Quanta Services | Blackstone→QTS Realty Trust | medium |
+| VRT | Vertiv | MGX→Aligned Data Centers | medium |
+| ETN | Eaton | MGX→Aligned Data Centers | medium |
+| NVDA | NVIDIA | MGX→Aligned Data Centers | low |
+| VRT | Vertiv | MGX→Aligned Data Centers | high |
+| ETN | Eaton | MGX→Aligned Data Centers | medium |
+| GEV | GE Vernova | MGX→Aligned Data Centers | medium |
+| NVDA | NVIDIA | MGX→Aligned Data Centers | medium |
+| GFS | GlobalFoundries | US Government→GlobalFoundries | high |
+| AMAT | Applied Materials | US Government→GlobalFoundries | medium |
+| BESIY | BE Semiconductor Industries | US Government→GlobalFoundries | low |
+| AMAT | Applied Materials | US Government→Kepler Computing | low |
+| ALMU | Aeluma | US Government→Aeluma | high |
+| NVDA | NVIDIA | US Government→Genesis Mission first project cohort (278 projects) | medium |
+| HPE | Hewlett Packard Enterprise | US Government→Genesis Mission first project cohort (278 projects) | medium |
+| AMD | Advanced Micro Devices | US Government→Genesis Mission first project cohort (278 projects) | medium |
+| BWXT | BWX Technologies | US Government→Prometheus project (Idaho National Laboratory and partners) | medium |
+| LEU | Centrus Energy | US Government→Prometheus project (Idaho National Laboratory and partners) | low |
+| JPM | JPMorgan Chase | Saudi PIF→Electronic Arts | medium |
+| LCID | Lucid Group | Saudi PIF→Lucid Group | high |
+| BAM | Brookfield Asset Management | Saudi PIF→Brookfield Middle East Partners (BMEP) | medium |
+| NVDA | NVIDIA | Jeff Bezos→CuspAI | medium |
 | NVDA | NVIDIA | Amazon→OpenAI Group PBC | medium |
 | AVGO | Broadcom | Amazon→OpenAI Group PBC | medium |
 | TSM | Taiwan Semiconductor | Amazon→OpenAI Group PBC | medium |
