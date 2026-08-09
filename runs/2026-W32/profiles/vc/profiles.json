@@ -1,0 +1,238 @@
+[
+  {
+    "allocator": "Andreessen Horowitz",
+    "background": "Founded in 2009 by Marc Andreessen and Ben Horowitz on the conviction that 'software would eat the world', a16z has grown into the largest US venture platform, reporting over $100B in assets under management on its own site (as of April 2026). Its registered-investment-advisor structure lets it hold crypto, public stock and other non-traditional venture assets.",
+    "focus": "Invests from seed through growth across AI, American Dynamism (defense/industry), bio + health, consumer, crypto, enterprise, fintech, games and infrastructure.",
+    "style": "Full-stack platform firm with large operating teams; leads aggressively at every stage, sizing checks to the magnitude of the potential outcome rather than the absence of weaknesses.",
+    "thesis": "Software eating the world has become AI eating software: the firm deliberately spreads capital across competing foundation labs, AI infrastructure and AI-native applications, and frames US technological 'dynamism' as a national imperative.",
+    "latest_investments_summary": "Closed more than $15B across six strategies in 2025 (Growth $6.75B, Apps $1.7B, Infrastructure $1.7B, American Dynamism $1.18B, Bio+Health $700M, other venture ~$3B), and in 2026 committed a further ~$1.7B to AI infrastructure projects on top of its 2024 $1.25B infra fund. Deals run from foundation labs (Mistral, xAI) down to picks-and-shovels bets like Netris's $15M Series A — a pattern of owning every layer of the AI stack, with roughly 40% of new dollars reportedly going to AI.",
+    "strategy": "a16z describes itself as a platform in 'the relationship business' with a long-term outlook, investing seed-to-growth in technology companies and backing 'the magnitude of the strength of the idea and the team, not ... their lack of weaknesses', across AI, bio, crypto, enterprise, fintech and American Dynamism.",
+    "strategy_source_url": "https://a16z.com/about/",
+    "sources": [
+      "https://a16z.com/about/",
+      "https://www.pymnts.com/artificial-intelligence-2/2026/andreessen-horowitz-investing-billions-in-ai-infrastructure-projects/",
+      "https://www.forbes.com/sites/rscottraynovich/2026/06/25/a16z-investment-in-netris-shows-growing-need-for-ai-network-automation/",
+      "https://www.cbinsights.com/research/andreessen-horowitz-a16z-artificial-intelligence-ai-investment-strategy",
+      "https://fortune.com/2023/12/04/andreessen-horowitz-california-pension-funds-lps"
+    ],
+    "track_record": [],
+    "track_record_note": "Private partnership; a16z does not publicly disclose fund IRR/TVPI. The only public performance data (leaked internal figures reported in 2019, and Cambridge Associates quartile rankings of its 2016 funds) predates the FY2021-2025 target window, so no rows are recorded.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Coatue",
+    "background": "New York crossover firm founded in 1999 by Philippe Laffont, one of the original 'Tiger cubs'. Runs public long/short equity alongside venture, growth and tactical (structured capital) strategies, with an active private portfolio of 250+ tech companies and AUM reported in the tens of billions (~$46B per 13F-based trackers).",
+    "focus": "Technology across public and private markets: AI labs and infrastructure, software, consumer internet and fintech, from early-stage venture through late growth plus creative debt/structured solutions.",
+    "style": "Thematic, research-driven crossover investing — holds companies from private rounds into public markets; writes large late-stage checks and increasingly co-leads (e.g. Cursor's Series D) rather than only following.",
+    "thesis": "Coatue's stated view is that 'investment strategies, like companies, must grow and evolve with the market' and its mission is 'expanding access to innovation'; since 2023 it has framed AI as a full-stack supercycle spanning compute, models and applications.",
+    "latest_investments_summary": "Co-led Anysphere (Cursor)'s $2.3B Series D at a $29.3B valuation with Accel (Nov 2025) — later acquired by SpaceX for $60B — and participated in OpenAI's $122B raise. Featured private positions include Anthropic, OpenAI, Databricks, Stripe and SpaceX, and Institutional Investor counted a dozen new VC deals in Q2 2026 alone: the pattern is concentrated exposure to perceived AI category winners across both books.",
+    "strategy": "Coatue describes four interlocking strategies — early-stage Privates, late-stage Growth targeting 'potential disruptors and platform companies', Tactical debt/equity solutions, and Public equities 'with responsible risk management' — all aimed at investing in innovation across public and private markets.",
+    "strategy_source_url": "https://www.coatue.com/",
+    "sources": [
+      "https://www.coatue.com/",
+      "https://www.bloomberg.com/news/articles/2026-07-02/coatue-s-hedge-fund-rallied-in-june-lifting-2026-gain-to-24-5",
+      "https://www.bloomberg.com/news/articles/2025-01-07/tiger-cubs-score-second-year-of-gains-on-soaring-tech-stocks",
+      "https://www.institutionalinvestor.com/article/2ekchq8rll8mbbn2glq80/hedge-funds/the-rich-list-the-24th-annual-ranking-of-the-highest-earning-hedge-fund-managers",
+      "https://www.hedgeweek.com/coatues-flagship-hedge-fund-gains-24-5-ytd-on-ai-driven-tech-rally/",
+      "https://www.insidermonkey.com/hedge-fund/coatue+management/79/"
+    ],
+    "track_record": [
+      {
+        "fiscal_year": "2023",
+        "metric": "fund_net_return_pct",
+        "value": 21.5,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 3,
+        "source_url": "https://www.institutionalinvestor.com/article/2ekchq8rll8mbbn2glq80/hedge-funds/the-rich-list-the-24th-annual-ranking-of-the-highest-earning-hedge-fund-managers",
+        "notes": "Flagship long/short hedge fund 2023 gain as reported by Institutional Investor; press figure, not an audited disclosure"
+      },
+      {
+        "fiscal_year": "2024",
+        "metric": "fund_net_return_pct",
+        "value": 18.7,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 3,
+        "source_url": "https://www.bloomberg.com/news/articles/2025-01-07/tiger-cubs-score-second-year-of-gains-on-soaring-tech-stocks",
+        "notes": "Main long/short fund 2024 return per Bloomberg (some coverage rounds to ~19%); press-reported"
+      },
+      {
+        "fiscal_year": "YTD2026",
+        "metric": "fund_net_return_pct",
+        "value": 24.5,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 3,
+        "source_url": "https://www.bloomberg.com/news/articles/2026-07-02/coatue-s-hedge-fund-rallied-in-june-lifting-2026-gain-to-24-5",
+        "notes": "Flagship hedge fund YTD through June 30, 2026 per Bloomberg; Bloomberg later reported an ~8% drop in July 2026, so the current YTD figure is materially lower"
+      }
+    ],
+    "track_record_note": "Rows are press-reported flagship hedge-fund returns (Bloomberg/Institutional Investor); Coatue's private venture/growth fund IRRs and a full-year 2025 figure are not publicly disclosed.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Altimeter",
+    "background": "Technology crossover firm founded in 2008 by Brad Gerstner, with offices in Menlo Park and Boston. Runs public funds (13F portfolio ~$7B, Sep 2024) alongside private venture vehicles; best known for its Snowflake win, its open letters to public companies, and Gerstner's Invest America initiative.",
+    "focus": "Technology across public and private markets, currently concentrated in AI compute and model-layer exposure — large public positions in Nvidia, CoreWeave, Meta and Microsoft plus late-stage private stakes including Anthropic and (reportedly) OpenAI.",
+    "style": "Extremely concentrated ('built by a founder for founders'): the top three public holdings exceed half the 13F book; positions itself as a long-term partner to companies entering public markets.",
+    "thesis": "Gerstner frames AI as a generational platform shift worth owning across its whole supply chain — compute, infrastructure and frontier models — paired with public advocacy for widening ownership of that upside ('Invest America' accounts for American children.)",
+    "latest_investments_summary": "Reported ~$250M participation in OpenAI's $122B raise at an $852B valuation, and helped lead Anthropic's 2026 round at a reported $965B valuation alongside Sequoia, Dragoneer and Greenoaks. Combined with outsized public positions in Nvidia and CoreWeave, the pattern is a single consolidated bet: the AI supercycle, expressed in whichever market offers the entry.",
+    "strategy": "Altimeter describes itself as 'a technology-focused investment firm built by a founder for founders', helping 'visionary entrepreneurs build iconic companies... through all stages of growth', investing across public and private markets and serving 'as an expert long-term partner to companies as they enter the public markets'.",
+    "strategy_source_url": "https://www.altimeter.com/",
+    "sources": [
+      "https://www.altimeter.com/",
+      "https://en.wikipedia.org/wiki/Altimeter_Capital",
+      "https://tracxn.com/d/companies/openai/__kElhSG7uVGeFk1i71Co9-nwFtmtyMVT7f-YHMn4TFBg/funding-and-investors",
+      "https://www.insidermonkey.com/hedge-fund/altimeter+capital+management/509/",
+      "https://www.cnbc.com/video/2026/07/06/watch-cnbcs-full-interview-with-invest-america-founder-brad-gerstner.html"
+    ],
+    "track_record": [],
+    "track_record_note": "Private crossover firm; annual fund returns are not systematically disclosed. Press coverage cites ~29.5% annualized public-fund returns for 2011-2022, but no credible per-year figures for FY2021-2025 or YTD2026 were found (13F-derived 'performance' trackers are not fund returns and are excluded).",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Sequoia",
+    "background": "Founded in 1972 by Don Valentine, Sequoia Capital (US/Europe) is the marquee Silicon Valley venture firm — early backer of Apple, Google, Nvidia, Stripe, OpenAI and Wiz. It restructured around the open-ended Sequoia Capital Fund in 2021, split from its China arm (now HongShan) in 2023, and leadership has passed from Roelof Botha to Alfred Lin and Pat Grady.",
+    "focus": "Seed through growth in the US and Europe, with a heavy current tilt to AI applications and infrastructure (roughly 60% of new checks in 2025-26 per portfolio trackers).",
+    "style": "Leads early and concentrates: a small team 'with diverse strengths focused on a small number of companies', high-touch and direct ('we push when we see potential'), with nonprofits as the backbone of its LP base.",
+    "thesis": "Sequoia's stated aim is to 'help the daring build legendary companies, from idea to IPO and beyond', partnering 'sometimes when a company is no more than an idea'; its current public posture is that AI is moving from hype to industrial scale.",
+    "latest_investments_summary": "Trackers count 107 AI deals in 2025, skewed to application-layer companies with revenue (Harvey, Glean, Sierra) over new foundation-model bets — yet in May 2026 it reportedly co-led Anthropic's $65B Series H at a $965B post-money valuation with Altimeter, Dragoneer and Greenoaks, and is reported to have raised a ~$7B expansion fund for late-stage AI. The pattern: breadth at the application layer, concentration in one frontier lab.",
+    "strategy": "Sequoia describes itself as partnering 'early... sometimes when a company is no more than an idea' to 'help the daring build legendary companies, from idea to IPO and beyond', seeking rare 'creative spirits... underdogs... independent thinkers' and valuing teamwork over showmanship.",
+    "strategy_source_url": "https://www.sequoiacap.com/our-ethos/",
+    "sources": [
+      "https://www.sequoiacap.com/our-ethos/",
+      "https://techcrunch.com/2024/11/22/sequoia-marks-up-its-2020-fund-by-25/",
+      "https://pitchbook.com/news/articles/sequoia-funds-markups-uc-vc",
+      "https://www.techtimes.com/articles/323398/20260806/sequoias-new-leaders-bet-10b-that-ai-needs-factories-not-just-software.htm",
+      "https://valueaddvc.com/blog/sequoia-capital-portfolio-2026-biggest-bets-biggest-wins-and-what-theyre-investing-in-now"
+    ],
+    "track_record": [
+      {
+        "fiscal_year": "2024",
+        "metric": "fund_irr_pct",
+        "value": 21.8,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://pitchbook.com/news/articles/sequoia-funds-markups-uc-vc",
+        "notes": "Sequoia Capital Global Growth Fund III ($8.17B) IRR as of June 30, 2024, per UC Regents endowment data analyzed by PitchBook; largely unrealized",
+        "scope": "Global Growth Fund III"
+      },
+      {
+        "fiscal_year": "2024",
+        "metric": "fund_irr_pct",
+        "value": 7.0,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://pitchbook.com/news/articles/sequoia-funds-markups-uc-vc",
+        "notes": "Sequoia US Growth Fund IX (2021 vintage) IRR as of June 30, 2024, per UC Regents data via PitchBook; fund value was written down 7.4% over the same 12 months",
+        "scope": "US Growth Fund IX"
+      },
+      {
+        "fiscal_year": "2024",
+        "metric": "fund_net_return_pct",
+        "value": 24.6,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 3,
+        "source_url": "https://techcrunch.com/2024/11/22/sequoia-marks-up-its-2020-fund-by-25/",
+        "notes": "Sequoia Capital US Venture XVII (2020 vintage, >$800M): 12-month unrealized NAV markup to June 2024 per UC Regents data; NOT a realized return — fund had no exits at the time",
+        "scope": "US Venture XVII"
+      }
+    ],
+    "track_record_note": "Sequoia does not publish fund performance; all rows come from University of California Regents LP disclosures analyzed by PitchBook/TechCrunch, are interim as of June 30, 2024, and are largely unrealized. No comparable FY2025/YTD2026 disclosures found. (Note: 'Sequoia Fund'/SEQUX mutual-fund returns belong to Ruane Cunniff, an unrelated entity, and are deliberately excluded.)",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Khosla Ventures",
+    "background": "Menlo Park firm founded in 2004 by Vinod Khosla, co-founder of Sun Microsystems and former Kleiner Perkins partner. One of Silicon Valley's most established early-stage deep-tech investors and OpenAI's first venture backer; now in talks to raise ~$5.5B, the largest fundraise in its two-decade history (Bloomberg, July 2026).",
+    "focus": "Early-stage, technology-heavy bets across AI, enterprise software, fintech, 'frontier' (robotics, manufacturing, logistics), medtech, digital health, therapeutics and sustainability.",
+    "style": "Runs Seed, Main and Opportunity funds; takes bold early positions on technical risk others avoid — 'early, bold and impactful' — and is comfortable being contrarian on science-driven companies.",
+    "thesis": "Khosla's stated worldview is that 'the future may not be knowable, but it is inventable': large problems amenable to technology solutions produce outsized outcomes, and AI will disrupt most economic models and areas of daily life.",
+    "latest_investments_summary": "In talks to raise ~$5.5B split roughly $1B seed / $2B venture / $2.5B opportunity — deliberately keeping most new capital at the early stage of AI rather than chasing late-stage rounds. Recent deals include leading legal-AI startup Norm Ai's $120M round at $1.2B (July 2026), plus continued backing of Cognition, Sakana AI and Physical Intelligence.",
+    "strategy": "Khosla Ventures describes pursuing 'technology-based economic disruption in many industries' — 'large problems that are amenable to technology solutions' — seeking companies with unfair advantages via proprietary technology or business-model innovation, and being 'early, bold and impactful'.",
+    "strategy_source_url": "https://www.khoslaventures.com/about/",
+    "sources": [
+      "https://www.khoslaventures.com/about/",
+      "https://www.bloomberg.com/news/articles/2026-07-23/khosla-ventures-in-talks-to-raise-5-5-billion-in-new-funds",
+      "https://techfundingnews.com/openais-early-backer-khosla-ventures-targets-largest-fund-ever-at-5-5b-with-most-going-to-early-stage-ai-startups/",
+      "https://techcrunch.com/2025/02/24/khosla-ventures-seeks-3-5b-in-fresh-capital/"
+    ],
+    "track_record": [],
+    "track_record_note": "Private firm; fund IRR/TVPI/MOIC are not publicly disclosed and no LP or endowment disclosures covering FY2021-2025 were found. Its OpenAI seed position is widely described as one of the best venture bets ever, but no sourced return figure exists to record.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Thrive Capital",
+    "background": "New York venture firm founded by Josh Kushner in 2010. Built a record of repeat-conviction bets on generational private companies — OpenAI, Stripe, SpaceX — and closed its largest-ever fund, the $10B Thrive Capital Partners X, in February 2026 after heavy oversubscription. Also incubates companies directly.",
+    "focus": "Internet, software and technology-enabled companies, with current weight on growth-stage AI leaders; US-centric.",
+    "style": "Deliberately concentrated: fewer, larger positions than peer funds, doubling into the same companies repeatedly (it backed OpenAI four separate times at four different valuations) and building via incubations as well as investing.",
+    "thesis": "Back a very small number of companies believed capable of defining their era, and keep compounding capital into them as conviction grows rather than diversifying broadly.",
+    "latest_investments_summary": "Invested roughly $1B in OpenAI at a $285B valuation in December 2025 (CNBC) and was expected to participate in OpenAI's subsequent ~$100B+ raise; closed the $10B Fund X in February 2026; also a repeat investor in Anysphere (Cursor) before its $60B SpaceX acquisition. The pattern: ever-larger, ever-more-concentrated checks into perceived AI winners it already knows.",
+    "strategy": "Thrive's own description is spare: it 'builds and invests in internet, software, and technology-enabled companies', operating both an investing arm and an incubations program.",
+    "strategy_source_url": "https://thrivecap.com/",
+    "sources": [
+      "https://thrivecap.com/",
+      "https://www.cnbc.com/2026/02/25/thrive-capital-openai-joshua-kushner.html",
+      "https://www.advisorperspectives.com/articles/2026/02/17/josh-kushners-thrive-capital-raises-10-billion",
+      "https://pitchbook.com/news/articles/why-josh-kushners-thrive-is-expanding-beyond-venture",
+      "https://en.wikipedia.org/wiki/Thrive_Capital"
+    ],
+    "track_record": [],
+    "track_record_note": "Private firm; fund IRR/TVPI are not publicly disclosed and no LP/endowment disclosures covering FY2021-2025 were found. Press describes 'outsized success' of its OpenAI/SpaceX/Stripe positions but reports no verifiable return figures.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Founders Fund",
+    "background": "San Francisco firm founded in 2005 by Peter Thiel with PayPal co-founders; early backer of SpaceX, Palantir, Facebook and Anduril. In May 2026 it closed its largest-ever vehicle, a $6B growth fund — $4.5B from LPs including sovereign wealth funds and $1.5B from Thiel and other partners/employees.",
+    "focus": "Transformative 'hard' technology: AI, defense, aerospace, fintech and bio, from seed through very large late-stage positions.",
+    "style": "Highly concentrated and contrarian — the new $6B fund is expected to deploy over two to three years across roughly a dozen companies; famously founder-aligned, letting portfolio achievements rather than firm marketing speak.",
+    "thesis": "Fund civilization-scale technology that consensus finds heretical: 'progress is a history of persecuted weirdos', existential-scale risk is inseparable from genuine progress, and the interesting question is 'What would you build if you could start over?'",
+    "latest_investments_summary": "Closed the $6B growth fund (May 2026) aimed at late-stage AI, defense and fintech; its prior fund put $1.25B into Anthropic at a $350B valuation and $1B into Anduril. The pattern is doubling down with billion-dollar checks on already-scaled winners at the intersection of AI and national security.",
+    "strategy": "Founders Fund presents itself through its portfolio (Anduril, SpaceX, Palantir) and its manifesto pages: it champions dissent and 'dangerous' ideas, rejects both techno-pessimism and uncritical optimism, and backs founders reimagining entire industries — 'What would you build if you could start over?'",
+    "strategy_source_url": "https://foundersfund.com/the-future/",
+    "sources": [
+      "https://foundersfund.com/",
+      "https://foundersfund.com/the-future/",
+      "https://www.bloomberg.com/news/articles/2026-05-01/thiel-s-founders-fund-raises-6-billion-in-its-largest-ever-haul",
+      "https://techfundingnews.com/founders-fund-6b-growth-fund-peter-thiel-late-stage-ai/",
+      "https://techcrunch.com/2025/04/15/founders-funds-new-4-6b-fund-indicates-an-era-of-big-vc-spending/"
+    ],
+    "track_record": [],
+    "track_record_note": "Private partnership; fund IRR/TVPI not publicly disclosed. Press-reported performance of early vintages (e.g. its 2007/2011 funds) predates the FY2021-2025 target window, so no rows are recorded.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Greenoaks",
+    "background": "San Francisco firm founded in 2012 by Neil Mehta (ex-D.E. Shaw), distinct from similarly named funds. Deliberately low-profile: roughly $15B across five funds, only about nine investment professionals and ~55 core portfolio companies, with reported gross profits above $13B. Long-time backer of Coupang, Stripe and Wiz.",
+    "focus": "Global growth-stage internet, software and AI businesses — explicitly hunting 'future S&P 500' companies rather than broad venture exposure.",
+    "style": "Extreme concentration with decades-long intended holds; leads large successive rounds in the same companies (it led Wiz's Series C and D and joined every growth round before its acquisition).",
+    "thesis": "Only a small handful of companies define each generation; Greenoaks backs founders building 'jaw-dropping customer experiences' — the loyalty engine it believes compounds into generational businesses — and concentrates heavily behind them for the long term.",
+    "latest_investments_summary": "Its Wiz position converted into a landmark exit when Google's $32B acquisition closed in March 2026, and it reportedly co-led Anthropic's 2026 round at a $965B valuation alongside Sequoia, Altimeter and Dragoneer. The pattern is unchanged: very few names, very large checks, held through to outcome.",
+    "strategy": "Greenoaks' website is deliberately bare; in Mehta's Colossus interview he describes the strategy as finding future S&P 500-caliber companies early, concentrating (~55 core companies across ~$15B), partnering with 'intensely focused management teams' and holding for decades as they compound.",
+    "strategy_source_url": "https://colossus.com/article/the-visions-of-neil-mehta-greenoaks/",
+    "sources": [
+      "https://colossus.com/article/the-visions-of-neil-mehta-greenoaks/",
+      "https://en.wikipedia.org/wiki/Neil_Mehta",
+      "https://www.forbes.com/profile/neil-mehta/",
+      "https://www.danielscrivner.com/neil-mehta-trades-and-holdings-q1-2026/",
+      "https://www.insidermonkey.com/hedge-fund/greenoaks+capital/1320/"
+    ],
+    "track_record": [
+      {
+        "fiscal_year": "2025",
+        "metric": "fund_irr_pct",
+        "value": 33.0,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 4,
+        "source_url": "https://colossus.com/article/the-visions-of-neil-mehta-greenoaks/",
+        "notes": "Since-inception net IRR across funds over ~13 years (through ~2025), as reported in Colossus's profile of Mehta — a cumulative firm-level figure, NOT a fiscal-2025 annual return"
+      }
+    ],
+    "track_record_note": "Private firm; per-fund, per-year returns are not disclosed. The single row is a press-reported since-inception net IRR (Colossus profile); no audited or LP-disclosed figures for individual fiscal years 2021-2025 were found.",
+    "as_of": "2026-08-09"
+  }
+]

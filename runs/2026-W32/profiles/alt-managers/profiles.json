@@ -1,0 +1,693 @@
+[
+  {
+    "allocator": "Brookfield",
+    "background": "Brookfield is a Canadian-rooted global alternative asset management complex: Brookfield Corporation (NYSE: BN, ~$108bn market cap) owns a majority of Brookfield Asset Management (BAM), which manages over $1 trillion across infrastructure, renewable power/energy, real estate, private equity and credit, with ~$614bn of fee-bearing capital and a 125+ year owner-operator heritage.",
+    "focus": "Real assets globally: infrastructure, renewable power and energy, data centers/digital infrastructure, real estate, private equity and credit, increasingly organized around the AI infrastructure buildout.",
+    "style": "Large-scale control investments via flagship drawdown funds plus perpetual vehicles; operator-heavy value creation; long-duration capital and multi-billion-dollar checks, usually leading transactions.",
+    "thesis": "Brookfield's AI-infrastructure head Sikander Rashid frames AI as 'one of the largest infrastructure buildouts in history,' requiring ~$7 trillion of capital over 10 years across power, compute and data centers - Brookfield aims to own that backbone with contracted, creditworthy cash flows.",
+    "latest_investments_summary": "In November 2025 Brookfield launched a $100bn global AI Infrastructure Program anchored by the Brookfield Artificial Intelligence Infrastructure Fund (BAIIF; $10bn equity target, $5bn already committed by Brookfield, Nvidia and Kuwait Investment Authority), seeded with a $5bn framework agreement with Bloom Energy for up to 1GW of behind-the-meter power. It also launched Radiant, an Nvidia-partnered AI cloud, and has France/Sweden sovereign-AI partnerships totaling up to ~$30bn - a coherent pivot of its power + digital platform toward AI factories.",
+    "strategy": "BAM describes itself as 'a leading global alternative asset manager... with over $1 trillion of assets under management,' a 'pure-play, asset-light investment manager with earnings derived from stable, predictable fee-related revenue,' leveraging scale, long-duration capital and a 250,000-employee operating ecosystem for 'an edge in sourcing, execution and value creation through market cycles.'",
+    "strategy_source_url": "https://bam.brookfield.com/about-us",
+    "sources": [
+      "https://bam.brookfield.com/about-us",
+      "https://bam.brookfield.com/press-releases/brookfield-launches-100-billion-ai-infrastructure-program",
+      "https://www.datacenterdynamics.com/en/news/brookfield-launches-100bn-ai-infrastructure-fund-secures-nvidia-and-kia-as-backers/",
+      "https://www.macrotrends.net/stocks/charts/BN/brookfield/stock-price-history"
+    ],
+    "track_record": [
+      {
+        "fiscal_year": "2021",
+        "metric": "stock_total_return_pct",
+        "value": 48.83,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/BN/brookfield/stock-price-history",
+        "notes": "Brookfield Corporation (BN); calendar-year change in split/dividend-adjusted close (Macrotrends) - total-return proxy"
+      },
+      {
+        "fiscal_year": "2022",
+        "metric": "stock_total_return_pct",
+        "value": -34.35,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/BN/brookfield/stock-price-history",
+        "notes": "BN adjusted-close annual change; year includes Dec-2022 spin-off of 25% of BAM to shareholders - spin distribution may not be fully captured"
+      },
+      {
+        "fiscal_year": "2023",
+        "metric": "stock_total_return_pct",
+        "value": 29.07,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/BN/brookfield/stock-price-history",
+        "notes": "BN adjusted-close annual change (Macrotrends)"
+      },
+      {
+        "fiscal_year": "2024",
+        "metric": "stock_total_return_pct",
+        "value": 44.18,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/BN/brookfield/stock-price-history",
+        "notes": "BN adjusted-close annual change (Macrotrends)"
+      },
+      {
+        "fiscal_year": "2025",
+        "metric": "stock_total_return_pct",
+        "value": 20.54,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/BN/brookfield/stock-price-history",
+        "notes": "Full-year 2025 market data; provisional because not sourced from an audited/annual report"
+      },
+      {
+        "fiscal_year": "YTD2026",
+        "metric": "stock_total_return_pct",
+        "value": -3.62,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/BN/brookfield/stock-price-history",
+        "notes": "YTD through Aug 7, 2026 close (Macrotrends adjusted series)"
+      }
+    ],
+    "track_record_note": "Stock rows are Brookfield Corporation (NYSE: BN), the listed parent; the separately listed manager BAM (NYSE/TSX: BAM) has its own return series not shown here. Brookfield does not publish a single consolidated private-fund composite return, so no fund_net_return/IRR rows are included.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "SoftBank",
+    "background": "SoftBank Group is Masayoshi Son's Tokyo-listed technology investment holding company (TSE: 9984; ~$200bn market cap after a 2025 AI-driven re-rating). It spans the Vision Funds (SVF1 $100bn, SVF2), a ~90% stake in Arm, telecom roots, and a rapidly growing AI-infrastructure arm including the Stargate program with OpenAI and Oracle.",
+    "focus": "AI across the whole stack: foundation models (OpenAI), semiconductors (Arm, Ampere), robotics, and AI data center / power infrastructure; global, with the largest bets in the US.",
+    "style": "Extremely concentrated, conviction-driven mega-checks (tens of billions into single names), often taking control or anchor positions; tolerant of leverage at the holding-company level; buys entire platforms when conviction is high.",
+    "thesis": "Son's stated worldview: the 'Information Revolution' is entering an AI phase that will bring 'greater innovation and disruption than the past 300 years,' and SoftBank positions itself as a 'Vision Capitalist' organizing capital toward artificial super intelligence.",
+    "latest_investments_summary": "The last 12 months are a single-minded ASI land-grab: a definitive agreement (Feb 2026) for a $30bn follow-on into OpenAI via Vision Fund 2 at a $730bn pre-money, in $10bn tranches in April, July and October 2026 (cumulative OpenAI investment to reach $64.6bn); the $500bn Stargate data center JV with OpenAI and Oracle; and a $4bn agreement (Dec 2025, shareholder-approved Apr 2026) to acquire DigitalBridge, adding ~$119bn of digital-infrastructure AUM. FY2025 (ended Mar 2026) Vision Fund gains of ~$46bn were driven almost entirely by OpenAI (fair value $79.6bn vs $34.6bn cost).",
+    "strategy": "SoftBank's stated philosophy is 'Information Revolution - Happiness for everyone,' with a 300-year vision; it describes itself as investing in companies leveraging AI to drive human progress, arguing the AI revolution will exceed the disruption of the past 300 years.",
+    "strategy_source_url": "https://group.softbank/en/philosophy",
+    "sources": [
+      "https://group.softbank/en/philosophy",
+      "https://www.cnbc.com/2026/05/13/softbank-earnings-fy-2025-vision-fund-openai-stake.html",
+      "https://group.softbank/media/Project/sbg/sbg/pdf/ir/presentations/2025/investor-accounting_q4fy2025_01_en.pdf",
+      "https://www.digitalbridge.com/news",
+      "https://www.macrotrends.net/stocks/charts/SFTBY/softbank-group/stock-price-history"
+    ],
+    "track_record": [
+      {
+        "fiscal_year": "2021",
+        "metric": "stock_total_return_pct",
+        "value": -36.47,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/SFTBY/softbank-group/stock-price-history",
+        "notes": "USD ADR (SFTBY), split/dividend-adjusted calendar-year change; includes JPY/USD FX drag - local-currency 9984 return differs"
+      },
+      {
+        "fiscal_year": "2022",
+        "metric": "stock_total_return_pct",
+        "value": -9.26,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/SFTBY/softbank-group/stock-price-history",
+        "notes": "USD ADR adjusted-close annual change (Macrotrends)"
+      },
+      {
+        "fiscal_year": "2023",
+        "metric": "stock_total_return_pct",
+        "value": 6.96,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/SFTBY/softbank-group/stock-price-history",
+        "notes": "USD ADR adjusted-close annual change (Macrotrends)"
+      },
+      {
+        "fiscal_year": "2024",
+        "metric": "stock_total_return_pct",
+        "value": 32.35,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/SFTBY/softbank-group/stock-price-history",
+        "notes": "USD ADR adjusted-close annual change (Macrotrends)"
+      },
+      {
+        "fiscal_year": "2025",
+        "metric": "stock_total_return_pct",
+        "value": 97.54,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/SFTBY/softbank-group/stock-price-history",
+        "notes": "Full-year 2025 market data (AI re-rating); provisional because not from an audited/annual report"
+      },
+      {
+        "fiscal_year": "YTD2026",
+        "metric": "stock_total_return_pct",
+        "value": 25.56,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/SFTBY/softbank-group/stock-price-history",
+        "notes": "YTD through Aug 6, 2026 close; extremely volatile year (ADR peaked Jun 1, 2026 at more than double the current level)"
+      }
+    ],
+    "track_record_note": "SoftBank reports Vision Fund performance as absolute segment investment gains/losses (e.g. ~$46bn gain in FY2025 ended Mar 2026, OpenAI fair value $79.6bn vs $34.6bn cost), not as fund net IRR or TVPI in its summary reporting, so no fund_irr/tvpi rows are included. Stock rows are the USD ADR; JPY-denominated returns on TSE:9984 differ due to FX.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Blackstone",
+    "background": "Blackstone (NYSE: BX, ~$102bn market cap) is the world's largest alternative asset manager, founded in 1985 by Stephen Schwarzman and Pete Peterson. AUM reached a record $1,274.9bn at end-2025 (up 13% y/y) with $239.4bn of full-year inflows and record earnings that management called the best in its 40-year history; perpetual capital is $523.6bn of AUM.",
+    "focus": "Real estate, private equity, credit & insurance, and multi-asset investing globally, with digital infrastructure (data centers via QTS/AirTrunk plus the power to run them) now among its largest thematic exposures.",
+    "style": "Scale, thematic high-conviction deployment - $138.2bn invested in 2025 alone, typically as control buyer or lead lender; drawdown flagships plus fast-growing perpetual/retail vehicles (BREIT, BXPE, BCRED).",
+    "thesis": "Blackstone describes its aim as delivering 'compelling returns for institutional and individual investors by strengthening the companies in which the firm invests'; management has repeatedly identified digital and AI infrastructure - data centers and their power - as among the largest drivers of fund appreciation.",
+    "latest_investments_summary": "2025 was record-breaking on both fundraising ($239bn inflows) and deployment ($138bn, a four-year high), with data centers the standout: infrastructure funds appreciated 23.5% in 2025 and digital infrastructure drove results (QTS/AirTrunk buildouts plus power investments), while traditional opportunistic real estate was roughly flat (-0.6%). The pattern is a decisive tilt of new capital toward AI-adjacent infrastructure, credit and insurance-linked assets over legacy real estate.",
+    "strategy": "In its own words: 'Blackstone is the world's largest alternative asset manager... Blackstone's $1.3 trillion in assets under management include global investment strategies focused on real estate, private equity, credit, infrastructure, life sciences, growth equity, secondaries and hedge funds,' seeking compelling returns by strengthening portfolio companies.",
+    "strategy_source_url": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526028145/d92648dex991.htm",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1393818/000119312526028145/d92648dex991.htm",
+      "https://www.costar.com/article/1774086675/blackstone-reports-record-results-powered-by-data-center-investments",
+      "https://www.blackstone.com/news/press/blackstone-reports-fourth-quarter-and-full-year-2025-earnings/",
+      "https://www.macrotrends.net/stocks/charts/BX/blackstone/stock-price-history"
+    ],
+    "track_record": [
+      {
+        "fiscal_year": "2021",
+        "metric": "stock_total_return_pct",
+        "value": 107.11,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/BX/blackstone/stock-price-history",
+        "notes": "Calendar-year change in split/dividend-adjusted close (Macrotrends) - total-return proxy"
+      },
+      {
+        "fiscal_year": "2022",
+        "metric": "stock_total_return_pct",
+        "value": -40.01,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/BX/blackstone/stock-price-history",
+        "notes": "Adjusted-close annual change (Macrotrends)"
+      },
+      {
+        "fiscal_year": "2023",
+        "metric": "stock_total_return_pct",
+        "value": 82.75,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/BX/blackstone/stock-price-history",
+        "notes": "Adjusted-close annual change (Macrotrends)"
+      },
+      {
+        "fiscal_year": "2024",
+        "metric": "stock_total_return_pct",
+        "value": 35.07,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/BX/blackstone/stock-price-history",
+        "notes": "Adjusted-close annual change (Macrotrends)"
+      },
+      {
+        "fiscal_year": "2025",
+        "metric": "stock_total_return_pct",
+        "value": -7.84,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/BX/blackstone/stock-price-history",
+        "notes": "Full-year 2025 market data; provisional because not from an audited/annual report"
+      },
+      {
+        "fiscal_year": "YTD2026",
+        "metric": "stock_total_return_pct",
+        "value": -8.24,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/BX/blackstone/stock-price-history",
+        "notes": "YTD through Aug 7, 2026 close (Macrotrends adjusted series)"
+      },
+      {
+        "fiscal_year": "2025",
+        "metric": "fund_gross_return_pct",
+        "value": 13.8,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 1,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526028145/d92648dex991.htm",
+        "notes": "Corporate Private Equity fund appreciation FY2025 (gross), 4Q25 earnings release (8-K EX-99.1); unaudited",
+        "scope": "Corporate Private Equity"
+      },
+      {
+        "fiscal_year": "2025",
+        "metric": "fund_gross_return_pct",
+        "value": 23.5,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 1,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526028145/d92648dex991.htm",
+        "notes": "Infrastructure fund appreciation FY2025 (gross), 4Q25 earnings release; unaudited",
+        "scope": "Infrastructure"
+      },
+      {
+        "fiscal_year": "2025",
+        "metric": "fund_gross_return_pct",
+        "value": -0.6,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 1,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526028145/d92648dex991.htm",
+        "notes": "Real Estate Opportunistic (BREP) fund appreciation FY2025; 4Q25 earnings release; unaudited",
+        "scope": "Real Estate Opportunistic (BREP)"
+      },
+      {
+        "fiscal_year": "2025",
+        "metric": "fund_gross_return_pct",
+        "value": 11.2,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 1,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526028145/d92648dex991.htm",
+        "notes": "Private Credit gross return FY2025, 4Q25 earnings release; unaudited",
+        "scope": "Private Credit"
+      },
+      {
+        "fiscal_year": "2025",
+        "metric": "fund_net_return_pct",
+        "value": 8.1,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 3,
+        "source_url": "https://www.costar.com/article/1774086675/blackstone-reports-record-results-powered-by-data-center-investments",
+        "notes": "BREIT (non-traded REIT) net return for 2025 as reported by CoStar from Blackstone results",
+        "scope": "BREIT"
+      }
+    ],
+    "track_record_note": "Segment 'appreciation/gross return' figures are Blackstone's own reported fund-level performance (gross, before fees) from its 4Q25 earnings release; they are labeled fund_gross_return_pct to avoid overstating them as net returns.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "KKR",
+    "background": "KKR & Co. (NYSE: KKR, ~$92bn market cap), founded 1976 by Kravis, Roberts and Kohlberg, is a global alternative asset manager with $744bn AUM at end-2025 (up 17% y/y), plus the Global Atlantic insurance platform and a balance-sheet 'Strategic Holdings' segment. 2025 set records for fee-related earnings ($3.7bn), capital raised ($129bn) and capital invested ($95bn).",
+    "focus": "Private equity (traditional, core, growth), infrastructure and real assets, credit (leveraged and private/asset-based), insurance, and increasingly secondaries and sports via the Arctos acquisition; global with a strong Asia franchise.",
+    "style": "Self-described 'patient and disciplined investment approach' deployed at firm scale - 4Q25 was the most active investment quarter in KKR's history ($32bn); typically control buyouts and platform builds, with growing perpetual and retail (K-Series, $34bn) capital.",
+    "thesis": "KKR aims 'to generate attractive investment returns by following a patient and disciplined investment approach, employing world-class people, and supporting growth in its portfolio companies and communities,' pairing asset management with insurance capital to fund long-duration private assets.",
+    "latest_investments_summary": "Recent pattern: scaling adjacencies and deployment records rather than a single theme - the February 2026 agreement to acquire Arctos Partners ($15bn AUM, sports stakes and GP capital solutions) creates 'KKR Solutions' and a multi-asset secondaries push; record 2025 deployment of $95bn was led by traditional PE in Europe/Americas, core PE and infrastructure (Global Infrastructure V, Asia Infrastructure III raising); K-Series wealth vehicles doubled to $34bn. Portfolio marks stayed solid (traditional PE +14% in 2025).",
+    "strategy": "From KKR's own release: 'KKR is a leading global investment firm that offers alternative asset management as well as capital markets and insurance solutions... sponsors investment funds that invest in private equity, credit and real assets,' with insurance subsidiaries under Global Atlantic.",
+    "strategy_source_url": "https://www.sec.gov/Archives/edgar/data/1404912/000140491226000002/q425earningsrelease_vf.htm",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1404912/000140491226000002/q425earningsrelease_vf.htm",
+      "https://media.kkr.com/news-details?news_id=5ce3bb0a-0e15-4cdc-8e0f-e34ae2ff0a74",
+      "https://www.macrotrends.net/stocks/charts/KKR/kkr/stock-price-history"
+    ],
+    "track_record": [
+      {
+        "fiscal_year": "2021",
+        "metric": "stock_total_return_pct",
+        "value": 85.77,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/KKR/kkr/stock-price-history",
+        "notes": "Calendar-year change in split/dividend-adjusted close (Macrotrends) - total-return proxy"
+      },
+      {
+        "fiscal_year": "2022",
+        "metric": "stock_total_return_pct",
+        "value": -36.98,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/KKR/kkr/stock-price-history",
+        "notes": "Adjusted-close annual change (Macrotrends)"
+      },
+      {
+        "fiscal_year": "2023",
+        "metric": "stock_total_return_pct",
+        "value": 80.48,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/KKR/kkr/stock-price-history",
+        "notes": "Adjusted-close annual change (Macrotrends)"
+      },
+      {
+        "fiscal_year": "2024",
+        "metric": "stock_total_return_pct",
+        "value": 79.65,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/KKR/kkr/stock-price-history",
+        "notes": "Adjusted-close annual change (Macrotrends)"
+      },
+      {
+        "fiscal_year": "2025",
+        "metric": "stock_total_return_pct",
+        "value": -13.32,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/KKR/kkr/stock-price-history",
+        "notes": "Full-year 2025 market data; provisional because not from an audited/annual report"
+      },
+      {
+        "fiscal_year": "YTD2026",
+        "metric": "stock_total_return_pct",
+        "value": -19.05,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/KKR/kkr/stock-price-history",
+        "notes": "YTD through Aug 7, 2026 close (Macrotrends adjusted series)"
+      },
+      {
+        "fiscal_year": "2025",
+        "metric": "fund_gross_return_pct",
+        "value": 14.0,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 1,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1404912/000140491226000002/q425earningsrelease_vf.htm",
+        "notes": "Traditional Private Equity portfolio gross return FY2025 ('appreciated 14% during the year'), Q4'25 earnings release (8-K); unaudited",
+        "scope": "Traditional Private Equity"
+      },
+      {
+        "fiscal_year": "2025",
+        "metric": "fund_gross_return_pct",
+        "value": 11.0,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 1,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1404912/000140491226000002/q425earningsrelease_vf.htm",
+        "notes": "Infrastructure portfolio gross return FY2025; Q4'25 earnings release; unaudited",
+        "scope": "Infrastructure"
+      },
+      {
+        "fiscal_year": "2025",
+        "metric": "fund_gross_return_pct",
+        "value": 5.0,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 1,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1404912/000140491226000002/q425earningsrelease_vf.htm",
+        "notes": "Opportunistic Real Estate portfolio gross return FY2025; Q4'25 earnings release; unaudited",
+        "scope": "Opportunistic Real Estate"
+      },
+      {
+        "fiscal_year": "2025",
+        "metric": "fund_gross_return_pct",
+        "value": 6.0,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 1,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1404912/000140491226000002/q425earningsrelease_vf.htm",
+        "notes": "Leveraged Credit composite gross return FY2025; Q4'25 earnings release; unaudited",
+        "scope": "Leveraged Credit"
+      },
+      {
+        "fiscal_year": "2025",
+        "metric": "fund_gross_return_pct",
+        "value": 8.0,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 1,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1404912/000140491226000002/q425earningsrelease_vf.htm",
+        "notes": "Alternative Credit composite gross return FY2025; Q4'25 earnings release; unaudited",
+        "scope": "Alternative Credit"
+      }
+    ],
+    "track_record_note": "Portfolio returns are KKR's reported gross composites from its Q4'25 earnings release (labeled fund_gross_return_pct, not net); KKR does not publish a firm-wide net fund return in this release.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "BlackRock",
+    "background": "BlackRock (NYSE: BLK, ~$176bn market cap) is the world's largest asset manager, hitting a record $15.3 trillion AUM in Q2 2026 after $868bn of net inflows over twelve months. Founded 1988 by Larry Fink, it has transformed from an index/ETF giant (iShares crossed $6 trillion) into a combined public-markets, private-markets and technology platform via the GIP, HPS and Preqin acquisitions.",
+    "focus": "Everything from index/ETFs and active strategies to fast-growing private markets - infrastructure (GIP), private credit (HPS) - plus the Aladdin technology business; its capital-deployment edge is now concentrated in AI infrastructure and energy.",
+    "style": "Platform scale and consortium deal-making: multi-tens-of-billions infrastructure vehicles and partnerships (AI Infrastructure Partnership with Microsoft, MGX and Nvidia) rather than single-company venture bets; targets $400bn of private-markets fundraising by 2030.",
+    "thesis": "Fink: 'BlackRock is simultaneously a leading public markets manager, a scaled private markets platform, and a global technology company' - with client portfolios steered toward infrastructure, AI and retirement assets as the growth engines.",
+    "latest_investments_summary": "The pattern is mega-scale AI infrastructure via consortiums: the AI Infrastructure Partnership (with MGX, Microsoft, Nvidia) agreed in Oct 2025 to acquire Aligned Data Centers for ~$40bn - the largest data center deal ever and AIP's first investment toward $30bn of equity ($100bn+ with debt), closing H1 2026; GIP closed its fifth flagship at $25.2bn (largest private infra fund raise); GIP+HPS arranged multibillion-dollar debt financing for Meta's AI data centers; and GIP formed a ~€2bn data center JV with ACS.",
+    "strategy": "BlackRock describes itself (Q2 2026 earnings release) as 'simultaneously a leading public markets manager, a scaled private markets platform, and a global technology company,' with record inflows driven by ETFs, private markets, active fixed income and Aladdin technology services.",
+    "strategy_source_url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526304013/blk-ex99_1.htm",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/2012383/000119312526304013/blk-ex99_1.htm",
+      "https://www.global-infra.com/news/ai-infrastructure-partnership-aip-mgx-and-blackrocks-global-infrastructure-partners-gip-to-acquire-all-equity-in-aligned-data-centers/",
+      "https://www.investmentnews.com/alternatives/blackrocks-rides-to-record-153-trillion-in-assets-on-etf-and-alternatives-growth/267421",
+      "https://www.esgdive.com/news/blackrocks-gip-microsoft-backed-ai-group-buy-aligned-data-centers-for-40/825920/",
+      "https://www.macrotrends.net/stocks/charts/BLK/blackrock/stock-price-history"
+    ],
+    "track_record": [
+      {
+        "fiscal_year": "2021",
+        "metric": "stock_total_return_pct",
+        "value": 29.39,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/BLK/blackrock/stock-price-history",
+        "notes": "Calendar-year change in split/dividend-adjusted close (Macrotrends) - total-return proxy"
+      },
+      {
+        "fiscal_year": "2022",
+        "metric": "stock_total_return_pct",
+        "value": -20.4,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/BLK/blackrock/stock-price-history",
+        "notes": "Adjusted-close annual change (Macrotrends)"
+      },
+      {
+        "fiscal_year": "2023",
+        "metric": "stock_total_return_pct",
+        "value": 17.86,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/BLK/blackrock/stock-price-history",
+        "notes": "Adjusted-close annual change (Macrotrends)"
+      },
+      {
+        "fiscal_year": "2024",
+        "metric": "stock_total_return_pct",
+        "value": 29.29,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/BLK/blackrock/stock-price-history",
+        "notes": "Adjusted-close annual change (Macrotrends)"
+      },
+      {
+        "fiscal_year": "2025",
+        "metric": "stock_total_return_pct",
+        "value": 6.55,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/BLK/blackrock/stock-price-history",
+        "notes": "Full-year 2025 market data; provisional because not from an audited/annual report"
+      },
+      {
+        "fiscal_year": "YTD2026",
+        "metric": "stock_total_return_pct",
+        "value": 7.36,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/BLK/blackrock/stock-price-history",
+        "notes": "YTD through Aug 7, 2026 close (Macrotrends adjusted series)"
+      }
+    ],
+    "track_record_note": "BlackRock reports AUM and net flows rather than a firm-level fund return composite (client returns accrue across thousands of index/active funds), so only stock-return rows are included.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "DigitalBridge",
+    "background": "DigitalBridge Group (NYSE: DBRG, ~$2.9bn market cap; formerly Colony Capital) is the dedicated digital-infrastructure alternative asset manager led by Marc Ganzi, with $119bn AUM (Mar 31, 2026) across 45+ portfolio companies. In December 2025 SoftBank Group agreed to acquire DigitalBridge for $4bn (stockholders approved April 2026) to scale next-generation AI infrastructure.",
+    "focus": "Pure-play digital infrastructure across five verticals: data centers, macro cell towers, fiber, small cells and edge infrastructure, plus digital credit, liquid and venture strategies; global (US, Europe, Japan, LatAm).",
+    "style": "Control equity in scaled platforms alongside co-investors, run by a 'full stack' invest-operate-capitalize model; multi-billion platform deals funded through its DigitalBridge Partners flagship series ($11.7bn total commitments for DBP III including co-invest).",
+    "thesis": "DigitalBridge calls itself 'the Infrastructure Partner to the Digital Economy,' arguing AI and cloud create $400bn+ of annual global capex that specialist owner-operators are best placed to capture.",
+    "latest_investments_summary": "A rapid-fire platform build-out amid its own sale to SoftBank: DBP III closed at $11.7bn (Nov 2025); take-private of broadband operator WideOpenWest with Crestview (Dec 2025); completed Yondr Group hyperscale developer acquisition with La Caisse (Jul 2025); acquired NEC's data center assets with JEXI (Mar 2026) and launched the Nippon Gateway Infrastructure platform in Japan (Jul 2026); agreed a strategic combination with ArcLight (May 2026) to sit at the convergence of power, AI and digital infrastructure.",
+    "strategy": "From its site: DigitalBridge invests across 'five key digital infrastructure verticals: data centers, macro cell towers, fiber networks, small cells, and edge infrastructure' with a \"'full stack' approach\" pairing capital with the right risk profiles across $400bn+ of annual digital capex, as 'the Infrastructure Partner to the Digital Economy.'",
+    "strategy_source_url": "https://www.digitalbridge.com/business",
+    "sources": [
+      "https://www.digitalbridge.com/business",
+      "https://www.digitalbridge.com/news",
+      "https://www.datacenterdynamics.com/en/news/softbank-to-buy-data-center-investor-digitalbridge-for-4bn/",
+      "https://pulse2.com/digitalbridge-11-7-billion-third-fund/",
+      "https://www.macrotrends.net/stocks/charts/DBRG/digitalbridge-group/stock-price-history"
+    ],
+    "track_record": [
+      {
+        "fiscal_year": "2021",
+        "metric": "stock_total_return_pct",
+        "value": 73.18,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/DBRG/digitalbridge-group/stock-price-history",
+        "notes": "Calendar-year change in split/dividend-adjusted close (Macrotrends) - total-return proxy"
+      },
+      {
+        "fiscal_year": "2022",
+        "metric": "stock_total_return_pct",
+        "value": -67.11,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/DBRG/digitalbridge-group/stock-price-history",
+        "notes": "Adjusted-close annual change (Macrotrends)"
+      },
+      {
+        "fiscal_year": "2023",
+        "metric": "stock_total_return_pct",
+        "value": 60.77,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/DBRG/digitalbridge-group/stock-price-history",
+        "notes": "Adjusted-close annual change (Macrotrends)"
+      },
+      {
+        "fiscal_year": "2024",
+        "metric": "stock_total_return_pct",
+        "value": -35.51,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/DBRG/digitalbridge-group/stock-price-history",
+        "notes": "Adjusted-close annual change (Macrotrends)"
+      },
+      {
+        "fiscal_year": "2025",
+        "metric": "stock_total_return_pct",
+        "value": 36.48,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/DBRG/digitalbridge-group/stock-price-history",
+        "notes": "Full-year 2025 market data (includes Dec 2025 SoftBank bid pop); provisional because not from an audited/annual report"
+      },
+      {
+        "fiscal_year": "YTD2026",
+        "metric": "stock_total_return_pct",
+        "value": 4.04,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/DBRG/digitalbridge-group/stock-price-history",
+        "notes": "YTD through Aug 7, 2026 close; price pinned near SoftBank deal terms"
+      }
+    ],
+    "track_record_note": "DigitalBridge does not publicly disclose fund-level net IRRs/TVPI for the DigitalBridge Partners series in citable sources, so only stock-return rows are included.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Blue Owl",
+    "background": "Blue Owl Capital (NYSE: OWL, ~$18.5bn market cap) was formed in 2021 from the merger of Owl Rock (direct lending) and Dyal Capital (GP stakes) via SPAC. It manages $319bn+ (Jun 30, 2026) across Credit ($158.1bn), Real Assets ($89.4bn) and GP Strategic Capital ($71.5bn), with $225bn+ of permanent capital.",
+    "focus": "Private credit / direct lending to sponsor- and non-sponsor-backed companies, GP minority stakes, and real assets - net-lease real estate and, increasingly, AI/data center joint ventures and digital infrastructure funds.",
+    "style": "Permanent-capital, income-oriented lender and structured-equity partner rather than control buyout shop; writes very large checks in bespoke structures (triple-net, JV equity) for investment-grade counterparties.",
+    "thesis": "Blue Owl says it is 'doing more than just investing in private markets - we are shaping the future of alternatives,' positioning itself as 'a partner of choice for businesses seeking private capital solutions.'",
+    "latest_investments_summary": "The defining move is hyperscaler AI-infrastructure finance: in October 2025 Blue Owl-managed funds took 80% of a ~$27bn joint venture with Meta to develop the 5GW Hyperion data center campus in Louisiana - the largest private-capital data center financing to date - with Meta as developer/operator/tenant. It extends the playbook built on its IPI digital-infrastructure platform and mirrors its earlier Stargate-related JV participation; meanwhile the stock fell sharply in 2025 (-32.8%) as private-credit sentiment soured.",
+    "strategy": "From its site: three platforms - Credit (direct lending), GP Strategic Capital (minority equity in alt managers) and Real Assets - backed by '$225B+ permanent capital,' with the stated ambition of 'shaping the future of alternatives' as 'a partner of choice for businesses seeking private capital solutions.'",
+    "strategy_source_url": "https://www.blueowl.com/",
+    "sources": [
+      "https://www.blueowl.com/",
+      "https://www.cnbc.com/2025/10/21/meta-blue-owl-capital-partner-on-27-billion-ai-data-center-project-.html",
+      "https://www.prnewswire.com/news-releases/meta-announces-joint-venture-with-funds-managed-by-blue-owl-capital-to-develop-hyperion-data-center-302590584.html",
+      "https://www.macrotrends.net/stocks/charts/OWL/blue-owl-capital/stock-price-history"
+    ],
+    "track_record": [
+      {
+        "fiscal_year": "2021",
+        "metric": "stock_total_return_pct",
+        "value": 32.18,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/OWL/blue-owl-capital/stock-price-history",
+        "notes": "Adjusted-close annual change (Macrotrends); OWL listed via SPAC merger in May 2021, so 2021 covers a partial trading history incl. the pre-merger SPAC"
+      },
+      {
+        "fiscal_year": "2022",
+        "metric": "stock_total_return_pct",
+        "value": -26.3,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/OWL/blue-owl-capital/stock-price-history",
+        "notes": "Calendar-year change in split/dividend-adjusted close (Macrotrends) - total-return proxy"
+      },
+      {
+        "fiscal_year": "2023",
+        "metric": "stock_total_return_pct",
+        "value": 47.4,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/OWL/blue-owl-capital/stock-price-history",
+        "notes": "Adjusted-close annual change (Macrotrends)"
+      },
+      {
+        "fiscal_year": "2024",
+        "metric": "stock_total_return_pct",
+        "value": 61.76,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/OWL/blue-owl-capital/stock-price-history",
+        "notes": "Adjusted-close annual change (Macrotrends)"
+      },
+      {
+        "fiscal_year": "2025",
+        "metric": "stock_total_return_pct",
+        "value": -32.83,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/OWL/blue-owl-capital/stock-price-history",
+        "notes": "Full-year 2025 market data; provisional because not from an audited/annual report"
+      },
+      {
+        "fiscal_year": "YTD2026",
+        "metric": "stock_total_return_pct",
+        "value": -17.07,
+        "unit": "pct",
+        "provisional": 1,
+        "source_tier": 2,
+        "source_url": "https://www.macrotrends.net/stocks/charts/OWL/blue-owl-capital/stock-price-history",
+        "notes": "YTD through Aug 7, 2026 close (Macrotrends adjusted series)"
+      }
+    ],
+    "track_record_note": "Blue Owl's listed BDCs (e.g. OBDC) publish fund-level net returns in their own filings, but Blue Owl the manager does not report a firm-wide fund net return/IRR composite in citable summary sources, so only stock rows are included here.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Azora",
+    "background": "Azora is a Madrid-based real asset investment firm founded in 2003, described in the August 2026 Volta announcement as managing over $20bn across real estate and infrastructure. It runs specialized platforms in living/housing, hospitality and leisure, commercial real estate, and infrastructure and climate solutions across Europe and the US.",
+    "focus": "European (and increasingly US) real assets - residential, hotels, logistics/commercial, energy transition and infrastructure - now extended into AI/digital infrastructure through the Volta platform.",
+    "style": "Platform creator and hands-on operator: builds specialized, multi-strategy investment vehicles around operating teams rather than passive stakes; typically anchor/control positions in mid-to-large European deals.",
+    "thesis": "Azora says it aims to 'uncover the megatrends of the future' by managing and transforming operational real assets through specialized platforms, with sustainability standards central.",
+    "latest_investments_summary": "Azora's signature recent move is AI infrastructure: it co-created Volta in late 2025 with ex-Brookfield executives Ricard Boada and Sofia Gumuzio. On August 4, 2026 Volta emerged from stealth valued at ~$2.4bn (Series A co-led by Azora, Andreessen Horowitz, Altimeter and Nvidia, with Dell also reported among backers), carrying a $10bn six-year AI-factory capacity agreement with a leading AI lab (reported by Bloomberg to be Anthropic, starting in Norway) and a $5bn Azora-backed AI Infrastructure Program to finance Volta's AI factories, on a development pipeline exceeding 1GW across North America and Europe.",
+    "strategy": "From its site: Azora is 'a real asset investment firm, founded in Madrid in 2003' that manages and transforms operational assets through 'specialized and multi-strategy platforms' across living, hospitality and leisure, commercial real estate, and infrastructure and climate solutions, aiming to 'uncover the megatrends of the future.'",
+    "strategy_source_url": "https://www.azora.com/en/",
+    "sources": [
+      "https://www.azora.com/en/",
+      "https://www.businesswire.com/news/home/20260804493428/en/Volta-Emerges-From-Stealth-With-$10-Billion-AI-Lab-Partnership-and-$5-Billion-AI-Infrastructure-Program",
+      "https://www.pymnts.com/news/artificial-intelligence/2026/volta-exits-stealth-2-billion-dollar-valuation-build-ai-infrastructure/",
+      "https://www.merca2.es/2026/08/05/azora-nvidia-vehiculo-inversion-ia-2430968/"
+    ],
+    "track_record": [],
+    "track_record_note": "Azora is a private firm; it does not publicly disclose fund-level returns (no net IRR/TVPI figures found in its site, press or the Volta announcement), and it has no listed stock. Empty track record is the honest answer.",
+    "as_of": "2026-08-09"
+  }
+]

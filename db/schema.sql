@@ -178,8 +178,11 @@ CREATE TABLE IF NOT EXISTS track_records (
     allocator_id INTEGER NOT NULL REFERENCES allocators(id),
     fiscal_year  TEXT NOT NULL,    -- '2021'..'2025', or 'YTD2026'
     metric       TEXT NOT NULL,    -- stock_total_return_pct | fund_net_return_pct |
-                                   -- fund_irr_pct | tvpi | reported_return_pct |
-                                   -- aum_usd_bn | hit_rate_pct | moic
+                                   -- fund_gross_return_pct | fund_irr_pct | tvpi |
+                                   -- reported_return_pct | aum_usd_bn | hit_rate_pct | moic
+    scope        TEXT NOT NULL DEFAULT '',  -- segment/fund/program when one allocator
+                                   -- reports several series (e.g. 'Infrastructure',
+                                   -- 'BREIT', 'CHIPS Act'); '' = the allocator overall
     value        REAL,
     unit         TEXT,             -- 'pct' | 'x' | 'usd_bn'
     provisional  INTEGER NOT NULL DEFAULT 0,  -- 1 = YTD / unaudited / estimate
@@ -188,7 +191,7 @@ CREATE TABLE IF NOT EXISTS track_records (
     notes        TEXT,
     run_week     TEXT NOT NULL,
     created_at   TEXT NOT NULL DEFAULT (datetime('now')),
-    UNIQUE (allocator_id, fiscal_year, metric)
+    UNIQUE (allocator_id, fiscal_year, metric, scope)
 );
 
 -- Detected themes: output of the theme engine, one row per (theme, run_week).

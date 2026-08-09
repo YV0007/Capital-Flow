@@ -112,13 +112,13 @@ def _build_map(con) -> dict:
            JOIN allocators a ON a.id = p.allocator_id""").fetchall()}
     track = {}
     for t in con.execute(
-        """SELECT a.name, t.fiscal_year, t.metric, t.value, t.unit, t.provisional,
-                  t.source_tier, t.source_url, t.notes
+        """SELECT a.name, t.fiscal_year, t.metric, t.scope, t.value, t.unit,
+                  t.provisional, t.source_tier, t.source_url, t.notes
            FROM track_records t JOIN allocators a ON a.id = t.allocator_id
-           ORDER BY t.fiscal_year""").fetchall():
+           ORDER BY t.fiscal_year, t.scope""").fetchall():
         track.setdefault(t["name"], []).append(
             {"fiscal_year": t["fiscal_year"], "metric": t["metric"],
-             "value": t["value"], "unit": t["unit"],
+             "scope": t["scope"] or None, "value": t["value"], "unit": t["unit"],
              "provisional": bool(t["provisional"]), "source_tier": t["source_tier"],
              "source_url": t["source_url"], "notes": t["notes"]})
     allocator_summaries = {}

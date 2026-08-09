@@ -52,6 +52,11 @@ per allocator, exactly this shape:
   - Individuals → almost never have published returns. Net-worth changes are NOT
     returns; do not use them. Empty + honest note is the correct answer.
 - `unit`: `pct` for percentages, `x` for multiples, `usd_bn` for AUM.
+- `scope` (optional): when one allocator reports SEVERAL series for the same year
+  and metric — per-segment returns, per-fund IRRs, per-program totals — set `scope`
+  to the segment/fund/program name (e.g. `"Infrastructure"`, `"BREIT"`,
+  `"CHIPS Act"`). Omit it for the allocator-overall series. Rows are unique per
+  (fiscal_year, metric, scope); without a scope, same-year same-metric rows overwrite.
 - `source_tier` follows CONTEXT.md's ladder (annual report/10-K = 1, Reuters/FT = 3).
 
 ## Profile rules

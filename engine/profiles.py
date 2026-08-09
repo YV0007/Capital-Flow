@@ -18,8 +18,9 @@ from datetime import date
 from . import db
 
 METRICS = {
-    "stock_total_return_pct", "fund_net_return_pct", "fund_irr_pct", "tvpi",
-    "reported_return_pct", "aum_usd_bn", "hit_rate_pct", "moic",
+    "stock_total_return_pct", "fund_net_return_pct", "fund_gross_return_pct",
+    "fund_irr_pct", "tvpi", "reported_return_pct", "aum_usd_bn", "hit_rate_pct",
+    "moic",
 }
 
 TEXT_FIELDS = ("background", "focus", "style", "thesis",
@@ -60,6 +61,7 @@ def _validate_tr_row(r, warnings, who):
     return {
         "fiscal_year": fy, "metric": metric, "value": value,
         "unit": (r.get("unit") or "").strip() or None,
+        "scope": (r.get("scope") or "").strip(),
         "provisional": provisional, "source_tier": tier, "source_url": url,
         "notes": _clean_text(r.get("notes"), 500),
     }
@@ -135,18 +137,19 @@ def ingest_week(week: str) -> dict:
                     continue
                 con.execute(
                     """INSERT INTO track_records
-                         (allocator_id, fiscal_year, metric, value, unit, provisional,
-                          source_tier, source_url, notes, run_week)
-                       VALUES (?,?,?,?,?,?,?,?,?,?)
-                       ON CONFLICT(allocator_id, fiscal_year, metric) DO UPDATE SET
+                         (allocator_id, fiscal_year, metric, scope, value, unit,
+                          provisional, source_tier, source_url, notes, run_week)
+                       VALUES (?,?,?,?,?,?,?,?,?,?,?)
+                       ON CONFLICT(allocator_id, fiscal_year, metric, scope)
+                       DO UPDATE SET
                          value=excluded.value, unit=excluded.unit,
                          provisional=excluded.provisional,
                          source_tier=excluded.source_tier,
                          source_url=excluded.source_url, notes=excluded.notes,
                          run_week=excluded.run_week""",
-                    (aid, tr["fiscal_year"], tr["metric"], tr["value"], tr["unit"],
-                     tr["provisional"], tr["source_tier"], tr["source_url"],
-                     tr["notes"], week))
+                    (aid, tr["fiscal_year"], tr["metric"], tr["scope"], tr["value"],
+                     tr["unit"], tr["provisional"], tr["source_tier"],
+                     tr["source_url"], tr["notes"], week))
                 stats["track_rows"] += 1
     con.commit()
     con.close()

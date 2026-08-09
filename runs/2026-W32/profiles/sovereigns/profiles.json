@@ -1,0 +1,313 @@
+[
+  {
+    "allocator": "MGX",
+    "background": "MGX is an Abu Dhabi technology investment company established in March 2024 under the emirate's Artificial Intelligence and Advanced Technology Council, with Mubadala and AI group G42 as foundational partners and Sheikh Tahnoun bin Zayed as chairman. Press reports describe a ~$100bn target platform; in July 2026 it closed a $49bn AI fund, one of the largest sector-focused vehicles ever raised.",
+    "focus": "Three stated areas: AI infrastructure (data centers and connectivity), semiconductors (logic and memory design and manufacturing), and AI core technologies and applications (models, software, data, life sciences, robotics), in the UAE and globally.",
+    "style": "Very large anchor checks deployed fast, usually alongside mega-consortia (Stargate with OpenAI/SoftBank/Oracle; AI Infrastructure Partnership with BlackRock's GIP and Microsoft) — pairing direct stakes in frontier labs with control-scale infrastructure deals.",
+    "thesis": "CEO Ahmed Yahia frames the mission as ensuring Abu Dhabi and the UAE are 'not just observers of the AI revolution, but active participants and beneficiaries of the most transformative technology of our time', with an emphasis on responsible, inclusive AI.",
+    "latest_investments_summary": "Founding equity partner in the $500bn Stargate AI-infrastructure venture (~$7bn planned contribution); invested in OpenAI's 2025 primary round at a $300bn valuation and bought further shares in the $6.6bn secondary at a $500bn valuation; a significant backer of Anthropic; joined the AIIP/GIP consortium's ~$40bn acquisition of Aligned Data Centers (Oct 2025); closed a $49bn AI fund in July 2026. The pattern: own both the frontier labs and the compute layer beneath them.",
+    "strategy": "MGX says it will 'invest to accelerate the development and adoption of AI and advanced technologies through world-leading partnerships both in the UAE and globally', to 'enable the advancement and deployment of leading edge technologies intended to improve the lives of current and future generations', across AI infrastructure, semiconductors, and AI core technologies and applications.",
+    "strategy_source_url": "https://www.mgx.ae/en/news/abu-dhabi-launches-comprehensive-global-investment-strategy-artificial-intelligence-0",
+    "sources": [
+      "https://www.mubadala.com/en/news/abu-dhabi-launches-comprehensive-global-investment-strategy-on-artificial-intelligence",
+      "https://www.cnbc.com/2026/07/01/mgx-ai-fund-uae-49-billion.html",
+      "https://www.thenationalnews.com/business/markets/2026/07/01/abu-dhabis-ai-investment-firm-mgx-raises-49bn-for-new-fund/",
+      "https://www.bloomberg.com/news/articles/2026-02-17/openai-anthropic-deals-power-abu-dhabi-s-100-billion-ai-bet",
+      "https://www.cnbc.com/2025/10/15/abu-dhabis-mgx-investments-in-trump-crypto-tiktok-openai-.html",
+      "https://news.crunchbase.com/ai/mgx-role-grows-stargate-openai-g42-tiktok/"
+    ],
+    "track_record": [],
+    "track_record_note": "Founded March 2024; a private state-backed vehicle that has published no audited returns and no official AUM. The ~$100bn platform size and $49bn fund close are press-reported fundraising figures, not performance. No source states a return, so no rows — this is honest, not missing coverage.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Mubadala",
+    "background": "Mubadala Investment Company is Abu Dhabi's second-largest sovereign investor, formed in 2017 from the merger of Mubadala Development and IPIC and operating for nearly a quarter-century as the emirate's diversification engine. AUM reached AED 1.4tn (US$385bn) at end-2025, up 17% year on year, with 44% of the portfolio in North America. It is also a founding shareholder of AI vehicle MGX.",
+    "focus": "Multi-asset global portfolio — private equity (42%), public markets, infrastructure and real estate, credit and alternatives — with sector emphasis on AI and technology, life sciences, clean energy and digital infrastructure across the UAE, North America, Europe and Asia.",
+    "style": "A disciplined global capital platform: large direct stakes and platform builds alongside top-tier GPs, deploying AED 143bn (US$39bn) in 2025 while recycling AED 138bn of proceeds — a high-velocity, partnership-heavy model rather than passive allocation.",
+    "thesis": "Mubadala describes its mandate as creating 'sector-based champions in the UAE and around the world', underpinning the UAE's economic diversification while generating sustainable long-term returns, with AI capability-building in Abu Dhabi an explicit priority.",
+    "latest_investments_summary": "2025 deployment rose 20% to US$39bn, tilted toward AI, technology, digital infrastructure, life sciences and private credit; the UAE portfolio was the standout performance driver. Alongside its role as MGX co-founder and continued build-out of credit and infrastructure platforms, the pattern is compounding exposure to the AI stack while monetizing mature assets at pace.",
+    "strategy": "Mubadala presents itself as 'a disciplined global capital platform' investing 'in key sectors of growth in the UAE and abroad', creating sector-based champions, underpinning the UAE's vision of greater economic diversification, and bolstering AI capabilities in Abu Dhabi — prioritizing rolling five- and ten-year IRR over annual profit metrics in line with its sovereign mandate.",
+    "strategy_source_url": "https://www.mubadala.com/en/news/strong-performance-by-uae-portfolio-drives-mubadalas-growth-in-2025",
+    "sources": [
+      "https://www.mubadala.com/en/news/strong-performance-by-uae-portfolio-drives-mubadalas-growth-in-2025",
+      "https://www.mubadala.com/en/news/mubadala-investment-company-reports-2024-financial-results",
+      "https://www.mubadala.com/en/news/mubadala-investment-company-reports-2023-financial-results",
+      "https://www.caproasia.com/2026/04/16/uae-abu-dhabi-sovereign-wealth-fund-mubadala-investment-company-reports-385-billion-aum-in-2025-portfolio-return-10-7-5-year-irr-10-3-10-year-irr-portfolio-allocation-private-market-42-publi/",
+      "https://economymiddleeast.com/news/abu-dhabi-mubadala-reports-326-7-billion-assets-in-2024-up-9-1-percent-yoy/"
+    ],
+    "track_record": [
+      {
+        "fiscal_year": "2023",
+        "metric": "reported_return_pct",
+        "value": 10.3,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 1,
+        "source_url": "https://www.mubadala.com/en/news/mubadala-investment-company-reports-2023-financial-results",
+        "notes": "5-year rate of return as reported in 2023 annual results; Mubadala does not disclose single-year returns"
+      },
+      {
+        "fiscal_year": "2023",
+        "metric": "aum_usd_bn",
+        "value": 302.5,
+        "unit": "usd_bn",
+        "provisional": 0,
+        "source_tier": 1,
+        "source_url": "https://www.mubadala.com/en/news/mubadala-investment-company-reports-2023-financial-results",
+        "notes": "AED 1.111tn converted at pegged rate ~3.6725 AED/USD"
+      },
+      {
+        "fiscal_year": "2024",
+        "metric": "reported_return_pct",
+        "value": 10.1,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 1,
+        "source_url": "https://www.mubadala.com/en/news/mubadala-investment-company-reports-2024-financial-results",
+        "notes": "5-year annualized return per 2024 annual results; 10-year rolling IRR 8.7%"
+      },
+      {
+        "fiscal_year": "2024",
+        "metric": "aum_usd_bn",
+        "value": 326.7,
+        "unit": "usd_bn",
+        "provisional": 0,
+        "source_tier": 1,
+        "source_url": "https://www.mubadala.com/en/news/mubadala-investment-company-reports-2024-financial-results",
+        "notes": "AED 1.2tn; USD conversion per press coverage of the same results"
+      },
+      {
+        "fiscal_year": "2025",
+        "metric": "reported_return_pct",
+        "value": 10.7,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 1,
+        "source_url": "https://www.mubadala.com/en/news/strong-performance-by-uae-portfolio-drives-mubadalas-growth-in-2025",
+        "notes": "5-year annualized return per 2025 annual results (10-year: 10.3%)"
+      },
+      {
+        "fiscal_year": "2025",
+        "metric": "aum_usd_bn",
+        "value": 385,
+        "unit": "usd_bn",
+        "provisional": 0,
+        "source_tier": 1,
+        "source_url": "https://www.mubadala.com/en/news/strong-performance-by-uae-portfolio-drives-mubadalas-growth-in-2025",
+        "notes": "AED 1.4tn (US$385bn), +17% YoY"
+      }
+    ],
+    "track_record_note": "Mubadala reports rolling 5- and 10-year IRRs, not single-year returns, so return rows show the 5-year annualized figure disclosed in each year's results. FY2021-2022 five-year figures were not located in its own releases this run.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Saudi PIF",
+    "background": "Saudi Arabia's Public Investment Fund is the kingdom's sovereign wealth fund and the designated engine of Vision 2030 economic transformation, chaired by Crown Prince Mohammed bin Salman. AUM grew 19% to $913bn at end-2024 (225 portfolio companies, 103 created by PIF itself), with roughly 80% of the portfolio domestic; Moody's upgraded it to Aa3 in 2024.",
+    "focus": "Domestic giga-projects and 13 priority sectors (energy, real estate, communications, IT, financials, utilities and more) plus a global pool of strategic technology and partnership stakes; since 2025 an aggressive AI push through wholly-owned HUMAIN.",
+    "style": "Concentrated, state-directed and builder-oriented: it creates national champions outright, deploys tens of billions a year ($56.8bn into priority sectors in 2024; $171bn cumulative since 2021), and funds itself with public and private debt alongside government asset transfers.",
+    "thesis": "PIF states a dual mandate: drive Saudi Arabia's economic transformation and diversification away from oil while generating sustainable long-term financial returns, using global investments to build partnerships and access 'cutting-edge technology that is shaping the future global economy'.",
+    "latest_investments_summary": "The clearest recent pattern is the AI stack build-out: PIF launched HUMAIN in May 2025 to own data centers, cloud, models and applications — with a 6.6GW capacity ambition, deployment of up to 600,000 Nvidia chips, a $10bn AMD joint venture, a $2bn Qualcomm program and a planned $10bn venture fund — while continuing heavy domestic deployment into giga-projects and priority sectors and slowing pure financial investing abroad.",
+    "strategy": "PIF describes 'continuous delivery on its unique mandate to drive Saudi Arabia's economic transformation and generate sustainable financial returns': developing strategic sectors through national champions, promoting localization, and using global investments to grow and diversify assets, form partnerships with innovative companies and investors, and invest in technology shaping the future economy.",
+    "strategy_source_url": "https://www.pif.gov.sa/en/news-and-insights/press-releases/2025/pif-continued-to-drive-the-economic-transformation-of-saudi-arabia-while-shaping-global-economies-in-2024/",
+    "sources": [
+      "https://www.pif.gov.sa/en/news-and-insights/press-releases/2025/pif-continued-to-drive-the-economic-transformation-of-saudi-arabia-while-shaping-global-economies-in-2024/",
+      "https://www.caproasia.com/2025/08/14/saudi-arabia-sovereign-wealth-fund-public-investment-fund-pif-reports-912-billion-aum-for-2024-7-2-annual-return-since-inception-2017-225-portfolio-companies-portfolio-aum-80-saudi-arabia/",
+      "https://economymiddleeast.com/news/saudi-arabias-pif-surpasses-765-billion-in-aum/",
+      "https://www.pif.gov.sa/en/our-investments/our-portfolio/humain/",
+      "https://www.cnbc.com/2025/08/27/saudi-arabia-wants-to-be-worlds-third-largest-ai-provider-humain.html",
+      "https://www.arabnews.com/node/2602454/business-economy"
+    ],
+    "track_record": [
+      {
+        "fiscal_year": "2023",
+        "metric": "reported_return_pct",
+        "value": 8.7,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 3,
+        "source_url": "https://economymiddleeast.com/news/saudi-arabias-pif-surpasses-765-billion-in-aum/",
+        "notes": "average annual total shareholder return since 2017, as disclosed in PIF's 2023 Annual Report (press-carried)"
+      },
+      {
+        "fiscal_year": "2023",
+        "metric": "aum_usd_bn",
+        "value": 765,
+        "unit": "usd_bn",
+        "provisional": 0,
+        "source_tier": 3,
+        "source_url": "https://economymiddleeast.com/news/saudi-arabias-pif-surpasses-765-billion-in-aum/",
+        "notes": "year-end 2023 AUM per 2023 Annual Report (press-carried)"
+      },
+      {
+        "fiscal_year": "2024",
+        "metric": "reported_return_pct",
+        "value": 7.2,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 1,
+        "source_url": "https://www.pif.gov.sa/en/news-and-insights/press-releases/2025/pif-continued-to-drive-the-economic-transformation-of-saudi-arabia-while-shaping-global-economies-in-2024/",
+        "notes": "annual average total portfolio return since 2017, per PIF 2024 Annual Report press release (content verified via archived copy)"
+      },
+      {
+        "fiscal_year": "2024",
+        "metric": "aum_usd_bn",
+        "value": 913,
+        "unit": "usd_bn",
+        "provisional": 0,
+        "source_tier": 1,
+        "source_url": "https://www.pif.gov.sa/en/news-and-insights/press-releases/2025/pif-continued-to-drive-the-economic-transformation-of-saudi-arabia-while-shaping-global-economies-in-2024/",
+        "notes": "AUM +19% YoY to $913bn at year-end 2024"
+      }
+    ],
+    "track_record_note": "PIF discloses only a since-inception (2017) average annual return in each annual report, not single-year returns, so return rows are that rolling figure per report year. The 2025 Annual Report had not been published as of 2026-08-09 (the 2024 report appeared in September 2025); no FY2025 or YTD2026 figures exist yet.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "US Government",
+    "background": "Treated here as a capital allocator, the US federal government has become one of the largest strategic investors in technology and energy: the 2022 CHIPS and Science Act appropriated $52.7bn (including $39bn of manufacturing incentives), DOE's loan office (renamed the Office of Energy Dominance Financing) holds loan authority exceeding $400bn, and since 2025 Washington has shifted from grants to taking direct equity stakes in strategic companies.",
+    "focus": "Semiconductor fabrication and advanced packaging (CHIPS incentives), energy and critical-materials supply chains (EDF/LPO loans), and defense-critical inputs — with new direct equity positions in Intel and rare-earth producer MP Materials.",
+    "style": "Policy-directed capital across grants, loans, loan guarantees, offtake guarantees and, newly, negotiated equity: e.g. converting $8.9bn of unpaid CHIPS grants and Secure Enclave funds into a passive 9.9% Intel common-stock stake, and a DoD preferred-plus-warrants package making the Pentagon MP Materials' largest shareholder with a price floor and 10-year offtake.",
+    "thesis": "Stated rationale is strategic, not financial: onshoring leading-edge chipmaking, 'restoring America's energy dominance', and securing defense supply chains, with equity stakes framed as ensuring taxpayers share the upside of companies rebuilt with public money.",
+    "latest_investments_summary": "By 31 Jan 2025 Commerce had finalized $30.7bn of CHIPS grants plus $5.5bn of loans to 19 companies across 40 fab projects. In 2025 the government pivoted to ownership: an $8.9bn / 9.9% Intel stake (Aug 2025, with a 5% warrant tied to foundry control) and the DoD's $400M convertible-preferred investment in MP Materials (Jul 2025). EDF's loan book kept growing to $126.3bn issued plus $36.2bn conditional by mid-2026. The pattern: state capital concentrated on chips, power and critical minerals, increasingly on equity terms.",
+    "strategy": "Official statements frame the programs as strategic industrial policy: CHIPS incentives to restore US leading-edge semiconductor manufacturing, and the Office of Energy Dominance Financing 'Committed to Restoring America's Energy Dominance', protecting taxpayer interests by monitoring each financed project through construction, completion and operation until loans are repaid.",
+    "strategy_source_url": "https://www.energy.gov/lpo/portfolio",
+    "sources": [
+      "https://www.energy.gov/lpo/portfolio",
+      "https://www.congress.gov/crs_external_products/R/PDF/R49031/R49031.1.pdf",
+      "https://newsroom.intel.com/corporate/intel-and-trump-administration-reach-historic-agreement",
+      "https://mpmaterials.com/news/mp-materials-announces-transformational-public-private-partnership-with-the-department-of-defense-to-accelerate-u-s-rare-earth-magnet-independence/",
+      "https://www.commerce.gov/news/press-releases/2024/11/biden-harris-administration-announces-chips-incentives-award-intel",
+      "https://www.cnbc.com/2025/08/22/intel-goverment-equity-stake.html"
+    ],
+    "track_record": [
+      {
+        "fiscal_year": "2025",
+        "metric": "aum_usd_bn",
+        "value": 36.2,
+        "unit": "usd_bn",
+        "provisional": 0,
+        "source_tier": 1,
+        "source_url": "https://www.congress.gov/crs_external_products/R/PDF/R49031/R49031.1.pdf",
+        "notes": "deployed capital, not AUM: CHIPS incentives finalized as of 2025-01-31 — $30.7bn grants + $5.5bn loans to 19 companies / 40 fab projects (CRS R49031)",
+        "scope": "CHIPS Act incentives"
+      },
+      {
+        "fiscal_year": "2025",
+        "metric": "aum_usd_bn",
+        "value": 8.9,
+        "unit": "usd_bn",
+        "provisional": 0,
+        "source_tier": 1,
+        "source_url": "https://newsroom.intel.com/corporate/intel-and-trump-administration-reach-historic-agreement",
+        "notes": "deployed capital: $8.9bn purchase of 433.3M Intel shares at $20.47 (9.9% stake), funded from remaining CHIPS grants and Secure Enclave awards, Aug 2025",
+        "scope": "Intel stake"
+      },
+      {
+        "fiscal_year": "2025",
+        "metric": "aum_usd_bn",
+        "value": 0.4,
+        "unit": "usd_bn",
+        "provisional": 0,
+        "source_tier": 1,
+        "source_url": "https://mpmaterials.com/news/mp-materials-announces-transformational-public-private-partnership-with-the-department-of-defense-to-accelerate-u-s-rare-earth-magnet-independence/",
+        "notes": "deployed capital: DoD $400M Series A convertible preferred in MP Materials (convertible at $30.03; warrants to ~15%), Jul 2025",
+        "scope": "MP Materials"
+      },
+      {
+        "fiscal_year": "YTD2026",
+        "metric": "aum_usd_bn",
+        "value": 126.3,
+        "unit": "usd_bn",
+        "provisional": 1,
+        "source_tier": 1,
+        "source_url": "https://www.energy.gov/lpo/portfolio",
+        "notes": "committed capital: DOE/EDF loans and loan guarantees issued as of 2026-06-30, plus $36.2bn conditional commitments (running program total, not a fiscal-year figure)",
+        "scope": "DOE loan programs"
+      }
+    ],
+    "track_record_note": "No return metric exists or is appropriate: the US government is a policy allocator, not a return-seeking fund, and publishes no portfolio performance. Rows above are deployed/committed program capital from Tier-1 sources (CRS, Intel IR, MP Materials IR, energy.gov), flagged as such in notes — they are not AUM in the SWF sense and must not be summed naively (the Intel stake was funded partly from the CHIPS totals).",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Korea Investment Corporation",
+    "background": "KIC is South Korea's sovereign wealth fund, established in 2005 to manage assets entrusted by the government and the Bank of Korea. From $1bn at founding, AUM reached $232.0bn at end-2025 with cumulative net investment gains of $122.4bn — now exceeding the entrusted principal. In July 2026 Seoul designated KIC to host a new ~KRW 20tn (~$13.6bn) strategic investment account for national industries.",
+    "focus": "A globally diversified portfolio: 78% traditional assets (global equities and fixed income) and 22% alternatives ($50.8bn — private equity, real estate, infrastructure, hedge funds), with growing attention to AI and technology exposure.",
+    "style": "Benchmark-driven institutional allocator: long-term, value-based and risk-managed, expressing views mainly through asset allocation and external specialist managers rather than concentrated direct deals; alternatives are the deliberate growth edge.",
+    "thesis": "KIC's stated purpose is to 'increase the nation's economic wealth and establish foundations for sustainable growth', on the beliefs that asset allocation determines returns, diversification improves risk-return, and market inefficiency rewards long-horizon value investing.",
+    "latest_investments_summary": "2025 delivered a 13.91% return, the strongest recent year, on top of a steady build-up of alternatives to 21.9% of assets. The forward-looking shift is policy-driven: from 2027 KIC will run a separate ~KRW 20tn strategic investment account supplying patient 'relay' capital to AI, semiconductors, nuclear, aerospace and biotech — pulling the fund from purely financial diversification toward national-strategic technology allocation.",
+    "strategy": "KIC states it invests for the long term, based on intrinsic value and thorough risk assessment, managing 'a diversified investment strategy across asset classes and regions' under the Prudent Investor Rule to maximize returns versus benchmark within predetermined guidelines, using external specialist managers where they add stable excess return.",
+    "strategy_source_url": "https://www.kic.kr/en/investment/philosophy-policy",
+    "sources": [
+      "https://www.kic.kr/en/investment/portfolio/management-status",
+      "https://www.kic.kr/annual-report/2025/en/",
+      "https://www.kic.kr/en/investment/philosophy-policy",
+      "https://www.upi.com/Top_News/World-News/2026/07/31/sovereign-wealth-fund-korea-investment-corporation-ai-semiconductors-strategic-investment/2841785543229/",
+      "https://en.sedaily.com/finance/2026/07/31/korea-to-launch-20-trillion-won-sovereign-wealth-fund-for"
+    ],
+    "track_record": [
+      {
+        "fiscal_year": "2021",
+        "metric": "reported_return_pct",
+        "value": 9.13,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 1,
+        "source_url": "https://www.kic.kr/en/investment/portfolio/management-status",
+        "notes": "total annual return as published by KIC"
+      },
+      {
+        "fiscal_year": "2022",
+        "metric": "reported_return_pct",
+        "value": -14.36,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 1,
+        "source_url": "https://www.kic.kr/en/investment/portfolio/management-status",
+        "notes": "total annual return as published by KIC"
+      },
+      {
+        "fiscal_year": "2023",
+        "metric": "reported_return_pct",
+        "value": 11.59,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 1,
+        "source_url": "https://www.kic.kr/en/investment/portfolio/management-status",
+        "notes": "total annual return as published by KIC"
+      },
+      {
+        "fiscal_year": "2024",
+        "metric": "reported_return_pct",
+        "value": 8.49,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 1,
+        "source_url": "https://www.kic.kr/en/investment/portfolio/management-status",
+        "notes": "total annual return as published by KIC"
+      },
+      {
+        "fiscal_year": "2025",
+        "metric": "reported_return_pct",
+        "value": 13.91,
+        "unit": "pct",
+        "provisional": 0,
+        "source_tier": 1,
+        "source_url": "https://www.kic.kr/en/investment/portfolio/management-status",
+        "notes": "total annual return per 2025 Annual Report; 10-year annualized 7.07%"
+      },
+      {
+        "fiscal_year": "2025",
+        "metric": "aum_usd_bn",
+        "value": 232.0,
+        "unit": "usd_bn",
+        "provisional": 0,
+        "source_tier": 1,
+        "source_url": "https://www.kic.kr/en/investment/portfolio/management-status",
+        "notes": "AUM as of end-December 2025; cumulative gains $122.4bn since 2005"
+      }
+    ],
+    "track_record_note": "Full FY2021-2025 annual returns published by KIC itself. No YTD2026 figure: KIC reports performance annually and had published no interim 2026 return as of 2026-08-09.",
+    "as_of": "2026-08-09"
+  }
+]

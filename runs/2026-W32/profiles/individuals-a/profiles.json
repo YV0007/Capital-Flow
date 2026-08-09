@@ -1,0 +1,143 @@
+[
+  {
+    "allocator": "Jeff Bezos",
+    "background": "Founder and executive chairman of Amazon; one of the world's wealthiest individuals. His personal capital runs through Bezos Expeditions, a Mercer Island, WA family office that has made ~93 investments over two decades, alongside major personal holdings Blue Origin and The Washington Post.",
+    "focus": "AI (models, chips, robotics, data), space, biotech/healthcare, fintech and real-estate platforms; mostly private companies from seed to growth.",
+    "style": "Long-horizon, founder-friendly minority checks via Bezos Expeditions (~4-8 deals/yr, 8 in 2025), occasionally leading rounds; increasingly operator-scale bets — he returned to a CEO seat at Prometheus, which he co-founded and partly funded.",
+    "thesis": "Long-term, 'Day 1' compounding: back missionary founders building durable technology platforms; recently, that AI applied to engineering and the physical world (manufacturing, aerospace) is the next frontier.",
+    "latest_investments_summary": "The last 12 months are a decisive AI concentration: led Toloka's $72M round (AI data), backed Unconventional AI's $475M seed (chips), Humans& (Dec 2025), and Yann LeCun's AMI Labs $1B seed (early 2026), plus first-time Generalist AI and a follow-on in Arrived. The signature move: co-founding Project Prometheus (Nov 2025), an AI-for-manufacturing/aerospace startup he partly funded and co-leads as co-CEO — $6.2B initial funding, then a $12B round at a $41B valuation (June 2026). He also seeded a $1B Coatue venture fund with Michael Dell's family office.",
+    "strategy": "Bezos Expeditions publishes no stated strategy — its site is a directory of holdings (Blue Origin, The Washington Post, the 10,000 Year Clock, philanthropy) and a venture portfolio spanning AI (Perplexity, Physical Intelligence, Contextual AI), healthcare, fintech, robotics and platforms, implying broad, stage-agnostic technology bets rather than a declared mandate.",
+    "strategy_source_url": "https://www.bezosexpeditions.com/",
+    "sources": [
+      "https://www.bezosexpeditions.com/",
+      "https://tracxn.com/d/venture-capital/bezos-expeditions/__F4KzBgaA8fszBNrQaZRoh1P_cxcLfVhlEVWnEavxzIs",
+      "https://familyofficehub.io/blog/the-jeff-bezos-family-office-bezos-expeditions/",
+      "https://www.datacenterdynamics.com/en/news/jeff-bezos-to-be-co-ceo-of-project-prometheus-an-ai-startup-with-62bn-in-funding/",
+      "https://www.cnbc.com/2026/06/11/project-prometheus-bezos-bajaj-live-updates.html",
+      "https://en.wikipedia.org/wiki/Prometheus_(company)"
+    ],
+    "track_record": [],
+    "track_record_note": "Personal vehicle (Bezos Expeditions) publishes no fund returns; no audited or press-reported vehicle-level return exists. Net-worth changes (largely Amazon stock) are not returns and are excluded.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Peter Thiel",
+    "background": "PayPal co-founder, Palantir chairman, first outside investor in Facebook. Personal capital runs through Thiel Capital (LA holding/investment vehicle) and Thiel Macro (his hedge fund); his famous Roth IRA compounded PayPal and Palantir stakes into billions. Founders Fund (~$17B) is his institutional firm and is profiled separately from his personal vehicles.",
+    "focus": "Contrarian technology bets: frontier tech, biotech (e.g. Alloy Therapeutics), crypto/fintech, defense-adjacent; via Thiel Macro, concentrated public equities and macro positions.",
+    "style": "Extremely concentrated, low-volume, conviction-driven; Thiel Capital made only ~1 new investment in 2025 and ~1 by March 2026 (first-time: STARK; follow-on: Alloy Therapeutics). Comfortable holding cash and being fully out of markets.",
+    "thesis": "Seek monopoly-like companies with 'secrets' — competition is for losers; back definite, contrarian visions of the future rather than diversified consensus.",
+    "latest_investments_summary": "The dominant recent signal is de-risking of AI-exposed public equities: Thiel Macro's Q3 2025 13F showed a full exit of its ~$100M Nvidia stake and a ~76% cut to Tesla, briefly rotating into Apple and Microsoft; by early 2026 the 13F was essentially blank — the fund had sold its remaining listed stocks and moved to the sidelines. Private-side activity through Thiel Capital stayed minimal (STARK, Alloy Therapeutics follow-on), consistent with a cautious, bubble-wary posture even as Founders Fund (institutional) stayed aggressive.",
+    "strategy": "Thiel's own articulation: businesses should escape competition and build monopoly — 'competition is for losers'; durable value comes from being so good at something unique that no one else offers a close substitute, and from backing definite plans about the future.",
+    "strategy_source_url": "https://www.wsj.com/articles/peter-thiel-competition-is-for-losers-1410535536",
+    "sources": [
+      "https://thielcapital.com/",
+      "https://tracxn.com/d/venture-capital/thiel-capital/__e_ESUUKeAHUpc37K6vkVXIhbiWDTzJ89n5C0HA0Lo6Y",
+      "https://www.bloomberg.com/news/articles/2025-11-17/peter-thiel-s-fund-sold-off-entire-nvidia-stake-in-third-quarter",
+      "https://www.fool.com/investing/how-to-invest/famous-investors/peter-thiel/",
+      "https://www.wsj.com/articles/peter-thiel-competition-is-for-losers-1410535536"
+    ],
+    "track_record": [],
+    "track_record_note": "Thiel Capital and Thiel Macro are private vehicles that publish no returns; 13F filings show holdings, not performance. Widely-cited Roth IRA figures are asset values, not stated fund returns, so no rows are included.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Reid Hoffman",
+    "background": "Co-founder of LinkedIn (sold to Microsoft for $26.2B), PayPal founding team, partner at Greylock, and co-founder of Inflection AI and Manas AI. One of Silicon Valley's most prolific personal angels (early Facebook, Airbnb), he invests personally alongside his Greylock partnership rather than through a named family office.",
+    "focus": "AI applications with network effects — consumer/enterprise platforms and now AI-for-biology; US-centric, seed through growth.",
+    "style": "Angel/co-founder hybrid: relatively small personal checks plus deep operational involvement — he increasingly builds the company rather than just funding it (Inflection, Manas AI), leveraging his network-effects playbook and blitzscaling doctrine.",
+    "thesis": "His stated current priority is 'investing in and building with AI to benefit humanity' — AI as amplifier of human agency ('superagency'), with the biggest returns where AI meets network effects and scale.",
+    "latest_investments_summary": "The last ~18 months center on Manas AI, the AI drug-discovery company he co-founded with Dr. Siddhartha Mukherjee (announced early 2025, raised over $50M across seed rounds, Hoffman as chairman). In June 2026 he left Microsoft's board explicitly to go 'founder mode' on Manas, pursuing 'Move 37'-style AI creativity in chemistry against cancer. The pattern: shifting from broad angel activity to concentrated, hands-on AI company formation.",
+    "strategy": "Per his own site: 'current priority is investing in and building with AI to benefit humanity' — he presents himself as 'Entrepreneur. Investor. Strategist.', co-founder of LinkedIn, Inflection and Manas AI and Greylock partner, emphasizing AI development directed at broad human benefit.",
+    "strategy_source_url": "https://www.reidhoffman.org/",
+    "sources": [
+      "https://www.reidhoffman.org/",
+      "https://techcrunch.com/2026/06/05/reid-hoffman-is-leaving-microsofts-board-to-go-founder-mode-with-startup-manus/",
+      "https://www.crunchbase.com/person/reid-hoffman",
+      "https://www.hustlefund.vc/post/reid-hoffman-investments-the-network-effects-master-who-built-linkedin-and-backed-facebook",
+      "https://en.wikipedia.org/wiki/Reid_Hoffman"
+    ],
+    "track_record": [],
+    "track_record_note": "Personal angel portfolio; no vehicle publishes returns. Greylock fund performance is not publicly disclosed and would belong to the firm, not Hoffman personally. No source states a personal-vehicle return, so none is recorded.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Marc Andreessen",
+    "background": "Netscape co-founder and co-founder/general partner of Andreessen Horowitz (a16z), now ~$90B+ AUM and among the world's largest venture firms. His personal angel track (with Ben Horowitz) predates a16z; today most of his capital deploys through the firm, with occasional direct personal checks.",
+    "focus": "Software and AI platforms; personal checks recently in AI simulation/analytics (Electric Twin, Macroscope) plus 'American dynamism'-adjacent themes; he also directs large personal sums to AI-policy political vehicles (Leading the Future), which are not investments.",
+    "style": "Personally low-volume (a handful of named direct deals; most recent: Electric Twin Series A, Sep 2025) — the real allocation engine is a16z, where he sets an aggressive, platform-scale, full-stack venture model.",
+    "thesis": "Techno-optimism: technological progress through free markets is the engine of human flourishing — 'technology is the glory of human ambition and achievement, the spearhead of progress' — so accelerate building rather than restrain it.",
+    "latest_investments_summary": "Personal direct activity in the last 12 months is thin and AI-flavored: an Electric Twin Series A participation (Sep 2025) and Macroscope, in productivity/simulation software. The larger personal-capital story is political-adjacent: heavy funding of the Leading the Future super-PAC to shape AI regulation (spending, not capital allocation, so excluded from events). Substantive dealflow continues through a16z rather than his own balance sheet.",
+    "strategy": "His authored Techno-Optimist Manifesto: markets plus technology drive abundance; society should deliberately accelerate innovation — pessimism and precaution are the enemy; 'technology is the glory of human ambition and achievement, the spearhead of progress.'",
+    "strategy_source_url": "https://a16z.com/the-techno-optimist-manifesto/",
+    "sources": [
+      "https://a16z.com/the-techno-optimist-manifesto/",
+      "https://pitchbook.com/profiles/investor/106030-63",
+      "https://tracxn.com/d/people/marc-andreessen/__hPqHRhNWnTbXod_q3osI0G_Koe3ATcwqwEea_SBl2zI",
+      "https://en.wikipedia.org/wiki/Andreessen_Horowitz"
+    ],
+    "track_record": [],
+    "track_record_note": "No personal vehicle publishes returns; a16z fund performance is confidential to LPs and belongs to the firm, not Andreessen personally. No source states a personal return, so none is recorded.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Sam Altman",
+    "background": "OpenAI CEO (holds no OpenAI equity); former Y Combinator president. His personal fortune (~$6.1B per 2026 estimates) is a venture portfolio held directly and via vehicles including Hydrazine Capital and Apollo Projects, anchored by Helion Energy, Stripe, Retro Biosciences and Oklo. May 2026 court filings gave a rare audited look at his holdings.",
+    "focus": "The physical substrate of the AI age: fusion (Helion), fission (Oklo), longevity biotech (Retro Biosciences), fintech (Stripe), brain-computer interfaces (Merge Labs, co-founded Aug 2025).",
+    "style": "Very concentrated, very early, personally enormous checks into moonshots he often chairs or co-founds (reported ~$375M into Helion's 2021 raise, ~$180M into Retro) — then held for a decade-plus; recently unwinding board roles (left Oklo chair Apr 2025, Helion board Mar 2026) to clear OpenAI conflict paths.",
+    "thesis": "Abundant intelligence requires abundant energy and compute: drive the cost of intelligence and energy toward zero and most other problems become solvable.",
+    "latest_investments_summary": "Recent moves consolidate the compute-energy-bio triangle around OpenAI: co-founded Merge Labs (brain-computer interface, Aug 2025); Retro Biosciences re-raised in May 2026 at $1.8B (his stake ~$258M per court filings, after a $5B figure circulated in late 2025); Helion remains his largest asset (stake estimates $1.6B-$4.1B) as OpenAI weighs a power supply deal; Oklo stake ~$364M after its 2024 SPAC listing via his AltC vehicle. Pattern: personal capital pre-positions the energy and infrastructure OpenAI will need, with governance separations following.",
+    "strategy": "From his essay 'Abundant Intelligence': build compute (and the energy behind it) at unprecedented scale so AI capacity never forces triage between curing disease, education, and other goals — 'If we are limited by compute, we'll have to choose which one to prioritize; no one wants to make that choice, so let's go build.'",
+    "strategy_source_url": "https://blog.samaltman.com/abundant-intelligence",
+    "sources": [
+      "https://blog.samaltman.com/abundant-intelligence",
+      "https://www.finance-monthly.com/sam-altman-net-worth/",
+      "https://www.startuphub.ai/ai-news/ai-figures/2026/figure-sam-altman-venture-portfolio-breakdown-2026-05-27",
+      "https://www.technologyreview.com/2023/03/08/1069523/sam-altman-investment-180-million-retro-biosciences-longevity-death/",
+      "https://www.aol.com/articles/sam-altmans-court-appearance-shines-224530000.html"
+    ],
+    "track_record": [],
+    "track_record_note": "Personal portfolio; no vehicle publishes returns. Court-disclosed stake values (May 2026) are asset marks, not returns, and net-worth estimates are excluded per methodology.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Eric Schmidt",
+    "background": "Former Google CEO/executive chairman (2001-2017). Personal capital runs through Hillspire, his family office, with philanthropy via Schmidt Sciences (with Wendy Schmidt; successor to Schmidt Futures programs). In March 2025 he became CEO and chairman of Relativity Space after taking a controlling interest. CNBC's inaugural Family Office 15 ranked Hillspire the most active US family office dealmaker of 2025.",
+    "focus": "Overwhelmingly AI (models, agents, AI-adjacent software) plus space infrastructure; US and European startups; growth of a science/deep-tech philanthropic arm in parallel.",
+    "style": "High-tempo venture checks through Hillspire (15 investments in 2025, mostly AI, e.g. Gradium, Reflection AI, Peek) combined with one massive operator-scale conviction bet: nearly $800M into Relativity Space, where he installed himself as CEO.",
+    "thesis": "AI is the defining technology wave and needs both talent and infrastructure; his Relativity bet extends this to space-based data centers — using orbit to serve AI compute demand that terrestrial power cannot.",
+    "latest_investments_summary": "The last 12 months show a two-track pattern: broad AI seed/venture spray via Hillspire (topping CNBC's 2025 family-office dealmaking ranking; investments include Kyutai spin-out Gradium and ex-DeepMind founded Reflection AI), and a concentrated ~$800M control bet on Relativity Space (first invested fall 2024, took over as CEO March 2025, ~$4B estimated valuation), pivoting the launch company toward orbital data centers for AI workloads.",
+    "strategy": "His site describes his focus as technology, AI, business and philanthropy — working to 'promote social good, support innovation, and coach the next generation of exceptional people to tackle the world's biggest challenges,' with current roles as CEO/executive chairman of Relativity Space and co-founder of Schmidt Sciences.",
+    "strategy_source_url": "https://ericschmidt.com/",
+    "sources": [
+      "https://ericschmidt.com/",
+      "https://www.cnbc.com/2026/02/12/inside-wealth-family-office-15.html",
+      "https://www.cbinsights.com/investor/hillspire-1",
+      "https://www.legistorm.com/person/bio/163330/Eric_Emerson_Schmidt.html",
+      "https://labusinessjournal.com/la500-2025/manufacturing-2025/la500-2025-eric-schmidt/"
+    ],
+    "track_record": [],
+    "track_record_note": "Hillspire is a private family office and publishes no returns; no source states a vehicle-level return. Deal counts and rankings (CNBC FO15) measure activity, not performance.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Masayoshi Son",
+    "background": "Founder, chairman and CEO of SoftBank Group. His personal wealth is overwhelmingly his large SoftBank Group stake (historically pledged in part as loan collateral), so his personal allocation is expressed mainly through the conviction bets he drives at SoftBank — profiled separately as a corporate — plus reported personal co-investment/profit-share arrangements in Vision Fund 2 (press-reported 17.25% profit participation with a personal guarantee).",
+    "focus": "Artificial superintelligence (ASI) as a single organizing bet: AI models (OpenAI), semiconductors (Arm, chip ventures), robotics/physical AI, and AI infrastructure (data centers, Stargate).",
+    "style": "Maximal concentration and personal leverage: 'all in' bets sized in the tens of billions, personal skin-in-the-game via profit-share structures, and multi-decade holding horizons; he says he was 'born to realize' ASI and will work another 10-15 years toward it.",
+    "thesis": "ASI - AI 10,000x smarter than humans - arrives within a decade; SoftBank should be 'the organiser of the industry in the artificial super intelligence era' across models, chips, robots and infrastructure, targeting NAV of JPY 1,000 trillion by 2042.",
+    "latest_investments_summary": "The past year is one bet repeated at growing scale: SoftBank completed its $22.5B additional investment in OpenAI on Dec 26, 2025 (after $7.5B via Vision Fund 2 in April 2025), taking aggregate OpenAI ownership to ~11% and total commitments cited at $60-65B. At the June 2026 AGM Son rejected AI-bubble talk as an 'insult,' delayed retirement, and framed a four-front ASI strategy (models, robotics, semiconductors, AI infrastructure). Personal-capital signal: his fortunes, collateralized stock, and reported VF2 profit-share tie him personally to the same trade.",
+    "strategy": "SoftBank's official announcement of the completed $22.5B OpenAI investment frames the group's strategy as concentrating capital on OpenAI and AI infrastructure toward Son's stated goal of realizing artificial superintelligence; at the 2026 AGM he stated the aim to be the industry's organizer in the ASI era.",
+    "strategy_source_url": "https://group.softbank/en/news/press/20251231",
+    "sources": [
+      "https://group.softbank/en/news/press/20251231",
+      "https://newsonjapan.com/article/149787.php",
+      "https://www.japantimes.co.jp/commentary/2026/04/23/japan/softbank-all-in-on-openai/",
+      "https://www.bloomberg.com/news/articles/2026-05-19/masayoshi-son-s-60-billion-bet-on-openai-raises-red-flags",
+      "https://www.taipeitimes.com/News/biz/archives/2026/06/25/2003859680",
+      "https://eu.36kr.com/en/p/3702617641972100"
+    ],
+    "track_record": [],
+    "track_record_note": "No personal vehicle publishes returns. SoftBank Group and Vision Fund performance belong to the corporation (profiled separately), not Son personally; his 17.25% VF2 profit-share is press-reported structure, not a stated return. Net-worth changes excluded per methodology.",
+    "as_of": "2026-08-09"
+  }
+]

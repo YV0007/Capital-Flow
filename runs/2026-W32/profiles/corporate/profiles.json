@@ -1,0 +1,177 @@
+[
+  {
+    "allocator": "NVIDIA",
+    "background": "NVIDIA is the dominant designer of AI accelerator chips and the world's most valuable semiconductor company. Its datacenter GPU franchise has generated enormous cash flow, which it now recycles into the AI ecosystem — by 2026 it had become the single largest corporate equity investor in AI, with more than $40B committed in 2026 alone.",
+    "focus": "Equity stakes in frontier AI labs (OpenAI, Anthropic), neoclouds and datacenter operators (IREN), supply-chain partners (Intel, Corning, Nokia), plus roughly two dozen private AI startup rounds.",
+    "style": "Balance-sheet strategic investing tied to compute deployment: multibillion-dollar anchor checks that accompany purchases of NVIDIA systems, alongside smaller venture participations. Concentrated — OpenAI and Anthropic alone absorbed ~$40B.",
+    "thesis": "Jensen Huang frames investment and infrastructure as one motion: 'This investment and infrastructure partnership mark the next leap forward — deploying 10 gigawatts to power the next era of intelligence.' Investing expands the installed base and demand for NVIDIA's platform.",
+    "latest_investments_summary": "Sep 2025: up to $100B OpenAI framework tied to 10GW of NVIDIA systems (finalized at ~$30B as part of OpenAI's 2026 round) and a $5B stake in Intel. Nov 2025: roughly $10B into Anthropic alongside Microsoft. 2026: seven multibillion-dollar public-company deals including up to $3.2B in Corning and ~$2.1B in IREN. In March 2026 Huang signaled the OpenAI/Anthropic checks would likely be its last major ones ahead of expected IPOs.",
+    "strategy": "NVIDIA's announced OpenAI partnership commits it to deploy at least 10 gigawatts of NVIDIA systems for OpenAI's next-generation AI infrastructure, with NVIDIA intending to invest up to $100 billion progressively as each gigawatt is deployed — the first gigawatt on the Vera Rubin platform in H2 2026.",
+    "strategy_source_url": "https://nvidianews.nvidia.com/news/openai-and-nvidia-announce-strategic-partnership-to-deploy-10gw-of-nvidia-systems",
+    "sources": [
+      "https://nvidianews.nvidia.com/news/openai-and-nvidia-announce-strategic-partnership-to-deploy-10gw-of-nvidia-systems",
+      "https://www.cnbc.com/amp/2026/05/09/nvidia-embraces-ai-investor-topping-40-billion-in-equity-bets-2026.html",
+      "https://www.cnbc.com/2025/09/22/nvidia-openai-data-center.html",
+      "https://www.pymnts.com/artificial-intelligence-2/2026/nvidia-signals-final-investments-in-openai-and-anthropic/"
+    ],
+    "track_record": [
+      {"fiscal_year": "2021", "metric": "stock_total_return_pct", "value": 125.5, "unit": "pct", "provisional": 0, "source_tier": 3, "source_url": "https://chartrow.com/quote/nvda/returns", "notes": "calendar-year total return incl. dividends (ChartRow)"},
+      {"fiscal_year": "2022", "metric": "stock_total_return_pct", "value": -50.3, "unit": "pct", "provisional": 0, "source_tier": 3, "source_url": "https://chartrow.com/quote/nvda/returns", "notes": "calendar-year total return incl. dividends (ChartRow)"},
+      {"fiscal_year": "2023", "metric": "stock_total_return_pct", "value": 239.0, "unit": "pct", "provisional": 0, "source_tier": 3, "source_url": "https://chartrow.com/quote/nvda/returns", "notes": "calendar-year total return incl. dividends (ChartRow)"},
+      {"fiscal_year": "2024", "metric": "stock_total_return_pct", "value": 171.2, "unit": "pct", "provisional": 0, "source_tier": 3, "source_url": "https://chartrow.com/quote/nvda/returns", "notes": "calendar-year total return incl. dividends (ChartRow)"},
+      {"fiscal_year": "2025", "metric": "stock_total_return_pct", "value": 38.9, "unit": "pct", "provisional": 1, "source_tier": 3, "source_url": "https://chartrow.com/quote/nvda/returns", "notes": "calendar-year total return incl. dividends (ChartRow); not from an audited report"},
+      {"fiscal_year": "YTD2026", "metric": "stock_total_return_pct", "value": 20.2, "unit": "pct", "provisional": 1, "source_tier": 3, "source_url": "https://chartrow.com/quote/nvda/returns", "notes": "total return YTD through 2026-08-07 (ChartRow)"}
+    ],
+    "track_record_note": "",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Meta",
+    "background": "Meta Platforms operates Facebook, Instagram and WhatsApp, funding one of the largest AI infrastructure programs in history from its advertising cash flow. Capex was $72.2B in 2025 and is guided to $125–145B for 2026; Zuckerberg has pledged more than $600B of US investment by 2028.",
+    "focus": "Owned AI datacenters (multi-gigawatt campuses such as Hyperion in Louisiana, scalable to 5GW, and Prometheus in Ohio), superintelligence R&D and talent, plus rare large strategic stakes (Scale AI).",
+    "style": "Predominantly on-balance-sheet capex rather than equity stakes, increasingly paired with novel off-balance-sheet financing — a $27B joint venture with Blue Owl Capital funds Hyperion. When it does buy stakes, they are large and talent-driven (the $14.3B Scale AI deal, June 2025).",
+    "thesis": "Zuckerberg's stated goal is 'personal superintelligence that helps you achieve your goals,' delivered to billions of people through Meta's platforms — and he argues Meta uniquely has 'the resources and the expertise to build the massive infrastructure required.'",
+    "latest_investments_summary": "Raised 2026 capex guidance twice — from $115–135B to $125–145B by April 2026 — citing component and datacenter costs. Closed the ~$27B Blue Owl JV for Hyperion (Oct 2025), continued the multi-state datacenter buildout, and digested the $14.3B, 49% Scale AI stake. The pattern: buy compute capacity and elite researchers, not portfolios of startups.",
+    "strategy": "Meta says it will build 'personal superintelligence for everyone,' bringing it to billions through its products; Zuckerberg writes that Meta has the resources and expertise to build the massive infrastructure required and intends to invest accordingly.",
+    "strategy_source_url": "https://www.meta.com/superintelligence/",
+    "sources": [
+      "https://www.meta.com/superintelligence/",
+      "https://fortune.com/2026/04/29/meta-zuckerberg-145-billion-ai-spending-roi/",
+      "https://futurumgroup.com/insights/ai-capex-2026-the-690b-infrastructure-sprint/",
+      "https://valueaddvc.com/blog/meta-145b-ai-capex-2026-why-zuckerberg-raised-guidance-twice"
+    ],
+    "track_record": [
+      {"fiscal_year": "2021", "metric": "stock_total_return_pct", "value": 23.1, "unit": "pct", "provisional": 0, "source_tier": 3, "source_url": "https://chartrow.com/quote/meta/returns", "notes": "calendar-year total return incl. dividends (ChartRow)"},
+      {"fiscal_year": "2022", "metric": "stock_total_return_pct", "value": -64.2, "unit": "pct", "provisional": 0, "source_tier": 3, "source_url": "https://chartrow.com/quote/meta/returns", "notes": "calendar-year total return incl. dividends (ChartRow)"},
+      {"fiscal_year": "2023", "metric": "stock_total_return_pct", "value": 194.1, "unit": "pct", "provisional": 0, "source_tier": 3, "source_url": "https://chartrow.com/quote/meta/returns", "notes": "calendar-year total return incl. dividends (ChartRow)"},
+      {"fiscal_year": "2024", "metric": "stock_total_return_pct", "value": 66.0, "unit": "pct", "provisional": 0, "source_tier": 3, "source_url": "https://chartrow.com/quote/meta/returns", "notes": "calendar-year total return incl. dividends (ChartRow)"},
+      {"fiscal_year": "2025", "metric": "stock_total_return_pct", "value": 13.1, "unit": "pct", "provisional": 1, "source_tier": 3, "source_url": "https://chartrow.com/quote/meta/returns", "notes": "calendar-year total return incl. dividends (ChartRow); not from an audited report"},
+      {"fiscal_year": "YTD2026", "metric": "stock_total_return_pct", "value": -10.3, "unit": "pct", "provisional": 1, "source_tier": 3, "source_url": "https://chartrow.com/quote/meta/returns", "notes": "total return YTD through 2026-08-07 (ChartRow)"}
+    ],
+    "track_record_note": "",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Microsoft",
+    "background": "Microsoft is one of the world's largest companies, spanning Azure cloud, enterprise software and gaming. It is the largest corporate holder of a frontier AI lab: its cumulative OpenAI investment converted into a stake valued at ~$135B in the October 2025 recapitalization, and it runs one of the biggest AI capex programs on earth (~$175–190B planned for calendar 2026).",
+    "focus": "Hyperscale AI datacenters (Fairwater-class sites), frontier-lab equity (OpenAI ~27%; Anthropic $5B), and Azure capacity that AI labs contract against ($250B incremental OpenAI commitment; $30B Anthropic commitment).",
+    "style": "Anchor strategic stakes structured around commercial cloud commitments rather than venture-style portfolios; capital deployed at extreme scale through its own balance sheet and datacenter buildout.",
+    "thesis": "Microsoft frames its lab investments as securing frontier-model access for Azure: after the OpenAI recapitalization both companies can 'independently continue advancing innovation and growth,' while Microsoft retains exclusive frontier IP rights and a diversified position across labs.",
+    "latest_investments_summary": "Oct 2025: OpenAI restructuring left Microsoft with ~27% (as-converted, ~$135B) and OpenAI contracted an incremental $250B of Azure. Nov 2025: invested $5B in Anthropic (alongside NVIDIA's ~$10B) as Anthropic agreed to buy $30B of Azure. FY2026 results (Jul 2026) booked a $3.2B gain on Anthropic and a ~$600M markdown on OpenAI; calendar-2026 capex plans ~$175–190B. The pattern: own equity in the labs, and monetize their training demand.",
+    "strategy": "Microsoft describes the next chapter of the OpenAI partnership as holding ~27% of OpenAI (valued ~$135B) while OpenAI purchases an incremental $250B of Azure services; Microsoft retains frontier-model and IP access and continues building AI infrastructure at global scale.",
+    "strategy_source_url": "https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/",
+    "sources": [
+      "https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/",
+      "https://techcrunch.com/2026/07/29/microsoft-logs-3-2b-from-anthropic-investment-but-openai-was-a-mixed-bag/",
+      "https://valueaddvc.com/blog/microsoft-190b-ai-capex-in-2026-azures-37b-run-rate-and-the-250b-openai-deal",
+      "https://www.globaldatacenterhub.com/p/microsoft-q3-fy2026-the-190b-capex"
+    ],
+    "track_record": [
+      {"fiscal_year": "2021", "metric": "stock_total_return_pct", "value": 52.5, "unit": "pct", "provisional": 0, "source_tier": 3, "source_url": "https://chartrow.com/quote/msft/returns", "notes": "calendar-year total return incl. dividends (ChartRow)"},
+      {"fiscal_year": "2022", "metric": "stock_total_return_pct", "value": -28.0, "unit": "pct", "provisional": 0, "source_tier": 3, "source_url": "https://chartrow.com/quote/msft/returns", "notes": "calendar-year total return incl. dividends (ChartRow)"},
+      {"fiscal_year": "2023", "metric": "stock_total_return_pct", "value": 58.2, "unit": "pct", "provisional": 0, "source_tier": 3, "source_url": "https://chartrow.com/quote/msft/returns", "notes": "calendar-year total return incl. dividends (ChartRow)"},
+      {"fiscal_year": "2024", "metric": "stock_total_return_pct", "value": 12.9, "unit": "pct", "provisional": 0, "source_tier": 3, "source_url": "https://chartrow.com/quote/msft/returns", "notes": "calendar-year total return incl. dividends (ChartRow)"},
+      {"fiscal_year": "2025", "metric": "stock_total_return_pct", "value": 15.6, "unit": "pct", "provisional": 1, "source_tier": 3, "source_url": "https://chartrow.com/quote/msft/returns", "notes": "calendar-year total return incl. dividends (ChartRow); not from an audited report"},
+      {"fiscal_year": "YTD2026", "metric": "stock_total_return_pct", "value": 3.8, "unit": "pct", "provisional": 1, "source_tier": 3, "source_url": "https://chartrow.com/quote/msft/returns", "notes": "total return YTD through 2026-08-07 (ChartRow)"}
+    ],
+    "track_record_note": "",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Amazon",
+    "background": "Amazon runs the world's largest cloud business (AWS) alongside its e-commerce empire, and now operates the largest capital-expenditure budget of any company: 2026 capex guidance was raised to roughly $220B (from ~$200B) in July 2026, overwhelmingly for AI infrastructure.",
+    "focus": "AI datacenters, networking and custom silicon (Trainium), power capacity, and a concentrated strategic stake in Anthropic — its primary frontier-lab bet.",
+    "style": "Vertical integration: own datacenters plus in-house chips rather than merchant GPUs where possible; equity deployed in large milestone-structured tranches tied to AWS commercial commitments rather than broad venture portfolios.",
+    "thesis": "Amazon frames AI as a generational opportunity that justifies building capacity ahead of demand — management said in July 2026 that capacity won't catch up with demand through 2027 — with Trainium economics as the differentiator.",
+    "latest_investments_summary": "Apr 2026: agreed to invest up to $25B more in Anthropic ($5B immediately, up to $20B tied to commercial milestones) on top of $8B already deployed; in exchange Anthropic committed over $100B of AWS spend across a decade and up to 5GW of Trainium capacity. Project Rainier is live with 500,000+ Trainium2 chips training Claude. Jul 2026: raised 2026 capex to ~$220B citing memory costs. The pattern: fuse the lab stake to captive demand for AWS silicon.",
+    "strategy": "Amazon's announcement of the expanded Anthropic collaboration describes a $5B investment with up to $20B more tied to milestones, Anthropic committing $100B to AWS over ten years, and up to 5GW of Trainium capacity — deepening AWS as the primary training infrastructure for Claude.",
+    "strategy_source_url": "https://www.aboutamazon.com/news/company-news/amazon-invests-additional-5-billion-anthropic-ai",
+    "sources": [
+      "https://www.aboutamazon.com/news/company-news/amazon-invests-additional-5-billion-anthropic-ai",
+      "https://www.cnbc.com/2026/04/20/amazon-invest-up-to-25-billion-in-anthropic-part-of-ai-infrastructure.html",
+      "https://www.cnbc.com/2026/07/30/amazon-amzn-q2-earnings-report-2026.html",
+      "https://mlq.ai/news/amazon-raises-2026-ai-capex-to-220b-says-capacity-wont-meet-demand-through-2027/"
+    ],
+    "track_record": [
+      {"fiscal_year": "2021", "metric": "stock_total_return_pct", "value": 2.4, "unit": "pct", "provisional": 0, "source_tier": 3, "source_url": "https://chartrow.com/quote/amzn/returns", "notes": "calendar-year total return incl. dividends (ChartRow)"},
+      {"fiscal_year": "2022", "metric": "stock_total_return_pct", "value": -49.6, "unit": "pct", "provisional": 0, "source_tier": 3, "source_url": "https://chartrow.com/quote/amzn/returns", "notes": "calendar-year total return incl. dividends (ChartRow)"},
+      {"fiscal_year": "2023", "metric": "stock_total_return_pct", "value": 80.9, "unit": "pct", "provisional": 0, "source_tier": 3, "source_url": "https://chartrow.com/quote/amzn/returns", "notes": "calendar-year total return incl. dividends (ChartRow)"},
+      {"fiscal_year": "2024", "metric": "stock_total_return_pct", "value": 44.4, "unit": "pct", "provisional": 0, "source_tier": 3, "source_url": "https://chartrow.com/quote/amzn/returns", "notes": "calendar-year total return incl. dividends (ChartRow)"},
+      {"fiscal_year": "2025", "metric": "stock_total_return_pct", "value": 5.2, "unit": "pct", "provisional": 1, "source_tier": 3, "source_url": "https://chartrow.com/quote/amzn/returns", "notes": "calendar-year total return incl. dividends (ChartRow); not from an audited report"},
+      {"fiscal_year": "YTD2026", "metric": "stock_total_return_pct", "value": 18.9, "unit": "pct", "provisional": 1, "source_tier": 3, "source_url": "https://chartrow.com/quote/amzn/returns", "notes": "total return YTD through 2026-08-07 (ChartRow)"}
+    ],
+    "track_record_note": "",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Alphabet",
+    "background": "Alphabet (Google) funds a full-stack AI program — Gemini models, DeepMind research, custom TPU silicon and hyperscale datacenters — from its search and ads cash machine. Its 2026 capex guidance was raised to $195–205B in July 2026, and Q2 2026 was its first negative-free-cash-flow quarter since the 2004 IPO.",
+    "focus": "TPU and datacenter buildout across US states, a large minority stake in Anthropic (plus a legacy SpaceX holding), power/energy deals, and externally sold TPU capacity.",
+    "style": "Full-stack self-reliance: designs its own chips and builds its own sites, while making very large, compute-linked minority investments in labs; also acts as financing guarantor for partner datacenters (e.g. an Anthropic site in Louisiana).",
+    "thesis": "Google frames its capital program as investing in American infrastructure and AI leadership — multi-billion-dollar state-level commitments (e.g. $9B Virginia, $7B Iowa, $4B Arkansas) to expand cloud and AI capacity for the Gemini era.",
+    "latest_investments_summary": "Apr 2026: invested a further ~$40B in Anthropic, lifting its post-money valuation to ~$350B and locking in 5GW of dedicated TPU compute (following the Oct 2025 deal for up to 1M TPUs). Jul 2026: raised 2026 capex guidance to $195–205B; Q2 capex was $44.9B, and ~$98B of equity-securities gains came mainly from SpaceX and Anthropic. Began selling TPUs to external datacenters — turning its silicon from cost center into product.",
+    "strategy": "Google's 'Investing in America 2025' program describes multi-billion-dollar cloud and AI infrastructure investments across US states — including $9B in Virginia through 2026, $7B in Iowa and $4B in Arkansas — plus workforce and energy-efficiency commitments supporting its AI buildout.",
+    "strategy_source_url": "https://blog.google/company-news/inside-google/company-announcements/investing-in-america-2025/",
+    "sources": [
+      "https://blog.google/company-news/inside-google/company-announcements/investing-in-america-2025/",
+      "https://www.cnbc.com/2026/07/22/google-earnings-q2-goog-live-updates.html",
+      "https://finance.yahoo.com/markets/stocks/articles/alphabet-us-40b-anthropic-bet-190322558.html",
+      "https://www.tomshardware.com/tech-industry/big-tech/alphabet-goes-cash-flow-negative-for-the-first-time-as-ai-capex-doubles-to-44-9-billion-in-a-single-quarter"
+    ],
+    "track_record": [
+      {"fiscal_year": "2021", "metric": "stock_total_return_pct", "value": 65.3, "unit": "pct", "provisional": 0, "source_tier": 3, "source_url": "https://chartrow.com/quote/googl/returns", "notes": "calendar-year total return incl. dividends (ChartRow)"},
+      {"fiscal_year": "2022", "metric": "stock_total_return_pct", "value": -39.1, "unit": "pct", "provisional": 0, "source_tier": 3, "source_url": "https://chartrow.com/quote/googl/returns", "notes": "calendar-year total return incl. dividends (ChartRow)"},
+      {"fiscal_year": "2023", "metric": "stock_total_return_pct", "value": 58.3, "unit": "pct", "provisional": 0, "source_tier": 3, "source_url": "https://chartrow.com/quote/googl/returns", "notes": "calendar-year total return incl. dividends (ChartRow)"},
+      {"fiscal_year": "2024", "metric": "stock_total_return_pct", "value": 36.0, "unit": "pct", "provisional": 0, "source_tier": 3, "source_url": "https://chartrow.com/quote/googl/returns", "notes": "calendar-year total return incl. dividends (ChartRow)"},
+      {"fiscal_year": "2025", "metric": "stock_total_return_pct", "value": 66.1, "unit": "pct", "provisional": 1, "source_tier": 3, "source_url": "https://chartrow.com/quote/googl/returns", "notes": "calendar-year total return incl. dividends (ChartRow); not from an audited report"},
+      {"fiscal_year": "YTD2026", "metric": "stock_total_return_pct", "value": 13.3, "unit": "pct", "provisional": 1, "source_tier": 3, "source_url": "https://chartrow.com/quote/googl/returns", "notes": "total return YTD through 2026-08-07 (ChartRow)"}
+    ],
+    "track_record_note": "",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Oracle",
+    "background": "Oracle, the decades-old enterprise database company, has remade itself into an AI-training cloud (OCI) and a core Stargate partner with OpenAI and SoftBank. Its RPO backlog exploded 359% to $455B after signing multibillion-dollar AI compute contracts in 2025 — anchored by a ~$300B, ~5-year OpenAI commitment.",
+    "focus": "AI datacenter capacity for frontier-model training: Stargate campuses (Abilene TX flagship, plus sites in Michigan, Wisconsin, Wyoming, Pennsylvania and Texas) and the GPU fleets inside them.",
+    "style": "Capex-led and debt-financed, building ahead of contracted revenue with concentrated counterparty exposure to OpenAI: ~$50B FY2026 capex, ~$30B of debt and equity raised in early 2026, and an estimated ~$135B of AI hardware to deploy over the contract term.",
+    "thesis": "Safra Catz: four multibillion-dollar contracts drove RPO to $455B, and Oracle projects OCI revenue growing from $18B in FY2026 to $144B within five years — most of it already booked in RPO. The bet is that contracted AI training demand converts into durable cloud revenue.",
+    "latest_investments_summary": "Sep 2025: OpenAI signed a ~$300B five-year compute contract, part of a plan for up to 10GW of Stargate capacity (4.5GW co-developed with OpenAI). Through 2026: Abilene live at 1.2GW, multiple US sites under construction, ~$50B FY2026 capex, $30B raised in debt/equity, and ~30,000 job cuts to fund the pivot. The market has balked at the financing mismatch — the stock is down ~24% YTD 2026.",
+    "strategy": "Oracle's FY2026 Q1 release states RPO grew 359% to $455B on four multibillion-dollar AI contracts, with OCI revenue projected to grow 77% to $18B in FY2026 and to $144B over the following four years, most of it already booked — the company is building datacenter capacity against that backlog.",
+    "strategy_source_url": "https://www.oracle.com/news/announcement/q1fy26-earnings-release-2025-09-09/",
+    "sources": [
+      "https://www.oracle.com/news/announcement/q1fy26-earnings-release-2025-09-09/",
+      "https://www.datacenterfrontier.com/machine-learning/article/55316610/openai-and-oracles-300b-stargate-deal-building-ais-national-scale-infrastructure",
+      "https://intuitionlabs.ai/articles/oracle-openai-300b-deal-analysis",
+      "https://siliconangle.com/2025/09/10/openai-oracle-strike-300b-cloud-computing-deal-power-ai/"
+    ],
+    "track_record": [
+      {"fiscal_year": "2021", "metric": "stock_total_return_pct", "value": 36.9, "unit": "pct", "provisional": 0, "source_tier": 3, "source_url": "https://chartrow.com/quote/orcl/returns", "notes": "calendar-year total return incl. dividends (ChartRow)"},
+      {"fiscal_year": "2022", "metric": "stock_total_return_pct", "value": -4.7, "unit": "pct", "provisional": 0, "source_tier": 3, "source_url": "https://chartrow.com/quote/orcl/returns", "notes": "calendar-year total return incl. dividends (ChartRow)"},
+      {"fiscal_year": "2023", "metric": "stock_total_return_pct", "value": 30.9, "unit": "pct", "provisional": 0, "source_tier": 3, "source_url": "https://chartrow.com/quote/orcl/returns", "notes": "calendar-year total return incl. dividends (ChartRow)"},
+      {"fiscal_year": "2024", "metric": "stock_total_return_pct", "value": 60.0, "unit": "pct", "provisional": 0, "source_tier": 3, "source_url": "https://chartrow.com/quote/orcl/returns", "notes": "calendar-year total return incl. dividends (ChartRow)"},
+      {"fiscal_year": "2025", "metric": "stock_total_return_pct", "value": 18.1, "unit": "pct", "provisional": 1, "source_tier": 3, "source_url": "https://chartrow.com/quote/orcl/returns", "notes": "calendar-year total return incl. dividends (ChartRow); not from an audited report"},
+      {"fiscal_year": "YTD2026", "metric": "stock_total_return_pct", "value": -24.1, "unit": "pct", "provisional": 1, "source_tier": 3, "source_url": "https://chartrow.com/quote/orcl/returns", "notes": "total return YTD through 2026-08-07 (ChartRow)"}
+    ],
+    "track_record_note": "",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Anthropic",
+    "background": "Anthropic is the AI safety company behind the Claude models, founded in 2021 and valued at ~$350B after Google's April 2026 investment. Tracked here as a corporate allocator: historically capital-light and cloud-dependent, it began deploying its own capital into physical infrastructure in late 2025.",
+    "focus": "Compute infrastructure: custom-built US datacenters (with GPU-cloud partner Fluidstack), plus enormous multi-year compute commitments across three clouds and three chip platforms — AWS/Trainium, Google/TPU, and Azure/NVIDIA.",
+    "style": "Deliberately multi-vendor and commitment-driven: rather than equity investing, it commits tens of billions in purchase obligations tied to its investors' platforms, and now direct capex via partner-built dedicated sites.",
+    "thesis": "Anthropic says the scale of its infrastructure investment is necessary to meet growing demand for Claude from hundreds of thousands of businesses while keeping its research at the frontier, and frames the US buildout as supporting American AI leadership.",
+    "latest_investments_summary": "Nov 2025: announced a $50B American AI infrastructure program with Fluidstack, starting with custom datacenters in Texas and New York (online through 2026, ~800 permanent jobs), and agreed to purchase $30B of Azure compute alongside the Microsoft/NVIDIA investments. Oct 2025: expanded Google Cloud deal for up to 1M TPUs. Apr 2026: committed $100B of AWS spend over a decade with up to 5GW of Trainium. Jul 2026: Nexus Data Centers in talks for $15B financing for an Anthropic campus in Texas, with Google as a guarantor structure emerging.",
+    "strategy": "Anthropic's announcement describes a $50B investment in American computing infrastructure — custom datacenters built with Fluidstack in Texas and New York with more sites to come — sized to meet demand for Claude and to keep its frontier research capability, aligned with US AI-leadership goals.",
+    "strategy_source_url": "https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure",
+    "sources": [
+      "https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure",
+      "https://www.cnbc.com/2025/11/12/anthropic-ai-data-centers-texas-new-york.html",
+      "https://www.cnbc.com/2026/07/30/nexus-data-centers-in-advanced-talks-to-secure-15b-for-google-backed-anthropic-data-center.html",
+      "https://www.aboutamazon.com/news/company-news/amazon-invests-additional-5-billion-anthropic-ai"
+    ],
+    "track_record": [],
+    "track_record_note": "Private company: no listed stock, so no stock_total_return_pct series exists, and Anthropic does not publicly disclose fund-style returns or financial statements. Reported valuation marks (e.g. ~$183B in Sep 2025 to ~$350B in Apr 2026 per press reports) are financing valuations, not returns, and are therefore not recorded as track-record rows.",
+    "as_of": "2026-08-09"
+  }
+]

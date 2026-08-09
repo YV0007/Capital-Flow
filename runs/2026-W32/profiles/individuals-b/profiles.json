@@ -1,0 +1,159 @@
+[
+  {
+    "allocator": "Garry Tan",
+    "background": "President & CEO of Y Combinator since January 2023; previously co-founded Initialized Capital and blog platform Posterous (YC S08, acquired by Twitter), and was an early designer at Palantir. This profile covers his PERSONAL angel capital, distinct from YC's institutional programs. Trackers credit him with roughly 50 personal angel investments; YC's own page says companies he has worked with are worth a combined $226B.",
+    "focus": "Earliest-stage software startups — AI, developer tools, consumer, crypto — almost always at pre-seed/seed.",
+    "style": "Small personal checks made on founder conviction before obvious signals; famously wrote a $150K angel check into Coinbase in 2012. Follower/supporter, not a lead investor, since taking the YC job.",
+    "thesis": "The highest returns come from being the earliest believer — backing exceptional founders when nothing is proven yet; he cautions founders that comparing early-round valuations is 'like comparing the color of shoes at the beginning of a marathon.'",
+    "latest_investments_summary": "Personal activity is now occasional and small, since most of his deal flow runs through YC. Trackers list recent seed participations such as Modusalliance (Apr 2026) and Monaco (May 2026) — a pattern of small AI/productivity-software seed checks adjacent to the YC ecosystem rather than a distinct personal program.",
+    "strategy": "His official YC profile frames his approach as hands-on, design-and-product-led early-stage investing: a YC partner turned VC who backed 40+ unicorns (Coinbase, Instacart, DoorDash, Flexport, Webflow) by working with founders from the earliest possible stage.",
+    "strategy_source_url": "https://www.ycombinator.com/people/garry-tan",
+    "sources": [
+      "https://www.ycombinator.com/people/garry-tan",
+      "https://tracxn.com/d/people/garry-tan/__I9DkLZLn8c86T6xWbeydp7ObaYpbtmE9h08Tmr7TnBw",
+      "https://pitchbook.com/profiles/investor/105890-77",
+      "https://www.hustlefund.vc/post/angel-squad-garry-tan-investments-what-y-combinators-president-teaches-about-betting-on-the-earliest-believers"
+    ],
+    "track_record": [],
+    "track_record_note": "Individual angel; no published returns for his personal portfolio, and Initialized Capital fund returns are private. Net-worth estimates exist but are not returns and are excluded.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Brian Singerman",
+    "background": "Former Founders Fund general partner (2008–2024, partner emeritus from Dec 2024) who led bets on SpaceX-era Founders Fund winners including Stemcentrx, Affirm and Oscar Health. In July 2025 he and Quiet Capital co-founder Lee Linden launched GPx, a new ~$500M+ vehicle; press reports Peter Thiel is expected to supply a large share (potentially up to half) of the capital.",
+    "focus": "US venture: pre-seed/seed exposure via emerging managers, plus direct later-stage (mainly Series B) rounds in those managers' breakout companies.",
+    "style": "Hybrid model: ~20% of the fund invested as an LP into emerging pre-seed/seed VC funds; ~80% reserved to co-lead later rounds alongside those managers so they can exercise pro-rata or lead without ad-hoc SPVs. Concentrated, founder-quality-driven picking.",
+    "thesis": "In his own words, venture is 'put the most money into the best companies possible at the best price possible,' with '98%-plus' of any decision based on the strength of the founder; GPx applies that same picking framework to general partners — 'Is there some chance this person could have beaten me in my prime?'",
+    "latest_investments_summary": "The dominant 2025 move is the GPx launch itself (targeting $500M+, reported first close by Oct 2025) — a bet that the next generation of seed managers, not incumbent mega-funds, will source the best companies, with GPx converting that access into concentrated Series B leads.",
+    "strategy": "Singerman (Sourcery interview): founder strength drives essentially the whole decision; no portfolio-management dogma ('reserve calculations, and ownership percentages, and all that nonsense'); structural optimism — 'I've actually made a lot of money at betting against the end of the world.'",
+    "strategy_source_url": "https://www.sourcery.vc/p/breaking-if-spacex-didnt-work-founders",
+    "sources": [
+      "https://techcrunch.com/2025/07/14/brian-singermans-new-fund-has-a-twist-and-peter-thiel-as-a-big-backer/",
+      "https://www.sourcery.vc/p/breaking-if-spacex-didnt-work-founders",
+      "https://www.venturecapitaljournal.com/ex-founders-fund-gp-brian-singerman-and-quiet-capital-co-founder-lee-linden-raising-new-fund/",
+      "https://vcwire.tech/2025/07/15/brian-singerman-and-lee-linden-raising-500m-for-first-gpx-fund/",
+      "https://en.wikipedia.org/wiki/Brian_Singerman"
+    ],
+    "track_record": [],
+    "track_record_note": "Neither his Founders Fund vintages nor first-time fund GPx publish returns; GPx is a 2025 first fund with no realized record. No public IRR/TVPI figures found.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Vinod Khosla",
+    "background": "Co-founder of Sun Microsystems and former Kleiner Perkins GP who founded Khosla Ventures in 2004 — initially deploying largely his own capital before taking outside LPs. Ranked No. 1 on the 2026 Forbes Midas List; KV was the first venture firm into OpenAI ($50M initial commitment, 2019). His personal balance sheet and the firm are deeply intertwined, with the personal angel portfolio (~15 companies on trackers) small relative to KV.",
+    "focus": "High-risk 'science experiment' deep tech: AI, fusion/nuclear, robotics, healthcare, climate and infrastructure reinvention.",
+    "style": "Bold, contrarian, failure-tolerant concentrated bets with long horizons; hands-on 'venture assistance' to founders; willing to fund pre-commercial science others won't.",
+    "thesis": "Technology can 'reinvent societal infrastructure' and make expertise — doctors, tutors, professional services — effectively free through AI; transformative goals are reached incrementally ('Nobody ever got to Mount Everest without getting to base camp first').",
+    "latest_investments_summary": "Personal-vehicle deal flow is sparse and mostly historical (trackers' latest distinct personal row: Basis, Series A, Dec 2024); his capital now overwhelmingly deploys through Khosla Ventures — Fund XIII closed at $3.5B in 2024 with mandates around fusion, humanoid robots and AI infrastructure, and KV was among the most active US AI investors through 2025–2026.",
+    "strategy": "KV's official page: reinventing societal infrastructure with technology; targeting societally critical, underserved sectors (biotech, transit, cybersecurity, quantum, AI) where technology platforms can extend resource-rich lifestyles globally.",
+    "strategy_source_url": "https://www.khoslaventures.com/team/vinod-khosla",
+    "sources": [
+      "https://www.khoslaventures.com/team/vinod-khosla",
+      "https://tracxn.com/d/people/vinod-khosla/__xrpCNW9mviVKNRqSUNLoF8W3vUuL99i3-7PBLYZZa5I",
+      "https://www.forbes.com/profile/vinod-khosla/",
+      "https://en.wikipedia.org/wiki/Khosla_Ventures"
+    ],
+    "track_record": [],
+    "track_record_note": "Khosla Ventures does not publicly disclose fund IRR/TVPI, and no LP disclosures for recent vintages were found; his personal angel returns are unpublished. Forbes net-worth estimates are not returns and are excluded.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Elad Gil",
+    "background": "The archetypal solo mega-angel: ex-Google and Twitter executive, co-founder of Color Genomics and Mixer Labs (acquired by Twitter), turned one-person venture franchise. Raised over $1B for his third solo vehicle in 2021, and in mid-2025 was reported raising a new solo fund of roughly $1.5B with the target later reported around $3B — institutional scale with no partnership.",
+    "focus": "AI-first across stages — foundation models, AI applications, infrastructure — plus defense, fintech, dev tools and longevity/bio; predominantly US.",
+    "style": "Solo GP writing checks from seed to growth across a very large portfolio; low-process, network- and judgment-driven, able to move faster than committee-based firms; multi-stage investing via his Gil&Co vehicles.",
+    "thesis": "Self-described 'technology entrepreneur, investor, & future forward optimist' focused on major technology shifts; currently argues AI's early winners are now visible and that AI applied to traditional businesses (including roll-ups) is the next big opportunity.",
+    "latest_investments_summary": "Last ~12 months: doubling down on the AI stack where he was early (Perplexity, Harvey, Character, Mistral, Anthropic/OpenAI exposure, Abridge, Braintrust, Decagon, Cognition) while pushing a new theme of AI-powered roll-ups of services businesses (per TechCrunch, June 2025), backed by the new multi-billion-dollar solo fund raise.",
+    "strategy": "From his own site: a series of investments, incubations and operating companies oriented at 'the technology future' — early generative-AI positioning, longevity/bio interests, and multi-stage venture investing through Gil&Co.",
+    "strategy_source_url": "https://eladgil.com/",
+    "sources": [
+      "https://eladgil.com/",
+      "https://pitchbook.com/news/articles/exclusive-prominent-solo-vc-elad-gil-raises-1b-for-3rd-fund",
+      "https://techcrunch.com/2025/06/01/early-ai-investor-elad-gil-finds-his-next-big-bet-ai-powered-rollups/",
+      "https://www.forbes.com/profile/elad-gil/"
+    ],
+    "track_record": [],
+    "track_record_note": "Solo VC; fund IRR/TVPI never publicly reported and no LP disclosures found. Reported fund sizes ($1B+ in 2021; ~$1.5–3B raise reported 2025) are capital raised, not returns.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Patrick Collison",
+    "background": "Co-founder and CEO of Stripe, one of the world's most valuable private companies. As a personal allocator he combines a modest angel portfolio (~30 companies per trackers) with large non-dilutive science funding: co-founder of Arc Institute (2021) and co-creator of Fast Grants, which moved substantial money to scientists during COVID.",
+    "focus": "Foundational technology and progress infrastructure: AI compute/semiconductors, energy and fusion, urban development (California Forever, Esmeralda), and scientific research organizations.",
+    "style": "Infrequent, conviction-driven personal checks rather than a systematic angel program; comfortable with both equity and grants/philanthropy as instruments; backs infrastructure others depend on rather than trend-chasing consumer apps.",
+    "thesis": "Self-described 'supply-side, free market, and abundance-oriented' worldview: catalyze economic growth, expand access to capital, accelerate science, and improve the policy and physical infrastructure of progress.",
+    "latest_investments_summary": "Recent personal deals form a hard-tech/abundance pattern: MatX (AI chip startup, Series B, Feb 2026), Rivan Industries (May 2025), and continued involvement in California Forever and Esmeralda new-city projects, alongside ongoing Arc Institute funding — capital aimed at compute, energy, land and science rather than software margins.",
+    "strategy": "From his personal site: investments and programs (Arc Institute, Fast Grants, New Aesthetics grants, Intercept) oriented around abundance — growing the economy's supply side, funding researchers directly, and building attractive new places to live.",
+    "strategy_source_url": "https://patrickcollison.com/about",
+    "sources": [
+      "https://patrickcollison.com/about",
+      "https://tracxn.com/d/people/patrick-collison/__83QiDoObVTFrSQVpix6oRuTx57ZKGQsuzvkePg2gAiE",
+      "https://pitchbook.com/profiles/investor/226728-91",
+      "https://en.wikipedia.org/wiki/Arc_Institute",
+      "https://www.hustlefund.vc/post/patrick-and-john-collison-investments-how-the-stripe-founders-became-infrastructure-investors"
+    ],
+    "track_record": [],
+    "track_record_note": "Individual angel/philanthropist; no published returns for personal investments, and much of his deployment is grants (no return by design). Stripe equity value is not a personal capital-allocation return and is excluded.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Dylan Field",
+    "background": "Co-founder and CEO of Figma; Thiel Fellow who took the company public on the NYSE in July 2025 in one of the largest tech IPO debuts (reported ~$68B day-one valuation; his ~9% stake valued around $6.6B by Forbes). In parallel he is one of the more prolific operator-angels of his generation, with 118 personal investments per PitchBook.",
+    "focus": "Seed through Series B in AI, developer tools, design/media and content, enterprise software, fintech and web3.",
+    "style": "Small operator-angel checks — reported $10K–$500K range — as a participant, not a lead; picks driven by product taste and founder quality rather than a portfolio-construction model.",
+    "thesis": "No formally published personal thesis; his public statements center on AI radically expanding who can create and design, with taste and craft becoming the differentiator — the lens visible in his angel picks.",
+    "latest_investments_summary": "Recent personal deals: Arcadia Medicine (drug discovery), PlayerZero (software analytics) and Huxe (productivity) in 2025, and Revel (business/productivity software, May 2026) — small checks clustered around AI-native tools and creation/analysis workflows, continuing post-IPO.",
+    "strategy": "In his 2026 Stratechery interview he lays out the worldview behind his bets: AI collapses the cost of producing software and design, shifting value to taste, craft and multiplayer-native product experiences.",
+    "strategy_source_url": "https://stratechery.com/2026/an-interview-with-figma-ceo-dylan-field-about-design-and-ai/",
+    "sources": [
+      "https://pitchbook.com/profiles/investor/224513-92",
+      "https://www.forbes.com/profile/dylan-field/",
+      "https://stratechery.com/2026/an-interview-with-figma-ceo-dylan-field-about-design-and-ai/",
+      "https://www.hustlefund.vc/post/angel-squad-dylan-field-investments-the-thiel-fellow-who-built-figma-from-a-dorm-room-idea-to-a-68-billion-ipo",
+      "https://tracxn.com/d/people/dylan-field/__yrBy8v-caSTOsnUm85tzD4HuJF1iqCQjpJxqDpgkiiw"
+    ],
+    "track_record": [],
+    "track_record_note": "Individual angel; no published returns for his personal portfolio. His Figma stake's IPO value is founder equity, not an allocation return, and is excluded.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "Stanley Druckenmiller",
+    "background": "Founder of Duquesne Capital (1981), famed for roughly three decades of ~30% average annual returns with no losing year and for running the 1992 sterling short as Soros's Quantum Fund lead PM. Returned outside capital in 2010 and now invests solely his own wealth through Duquesne Family Office, whose 13F equity book has recently ranged around $3.4–4.5B (Q4 2025–Q1 2026), alongside unreported macro positions.",
+    "focus": "Global macro across all asset classes; current equity book tilts to biotech/diagnostics (Natera, Insmed), non-US exposure (Taiwan Semiconductor, Brazil ETF) and index/AI-adjacent positions.",
+    "style": "Concentrated, high-conviction, aggressively sized positions with fast reversals when the thesis breaks; forward-looking 18-months-out framing; capital preservation as the base discipline.",
+    "thesis": "Superior returns come from concentration, flexibility across asset classes, and sizing up hard when conviction is high — 'be a pig' when right — rather than diversification; he stresses willingness to change his mind quickly.",
+    "latest_investments_summary": "Per Q4 2025–Q1 2026 13Fs: built/added Natera (~$118M add) and Insmed, held Taiwan Semiconductor and broad-market/Brazil call structures, while exiting Alphabet and materials SPDRs and trimming MercadoLibre, Amazon and Bloom Energy — a rotation from mega-cap tech toward biotech, non-US value and index optionality.",
+    "strategy": "No firm website or letters; in his Nov 2024 Norges Bank Investment Management interview he describes his approach: flexibility, concentration, betting on where the world will be in 18 months, and adapting views quickly when wrong.",
+    "strategy_source_url": "https://podcasts.apple.com/lv/podcast/stan-druckenmiller-inside-the-mind-of-a-legendary-investor/id1614211565?i=1000675883446",
+    "sources": [
+      "https://13f.info/manager/0001536411-duquesne-family-office-llc",
+      "https://seekingalpha.com/article/4881297-tracking-stanley-druckenmillers-duquesne-family-office-portfolio-q4-2025-update",
+      "https://podcasts.apple.com/lv/podcast/stan-druckenmiller-inside-the-mind-of-a-legendary-investor/id1614211565?i=1000675883446",
+      "https://acquirersmultiple.com/2024/12/stanley-druckenmiller-great-investors-win-with-concentrated-bets/",
+      "https://www.grufity.com/funds/1536411"
+    ],
+    "track_record": [],
+    "track_record_note": "Duquesne Family Office manages only personal capital and reports no returns. Third-party 13F-derived performance estimates exist (e.g. aggregators showing ~+23.75% for 2025) but are long-only approximations from quarterly snapshots, not from reputable press or the firm, so they are excluded. The oft-cited ~30% annualized 1981–2010 record predates the family office and is historical press lore, not a current-period figure.",
+    "as_of": "2026-08-09"
+  },
+  {
+    "allocator": "David Sacks",
+    "background": "PayPal COO turned founder (Yammer, sold to Microsoft for $1.2B) who founded Craft Ventures in 2017, a multi-billion-AUM B2B-software-focused VC firm; co-host of the All-In podcast. Since December 2024 he has served as the White House AI & Crypto Czar (a special government employee role), which now dominates his personal capital posture.",
+    "focus": "Via Craft: B2B SaaS, marketplaces, and AI/crypto infrastructure, early-stage through growth.",
+    "style": "Operator-style investing — lead checks with hands-on SaaS playbooks; Craft describes itself as 'designed by founders for founders' and 'low maintenance but high value-add.' Personally, currently a net divester due to his government role.",
+    "thesis": "Back founders building recurring-revenue software businesses and apply proven operating playbooks (sales efficiency, burn multiple discipline) to compound them; in government, champion US leadership in AI and crypto.",
+    "latest_investments_summary": "His personal story in the last 12 months is divestment, not deployment: per a White House memo, he and Craft divested over $200M of digital-asset-related positions (at least $85M directly attributable to him) before Jan 20, 2025, later selling direct AI-exposed stocks (Amazon, Meta, TSMC) and 97%+ of covered Craft holdings under ethics waivers (crypto in March, AI in June 2025). Craft continues investing institutionally (recent portfolio highlights include Neo and Ent); Senate Democrats opened an ethics inquiry in Sept 2025 over retained AI/crypto stakes.",
+    "strategy": "Craft Ventures' site: help founders build great companies with operational expertise — former founders and operators who 'roll up our sleeves, deploy winning playbooks, and give founders access to senior talent.'",
+    "strategy_source_url": "https://www.craftventures.com/",
+    "sources": [
+      "https://www.craftventures.com/",
+      "https://cryptobriefing.com/crypto-asset-divestment-sacks-white-house/",
+      "https://www.vktr.com/ai-ethics-law-risk/did-ai-czar-david-sacks-really-divest-new-ai-investment-raises-ethics-questions/",
+      "https://www.nextgov.com/people/2025/09/democrats-launch-ethics-investigation-ai-and-crypto-czar-david-sacks/408175/",
+      "https://www.warren.senate.gov/newsroom/press-releases/warren-stansbury-members-of-congress-launch-investigation-into-trump-crypto-and-ai-czars-ethics-conflicts"
+    ],
+    "track_record": [],
+    "track_record_note": "Craft Ventures does not publish fund returns and his personal portfolio returns are undisclosed; disclosed divestment totals ($200M+) are position sizes, not returns, and are excluded.",
+    "as_of": "2026-08-09"
+  }
+]
