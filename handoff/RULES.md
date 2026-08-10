@@ -79,3 +79,22 @@ file to an ab-investment Claude Code session to rebuild the map.
   already carry engine data.
 - Render `description` in the "About / what this is" card and `links` beneath it
   (website chip + read-more chip), as in the existing Atoms-style layout.
+
+## Flow "read" ownership (v3.2, 2026-08-10) — engine=facts, dashboard=words
+The per-deal "read"/angle write-up is NARRATIVE, not fact, and is owned by the
+DASHBOARD, generated on its scheduled run. The engine never writes read prose —
+keeping its payload 100% auditable fact. To let the dashboard word a read for
+EVERY flow without fetching anything itself, each flow now carries the full fact
+set needed:
+- `id` — stable, deterministic per flow (sha1 of allocator|target|event_type|date).
+  Cache generated reads against this id; a flow's id only changes if the flow is
+  genuinely new/changed, so unchanged flows are never re-worded.
+- `source_url`, `amount`, `amount_estimated`, `round_total`, `co_investors`,
+  `capital_role`, `instrument`, `stage`, `status`, `confidence`, `grade`,
+  `sector`, `subsector`, `event_type`, `date`.
+- Plus the joinable context already in the payload: `allocators[source].profile`
+  (thesis/style), the target node's `description`, and `sectors[].signals`.
+The dashboard writes `{angle, read}` from THIS payload only — no external search.
+`flowNotes.json` therefore becomes generated-and-cached, not hand-curated, and
+covers 100% of flows instead of ~23%. Boundary rule: engine searches + sources +
+derives facts; dashboard words + visualizes. Neither does the other's job.

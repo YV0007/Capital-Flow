@@ -15,6 +15,7 @@ Reconstruction rules (when to add / drop / keep an entity, display thresholds)
 live in handoff/RULES.md — authored later; this exporter just ships the state.
 """
 
+import hashlib
 import json
 from datetime import date, datetime
 
@@ -58,12 +59,24 @@ def _build_map(con) -> dict:
             d = e["disclosed_date"]
             n["first_seen"] = min(n["first_seen"] or d, d)
             n["last_activity"] = max(n["last_activity"] or d, d)
+        # Stable, deterministic flow id (same components as the DB dedupe key) so
+        # the dashboard can cache a generated "read" against it and only re-word a
+        # flow when the flow itself is new or changed — never on every delivery.
+        flow_id = "flow:" + hashlib.sha1(
+            "|".join((e["allocator"], e["target"], e["event_type"],
+                      e["disclosed_date"] or "")).encode()).hexdigest()[:16]
         flows.append({
+            "id": flow_id,
             "source": a_id, "target": t_id, "sector": e["sector"],
             "subsector": e["subsector"],
             "event_type": e["event_type"], "amount": e["amount_usd"],
             "amount_estimated": bool(e["amount_estimated"]),
             "round_total": e["round_total_usd"],
+            # co_investors is fact (who else was in the round) — editorially useful
+            # for the dashboard's read, but it stays a fact the engine sources.
+            "co_investors": e["co_investors"],
+            "capital_role": e["capital_role"],
+            "instrument": e["instrument"], "stage": e["stage"],
             "status": e["status"], "date": e["disclosed_date"], "tier": e["source_tier"],
             "source_url": e["source_url"],
             "confidence": e["confidence_score"],
