@@ -42,7 +42,22 @@ def _build_map(con) -> dict:
             nodes[node_id] = n
         return n
 
+    # Dated backers (deal-classifier): round_id + role per (target, allocator), and
+    # the full set of participation edges. Event flows are enriched from this; any
+    # backer with no matching event becomes an extra dated edge (amount may be null).
+    backers = con.execute("SELECT * FROM round_backers").fetchall()
+    backer_by_pair = {}
+    for b in backers:
+        backer_by_pair.setdefault((b["target"], b["allocator"]), b)
+
+    def _derived_role(e):
+        if e["event_type"] == "follow_on":
+            return "follow-on"
+        cr = (e["capital_role"] or "").lower()
+        return "lead" if cr in ("lead", "sole") else ("participant" if cr == "participant" else None)
+
     flows = []
+    seen_edges = set()
     for e in events:
         amt = e["amount_usd"] or 0.0
         a_id = f"alloc:{e['allocator']}"
@@ -65,6 +80,8 @@ def _build_map(con) -> dict:
         flow_id = "flow:" + hashlib.sha1(
             "|".join((e["allocator"], e["target"], e["event_type"],
                       e["disclosed_date"] or "")).encode()).hexdigest()[:16]
+        seen_edges.add((e["target"], e["allocator"]))
+        bk = backer_by_pair.get((e["target"], e["allocator"]))
         flows.append({
             "id": flow_id,
             "source": a_id, "target": t_id, "sector": e["sector"],
@@ -77,11 +94,43 @@ def _build_map(con) -> dict:
             "co_investors": e["co_investors"],
             "capital_role": e["capital_role"],
             "instrument": e["instrument"], "stage": e["stage"],
+            # Dated-backer enrichment (deal-classifier): round grouping + role so the
+            # dashboard can order who entered before the crowd (lead-time/bellwether).
+            "round_id": bk["round_id"] if bk else None,
+            "role": (bk["role"] if bk and bk["role"] else _derived_role(e)),
+            "provisional": bool(bk["provisional"]) if bk else False,
             "status": e["status"], "date": e["disclosed_date"], "tier": e["source_tier"],
             "source_url": e["source_url"],
             "confidence": e["confidence_score"],
             "grade": (f"{e['source_reliability']}{e['info_credibility']}"
                       if e["source_reliability"] else None),
+        })
+
+    # Classifier-only backer edges: a participant with no capital event of its own
+    # still forms a dated edge (amount may be null — it's participation, not a
+    # sourced capital move). These extend the graph for lead-time / bellwether.
+    for b in backers:
+        if (b["target"], b["allocator"]) in seen_edges:
+            continue
+        a_id, t_id = f"alloc:{b['allocator']}", f"target:{b['target']}"
+        if t_id not in nodes:  # only attach to targets already on the map
+            continue
+        a = touch(a_id, label=b["allocator"], kind="allocator", cls=None,
+                  tier=None, sector=None, network=None, country=None)
+        d = b["entry_date"] or ""
+        a["deals"] += 1
+        a["first_seen"] = min(a["first_seen"] or d, d) if d else a["first_seen"]
+        a["last_activity"] = max(a["last_activity"] or d, d) if d else a["last_activity"]
+        flows.append({
+            "id": "flow:" + hashlib.sha1(
+                "|".join((b["allocator"], b["target"], b["round_id"])).encode()
+            ).hexdigest()[:16],
+            "source": a_id, "target": t_id, "sector": nodes[t_id]["sector"],
+            "event_type": "funding_round", "amount": b["amount_usd"],
+            "round_id": b["round_id"], "role": b["role"],
+            "status": b["status"], "date": b["entry_date"], "tier": b["source_tier"],
+            "source_url": b["source_url"], "provisional": bool(b["provisional"]),
+            "backer_edge": True,  # participation metadata, not a sourced capital move
         })
 
     # Target references (engine-owned "what this is"): description + links emitted
@@ -108,6 +157,32 @@ def _build_map(con) -> dict:
                           "url": r["read_more_url"]})
         n["links"] = links
         n["reference_as_of"] = r["as_of"]
+
+    # Per-target deep classification (deal-classifier): outcome/valuation trail,
+    # investability, ai_posture. Lights up the dashboard's Rank-1 deal factors.
+    for c in con.execute("SELECT * FROM target_classification").fetchall():
+        n = nodes.get(f"target:{c['target']}")
+        if not n:
+            continue
+        if c["outcome_status"] or c["latest_valuation_usd"]:
+            n["outcome"] = {
+                "status": c["outcome_status"],
+                "entry_valuation_usd": c["entry_valuation_usd"],
+                "latest_valuation_usd": c["latest_valuation_usd"],
+                "latest_as_of": c["latest_as_of"],
+                "step_up_multiple": c["step_up_multiple"],
+                "source_url": c["outcome_source_url"],
+                "provisional": bool(c["outcome_provisional"])}
+        if c["listing_status"] or c["public_ticker"] or c["public_proxies"]:
+            n["investability"] = {
+                "listing_status": c["listing_status"],
+                "public_ticker": c["public_ticker"],
+                "public_proxies": json.loads(c["public_proxies"] or "[]")}
+        if c["ai_class"]:
+            n["ai_posture"] = {
+                "class": c["ai_class"], "rationale": c["ai_rationale"],
+                "source_url": c["ai_source_url"], "confidence": c["ai_confidence"],
+                "provisional": bool(c["ai_provisional"])}
 
     # Fund/firm PORTFOLIOS (holdings task): the companies an entity deploys into —
     # the layer below the map's LP flows. Attached to any node (allocator firm or

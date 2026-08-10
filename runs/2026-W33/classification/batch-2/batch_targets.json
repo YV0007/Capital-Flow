@@ -1,0 +1,214 @@
+[
+  {
+    "target": "OpenAI Group PBC",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "Amazon"
+    ],
+    "co_investors": [
+      "NVIDIA;SoftBank;Microsoft;Andreessen Horowitz;D. E. Shaw Ventures"
+    ],
+    "disclosed_dates": [
+      "2026-07-31"
+    ],
+    "capital_usd": 21300000000.0,
+    "valuation_usd": 852000000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm"
+    ]
+  },
+  {
+    "target": "Hadrian",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "Andreessen Horowitz",
+      "Founders Fund",
+      "Altimeter"
+    ],
+    "co_investors": [
+      "WCM Investment Management (co-lead); Washington Harbour Partners (co-lead); Valor Equity Partners (co-lead); 137 Ventures (co-lead); Baillie Gifford (co-lead); JPMorganChase Strategic Investment Group (anchor co-lead); 1789 Capital; Morgan Stanley Wealth Management; Apollo; T. Rowe Price; CapitalG; Founders Fund; Lux Capital; Altimeter; Construct Capital",
+      "WCM Investment Management (co-lead); Washington Harbour Partners (co-lead); Valor Equity Partners (co-lead); 137 Ventures (co-lead); Baillie Gifford (co-lead); JPMorganChase Strategic Investment Group (anchor co-lead); Andreessen Horowitz; Altimeter; CapitalG; Lux Capital; Construct Capital; Apollo; T. Rowe Price",
+      "WCM Investment Management (co-lead); Washington Harbour Partners (co-lead); Valor Equity Partners (co-lead); 137 Ventures (co-lead); Baillie Gifford (co-lead); JPMorganChase Strategic Investment Group (anchor co-lead); Andreessen Horowitz; Founders Fund; CapitalG; Lux Capital; Construct Capital"
+    ],
+    "disclosed_dates": [
+      "2026-08-06"
+    ],
+    "capital_usd": 4110000000.0,
+    "valuation_usd": 7870000000.0,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html"
+    ]
+  },
+  {
+    "target": "Atoms",
+    "target_type": "private",
+    "sector": "robotics",
+    "allocators": [
+      "Andreessen Horowitz"
+    ],
+    "co_investors": [
+      "Bain Capital; Fifth Wall; Chemistry; K5 Global; SV Angel; Alpha Square Group; Uber"
+    ],
+    "disclosed_dates": [
+      "2026-07-22"
+    ],
+    "capital_usd": 1700000000.0,
+    "valuation_usd": null,
+    "deal_source_urls": [
+      "https://atoms.co/unfinished-business"
+    ]
+  },
+  {
+    "target": "Greenoaks Prime Radiant Founders LP",
+    "target_type": "fund",
+    "sector": "ai-applications",
+    "allocators": [
+      "Greenoaks"
+    ],
+    "co_investors": [
+      "Neil Mehta; Benjamin Peretz"
+    ],
+    "disclosed_dates": [
+      "2026-07-14"
+    ],
+    "capital_usd": 576519835.0,
+    "valuation_usd": null,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2141341/000184073526000020/primary_doc.xml"
+    ]
+  },
+  {
+    "target": "Glow",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Sequoia"
+    ],
+    "co_investors": [],
+    "disclosed_dates": [
+      "2026-07-22"
+    ],
+    "capital_usd": 180000000.0,
+    "valuation_usd": null,
+    "deal_source_urls": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=Glow&type=D&dateb=&owner=include&count=40"
+    ]
+  },
+  {
+    "target": "Flourish",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "Jeff Bezos"
+    ],
+    "co_investors": [
+      "Lux Capital; GV; Catalio Capital"
+    ],
+    "disclosed_dates": [
+      "2026-07-02"
+    ],
+    "capital_usd": 100000000.0,
+    "valuation_usd": 2500000000.0,
+    "deal_source_urls": [
+      "https://techfundingnews.com/bezos-flourish-500m-brain-inspired-ai-power-crisis/"
+    ]
+  },
+  {
+    "target": "P-1 AI",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Founders Fund"
+    ],
+    "co_investors": [],
+    "disclosed_dates": [
+      "2026-07-29"
+    ],
+    "capital_usd": 50000000.0,
+    "valuation_usd": null,
+    "deal_source_urls": [
+      "https://efts.sec.gov/LATEST/search-index?q=%22P-1+AI%22"
+    ]
+  },
+  {
+    "target": "Radical Numerics",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "Patrick Collison"
+    ],
+    "co_investors": [
+      "Emergence Capital (lead",
+      " seed); Obvious Ventures; Triatomic Capital; Factory; First Spark Ventures"
+    ],
+    "disclosed_dates": [
+      "2026-06-15"
+    ],
+    "capital_usd": 0,
+    "valuation_usd": null,
+    "deal_source_urls": [
+      "https://www.businesswire.com/news/home/20260615558179/en/AI-Lab-Radical-Numerics-Launches-with-$50M-Seed-Round-To-Build-General-Biological-Intelligence"
+    ]
+  },
+  {
+    "target": "Monogram",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Garry Tan"
+    ],
+    "co_investors": [
+      "DST Global (co-lead); Lux Capital (co-lead); Conviction; SOMA Capital; Gradient Ventures; e2vc; Maxitech; Arthur Mensch; Logan Green; Karim Atiyeh; Pete Flint; Mario Schlosser"
+    ],
+    "disclosed_dates": [
+      "2026-07-07"
+    ],
+    "capital_usd": 0,
+    "valuation_usd": null,
+    "deal_source_urls": [
+      "https://www.thesaasnews.com/news/monogram-raises-40m-seed/"
+    ]
+  },
+  {
+    "target": "Generalist AI",
+    "target_type": "private",
+    "sector": "robotics",
+    "allocators": [
+      "Jeff Bezos"
+    ],
+    "co_investors": [
+      "Radical Ventures (lead); NVIDIA; 8VC; Union Square Ventures; Norwest"
+    ],
+    "disclosed_dates": [
+      "2026-07-02",
+      "2026-08-04"
+    ],
+    "capital_usd": 0,
+    "valuation_usd": 2000000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2137708/000213770826000003/primary_doc.xml",
+      "https://www.bloomberg.com/news/articles/2026-08-04/family-offices-sidestep-ai-fears-in-deal-spree-for-robotics-bets"
+    ]
+  },
+  {
+    "target": "Altimeter Kilauea Fund II, L.P.",
+    "target_type": "fund",
+    "sector": "ai-applications",
+    "allocators": [
+      "Altimeter"
+    ],
+    "co_investors": [
+      "Brad Gerstner; John Kiernan III; Matthew Tolve"
+    ],
+    "disclosed_dates": [
+      "2026-07-28"
+    ],
+    "capital_usd": 0,
+    "valuation_usd": null,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2141877/000214187726000001/primary_doc.xml"
+    ]
+  }
+]

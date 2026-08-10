@@ -1,0 +1,226 @@
+[
+  {
+    "target": "Electronic Arts",
+    "target_type": "public",
+    "sector": "gaming",
+    "allocators": [
+      "Saudi PIF"
+    ],
+    "co_investors": [
+      "Silver Lake (5.5%); Affinity Partners (1.1%); JPMorgan Chase (sole debt commitment)"
+    ],
+    "disclosed_dates": [
+      "2026-08-04"
+    ],
+    "capital_usd": 33600000000.0,
+    "valuation_usd": 55000000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/712515/000114036126031157/ef20079099_8k.htm"
+    ]
+  },
+  {
+    "target": "Mubadala Capital (credit platform)",
+    "target_type": "fund",
+    "sector": "private-credit",
+    "allocators": [
+      "Mubadala"
+    ],
+    "co_investors": [
+      "third-party LPs (to be raised)"
+    ],
+    "disclosed_dates": [
+      "2026-07-06"
+    ],
+    "capital_usd": 4650000000.0,
+    "valuation_usd": null,
+    "deal_source_urls": [
+      "https://finance.yahoo.com/markets/stocks/articles/mubadala-capital-completes-integration-mubadala-100000955.html"
+    ]
+  },
+  {
+    "target": "Blue Origin",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "Jeff Bezos"
+    ],
+    "co_investors": [
+      "Coatue Management (lead; $4B)"
+    ],
+    "disclosed_dates": [
+      "2026-07-08"
+    ],
+    "capital_usd": 2000000000.0,
+    "valuation_usd": 130000000000.0,
+    "deal_source_urls": [
+      "https://www.cnbc.com/2026/07/08/blue-origin-bezos-fundraising.html"
+    ]
+  },
+  {
+    "target": "Etched",
+    "target_type": "private",
+    "sector": "ai-compute",
+    "allocators": [
+      "Peter Thiel",
+      "Dylan Field",
+      "Stanley Druckenmiller",
+      "Sequoia",
+      "Andreessen Horowitz"
+    ],
+    "co_investors": [
+      "Sequoia (lead); a16z; SK Hynix; Jane Street; Diffusion Capital; Andrej Karpathy; Dylan Field; Amjad Masad; Geoffrey Hinton; Fei-Fei Li; Stanley Druckenmiller",
+      "Sequoia (lead); a16z; SK Hynix; Jane Street; Peter Thiel; Andrej Karpathy; Amjad Masad",
+      "Sequoia (lead); Peter Thiel; Geoffrey Hinton; Andrej Karpathy; Fei-Fei Li",
+      "Andreessen Horowitz; Jane Street; Diffusion Capital; SK Hynix",
+      "Sequoia (lead); Jane Street; Diffusion Capital; SK Hynix"
+    ],
+    "disclosed_dates": [
+      "2026-07-23",
+      "2026-07-27"
+    ],
+    "capital_usd": 600000000.0,
+    "valuation_usd": 10300000000.0,
+    "deal_source_urls": [
+      "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/",
+      "https://www.tryfundable.ai/blog/top-funding-rounds-week-of-2026-07-27",
+      "https://www.globenewswire.com/news-release/2026/07/23/3332366/0/en/etched-raises-300m-at-a-10-3b-valuation-to-scale-production-of-frontier-scale-inference-hardware.html"
+    ]
+  },
+  {
+    "target": "Senra Systems",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "Sequoia",
+      "Andreessen Horowitz",
+      "Founders Fund"
+    ],
+    "co_investors": [
+      "Lowercarbon Capital (co-lead); Interlagos (co-lead); General Catalyst; Andreessen Horowitz; Founders Fund; Dylan Field; CIV; 8VC; The Friedkin Group; Jaws Estates Capital; Sozo Ventures; Alumni Ventures",
+      "Lowercarbon Capital (co-lead); Interlagos (co-lead); General Catalyst; Sequoia Capital; Founders Fund; Dylan Field; CIV; 8VC; The Friedkin Group; Jaws Estates Capital; Sozo Ventures; Alumni Ventures",
+      "Lowercarbon Capital (co-lead); Interlagos (co-lead); General Catalyst; Sequoia Capital; Andreessen Horowitz; Dylan Field; CIV; 8VC; The Friedkin Group; Jaws Estates Capital; Sozo Ventures; Alumni Ventures"
+    ],
+    "disclosed_dates": [
+      "2026-07-15"
+    ],
+    "capital_usd": 195000000.0,
+    "valuation_usd": null,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/senra-systems-announces-65-million-series-b-plans-for-third-manufacturing-facility-302825664.html"
+    ]
+  },
+  {
+    "target": "Neo Security",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Andreessen Horowitz"
+    ],
+    "co_investors": [
+      "Bessemer Venture Partners (co-lead); Craft Ventures; Merlin Ventures"
+    ],
+    "disclosed_dates": [
+      "2026-07-20"
+    ],
+    "capital_usd": 100000000.0,
+    "valuation_usd": null,
+    "deal_source_urls": [
+      "https://www.globenewswire.com/news-release/2026/07/20/3329638/0/en/neo-launches-with-100m-to-secure-ai-software-across-the-enterprise.html"
+    ]
+  },
+  {
+    "target": "Convex",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Andreessen Horowitz"
+    ],
+    "co_investors": [
+      "Insight Partners (lead); Etna Labs; Spark Capital; Justin Kan"
+    ],
+    "disclosed_dates": [
+      "2026-08-04"
+    ],
+    "capital_usd": 57000000.0,
+    "valuation_usd": null,
+    "deal_source_urls": [
+      "https://news.convex.dev/convex-raises-57m/"
+    ]
+  },
+  {
+    "target": "SkillBench",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Reid Hoffman"
+    ],
+    "co_investors": [
+      "Matthew Beane; Juho Kim (co-related persons)"
+    ],
+    "disclosed_dates": [
+      "2026-08-06"
+    ],
+    "capital_usd": 0,
+    "valuation_usd": null,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2035925/000203592526000003/primary_doc.xml"
+    ]
+  },
+  {
+    "target": "Moove",
+    "target_type": "private",
+    "sector": "robotics",
+    "allocators": [
+      "Mubadala"
+    ],
+    "co_investors": [
+      "Woven Capital (Toyota Growth Fund); Ion Pacific; BlueCrest Capital Management; Sona Capital; BlackRock; MUFG; Franklin Templeton; Uber; Left Lane; Square Associates; The Latest Ventures; Ontario Power Generation Pension Plan"
+    ],
+    "disclosed_dates": [
+      "2026-08-05"
+    ],
+    "capital_usd": 0,
+    "valuation_usd": 2100000000.0,
+    "deal_source_urls": [
+      "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility"
+    ]
+  },
+  {
+    "target": "Kirkwood Infrastructure Group",
+    "target_type": "private",
+    "sector": "networking",
+    "allocators": [
+      "Blue Owl"
+    ],
+    "co_investors": [],
+    "disclosed_dates": [
+      "2026-07-08"
+    ],
+    "capital_usd": 0,
+    "valuation_usd": null,
+    "deal_source_urls": [
+      "https://www.blueowl.com/news/funds-managed-blue-owl-digital-infrastructure-strategy-launch-kirkwood-infrastructure-group"
+    ]
+  },
+  {
+    "target": "Cathedral",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "Andreessen Horowitz",
+      "Sequoia"
+    ],
+    "co_investors": [
+      "Andreessen Horowitz (co-lead)"
+    ],
+    "disclosed_dates": [
+      "2026-07-22"
+    ],
+    "capital_usd": 0,
+    "valuation_usd": 1400000000.0,
+    "deal_source_urls": [
+      "https://efts.sec.gov/LATEST/search-index?q=%22Cathedral%22&forms=D",
+      "https://thenextweb.com/news/cathedral-doge-alumni-military-cyber-startup-1-4-billion"
+    ]
+  }
+]

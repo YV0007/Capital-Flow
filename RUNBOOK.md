@@ -59,6 +59,15 @@ Launch one holdings-profiler agent (`agents/holdings-profiler.md`) per batch,
 writing `holdings.json` beside each input, then re-run the pipeline to ingest.
 The audit warns (W7) on ≥$1B funds/firms with zero holdings.
 
+**Step 3e — deal classification (investable targets).** For investable targets
+lacking a moat/outcome tag, generate batch inputs, then launch profiler agents:
+```bash
+python tools/make_classification_batches.py <week>   # runs/<week>/classification/batch-N/batch_targets.json
+```
+Launch one deal-classifier agent (`agents/deal-classifier.md`) per batch, writing
+`backers.json` + `classification.json` beside each input, then re-run the pipeline.
+The audit warns (W8) on ≥$1B investable targets with no `ai_posture`.
+
 **Step 4 — beneficiaries (optional but recommended).** Run the beneficiary-mapper
 pass (`agents/beneficiary-mapper.md`) to write `runs/<week>/beneficiaries.csv`, then
 re-run `python run_week.py 2026-W32` to link them (idempotent — safe to re-run).

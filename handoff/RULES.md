@@ -113,3 +113,24 @@ targets and VC/alt-manager allocators) may now carry:
 Cumulative like the map; the audit flags (W7) any ≥$1B fund/firm with zero
 holdings. This is the "follow smart money into the exact companies" layer — the
 map shows LP money into a fund; holdings show where the fund then deploys it.
+
+## Deep classification (v3.4, 2026-08-10) — lights up the two-rank highlight
+The deal-classifier fills factors the dashboard already computes but couldn't feed.
+All additive & back-compatible (a missing block leaves that factor "pending").
+
+Flows gain dated-backer fields (unlocks lead-time + bellwether):
+- `round_id` — groups co-participants of one round; `role` ∈ lead|co-lead|
+  participant|follow-on; `provisional` — true when the date is the round's, not
+  the backer's. Some flows are `backer_edge:true` — a participation edge with no
+  capital event of its own (amount may be null; it's not a sourced capital move).
+
+Investable target nodes gain (each block sourced; absent when unknown):
+- `outcome` — {status ∈ active|up_round|ipo|acquired|shut_down, entry/latest
+  valuation, step_up_multiple, source_url, provisional} → strike-rate.
+- `investability` — {listing_status ∈ public|filed_s1|rumored_ipo|private|
+  subsidiary, public_ticker, public_proxies:[{ticker,relation,source_url}]} →
+  actionable path.
+- `ai_posture` — {class ∈ compounds|neutral|at_risk, rationale, source_url,
+  confidence, provisional} → the moat / AI-resilience factor (NEW). Out-of-vocab
+  classes are dropped by the engine, so the dashboard can weight the tag safely.
+Audit W8 flags any >=$1B investable target with no ai_posture.

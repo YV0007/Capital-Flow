@@ -1,0 +1,196 @@
+[
+  {
+    "target": "Safe Superintelligence",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "co_investors": [],
+    "disclosed_dates": [
+      "2026-07-27"
+    ],
+    "capital_usd": 5000000000.0,
+    "valuation_usd": null,
+    "deal_source_urls": [
+      "https://nvidianews.nvidia.com/news/ilya-sutskevers-safe-superintelligence-inc-and-nvidia-announce-long-term-strategic-partnership"
+    ]
+  },
+  {
+    "target": "Thrive Holdings",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Altimeter"
+    ],
+    "co_investors": [
+      "SoftBank; D1 Capital Partners; OpenAI (reported stake + talent)"
+    ],
+    "disclosed_dates": [
+      "2026-07-06"
+    ],
+    "capital_usd": 2000000000.0,
+    "valuation_usd": null,
+    "deal_source_urls": [
+      "https://efts.sec.gov/LATEST/search-index?q=%22Thrive+Holdings%22"
+    ]
+  },
+  {
+    "target": "Mariana Minerals",
+    "target_type": "private",
+    "sector": "robotics",
+    "allocators": [
+      "Khosla Ventures",
+      "Andreessen Horowitz"
+    ],
+    "co_investors": [
+      "Andreessen Horowitz (existing); Breakthrough Energy Ventures (existing); Greenoaks; Halo Fund; Pax Ventures; StepStone Group; BHP Ventures; Washington Harbour Partners; Greycroft; General Innovation Capital Partners; Mitsubishi Corporation; In-Q-Tel (IQT); Earthshot Ventures",
+      "Khosla Ventures (lead); Breakthrough Energy Ventures (existing); Greenoaks; Halo Fund; Pax Ventures; StepStone Group; BHP Ventures; Washington Harbour Partners; Greycroft; Mitsubishi Corporation; In-Q-Tel (IQT); Earthshot Ventures"
+    ],
+    "disclosed_dates": [
+      "2026-08-03"
+    ],
+    "capital_usd": 620000000.0,
+    "valuation_usd": 1500000000.0,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/mariana-minerals-raises-310-million-series-b-led-by-khosla-ventures-to-accelerate-critical-minerals-production-302840889.html"
+    ]
+  },
+  {
+    "target": "Norm Ai",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Khosla Ventures",
+      "Coatue"
+    ],
+    "co_investors": [
+      "Coatue; Blackstone; Bain Capital Ventures; Craft Ventures",
+      "Khosla Ventures (lead); Blackstone; Bain Capital Ventures; Craft Ventures"
+    ],
+    "disclosed_dates": [
+      "2026-07-07"
+    ],
+    "capital_usd": 240000000.0,
+    "valuation_usd": 1200000000.0,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/norm-ai-raises-120-million-at-a-1-2-billion-valuation-led-by-khosla-ventures-to-deliver-the-full-stack-model-for-legal-ai-302819152.html"
+    ]
+  },
+  {
+    "target": "Greenoaks Prime Radiant Founders Offshore LP",
+    "target_type": "fund",
+    "sector": "ai-applications",
+    "allocators": [
+      "Greenoaks"
+    ],
+    "co_investors": [
+      "Neil Mehta; Benjamin Peretz"
+    ],
+    "disclosed_dates": [
+      "2026-07-14"
+    ],
+    "capital_usd": 115480165.0,
+    "valuation_usd": null,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2141340/000214134026000002/primary_doc.xml"
+    ]
+  },
+  {
+    "target": "Khosla Ventures MM SPV, LLC",
+    "target_type": "fund",
+    "sector": "ai-applications",
+    "allocators": [
+      "Vinod Khosla"
+    ],
+    "co_investors": [
+      "Samir Kaul; David Weiden; Sven Strohnand; Keith Rabois"
+    ],
+    "disclosed_dates": [
+      "2026-08-05"
+    ],
+    "capital_usd": 60500000.0,
+    "valuation_usd": null,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2148181/000214818126000001/xslFormDX01/primary_doc.xml"
+    ]
+  },
+  {
+    "target": "Ellis",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Khosla Ventures"
+    ],
+    "co_investors": [
+      "First Round Capital (lead); 645 Ventures; Harlem Capital; Slow Ventures; Wilshire Lane; Westbound; Collide Capital; Gallery Ventures; Mellody Hobson; Josh Kushner; Immad Akhund"
+    ],
+    "disclosed_dates": [
+      "2026-07-30"
+    ],
+    "capital_usd": 10000000.0,
+    "valuation_usd": null,
+    "deal_source_urls": [
+      "https://www.businesswire.com/news/home/20260730538995/en/Ellis-Emerges-From-Stealth-With-More-Than-$10-Million-to-Build-the-AI-Native-Operating-Foundation-for-Private-Credit"
+    ]
+  },
+  {
+    "target": "Odyssey",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "Elad Gil",
+      "Garry Tan"
+    ],
+    "co_investors": [
+      "Natural Capital (lead); Amazon; AMD Ventures; GV; Jeff Dean; Garry Tan; Guillermo Rauch; Kyle Vogt",
+      "Natural Capital (lead); Amazon; AMD Ventures; GV; Jeff Dean; Elad Gil; Guillermo Rauch; Kyle Vogt"
+    ],
+    "disclosed_dates": [
+      "2026-06-17"
+    ],
+    "capital_usd": 0,
+    "valuation_usd": 1450000000.0,
+    "deal_source_urls": [
+      "https://techcrunch.com/2026/06/17/world-model-maker-odyssey-nabs-1-45b-valuation-backed-by-amazon-and-other-big-names/"
+    ]
+  },
+  {
+    "target": "LifeMine Therapeutics",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Jeff Bezos"
+    ],
+    "co_investors": [
+      "Milky Way Investments (lead); Gates Frontier (Bill Gates); RA Capital; GV; GSK; ARCH Venture Partners; Invus; LoLa Capital"
+    ],
+    "disclosed_dates": [
+      "2026-08-05"
+    ],
+    "capital_usd": 0,
+    "valuation_usd": null,
+    "deal_source_urls": [
+      "https://www.biospace.com/business/lifemine-raises-263m-in-mission-to-improve-organ-transplant-aftercare"
+    ]
+  },
+  {
+    "target": "CuspAI",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "Jeff Bezos"
+    ],
+    "co_investors": [
+      "Kleiner Perkins (co-lead); NEA (co-lead); Lux Capital; AMD Ventures; Glade Brook; StepStone; Temasek; Prosus; Northzone; John Doerr; UK Sovereign AI Venture Fund"
+    ],
+    "disclosed_dates": [
+      "2026-07-20"
+    ],
+    "capital_usd": 0,
+    "valuation_usd": 2600000000.0,
+    "deal_source_urls": [
+      "https://techfundingnews.com/cuspai-400m-series-b-2-6b-valuation-bezos-materials-search/"
+    ]
+  }
+]

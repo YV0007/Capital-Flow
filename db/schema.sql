@@ -244,6 +244,61 @@ CREATE TABLE IF NOT EXISTS holdings (
 );
 CREATE INDEX IF NOT EXISTS idx_holdings_entity ON holdings (entity, rank);
 
+-- Dated backers (deal-classifier). Explodes a funding round into ONE dated edge
+-- per participating allocator — the data the dashboard needs for lead-time (who
+-- entered before the crowd) and bellwether pull (how many quality backers
+-- followed). Kept SEPARATE from events so the capital ledger stays pristine:
+-- events = capital actually moved (research agents); round_backers = participation
+-- metadata (classifier). handoff merges both into dated flow edges.
+CREATE TABLE IF NOT EXISTS round_backers (
+    id          INTEGER PRIMARY KEY,
+    round_id    TEXT NOT NULL,        -- groups co-participants of one round
+    target      TEXT NOT NULL,        -- the company raising (matches an events.target / node label)
+    allocator   TEXT NOT NULL,        -- canonical allocator name (resolved through aliases)
+    role        TEXT CHECK (role IN ('lead','co-lead','participant','follow-on')),
+    entry_date  TEXT,                 -- that allocator's entry (round's disclosed date if unknown)
+    amount_usd  REAL,                 -- this backer's slice, NULL if undisclosed (no double-count)
+    status      TEXT NOT NULL DEFAULT 'candidate',
+    source_tier INTEGER CHECK (source_tier BETWEEN 1 AND 5),
+    source_url  TEXT,
+    provisional INTEGER NOT NULL DEFAULT 0,  -- 1 when entry_date is the round date, not the backer's
+    run_week    TEXT NOT NULL,
+    created_at  TEXT NOT NULL DEFAULT (datetime('now')),
+    UNIQUE (round_id, allocator)      -- one edge per allocator per round
+);
+CREATE INDEX IF NOT EXISTS idx_round_backers_target ON round_backers (target);
+
+-- Per-target deep classification (deal-classifier). Lights up the dashboard's
+-- Rank-1 (Interesting deals) factors: realized outcome / valuation trail
+-- (strike-rate), listing status + public proxies (actionable path), and
+-- ai_posture (moat / AI-resilience). Facts only, every asserted block sourced.
+CREATE TABLE IF NOT EXISTS target_classification (
+    target               TEXT PRIMARY KEY,   -- matches events.target / node label
+    -- outcome / valuation trail
+    outcome_status       TEXT CHECK (outcome_status IN
+                           ('active','up_round','ipo','acquired','shut_down')),
+    entry_valuation_usd  REAL,               -- earliest tracked round post-money
+    latest_valuation_usd REAL,               -- latest post-money / market cap / deal price
+    latest_as_of         TEXT,
+    step_up_multiple     REAL,               -- latest / entry, when both known
+    outcome_source_url   TEXT,
+    outcome_provisional  INTEGER NOT NULL DEFAULT 0,
+    -- investability / actionable path
+    listing_status       TEXT CHECK (listing_status IN
+                           ('public','filed_s1','rumored_ipo','private','subsidiary')),
+    public_ticker        TEXT,               -- set when the target itself is/becomes public
+    public_proxies       TEXT,               -- JSON [{ticker, relation, source_url}]
+    -- ai_posture / moat (controlled vocabulary)
+    ai_class             TEXT CHECK (ai_class IN ('compounds','neutral','at_risk')),
+    ai_rationale         TEXT,
+    ai_source_url        TEXT,
+    ai_confidence        TEXT,               -- Admiralty-style grade, e.g. 'B2'
+    ai_provisional       INTEGER NOT NULL DEFAULT 0,
+    as_of                TEXT NOT NULL,
+    run_week             TEXT NOT NULL,
+    updated_at           TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
 -- Detected themes: output of the theme engine, one row per (theme, run_week).
 CREATE TABLE IF NOT EXISTS themes (
     id          INTEGER PRIMARY KEY,

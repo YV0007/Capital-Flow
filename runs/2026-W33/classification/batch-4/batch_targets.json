@@ -1,0 +1,188 @@
+[
+  {
+    "target": "OpenAI",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "SoftBank"
+    ],
+    "co_investors": [],
+    "disclosed_dates": [
+      "2026-07-01"
+    ],
+    "capital_usd": 10000000000.0,
+    "valuation_usd": null,
+    "deal_source_urls": [
+      "https://group.softbank/en/news/press/20260701"
+    ]
+  },
+  {
+    "target": "Microsoft Frontier Company",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Microsoft"
+    ],
+    "co_investors": [],
+    "disclosed_dates": [
+      "2026-07-02"
+    ],
+    "capital_usd": 2500000000.0,
+    "valuation_usd": null,
+    "deal_source_urls": [
+      "https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/"
+    ]
+  },
+  {
+    "target": "Chai Discovery",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Sequoia",
+      "Thrive Capital"
+    ],
+    "co_investors": [
+      "Index Ventures (lead); Kleiner Perkins; Dimension; Bain Capital Ventures; Battery Ventures; Baillie Gifford; BDT & MSD; Sapphire Ventures; Avra Capital; Thrive Capital; OpenAI; Oak HC/FT; Menlo Ventures; General Catalyst; Glade Brook; Avenir; Lachy Groom; Yosemite",
+      "Index Ventures (lead); Sequoia; Kleiner Perkins; Dimension; OpenAI; General Catalyst; Menlo Ventures; Bain Capital Ventures; Baillie Gifford"
+    ],
+    "disclosed_dates": [
+      "2026-07-13"
+    ],
+    "capital_usd": 800000000.0,
+    "valuation_usd": 3800000000.0,
+    "deal_source_urls": [
+      "https://www.businesswire.com/news/home/20260713849009/en/Chai-Discovery-Announces-$400M-Series-C-to-Advance-AI-Driven-Molecular-Design"
+    ]
+  },
+  {
+    "target": "Gravis Robotics AG",
+    "target_type": "private",
+    "sector": "robotics",
+    "allocators": [
+      "SoftBank"
+    ],
+    "co_investors": [],
+    "disclosed_dates": [
+      "2026-07-24"
+    ],
+    "capital_usd": 500000000.0,
+    "valuation_usd": 500000000.0,
+    "deal_source_urls": [
+      "https://www.swissinfo.ch/eng/softbank-weighs-deal-for-robotics-startup-gravis/91794315"
+    ]
+  },
+  {
+    "target": "State Affairs",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Khosla Ventures",
+      "Founders Fund"
+    ],
+    "co_investors": [
+      "Founders Fund (co-lead); Tru Arrow Partners; Alumni Ventures; Marcus Brauchli; Alex Mather; Adam Hansmann; Richard Sarnoff",
+      "Khosla Ventures (co-lead); Tru Arrow Partners; Alumni Ventures"
+    ],
+    "disclosed_dates": [
+      "2026-07-14"
+    ],
+    "capital_usd": 140000000.0,
+    "valuation_usd": null,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/state-affairs-raises-70-million-to-help-institutions-navigate-the-policy-and-regulatory-economy-302824501.html"
+    ]
+  },
+  {
+    "target": "Singularity Defense",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "Khosla Ventures"
+    ],
+    "co_investors": [
+      "Felicis (co-lead); NEA; AE Ventures; Long Journey; Harpoon Ventures; Menlo Ventures; Y Combinator; Decisive Point; New Vista; Sunflower; Soma"
+    ],
+    "disclosed_dates": [
+      "2026-07-14"
+    ],
+    "capital_usd": 80000000.0,
+    "valuation_usd": 400000000.0,
+    "deal_source_urls": [
+      "https://www.businesswire.com/news/home/20260714185502/en/Singularity-Emerges-from-Stealth-with-$80M-Series-A-at-$400M-Valuation-to-Deploy-Air-Defense-at-Scale"
+    ]
+  },
+  {
+    "target": "Ambrook",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Thrive Capital"
+    ],
+    "co_investors": [
+      "Lachy Groom (lead); Thomson Reuters Ventures; Field Ventures; Cameron Ventures; Akshay Kothari; Tomer London; Guillermo Rauch"
+    ],
+    "disclosed_dates": [
+      "2026-08-04"
+    ],
+    "capital_usd": 30000000.0,
+    "valuation_usd": null,
+    "deal_source_urls": [
+      "https://ambrook.com/series-b"
+    ]
+  },
+  {
+    "target": "Prime Intellect",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "co_investors": [
+      "Radical Ventures;Intel Capital;Dell Technologies Capital;Iconiq"
+    ],
+    "disclosed_dates": [
+      "2026-07-08"
+    ],
+    "capital_usd": 0,
+    "valuation_usd": 1000000000.0,
+    "deal_source_urls": [
+      "https://techcrunch.com/2026/07/08/prime-intellect-raises-130m-series-a-to-help-enterprises-build-their-own-ai-agents/"
+    ]
+  },
+  {
+    "target": "MOZN",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Saudi PIF"
+    ],
+    "co_investors": [],
+    "disclosed_dates": [
+      "2026-08-03"
+    ],
+    "capital_usd": 0,
+    "valuation_usd": null,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/humain-makes-investment-in-mozn-and-partners-to-co-build-enterprise-ai-solutions-locally-and-globally-302841043.html"
+    ]
+  },
+  {
+    "target": "Discovery Loop",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "Alphabet"
+    ],
+    "co_investors": [
+      "Radical Ventures;Khosla Ventures;Lightspeed;Kleiner Perkins;Doerr Capital"
+    ],
+    "disclosed_dates": [
+      "2026-08-05"
+    ],
+    "capital_usd": 0,
+    "valuation_usd": null,
+    "deal_source_urls": [
+      "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/"
+    ]
+  }
+]

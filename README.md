@@ -54,6 +54,9 @@ run and is gitignored (regenerable from CSVs + schema).
   the engine-owned "what this is" card, superseding dashboard-side curation.
 - fund + firm nodes carry `portfolio_url` + `holdings[]` + `holdings_count` — the
   companies a fund deploys into (the layer below the map's LP flows), each sourced.
+- flows carry dated-backer fields (`round_id`, `role`) and investable target nodes
+  carry `outcome` / `investability` / `ai_posture` — the deal-classifier data that
+  lights up the dashboard's lead-time, strike-rate, actionable-path and moat factors.
 - `audit` — the §6 verification verdict; audit errors block delivery.
 
 ## Signal rules (config/rules.yaml)

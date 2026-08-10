@@ -83,5 +83,9 @@ workflow ⏳ (dashboard side)  11. Automation ⏳ (B2)
 15. Fund holdings ✅ agents/holdings-profiler.md + engine/holdings.py → portfolios +
     holdings tables; emitted on fund/firm nodes (portfolio_url + holdings[] +
     holdings_count). The "follow smart money into the exact companies" layer.
+16. Deep classification ✅ agents/deal-classifier.md + engine/classify.py →
+    round_backers (dated per-allocator edges: lead-time + bellwether) +
+    target_classification (outcome/valuation trail, investability + public proxies,
+    ai_posture moat tag). Lights up the dashboard's two-rank highlight. Audit W8.
 
 Remaining: scheduling (B2) and the dashboard-side consumer of the v3 blocks.

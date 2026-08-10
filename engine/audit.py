@@ -25,9 +25,16 @@ WARNINGS (ship, but surfaced):
   W7  fund/firm (VC or alt-manager, or a fund-vehicle target) with >= $1B
       confirmed capital but zero portfolio holdings collected — the dashboard's
       portfolio view would be empty
+  W8  investable target with >= $1B confirmed capital but no ai_posture tag —
+      the dashboard's moat / AI-resilience factor stays dark for it
 """
 
 HOLDINGS_MIN_USD = 1e9
+CLASSIFY_MIN_USD = 1e9
+# Mirror the dashboard's investable gate (classification.js): these never get
+# deal-level classification, so don't flag them for missing it.
+EXCLUDED_SECTORS = {"datacenters", "power-energy", "nuclear", "neocloud"}
+EXCLUDED_TARGET_TYPES = {"project", "asset"}
 
 import json
 from datetime import date
@@ -127,6 +134,25 @@ def _check_holdings(con, warnings):
     return con.execute("SELECT COUNT(*) c FROM holdings").fetchone()["c"]
 
 
+def _check_classification(con, warnings):
+    ph_sec = ",".join("?" * len(EXCLUDED_SECTORS))
+    ph_tt = ",".join("?" * len(EXCLUDED_TARGET_TYPES))
+    gaps = con.execute(
+        f"""SELECT e.target, SUM(COALESCE(e.amount_usd,0)) cap
+            FROM events e
+            WHERE e.status IN ('verified','verified_alpha')
+              AND (e.target_type IS NULL OR e.target_type NOT IN ({ph_tt}))
+              AND e.sector NOT IN ({ph_sec})
+              AND NOT EXISTS (SELECT 1 FROM target_classification t
+                              WHERE t.target = e.target AND t.ai_class IS NOT NULL)
+            GROUP BY e.target HAVING cap >= ? ORDER BY cap DESC""",
+        (*EXCLUDED_TARGET_TYPES, *EXCLUDED_SECTORS, CLASSIFY_MIN_USD)).fetchall()
+    for g in gaps:
+        warnings.append(f"W8 {g['target']}: ${g['cap']/1e9:.1f}B investable target "
+                        f"with no ai_posture")
+    return con.execute("SELECT COUNT(*) c FROM target_classification").fetchone()["c"]
+
+
 def _stats(con):
     s = {r["status"]: r["c"] for r in con.execute(
         "SELECT status, COUNT(*) c FROM events GROUP BY status").fetchall()}
@@ -152,13 +178,14 @@ def run(week: str) -> dict:
     n_prof = _check_profiles(con, warnings)
     n_refs = _check_references(con, warnings)
     n_hold = _check_holdings(con, warnings)
+    n_cls = _check_classification(con, warnings)
     stats = _stats(con)
     con.close()
 
     verdict = {"generated": date.today().isoformat(), "week": week,
                "checked": {"events": n_events, "track_records": n_tr,
                            "profiles": n_prof, "target_references": n_refs,
-                           "holdings": n_hold},
+                           "holdings": n_hold, "classified_targets": n_cls},
                "errors": errors, "warnings": warnings, "stats": stats,
                "passed": not errors}
 
@@ -167,7 +194,8 @@ def run(week: str) -> dict:
     L = [f"# Audit report — {week} ({verdict['generated']})", "",
          f"**Verdict: {'PASS' if verdict['passed'] else 'FAIL — delivery blocked'}**",
          f"Checked {n_events} events, {n_tr} track-record rows, {n_prof} profiles, "
-         f"{n_refs} target references, {n_hold} holdings.", "",
+         f"{n_refs} target references, {n_hold} holdings, {n_cls} classified "
+         f"targets.", "",
          f"## Errors ({len(errors)})"]
     L += [f"- {e}" for e in errors] or ["_none_"]
     L += ["", f"## Warnings ({len(warnings)})"]
