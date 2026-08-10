@@ -80,5 +80,8 @@ workflow ⏳ (dashboard side)  11. Automation ⏳ (B2)
 13. Allocator intelligence (§5, Cluster C) ✅ agents/allocator-profiler.md +
     engine/profiles.py → allocator_profiles + track_records (provisional-flagged, sourced)
 14. Audit gate (§6) ✅ engine/audit.py — every run; errors block --deliver/--push
+15. Fund holdings ✅ agents/holdings-profiler.md + engine/holdings.py → portfolios +
+    holdings tables; emitted on fund/firm nodes (portfolio_url + holdings[] +
+    holdings_count). The "follow smart money into the exact companies" layer.
 
 Remaining: scheduling (B2) and the dashboard-side consumer of the v3 blocks.

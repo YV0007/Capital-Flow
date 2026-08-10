@@ -211,6 +211,39 @@ CREATE TABLE IF NOT EXISTS target_references (
     updated_at    TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
+-- Fund / firm PORTFOLIOS (holdings task). The map shows LP money flowing INTO a
+-- fund vehicle; this is the layer BELOW — the companies the fund itself deploys
+-- into. Researched by agents/holdings-profiler.md, ingested by engine/holdings.py,
+-- emitted on fund + firm nodes in the handoff. Cumulative (upsert, never drop).
+CREATE TABLE IF NOT EXISTS portfolios (
+    entity         TEXT PRIMARY KEY,   -- fund/firm name; matches an allocator name or a target label
+    portfolio_url  TEXT,               -- DIRECT link to this entity's portfolio listing (not homepage)
+    holdings_count INTEGER,            -- TRUE total known holdings (may exceed stored rows if capped)
+    as_of          TEXT NOT NULL,
+    run_week       TEXT NOT NULL,
+    updated_at     TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+-- One row = one portfolio company a fund/firm backs. Facts only, every one sourced
+-- (audit treats an unsourced holding as a violation, like an unsourced flow).
+CREATE TABLE IF NOT EXISTS holdings (
+    id          INTEGER PRIMARY KEY,
+    entity      TEXT NOT NULL,        -- the fund/firm that holds it
+    name        TEXT NOT NULL,        -- portfolio company (byte-identical to a node label when tracked)
+    sector      TEXT,                 -- canonical sector slug (for dashboard color/grouping)
+    subsector   TEXT,                 -- per-deal subsector slug
+    note        TEXT,                 -- <=120 chars: what the company IS
+    stake       TEXT,                 -- '% or $' if disclosed, kept verbatim; else NULL
+    lead        INTEGER NOT NULL DEFAULT 0,  -- 1 if the fund led the round
+    rank        INTEGER,              -- display order, most-notable/largest first (1 = top)
+    as_of       TEXT,
+    source_url  TEXT NOT NULL,        -- every holding is sourced
+    run_week    TEXT NOT NULL,
+    created_at  TEXT NOT NULL DEFAULT (datetime('now')),
+    UNIQUE (entity, name)
+);
+CREATE INDEX IF NOT EXISTS idx_holdings_entity ON holdings (entity, rank);
+
 -- Detected themes: output of the theme engine, one row per (theme, run_week).
 CREATE TABLE IF NOT EXISTS themes (
     id          INTEGER PRIMARY KEY,

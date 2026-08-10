@@ -105,6 +105,31 @@ def _build_map(con) -> dict:
         n["links"] = links
         n["reference_as_of"] = r["as_of"]
 
+    # Fund/firm PORTFOLIOS (holdings task): the companies an entity deploys into —
+    # the layer below the map's LP flows. Attached to any node (allocator firm or
+    # fund-vehicle target) whose label matches a portfolio entity. Holdings are
+    # ranked most-notable first so the dashboard's top-5 / top-25 / all views work.
+    portfolios = {r["entity"]: r for r in con.execute("SELECT * FROM portfolios")}
+    holdings_by = {}
+    for h in con.execute(
+        """SELECT entity, name, sector, subsector, note, stake, lead, rank,
+                  as_of, source_url FROM holdings
+           ORDER BY entity, CASE WHEN rank IS NULL THEN 1 ELSE 0 END, rank, name"""):
+        holdings_by.setdefault(h["entity"], []).append({
+            "name": h["name"], "sector": h["sector"], "subsector": h["subsector"],
+            "note": h["note"], "stake": h["stake"], "lead": bool(h["lead"]),
+            "as_of": h["as_of"], "source_url": h["source_url"]})
+    for n in nodes.values():
+        p, hs = portfolios.get(n["label"]), holdings_by.get(n["label"])
+        if not p and not hs:
+            continue
+        if p and p["portfolio_url"]:
+            n["portfolio_url"] = p["portfolio_url"]
+        n["holdings"] = hs or []
+        n["holdings_count"] = (p["holdings_count"] if p and p["holdings_count"] is not None
+                               else len(hs or []))
+        n["holdings_as_of"] = (p["as_of"] if p else (hs[0]["as_of"] if hs else None))
+
     today = date.today().isoformat()
     for n in nodes.values():
         stale_before = (datetime.fromisoformat(today).toordinal() - STALE_DAYS)

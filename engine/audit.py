@@ -22,7 +22,12 @@ WARNINGS (ship, but surfaced):
   W5  verified event sourced from tier >= 4 (weak source for a 'verified' claim)
   W6  target with >= $1B confirmed capital but no engine reference ("what this
       is" description + read-more link) — a visible blank card on the dashboard
+  W7  fund/firm (VC or alt-manager, or a fund-vehicle target) with >= $1B
+      confirmed capital but zero portfolio holdings collected — the dashboard's
+      portfolio view would be empty
 """
+
+HOLDINGS_MIN_USD = 1e9
 
 import json
 from datetime import date
@@ -100,6 +105,28 @@ def _check_references(con, warnings):
     return con.execute("SELECT COUNT(*) c FROM target_references").fetchone()["c"]
 
 
+def _check_holdings(con, warnings):
+    gaps = con.execute(
+        """SELECT label, cap FROM (
+             SELECT a.name AS label, SUM(COALESCE(e.amount_usd,0)) cap
+             FROM events e JOIN allocators a ON a.id = e.allocator_id
+             WHERE a.class IN ('vc','alt_manager')
+               AND e.status IN ('verified','verified_alpha')
+             GROUP BY a.id
+             UNION ALL
+             SELECT e.target AS label, SUM(COALESCE(e.amount_usd,0)) cap
+             FROM events e
+             WHERE e.target_type = 'fund' AND e.status IN ('verified','verified_alpha')
+             GROUP BY e.target)
+           WHERE cap >= ?
+             AND label NOT IN (SELECT entity FROM portfolios WHERE holdings_count > 0)
+           ORDER BY cap DESC""", (HOLDINGS_MIN_USD,)).fetchall()
+    for g in gaps:
+        warnings.append(f"W7 {g['label']}: ${g['cap']/1e9:.1f}B fund/firm with no "
+                        f"holdings collected")
+    return con.execute("SELECT COUNT(*) c FROM holdings").fetchone()["c"]
+
+
 def _stats(con):
     s = {r["status"]: r["c"] for r in con.execute(
         "SELECT status, COUNT(*) c FROM events GROUP BY status").fetchall()}
@@ -124,12 +151,14 @@ def run(week: str) -> dict:
     n_tr = _check_track_records(con, errors)
     n_prof = _check_profiles(con, warnings)
     n_refs = _check_references(con, warnings)
+    n_hold = _check_holdings(con, warnings)
     stats = _stats(con)
     con.close()
 
     verdict = {"generated": date.today().isoformat(), "week": week,
                "checked": {"events": n_events, "track_records": n_tr,
-                           "profiles": n_prof, "target_references": n_refs},
+                           "profiles": n_prof, "target_references": n_refs,
+                           "holdings": n_hold},
                "errors": errors, "warnings": warnings, "stats": stats,
                "passed": not errors}
 
@@ -138,7 +167,7 @@ def run(week: str) -> dict:
     L = [f"# Audit report — {week} ({verdict['generated']})", "",
          f"**Verdict: {'PASS' if verdict['passed'] else 'FAIL — delivery blocked'}**",
          f"Checked {n_events} events, {n_tr} track-record rows, {n_prof} profiles, "
-         f"{n_refs} target references.", "",
+         f"{n_refs} target references, {n_hold} holdings.", "",
          f"## Errors ({len(errors)})"]
     L += [f"- {e}" for e in errors] or ["_none_"]
     L += ["", f"## Warnings ({len(warnings)})"]

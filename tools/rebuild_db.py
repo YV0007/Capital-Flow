@@ -14,7 +14,8 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from engine import beneficiaries, db, ingest, profiles, references, themes  # noqa: E402
+from engine import (beneficiaries, db, holdings, ingest, profiles,  # noqa: E402
+                    references, themes)
 
 
 def main() -> None:
@@ -29,9 +30,10 @@ def main() -> None:
         b = beneficiaries.run(w)
         p = profiles.ingest_week(w)
         r = references.ingest_week(w)
+        hd = holdings.ingest_week(w)
         print(f"  {w}: +{s['inserted']} events ({s['skipped']} skipped), "
               f"{b['linked']} beneficiaries, {p['profiles']} profiles, "
-              f"{r['references']} references")
+              f"{r['references']} references, {hd['holdings']} holdings")
     t = themes.run(weeks[-1])
     print(f"  themes recomputed for {weeks[-1]}: {len(t['fired'])} fired")
     print("done — run `python run_week.py <week>` for the current cycle next")

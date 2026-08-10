@@ -50,6 +50,15 @@ a reference, generate batch inputs (target + sector + allocators + deal URLs) un
 (`agents/target-profiler.md`) writing `references.json` beside them, then re-run the
 pipeline to ingest. The audit warns (W6) on ≥$1B targets without a reference.
 
+**Step 3d — fund holdings (the layer below LP flows).** For funds/firms without
+collected holdings, generate batch inputs, then launch profiler agents:
+```bash
+python tools/make_holdings_batches.py <week>   # writes runs/<week>/holdings/batch-N/batch_entities.json
+```
+Launch one holdings-profiler agent (`agents/holdings-profiler.md`) per batch,
+writing `holdings.json` beside each input, then re-run the pipeline to ingest.
+The audit warns (W7) on ≥$1B funds/firms with zero holdings.
+
 **Step 4 — beneficiaries (optional but recommended).** Run the beneficiary-mapper
 pass (`agents/beneficiary-mapper.md`) to write `runs/<week>/beneficiaries.csv`, then
 re-run `python run_week.py 2026-W32` to link them (idempotent — safe to re-run).

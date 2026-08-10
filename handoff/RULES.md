@@ -98,3 +98,18 @@ The dashboard writes `{angle, read}` from THIS payload only — no external sear
 `flowNotes.json` therefore becomes generated-and-cached, not hand-curated, and
 covers 100% of flows instead of ~23%. Boundary rule: engine searches + sources +
 derives facts; dashboard words + visualizes. Neither does the other's job.
+
+## Fund holdings on nodes (v3.3, 2026-08-10) — the layer below LP flows
+Fund + firm nodes (any node whose entity has collected holdings — `cls:"fund"`
+targets and VC/alt-manager allocators) may now carry:
+- `portfolio_url` — DIRECT link to that entity's portfolio listing (not homepage);
+  absent when no portfolio page exists (fall back to the website link).
+- `holdings[]` — the companies the fund deploys into, ranked most-notable first;
+  each `{name, sector, subsector, note, stake, lead, as_of, source_url}`. Every
+  holding is sourced. When a holding's `name` matches a map node label, link the
+  row straight through.
+- `holdings_count` — the TRUE total (may exceed the array; show "top N of count").
+- `holdings_as_of` — research date.
+Cumulative like the map; the audit flags (W7) any ≥$1B fund/firm with zero
+holdings. This is the "follow smart money into the exact companies" layer — the
+map shows LP money into a fund; holdings show where the fund then deploys it.

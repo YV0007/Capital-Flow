@@ -1,0 +1,121 @@
+[
+  {
+    "entity": "MGX Fund I",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "MGX"
+    ],
+    "capital_usd": 49000000000.0,
+    "deal_source_urls": [
+      "https://www.mgx.ae/news-insights/mgx-pleased-confirm-final-close-mgx-fund-i-49-billion-total-commitments-significantly"
+    ]
+  },
+  {
+    "entity": "KKR Global Infrastructure Investors V",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "KKR"
+    ],
+    "capital_usd": 19200000000.0,
+    "deal_source_urls": [
+      "https://www.businesswire.com/news/home/20260803095185/en/KKR-Closes-$19.2-Billion-Infrastructure-Fund"
+    ]
+  },
+  {
+    "entity": "KIC strategic investment account (AI / data centers / strategic industries)",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Korea Investment Corporation"
+    ],
+    "capital_usd": 14000000000.0,
+    "deal_source_urls": [
+      "https://efts.sec.gov/LATEST/search-index?q=%22Korea+Investment+Corporation%22"
+    ]
+  },
+  {
+    "entity": "Khosla Ventures",
+    "kind": "firm",
+    "class": "vc",
+    "parent_hint": [],
+    "capital_usd": 6090000000.0,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/norm-ai-raises-120-million-at-a-1-2-billion-valuation-led-by-khosla-ventures-to-deliver-the-full-stack-model-for-legal-ai-302819152.html",
+      "https://www.businesswire.com/news/home/20260714185502/en/Singularity-Emerges-from-Stealth-with-$80M-Series-A-at-$400M-Valuation-to-Deploy-Air-Defense-at-Scale",
+      "https://www.prnewswire.com/news-releases/state-affairs-raises-70-million-to-help-institutions-navigate-the-policy-and-regulatory-economy-302824501.html"
+    ]
+  },
+  {
+    "entity": "Brookfield AI Infrastructure strategy",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Brookfield"
+    ],
+    "capital_usd": 5000000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1937926/000117184326005272/exh_991.htm"
+    ]
+  },
+  {
+    "entity": "Thrive Capital",
+    "kind": "firm",
+    "class": "vc",
+    "parent_hint": [],
+    "capital_usd": 1430000000.0,
+    "deal_source_urls": [
+      "https://www.businesswire.com/news/home/20260713849009/en/Chai-Discovery-Announces-$400M-Series-C-to-Advance-AI-Driven-Molecular-Design",
+      "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+      "https://ambrook.com/series-b"
+    ]
+  },
+  {
+    "entity": "Greenoaks",
+    "kind": "firm",
+    "class": "vc",
+    "parent_hint": [],
+    "capital_usd": 692000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2141341/000184073526000020/primary_doc.xml",
+      "https://www.sec.gov/Archives/edgar/data/2141340/000214134026000002/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Khosla Ventures MM SPV, LLC",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Vinod Khosla"
+    ],
+    "capital_usd": 60500000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2148181/000214818126000001/xslFormDX01/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Andreessen Horowitz Fund X-B - AI Infrastructure, L.P.",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Andreessen Horowitz"
+    ],
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2107841/000110465926084291/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "GPx TX LP",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Brian Singerman"
+    ],
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2147127/000123191926000804/primary_doc.xml"
+    ]
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "entity": "BlackRock",
+    "kind": "firm",
+    "class": "alt_manager",
+    "parent_hint": [],
+    "capital_usd": 44900000000.0,
+    "deal_source_urls": [
+      "https://www.globenewswire.com/news-release/2026/07/14/3326975/0/en/global-infrastructure-partners-agrees-to-acquire-summit-ridge-energy.html",
+      "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/",
+      "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-New-Strategic-Venture-with-BlackRock-to-Develop-Data-Center-in-El-Paso/default.aspx"
+    ]
+  },
+  {
+    "entity": "Coatue",
+    "kind": "firm",
+    "class": "vc",
+    "parent_hint": [],
+    "capital_usd": 15425185000.0,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/norm-ai-raises-120-million-at-a-1-2-billion-valuation-led-by-khosla-ventures-to-deliver-the-full-stack-model-for-legal-ai-302819152.html",
+      "https://www.sec.gov/Archives/edgar/data/2143819/000214381926000001/primary_doc.xml",
+      "https://www.sec.gov/Archives/edgar/data/2143818/000214381826000001/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Sequoia",
+    "kind": "firm",
+    "class": "vc",
+    "parent_hint": [],
+    "capital_usd": 11945000000.0,
+    "deal_source_urls": [
+      "https://www.businesswire.com/news/home/20260713849009/en/Chai-Discovery-Announces-$400M-Series-C-to-Advance-AI-Driven-Molecular-Design",
+      "https://www.prnewswire.com/news-releases/senra-systems-announces-65-million-series-b-plans-for-third-manufacturing-facility-302825664.html",
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=Glow&type=D&dateb=&owner=include&count=40"
+    ]
+  },
+  {
+    "entity": "Andreessen Horowitz",
+    "kind": "firm",
+    "class": "vc",
+    "parent_hint": [],
+    "capital_usd": 5597000000.0,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/senra-systems-announces-65-million-series-b-plans-for-third-manufacturing-facility-302825664.html",
+      "https://www.sec.gov/Archives/edgar/data/2107841/000110465926084291/primary_doc.xml",
+      "https://www.sec.gov/Archives/edgar/data/2107847/000110465926084290/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Mubadala Capital (credit platform)",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Mubadala"
+    ],
+    "capital_usd": 4650000000.0,
+    "deal_source_urls": [
+      "https://finance.yahoo.com/markets/stocks/articles/mubadala-capital-completes-integration-mubadala-100000955.html"
+    ]
+  },
+  {
+    "entity": "Coatue Growth Fund VI Private Investors US, LLC",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Coatue"
+    ],
+    "capital_usd": 778230000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2143819/000214381926000001/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Greenoaks Prime Radiant Founders LP",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Greenoaks"
+    ],
+    "capital_usd": 576519835.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2141341/000184073526000020/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Altimeter Himalaya Fund I, L.P.",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Altimeter"
+    ],
+    "capital_usd": 40000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2139124/000213912426000001/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Andreessen Horowitz LSV Fund V-B, L.P.",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Andreessen Horowitz"
+    ],
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2107845/000110465926084286/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Prentis",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Reid Hoffman"
+    ],
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://efts.sec.gov/LATEST/search-index?q=%22Prentis%22&forms=D"
+    ]
+  }
+]

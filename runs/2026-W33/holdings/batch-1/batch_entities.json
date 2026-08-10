@@ -1,0 +1,133 @@
+[
+  {
+    "entity": "Brookfield",
+    "kind": "firm",
+    "class": "alt_manager",
+    "parent_hint": [],
+    "capital_usd": 153900000000.0,
+    "deal_source_urls": [
+      "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Brookfield-and-Bloom-Energy-Expand-AI-Infrastructure-Partnership-to-25-Billion-Fivefold-Increase-to-Build-and-Finance-Rapid-Power-for-AI-Infrastructure/default.aspx",
+      "https://www.globenewswire.com/news-release/2026/07/22/3331786/0/en/brookfield-to-acquire-aypa-power-the-leading-north-american-battery-storage-platform-from-blackstone-energy-transition-partners.html",
+      "https://www.blackstone.com/news/press/kuwait-oil-company-signs-us-16-0-billion-infrastructure-partnership-involving-its-crude-oil-pipeline-network-with-a-consortium-comprising-blackstone-brookfield-and-kkr/"
+    ]
+  },
+  {
+    "entity": "Blackstone",
+    "kind": "firm",
+    "class": "alt_manager",
+    "parent_hint": [],
+    "capital_usd": 41590000000.0,
+    "deal_source_urls": [
+      "https://asia.nikkei.com/editor-s-picks/interview/blackstone-to-invest-30bn-in-japan-ai-data-centers-president",
+      "https://www.sec.gov/Archives/edgar/data/0000107263/000119312526301533/d152507dex991.htm",
+      "https://pitchbook.com/news/articles/blackstones-qts-secures-upsized-3-25b-leveraged-loan"
+    ]
+  },
+  {
+    "entity": "Saudi PIF strategic investments (US export credit facility)",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "US Government"
+    ],
+    "capital_usd": 15000000000.0,
+    "deal_source_urls": [
+      "https://www.pif.gov.sa/en/news-and-insights/press-releases/2026/pif-us-exim-15-billion-usd-mou-export-credit/"
+    ]
+  },
+  {
+    "entity": "Coatue retail fund",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Coatue"
+    ],
+    "capital_usd": 8000000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002044519&type=&dateb=&owner=include&count=40"
+    ]
+  },
+  {
+    "entity": "Khosla Ventures 2026 fund family",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Khosla Ventures"
+    ],
+    "capital_usd": 5500000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2074230/000207423025000001/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Altimeter",
+    "kind": "firm",
+    "class": "vc",
+    "parent_hint": [],
+    "capital_usd": 4410000000.0,
+    "deal_source_urls": [
+      "https://efts.sec.gov/LATEST/search-index?q=%22Thrive+Holdings%22",
+      "https://www.sec.gov/Archives/edgar/data/2139124/000213912426000001/primary_doc.xml",
+      "https://www.sec.gov/Archives/edgar/data/2141877/000214187726000001/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "DigitalBridge",
+    "kind": "firm",
+    "class": "alt_manager",
+    "parent_hint": [],
+    "capital_usd": 711350516.0,
+    "deal_source_urls": [
+      "https://www.digitalbridge.com/news/2026-07-01-digitalbridge-and-jexi-announce-formation-of-nippon-gateway-infrastructure-a-new-data-center-platform-in-japan",
+      "https://www.sec.gov/Archives/edgar/data/2014474/000201447426000004/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Coatue Growth Fund VI Private Investors Cayman, L.P.",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Coatue"
+    ],
+    "capital_usd": 526955000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2143818/000214381826000001/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Altimeter Kilauea Fund II, L.P.",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Altimeter"
+    ],
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2141877/000214187726000001/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Brookfield Middle East Partners (BMEP)",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Saudi PIF"
+    ],
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.arabnews.com/node/2652475/business-economy"
+    ]
+  },
+  {
+    "entity": "Quiet Select TX LP",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Brian Singerman"
+    ],
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2147584/000123191926000805/primary_doc.xml"
+    ]
+  }
+]

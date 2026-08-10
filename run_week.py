@@ -12,8 +12,8 @@ deterministic Python. Scheduling (build step 3) will wrap this script.
 import sys
 from datetime import date
 
-from engine import (audit, beneficiaries, deliver, handoff, ingest, profiles,
-                    references, report, themes)
+from engine import (audit, beneficiaries, deliver, handoff, holdings, ingest,
+                    profiles, references, report, themes)
 
 
 def current_week() -> str:
@@ -45,6 +45,11 @@ def main(week: str, do_deliver: bool = False, do_push: bool = False,
     r = references.ingest_week(week)  # target "what this is" cards (engine-owned)
     print(f"[refs]    {r['references']} target references, {r['skipped']} skipped")
     for w in r.get("warnings", []):
+        print("          WARN", w)
+    hd = holdings.ingest_week(week)  # fund/firm portfolio holdings (the layer below LP flows)
+    print(f"[holding] {hd['entities']} portfolios, {hd['holdings']} holdings, "
+          f"{hd['skipped']} skipped")
+    for w in hd.get("warnings", []):
         print("          WARN", w)
     t = themes.run(week)  # after beneficiaries so beneficiary_concentration can see them
     print(f"[themes]  {len(t['fired'])} fired: {'; '.join(t['fired']) or '—'}")

@@ -52,6 +52,8 @@ run and is gitignored (regenerable from CSVs + schema).
   profile (source-attributed) + per-fiscal-year track record with `provisional` flags.
 - target nodes carry `description` + `links` (website + one read-more article) —
   the engine-owned "what this is" card, superseding dashboard-side curation.
+- fund + firm nodes carry `portfolio_url` + `holdings[]` + `holdings_count` — the
+  companies a fund deploys into (the layer below the map's LP flows), each sourced.
 - `audit` — the §6 verification verdict; audit errors block delivery.
 
 ## Signal rules (config/rules.yaml)
