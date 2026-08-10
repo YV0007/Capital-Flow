@@ -60,8 +60,12 @@ def _build_map(con) -> dict:
             n["last_activity"] = max(n["last_activity"] or d, d)
         flows.append({
             "source": a_id, "target": t_id, "sector": e["sector"],
+            "subsector": e["subsector"],
             "event_type": e["event_type"], "amount": e["amount_usd"],
+            "amount_estimated": bool(e["amount_estimated"]),
+            "round_total": e["round_total_usd"],
             "status": e["status"], "date": e["disclosed_date"], "tier": e["source_tier"],
+            "source_url": e["source_url"],
             "confidence": e["confidence_score"],
             "grade": (f"{e['source_reliability']}{e['info_credibility']}"
                       if e["source_reliability"] else None),

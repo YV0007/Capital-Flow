@@ -1,0 +1,118 @@
+[
+  {
+    "target": "Meta Hyperion (Richland Parish, Louisiana)",
+    "description": "Meta's largest data-center campus, a 5 GW AI supercluster under construction in Richland Parish, Louisiana, with investment now above $50B. Financed partly through a record $27B private-credit joint venture with Blue Owl Capital (Blue Owl funds own 80%, Meta 20%); first 2 GW targeted by 2030, full build ~2032.",
+    "website": "https://datacenters.atmeta.com/richland-parish-data-center/",
+    "read_more": {"label": "CNBC", "url": "https://www.cnbc.com/2026/07/13/meta-louisiana-data-center-investment-reaches-50-billion-amid-ai-push.html"},
+    "sources": [
+      "https://www.cnbc.com/2026/07/13/meta-louisiana-data-center-investment-reaches-50-billion-amid-ai-push.html",
+      "https://datacenters.atmeta.com/2026/07/deepening-our-investment-in-richland-parish-louisiana/",
+      "https://en.wikipedia.org/wiki/Hyperion_Data_Center"
+    ],
+    "as_of": "2026-08-10"
+  },
+  {
+    "target": "Lancium",
+    "description": "Power-infrastructure developer behind the 1,000-acre Lancium Clean Campus in Abilene, Texas — the first operational site of the Stargate AI data-center initiative (SoftBank/OpenAI/Oracle). Backed by Blackstone; NVIDIA is reported to be investing $2B for roughly 20% (up to $3B total) at a ~$10B valuation, with a possible 2027 IPO.",
+    "website": "https://lancium.com",
+    "read_more": {"label": "Investing.com", "url": "https://www.investing.com/news/stock-market-news/nvidia-to-invest-up-to-3-billion-in-lancium-the-information-reports-4847578"},
+    "sources": [
+      "https://www.investing.com/news/stock-market-news/nvidia-to-invest-up-to-3-billion-in-lancium-the-information-reports-4847578",
+      "https://lancium.com"
+    ],
+    "as_of": "2026-08-10"
+  },
+  {
+    "target": "Blue Origin",
+    "description": "Jeff Bezos's space company (founded 2000): New Glenn heavy-lift rockets, BE-4 engines, the Blue Moon lunar lander and New Shepard suborbital flights. In July 2026 it raised its first-ever outside round — about $10B at a $130B valuation — with Bezos putting in $2B alongside ~$4B from Coatue; Bezos had previously funded it with roughly $30B.",
+    "website": "https://www.blueorigin.com",
+    "read_more": {"label": "CNBC", "url": "https://www.cnbc.com/2026/07/08/blue-origin-bezos-fundraising.html"},
+    "sources": [
+      "https://www.cnbc.com/2026/07/08/blue-origin-bezos-fundraising.html",
+      "https://finance.yahoo.com/markets/stocks/articles/jeff-bezos-put-2-billion-102600114.html",
+      "https://www.fool.com/investing/2026/07/26/bezos-blue-origin-raise-10b-at-130b-valuation/"
+    ],
+    "as_of": "2026-08-10"
+  },
+  {
+    "target": "Mariana Minerals",
+    "description": "San Francisco software-first critical-minerals company (CEO Turner Caldwell) that engineers, builds and operates mines and refineries on its MarianaOS platform; flagship sites include Copper One in southeastern Utah and Lithium One in East Texas. Raised a $310M Series B led by Khosla Ventures with a16z, Breakthrough Energy, BHP Ventures and In-Q-Tel — ~$400M raised to date.",
+    "website": "https://marianaminerals.com",
+    "read_more": {"label": "PR Newswire", "url": "https://www.prnewswire.com/news-releases/mariana-minerals-raises-310-million-series-b-led-by-khosla-ventures-to-accelerate-critical-minerals-production-302840889.html"},
+    "sources": [
+      "https://www.prnewswire.com/news-releases/mariana-minerals-raises-310-million-series-b-led-by-khosla-ventures-to-accelerate-critical-minerals-production-302840889.html"
+    ],
+    "as_of": "2026-08-10"
+  },
+  {
+    "target": "Sunrise Energy Metals",
+    "description": "ASX-listed critical-minerals developer (SRL, Melbourne; backed by Robert Friedland) behind the 100%-owned Syerston Scandium Project in New South Wales, designed to produce ~60 tonnes of scandium a year for aerospace-grade aluminum alloys. The US Department of War's Office of Strategic Capital signed a conditional commitment of up to US$400M in long-term debt for the project; the company is also pursuing a US listing.",
+    "website": "https://sunriseem.com",
+    "read_more": {"label": "U.S. Department of War", "url": "https://www.war.gov/News/Releases/Release/Article/4566598/office-of-strategic-capital-signs-400-million-conditional-loan-commitment-with/"},
+    "sources": [
+      "https://www.war.gov/News/Releases/Release/Article/4566598/office-of-strategic-capital-signs-400-million-conditional-loan-commitment-with/",
+      "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-billions-in-new-deals-and-investments-to-power-american-mining/",
+      "https://www.mining.com/sunrise-energy-metals-scandium-project-gets-400m-conditional-loan-from-us-department-of-war/",
+      "https://sunriseem.com"
+    ],
+    "as_of": "2026-08-10"
+  },
+  {
+    "target": "Niron Magnetics",
+    "description": "Minneapolis-area company commercializing rare-earth-free Iron Nitride permanent magnets, based on technology developed at the University of Minnesota. The US Department of War's Office of Strategic Capital signed a conditional 20-year loan commitment of up to $150M to fund its 287,000 sq ft Sartell, Minnesota plant, slated to produce up to 1,500 tons of magnets annually from 2027.",
+    "website": "https://nironmagnetics.com",
+    "read_more": {"label": "PR Newswire", "url": "https://www.prnewswire.com/news-releases/niron-magnetics-receives-conditional-150-million-department-of-war-commitment-302846367.html"},
+    "sources": [
+      "https://www.prnewswire.com/news-releases/niron-magnetics-receives-conditional-150-million-department-of-war-commitment-302846367.html",
+      "https://www.war.gov/News/Releases/Release/Article/4566567/office-of-strategic-capital-signs-150-million-conditional-loan-commitment-with/",
+      "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-billions-in-new-deals-and-investments-to-power-american-mining/"
+    ],
+    "as_of": "2026-08-10"
+  },
+  {
+    "target": "Standard Bauxite",
+    "description": "Refractory-grade bauxite supplier named 'Standard Bauxite' in the White House fact sheet; the Department of War release identifies the counterparty as Strategic Bauxite USA, LLC (SBX), which acquired Canada's First Bauxite Corporation. The DoW's $85.5M IBAS equity investment (plus $64.5M private co-investment) funds expansion of the First Bauxite mine in Guyana, calcination facilities, and a US brown-fused alumina plant.",
+    "website": null,
+    "read_more": {"label": "U.S. Department of War", "url": "https://www.war.gov/News/Releases/Release/Article/4566604/department-of-war-announces-an-855-million-agreement-with-strategic-bauxite-usa/"},
+    "sources": [
+      "https://www.war.gov/News/Releases/Release/Article/4566604/department-of-war-announces-an-855-million-agreement-with-strategic-bauxite-usa/",
+      "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-billions-in-new-deals-and-investments-to-power-american-mining/",
+      "https://guyanachronicle.com/2026/08/09/us-to-invest-us85-5m-to-expand-bauxite-operations-in-guyana/"
+    ],
+    "as_of": "2026-08-10"
+  },
+  {
+    "target": "Prime Intellect",
+    "description": "AI infrastructure company (founded 2024, CEO Vincent Weisser) building an open 'superintelligence stack' — GPU compute, reinforcement-learning frameworks and evals that let enterprises train and run their own AI models and agents instead of relying on frontier labs. Raised a $130M Series A at a $1B valuation led by Radical Ventures, with NVIDIA Ventures, Intel Capital and Dell Technologies Capital; ~$100M revenue run rate.",
+    "website": "https://www.primeintellect.ai",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/07/08/prime-intellect-raises-130m-series-a-to-help-enterprises-build-their-own-ai-agents/"},
+    "sources": [
+      "https://techcrunch.com/2026/07/08/prime-intellect-raises-130m-series-a-to-help-enterprises-build-their-own-ai-agents/",
+      "https://www.primeintellect.ai"
+    ],
+    "as_of": "2026-08-10"
+  },
+  {
+    "target": "MOZN",
+    "description": "Riyadh-based enterprise AI company focused on financial-crime prevention and decision intelligence; its FOCAL platform (AML/KYC) serves 150+ financial-services and public-sector customers across the Middle East. Received a strategic investment from HUMAIN (Saudi PIF's AI company) — HUMAIN Ventures' first investment in a Saudi company — paired with a partnership to co-build enterprise AI solutions.",
+    "website": "https://mozn.ai",
+    "read_more": {"label": "PR Newswire", "url": "https://www.prnewswire.com/news-releases/humain-makes-investment-in-mozn-and-partners-to-co-build-enterprise-ai-solutions-locally-and-globally-302841043.html"},
+    "sources": [
+      "https://www.prnewswire.com/news-releases/humain-makes-investment-in-mozn-and-partners-to-co-build-enterprise-ai-solutions-locally-and-globally-302841043.html"
+    ],
+    "as_of": "2026-08-10"
+  },
+  {
+    "target": "Discovery Loop",
+    "description": "Public benefit corporation founded in August 2026 by Google veterans Jeff Dean (CEO), Sanjay Ghemawat, Oriol Vinyals and Quoc Le to use AI to automate large-scale scientific and engineering experimentation. Seed round co-led by Radical Ventures and Khosla Ventures, with Alphabet participating as founding investor and cloud partner alongside Lightspeed and Kleiner Perkins.",
+    "website": "https://www.discoveryloop.com/",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/"},
+    "sources": [
+      "https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/",
+      "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
+      "https://www.geekwire.com/2026/the-startup-idea-that-convinced-a-uw-computer-science-legend-to-leave-google-after-27-years/",
+      "https://www.discoveryloop.com/"
+    ],
+    "as_of": "2026-08-10"
+  }
+]

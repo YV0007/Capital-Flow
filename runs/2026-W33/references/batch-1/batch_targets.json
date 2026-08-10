@@ -1,0 +1,133 @@
+[
+  {
+    "target": "Meta Hyperion (Richland Parish, Louisiana)",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Blue Owl"
+    ],
+    "last_event": "2026-07-13",
+    "capital_usd": 50000000000.0,
+    "deal_source_urls": [
+      "https://www.cnbc.com/2026/07/13/meta-louisiana-data-center-investment-reaches-50-billion-amid-ai-push.html"
+    ]
+  },
+  {
+    "target": "Lancium",
+    "target_type": "private",
+    "sector": "power-energy",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-08-08",
+    "capital_usd": 2000000000.0,
+    "deal_source_urls": [
+      "https://www.investing.com/news/stock-market-news/nvidia-to-invest-up-to-3-billion-in-lancium-the-information-reports-4847578"
+    ]
+  },
+  {
+    "target": "Blue Origin",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "Jeff Bezos"
+    ],
+    "last_event": "2026-07-08",
+    "capital_usd": 2000000000.0,
+    "deal_source_urls": [
+      "https://www.cnbc.com/2026/07/08/blue-origin-bezos-fundraising.html"
+    ]
+  },
+  {
+    "target": "Mariana Minerals",
+    "target_type": "private",
+    "sector": "robotics",
+    "allocators": [
+      "Andreessen Horowitz",
+      "Khosla Ventures"
+    ],
+    "last_event": "2026-08-03",
+    "capital_usd": 620000000.0,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/mariana-minerals-raises-310-million-series-b-led-by-khosla-ventures-to-accelerate-critical-minerals-production-302840889.html"
+    ]
+  },
+  {
+    "target": "Sunrise Energy Metals",
+    "target_type": "public",
+    "sector": "defense-tech",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-08-07",
+    "capital_usd": 400000000.0,
+    "deal_source_urls": [
+      "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-billions-in-new-deals-and-investments-to-power-american-mining/"
+    ]
+  },
+  {
+    "target": "Niron Magnetics",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-08-07",
+    "capital_usd": 150000000.0,
+    "deal_source_urls": [
+      "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-billions-in-new-deals-and-investments-to-power-american-mining/"
+    ]
+  },
+  {
+    "target": "Standard Bauxite",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-08-07",
+    "capital_usd": 85000000.0,
+    "deal_source_urls": [
+      "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-billions-in-new-deals-and-investments-to-power-american-mining/"
+    ]
+  },
+  {
+    "target": "Prime Intellect",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-07-08",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://techcrunch.com/2026/07/08/prime-intellect-raises-130m-series-a-to-help-enterprises-build-their-own-ai-agents/"
+    ]
+  },
+  {
+    "target": "MOZN",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Saudi PIF"
+    ],
+    "last_event": "2026-08-03",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/humain-makes-investment-in-mozn-and-partners-to-co-build-enterprise-ai-solutions-locally-and-globally-302841043.html"
+    ]
+  },
+  {
+    "target": "Discovery Loop",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "Alphabet"
+    ],
+    "last_event": "2026-08-05",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/"
+    ]
+  }
+]

@@ -59,6 +59,16 @@ re-run `python run_week.py 2026-W32` to link them (idempotent — safe to re-run
 
 ---
 
+## Fresh clone / new environment — REQUIRED first step
+`db/capital.db` is gitignored; `runs/` is the committed source of truth. Before
+running any week from a fresh clone or a new machine/agent environment:
+```bash
+python tools/rebuild_db.py
+```
+Skipping this produces a handoff containing only the new week's events;
+`deliver.py` now BLOCKS such collapsed deliveries (node-count/profile regression
+guard) — this rebuild is the fix, not an optional step. (Incident: 2026-W33.)
+
 ## Mode B2 — scheduled / autonomous (after B1 is trusted)
 
 Wrap the exact B1 sequence in a scheduled cloud agent (the `/schedule` skill or cron)

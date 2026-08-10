@@ -1,0 +1,123 @@
+[
+  {
+    "target": "Oaktree Capital Management",
+    "target_type": "private",
+    "sector": "datacenters",
+    "allocators": [
+      "Brookfield"
+    ],
+    "last_event": "2026-08-03",
+    "capital_usd": 3000000000.0,
+    "deal_source_urls": [
+      "https://www.globenewswire.com/news-release/2026/08/03/3337342/0/en/Brookfield-Completes-Acquisition-of-Oaktree.html"
+    ]
+  },
+  {
+    "target": "Firmus",
+    "target_type": "private",
+    "sector": "neocloud",
+    "allocators": [
+      "Coatue"
+    ],
+    "last_event": "2026-08-07",
+    "capital_usd": 2000000000.0,
+    "deal_source_urls": [
+      "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific"
+    ]
+  },
+  {
+    "target": "Sila Nanotechnologies",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-08-07",
+    "capital_usd": 1400000000.0,
+    "deal_source_urls": [
+      "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-billions-in-new-deals-and-investments-to-power-american-mining/"
+    ]
+  },
+  {
+    "target": "Whatnot",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Andreessen Horowitz"
+    ],
+    "last_event": "2026-08-07",
+    "capital_usd": 545000000.0,
+    "deal_source_urls": [
+      "https://blog.teamwhatnot.com/unitedstates/seriesg"
+    ]
+  },
+  {
+    "target": "Senra Systems",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "Sequoia",
+      "Andreessen Horowitz",
+      "Founders Fund"
+    ],
+    "last_event": "2026-07-15",
+    "capital_usd": 195000000.0,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/senra-systems-announces-65-million-series-b-plans-for-third-manufacturing-facility-302825664.html"
+    ]
+  },
+  {
+    "target": "Strategic Bauxite USA, LLC (SBX)",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-08-07",
+    "capital_usd": 85500000.0,
+    "deal_source_urls": [
+      "https://www.war.gov/News/Releases/Release/Article/4566604/department-of-war-announces-an-855-million-agreement-with-strategic-bauxite-usa/"
+    ]
+  },
+  {
+    "target": "TotalEnergies European renewables portfolio (Germany/Spain/France/Poland)",
+    "target_type": "private",
+    "sector": "power-energy",
+    "allocators": [
+      "KKR"
+    ],
+    "last_event": "2026-08-02",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.businesswire.com/news/home/20260802134675/en/KKR-to-Acquire-a-50-Stake-in-a-Portfolio-of-Developed-Renewable-Assets-from-TotalEnergies-Across-Europe"
+    ]
+  },
+  {
+    "target": "Moove",
+    "target_type": "private",
+    "sector": "robotics",
+    "allocators": [
+      "Mubadala"
+    ],
+    "last_event": "2026-08-05",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility"
+    ]
+  },
+  {
+    "target": "Kuwait Oil Company Pipeline JV (Project Peregrine)",
+    "target_type": "asset",
+    "sector": "power-energy",
+    "allocators": [
+      "Blackstone",
+      "Brookfield",
+      "KKR"
+    ],
+    "last_event": "2026-07-25",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.blackstone.com/news/press/kuwait-oil-company-signs-us-16-0-billion-infrastructure-partnership-involving-its-crude-oil-pipeline-network-with-a-consortium-comprising-blackstone-brookfield-and-kkr/"
+    ]
+  }
+]

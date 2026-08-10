@@ -1,0 +1,107 @@
+[
+  {
+    "target": "Oaktree Capital Management",
+    "description": "Los Angeles-based alternative asset manager co-founded in 1995 by Howard Marks and Bruce Karsh, best known for credit and distressed-debt investing. Brookfield, a partner since 2019, completed acquisition of the remaining ~26% it did not own for ~$3.0B on July 31, 2026, taking 100% ownership and forming a ~$365B combined credit platform.",
+    "website": "https://www.oaktreecapital.com",
+    "read_more": {"label": "Brookfield Oaktree Holdings", "url": "https://www.brookfieldoaktreeholdings.com/news-releases/news-release-details/brookfield-completes-acquisition-oaktree"},
+    "sources": [
+      "https://www.brookfieldoaktreeholdings.com/news-releases/news-release-details/brookfield-completes-acquisition-oaktree",
+      "https://bam.brookfield.com/press-releases/brookfield-acquire-remaining-interest-oaktree",
+      "https://www.fundssociety.com/en/news/business/brookfield-to-acquire-remaining-26-of-oaktree-for-approximately-3-billion-dollars/"
+    ],
+    "as_of": "2026-08-10"
+  },
+  {
+    "target": "Firmus",
+    "description": "Sydney-based AI infrastructure company building Nvidia-architecture 'AI factories' with proprietary immersion-cooling and grid-aware technology across Australia and Asia-Pacific (Project Southgate rollout, Indonesia next). Raised a fully subscribed $2B strategic equity round from Blackstone, Coatue, Nvidia and Jane Street at a post-money valuation above $10.5B.",
+    "website": "https://firmus.co",
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-08-07/ai-data-center-group-firmus-draws-2-billion-from-coatue-nvidia"},
+    "sources": [
+      "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+      "https://www.bloomberg.com/news/articles/2026-08-07/ai-data-center-group-firmus-draws-2-billion-from-coatue-nvidia",
+      "https://technode.global/2026/08/07/australias-firmus-raises-2b-from-blackstone-coatue-nvidia-to-expand-ai-factories-in-apac/"
+    ],
+    "as_of": "2026-08-10"
+  },
+  {
+    "target": "Sila Nanotechnologies",
+    "description": "Alameda, CA battery-materials company (founded 2011 by ex-Tesla engineer Gene Berdichevsky) making silicon-carbon anodes at its Moses Lake, WA plant. Received a conditional loan commitment of up to $1.4B from the Department of War's Office of Strategic Capital to expand anode capacity and build a lithium-ion cell facility for defense supply chains (satellites, UAS, munitions).",
+    "website": "https://www.silanano.com",
+    "read_more": {"label": "Business Wire", "url": "https://www.businesswire.com/news/home/20260807648387/en/Sila-Receives-Conditional-$1.4-Billion-Loan-Commitment-from-U.S.-Department-of-War-to-Accelerate-Domestic-Battery-Technology-Manufacturing"},
+    "sources": [
+      "https://www.war.gov/News/Releases/Release/Article/4566579/the-office-of-strategic-capital-signs-14-billion-conditional-loan-commitment-wi/",
+      "https://www.businesswire.com/news/home/20260807648387/en/Sila-Receives-Conditional-$1.4-Billion-Loan-Commitment-from-U.S.-Department-of-War-to-Accelerate-Domestic-Battery-Technology-Manufacturing",
+      "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-billions-in-new-deals-and-investments-to-power-american-mining/"
+    ],
+    "as_of": "2026-08-10"
+  },
+  {
+    "target": "Whatnot",
+    "description": "Live-shopping marketplace (founded 2019, CEO Grant LaFontaine) where sellers broadcast live shows to sell collectibles, fashion and more. Closed a $545M Series G at a $20B valuation — roughly double its Oct 2025 mark — led by ICONIQ, Lightspeed and Avra, with returning backers including Andreessen Horowitz, DST Global and CapitalG; ~$1.5B raised to date.",
+    "website": "https://www.whatnot.com",
+    "read_more": {"label": "Fortune", "url": "https://fortune.com/2026/08/07/ai-obsessed-silicon-valley-live-commerce-platform-whatnot-new-funding-round-20-billion/"},
+    "sources": [
+      "https://blog.teamwhatnot.com/unitedstates/seriesg",
+      "https://fortune.com/2026/08/07/ai-obsessed-silicon-valley-live-commerce-platform-whatnot-new-funding-round-20-billion/",
+      "https://qz.com/whatnot-series-g-funding-live-shopping-valuation-080726"
+    ],
+    "as_of": "2026-08-10"
+  },
+  {
+    "target": "Senra Systems",
+    "description": "California aerospace/defense manufacturer (founded 2023 by ex-SpaceX engineers Jordan Black and Benjamin Shanahan) automating wire-harness production with its Amp software platform. Raised a $65M Series B co-led by Lowercarbon Capital and Interlagos — with Sequoia, Andreessen Horowitz and Founders Fund participating — to open a third factory; total funding tops $112M.",
+    "website": "https://www.senrasystems.us",
+    "read_more": {"label": "PR Newswire", "url": "https://www.prnewswire.com/news-releases/senra-systems-announces-65-million-series-b-plans-for-third-manufacturing-facility-302825664.html"},
+    "sources": [
+      "https://www.prnewswire.com/news-releases/senra-systems-announces-65-million-series-b-plans-for-third-manufacturing-facility-302825664.html",
+      "https://www.senrasystems.us/about"
+    ],
+    "as_of": "2026-08-10"
+  },
+  {
+    "target": "Strategic Bauxite USA, LLC (SBX)",
+    "description": "US critical-minerals venture receiving an $85.5M equity investment from the Department of War's IBAS program (plus $64.5M private co-investment) to build a vertically integrated US supply chain for refractory-grade bauxite — currently import-dependent on China. Funds go in part to acquiring and expanding the First Bauxite mine in Guyana, targeting 100% of US military demand.",
+    "website": null,
+    "read_more": {"label": "U.S. Department of War", "url": "https://www.war.gov/News/Releases/Release/Article/4566604/department-of-war-announces-an-855-million-agreement-with-strategic-bauxite-usa/"},
+    "sources": [
+      "https://www.war.gov/News/Releases/Release/Article/4566604/department-of-war-announces-an-855-million-agreement-with-strategic-bauxite-usa/",
+      "https://www.globalsecurity.org/military/library/news/2026/08/mil-260807-dod04.htm",
+      "https://newsroom.gy/2026/08/08/us150m-investment-initiative-puts-guyana-bauxite-at-centre-of-us-critical-minerals-strategy/"
+    ],
+    "as_of": "2026-08-10"
+  },
+  {
+    "target": "TotalEnergies European renewables portfolio (Germany/Spain/France/Poland)",
+    "description": "A 1.2 GW portfolio of developed solar and onshore-wind assets across Germany, Spain, France and Poland, with an enterprise value of ~€1.8B. KKR (through an insurance account it manages) agreed to acquire a 50% stake; TotalEnergies retains the other 50% and continues operating the assets, part of its farm-down capital-recycling model.",
+    "website": null,
+    "read_more": {"label": "TotalEnergies", "url": "https://totalenergies.com/newsroom/renewables-in-europe-totalenergies-acquires-shells-renewables-business-and-sells-a-50-stake-in-a-portfolio-of-developed-assets-to-kkr/?lang=eng"},
+    "sources": [
+      "https://www.businesswire.com/news/home/20260802134675/en/KKR-to-Acquire-a-50-Stake-in-a-Portfolio-of-Developed-Renewable-Assets-from-TotalEnergies-Across-Europe",
+      "https://totalenergies.com/newsroom/renewables-in-europe-totalenergies-acquires-shells-renewables-business-and-sells-a-50-stake-in-a-portfolio-of-developed-assets-to-kkr/?lang=eng",
+      "https://pulse2.com/kkr-to-acquire-50-stake-in-totalenergies-e1-8-billion-european-renewable-energy-portfolio/"
+    ],
+    "as_of": "2026-08-10"
+  },
+  {
+    "target": "Moove",
+    "description": "Mobility-infrastructure company founded 2020 by Ladi Delano and Jide Odunsi (now UAE-headquartered) that finances, owns and operates vehicle fleets — ~42,000 vehicles across 29 cities — and runs autonomous-fleet operations, including as a fleet operator for Waymo in Phoenix and Miami. Raised a $250M Series C led by Mubadala at a $2.1B valuation, with Woven Capital (Toyota) and Uber among backers.",
+    "website": "https://moove.io",
+    "read_more": {"label": "Mubadala", "url": "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility"},
+    "sources": [
+      "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility"
+    ],
+    "as_of": "2026-08-10"
+  },
+  {
+    "target": "Kuwait Oil Company Pipeline JV (Project Peregrine)",
+    "description": "A $16.0B lease-and-leaseback joint venture over Kuwait Oil Company's entire domestic and export crude pipeline network (13 pipelines, ~320 km). A Blackstone/Brookfield/KKR consortium holds 49% (equal shares) with KOC keeping 51%, ownership and operations; the JV leases usage rights back to KOC for 20.5 years for a volume-based tariff, generating ~$7.85B upfront — Kuwait's largest-ever FDI.",
+    "website": null,
+    "read_more": {"label": "CNBC", "url": "https://www.cnbc.com/2026/07/25/blackstone-brookfield-and-kkr-sign-16-billion-oil-deal-with-kuwait.html"},
+    "sources": [
+      "https://www.businesswire.com/news/home/20260724974083/en/Kuwait-Oil-Company-Signs-US$-16.0-Billion-Infrastructure-Partnership-Involving-Its-Crude-Oil-Pipeline-Network-With-a-Consortium-Comprising-Blackstone-Brookfield-and-KKR",
+      "https://www.cnbc.com/2026/07/25/blackstone-brookfield-and-kkr-sign-16-billion-oil-deal-with-kuwait.html",
+      "https://www.bloomberg.com/news/articles/2026-07-25/blackstone-brookfield-kkr-ink-16-billion-kuwait-pipeline-deal"
+    ],
+    "as_of": "2026-08-10"
+  }
+]

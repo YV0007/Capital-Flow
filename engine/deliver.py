@@ -62,6 +62,35 @@ def refresh_logos() -> dict:
             "note": (p.stderr or "").strip()[:200] or None}
 
 
+def _regression_guard(src, dest) -> str | None:
+    """Refuse to overwrite a rich delivered map with a collapsed one.
+
+    This is the incident guard for 2026-W33: a run from a fresh clone (empty
+    gitignored DB) produced a 36-node map and replaced the 147-node cumulative
+    one in production. The engine DB is cumulative by design, so a big shrink
+    means lost state, not lost reality. Fix: python tools/rebuild_db.py, re-run
+    the week, deliver again.
+    """
+    import json
+    if not dest.exists():
+        return None
+    try:
+        new, old = json.loads(src.read_text()), json.loads(dest.read_text())
+    except (json.JSONDecodeError, OSError):
+        return None
+    n_new, n_old = len(new.get("nodes", [])), len(old.get("nodes", []))
+    if n_old >= 50 and n_new < 0.7 * n_old:
+        return (f"node collapse: {n_old} -> {n_new} (<70%) — DB state is missing; "
+                f"run tools/rebuild_db.py first")
+    def profiled(m):
+        return sum(1 for a in (m.get("allocators") or {}).values()
+                   if isinstance(a, dict) and a.get("profile"))
+    if profiled(old) > 0 and profiled(new) == 0:
+        return ("allocator profiles dropped to zero — profiles not ingested; "
+                "run tools/rebuild_db.py first")
+    return None
+
+
 def run(week: str, push: bool = False, refresh_logos_first: bool = True) -> dict:
     src = db.HANDOFF_DIR / "capital_map.json"
     if not src.exists():
@@ -71,6 +100,9 @@ def run(week: str, push: bool = False, refresh_logos_first: bool = True) -> dict
                                 f"(set AB_INVESTMENT_PATH)")
 
     dest = AB_PATH / DEST_REL
+    guard = _regression_guard(src, dest)
+    if guard:
+        raise RuntimeError(f"delivery blocked — {guard}")
     dest.parent.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(src, dest)
 

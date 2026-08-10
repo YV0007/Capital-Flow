@@ -1,10 +1,37 @@
 # Capital Flow — Weekly Report 2026-W33
 
 ## Signals fired
-- **defense-tech: smart money — Jeff Bezos led, 3 followed in 21d**  _(rule: smart_money_follow, strength 4.0)_
-- **defense-tech: 3 key allocators in 30d**  _(rule: sector_swarm, strength 3.0)_
-- **robotics: 3 key allocators in 30d**  _(rule: sector_swarm, strength 3.0)_
+- **VRT (Vertiv): 18 private flows converge**  _(rule: beneficiary_concentration, strength 18.0)_
+- **NVDA (NVIDIA): 16 private flows converge**  _(rule: beneficiary_concentration, strength 16.0)_
+- **ETN (Eaton): 12 private flows converge**  _(rule: beneficiary_concentration, strength 12.0)_
+- **GEV (GE Vernova): 11 private flows converge**  _(rule: beneficiary_concentration, strength 11.0)_
+- **ai-applications: 10 key allocators in 30d**  _(rule: sector_swarm, strength 10.0)_
+- **ai_applications: 10 key allocators converge (30d)**  _(rule: theme_swarm, strength 10.0)_
+- **ai_infrastructure: 10 key allocators converge (30d)**  _(rule: theme_swarm, strength 10.0)_
+- **datacenters: 8 key allocators in 30d**  _(rule: sector_swarm, strength 8.0)_
+- **energy_for_ai: 7 key allocators converge (30d)**  _(rule: theme_swarm, strength 7.0)_
+- **ai-applications: smart money — Microsoft led, 6 followed in 21d**  _(rule: smart_money_follow, strength 7.0)_
+- **PWR (Quanta Services): 7 private flows converge**  _(rule: beneficiary_concentration, strength 7.0)_
+- **TSM (Taiwan Semiconductor): 7 private flows converge**  _(rule: beneficiary_concentration, strength 7.0)_
+- **power-energy: 6 key allocators in 30d**  _(rule: sector_swarm, strength 6.0)_
+- **datacenters: smart money — DigitalBridge led, 5 followed in 21d**  _(rule: smart_money_follow, strength 6.0)_
+- **ai-labs: 5 key allocators in 30d**  _(rule: sector_swarm, strength 5.0)_
+- **ai-labs: smart money — Elad Gil led, 4 followed in 21d**  _(rule: smart_money_follow, strength 5.0)_
+- **defense-tech: smart money — Jeff Bezos led, 4 followed in 21d**  _(rule: smart_money_follow, strength 5.0)_
+- **defense-tech: 4 key allocators in 30d**  _(rule: sector_swarm, strength 4.0)_
+- **robotics: 4 key allocators in 30d**  _(rule: sector_swarm, strength 4.0)_
+- **defense_ai: 4 key allocators converge (30d)**  _(rule: theme_swarm, strength 4.0)_
+- **robotics_embodiment: 4 key allocators converge (30d)**  _(rule: theme_swarm, strength 4.0)_
+- **MU (Micron): 4 private flows converge**  _(rule: beneficiary_concentration, strength 4.0)_
+- **neocloud: 3 key allocators in 30d**  _(rule: sector_swarm, strength 3.0)_
+- **semiconductors: 3 key allocators in 30d**  _(rule: sector_swarm, strength 3.0)_
+- **power-energy: smart money — Brookfield led, 2 followed in 21d**  _(rule: smart_money_follow, strength 3.0)_
+- **robotics: smart money — Jeff Bezos led, 2 followed in 21d**  _(rule: smart_money_follow, strength 3.0)_
 - **Kuwait Oil Company Pipeline JV (Project Peregrine): stealth accumulation — 3 stakes in 90d**  _(rule: stealth_accumulation, strength 3.0)_
+- **AVGO (Broadcom): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
+- **FANUY (FANUC): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
+- **FLNC (Fluence Energy): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
+- **SIEGY (Siemens): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
 
 ## New verified events (21)
 | Allocator | Target | Sector | Type | Amount | Status | Conf |
@@ -34,27 +61,43 @@
 ## Top sectors — last 30 days
 | Sector | Capital | Deals | Distinct allocators |
 |---|--:|--:|--:|
-| datacenters | $53.0B | 2 | 2 |
-| ai-labs | $10.0B | 2 | 2 |
-| defense-tech | $2.3B | 8 | 4 |
-| neocloud | $2.0B | 1 | 1 |
-| power-energy | $2.0B | 5 | 4 |
-| robotics | $620M | 4 | 4 |
-| ai-applications | $545M | 2 | 2 |
+| datacenters | $599.5B | 27 | 15 |
+| ai-labs | $46.3B | 9 | 7 |
+| gaming | $33.6B | 1 | 1 |
+| nuclear | $18.6B | 3 | 2 |
+| ai-applications | $18.0B | 29 | 14 |
+| diversified-pe | $15.0B | 2 | 2 |
+| power-energy | $14.3B | 13 | 9 |
+| defense-tech | $6.5B | 14 | 6 |
+| robotics | $6.3B | 8 | 5 |
+| neocloud | $4.0B | 5 | 4 |
 
 ## Themes — last 30 days
 | Theme | Capital | Deals | Distinct allocators |
 |---|--:|--:|--:|
-| ai_infrastructure | $57.0B | 4 | 4 |
-| frontier_ai | $10.0B | 2 | 2 |
-| defense_ai | $2.3B | 8 | 4 |
-| robotics_embodiment | $620M | 4 | 4 |
-| ai_applications | $545M | 2 | 2 |
-| energy_for_ai | $0 | 4 | 3 |
+| ai_infrastructure | $577.6B | 41 | 19 |
+| frontier_ai | $46.3B | 7 | 5 |
+| energy_for_ai | $30.9B | 15 | 10 |
+| sovereign_ai | $30.6B | 7 | 6 |
+| ai_applications | $19.9B | 27 | 13 |
+| defense_ai | $6.5B | 14 | 6 |
+| robotics_embodiment | $6.3B | 8 | 5 |
+| biotech_ai | $800M | 3 | 3 |
 
-## Public beneficiaries mapped (11)
+## Public beneficiaries mapped (22)
 | Ticker | Company | From flow | Confidence |
 |---|---|---|:-:|
+| NVDA | NVIDIA | Coatue→Firmus | high |
+| SAND.ST | Sandvik AB | Khosla Ventures→Mariana Minerals | high |
+| SAND.ST | Sandvik AB | Andreessen Horowitz→Mariana Minerals | high |
+| PTCIL.NS | PTC Industries (Aerolloy Technologies) | Jeff Bezos→Blue Origin | medium |
+| GE | GE Aerospace | Jeff Bezos→Blue Origin | low |
+| SRL.AX | Sunrise Energy Metals Limited | US Government→Sunrise Energy Metals | high |
+| LMT | Lockheed Martin | US Government→Sunrise Energy Metals | low |
+| 6752.T | Panasonic Holdings | US Government→Sila Nanotechnologies | medium |
+| MBG.DE | Mercedes-Benz Group | US Government→Sila Nanotechnologies | medium |
+| MGA | Magna International | US Government→Niron Magnetics | low |
+| GOOGL | Alphabet | Mubadala→Moove | low |
 | NVDA | NVIDIA | Coatue→Firmus | high |
 | SAND.ST | Sandvik AB | Khosla Ventures→Mariana Minerals | high |
 | SAND.ST | Sandvik AB | Andreessen Horowitz→Mariana Minerals | high |
@@ -82,6 +125,19 @@ _Silent this run (34) — verify these are genuinely quiet, not missed:_
 - **individual**: Alexandr Wang, Austin Russell, Daniel Gross, David Sacks, Delian Asparouhov, Dylan Field, Elon Musk, Joe Lonsdale, Keith Rabois, Laura Deming, Lucy Guo, Luke Nosek, Max Levchin, Nat Friedman, Palmer Luckey, Peter Thiel, Reid Hoffman, Roelof Botha, Trae Stephens, Elad Gil, Eric Schmidt, Marc Andreessen, Masayoshi Son, Sam Altman, Vinod Khosla
 - **sovereign**: MGX
 - **vc**: Thrive Capital
+
+## Open leads to chase (11)
+- `8-K` **DigitalBridge** (2026-08-04) — https://www.sec.gov/Archives/edgar/data/1679688/000167968826000113/dbrg-20260804.htm
+- `8-K` **KKR** (2026-07-31) — https://www.sec.gov/Archives/edgar/data/1404912/000114036126030498/ef20079131_8k.htm
+- `8-K` **KKR** (2026-07-30) — https://www.sec.gov/Archives/edgar/data/1404912/000140491226000022/kkr-20260730.htm
+- `8-K` **Microsoft** (2026-07-29) — https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-20260729.htm
+- `8-K` **Blackstone** (2026-07-23) — https://www.sec.gov/Archives/edgar/data/1393818/000119312526313250/d153439d8k.htm
+- `8-K` **Alphabet** (2026-07-22) — https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/goog-20260722.htm
+- `8-K` **BlackRock** (2026-07-15) — https://www.sec.gov/Archives/edgar/data/2012383/000119312526304013/blk-20260715.htm
+- `8-K` **NVIDIA** (2026-07-02) — https://www.sec.gov/Archives/edgar/data/1045810/000104581026000060/nvda-20260628.htm
+- `8-K` **NVIDIA** (2026-06-30) — https://www.sec.gov/Archives/edgar/data/1045810/000104581026000056/nvda-20260624.htm
+- `8-K` **BlackRock** (2026-06-30) — https://www.sec.gov/Archives/edgar/data/2012383/000119312526290830/d108689d8k.htm
+- `8-K` **Blackstone** (2026-06-23) — https://www.sec.gov/Archives/edgar/data/1393818/000119312526279498/d122067d8k.htm
 
 ## Discovered allocators — promote to watchlist? (12)
 - **Apollo Global Funding LLC** (alt_manager) — seen with SoftBank. Second consecutive window Apollo shows up inside a tracked allocator's capital stack: mandated lead arranger/lender (with Goldman Sachs, JPMorgan, Mizuho, Sumitomo Mitsui) on SoftBank's $10bn margin loan against its OpenAI stake, signed and drawn in August 2026. Prior window Apollo co-invested in the $5.34bn Williams Power Innovation JV alongside Blackstone/KKR and led the $35bn Broadcom/Anthropic AI XPV SPV. Recurrence across financing structures (equity JV, chip-backed SPV, and now a sponsor-level margin loan) strengthens last week's promotion flag - Apollo is functioning as a de facto eighth name on this watchlist already.
