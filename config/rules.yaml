@@ -17,11 +17,11 @@ sectors:
   - networking      # optical interconnect / photonics
   - robotics        # embodiment / humanoids
   - defense-tech    # defense outside the prime-contractor route (Anduril)
+  - cybersecurity   # AI-adjacent security: agentic/software security, military-cyber, secure infra
   - ai-applications # application/vertical-layer AI (legal, enterprise, consumer)
   - ai-data         # data platforms & labeling that feed models (Databricks, Scale)
   # Non-AI sectors — sovereigns/alt-managers allocate here too and it's real capital
-  # (e.g. PIF/EA gaming take-private, Lucid). Tracked, but outside the AI buildout.
-  - gaming
+  # (e.g. PE take-privates like EA, Lucid). Tracked, but outside the AI buildout.
   - ev-automotive
   - private-credit
   - diversified-pe
@@ -40,6 +40,7 @@ themes:
   - biotech_ai           # AI for bio, longevity, scientific discovery
   - space                # space & orbital infrastructure
   - crypto_ai            # crypto/decentralized compute × AI
+  - cyber_security       # AI-era security: agentic defense, military-cyber, secure infra
 
 # Default sector -> theme mapping used when an agent doesn't supply a theme.
 theme_defaults:
@@ -55,6 +56,7 @@ theme_defaults:
   nuclear: energy_for_ai
   robotics: robotics_embodiment
   defense-tech: defense_ai
+  cybersecurity: cyber_security
   ai-applications: ai_applications
   ai-data: ai_applications
 

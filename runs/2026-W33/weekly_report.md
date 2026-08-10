@@ -62,15 +62,15 @@
 | Sector | Capital | Deals | Distinct allocators |
 |---|--:|--:|--:|
 | datacenters | $599.5B | 27 | 15 |
+| diversified-pe | $48.6B | 3 | 2 |
 | ai-labs | $46.3B | 9 | 7 |
-| gaming | $33.6B | 1 | 1 |
 | nuclear | $18.6B | 3 | 2 |
-| ai-applications | $18.0B | 29 | 14 |
-| diversified-pe | $15.0B | 2 | 2 |
+| ai-applications | $17.9B | 28 | 14 |
 | power-energy | $14.3B | 13 | 9 |
-| defense-tech | $6.5B | 14 | 6 |
+| defense-tech | $6.5B | 12 | 6 |
 | robotics | $6.3B | 8 | 5 |
 | neocloud | $4.0B | 5 | 4 |
+| ai-data | $3.0B | 1 | 1 |
 
 ## Themes — last 30 days
 | Theme | Capital | Deals | Distinct allocators |
@@ -84,31 +84,9 @@
 | robotics_embodiment | $6.3B | 8 | 5 |
 | biotech_ai | $800M | 3 | 3 |
 
-## Public beneficiaries mapped (44)
+## Public beneficiaries mapped (22)
 | Ticker | Company | From flow | Confidence |
 |---|---|---|:-:|
-| NVDA | NVIDIA | Coatue→Firmus | high |
-| SAND.ST | Sandvik AB | Khosla Ventures→Mariana Minerals | high |
-| SAND.ST | Sandvik AB | Andreessen Horowitz→Mariana Minerals | high |
-| PTCIL.NS | PTC Industries (Aerolloy Technologies) | Jeff Bezos→Blue Origin | medium |
-| GE | GE Aerospace | Jeff Bezos→Blue Origin | low |
-| SRL.AX | Sunrise Energy Metals Limited | US Government→Sunrise Energy Metals | high |
-| LMT | Lockheed Martin | US Government→Sunrise Energy Metals | low |
-| 6752.T | Panasonic Holdings | US Government→Sila Nanotechnologies | medium |
-| MBG.DE | Mercedes-Benz Group | US Government→Sila Nanotechnologies | medium |
-| MGA | Magna International | US Government→Niron Magnetics | low |
-| GOOGL | Alphabet | Mubadala→Moove | low |
-| NVDA | NVIDIA | Coatue→Firmus | high |
-| SAND.ST | Sandvik AB | Khosla Ventures→Mariana Minerals | high |
-| SAND.ST | Sandvik AB | Andreessen Horowitz→Mariana Minerals | high |
-| PTCIL.NS | PTC Industries (Aerolloy Technologies) | Jeff Bezos→Blue Origin | medium |
-| GE | GE Aerospace | Jeff Bezos→Blue Origin | low |
-| SRL.AX | Sunrise Energy Metals Limited | US Government→Sunrise Energy Metals | high |
-| LMT | Lockheed Martin | US Government→Sunrise Energy Metals | low |
-| 6752.T | Panasonic Holdings | US Government→Sila Nanotechnologies | medium |
-| MBG.DE | Mercedes-Benz Group | US Government→Sila Nanotechnologies | medium |
-| MGA | Magna International | US Government→Niron Magnetics | low |
-| GOOGL | Alphabet | Mubadala→Moove | low |
 | NVDA | NVIDIA | Coatue→Firmus | high |
 | SAND.ST | Sandvik AB | Khosla Ventures→Mariana Minerals | high |
 | SAND.ST | Sandvik AB | Andreessen Horowitz→Mariana Minerals | high |
@@ -147,19 +125,6 @@ _Silent this run (34) — verify these are genuinely quiet, not missed:_
 - **individual**: Alexandr Wang, Austin Russell, Daniel Gross, David Sacks, Delian Asparouhov, Dylan Field, Elon Musk, Joe Lonsdale, Keith Rabois, Laura Deming, Lucy Guo, Luke Nosek, Max Levchin, Nat Friedman, Palmer Luckey, Peter Thiel, Reid Hoffman, Roelof Botha, Trae Stephens, Elad Gil, Eric Schmidt, Marc Andreessen, Masayoshi Son, Sam Altman, Vinod Khosla
 - **sovereign**: MGX
 - **vc**: Thrive Capital
-
-## Open leads to chase (11)
-- `8-K` **DigitalBridge** (2026-08-04) — https://www.sec.gov/Archives/edgar/data/1679688/000167968826000113/dbrg-20260804.htm
-- `8-K` **KKR** (2026-07-31) — https://www.sec.gov/Archives/edgar/data/1404912/000114036126030498/ef20079131_8k.htm
-- `8-K` **KKR** (2026-07-30) — https://www.sec.gov/Archives/edgar/data/1404912/000140491226000022/kkr-20260730.htm
-- `8-K` **Microsoft** (2026-07-29) — https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-20260729.htm
-- `8-K` **Blackstone** (2026-07-23) — https://www.sec.gov/Archives/edgar/data/1393818/000119312526313250/d153439d8k.htm
-- `8-K` **Alphabet** (2026-07-22) — https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/goog-20260722.htm
-- `8-K` **BlackRock** (2026-07-15) — https://www.sec.gov/Archives/edgar/data/2012383/000119312526304013/blk-20260715.htm
-- `8-K` **NVIDIA** (2026-07-02) — https://www.sec.gov/Archives/edgar/data/1045810/000104581026000060/nvda-20260628.htm
-- `8-K` **NVIDIA** (2026-06-30) — https://www.sec.gov/Archives/edgar/data/1045810/000104581026000056/nvda-20260624.htm
-- `8-K` **BlackRock** (2026-06-30) — https://www.sec.gov/Archives/edgar/data/2012383/000119312526290830/d108689d8k.htm
-- `8-K` **Blackstone** (2026-06-23) — https://www.sec.gov/Archives/edgar/data/1393818/000119312526279498/d122067d8k.htm
 
 ## Discovered allocators — promote to watchlist? (12)
 - **Apollo Global Funding LLC** (alt_manager) — seen with SoftBank. Second consecutive window Apollo shows up inside a tracked allocator's capital stack: mandated lead arranger/lender (with Goldman Sachs, JPMorgan, Mizuho, Sumitomo Mitsui) on SoftBank's $10bn margin loan against its OpenAI stake, signed and drawn in August 2026. Prior window Apollo co-invested in the $5.34bn Williams Power Innovation JV alongside Blackstone/KKR and led the $35bn Broadcom/Anthropic AI XPV SPV. Recurrence across financing structures (equity JV, chip-backed SPV, and now a sponsor-level margin loan) strengthens last week's promotion flag - Apollo is functioning as a de facto eighth name on this watchlist already.

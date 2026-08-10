@@ -30,6 +30,9 @@ SECTOR_ALIASES = {
     "ai-services-rollup": "ai-applications",
     "ai-diversified": "ai-applications",
     "ai-app": "ai-applications",
+    # 'gaming' was retired from the taxonomy (replaced by 'cybersecurity'); the one
+    # deal there (EA take-private) is really a PE buyout → diversified-pe.
+    "gaming": "diversified-pe",
 }
 
 _RELIABILITY = {1: "A", 2: "B", 3: "C", 4: "D", 5: "E"}
