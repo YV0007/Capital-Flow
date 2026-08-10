@@ -1,0 +1,7 @@
+# Promoted allocators — candidates the user accepted in the weekly Monday review.
+# Appended by tools/promote.py (never hand-auto-promoted). Loaded by
+# db.sync_allocators alongside allocators.yaml, so a promoted name is tracked from
+# the next run. Same shape as allocators.yaml rows + the class + when promoted.
+# Example:
+#   - { name: Lightspeed, class: vc, tier: watch, country: US, promoted_on: 2026-08-17 }
+promoted: []

@@ -1,12 +1,12 @@
 # Audit report — 2026-W33 (2026-08-10)
 
 **Verdict: PASS**
-Checked 154 events, 115 track-record rows, 43 profiles, 127 target references, 0 holdings.
+Checked 154 events, 115 track-record rows, 43 profiles, 127 target references, 0 holdings, 0 classified targets.
 
 ## Errors (0)
 _none_
 
-## Warnings (17)
+## Warnings (29)
 - W7 Brookfield: $153.9B fund/firm with no holdings collected
 - W7 MGX Fund I: $49.0B fund/firm with no holdings collected
 - W7 BlackRock: $44.9B fund/firm with no holdings collected
@@ -24,6 +24,18 @@ _none_
 - W7 Sequoia: $1.9B fund/firm with no holdings collected
 - W7 Founders Fund: $1.5B fund/firm with no holdings collected
 - W7 Thrive Capital: $1.4B fund/firm with no holdings collected
+- W8 MGX Fund I: $49.0B investable target with no ai_posture
+- W8 Electronic Arts: $33.6B investable target with no ai_posture
+- W8 OpenAI Group PBC: $21.3B investable target with no ai_posture
+- W8 OpenAI: $10.0B investable target with no ai_posture
+- W8 Anthropic: $10.0B investable target with no ai_posture
+- W8 Safe Superintelligence: $5.0B investable target with no ai_posture
+- W8 Mubadala Capital (credit platform): $4.7B investable target with no ai_posture
+- W8 Hadrian: $4.1B investable target with no ai_posture
+- W8 Microsoft Frontier Company: $2.5B investable target with no ai_posture
+- W8 Blue Origin: $2.0B investable target with no ai_posture
+- W8 Atoms: $1.7B investable target with no ai_posture
+- W8 Sila Nanotechnologies: $1.4B investable target with no ai_posture
 
 ## Stats
 ```json

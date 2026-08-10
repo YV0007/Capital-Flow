@@ -94,6 +94,12 @@ CREATE TABLE IF NOT EXISTS universe_candidates (
     rationale       TEXT,
     run_week        TEXT NOT NULL,
     agent           TEXT,
+    -- Weekly promotion review (human-decided): 'new' candidates surface in the
+    -- payload's promotion_queue; the user promotes/dismisses via the Monday popup,
+    -- applied by tools/promote.py. The engine NEVER auto-promotes.
+    status          TEXT NOT NULL DEFAULT 'new'
+                      CHECK (status IN ('new','promoted','dismissed')),
+    decided_at      TEXT,
     created_at      TEXT NOT NULL DEFAULT (datetime('now')),
     UNIQUE (name, run_week)
 );

@@ -51,7 +51,20 @@ def connect() -> sqlite3.Connection:
     con = sqlite3.connect(DB_PATH)
     con.row_factory = sqlite3.Row
     con.executescript(SCHEMA_PATH.read_text())
+    _migrate(con)
     return con
+
+
+def _migrate(con: sqlite3.Connection) -> None:
+    """Add columns to existing tables that CREATE TABLE IF NOT EXISTS can't (the
+    file predates them). Idempotent — only adds what's missing."""
+    uc = {r[1] for r in con.execute("PRAGMA table_info(universe_candidates)")}
+    if "status" not in uc:
+        con.execute("ALTER TABLE universe_candidates ADD COLUMN status TEXT "
+                    "NOT NULL DEFAULT 'new'")
+    if "decided_at" not in uc:
+        con.execute("ALTER TABLE universe_candidates ADD COLUMN decided_at TEXT")
+    con.commit()
 
 
 def load_config() -> dict:
@@ -98,6 +111,15 @@ def resolve_name(name: str) -> str:
     return load_aliases().get(_normalize(name), name)
 
 
+def load_promoted() -> list:
+    """config/promoted.yaml → [{name, class, tier, country, promoted_on}] (the
+    candidates the user accepted in the weekly review)."""
+    p = CONFIG_DIR / "promoted.yaml"
+    if not p.exists():
+        return []
+    return (yaml.safe_load(p.read_text()) or {}).get("promoted") or []
+
+
 def load_networks() -> dict:
     """Load config/networks.yaml → {members: [...], rules: [...]}."""
     p = CONFIG_DIR / "networks.yaml"
@@ -135,6 +157,12 @@ def sync_allocators(con: sqlite3.Connection, cfg: dict) -> None:
     for m in members:
         _upsert_allocator(con, m["name"], "individual", m.get("tier", "watch"),
                           m.get("country"), m.get("network"))
+    # Promoted candidates (accepted in the weekly Monday review). Tracked from the
+    # next run, exactly like a seed-watchlist name — never auto-promoted.
+    for r in (load_promoted() or []):
+        if r.get("class") in CLASSES:
+            _upsert_allocator(con, r["name"], r["class"], r.get("tier", "watch"),
+                              r.get("country"), None)
     # Persist aliases (for inspection/audit) and seed principal -> vehicle links.
     for norm_alias, canonical in load_aliases().items():
         con.execute("INSERT OR REPLACE INTO entity_aliases (alias, canonical_name) VALUES (?,?)",

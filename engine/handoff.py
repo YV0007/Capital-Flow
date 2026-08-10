@@ -25,12 +25,37 @@ STALE_DAYS = 180  # entities with no activity beyond this are flagged stale (not
 CONFIDENCE_THRESHOLD = 60  # D3: main-map floor; flows scoring below this belong in "Watch"
 
 
-def _build_map(con) -> dict:
+def _build_map(con, week: str | None = None) -> dict:
     events = con.execute(
         """SELECT e.*, a.name AS allocator, a.class AS allocator_class,
                   a.tier AS allocator_tier, a.network AS allocator_network,
                   a.country AS allocator_country
            FROM events e JOIN allocators a ON a.id = e.allocator_id""").fetchall()
+
+    # Rotation keep-alive (deterministic): a flow whose event is part of a signal
+    # fired THIS cycle stays in the dashboard's default time-window even if older.
+    # The dashboard filters on age_days; active_signal is the rule-based rescue.
+    latest = week or (con.execute(
+        "SELECT MAX(run_week) w FROM themes").fetchone()["w"])
+    active_event_ids, active_targets = set(), set()
+    for r in con.execute("SELECT evidence FROM themes WHERE run_week = ?", (latest,)):
+        try:
+            active_event_ids.update(int(x) for x in json.loads(r["evidence"]))
+        except (ValueError, TypeError):
+            pass
+    if active_event_ids:
+        ph = ",".join("?" * len(active_event_ids))
+        active_targets = {row["target"] for row in con.execute(
+            f"SELECT DISTINCT target FROM events WHERE id IN ({ph})",
+            tuple(active_event_ids))}
+
+    today_ord = date.today().toordinal()
+
+    def _age(d):
+        try:
+            return today_ord - datetime.fromisoformat(d).toordinal() if d else None
+        except ValueError:
+            return None
 
     nodes = {}
 
@@ -99,6 +124,10 @@ def _build_map(con) -> dict:
             "round_id": bk["round_id"] if bk else None,
             "role": (bk["role"] if bk and bk["role"] else _derived_role(e)),
             "provisional": bool(bk["provisional"]) if bk else False,
+            # Rotation fields — the dashboard's default view is a trailing window
+            # on age_days; active_signal keeps a pivotal older flow in view by rule.
+            "age_days": _age(e["disclosed_date"]),
+            "active_signal": e["id"] in active_event_ids,
             "status": e["status"], "date": e["disclosed_date"], "tier": e["source_tier"],
             "source_url": e["source_url"],
             "confidence": e["confidence_score"],
@@ -128,6 +157,8 @@ def _build_map(con) -> dict:
             "source": a_id, "target": t_id, "sector": nodes[t_id]["sector"],
             "event_type": "funding_round", "amount": b["amount_usd"],
             "round_id": b["round_id"], "role": b["role"],
+            "age_days": _age(b["entry_date"]),
+            "active_signal": b["target"] in active_targets,
             "status": b["status"], "date": b["entry_date"], "tier": b["source_tier"],
             "source_url": b["source_url"], "provisional": bool(b["provisional"]),
             "backer_edge": True,  # participation metadata, not a sourced capital move
@@ -284,6 +315,28 @@ def _build_map(con) -> dict:
             "track_record": track.get(name, []),
         }
 
+    # Weekly promotion queue — discovered co-investors awaiting the user's Monday
+    # review. The dashboard renders these as the pop-up (yes/no per name); the
+    # engine NEVER auto-promotes. An accepted name is applied by tools/promote.py.
+    promotion_queue = []
+    for c in con.execute(
+        """SELECT name, GROUP_CONCAT(DISTINCT suggested_class) classes,
+                  GROUP_CONCAT(DISTINCT seen_with) seen_with,
+                  GROUP_CONCAT(DISTINCT rationale) rationale,
+                  COUNT(*) times_seen, MIN(created_at) first_seen
+           FROM universe_candidates WHERE status = 'new'
+           GROUP BY name ORDER BY times_seen DESC, name""").fetchall():
+        seen = sorted({s for s in (c["seen_with"] or "").split(",") if s})
+        promotion_queue.append({
+            "candidate_id": "cand:" + c["name"].lower().replace(" ", "-"),
+            "name": c["name"],
+            "suggested_class": (c["classes"] or "").split(",")[0] or None,
+            "seen_with": seen,
+            "description": (c["rationale"] or "").split(",")[0]
+            or (f"Co-invested with {', '.join(seen[:3])}" if seen else "Discovered co-investor"),
+            "times_seen": c["times_seen"], "first_seen": c["first_seen"],
+        })
+
     return {
         "generated": today,
         "totals": {"nodes": len(nodes), "flows": len(flows), "sectors": len(sectors)},
@@ -291,6 +344,12 @@ def _build_map(con) -> dict:
         "allocators": allocator_summaries,
         # D3: flows at or above this confidence score belong on the main map; below → Watch.
         "confidence_threshold": CONFIDENCE_THRESHOLD,
+        # Rotation: dashboard default view = trailing window on flow.age_days;
+        # keep any flow with active_signal:true regardless of age. Toggles let the
+        # user widen to 7 / 30 / 90 / all. Nothing is ever deleted — only filtered.
+        "view_defaults": {"default_window_days": 30, "windows": [7, 30, 90, None],
+                          "keep_active_signal": True},
+        "promotion_queue": promotion_queue,
         "nodes": sorted(nodes.values(), key=lambda n: -n["capital"]),
         "flows": flows,
         "sectors": sectors,
@@ -321,7 +380,7 @@ def run(week: str, audit_verdict: dict | None = None) -> dict:
     map_path = db.HANDOFF_DIR / "capital_map.json"
     prev = json.loads(map_path.read_text()) if map_path.exists() else None
 
-    cur = _build_map(con)
+    cur = _build_map(con, week)
     # Ship the audit verdict with the payload (spec §6): the dashboard can state
     # when the data was last verified and whether anything is flagged.
     if audit_verdict is None:
