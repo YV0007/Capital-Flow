@@ -98,6 +98,10 @@ def _build_map(con) -> dict:
         links = []
         if r["website"]:
             dom = r["website"].split("//")[-1].split("/")[0].removeprefix("www.")
+            # Authoritative logo domain — the official site the engine researched.
+            # The dashboard's logo fetcher should prefer this over guessing from the
+            # entity name (which fails for campuses, fund vehicles and SPVs).
+            n["domain"] = dom
             links.append({"kind": "website", "label": dom, "url": r["website"]})
         if r["read_more_url"]:
             links.append({"kind": "read_more", "label": r["read_more_label"] or "Read more",
@@ -125,6 +129,11 @@ def _build_map(con) -> dict:
             continue
         if p and p["portfolio_url"]:
             n["portfolio_url"] = p["portfolio_url"]
+            # A fund vehicle with no site of its own can still resolve a logo from
+            # its portfolio-page host (usually the manager's domain).
+            if not n.get("domain"):
+                n["domain"] = (p["portfolio_url"].split("//")[-1].split("/")[0]
+                               .removeprefix("www."))
         n["holdings"] = hs or []
         n["holdings_count"] = (p["holdings_count"] if p and p["holdings_count"] is not None
                                else len(hs or []))
