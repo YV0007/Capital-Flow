@@ -35,7 +35,8 @@ def _clusters(con):
     lookback, with per-event rows so the export can window them."""
     rows = con.execute(
         """SELECT e.id, e.sector, e.subsector, e.disclosed_date AS date,
-                  COALESCE(e.amount_usd,0) AS amount, a.name AS allocator, a.tier
+                  COALESCE(e.amount_usd,0) AS amount, e.target,
+                  a.name AS allocator, a.tier
            FROM events e JOIN allocators a ON a.id = e.allocator_id
            WHERE a.tier IN ('key','core') AND e.subsector IS NOT NULL
                  AND e.status IN ('verified','verified_alpha')
@@ -57,12 +58,24 @@ def _window_entry(sector, subsector, evs, narratives):
     cid = _cluster_id(sector, subsector)
     nar = narratives.get(cid)
     cleared = len(allocs) >= MIN_ALLOCATORS
+    # Capital must be counted PER ROUND, not per tracked allocator. When several
+    # watchlist funds join one round they each carry that round's amount, so a naive
+    # SUM multiplies a single deal by its number of tracked backers (a $1.37B round
+    # with two tracked backers reported as $2.74B). Group by (target, date) — the
+    # round proxy — and take the max amount once per round.
+    rounds = {}
+    for e in evs:
+        key = (e["target"], e["date"])
+        rounds[key] = max(rounds.get(key, 0), e["amount"])
     entry = {
         "cluster_id": cid,
         "title": (nar or {}).get("title") or subsector.replace("-", " ").title(),
         "sector": sector, "subsector": subsector,
-        "deals": len(evs),
-        "capital_usd": sum(e["amount"] for e in evs),
+        # `deals` = distinct rounds (not allocator-events); `participations` keeps
+        # the raw edge count so "2 funds into 1 round" stays visible.
+        "deals": len(rounds),
+        "participations": len(evs),
+        "capital_usd": sum(rounds.values()),
         "date_range": [dates[0], dates[-1]] if dates else [None, None],
         "allocators": allocs,
         "evidence": [e["id"] for e in evs],

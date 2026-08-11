@@ -1,0 +1,30 @@
+[
+  {
+    "cluster_id": "defense-tech::defense-manufacturing",
+    "title": "Trusted US defense manufacturing capacity: $1.37B into Hadrian",
+    "narrative": "Hadrian's $1.37B Series D, disclosed 2026-08-06, is one round rather than a repeated pattern - but it put two tracked allocators on the same cap table: Andreessen Horowitz and Founders Fund, both participants with undisclosed slices, alongside Altimeter, Lux Capital, CapitalG and Construct Capital. WCM Investment Management, Washington Harbour Partners, Valor Equity Partners, 137 Ventures and Baillie Gifford co-led, with JPMorganChase's Strategic Investment Group as anchor co-lead; Apollo, T. Rowe Price, Morgan Stanley Wealth Management and 1789 Capital also took part. The company's own release puts the valuation at $7.87B and the footprint at just under 3M sq ft across four plants - two in Torrance CA, plus Mesa AZ and Muscle Shoals AL - with proceeds going to new factories, munitions production lines and autonomous systems. The driver Hadrian states is capacity, not technology: demand for trusted US manufacturing capacity continues to outpace supply.",
+    "confidence": "high",
+    "provisional": true
+  },
+  {
+    "cluster_id": "neocloud::gpu-cloud-financing",
+    "title": "Financing GPU capacity like infrastructure, not product",
+    "narrative": "Volta Infra Holdings' combined seed and Series A, disclosed 2026-08-04 at a $2.4B post-money, drew two tracked allocators into one cap table: Andreessen Horowitz co-led and NVIDIA participated, with Azora, Altimeter, Michael Dell's family office and Matter Venture Partners. No investor disclosed a cheque size, so this cluster carries zero confirmed capital - the signal is the roster, not the number. Volta was founded in 2026 by ex-Brookfield infrastructure executives Ricard Boada and Sofia Gumuzio, and its own launch post frames the thesis as financing compute like infrastructure rather than buying it as a technology product, naming access to affordable capital - not demand, power or chips - as the binding constraint. It states a $5B financing program with Azora, a $10B partnership with an unnamed AI lab for a 133MW Norwegian site built with Bitdeer on NVIDIA Vera Rubin systems, and a development pipeline above 1GW. One wire named that lab; a second could not verify it, so it stays unnamed here.",
+    "confidence": "medium",
+    "provisional": true
+  },
+  {
+    "cluster_id": "power-energy::grid-storage",
+    "title": "Backyard batteries priced as grid capacity: $1B into Base Power",
+    "narrative": "Base Power's $1B Series D, disclosed 2026-08-03, is a single round that three tracked allocators touched at once: Coatue came in as a new participant while Thrive Capital and Andreessen Horowitz re-upped as existing investors. Ribbit Capital, Addition, Valor Equity Partners and JPMorganChase's Strategic Investment Group co-led; Altimeter, D1 Capital Partners, Sands Capital, Layer Global, Energy Impact Partners, Lightspeed, Trust Ventures and CapitalG also participated. Individual slices are undisclosed. The round priced at a $13B post-money, roughly triple the $4B Series C valuation from October 2025, and landed with the launch of Base Core, a 39.2/78.4 kWh home battery built in the US. TechCrunch reports an installed fleet above 500 MWh, about 100 batteries installed per day targeting 200 by year-end, and operations in Texas and Illinois, and attributes the demand to electrification and AI data center construction straining grids such as PJM. Base owns the hardware on subscription and sells stored power back at peak.",
+    "confidence": "medium",
+    "provisional": true
+  },
+  {
+    "cluster_id": "ai-applications::drug-discovery-ai",
+    "title": "AI drug discovery moves from promise to signed pharma contracts",
+    "narrative": "Two rounds in 23 days, three tracked allocators, $663M of disclosed round value across two companies - every allocator slice undisclosed. On 2026-07-13 Chai Discovery raised a $400M Series C at a $3.8B valuation led by Index Ventures, with Sequoia participating alongside Kleiner Perkins and Dimension and Thrive Capital re-upping as an existing investor; OpenAI, General Catalyst, Menlo Ventures, Bain Capital Ventures and Baillie Gifford also joined. On 2026-08-05 LifeMine Therapeutics disclosed $263M - a $75M Series D plus a $188M Series E led by Milky Way Investments - with Jeff Bezos's Bezos Expeditions entering as a new investor alongside Bill Gates's Gates Frontier, RA Capital, GV, GSK and ARCH Venture Partners. Each round tracks a specific milestone rather than a theme: SiliconANGLE reports Chai's new Chai-3 model roughly doubled molecular-interaction success to a 35-40% hit rate, with Pfizer licensing it and Eli Lilly and Novartis signed; BioSpace reports LifeMine's LIFE-001 cleared a 120-adult Phase 1 with no clinically meaningful renal, metabolic or cardiovascular safety signals.",
+    "confidence": "medium",
+    "provisional": true
+  }
+]
