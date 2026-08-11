@@ -305,6 +305,20 @@ CREATE TABLE IF NOT EXISTS target_classification (
     updated_at           TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
+-- Stage-A trend narratives (agents/trend-writer.md). One grounded paragraph per
+-- (sector::subsector) cluster that cleared Stage-B's bar. engine/trends.py merges
+-- these into the windowed trends[] export; the mechanical numbers/allocators are
+-- computed live from events, so a stale/removed cluster simply gets no narrative.
+CREATE TABLE IF NOT EXISTS trend_narratives (
+    cluster_id  TEXT PRIMARY KEY,     -- "<sector>::<subsector>"
+    title       TEXT NOT NULL,        -- the narrative label
+    narrative   TEXT,                 -- the grounded "why + who" paragraph
+    confidence  TEXT,                 -- high | medium | low
+    provisional INTEGER NOT NULL DEFAULT 0,
+    run_week    TEXT NOT NULL,
+    updated_at  TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
 -- Detected themes: output of the theme engine, one row per (theme, run_week).
 CREATE TABLE IF NOT EXISTS themes (
     id          INTEGER PRIMARY KEY,
@@ -314,5 +328,11 @@ CREATE TABLE IF NOT EXISTS themes (
     rule        TEXT NOT NULL,        -- which rule from config/rules.yaml fired
     evidence    TEXT NOT NULL,        -- JSON array of event ids
     strength    REAL,                 -- rule-defined score
+    -- Structured anchor for rules that fire about a specific entity rather than a
+    -- whole sector (stealth_accumulation -> a target, beneficiary_concentration ->
+    -- a ticker, first_entry -> the allocator). Previously this identity existed
+    -- only inside the free-text description, so a signal could not be attached to
+    -- a company/project node on the dashboard map — only to a sector zone.
+    entity_id   TEXT,                 -- e.g. 'target:Etched' | 'ticker:NVDA' | 'alloc:Sequoia'
     created_at  TEXT NOT NULL DEFAULT (datetime('now'))
 );

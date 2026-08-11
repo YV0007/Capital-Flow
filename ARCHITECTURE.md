@@ -87,5 +87,8 @@ workflow ⏳ (dashboard side)  11. Automation ⏳ (B2)
     round_backers (dated per-allocator edges: lead-time + bellwether) +
     target_classification (outcome/valuation trail, investability + public proxies,
     ai_posture moat tag). Lights up the dashboard's two-rank highlight. Audit W8.
+17. Sub-sector trends ✅ Stage B (engine/themes.py subsector_swarm + engine/trends.py
+    windowed clustering) finds real (sector,subsector) convergence; Stage A
+    (agents/trend-writer.md) writes the grounded narrative. Ships trends{week,month,all}.
 
 Remaining: scheduling (B2) and the dashboard-side consumer of the v3 blocks.

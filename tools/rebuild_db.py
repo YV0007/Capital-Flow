@@ -15,7 +15,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from engine import (beneficiaries, classify, db, holdings, ingest,  # noqa: E402
-                    profiles, references, themes)
+                    profiles, references, themes, trends)
 
 
 def main() -> None:
@@ -32,6 +32,7 @@ def main() -> None:
         r = references.ingest_week(w)
         hd = holdings.ingest_week(w)
         cl = classify.ingest_week(w)
+        trends.ingest_week(w)
         print(f"  {w}: +{s['inserted']} events ({s['skipped']} skipped), "
               f"{b['linked']} beneficiaries, {p['profiles']} profiles, "
               f"{r['references']} references, {hd['holdings']} holdings, "

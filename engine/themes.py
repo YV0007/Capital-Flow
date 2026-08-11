@@ -47,6 +47,27 @@ def _sector_swarm(con, week, p):
     return out
 
 
+def _subsector_swarm(con, week, p):
+    """Like sector_swarm but one level deeper — N distinct key/core allocators
+    converging on the same (sector, subsector) narrative. Sub-buckets are smaller
+    populations, so the bar is lower (min_allocators default 2). Scans a generous
+    lookback; the trends[] export re-checks the bar per time window (7/30/all)."""
+    win = f"-{p.get('window_days', 400)} days"
+    rows = con.execute(
+        """SELECT e.sector AS sector, e.subsector AS subsector,
+                  COUNT(DISTINCT e.allocator_id) AS inv, GROUP_CONCAT(e.id) AS ids
+           FROM events e JOIN allocators a ON a.id = e.allocator_id
+           WHERE a.tier IN ('key','core') AND e.subsector IS NOT NULL
+                 AND e.status IN ('verified','verified_alpha')
+                 AND e.disclosed_date >= date('now', ?)
+           GROUP BY e.sector, e.subsector
+           HAVING inv >= ?""", (win, p.get("min_allocators", 2))).fetchall()
+    return [(f"{r['sector']}/{r['subsector']}: {r['inv']} key allocators converge",
+             r["sector"], "subsector_swarm",
+             json.dumps([int(x) for x in r["ids"].split(",")]), float(r["inv"]))
+            for r in rows]
+
+
 def _capital_acceleration(con, week, p):
     win = p.get("window_days", 90)
     factor = p.get("growth_factor", 2.0)
@@ -92,7 +113,7 @@ def _first_entry(con, week, p):
             if min(e["disclosed_date"] for e in sevs) >= cutoff:
                 ids = [e["id"] for e in sevs]
                 out.append((f"{name} enters {sector} (first time)", sector,
-                            "first_entry", json.dumps(ids), 1.0))
+                            "first_entry", json.dumps(ids), 1.0, f"alloc:{name}"))
     return out
 
 
@@ -179,7 +200,8 @@ def _stealth_accumulation(con, week, p):
            GROUP BY e.target HAVING n >= ?""", (f"-{win} days", min_stakes)).fetchall()
     return [(f"{r['target']}: stealth accumulation — {r['n']} stakes in {win}d",
              r["sector"] or "unknown", "stealth_accumulation",
-             json.dumps([int(x) for x in r["ids"].split(",")]), float(r["n"])) for r in rows]
+             json.dumps([int(x) for x in r["ids"].split(",")]), float(r["n"]),
+             f"target:{r['target']}") for r in rows]
 
 
 def _beneficiary_concentration(con, week, p):
@@ -242,6 +264,7 @@ def _defense_network_convergence(con, week, p):
 
 RULES = {
     "sector_swarm": _sector_swarm,
+    "subsector_swarm": _subsector_swarm,
     "theme_swarm": _theme_swarm,
     "capital_acceleration": _capital_acceleration,
     "first_entry": _first_entry,
@@ -261,11 +284,13 @@ def run(week: str) -> dict:
         fn = RULES.get(r.get("id"))
         if not fn:
             continue
-        for theme, sector, rule, evidence, strength in fn(con, week, r):
+        for row in fn(con, week, r):
+            theme, sector, rule, evidence, strength = row[:5]
+            entity_id = row[5] if len(row) > 5 else None
             con.execute(
-                """INSERT INTO themes (run_week, theme, sector, rule, evidence, strength)
-                   VALUES (?,?,?,?,?,?)""",
-                (week, theme, sector, rule, evidence, strength))
+                """INSERT INTO themes (run_week, theme, sector, rule, evidence,
+                     strength, entity_id) VALUES (?,?,?,?,?,?,?)""",
+                (week, theme, sector, rule, evidence, strength, entity_id))
             fired.append(theme)
     # Network rules live in config/networks.yaml; evaluate the active ones.
     network_rules = {
@@ -277,11 +302,13 @@ def run(week: str) -> dict:
         fn = network_rules.get(nr.get("signal"))
         if not fn or nr.get("status") != "active":
             continue
-        for theme, sector, rule, evidence, strength in fn(con, week, nr):
+        for row in fn(con, week, nr):
+            theme, sector, rule, evidence, strength = row[:5]
+            entity_id = row[5] if len(row) > 5 else None
             con.execute(
-                """INSERT INTO themes (run_week, theme, sector, rule, evidence, strength)
-                   VALUES (?,?,?,?,?,?)""",
-                (week, theme, sector, rule, evidence, strength))
+                """INSERT INTO themes (run_week, theme, sector, rule, evidence,
+                     strength, entity_id) VALUES (?,?,?,?,?,?,?)""",
+                (week, theme, sector, rule, evidence, strength, entity_id))
             fired.append(theme)
     con.commit()
     con.close()

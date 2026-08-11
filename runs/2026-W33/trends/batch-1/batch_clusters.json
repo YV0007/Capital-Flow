@@ -1,0 +1,100 @@
+[
+  {
+    "cluster_id": "defense-tech::defense-manufacturing",
+    "sector": "defense-tech",
+    "subsector": "defense-manufacturing",
+    "deals": [
+      {
+        "allocator": "Andreessen Horowitz",
+        "target": "Hadrian",
+        "amount_usd": 1370000000.0,
+        "date": "2026-08-06",
+        "source_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html"
+      },
+      {
+        "allocator": "Founders Fund",
+        "target": "Hadrian",
+        "amount_usd": 1370000000.0,
+        "date": "2026-08-06",
+        "source_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html"
+      }
+    ]
+  },
+  {
+    "cluster_id": "neocloud::gpu-cloud-financing",
+    "sector": "neocloud",
+    "subsector": "gpu-cloud-financing",
+    "deals": [
+      {
+        "allocator": "NVIDIA",
+        "target": "Volta Infra Holdings",
+        "amount_usd": null,
+        "date": "2026-08-04",
+        "source_url": "https://thenextweb.com/news/volta-ai-cloud-300m-nvidia-dell-2-4bn"
+      },
+      {
+        "allocator": "Andreessen Horowitz",
+        "target": "Volta Infra Holdings",
+        "amount_usd": null,
+        "date": "2026-08-04",
+        "source_url": "https://volta.com/news/volta-launches-the-utility-of-compute/"
+      }
+    ]
+  },
+  {
+    "cluster_id": "power-energy::grid-storage",
+    "sector": "power-energy",
+    "subsector": "grid-storage",
+    "deals": [
+      {
+        "allocator": "Coatue",
+        "target": "Base Power",
+        "amount_usd": 1000000000.0,
+        "date": "2026-08-03",
+        "source_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States"
+      },
+      {
+        "allocator": "Thrive Capital",
+        "target": "Base Power",
+        "amount_usd": 1000000000.0,
+        "date": "2026-08-03",
+        "source_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States"
+      },
+      {
+        "allocator": "Andreessen Horowitz",
+        "target": "Base Power",
+        "amount_usd": 1000000000.0,
+        "date": "2026-08-03",
+        "source_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States"
+      }
+    ]
+  },
+  {
+    "cluster_id": "ai-applications::drug-discovery-ai",
+    "sector": "ai-applications",
+    "subsector": "drug-discovery-ai",
+    "deals": [
+      {
+        "allocator": "Sequoia",
+        "target": "Chai Discovery",
+        "amount_usd": 400000000.0,
+        "date": "2026-07-13",
+        "source_url": "https://www.businesswire.com/news/home/20260713849009/en/Chai-Discovery-Announces-$400M-Series-C-to-Advance-AI-Driven-Molecular-Design"
+      },
+      {
+        "allocator": "Thrive Capital",
+        "target": "Chai Discovery",
+        "amount_usd": 400000000.0,
+        "date": "2026-07-13",
+        "source_url": "https://www.businesswire.com/news/home/20260713849009/en/Chai-Discovery-Announces-$400M-Series-C-to-Advance-AI-Driven-Molecular-Design"
+      },
+      {
+        "allocator": "Jeff Bezos",
+        "target": "LifeMine Therapeutics",
+        "amount_usd": null,
+        "date": "2026-08-05",
+        "source_url": "https://www.biospace.com/business/lifemine-raises-263m-in-mission-to-improve-organ-transplant-aftercare"
+      }
+    ]
+  }
+]

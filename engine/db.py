@@ -80,6 +80,8 @@ def load_config() -> dict:
         "sectors": set(rules.get("sectors") or []),
         "themes": set(rules.get("themes") or []),
         "theme_defaults": rules.get("theme_defaults") or {},
+        "subsectors": rules.get("subsectors") or {},
+        "subsector_aliases": rules.get("subsector_aliases") or {},
     }
 
 

@@ -134,3 +134,18 @@ Investable target nodes gain (each block sourced; absent when unknown):
   confidence, provisional} → the moat / AI-resilience factor (NEW). Out-of-vocab
   classes are dropped by the engine, so the dashboard can weight the tag safely.
 Audit W8 flags any >=$1B investable target with no ai_posture.
+
+## Sub-sector trends (v3.5, 2026-08-11) — named, grounded narratives per window
+New top-level `trends` block, keyed to the dashboard's window ids: `{week, month,
+all}`, each a ranked list of the top 1-3 sub-sector clusters. Additive; nothing
+else changes. Per entry:
+- `title`, `sector`, `subsector`, `deals`, `capital_usd`, `date_range`,
+  `allocators[]` (named), `evidence[]` (event ids) — all SQL-derived from real
+  confirmed flows (numbers + named investors, not adjectives).
+- `narrative` — the grounded "why + who" paragraph (Stage-A trend-writer agent);
+  `null` until written. `confidence` (high|low) + `provisional`: a borderline
+  cluster surfaced in a quiet window is flagged `low`/provisional, never asserted
+  equal to one that cleared the bar. A window with no clusters ships `[]`.
+Also: `sectors[].signals[]` now carries `evidence` (event ids), and both the
+signals and theme-aggregate exports are bound to the current run week (were
+unfiltered — would have mixed stale signals next week).

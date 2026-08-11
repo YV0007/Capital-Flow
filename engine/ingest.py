@@ -65,7 +65,17 @@ def _grade(tier: int, status: str):
     return reliability, credibility, score
 
 
-def _validate(row: dict, agent: str, sectors: set, themes: set = None, theme_defaults: dict = None):
+def _norm_subsector(v, aliases):
+    """Fold a free-text subsector into its canonical bucket (config subsector_aliases).
+    Normalizes to lower/hyphen first; passthrough if unknown."""
+    s = (v or "").strip().lower().replace(" ", "-")
+    if not s:
+        return None
+    return (aliases or {}).get(s, s)
+
+
+def _validate(row: dict, agent: str, sectors: set, themes: set = None,
+              theme_defaults: dict = None, subsector_aliases: dict = None):
     """Return (clean|None, class|None, errors, warnings)."""
     errors, warnings = [], []
     disclosed = (row.get("disclosed_date") or "").strip()
@@ -129,7 +139,7 @@ def _validate(row: dict, agent: str, sectors: set, themes: set = None, theme_def
         "event_date": (row.get("event_date") or "").strip() or None,
         "disclosed_date": disclosed,
         "target": target, "target_type": ttype, "sector": sector,
-        "subsector": (row.get("subsector") or "").strip() or None,
+        "subsector": _norm_subsector(row.get("subsector"), subsector_aliases),
         "event_type": etype, "amount_usd": amount,
         "amount_estimated": 1 if (row.get("amount_estimated") or "").strip() in ("1", "true", "yes") else 0,
         "status": status, "source_tier": tier,
@@ -255,7 +265,7 @@ def ingest_week(week: str) -> dict:
                 for i, row in enumerate(csv.DictReader(f), start=2):
                     clean, cls, errs, warns = _validate(
                         row, agent, cfg["sectors"], cfg.get("themes"),
-                        cfg.get("theme_defaults"))
+                        cfg.get("theme_defaults"), cfg.get("subsector_aliases"))
                     stats["warnings"] += len(warns)
                     for w in warns:
                         problems.append(f"{agent}/{fname}:{i} WARN {w}")

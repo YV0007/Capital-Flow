@@ -102,3 +102,12 @@ If `runs/<week>/` already has agent CSVs, you can run the Python pipeline alone:
 python run_week.py <week>      # full deterministic pipeline
 python tools/smoke_test.py     # end-to-end self-test on synthetic data
 ```
+
+**Step 3f — sub-sector trend narratives (Stage A).** After ingest, generate the
+proven-cluster batches, then launch the narrative agents:
+```bash
+python tools/make_trend_batches.py <week>   # runs/<week>/trends/batch-N/batch_clusters.json
+```
+Launch one trend-writer agent (`agents/trend-writer.md`) per batch, writing
+`trends.json` beside each input, then re-run the pipeline. The mechanical trend
+numbers/allocators ship without the agent; the agent adds the grounded narrative.

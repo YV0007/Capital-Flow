@@ -19,7 +19,7 @@ import hashlib
 import json
 from datetime import date, datetime
 
-from . import aggregates, db
+from . import aggregates, db, trends
 
 STALE_DAYS = 180  # entities with no activity beyond this are flagged stale (not dropped)
 CONFIDENCE_THRESHOLD = 60  # D3: main-map floor; flows scoring below this belong in "Watch"
@@ -257,11 +257,25 @@ def _build_map(con, week: str | None = None) -> dict:
                   COUNT(DISTINCT allocator_id) allocs FROM events GROUP BY sector""").fetchall():
         sectors[s["sector"]] = {"deals": s["n"], "capital": s["total"],
                                 "allocators": s["allocs"], "signals": []}
+    # Signals for THIS run week only (prereq fix: the old query had no run_week
+    # filter, so next week it would mix every prior week's signals with no way to
+    # tell which are current), and it now carries `evidence` (the event ids) —
+    # previously computed then dropped at export, which left nothing able to
+    # resolve a signal back to real allocator/target names.
     for t in con.execute(
-        "SELECT theme, sector, rule, strength FROM themes ORDER BY strength DESC").fetchall():
+        """SELECT theme, sector, rule, strength, evidence, entity_id FROM themes
+           WHERE run_week = ? ORDER BY strength DESC""", (latest,)).fetchall():
         sectors.setdefault(t["sector"], {"deals": 0, "capital": 0, "allocators": 0, "signals": []})
+        try:
+            ev = [int(x) for x in json.loads(t["evidence"] or "[]")]
+        except (ValueError, TypeError):
+            ev = []
         sectors[t["sector"]]["signals"].append(
-            {"theme": t["theme"], "rule": t["rule"], "strength": t["strength"]})
+            {"theme": t["theme"], "rule": t["rule"], "strength": t["strength"],
+             "evidence": ev,
+             # Anchors a signal to a specific node (target:/ticker:/alloc:) so the
+             # dashboard can pin it to a company, not just a sector zone.
+             "entity_id": t["entity_id"]})
 
     # Theme aggregates (WS5) — the cross-cutting dimension alongside sectors.
     themes_agg = {}
@@ -275,7 +289,7 @@ def _build_map(con, week: str | None = None) -> dict:
         """SELECT th.theme AS label, th.rule, th.strength, e.theme AS ev_theme
            FROM themes th JOIN events e
              ON e.id = CAST(json_extract(th.evidence, '$[0]') AS INTEGER)
-           WHERE e.theme IS NOT NULL""").fetchall():
+           WHERE e.theme IS NOT NULL AND th.run_week = ?""", (latest,)).fetchall():
         if t["ev_theme"] in themes_agg:
             themes_agg[t["ev_theme"]]["signals"].append(
                 {"theme": t["label"], "rule": t["rule"], "strength": t["strength"]})
@@ -350,6 +364,10 @@ def _build_map(con, week: str | None = None) -> dict:
         "view_defaults": {"default_window_days": 30, "windows": [7, 30, 90, None],
                           "keep_active_signal": True},
         "promotion_queue": promotion_queue,
+        # Named, grounded sub-sector narratives per window (7d/30d/all). Top 1-3
+        # each, ranked by capital then allocator count; mechanical numbers + named
+        # allocators are SQL-derived, narrative is the trend-writer enrichment.
+        "trends": trends.compute(con, week),
         "nodes": sorted(nodes.values(), key=lambda n: -n["capital"]),
         "flows": flows,
         "sectors": sectors,

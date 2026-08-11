@@ -13,7 +13,7 @@ import sys
 from datetime import date
 
 from engine import (audit, beneficiaries, classify, deliver, handoff, holdings,
-                    ingest, profiles, references, report, themes)
+                    ingest, profiles, references, report, themes, trends)
 
 
 def current_week() -> str:
@@ -56,6 +56,8 @@ def main(week: str, do_deliver: bool = False, do_push: bool = False,
           f"targets, {cl['skipped']} skipped")
     for w in cl.get("warnings", []):
         print("          WARN", w)
+    tn = trends.ingest_week(week)  # Stage-A trend narratives (when batches exist)
+    print(f"[trends]  {tn['narratives']} narratives, {tn['skipped']} skipped")
     t = themes.run(week)  # after beneficiaries so beneficiary_concentration can see them
     print(f"[themes]  {len(t['fired'])} fired: {'; '.join(t['fired']) or '—'}")
     rp = report.run(week)

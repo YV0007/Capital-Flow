@@ -25,6 +25,12 @@
 - **MU (Micron): 4 private flows converge**  _(rule: beneficiary_concentration, strength 4.0)_
 - **neocloud: 3 key allocators in 30d**  _(rule: sector_swarm, strength 3.0)_
 - **semiconductors: 3 key allocators in 30d**  _(rule: sector_swarm, strength 3.0)_
+- **ai-applications/drug-discovery-ai: 3 key allocators converge**  _(rule: subsector_swarm, strength 3.0)_
+- **ai-applications/enterprise-ai-agents: 3 key allocators converge**  _(rule: subsector_swarm, strength 3.0)_
+- **ai-applications/legal-regulatory-ai: 3 key allocators converge**  _(rule: subsector_swarm, strength 3.0)_
+- **ai-labs/world-models: 3 key allocators converge**  _(rule: subsector_swarm, strength 3.0)_
+- **defense-tech/defense-manufacturing: 3 key allocators converge**  _(rule: subsector_swarm, strength 3.0)_
+- **power-energy/grid-storage: 3 key allocators converge**  _(rule: subsector_swarm, strength 3.0)_
 - **power-energy: smart money — Brookfield led, 2 followed in 21d**  _(rule: smart_money_follow, strength 3.0)_
 - **robotics: smart money — Jeff Bezos led, 2 followed in 21d**  _(rule: smart_money_follow, strength 3.0)_
 - **Kuwait Oil Company Pipeline JV (Project Peregrine): stealth accumulation — 3 stakes in 90d**  _(rule: stealth_accumulation, strength 3.0)_
@@ -32,6 +38,11 @@
 - **FANUY (FANUC): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
 - **FLNC (Fluence Energy): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
 - **SIEGY (Siemens): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
+- **cybersecurity/military-cyber: 2 key allocators converge**  _(rule: subsector_swarm, strength 2.0)_
+- **neocloud/gpu-cloud-financing: 2 key allocators converge**  _(rule: subsector_swarm, strength 2.0)_
+- **power-energy/oil-pipeline-lease-leaseback: 2 key allocators converge**  _(rule: subsector_swarm, strength 2.0)_
+- **robotics/critical-minerals-automation: 2 key allocators converge**  _(rule: subsector_swarm, strength 2.0)_
+- **semiconductors/inference-asic: 2 key allocators converge**  _(rule: subsector_swarm, strength 2.0)_
 
 ## New verified events (21)
 | Allocator | Target | Sector | Type | Amount | Status | Conf |

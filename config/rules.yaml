@@ -26,6 +26,58 @@ sectors:
   - private-credit
   - diversified-pe
 
+# Curated sub-sector buckets — ONE level under `sectors`. A stable, reused
+# vocabulary (like sectors/themes), NOT per-deal free text — so convergence on a
+# specific narrative is detectable. Agents map each flow's subsector into the
+# nearest bucket; unknown values pass through (may stay singleton until reconciled
+# via subsector_aliases below). Only buckets that matter for trend clustering are
+# listed; the long tail of one-off labels is fine as passthrough.
+subsectors:
+  ai-applications: [healthcare-ai, drug-discovery-ai, legal-regulatory-ai,
+                    enterprise-ai-agents, fintech-ai, vertical-saas-ai, ai-for-science]
+  ai-labs: [frontier-models, world-models, biological-foundation-models,
+            superintelligence-research, sovereign-compute]
+  ai-data: [data-labeling, data-platform, synthetic-data]
+  semiconductors: [inference-asic, custom-silicon, advanced-packaging]
+  robotics: [robot-foundation-models, industrial-automation, autonomous-mobility,
+             critical-minerals-automation]
+  defense-tech: [autonomous-systems, defense-manufacturing, critical-materials,
+                 air-missile-defense]
+  cybersecurity: [agentic-security, military-cyber, infrastructure-security]
+  neocloud: [gpu-cloud-financing, gpu-capacity]
+  datacenters: [hyperscale-campus, sovereign-datacenter, colocation]
+  power-energy: [grid-storage, baseload-generation, energy-infrastructure]
+  nuclear: [smr, fusion, uranium-fuel]
+
+# Fold observed free-text subsector labels into the canonical buckets above so
+# near-synonyms cluster. normalized (lower, hyphen) on the left. Extend as agents
+# introduce new phrasings; unlisted values pass through unchanged.
+subsector_aliases:
+  military-ai-cyber: military-cyber
+  military-cyber: military-cyber
+  agentic-software-security: agentic-security
+  spatial-ai-world-models: world-models
+  world-models: world-models
+  ai-drug-discovery: drug-discovery-ai
+  policy-regulatory-intelligence: legal-regulatory-ai
+  legal-regulatory-ai: legal-regulatory-ai
+  enterprise-ai-financial-services-public-sector: enterprise-ai-agents
+  logistics-ai-agents: enterprise-ai-agents
+  agent-native-backend: enterprise-ai-agents
+  private-credit-ops-agents: enterprise-ai-agents
+  ai-driven-critical-minerals-mining: critical-minerals-automation
+  autonomous-heavy-machinery: critical-minerals-automation
+  frontier-model-lab: frontier-models
+  frontier-models: frontier-models
+  superintelligence-research: superintelligence-research
+  brain-inspired-low-power-ai: frontier-models
+  robot-foundation-models: robot-foundation-models
+  physical-ai: robot-foundation-models
+  wire-harness-manufacturing-automation: defense-manufacturing
+  automated-factories: defense-manufacturing
+  distributed-storage-grid: grid-storage
+  real-economy-fintech: fintech-ai
+
 themes:
   # Cross-cutting investment themes — ORTHOGONAL to `sectors` above. A deal has one
   # structural sector (where it sits in the stack) and one theme (what narrative it
@@ -67,6 +119,13 @@ rules:
     min_allocators: 3
     window_days: 30
     allocator_tier: key
+
+  - id: subsector_swarm
+    description: "N distinct key/core allocators converge on the same (sector,
+      subsector) narrative. Lower bar (sub-buckets are smaller); generous lookback,
+      then trends[] re-checks the bar per 7d/30d/all window."
+    min_allocators: 2
+    window_days: 400
 
   - id: theme_swarm
     description: "N distinct key allocators converge on the same THEME within a window
