@@ -21,6 +21,19 @@ def _num(v):
     return float(v)
 
 
+def is_search_url(url: str) -> bool:
+    """A search QUERY is not a citation. EDGAR full-text search (the efts JSON API
+    or the human search UI with a query) returns a noisy result set, not a resolved
+    document — for a common word it surfaces dozens of unrelated filers. Only a
+    specific filing (sec.gov/Archives/edgar/data/<CIK>/<accession>/...) counts."""
+    u = (url or "").lower()
+    if not u:
+        return False
+    return ("efts.sec.gov" in u or "search-index" in u
+            or ("sec.gov/cgi-bin/srqsb" in u)
+            or ("sec.gov/edgar/search" in u and ("?" in u or "#/q" in u or "q=" in u)))
+
+
 # Admiralty-style two-axis confidence (docs/ENHANCEMENT_STRATEGY.md §6).
 # reliability A–E from source tier; credibility 1–5 from the agent's status
 # (a corroboration proxy until C4 has agents supply it directly).
@@ -103,6 +116,15 @@ def _validate(row: dict, agent: str, sectors: set, themes: set = None, theme_def
     if errors:
         return None, None, errors, warnings
 
+    # A search-query URL is not a citation — strip it so it can never ship as
+    # source_url. The row keeps its notes; a verified/verified_alpha row then has
+    # no source and the audit's E1 forces it to be re-sourced.
+    src = (row.get("source_url") or "").strip() or None
+    if src and is_search_url(src):
+        warnings.append("source_url is an EDGAR search query, not a filing citation "
+                        "— dropped")
+        src = None
+
     clean = {
         "event_date": (row.get("event_date") or "").strip() or None,
         "disclosed_date": disclosed,
@@ -111,7 +133,7 @@ def _validate(row: dict, agent: str, sectors: set, themes: set = None, theme_def
         "event_type": etype, "amount_usd": amount,
         "amount_estimated": 1 if (row.get("amount_estimated") or "").strip() in ("1", "true", "yes") else 0,
         "status": status, "source_tier": tier,
-        "source_url": (row.get("source_url") or "").strip() or None,
+        "source_url": src,
         "notes": (row.get("notes") or "").strip() or None,
         "origin_id": (row.get("origin_id") or "").strip() or None,
         "allocator": allocator,

@@ -73,7 +73,15 @@ Field rules:
 - `amount_estimated` 1 if the amount is a press/analyst estimate, else 0.
 - `status` candidate|verified|verified_alpha.
 - `source_tier` 1–5 (the BEST tier that supports the row).
-- `source_url` the confirming link.
+- `source_url` the confirming link — a RESOLVED document, never a search query.
+  Cite the actual article/filing you read (a press URL, or a specific EDGAR
+  filing `sec.gov/Archives/edgar/data/<CIK>/<accession>/...`). NEVER put an EDGAR
+  full-text-search URL (`efts.sec.gov/...` or `sec.gov/edgar/search?q=...`) here —
+  a bare keyword search resolves to nothing and returns unrelated entities. If a
+  filings sweep found no document, cite the press you actually have and record the
+  sweep in `notes` (+ `provisional`), not a search link. Log searches in
+  source_log.csv, which is where "what I checked" belongs. The engine drops a
+  search-query source_url and the audit blocks it (E0).
 - `notes` lead/participant, vehicle name, caveats.
 
 **Optional structured columns** (fill what the source actually supports — never guess):

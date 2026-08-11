@@ -6,6 +6,9 @@ audit report into the run directory, and returns a verdict the pipeline uses
 to GATE delivery: errors block --deliver/--push; warnings ship but are listed.
 
 ERRORS (block deployment):
+  E0  any event whose source_url is a SEARCH QUERY (EDGAR full-text search),
+      not a resolved filing/article — a query cites nothing and, for a common
+      word, returns dozens of unrelated entities
   E1  confirmed event (verified / verified_alpha) with no source_url
   E2  event where this allocator's slice exceeds the full round
       (amount_usd > round_total_usd)
@@ -45,8 +48,11 @@ from . import db
 def _check_events(con, sectors, errors, warnings):
     rows = con.execute("""SELECT e.*, a.name AS allocator FROM events e
                           JOIN allocators a ON a.id = e.allocator_id""").fetchall()
+    from .ingest import is_search_url
     for e in rows:
         who = f"event #{e['id']} {e['allocator']} -> {e['target']}"
+        if is_search_url(e["source_url"]):
+            errors.append(f"E0 {who}: source_url is a search query, not a citation")
         if e["status"] in ("verified", "verified_alpha") and not e["source_url"]:
             errors.append(f"E1 {who}: confirmed but no source_url")
         if (e["amount_usd"] and e["round_total_usd"]

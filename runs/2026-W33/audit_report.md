@@ -1,4 +1,4 @@
-# Audit report — 2026-W33 (2026-08-10)
+# Audit report — 2026-W33 (2026-08-11)
 
 **Verdict: PASS**
 Checked 154 events, 115 track-record rows, 43 profiles, 127 target references, 0 holdings, 0 classified targets.
