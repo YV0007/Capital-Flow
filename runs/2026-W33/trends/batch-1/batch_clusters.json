@@ -3,20 +3,47 @@
     "cluster_id": "defense-tech::defense-manufacturing",
     "sector": "defense-tech",
     "subsector": "defense-manufacturing",
-    "deals": [
+    "windows_qualified": [
+      "week",
+      "month",
+      "all"
+    ],
+    "deals": 2,
+    "capital_usd": 2740000000.0,
+    "date_range": [
+      "2026-08-06",
+      "2026-08-06"
+    ],
+    "allocators": [
+      "Andreessen Horowitz",
+      "Founders Fund"
+    ],
+    "evidence": [
       {
         "allocator": "Andreessen Horowitz",
         "target": "Hadrian",
         "amount_usd": 1370000000.0,
-        "date": "2026-08-06",
-        "source_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html"
+        "disclosed_date": "2026-08-06",
+        "event_type": "funding_round",
+        "stage": "series d",
+        "capital_role": "participant",
+        "co_investors": "WCM Investment Management (co-lead); Washington Harbour Partners (co-lead); Valor Equity Partners (co-lead); 137 Ventures (co-lead); Baillie Gifford (co-lead); JPMorganChase Strategic Investment Group (anchor co-lead); 1789 Capital; Morgan Stanley Wealth Management; Apollo; T. Rowe Price; CapitalG; Founders Fund; Lux Capital; Altimeter; Construct Capital",
+        "status": "verified",
+        "source_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+        "notes": "PARTICIPANT. AI/robotics-automated precision manufacturing for aerospace & defense. THREE watchlist VCs in one round (a16z, Founders Fund, Altimeter). amount_usd = FULL round; a16z slice undisclosed"
       },
       {
         "allocator": "Founders Fund",
         "target": "Hadrian",
         "amount_usd": 1370000000.0,
-        "date": "2026-08-06",
-        "source_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html"
+        "disclosed_date": "2026-08-06",
+        "event_type": "funding_round",
+        "stage": "series d",
+        "capital_role": "participant",
+        "co_investors": "WCM Investment Management (co-lead); Washington Harbour Partners (co-lead); Valor Equity Partners (co-lead); 137 Ventures (co-lead); Baillie Gifford (co-lead); JPMorganChase Strategic Investment Group (anchor co-lead); Andreessen Horowitz; Altimeter; CapitalG; Lux Capital; Construct Capital; Apollo; T. Rowe Price",
+        "status": "verified",
+        "source_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html",
+        "notes": "PARTICIPANT. amount_usd = FULL round; Founders Fund slice undisclosed"
       }
     ]
   },
@@ -24,20 +51,45 @@
     "cluster_id": "neocloud::gpu-cloud-financing",
     "sector": "neocloud",
     "subsector": "gpu-cloud-financing",
-    "deals": [
+    "windows_qualified": [
+      "week"
+    ],
+    "deals": 2,
+    "capital_usd": 0,
+    "date_range": [
+      "2026-08-04",
+      "2026-08-04"
+    ],
+    "allocators": [
+      "Andreessen Horowitz",
+      "NVIDIA"
+    ],
+    "evidence": [
       {
         "allocator": "NVIDIA",
         "target": "Volta Infra Holdings",
         "amount_usd": null,
-        "date": "2026-08-04",
-        "source_url": "https://thenextweb.com/news/volta-ai-cloud-300m-nvidia-dell-2-4bn"
+        "disclosed_date": "2026-08-04",
+        "event_type": "corporate_investment",
+        "stage": "series a",
+        "capital_role": "participant",
+        "co_investors": "Andreessen Horowitz;Altimeter Capital;Michael Dell;Azora",
+        "status": "verified",
+        "source_url": "https://thenextweb.com/news/volta-ai-cloud-300m-nvidia-dell-2-4bn",
+        "notes": "verified_alpha: two INDEPENDENT Tier-3 desks - Bloomberg (2026-08-04) and Reuters (2026-08-04, syndicated) - plus a company announcement carried by MarketScreener. No SEC/primary filing exists (Volta is a private Singapore entity, Volta AI Infra Holdings Pte. Ltd.). NVIDIA participated; a16z and Altimeter CO-LED. NVIDIA's cheque size not disclosed -> amount_usd blank. Volta was founded Jan 2026 by two ex-Brookfield executives (Ricard Boada, Sofia Gumuzio) and finances/operates GPU data centers on long-term contracts. Alongside the equity: a separate ~$5bn bank financing pool arranged by asset manager Azora, and a 6-year ~$10bn compute contract with an unnamed 'leading AI developer' that Bloomberg reports is Anthropic (Reuters could NOT independently verify that customer ID - treat as unconfirmed). Delivery via Bitdeer's 133MW Norway site, expansion planned in Texas and Wyoming."
       },
       {
         "allocator": "Andreessen Horowitz",
         "target": "Volta Infra Holdings",
         "amount_usd": null,
-        "date": "2026-08-04",
-        "source_url": "https://volta.com/news/volta-launches-the-utility-of-compute/"
+        "disclosed_date": "2026-08-04",
+        "event_type": "funding_round",
+        "stage": "series a",
+        "capital_role": "lead",
+        "co_investors": "Azora;Altimeter;NVIDIA;Michael Dell family office;Matter Venture Partners",
+        "status": "verified",
+        "source_url": "https://volta.com/news/volta-launches-the-utility-of-compute/",
+        "notes": "DISCOVERY - the a16z side of the Volta round was not in vc/. Volta's own launch page (legal name Volta Infrastructure Holdings Ltd) names Azora, Andreessen Horowitz, Altimeter and NVIDIA as the investors behind the completed Seed + Series A at a 2.4bn post-money. Volta was founded in 2026 by Ricard Boada and Sofia Gumuzio, both ex-Brookfield infrastructure. The launch is anchored by a 10bn strategic partnership with an unnamed frontier AI lab for a 133MW AI factory in Norway built with Bitdeer on NVIDIA Vera Rubin systems. Per-investor slices are not disclosed."
       }
     ]
   },
@@ -45,27 +97,60 @@
     "cluster_id": "power-energy::grid-storage",
     "sector": "power-energy",
     "subsector": "grid-storage",
-    "deals": [
+    "windows_qualified": [
+      "month",
+      "all"
+    ],
+    "deals": 3,
+    "capital_usd": 3000000000.0,
+    "date_range": [
+      "2026-08-03",
+      "2026-08-03"
+    ],
+    "allocators": [
+      "Andreessen Horowitz",
+      "Coatue",
+      "Thrive Capital"
+    ],
+    "evidence": [
       {
         "allocator": "Coatue",
         "target": "Base Power",
         "amount_usd": 1000000000.0,
-        "date": "2026-08-03",
-        "source_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States"
+        "disclosed_date": "2026-08-03",
+        "event_type": "funding_round",
+        "stage": "series d",
+        "capital_role": "participant",
+        "co_investors": "Ribbit Capital (co-lead); Addition (co-lead); Valor Equity Partners (co-lead); JPMorganChase Strategic Investment Group (co-lead); Altimeter; D1 Capital Partners; Sands Capital; Layer Global; Energy Impact Partners; Thrive Capital; Andreessen Horowitz; Lightspeed; Trust Ventures; CapitalG",
+        "status": "verified",
+        "source_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+        "notes": "NEW participant. $1B Series D at $13B post - more than triples the $4B Oct-2025 Series C valuation in under a year. US-built 39.2/78.4 kWh home batteries aggregated into distributed grid capacity. FOUR watchlist VCs in this one round (Coatue, Altimeter, Thrive, a16z). amount_usd = FULL round; Coatue slice undisclosed"
       },
       {
         "allocator": "Thrive Capital",
         "target": "Base Power",
         "amount_usd": 1000000000.0,
-        "date": "2026-08-03",
-        "source_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States"
+        "disclosed_date": "2026-08-03",
+        "event_type": "follow_on",
+        "stage": "series d",
+        "capital_role": "participant",
+        "co_investors": "Ribbit Capital (co-lead); Addition (co-lead); Valor Equity Partners (co-lead); JPMorganChase Strategic Investment Group (co-lead); Coatue; Altimeter; D1 Capital Partners; Sands Capital; Andreessen Horowitz; Lightspeed; Trust Ventures; CapitalG",
+        "status": "verified",
+        "source_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+        "notes": "EXISTING investor reinvesting (follow_on) per the company PR. amount_usd = FULL round"
       },
       {
         "allocator": "Andreessen Horowitz",
         "target": "Base Power",
         "amount_usd": 1000000000.0,
-        "date": "2026-08-03",
-        "source_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States"
+        "disclosed_date": "2026-08-03",
+        "event_type": "follow_on",
+        "stage": "series d",
+        "capital_role": "participant",
+        "co_investors": "Ribbit Capital (co-lead); Addition (co-lead); Valor Equity Partners (co-lead); JPMorganChase Strategic Investment Group (co-lead); Coatue; Altimeter; Thrive Capital; D1 Capital Partners; Sands Capital; Lightspeed; Trust Ventures; CapitalG",
+        "status": "verified",
+        "source_url": "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+        "notes": "EXISTING investor reinvesting (follow_on) per the company PR. amount_usd = FULL round"
       }
     ]
   },
@@ -73,27 +158,60 @@
     "cluster_id": "ai-applications::drug-discovery-ai",
     "sector": "ai-applications",
     "subsector": "drug-discovery-ai",
-    "deals": [
+    "windows_qualified": [
+      "month",
+      "all"
+    ],
+    "deals": 3,
+    "capital_usd": 800000000.0,
+    "date_range": [
+      "2026-07-13",
+      "2026-08-05"
+    ],
+    "allocators": [
+      "Jeff Bezos",
+      "Sequoia",
+      "Thrive Capital"
+    ],
+    "evidence": [
       {
         "allocator": "Sequoia",
         "target": "Chai Discovery",
         "amount_usd": 400000000.0,
-        "date": "2026-07-13",
-        "source_url": "https://www.businesswire.com/news/home/20260713849009/en/Chai-Discovery-Announces-$400M-Series-C-to-Advance-AI-Driven-Molecular-Design"
+        "disclosed_date": "2026-07-13",
+        "event_type": "funding_round",
+        "stage": "series c",
+        "capital_role": "participant",
+        "co_investors": "Index Ventures (lead); Kleiner Perkins; Dimension; Bain Capital Ventures; Battery Ventures; Baillie Gifford; BDT & MSD; Sapphire Ventures; Avra Capital; Thrive Capital; OpenAI; Oak HC/FT; Menlo Ventures; General Catalyst; Glade Brook; Avenir; Lachy Groom; Yosemite",
+        "status": "verified",
+        "source_url": "https://www.businesswire.com/news/home/20260713849009/en/Chai-Discovery-Announces-$400M-Series-C-to-Advance-AI-Driven-Molecular-Design",
+        "notes": "Index led; Sequoia named alongside Kleiner Perkins and Dimension. Valuation tripled in ~7 months. AI molecular design used by Lilly, Novartis, Pfizer. Off-core-taxonomy (bio, not AI buildout) - mapped to ai-applications / biotech_ai theme. amount_usd = FULL round"
       },
       {
         "allocator": "Thrive Capital",
         "target": "Chai Discovery",
         "amount_usd": 400000000.0,
-        "date": "2026-07-13",
-        "source_url": "https://www.businesswire.com/news/home/20260713849009/en/Chai-Discovery-Announces-$400M-Series-C-to-Advance-AI-Driven-Molecular-Design"
+        "disclosed_date": "2026-07-13",
+        "event_type": "follow_on",
+        "stage": "series c",
+        "capital_role": "participant",
+        "co_investors": "Index Ventures (lead); Sequoia; Kleiner Perkins; Dimension; OpenAI; General Catalyst; Menlo Ventures; Bain Capital Ventures; Baillie Gifford",
+        "status": "verified",
+        "source_url": "https://www.businesswire.com/news/home/20260713849009/en/Chai-Discovery-Announces-$400M-Series-C-to-Advance-AI-Driven-Molecular-Design",
+        "notes": "EXISTING investor re-upping (follow_on). amount_usd = FULL round; Thrive slice undisclosed"
       },
       {
         "allocator": "Jeff Bezos",
         "target": "LifeMine Therapeutics",
         "amount_usd": null,
-        "date": "2026-08-05",
-        "source_url": "https://www.biospace.com/business/lifemine-raises-263m-in-mission-to-improve-organ-transplant-aftercare"
+        "disclosed_date": "2026-08-05",
+        "event_type": "funding_round",
+        "stage": "series e",
+        "capital_role": "participant",
+        "co_investors": "Milky Way Investments (lead); Gates Frontier (Bill Gates); RA Capital; GV; GSK; ARCH Venture Partners; Invus; LoLa Capital",
+        "status": "verified_alpha",
+        "source_url": "https://www.biospace.com/business/lifemine-raises-263m-in-mission-to-improve-organ-transplant-aftercare",
+        "notes": "NEW THIS WEEK and the strongest personal-capital event in the window. Bezos Expeditions (family office) came in as a NEW investor in LifeMine's $188M Series E, led by Milky Way Investments and announced 2026-08-05/06; a $75M Series D closed alongside it for $263M total. Fierce Biotech headlines it as 'how LifeMine won over Gates and Bezos', i.e. personal/family-office money rather than a fund. NETWORK/CO-INVEST FLAG: Gates Frontier (Bill Gates' family office) in the same round -- Bezos x Gates family-office convergence, second time in this window after their separate AI-for-science bets. Corroborated by BioSpace, Fierce Biotech, techstartups, finsmes, BioPharma Dive. Personal check size undisclosed -> blank. No SEC Form D found for LifeMine in the window (Delaware/Watertown MA issuer, likely Reg D exempt filing outside window or 4(a)(2)). SECTOR FLAG: clinical-stage biopharma on a 'digital genomics' AI discovery platform -- no clean canonical slug; ai-applications used as closest, theme biotech_ai."
       }
     ]
   }

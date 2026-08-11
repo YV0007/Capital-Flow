@@ -64,6 +64,11 @@ def _migrate(con: sqlite3.Connection) -> None:
                     "NOT NULL DEFAULT 'new'")
     if "decided_at" not in uc:
         con.execute("ALTER TABLE universe_candidates ADD COLUMN decided_at TEXT")
+    # Structured entity anchor on signals (target:/ticker:/alloc:) so a signal can
+    # be pinned to a company node, not just a sector zone.
+    th = {r[1] for r in con.execute("PRAGMA table_info(themes)")}
+    if "entity_id" not in th:
+        con.execute("ALTER TABLE themes ADD COLUMN entity_id TEXT")
     con.commit()
 
 
