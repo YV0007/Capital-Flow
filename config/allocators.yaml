@@ -81,6 +81,8 @@ alt_managers:   # PE / infra / credit / mega-funds
   - { name: Brookfield, tier: key, country: CA }
   - { name: KKR, tier: watch, country: US }
   - { name: Blue Owl, tier: watch, country: US }
+  - { name: Apollo, tier: key, country: US }          # Apollo Global — credit/infra AI-infra financing
+  - { name: Goldman Sachs, tier: key, country: US }   # GS asset & wealth mgmt — AI-infra financing
 
 sovereigns:
   - { name: MGX, tier: key, country: AE }             # Abu Dhabi

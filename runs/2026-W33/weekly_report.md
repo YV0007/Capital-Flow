@@ -72,7 +72,7 @@
 ## Top sectors — last 30 days
 | Sector | Capital | Deals | Distinct allocators |
 |---|--:|--:|--:|
-| datacenters | $599.5B | 27 | 15 |
+| datacenters | $599.5B | 33 | 17 |
 | diversified-pe | $48.6B | 3 | 2 |
 | ai-labs | $46.3B | 9 | 7 |
 | nuclear | $18.6B | 3 | 2 |
@@ -86,7 +86,7 @@
 ## Themes — last 30 days
 | Theme | Capital | Deals | Distinct allocators |
 |---|--:|--:|--:|
-| ai_infrastructure | $577.6B | 41 | 19 |
+| ai_infrastructure | $577.6B | 47 | 21 |
 | frontier_ai | $46.3B | 7 | 5 |
 | energy_for_ai | $30.9B | 15 | 10 |
 | sovereign_ai | $30.6B | 7 | 6 |
@@ -95,7 +95,7 @@
 | robotics_embodiment | $6.3B | 8 | 5 |
 | biotech_ai | $800M | 3 | 3 |
 
-## Public beneficiaries mapped (55)
+## Public beneficiaries mapped (77)
 | Ticker | Company | From flow | Confidence |
 |---|---|---|:-:|
 | NVDA | NVIDIA | Coatue→Firmus | high |
@@ -153,18 +153,46 @@
 | MBG.DE | Mercedes-Benz Group | US Government→Sila Nanotechnologies | medium |
 | MGA | Magna International | US Government→Niron Magnetics | low |
 | GOOGL | Alphabet | Mubadala→Moove | low |
+| NVDA | NVIDIA | Coatue→Firmus | high |
+| SAND.ST | Sandvik AB | Khosla Ventures→Mariana Minerals | high |
+| SAND.ST | Sandvik AB | Andreessen Horowitz→Mariana Minerals | high |
+| PTCIL.NS | PTC Industries (Aerolloy Technologies) | Jeff Bezos→Blue Origin | medium |
+| GE | GE Aerospace | Jeff Bezos→Blue Origin | low |
+| SRL.AX | Sunrise Energy Metals Limited | US Government→Sunrise Energy Metals | high |
+| LMT | Lockheed Martin | US Government→Sunrise Energy Metals | low |
+| 6752.T | Panasonic Holdings | US Government→Sila Nanotechnologies | medium |
+| MBG.DE | Mercedes-Benz Group | US Government→Sila Nanotechnologies | medium |
+| MGA | Magna International | US Government→Niron Magnetics | low |
+| GOOGL | Alphabet | Mubadala→Moove | low |
+| NVDA | NVIDIA | Coatue→Firmus | high |
+| SAND.ST | Sandvik AB | Khosla Ventures→Mariana Minerals | high |
+| SAND.ST | Sandvik AB | Andreessen Horowitz→Mariana Minerals | high |
+| PTCIL.NS | PTC Industries (Aerolloy Technologies) | Jeff Bezos→Blue Origin | medium |
+| GE | GE Aerospace | Jeff Bezos→Blue Origin | low |
+| SRL.AX | Sunrise Energy Metals Limited | US Government→Sunrise Energy Metals | high |
+| LMT | Lockheed Martin | US Government→Sunrise Energy Metals | low |
+| 6752.T | Panasonic Holdings | US Government→Sila Nanotechnologies | medium |
+| MBG.DE | Mercedes-Benz Group | US Government→Sila Nanotechnologies | medium |
+| MGA | Magna International | US Government→Niron Magnetics | low |
+| GOOGL | Alphabet | Mubadala→Moove | low |
 
-## Candidates to watch (5)
+## Candidates to watch (11)
 - Sequoia → Anthropic (ai-labs, follow_on)
 - Blue Owl → Meta Hyperion (Richland Parish, Louisiana) (datacenters, follow_on)
+- Apollo → NVIDIA AI Infrastructure Financing Platform (datacenters, fund_launch)
+- BlackRock → NVIDIA AI Infrastructure Financing Platform (datacenters, fund_launch)
+- Blackstone → NVIDIA AI Infrastructure Financing Platform (datacenters, fund_launch)
+- Brookfield → NVIDIA AI Infrastructure Financing Platform (datacenters, fund_launch)
+- Goldman Sachs → NVIDIA AI Infrastructure Financing Platform (datacenters, fund_launch)
+- KKR → NVIDIA AI Infrastructure Financing Platform (datacenters, fund_launch)
 - US Government → Standard Bauxite (defense-tech, project_finance)
 - NVIDIA → Lancium (power-energy, corporate_investment)
 - Jeff Bezos → Generalist AI (robotics, follow_on)
 
-## Coverage — 12/46 key & core allocators produced events
-_Silent this run (34) — verify these are genuinely quiet, not missed:_
+## Coverage — 15/48 key & core allocators produced events
+_Silent this run (33) — verify these are genuinely quiet, not missed:_
 
-- **alt_manager**: BlackRock, DigitalBridge, SoftBank
+- **alt_manager**: DigitalBridge, SoftBank
 - **corporate**: Amazon, Meta, Microsoft, Oracle
 - **individual**: Alexandr Wang, Austin Russell, Daniel Gross, David Sacks, Delian Asparouhov, Dylan Field, Elon Musk, Joe Lonsdale, Keith Rabois, Laura Deming, Lucy Guo, Luke Nosek, Max Levchin, Nat Friedman, Palmer Luckey, Peter Thiel, Reid Hoffman, Roelof Botha, Trae Stephens, Elad Gil, Eric Schmidt, Marc Andreessen, Masayoshi Son, Sam Altman, Vinod Khosla
 - **sovereign**: MGX
