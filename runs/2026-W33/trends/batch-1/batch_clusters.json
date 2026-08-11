@@ -8,8 +8,8 @@
       "month",
       "all"
     ],
-    "deals": 2,
-    "capital_usd": 2740000000.0,
+    "deals": 1,
+    "capital_usd": 1370000000.0,
     "date_range": [
       "2026-08-06",
       "2026-08-06"
@@ -54,7 +54,7 @@
     "windows_qualified": [
       "week"
     ],
-    "deals": 2,
+    "deals": 1,
     "capital_usd": 0,
     "date_range": [
       "2026-08-04",
@@ -101,8 +101,8 @@
       "month",
       "all"
     ],
-    "deals": 3,
-    "capital_usd": 3000000000.0,
+    "deals": 1,
+    "capital_usd": 1000000000.0,
     "date_range": [
       "2026-08-03",
       "2026-08-03"
@@ -162,8 +162,8 @@
       "month",
       "all"
     ],
-    "deals": 3,
-    "capital_usd": 800000000.0,
+    "deals": 2,
+    "capital_usd": 400000000.0,
     "date_range": [
       "2026-07-13",
       "2026-08-05"

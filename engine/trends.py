@@ -35,7 +35,7 @@ def _clusters(con):
     lookback, with per-event rows so the export can window them."""
     rows = con.execute(
         """SELECT e.id, e.sector, e.subsector, e.disclosed_date AS date,
-                  COALESCE(e.amount_usd,0) AS amount, e.target,
+                  COALESCE(e.amount_usd,0) AS amount, e.target, e.status,
                   a.name AS allocator, a.tier
            FROM events e JOIN allocators a ON a.id = e.allocator_id
            WHERE a.tier IN ('key','core') AND e.subsector IS NOT NULL
@@ -78,7 +78,17 @@ def _window_entry(sector, subsector, evs, narratives):
         "capital_usd": sum(rounds.values()),
         "date_range": [dates[0], dates[-1]] if dates else [None, None],
         "allocators": allocs,
-        "evidence": [e["id"] for e in evs],
+        # Evidence in the alloc:/target: id namespace so each row resolves straight
+        # to a map node instead of going through a plain-name lookup. `event_id` is
+        # kept for traceability back to the DB row.
+        "evidence": [{
+            "event_id": e["id"],
+            "allocator_id": f"alloc:{e['allocator']}",
+            "target_id": f"target:{e['target']}",
+            "amount_usd": e["amount"] or None,
+            "date": e["date"],
+            "confirmed": e["status"] == "verified",
+        } for e in evs],
         # A cluster that didn't clear the bar in THIS window is surfaced (top 1-3
         # even when a window is quiet) but honestly flagged, never asserted equal.
         "confidence": ((nar or {}).get("confidence") or "high") if cleared else "low",

@@ -36,7 +36,7 @@ def run(week: str, per_batch: int = PER_BATCH) -> dict:
 
     out = []
     for cid, c in qualified.items():
-        ids = c["evidence"]
+        ids = [x["event_id"] if isinstance(x, dict) else x for x in c["evidence"]]
         ph = ",".join("?" * len(ids))
         rows = con.execute(
             f"""SELECT a.name AS allocator, e.target, e.amount_usd, e.disclosed_date,
