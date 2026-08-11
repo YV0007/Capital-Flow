@@ -219,7 +219,7 @@ def _beneficiary_concentration(con, week, p):
                           f"GROUP BY sector ORDER BY c DESC LIMIT 1", ids).fetchone()
         out.append((f"{r['ticker']} ({r['company']}): {r['flows']} private flows converge",
                     sec["sector"] if sec else "unknown", "beneficiary_concentration",
-                    json.dumps(ids), float(r["flows"])))
+                    json.dumps(ids), float(r["flows"]), f"ticker:{r['ticker']}"))
     return out
 
 

@@ -262,20 +262,24 @@ def _build_map(con, week: str | None = None) -> dict:
     # tell which are current), and it now carries `evidence` (the event ids) —
     # previously computed then dropped at export, which left nothing able to
     # resolve a signal back to real allocator/target names.
+    ev_target = {e["id"]: e["target"] for e in events}
     for t in con.execute(
-        """SELECT theme, sector, rule, strength, evidence, entity_id FROM themes
+        """SELECT theme, sector, rule, strength, evidence FROM themes
            WHERE run_week = ? ORDER BY strength DESC""", (latest,)).fetchall():
         sectors.setdefault(t["sector"], {"deals": 0, "capital": 0, "allocators": 0, "signals": []})
         try:
             ev = [int(x) for x in json.loads(t["evidence"] or "[]")]
         except (ValueError, TypeError):
             ev = []
+        # Anchor a signal to a specific node when its evidence converges on ONE
+        # target (e.g. stealth_accumulation, beneficiary_concentration) so the
+        # dashboard can pin it to a company, not just a sector zone. Sector/theme-
+        # level signals span many targets → no single anchor (None).
+        tgts = {ev_target[i] for i in ev if i in ev_target}
+        entity_id = f"target:{next(iter(tgts))}" if len(tgts) == 1 else None
         sectors[t["sector"]]["signals"].append(
             {"theme": t["theme"], "rule": t["rule"], "strength": t["strength"],
-             "evidence": ev,
-             # Anchors a signal to a specific node (target:/ticker:/alloc:) so the
-             # dashboard can pin it to a company, not just a sector zone.
-             "entity_id": t["entity_id"]})
+             "evidence": ev, "entity_id": entity_id})
 
     # Theme aggregates (WS5) — the cross-cutting dimension alongside sectors.
     themes_agg = {}
