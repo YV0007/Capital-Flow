@@ -1,4 +1,4 @@
-# Handoff changelog — 2026-08-11
+# Handoff changelog — 2026-08-16
 
 - nodes: 169  flows: 160  sectors: 17
 

@@ -149,3 +149,14 @@ else changes. Per entry:
 Also: `sectors[].signals[]` now carries `evidence` (event ids), and both the
 signals and theme-aggregate exports are bound to the current run week (were
 unfiltered — would have mixed stale signals next week).
+
+## Allocator `domain` (v3.6, 2026-08-12) — verified own-site, no guessing
+Allocator nodes and `allocators[name]` now carry a top-level `domain` (bare
+registrable domain, e.g. `thrivecap.com`) when the entity's own site is present
+in its researched `profile.sources`/`strategy_source_url`. It's **name-matched**
+(the domain must match the entity name) so a third-party first source (a news
+article, a parent org) is rejected to `null` rather than shipped as a wrong logo —
+"a wrong logo is worse than none". Individuals and entities whose own site wasn't
+captured ship `domain: null` (the dashboard's name-guess safely recovers obvious
+ones like a16z.com). Targets already carry `domain` from their reference website.
+The dashboard's fetch_logos.py consumes `node.domain` directly — no change needed.

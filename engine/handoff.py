@@ -24,6 +24,82 @@ from . import aggregates, db, trends
 STALE_DAYS = 180  # entities with no activity beyond this are flagged stale (not dropped)
 CONFIDENCE_THRESHOLD = 60  # D3: main-map floor; flows scoring below this belong in "Watch"
 
+# Hosts that are third-party bios / news / registries, never the entity's OWN site.
+# An org allocator reliably cites its own domain first in profile.sources; guard
+# against the exception (a first source that is one of these) so we never emit a
+# bio URL as a "domain". Individuals are handled separately (domain stays null).
+_NON_OWN_HOSTS = {
+    "linkedin.com", "x.com", "twitter.com", "facebook.com", "instagram.com",
+    "youtube.com", "medium.com", "substack.com", "github.com",
+    "wikipedia.org", "crunchbase.com", "pitchbook.com", "dealroom.co",
+    "tracxn.com", "sec.gov", "efts.sec.gov", "opencorporates.com",
+    "techcrunch.com", "bloomberg.com", "reuters.com", "forbes.com", "wsj.com",
+    "ft.com", "cnbc.com", "axios.com", "theinformation.com", "theverge.com",
+    "businesswire.com", "prnewswire.com", "globenewswire.com", "yahoo.com",
+    "finance.yahoo.com", "fortune.com", "nytimes.com",
+}
+
+
+def _bare_domain(url: str):
+    """Extract the bare host (no scheme/www) from a URL, else None."""
+    u = (url or "").strip().lower()
+    if not u.startswith("http"):
+        return None
+    host = u.split("//", 1)[-1].split("/", 1)[0].split("?", 1)[0]
+    return host[4:] if host.startswith("www.") else host or None
+
+
+def _own_domain(url: str):
+    """The entity's OWN domain from a source URL — None if it's a third-party host.
+    Matches on the registrable suffix so 'finance.yahoo.com' and 'yahoo.com' both
+    reject."""
+    host = _bare_domain(url)
+    if not host:
+        return None
+    for bad in _NON_OWN_HOSTS:
+        if host == bad or host.endswith("." + bad):
+            return None
+    return host
+
+
+_NAME_STOP = {"capital", "ventures", "venture", "partners", "partner", "group",
+              "management", "global", "fund", "funds", "holdings", "the", "and",
+              "co", "llc", "lp", "inc", "corp", "company", "asset", "investment",
+              "investments", "advisors"}
+
+
+def _registrable(host: str) -> str:
+    """Reduce a host to its bare registrable domain (eTLD+1): bam.brookfield.com ->
+    brookfield.com, blogs.microsoft.com -> microsoft.com. Keeps 3 labels for
+    two-part suffixes (x.co.uk)."""
+    parts = host.split(".")
+    if len(parts) <= 2:
+        return host
+    if len(parts[-1]) <= 2 and len(parts[-2]) <= 2:
+        return ".".join(parts[-3:])
+    return ".".join(parts[-2:])
+
+
+def _entity_domain(name: str, urls) -> str | None:
+    """Pick the entity's own domain from candidate URLs by requiring the domain to
+    MATCH the entity name — so a third-party first source (a CoStar article for
+    Blackstone, the parent Mubadala for MGX) is rejected to null rather than shipped
+    as a wrong logo. Catches the non-obvious real ones (Thrive → thrivecap.com,
+    Sequoia → sequoiacap.com). Obvious-but-unmatched names (a16z) stay null and are
+    safely recovered by the dashboard's name-guess."""
+    concat = "".join(c for c in name.lower() if c.isalnum())
+    toks = [t for t in "".join(c if c.isalnum() else " " for c in name.lower()).split()
+            if len(t) >= 3 and t not in _NAME_STOP]
+    for u in urls:
+        d = _own_domain(u)
+        if not d:
+            continue
+        core = d.split(".")[-2] if "." in d else d   # second-level label
+        if (core in concat or concat in core
+                or any(len(t) >= 4 and t in core for t in toks)):
+            return _registrable(d)
+    return None
+
 
 def _build_map(con, week: str | None = None) -> dict:
     events = con.execute(
@@ -317,11 +393,36 @@ def _build_map(con, week: str | None = None) -> dict:
              "scope": t["scope"] or None, "value": t["value"], "unit": t["unit"],
              "provisional": bool(t["provisional"]), "source_tier": t["source_tier"],
              "source_url": t["source_url"], "notes": t["notes"]})
+    # Allocator domain (formalization): for ORG-class allocators, the entity's own
+    # site is reliably the first entry of profile.sources — surface it as a verified
+    # `domain` (removes the dashboard's guess-then-verify step, zero wrong-logo risk).
+    # Individuals usually have no site of their own (their first source is a
+    # third-party bio), so they stay null rather than shipping an unrelated URL.
+    alloc_class = {r["name"]: r["class"] for r in con.execute(
+        "SELECT name, class FROM allocators")}
+    alloc_domain = {}
+    for name, p in profiles.items():
+        if alloc_class.get(name) == "individual":
+            continue
+        # strategy_source_url first (the profiler scrapes strategy from the OWN
+        # site), then the sources list — first name-matching own-domain wins.
+        cands = ([p["strategy_source_url"]] if p["strategy_source_url"] else []) \
+            + json.loads(p["sources"] or "[]")
+        d = _entity_domain(name, cands)
+        if d:
+            alloc_domain[name] = d
+    # Emit it on the allocator nodes too (targets already carry `domain` from their
+    # reference website); the dashboard's logo fetcher consumes node.domain directly.
+    for n in nodes.values():
+        if n["kind"] == "allocator" and alloc_domain.get(n["label"]):
+            n["domain"] = alloc_domain[n["label"]]
+
     allocator_summaries = {}
     for name in set(rollups) | set(profiles):
         p = profiles.get(name)
         allocator_summaries[name] = {
             **(rollups.get(name) or {}),
+            "domain": alloc_domain.get(name),
             "profile": ({"background": p["background"], "focus": p["focus"],
                          "style": p["style"], "thesis": p["thesis"],
                          "latest_investments_summary": p["latest_summary"],
