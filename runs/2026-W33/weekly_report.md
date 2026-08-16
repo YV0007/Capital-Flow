@@ -5,22 +5,20 @@
 - **NVDA (NVIDIA): 16 private flows converge**  _(rule: beneficiary_concentration, strength 16.0)_
 - **ETN (Eaton): 12 private flows converge**  _(rule: beneficiary_concentration, strength 12.0)_
 - **GEV (GE Vernova): 11 private flows converge**  _(rule: beneficiary_concentration, strength 11.0)_
-- **ai-applications: 10 key allocators in 30d**  _(rule: sector_swarm, strength 10.0)_
-- **ai_applications: 10 key allocators converge (30d)**  _(rule: theme_swarm, strength 10.0)_
-- **ai_infrastructure: 10 key allocators converge (30d)**  _(rule: theme_swarm, strength 10.0)_
-- **datacenters: 8 key allocators in 30d**  _(rule: sector_swarm, strength 8.0)_
-- **energy_for_ai: 7 key allocators converge (30d)**  _(rule: theme_swarm, strength 7.0)_
+- **ai-applications: 8 key allocators in 30d**  _(rule: sector_swarm, strength 8.0)_
+- **ai_applications: 8 key allocators converge (30d)**  _(rule: theme_swarm, strength 8.0)_
+- **ai_infrastructure: 8 key allocators converge (30d)**  _(rule: theme_swarm, strength 8.0)_
 - **ai-applications: smart money — Microsoft led, 6 followed in 21d**  _(rule: smart_money_follow, strength 7.0)_
 - **PWR (Quanta Services): 7 private flows converge**  _(rule: beneficiary_concentration, strength 7.0)_
 - **TSM (Taiwan Semiconductor): 7 private flows converge**  _(rule: beneficiary_concentration, strength 7.0)_
-- **power-energy: 6 key allocators in 30d**  _(rule: sector_swarm, strength 6.0)_
+- **energy_for_ai: 6 key allocators converge (30d)**  _(rule: theme_swarm, strength 6.0)_
 - **datacenters: smart money — DigitalBridge led, 5 followed in 21d**  _(rule: smart_money_follow, strength 6.0)_
 - **ai-labs: 5 key allocators in 30d**  _(rule: sector_swarm, strength 5.0)_
+- **datacenters: 5 key allocators in 30d**  _(rule: sector_swarm, strength 5.0)_
+- **power-energy: 5 key allocators in 30d**  _(rule: sector_swarm, strength 5.0)_
 - **ai-labs: smart money — Elad Gil led, 4 followed in 21d**  _(rule: smart_money_follow, strength 5.0)_
 - **defense-tech: smart money — Jeff Bezos led, 4 followed in 21d**  _(rule: smart_money_follow, strength 5.0)_
-- **defense-tech: 4 key allocators in 30d**  _(rule: sector_swarm, strength 4.0)_
 - **robotics: 4 key allocators in 30d**  _(rule: sector_swarm, strength 4.0)_
-- **defense_ai: 4 key allocators converge (30d)**  _(rule: theme_swarm, strength 4.0)_
 - **robotics_embodiment: 4 key allocators converge (30d)**  _(rule: theme_swarm, strength 4.0)_
 - **MU (Micron): 4 private flows converge**  _(rule: beneficiary_concentration, strength 4.0)_
 - **neocloud: 3 key allocators in 30d**  _(rule: sector_swarm, strength 3.0)_
@@ -72,32 +70,43 @@
 ## Top sectors — last 30 days
 | Sector | Capital | Deals | Distinct allocators |
 |---|--:|--:|--:|
-| datacenters | $599.5B | 33 | 17 |
+| datacenters | $495.5B | 28 | 15 |
 | diversified-pe | $48.6B | 3 | 2 |
 | ai-labs | $46.3B | 9 | 7 |
 | nuclear | $18.6B | 3 | 2 |
-| ai-applications | $17.9B | 28 | 14 |
-| power-energy | $14.3B | 13 | 9 |
-| defense-tech | $6.5B | 12 | 6 |
+| ai-applications | $14.9B | 17 | 13 |
+| power-energy | $9.0B | 10 | 8 |
 | robotics | $6.3B | 8 | 5 |
+| defense-tech | $6.2B | 8 | 4 |
 | neocloud | $4.0B | 5 | 4 |
-| ai-data | $3.0B | 1 | 1 |
+| semiconductors | $2.0B | 7 | 4 |
 
 ## Themes — last 30 days
 | Theme | Capital | Deals | Distinct allocators |
 |---|--:|--:|--:|
-| ai_infrastructure | $577.6B | 47 | 21 |
+| ai_infrastructure | $473.7B | 42 | 20 |
 | frontier_ai | $46.3B | 7 | 5 |
-| energy_for_ai | $30.9B | 15 | 10 |
 | sovereign_ai | $30.6B | 7 | 6 |
-| ai_applications | $19.9B | 27 | 13 |
-| defense_ai | $6.5B | 14 | 6 |
+| energy_for_ai | $25.6B | 12 | 9 |
+| ai_applications | $14.7B | 17 | 12 |
 | robotics_embodiment | $6.3B | 8 | 5 |
-| biotech_ai | $800M | 3 | 3 |
+| defense_ai | $6.2B | 10 | 5 |
+| biotech_ai | $0 | 1 | 1 |
 
-## Public beneficiaries mapped (77)
+## Public beneficiaries mapped (88)
 | Ticker | Company | From flow | Confidence |
 |---|---|---|:-:|
+| NVDA | NVIDIA | Coatue→Firmus | high |
+| SAND.ST | Sandvik AB | Khosla Ventures→Mariana Minerals | high |
+| SAND.ST | Sandvik AB | Andreessen Horowitz→Mariana Minerals | high |
+| PTCIL.NS | PTC Industries (Aerolloy Technologies) | Jeff Bezos→Blue Origin | medium |
+| GE | GE Aerospace | Jeff Bezos→Blue Origin | low |
+| SRL.AX | Sunrise Energy Metals Limited | US Government→Sunrise Energy Metals | high |
+| LMT | Lockheed Martin | US Government→Sunrise Energy Metals | low |
+| 6752.T | Panasonic Holdings | US Government→Sila Nanotechnologies | medium |
+| MBG.DE | Mercedes-Benz Group | US Government→Sila Nanotechnologies | medium |
+| MGA | Magna International | US Government→Niron Magnetics | low |
+| GOOGL | Alphabet | Mubadala→Moove | low |
 | NVDA | NVIDIA | Coatue→Firmus | high |
 | SAND.ST | Sandvik AB | Khosla Ventures→Mariana Minerals | high |
 | SAND.ST | Sandvik AB | Andreessen Horowitz→Mariana Minerals | high |
