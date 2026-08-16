@@ -98,16 +98,30 @@ def _window_entry(sector, subsector, evs, narratives):
     return entry
 
 
+def _anchor_ordinal(con) -> int:
+    """Window anchor = the newest day the engine actually SAW confirmed money move
+    (max verified/verified_alpha flow date), not the run date. A cycle whose last
+    calendar week holds only unverified candidates (e.g. a tweet-sourced JV) would
+    otherwise return an empty `week` even though the run produced real clusters —
+    mirrors the dashboard's digest-window fix. Falls back to today if nothing is
+    confirmed yet. When a late-week deal IS confirmed, anchor == today (unchanged)."""
+    row = con.execute(
+        "SELECT MAX(disclosed_date) d FROM events "
+        "WHERE status IN ('verified','verified_alpha')").fetchone()
+    return (date.fromisoformat(row["d"]).toordinal()
+            if row and row["d"] else date.today().toordinal())
+
+
 def compute(con, week: str | None = None) -> dict:
     groups = _clusters(con)
     narratives = _load_narratives(con)
-    today_ord = date.today().toordinal()
+    anchor_ord = _anchor_ordinal(con)
     out = {}
     for wkey, days in WINDOWS.items():
         entries = []
         for (sector, subsector), evs in groups.items():
             if days is not None:
-                cutoff = today_ord - days
+                cutoff = anchor_ord - days
                 evs = [e for e in evs if e["date"]
                        and date.fromisoformat(e["date"]).toordinal() >= cutoff]
             entry = _window_entry(sector, subsector, evs, narratives)

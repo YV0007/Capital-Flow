@@ -93,9 +93,20 @@
 | defense_ai | $6.2B | 10 | 5 |
 | biotech_ai | $0 | 1 | 1 |
 
-## Public beneficiaries mapped (88)
+## Public beneficiaries mapped (99)
 | Ticker | Company | From flow | Confidence |
 |---|---|---|:-:|
+| NVDA | NVIDIA | Coatue→Firmus | high |
+| SAND.ST | Sandvik AB | Khosla Ventures→Mariana Minerals | high |
+| SAND.ST | Sandvik AB | Andreessen Horowitz→Mariana Minerals | high |
+| PTCIL.NS | PTC Industries (Aerolloy Technologies) | Jeff Bezos→Blue Origin | medium |
+| GE | GE Aerospace | Jeff Bezos→Blue Origin | low |
+| SRL.AX | Sunrise Energy Metals Limited | US Government→Sunrise Energy Metals | high |
+| LMT | Lockheed Martin | US Government→Sunrise Energy Metals | low |
+| 6752.T | Panasonic Holdings | US Government→Sila Nanotechnologies | medium |
+| MBG.DE | Mercedes-Benz Group | US Government→Sila Nanotechnologies | medium |
+| MGA | Magna International | US Government→Niron Magnetics | low |
+| GOOGL | Alphabet | Mubadala→Moove | low |
 | NVDA | NVIDIA | Coatue→Firmus | high |
 | SAND.ST | Sandvik AB | Khosla Ventures→Mariana Minerals | high |
 | SAND.ST | Sandvik AB | Andreessen Horowitz→Mariana Minerals | high |
