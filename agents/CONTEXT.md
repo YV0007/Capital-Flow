@@ -47,6 +47,18 @@ closest and note it — an unknown sector ingests but is flagged.
 Use WebSearch / WebFetch for all tiers. SEC EDGAR full-text search is free and is
 your best Tier-1 confirm. Tier 5 finds the lead; a higher tier must confirm it.
 
+## Read your context pack FIRST — `runs/<week>/<your-agent>/context.json`
+Built before every run from what the engine already knows. Three sections:
+- **what_you_already_have** — per entity: `last_event_date` (search FORWARD from it,
+  don't re-find old deals), `sectors_active`, `known_vehicles`, `aliases` (the SAME
+  entity — never file one as new), `cik`/`edgar_path`, `recent_targets`. Plus
+  `stale_candidates`: existing rows needing a Tier-1 confirm — chase these first,
+  don't re-file them as new deals.
+- **what_worked** — `check_first`: sources that actually yielded events in recent
+  runs. Check them before searching broadly.
+- **what_you_got_wrong** — real rejects from recent runs with the lesson and count.
+  Don't repeat them.
+
 ## Tools — use the deterministic path before searching
 Two paths, and they are NOT interchangeable:
 

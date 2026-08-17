@@ -1,0 +1,443 @@
+{
+  "week": "2026-W34",
+  "agent": "alt-managers",
+  "feedback_from_runs": [
+    "2026-W32",
+    "2026-W33",
+    "2026-W34"
+  ],
+  "how_to_use": "1) WHAT YOU ALREADY HAVE \u2014 search FORWARD from each entity's last_event_date; don't re-find old deals. Use the deterministic EDGAR path when cik is present (agents/CONTEXT.md \u2192 Tools) and run `engine.edgar exists` before writing a row. Aliases are the SAME entity \u2014 never file one as new. stale_candidates are existing rows needing a Tier-1 confirm, not new deals to re-file. 2) WHAT WORKED \u2014 check `check_first` sources before searching broadly. 3) WHAT YOU GOT WRONG \u2014 these are real rejects from recent runs; don't repeat them.",
+  "what_you_already_have": {
+    "entities": [
+      {
+        "allocator": "Apollo",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-11",
+        "events_on_file": 1,
+        "sectors_active": [
+          "datacenters"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": null,
+        "ticker": null,
+        "edgar_path": "search",
+        "recent_targets": [
+          "NVIDIA AI Infrastructure Financing Platform"
+        ]
+      },
+      {
+        "allocator": "Azora",
+        "class": "alt_manager",
+        "tier": "watch",
+        "country": null,
+        "network": null,
+        "last_event_date": "2026-08-04",
+        "events_on_file": 1,
+        "sectors_active": [
+          "datacenters"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": null,
+        "ticker": null,
+        "edgar_path": "search",
+        "recent_targets": [
+          "Volta AI Infrastructure Program"
+        ]
+      },
+      {
+        "allocator": "BlackRock",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-11",
+        "events_on_file": 4,
+        "sectors_active": [
+          "datacenters",
+          "power-energy"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "blackrock (gip)",
+          "blackrock / gip",
+          "blackrock/gip",
+          "gip",
+          "global infrastructure partners"
+        ],
+        "cik": "0002012383",
+        "ticker": "BLK",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "NVIDIA AI Infrastructure Financing Platform",
+          "Project Sopaipilla Holdings (Meta El Paso data center JV)",
+          "Aligned Data Centers",
+          "Summit Ridge Energy"
+        ]
+      },
+      {
+        "allocator": "Blackstone",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-13",
+        "events_on_file": 7,
+        "sectors_active": [
+          "ai-data",
+          "datacenters",
+          "power-energy"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": "0001393818",
+        "ticker": "BX",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "Databricks",
+          "NVIDIA AI Infrastructure Financing Platform",
+          "Kuwait Oil Company Pipeline JV (Project Peregrine)",
+          "AirTrunk SYD3 (Western Sydney)",
+          "QTS Realty Trust",
+          "Williams Power Innovation JV (Socrates, Apollo, Aquila, Socrates the Younger, Neo)"
+        ]
+      },
+      {
+        "allocator": "Blue Owl",
+        "class": "alt_manager",
+        "tier": "watch",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-07-30",
+        "events_on_file": 3,
+        "sectors_active": [
+          "datacenters",
+          "networking"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "blue owl capital"
+        ],
+        "cik": "0001823945",
+        "ticker": "OWL",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "STACK Infrastructure Melbourne (third campus)",
+          "Meta Hyperion (Richland Parish, Louisiana)",
+          "Kirkwood Infrastructure Group"
+        ]
+      },
+      {
+        "allocator": "Brookfield",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "CA",
+        "network": null,
+        "last_event_date": "2026-08-14",
+        "events_on_file": 12,
+        "sectors_active": [
+          "datacenters",
+          "power-energy",
+          "semiconductors"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "brookfield asset management",
+          "brookfield infrastructure"
+        ],
+        "cik": "0001937926",
+        "ticker": "BAM",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "Boralex",
+          "NVIDIA AI Infrastructure Financing Platform",
+          "Brookfield Infrastructure Fund VI (flagship)",
+          "France sovereign AI infrastructure framework",
+          "U.S. semiconductor fabrication facility (unnamed)",
+          "Brookfield AI Infrastructure strategy"
+        ]
+      },
+      {
+        "allocator": "DigitalBridge",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-07-15",
+        "events_on_file": 2,
+        "sectors_active": [
+          "datacenters"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": "0001679688",
+        "ticker": "DBRG",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "DigitalBridge Credit II",
+          "Nippon Gateway Infrastructure (NGI)"
+        ]
+      },
+      {
+        "allocator": "Goldman Sachs",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-11",
+        "events_on_file": 1,
+        "sectors_active": [
+          "datacenters"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": "0000886982",
+        "ticker": "GS",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "NVIDIA AI Infrastructure Financing Platform"
+        ]
+      },
+      {
+        "allocator": "KKR",
+        "class": "alt_manager",
+        "tier": "watch",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-11",
+        "events_on_file": 7,
+        "sectors_active": [
+          "datacenters",
+          "power-energy"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "kohlberg kravis roberts"
+        ],
+        "cik": "0001404912",
+        "ticker": "KKR",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "NVIDIA AI Infrastructure Financing Platform",
+          "KKR Global Infrastructure Investors V",
+          "TotalEnergies European renewables portfolio (Germany/Spain/France/Poland)",
+          "Kuwait Oil Company Pipeline JV (Project Peregrine)",
+          "Williams Power Innovation JV (Socrates, Apollo, Aquila, Socrates the Younger, Neo)",
+          "SK-KKR Korea renewable energy platform"
+        ]
+      },
+      {
+        "allocator": "SoftBank",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "JP",
+        "network": null,
+        "last_event_date": "2026-07-24",
+        "events_on_file": 5,
+        "sectors_active": [
+          "ai-labs",
+          "neocloud",
+          "robotics"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "softbank group",
+          "softbank group corp",
+          "softbank vision fund"
+        ],
+        "cik": "0001065521",
+        "ticker": "SFTBF",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "Gravis Robotics AG",
+          "ABB Robotics acquisition financing",
+          "ABB Robotics",
+          "SB Neo",
+          "OpenAI"
+        ]
+      }
+    ],
+    "stale_candidates": [
+      {
+        "allocator": "Blackstone",
+        "target": "Japan AI data centers (programme)",
+        "event_type": "project_finance",
+        "disclosed_date": "2026-06-30",
+        "source_tier": 3,
+        "source_url": "https://asia.nikkei.com/editor-s-picks/interview/blackstone-to-invest-30bn-in-japan-ai-data-centers-president",
+        "why_still_candidate": "CANDIDATE - STATED PLAN, NOT COMMITTED CAPITAL (amount_estimated=1). President/COO Jonathan Gray told Nikkei that Blackstone intends to invest ~$30bn in Japanese AI data centres over the next three to five years, exploring projects exceeding 1GW combined against >500MW already built. No vehicle clos"
+      },
+      {
+        "allocator": "Blue Owl",
+        "target": "Meta Hyperion (Richland Parish, Louisiana)",
+        "event_type": "follow_on",
+        "disclosed_date": "2026-07-13",
+        "source_tier": 3,
+        "source_url": "https://www.cnbc.com/2026/07/13/meta-louisiana-data-center-investment-reaches-50-billion-amid-ai-push.html",
+        "why_still_candidate": "CANDIDATE - a Meta SCOPE announcement, not a confirmed new Blue Owl capital commitment. Meta confirmed 2026-07-13 that Hyperion will scale from 2GW to 5GW across 3,200 acres, with total project investment rising from the original $27bn JV valuation (Oct 2025, Blue Owl 80% / Meta 20%) to 'more than $"
+      },
+      {
+        "allocator": "SoftBank",
+        "target": "ABB Robotics acquisition financing",
+        "event_type": "project_finance",
+        "disclosed_date": "2026-07-21",
+        "source_tier": 3,
+        "source_url": "https://group.softbank/en/news/press/20251008",
+        "why_still_candidate": "FILINGS SWEEP FOUND NOTHING FOR THE LOAN ITSELF - candidate stands, but see the paired verified row for the underlying acquisition. The 1.75bn is a four-bank syndicated term-loan package (dollar tranche increased by 200m to 800m; euro tranche cut to EUR 825m, ~940m equivalent; priced ~425bp over ben"
+      },
+      {
+        "allocator": "Blackstone",
+        "target": "AirTrunk SYD3 (Western Sydney)",
+        "event_type": "project_finance",
+        "disclosed_date": "2026-07-22",
+        "source_tier": 3,
+        "source_url": "https://www.bloomberg.com/news/articles/2026-07-22/blackstone-tying-up-3-billion-airtrunk-loan-as-data-center-debt-binge-woes-grow",
+        "why_still_candidate": "CANDIDATE - not closed and single-origin. Blackstone-owned AirTrunk is finalising the underwriting group for an A$4.3bn (~US$3.0bn, FX-converted hence amount_estimated=1) five-year syndicated loan to build SYD3, a 400+MW hyperscale campus in Western Sydney. Named underwriters: Credit Agricole, DBS, "
+      },
+      {
+        "allocator": "SoftBank",
+        "target": "Gravis Robotics AG",
+        "event_type": "acquisition",
+        "disclosed_date": "2026-07-24",
+        "source_tier": 3,
+        "source_url": "https://www.swissinfo.ch/eng/softbank-weighs-deal-for-robotics-startup-gravis/91794315",
+        "why_still_candidate": "CANDIDATE - EXPLORATORY, no final decision on size or structure. SoftBank is weighing an acquisition of Zurich-based Gravis Robotics AG (2022 ETH Zurich spinout, autonomous construction equipment) at a valuation reportedly >$500m (amount_estimated=1). Would be held in a NEW entity SoftBank is settin"
+      }
+    ]
+  },
+  "what_worked": {
+    "check_first": [
+      "bloomberg.com",
+      "cnbc.com",
+      "bam.brookfield.com",
+      "finance.yahoo.com",
+      "peinsights.substack.com",
+      "totalenergies.com",
+      "blackstone.com",
+      "businesswire.com"
+    ],
+    "detail": [
+      {
+        "source": "bam.brookfield.com",
+        "example_url": "https://bam.brookfield.com/press-releases/brookfield-acquire-remaining-interest-oaktree",
+        "tier": 1,
+        "hits": 12,
+        "checks": 12
+      },
+      {
+        "source": "finance.yahoo.com",
+        "example_url": "https://finance.yahoo.com/markets/stocks/articles/blue-owl-capital-owl-ties-171150001.html",
+        "tier": 3,
+        "hits": 12,
+        "checks": 12
+      },
+      {
+        "source": "peinsights.substack.com",
+        "example_url": "https://peinsights.substack.com/p/kkr-deploys-insurance-capital-into",
+        "tier": 4,
+        "hits": 12,
+        "checks": 12
+      },
+      {
+        "source": "totalenergies.com",
+        "example_url": "https://totalenergies.com/newsroom/renewables-in-europe-totalenergies-acquires-shells-renewables-business-and-sells-a-50-stake-in-a-portfolio-of-developed-assets-to-kkr/?lang=eng",
+        "tier": 1,
+        "hits": 12,
+        "checks": 12
+      },
+      {
+        "source": "blackstone.com",
+        "example_url": "https://www.blackstone.com/news/press/kuwait-oil-company-signs-us-16-0-billion-infrastructure-partnership-involving-its-crude-oil-pipeline-network-with-a-consortium-comprising-blackstone-brookfield-and-kkr/",
+        "tier": 1,
+        "hits": 12,
+        "checks": 12
+      },
+      {
+        "source": "bloomberg.com",
+        "example_url": "https://www.bloomberg.com/news/articles/2026-07-25/blackstone-brookfield-kkr-ink-16-billion-kuwait-pipeline-deal",
+        "tier": 3,
+        "hits": 12,
+        "checks": 12
+      },
+      {
+        "source": "bloomberg.com",
+        "example_url": "https://www.bloomberg.com/news/articles/2026-08-03/total-buys-green-assets-from-shell-sells-stake-in-others-to-kkr",
+        "tier": 3,
+        "hits": 12,
+        "checks": 12
+      },
+      {
+        "source": "bloomberg.com",
+        "example_url": "https://www.bloomberg.com/news/articles/2026-08-06/softbank-secures-10-billion-margin-loan-backed-by-openai-stake",
+        "tier": 3,
+        "hits": 12,
+        "checks": 12
+      },
+      {
+        "source": "businesswire.com",
+        "example_url": "https://www.businesswire.com/news/home/20260802134675/en/KKR-to-Acquire-a-50-Stake-in-a-Portfolio-of-Developed-Renewable-Assets-from-TotalEnergies-Across-Europe",
+        "tier": 1,
+        "hits": 12,
+        "checks": 12
+      },
+      {
+        "source": "cnbc.com",
+        "example_url": "https://www.cnbc.com/2026/07/13/meta-louisiana-data-center-investment-reaches-50-billion-amid-ai-push.html",
+        "tier": 3,
+        "hits": 12,
+        "checks": 12
+      },
+      {
+        "source": "cnbc.com",
+        "example_url": "https://www.cnbc.com/2026/07/25/blackstone-brookfield-and-kkr-sign-16-billion-oil-deal-with-kuwait.html",
+        "tier": 3,
+        "hits": 12,
+        "checks": 12
+      },
+      {
+        "source": "energyconnects.com",
+        "example_url": "https://www.energyconnects.com/news/oil/2026/july/blackstone-brookfield-kkr-ink-16-billion-kuwait-oil-deal/",
+        "tier": 3,
+        "hits": 12,
+        "checks": 12
+      }
+    ]
+  },
+  "what_you_got_wrong": {
+    "this_class": [
+      {
+        "code": "W7",
+        "lesson": "a >=$1B fund/firm has no holdings collected.",
+        "occurrences": 16,
+        "examples": [
+          "Brookfield: $153.9B fund/firm with no holdings collected",
+          "BlackRock: $44.9B fund/firm with no holdings collected"
+        ]
+      },
+      {
+        "code": "W3",
+        "lesson": "a key allocator with events has no profile yet (profiler coverage gap).",
+        "occurrences": 4,
+        "examples": [
+          "Apollo: key allocator with events but no profile",
+          "Goldman Sachs: key allocator with events but no profile"
+        ]
+      }
+    ],
+    "all_classes": [
+      {
+        "code": "W8",
+        "lesson": "a >=$1B investable target has no ai_posture tag.",
+        "occurrences": 19,
+        "examples": [
+          "Electronic Arts: $33.6B investable target with no ai_posture",
+          "OpenAI Group PBC: $21.3B investable target with no ai_posture"
+        ]
+      }
+    ]
+  }
+}

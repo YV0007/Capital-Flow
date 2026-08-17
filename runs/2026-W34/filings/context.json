@@ -1,0 +1,673 @@
+{
+  "week": "2026-W34",
+  "agent": "filings",
+  "feedback_from_runs": [
+    "2026-W32",
+    "2026-W33",
+    "2026-W34"
+  ],
+  "how_to_use": "1) WHAT YOU ALREADY HAVE \u2014 search FORWARD from each entity's last_event_date; don't re-find old deals. Use the deterministic EDGAR path when cik is present (agents/CONTEXT.md \u2192 Tools) and run `engine.edgar exists` before writing a row. Aliases are the SAME entity \u2014 never file one as new. stale_candidates are existing rows needing a Tier-1 confirm, not new deals to re-file. 2) WHAT WORKED \u2014 check `check_first` sources before searching broadly. 3) WHAT YOU GOT WRONG \u2014 these are real rejects from recent runs; don't repeat them.",
+  "what_you_already_have": {
+    "entities": [
+      {
+        "allocator": "BlackRock",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-11",
+        "events_on_file": 4,
+        "sectors_active": [
+          "datacenters",
+          "power-energy"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "blackrock (gip)",
+          "blackrock / gip",
+          "blackrock/gip",
+          "gip",
+          "global infrastructure partners"
+        ],
+        "cik": "0002012383",
+        "ticker": "BLK",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "NVIDIA AI Infrastructure Financing Platform",
+          "Project Sopaipilla Holdings (Meta El Paso data center JV)",
+          "Aligned Data Centers",
+          "Summit Ridge Energy"
+        ]
+      },
+      {
+        "allocator": "Blackstone",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-13",
+        "events_on_file": 7,
+        "sectors_active": [
+          "ai-data",
+          "datacenters",
+          "power-energy"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": "0001393818",
+        "ticker": "BX",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "Databricks",
+          "NVIDIA AI Infrastructure Financing Platform",
+          "Kuwait Oil Company Pipeline JV (Project Peregrine)",
+          "AirTrunk SYD3 (Western Sydney)",
+          "QTS Realty Trust",
+          "Williams Power Innovation JV (Socrates, Apollo, Aquila, Socrates the Younger, Neo)"
+        ]
+      },
+      {
+        "allocator": "Blue Owl",
+        "class": "alt_manager",
+        "tier": "watch",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-07-30",
+        "events_on_file": 3,
+        "sectors_active": [
+          "datacenters",
+          "networking"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "blue owl capital"
+        ],
+        "cik": "0001823945",
+        "ticker": "OWL",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "STACK Infrastructure Melbourne (third campus)",
+          "Meta Hyperion (Richland Parish, Louisiana)",
+          "Kirkwood Infrastructure Group"
+        ]
+      },
+      {
+        "allocator": "Brookfield",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "CA",
+        "network": null,
+        "last_event_date": "2026-08-14",
+        "events_on_file": 12,
+        "sectors_active": [
+          "datacenters",
+          "power-energy",
+          "semiconductors"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "brookfield asset management",
+          "brookfield infrastructure"
+        ],
+        "cik": "0001937926",
+        "ticker": "BAM",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "Boralex",
+          "NVIDIA AI Infrastructure Financing Platform",
+          "Brookfield Infrastructure Fund VI (flagship)",
+          "France sovereign AI infrastructure framework",
+          "U.S. semiconductor fabrication facility (unnamed)",
+          "Brookfield AI Infrastructure strategy"
+        ]
+      },
+      {
+        "allocator": "DigitalBridge",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-07-15",
+        "events_on_file": 2,
+        "sectors_active": [
+          "datacenters"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": "0001679688",
+        "ticker": "DBRG",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "DigitalBridge Credit II",
+          "Nippon Gateway Infrastructure (NGI)"
+        ]
+      },
+      {
+        "allocator": "Goldman Sachs",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-11",
+        "events_on_file": 1,
+        "sectors_active": [
+          "datacenters"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": "0000886982",
+        "ticker": "GS",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "NVIDIA AI Infrastructure Financing Platform"
+        ]
+      },
+      {
+        "allocator": "KKR",
+        "class": "alt_manager",
+        "tier": "watch",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-11",
+        "events_on_file": 7,
+        "sectors_active": [
+          "datacenters",
+          "power-energy"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "kohlberg kravis roberts"
+        ],
+        "cik": "0001404912",
+        "ticker": "KKR",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "NVIDIA AI Infrastructure Financing Platform",
+          "KKR Global Infrastructure Investors V",
+          "TotalEnergies European renewables portfolio (Germany/Spain/France/Poland)",
+          "Kuwait Oil Company Pipeline JV (Project Peregrine)",
+          "Williams Power Innovation JV (Socrates, Apollo, Aquila, Socrates the Younger, Neo)",
+          "SK-KKR Korea renewable energy platform"
+        ]
+      },
+      {
+        "allocator": "SoftBank",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "JP",
+        "network": null,
+        "last_event_date": "2026-07-24",
+        "events_on_file": 5,
+        "sectors_active": [
+          "ai-labs",
+          "neocloud",
+          "robotics"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "softbank group",
+          "softbank group corp",
+          "softbank vision fund"
+        ],
+        "cik": "0001065521",
+        "ticker": "SFTBF",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "Gravis Robotics AG",
+          "ABB Robotics acquisition financing",
+          "ABB Robotics",
+          "SB Neo",
+          "OpenAI"
+        ]
+      },
+      {
+        "allocator": "Alphabet",
+        "class": "corporate",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-05",
+        "events_on_file": 2,
+        "sectors_active": [
+          "ai-labs",
+          "nuclear"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "alphabet (google)",
+          "alphabet / google",
+          "google",
+          "google / alphabet"
+        ],
+        "cik": "0001652044",
+        "ticker": "GOOGL",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "Discovery Loop",
+          "Proxima Fusion"
+        ]
+      },
+      {
+        "allocator": "Amazon",
+        "class": "corporate",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-07-31",
+        "events_on_file": 2,
+        "sectors_active": [
+          "ai-labs"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "amazon / aws",
+          "amazon web services",
+          "amazon.com",
+          "aws"
+        ],
+        "cik": "0001018724",
+        "ticker": "AMZN",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "Anthropic",
+          "OpenAI Group PBC"
+        ]
+      },
+      {
+        "allocator": "Meta",
+        "class": "corporate",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-07-28",
+        "events_on_file": 3,
+        "sectors_active": [
+          "datacenters"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "facebook",
+          "meta / facebook",
+          "meta platforms"
+        ],
+        "cik": "0001326801",
+        "ticker": "META",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "Meta-BlackRock El Paso data center venture",
+          "Richland Parish / Hyperion data center (Louisiana)",
+          "Sturgeon County data center (Alberta, Canada)"
+        ]
+      },
+      {
+        "allocator": "Microsoft",
+        "class": "corporate",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-07-21",
+        "events_on_file": 2,
+        "sectors_active": [
+          "ai-applications",
+          "ai-labs"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "microsoft corporation",
+          "msft"
+        ],
+        "cik": "0000789019",
+        "ticker": "MSFT",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "Mistral AI",
+          "Microsoft Frontier Company"
+        ]
+      },
+      {
+        "allocator": "NVIDIA",
+        "class": "corporate",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-14",
+        "events_on_file": 8,
+        "sectors_active": [
+          "ai-compute",
+          "ai-labs",
+          "datacenters",
+          "neocloud",
+          "power-energy"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "nvda",
+          "nvidia corporation"
+        ],
+        "cik": "0001045810",
+        "ticker": "NVDA",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "SpaceX",
+          "Lancium",
+          "Volta Infra Holdings",
+          "OpenAI southern Ohio 10GW data center",
+          "Safe Superintelligence",
+          "NAVER Corporation"
+        ]
+      },
+      {
+        "allocator": "Oracle",
+        "class": "corporate",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": null,
+        "events_on_file": 0,
+        "sectors_active": [],
+        "known_vehicles": [],
+        "aliases": [
+          "oracle corporation"
+        ],
+        "cik": "0001341439",
+        "ticker": "ORCL",
+        "edgar_path": "deterministic",
+        "recent_targets": []
+      }
+    ],
+    "stale_candidates": [
+      {
+        "allocator": "Peter Thiel",
+        "target": "Panthalassa",
+        "event_type": "funding_round",
+        "disclosed_date": "2026-05-14",
+        "source_tier": 3,
+        "source_url": "https://fortune.com/2026/05/14/peter-thiel-leading-investment-ocean-data-center-panthalassa/",
+        "why_still_candidate": "NETWORK: Peter Thiel (paypal_mafia, core). Thiel personally LED Panthalassa's $140M raise at a reported ~$1B valuation -- wave-powered offshore compute nodes, i.e. an energy-for-AI / floating-datacenter bet. Explicitly his PERSONAL fund, not Founders Fund (FF backed the company back in 2018). Well c"
+      },
+      {
+        "allocator": "Patrick Collison",
+        "target": "Radical Numerics",
+        "event_type": "equity",
+        "disclosed_date": "2026-06-15",
+        "source_tier": 1,
+        "source_url": "https://www.businesswire.com/news/home/20260615558179/en/AI-Lab-Radical-Numerics-Launches-with-$50M-Seed-Round-To-Build-General-Biological-Intelligence",
+        "why_still_candidate": "Radical Numerics (general biological intelligence lab, founders ex-Liquid AI / Stanford) launched 2026-06-15 with a $50M seed led by Emergence Capital; the BusinessWire release names PATRICK COLLISON among its PRE-SEED investors. Two reasons this stays a candidate rather than an event: (1) the pre-s"
+      },
+      {
+        "allocator": "Jeff Bezos",
+        "target": "Prometheus",
+        "event_type": "funding_round",
+        "disclosed_date": "2026-07-02",
+        "source_tier": 3,
+        "source_url": "https://techcrunch.com/2026/06/11/jeff-bezoss-prometheus-raises-12b-to-build-an-artificial-general-engineer-for-the-physical-world/",
+        "why_still_candidate": "Bezos Expeditions among the backers of Prometheus (Project Prometheus), a $12B Series B at $41B. MAJOR CAVEAT: Bezos is CO-FOUNDER AND CO-CEO of Prometheus, so this is largely self-funding his own physical-AI venture through his family office rather than an external allocation. WINDOW: primary discl"
+      },
+      {
+        "allocator": "Jeff Bezos",
+        "target": "Flourish",
+        "event_type": "funding_round",
+        "disclosed_date": "2026-07-02",
+        "source_tier": 3,
+        "source_url": "https://techfundingnews.com/bezos-flourish-500m-brain-inspired-ai-power-crisis/",
+        "why_still_candidate": "Bezos personally committed a REPORTED ~$100M (roughly doubling an initial $50M pledge) into Flourish's $500M round at a $2.5B post-money -- brain-inspired, low-power AI models pitched against the AI power crunch. Rare case where a personal figure is actually reported, hence amount_usd populated with"
+      },
+      {
+        "allocator": "Peter Thiel",
+        "target": "Etched",
+        "event_type": "funding_round",
+        "disclosed_date": "2026-07-23",
+        "source_tier": 3,
+        "source_url": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/",
+        "why_still_candidate": "NETWORK: Peter Thiel (paypal_mafia, core). Etched closed a $300M Series C at $10.3B on 2026-07-23, led by Sequoia. CANDIDATE, NOT AN EVENT-GRADE CONFIRM: TechCrunch's exact framing is 'Other backers of the company include names like Peter Thiel, Andrej Karpathy, Dylan Field, Amjad Masad' -- that is "
+      },
+      {
+        "allocator": "Dylan Field",
+        "target": "Etched",
+        "event_type": "funding_round",
+        "disclosed_date": "2026-07-23",
+        "source_tier": 3,
+        "source_url": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/",
+        "why_still_candidate": "*** NETWORK COINVESTMENT FLAG *** Dylan Field (thiel_fellowship, core) named in the SAME Etched cap-table sentence as Peter Thiel (paypal_mafia, core) -- two members of two tracked Thiel-lineage networks in one ai-compute deal. Same evidentiary caveat as the Thiel row: TechCrunch says 'other backers"
+      },
+      {
+        "allocator": "Reid Hoffman",
+        "target": "Prentis",
+        "event_type": "fund_launch",
+        "disclosed_date": "2026-07-24",
+        "source_tier": 3,
+        "source_url": "https://techcrunch.com/2026/07/24/prentis-new-ai-lab-co-founded-by-reid-hoffman-mark-pincus-in-talks-to-raise-100m/",
+        "why_still_candidate": "FILINGS SWEEP FOUND NOTHING - candidate stands. EDGAR full-text search for 'Prentis' restricted to Form D over 2026-06-01..2026-08-07 returns zero hits; an EDGAR company-name search for 'Prentis' returns only PRENTISS PROPERTIES TRUST/MD, an unrelated legacy REIT. No Reg D vehicle has been registere"
+      },
+      {
+        "allocator": "Stanley Druckenmiller",
+        "target": "Etched",
+        "event_type": "funding_round",
+        "disclosed_date": "2026-07-27",
+        "source_tier": 2,
+        "source_url": "https://www.tryfundable.ai/blog/top-funding-rounds-week-of-2026-07-27",
+        "why_still_candidate": "Druckenmiller listed among Etched's named individual investors in tryfundable's week-of-2026-07-20 round table (Tier 2 aggregator) but NOT in the TechCrunch write-up. Single effective source -> candidate. Notable because Druckenmiller is a public-markets macro name and a private AI-silicon position "
+      },
+      {
+        "allocator": "Blackstone",
+        "target": "Japan AI data centers (programme)",
+        "event_type": "project_finance",
+        "disclosed_date": "2026-06-30",
+        "source_tier": 3,
+        "source_url": "https://asia.nikkei.com/editor-s-picks/interview/blackstone-to-invest-30bn-in-japan-ai-data-centers-president",
+        "why_still_candidate": "CANDIDATE - STATED PLAN, NOT COMMITTED CAPITAL (amount_estimated=1). President/COO Jonathan Gray told Nikkei that Blackstone intends to invest ~$30bn in Japanese AI data centres over the next three to five years, exploring projects exceeding 1GW combined against >500MW already built. No vehicle clos"
+      },
+      {
+        "allocator": "Blue Owl",
+        "target": "Meta Hyperion (Richland Parish, Louisiana)",
+        "event_type": "follow_on",
+        "disclosed_date": "2026-07-13",
+        "source_tier": 3,
+        "source_url": "https://www.cnbc.com/2026/07/13/meta-louisiana-data-center-investment-reaches-50-billion-amid-ai-push.html",
+        "why_still_candidate": "CANDIDATE - a Meta SCOPE announcement, not a confirmed new Blue Owl capital commitment. Meta confirmed 2026-07-13 that Hyperion will scale from 2GW to 5GW across 3,200 acres, with total project investment rising from the original $27bn JV valuation (Oct 2025, Blue Owl 80% / Meta 20%) to 'more than $"
+      },
+      {
+        "allocator": "SoftBank",
+        "target": "ABB Robotics acquisition financing",
+        "event_type": "project_finance",
+        "disclosed_date": "2026-07-21",
+        "source_tier": 3,
+        "source_url": "https://group.softbank/en/news/press/20251008",
+        "why_still_candidate": "FILINGS SWEEP FOUND NOTHING FOR THE LOAN ITSELF - candidate stands, but see the paired verified row for the underlying acquisition. The 1.75bn is a four-bank syndicated term-loan package (dollar tranche increased by 200m to 800m; euro tranche cut to EUR 825m, ~940m equivalent; priced ~425bp over ben"
+      },
+      {
+        "allocator": "Blackstone",
+        "target": "AirTrunk SYD3 (Western Sydney)",
+        "event_type": "project_finance",
+        "disclosed_date": "2026-07-22",
+        "source_tier": 3,
+        "source_url": "https://www.bloomberg.com/news/articles/2026-07-22/blackstone-tying-up-3-billion-airtrunk-loan-as-data-center-debt-binge-woes-grow",
+        "why_still_candidate": "CANDIDATE - not closed and single-origin. Blackstone-owned AirTrunk is finalising the underwriting group for an A$4.3bn (~US$3.0bn, FX-converted hence amount_estimated=1) five-year syndicated loan to build SYD3, a 400+MW hyperscale campus in Western Sydney. Named underwriters: Credit Agricole, DBS, "
+      },
+      {
+        "allocator": "SoftBank",
+        "target": "Gravis Robotics AG",
+        "event_type": "acquisition",
+        "disclosed_date": "2026-07-24",
+        "source_tier": 3,
+        "source_url": "https://www.swissinfo.ch/eng/softbank-weighs-deal-for-robotics-startup-gravis/91794315",
+        "why_still_candidate": "CANDIDATE - EXPLORATORY, no final decision on size or structure. SoftBank is weighing an acquisition of Zurich-based Gravis Robotics AG (2022 ETH Zurich spinout, autonomous construction equipment) at a valuation reportedly >$500m (amount_estimated=1). Would be held in a NEW entity SoftBank is settin"
+      },
+      {
+        "allocator": "Altimeter",
+        "target": "Thrive Holdings",
+        "event_type": "minority_stake",
+        "disclosed_date": "2026-07-06",
+        "source_tier": 3,
+        "source_url": "https://www.theinformation.com/articles/softbank-altimeter-d1-invest-thrive-holdings-2-billion-financing",
+        "why_still_candidate": "FILINGS SWEEP FOUND NOTHING - candidate stands. EDGAR full-text search for 'Thrive Holdings' over 2026-06-01..2026-08-07 returns 6 documents, all false positives: four Fidelity NPORT-P holdings reports and two Morgan Stanley Direct Lending 424B2s. An EDGAR company-name search for 'Thrive Holdings' r"
+      },
+      {
+        "allocator": "Coatue",
+        "target": "Databricks",
+        "event_type": "funding_round",
+        "disclosed_date": "2026-07-16",
+        "source_tier": 1,
+        "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001587468&type=D&dateb=&owner=include&count=40",
+        "why_still_candidate": "FILINGS SWEEP FOUND NOTHING - candidate stands. Databricks, Inc. is CIK 0001587468 and files its own Form Ds. Its full filing history was pulled from data.sec.gov: the most recent Form D filings are TWO dated 2025-12-31, then 2025-09-23 (x2) and 2025-01-02 (x2). There is NO 2026 Form D and no Form D"
+      },
+      {
+        "allocator": "Coatue",
+        "target": "Coatue retail fund",
+        "event_type": "fund_launch",
+        "disclosed_date": "2026-07-17",
+        "source_tier": 3,
+        "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002044519&type=&dateb=&owner=include&count=40",
+        "why_still_candidate": "FILINGS SWEEP FOUND THE VEHICLE BUT NOT THE 8BN - candidate stands. Coatue Innovative Strategies Fund (CIK 0002044519) is the registered retail-facing vehicle and is actively filing: 424B3 supplement 2026-07-08, SC TO-I tender offer 2026-06-16 with an amendment 2026-07-23, NPORT-P/A 2026-06-16, and "
+      },
+      {
+        "allocator": "Khosla Ventures",
+        "target": "Khosla Ventures 2026 fund family",
+        "event_type": "fund_launch",
+        "disclosed_date": "2026-07-23",
+        "source_tier": 3,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/2074230/000207423025000001/primary_doc.xml",
+        "why_still_candidate": "FILINGS SWEEP PARTIALLY CONTRADICTS THE HEADLINE - candidate stands at tier 3. Enumerated all 34 'Khosla Ventures' EDGAR entities and pulled the fund-level Form Ds. The current vintage vehicles are: Khosla Ventures IX, L.P. (CIK 0002074230, Form D 2025-07-02, offering 1,950,000,000), Khosla Ventures"
+      },
+      {
+        "allocator": "US Government",
+        "target": "Savannah River Site AI data center",
+        "event_type": "project_finance",
+        "disclosed_date": "2026-07-20",
+        "source_tier": 1,
+        "source_url": "https://www.energy.gov/nnsa/articles/nnsa-selects-amentum-ai-data-center-and-energy-project-savannah-river-site",
+        "why_still_candidate": "DOE/NNSA selected Amentum to ENTER NEGOTIATIONS for a phased lease to develop a 1GW AI data center plus ~2GW of dedicated on-site generation (natural gas bridging to nuclear) at the Savannah River Site, South Carolina. CANDIDATE: the release states explicitly that 'selection for negotiations does no"
+      },
+      {
+        "allocator": "US Government",
+        "target": "Saudi PIF strategic investments (US export credit facility)",
+        "event_type": "project_finance",
+        "disclosed_date": "2026-07-24",
+        "source_tier": 1,
+        "source_url": "https://www.pif.gov.sa/en/news-and-insights/press-releases/2026/pif-us-exim-15-billion-usd-mou-export-credit/",
+        "why_still_candidate": "NON-BINDING MoU between PIF and the Export-Import Bank of the United States for UP TO $15bn of US export credit to support PIF strategic investments. Textbook sovereign headline number: a CEILING with no named target, no drawn amount and no signed facility - amount_estimated=1 and status candidate p"
+      },
+      {
+        "allocator": "NVIDIA",
+        "target": "OpenAI southern Ohio 10GW data center",
+        "event_type": "corporate_investment",
+        "disclosed_date": "2026-07-27",
+        "source_tier": 3,
+        "source_url": "https://www.forbes.com/sites/tylerroush/2026/07/27/nvidia-and-openai-discussing-500-billion-data-center-heres-what-we-know/",
+        "why_still_candidate": "CANDIDATE - talks only, NO signed agreement, so no capital is committed yet. Origin is a single Wall Street Journal scoop of 2026-07-27 citing 'people familiar'; Forbes, Reuters, Al Jazeera, PYMNTS and Jerusalem Post all trace back to that one WSJ report, so this counts as ONE source, not five (circ"
+      }
+    ]
+  },
+  "what_worked": {
+    "check_first": [
+      "newsroom.gy",
+      "techcrunch.com",
+      "anthropic.com",
+      "globalsecurity.org",
+      "miragenews.com",
+      "thestkittsnevisobserver.com",
+      "war.gov",
+      "maaal.com"
+    ],
+    "detail": [
+      {
+        "source": "newsroom.gy",
+        "example_url": "https://newsroom.gy/2026/08/08/us150m-investment-initiative-puts-guyana-bauxite-at-centre-of-us-critical-minerals-strategy/",
+        "tier": 3,
+        "hits": 12,
+        "checks": 12
+      },
+      {
+        "source": "techcrunch.com",
+        "example_url": "https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/",
+        "tier": 3,
+        "hits": 12,
+        "checks": 12
+      },
+      {
+        "source": "anthropic.com",
+        "example_url": "https://www.anthropic.com/news/series-h",
+        "tier": 1,
+        "hits": 12,
+        "checks": 12
+      },
+      {
+        "source": "globalsecurity.org",
+        "example_url": "https://www.globalsecurity.org/military/library/news/2026/08/mil-260807-dod04.htm",
+        "tier": 3,
+        "hits": 12,
+        "checks": 12
+      },
+      {
+        "source": "miragenews.com",
+        "example_url": "https://www.miragenews.com/war-dept-secures-85-5m-deal-for-bauxite-supply-1724024/",
+        "tier": 4,
+        "hits": 12,
+        "checks": 12
+      },
+      {
+        "source": "thestkittsnevisobserver.com",
+        "example_url": "https://www.thestkittsnevisobserver.com/united-states-department-of-war-announces-an-85-5-million-agreement-with-strategic-bauxite-usa-to-secure-the-critical-refractory-grade-bauxite-supply-chain/",
+        "tier": 4,
+        "hits": 12,
+        "checks": 12
+      },
+      {
+        "source": "war.gov",
+        "example_url": "https://www.war.gov/News/Releases/Release/Article/4566604/department-of-war-announces-an-855-million-agreement-with-strategic-bauxite-usa/",
+        "tier": 1,
+        "hits": 12,
+        "checks": 12
+      },
+      {
+        "source": "maaal.com",
+        "example_url": "https://maaal.com/en/news/details/saudi-pif-acquires-264/",
+        "tier": 3,
+        "hits": 7,
+        "checks": 7
+      },
+      {
+        "source": "seekingalpha.com",
+        "example_url": "https://seekingalpha.com/news/4633390-saudi-arabias-pif-adds-elon-musks-spacex-in-q2",
+        "tier": 3,
+        "hits": 7,
+        "checks": 7
+      },
+      {
+        "source": "thesauditimes.net",
+        "example_url": "https://thesauditimes.net/en/pif-holds-154-1-million-spacex-shares-valued-at-21-5-billion",
+        "tier": 3,
+        "hits": 7,
+        "checks": 7
+      },
+      {
+        "source": "bloomberg.com",
+        "example_url": "https://www.bloomberg.com/news/articles/2026-08-13/databricks-raises-5-billion-at-a-190-billion-valuation",
+        "tier": 3,
+        "hits": 7,
+        "checks": 7
+      },
+      {
+        "source": "businesswire.com",
+        "example_url": "https://www.businesswire.com/news/home/20260629894664/en/Empery-Digital-Announces-a-$65-Million-Strategic-Investment-in-Midwest-150-MW-AI-Data-Center-Property",
+        "tier": 3,
+        "hits": 7,
+        "checks": 7
+      }
+    ]
+  },
+  "what_you_got_wrong": {
+    "this_class": [],
+    "all_classes": [
+      {
+        "code": "W8",
+        "lesson": "a >=$1B investable target has no ai_posture tag.",
+        "occurrences": 19,
+        "examples": [
+          "Electronic Arts: $33.6B investable target with no ai_posture",
+          "OpenAI Group PBC: $21.3B investable target with no ai_posture"
+        ]
+      }
+    ]
+  }
+}

@@ -12,7 +12,7 @@ deterministic Python. Scheduling (build step 3) will wrap this script.
 import sys
 from datetime import date
 
-from engine import (audit, beneficiaries, classify, deliver, handoff, holdings,
+from engine import (audit, beneficiaries, classify, db, deliver, handoff, holdings,
                     ingest, profiles, references, report, themes, trends)
 
 
@@ -35,6 +35,13 @@ def main(week: str, do_deliver: bool = False, do_push: bool = False,
           f"{s['skipped']} skipped, {s['warnings']} warnings")
     for p in s["problems"]:
         print("          ", p)
+    # Persist row-level rejects so the next run can feed them back to the agents as
+    # "don't repeat these" (tools/make_research_batches.py, lever 3). Printed-only
+    # problems were invisible to the agent that caused them.
+    if s["problems"]:
+        (db.RUNS_DIR / week).mkdir(parents=True, exist_ok=True)
+        (db.RUNS_DIR / week / "ingest_problems.txt").write_text(
+            "\n".join(s["problems"]) + "\n")
     b = beneficiaries.run(week)
     print(f"[benefic] {b['linked']} linked, {b['unmatched']} unmatched")
     p = profiles.ingest_week(week)  # allocator intelligence (§5), when batches exist

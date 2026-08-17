@@ -111,3 +111,12 @@ python tools/make_trend_batches.py <week>   # runs/<week>/trends/batch-N/batch_c
 Launch one trend-writer agent (`agents/trend-writer.md`) per batch, writing
 `trends.json` beside each input, then re-run the pipeline. The mechanical trend
 numbers/allocators ship without the agent; the agent adds the grounded narrative.
+
+**Step 0 — build the agent context packs (do this BEFORE launching research agents).**
+```bash
+python tools/make_research_batches.py <week>
+```
+Writes `runs/<week>/<agent>/context.json` — the feedback loop: what the engine
+already has per entity (search forward from `last_event_date`; `stale_candidates`
+needing a Tier-1 confirm), which sources actually yielded recently (`check_first`),
+and recent rejects with their lesson. Agents read this first (see agents/CONTEXT.md).

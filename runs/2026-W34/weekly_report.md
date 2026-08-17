@@ -102,9 +102,39 @@
 | cyber_security | $180M | 3 | 3 |
 | biotech_ai | $0 | 1 | 1 |
 
-## Public beneficiaries mapped (180)
+## Public beneficiaries mapped (210)
 | Ticker | Company | From flow | Confidence |
 |---|---|---|:-:|
+| GOOGL | Alphabet Inc | Sequoia→Form Energy | medium |
+| ETN | Eaton Corporation | Sequoia→Form Energy | low |
+| PWR | Quanta Services | Sequoia→Form Energy | low |
+| GOOGL | Alphabet Inc | Coatue→Form Energy | medium |
+| ETN | Eaton Corporation | Coatue→Form Energy | low |
+| PWR | Quanta Services | Coatue→Form Energy | low |
+| NVDA | NVIDIA Corporation | Coatue→Databricks | high |
+| MSFT | Microsoft Corporation | Coatue→Databricks | high |
+| AMZN | Amazon.com Inc | Coatue→Databricks | medium |
+| GOOGL | Alphabet Inc | Coatue→Databricks | medium |
+| NVDA | NVIDIA Corporation | Andreessen Horowitz→Databricks | high |
+| MSFT | Microsoft Corporation | Andreessen Horowitz→Databricks | high |
+| AMZN | Amazon.com Inc | Andreessen Horowitz→Databricks | medium |
+| GOOGL | Alphabet Inc | Andreessen Horowitz→Databricks | medium |
+| NVDA | NVIDIA Corporation | Thrive Capital→Databricks | high |
+| MSFT | Microsoft Corporation | Thrive Capital→Databricks | high |
+| AMZN | Amazon.com Inc | Thrive Capital→Databricks | medium |
+| GOOGL | Alphabet Inc | Thrive Capital→Databricks | medium |
+| NVDA | NVIDIA Corporation | MGX→Databricks | high |
+| MSFT | Microsoft Corporation | MGX→Databricks | high |
+| AMZN | Amazon.com Inc | MGX→Databricks | medium |
+| GOOGL | Alphabet Inc | MGX→Databricks | medium |
+| NVDA | NVIDIA Corporation | Blackstone→Databricks | high |
+| MSFT | Microsoft Corporation | Blackstone→Databricks | high |
+| AMZN | Amazon.com Inc | Blackstone→Databricks | medium |
+| GOOGL | Alphabet Inc | Blackstone→Databricks | medium |
+| KTOS | Kratos Defense & Security Solutions | Elad Gil→Cambridge Aerospace | low |
+| AVAV | AeroVironment Inc | Elad Gil→Cambridge Aerospace | low |
+| KTOS | Kratos Defense & Security Solutions | US Government→Performance Drone Works | low |
+| AVAV | AeroVironment Inc | US Government→Performance Drone Works | low |
 | GOOGL | Alphabet Inc | Sequoia→Form Energy | medium |
 | ETN | Eaton Corporation | Sequoia→Form Energy | low |
 | PWR | Quanta Services | Sequoia→Form Energy | low |
@@ -297,6 +327,11 @@ _Silent this run (36) — verify these are genuinely quiet, not missed:_
 - **individual**: Alexandr Wang, Austin Russell, Daniel Gross, David Sacks, Delian Asparouhov, Dylan Field, Elon Musk, Joe Lonsdale, Keith Rabois, Laura Deming, Lucy Guo, Luke Nosek, Max Levchin, Nat Friedman, Peter Thiel, Reid Hoffman, Roelof Botha, Trae Stephens, Eric Schmidt, Jeff Bezos, Marc Andreessen, Masayoshi Son, Sam Altman, Vinod Khosla
 - **sovereign**: Mubadala
 - **vc**: Founders Fund
+
+## Open leads to chase (3)
+- `8-K` **Alphabet** (2026-08-10) — https://www.sec.gov/Archives/edgar/data/1652044/000119312526342390/d171253d8k.htm
+- `8-K` **Microsoft** (2026-07-29) — https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-20260729.htm
+- `8-K` **Alphabet** (2026-07-22) — https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/goog-20260722.htm
 
 ## Discovered allocators — promote to watchlist? (9)
 - **Clearlake Capital** (alt_manager) — seen with MGX;Blackstone;Coatue (Databricks $5B round. 2026-08-13)
