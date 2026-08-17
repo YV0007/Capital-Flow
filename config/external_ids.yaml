@@ -1,0 +1,45 @@
+# SEC-resolved external ids (tools/enrich_ids.py). Committed so a DB
+# rebuild restores them offline; loaded by db.sync_allocators.
+external_ids:
+  Alphabet:
+    cik: '0001652044'
+    ticker: GOOGL
+  Amazon:
+    cik: 0001018724
+    ticker: AMZN
+  BlackRock:
+    cik: 0002012383
+    ticker: BLK
+  Blackstone:
+    cik: 0001393818
+    ticker: BX
+  Blue Owl:
+    cik: 0001823945
+    ticker: OWL
+  Brookfield:
+    cik: 0001937926
+    ticker: BAM
+  DigitalBridge:
+    cik: 0001679688
+    ticker: DBRG
+  Goldman Sachs:
+    cik: 0000886982
+    ticker: GS
+  KKR:
+    cik: 0001404912
+    ticker: KKR
+  Meta:
+    cik: 0001326801
+    ticker: META
+  Microsoft:
+    cik: 0000789019
+    ticker: MSFT
+  NVIDIA:
+    cik: 0001045810
+    ticker: NVDA
+  Oracle:
+    cik: 0001341439
+    ticker: ORCL
+  SoftBank:
+    cik: '0001065521'
+    ticker: SFTBF

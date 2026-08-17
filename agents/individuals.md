@@ -27,8 +27,12 @@ in this order:
    once — this is your highest-yield source. Search broadly ("AI startup angel round
    July 2026", "backed by <name>", "<name> invests").
 2. **Form D related-persons (Tier-1 confirm).** SEC Form D lists named "related
-   persons" — this is how a personal GP/fund commitment gets confirmed. Use curl with a
-   User-Agent (efts.sec.gov 403s on plain fetch): `curl -A "capital-flow research you@example.com" "https://efts.sec.gov/LATEST/search-index?q=%22<name>%22&forms=D"`.
+   persons" — this is how a personal GP/fund commitment gets confirmed. If the person
+   or their vehicle is a known filer, pull it deterministically:
+   `python -m engine.edgar filings "<name or vehicle>" --forms D --since <date>`
+   (see CONTEXT.md → Tools). That returns resolved filing URLs you can cite. If it
+   returns no CIK, search — but cite the *document* you actually open, never a
+   full-text-search query URL (the engine strips those and the audit blocks them).
 3. **Investor/person trackers** — Crunchbase / PitchBook person profiles for recent
    personal deals.
 4. **Form 4 / 13D-G** only when the person crosses a *public*-company stake threshold.

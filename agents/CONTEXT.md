@@ -47,6 +47,26 @@ closest and note it — an unknown sector ingests but is flagged.
 Use WebSearch / WebFetch for all tiers. SEC EDGAR full-text search is free and is
 your best Tier-1 confirm. Tier 5 finds the lead; a higher tier must confirm it.
 
+## Tools — use the deterministic path before searching
+Two paths, and they are NOT interchangeable:
+
+**Known filer + known form → deterministic pull (do this first).** No fuzzy search,
+no name collisions, and the URL it returns is a resolved filing document (citable).
+```bash
+python -m engine.edgar cik "Blue Owl"                  # CIK, or null = no known filer
+python -m engine.edgar filings NVIDIA --forms 8-K,D --since 2026-08-01
+```
+`cik` returning null means "take the search path" — do not guess a CIK.
+
+**Before writing any event row, check we don't already have it:**
+```bash
+python -m engine.edgar exists --allocator NVIDIA --target "Nebius Group N.V."
+```
+`exists: true` → don't re-file it; if your source is stronger (better tier/status),
+note that in `notes` so ingest merges forward instead of you creating churn.
+
+**Unknown deal in the wild → agent search** (WebSearch/WebFetch, Tier ladder above).
+
 ## Status — how sure are you
 - `verified` — a Tier-1 source confirms it (filing, official PR, IR page, gov DB).
 - `verified_alpha` — strong: ≥2 independent Tier 2–4 sources agree, but no Tier-1 yet.

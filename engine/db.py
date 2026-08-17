@@ -127,6 +127,16 @@ def load_promoted() -> list:
     return (yaml.safe_load(p.read_text()) or {}).get("promoted") or []
 
 
+def load_external_ids() -> dict:
+    """config/external_ids.yaml → {allocator_name: {cik, ticker}} (SEC-resolved by
+    tools/enrich_ids.py). Committed so a DB rebuild restores CIKs offline — without
+    this the EDGAR tool loses its deterministic pull-by-CIK path after every rebuild."""
+    p = CONFIG_DIR / "external_ids.yaml"
+    if not p.exists():
+        return {}
+    return (yaml.safe_load(p.read_text()) or {}).get("external_ids") or {}
+
+
 def load_networks() -> dict:
     """Load config/networks.yaml → {members: [...], rules: [...]}."""
     p = CONFIG_DIR / "networks.yaml"
@@ -170,6 +180,17 @@ def sync_allocators(con: sqlite3.Connection, cfg: dict) -> None:
         if r.get("class") in CLASSES:
             _upsert_allocator(con, r["name"], r["class"], r.get("tier", "watch"),
                               r.get("country"), None)
+    # Restore SEC-resolved external ids (CIK/ticker) offline, so a rebuilt DB keeps
+    # the EDGAR tool's deterministic pull-by-CIK path.
+    for ename, ids in load_external_ids().items():
+        row = con.execute("SELECT id FROM allocators WHERE name = ?", (ename,)).fetchone()
+        if not row:
+            continue
+        for kind in ("cik", "ticker"):
+            if ids.get(kind):
+                con.execute(
+                    """INSERT OR IGNORE INTO entity_external_ids (allocator_id, kind, value)
+                       VALUES (?,?,?)""", (row["id"], kind, str(ids[kind])))
     # Persist aliases (for inspection/audit) and seed principal -> vehicle links.
     for norm_alias, canonical in load_aliases().items():
         con.execute("INSERT OR REPLACE INTO entity_aliases (alias, canonical_name) VALUES (?,?)",
