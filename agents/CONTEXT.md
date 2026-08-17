@@ -158,6 +158,40 @@ Do NOT check SEC, find nothing, and stop. Run this escalation loop before you dr
 "Don't give up yet" moves: reverse from the beneficiary; check the *vehicle* not just the
 person; find the *debt* behind the equity; diff quarterly 13Fs; read Form D *amendments*.
 
+## Recurring mistakes — worked examples (promoted from real rejects)
+These are the error types that actually recurred across runs. Each is a real case.
+
+**1. Search query as a citation (audit E0 — blocks delivery).**
+- REJECTED: `source_url = https://efts.sec.gov/LATEST/search-index?q=%22Cathedral%22&forms=D`
+  — a keyword search resolves to nothing and, for a common word, returns unrelated
+  filers (Cathedral Energy Services, Cathedral Lake CLOs…).
+- GOOD: cite the document you actually read — the press article
+  (`https://thenextweb.com/news/cathedral-…`) or a specific filing
+  (`https://www.sec.gov/Archives/edgar/data/<CIK>/<accession>/<doc>`). Record the
+  fruitless EDGAR sweep in `notes`, not in `source_url`.
+
+**2. Valuation in the amount column (audit W2 / measurement corruption).**
+- REJECTED: a $1.4B post-money round where `amount_usd = 1400000000` — that's the
+  company's price, not money that moved. It inflates every sector total it touches.
+- GOOD: `amount_usd` = the allocator's slice if disclosed; else leave it blank and
+  put the round in `round_total_usd`; `valuation_usd` holds the valuation. Never a
+  silent 0, never the valuation.
+
+**3. Same round filed once per co-investor (duplicate capital).**
+- REJECTED: a16z and Sequoia co-led one $160M round; both rows carried
+  `amount_usd = 160000000` → the deal read as $320M.
+- GOOD: per-allocator slice when disclosed; otherwise blank `amount_usd` +
+  `round_total_usd = 160000000` on each row, and name the co-leads in
+  `co_investors`. Run `python -m engine.edgar exists --allocator X --target Y`
+  first — if the pair is already on file, don't re-file it.
+
+**4. Ambiguous entity (name collision).**
+- REJECTED: filing "Atoms" from a shoe-brand page, or attaching a parent's domain to
+  a subsidiary.
+- GOOD: verify against the sector + co-investor context you were given. If two
+  entities plausibly match, file `candidate` and say which two in `notes` — an
+  honest ambiguity is data; a confident wrong entity poisons the map.
+
 ## Universe discovery — feed the watchlist
 When you see a NOT-yet-tracked allocator co-investing alongside a tracked name, record it in
 `runs/<week>/<agent>/discovered_allocators.csv` (header: `name,suggested_class,seen_with,
