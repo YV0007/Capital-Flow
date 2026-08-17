@@ -1,0 +1,31 @@
+source_url,source_tier,yielded
+https://www.sec.gov,1,0
+https://efts.sec.gov/LATEST/search-index?q=%22Lancium%22&forms=8-K,1,0
+https://www.theinformation.com/articles/nvidia-invest-3-billion-blackstone-backed-power-firm-behind-stargate,3,0
+https://www.axios.com/pro/fintech-deals/2026/08/10/erebor-raise-8-billion-valuation,3,0
+websearch:"NVIDIA Lancium 8-K SEC filing $3 billion Stargate power",5,0
+websearch:"Erebor bank SEC Form D filing Palmer Luckey Thiel $1.5 billion",5,0
+websearch:"8-K filing August 2026 AI datacenter investment million SEC",5,1
+websearch:"SEC 13D filing new stake AI semiconductor company August 2026",5,0
+websearch:"Form 4 insider buy AI compute nuclear power stock August 2026",5,0
+websearch:"S-1 filing IPO datacenter AI infrastructure 2026",5,1
+https://www.businesswire.com/news/home/20260629894664/en/Empery-Digital-Announces-a-$65-Million-Strategic-Investment-in-Midwest-150-MW-AI-Data-Center-Property,3,1
+https://www.sec.gov/Archives/edgar/data/1181412/000162828026036936/spaceexplorationtechnologi.htm,1,0
+websearch:"Form D filing AI startup funding round August 2026 SEC",5,0
+websearch:"Schedule 13D Mubadala OR Saudi PIF OR MGX new stake filing 2026",5,0
+websearch:"Blackstone OR Brookfield OR Blue Owl 8-K datacenter power investment filing August 2026",5,0
+websearch:"13F Q2 2026 hedge fund new position Nvidia OR AI compute stock filed August 14 2026",5,1
+https://www.cnbc.com/2026/08/14/nvidia-discloses-21-billion-stake-in-spacex-at-end-of-second-quarter.html,3,1
+https://www.gurufocus.com/news/9037571/nvidia-nvda-reports-21-billion-stake-in-spacex,3,1
+websearch:"Mubadala 13F Q2 2026 filed August 2026 new positions semiconductor AI",5,0
+websearch:"Saudi PIF 13F Q2 2026 August filing new holdings AI",5,1
+https://seekingalpha.com/news/4633390-saudi-arabias-pif-adds-elon-musks-spacex-in-q2,3,1
+https://maaal.com/en/news/details/saudi-pif-acquires-264/,3,1
+https://thesauditimes.net/en/pif-holds-154-1-million-spacex-shares-valued-at-21-5-billion,3,1
+websearch:"Mubadala Q2 2026 13F filed August 2026 SpaceX OR Anthropic OR OpenAI new position",5,0
+websearch:"MGX Abu Dhabi SEC filing 13D 13G new investment August 2026",5,1
+websearch:"Oracle OR Amazon OR Microsoft OR Alphabet 8-K material definitive agreement datacenter power August 2026",5,0
+https://www.thenationalnews.com/future/technology/2026/08/13/mgx-uae-databricks-ai/,3,1
+https://www.bloomberg.com/news/articles/2026-08-13/databricks-raises-5-billion-at-a-190-billion-valuation,3,1
+https://www.cnbc.com/2026/08/13/databricks-funding-round-190-billion-valuation.html,3,1
+https://www.databricks.com/company/newsroom/press-releases/databricks-grows-80-yoy-surpasses-7b-revenue-run-rate-scales,1,0

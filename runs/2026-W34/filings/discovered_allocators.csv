@@ -1,0 +1,8 @@
+name,suggested_class,seen_with,rationale
+GIC,sovereign,MGX;Temasek;Coatue;Blackstone (Databricks $5B round, 2026-08-13),Singapore SWF listed as an existing participating investor in the Databricks round alongside tracked sovereign MGX; not currently in config/allocators.yaml sovereigns list despite being a top-tier AI-infra allocator.
+Temasek,sovereign,MGX;GIC;Coatue;Blackstone (Databricks $5B round, 2026-08-13),Singapore SWF listed as an existing participating investor in the Databricks round; not currently tracked under sovereigns.
+TPG,alt_manager,MGX;Blackstone;Coatue (Databricks $5B round, 2026-08-13),New investor in the Databricks round; large PE/growth manager active in AI infrastructure not currently on the alt_managers watchlist.
+Sixth Street Growth,alt_manager,MGX;Blackstone;Coatue;T. Rowe Price (Databricks $5B round, 2026-08-13),Co-led the Databricks round alongside tracked names MGX/Blackstone/Coatue; not currently tracked.
+T. Rowe Price,alt_manager,MGX;Blackstone;Coatue;Sixth Street Growth (Databricks $5B round, 2026-08-13),Co-led the Databricks round; large public-markets asset manager increasingly writing late-stage private AI checks.
+Clearlake Capital,alt_manager,MGX;Blackstone;Coatue (Databricks $5B round, 2026-08-13),New investor in the Databricks round; PE firm not currently tracked.
+Point72,individual,MGX;Blackstone;Coatue (Databricks $5B round, 2026-08-13),New investor in the Databricks round (Steve Cohen's fund); could also be tracked as an alt_manager hedge fund rather than individual -- flagging for a class-owner decision.
