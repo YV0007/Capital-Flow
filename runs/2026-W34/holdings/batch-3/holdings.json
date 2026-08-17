@@ -1,0 +1,210 @@
+[
+  {
+    "entity": "Brookfield",
+    "portfolio_url": "https://www.brookfield.com/our-businesses/infrastructure",
+    "holdings_count": 60,
+    "as_of": "2026-08-17",
+    "holdings": [
+      {
+        "name": "Westinghouse Electric",
+        "sector": "nuclear",
+        "subsector": "smr",
+        "note": "AP1000 nuclear reactor technology, fuel and services; Brookfield 51% / Cameco 49%. US govt partnership targets $80B+ of new reactors.",
+        "stake": "51%",
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.cameco.com/media/news/united-states-government-brookfield-and-cameco-announce-transformational-partnership"
+      },
+      {
+        "name": "Bloom Energy",
+        "sector": "power-energy",
+        "subsector": "baseload-generation",
+        "note": "Solid-oxide fuel cells for behind-the-meter AI data center power; $25B framework, first AI Infrastructure Fund investment.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.bloomenergy.com/news/brookfield-and-bloom-energy-expand-ai-infrastructure-partnership/"
+      },
+      {
+        "name": "NAVER GAK Sejong AI factory",
+        "sector": "datacenters",
+        "subsector": "sovereign-datacenter",
+        "note": "200MW NVIDIA DSX sovereign AI factory, Korea; Brookfield up to $9B of the $10B project.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-17",
+        "source_url": "https://nvidianews.nvidia.com/news/naver-nvidia-and-brookfield-to-expand-koreas-national-ai-factory-infrastructure-buildout"
+      },
+      {
+        "name": "Qai AI infrastructure JV (Qatar)",
+        "sector": "datacenters",
+        "subsector": "sovereign-datacenter",
+        "note": "$20B JV with the Qatar Investment Authority for integrated AI compute centers, via BAIIF.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.qia.qa/en/Newsroom/Pages/Brookfield-and-Qai-Form-$20-Billion-Strategic-Investment-Partnership-for-AI-Infrastructure.aspx"
+      },
+      {
+        "name": "Colonial Enterprises (Colonial Pipeline)",
+        "sector": "power-energy",
+        "subsector": "energy-infrastructure",
+        "note": "Largest US refined-products pipeline, 5,500 miles Texas to New Jersey; ~$9B EV.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.pipeline-journal.net/news/brookfield-infrastructure-acquire-colonial-pipeline-9-billion-deal"
+      },
+      {
+        "name": "Oaktree Capital Management",
+        "sector": "private-credit",
+        "subsector": null,
+        "note": "Global credit and distressed-debt manager; Brookfield moved from 61.2% to 100% ($3B for the final 26%).",
+        "stake": "100%",
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.fundssociety.com/en/news/business/brookfield-to-acquire-remaining-26-of-oaktree-for-approximately-3-billion-dollars/"
+      },
+      {
+        "name": "Intel Arizona fab JV (SCIP)",
+        "sector": "fab-equipment",
+        "subsector": "advanced-packaging",
+        "note": "Two leading-edge chip fabs at the Ocotillo campus, Chandler AZ; Brookfield 49% of a $30B joint program.",
+        "stake": "49%",
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.intc.com/news-events/press-releases/detail/1568/intel-advances-smart-capital-introduces-first-of-its-kind"
+      },
+      {
+        "name": "Data4",
+        "sector": "datacenters",
+        "subsector": "hyperscale-campus",
+        "note": "European hyperscale data center platform: 31 sites, 6 countries, 850MW.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://alts.axa-im.com/media-centre/axa-im-alts-agrees-sale-data4-european-leading-data-centre-platform-brookfield-infrastructure"
+      },
+      {
+        "name": "Compass Datacenters",
+        "sector": "datacenters",
+        "subsector": "hyperscale-campus",
+        "note": "North American hyperscale developer; ~$375M BIP equity in a $1.35B deal, 735MW capacity.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://bip.brookfield.com/bip/reports-filings/letters-unitholders/bip-q2-2023-letter-unitholders"
+      },
+      {
+        "name": "Centersquare",
+        "sector": "datacenters",
+        "subsector": "colocation",
+        "note": "US retail colocation, 320MW across 50+ sites (Evoque + Cyxtera combination).",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.datacenterfrontier.com/colocation/article/55016615/brookfield-infrastructures-evoque-cyxtera-data-center-collaboration-emerges-as-centersquare"
+      },
+      {
+        "name": "Strangnas AI center (Sweden)",
+        "sector": "datacenters",
+        "subsector": "hyperscale-campus",
+        "note": "Data center site expanding 300MW to 750MW; SEK 95B (~$10B).",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.barchart.com/story/news/32750671/brookfield-to-advance-ai-infrastructure-in-sweden-through-sek-95-billion-investment"
+      },
+      {
+        "name": "Cambrai AI factory (France)",
+        "sector": "datacenters",
+        "subsector": "sovereign-datacenter",
+        "note": "Up to 1GW AI data center in Hauts-de-France; EUR15B of a EUR20B France program.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://techcrunch.com/2025/02/09/investments-in-french-ai-ecosystem-reach-85b-as-brookfield-commits-20b/"
+      },
+      {
+        "name": "The OpenAI Deployment Company",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Enterprise AI deployment platform formed with OpenAI; $500M led by Brookfield Business Corporation.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.bnnbloomberg.ca/press-releases/2026/05/11/brookfield-to-invest-500-million-in-strategic-partnership-with-openai/"
+      },
+      {
+        "name": "Aypa Power",
+        "sector": "power-energy",
+        "subsector": "grid-storage",
+        "note": "Largest North American standalone battery storage developer; acquired from Blackstone.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://bep.brookfield.com/press-releases/bep/brookfield-acquire-aypa-power-leading-north-american-battery-storage-platform"
+      },
+      {
+        "name": "Neoen",
+        "sector": "power-energy",
+        "subsector": null,
+        "note": "French renewables IPP (solar, wind, battery storage); 53.32% at EUR6.1B equity value.",
+        "stake": "53.32%",
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://bep.brookfield.com/brookfield-enters-exclusive-negotiations-impala-and-other-shareholders-acquire-majority-stake-neoen"
+      },
+      {
+        "name": "Triton International",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "World's largest intermodal container lessor, 7.6M CEU; $13.3B take-private.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://bip.brookfield.com/press-releases/bip/triton-international-be-acquired-brookfield-infrastructure-133-billion-take"
+      },
+      {
+        "name": "GD Towers",
+        "sector": "networking",
+        "subsector": null,
+        "note": "German and Austrian telecom towers from Deutsche Telekom; 51% with DigitalBridge, EUR17.5B EV.",
+        "stake": "51%",
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.telekom.com/en/media/media-information/archive/deutsche-telekom-completes-tower-transaction-1025420"
+      },
+      {
+        "name": "Boralex",
+        "sector": "power-energy",
+        "subsector": null,
+        "note": "Global independent renewable power producer.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.brookfield.com/our-businesses/renewable-power-transition"
+      },
+      {
+        "name": "V.C. Summer nuclear project",
+        "sector": "nuclear",
+        "subsector": "smr",
+        "note": "Two unfinished AP1000 reactors in South Carolina; ~2,200 MWe to be added.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.ans.org/news/article-7493/santee-cooper-opts-to-reboot-summer-reactor-project/"
+      },
+      {
+        "name": "Deriva Energy",
+        "sector": "power-energy",
+        "subsector": null,
+        "note": "US wind, solar and storage (ex-Duke Energy Renewables); ~5,900MW, $2.8B.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.prnewswire.com/news-releases/duke-energy-renewables-rebrands-as-deriva-energy-under-brookfield-ownership-301967769.html"
+      }
+    ]
+  }
+]

@@ -1,16 +1,15 @@
 # Audit report — 2026-W34 (2026-08-17)
 
 **Verdict: PASS**
-Checked 178 events, 115 track-record rows, 43 profiles, 136 target references, 140 holdings, 0 classified targets.
+Checked 178 events, 115 track-record rows, 43 profiles, 136 target references, 160 holdings, 0 classified targets.
 
 ## Errors (0)
 _none_
 
-## Warnings (31)
+## Warnings (30)
 - W3 Apollo: key allocator with events but no profile
 - W3 Goldman Sachs: key allocator with events but no profile
 - W3 Palmer Luckey: key allocator with events but no profile
-- W7 Brookfield: $153.9B fund/firm with no holdings collected
 - W7 MGX Fund I: $49.0B fund/firm with no holdings collected
 - W7 BlackRock: $44.9B fund/firm with no holdings collected
 - W7 KKR: $24.7B fund/firm with no holdings collected
