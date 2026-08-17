@@ -160,3 +160,24 @@ article, a parent org) is rejected to `null` rather than shipped as a wrong logo
 captured ship `domain: null` (the dashboard's name-guess safely recovers obvious
 ones like a16z.com). Targets already carry `domain` from their reference website.
 The dashboard's fetch_logos.py consumes `node.domain` directly — no change needed.
+
+## Structured signals (v3.7, 2026-08-17) — evidence objects + rule_params
+Each `sectors[].signals[]` entry now carries, alongside `theme`/`rule`/`strength`:
+- `evidence` — array of OBJECTS (was bare event ids), in the `nodes[].id`
+  namespace so the dashboard can name them + open the entity panel:
+  `{allocator_id:"alloc:X", target_id:"target:Y", amount_usd, date, confirmed, flow_id}`.
+  `flow_id` back-refs `flows[].id`. Empty array is fine (some rules aggregate);
+  the shape is all-or-nothing per signal.
+- `rule_params` — structured fields so the dashboard renders text (incl. Russian)
+  without regex-parsing the English `theme`. Per rule: sector_swarm {sector_id,
+  window_days, n_allocators}; subsector_swarm {+subsector_id}; theme_swarm
+  {theme_id,…}; smart_money_follow {sector_id, leader_id, n_followers, follow_days};
+  stealth_accumulation {target_id, n_stakes, window_days}; beneficiary_concentration
+  {ticker, company, n_flows, private_targets:["target:…"], rationale}. `theme` stays
+  as a fallback string.
+- `entity_id` — kept: the single node a signal pins to when its evidence converges
+  on one target.
+Beneficiary card: `private_targets` names the PRIVATE companies the flows land in
+(e.g. Databricks), and `rationale` is the read-through ("Databricks runs on AWS/
+Azure → the cloud provider's revenue") — so the card can state which private
+company and why the ticker benefits.

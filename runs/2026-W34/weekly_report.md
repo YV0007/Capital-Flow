@@ -102,9 +102,39 @@
 | cyber_security | $180M | 3 | 3 |
 | biotech_ai | $0 | 1 | 1 |
 
-## Public beneficiaries mapped (30)
+## Public beneficiaries mapped (60)
 | Ticker | Company | From flow | Confidence |
 |---|---|---|:-:|
+| GOOGL | Alphabet Inc | Sequoia→Form Energy | medium |
+| ETN | Eaton Corporation | Sequoia→Form Energy | low |
+| PWR | Quanta Services | Sequoia→Form Energy | low |
+| GOOGL | Alphabet Inc | Coatue→Form Energy | medium |
+| ETN | Eaton Corporation | Coatue→Form Energy | low |
+| PWR | Quanta Services | Coatue→Form Energy | low |
+| NVDA | NVIDIA Corporation | Coatue→Databricks | high |
+| MSFT | Microsoft Corporation | Coatue→Databricks | high |
+| AMZN | Amazon.com Inc | Coatue→Databricks | medium |
+| GOOGL | Alphabet Inc | Coatue→Databricks | medium |
+| NVDA | NVIDIA Corporation | Andreessen Horowitz→Databricks | high |
+| MSFT | Microsoft Corporation | Andreessen Horowitz→Databricks | high |
+| AMZN | Amazon.com Inc | Andreessen Horowitz→Databricks | medium |
+| GOOGL | Alphabet Inc | Andreessen Horowitz→Databricks | medium |
+| NVDA | NVIDIA Corporation | Thrive Capital→Databricks | high |
+| MSFT | Microsoft Corporation | Thrive Capital→Databricks | high |
+| AMZN | Amazon.com Inc | Thrive Capital→Databricks | medium |
+| GOOGL | Alphabet Inc | Thrive Capital→Databricks | medium |
+| NVDA | NVIDIA Corporation | MGX→Databricks | high |
+| MSFT | Microsoft Corporation | MGX→Databricks | high |
+| AMZN | Amazon.com Inc | MGX→Databricks | medium |
+| GOOGL | Alphabet Inc | MGX→Databricks | medium |
+| NVDA | NVIDIA Corporation | Blackstone→Databricks | high |
+| MSFT | Microsoft Corporation | Blackstone→Databricks | high |
+| AMZN | Amazon.com Inc | Blackstone→Databricks | medium |
+| GOOGL | Alphabet Inc | Blackstone→Databricks | medium |
+| KTOS | Kratos Defense & Security Solutions | Elad Gil→Cambridge Aerospace | low |
+| AVAV | AeroVironment Inc | Elad Gil→Cambridge Aerospace | low |
+| KTOS | Kratos Defense & Security Solutions | US Government→Performance Drone Works | low |
+| AVAV | AeroVironment Inc | US Government→Performance Drone Works | low |
 | GOOGL | Alphabet Inc | Sequoia→Form Energy | medium |
 | ETN | Eaton Corporation | Sequoia→Form Energy | low |
 | PWR | Quanta Services | Sequoia→Form Energy | low |

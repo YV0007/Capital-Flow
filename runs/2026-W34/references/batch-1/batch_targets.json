@@ -1,0 +1,111 @@
+[
+  {
+    "target": "SpaceX",
+    "target_type": "public",
+    "sector": "ai-compute",
+    "allocators": [
+      "NVIDIA",
+      "Saudi PIF"
+    ],
+    "last_event": "2026-08-14",
+    "capital_usd": 36400000000.0,
+    "deal_source_urls": [
+      "https://www.cnbc.com/2026/08/14/nvidia-discloses-21-billion-stake-in-spacex-at-end-of-second-quarter.html",
+      "https://maaal.com/en/news/details/saudi-pif-acquires-264/"
+    ]
+  },
+  {
+    "target": "Form Energy",
+    "target_type": "private",
+    "sector": "power-energy",
+    "allocators": [
+      "Sequoia",
+      "Coatue"
+    ],
+    "last_event": "2026-08-12",
+    "capital_usd": 1500000000.0,
+    "deal_source_urls": [
+      "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/"
+    ]
+  },
+  {
+    "target": "Performance Drone Works",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-07-31",
+    "capital_usd": 820000000.0,
+    "deal_source_urls": [
+      "https://www.war.gov/News/Releases/Release/Article/4561771/the-office-of-strategic-capital-signs-820-million-conditional-loan-commitment-w/"
+    ]
+  },
+  {
+    "target": "Corma",
+    "target_type": "private",
+    "sector": "cybersecurity",
+    "allocators": [
+      "Sequoia",
+      "Khosla Ventures",
+      "Coatue"
+    ],
+    "last_event": "2026-08-10",
+    "capital_usd": 180000000.0,
+    "deal_source_urls": [
+      "https://www.newswire.com/news/corma-the-first-frontier-defensive-cybersecurity-ai-lab-raises-60m-as-ai"
+    ]
+  },
+  {
+    "target": "Vals AI",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Andreessen Horowitz"
+    ],
+    "last_event": "2026-08-13",
+    "capital_usd": 40000000.0,
+    "deal_source_urls": [
+      "https://www.vals.ai/blogs/series-a"
+    ]
+  },
+  {
+    "target": "Erebor",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "Palmer Luckey"
+    ],
+    "last_event": "2026-08-10",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.axios.com/pro/fintech-deals/2026/08/10/erebor-raise-8-billion-valuation"
+    ]
+  },
+  {
+    "target": "Cambridge Aerospace",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "Elad Gil"
+    ],
+    "last_event": "2026-08-10",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.caproasia.com/2026/08/10/uk-air-defence-company-cambridge-aerospace-raised-300-million-in-series-c-funding-at-3-4-billion-valuation-founded-in-2024-by-steven-barrett-chris-sylvan-investors-include-dfj-growth-lux-accel/"
+    ]
+  },
+  {
+    "target": "Boralex",
+    "target_type": "public",
+    "sector": "power-energy",
+    "allocators": [
+      "Brookfield"
+    ],
+    "last_event": "2026-08-14",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.lacaisse.com/en/news/pressreleases/brookfield-caisse-complete-acquisition-boralex"
+    ]
+  }
+]

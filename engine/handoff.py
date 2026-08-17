@@ -101,6 +101,85 @@ def _entity_domain(name: str, urls) -> str | None:
     return None
 
 
+def _flow_id(e) -> str:
+    """Stable flow id — must match the id emitted on flows[] so a signal's evidence
+    row back-refs the same edge."""
+    return "flow:" + hashlib.sha1(
+        "|".join((e["allocator"], e["target"], e["event_type"],
+                  e["disclosed_date"] or "")).encode()).hexdigest()[:16]
+
+
+def _signal_evidence(ids, ev_map) -> list:
+    """Resolve a signal's raw event ids into structured rows in the SAME id
+    namespace as nodes[] (alloc:/target:), so the dashboard can show 'who exactly'
+    and open the entity panel. All-or-nothing shape; unresolvable ids are dropped."""
+    out = []
+    for eid in ids:
+        e = ev_map.get(eid)
+        if not e:
+            continue
+        out.append({
+            "allocator_id": f"alloc:{e['allocator']}",
+            "target_id": f"target:{e['target']}",
+            "amount_usd": e["amount_usd"],
+            "date": e["disclosed_date"],
+            "confirmed": e["status"] == "verified",
+            "flow_id": _flow_id(e),
+        })
+    return out
+
+
+def _signal_params(rule, sector, theme_str, ids, ev_map, benef, rule_cfg) -> dict:
+    """Structured fields so the dashboard renders the signal in any language without
+    regex-parsing the English `theme` string. Reconstructed from the evidence +
+    config, never from the display string (except the beneficiary ticker/company,
+    which are only in the engine-controlled theme text)."""
+    evs = [ev_map[i] for i in ids if i in ev_map]
+    allocs = sorted({e["allocator"] for e in evs})
+    targets = sorted({e["target"] for e in evs})
+    cfg = rule_cfg.get(rule, {})
+    p = {"rule": rule}
+    if rule == "sector_swarm":
+        p.update(sector_id=sector, window_days=cfg.get("window_days"),
+                 n_allocators=len(allocs))
+    elif rule == "subsector_swarm":
+        sub = next((e["subsector"] for e in evs if e["subsector"]), None)
+        p.update(sector_id=sector, subsector_id=sub,
+                 window_days=cfg.get("window_days"), n_allocators=len(allocs))
+    elif rule == "theme_swarm":
+        th = next((e["theme"] for e in evs if e["theme"]), None)
+        p.update(theme_id=th, window_days=cfg.get("window_days"),
+                 n_allocators=len(allocs))
+    elif rule == "smart_money_follow":
+        first = min(evs, key=lambda e: e["disclosed_date"] or "") if evs else None
+        p.update(sector_id=sector,
+                 leader_id=f"alloc:{first['allocator']}" if first else None,
+                 n_followers=max(0, len(allocs) - 1),
+                 follow_days=cfg.get("follow_days"))
+    elif rule == "stealth_accumulation":
+        p.update(target_id=f"target:{targets[0]}" if targets else None,
+                 n_stakes=len(evs), window_days=cfg.get("window_days"))
+    elif rule == "beneficiary_concentration":
+        ticker = theme_str.split(" ", 1)[0] if theme_str else None
+        company = (theme_str[theme_str.index("(") + 1:theme_str.index(")")]
+                   if theme_str and "(" in theme_str and ")" in theme_str else None)
+        rationale = None
+        for eid in ids:
+            for b in benef.get(eid, []):
+                if b["ticker"] == ticker:
+                    rationale = rationale or b["rationale"]
+        # the PRIVATE companies these flows land in (e.g. Databricks) — what the
+        # public ticker is a read-through of.
+        p.update(ticker=ticker, company=company, n_flows=len(evs),
+                 private_targets=[f"target:{t}" for t in targets],
+                 rationale=rationale)
+    else:
+        if sector:
+            p["sector_id"] = sector
+        p["n_allocators"] = len(allocs)
+    return p
+
+
 def _build_map(con, week: str | None = None) -> dict:
     events = con.execute(
         """SELECT e.*, a.name AS allocator, a.class AS allocator_class,
@@ -338,7 +417,13 @@ def _build_map(con, week: str | None = None) -> dict:
     # tell which are current), and it now carries `evidence` (the event ids) —
     # previously computed then dropped at export, which left nothing able to
     # resolve a signal back to real allocator/target names.
-    ev_target = {e["id"]: e["target"] for e in events}
+    ev_map = {e["id"]: e for e in events}
+    benef = {}
+    for b in con.execute(
+        "SELECT event_id, ticker, company, rationale FROM beneficiaries").fetchall():
+        benef.setdefault(b["event_id"], []).append(
+            {"ticker": b["ticker"], "company": b["company"], "rationale": b["rationale"]})
+    rule_cfg = {r["id"]: r for r in db.load_config().get("rules", [])}
     for t in con.execute(
         """SELECT theme, sector, rule, strength, evidence FROM themes
            WHERE run_week = ? ORDER BY strength DESC""", (latest,)).fetchall():
@@ -347,15 +432,20 @@ def _build_map(con, week: str | None = None) -> dict:
             ev = [int(x) for x in json.loads(t["evidence"] or "[]")]
         except (ValueError, TypeError):
             ev = []
+        params = _signal_params(t["rule"], t["sector"], t["theme"], ev, ev_map,
+                                benef, rule_cfg)
         # Anchor a signal to a specific node when its evidence converges on ONE
         # target (e.g. stealth_accumulation, beneficiary_concentration) so the
         # dashboard can pin it to a company, not just a sector zone. Sector/theme-
         # level signals span many targets → no single anchor (None).
-        tgts = {ev_target[i] for i in ev if i in ev_target}
+        tgts = {ev_map[i]["target"] for i in ev if i in ev_map}
         entity_id = f"target:{next(iter(tgts))}" if len(tgts) == 1 else None
         sectors[t["sector"]]["signals"].append(
             {"theme": t["theme"], "rule": t["rule"], "strength": t["strength"],
-             "evidence": ev, "entity_id": entity_id})
+             # structured evidence (alloc:/target: ids) + rule_params so the
+             # dashboard shows 'who exactly' and renders text without regex-parsing.
+             "evidence": _signal_evidence(ev, ev_map), "rule_params": params,
+             "entity_id": entity_id})
 
     # Theme aggregates (WS5) — the cross-cutting dimension alongside sectors.
     themes_agg = {}
@@ -416,6 +506,12 @@ def _build_map(con, week: str | None = None) -> dict:
     for n in nodes.values():
         if n["kind"] == "allocator" and alloc_domain.get(n["label"]):
             n["domain"] = alloc_domain[n["label"]]
+    # ALWAYS emit the key. `null` is a decision ("this entity has no site of its
+    # own" — JVs, projects, SPVs, most individuals); a MISSING key reads as "the
+    # engine hasn't looked yet", and the dashboard's fetcher then burns cycles
+    # guess-then-verifying entities that will never resolve.
+    for n in nodes.values():
+        n.setdefault("domain", None)
 
     allocator_summaries = {}
     for name in set(rollups) | set(profiles):
