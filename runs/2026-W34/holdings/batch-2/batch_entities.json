@@ -1,0 +1,133 @@
+[
+  {
+    "entity": "Blue Owl",
+    "kind": "firm",
+    "class": "alt_manager",
+    "parent_hint": [],
+    "capital_usd": 55900000000.0,
+    "deal_source_urls": [
+      "https://www.blueowl.com/news/funds-managed-blue-owl-digital-infrastructure-strategy-launch-kirkwood-infrastructure-group",
+      "https://www.cnbc.com/2026/07/13/meta-louisiana-data-center-investment-reaches-50-billion-amid-ai-push.html",
+      "https://www.bloomberg.com/news/articles/2026-07-30/blue-owl-s-stack-seeks-5-9-billion-loan-extending-ai-debt-boom"
+    ]
+  },
+  {
+    "entity": "KKR",
+    "kind": "firm",
+    "class": "alt_manager",
+    "parent_hint": [],
+    "capital_usd": 24700000000.0,
+    "deal_source_urls": [
+      "https://www.businesswire.com/news/home/20260630667572/en/KKR-to-Acquire-EDF-power-solutions-North-American-Operations-for-$4.2-Billion",
+      "https://www.cnbc.com/2026/07/01/kkr-sk-launch-1-3-billion-south-korea-renewable-energy-platform-ai-data-centers.html",
+      "https://www.sec.gov/Archives/edgar/data/0000107263/000119312526301533/d152507dex991.htm"
+    ]
+  },
+  {
+    "entity": "SoftBank",
+    "kind": "firm",
+    "class": "alt_manager",
+    "parent_hint": [],
+    "capital_usd": 14000000000.0,
+    "deal_source_urls": [
+      "https://group.softbank/en/news/press/20260701",
+      "https://group.softbank/en/news/press/20260702",
+      "https://www.bloomberg.com/news/articles/2026-07-21/banks-wrap-up-loan-backing-softbank-s-5-4-billion-robotics-bet"
+    ]
+  },
+  {
+    "entity": "Coatue retail fund",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Coatue"
+    ],
+    "capital_usd": 8000000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002044519&type=&dateb=&owner=include&count=40"
+    ]
+  },
+  {
+    "entity": "Khosla Ventures",
+    "kind": "firm",
+    "class": "vc",
+    "parent_hint": [],
+    "capital_usd": 6150000000.0,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/norm-ai-raises-120-million-at-a-1-2-billion-valuation-led-by-khosla-ventures-to-deliver-the-full-stack-model-for-legal-ai-302819152.html",
+      "https://www.businesswire.com/news/home/20260714185502/en/Singularity-Emerges-from-Stealth-with-$80M-Series-A-at-$400M-Valuation-to-Deploy-Air-Defense-at-Scale",
+      "https://www.prnewswire.com/news-releases/state-affairs-raises-70-million-to-help-institutions-navigate-the-policy-and-regulatory-economy-302824501.html"
+    ]
+  },
+  {
+    "entity": "Mubadala Capital (credit platform)",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Mubadala"
+    ],
+    "capital_usd": 4650000000.0,
+    "deal_source_urls": [
+      "https://finance.yahoo.com/markets/stocks/articles/mubadala-capital-completes-integration-mubadala-100000955.html"
+    ]
+  },
+  {
+    "entity": "DigitalBridge Credit II",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "DigitalBridge"
+    ],
+    "capital_usd": 711350516.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2014474/000201447426000004/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Greenoaks Prime Radiant Founders Offshore LP",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Greenoaks"
+    ],
+    "capital_usd": 115480165.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2141340/000214134026000002/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Goldman Sachs",
+    "kind": "firm",
+    "class": "alt_manager",
+    "parent_hint": [],
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://x.com/jensenhuang/status/2086934705207959965?s=46"
+    ]
+  },
+  {
+    "entity": "Andreessen Horowitz LSV Fund V-B, L.P.",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Andreessen Horowitz"
+    ],
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2107845/000110465926084286/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "NVIDIA AI Infrastructure Financing Platform",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Apollo",
+      "BlackRock"
+    ],
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://x.com/jensenhuang/status/2086934705207959965?s=46"
+    ]
+  }
+]

@@ -1,24 +1,21 @@
 # Audit report — 2026-W34 (2026-08-17)
 
 **Verdict: PASS**
-Checked 178 events, 115 track-record rows, 43 profiles, 128 target references, 0 holdings, 0 classified targets.
+Checked 178 events, 115 track-record rows, 43 profiles, 136 target references, 81 holdings, 0 classified targets.
 
 ## Errors (0)
 _none_
 
-## Warnings (37)
+## Warnings (34)
 - W3 Apollo: key allocator with events but no profile
 - W3 Goldman Sachs: key allocator with events but no profile
 - W3 Palmer Luckey: key allocator with events but no profile
-- W6 SpaceX: $36.4B target with no reference
-- W6 Form Energy: $1.5B target with no reference
 - W7 Brookfield: $153.9B fund/firm with no holdings collected
 - W7 MGX Fund I: $49.0B fund/firm with no holdings collected
 - W7 BlackRock: $44.9B fund/firm with no holdings collected
 - W7 KKR: $24.7B fund/firm with no holdings collected
 - W7 KKR Global Infrastructure Investors V: $19.2B fund/firm with no holdings collected
 - W7 SoftBank: $11.8B fund/firm with no holdings collected
-- W7 Andreessen Horowitz: $10.6B fund/firm with no holdings collected
 - W7 Coatue: $10.2B fund/firm with no holdings collected
 - W7 Blackstone: $8.6B fund/firm with no holdings collected
 - W7 Brookfield Infrastructure Fund VI (flagship): $7.9B fund/firm with no holdings collected

@@ -105,7 +105,7 @@ def _check_profiles(con, warnings):
     return con.execute("SELECT COUNT(*) c FROM allocator_profiles").fetchone()["c"]
 
 
-def _check_references(con, warnings):
+def _check_references(con, warnings, errors):
     gaps = con.execute(
         """SELECT e.target, SUM(COALESCE(e.amount_usd,0)) cap
            FROM events e
@@ -115,6 +115,23 @@ def _check_references(con, warnings):
            GROUP BY e.target HAVING cap >= 1e9 ORDER BY cap DESC""").fetchall()
     for g in gaps:
         warnings.append(f"W6 {g['target']}: ${g['cap']/1e9:.1f}B target with no reference")
+
+    # E6 — ENRICHMENT INVARIANT (blocks delivery). A target that reached the map
+    # must ship enriched on the SAME delivery that first surfaces it; a user
+    # opening the map should never meet a bare stub for a company that just got
+    # its first tracked flow. This catches the ordering failure where batch inputs
+    # were generated but the profiler pass never ran before export — previously
+    # only noticed by the dashboard at render time.
+    stubs = con.execute(
+        """SELECT DISTINCT e.target FROM events e
+           WHERE e.status IN ('verified','verified_alpha')
+             AND NOT EXISTS (SELECT 1 FROM target_references t
+                             WHERE t.target = e.target AND COALESCE(t.description,'') != '')
+           ORDER BY e.target""").fetchall()
+    for s in stubs:
+        errors.append(f"E6 {s['target']}: target on the map with no description — run "
+                      f"tools/make_reference_batches.py + the target-profiler pass "
+                      f"BEFORE delivering")
     return con.execute("SELECT COUNT(*) c FROM target_references").fetchone()["c"]
 
 
@@ -182,7 +199,7 @@ def run(week: str) -> dict:
     n_events = _check_events(con, cfg["sectors"], errors, warnings)
     n_tr = _check_track_records(con, errors)
     n_prof = _check_profiles(con, warnings)
-    n_refs = _check_references(con, warnings)
+    n_refs = _check_references(con, warnings, errors)
     n_hold = _check_holdings(con, warnings)
     n_cls = _check_classification(con, warnings)
     stats = _stats(con)

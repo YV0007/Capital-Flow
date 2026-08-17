@@ -1,0 +1,131 @@
+[
+  {
+    "entity": "Brookfield",
+    "kind": "firm",
+    "class": "alt_manager",
+    "parent_hint": [],
+    "capital_usd": 153900000000.0,
+    "deal_source_urls": [
+      "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Brookfield-and-Bloom-Energy-Expand-AI-Infrastructure-Partnership-to-25-Billion-Fivefold-Increase-to-Build-and-Finance-Rapid-Power-for-AI-Infrastructure/default.aspx",
+      "https://www.globenewswire.com/news-release/2026/07/22/3331786/0/en/brookfield-to-acquire-aypa-power-the-leading-north-american-battery-storage-platform-from-blackstone-energy-transition-partners.html",
+      "https://www.blackstone.com/news/press/kuwait-oil-company-signs-us-16-0-billion-infrastructure-partnership-involving-its-crude-oil-pipeline-network-with-a-consortium-comprising-blackstone-brookfield-and-kkr/"
+    ]
+  },
+  {
+    "entity": "Blackstone",
+    "kind": "firm",
+    "class": "alt_manager",
+    "parent_hint": [],
+    "capital_usd": 41590000000.0,
+    "deal_source_urls": [
+      "https://asia.nikkei.com/editor-s-picks/interview/blackstone-to-invest-30bn-in-japan-ai-data-centers-president",
+      "https://www.sec.gov/Archives/edgar/data/0000107263/000119312526301533/d152507dex991.htm",
+      "https://pitchbook.com/news/articles/blackstones-qts-secures-upsized-3-25b-leveraged-loan"
+    ]
+  },
+  {
+    "entity": "Saudi PIF strategic investments (US export credit facility)",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "US Government"
+    ],
+    "capital_usd": 15000000000.0,
+    "deal_source_urls": [
+      "https://www.pif.gov.sa/en/news-and-insights/press-releases/2026/pif-us-exim-15-billion-usd-mou-export-credit/"
+    ]
+  },
+  {
+    "entity": "Andreessen Horowitz",
+    "kind": "firm",
+    "class": "vc",
+    "parent_hint": [],
+    "capital_usd": 10637000000.0,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/senra-systems-announces-65-million-series-b-plans-for-third-manufacturing-facility-302825664.html",
+      "https://www.sec.gov/Archives/edgar/data/2107841/000110465926084291/primary_doc.xml",
+      "https://www.sec.gov/Archives/edgar/data/2107847/000110465926084290/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Altimeter",
+    "kind": "firm",
+    "class": "vc",
+    "parent_hint": [],
+    "capital_usd": 6410000000.0,
+    "deal_source_urls": [
+      "https://www.theinformation.com/articles/softbank-altimeter-d1-invest-thrive-holdings-2-billion-financing",
+      "https://www.sec.gov/Archives/edgar/data/2139124/000213912426000001/primary_doc.xml",
+      "https://www.sec.gov/Archives/edgar/data/2141877/000214187726000001/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Brookfield AI Infrastructure strategy",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Brookfield"
+    ],
+    "capital_usd": 5000000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1937926/000117184326005272/exh_991.htm"
+    ]
+  },
+  {
+    "entity": "DigitalBridge",
+    "kind": "firm",
+    "class": "alt_manager",
+    "parent_hint": [],
+    "capital_usd": 711350516.0,
+    "deal_source_urls": [
+      "https://www.digitalbridge.com/news/2026-07-01-digitalbridge-and-jexi-announce-formation-of-nippon-gateway-infrastructure-a-new-data-center-platform-in-japan",
+      "https://www.sec.gov/Archives/edgar/data/2014474/000201447426000004/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Coatue Growth Fund VI Private Investors Cayman, L.P.",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Coatue"
+    ],
+    "capital_usd": 526955000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2143818/000214381826000001/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Apollo",
+    "kind": "firm",
+    "class": "alt_manager",
+    "parent_hint": [],
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://x.com/jensenhuang/status/2086934705207959965?s=46"
+    ]
+  },
+  {
+    "entity": "Andreessen Horowitz Fund X-B - AI Infrastructure, L.P.",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Andreessen Horowitz"
+    ],
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2107841/000110465926084291/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "GPx TX LP",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Brian Singerman"
+    ],
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2147127/000123191926000804/primary_doc.xml"
+    ]
+  }
+]

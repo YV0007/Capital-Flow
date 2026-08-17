@@ -1,0 +1,100 @@
+[
+  {
+    "target": "SpaceX",
+    "description": "Elon Musk's space launch and satellite company (Falcon, Starship, Starlink), which absorbed xAI in February 2026 and listed on Nasdaq in June 2026. Its Q2 2026 13F season revealed two large holders: NVIDIA at ~$21B (its stake converted from a $10B xAI investment) and Saudi Arabia's PIF at ~$26.3B across 154.1M shares.",
+    "website": "https://www.spacex.com",
+    "read_more": {"label": "CNBC", "url": "https://www.cnbc.com/2026/08/14/nvidia-discloses-21-billion-stake-in-spacex-at-end-of-second-quarter.html"},
+    "sources": [
+      "https://www.spacex.com",
+      "https://www.cnbc.com/2026/08/14/nvidia-discloses-21-billion-stake-in-spacex-at-end-of-second-quarter.html",
+      "https://maaal.com/en/news/details/saudi-pif-acquires-264/",
+      "https://seekingalpha.com/news/4633390-saudi-arabias-pif-adds-elon-musks-spacex-in-q2"
+    ],
+    "as_of": "2026-08-17"
+  },
+  {
+    "target": "Form Energy",
+    "description": "US multi-day energy storage company building iron-air batteries that discharge for 100 hours, manufactured at Form Factory 1 in Weirton, West Virginia. Its $750M Series G (August 12, 2026) was led by T. Rowe Price with Sequoia Capital, Janus Henderson, Franklin Templeton and PEAK6 joining, taking total equity past $2B against an 80 GWh backlog.",
+    "website": "https://formenergy.com",
+    "read_more": {"label": "Form Energy", "url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/"},
+    "sources": [
+      "https://formenergy.com",
+      "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/"
+    ],
+    "as_of": "2026-08-17"
+  },
+  {
+    "target": "Performance Drone Works",
+    "description": "Huntsville, Alabama maker of rugged autonomous small drones for US special operations — the C100 multi-mission quadcopter and AM attritable strike munition — founded 2018 out of Drone Racing League roots. On July 31, 2026 the Pentagon's Office of Strategic Capital signed a conditional loan commitment of up to $820M to scale domestic drone-component manufacturing.",
+    "website": "https://www.pdw.ai",
+    "read_more": {"label": "U.S. Department of War", "url": "https://www.war.gov/News/Releases/Release/Article/4561771/the-office-of-strategic-capital-signs-820-million-conditional-loan-commitment-w/"},
+    "sources": [
+      "https://www.pdw.ai",
+      "https://www.war.gov/News/Releases/Release/Article/4561771/the-office-of-strategic-capital-signs-820-million-conditional-loan-commitment-w/",
+      "https://www.prnewswire.com/news-releases/pdw-receives-conditional-820-million-loan-commitment-from-us-department-of-war-to-power-americas-drone-arsenal-302840387.html"
+    ],
+    "as_of": "2026-08-17"
+  },
+  {
+    "target": "Corma",
+    "description": "Tel Aviv and San Francisco AI lab founded in 2025 by CEO Alon Pluda and Unit 8200 alumni, building foundation models and agents purpose-built for defensive cybersecurity rather than offense. Raised a $60M seed on August 10, 2026 led by Sequoia Capital with Khosla Ventures and Coatue, already deployed at Fortune 100 and 500 customers.",
+    "website": "https://corma.ai",
+    "read_more": {"label": "Fortune", "url": "https://fortune.com/2026/08/10/exclusive-corma-raises-60-million-from-sequoia-for-ai-trained-to-defend-against-cyberattacks/"},
+    "sources": [
+      "https://corma.ai",
+      "https://fortune.com/2026/08/10/exclusive-corma-raises-60-million-from-sequoia-for-ai-trained-to-defend-against-cyberattacks/",
+      "https://www.newswire.com/news/corma-the-first-frontier-defensive-cybersecurity-ai-lab-raises-60m-as-ai",
+      "https://www.calcalistech.com/ctechnews/article/h1cwzhvigg"
+    ],
+    "as_of": "2026-08-17"
+  },
+  {
+    "target": "Vals AI",
+    "description": "Independent third-party evaluator of AI models, running private held-out benchmarks on real professional work in finance, law, medicine, software engineering and security, and publishing the Vals Index. Its results are cited in model cards from OpenAI, Anthropic, Google, Meta and xAI. Raised a $40M Series A at a $400M valuation on August 13, 2026, led by a16z with 8VC, Bloomberg Beta, HRT Ventures and Next Ladder.",
+    "website": "https://www.vals.ai",
+    "read_more": {"label": "Vals AI", "url": "https://www.vals.ai/blogs/series-a"},
+    "sources": [
+      "https://www.vals.ai",
+      "https://www.vals.ai/blogs/series-a",
+      "https://techfundingnews.com/a16z-leads-40m-vals-ai-round-at-400m-valuation-to-test-ai-on-real-world-tasks/"
+    ],
+    "as_of": "2026-08-17"
+  },
+  {
+    "target": "Erebor",
+    "description": "Columbus, Ohio digital bank founded by Anduril's Palmer Luckey with Joe Lonsdale and backed by Peter Thiel, chartered by the OCC and opened February 2026 to serve crypto, AI, defense and manufacturing companies in the gap left by Silicon Valley Bank. Deposits reached roughly $4.6B by end-July 2026; reported in talks to raise ~$1.5B at an $8B pre-money valuation.",
+    "website": "https://erebor.bank",
+    "read_more": {"label": "Banking Dive", "url": "https://www.bankingdive.com/news/tech-focused-erebor-bank-gets-conditional-occ-approval/802895/"},
+    "sources": [
+      "https://erebor.bank",
+      "https://www.bankingdive.com/news/tech-focused-erebor-bank-gets-conditional-occ-approval/802895/",
+      "https://www.axios.com/pro/fintech-deals/2026/08/10/erebor-raise-8-billion-valuation",
+      "https://www.occ.gov/news-issuances/news-releases/2025/nr-occ-2025-101.html"
+    ],
+    "as_of": "2026-08-17"
+  },
+  {
+    "target": "Cambridge Aerospace",
+    "description": "UK air-defence startup founded in late 2024, led by CEO Steven Barrett and CCO Chris Sylvan, making low-cost interceptors against Shahed-type attack drones — the tube-launched Skyhammer (30+ km range, 700 km/h) with Starhammer due 2027. Raised a $300M Series C on August 10, 2026 at a $3.4B valuation, led by DFJ Growth with Accel, Lux, Lakestar and Elad Gil & Co.",
+    "website": "https://www.cambridgeaerospace.com",
+    "read_more": {"label": "TNW", "url": "https://thenextweb.com/news/cambridge-aerospace-300m-series-c-skyhammer-air-defence"},
+    "sources": [
+      "https://www.cambridgeaerospace.com",
+      "https://thenextweb.com/news/cambridge-aerospace-300m-series-c-skyhammer-air-defence",
+      "https://www.finsmes.com/2026/08/cambridge-aerospace-raises-300m-in-series-c-funding.html",
+      "https://www.uktech.news/defence-tech/cambridge-aerospace-raises-222m-at-a-2-5bn-valuation-20260810"
+    ],
+    "as_of": "2026-08-17"
+  },
+  {
+    "target": "Boralex",
+    "description": "Quebec-based renewable power producer (Kingsey Falls), Canada's largest and France's biggest independent onshore wind operator, with 3.8 GW installed across 139 sites in Canada, France, the UK and US and 8.2 GW in development. Brookfield, Brookfield Renewable and La Caisse completed their take-private at C$37.25 per share on August 14, 2026; the TSX listing was delisted around August 17.",
+    "website": "https://www.boralex.com",
+    "read_more": {"label": "La Caisse", "url": "https://www.lacaisse.com/en/news/pressreleases/brookfield-caisse-complete-acquisition-boralex"},
+    "sources": [
+      "https://www.boralex.com/en/",
+      "https://www.lacaisse.com/en/news/pressreleases/brookfield-caisse-complete-acquisition-boralex"
+    ],
+    "as_of": "2026-08-17"
+  }
+]

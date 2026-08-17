@@ -1,0 +1,132 @@
+[
+  {
+    "entity": "BlackRock",
+    "kind": "firm",
+    "class": "alt_manager",
+    "parent_hint": [],
+    "capital_usd": 44900000000.0,
+    "deal_source_urls": [
+      "https://www.globenewswire.com/news-release/2026/07/14/3326975/0/en/global-infrastructure-partners-agrees-to-acquire-summit-ridge-energy.html",
+      "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/",
+      "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-New-Strategic-Venture-with-BlackRock-to-Develop-Data-Center-in-El-Paso/default.aspx"
+    ]
+  },
+  {
+    "entity": "KKR Global Infrastructure Investors V",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "KKR"
+    ],
+    "capital_usd": 19200000000.0,
+    "deal_source_urls": [
+      "https://www.businesswire.com/news/home/20260803095185/en/KKR-Closes-$19.2-Billion-Infrastructure-Fund"
+    ]
+  },
+  {
+    "entity": "Sequoia",
+    "kind": "firm",
+    "class": "vc",
+    "parent_hint": [],
+    "capital_usd": 12755000000.0,
+    "deal_source_urls": [
+      "https://www.businesswire.com/news/home/20260713849009/en/Chai-Discovery-Announces-$400M-Series-C-to-Advance-AI-Driven-Molecular-Design",
+      "https://www.prnewswire.com/news-releases/senra-systems-announces-65-million-series-b-plans-for-third-manufacturing-facility-302825664.html",
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=Glow&type=D&dateb=&owner=include&count=40"
+    ]
+  },
+  {
+    "entity": "Thrive Capital",
+    "kind": "firm",
+    "class": "vc",
+    "parent_hint": [],
+    "capital_usd": 6430000000.0,
+    "deal_source_urls": [
+      "https://www.businesswire.com/news/home/20260713849009/en/Chai-Discovery-Announces-$400M-Series-C-to-Advance-AI-Driven-Molecular-Design",
+      "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+      "https://ambrook.com/series-b"
+    ]
+  },
+  {
+    "entity": "Azora",
+    "kind": "firm",
+    "class": "alt_manager",
+    "parent_hint": [],
+    "capital_usd": 5000000000.0,
+    "deal_source_urls": [
+      "https://volta.com/news/volta-launches-the-utility-of-compute/"
+    ]
+  },
+  {
+    "entity": "Coatue Growth Fund VI Private Investors US, LLC",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Coatue"
+    ],
+    "capital_usd": 778230000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2143819/000214381926000001/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Greenoaks Prime Radiant Founders LP",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Greenoaks"
+    ],
+    "capital_usd": 576519835.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2141341/000184073526000020/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Altimeter Himalaya Fund I, L.P.",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Altimeter"
+    ],
+    "capital_usd": 40000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2139124/000213912426000001/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Andreessen Horowitz Fund X-B - AI Applications, L.P.",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Andreessen Horowitz"
+    ],
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2107847/000110465926084290/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Craft Ventures V, LP",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "David Sacks"
+    ],
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2140032/000214003226000001/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Quiet Select TX LP",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Brian Singerman"
+    ],
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2147584/000123191926000805/primary_doc.xml"
+    ]
+  }
+]

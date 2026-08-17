@@ -1,0 +1,133 @@
+[
+  {
+    "entity": "MGX Fund I",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "MGX"
+    ],
+    "capital_usd": 49000000000.0,
+    "deal_source_urls": [
+      "https://www.mgx.ae/news-insights/mgx-pleased-confirm-final-close-mgx-fund-i-49-billion-total-commitments-significantly"
+    ]
+  },
+  {
+    "entity": "Coatue",
+    "kind": "firm",
+    "class": "vc",
+    "parent_hint": [],
+    "capital_usd": 21235185000.0,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/norm-ai-raises-120-million-at-a-1-2-billion-valuation-led-by-khosla-ventures-to-deliver-the-full-stack-model-for-legal-ai-302819152.html",
+      "https://www.sec.gov/Archives/edgar/data/2143819/000214381926000001/primary_doc.xml",
+      "https://www.sec.gov/Archives/edgar/data/2143818/000214381826000001/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "KIC strategic investment account (AI / data centers / strategic industries)",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Korea Investment Corporation"
+    ],
+    "capital_usd": 14000000000.0,
+    "deal_source_urls": [
+      "https://www.bloomberg.com/news/articles/2026-07-30/korea-plans-14-billion-for-wealth-fund-s-ai-bets-after-rout"
+    ]
+  },
+  {
+    "entity": "Brookfield Infrastructure Fund VI (flagship)",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Brookfield"
+    ],
+    "capital_usd": 7900000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1937926/000117184326005272/exh_991.htm"
+    ]
+  },
+  {
+    "entity": "Khosla Ventures 2026 fund family",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Khosla Ventures"
+    ],
+    "capital_usd": 5500000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2074230/000207423025000001/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Founders Fund",
+    "kind": "firm",
+    "class": "vc",
+    "parent_hint": [],
+    "capital_usd": 1555000000.0,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/state-affairs-raises-70-million-to-help-institutions-navigate-the-policy-and-regulatory-economy-302824501.html",
+      "https://www.prnewswire.com/news-releases/senra-systems-announces-65-million-series-b-plans-for-third-manufacturing-facility-302825664.html",
+      "https://finance.yahoo.com/technology/ai/articles/engineering-ai-startup-p-1-123500705.html"
+    ]
+  },
+  {
+    "entity": "Greenoaks",
+    "kind": "firm",
+    "class": "vc",
+    "parent_hint": [],
+    "capital_usd": 692000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2141341/000184073526000020/primary_doc.xml",
+      "https://www.sec.gov/Archives/edgar/data/2141340/000214134026000002/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Khosla Ventures MM SPV, LLC",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Vinod Khosla"
+    ],
+    "capital_usd": 60500000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2148181/000214818126000001/xslFormDX01/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Altimeter Kilauea Fund II, L.P.",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Altimeter"
+    ],
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2141877/000214187726000001/primary_doc.xml"
+    ]
+  },
+  {
+    "entity": "Brookfield Middle East Partners (BMEP)",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Saudi PIF"
+    ],
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.arabnews.com/node/2652475/business-economy"
+    ]
+  },
+  {
+    "entity": "Prentis",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Reid Hoffman"
+    ],
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://techcrunch.com/2026/07/24/prentis-new-ai-lab-co-founded-by-reid-hoffman-mark-pincus-in-talks-to-raise-100m/"
+    ]
+  }
+]

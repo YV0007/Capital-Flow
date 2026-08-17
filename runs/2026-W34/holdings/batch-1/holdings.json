@@ -1,0 +1,840 @@
+[
+  {
+    "entity": "Andreessen Horowitz",
+    "portfolio_url": "https://a16z.com/investment-list/",
+    "holdings_count": 1458,
+    "as_of": "2026-08-17",
+    "holdings": [
+      {
+        "name": "OpenAI",
+        "sector": "ai-labs",
+        "subsector": "frontier-models",
+        "note": "Frontier AI research lab; builder of the GPT model family and ChatGPT.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "SpaceX",
+        "sector": "defense-tech",
+        "subsector": "space-launch-satellite",
+        "note": "Orbital launch provider and operator of the Starlink satellite broadband network.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Databricks",
+        "sector": "ai-data",
+        "subsector": "data-platform",
+        "note": "Lakehouse data and AI platform for enterprise analytics and model training.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "xAI",
+        "sector": "ai-labs",
+        "subsector": "frontier-models",
+        "note": "Frontier model lab building the Grok family of large language models.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Stripe",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Internet payments and financial infrastructure platform for online businesses.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Anduril",
+        "sector": "defense-tech",
+        "subsector": "autonomous-systems",
+        "note": "Defense technology company building autonomous systems and the Lattice software platform.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Figma",
+        "sector": "ai-applications",
+        "subsector": "vertical-saas-ai",
+        "note": "Browser-based collaborative interface design and prototyping platform.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Safe Superintelligence",
+        "sector": "ai-labs",
+        "subsector": "superintelligence-research",
+        "note": "Research lab founded by Ilya Sutskever pursuing safe superintelligence.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Mistral AI",
+        "sector": "ai-labs",
+        "subsector": "frontier-models",
+        "note": "European frontier model lab building open-weight and commercial LLMs.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Thinking Machines Lab",
+        "sector": "ai-labs",
+        "subsector": "frontier-models",
+        "note": "AI research lab founded by Mira Murati building frontier multimodal models.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Cursor",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "AI-native code editor and agentic software engineering environment.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Waymo",
+        "sector": "robotics",
+        "subsector": "autonomous-mobility",
+        "note": "Autonomous driving company operating a commercial robotaxi service.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Wiz",
+        "sector": "cybersecurity",
+        "subsector": "infrastructure-security",
+        "note": "Cloud security platform scanning cloud estates for risk and misconfiguration.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "ElevenLabs",
+        "sector": "ai-applications",
+        "subsector": "vertical-saas-ai",
+        "note": "Voice AI platform for speech synthesis, dubbing and conversational agents.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "World Labs",
+        "sector": "ai-labs",
+        "subsector": "world-models",
+        "note": "Spatial intelligence lab building large world models from images and video.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Applied Intuition",
+        "sector": "robotics",
+        "subsector": "autonomous-mobility",
+        "note": "Simulation and autonomy software stack for vehicle and defense programs.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Shield AI",
+        "sector": "defense-tech",
+        "subsector": "autonomous-systems",
+        "note": "Autonomy software and aircraft for GPS-denied military flight.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Skydio",
+        "sector": "defense-tech",
+        "subsector": "autonomous-systems",
+        "note": "US autonomous drone manufacturer for defense, utility and public-safety use.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Character.AI",
+        "sector": "ai-applications",
+        "subsector": "vertical-saas-ai",
+        "note": "Consumer platform for conversations with user-created AI characters.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Replit",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Browser-based development environment with AI agents that build and deploy apps.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Harvey",
+        "sector": "ai-applications",
+        "subsector": "legal-regulatory-ai",
+        "note": "Generative AI platform for law firms and legal departments.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Hebbia",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "AI document analysis platform used by finance and legal knowledge workers.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Saronic",
+        "sector": "defense-tech",
+        "subsector": "autonomous-systems",
+        "note": "Builder of autonomous surface vessels for the US Navy and allied fleets.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Castelion",
+        "sector": "defense-tech",
+        "subsector": "defense-manufacturing",
+        "note": "Low-cost hypersonic strike weapons manufacturer for the US defense market.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "KoBold Metals",
+        "sector": "robotics",
+        "subsector": "critical-minerals-automation",
+        "note": "AI-driven mineral exploration company hunting copper, nickel and lithium deposits.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Base Power",
+        "sector": "power-energy",
+        "subsector": "grid-storage",
+        "note": "Residential battery storage company operating a distributed virtual power plant.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Heron Power",
+        "sector": "power-energy",
+        "subsector": "energy-infrastructure",
+        "note": "Power electronics company building transformers for grid and datacenter interconnection.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Standard Nuclear",
+        "sector": "nuclear",
+        "subsector": "smr",
+        "note": "Advanced nuclear fuel company producing TRISO fuel for microreactors.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Radiant",
+        "sector": "nuclear",
+        "subsector": "smr",
+        "note": "Developer of portable microreactors for off-grid and remote power.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Gensyn",
+        "sector": "neocloud",
+        "subsector": "gpu-capacity",
+        "note": "Decentralized compute protocol for distributed machine-learning training.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "fal",
+        "sector": "neocloud",
+        "subsector": "gpu-capacity",
+        "note": "Generative media inference cloud running diffusion and video models on GPUs.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Black Forest Labs",
+        "sector": "ai-labs",
+        "subsector": "frontier-models",
+        "note": "Image and video generation lab behind the FLUX open-weight model family.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Exowatt",
+        "sector": "power-energy",
+        "subsector": "baseload-generation",
+        "note": "Modular solar thermal energy system built to supply datacenter power.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Nexthop",
+        "sector": "networking",
+        "subsector": null,
+        "note": "AI networking infrastructure company building switching for large training clusters.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Astranis",
+        "sector": "defense-tech",
+        "subsector": "space-launch-satellite",
+        "note": "Manufacturer of small geostationary communications satellites.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Periodic Labs",
+        "sector": "ai-applications",
+        "subsector": "ai-for-science",
+        "note": "AI research company building autonomous laboratories for materials discovery.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Erebor",
+        "sector": "defense-tech",
+        "subsector": null,
+        "note": "Digital bank chartered to serve defense, crypto and frontier-technology companies.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Hadrian",
+        "sector": "defense-tech",
+        "subsector": "defense-manufacturing",
+        "note": "Automated precision machining factories for aerospace and defense components.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Senra Systems",
+        "sector": "defense-tech",
+        "subsector": "wire-harness-manufacturing-automation",
+        "note": "Automated wire harness manufacturing for aircraft, spacecraft and defense systems.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.prnewswire.com/news-releases/senra-systems-announces-65-million-series-b-plans-for-third-manufacturing-facility-302825664.html"
+      },
+      {
+        "name": "Mariana Minerals",
+        "sector": "robotics",
+        "subsector": "critical-minerals-automation",
+        "note": "AI and robotics company automating critical-minerals mining and processing.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Whatnot",
+        "sector": "ai-applications",
+        "subsector": null,
+        "note": "Live shopping marketplace for collectibles, fashion and trading cards.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Convex",
+        "sector": "ai-applications",
+        "subsector": "agent-native-backend",
+        "note": "Reactive backend-as-a-service database platform built for AI-generated applications.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Vals AI",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Independent benchmarking company that evaluates LLM performance on expert tasks.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "HappyRobot",
+        "sector": "ai-applications",
+        "subsector": "logistics-ai-agents",
+        "note": "AI voice agents that automate freight brokerage and logistics operations.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Glow",
+        "sector": "ai-applications",
+        "subsector": null,
+        "note": "Consumer AI application company on the a16z investment list.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Odyssey",
+        "sector": "ai-labs",
+        "subsector": "world-models",
+        "note": "Generative world model lab building interactive AI-rendered video environments.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Anyscale",
+        "sector": "neocloud",
+        "subsector": "gpu-capacity",
+        "note": "Managed Ray platform for distributed AI training and inference workloads.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Pinecone",
+        "sector": "ai-data",
+        "subsector": "data-platform",
+        "note": "Managed vector database for retrieval-augmented generation workloads.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      },
+      {
+        "name": "Zipline",
+        "sector": "robotics",
+        "subsector": "autonomous-mobility",
+        "note": "Autonomous drone delivery network for medical supplies and consumer goods.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://a16z.com/investment-list/"
+      }
+    ]
+  },
+  {
+    "entity": "DigitalBridge",
+    "portfolio_url": "https://www.digitalbridge.com/portfolio",
+    "holdings_count": 32,
+    "as_of": "2026-08-17",
+    "holdings": [
+      {
+        "name": "Vantage Data Centers (North America)",
+        "sector": "datacenters",
+        "subsector": "hyperscale-campus",
+        "note": "Hyperscale data center platform serving North American cloud and AI customers.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "Switch",
+        "sector": "datacenters",
+        "subsector": "colocation",
+        "note": "Private cloud and colocation data center operator with US hyperscale campuses.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "Vantage Data Centers (EMEA)",
+        "sector": "datacenters",
+        "subsector": "hyperscale-campus",
+        "note": "Hyperscale data center platform across Europe, the Middle East and Africa.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "Scala Data Centers",
+        "sector": "datacenters",
+        "subsector": "hyperscale-campus",
+        "note": "Latin American hyperscale data center platform headquartered in Brazil.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "Yondr Group",
+        "sector": "datacenters",
+        "subsector": "hyperscale-campus",
+        "note": "Global developer and operator of hyperscale data center campuses.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "DataBank",
+        "sector": "datacenters",
+        "subsector": "colocation",
+        "note": "US enterprise and edge data center and interconnection operator.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "Vantage Data Centers (APAC)",
+        "sector": "datacenters",
+        "subsector": "hyperscale-campus",
+        "note": "Hyperscale data center platform across Asia-Pacific markets.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "Zayo Group Holdings",
+        "sector": "networking",
+        "subsector": null,
+        "note": "North American and European fiber infrastructure and bandwidth provider.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "Vantage Data Centers (SDC)",
+        "sector": "datacenters",
+        "subsector": "hyperscale-campus",
+        "note": "Vantage strategic development company for new hyperscale campus builds.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "AtlasEdge Data Centres",
+        "sector": "datacenters",
+        "subsector": "colocation",
+        "note": "European edge data center platform serving regional and metro markets.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "GD Towers",
+        "sector": "networking",
+        "subsector": null,
+        "note": "German and Austrian mobile tower platform carved out of Deutsche Telekom.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "Vertical Bridge",
+        "sector": "networking",
+        "subsector": null,
+        "note": "Largest private owner and operator of wireless communications towers in the US.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "Nippon Gateway Infrastructure (NGI)",
+        "sector": "datacenters",
+        "subsector": "sovereign-datacenter",
+        "note": "Japanese data center platform formed by DigitalBridge and JEXI.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "JTOWER",
+        "sector": "networking",
+        "subsector": null,
+        "note": "Japanese shared telecom infrastructure and tower operator.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "WOW!",
+        "sector": "networking",
+        "subsector": null,
+        "note": "US broadband provider delivering fiber and cable internet to residential markets.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "Netomnia",
+        "sector": "networking",
+        "subsector": null,
+        "note": "UK alternative fiber network builder providing full-fiber broadband.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "ExteNet Systems",
+        "sector": "networking",
+        "subsector": null,
+        "note": "US distributed networks and small cell infrastructure provider.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "Boingo Wireless",
+        "sector": "networking",
+        "subsector": null,
+        "note": "Operator of DAS and small cell networks in airports, stadiums and transit.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "Beanfield",
+        "sector": "networking",
+        "subsector": null,
+        "note": "Canadian metro fiber network operator serving Toronto, Montreal and Vancouver.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "Highline do Brasil",
+        "sector": "networking",
+        "subsector": null,
+        "note": "Brazilian tower and telecom infrastructure platform.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "Mundo Pacifico",
+        "sector": "networking",
+        "subsector": null,
+        "note": "Chilean fiber broadband network operator.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "Andean Telecom Partners",
+        "sector": "networking",
+        "subsector": null,
+        "note": "Andean-region towers, fiber and small cell infrastructure platform.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "EdgePoint Infrastructure",
+        "sector": "networking",
+        "subsector": null,
+        "note": "Southeast Asian telecom tower and infrastructure platform.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "Mexico Telecom Partners",
+        "sector": "networking",
+        "subsector": null,
+        "note": "Mexican wireless tower infrastructure platform.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "FreshWave Group",
+        "sector": "networking",
+        "subsector": null,
+        "note": "UK shared mobile infrastructure provider of small cells and towers.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "Digita Oy",
+        "sector": "networking",
+        "subsector": null,
+        "note": "Finnish broadcast and telecom tower network operator.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "AIMS",
+        "sector": "datacenters",
+        "subsector": "colocation",
+        "note": "Malaysian carrier-neutral data center and interconnection provider.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "Aptum Technologies",
+        "sector": "cloud-hyperscale",
+        "subsector": null,
+        "note": "Hybrid cloud and managed infrastructure services provider.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "Landmark Dividend",
+        "sector": "networking",
+        "subsector": null,
+        "note": "Owner of ground leases and real estate under digital infrastructure assets.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "Fibernow",
+        "sector": "networking",
+        "subsector": null,
+        "note": "Brazilian fiber-to-the-home broadband network operator.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "Xenith IG",
+        "sector": "networking",
+        "subsector": null,
+        "note": "UK fiber infrastructure platform serving enterprise and wholesale customers.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      },
+      {
+        "name": "Orange Barrel Media",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Owner and operator of urban outdoor media and digital signage infrastructure.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.digitalbridge.com/portfolio"
+      }
+    ]
+  },
+  {
+    "entity": "Saudi PIF strategic investments (US export credit facility)",
+    "holdings_count": 0,
+    "as_of": "2026-08-17",
+    "holdings": []
+  },
+  {
+    "entity": "GPx TX LP",
+    "holdings_count": 0,
+    "as_of": "2026-08-17",
+    "holdings": []
+  }
+]
