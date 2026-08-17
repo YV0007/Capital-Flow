@@ -1,0 +1,624 @@
+[
+  {
+    "entity": "Coatue",
+    "portfolio_url": "https://www.coatue.com/privates-portfolio",
+    "holdings_count": 250,
+    "as_of": "2026-08-17",
+    "holdings": [
+      {
+        "name": "Anthropic",
+        "sector": "ai-labs",
+        "subsector": "frontier-models",
+        "note": "AI lab building Claude; Coatue co-led the $30B Series G at $380B post.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
+      },
+      {
+        "name": "Databricks",
+        "sector": "ai-data",
+        "subsector": "data-platform",
+        "note": "Data + AI lakehouse platform; $5B at $190B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-17",
+        "source_url": "https://techcrunch.com/2026/08/13/databricks-wanted-to-raise-1b-investors-wanted-15b-it-settled-on-5b-at-a-190b-valuation/"
+      },
+      {
+        "name": "Anysphere (Cursor)",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "AI coding agent; Coatue co-led $2.3B Series D at ~$29.3B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.hedgeweek.com/coatue-co-leads-2-3bn-raise-for-ai-platform/"
+      },
+      {
+        "name": "Kalshi",
+        "sector": "ai-applications",
+        "subsector": null,
+        "note": "Regulated event/prediction market exchange; $1B Series F at $22B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-17",
+        "source_url": "https://techcrunch.com/2026/05/07/kalshi-doubles-valuation-in-5-months-hitting-22-billion/"
+      },
+      {
+        "name": "Cerebras Systems",
+        "sector": "semiconductors",
+        "subsector": "custom-silicon",
+        "note": "Wafer-scale AI chips; $1B Series H at ~$23B.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.cerebras.ai/press-release/cerebras-systems-raises-usd1-billion-series-h"
+      },
+      {
+        "name": "Base Power",
+        "sector": "power-energy",
+        "subsector": "grid-storage",
+        "note": "Home batteries forming distributed grid capacity; $1B Series D at $13B.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://techcrunch.com/2026/08/03/base-power-raises-another-1b-to-save-the-grid-using-backyard-batteries/"
+      },
+      {
+        "name": "Cyera",
+        "sector": "cybersecurity",
+        "subsector": "agentic-security",
+        "note": "AI data-security posture platform; $600M Series G at $12B.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.cyera.com/press-releases/cyera-raises-600-million-at-12-billion-valuation-to-continue-building-the-trust-layer-for-the-ai-era"
+      },
+      {
+        "name": "Firmus",
+        "sector": "datacenters",
+        "subsector": "hyperscale-campus",
+        "note": "Energy-efficient APAC AI data centers; $505M strategic equity at $5.5B, Coatue-led.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-17",
+        "source_url": "https://firmus.co/newsroom/firmus-raises-usdusd505-million-in-strategic-equity-investment-led-by-coatue"
+      },
+      {
+        "name": "Supabase",
+        "sector": "ai-applications",
+        "subsector": null,
+        "note": "Open-source Postgres agentic backend; $500M Series F at $10.5B.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.prnewswire.com/news-releases/supabase-raises-500m-at-10-5b-to-accelerate-lead-in-agentic-infrastructure-302791787.html"
+      },
+      {
+        "name": "Harvey",
+        "sector": "ai-applications",
+        "subsector": "legal-regulatory-ai",
+        "note": "AI agents for legal work; Coatue co-led $300M Series E at $5B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.harvey.ai/blog/harvey-raises-series-e"
+      },
+      {
+        "name": "Decagon",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Conversational AI agents for CX; co-led $250M Series D at $4.5B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-17",
+        "source_url": "https://decagon.ai/blog/series-d-announcement"
+      },
+      {
+        "name": "Island",
+        "sector": "cybersecurity",
+        "subsector": "infrastructure-security",
+        "note": "Enterprise secure browser; $250M Series E at $4.85B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-17",
+        "source_url": "https://techcrunch.com/2025/03/26/island-lands-250m-in-funding-at-a-4-8b-valuation/"
+      },
+      {
+        "name": "ClickHouse",
+        "sector": "ai-data",
+        "subsector": "data-platform",
+        "note": "High-speed analytical database; co-led $250M Series B at $2B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-17",
+        "source_url": "https://clickhouse.com/blog/click-house-raises-a-250m-series-b-at-a-2b-valuationand-we-are-hiring"
+      },
+      {
+        "name": "Rippling",
+        "sector": "ai-applications",
+        "subsector": null,
+        "note": "HR/IT/spend workforce platform; $200M primary at $13.4B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-17",
+        "source_url": "https://techcrunch.com/2024/04/22/ripplings-parker-conrad-on-the-companys-brand-new-round-its-brand-new-sf-lease-and-also-its-brand-new-critic/"
+      },
+      {
+        "name": "Sunday Robotics",
+        "sector": "robotics",
+        "subsector": "robot-foundation-models",
+        "note": "Household humanoid robots; $165M Series B at $1.15B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-17",
+        "source_url": "https://techcrunch.com/2026/03/12/humanoid-robotics-maker-sunday-reaches-1-15b-valuation-to-build-household-robots/"
+      },
+      {
+        "name": "Applied Intuition",
+        "sector": "robotics",
+        "subsector": "autonomous-mobility",
+        "note": "Simulation/validation for autonomous vehicles; co-led $175M Series D at $3.6B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.prnewswire.com/news-releases/applied-intuition-raises-175m-series-d-co-led-by-elad-gil-addition-and-coatue-management-at-3-6b-valuation-301422396.html"
+      }
+    ]
+  },
+  {
+    "entity": "Altimeter",
+    "portfolio_url": null,
+    "holdings_count": 18,
+    "as_of": "2026-08-17",
+    "holdings": [
+      {
+        "name": "Anthropic",
+        "sector": "ai-labs",
+        "subsector": "frontier-models",
+        "note": "AI lab building Claude; Altimeter co-led the $65B Series H at $965B post.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.anthropic.com/news/series-h"
+      },
+      {
+        "name": "Baseten",
+        "sector": "ai-compute",
+        "subsector": null,
+        "note": "AI inference infrastructure; co-led $1.5B Series F at $13B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.baseten.co/blog/announcing-our-series-f/"
+      },
+      {
+        "name": "Hadrian",
+        "sector": "defense-tech",
+        "subsector": "defense-manufacturing",
+        "note": "Automated precision-manufacturing factories; $1.37B Series D at $7.87B.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html"
+      },
+      {
+        "name": "Base Power",
+        "sector": "power-energy",
+        "subsector": "grid-storage",
+        "note": "Home battery systems / distributed grid capacity; $1B Series D at $13B.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://techcrunch.com/2026/08/03/base-power-raises-another-1b-to-save-the-grid-using-backyard-batteries/"
+      },
+      {
+        "name": "Cerebras Systems",
+        "sector": "semiconductors",
+        "subsector": "custom-silicon",
+        "note": "Wafer-scale AI chips and inference systems; $1B Series H.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.cerebras.ai/press-release/cerebras-systems-raises-usd1-billion-series-h"
+      },
+      {
+        "name": "K2 Space",
+        "sector": "defense-tech",
+        "subsector": null,
+        "note": "Large high-power satellites; $500M Series D at $6.8B.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.prnewswire.com/news-releases/k2-space-raises-500m-series-d-at-6-8b-valuation-to-scale-large-high-power-satellites-302838793.html"
+      },
+      {
+        "name": "Thrive Holdings",
+        "sector": "ai-applications",
+        "subsector": null,
+        "note": "Holding company applying AI to traditional enterprises; $2B at $12B.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/"
+      },
+      {
+        "name": "Castelion",
+        "sector": "defense-tech",
+        "subsector": "defense-manufacturing",
+        "note": "Mass-produced hypersonic strike weapons; co-led $350M Series B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.prnewswire.com/news-releases/castelion-closes-350-million-series-b-to-mass-produce-us-hypersonic-weapons-302633732.html"
+      },
+      {
+        "name": "dbt Labs",
+        "sector": "ai-data",
+        "subsector": "data-platform",
+        "note": "Analytics engineering platform; led $222M Series D at $4.2B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.prnewswire.com/news-releases/dbt-labs-raises-222m-in-series-d-funding-at-4-2b-valuation-led-by-altimeter-with-participation-from-databricks-and-snowflake-301489733.html"
+      },
+      {
+        "name": "ClickHouse",
+        "sector": "ai-data",
+        "subsector": "data-platform",
+        "note": "High-speed analytical database; co-led $250M Series B at $2B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-17",
+        "source_url": "https://clickhouse.com/blog/click-house-raises-a-250m-series-b-at-a-2b-valuationand-we-are-hiring"
+      },
+      {
+        "name": "Plaid",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Bank-account connectivity for fintech; led $425M Series D at $13.4B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-17",
+        "source_url": "https://techcrunch.com/2021/04/07/plaid-raises-425m-series-d-from-altimeter-as-it-charts-a-post-visa-future/"
+      },
+      {
+        "name": "Hammerspace",
+        "sector": "ai-data",
+        "subsector": "data-platform",
+        "note": "Unstructured-data file system for AI workloads; $100M at $500M+.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://techcrunch.com/2025/04/16/hammerspace-an-unstructured-data-wrangler-100m/"
+      },
+      {
+        "name": "Benchling",
+        "sector": "ai-applications",
+        "subsector": null,
+        "note": "R&D cloud for biotechnology; co-led $100M Series F at $6.1B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.prnewswire.com/news-releases/benchling-raises-100m-in-series-f-financing-co-led-by-altimeter-and-franklin-templeton-301428052.html"
+      },
+      {
+        "name": "Parloa",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Conversational AI for customer service; led $66M Series B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-17",
+        "source_url": "https://techcrunch.com/2024/04/24/parloa-a-conversational-ai-platform-for-customer-service-raises-66m/"
+      }
+    ]
+  },
+  {
+    "entity": "Blackstone",
+    "portfolio_url": null,
+    "holdings_count": 53,
+    "as_of": "2026-08-17",
+    "holdings": [
+      {
+        "name": "QTS Data Centers",
+        "sector": "datacenters",
+        "subsector": "hyperscale-campus",
+        "note": "US hyperscale data center platform; Blackstone's flagship AI/DC asset (~$10B, 2021).",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.datacenterfrontier.com/energy/article/55321638/inside-blackstones-electrification-push-from-shermco-to-the-power-backbone-of-ai-data-centers"
+      },
+      {
+        "name": "AirTrunk",
+        "sector": "datacenters",
+        "subsector": "hyperscale-campus",
+        "note": "APAC hyperscale data center operator (~$24B, 2024).",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.datacenterfrontier.com/energy/article/55321638/inside-blackstones-electrification-push-from-shermco-to-the-power-backbone-of-ai-data-centers"
+      },
+      {
+        "name": "Copeland",
+        "sector": "power-energy",
+        "subsector": null,
+        "note": "HVACR compressors/controls carved out of Emerson; 60% at $14.0B.",
+        "stake": "60%",
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.privateequitywire.co.uk/blackstone-completes-acquisition-majority-stake-copeland-14bn-valuation/"
+      },
+      {
+        "name": "Safe Harbor Marinas",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Largest US marina operator, 138 marinas; $5.65B majority.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://markets.financialcontent.com/wral/article/marketminute-2026-2-5-blackstone-secures-the-blue-economy-with-565-billion-safe-harbor-acquisition"
+      },
+      {
+        "name": "TXNM Energy",
+        "sector": "power-energy",
+        "subsector": null,
+        "note": "NM/TX utility holdco (PNM, TNMP), 800k+ customers; pending take-private.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.prnewswire.com/news-releases/texas-commission-approves-txnm-energy-acquisition-by-blackstone-infrastructure-302681501.html"
+      },
+      {
+        "name": "Invenergy Renewables",
+        "sector": "power-energy",
+        "subsector": null,
+        "note": "Largest private renewable developer in North America; ~$4B minority.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.prnewswire.com/news-releases/invenergy-announces-1-billion-follow-on-investment-from-blackstone-infrastructure-partners-301856230.html"
+      },
+      {
+        "name": "Legence",
+        "sector": "power-energy",
+        "subsector": null,
+        "note": "Engineering/HVAC services; data centers ~40% of pipeline; IPO at ~$2.95B.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://finance.yahoo.com/news/blackstone-backed-legence-targets-nearly-110423559.html"
+      },
+      {
+        "name": "VoltaGrid",
+        "sector": "power-energy",
+        "subsector": "baseload-generation",
+        "note": "Behind-the-meter generation for data centers; $1.0B equity.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.publicpower.org/periodical/article/voltagrid-announces-1-billion-investment-blackstone-halliburton-deploy-btm-generation-data-centers"
+      },
+      {
+        "name": "Shermco Industries",
+        "sector": "power-energy",
+        "subsector": null,
+        "note": "Electrical testing/commissioning for data centers and utilities; ~$1.6B.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.datacenterfrontier.com/energy/article/55321638/inside-blackstones-electrification-push-from-shermco-to-the-power-backbone-of-ai-data-centers"
+      },
+      {
+        "name": "Champions Group",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Residential and live-event essential home services; ~$2.5B majority.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-2-19-blackstone-acquires-champions-group-for-25-billion-in-major-sports-and-live-events-expansion"
+      },
+      {
+        "name": "Advanced Cooling Technologies",
+        "sector": "power-energy",
+        "subsector": null,
+        "note": "Two-phase liquid cooling and thermal management; majority stake.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.stocktitan.net/news/BX/blackstone-energy-transition-partners-announces-agreement-to-acquire-u6bca90mukwy.html"
+      },
+      {
+        "name": "Arlington Industries",
+        "sector": "power-energy",
+        "subsector": null,
+        "note": "Electrical fittings/enclosures for commercial and data center use.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://finance.yahoo.com/news/blackstone-announces-agreement-acquire-arlington-133000796.html"
+      },
+      {
+        "name": "Trystar",
+        "sector": "power-energy",
+        "subsector": null,
+        "note": "Backup/critical electrical power equipment for data centers.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.esgtoday.com/blackstone-energy-transition-partners-acquires-power-solutions-provider-trystar/"
+      },
+      {
+        "name": "Lumina CloudInfra",
+        "sector": "datacenters",
+        "subsector": "hyperscale-campus",
+        "note": "Blackstone-founded India DC platform, 600MW pipeline; sold into AirTrunk.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.mingtiandi.com/real-estate/data-centres/airtrunk-enters-india-with-buy-of-blackstones-lumina-cloudinfra/"
+      }
+    ]
+  },
+  {
+    "entity": "Apollo",
+    "portfolio_url": null,
+    "holdings_count": 190,
+    "as_of": "2026-08-17",
+    "holdings": [
+      {
+        "name": "Athene",
+        "sector": "private-credit",
+        "subsector": null,
+        "note": "Apollo's retirement services / annuities subsidiary; core balance sheet.",
+        "stake": "wholly owned",
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://ir.apollo.com/news-events/press-releases/detail/39/apollo-completes-merger-with-athene-and-finalizes-key"
+      },
+      {
+        "name": "Univar Solutions",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Global specialty chemicals distributor; $8.1B incl. debt.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.paulweiss.com/insights/client-news/apollo-funds-complete-acquisition-of-univar-solutions-in-81-billion-deal"
+      },
+      {
+        "name": "Tenneco",
+        "sector": "ev-automotive",
+        "subsector": null,
+        "note": "Automotive OEM and aftermarket parts, ~$18B revenue; $7.1B.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://ir.apollo.com/news-events/press-releases/detail/417/apollo-funds-complete-acquisition-of-tenneco"
+      },
+      {
+        "name": "IGT (Gaming + Everi)",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Global gaming and gaming-fintech platform; ~$6.3B all-cash.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.apollo.com/insights-news/pressreleases/2025/07/apollo-funds-complete-acquisitions-of-international-game-technology-s-gaming-digital-business-and-everi-combined-enterprise-to-operate-as-igt-3108340"
+      },
+      {
+        "name": "Valor Compute Infrastructure (xAI)",
+        "sector": "neocloud",
+        "subsector": "gpu-cloud-financing",
+        "note": "Fund owning NVIDIA GB200 GPUs leased to xAI; $3.5B capital solution on a $5.4B deal.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://ir.apollo.com/news-events/press-releases/detail/599/apollo-backs-5-4-billion-valor-and-xai-data-center-compute"
+      },
+      {
+        "name": "Stream Data Centers",
+        "sector": "datacenters",
+        "subsector": "hyperscale-campus",
+        "note": "Hyperscale data center developer, 4+ GW pipeline; majority interest.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.apollo.com/insights-news/pressreleases/2025/11/apollo-funds-complete-acquisition-of-stream-data-centers-3179224"
+      },
+      {
+        "name": "Arconic",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Value-added aluminum rolled and engineered products; ~$5.2B EV.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://finance.yahoo.com/news/arconic-announces-finalization-sale-apollo-221800729.html"
+      },
+      {
+        "name": "Atlas Air Worldwide",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Global outsourced air cargo; largest 747 freighter fleet.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://ir.apollo.com/news-events/press-releases/detail/435/investor-group-led-by-apollo-together-with-j-f-lehman"
+      },
+      {
+        "name": "Yahoo",
+        "sector": "ai-applications",
+        "subsector": null,
+        "note": "Global internet media and technology company; ~90%.",
+        "stake": "~90%",
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://ir.apollo.com/news-events/press-releases/detail/67/apollo-funds-complete-acquisition-of-yahoo"
+      },
+      {
+        "name": "Rackspace Technology",
+        "sector": "cloud-hyperscale",
+        "subsector": null,
+        "note": "Multicloud managed services provider; 129.6M shares, 52.0%.",
+        "stake": "52.0%",
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.stocktitan.net/sec-filings/RXT/schedule-13g-a-rackspace-technology-inc-amended-passive-investment-di-af6597a72b6a.html"
+      },
+      {
+        "name": "TierPoint",
+        "sector": "datacenters",
+        "subsector": "colocation",
+        "note": "US data center operator, ~40 facilities in 18 markets (via Argo).",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.datacenterfrontier.com/colocation/article/55288634/tracking-apollos-growing-presence-in-digital-infrastructure-and-data-center-investments"
+      },
+      {
+        "name": "STACK Infrastructure EMEA",
+        "sector": "datacenters",
+        "subsector": "colocation",
+        "note": "Seven European data centers (Stockholm, Oslo, Copenhagen, Milan, Geneva).",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.datacenterfrontier.com/colocation/article/55288634/tracking-apollos-growing-presence-in-digital-infrastructure-and-data-center-investments"
+      },
+      {
+        "name": "Barnes Group",
+        "sector": "defense-tech",
+        "subsector": null,
+        "note": "Aerospace and industrial engineered products; ~$3.6B.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://www.stocktitan.net/news/APO/apollo-funds-complete-acquisition-of-barnes-wcw0xmwogpas.html"
+      },
+      {
+        "name": "Bridge Investment Group",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Real estate alternative asset manager, ~$50B AUM.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://ir.apollo.com/news-events/press-releases/detail/575/apollo-completes-acquisition-of-bridge-investment-group"
+      },
+      {
+        "name": "Argo Infrastructure Partners",
+        "sector": "private-credit",
+        "subsector": null,
+        "note": "Mid-market infrastructure asset manager, ~$6B AUM.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-17",
+        "source_url": "https://ir.apollo.com/news-events/press-releases/detail/533/apollo-to-acquire-argo-infrastructure-partners"
+      }
+    ]
+  }
+]
