@@ -19,38 +19,41 @@ This repo is the **autonomous research engine**. It is fully separate from the d
 Capital Flow/
 ├── db/
 │   ├── schema.sql        # weekly schema: events, allocators, beneficiaries, themes
-│   ├── schema_eco.sql    # monthly schema: eco_nodes / edges / evidence / scores / cycles
+│   ├── schema_nveco.sql  # monthly schema: nveco_entity / edge / source / cycle …
 │   └── capital.db        # SQLite master DB — BOTH pipelines (shared entity identity)
 ├── config/
 │   ├── allocators.yaml   # watchlist: 6 allocator classes, who each weekly agent tracks
 │   ├── aliases.yaml      # entity resolution — shared by both pipelines
 │   ├── sources.yaml      # Tier 1-5 source registry
 │   ├── rules.yaml        # weekly signal rules
-│   ├── eco_layers.yaml   # the 12-layer stack + sectors + tech nodes (FROZEN taxonomy)
-│   ├── eco_watchlist.yaml# anchors, emerging names, capital spine, agent -> layer map
-│   └── eco_rules.yaml    # criticality rubric, source tiers, thresholds, R1-R5
+│   ├── nveco_layers.yaml # 16 layers + sectors + tech nodes (FROZEN taxonomy)
+│   ├── nveco_edges.yaml  # 31 edge types -> 5 spines (FROZEN taxonomy)
+│   ├── nveco_anchors.yaml# anchor registry — the centre of each ecosystem
+│   └── nveco_watchlist.yaml # seed entities per agent
 ├── agents/               # Claude Code research agent briefs (the autonomous layer)
 │   ├── CONTEXT.md        # shared context for the WEEKLY agents
 │   ├── corporate.md  vc.md  individuals.md  alt-managers.md  sovereigns.md  filings.md
-│   ├── eco-CONTEXT.md    # shared context for the MONTHLY ecosystem agents
-│   ├── eco-silicon.md  eco-systems.md  eco-power.md  eco-infra.md  eco-models.md
-│   └── eco-capital.md    # the cross-cutting ownership / financing spine
+│   ├── nveco-CONTEXT.md  # shared context for the MONTHLY ecosystem agents
+│   ├── nveco-geo.md  nveco-silicon.md  nveco-systems.md  nveco-power.md
+│   ├── nveco-software.md  nveco-models.md  nveco-capital.md
+│   └── nveco-strategic.md # runs LAST; finds cycles, moats, hedges — no new entities
 ├── engine/               # Python — the deterministic layer
 │   ├── ingest.py         # weekly: agent CSVs -> validate -> dedupe -> SQLite
 │   ├── themes.py  beneficiaries.py  report.py  handoff.py      # weekly
-│   ├── eco.py            # monthly: shared vocabulary + slug identity
-│   └── eco_ingest.py  eco_verify.py  eco_score.py  eco_cycles.py  eco_handoff.py
+│   ├── nveco.py          # monthly: shared vocabulary + stable ids
+│   └── nveco_ingest.py  nveco_verify.py  nveco_score.py  nveco_cycles.py  nveco_handoff.py
 ├── tools/
-│   └── eco_validate.py   # asserts handoff/ecosystem_map.json against the frozen contract
+│   └── nveco_corrupt_test.py # proves the handoff validator rejects broken files
 ├── runs/                 # per-period raw agent outputs, kept as the audit trail
 │   ├── 2026-W32/<agent>/    verified_events.csv, candidate_events.csv, source_log.csv
-│   └── 2026-08/eco-<agent>/ nodes.csv, edges.csv, source_log.csv, summary.md
-│                            (+ runs/<month>/rejects.csv — fed back to agents next run)
+│   └── 2026-08/nveco-<agent>/ entities.csv, factors.csv, edges.csv, sources.csv
+│                            (+ runs/<month>/_rejected/ — fed back to agents next run)
 ├── handoff/              # what the dashboard side consumes
-│   ├── capital_map.json  ECOSYSTEM-CHANGELOG.md  ecosystem_map.json
-│   └── ECOSYSTEM-BUILD-LOG.md   # decisions, deviations, what did not add up
+│   ├── capital_map.json  nvidia_ecosystem.json  ECOSYSTEM-V2-CHANGELOG.md
+│   └── NVIDIA-ECOSYSTEM-BUILD-LOG.md  # decisions, deviations, what did not add up
+├── archive/ecosystem-v1/ # the retired 12-layer supply-chain map, frozen 2026-08-18
 ├── run_week.py           # WEEKLY orchestrator: flows map
-└── run_month.py          # MONTHLY orchestrator: ecosystem map
+└── run_nvidia.py         # MONTHLY orchestrator: NVIDIA ecosystem map
 ```
 
 ## Two pipelines, one database
@@ -58,47 +61,55 @@ The repo runs **two** pipelines against the same `db/capital.db`, because entity
 is shared — NVIDIA has to be one NVIDIA on both maps, and that is what `config/aliases.yaml`
 + `entity_aliases` guarantee.
 
-| | Weekly — **Потоки** | Monthly — **Экосистема** |
+| | Weekly — **Потоки** | Monthly — **Экосистема NVIDIA** |
 |---|---|---|
-| Question | Where did money go this week | How is the industry built, who holds it |
+| Question | Where did money go this week | Who makes NVIDIA irreplaceable, who is locked into its orbit, who gates it, what does it hedge with |
 | Unit | A dated capital-allocation **event** | An undated standing **dependency** |
-| Node | Allocator / target | **Company** in a layer of the stack |
-| Node size | Capital | **Criticality** (4-factor rubric) |
-| Tables | `events`, `allocators`, … | `eco_*` (schema in `db/schema_eco.sql`) |
-| Agents | 6 by allocator class (`agents/*.md`) | 6 by stack layer (`agents/eco-*.md`) |
-| Orchestrator | `run_week.py` | `run_month.py` |
-| Handoff | `handoff/capital_map.json` | `handoff/ecosystem_map.json` |
+| Node | Allocator / target | **Entity** in the orbit of an anchor |
+| Node size | Capital | **Criticality** (4-factor rubric, 0–100 each) |
+| Centre | none | **anchor** — nothing further than 2 hops from it exists |
+| Tables | `events`, `allocators`, … | `nveco_*` (schema in `db/schema_nveco.sql`) |
+| Agents | 6 by allocator class (`agents/*.md`) | 8 by stack layer (`agents/nveco-*.md`) |
+| Orchestrator | `run_week.py` | `run_nvidia.py` |
+| Handoff | `handoff/capital_map.json` | `handoff/nvidia_ecosystem.json` |
 
 Shared: entity resolution, the source registry, the `runs/<period>/<agent>/` pattern, the
 handoff pattern. Separate: tables, agents, rules, schedule. On the dashboard they are two
 unconnected maps sharing only the shell.
 
-## Monthly pipeline (ecosystem map)
+## Monthly pipeline (NVIDIA ecosystem map, v2)
 ```
-6 agents (agents/eco-*.md) -> runs/<YYYY-MM>/eco-*/{nodes,edges,source_log}.csv
-  -> engine/eco_ingest.py   validate, resolve names to permanent slugs, dedupe, load
-                            (rejects -> runs/<month>/rejects.csv, handed back next month)
-  -> engine/eco_verify.py   re-fetch EVERY citation, look for its own quote, expire the dead
-  -> engine/eco_score.py    criticality rubric, gravity, per-layer HHI + concentration
-  -> engine/eco_cycles.py   closed loops of length 3–5, sales vs financing
-  -> engine/eco_handoff.py  handoff/ecosystem_map.json + handoff/ECOSYSTEM-CHANGELOG.md
+8 agents (agents/nveco-*.md) -> runs/<YYYY-MM>/nveco-*/{entities,factors,edges,sources}.csv
+  -> engine/nveco_ingest.py   validate against the frozen configs, resolve ids, 2-hop rule
+                              (rejects -> runs/<month>/_rejected/<agent>.csv)
+  -> engine/nveco_verify.py   re-fetch EVERY link; a dead one costs the edge a confirmation
+  -> engine/nveco_score.py    rubric, spine from type, status from tiers, gravity, HHI, clamps
+  -> engine/nveco_cycles.py   closed loops 3–5 long: sales / financing / lockin
+  -> engine/nveco_score.py    again — gravity counts the cycles an entity stands on
+  -> engine/nveco_handoff.py  handoff/nvidia_ecosystem.json + ECOSYSTEM-V2-CHANGELOG.md
 ```
-Validate the output against the frozen contract with `python tools/eco_validate.py`.
+Prove the validator still bites with `python tools/nveco_corrupt_test.py`.
 
-**The load-bearing rule:** an edge exists only if a **verbatim quote** from a resolved
-document states the relationship. Evidence is its own table (`eco_evidence`, many rows per
-edge), which is where the two-source rule, the effective source tier and the monthly
-liveness recheck all come from for free. `eco_verify` re-fetches every URL each month, so
-the map shows its own decay rather than quietly going stale.
+**The map has a centre.** `anchor` (`config/nveco_anchors.yaml`) is the question the map
+answers. An entity more than 2 hops from it is rejected at ingest with a reason — that is
+the line between "NVIDIA's orbit" and "the world semiconductor industry". A second anchor
+costs one config entry and one run; nothing else in the engine is anchor-aware.
 
-**Criticality is not a judgement call:** agents supply four 0–5 factors with a sourced
-`share_note`; `eco_score` does the arithmetic (`config/eco_rules.yaml` holds the weights).
-ASML 5/5/5/5 → 100; a commodity ODM 2/1/1/1 → 26.
+**Five spines, not two.** `physical` · `capital` · `moat` · `control` · `rivalry`. A moat
+and a gate are not kinds of supply and not kinds of money — they are separate mechanics of
+power, and they must not read in one colour with a delivery. The spine is DERIVED from the
+edge type (`config/nveco_edges.yaml`); neither the agent nor the dashboard computes it.
 
-**Cycles are searched in the MONEY direction.** Edges are stored supplier → consumer, so
-`eco_cycles` reverses the physical spine before searching: NVIDIA funds OpenAI, OpenAI pays
-CoreWeave, CoreWeave pays NVIDIA. In goods direction those three edges are a chain and
-nothing closes.
+**The iron rule:** an edge exists only if a verbatim quote of **15 words or fewer** from a
+resolved document states the relationship. Sources for entities and edges live in one
+table, so `nveco_verify` walks every link in a single pass.
+
+**Nothing is written unless it validates.** `nveco_handoff` runs the contract's hard rules
+before writing and refuses to overwrite a good file with a broken one — yesterday's truth
+beats today's lie.
+
+**No DC-AI references.** The map carries its own taxonomy; the field `dcNode` does not
+exist and the validator rejects a payload that reintroduces it.
 
 ## Weekly pipeline
 Scheduler → 6 research agents (CSV outputs into `runs/<week>/`) → `ingest.py` validates into

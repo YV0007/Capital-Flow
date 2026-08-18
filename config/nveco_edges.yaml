@@ -1,0 +1,235 @@
+# Экосистема NVIDIA — таксономия связей. ЗАМОРОЖЕНА.
+#
+# 31 тип на пяти хребтах. ЕДИНСТВЕННОЕ место, где живут типы связей: `spine` выводится
+# отсюда движком и пишется в файл, дашборд его только красит.
+#
+# Почему пять хребтов, а не два. В v1 их было два — «физика» и «капитал», и этого хватало,
+# пока карта отвечала на вопрос «кто кому поставляет». Здесь вопрос другой: «кто кого
+# делает дороже, кто заперт, кто чем хеджируется». Ров (moat) и шлюз (control) — это не
+# разновидности поставки и не разновидности денег, а отдельные механики власти, и одним
+# цветом с поставкой читаться не должны.
+#
+# verb — русский глагол для подписи на ребре («поставляет»).
+# label — как связь называется в панели («Поставка компонентов»).
+# default_direction — что ставит движок, если агент оставил колонку пустой.
+
+spines:
+  physical: { label: "Физика",     note: "Что физически движется и что кем собрано" }
+  capital:  { label: "Капитал",    note: "Кто платит и кто владеет" }
+  moat:     { label: "Ров",        note: "Что запирает и что доказывает спрос" }
+  control:  { label: "Шлюз",       note: "Кто шлюзует доступ" }
+  rivalry:  { label: "Соперничество", note: "Кто откусывает" }
+
+types:
+  # ── physical ───────────────────────────────────────────────────────────────
+  manufactures:
+    spine: physical
+    verb: "производит для"
+    label: "Производство"
+    default_direction: upstream
+    note: "Фабрика физически изготавливает чип для разработчика без своих фабрик."
+  supplies:
+    spine: physical
+    verb: "поставляет"
+    label: "Поставка"
+    default_direction: upstream
+    note: "Поставщик отдаёт материал или компонент покупателю."
+  packages:
+    spine: physical
+    verb: "упаковывает"
+    label: "Упаковка кристаллов"
+    default_direction: upstream
+    note: "Подрядчик собирает кристаллы в готовый корпус."
+  integrates:
+    spine: physical
+    verb: "собирает"
+    label: "Сборка систем"
+    default_direction: downstream
+    note: "Интегратор собирает готовую систему из чужих компонентов."
+  delivers_to:
+    spine: physical
+    verb: "доставляет"
+    label: "Логистика"
+    default_direction: downstream
+    note: "Физическая доставка готового продукта."
+  enables:
+    spine: physical
+    verb: "делает возможным"
+    label: "Даёт возможность"
+    default_direction: bidirectional
+    note: "Без первого бизнес второго не работает вовсе."
+  co_designs:
+    spine: physical
+    verb: "проектирует вместе с"
+    label: "Совместная разработка"
+    default_direction: bidirectional
+    note: "Обе стороны улучшают друг друга общей инженерией."
+  optimizes_for:
+    spine: physical
+    verb: "заточен под"
+    label: "Заточка под платформу"
+    default_direction: downstream
+    note: "Продукт спроектирован именно под требования другого."
+
+  # ── capital ────────────────────────────────────────────────────────────────
+  invests_in:
+    spine: capital
+    verb: "вкладывается в"
+    label: "Инвестиция"
+    default_direction: downstream
+    note: "Деньги даются по стратегическим причинам, а не только ради доходности."
+  funded_by:
+    spine: capital
+    verb: "получает деньги от"
+    label: "Финансирование"
+    default_direction: upstream
+    note: "Обратная сторона инвестиции: кто кого содержит."
+  board_seat:
+    spine: capital
+    verb: "имеет место в совете"
+    label: "Место в совете"
+    default_direction: downstream
+    note: "Формальное влияние на управление."
+  strategic_partner:
+    spine: capital
+    verb: "стратегический партнёр"
+    label: "Стратегическое партнёрство"
+    default_direction: bidirectional
+    note: "Оформленное соглашение без обязательной доли в капитале."
+  hedges_against:
+    spine: capital
+    verb: "страхуется через"
+    label: "Хедж"
+    default_direction: downstream
+    note: "Вложение делается, чтобы снизить риск от кого-то ТРЕТЬЕГО. Против кого именно — в risk_mitigation."
+  diversifies_supply:
+    spine: capital
+    verb: "держит как запасной вариант"
+    label: "Второй источник"
+    default_direction: upstream
+    note: "Запасной поставщик на случай отказа основного."
+  customer_of:
+    spine: capital
+    verb: "покупает у"
+    label: "Закупка"
+    default_direction: upstream
+    note: "Обычная сделка купли-продажи. Отдельно от validates_demand: это деньги, а не доказательство."
+
+  # ── moat ───────────────────────────────────────────────────────────────────
+  validates_demand:
+    spine: moat
+    verb: "доказывает спрос на"
+    label: "Доказательство спроса"
+    default_direction: downstream
+    note: "Само существование покупателя доказывает, что продукт необходим. Это не закупка."
+  proves_roi:
+    spine: moat
+    verb: "доказывает окупаемость"
+    label: "Доказательство окупаемости"
+    default_direction: downstream
+    note: "Показывает, что на этом можно зарабатывать, а не только тратить."
+  proves_use_case:
+    spine: moat
+    verb: "показывает применение"
+    label: "Референсное применение"
+    default_direction: downstream
+    note: "Эталонная реализация, на которую ссылаются остальные."
+  locks_in_developers:
+    spine: moat
+    verb: "запирает разработчиков"
+    label: "Замок на разработчиках"
+    default_direction: bidirectional
+    note: "Люди пишут код под эту среду и не могут уйти без переписывания."
+  locks_in_platforms:
+    spine: moat
+    verb: "запирает платформы"
+    label: "Замок на платформах"
+    default_direction: bidirectional
+    note: "Платформа зависит сразу на нескольких слоях и уйти целиком не может."
+  path_dependent_on:
+    spine: moat
+    verb: "развивается вслед за"
+    label: "Зависимость траектории"
+    default_direction: upstream
+    note: "Развитие второго повторяет развитие первого."
+  standardizes_on:
+    spine: moat
+    verb: "стандартизуется на"
+    label: "Отраслевой стандарт"
+    default_direction: upstream
+    note: "Отрасль сходится на этом как на общем знаменателе."
+  sets_benchmark:
+    spine: moat
+    verb: "задаёт планку"
+    label: "Планка"
+    default_direction: downstream
+    note: "С этим сравнивают всех остальных."
+  defines_category:
+    spine: moat
+    verb: "определяет категорию"
+    label: "Определение категории"
+    default_direction: downstream
+    note: "Задаёт саму рамку, в которой отрасль думает о рынке."
+
+  # ── control ────────────────────────────────────────────────────────────────
+  controls_access_to:
+    spine: control
+    verb: "шлюзует доступ к"
+    label: "Контроль доступа"
+    default_direction: downstream
+    note: "Может закрыть доступ к рынку или поставке решением, а не сделкой."
+  subject_to_restriction:
+    spine: control
+    verb: "ограничен режимом"
+    label: "Под ограничением"
+    default_direction: upstream
+    note: "Сторона живёт под экспортным, импортным или инвестиционным ограничением."
+  export_controlled_by:
+    spine: control
+    verb: "экспортно подконтролен"
+    label: "Экспортный контроль"
+    default_direction: upstream
+    note: "Право юрисдикции определяет, куда товар можно продать."
+  geopolitically_dependent:
+    spine: control
+    verb: "геополитически зависит от"
+    label: "Геополитическая зависимость"
+    default_direction: upstream
+    note: "Цепочка уязвима к статусу конкретной территории."
+
+  # ── rivalry ────────────────────────────────────────────────────────────────
+  competes_with:
+    spine: rivalry
+    verb: "конкурирует с"
+    label: "Конкуренция"
+    default_direction: lateral
+    note: "Борются за один рынок и при этом остаются взаимозависимыми."
+  threatens:
+    spine: rivalry
+    verb: "подтачивает"
+    label: "Угроза позиции"
+    default_direction: downstream
+    note: "Успех одного прямо ослабляет позицию другого."
+  could_disrupt:
+    spine: rivalry
+    verb: "может вытеснить"
+    label: "Потенциальное вытеснение"
+    default_direction: downstream
+    note: "Может заместить при определённых условиях; условия — в note."
+
+# Классификация контуров по составу типов. Порядок проверки важен: moat сильнее
+# capital, capital сильнее physical — потому что замок объясняет контур лучше, чем
+# деньги, а деньги лучше, чем поставка.
+# Классификация контуров. Порядок проверки важен: замок объясняет контур лучше денег,
+# деньги лучше поставки.
+#
+# `customer_of` формально живёт на хребте capital (это сделка купли-продажи), но контур
+# из одних закупок — это контур СБЫТА, а не финансирования. Поэтому правило financing
+# исключает его явно: иначе любая цепочка «купил — перепродал — купил» называлась бы
+# финансовой, и разница между двумя моторами отрасли исчезла бы.
+cycle_classification:
+  fallback: sales
+  rules:
+    - { type: lockin,    if_any_spine: [moat] }
+    - { type: financing, if_any_spine: [capital], except_types: [customer_of] }
+    - { type: sales,     if_any_spine: [physical, control, rivalry, capital] }

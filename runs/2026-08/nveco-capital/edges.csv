@@ -1,0 +1,28 @@
+source,target,type,direction,strength,lock_in_depth,substitutability,is_reversible,risk_level,risk_type,risk_timeline,risk_mitigation,tech_node,formed,strengthened,note
+nvidia,nventures,funded_by,downstream,100,70,0,false,low,none,none,,,2022,,"Венчурное подразделение якоря: инструмент управления собственным риском, а не портфель ради доходности."
+nvidia,coreweave,hedges_against,downstream,85,65,20,true,medium,market,2-5y,Хедж против монополии облаков-гигантов на аренду вычислений: независимое облако должно выжить.,,2023,2025,"Вложения в независимое облако снижают риск того, что гиперскейлеры замкнут на себя весь рынок аренды ускорителей."
+nvidia,nebius,hedges_against,downstream,70,50,30,true,medium,market,2-5y,"Хедж против монополии гиперскейлеров, теперь в европейской юрисдикции.",,2024,,"Второе независимое облако в портфеле: тот же хедж, распространённый на другой рынок."
+nvidia,lambda,hedges_against,downstream,55,35,45,true,low,market,2-5y,Хедж против монополии гиперскейлеров на аренду ускорителей.,,2023,,Третье независимое облако: каждое следующее снижает долю гигантов в аренде вычислений.
+nvidia,crusoe,hedges_against,downstream,55,40,45,true,low,market,2-5y,Хедж против нехватки энергии как ограничителя спроса на ускорители.,,2023,,"Вложение в облако, строящее у источников энергии: снимает ограничение, которое иначе упрётся в спрос."
+nvidia,huggingface,hedges_against,downstream,65,55,35,true,medium,substitution,2-5y,Хедж против ухода экосистемы моделей на чужие ускорители.,,2023,,"Вложение в общий хаб моделей: если экосистема уйдёт на другое железо, ров якоря обесценится."
+nvidia,synopsys,invests_in,downstream,80,55,20,true,low,market,2-5y,,,2025,,"Частное размещение на 2 млрд долларов в компании, без софта которой якорь не может проектировать свои чипы."
+nvidia,openai,invests_in,downstream,90,75,15,true,medium,market,2-5y,"Вложение раскрывается по мере ввода мощностей, а не единовременно.",,2025,,"До 100 млрд долларов, разблокируемых по мере ввода каждого гигаватта — вложение в собственного крупнейшего покупателя."
+microsoft,openai,invests_in,downstream,90,75,15,true,medium,market,2-5y,,,2019,2025,Крупнейший инвестор лаборатории с правами на её интеллектуальную собственность и долей выручки.
+amazon,anthropic,invests_in,downstream,85,70,20,true,medium,market,2-5y,,,2023,2025,"Конвертируемые займы, часть которых превращена в неголосующие акции: облако финансирует собственного клиента."
+softbank,openai,invests_in,downstream,80,55,25,true,medium,market,2-5y,,,2025,,Держатель капитала и финансово ответственный партнёр стройки вычислений.
+mgx,openai,invests_in,downstream,65,45,35,true,medium,regulatory,2-5y,Сделки суверенного капитала проходят проверку CFIUS.,,2025,,Суверенный капитал Абу-Даби среди четырёх первоначальных держателей капитала стройки.
+oracle,openai,invests_in,downstream,70,50,30,true,medium,market,2-5y,,,2025,,Облако одновременно инвестор стройки и её подрядчик — это и делает контур замкнутым.
+softbank,oracle,strategic_partner,bidirectional,60,40,40,true,medium,market,2-5y,,,2025,,Два из четырёх держателей капитала одной стройки.
+mgx,softbank,strategic_partner,bidirectional,50,35,50,true,medium,regulatory,2-5y,,,2025,,Суверенный и частный капитал в одном консорциуме стройки.
+nvidia,softbank,strategic_partner,bidirectional,60,45,40,true,low,market,2-5y,,,2025,,"Якорь назван ключевым технологическим партнёром стройки, которую финансирует холдинг."
+nvidia,arm,strategic_partner,bidirectional,55,50,45,true,low,market,2-5y,,arm-isa,2020,2025,Оба названы ключевыми технологическими партнёрами одной стройки вычислений.
+sequoia,openai,invests_in,downstream,45,30,55,true,low,market,1-2y,,,2021,,"Венчурный капитал в лаборатории: деньги заменимы деньгами, ценность в доступе к сделке."
+thrive,openai,invests_in,downstream,50,30,50,true,low,market,1-2y,,,2024,,"Поздние раунды на миллиарды — узкий сегмент, но инвесторов в нём несколько."
+a16z,databricks,invests_in,downstream,40,25,60,true,low,market,1-2y,,,2019,,Венчурный капитал в платформе данных прикладного слоя.
+lightspeed,anthropic,invests_in,downstream,40,25,60,true,low,market,1-2y,,,2023,,Венчурный капитал во второй лаборатории.
+blackrock,microsoft,funded_by,downstream,45,35,55,true,low,market,2-5y,,,2024,,Инфраструктурный капитал финансирует площадки и энергию под облачные мощности.
+blackstone,digital-realty,invests_in,downstream,50,35,50,true,low,market,2-5y,,,2021,,"Управляющий капиталом владеет платформами площадок напрямую, а не долями в них."
+brookfield,crusoe,invests_in,downstream,45,35,55,true,low,market,2-5y,,,2024,,"Инфраструктурный капитал в облаке, строящем площадки у источников энергии."
+nvidia,nventures,board_seat,downstream,100,60,0,false,low,none,none,,,2022,,Собственная структура якоря: контроль полный по определению.
+nventures,huggingface,invests_in,downstream,60,45,40,true,low,market,1-2y,,,2023,,Венчурное подразделение якоря в общем хабе моделей.
+nventures,crusoe,invests_in,downstream,50,35,50,true,low,market,1-2y,,,2023,,Венчурное подразделение якоря в облаке у источников энергии.

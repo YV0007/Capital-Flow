@@ -1,0 +1,165 @@
+# Экосистема NVIDIA — стартовый список на прогон, по агентам.
+#
+# ЭТО ЗАТРАВКА, А НЕ ОТВЕТ. Список собран из §«NVIDIA Blueprint: Layer-by-Layer»
+# блюпринта и задаёт STEP 1 (BASELINE DISCOVERY). Агент ОБЯЗАН искать сверх него:
+# партнёрский директорий NVIDIA, каталог NVIDIA-Certified Systems, повестка GTC и
+# раздел про поставщиков в 10-K называют компании, которых здесь нет.
+#
+# id — постоянный slug сущности в файле передачи. Он пишется один раз и не меняется
+# никогда: переименование = потеря истории.
+# must — сущность обязательна к покрытию. Если после прогона её нет, это ДЫРА, а не
+# решение, и она попадает в журнал сборки.
+
+anchor: nvidia
+
+agents:
+
+  nveco-geo:
+    layers: [L0, L15]
+    target_entities: [10, 14]
+    seeds:
+      - { id: nvidia,     name: NVIDIA,             layer: L10, must: true, note: "Якорь. Заводится здесь, потому что geo читает 10-K первым." }
+      - { id: usa,        name: США,                layer: L0, must: true }
+      - { id: taiwan,     name: Тайвань,            layer: L0, must: true }
+      - { id: china,      name: Китай,              layer: L0, must: true }
+      - { id: netherlands, name: Нидерланды,        layer: L0, must: true }
+      - { id: south-korea, name: "Южная Корея",     layer: L0, must: true }
+      - { id: japan,      name: Япония,             layer: L0 }
+      - { id: eu,         name: "Европейский союз", layer: L0 }
+      - { id: singapore,  name: Сингапур,           layer: L0 }
+      - { id: bis,        name: "Bureau of Industry and Security", layer: L15, must: true }
+      - { id: cfius,      name: CFIUS,              layer: L15, must: true }
+      - { id: eu-ai-act,  name: "Регламент ЕС об ИИ", layer: L15 }
+      - { id: chips-act,  name: "CHIPS Act",        layer: L15 }
+      - { id: mlcommons,  name: MLCommons,          layer: L15 }
+
+  nveco-silicon:
+    layers: [L1, L2, L3, L4]
+    target_entities: [18, 24]
+    seeds:
+      - { id: asml,        name: ASML,               layer: L1, must: true }
+      - { id: applied-materials, name: "Applied Materials", layer: L1 }
+      - { id: lam-research, name: "Lam Research",     layer: L1 }
+      - { id: tokyo-electron, name: "Tokyo Electron", layer: L1 }
+      - { id: kla,         name: KLA,                 layer: L1 }
+      - { id: zeiss-smt,   name: "Carl Zeiss SMT",    layer: L1 }
+      - { id: shin-etsu,   name: "Shin-Etsu Chemical", layer: L1 }
+      - { id: synopsys,    name: Synopsys,            layer: L2, must: true }
+      - { id: cadence,     name: Cadence,             layer: L2, must: true }
+      - { id: arm,         name: Arm,                 layer: L2, must: true }
+      - { id: siemens-eda, name: "Siemens EDA",       layer: L2 }
+      - { id: tsmc,        name: TSMC,                layer: L3, must: true }
+      - { id: samsung,     name: Samsung,             layer: L3, must: true }
+      - { id: intel,       name: Intel,               layer: L3 }
+      - { id: ase,         name: "ASE Technology",    layer: L3 }
+      - { id: amkor,       name: "Amkor Technology",  layer: L3 }
+      - { id: sk-hynix,    name: "SK Hynix",          layer: L4, must: true }
+      - { id: micron,      name: Micron,              layer: L4, must: true }
+      - { id: kioxia,      name: Kioxia,              layer: L4 }
+      - { id: sandisk,     name: SanDisk,             layer: L4 }
+
+  nveco-systems:
+    layers: [L5, L8, L9]
+    target_entities: [16, 22]
+    seeds:
+      - { id: foxconn,     name: Foxconn,             layer: L5, must: true }
+      - { id: supermicro,  name: Supermicro,          layer: L5, must: true }
+      - { id: wistron,     name: Wistron,             layer: L5 }
+      - { id: quanta,      name: "Quanta Computer",   layer: L5 }
+      - { id: dell,        name: Dell,                layer: L5 }
+      - { id: hpe,         name: HPE,                 layer: L5 }
+      - { id: arista,      name: "Arista Networks",   layer: L8, must: true }
+      - { id: broadcom,    name: Broadcom,            layer: L8, must: true }
+      - { id: marvell,     name: Marvell,             layer: L8 }
+      - { id: astera-labs, name: "Astera Labs",       layer: L8 }
+      - { id: credo,       name: "Credo Technology",  layer: L8 }
+      - { id: coherent,    name: Coherent,            layer: L8 }
+      - { id: fabrinet,    name: Fabrinet,            layer: L8 }
+      - { id: cisco,       name: Cisco,               layer: L8 }
+      - { id: microsoft,   name: Microsoft,           layer: L9, must: true }
+      - { id: amazon,      name: Amazon,              layer: L9, must: true }
+      - { id: google,      name: Google,              layer: L9, must: true }
+      - { id: oracle,      name: Oracle,              layer: L9 }
+      - { id: coreweave,   name: CoreWeave,           layer: L9, must: true }
+      - { id: nebius,      name: Nebius,              layer: L9, must: true }
+      - { id: lambda,      name: "Lambda Labs",       layer: L9 }
+      - { id: crusoe,      name: Crusoe,              layer: L9 }
+      - { id: equinix,     name: Equinix,             layer: L9 }
+      - { id: digital-realty, name: "Digital Realty", layer: L9 }
+
+  nveco-power:
+    layers: [L6, L7]
+    target_entities: [10, 14]
+    seeds:
+      - { id: eaton,       name: Eaton,               layer: L6, must: true }
+      - { id: schneider,   name: "Schneider Electric", layer: L6 }
+      - { id: ge-vernova,  name: "GE Vernova",        layer: L6 }
+      - { id: siemens-energy, name: "Siemens Energy", layer: L6 }
+      - { id: delta-electronics, name: "Delta Electronics", layer: L6 }
+      - { id: constellation, name: "Constellation Energy", layer: L6 }
+      - { id: bloom-energy, name: "Bloom Energy",     layer: L6 }
+      - { id: brookfield,  name: Brookfield,          layer: L6 }
+      - { id: vertiv,      name: Vertiv,              layer: L7, must: true }
+      - { id: nvent,       name: nVent,               layer: L7 }
+      - { id: boyd,        name: "Boyd Corporation",  layer: L7 }
+      - { id: lite-on,     name: "LiteOn Technology", layer: L7 }
+
+  nveco-software:
+    layers: [L10, L11]
+    target_entities: [12, 16]
+    seeds:
+      - { id: cuda,        name: CUDA,                layer: L10, must: true }
+      - { id: pytorch,     name: PyTorch,             layer: L10, must: true }
+      - { id: jax,         name: JAX,                 layer: L10 }
+      - { id: triton,      name: "OpenAI Triton",     layer: L10 }
+      - { id: tensorrt,    name: TensorRT,            layer: L10 }
+      - { id: nccl,        name: NCCL,                layer: L10 }
+      - { id: vllm,        name: vLLM,                layer: L11, must: true }
+      - { id: ray,         name: "Ray / Anyscale",    layer: L11 }
+      - { id: kubernetes,  name: Kubernetes,          layer: L11 }
+      - { id: huggingface, name: "Hugging Face",      layer: L11, must: true }
+      - { id: sglang,      name: SGLang,              layer: L11 }
+      - { id: nim,         name: "NVIDIA NIM",        layer: L11 }
+
+  nveco-models:
+    layers: [L12, L13]
+    target_entities: [14, 18]
+    seeds:
+      - { id: openai,      name: OpenAI,              layer: L12, must: true }
+      - { id: anthropic,   name: Anthropic,           layer: L12, must: true }
+      - { id: meta,        name: Meta,                layer: L12, must: true }
+      - { id: xai,         name: xAI,                 layer: L12, must: true }
+      - { id: mistral,     name: "Mistral AI",        layer: L12 }
+      - { id: deepseek,    name: DeepSeek,            layer: L12 }
+      - { id: google-deepmind, name: "Google DeepMind", layer: L12 }
+      - { id: databricks,  name: Databricks,          layer: L13, must: true }
+      - { id: servicenow,  name: ServiceNow,          layer: L13 }
+      - { id: salesforce,  name: Salesforce,          layer: L13 }
+      - { id: snowflake,   name: Snowflake,           layer: L13 }
+      - { id: recursion,   name: "Recursion Pharmaceuticals", layer: L13 }
+      - { id: siemens,     name: Siemens,             layer: L13 }
+      - { id: schrodinger, name: "Schrödinger",       layer: L13 }
+
+  nveco-capital:
+    layers: [L14]
+    target_entities: [10, 14]
+    seeds:
+      - { id: nventures,   name: "NVIDIA Ventures (NVentures)", layer: L14, must: true }
+      - { id: softbank,    name: SoftBank,            layer: L14 }
+      - { id: mgx,         name: MGX,                 layer: L14 }
+      - { id: sequoia,     name: "Sequoia Capital",   layer: L14 }
+      - { id: a16z,        name: "Andreessen Horowitz", layer: L14 }
+      - { id: blackrock,   name: BlackRock,           layer: L14 }
+      - { id: blackstone,  name: Blackstone,          layer: L14 }
+      - { id: thrive,      name: "Thrive Capital",    layer: L14 }
+      - { id: lightspeed,  name: "Lightspeed Venture Partners", layer: L14 }
+      - { id: index-ventures, name: "Index Ventures", layer: L14 }
+
+  # Восьмой агент. Запускается ПОСЛЕ остальных семи и новых сущностей НЕ ищет.
+  nveco-strategic:
+    layers: ["*"]
+    target_entities: null
+    seeds: []
+    mandate: >
+      Контуры, которые не видит ни один слоевой агент, рвы, хеджи и список дыр
+      на следующий месяц. Ставит межслойные рёбра хребтов moat и rivalry.

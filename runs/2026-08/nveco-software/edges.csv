@@ -1,0 +1,28 @@
+source,target,type,direction,strength,lock_in_depth,substitutability,is_reversible,risk_level,risk_type,risk_timeline,risk_mitigation,tech_node,formed,strengthened,note
+nvidia,cuda,enables,downstream,100,95,0,false,low,none,none,,nvlink,2006,,Среда программирования — собственный продукт якоря и его главный ров: она входит в каждую поставку.
+cuda,pytorch,locks_in_developers,bidirectional,95,95,5,false,high,substitution,5y+,Открытые компиляторы и переносимые слои постепенно ослабляют привязку.,,2016,2020,Библиотека обучения собирается под эту среду и без неё на ускорителях не работает. Обратно: массовость библиотеки доказывает ценность среды.
+pytorch,cuda,path_dependent_on,upstream,90,90,10,false,high,substitution,5y+,"Поддержка чужих ускорителей развивается, но отстаёт.",,2016,,"Возможности библиотеки появляются вслед за возможностями среды: сначала там, потом везде."
+cuda,nvidia,locks_in_platforms,bidirectional,95,95,5,false,high,substitution,5y+,Открытие части стека снижает риск отторжения.,,2006,2016,Среда работает только на ускорителях якоря: уход с них означает переписывание кода отрасли.
+pytorch,nvidia,validates_demand,downstream,90,85,15,false,medium,substitution,2-5y,"Библиотека поддерживает и чужие ускорители, но хуже.",,2016,2020,"Библиотека, в которой написано большинство исследований, ускоряется прежде всего на его железе — это и доказывает необходимость."
+meta,pytorch,funded_by,downstream,80,60,20,true,low,market,5y+,,,2016,2022,Библиотеку создала компания-покупатель ускорителей и передала независимому фонду.
+jax,cuda,path_dependent_on,upstream,60,55,40,true,medium,substitution,2-5y,,,2018,,"Вторая библиотека обучения тоже работает через эту среду, хотя развивается вокруг чужого ускорителя."
+jax,pytorch,competes_with,lateral,60,50,40,true,medium,substitution,2-5y,,,2018,,Вторая половина дуополии библиотек обучения; экосистема заметно меньше.
+jax,google,funded_by,upstream,70,50,30,true,low,market,2-5y,,,2018,,"Библиотеку ведёт компания, у которой есть и своё облако, и свой ускоритель."
+triton,cuda,could_disrupt,downstream,50,55,50,true,medium,substitution,2-5y,"Компилятор пока работает лучше всего на той же среде, которую должен заменить.",,2021,,"Промежуточный слой, позволяющий писать вычислительные ядра без привязки к среде — теоретический путь наружу."
+triton,openai,funded_by,upstream,60,40,40,true,low,market,2-5y,,,2021,,Компилятор создан лабораторией — крупнейшим покупателем ускорителей.
+tensorrt,nvidia,locks_in_platforms,bidirectional,70,60,30,true,low,substitution,1-2y,Открытые оптимизаторы догоняют по скорости.,,2016,,Оптимизатор запуска моделей работает только на его ускорителях: перенос модели означает потерю ускорения.
+nccl,nvidia,locks_in_platforms,bidirectional,80,70,20,false,medium,substitution,2-5y,Переносимые библиотеки коллективных операций пока заметно слабее.,,2015,2020,Обучение на тысячах ускорителей упирается в обмен данными между ними; эта библиотека — стандарт де-факто.
+nccl,pytorch,enables,downstream,80,65,20,false,medium,technical,2-5y,,,2016,,Распределённое обучение в библиотеке опирается на эту библиотеку обмена данными.
+vllm,nvidia,validates_demand,downstream,60,55,40,true,medium,substitution,1-2y,Движок поддерживает и чужие ускорители — это ослабляет привязку.,,2023,2024,Открытый движок запуска моделей называет ускорители якоря первыми в списке поддержки.
+vllm,cuda,path_dependent_on,upstream,65,55,35,true,medium,substitution,1-2y,,,2023,,Быстрые режимы движка построены на возможностях этой среды.
+vllm,huggingface,standardizes_on,upstream,70,50,30,true,low,technical,1-2y,,,2023,,"Движок запускает модели, опубликованные в общем хабе, и берёт их описания оттуда."
+sglang,vllm,competes_with,lateral,45,35,55,true,low,substitution,1-2y,,,2024,,"Второй открытый движок запуска моделей: слой конкурентный, а не запертый."
+huggingface,pytorch,standardizes_on,upstream,80,70,20,true,medium,technical,2-5y,,,2018,,Общая библиотека моделей построена вокруг библиотеки обучения: это точка стыковки всей экосистемы.
+huggingface,nvidia,validates_demand,downstream,70,65,30,true,medium,substitution,2-5y,Хаб поддерживает и чужие ускорители.,,2018,2023,Опубликованные в хабе модели работают прежде всего на его ускорителях: уйти значит потерять доступ к экосистеме.
+kubernetes,nvidia,standardizes_on,downstream,70,60,30,true,low,technical,5y+,,,2018,,Отраслевой стандарт запуска контейнеров: совместимость с ним обязательна для любого поставщика ускорителей.
+ray,nvidia,optimizes_for,downstream,50,45,50,true,low,technical,1-2y,,,2019,,Оркестратор распределённых вычислений раскладывает обучение по кластерам ускорителей.
+ray,kubernetes,standardizes_on,upstream,55,40,45,true,low,technical,1-2y,,,2019,,Оркестратор запускается поверх общего стандарта контейнеров.
+nim,nvidia,locks_in_platforms,bidirectional,45,45,55,true,low,substitution,1-2y,Открытые движки покрывают ту же задачу бесплатно.,,2024,,Готовые контейнеры запуска моделей от самого якоря: способ подняться из железа в слой инференса.
+nim,vllm,competes_with,lateral,45,35,55,true,low,substitution,1-2y,,,2024,,Собственный движок якоря против открытого: платный против бесплатного.
+cuda,huggingface,locks_in_developers,bidirectional,75,70,25,true,medium,substitution,2-5y,Поддержка чужих ускорителей в хабе растёт.,,2018,,"Модели в общем хабе оптимизированы под эту среду: перенести экосистему целиком дороже, чем купить железо."
+arm,kubernetes,standardizes_on,downstream,50,45,50,true,low,technical,2-5y,,arm-isa,2018,,Архитектура процессоров поддержана общим стандартом контейнеров наравне с остальными.

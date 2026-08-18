@@ -14,8 +14,10 @@ ROOT = Path(__file__).resolve().parent.parent
 DB_PATH = Path(os.environ.get("CAPITAL_DB", ROOT / "db" / "capital.db"))
 SCHEMA_PATH = ROOT / "db" / "schema.sql"
 # The monthly ecosystem pipeline lives in the SAME database file — entity identity
-# is shared (NVIDIA must be one NVIDIA on both maps). Its tables are all eco_*.
-ECO_SCHEMA_PATH = ROOT / "db" / "schema_eco.sql"
+# is shared (NVIDIA must be one NVIDIA on every map). Its tables are all nveco_*.
+# The v1 eco_* tables stay in the file as history; their schema now lives in
+# archive/ecosystem-v1/ and is no longer applied on connect.
+ECO_SCHEMA_PATH = ROOT / "db" / "schema_nveco.sql"
 CONFIG_DIR = ROOT / "config"
 RUNS_DIR = ROOT / "runs"
 HANDOFF_DIR = ROOT / "handoff"

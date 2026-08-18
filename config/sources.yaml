@@ -21,3 +21,79 @@ tier4:  # specialist analysis
 tier5:  # lead discovery only — never store unverified as verified
   []
   # podcasts, YouTube, X, LinkedIn, blogs
+
+# ───────────────────────────────────────────────────────────────────────────────
+# Шкала тиров ЭКОСИСТЕМНОГО конвейера (nveco_*). Она ДРУГАЯ, чем тиры 1–5 выше:
+# та шкала ранжирует источники по «официальности вообще», эта — по близости к якорю.
+# Пресс-релиз партнёра про NVIDIA здесь тир 2, а не тир 1, потому что говорит о NVIDIA
+# не сама NVIDIA. Не путать; недельный конвейер продолжает читать блок tier1..tier5.
+nveco_tiers:
+  1:
+    name: "Официальная NVIDIA"
+    what: "10-K / 10-Q, стенограммы звонков, пресс-релизы, вайтпейперы, патенты, презентации для инвесторов"
+    confidence: [0.95, 1.00]
+  2:
+    name: "Официальное от контрагента"
+    what: "его пресс-релизы про NVIDIA, его звонки, документация продукта, каталог NVIDIA-Certified, партнёрский директорий"
+    confidence: [0.90, 0.95]
+  3:
+    name: "Прямая речь принципалов"
+    what: "подкасты с Хуангом, GTC и Davos, инвестконференции, показания в Конгрессе, верифицированные интервью"
+    confidence: [0.85, 0.90]
+  4:
+    name: "Исследования и данные"
+    what: "научные статьи, лидерборды, отчёты аналитиков, Crunchbase / PitchBook"
+    confidence: [0.75, 0.85]
+  5:
+    name: "Вторичная пресса"
+    what: "Bloomberg, Reuters, WSJ, The Information, отраслевые рассылки"
+    confidence: [0.65, 0.75]
+  6:
+    name: "Третичное и сигналы"
+    what: "подкасты без принципалов, соцсети, форумы, блоги, видео"
+    confidence: [0.40, 0.65]
+
+# Домен -> тир по умолчанию. Движок сверяет заявленный агентом тир с этой картой и
+# предупреждает при расхождении: тир — это не мнение агента, а свойство источника.
+# Правила проверяются СВЕРХУ ВНИЗ, побеждает первое совпадение (поэтому
+# nvidia.com стоит раньше общего правила про investor.*).
+nveco_domain_tiers:
+  # Отчётность САМОГО якоря (CIK 1045810) — тир 1; любая другая отчётность в EDGAR
+  # говорит о якоре со стороны контрагента и потому тир 2. Порядок правил важен.
+  - { match: "sec.gov/Archives/edgar/data/1045810", tier: 1, type: sec_filing }
+  - { match: "sec.gov",                    tier: 2, type: sec_filing }
+  - { match: "nvidia.com/en-us/about-nvidia/", tier: 1, type: company_pr }
+  - { match: "nvidianews.nvidia.com",      tier: 1, type: company_pr }
+  - { match: "investor.nvidia.com",        tier: 1, type: earnings_call }
+  - { match: "blogs.nvidia.com",           tier: 1, type: company_pr }
+  - { match: "developer.nvidia.com",       tier: 1, type: product_doc }
+  - { match: "docs.nvidia.com",            tier: 1, type: product_doc }
+  - { match: "nvidia.com",                 tier: 1, type: company_pr }
+  - { match: "patents.google.com",         tier: 1, type: patent }
+  - { match: "openai.com",                 tier: 2, type: partner_pr }
+  - { match: "anthropic.com",              tier: 2, type: partner_pr }
+  - { match: "pytorch.org",                tier: 2, type: product_doc }
+  - { match: "huggingface.co",             tier: 2, type: product_doc }
+  - { match: "docs.vllm.ai",               tier: 2, type: product_doc }
+  - { match: "investor.",                  tier: 2, type: partner_pr }
+  - { match: "ir.",                        tier: 2, type: partner_pr }
+  - { match: "news.",                      tier: 2, type: partner_pr }
+  - { match: "press.",                     tier: 2, type: partner_pr }
+  - { match: "bis.doc.gov",                tier: 1, type: testimony }
+  - { match: "federalregister.gov",        tier: 1, type: testimony }
+  - { match: "home.treasury.gov",          tier: 1, type: testimony }
+  - { match: "congress.gov",               tier: 3, type: testimony }
+  - { match: "youtube.com/watch",          tier: 3, type: interview }
+  - { match: "arxiv.org",                  tier: 4, type: research }
+  - { match: "crunchbase.com",             tier: 4, type: database }
+  - { match: "pitchbook.com",              tier: 4, type: database }
+  - { match: "mlcommons.org",              tier: 4, type: research }
+  - { match: "bloomberg.com",              tier: 5, type: press }
+  - { match: "reuters.com",                tier: 5, type: press }
+  - { match: "wsj.com",                    tier: 5, type: press }
+  - { match: "ft.com",                     tier: 5, type: press }
+  - { match: "theinformation.com",         tier: 5, type: press }
+  - { match: "x.com",                      tier: 6, type: social }
+  - { match: "twitter.com",                tier: 6, type: social }
+  - { match: "linkedin.com",               tier: 6, type: social }
+  - { match: "reddit.com",                 tier: 6, type: social }

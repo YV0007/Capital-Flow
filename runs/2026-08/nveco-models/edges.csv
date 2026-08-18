@@ -1,0 +1,30 @@
+source,target,type,direction,strength,lock_in_depth,substitutability,is_reversible,risk_level,risk_type,risk_timeline,risk_mitigation,tech_node,formed,strengthened,note
+openai,nvidia,customer_of,upstream,95,80,15,true,medium,market,1-2y,Спрос распределён между несколькими лабораториями.,,2016,2025,"Лаборатория закупает системы гигаваттами: это деньги, а не доказательство. Доказательство идёт отдельным ребром."
+openai,nvidia,validates_demand,downstream,95,85,15,false,medium,substitution,2-5y,"Если спрос упрётся в окупаемость, доказательство ослабнет.",,2020,2025,"Своим существованием доказала отрасли, что ускорители необходимы: под неё строят площадки на десять гигаватт."
+nvidia,openai,co_designs,bidirectional,85,75,20,true,medium,technical,2-5y,,,2019,2025,"Совместная работа над системами и оптимизациями: лаборатория пишет ядра, якорь подгоняет платформу."
+anthropic,nvidia,customer_of,upstream,80,65,25,true,medium,market,1-2y,,,2021,2024,Вторая лаборатория закупает вычисления — спрос не сосредоточен в одной компании.
+anthropic,nvidia,validates_demand,downstream,80,70,25,false,medium,substitution,2-5y,Лаборатория частично обучает на чужих ускорителях.,,2021,2024,"Второе доказательство спроса: если бы покупатель был один, вся стройка висела бы на нём."
+meta,nvidia,validates_demand,downstream,85,75,20,false,medium,substitution,2-5y,Компания строит собственные чипы для части задач.,,2016,2023,"Капитальные вложения в инфраструктуру доказывают спрос со стороны компании, которая могла бы обойтись без неё."
+xai,nvidia,customer_of,upstream,70,50,30,true,medium,market,1-2y,,,2023,2024,Молодая лаборатория собрала один из крупнейших кластеров ускорителей за месяцы.
+xai,nvidia,validates_demand,downstream,65,50,35,true,medium,market,1-2y,,,2023,,"Доказательство скорости: кластер на сотни тысяч ускорителей собирается за месяцы, а не за годы."
+google-deepmind,google,funded_by,upstream,85,60,15,false,low,market,5y+,,,2014,,Лаборатория внутри облака: обучается на собственных чипах владельца.
+google-deepmind,nvidia,threatens,downstream,60,60,40,true,high,substitution,2-5y,Универсальные ускорители остаются гибче под новые архитектуры.,,2016,2025,"Единственная передовая лаборатория, обучающая на чипах собственного владельца, — живое доказательство альтернативы."
+deepseek,nvidia,threatens,downstream,65,60,35,true,high,substitution,1-2y,Более дешёвое обучение увеличивает общий спрос на запуск моделей.,,2024,2025,"Показала обучение сильной модели при меньших вычислениях — вызов допущению, что качество пропорционально закупкам."
+mistral,nvidia,customer_of,upstream,50,35,50,true,medium,market,1-2y,,,2023,,Европейская лаборатория закупает вычисления: спрос географически распределён.
+openai,microsoft,strategic_partner,bidirectional,90,80,15,false,medium,market,2-5y,Лаборатория расширила круг облачных партнёров.,,2019,2025,Гиперскейлер — крупнейший инвестор лаборатории и держатель прав на её интеллектуальную собственность.
+openai,microsoft,enables,downstream,80,70,25,true,medium,market,2-5y,,,2019,2025,Модели лаборатории встроены в продукты гиперскейлера — это его прикладной слой.
+openai,oracle,customer_of,upstream,85,65,20,true,medium,market,2-5y,Мощности распределены между несколькими облаками.,,2025,,"Соглашение на 4,5 гигаватта дополнительных мощностей: контракт определяет профиль роста облака."
+anthropic,amazon,strategic_partner,bidirectional,85,70,20,false,medium,market,2-5y,,,2023,2025,Облако вложило миллиарды в лабораторию и стало её основным инфраструктурным партнёром.
+databricks,nvidia,proves_roi,downstream,65,55,35,true,low,market,1-2y,Гиперскейлеры встраивают ту же функциональность в свои облака.,,2023,2024,"Показывает, что корпоративные заказчики окупают вычисления на собственных данных, а не только лаборатории."
+servicenow,nvidia,proves_roi,downstream,55,45,45,true,low,market,1-2y,,,2024,,"Модели встроены в корпоративные процессы, за которые компании уже платят: окупаемость доказана в другом сегменте."
+servicenow,microsoft,strategic_partner,bidirectional,45,30,55,true,low,market,1-2y,,,2020,,Корпоративная платформа работает поверх нескольких облаков одновременно.
+salesforce,nvidia,proves_roi,downstream,45,40,55,true,low,market,1-2y,,,2024,,Ещё одно доказательство окупаемости в корпоративном сегменте — в отделах продаж.
+snowflake,nvidia,proves_roi,downstream,45,40,55,true,low,market,1-2y,,,2024,,"Данные корпораций становятся пригодными для обучения — то, чего нет у лабораторий."
+recursion,nvidia,proves_use_case,downstream,50,40,50,true,low,market,2-5y,Клинические результаты моделей ещё не подтверждены.,,2020,2023,Суперкомпьютер для поиска лекарств построен совместно с якорем: референсное применение вне интернет-компаний.
+siemens,nvidia,proves_use_case,downstream,45,40,55,true,low,market,2-5y,,,2023,,Применение моделей в промышленном проектировании и на производстве.
+schrodinger,nvidia,proves_use_case,downstream,35,30,65,true,low,market,2-5y,,,2021,,Моделирование молекул на кластерах ускорителей для разработки лекарств.
+databricks,huggingface,standardizes_on,upstream,55,40,45,true,low,technical,1-2y,,,2023,,"Корпоративная платформа берёт модели из общего хаба, а не обучает их с нуля."
+openai,huggingface,competes_with,lateral,40,35,60,true,low,market,2-5y,,,2022,,Закрытые модели по подписке против открытых весов в общем хабе.
+meta,huggingface,enables,downstream,65,50,35,true,low,market,2-5y,,,2023,,Открытые модели компании публикуются в общем хабе и делают его центром экосистемы.
+openai,vllm,enables,downstream,50,40,50,true,low,technical,1-2y,,,2023,,Открытый движок реализует совместимый с лабораторией программный интерфейс — он стал общим стандартом.
+deepseek,huggingface,enables,downstream,45,35,55,true,medium,regulatory,1-2y,,,2024,,Открытые веса китайской лаборатории публикуются в общем хабе и доступны всем.

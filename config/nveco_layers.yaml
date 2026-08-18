@@ -1,0 +1,100 @@
+# Экосистема NVIDIA — таксономия слоёв. ЗАМОРОЖЕНА.
+#
+# ЕДИНСТВЕННОЕ место, где живут слои. Ни один Python-модуль не имеет права написать 'L3'
+# в коде: всё читается отсюда. Придёт 16 слоёв или 20 — конвейер и дашборд соберутся.
+#
+# Три плана карты — главная геометрическая идея v2:
+#   nucleus (L14) — ядро молекулы. Капитал владеет стеком и финансирует его, сам в нём
+#                   не стоя.
+#   orbit (L1..L13) — 13 ячеек по кольцу. Угол задаёт `order`, цвет — `band`,
+#                   радиус считает раскладка на стороне дашборда.
+#   control (L0, L15) — внешняя дуга. Государства, агентства и стандарты не стоят
+#                   в стеке, они его ШЛЮЗУЮТ. Вставить США между «памятью» и «системами»
+#                   значит соврать про природу связи.
+#
+# label — ЗАГЛАВНЫМИ, <= 16 знаков. caption — строчными, <= 28 знаков.
+# band отсутствует у control и nucleus: у них своя палитра, не полосовая.
+
+layers:
+  - { id: L0,  label: "ГЕОПОЛИТИКА",    caption: "юрисдикции · контроль доступа", plane: control, order: 0,  band: null }
+  - { id: L1,  label: "СЫРЬЁ И СТАНКИ", caption: "материалы · оборудование",      plane: orbit,   order: 1,  band: 1 }
+  - { id: L2,  label: "ПРОЕКТИРОВАНИЕ", caption: "софт для чипов · лицензии",     plane: orbit,   order: 2,  band: 1 }
+  - { id: L3,  label: "ФАБРИКИ",        caption: "литография · процесс",          plane: orbit,   order: 3,  band: 2 }
+  - { id: L4,  label: "ПАМЯТЬ",         caption: "HBM · DRAM · хранение",         plane: orbit,   order: 4,  band: 2 }
+  - { id: L5,  label: "СИСТЕМЫ",        caption: "сборка · серверы · стойки",     plane: orbit,   order: 5,  band: 3 }
+  - { id: L6,  label: "ЭНЕРГИЯ",        caption: "генерация · передача тока",     plane: orbit,   order: 6,  band: 3 }
+  - { id: L7,  label: "ОХЛАЖДЕНИЕ",     caption: "тепло · вода · жидкость",       plane: orbit,   order: 7,  band: 3 }
+  - { id: L8,  label: "СВЯЗЬ",          caption: "сеть · оптика · коммутация",    plane: orbit,   order: 8,  band: 4 }
+  - { id: L9,  label: "ИНФРАСТРУКТУРА", caption: "площадки · облака",             plane: orbit,   order: 9,  band: 4 }
+  - { id: L10, label: "ПЛАТФОРМА",      caption: "CUDA · фреймворки",             plane: orbit,   order: 10, band: 5 }
+  - { id: L11, label: "ИНФЕРЕНС",       caption: "запуск моделей · оркестрация",  plane: orbit,   order: 11, band: 5 }
+  - { id: L12, label: "ЛАБОРАТОРИИ",    caption: "модели · обучение",             plane: orbit,   order: 12, band: 5 }
+  - { id: L13, label: "ПРИЛОЖЕНИЯ",     caption: "ИИ в бизнесе · отрасли",        plane: orbit,   order: 13, band: 5 }
+  - { id: L14, label: "КАПИТАЛ",        caption: "кто владеет и финансирует",     plane: nucleus, order: 14, band: null }
+  - { id: L15, label: "РЕГУЛИРОВАНИЕ",  caption: "правила · субсидии · стандарты", plane: control, order: 15, band: null }
+
+# Сектора — собственная таксономия карты. Ни одного поля, указывающего в DC-AI.
+# key используется в entities[].sector; label — то, что видит человек.
+sectors:
+  - { key: jurisdiction,      label: "Юрисдикции",             layer: L0 }
+  - { key: materials,         label: "Материалы",              layer: L1 }
+  - { key: fab_equipment,     label: "Станки для фабрик",      layer: L1 }
+  - { key: eda,               label: "Софт для чипов",         layer: L2 }
+  - { key: chip_ip,           label: "Лицензии на схемы",      layer: L2 }
+  - { key: foundry,           label: "Фабрики",                layer: L3 }
+  - { key: packaging,         label: "Упаковка кристаллов",    layer: L3 }
+  - { key: hbm,               label: "Память HBM",             layer: L4 }
+  - { key: dram,              label: "Оперативная память",     layer: L4 }
+  - { key: storage,           label: "Хранение",               layer: L4 }
+  - { key: server_odm,        label: "Сборка серверов",        layer: L5 }
+  - { key: rack_integration,  label: "Стойки",                 layer: L5 }
+  - { key: generation,        label: "Генерация энергии",      layer: L6 }
+  - { key: grid_power,        label: "Передача тока",          layer: L6 }
+  - { key: cooling,           label: "Охлаждение",             layer: L7 }
+  - { key: thermal_materials, label: "Теплоотвод",             layer: L7 }
+  - { key: rack_power,        label: "Питание стоек",          layer: L7 }
+  - { key: switching,         label: "Коммутаторы",            layer: L8 }
+  - { key: interconnect,      label: "Межсоединения",          layer: L8 }
+  - { key: optics,            label: "Оптика",                 layer: L8 }
+  - { key: hyperscaler,       label: "Гиперскейлеры",          layer: L9 }
+  - { key: neocloud,          label: "GPU-облака",             layer: L9 }
+  - { key: colocation,        label: "Площадки",               layer: L9 }
+  - { key: gpu_platform,      label: "Платформа GPU",          layer: L10 }
+  - { key: ml_framework,      label: "Фреймворки обучения",    layer: L10 }
+  - { key: compiler,          label: "Компиляторы",            layer: L10 }
+  - { key: inference_engine,  label: "Движки инференса",       layer: L11 }
+  - { key: orchestration,     label: "Оркестрация",            layer: L11 }
+  - { key: model_hub,         label: "Хабы моделей",           layer: L11 }
+  - { key: frontier_lab,      label: "Передовые лаборатории",  layer: L12 }
+  - { key: open_model,        label: "Открытые модели",        layer: L12 }
+  - { key: enterprise_ai,     label: "ИИ для бизнеса",         layer: L13 }
+  - { key: vertical_ai,       label: "Отраслевой ИИ",          layer: L13 }
+  - { key: venture,           label: "Венчурный капитал",      layer: L14 }
+  - { key: strategic_capital, label: "Стратегический капитал", layer: L14 }
+  - { key: export_authority,  label: "Экспортный контроль",    layer: L15 }
+  - { key: policy,            label: "Государственная политика", layer: L15 }
+  - { key: standards,         label: "Стандарты",              layer: L15 }
+
+# Полосы критичности — как читать итоговый балл. Дашборд берёт подписи отсюда.
+criticality_bands:
+  - { min: 90, max: 100, key: critical,  label: "критично" }
+  - { min: 75, max: 89,  key: high,      label: "высоко" }
+  - { min: 60, max: 74,  key: medium,    label: "средне" }
+  - { min: 45, max: 59,  key: low_mid,   label: "ниже среднего" }
+  - { min: 0,  max: 44,  key: low,       label: "низко" }
+
+# Тех-узлы — ТЕХНОЛОГИИ, а не компании: процессы, упаковка, протоколы связи.
+# Компания, даже если она по сути платформа (CUDA), заводится СУЩНОСТЬЮ и живёт в
+# entities[] со своими связями; сюда попадает только то, что связью быть не может.
+# На ребре тех-узел работает подписью: он объясняет, ПОЧЕМУ зависимость неразрывна.
+tech_nodes:
+  - { id: euv,        label: "EUV",         owner: asml,     importance: critical, note: "Печать самых мелких элементов чипа" }
+  - { id: n3,         label: "3 нм",        owner: tsmc,     importance: critical, note: "Передовой техпроцесс производства" }
+  - { id: n5,         label: "5 нм",        owner: tsmc,     importance: high,     note: "Предыдущий передовой техпроцесс" }
+  - { id: cowos,      label: "CoWoS",       owner: tsmc,     importance: critical, note: "Упаковка «чип + память» на одной подложке" }
+  - { id: hbm,        label: "HBM",         owner: sk-hynix, importance: critical, note: "Стековая память вплотную к ускорителю" }
+  - { id: nvlink,     label: "NVLink",      owner: nvidia,   importance: critical, note: "Связь ускорителей внутри стойки" }
+  - { id: infiniband, label: "InfiniBand",  owner: nvidia,   importance: high,     note: "Сеть между стойками кластера" }
+  - { id: spectrum-x, label: "Spectrum-X",  owner: nvidia,   importance: medium,   note: "Ethernet-сеть под кластеры ускорителей" }
+  - { id: arm-isa,    label: "Arm ISA",     owner: arm,      importance: high,     note: "Набор команд процессоров" }
+  - { id: pcie,       label: "PCIe",        owner: null,     importance: medium,   note: "Общая шина подключения устройств" }

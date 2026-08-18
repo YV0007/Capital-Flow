@@ -1,0 +1,23 @@
+source,target,type,direction,strength,lock_in_depth,substitutability,is_reversible,risk_level,risk_type,risk_timeline,risk_mitigation,tech_node,formed,strengthened,note
+vertiv,nvidia,co_designs,bidirectional,70,60,30,true,medium,technical,1-2y,Гиперскейлеры могут стандартизовать собственный дизайн охлаждения.,,2022,2025,"Питание и охлаждение стойки проектируются совместно под будущие поколения ускорителей, а не покупаются готовыми."
+vertiv,microsoft,supplies,upstream,60,40,40,true,low,market,1-2y,,,2018,,Питание и охлаждение на площадках облака-гиганта.
+vertiv,coreweave,supplies,upstream,55,35,45,true,low,market,1-2y,,,2022,,Питание и охлаждение на площадках независимого облака.
+oklo,vertiv,strategic_partner,bidirectional,15,20,85,true,low,market,5y+,"Пока это изучение вариантов, а не поставка.",,2025,,"Изучение вариантов энергоснабжения площадок. Записано ниже порога отрисовки именно потому, что это ещё не поставка."
+nvent,nvidia,optimizes_for,downstream,45,35,55,true,low,technical,1-2y,Поставщиков жидкостного охлаждения несколько.,,2023,,Шкафы и жидкостное охлаждение под стойки высокой плотности.
+nvent,microsoft,supplies,upstream,40,25,60,true,low,market,1-2y,,,2020,,Охлаждение и шкафы на площадках облака-гиганта.
+boyd,nvidia,supplies,upstream,40,30,60,true,low,technical,1-2y,Поставщиков теплоотвода несколько.,,2020,,"Теплоотводящие пластины, снимающие тепло прямо с кристалла ускорителя."
+lite-on,supermicro,supplies,upstream,25,20,85,true,low,market,1-2y,Поставщиков блоков питания много.,,2016,,"Блоки питания для серверов: взаимозаменяемый компонент, поставщиков много."
+delta-electronics,nvidia,optimizes_for,downstream,50,40,50,true,medium,technical,1-2y,Поставщиков питания стойки несколько.,,2020,2024,"Преобразователи, раздающие электричество внутри стойки под требования конкретного поколения."
+eaton,microsoft,supplies,upstream,60,45,40,true,low,market,1-2y,"Поставщиков питания три-четыре, ограничение — срок поставки.",,2018,2024,"Оборудование питания на площадках: щиты, шины, защита. Очередь на поставку измеряется годами."
+eaton,equinix,supplies,upstream,55,40,45,true,low,market,1-2y,,,2015,,Оборудование питания на нейтральных площадках.
+schneider,microsoft,supplies,upstream,55,40,45,true,low,market,1-2y,,,2015,,Второй поставщик оборудования питания площадок.
+schneider,digital-realty,supplies,upstream,50,35,50,true,low,market,1-2y,,,2015,,Оборудование питания и управления на площадках оператора.
+ge-vernova,microsoft,supplies,upstream,65,45,35,true,medium,market,2-5y,Очередь на большие турбины расписана на годы.,,2023,,"Газовые турбины для площадок: самый быстрый способ дать много энергии, но очередь на годы."
+siemens-energy,equinix,supplies,upstream,55,40,45,true,medium,market,2-5y,Производителей больших турбин три.,,2022,,Второй производитель турбин и сетевого оборудования для площадок.
+constellation,microsoft,supplies,upstream,60,45,40,true,low,regulatory,2-5y,Контракт на двадцать лет фиксирует поставку.,,2024,,Двадцатилетний контракт на поставку атомной энергии под спрос дата-центров: перезапуск остановленного энергоблока.
+bloom-energy,oracle,supplies,upstream,50,35,50,true,low,market,1-2y,Подключение к сети остаётся альтернативой.,,2025,,"Топливные элементы дают питание прямо на площадке, не дожидаясь подключения к сети."
+oklo,equinix,strategic_partner,bidirectional,15,15,85,true,low,market,5y+,Соглашение необязывающее.,,2024,,Необязывающее письмо о намерениях по будущим поставкам энергии. Ниже порога отрисовки.
+brookfield,constellation,competes_with,lateral,30,25,70,true,low,market,2-5y,,,2020,,Два владельца генерации конкурируют за контракты с площадками.
+brookfield,microsoft,supplies,upstream,45,35,55,true,low,market,2-5y,,,2024,,Инфраструктурный владелец поставляет энергию площадкам облака-гиганта.
+crusoe,nvidia,enables,upstream,50,45,50,true,low,market,1-2y,,,2021,,"Строит площадки прямо у источников энергии, снимая главное ограничение стройки."
+nvidia,vertiv,strategic_partner,bidirectional,65,50,35,true,low,technical,1-2y,,,2022,2025,Объявленное партнёрство по инфраструктуре питания и охлаждения нового поколения.
