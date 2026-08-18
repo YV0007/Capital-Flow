@@ -1,0 +1,78 @@
+# Ecosystem map — who the six monthly agents are responsible for.
+#
+# This is the ecosystem twin of config/allocators.yaml. Same idea (a named watchlist per
+# agent), different axis: agents are sliced by STACK LAYER, not by allocator class.
+#
+# `slug` is the map id from the handoff contract. It is written once and NEVER changed —
+# renaming a slug destroys that node's history (first_seen, changelog, cycles).
+# Names resolve through config/aliases.yaml exactly like the weekly pipeline, so NVIDIA
+# is one NVIDIA on both maps.
+#
+# A watchlist entry is a RESEARCH ASSIGNMENT, not a promise the node exists. A node only
+# reaches the map once at least one sourced edge touches it.
+
+# ─── Anchors: the ~10 companies the whole map hangs off. Every agent that touches one
+# is expected to come back with its counterparties, not just the name.
+anchors:
+  - { slug: nvidia,    name: NVIDIA,        layers: [L3, L10],      agent: eco-silicon }
+  - { slug: tsmc,      name: TSMC,          layers: [L3, L5],       agent: eco-silicon }
+  - { slug: asml,      name: ASML,          layers: [L2],           agent: eco-silicon }
+  - { slug: broadcom,  name: Broadcom,      layers: [L3, L8],       agent: eco-silicon }
+  - { slug: sk-hynix,  name: "SK Hynix",    layers: [L4],           agent: eco-silicon }
+  - { slug: foxconn,   name: Foxconn,       layers: [L9],           agent: eco-systems }
+  - { slug: microsoft, name: Microsoft,     layers: [L10, L12],     agent: eco-infra }
+  - { slug: alphabet,  name: Alphabet,      layers: [L3, L10, L12], agent: eco-infra }
+  - { slug: amazon,    name: Amazon,        layers: [L3, L10],      agent: eco-infra }
+  - { slug: openai,    name: OpenAI,        layers: [L12],          agent: eco-models }
+  # Candidates — promote to anchor once the map shows they carry anchor-level gravity.
+  - { slug: oracle,     name: Oracle,      layers: [L10], agent: eco-infra,   candidate: true }
+  - { slug: brookfield, name: Brookfield,  layers: [L6],  agent: eco-capital, candidate: true }
+  - { slug: anthropic,  name: Anthropic,   layers: [L12], agent: eco-models,  candidate: true }
+
+# ─── Emerging: only admitted with a SIGNED contract or a design win (rule R4).
+# "Promising idea" is not a qualification.
+emerging:
+  - { slug: astera-labs,   name: "Astera Labs",   layers: [L8],  agent: eco-systems }
+  - { slug: credo,         name: "Credo Technology", layers: [L8], agent: eco-systems }
+  - { slug: celestial-ai,  name: "Celestial AI",  layers: [L8],  agent: eco-systems }
+  - { slug: crusoe,        name: Crusoe,          layers: [L10], agent: eco-infra }
+  - { slug: nebius,        name: Nebius,          layers: [L10], agent: eco-infra }
+  - { slug: lambda,        name: "Lambda Labs",   layers: [L10], agent: eco-infra }
+  - { slug: oklo,          name: Oklo,            layers: [L6],  agent: eco-power }
+  - { slug: alchip,        name: "Alchip Technologies", layers: [L3], agent: eco-silicon }
+  - { slug: fluidstack,    name: Fluidstack,      layers: [L10], agent: eco-infra }
+
+# ─── Capital spine (§2 of the plan). These are NOT in the physical chain; they reach into
+# it through ownership and financing. Without them the map cannot answer "who actually
+# holds the nuclear leg of AI".
+# role is `capital` or `owner`; layer = where the CONTROLLED ASSET sits, never a layer of
+# its own.
+capital_spine:
+  - { slug: brookfield,        name: Brookfield,             role: capital, layers: [L6],  agent: eco-capital,
+      reach: [westinghouse, brookfield-renewable, compass-datacenters, data4] }
+  - { slug: blackstone,        name: Blackstone,             role: capital, layers: [L10], agent: eco-capital,
+      reach: [qts] }
+  - { slug: kkr,               name: KKR,                    role: capital, layers: [L10], agent: eco-capital }
+  - { slug: mgx,               name: MGX,                    role: capital, layers: [L10], agent: eco-capital }
+  - { slug: stonepeak,         name: Stonepeak,              role: capital, layers: [L10], agent: eco-capital }
+  - { slug: blackrock,         name: BlackRock,              role: capital, layers: [L10], agent: eco-capital,
+      note: "GIP resolves to BlackRock via config/aliases.yaml" }
+  - { slug: ontario-teachers,  name: "Ontario Teachers' Pension Plan", role: capital, layers: [L10], agent: eco-capital }
+  - { slug: digital-realty,    name: "Digital Realty",       role: owner,   layers: [L10], agent: eco-infra }
+  - { slug: equinix,           name: Equinix,                role: owner,   layers: [L10], agent: eco-infra }
+  - { slug: vantage,           name: "Vantage Data Centers", role: owner,   layers: [L10], agent: eco-infra }
+  - { slug: constellation,     name: "Constellation Energy", role: owner,   layers: [L6],  agent: eco-power }
+  - { slug: vistra,            name: Vistra,                 role: owner,   layers: [L6],  agent: eco-power }
+  - { slug: coreweave,         name: CoreWeave,              role: owner,   layers: [L10], agent: eco-infra }
+  - { slug: oracle,            name: Oracle,                 role: owner,   layers: [L10], agent: eco-infra }
+  - { slug: westinghouse,      name: "Westinghouse Electric", role: producer, layers: [L6], agent: eco-power }
+
+# ─── Agent → layer assignment. Mirrors agents/eco-*.md; eco_ingest reads this to know
+# which agent directory is expected under runs/<month>/.
+agents:
+  eco-silicon: { layers: [L1, L2, L3, L4], brief: agents/eco-silicon.md }
+  eco-systems: { layers: [L5, L8, L9],     brief: agents/eco-systems.md }
+  eco-power:   { layers: [L6, L7],         brief: agents/eco-power.md }
+  eco-infra:   { layers: [L10],            brief: agents/eco-infra.md }
+  eco-models:  { layers: [L11, L12],       brief: agents/eco-models.md }
+  eco-capital: { layers: ["*"],            brief: agents/eco-capital.md }

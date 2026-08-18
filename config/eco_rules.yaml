@@ -1,0 +1,107 @@
+# Ecosystem map — the rules the deterministic layer applies. Everything here is
+# arithmetic or a threshold; nothing here is a judgement call.
+#
+# Changing a weight or a threshold changes every score on the map. Do it deliberately and
+# say so in handoff/ECOSYSTEM-BUILD-LOG.md.
+
+# ─── Criticality rubric (§4.1 of the plan). Agents supply the four 0..5 factors with a
+# sourced share_note; the engine does the arithmetic and nothing else.
+#   criticality = round(100 * (0.30*share + 0.30*alternatives + 0.25*switch_time
+#                              + 0.15*barrier) / 5)
+# Check: ASML 5/5/5/5 -> 100.  ODM assembler 2/1/1/1 -> 26.
+criticality:
+  weights:
+    share:        0.30
+    alternatives: 0.30
+    switch_time:  0.25
+    barrier:      0.15
+  scale:
+    share:        # доля в своей функции
+      5: ">90%"
+      4: "70–90%"
+      3: "50–70%"
+      2: "30–50%"
+      1: "15–30%"
+      0: "<15%"
+    alternatives: # реальных альтернатив
+      5: "нет"
+      4: "одна"
+      3: "две"
+      2: "три-четыре"
+      1: "много"
+      0: "товар"
+    switch_time:  # время замены
+      5: ">5 лет"
+      4: "3–5 лет"
+      3: "1–3 года"
+      2: "6–12 мес"
+      1: "<6 мес"
+      0: "мгновенно"
+    barrier:      # порог входа
+      5: "запретительный"
+      4: "очень высокий"
+      3: "высокий"
+      2: "средний"
+      1: "низкий"
+      0: "нет"
+
+# ─── Gravity (§4.2). Deliberately DIVERGES from criticality: Microsoft has high gravity
+# and low criticality, ASML the reverse. Both are shown; they are never blended.
+# gravity_score = round(100 * (0.5*nodes_norm + 0.3*layers/12 + 0.2*edge_types/10))
+# where nodes_norm = min(1, distinct_counterparties / gravity.nodes_full_scale).
+gravity:
+  nodes_full_scale: 25
+  weights: { nodes: 0.5, layers: 0.3, edge_types: 0.2 }
+
+# ─── Layer concentration (§4.4). HHI over each node's share of the layer's summed
+# criticality_in_layer. Colours the ring.
+concentration:
+  monopoly_hhi:  0.50   # hhi >= 0.50  -> monopoly
+  oligopoly_hhi: 0.25   # hhi >= 0.25  -> oligopoly, else competitive
+
+# ─── Source tiers. FROZEN — mirrored on the dashboard side.
+source_tiers:
+  filing:     { line: solid,  contrast: full, note: "10-K / 20-F / 8-K / проспект / 13D-G" }
+  company_pr: { line: solid,  contrast: full, note: "Пресс-релиз одной из сторон" }
+  transcript: { line: solid,  contrast: thin, note: "Заявление на звонке по отчётности" }
+  press:      { line: dashed, contrast: full, note: "Reuters / Bloomberg / FT / WSJ" }
+  estimate:   { line: dashed, contrast: full, note: "TrendForce / Omdia — только доли рынка" }
+
+evidence:
+  # Two independent evidence rows -> solid line. One -> dashed, whatever the tier.
+  two_source_rule: 2
+  # Verbatim quote is MANDATORY. No quote -> the row is rejected at ingest, not softened.
+  require_quote: true
+  min_quote_chars: 25
+  # Dead link or vanished quote -> edge goes `unverified` and dims on the map.
+  dead_link_status: unverified
+
+staleness:
+  # Nothing confirming a node/edge for this long -> it fades with "не подтверждалось с …".
+  months: 6
+
+display:
+  # EVERYTHING is written to the DB and to the JSON. The map draws >= this by default;
+  # the slider goes to 0. The node panel's connection list is ALWAYS complete, no threshold.
+  strength_floor: 20
+
+cycles:
+  min_length: 3
+  max_length: 5
+  # sales   — the loop is closed by supply/offtake (money returns as a purchase)
+  # financing — the loop is closed by owns/finances/develops/operates
+  classify_by: edge_type_majority
+
+# ─── Inclusion rules R1–R5 (§5 of the plan). A node needs at least ONE.
+inclusion:
+  R1: "Топ-3 по доле в своей функции."
+  R2: "Единственный / почти единственный поставщик критического входа (criticality >= 70)."
+  R3: "Названный контрагент в контракте или партнёрстве с якорем."
+  R4: "Восходящий с ПОДПИСАННЫМ контрактом или design win — не «перспективная идея»."
+  R5: "Контролирует узкое место через собственность или финансирование."
+  target_nodes_v1: 150
+  pilot_nodes: 40   # первый прогон — хребет NVIDIA
+
+# ─── Not in v1.
+excluded:
+  edge_types: [compete]   # суждение, а не факт из релиза — отдельным слоем после Ф5

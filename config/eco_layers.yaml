@@ -1,0 +1,147 @@
+# Ecosystem map — the 12-layer stack. FROZEN taxonomy.
+#
+# Source of truth: ab-investment/src/components/research/dc/Roadmap.jsx (LAYERS + NODES).
+# Labels/captions are copied verbatim so the two research surfaces never drift apart.
+#
+# band 1..5 is the colour band on the map: L1-L2=1, L3-L4=2, L5-L7=3, L8-L10=4, L11-L12=5.
+# `sectors` are the Roadmap.jsx `sector` values; `dc_node` is the Roadmap.jsx node id, which
+# is also the key into dc-details.json — that is what lets a company on the ecosystem map
+# link back into the DC-AI thesis.
+#
+# The layer is a COORDINATE (radius), not a clickable object. The clickable object is the
+# company. A company may live in several layers (Alphabet: L3 TPU, L10 cloud, L12 models);
+# that is several eco_node_layers rows on ONE node, never a second node.
+
+layers:
+  - id: L1
+    label: "СЫРЬЁ"
+    caption: "материалы · химия"
+    band: 1
+    sectors:
+      - { key: "GOES Steel",     label: "Электросталь",         dc_node: goes }
+      - { key: "Photoresist",    label: "Фоторезист",           dc_node: resist }
+      - { key: "Specialty Chem", label: "Химия для чипов",      dc_node: chem }
+      - { key: "InP/GaAs",       label: "InP / GaAs",           dc_node: inpgaas }
+      - { key: "Titanium",       label: "Титановые сплавы",     dc_node: titanium }
+      - { key: "HBM Materials",  label: "Материалы для HBM",    dc_node: hbmmat }
+
+  - id: L2
+    label: "ОБОРУДОВАНИЕ"
+    caption: "станки · софт · тесты"
+    band: 1
+    sectors:
+      - { key: "Litho Tools", label: "Станки для чипов",    dc_node: litho }
+      - { key: "Test",        label: "Тестирование",        dc_node: test }
+      - { key: "EDA",         label: "Софт для чипов",      dc_node: eda }
+      - { key: "IP/Bonding",  label: "Лицензии / склейка",  dc_node: ip }
+
+  - id: L3
+    label: "ЧИПЫ"
+    caption: "логика · силовые · кастомные"
+    band: 2
+    # Foundries (TSMC, Samsung Foundry, Intel Foundry) live HERE — they are the
+    # physical maker of the logic, not a separate layer.
+    sectors:
+      - { key: "AI Silicon",   label: "AI-чипы",           dc_node: silicon }
+      - { key: "Wide-Bandgap", label: "Силовые чипы",      dc_node: wbg }
+      - { key: "Custom ASIC",  label: "Кастомные AI-чипы", dc_node: asic }
+
+  - id: L4
+    label: "ПАМЯТЬ"
+    caption: "HBM · DRAM · SSD"
+    band: 2
+    sectors:
+      - { key: "HBM",      label: "HBM-память", dc_node: hbm }
+      - { key: "DRAM",     label: "DRAM",       dc_node: dram }
+      - { key: "NAND/SSD", label: "NAND / SSD", dc_node: nand }
+
+  - id: L5
+    label: "СБОРКА"
+    caption: "упаковка · платы"
+    band: 3
+    sectors:
+      - { key: "Adv Packaging", label: "Упаковка чипов",  dc_node: pkg }
+      - { key: "PCB",           label: "Платы / подложки", dc_node: pcb }
+
+  - id: L6
+    label: "ГЕНЕРАЦИЯ"
+    caption: "источники · топливо"
+    band: 3
+    sectors:
+      - { key: "Nuclear",       label: "Атомная энергия",         dc_node: nuc }
+      - { key: "SMR",           label: "Малые реакторы",          dc_node: smr }
+      - { key: "Fuel Cells",    label: "Топливные элементы",      dc_node: fuel }
+      - { key: "Gas Pipelines", label: "Газопроводы",             dc_node: gaspipe }
+      - { key: "Gas Turbines",  label: "Газовые турбины",         dc_node: gasturbines }
+      - { key: "Renewables",    label: "Возобновляемая энергия",  dc_node: renewables }
+
+  - id: L7
+    label: "ПЕРЕДАЧА ТОКА"
+    caption: "сеть → стойка"
+    band: 3
+    sectors:
+      - { key: "Power",        label: "Электроэнергия", dc_node: power }
+      - { key: "Transformers", label: "Трансформаторы", dc_node: transformers }
+      - { key: "Switchgear",   label: "Электрощиты",    dc_node: switchgear }
+      - { key: "Power Mgmt",   label: "Питание стоек",  dc_node: pmgmt }
+
+  - id: L8
+    label: "СВЯЗЬ"
+    caption: "сеть · оптика"
+    band: 4
+    sectors:
+      - { key: "Photonics",            label: "Фотоника",           dc_node: photonics }
+      - { key: "Network Silicon",      label: "Сетевые чипы",       dc_node: netsilicon }
+      - { key: "Interconnect Fabric",  label: "Сетевая фабрика",    dc_node: fabric }
+      - { key: "Optical Modules",      label: "Оптические модули",  dc_node: transceivers }
+      - { key: "Dark Fiber",           label: "Тёмное волокно",     dc_node: darkfiber }
+      - { key: "Fiber/Cable",          label: "Оптоволокно",        dc_node: fiber }
+
+  - id: L9
+    label: "СИСТЕМЫ"
+    caption: "серверы · охлаждение · стройка"
+    band: 4
+    sectors:
+      - { key: "Server Systems", label: "Сборка серверов",     dc_node: server }
+      - { key: "Liquid Cooling", label: "Охлаждение",          dc_node: liquid }
+      - { key: "MEP",            label: "Инженерные системы",  dc_node: mep }
+      - { key: "Contracting",    label: "Строительство",       dc_node: contracting }
+
+  - id: L10
+    label: "ВЫЧИСЛЕНИЯ"
+    caption: "стойка"
+    band: 4
+    # Clouds, neoclouds (CoreWeave, Crusoe, Nebius) and DC REITs (Equinix, Digital
+    # Realty) all sit HERE.
+    sectors:
+      - { key: "AI Compute Infra", label: "AI-ВЫЧИСЛЕНИЯ", dc_node: rack }
+
+  - id: L11
+    label: "ИНФЕРЕНС"
+    caption: "работа моделей · цена ответа"
+    band: 5
+    # Software / orchestration (Databricks, HuggingFace) lands here.
+    sectors:
+      - { key: "Inference", label: "Инференс", dc_node: inference }
+
+  - id: L12
+    label: "РЕЗУЛЬТАТ"
+    caption: "модели · ИИ для бизнеса"
+    band: 5
+    # Frontier labs and end demand. `AI Apps` is carried over from Roadmap.jsx, which
+    # places it at the same layer as Frontier Lab (see ECOSYSTEM-BUILD-LOG.md).
+    sectors:
+      - { key: "Frontier Lab", label: "AI-лаборатории", dc_node: lab }
+      - { key: "AI Apps",      label: "Внедрение ИИ",   dc_node: apps }
+
+# Tech nodes — ~12 satellites hung off their owner company. On an edge they become the
+# label ("EUV"), which is what explains WHY the dependency is unavoidable.
+tech_nodes:
+  - { slug: euv,        label: "EUV",        owner: asml,      note: "Литография ниже 7 нм" }
+  - { slug: cuda,       label: "CUDA",       owner: nvidia,    note: "Программный замок вокруг GPU" }
+  - { slug: nvlink,     label: "NVLink",     owner: nvidia,    note: "Связь GPU внутри стойки" }
+  - { slug: cowos,      label: "CoWoS",      owner: tsmc,      note: "Упаковка «чип + HBM» на одной подложке" }
+  - { slug: hbm,        label: "HBM",        owner: sk-hynix,  note: "Стековая память рядом с ускорителем" }
+  - { slug: infiniband, label: "InfiniBand", owner: nvidia,    note: "Сеть между стойками кластера" }
+  - { slug: arm-isa,    label: "Arm ISA",    owner: arm,       note: "Набор команд под CPU в AI-платформах" }
+  - { slug: ap1000,     label: "AP1000",     owner: westinghouse, note: "Большой реактор Westinghouse" }

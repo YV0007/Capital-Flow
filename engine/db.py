@@ -13,6 +13,9 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 DB_PATH = Path(os.environ.get("CAPITAL_DB", ROOT / "db" / "capital.db"))
 SCHEMA_PATH = ROOT / "db" / "schema.sql"
+# The monthly ecosystem pipeline lives in the SAME database file — entity identity
+# is shared (NVIDIA must be one NVIDIA on both maps). Its tables are all eco_*.
+ECO_SCHEMA_PATH = ROOT / "db" / "schema_eco.sql"
 CONFIG_DIR = ROOT / "config"
 RUNS_DIR = ROOT / "runs"
 HANDOFF_DIR = ROOT / "handoff"
@@ -51,6 +54,8 @@ def connect() -> sqlite3.Connection:
     con = sqlite3.connect(DB_PATH)
     con.row_factory = sqlite3.Row
     con.executescript(SCHEMA_PATH.read_text())
+    if ECO_SCHEMA_PATH.exists():
+        con.executescript(ECO_SCHEMA_PATH.read_text())
     _migrate(con)
     return con
 

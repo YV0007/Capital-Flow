@@ -120,3 +120,80 @@ Writes `runs/<week>/<agent>/context.json` — the feedback loop: what the engine
 already has per entity (search forward from `last_event_date`; `stale_candidates`
 needing a Tier-1 confirm), which sources actually yielded recently (`check_first`),
 and recent rejects with their lesson. Agents read this first (see agents/CONTEXT.md).
+
+---
+
+# RUNBOOK — running a MONTHLY cycle (the ecosystem map)
+
+Second pipeline, same repo, same database. It answers a different question — *how is the
+industry built and who holds it* — and it moves once a month, not once a week. Do not mix
+its files with the weekly ones: agents are `agents/eco-*.md`, outputs go to
+`runs/<YYYY-MM>/eco-<agent>/`, the orchestrator is `run_month.py`.
+
+## Step 1 — research (the non-deterministic layer)
+
+Launch the six ecosystem agents as subagents from a Claude Code session in this repo.
+Same instruction for each, varying only the agent name:
+
+> You are the **<AGENT>** research agent for the Capital Flow **ecosystem** map.
+> Read `agents/eco-CONTEXT.md`, then `agents/<AGENT>.md`, then `config/eco_layers.yaml`,
+> your slice of `config/eco_watchlist.yaml`, and `config/eco_rules.yaml`.
+> Read `runs/<PREVIOUS-MONTH>/rejects.csv` — those rows came back to you for a reason.
+> Research standing dependencies for month **<YYYY-MM>** and write `nodes.csv`,
+> `edges.csv`, `source_log.csv` and `summary.md` into `runs/<YYYY-MM>/<AGENT>/`.
+> Follow the CSV contract in eco-CONTEXT.md exactly. **No verbatim quote, no edge.**
+
+Order does not matter — `eco_ingest` loads every agent's nodes first, then every agent's
+edges, so cross-agent references resolve regardless of who ran when.
+
+| agent | layers | goes after |
+|---|---|---|
+| `eco-silicon` | L1–L4 | materials, tools, EDA, foundries, chips, HBM |
+| `eco-systems` | L5, L8–L9 | packaging, boards, networking, optics, servers, cooling, construction |
+| `eco-power` | L6–L7 | generation, turbines, nuclear, SMR, transformers, switchgear |
+| `eco-infra` | L10 | datacenters, REITs, neoclouds, hyperscalers |
+| `eco-models` | L11–L12 | inference, labs, orchestration software, demand |
+| `eco-capital` | cross-cutting | `owner` / `capital`: ownership, JVs, project finance, development |
+
+## Step 2 — the deterministic pipeline
+```bash
+python run_month.py 2026-08
+```
+Ingest → verify → score → cycles → handoff. Useful flags:
+
+| flag | what it does |
+|---|---|
+| `--offline` | skip the network verification pass (offline / data-only runs) |
+| `--verify-limit=N` | only re-check the first N citations (smoke runs) |
+| `--deliver` | copy `handoff/ecosystem_map.json` into `ab-investment/src/data/ecosystemMap.json` |
+| `--month=YYYY-MM` | same as the positional argument |
+
+## Step 3 — validate the contract (do this every run)
+```bash
+python tools/eco_validate.py
+```
+Exit code 1 on any violation. It checks the things the dashboard cannot defend itself
+against: dangling edge endpoints, an edge with empty evidence, `layers` not being exactly
+12, an id that does not match `<source>__<target>__<type>`, and every node's `criticality`
+reconciling with its own four rubric factors.
+
+## Step 4 — read the diff, not the data
+`handoff/ECOSYSTEM-CHANGELOG.md`. That is the whole human step: what appeared, what fell
+off, where an owner changed, which edge went dark. If the diff reads fine, the month is
+done.
+
+## What "it broke" looks like
+
+| symptom | cause | fix |
+|---|---|---|
+| Rows in `runs/<month>/rejects.csv` | An agent broke the contract (no quote, search URL, undeclared node, `compete`) | The reason column says exactly which. Hand the file back to that agent next run. |
+| `[verify] … N dead` | The page changed or the citation was paraphrased | Open the URL. If the fact still holds, re-quote it verbatim; if not, the edge deserves to die. |
+| `[verify] … N blocked/paywalled` | 403/429 — bot wall, not disproof | Nothing to fix. `alive` is left untouched by design. |
+| A node shows criticality 0 | Missing rubric factors | Ingest rejects those rows outright, so this means the DB was hand-edited. |
+| Cycles count jumps | A new capital edge closed a loop | Expected and interesting — read the note on the cycle. |
+
+## Re-running is safe
+`slug` is the key everywhere, so re-running a month updates in place: no duplicate nodes,
+no duplicate edges, no duplicate evidence rows. A second identical run reports
+`+0 / -0 / ~0` in the changelog. Node ids are permanent — **renaming a slug destroys that
+node's history**, so never "tidy" one.

@@ -1,0 +1,3826 @@
+{
+  "generated": "2026-08-18",
+  "asOf": "2026-08",
+  "source": "engine",
+  "ecosystem": "ai-datacenters",
+  "totals": {
+    "nodes": 44,
+    "edges": 57,
+    "layers": 12,
+    "cycles": 7
+  },
+  "layers": [
+    {
+      "id": "L1",
+      "label": "СЫРЬЁ",
+      "caption": "материалы · химия",
+      "band": 1,
+      "concentration": null
+    },
+    {
+      "id": "L2",
+      "label": "ОБОРУДОВАНИЕ",
+      "caption": "станки · софт · тесты",
+      "band": 1,
+      "concentration": {
+        "level": "competitive",
+        "hhi": 0.1942,
+        "top": [
+          "asml",
+          "carl-zeiss-smt",
+          "arm-holdings"
+        ]
+      }
+    },
+    {
+      "id": "L3",
+      "label": "ЧИПЫ",
+      "caption": "логика · силовые · кастомные",
+      "band": 2,
+      "concentration": {
+        "level": "competitive",
+        "hhi": 0.2478,
+        "top": [
+          "tsmc",
+          "nvidia",
+          "broadcom"
+        ]
+      }
+    },
+    {
+      "id": "L4",
+      "label": "ПАМЯТЬ",
+      "caption": "HBM · DRAM · SSD",
+      "band": 2,
+      "concentration": {
+        "level": "oligopoly",
+        "hhi": 0.3352,
+        "top": [
+          "sk-hynix",
+          "micron-technology",
+          "samsung-electronics"
+        ]
+      }
+    },
+    {
+      "id": "L5",
+      "label": "СБОРКА",
+      "caption": "упаковка · платы",
+      "band": 3,
+      "concentration": {
+        "level": "oligopoly",
+        "hhi": 0.2554,
+        "top": [
+          "ase-technology",
+          "amkor-technology",
+          "tsmc"
+        ]
+      }
+    },
+    {
+      "id": "L6",
+      "label": "ГЕНЕРАЦИЯ",
+      "caption": "источники · топливо",
+      "band": 3,
+      "concentration": {
+        "level": "competitive",
+        "hhi": 0.1773,
+        "top": [
+          "westinghouse",
+          "brookfield",
+          "cameco"
+        ]
+      }
+    },
+    {
+      "id": "L7",
+      "label": "ПЕРЕДАЧА ТОКА",
+      "caption": "сеть → стойка",
+      "band": 3,
+      "concentration": {
+        "level": "monopoly",
+        "hhi": 0.5312,
+        "top": [
+          "american-electric-power",
+          "vertiv"
+        ]
+      }
+    },
+    {
+      "id": "L8",
+      "label": "СВЯЗЬ",
+      "caption": "сеть · оптика",
+      "band": 4,
+      "concentration": {
+        "level": "competitive",
+        "hhi": 0.2178,
+        "top": [
+          "astera-labs",
+          "fabrinet",
+          "credo"
+        ]
+      }
+    },
+    {
+      "id": "L9",
+      "label": "СИСТЕМЫ",
+      "caption": "серверы · охлаждение · стройка",
+      "band": 4,
+      "concentration": {
+        "level": "oligopoly",
+        "hhi": 0.2733,
+        "top": [
+          "foxconn",
+          "vertiv",
+          "super-micro-computer"
+        ]
+      }
+    },
+    {
+      "id": "L10",
+      "label": "ВЫЧИСЛЕНИЯ",
+      "caption": "стойка",
+      "band": 4,
+      "concentration": {
+        "level": "competitive",
+        "hhi": 0.0826,
+        "top": [
+          "nvidia",
+          "equinix",
+          "stargate"
+        ]
+      }
+    },
+    {
+      "id": "L11",
+      "label": "ИНФЕРЕНС",
+      "caption": "работа моделей · цена ответа",
+      "band": 5,
+      "concentration": null
+    },
+    {
+      "id": "L12",
+      "label": "РЕЗУЛЬТАТ",
+      "caption": "модели · ИИ для бизнеса",
+      "band": 5,
+      "concentration": {
+        "level": "oligopoly",
+        "hhi": 0.3598,
+        "top": [
+          "openai",
+          "anthropic",
+          "microsoft"
+        ]
+      }
+    }
+  ],
+  "sectors": [
+    {
+      "key": "GOES Steel",
+      "label": "Электросталь",
+      "layer": "L1",
+      "dcNode": "goes"
+    },
+    {
+      "key": "Photoresist",
+      "label": "Фоторезист",
+      "layer": "L1",
+      "dcNode": "resist"
+    },
+    {
+      "key": "Specialty Chem",
+      "label": "Химия для чипов",
+      "layer": "L1",
+      "dcNode": "chem"
+    },
+    {
+      "key": "InP/GaAs",
+      "label": "InP / GaAs",
+      "layer": "L1",
+      "dcNode": "inpgaas"
+    },
+    {
+      "key": "Titanium",
+      "label": "Титановые сплавы",
+      "layer": "L1",
+      "dcNode": "titanium"
+    },
+    {
+      "key": "HBM Materials",
+      "label": "Материалы для HBM",
+      "layer": "L1",
+      "dcNode": "hbmmat"
+    },
+    {
+      "key": "Litho Tools",
+      "label": "Станки для чипов",
+      "layer": "L2",
+      "dcNode": "litho"
+    },
+    {
+      "key": "Test",
+      "label": "Тестирование",
+      "layer": "L2",
+      "dcNode": "test"
+    },
+    {
+      "key": "EDA",
+      "label": "Софт для чипов",
+      "layer": "L2",
+      "dcNode": "eda"
+    },
+    {
+      "key": "IP/Bonding",
+      "label": "Лицензии / склейка",
+      "layer": "L2",
+      "dcNode": "ip"
+    },
+    {
+      "key": "AI Silicon",
+      "label": "AI-чипы",
+      "layer": "L3",
+      "dcNode": "silicon"
+    },
+    {
+      "key": "Wide-Bandgap",
+      "label": "Силовые чипы",
+      "layer": "L3",
+      "dcNode": "wbg"
+    },
+    {
+      "key": "Custom ASIC",
+      "label": "Кастомные AI-чипы",
+      "layer": "L3",
+      "dcNode": "asic"
+    },
+    {
+      "key": "HBM",
+      "label": "HBM-память",
+      "layer": "L4",
+      "dcNode": "hbm"
+    },
+    {
+      "key": "DRAM",
+      "label": "DRAM",
+      "layer": "L4",
+      "dcNode": "dram"
+    },
+    {
+      "key": "NAND/SSD",
+      "label": "NAND / SSD",
+      "layer": "L4",
+      "dcNode": "nand"
+    },
+    {
+      "key": "Adv Packaging",
+      "label": "Упаковка чипов",
+      "layer": "L5",
+      "dcNode": "pkg"
+    },
+    {
+      "key": "PCB",
+      "label": "Платы / подложки",
+      "layer": "L5",
+      "dcNode": "pcb"
+    },
+    {
+      "key": "Nuclear",
+      "label": "Атомная энергия",
+      "layer": "L6",
+      "dcNode": "nuc"
+    },
+    {
+      "key": "SMR",
+      "label": "Малые реакторы",
+      "layer": "L6",
+      "dcNode": "smr"
+    },
+    {
+      "key": "Fuel Cells",
+      "label": "Топливные элементы",
+      "layer": "L6",
+      "dcNode": "fuel"
+    },
+    {
+      "key": "Gas Pipelines",
+      "label": "Газопроводы",
+      "layer": "L6",
+      "dcNode": "gaspipe"
+    },
+    {
+      "key": "Gas Turbines",
+      "label": "Газовые турбины",
+      "layer": "L6",
+      "dcNode": "gasturbines"
+    },
+    {
+      "key": "Renewables",
+      "label": "Возобновляемая энергия",
+      "layer": "L6",
+      "dcNode": "renewables"
+    },
+    {
+      "key": "Power",
+      "label": "Электроэнергия",
+      "layer": "L7",
+      "dcNode": "power"
+    },
+    {
+      "key": "Transformers",
+      "label": "Трансформаторы",
+      "layer": "L7",
+      "dcNode": "transformers"
+    },
+    {
+      "key": "Switchgear",
+      "label": "Электрощиты",
+      "layer": "L7",
+      "dcNode": "switchgear"
+    },
+    {
+      "key": "Power Mgmt",
+      "label": "Питание стоек",
+      "layer": "L7",
+      "dcNode": "pmgmt"
+    },
+    {
+      "key": "Photonics",
+      "label": "Фотоника",
+      "layer": "L8",
+      "dcNode": "photonics"
+    },
+    {
+      "key": "Network Silicon",
+      "label": "Сетевые чипы",
+      "layer": "L8",
+      "dcNode": "netsilicon"
+    },
+    {
+      "key": "Interconnect Fabric",
+      "label": "Сетевая фабрика",
+      "layer": "L8",
+      "dcNode": "fabric"
+    },
+    {
+      "key": "Optical Modules",
+      "label": "Оптические модули",
+      "layer": "L8",
+      "dcNode": "transceivers"
+    },
+    {
+      "key": "Dark Fiber",
+      "label": "Тёмное волокно",
+      "layer": "L8",
+      "dcNode": "darkfiber"
+    },
+    {
+      "key": "Fiber/Cable",
+      "label": "Оптоволокно",
+      "layer": "L8",
+      "dcNode": "fiber"
+    },
+    {
+      "key": "Server Systems",
+      "label": "Сборка серверов",
+      "layer": "L9",
+      "dcNode": "server"
+    },
+    {
+      "key": "Liquid Cooling",
+      "label": "Охлаждение",
+      "layer": "L9",
+      "dcNode": "liquid"
+    },
+    {
+      "key": "MEP",
+      "label": "Инженерные системы",
+      "layer": "L9",
+      "dcNode": "mep"
+    },
+    {
+      "key": "Contracting",
+      "label": "Строительство",
+      "layer": "L9",
+      "dcNode": "contracting"
+    },
+    {
+      "key": "AI Compute Infra",
+      "label": "AI-ВЫЧИСЛЕНИЯ",
+      "layer": "L10",
+      "dcNode": "rack"
+    },
+    {
+      "key": "Inference",
+      "label": "Инференс",
+      "layer": "L11",
+      "dcNode": "inference"
+    },
+    {
+      "key": "Frontier Lab",
+      "label": "AI-лаборатории",
+      "layer": "L12",
+      "dcNode": "lab"
+    },
+    {
+      "key": "AI Apps",
+      "label": "Внедрение ИИ",
+      "layer": "L12",
+      "dcNode": "apps"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "amazon",
+      "name": "Amazon",
+      "role": "demand",
+      "sector": "AI Compute Infra",
+      "layers": [
+        {
+          "layer": "L3",
+          "primary": false,
+          "criticality": 17
+        },
+        {
+          "layer": "L10",
+          "primary": true,
+          "criticality": 57
+        }
+      ],
+      "criticality": 57,
+      "criticalityFactors": {
+        "share": 3,
+        "alternatives": 2,
+        "switchTime": 3,
+        "barrier": 4
+      },
+      "gravity": {
+        "nodes": 1,
+        "layers": 1,
+        "edgeTypes": 1,
+        "score": 6
+      },
+      "oneLiner": "AWS плюс собственные ускорители Trainium; крупнейший инвестор Anthropic.",
+      "whatBreaksIt": "Anthropic уходит к другому облаку, а Trainium не догоняет NVIDIA по софту.",
+      "shareNote": "which primarily reflect investments in convertible notes from Anthropic, PBC (“Anthropic”), including $2.7 billion we invested in 2025",
+      "ticker": "NASDAQ: AMZN",
+      "publicPrivate": "Pub",
+      "geo": "US",
+      "tier": "anchor",
+      "techNodes": [],
+      "dcNode": "rack",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "american-electric-power",
+      "name": "American Electric Power",
+      "role": "owner",
+      "sector": "Power",
+      "layers": [
+        {
+          "layer": "L7",
+          "primary": true,
+          "criticality": 45
+        }
+      ],
+      "criticality": 45,
+      "criticalityFactors": {
+        "share": 2,
+        "alternatives": 1,
+        "switchTime": 3,
+        "barrier": 4
+      },
+      "gravity": {
+        "nodes": 1,
+        "layers": 1,
+        "edgeTypes": 1,
+        "score": 6
+      },
+      "oneLiner": "Одна из крупнейших электросетевых компаний США; подключает дата-центры к сети.",
+      "whatBreaksIt": "Перенос спроса в другие энергозоны с более коротким сроком подключения.",
+      "shareNote": "Bloom Energy and American Electric Power (AEP) entered into a strategic partnership under a landmark supply agreement announced in November 2024, under which AEP is expected to procure up to 1 GW of Bloom’s solid oxide fuel cells to support high-demand commercial applications such as AI data centers.",
+      "ticker": "NASDAQ: AEP",
+      "publicPrivate": "Pub",
+      "geo": "US",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "power",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "amkor-technology",
+      "name": "Amkor Technology",
+      "role": "producer",
+      "sector": "Adv Packaging",
+      "layers": [
+        {
+          "layer": "L5",
+          "primary": true,
+          "criticality": 51
+        }
+      ],
+      "criticality": 51,
+      "criticalityFactors": {
+        "share": 2,
+        "alternatives": 2,
+        "switchTime": 3,
+        "barrier": 4
+      },
+      "gravity": {
+        "nodes": 3,
+        "layers": 2,
+        "edgeTypes": 1,
+        "score": 13
+      },
+      "oneLiner": "Второй независимый подрядчик по упаковке и тестированию; сильные позиции в США.",
+      "whatBreaksIt": "Потеря крупнейшего заказчика, дающего почти треть выручки.",
+      "shareNote": "In 2025, 2024 and 2023 one customer accounted for 29.8 %, 30.8 % and 27.7 % of total net sales, respectively.",
+      "ticker": "NASDAQ: AMKR",
+      "publicPrivate": "Pub",
+      "geo": "US",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "pkg",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "role": "demand",
+      "sector": "Frontier Lab",
+      "layers": [
+        {
+          "layer": "L12",
+          "primary": true,
+          "criticality": 52
+        }
+      ],
+      "criticality": 52,
+      "criticalityFactors": {
+        "share": 3,
+        "alternatives": 2,
+        "switchTime": 2,
+        "barrier": 4
+      },
+      "gravity": {
+        "nodes": 1,
+        "layers": 2,
+        "edgeTypes": 1,
+        "score": 9
+      },
+      "oneLiner": "Лаборатория передовых моделей; основной инфраструктурный партнёр — Amazon.",
+      "whatBreaksIt": "Потеря доступа к мощности AWS или отставание в поколении моделей.",
+      "shareNote": "which primarily reflect investments in convertible notes from Anthropic, PBC (“Anthropic”), including $2.7 billion we invested in 2025",
+      "ticker": null,
+      "publicPrivate": "Pvt",
+      "geo": "US",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "lab",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "arm-holdings",
+      "name": "Arm Holdings",
+      "role": "platform",
+      "sector": "IP/Bonding",
+      "layers": [
+        {
+          "layer": "L2",
+          "primary": true,
+          "criticality": 86
+        }
+      ],
+      "criticality": 86,
+      "criticalityFactors": {
+        "share": 5,
+        "alternatives": 4,
+        "switchTime": 4,
+        "barrier": 4
+      },
+      "gravity": {
+        "nodes": 1,
+        "layers": 1,
+        "edgeTypes": 1,
+        "score": 6
+      },
+      "oneLiner": "Лицензирует набор команд и готовые блоки, на которых строят CPU в AI-платформах.",
+      "whatBreaksIt": "Массовый переход отрасли на RISC-V в серверном сегменте.",
+      "shareNote": "Набор команд Arm лицензирован практически всеми разработчиками CPU для AI-платформ; компания названа ключевым технологическим партнёром Stargate.",
+      "ticker": "NASDAQ: ARM",
+      "publicPrivate": "Pub",
+      "geo": "GB",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "ip",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "ase-technology",
+      "name": "ASE Technology",
+      "role": "producer",
+      "sector": "Adv Packaging",
+      "layers": [
+        {
+          "layer": "L5",
+          "primary": true,
+          "criticality": 63
+        }
+      ],
+      "criticality": 63,
+      "criticalityFactors": {
+        "share": 3,
+        "alternatives": 3,
+        "switchTime": 3,
+        "barrier": 4
+      },
+      "gravity": {
+        "nodes": 3,
+        "layers": 2,
+        "edgeTypes": 1,
+        "score": 13
+      },
+      "oneLiner": "Крупнейший независимый подрядчик по упаковке и тестированию чипов.",
+      "whatBreaksIt": "Заказчики переводят передовую упаковку внутрь фаундри (CoWoS у TSMC).",
+      "shareNote": "The majority of our front-end wafer manufacturing operations is outsourced to external foundries, including Taiwan Semiconductor Manufacturing Company Limited (“TSMC”). We use third-party CMs for a significant majority of our assembly and test operations, including TSMC, Advanced Semiconductor Engineering, Inc., Foxconn Technology Group, Amkor Technology, Inc. and Siliconware Precision Industries Co., Ltd.",
+      "ticker": "NYSE: ASX",
+      "publicPrivate": "Pub",
+      "geo": "TW",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "pkg",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "asml",
+      "name": "ASML",
+      "role": "producer",
+      "sector": "Litho Tools",
+      "layers": [
+        {
+          "layer": "L2",
+          "primary": true,
+          "criticality": 100
+        }
+      ],
+      "criticality": 100,
+      "criticalityFactors": {
+        "share": 5,
+        "alternatives": 5,
+        "switchTime": 5,
+        "barrier": 5
+      },
+      "gravity": {
+        "nodes": 2,
+        "layers": 3,
+        "edgeTypes": 1,
+        "score": 13
+      },
+      "oneLiner": "Единственный в мире производитель EUV-сканеров — станков, без которых не печатают чипы ниже 7 нм.",
+      "whatBreaksIt": "Рабочая альтернатива EUV или потеря эксклюзивного доступа к оптике Carl Zeiss SMT.",
+      "shareNote": "ASML is currently the world’s only manufacturer of EUV lithography systems.",
+      "ticker": "AMS: ASML",
+      "publicPrivate": "Pub",
+      "geo": "NL",
+      "tier": "anchor",
+      "techNodes": [
+        "euv"
+      ],
+      "dcNode": "litho",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "astera-labs",
+      "name": "Astera Labs",
+      "role": "producer",
+      "sector": "Network Silicon",
+      "layers": [
+        {
+          "layer": "L8",
+          "primary": true,
+          "criticality": 63
+        }
+      ],
+      "criticality": 63,
+      "criticalityFactors": {
+        "share": 3,
+        "alternatives": 3,
+        "switchTime": 3,
+        "barrier": 4
+      },
+      "gravity": {
+        "nodes": 3,
+        "layers": 2,
+        "edgeTypes": 1,
+        "score": 13
+      },
+      "oneLiner": "Ретаймеры и фабрика связности внутри AI-стойки — соединяет ускорители с CPU и памятью.",
+      "whatBreaksIt": "Функцию ретаймера втягивают в коммутаторный чип или в сам ускоритель.",
+      "shareNote": "We use a fabless manufacturing model and partner with TSMC to fabricate all of our ICs. We use Advanced Semiconductor Engineering and Amkor Technologies to assemble, package, and test our ICs.",
+      "ticker": "NASDAQ: ALAB",
+      "publicPrivate": "Pub",
+      "geo": "US",
+      "tier": "emerging",
+      "techNodes": [],
+      "dcNode": "netsilicon",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "blackstone",
+      "name": "Blackstone",
+      "role": "capital",
+      "sector": "AI Compute Infra",
+      "layers": [
+        {
+          "layer": "L10",
+          "primary": true,
+          "criticality": 51
+        }
+      ],
+      "criticality": 51,
+      "criticalityFactors": {
+        "share": 2,
+        "alternatives": 2,
+        "switchTime": 3,
+        "barrier": 4
+      },
+      "gravity": {
+        "nodes": 1,
+        "layers": 1,
+        "edgeTypes": 1,
+        "score": 6
+      },
+      "oneLiner": "Управляющий капиталом; владеет QTS — одной из крупнейших платформ гиперскейл-дата-центров.",
+      "whatBreaksIt": "Выход из QTS или разворот цикла на рынке дата-центров.",
+      "shareNote": "Blackstone (NYSE: BX) and QTS Realty Trust (NYSE: QTS) today announced that affiliates of Blackstone Infrastructure Partners, Blackstone Real Estate Income Trust, Inc., and Blackstone Property Partners have completed their previously announced acquisition of QTS Realty Trust for approximately $10 billion, including debt.",
+      "ticker": "NYSE: BX",
+      "publicPrivate": "Pub",
+      "geo": "US",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "rack",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "bloom-energy",
+      "name": "Bloom Energy",
+      "role": "producer",
+      "sector": "Fuel Cells",
+      "layers": [
+        {
+          "layer": "L6",
+          "primary": true,
+          "criticality": 49
+        }
+      ],
+      "criticality": 49,
+      "criticalityFactors": {
+        "share": 3,
+        "alternatives": 2,
+        "switchTime": 2,
+        "barrier": 3
+      },
+      "gravity": {
+        "nodes": 2,
+        "layers": 2,
+        "edgeTypes": 1,
+        "score": 11
+      },
+      "oneLiner": "Твердооксидные топливные элементы — питание прямо на площадке, без ожидания сети.",
+      "whatBreaksIt": "Подключение к сети дешевеет и ускоряется, снимая смысл локальной генерации.",
+      "shareNote": "Bloom Energy and American Electric Power (AEP) entered into a strategic partnership under a landmark supply agreement announced in November 2024, under which AEP is expected to procure up to 1 GW of Bloom’s solid oxide fuel cells to support high-demand commercial applications such as AI data centers.",
+      "ticker": "NYSE: BE",
+      "publicPrivate": "Pub",
+      "geo": "US",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "fuel",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "broadcom",
+      "name": "Broadcom",
+      "role": "producer",
+      "sector": "Custom ASIC",
+      "layers": [
+        {
+          "layer": "L3",
+          "primary": true,
+          "criticality": 80
+        },
+        {
+          "layer": "L8",
+          "primary": false,
+          "criticality": 24
+        }
+      ],
+      "criticality": 80,
+      "criticalityFactors": {
+        "share": 4,
+        "alternatives": 4,
+        "switchTime": 4,
+        "barrier": 4
+      },
+      "gravity": {
+        "nodes": 5,
+        "layers": 3,
+        "edgeTypes": 1,
+        "score": 19
+      },
+      "oneLiner": "Проектирует кастомные AI-ускорители для гиперскейлеров и делает сетевые чипы для кластеров.",
+      "whatBreaksIt": "Гиперскейлеры забирают дизайн ASIC внутрь или уходят к Marvell и дизайн-хаусам.",
+      "shareNote": "During fiscal years 2025, 2024 and 2023, one customer accounted for 32 %, 28 % and 21 % of our net revenue, respectively.",
+      "ticker": "NASDAQ: AVGO",
+      "publicPrivate": "Pub",
+      "geo": "US",
+      "tier": "anchor",
+      "techNodes": [],
+      "dcNode": "asic",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "brookfield",
+      "name": "Brookfield",
+      "role": "capital",
+      "sector": "Nuclear",
+      "layers": [
+        {
+          "layer": "L6",
+          "primary": true,
+          "criticality": 68
+        }
+      ],
+      "criticality": 68,
+      "criticalityFactors": {
+        "share": 3,
+        "alternatives": 3,
+        "switchTime": 4,
+        "barrier": 4
+      },
+      "gravity": {
+        "nodes": 1,
+        "layers": 1,
+        "edgeTypes": 1,
+        "score": 6
+      },
+      "oneLiner": "Управляющий инфраструктурным капиталом; контролирует Westinghouse — ядерное плечо стройки ИИ.",
+      "whatBreaksIt": "Продажа доли в Westinghouse или вывод её на биржу с потерей контроля.",
+      "shareNote": "Cameco now owns a 49% interest and Brookfield owns the remaining 51% in Westinghouse, one of the world’s largest nuclear services businesses.",
+      "ticker": "NYSE: BN",
+      "publicPrivate": "Pub",
+      "geo": "CA",
+      "tier": "anchor",
+      "techNodes": [],
+      "dcNode": "nuc",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "cameco",
+      "name": "Cameco",
+      "role": "owner",
+      "sector": "Nuclear",
+      "layers": [
+        {
+          "layer": "L6",
+          "primary": true,
+          "criticality": 68
+        }
+      ],
+      "criticality": 68,
+      "criticalityFactors": {
+        "share": 3,
+        "alternatives": 3,
+        "switchTime": 4,
+        "barrier": 4
+      },
+      "gravity": {
+        "nodes": 1,
+        "layers": 1,
+        "edgeTypes": 1,
+        "score": 6
+      },
+      "oneLiner": "Крупнейший западный добытчик урана и совладелец Westinghouse с долей 49%.",
+      "whatBreaksIt": "Выход из Westinghouse или обвал цены урана.",
+      "shareNote": "Cameco now owns a 49% interest and Brookfield owns the remaining 51% in Westinghouse, one of the world’s largest nuclear services businesses.",
+      "ticker": "NYSE: CCJ",
+      "publicPrivate": "Pub",
+      "geo": "CA",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "nuc",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "carl-zeiss-smt",
+      "name": "Carl Zeiss SMT",
+      "role": "producer",
+      "sector": "Litho Tools",
+      "layers": [
+        {
+          "layer": "L2",
+          "primary": true,
+          "criticality": 100
+        }
+      ],
+      "criticality": 100,
+      "criticalityFactors": {
+        "share": 5,
+        "alternatives": 5,
+        "switchTime": 5,
+        "barrier": 5
+      },
+      "gravity": {
+        "nodes": 1,
+        "layers": 1,
+        "edgeTypes": 1,
+        "score": 6
+      },
+      "oneLiner": "Единственный поставщик оптики (линзы, зеркала, коллекторы) для EUV-сканеров ASML.",
+      "whatBreaksIt": "ASML разрабатывает собственную оптику или квалифицирует второго поставщика — обоего пока нет.",
+      "shareNote": "The number of lithography systems we are able to produce is limited by the production capacity of one of our key suppliers, Carl Zeiss SMT, our sole supplier of lenses, mirrors, illuminators, collectors and other critical optical components (which we refer to as optics).",
+      "ticker": null,
+      "publicPrivate": "Pvt",
+      "geo": "DE",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "litho",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "cisco-systems",
+      "name": "Cisco Systems",
+      "role": "producer",
+      "sector": "Network Silicon",
+      "layers": [
+        {
+          "layer": "L8",
+          "primary": true,
+          "criticality": 37
+        }
+      ],
+      "criticality": 37,
+      "criticalityFactors": {
+        "share": 2,
+        "alternatives": 1,
+        "switchTime": 2,
+        "barrier": 3
+      },
+      "gravity": {
+        "nodes": 1,
+        "layers": 1,
+        "edgeTypes": 1,
+        "score": 6
+      },
+      "oneLiner": "Сетевое оборудование для дата-центров и корпоративных сетей.",
+      "whatBreaksIt": "Гиперскейлеры окончательно переходят на белые коробки и собственный сетевой кремний.",
+      "shareNote": "Второй по величине заказчик Fabrinet — 18,2% его выручки в 2025 финансовом году (10-K Fabrinet).",
+      "ticker": "NASDAQ: CSCO",
+      "publicPrivate": "Pub",
+      "geo": "US",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "netsilicon",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "constellation",
+      "name": "Constellation Energy",
+      "role": "owner",
+      "sector": "Nuclear",
+      "layers": [
+        {
+          "layer": "L6",
+          "primary": true,
+          "criticality": 68
+        }
+      ],
+      "criticality": 68,
+      "criticalityFactors": {
+        "share": 3,
+        "alternatives": 3,
+        "switchTime": 4,
+        "barrier": 4
+      },
+      "gravity": {
+        "nodes": 1,
+        "layers": 2,
+        "edgeTypes": 1,
+        "score": 9
+      },
+      "oneLiner": "Крупнейший в США владелец действующих АЭС; продаёт безуглеродную выработку дата-центрам.",
+      "whatBreaksIt": "Регуляторный запрет на прямые контракты «станция — дата-центр».",
+      "shareNote": "Constellation (Nasdaq: CEG) announced today the signing of a 20-year power purchase agreement with Microsoft that will pave the way for the launch of the Crane Clean Energy Center (CCEC) and restart of Three Mile Island Unit 1",
+      "ticker": "NASDAQ: CEG",
+      "publicPrivate": "Pub",
+      "geo": "US",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "nuc",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "coreweave",
+      "name": "CoreWeave",
+      "role": "owner",
+      "sector": "AI Compute Infra",
+      "layers": [
+        {
+          "layer": "L10",
+          "primary": true,
+          "criticality": 43
+        }
+      ],
+      "criticality": 43,
+      "criticalityFactors": {
+        "share": 2,
+        "alternatives": 2,
+        "switchTime": 2,
+        "barrier": 3
+      },
+      "gravity": {
+        "nodes": 3,
+        "layers": 3,
+        "edgeTypes": 2,
+        "score": 18
+      },
+      "oneLiner": "Неклауд: сдаёт в аренду GPU-кластеры под обучение и инференс.",
+      "whatBreaksIt": "Уход Microsoft или OpenAI — на двух заказчиков приходится почти вся выручка.",
+      "shareNote": "We recognized an aggregate of approximately 67% of our revenue from our top customer, Microsoft, for the year ended December 31, 2025.",
+      "ticker": "NASDAQ: CRWV",
+      "publicPrivate": "Pub",
+      "geo": "US",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "rack",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "credo",
+      "name": "Credo Technology",
+      "role": "producer",
+      "sector": "Network Silicon",
+      "layers": [
+        {
+          "layer": "L8",
+          "primary": true,
+          "criticality": 43
+        }
+      ],
+      "criticality": 43,
+      "criticalityFactors": {
+        "share": 2,
+        "alternatives": 2,
+        "switchTime": 2,
+        "barrier": 3
+      },
+      "gravity": {
+        "nodes": 5,
+        "layers": 3,
+        "edgeTypes": 1,
+        "score": 19
+      },
+      "oneLiner": "Активные электрические кабели и SerDes для соединения стоек в AI-кластере.",
+      "whatBreaksIt": "Переход кластеров на оптику вместо активной меди.",
+      "shareNote": "In fiscal 2026, sales to our top 10 customers accounted for approximately 90% of our total revenue.",
+      "ticker": "NASDAQ: CRDO",
+      "publicPrivate": "Pub",
+      "geo": "US",
+      "tier": "emerging",
+      "techNodes": [],
+      "dcNode": "netsilicon",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "equinix",
+      "name": "Equinix",
+      "role": "owner",
+      "sector": "AI Compute Infra",
+      "layers": [
+        {
+          "layer": "L10",
+          "primary": true,
+          "criticality": 62
+        }
+      ],
+      "criticality": 62,
+      "criticalityFactors": {
+        "share": 3,
+        "alternatives": 2,
+        "switchTime": 4,
+        "barrier": 4
+      },
+      "gravity": {
+        "nodes": 1,
+        "layers": 1,
+        "edgeTypes": 1,
+        "score": 6
+      },
+      "oneLiner": "Нейтральные дата-центры и точки обмена трафиком — физическая база интернета.",
+      "whatBreaksIt": "Гиперскейлеры окончательно уходят в собственные кампусы.",
+      "shareNote": "Крупнейший в мире оператор нейтральных дата-центров по числу площадок и точек обмена трафиком.",
+      "ticker": "NASDAQ: EQIX",
+      "publicPrivate": "Pub",
+      "geo": "US",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "rack",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "fabrinet",
+      "name": "Fabrinet",
+      "role": "producer",
+      "sector": "Optical Modules",
+      "layers": [
+        {
+          "layer": "L8",
+          "primary": true,
+          "criticality": 49
+        }
+      ],
+      "criticality": 49,
+      "criticalityFactors": {
+        "share": 3,
+        "alternatives": 2,
+        "switchTime": 2,
+        "barrier": 3
+      },
+      "gravity": {
+        "nodes": 2,
+        "layers": 3,
+        "edgeTypes": 1,
+        "score": 13
+      },
+      "oneLiner": "Контрактный производитель оптических модулей и сборок; крупнейший заказчик — NVIDIA.",
+      "whatBreaksIt": "NVIDIA или Cisco переводят сборку к другому подрядчику.",
+      "shareNote": "During fiscal year 2025, NVIDIA Corporation and Cisco Systems, Inc. contributed 27.6% and 18.2%, respectively, of our revenues.",
+      "ticker": "NYSE: FN",
+      "publicPrivate": "Pub",
+      "geo": "TH",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "transceivers",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "foxconn",
+      "name": "Foxconn",
+      "role": "producer",
+      "sector": "Server Systems",
+      "layers": [
+        {
+          "layer": "L9",
+          "primary": true,
+          "criticality": 55
+        }
+      ],
+      "criticality": 55,
+      "criticalityFactors": {
+        "share": 4,
+        "alternatives": 2,
+        "switchTime": 2,
+        "barrier": 3
+      },
+      "gravity": {
+        "nodes": 2,
+        "layers": 3,
+        "edgeTypes": 1,
+        "score": 13
+      },
+      "oneLiner": "Крупнейший в мире контрактный сборщик; собирает AI-серверы и стойки.",
+      "whatBreaksIt": "Заказчики распределяют объёмы между Quanta, Wistron и Inventec.",
+      "shareNote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung Electronics Co., Ltd., or Samsung, to produce our semiconductor wafers. We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung. We utilize CoWoS technology for semiconductor packaging. We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products.",
+      "ticker": "TWSE: 2317",
+      "publicPrivate": "Pub",
+      "geo": "TW",
+      "tier": "anchor",
+      "techNodes": [],
+      "dcNode": "server",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "king-yuan-electronics",
+      "name": "King Yuan Electronics",
+      "role": "producer",
+      "sector": "Test",
+      "layers": [
+        {
+          "layer": "L2",
+          "primary": true,
+          "criticality": 43
+        }
+      ],
+      "criticality": 43,
+      "criticalityFactors": {
+        "share": 2,
+        "alternatives": 2,
+        "switchTime": 2,
+        "barrier": 3
+      },
+      "gravity": {
+        "nodes": 1,
+        "layers": 1,
+        "edgeTypes": 1,
+        "score": 6
+      },
+      "oneLiner": "Подрядчик по тестированию микросхем для fabless-разработчиков.",
+      "whatBreaksIt": "Заказчики переносят тест к упаковщику или внутрь фаундри.",
+      "shareNote": "Upon the completion of processing at the foundry, we use third-party contractors for packaging, assembly and testing, including Amkor Technology Inc. (Amkor) and Advanced Semiconductor Engineering, Inc. (ASE) for packaging our IC products, King Yuan Electronics Company (KYEC) and Sigurd Microelectronics Corp. (Sigurd) for testing our IC produ",
+      "ticker": null,
+      "publicPrivate": "Pub",
+      "geo": "TW",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "test",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "lam-research",
+      "name": "Lam Research",
+      "role": "producer",
+      "sector": "Litho Tools",
+      "layers": [
+        {
+          "layer": "L2",
+          "primary": true,
+          "criticality": 57
+        }
+      ],
+      "criticality": 57,
+      "criticalityFactors": {
+        "share": 3,
+        "alternatives": 2,
+        "switchTime": 3,
+        "barrier": 4
+      },
+      "gravity": {
+        "nodes": 4,
+        "layers": 3,
+        "edgeTypes": 1,
+        "score": 18
+      },
+      "oneLiner": "Оборудование травления и осаждения; клиенты — Micron, Samsung, SK hynix и TSMC.",
+      "whatBreaksIt": "Клиенты переходят на конкурирующее оборудование Applied Materials или Tokyo Electron.",
+      "shareNote": "Our most significant customers during the fiscal years ending June 28, 2026, June 29, 2025, and June 30, 2024 included Micron Technology, Inc., Samsung Electronics Company, Ltd., SK hynix Inc., and Taiwan Semiconductor Manufacturing Company.",
+      "ticker": "NASDAQ: LRCX",
+      "publicPrivate": "Pub",
+      "geo": "US",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "litho",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "mgx",
+      "name": "MGX",
+      "role": "capital",
+      "sector": "AI Compute Infra",
+      "layers": [
+        {
+          "layer": "L10",
+          "primary": true,
+          "criticality": 45
+        }
+      ],
+      "criticality": 45,
+      "criticalityFactors": {
+        "share": 1,
+        "alternatives": 2,
+        "switchTime": 3,
+        "barrier": 4
+      },
+      "gravity": {
+        "nodes": 1,
+        "layers": 1,
+        "edgeTypes": 1,
+        "score": 6
+      },
+      "oneLiner": "Инвестиционная компания Абу-Даби, созданная под ИИ; один из четырёх держателей капитала Stargate.",
+      "whatBreaksIt": "Смена приоритетов суверенного собственника.",
+      "shareNote": "The initial equity funders in Stargate are SoftBank, OpenAI, Oracle, and MGX.",
+      "ticker": null,
+      "publicPrivate": "Pvt",
+      "geo": "AE",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "rack",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "micron-technology",
+      "name": "Micron Technology",
+      "role": "producer",
+      "sector": "HBM",
+      "layers": [
+        {
+          "layer": "L4",
+          "primary": true,
+          "criticality": 71
+        }
+      ],
+      "criticality": 71,
+      "criticalityFactors": {
+        "share": 3,
+        "alternatives": 3,
+        "switchTime": 4,
+        "barrier": 5
+      },
+      "gravity": {
+        "nodes": 2,
+        "layers": 3,
+        "edgeTypes": 1,
+        "score": 13
+      },
+      "oneLiner": "Третий поставщик HBM и DRAM; единственный американский производитель памяти такого масштаба.",
+      "whatBreaksIt": "Провал квалификации на следующем поколении HBM у ключевого заказчика.",
+      "shareNote": "Revenue from one customer was 17 % (primarily included in the CMBU segment) of total revenue for 2025.",
+      "ticker": "NASDAQ: MU",
+      "publicPrivate": "Pub",
+      "geo": "US",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "hbm",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "microsoft",
+      "name": "Microsoft",
+      "role": "demand",
+      "sector": "AI Compute Infra",
+      "layers": [
+        {
+          "layer": "L10",
+          "primary": true,
+          "criticality": 57
+        },
+        {
+          "layer": "L12",
+          "primary": false,
+          "criticality": 28
+        }
+      ],
+      "criticality": 57,
+      "criticalityFactors": {
+        "share": 3,
+        "alternatives": 2,
+        "switchTime": 3,
+        "barrier": 4
+      },
+      "gravity": {
+        "nodes": 5,
+        "layers": 3,
+        "edgeTypes": 4,
+        "score": 26
+      },
+      "oneLiner": "Гиперскейлер и крупнейший инвестор OpenAI; продаёт вычисления и встраивает модели в продукты.",
+      "whatBreaksIt": "Разрыв партнёрства с OpenAI или потеря прав на её интеллектуальную собственность.",
+      "shareNote": "Microsoft is a major investor in OpenAI and will continue to receive revenue-sharing payments. We hold rights to OpenAI’s intellectual property, including models and infrastructure, for integration into our products.",
+      "ticker": "NASDAQ: MSFT",
+      "publicPrivate": "Pub",
+      "geo": "US",
+      "tier": "anchor",
+      "techNodes": [],
+      "dcNode": "rack",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "nebius",
+      "name": "Nebius",
+      "role": "owner",
+      "sector": "AI Compute Infra",
+      "layers": [
+        {
+          "layer": "L10",
+          "primary": true,
+          "criticality": 26
+        }
+      ],
+      "criticality": 26,
+      "criticalityFactors": {
+        "share": 1,
+        "alternatives": 1,
+        "switchTime": 1,
+        "barrier": 3
+      },
+      "gravity": {
+        "nodes": 2,
+        "layers": 3,
+        "edgeTypes": 2,
+        "score": 16
+      },
+      "oneLiner": "Европейский неклауд; строит GPU-кластеры и продаёт мощность по долгим контрактам.",
+      "whatBreaksIt": "Отмена контракта Microsoft — на него приходится основная часть законтрактованной выручки.",
+      "shareNote": "Effective as of September 7, 2025, our wholly owned subsidiary, Nebius, Inc., entered into a commercial agreement with Microsoft Corp (“Microsoft”), pursuant to which we are providing Microsoft access to dedicated GPU infrastructure capacity in clusters at our new data center in Vineland, New Jersey over a five-year term.",
+      "ticker": "NASDAQ: NBIS",
+      "publicPrivate": "Pub",
+      "geo": "NL",
+      "tier": "emerging",
+      "techNodes": [],
+      "dcNode": "rack",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "nvidia",
+      "name": "NVIDIA",
+      "role": "producer",
+      "sector": "AI Silicon",
+      "layers": [
+        {
+          "layer": "L3",
+          "primary": true,
+          "criticality": 89
+        },
+        {
+          "layer": "L10",
+          "primary": false,
+          "criticality": 89
+        }
+      ],
+      "criticality": 89,
+      "criticalityFactors": {
+        "share": 5,
+        "alternatives": 4,
+        "switchTime": 4,
+        "barrier": 5
+      },
+      "gravity": {
+        "nodes": 13,
+        "layers": 8,
+        "edgeTypes": 3,
+        "score": 52
+      },
+      "oneLiner": "Ускорители для ИИ вместе с сетью и софтом CUDA — де-факто стандарт обучения моделей.",
+      "whatBreaksIt": "Массовый переход гиперскейлеров на собственные ASIC или прорыв конкурента в софтовом слое.",
+      "shareNote": "For fiscal year 2026, sales to one direct customer represented 22% of total revenue and sales to another direct customer represented 14% of total revenue, all of which were primarily attributable to the Compute & Networking segment.",
+      "ticker": "NASDAQ: NVDA",
+      "publicPrivate": "Pub",
+      "geo": "US",
+      "tier": "anchor",
+      "techNodes": [
+        "cuda",
+        "infiniband",
+        "nvlink"
+      ],
+      "dcNode": "silicon",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "oklo",
+      "name": "Oklo",
+      "role": "producer",
+      "sector": "SMR",
+      "layers": [
+        {
+          "layer": "L6",
+          "primary": true,
+          "criticality": 38
+        }
+      ],
+      "criticality": 38,
+      "criticalityFactors": {
+        "share": 0,
+        "alternatives": 1,
+        "switchTime": 4,
+        "barrier": 4
+      },
+      "gravity": {
+        "nodes": 3,
+        "layers": 3,
+        "edgeTypes": 2,
+        "score": 18
+      },
+      "oneLiner": "Разработчик малых реакторов Aurora; продаёт энергию по контрактам, а не сами реакторы.",
+      "whatBreaksIt": "Отказ NRC в лицензировании — станций пока не построено ни одной.",
+      "shareNote": "We have not yet constructed any powerhouses or entered into any binding power purchase agreement with any customer to operate a plant or deliver electricity or heat",
+      "ticker": "NYSE: OKLO",
+      "publicPrivate": "Pub",
+      "geo": "US",
+      "tier": "emerging",
+      "techNodes": [],
+      "dcNode": "smr",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "role": "demand",
+      "sector": "Frontier Lab",
+      "layers": [
+        {
+          "layer": "L12",
+          "primary": true,
+          "criticality": 58
+        }
+      ],
+      "criticality": 58,
+      "criticalityFactors": {
+        "share": 4,
+        "alternatives": 2,
+        "switchTime": 2,
+        "barrier": 4
+      },
+      "gravity": {
+        "nodes": 5,
+        "layers": 3,
+        "edgeTypes": 5,
+        "score": 28
+      },
+      "oneLiner": "Лаборатория передовых моделей и крупнейший в мире покупатель вычислений.",
+      "whatBreaksIt": "Модель конкурента заметно лучше при сопоставимой цене ответа.",
+      "shareNote": "In May 2025, we entered into a master services agreement with OpenAI OpCo, LLC (“OpenAI”) and in September 2025, we entered into an order form under this master services agreement pursuant to which OpenAI has committed to pay us up to approximately $6.5 billion through May 31, 2031",
+      "ticker": null,
+      "publicPrivate": "Pvt",
+      "geo": "US",
+      "tier": "anchor",
+      "techNodes": [],
+      "dcNode": "lab",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "oracle",
+      "name": "Oracle",
+      "role": "owner",
+      "sector": "AI Compute Infra",
+      "layers": [
+        {
+          "layer": "L10",
+          "primary": true,
+          "criticality": 51
+        }
+      ],
+      "criticality": 51,
+      "criticalityFactors": {
+        "share": 2,
+        "alternatives": 2,
+        "switchTime": 3,
+        "barrier": 4
+      },
+      "gravity": {
+        "nodes": 3,
+        "layers": 3,
+        "edgeTypes": 3,
+        "score": 20
+      },
+      "oneLiner": "Облако OCI и оператор площадок Stargate; продаёт мощность лабораториям большими контрактами.",
+      "whatBreaksIt": "Сокращение обязательств OpenAI — контракт на 4,5 ГВт определяет весь профиль роста.",
+      "shareNote": "Oracle and OpenAI have entered an agreement to develop 4.5 gigawatts of additional Stargate data center capacity in the U.S.",
+      "ticker": "NYSE: ORCL",
+      "publicPrivate": "Pub",
+      "geo": "US",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "rack",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "qts-realty-trust",
+      "name": "QTS Realty Trust",
+      "role": "owner",
+      "sector": "AI Compute Infra",
+      "layers": [
+        {
+          "layer": "L10",
+          "primary": true,
+          "criticality": 42
+        }
+      ],
+      "criticality": 42,
+      "criticalityFactors": {
+        "share": 2,
+        "alternatives": 1,
+        "switchTime": 3,
+        "barrier": 3
+      },
+      "gravity": {
+        "nodes": 1,
+        "layers": 1,
+        "edgeTypes": 1,
+        "score": 6
+      },
+      "oneLiner": "Оператор гиперскейл-кампусов, полностью принадлежит фондам Blackstone.",
+      "whatBreaksIt": "Смена стратегии владельца или потеря якорных арендаторов.",
+      "shareNote": "Blackstone (NYSE: BX) and QTS Realty Trust (NYSE: QTS) today announced that affiliates of Blackstone Infrastructure Partners, Blackstone Real Estate Income Trust, Inc., and Blackstone Property Partners have completed their previously announced acquisition of QTS Realty Trust for approximately $10 billion, including debt.",
+      "ticker": null,
+      "publicPrivate": "Pvt",
+      "geo": "US",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "rack",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "samsung-electronics",
+      "name": "Samsung Electronics",
+      "role": "producer",
+      "sector": "DRAM",
+      "layers": [
+        {
+          "layer": "L3",
+          "primary": false,
+          "criticality": 36
+        },
+        {
+          "layer": "L4",
+          "primary": true,
+          "criticality": 71
+        }
+      ],
+      "criticality": 71,
+      "criticalityFactors": {
+        "share": 3,
+        "alternatives": 3,
+        "switchTime": 4,
+        "barrier": 5
+      },
+      "gravity": {
+        "nodes": 2,
+        "layers": 3,
+        "edgeTypes": 1,
+        "score": 13
+      },
+      "oneLiner": "Память и фаундри в одной компании: DRAM, HBM и передовое производство чипов.",
+      "whatBreaksIt": "Отставание в HBM закрепляется, и доля в памяти для ИИ уходит к SK hynix и Micron.",
+      "shareNote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung Electronics Co., Ltd., or Samsung, to produce our semiconductor wafers. We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung. We utilize CoWoS technology for semiconductor packaging. We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products.",
+      "ticker": "KRX: 005930",
+      "publicPrivate": "Pub",
+      "geo": "KR",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "dram",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "sigurd-microelectronics",
+      "name": "Sigurd Microelectronics",
+      "role": "producer",
+      "sector": "Test",
+      "layers": [
+        {
+          "layer": "L2",
+          "primary": true,
+          "criticality": 28
+        }
+      ],
+      "criticality": 28,
+      "criticalityFactors": {
+        "share": 1,
+        "alternatives": 1,
+        "switchTime": 2,
+        "barrier": 2
+      },
+      "gravity": {
+        "nodes": 1,
+        "layers": 1,
+        "edgeTypes": 1,
+        "score": 6
+      },
+      "oneLiner": "Небольшой тайваньский подрядчик по тестированию микросхем.",
+      "whatBreaksIt": "Уход одного-двух заказчиков — база клиентов узкая.",
+      "shareNote": "Upon the completion of processing at the foundry, we use third-party contractors for packaging, assembly and testing, including Amkor Technology Inc. (Amkor) and Advanced Semiconductor Engineering, Inc. (ASE) for packaging our IC products, King Yuan Electronics Company (KYEC) and Sigurd Microelectronics Corp. (Sigurd) for testing our IC produ",
+      "ticker": null,
+      "publicPrivate": "Pub",
+      "geo": "TW",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "test",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "siliconware-precision-industries",
+      "name": "Siliconware Precision Industries",
+      "role": "producer",
+      "sector": "Adv Packaging",
+      "layers": [
+        {
+          "layer": "L5",
+          "primary": true,
+          "criticality": 43
+        }
+      ],
+      "criticality": 43,
+      "criticalityFactors": {
+        "share": 2,
+        "alternatives": 2,
+        "switchTime": 2,
+        "barrier": 3
+      },
+      "gravity": {
+        "nodes": 1,
+        "layers": 2,
+        "edgeTypes": 1,
+        "score": 9
+      },
+      "oneLiner": "Тайваньский подрядчик по упаковке и тестированию, входит в группу ASE.",
+      "whatBreaksIt": "Консолидация упаковки внутри фаундри.",
+      "shareNote": "The majority of our front-end wafer manufacturing operations is outsourced to external foundries, including Taiwan Semiconductor Manufacturing Company Limited (“TSMC”). We use third-party CMs for a significant majority of our assembly and test operations, including TSMC, Advanced Semiconductor Engineering, Inc., Foxconn Technology Group, Amkor Technology, Inc. and Siliconware Precision Industries Co., Ltd.",
+      "ticker": null,
+      "publicPrivate": "Pub",
+      "geo": "TW",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "pkg",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "sk-hynix",
+      "name": "SK Hynix",
+      "role": "producer",
+      "sector": "HBM",
+      "layers": [
+        {
+          "layer": "L4",
+          "primary": true,
+          "criticality": 83
+        }
+      ],
+      "criticality": 83,
+      "criticalityFactors": {
+        "share": 4,
+        "alternatives": 4,
+        "switchTime": 4,
+        "barrier": 5
+      },
+      "gravity": {
+        "nodes": 2,
+        "layers": 3,
+        "edgeTypes": 2,
+        "score": 16
+      },
+      "oneLiner": "Ведущий поставщик HBM — стековой памяти, стоящей вплотную к ускорителю.",
+      "whatBreaksIt": "Samsung или Micron проходят квалификацию на следующее поколение HBM раньше.",
+      "shareNote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung Electronics Co., Ltd., or Samsung, to produce our semiconductor wafers. We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung. We utilize CoWoS technology for semiconductor packaging. We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products.",
+      "ticker": "KRX: 000660",
+      "publicPrivate": "Pub",
+      "geo": "KR",
+      "tier": "anchor",
+      "techNodes": [
+        "hbm"
+      ],
+      "dcNode": "hbm",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "softbank",
+      "name": "SoftBank",
+      "role": "capital",
+      "sector": "AI Compute Infra",
+      "layers": [
+        {
+          "layer": "L10",
+          "primary": true,
+          "criticality": 51
+        }
+      ],
+      "criticality": 51,
+      "criticalityFactors": {
+        "share": 2,
+        "alternatives": 2,
+        "switchTime": 3,
+        "barrier": 4
+      },
+      "gravity": {
+        "nodes": 1,
+        "layers": 1,
+        "edgeTypes": 1,
+        "score": 6
+      },
+      "oneLiner": "Держатель капитала и финансовый ответственный Stargate; ведущий партнёр проекта наряду с OpenAI.",
+      "whatBreaksIt": "Невозможность привлечь долг под стройку — финансовая ответственность лежит на нём.",
+      "shareNote": "The initial equity funders in Stargate are SoftBank, OpenAI, Oracle, and MGX.",
+      "ticker": "TSE: 9984",
+      "publicPrivate": "Pub",
+      "geo": "JP",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "rack",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "stargate",
+      "name": "Stargate",
+      "role": "owner",
+      "sector": "AI Compute Infra",
+      "layers": [
+        {
+          "layer": "L10",
+          "primary": true,
+          "criticality": 59
+        }
+      ],
+      "criticality": 59,
+      "criticalityFactors": {
+        "share": 2,
+        "alternatives": 2,
+        "switchTime": 4,
+        "barrier": 5
+      },
+      "gravity": {
+        "nodes": 7,
+        "layers": 4,
+        "edgeTypes": 3,
+        "score": 30
+      },
+      "oneLiner": "Совместное предприятие OpenAI, SoftBank, Oracle и MGX для стройки AI-дата-центров в США.",
+      "whatBreaksIt": "Выход одного из держателей капитала — финансирование стройки завязано на четверых.",
+      "shareNote": "The initial equity funders in Stargate are SoftBank, OpenAI, Oracle, and MGX.",
+      "ticker": null,
+      "publicPrivate": "Pvt",
+      "geo": "US",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "rack",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "super-micro-computer",
+      "name": "Super Micro Computer",
+      "role": "producer",
+      "sector": "Server Systems",
+      "layers": [
+        {
+          "layer": "L9",
+          "primary": true,
+          "criticality": 29
+        }
+      ],
+      "criticality": 29,
+      "criticalityFactors": {
+        "share": 2,
+        "alternatives": 1,
+        "switchTime": 1,
+        "barrier": 2
+      },
+      "gravity": {
+        "nodes": 1,
+        "layers": 2,
+        "edgeTypes": 1,
+        "score": 9
+      },
+      "oneLiner": "Собирает AI-серверы и стойки под новые платформы NVIDIA, Intel и AMD.",
+      "whatBreaksIt": "Потеря раннего доступа к новым платформам NVIDIA.",
+      "shareNote": "Four customers each accounted for 10% or more of our net sales in fiscal year 2025",
+      "ticker": "NASDAQ: SMCI",
+      "publicPrivate": "Pub",
+      "geo": "US",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "server",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "switch",
+      "name": "Switch",
+      "role": "owner",
+      "sector": "AI Compute Infra",
+      "layers": [
+        {
+          "layer": "L10",
+          "primary": true,
+          "criticality": 42
+        }
+      ],
+      "criticality": 42,
+      "criticalityFactors": {
+        "share": 2,
+        "alternatives": 1,
+        "switchTime": 3,
+        "barrier": 3
+      },
+      "gravity": {
+        "nodes": 1,
+        "layers": 1,
+        "edgeTypes": 1,
+        "score": 6
+      },
+      "oneLiner": "Оператор крупных кампусов дата-центров в США.",
+      "whatBreaksIt": "Невозможность обеспечить мощность под законтрактованный рост.",
+      "shareNote": "In December 2024, we signed a 12 gigawatt (GW) Master Power Agreement with Switch, Ltd. (\"Switch\"), one of the largest corporate power purchase agreements (\"PPA\") in history.",
+      "ticker": null,
+      "publicPrivate": "Pvt",
+      "geo": "US",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "rack",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "tsmc",
+      "name": "TSMC",
+      "role": "producer",
+      "sector": "AI Silicon",
+      "layers": [
+        {
+          "layer": "L3",
+          "primary": true,
+          "criticality": 94
+        },
+        {
+          "layer": "L5",
+          "primary": false,
+          "criticality": 47
+        }
+      ],
+      "criticality": 94,
+      "criticalityFactors": {
+        "share": 5,
+        "alternatives": 4,
+        "switchTime": 5,
+        "barrier": 5
+      },
+      "gravity": {
+        "nodes": 6,
+        "layers": 4,
+        "edgeTypes": 1,
+        "score": 24
+      },
+      "oneLiner": "Крупнейший контрактный производитель чипов; делает физически почти весь передовой AI-кремний.",
+      "whatBreaksIt": "Военно-политический разрыв поставок с Тайваня либо успешный передовой узел у Samsung или Intel.",
+      "shareNote": "Our largest customer in 2023 , 2024 and 2025 accounted for 25% , 22% and 19% of our net revenue in the respective year.",
+      "ticker": "NYSE: TSM",
+      "publicPrivate": "Pub",
+      "geo": "TW",
+      "tier": "anchor",
+      "techNodes": [
+        "cowos"
+      ],
+      "dcNode": "silicon",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "vertiv",
+      "name": "Vertiv",
+      "role": "producer",
+      "sector": "Liquid Cooling",
+      "layers": [
+        {
+          "layer": "L7",
+          "primary": false,
+          "criticality": 27
+        },
+        {
+          "layer": "L9",
+          "primary": true,
+          "criticality": 54
+        }
+      ],
+      "criticality": 54,
+      "criticalityFactors": {
+        "share": 3,
+        "alternatives": 2,
+        "switchTime": 3,
+        "barrier": 3
+      },
+      "gravity": {
+        "nodes": 2,
+        "layers": 3,
+        "edgeTypes": 1,
+        "score": 13
+      },
+      "oneLiner": "Питание и жидкостное охлаждение дата-центров; партнёр NVIDIA по стоечной инфраструктуре.",
+      "whatBreaksIt": "Гиперскейлеры стандартизируют собственный дизайн охлаждения и отдают его дешёвым подрядчикам.",
+      "shareNote": "Our partnership with NVIDIA supports the development of advanced power and thermal infrastructure aligned with next-generation AI and high-performance computing architectures, while our collaboration with Oklo reflects exploration of alternative energy solutions",
+      "ticker": "NYSE: VRT",
+      "publicPrivate": "Pub",
+      "geo": "US",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "liquid",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "westinghouse",
+      "name": "Westinghouse Electric",
+      "role": "producer",
+      "sector": "Nuclear",
+      "layers": [
+        {
+          "layer": "L6",
+          "primary": true,
+          "criticality": 88
+        }
+      ],
+      "criticality": 88,
+      "criticalityFactors": {
+        "share": 4,
+        "alternatives": 4,
+        "switchTime": 5,
+        "barrier": 5
+      },
+      "gravity": {
+        "nodes": 2,
+        "layers": 1,
+        "edgeTypes": 2,
+        "score": 11
+      },
+      "oneLiner": "Реакторы AP1000 и обслуживание действующего парка АЭС на Западе.",
+      "whatBreaksIt": "Отмена новых заказов на AP1000 или уход обслуживаемых станций к конкурентам.",
+      "shareNote": "Cameco now owns a 49% interest and Brookfield owns the remaining 51% in Westinghouse, one of the world’s largest nuclear services businesses.",
+      "ticker": null,
+      "publicPrivate": "Pvt",
+      "geo": "US",
+      "tier": "core",
+      "techNodes": [
+        "ap1000"
+      ],
+      "dcNode": "nuc",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    },
+    {
+      "id": "wistron",
+      "name": "Wistron",
+      "role": "producer",
+      "sector": "Server Systems",
+      "layers": [
+        {
+          "layer": "L9",
+          "primary": true,
+          "criticality": 29
+        }
+      ],
+      "criticality": 29,
+      "criticalityFactors": {
+        "share": 2,
+        "alternatives": 1,
+        "switchTime": 1,
+        "barrier": 2
+      },
+      "gravity": {
+        "nodes": 1,
+        "layers": 2,
+        "edgeTypes": 1,
+        "score": 9
+      },
+      "oneLiner": "Тайваньский ODM-сборщик серверов и AI-модулей.",
+      "whatBreaksIt": "Перераспределение заказов к Foxconn или Quanta — переключение почти мгновенное.",
+      "shareNote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung Electronics Co., Ltd., or Samsung, to produce our semiconductor wafers. We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung. We utilize CoWoS technology for semiconductor packaging. We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products.",
+      "ticker": "TWSE: 3231",
+      "publicPrivate": "Pub",
+      "geo": "TW",
+      "tier": "core",
+      "techNodes": [],
+      "dcNode": "server",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false
+    }
+  ],
+  "techNodes": [
+    {
+      "id": "ap1000",
+      "label": "AP1000",
+      "owner": "westinghouse",
+      "note": "Большой реактор Westinghouse"
+    },
+    {
+      "id": "arm-isa",
+      "label": "Arm ISA",
+      "owner": null,
+      "note": "Набор команд под CPU в AI-платформах"
+    },
+    {
+      "id": "cowos",
+      "label": "CoWoS",
+      "owner": "tsmc",
+      "note": "Упаковка «чип + HBM» на одной подложке"
+    },
+    {
+      "id": "cuda",
+      "label": "CUDA",
+      "owner": "nvidia",
+      "note": "Программный замок вокруг GPU"
+    },
+    {
+      "id": "euv",
+      "label": "EUV",
+      "owner": "asml",
+      "note": "Литография ниже 7 нм"
+    },
+    {
+      "id": "hbm",
+      "label": "HBM",
+      "owner": "sk-hynix",
+      "note": "Стековая память рядом с ускорителем"
+    },
+    {
+      "id": "infiniband",
+      "label": "InfiniBand",
+      "owner": "nvidia",
+      "note": "Сеть между стойками кластера"
+    },
+    {
+      "id": "nvlink",
+      "label": "NVLink",
+      "owner": "nvidia",
+      "note": "Связь GPU внутри стойки"
+    }
+  ],
+  "edges": [
+    {
+      "id": "amazon__anthropic__stake",
+      "source": "amazon",
+      "target": "anthropic",
+      "type": "stake",
+      "spine": "capital",
+      "strength": 80,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": true,
+      "started": "2024",
+      "lastConfirmed": "2026-08",
+      "note": "Конвертируемые займы, часть которых в 2025 конвертирована в неголосующие привилегированные акции.",
+      "evidence": [
+        {
+          "quote": "which primarily reflect investments in convertible notes from Anthropic, PBC (“Anthropic”), including $2.7 billion we invested in 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+          "tier": "filing",
+          "published": "2026-02-06",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "amkor-technology__astera-labs__supply",
+      "source": "amkor-technology",
+      "target": "astera-labs",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 60,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "Упаковка, сборка и тест микросхем Astera Labs.",
+      "evidence": [
+        {
+          "quote": "We use a fabless manufacturing model and partner with TSMC to fabricate all of our ICs. We use Advanced Semiconductor Engineering and Amkor Technologies to assemble, package, and test our ICs.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+          "tier": "filing",
+          "published": "2026-02-20",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "amkor-technology__broadcom__supply",
+      "source": "amkor-technology",
+      "target": "broadcom",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 45,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "Упаковка и тест для Broadcom.",
+      "evidence": [
+        {
+          "quote": "The majority of our front-end wafer manufacturing operations is outsourced to external foundries, including Taiwan Semiconductor Manufacturing Company Limited (“TSMC”). We use third-party CMs for a significant majority of our assembly and test operations, including TSMC, Advanced Semiconductor Engineering, Inc., Foxconn Technology Group, Amkor Technology, Inc. and Siliconware Precision Industries Co., Ltd.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+          "tier": "filing",
+          "published": "2025-12-18",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "amkor-technology__credo__supply",
+      "source": "amkor-technology",
+      "target": "credo",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 55,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "Упаковка микросхем Credo.",
+      "evidence": [
+        {
+          "quote": "Upon the completion of processing at the foundry, we use third-party contractors for packaging, assembly and testing, including Amkor Technology Inc. (Amkor) and Advanced Semiconductor Engineering, Inc. (ASE) for packaging our IC products, King Yuan Electronics Company (KYEC) and Sigurd Microelectronics Corp. (Sigurd) for testing our IC produ",
+          "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm",
+          "tier": "filing",
+          "published": "2026-06-15",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "arm-holdings__stargate__platform",
+      "source": "arm-holdings",
+      "target": "stargate",
+      "type": "platform",
+      "spine": "physical",
+      "strength": 40,
+      "techNode": "arm-isa",
+      "status": "active",
+      "tier": "company_pr",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": "2025",
+      "lastConfirmed": "2026-08",
+      "note": "Назван среди ключевых первоначальных технологических партнёров.",
+      "evidence": [
+        {
+          "quote": "Arm, Microsoft, NVIDIA, Oracle, and OpenAI are the key initial technology partners.",
+          "url": "https://openai.com/index/announcing-the-stargate-project/",
+          "tier": "company_pr",
+          "published": "2025-01-21",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "ase-technology__astera-labs__supply",
+      "source": "ase-technology",
+      "target": "astera-labs",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 60,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "Упаковка, сборка и тест микросхем Astera Labs.",
+      "evidence": [
+        {
+          "quote": "We use a fabless manufacturing model and partner with TSMC to fabricate all of our ICs. We use Advanced Semiconductor Engineering and Amkor Technologies to assemble, package, and test our ICs.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+          "tier": "filing",
+          "published": "2026-02-20",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "ase-technology__broadcom__supply",
+      "source": "ase-technology",
+      "target": "broadcom",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 55,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "Упаковка и тест для Broadcom.",
+      "evidence": [
+        {
+          "quote": "The majority of our front-end wafer manufacturing operations is outsourced to external foundries, including Taiwan Semiconductor Manufacturing Company Limited (“TSMC”). We use third-party CMs for a significant majority of our assembly and test operations, including TSMC, Advanced Semiconductor Engineering, Inc., Foxconn Technology Group, Amkor Technology, Inc. and Siliconware Precision Industries Co., Ltd.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+          "tier": "filing",
+          "published": "2025-12-18",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "ase-technology__credo__supply",
+      "source": "ase-technology",
+      "target": "credo",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 55,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "Упаковка микросхем Credo.",
+      "evidence": [
+        {
+          "quote": "Upon the completion of processing at the foundry, we use third-party contractors for packaging, assembly and testing, including Amkor Technology Inc. (Amkor) and Advanced Semiconductor Engineering, Inc. (ASE) for packaging our IC products, King Yuan Electronics Company (KYEC) and Sigurd Microelectronics Corp. (Sigurd) for testing our IC produ",
+          "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm",
+          "tier": "filing",
+          "published": "2026-06-15",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "asml__tsmc__supply",
+      "source": "asml",
+      "target": "tsmc",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 95,
+      "techNode": "euv",
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "ASML — поставщик TSMC; в ноябре 2025 получил от него награду поставщика.",
+      "evidence": [
+        {
+          "quote": "In November 2025, we were honored to receive the TSMC Supplier ‘Excellence in Green Manufacturing’ Award",
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "tier": "filing",
+          "published": "2026-02-25",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "blackstone__qts-realty-trust__owns",
+      "source": "blackstone",
+      "target": "qts-realty-trust",
+      "type": "owns",
+      "spine": "capital",
+      "strength": 95,
+      "techNode": null,
+      "status": "active",
+      "tier": "company_pr",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": "2021",
+      "lastConfirmed": "2026-08",
+      "note": "Полная покупка QTS фондами Blackstone примерно за $10 млрд с учётом долга.",
+      "evidence": [
+        {
+          "quote": "Blackstone (NYSE: BX) and QTS Realty Trust (NYSE: QTS) today announced that affiliates of Blackstone Infrastructure Partners, Blackstone Real Estate Income Trust, Inc., and Blackstone Property Partners have completed their previously announced acquisition of QTS Realty Trust for approximately $10 billion, including debt.",
+          "url": "https://www.blackstone.com/news/press/blackstone-funds-complete-acquisition-of-qts-realty-trust/",
+          "tier": "company_pr",
+          "published": "2021-08-31",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "bloom-energy__american-electric-power__supply",
+      "source": "bloom-energy",
+      "target": "american-electric-power",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 45,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": "2024",
+      "lastConfirmed": "2026-08",
+      "note": "AEP законтрактовала до 1 ГВт топливных элементов Bloom под спрос ДЦ.",
+      "evidence": [
+        {
+          "quote": "Bloom Energy and American Electric Power (AEP) entered into a strategic partnership under a landmark supply agreement announced in November 2024, under which AEP is expected to procure up to 1 GW of Bloom’s solid oxide fuel cells to support high-demand commercial applications such as AI data centers.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "tier": "filing",
+          "published": "2026-02-09",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "bloom-energy__oracle__supply",
+      "source": "bloom-energy",
+      "target": "oracle",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 40,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": "2025",
+      "lastConfirmed": "2026-08",
+      "note": "Питание прямо на площадке для AI-дата-центров Oracle; Oracle получает варрант.",
+      "evidence": [
+        {
+          "quote": "in October 2025, in connection with our partnership with Oracle Corporation (“Oracle”) to provide on-site solid state power for AI data centers, subject to the negotiation of a warrant mutually acceptable to us and Oracle, we agreed to issue to Oracle a warrant (the “Oracle Warrant”)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "tier": "filing",
+          "published": "2026-02-09",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "brookfield__westinghouse__owns",
+      "source": "brookfield",
+      "target": "westinghouse",
+      "type": "owns",
+      "spine": "capital",
+      "strength": 90,
+      "techNode": "ap1000",
+      "status": "active",
+      "tier": "company_pr",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": "2023",
+      "lastConfirmed": "2026-08",
+      "note": "51% — контроль. Ядерное плечо стройки ИИ находится в руках инфраструктурного фонда.",
+      "evidence": [
+        {
+          "quote": "Cameco now owns a 49% interest and Brookfield owns the remaining 51% in Westinghouse, one of the world’s largest nuclear services businesses.",
+          "url": "https://www.cameco.com/media/news/cameco-and-brookfield-complete-acquisition-of-westinghouse-electric-company",
+          "tier": "company_pr",
+          "published": "2023-11-07",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "cameco__westinghouse__stake",
+      "source": "cameco",
+      "target": "westinghouse",
+      "type": "stake",
+      "spine": "capital",
+      "strength": 60,
+      "techNode": "ap1000",
+      "status": "active",
+      "tier": "company_pr",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": "2023",
+      "lastConfirmed": "2026-08",
+      "note": "49% — доля без контроля.",
+      "evidence": [
+        {
+          "quote": "Cameco now owns a 49% interest and Brookfield owns the remaining 51% in Westinghouse, one of the world’s largest nuclear services businesses.",
+          "url": "https://www.cameco.com/media/news/cameco-and-brookfield-complete-acquisition-of-westinghouse-electric-company",
+          "tier": "company_pr",
+          "published": "2023-11-07",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "carl-zeiss-smt__asml__supply",
+      "source": "carl-zeiss-smt",
+      "target": "asml",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 100,
+      "techNode": "euv",
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "Единственный поставщик оптики; у ASML с ним эксклюзивное соглашение.",
+      "evidence": [
+        {
+          "quote": "The number of lithography systems we are able to produce is limited by the production capacity of one of our key suppliers, Carl Zeiss SMT, our sole supplier of lenses, mirrors, illuminators, collectors and other critical optical components (which we refer to as optics).",
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "tier": "filing",
+          "published": "2026-02-25",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "constellation__microsoft__offtake",
+      "source": "constellation",
+      "target": "microsoft",
+      "type": "offtake",
+      "spine": "physical",
+      "strength": 35,
+      "techNode": null,
+      "status": "active",
+      "tier": "company_pr",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": "2024",
+      "lastConfirmed": "2026-08",
+      "note": "20-летний PPA: перезапуск Three Mile Island Unit 1 под спрос дата-центров Microsoft.",
+      "evidence": [
+        {
+          "quote": "Constellation (Nasdaq: CEG) announced today the signing of a 20-year power purchase agreement with Microsoft that will pave the way for the launch of the Crane Clean Energy Center (CCEC) and restart of Three Mile Island Unit 1",
+          "url": "https://www.constellationenergy.com/news/2024/Constellation-to-Launch-Crane-Clean-Energy-Center-Restoring-Jobs-and-Carbon-Free-Power-to-The-Grid.html",
+          "tier": "company_pr",
+          "published": "2024-09-20",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "coreweave__microsoft__offtake",
+      "source": "coreweave",
+      "target": "microsoft",
+      "type": "offtake",
+      "spine": "physical",
+      "strength": 25,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "Для CoreWeave это 67% выручки; для Microsoft — одна из нескольких внешних площадок.",
+      "evidence": [
+        {
+          "quote": "We recognized an aggregate of approximately 67% of our revenue from our top customer, Microsoft, for the year ended December 31, 2025.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+          "tier": "filing",
+          "published": "2026-03-02",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "coreweave__openai__offtake",
+      "source": "coreweave",
+      "target": "openai",
+      "type": "offtake",
+      "spine": "physical",
+      "strength": 60,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": "2025",
+      "lastConfirmed": "2026-08",
+      "note": "Мастер-соглашение: OpenAI обязалась заплатить до ~$6,5 млрд к 31 мая 2031 года.",
+      "evidence": [
+        {
+          "quote": "In May 2025, we entered into a master services agreement with OpenAI OpCo, LLC (“OpenAI”) and in September 2025, we entered into an order form under this master services agreement pursuant to which OpenAI has committed to pay us up to approximately $6.5 billion through May 31, 2031",
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+          "tier": "filing",
+          "published": "2026-03-02",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "fabrinet__cisco-systems__supply",
+      "source": "fabrinet",
+      "target": "cisco-systems",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 30,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "Cisco — второй крупнейший заказчик Fabrinet, 18,2% выручки.",
+      "evidence": [
+        {
+          "quote": "During fiscal year 2025, NVIDIA Corporation and Cisco Systems, Inc. contributed 27.6% and 18.2%, respectively, of our revenues.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871025000039/fn-20250627.htm",
+          "tier": "filing",
+          "published": "2025-08-19",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "fabrinet__nvidia__supply",
+      "source": "fabrinet",
+      "target": "nvidia",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 35,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 2,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "Сборка и тест — в основном оптические модули и сборки.",
+      "evidence": [
+        {
+          "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung Electronics Co., Ltd., or Samsung, to produce our semiconductor wafers. We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung. We utilize CoWoS technology for semiconductor packaging. We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "tier": "filing",
+          "published": "2026-02-25",
+          "fetched": "2026-08-18",
+          "alive": true
+        },
+        {
+          "quote": "During fiscal year 2025, NVIDIA Corporation and Cisco Systems, Inc. contributed 27.6% and 18.2%, respectively, of our revenues.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871025000039/fn-20250627.htm",
+          "tier": "filing",
+          "published": "2025-08-19",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "foxconn__broadcom__supply",
+      "source": "foxconn",
+      "target": "broadcom",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 45,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "Контрактная сборка и тест для Broadcom.",
+      "evidence": [
+        {
+          "quote": "The majority of our front-end wafer manufacturing operations is outsourced to external foundries, including Taiwan Semiconductor Manufacturing Company Limited (“TSMC”). We use third-party CMs for a significant majority of our assembly and test operations, including TSMC, Advanced Semiconductor Engineering, Inc., Foxconn Technology Group, Amkor Technology, Inc. and Siliconware Precision Industries Co., Ltd.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+          "tier": "filing",
+          "published": "2025-12-18",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "foxconn__nvidia__supply",
+      "source": "foxconn",
+      "target": "nvidia",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 70,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "Сборка, тест и упаковка готовых изделий NVIDIA.",
+      "evidence": [
+        {
+          "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung Electronics Co., Ltd., or Samsung, to produce our semiconductor wafers. We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung. We utilize CoWoS technology for semiconductor packaging. We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "tier": "filing",
+          "published": "2026-02-25",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "king-yuan-electronics__credo__supply",
+      "source": "king-yuan-electronics",
+      "target": "credo",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 35,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "Тестирование микросхем Credo.",
+      "evidence": [
+        {
+          "quote": "Upon the completion of processing at the foundry, we use third-party contractors for packaging, assembly and testing, including Amkor Technology Inc. (Amkor) and Advanced Semiconductor Engineering, Inc. (ASE) for packaging our IC products, King Yuan Electronics Company (KYEC) and Sigurd Microelectronics Corp. (Sigurd) for testing our IC produ",
+          "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm",
+          "tier": "filing",
+          "published": "2026-06-15",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "lam-research__micron-technology__supply",
+      "source": "lam-research",
+      "target": "micron-technology",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 65,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "Micron назван среди самых значимых клиентов Lam.",
+      "evidence": [
+        {
+          "quote": "Our most significant customers during the fiscal years ending June 28, 2026, June 29, 2025, and June 30, 2024 included Micron Technology, Inc., Samsung Electronics Company, Ltd., SK hynix Inc., and Taiwan Semiconductor Manufacturing Company.",
+          "url": "https://www.sec.gov/Archives/edgar/data/707549/000070754926000037/lrcx-20260628.htm",
+          "tier": "filing",
+          "published": "2026-08-07",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "lam-research__samsung-electronics__supply",
+      "source": "lam-research",
+      "target": "samsung-electronics",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 60,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "Samsung назван среди самых значимых клиентов Lam.",
+      "evidence": [
+        {
+          "quote": "Our most significant customers during the fiscal years ending June 28, 2026, June 29, 2025, and June 30, 2024 included Micron Technology, Inc., Samsung Electronics Company, Ltd., SK hynix Inc., and Taiwan Semiconductor Manufacturing Company.",
+          "url": "https://www.sec.gov/Archives/edgar/data/707549/000070754926000037/lrcx-20260628.htm",
+          "tier": "filing",
+          "published": "2026-08-07",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "lam-research__sk-hynix__supply",
+      "source": "lam-research",
+      "target": "sk-hynix",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 65,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "SK hynix назван среди самых значимых клиентов Lam.",
+      "evidence": [
+        {
+          "quote": "Our most significant customers during the fiscal years ending June 28, 2026, June 29, 2025, and June 30, 2024 included Micron Technology, Inc., Samsung Electronics Company, Ltd., SK hynix Inc., and Taiwan Semiconductor Manufacturing Company.",
+          "url": "https://www.sec.gov/Archives/edgar/data/707549/000070754926000037/lrcx-20260628.htm",
+          "tier": "filing",
+          "published": "2026-08-07",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "lam-research__tsmc__supply",
+      "source": "lam-research",
+      "target": "tsmc",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 60,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "TSMC назван среди самых значимых клиентов Lam.",
+      "evidence": [
+        {
+          "quote": "Our most significant customers during the fiscal years ending June 28, 2026, June 29, 2025, and June 30, 2024 included Micron Technology, Inc., Samsung Electronics Company, Ltd., SK hynix Inc., and Taiwan Semiconductor Manufacturing Company.",
+          "url": "https://www.sec.gov/Archives/edgar/data/707549/000070754926000037/lrcx-20260628.htm",
+          "tier": "filing",
+          "published": "2026-08-07",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "mgx__stargate__finances",
+      "source": "mgx",
+      "target": "stargate",
+      "type": "finances",
+      "spine": "capital",
+      "strength": 70,
+      "techNode": null,
+      "status": "active",
+      "tier": "company_pr",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": "2025",
+      "lastConfirmed": "2026-08",
+      "note": "Один из четырёх первоначальных держателей капитала; капитал из Абу-Даби.",
+      "evidence": [
+        {
+          "quote": "The initial equity funders in Stargate are SoftBank, OpenAI, Oracle, and MGX.",
+          "url": "https://openai.com/index/announcing-the-stargate-project/",
+          "tier": "company_pr",
+          "published": "2025-01-21",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "micron-technology__nvidia__supply",
+      "source": "micron-technology",
+      "target": "nvidia",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 55,
+      "techNode": "hbm",
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "Второй источник HBM и DRAM для NVIDIA.",
+      "evidence": [
+        {
+          "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung Electronics Co., Ltd., or Samsung, to produce our semiconductor wafers. We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung. We utilize CoWoS technology for semiconductor packaging. We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "tier": "filing",
+          "published": "2026-02-25",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "microsoft__openai__stake",
+      "source": "microsoft",
+      "target": "openai",
+      "type": "stake",
+      "spine": "capital",
+      "strength": 85,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": "2019",
+      "lastConfirmed": "2026-08",
+      "note": "Крупнейший инвестор плюс права на ИС и разделение выручки.",
+      "evidence": [
+        {
+          "quote": "Microsoft is a major investor in OpenAI and will continue to receive revenue-sharing payments. We hold rights to OpenAI’s intellectual property, including models and infrastructure, for integration into our products.",
+          "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+          "tier": "filing",
+          "published": "2026-07-29",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "microsoft__stargate__partner",
+      "source": "microsoft",
+      "target": "stargate",
+      "type": "partner",
+      "spine": "physical",
+      "strength": 40,
+      "techNode": null,
+      "status": "active",
+      "tier": "company_pr",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": "2025",
+      "lastConfirmed": "2026-08",
+      "note": "Назван среди ключевых первоначальных технологических партнёров.",
+      "evidence": [
+        {
+          "quote": "Arm, Microsoft, NVIDIA, Oracle, and OpenAI are the key initial technology partners.",
+          "url": "https://openai.com/index/announcing-the-stargate-project/",
+          "tier": "company_pr",
+          "published": "2025-01-21",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "nebius__microsoft__offtake",
+      "source": "nebius",
+      "target": "microsoft",
+      "type": "offtake",
+      "spine": "physical",
+      "strength": 20,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": "2025",
+      "lastConfirmed": "2026-08",
+      "note": "Выделенная GPU-мощность в Vineland, Нью-Джерси, на пять лет.",
+      "evidence": [
+        {
+          "quote": "Effective as of September 7, 2025, our wholly owned subsidiary, Nebius, Inc., entered into a commercial agreement with Microsoft Corp (“Microsoft”), pursuant to which we are providing Microsoft access to dedicated GPU infrastructure capacity in clusters at our new data center in Vineland, New Jersey over a five-year term.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+          "tier": "filing",
+          "published": "2026-04-30",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "nvidia__coreweave__supply",
+      "source": "nvidia",
+      "target": "coreweave",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 100,
+      "techNode": "cuda",
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "ВСЕ GPU в инфраструктуре CoreWeave — NVIDIA, это прописано в контрактах с клиентами.",
+      "evidence": [
+        {
+          "quote": "as a result of our obligations in our current customer contracts, all of the GPUs used in our infrastructure today are NVIDIA GPUs",
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+          "tier": "filing",
+          "published": "2026-03-02",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "nvidia__nebius__supply",
+      "source": "nvidia",
+      "target": "nebius",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 95,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "Nebius прямо заявляет зависимость от Nvidia по GPU.",
+      "evidence": [
+        {
+          "quote": "We currently rely on Nvidia for the GPU chips we use and on a limited number of other suppliers for other key components in our infrastructure.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+          "tier": "filing",
+          "published": "2026-04-30",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "nvidia__openai__stake",
+      "source": "nvidia",
+      "target": "openai",
+      "type": "stake",
+      "spine": "capital",
+      "strength": 70,
+      "techNode": null,
+      "status": "active",
+      "tier": "company_pr",
+      "confirmedSources": 1,
+      "engineConfirmed": true,
+      "started": "2025",
+      "lastConfirmed": "2026-08",
+      "note": "До $100 млрд инвестиций, разблокируемых по мере ввода каждого гигаватта.",
+      "evidence": [
+        {
+          "quote": "Strategic partnership enables OpenAI to build and deploy at least 10 gigawatts of AI datacenters with NVIDIA systems representing millions of GPUs for OpenAI’s next-generation AI infrastructure. To support the partnership, NVIDIA intends to invest up to $100 billion in OpenAI progressively as each gigawatt is deployed.",
+          "url": "https://openai.com/index/openai-nvidia-systems-partnership/",
+          "tier": "company_pr",
+          "published": "2025-09-22",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "nvidia__openai__supply",
+      "source": "nvidia",
+      "target": "openai",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 95,
+      "techNode": "nvlink",
+      "status": "active",
+      "tier": "company_pr",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": "2025",
+      "lastConfirmed": "2026-08",
+      "note": "Не менее 10 ГВт систем NVIDIA под инфраструктуру OpenAI.",
+      "evidence": [
+        {
+          "quote": "Strategic partnership enables OpenAI to build and deploy at least 10 gigawatts of AI datacenters with NVIDIA systems representing millions of GPUs for OpenAI’s next-generation AI infrastructure. To support the partnership, NVIDIA intends to invest up to $100 billion in OpenAI progressively as each gigawatt is deployed.",
+          "url": "https://openai.com/index/openai-nvidia-systems-partnership/",
+          "tier": "company_pr",
+          "published": "2025-09-22",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "nvidia__stargate__partner",
+      "source": "nvidia",
+      "target": "stargate",
+      "type": "partner",
+      "spine": "physical",
+      "strength": 70,
+      "techNode": null,
+      "status": "active",
+      "tier": "company_pr",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": "2025",
+      "lastConfirmed": "2026-08",
+      "note": "Назван среди ключевых первоначальных технологических партнёров.",
+      "evidence": [
+        {
+          "quote": "Arm, Microsoft, NVIDIA, Oracle, and OpenAI are the key initial technology partners.",
+          "url": "https://openai.com/index/announcing-the-stargate-project/",
+          "tier": "company_pr",
+          "published": "2025-01-21",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "nvidia__super-micro-computer__supply",
+      "source": "nvidia",
+      "target": "super-micro-computer",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 90,
+      "techNode": "cuda",
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "Supermicro проектирует продукты под новые платформы NVIDIA заранее и совместно.",
+      "evidence": [
+        {
+          "quote": "We work closely with NVIDIA, Intel and AMD, among others, to develop products that are compatible with the latest generation of industry-standard technologies under development.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536525000027/smci-20250630.htm",
+          "tier": "filing",
+          "published": "2025-08-28",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "oklo__equinix__offtake",
+      "source": "oklo",
+      "target": "equinix",
+      "type": "offtake",
+      "spine": "physical",
+      "strength": 10,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "НЕОБЯЗЫВАЮЩЕЕ письмо о намерениях — записано с strength 10, ниже порога отрисовки.",
+      "evidence": [
+        {
+          "quote": "we have signed non-binding letters of intent with Equinix, Inc. (\"Equinix\"), Diamondback E&P LLC (\"Diamondback Energy\"), and Prometheus Hyperscale (formerly Wyoming Hyperscale White Box LLC) (\"Prometheus Hyperscale\").",
+          "url": "https://www.sec.gov/Archives/edgar/data/1849056/000162828026018698/oklo-20251231.htm",
+          "tier": "filing",
+          "published": "2026-03-17",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "oklo__switch__offtake",
+      "source": "oklo",
+      "target": "switch",
+      "type": "offtake",
+      "spine": "physical",
+      "strength": 30,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": "2024",
+      "lastConfirmed": "2026-08",
+      "note": "Мастер-соглашение на 12 ГВт — крупнейший корпоративный PPA в истории; станций пока нет.",
+      "evidence": [
+        {
+          "quote": "In December 2024, we signed a 12 gigawatt (GW) Master Power Agreement with Switch, Ltd. (\"Switch\"), one of the largest corporate power purchase agreements (\"PPA\") in history.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1849056/000162828026018698/oklo-20251231.htm",
+          "tier": "filing",
+          "published": "2026-03-17",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "oklo__vertiv__partner",
+      "source": "oklo",
+      "target": "vertiv",
+      "type": "partner",
+      "spine": "physical",
+      "strength": 15,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "Пока только изучение вариантов энергоснабжения — ниже порога отрисовки (20).",
+      "evidence": [
+        {
+          "quote": "Our partnership with NVIDIA supports the development of advanced power and thermal infrastructure aligned with next-generation AI and high-performance computing architectures, while our collaboration with Oklo reflects exploration of alternative energy solutions",
+          "url": "https://www.sec.gov/Archives/edgar/data/1674101/000167410126000008/vrt-20251231.htm",
+          "tier": "filing",
+          "published": "2026-02-13",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "openai__microsoft__platform",
+      "source": "openai",
+      "target": "microsoft",
+      "type": "platform",
+      "spine": "physical",
+      "strength": 70,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": "2019",
+      "lastConfirmed": "2026-08",
+      "note": "Microsoft держит права на интеллектуальную собственность OpenAI и встраивает её модели в свои продукты.",
+      "evidence": [
+        {
+          "quote": "Microsoft is a major investor in OpenAI and will continue to receive revenue-sharing payments. We hold rights to OpenAI’s intellectual property, including models and infrastructure, for integration into our products.",
+          "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+          "tier": "filing",
+          "published": "2026-07-29",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "openai__stargate__finances",
+      "source": "openai",
+      "target": "stargate",
+      "type": "finances",
+      "spine": "capital",
+      "strength": 85,
+      "techNode": null,
+      "status": "active",
+      "tier": "company_pr",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": "2025",
+      "lastConfirmed": "2026-08",
+      "note": "Держатель капитала и операционно ответственный партнёр проекта.",
+      "evidence": [
+        {
+          "quote": "The initial equity funders in Stargate are SoftBank, OpenAI, Oracle, and MGX.",
+          "url": "https://openai.com/index/announcing-the-stargate-project/",
+          "tier": "company_pr",
+          "published": "2025-01-21",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "oracle__openai__offtake",
+      "source": "oracle",
+      "target": "openai",
+      "type": "offtake",
+      "spine": "physical",
+      "strength": 85,
+      "techNode": null,
+      "status": "active",
+      "tier": "company_pr",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": "2025",
+      "lastConfirmed": "2026-08",
+      "note": "4,5 ГВт дополнительной мощности Stargate.",
+      "evidence": [
+        {
+          "quote": "Oracle and OpenAI have entered an agreement to develop 4.5 gigawatts of additional Stargate data center capacity in the U.S.",
+          "url": "https://openai.com/index/stargate-advances-with-partnership-with-oracle/",
+          "tier": "company_pr",
+          "published": "2025-07-22",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "oracle__stargate__finances",
+      "source": "oracle",
+      "target": "stargate",
+      "type": "finances",
+      "spine": "capital",
+      "strength": 80,
+      "techNode": null,
+      "status": "active",
+      "tier": "company_pr",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": "2025",
+      "lastConfirmed": "2026-08",
+      "note": "Один из четырёх первоначальных держателей капитала.",
+      "evidence": [
+        {
+          "quote": "The initial equity funders in Stargate are SoftBank, OpenAI, Oracle, and MGX.",
+          "url": "https://openai.com/index/announcing-the-stargate-project/",
+          "tier": "company_pr",
+          "published": "2025-01-21",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "samsung-electronics__nvidia__supply",
+      "source": "samsung-electronics",
+      "target": "nvidia",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 45,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "Второй фаундри в списке NVIDIA — источник резервирования, не основной.",
+      "evidence": [
+        {
+          "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung Electronics Co., Ltd., or Samsung, to produce our semiconductor wafers. We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung. We utilize CoWoS technology for semiconductor packaging. We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "tier": "filing",
+          "published": "2026-02-25",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "sigurd-microelectronics__credo__supply",
+      "source": "sigurd-microelectronics",
+      "target": "credo",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 30,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "Тестирование микросхем Credo.",
+      "evidence": [
+        {
+          "quote": "Upon the completion of processing at the foundry, we use third-party contractors for packaging, assembly and testing, including Amkor Technology Inc. (Amkor) and Advanced Semiconductor Engineering, Inc. (ASE) for packaging our IC products, King Yuan Electronics Company (KYEC) and Sigurd Microelectronics Corp. (Sigurd) for testing our IC produ",
+          "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm",
+          "tier": "filing",
+          "published": "2026-06-15",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "siliconware-precision-industries__broadcom__supply",
+      "source": "siliconware-precision-industries",
+      "target": "broadcom",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 40,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "Упаковка и тест для Broadcom.",
+      "evidence": [
+        {
+          "quote": "The majority of our front-end wafer manufacturing operations is outsourced to external foundries, including Taiwan Semiconductor Manufacturing Company Limited (“TSMC”). We use third-party CMs for a significant majority of our assembly and test operations, including TSMC, Advanced Semiconductor Engineering, Inc., Foxconn Technology Group, Amkor Technology, Inc. and Siliconware Precision Industries Co., Ltd.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+          "tier": "filing",
+          "published": "2025-12-18",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "sk-hynix__nvidia__partner",
+      "source": "sk-hynix",
+      "target": "nvidia",
+      "type": "partner",
+      "spine": "physical",
+      "strength": 70,
+      "techNode": "hbm",
+      "status": "active",
+      "tier": "company_pr",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": "2026",
+      "lastConfirmed": "2026-08",
+      "note": "Расширение партнёрства SK Group и NVIDIA: от стройки AI-фабрик до поставки памяти.",
+      "evidence": [
+        {
+          "quote": "SK Group and NVIDIA today announced plans for a $500 billion plus comprehensive partnership to establish AI infrastructure serving the surging demand for global compute.",
+          "url": "https://news.skhynix.com/en/skhynix-nvidia-partnership-2026/",
+          "tier": "company_pr",
+          "published": "2026-06-01",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "sk-hynix__nvidia__supply",
+      "source": "sk-hynix",
+      "target": "nvidia",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 90,
+      "techNode": "hbm",
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "HBM для ускорителей: NVIDIA называет SK Hynix первым из трёх поставщиков памяти.",
+      "evidence": [
+        {
+          "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung Electronics Co., Ltd., or Samsung, to produce our semiconductor wafers. We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung. We utilize CoWoS technology for semiconductor packaging. We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "tier": "filing",
+          "published": "2026-02-25",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "softbank__stargate__finances",
+      "source": "softbank",
+      "target": "stargate",
+      "type": "finances",
+      "spine": "capital",
+      "strength": 90,
+      "techNode": null,
+      "status": "active",
+      "tier": "company_pr",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": "2025",
+      "lastConfirmed": "2026-08",
+      "note": "Держатель капитала и финансово ответственный партнёр проекта.",
+      "evidence": [
+        {
+          "quote": "The initial equity funders in Stargate are SoftBank, OpenAI, Oracle, and MGX.",
+          "url": "https://openai.com/index/announcing-the-stargate-project/",
+          "tier": "company_pr",
+          "published": "2025-01-21",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "tsmc__astera-labs__supply",
+      "source": "tsmc",
+      "target": "astera-labs",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 100,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "Astera Labs — fabless; ВСЕ её микросхемы делает TSMC.",
+      "evidence": [
+        {
+          "quote": "We use a fabless manufacturing model and partner with TSMC to fabricate all of our ICs. We use Advanced Semiconductor Engineering and Amkor Technologies to assemble, package, and test our ICs.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+          "tier": "filing",
+          "published": "2026-02-20",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "tsmc__broadcom__supply",
+      "source": "tsmc",
+      "target": "broadcom",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 90,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "Основная часть пластин Broadcom делается на внешних фаундри, TSMC назван первым.",
+      "evidence": [
+        {
+          "quote": "The majority of our front-end wafer manufacturing operations is outsourced to external foundries, including Taiwan Semiconductor Manufacturing Company Limited (“TSMC”). We use third-party CMs for a significant majority of our assembly and test operations, including TSMC, Advanced Semiconductor Engineering, Inc., Foxconn Technology Group, Amkor Technology, Inc. and Siliconware Precision Industries Co., Ltd.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+          "tier": "filing",
+          "published": "2025-12-18",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "tsmc__credo__supply",
+      "source": "tsmc",
+      "target": "credo",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 100,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": "2026",
+      "lastConfirmed": "2026-08",
+      "note": "В 2026 финансовом году Credo использовала ИСКЛЮЧИТЕЛЬНО TSMC.",
+      "evidence": [
+        {
+          "quote": "In fiscal year 2026, we exclusively used Taiwan Semiconductor Manufacturing Company Limited (TSMC) for semiconductor wafer production.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm",
+          "tier": "filing",
+          "published": "2026-06-15",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "tsmc__nvidia__supply",
+      "source": "tsmc",
+      "target": "nvidia",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 95,
+      "techNode": "cowos",
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": "2007",
+      "lastConfirmed": "2026-08",
+      "note": "Пластины NVIDIA делают внешние фаундри; TSMC назван первым, упаковка — CoWoS.",
+      "evidence": [
+        {
+          "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung Electronics Co., Ltd., or Samsung, to produce our semiconductor wafers. We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung. We utilize CoWoS technology for semiconductor packaging. We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "tier": "filing",
+          "published": "2026-02-25",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "vertiv__nvidia__partner",
+      "source": "vertiv",
+      "target": "nvidia",
+      "type": "partner",
+      "spine": "physical",
+      "strength": 55,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "Совместная разработка питания и охлаждения под следующие поколения AI-стоек.",
+      "evidence": [
+        {
+          "quote": "Our partnership with NVIDIA supports the development of advanced power and thermal infrastructure aligned with next-generation AI and high-performance computing architectures, while our collaboration with Oklo reflects exploration of alternative energy solutions",
+          "url": "https://www.sec.gov/Archives/edgar/data/1674101/000167410126000008/vrt-20251231.htm",
+          "tier": "filing",
+          "published": "2026-02-13",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "wistron__nvidia__supply",
+      "source": "wistron",
+      "target": "nvidia",
+      "type": "supply",
+      "spine": "physical",
+      "strength": 45,
+      "techNode": null,
+      "status": "active",
+      "tier": "filing",
+      "confirmedSources": 1,
+      "engineConfirmed": false,
+      "started": null,
+      "lastConfirmed": "2026-08",
+      "note": "Второй ODM-подрядчик NVIDIA по сборке и тесту.",
+      "evidence": [
+        {
+          "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung Electronics Co., Ltd., or Samsung, to produce our semiconductor wafers. We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung. We utilize CoWoS technology for semiconductor packaging. We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "tier": "filing",
+          "published": "2026-02-25",
+          "fetched": "2026-08-18",
+          "alive": true
+        }
+      ]
+    }
+  ],
+  "cycles": [
+    {
+      "id": "c1",
+      "type": "sales",
+      "path": [
+        "coreweave",
+        "nvidia",
+        "openai",
+        "coreweave"
+      ],
+      "edges": [
+        "nvidia__coreweave__supply",
+        "nvidia__openai__stake",
+        "coreweave__openai__offtake"
+      ],
+      "note": "Контур сбыта: CoreWeave —платит за поставку→ NVIDIA; NVIDIA —держит долю в→ OpenAI; OpenAI —платит за мощность→ CoreWeave"
+    },
+    {
+      "id": "c2",
+      "type": "financing",
+      "path": [
+        "nvidia",
+        "openai",
+        "stargate",
+        "nvidia"
+      ],
+      "edges": [
+        "nvidia__openai__stake",
+        "openai__stargate__finances",
+        "nvidia__stargate__partner"
+      ],
+      "note": "Контур финансирования: NVIDIA —держит долю в→ OpenAI; OpenAI —финансирует→ Stargate; Stargate —платит партнёру→ NVIDIA"
+    },
+    {
+      "id": "c3",
+      "type": "financing",
+      "path": [
+        "microsoft",
+        "openai",
+        "stargate",
+        "microsoft"
+      ],
+      "edges": [
+        "microsoft__openai__stake",
+        "openai__stargate__finances",
+        "microsoft__stargate__partner"
+      ],
+      "note": "Контур финансирования: Microsoft —держит долю в→ OpenAI; OpenAI —финансирует→ Stargate; Stargate —платит партнёру→ Microsoft"
+    },
+    {
+      "id": "c4",
+      "type": "financing",
+      "path": [
+        "nvidia",
+        "openai",
+        "oracle",
+        "stargate",
+        "nvidia"
+      ],
+      "edges": [
+        "nvidia__openai__stake",
+        "oracle__openai__offtake",
+        "oracle__stargate__finances",
+        "nvidia__stargate__partner"
+      ],
+      "note": "Контур финансирования: NVIDIA —держит долю в→ OpenAI; OpenAI —платит за мощность→ Oracle; Oracle —финансирует→ Stargate; Stargate —платит партнёру→ NVIDIA"
+    },
+    {
+      "id": "c5",
+      "type": "financing",
+      "path": [
+        "microsoft",
+        "openai",
+        "oracle",
+        "stargate",
+        "microsoft"
+      ],
+      "edges": [
+        "microsoft__openai__stake",
+        "oracle__openai__offtake",
+        "oracle__stargate__finances",
+        "microsoft__stargate__partner"
+      ],
+      "note": "Контур финансирования: Microsoft —держит долю в→ OpenAI; OpenAI —платит за мощность→ Oracle; Oracle —финансирует→ Stargate; Stargate —платит партнёру→ Microsoft"
+    },
+    {
+      "id": "c6",
+      "type": "sales",
+      "path": [
+        "coreweave",
+        "nvidia",
+        "openai",
+        "stargate",
+        "microsoft",
+        "coreweave"
+      ],
+      "edges": [
+        "nvidia__coreweave__supply",
+        "nvidia__openai__stake",
+        "openai__stargate__finances",
+        "microsoft__stargate__partner",
+        "coreweave__microsoft__offtake"
+      ],
+      "note": "Контур сбыта: CoreWeave —платит за поставку→ NVIDIA; NVIDIA —держит долю в→ OpenAI; OpenAI —финансирует→ Stargate; Stargate —платит партнёру→ Microsoft; Microsoft —платит за мощность→ CoreWeave"
+    },
+    {
+      "id": "c7",
+      "type": "sales",
+      "path": [
+        "microsoft",
+        "nebius",
+        "nvidia",
+        "openai",
+        "stargate",
+        "microsoft"
+      ],
+      "edges": [
+        "nebius__microsoft__offtake",
+        "nvidia__nebius__supply",
+        "nvidia__openai__stake",
+        "openai__stargate__finances",
+        "microsoft__stargate__partner"
+      ],
+      "note": "Контур сбыта: Microsoft —платит за мощность→ Nebius; Nebius —платит за поставку→ NVIDIA; NVIDIA —держит долю в→ OpenAI; OpenAI —финансирует→ Stargate; Stargate —платит партнёру→ Microsoft"
+    }
+  ],
+  "changelog": {
+    "month": "2026-08",
+    "added": [],
+    "removed": [],
+    "changed": []
+  }
+}
