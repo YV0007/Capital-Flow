@@ -81,6 +81,21 @@ def main(month):
         def _(d):
             d["entities"][0]["centrality"]["betweenness"] = 42
 
+        @case("pagerank отсутствует")
+        def _(d):
+            d["entities"][0]["centrality"].pop("pagerank", None)
+
+        @case("pagerank вне 0..1")
+        def _(d):
+            d["entities"][0]["centrality"]["pagerank"] = 1.5
+
+        @case("сумма pagerank не равна 1")
+        def _(d):
+            # Половина веса испаряется — так выглядит мера, посчитанная на другом
+            # множестве узлов или обрезанная после нормировки.
+            for e in d["entities"][:len(d["entities"]) // 2]:
+                e["centrality"]["pagerank"] = 0.0
+
         @case("сущность без pivotal")
         def _(d):
             d["entities"][0].pop("pivotal", None)

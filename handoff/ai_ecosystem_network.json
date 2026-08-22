@@ -1,7 +1,7 @@
 {
   "schema": "ai-ecosystem-network/1",
-  "version": "v1.0-2026-08",
-  "generated": "2026-08-18",
+  "version": "v1.1-2026-08",
+  "generated": "2026-08-22",
   "asOf": "2026-08",
   "source": "engine",
   "ecosystem": "ai-infrastructure-complete",
@@ -3226,7 +3226,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.004978
       }
     },
     {
@@ -3310,7 +3311,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 5,
-        "betweenness": 0.006155
+        "betweenness": 0.006155,
+        "pagerank": 0.006602
       }
     },
     {
@@ -3387,7 +3389,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 4,
-        "betweenness": 0.000494
+        "betweenness": 0.000494,
+        "pagerank": 0.007425
       }
     },
     {
@@ -3465,7 +3468,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 4,
-        "betweenness": 0.000135
+        "betweenness": 0.000135,
+        "pagerank": 0.010701
       }
     },
     {
@@ -3542,7 +3546,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 8,
-        "betweenness": 0.036139
+        "betweenness": 0.036139,
+        "pagerank": 0.006286
       }
     },
     {
@@ -3619,7 +3624,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.007783
       }
     },
     {
@@ -3696,7 +3702,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 4,
-        "betweenness": 0.010974
+        "betweenness": 0.010974,
+        "pagerank": 0.006093
       }
     },
     {
@@ -3776,7 +3783,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 4,
-        "betweenness": 0.000875
+        "betweenness": 0.000875,
+        "pagerank": 0.007696
       }
     },
     {
@@ -3854,7 +3862,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 4,
-        "betweenness": 0.000135
+        "betweenness": 0.000135,
+        "pagerank": 0.010701
       }
     },
     {
@@ -3933,7 +3942,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 2,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.005603
       }
     },
     {
@@ -4010,7 +4020,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 4,
-        "betweenness": 0.000797
+        "betweenness": 0.000797,
+        "pagerank": 0.003879
       }
     },
     {
@@ -4088,7 +4099,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 2,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.007696
       }
     },
     {
@@ -4167,7 +4179,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.003879
       }
     },
     {
@@ -4244,7 +4257,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 0.000307
+        "betweenness": 0.000307,
+        "pagerank": 0.008678
       }
     },
     {
@@ -4321,7 +4335,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.005902
       }
     },
     {
@@ -4398,7 +4413,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.007696
       }
     },
     {
@@ -4480,7 +4496,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 6,
-        "betweenness": 0.002196
+        "betweenness": 0.002196,
+        "pagerank": 0.007978
       }
     },
     {
@@ -4563,7 +4580,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 5,
-        "betweenness": 0.002785
+        "betweenness": 0.002785,
+        "pagerank": 0.008841
       }
     },
     {
@@ -4640,7 +4658,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 2,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.007696
       }
     },
     {
@@ -4717,7 +4736,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 0.004663
+        "betweenness": 0.004663,
+        "pagerank": 0.011741
       }
     },
     {
@@ -4795,7 +4815,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.011961
       }
     },
     {
@@ -4872,7 +4893,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 9e-05
+        "betweenness": 9e-05,
+        "pagerank": 0.005528
       }
     },
     {
@@ -4949,7 +4971,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 9e-05
+        "betweenness": 9e-05,
+        "pagerank": 0.003879
       }
     },
     {
@@ -5027,7 +5050,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.007696
       }
     },
     {
@@ -5104,7 +5128,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.00459
       }
     },
     {
@@ -5181,7 +5206,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 5,
-        "betweenness": 0.001276
+        "betweenness": 0.001276,
+        "pagerank": 0.005946
       }
     },
     {
@@ -5259,7 +5285,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 4,
-        "betweenness": 0.000797
+        "betweenness": 0.000797,
+        "pagerank": 0.003879
       }
     },
     {
@@ -5342,7 +5369,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 3,
-        "betweenness": 0.003189
+        "betweenness": 0.003189,
+        "pagerank": 0.007696
       }
     },
     {
@@ -5419,7 +5447,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 12,
-        "betweenness": 0.03229
+        "betweenness": 0.03229,
+        "pagerank": 0.016925
       }
     },
     {
@@ -5496,7 +5525,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 3,
-        "betweenness": 0.018868
+        "betweenness": 0.018868,
+        "pagerank": 0.003879
       }
     },
     {
@@ -5573,7 +5603,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 4,
-        "betweenness": 0.000285
+        "betweenness": 0.000285,
+        "pagerank": 0.005018
       }
     },
     {
@@ -5650,7 +5681,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.007696
       }
     },
     {
@@ -5732,7 +5764,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.003879
       }
     },
     {
@@ -5809,7 +5842,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 4,
-        "betweenness": 0.014869
+        "betweenness": 0.014869,
+        "pagerank": 0.009718
       }
     },
     {
@@ -5887,7 +5921,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.009349
       }
     },
     {
@@ -5964,7 +5999,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 6,
-        "betweenness": 0.03468
+        "betweenness": 0.03468,
+        "pagerank": 0.016796
       }
     },
     {
@@ -6042,7 +6078,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 0.006829
+        "betweenness": 0.006829,
+        "pagerank": 0.005528
       }
     },
     {
@@ -6119,7 +6156,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 0.000374
+        "betweenness": 0.000374,
+        "pagerank": 0.003879
       }
     },
     {
@@ -6196,7 +6234,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 3,
-        "betweenness": 0.008092
+        "betweenness": 0.008092,
+        "pagerank": 0.017534
       }
     },
     {
@@ -6275,7 +6314,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.009052
       }
     },
     {
@@ -6352,7 +6392,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.00459
       }
     },
     {
@@ -6441,7 +6482,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 7,
-        "betweenness": 0.01366
+        "betweenness": 0.01366,
+        "pagerank": 0.014467
       }
     },
     {
@@ -6510,7 +6552,7 @@
           "title": "Anthropic выбирает Google Cloud",
           "url": "https://www.anthropic.com/news/anthropic-partners-with-google-cloud",
           "published": "2023-02-03",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-22",
           "alive": true,
           "quote": "an AI safety and research company, has selected Google Cloud",
           "confidence": 0.925
@@ -6519,7 +6561,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 5,
-        "betweenness": 0.002172
+        "betweenness": 0.002172,
+        "pagerank": 0.006196
       }
     },
     {
@@ -6596,7 +6639,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 3,
-        "betweenness": 0.002077
+        "betweenness": 0.002077,
+        "pagerank": 0.003879
       }
     },
     {
@@ -6673,7 +6717,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.003879
       }
     },
     {
@@ -6750,7 +6795,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 9,
-        "betweenness": 0.005364
+        "betweenness": 0.005364,
+        "pagerank": 0.008037
       }
     },
     {
@@ -6828,7 +6874,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 4,
-        "betweenness": 0.010399
+        "betweenness": 0.010399,
+        "pagerank": 0.003879
       }
     },
     {
@@ -6905,7 +6952,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.010366
       }
     },
     {
@@ -6982,7 +7030,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 3,
-        "betweenness": 0.000217
+        "betweenness": 0.000217,
+        "pagerank": 0.003879
       }
     },
     {
@@ -7059,7 +7108,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.007696
       }
     },
     {
@@ -7137,7 +7187,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.005603
       }
     },
     {
@@ -7215,7 +7266,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 3,
-        "betweenness": 9e-05
+        "betweenness": 9e-05,
+        "pagerank": 0.007708
       }
     },
     {
@@ -7292,7 +7344,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 4,
-        "betweenness": 0.001569
+        "betweenness": 0.001569,
+        "pagerank": 0.017595
       }
     },
     {
@@ -7369,7 +7422,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.003879
       }
     },
     {
@@ -7446,7 +7500,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.004547
       }
     },
     {
@@ -7523,7 +7578,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.005528
       }
     },
     {
@@ -7605,7 +7661,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.003879
       }
     },
     {
@@ -7688,7 +7745,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 5,
-        "betweenness": 0.000566
+        "betweenness": 0.000566,
+        "pagerank": 0.007073
       }
     },
     {
@@ -7765,7 +7823,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 3,
-        "betweenness": 0.000479
+        "betweenness": 0.000479,
+        "pagerank": 0.009519
       }
     },
     {
@@ -7843,7 +7902,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 3,
-        "betweenness": 0.003366
+        "betweenness": 0.003366,
+        "pagerank": 0.007696
       }
     },
     {
@@ -7926,7 +7986,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 17,
-        "betweenness": 0.096874
+        "betweenness": 0.096874,
+        "pagerank": 0.012538
       }
     },
     {
@@ -8003,7 +8064,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.003879
       }
     },
     {
@@ -8080,7 +8142,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.007696
       }
     },
     {
@@ -8157,7 +8220,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.009518
       }
     },
     {
@@ -8235,7 +8299,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.00459
       }
     },
     {
@@ -8312,7 +8377,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.010366
       }
     },
     {
@@ -8390,7 +8456,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.007696
       }
     },
     {
@@ -8467,7 +8534,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.00459
       }
     },
     {
@@ -8545,7 +8613,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 3,
-        "betweenness": 0.00011
+        "betweenness": 0.00011,
+        "pagerank": 0.011015
       }
     },
     {
@@ -8637,7 +8706,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 74,
-        "betweenness": 0.835431
+        "betweenness": 0.835431,
+        "pagerank": 0.166122
       }
     },
     {
@@ -8714,7 +8784,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 9e-05
+        "betweenness": 9e-05,
+        "pagerank": 0.015776
       }
     },
     {
@@ -8792,7 +8863,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 12,
-        "betweenness": 0.068961
+        "betweenness": 0.068961,
+        "pagerank": 0.014356
       }
     },
     {
@@ -8869,7 +8941,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 5,
-        "betweenness": 0.019751
+        "betweenness": 0.019751,
+        "pagerank": 0.009519
       }
     },
     {
@@ -8946,7 +9019,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 7,
-        "betweenness": 0.004865
+        "betweenness": 0.004865,
+        "pagerank": 0.008576
       }
     },
     {
@@ -9023,7 +9097,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.007696
       }
     },
     {
@@ -9101,7 +9176,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.003879
       }
     },
     {
@@ -9178,7 +9254,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.003879
       }
     },
     {
@@ -9255,7 +9332,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.003879
       }
     },
     {
@@ -9338,7 +9416,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 5,
-        "betweenness": 0.02044
+        "betweenness": 0.02044,
+        "pagerank": 0.007696
       }
     },
     {
@@ -9415,7 +9494,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.007696
       }
     },
     {
@@ -9492,7 +9572,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 0.000608
+        "betweenness": 0.000608,
+        "pagerank": 0.00872
       }
     },
     {
@@ -9569,7 +9650,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.003879
       }
     },
     {
@@ -9646,7 +9728,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.005235
       }
     },
     {
@@ -9723,7 +9806,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.00459
       }
     },
     {
@@ -9800,7 +9884,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.003879
       }
     },
     {
@@ -9877,7 +9962,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.005603
       }
     },
     {
@@ -9954,7 +10040,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.003879
       }
     },
     {
@@ -10032,7 +10119,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.007696
       }
     },
     {
@@ -10109,7 +10197,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.008638
       }
     },
     {
@@ -10186,7 +10275,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.007696
       }
     },
     {
@@ -10266,7 +10356,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 4,
-        "betweenness": 0.011715
+        "betweenness": 0.011715,
+        "pagerank": 0.007696
       }
     },
     {
@@ -10343,7 +10434,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.003879
       }
     },
     {
@@ -10421,7 +10513,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 4,
-        "betweenness": 0.004898
+        "betweenness": 0.004898,
+        "pagerank": 0.01512
       }
     },
     {
@@ -10499,7 +10592,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 9.6e-05
+        "betweenness": 9.6e-05,
+        "pagerank": 0.00933
       }
     },
     {
@@ -10577,7 +10671,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 0.018868
+        "betweenness": 0.018868,
+        "pagerank": 0.003879
       }
     },
     {
@@ -10654,7 +10749,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 3,
-        "betweenness": 0.000725
+        "betweenness": 0.000725,
+        "pagerank": 0.007696
       }
     },
     {
@@ -10731,7 +10827,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 3,
-        "betweenness": 0.000725
+        "betweenness": 0.000725,
+        "pagerank": 0.025515
       }
     },
     {
@@ -10808,7 +10905,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.007696
       }
     },
     {
@@ -10885,7 +10983,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.005235
       }
     },
     {
@@ -10963,7 +11062,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.005603
       }
     },
     {
@@ -11040,7 +11140,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 2,
-        "betweenness": 0.00026
+        "betweenness": 0.00026,
+        "pagerank": 0.003879
       }
     },
     {
@@ -11122,7 +11223,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 20,
-        "betweenness": 0.134718
+        "betweenness": 0.134718,
+        "pagerank": 0.022306
       }
     },
     {
@@ -11199,7 +11301,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 4,
-        "betweenness": 0.008379
+        "betweenness": 0.008379,
+        "pagerank": 0.018936
       }
     },
     {
@@ -11282,7 +11385,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 4,
-        "betweenness": 0.009164
+        "betweenness": 0.009164,
+        "pagerank": 0.016796
       }
     },
     {
@@ -11359,7 +11463,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 8,
-        "betweenness": 0.022773
+        "betweenness": 0.022773,
+        "pagerank": 0.005903
       }
     },
     {
@@ -11436,7 +11541,8 @@
       "pivotal": false,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.007696
       }
     },
     {
@@ -11513,7 +11619,8 @@
       "pivotal": true,
       "centrality": {
         "degree": 1,
-        "betweenness": 0.0
+        "betweenness": 0.0,
+        "pagerank": 0.003879
       }
     }
   ],
@@ -11654,7 +11761,7 @@
           "title": "Anthropic: раунд Series H",
           "url": "https://www.anthropic.com/news/series-h",
           "published": "2026-05-01",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-22",
           "alive": true,
           "quote": "We signed agreements with Amazon for up to five gigawatts of new capacity,",
           "confidence": 0.925
@@ -11910,7 +12017,7 @@
           "title": "PyTorch README",
           "url": "https://raw.githubusercontent.com/pytorch/pytorch/main/README.md",
           "published": "2026-08-01",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-22",
           "alive": true,
           "quote": "AMD ROCm Support If you want to compile with ROCm support, install",
           "confidence": 0.925
@@ -12002,7 +12109,7 @@
           "title": "PyTorch README",
           "url": "https://raw.githubusercontent.com/pytorch/pytorch/main/README.md",
           "published": "2026-08-01",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-22",
           "alive": true,
           "quote": "AMD ROCm Support If you want to compile with ROCm support, install",
           "confidence": 0.925
@@ -12013,7 +12120,7 @@
           "title": "AMD 10-K 2025",
           "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
           "published": "2026-02-03",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-22",
           "alive": true,
           "quote": "We continue to invest in software capabilities and the open ecosystem through the AMD",
           "confidence": 0.925
@@ -12371,7 +12478,7 @@
           "title": "Anthropic: расширение использования Google Cloud TPU",
           "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
           "published": "2025-10-23",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-22",
           "alive": true,
           "quote": "we plan to expand our use of Google Cloud technologies, including up to one",
           "confidence": 0.925
@@ -12758,7 +12865,7 @@
           "title": "Intel 10-K 2025",
           "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
           "published": "2026-01-29",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-22",
           "alive": true,
           "quote": "ARM-based products and the ARM ecosystem have seen increased development and adoption in",
           "confidence": 0.925
@@ -13422,7 +13529,7 @@
           "title": "Anthropic: раунд Series H",
           "url": "https://www.anthropic.com/news/series-h",
           "published": "2026-05-01",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-22",
           "alive": true,
           "quote": "Significant investors in this round include AMP PBC, Baillie Gifford, Blackstone, Brookfield, D.E.",
           "confidence": 0.925
@@ -13791,7 +13898,7 @@
           "title": "Brookfield и AWS: облако и зелёная энергия",
           "url": "https://press.aboutamazon.com/2022/11/Brookfield-Asset-Management-Selects-AWS-to-Enhance-Its-Renewable-Energy-Operations",
           "published": "2022-11-30",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-22",
           "alive": true,
           "quote": "Brookfield Renewable agrees to provide clean energy capacity to power Amazon’s operations",
           "confidence": 0.925
@@ -13832,7 +13939,7 @@
           "title": "Anthropic: раунд Series H",
           "url": "https://www.anthropic.com/news/series-h",
           "published": "2026-05-01",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-22",
           "alive": true,
           "quote": "Significant investors in this round include AMP PBC, Baillie Gifford, Blackstone, Brookfield, D.E.",
           "confidence": 0.925
@@ -14066,7 +14173,7 @@
           "title": "Cadence 10-K 2025",
           "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000016/cdns-20251231.htm",
           "published": "2026-02-19",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-22",
           "alive": true,
           "quote": "Key competitors include Synopsys, Inc., Ansys, Inc. (acquired by Synopsys), Siemens EDA, and",
           "confidence": 0.925
@@ -16092,7 +16199,7 @@
           "title": "Anthropic: раунд Series H",
           "url": "https://www.anthropic.com/news/series-h",
           "published": "2026-05-01",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-22",
           "alive": true,
           "quote": "We signed agreements with Amazon for up to five gigawatts of new capacity,",
           "confidence": 0.925
@@ -16103,7 +16210,7 @@
           "title": "Anthropic: раунд Series H",
           "url": "https://www.anthropic.com/news/series-h",
           "published": "2026-05-01",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-22",
           "alive": true,
           "quote": "with Google and Broadcom for five gigawatts of next-generation TPU capacity, and",
           "confidence": 0.925
@@ -16144,7 +16251,7 @@
           "title": "Anthropic выбирает Google Cloud",
           "url": "https://www.anthropic.com/news/anthropic-partners-with-google-cloud",
           "published": "2023-02-03",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-22",
           "alive": true,
           "quote": "an AI safety and research company, has selected Google Cloud",
           "confidence": 0.925
@@ -16155,7 +16262,7 @@
           "title": "Anthropic: расширение использования Google Cloud TPU",
           "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
           "published": "2025-10-23",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-22",
           "alive": true,
           "quote": "we plan to expand our use of Google Cloud technologies, including up to one",
           "confidence": 0.925
@@ -16196,7 +16303,7 @@
           "title": "Anthropic выбирает Google Cloud",
           "url": "https://www.anthropic.com/news/anthropic-partners-with-google-cloud",
           "published": "2023-02-03",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-22",
           "alive": true,
           "quote": "an AI safety and research company, has selected Google Cloud",
           "confidence": 0.925
@@ -16237,7 +16344,7 @@
           "title": "Anthropic выбирает Google Cloud",
           "url": "https://www.anthropic.com/news/anthropic-partners-with-google-cloud",
           "published": "2023-02-03",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-22",
           "alive": true,
           "quote": "an AI safety and research company, has selected Google Cloud",
           "confidence": 0.925
@@ -16278,7 +16385,7 @@
           "title": "Anthropic: раунд Series H",
           "url": "https://www.anthropic.com/news/series-h",
           "published": "2026-05-01",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-22",
           "alive": true,
           "quote": "We signed agreements with Amazon for up to five gigawatts of new capacity,",
           "confidence": 0.925
@@ -16421,7 +16528,7 @@
           "title": "Anthropic: расширение использования Google Cloud TPU",
           "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
           "published": "2025-10-23",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-22",
           "alive": true,
           "quote": "we plan to expand our use of Google Cloud technologies, including up to one",
           "confidence": 0.925
@@ -16432,7 +16539,7 @@
           "title": "Anthropic: раунд Series H",
           "url": "https://www.anthropic.com/news/series-h",
           "published": "2026-05-01",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-22",
           "alive": true,
           "quote": "with Google and Broadcom for five gigawatts of next-generation TPU capacity, and",
           "confidence": 0.925
@@ -23464,7 +23571,7 @@
           "title": "TSMC 20-F 2025",
           "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
           "published": "2026-04-16",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-22",
           "alive": true,
           "quote": "the Creating Helpful Incentives to Produce Semiconductors and Science Act of 2022",
           "confidence": 0.925
@@ -23942,7 +24049,7 @@
           "title": "TrendForce: чипы Google на 3 нм TSMC",
           "url": "https://www.trendforce.com/news/2025/10/21/news-googles-axion-cpu-reportedly-built-on-tsmcs-3nm-set-to-drive-foundrys-data-center-revenue-growth/",
           "published": "2025-10-21",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-22",
           "alive": true,
           "quote": "Google’s First Arm-Based CPU Axion Reportedly Built on TSMC 3nm with GUC Design",
           "confidence": 0.8
@@ -24329,7 +24436,7 @@
           "title": "vLLM README",
           "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
           "published": "2026-08-01",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-22",
           "alive": true,
           "quote": "OpenAI-compatible API server, plus Anthropic Messages API and gRPC support -",
           "confidence": 0.925
@@ -24523,7 +24630,7 @@
           "title": "vLLM README",
           "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
           "published": "2026-08-01",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-22",
           "alive": true,
           "quote": "OpenAI-compatible API server, plus Anthropic Messages API and gRPC support -",
           "confidence": 0.925
@@ -25038,6 +25145,6 @@
     "newSources": [],
     "layerChanges": [],
     "month": "2026-08",
-    "version": "v1.0-2026-08"
+    "version": "v1.1-2026-08"
   }
 }

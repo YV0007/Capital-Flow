@@ -66,6 +66,12 @@ def default_direction(edge_type: str):
     return t.get("default_direction") if t else None
 
 
+def pagerank_dependence() -> dict:
+    """{тип связи: to_source|to_target|both|none} из config/nvnet_edges.yaml.
+    Направление голоса зависимости для PageRank; см. комментарий в конфиге."""
+    return _load("nvnet_edges.yaml").get("pagerank_dependence", {}) or {}
+
+
 def seed_path():
     return db.ROOT / load_pivots_cfg().get("seed", "handoff/nvidia_ecosystem.json")
 
@@ -110,9 +116,14 @@ def hops_from_pivots(pivots, edges) -> dict:
     return dist
 
 
-def release_version(month: str, major: int = 1, minor: int = 0) -> str:
-    """vX.Y-YYYY-MM. X растёт при перестройке, Y — при месячном выпуске."""
-    return f"v{major}.{minor}-{month}"
+def release_version(month: str, major: int = None, minor: int = None) -> str:
+    """vX.Y-YYYY-MM. X растёт при перестройке формы, Y — при выпуске без ломки формы.
+
+    Номер лежит в config/nvnet_pivots.yaml, а не литералом в коде: выпуск — это решение,
+    и оно должно быть видно в конфиге, а не в диффе Python.
+    """
+    cfg = load_pivots_cfg().get("release", {}) or {}
+    return f"v{major or cfg.get('major', 1)}.{minor if minor is not None else cfg.get('minor', 0)}-{month}"
 
 
 # 10 категорий изменений блюпринта. Первый выпуск заполняет только первые две и

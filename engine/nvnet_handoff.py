@@ -27,7 +27,8 @@ def build(month: str, net: dict) -> dict:
     entities = [net["entities"][k] for k in sorted(net["entities"])]
     edges = [net["edges"][k] for k in sorted(net["edges"])]
 
-    metrics = nvnet_centrality.run([e["id"] for e in entities], edges)
+    metrics = nvnet_centrality.run([e["id"] for e in entities], edges,
+                                  nvnet.pagerank_dependence())
     for e in entities:
         e["centrality"] = metrics["centrality"][e["id"]]
 
@@ -97,6 +98,9 @@ def validate(payload: dict) -> list:
         b = c.get("betweenness")
         if not isinstance(b, (int, float)) or isinstance(b, bool) or not 0 <= b <= 1:
             errs.append(f"сущность {e['id']}: centrality.betweenness вне 0..1")
+        pr = c.get("pagerank")
+        if not isinstance(pr, (int, float)) or isinstance(pr, bool) or not 0 <= pr <= 1:
+            errs.append(f"сущность {e['id']}: centrality.pagerank вне 0..1")
         if e.get("hops") is None or e["hops"] > hops_limit:
             errs.append(f"сущность {e['id']} в {e.get('hops')} шагах от ближайшего "
                         f"пивота при пределе {hops_limit}")
@@ -159,6 +163,14 @@ def validate(payload: dict) -> list:
                             f"слов при пределе {nveco.MAX_QUOTE_WORDS}")
             if ev.get("tier") not in (1, 2, 3, 4, 5, 6):
                 errs.append(f"связь {x['id']}: тир источника '{ev.get('tier')}'")
+
+    # PageRank — доля важности, и сумма долей обязана равняться единице. Расхождение
+    # означает, что мера посчитана на другом множестве узлов или обрезана после
+    # нормировки; и то и другое делает числа несравнимыми между прогонами.
+    prs = [(e.get("centrality") or {}).get("pagerank") for e in payload["entities"]]
+    prs = [x for x in prs if isinstance(x, (int, float)) and not isinstance(x, bool)]
+    if prs and abs(sum(prs) - 1.0) > 1e-3:
+        errs.append(f"сумма centrality.pagerank = {round(sum(prs), 6)}, а должна быть ≈1")
 
     n = payload.get("network") or {}
     for k in ("totalNodes", "totalEdges", "pivotalNodes", "secondaryNodes", "density",
@@ -271,13 +283,19 @@ def _changelog_md(cur, cl, net) -> str:
               f"**{b['addedEdges']}** связей пивот↔пивот.",
               f"- {b['note']}.", ""]
 
-    L += ["## Центральность — верх списка", "",
-          "| сущность | degree | betweenness | пивот |", "|---|---|---|---|"]
-    top = sorted(cur["entities"], key=lambda e: -e["centrality"]["betweenness"])[:10]
-    L += [f"| {e['name']} | {e['centrality']['degree']} | "
-          f"{e['centrality']['betweenness']} | {'да' if e['pivotal'] else '—'} |"
-          for e in top]
-    L += [""]
+    L += ["## Центральность — три меры, три разных вопроса", "",
+          "`degree` — со сколькими связан · `betweenness` — через кого идут пути · "
+          "`pagerank` — на кого опираются те, на кого опираются сами.", ""]
+    for key, title in (("betweenness", "По betweenness — кто держит пути"),
+                       ("pagerank", "По pagerank — на кого опирается сеть")):
+        L += [f"### {title}", "",
+              "| сущность | degree | betweenness | pagerank | пивот |",
+              "|---|---|---|---|---|"]
+        top = sorted(cur["entities"], key=lambda e: -e["centrality"][key])[:10]
+        L += [f"| {e['name']} | {e['centrality']['degree']} | "
+              f"{e['centrality']['betweenness']} | {e['centrality']['pagerank']} | "
+              f"{'да' if e['pivotal'] else '—'} |" for e in top]
+        L += [""]
 
     if n["singlePointsOfFailure"]:
         L += ["## Точки отказа", ""]
