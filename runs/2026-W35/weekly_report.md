@@ -149,9 +149,38 @@
 | cyber_security | $214M | 5 | 5 |
 | biotech_ai | $0 | 2 | 2 |
 
-## Public beneficiaries mapped (58)
+## Public beneficiaries mapped (87)
 | Ticker | Company | From flow | Confidence |
 |---|---|---|:-:|
+| NVDA | NVIDIA Corporation | Meta→BlackRock (El Paso Data Center JV) | high |
+| VRT | Vertiv Holdings | Meta→BlackRock (El Paso Data Center JV) | high |
+| ETN | Eaton Corporation | Meta→BlackRock (El Paso Data Center JV) | high |
+| LEU | Centrus Energy | Sequoia→Valar Atomics Inc. | high |
+| BWXT | BWX Technologies | Sequoia→Valar Atomics Inc. | medium |
+| CCJ | Cameco Corporation | Sequoia→Valar Atomics Inc. | low |
+| KTOS | Kratos Defense & Security Solutions | Sequoia→Neros Technologies | low |
+| AMBA | Ambarella Inc. | Sequoia→Neros Technologies | low |
+| NVDA | NVIDIA Corporation | Andreessen Horowitz→Volta AI Infra Holdings | high |
+| DELL | Dell Technologies | Andreessen Horowitz→Volta AI Infra Holdings | medium |
+| NVDA | NVIDIA Corporation | Altimeter→Volta AI Infra Holdings | high |
+| DELL | Dell Technologies | Altimeter→Volta AI Infra Holdings | medium |
+| TSM | Taiwan Semiconductor Manufacturing | Andreessen Horowitz→Etched | high |
+| TSM | Taiwan Semiconductor Manufacturing | Sequoia→Etched | high |
+| TSM | Taiwan Semiconductor Manufacturing | Peter Thiel→Etched | high |
+| GEV | GE Vernova | Elon Musk→APR Energy | medium |
+| COHR | Coherent Corp. | Elon Musk→Mesh Optical Technologies | low |
+| NEE | NextEra Energy | Brookfield→Paducah DOE Site AI Data Center Campus | high |
+| GEV | GE Vernova | Brookfield→Paducah DOE Site AI Data Center Campus | medium |
+| NVDA | NVIDIA Corporation | Apollo→AI Compute Infrastructure Financing Platform (NVIDIA-anchored) | high |
+| NVDA | NVIDIA Corporation | BlackRock→AI Compute Infrastructure Financing Platform (NVIDIA-anchored) | high |
+| NVDA | NVIDIA Corporation | Blackstone→AI Compute Infrastructure Financing Platform (NVIDIA-anchored) | high |
+| NVDA | NVIDIA Corporation | Brookfield→AI Compute Infrastructure Financing Platform (NVIDIA-anchored) | high |
+| NVDA | NVIDIA Corporation | Goldman Sachs→AI Compute Infrastructure Financing Platform (NVIDIA-anchored) | high |
+| NVDA | NVIDIA Corporation | KKR→AI Compute Infrastructure Financing Platform (NVIDIA-anchored) | high |
+| NEE | NextEra Energy | Brookfield→NextEra-Brookfield Paducah AI Data Center Campus | high |
+| GEV | GE Vernova | Brookfield→NextEra-Brookfield Paducah AI Data Center Campus | medium |
+| COHR | Coherent Corp. | US Government→GlobalFoundries | low |
+| COHR | Coherent Corp. | US Government→GlobalFoundries | low |
 | NVDA | NVIDIA Corporation | Meta→BlackRock (El Paso Data Center JV) | high |
 | VRT | Vertiv Holdings | Meta→BlackRock (El Paso Data Center JV) | high |
 | ETN | Eaton Corporation | Meta→BlackRock (El Paso Data Center JV) | high |
