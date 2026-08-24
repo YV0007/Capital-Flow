@@ -1,0 +1,191 @@
+[
+  {
+    "target": "Poolside",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-08-20",
+    "capital_usd": 1000000000.0,
+    "deal_source_urls": [
+      "https://www.bloomberg.com/news/articles/2026-08-20/nvidia-to-pay-ai-startup-poolside-a-6-billion-license-newcomer-says"
+    ]
+  },
+  {
+    "target": "Kepler",
+    "target_type": "private",
+    "sector": "semiconductors",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-07-29",
+    "capital_usd": 490000000.0,
+    "deal_source_urls": [
+      "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million"
+    ]
+  },
+  {
+    "target": "Gravis Robotics",
+    "target_type": "private",
+    "sector": "robotics",
+    "allocators": [
+      "SoftBank"
+    ],
+    "last_event": "2026-08-17",
+    "capital_usd": 200000000.0,
+    "deal_source_urls": [
+      "https://www.gravisrobotics.com/series-a"
+    ]
+  },
+  {
+    "target": "Aeluma Inc.",
+    "target_type": "public",
+    "sector": "networking",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-07-29",
+    "capital_usd": 30000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/0001828805/000121390026083005/ea029978601ex99-1.htm"
+    ]
+  },
+  {
+    "target": "Veeda AI",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "Khosla Ventures"
+    ],
+    "last_event": "2026-08-19",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://siliconangle.com/2026/08/19/sanja-fidlers-world-model-startup-veeda-ai-raises-90m-in-seed-funding/"
+    ]
+  },
+  {
+    "target": "Thrive Holdings Inc",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Altimeter"
+    ],
+    "last_event": "2026-08-12",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/"
+    ]
+  },
+  {
+    "target": "Rillet",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Sequoia",
+      "Andreessen Horowitz"
+    ],
+    "last_event": "2026-08-19",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://techcrunch.com/2026/08/19/rillet-raises-100m-series-c-at-1b-valuation-2-years-after-emerging-from-stealth/"
+    ]
+  },
+  {
+    "target": "Paducah DOE Site AI Data Center Campus",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Brookfield"
+    ],
+    "last_event": "2026-07-29",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://bam.brookfield.com/press-releases/doe-site-western-kentucky-revitalized-data-center-campus-and-dedicated-energy"
+    ]
+  },
+  {
+    "target": "Network Bio",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Founders Fund"
+    ],
+    "last_event": "2026-08-19",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.citybiz.co/article/891371/network-bio-launches-with-50m-to-scale-ai-driven-biomedical-platform/"
+    ]
+  },
+  {
+    "target": "NVIDIA AI Compute Infrastructure Financing Platform",
+    "target_type": "fund",
+    "sector": "neocloud",
+    "allocators": [
+      "Blackstone",
+      "BlackRock",
+      "Brookfield",
+      "KKR"
+    ],
+    "last_event": "2026-08-10",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.blackstone.com/news/press/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital/",
+      "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+      "https://www.apollo.com/insights-news/pressreleases/2026/08/nvidia-partners-with-apollo"
+    ]
+  },
+  {
+    "target": "Mesh Optical Technologies",
+    "target_type": "private",
+    "sector": "networking",
+    "allocators": [
+      "Elon Musk"
+    ],
+    "last_event": "2026-06-26",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.ftc.gov/legal-library/browse/early-termination-notices/20261601"
+    ]
+  },
+  {
+    "target": "Khosla Ventures (new fund family, unnamed)",
+    "target_type": "fund",
+    "sector": "ai-labs",
+    "allocators": [
+      "Khosla Ventures"
+    ],
+    "last_event": "2026-07-23",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.bloomberg.com/news/articles/2026-07-23/khosla-ventures-in-talks-to-raise-5-5-billion-in-new-funds"
+    ]
+  },
+  {
+    "target": "Castelion",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "Andreessen Horowitz",
+      "Altimeter"
+    ],
+    "last_event": "2026-08-19",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/castelion-raises-1-billion-series-c-to-scale-production-of-low-cost-hypersonic-weapons-302855711.html"
+    ]
+  },
+  {
+    "target": "Akita AI Data Center (BitGrid / S2 JV)",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Mubadala"
+    ],
+    "last_event": "2026-08-06",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.japantimes.co.jp/business/2026/08/06/uae-fund-data-center/"
+    ]
+  }
+]
