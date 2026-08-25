@@ -1,5 +1,5 @@
 source,target,type,direction,strength,lock_in_depth,substitutability,is_reversible,risk_level,risk_type,risk_timeline,risk_mitigation,tech_node,formed,strengthened,note
-nvidia,nventures,funded_by,downstream,100,70,0,false,low,none,none,,,2022,,"Венчурное подразделение якоря: инструмент управления собственным риском, а не портфель ради доходности."
+nventures,nvidia,funded_by,upstream,100,70,0,false,low,none,none,,,2022,,"Венчурное подразделение якоря: инструмент управления собственным риском, а не портфель ради доходности."
 nvidia,coreweave,hedges_against,downstream,85,65,20,true,medium,market,2-5y,Хедж против монополии облаков-гигантов на аренду вычислений: независимое облако должно выжить.,,2023,2025,"Вложения в независимое облако снижают риск того, что гиперскейлеры замкнут на себя весь рынок аренды ускорителей."
 nvidia,nebius,hedges_against,downstream,70,50,30,true,medium,market,2-5y,"Хедж против монополии гиперскейлеров, теперь в европейской юрисдикции.",,2024,,"Второе независимое облако в портфеле: тот же хедж, распространённый на другой рынок."
 nvidia,lambda,hedges_against,downstream,55,35,45,true,low,market,2-5y,Хедж против монополии гиперскейлеров на аренду ускорителей.,,2023,,Третье независимое облако: каждое следующее снижает долю гигантов в аренде вычислений.
@@ -20,7 +20,7 @@ sequoia,openai,invests_in,downstream,45,30,55,true,low,market,1-2y,,,2021,,"Ве
 thrive,openai,invests_in,downstream,50,30,50,true,low,market,1-2y,,,2024,,"Поздние раунды на миллиарды — узкий сегмент, но инвесторов в нём несколько."
 a16z,databricks,invests_in,downstream,40,25,60,true,low,market,1-2y,,,2019,,Венчурный капитал в платформе данных прикладного слоя.
 lightspeed,anthropic,invests_in,downstream,40,25,60,true,low,market,1-2y,,,2023,,Венчурный капитал во второй лаборатории.
-blackrock,microsoft,funded_by,downstream,45,35,55,true,low,market,2-5y,,,2024,,Инфраструктурный капитал финансирует площадки и энергию под облачные мощности.
+microsoft,blackrock,funded_by,upstream,45,35,55,true,low,market,2-5y,,,2024,,Инфраструктурный капитал финансирует площадки и энергию под облачные мощности.
 blackstone,digital-realty,invests_in,downstream,50,35,50,true,low,market,2-5y,,,2021,,"Управляющий капиталом владеет платформами площадок напрямую, а не долями в них."
 brookfield,crusoe,invests_in,downstream,45,35,55,true,low,market,2-5y,,,2024,,"Инфраструктурный капитал в облаке, строящем площадки у источников энергии."
 nvidia,nventures,board_seat,downstream,100,60,0,false,low,none,none,,,2022,,Собственная структура якоря: контроль полный по определению.

@@ -26,7 +26,7 @@ layers:
   - { id: L7,  label: "ОХЛАЖДЕНИЕ",     caption: "тепло · вода · жидкость",       plane: orbit,   order: 7,  band: 3 }
   - { id: L8,  label: "СВЯЗЬ",          caption: "сеть · оптика · коммутация",    plane: orbit,   order: 8,  band: 4 }
   - { id: L9,  label: "ИНФРАСТРУКТУРА", caption: "площадки · облака",             plane: orbit,   order: 9,  band: 4 }
-  - { id: L10, label: "ПЛАТФОРМА",      caption: "CUDA · фреймворки",             plane: orbit,   order: 10, band: 5 }
+  - { id: L10, label: "СОФТ ДЛЯ GPU",   caption: "CUDA · на чём пишут код",       plane: orbit,   order: 10, band: 5 }
   - { id: L11, label: "ИНФЕРЕНС",       caption: "запуск моделей · оркестрация",  plane: orbit,   order: 11, band: 5 }
   - { id: L12, label: "ЛАБОРАТОРИИ",    caption: "модели · обучение",             plane: orbit,   order: 12, band: 5 }
   - { id: L13, label: "ПРИЛОЖЕНИЯ",     caption: "ИИ в бизнесе · отрасли",        plane: orbit,   order: 13, band: 5 }

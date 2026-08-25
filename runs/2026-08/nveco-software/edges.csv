@@ -4,7 +4,7 @@ cuda,pytorch,locks_in_developers,bidirectional,95,95,5,false,high,substitution,5
 pytorch,cuda,path_dependent_on,upstream,90,90,10,false,high,substitution,5y+,"Поддержка чужих ускорителей развивается, но отстаёт.",,2016,,"Возможности библиотеки появляются вслед за возможностями среды: сначала там, потом везде."
 cuda,nvidia,locks_in_platforms,bidirectional,95,95,5,false,high,substitution,5y+,Открытие части стека снижает риск отторжения.,,2006,2016,Среда работает только на ускорителях якоря: уход с них означает переписывание кода отрасли.
 pytorch,nvidia,validates_demand,downstream,90,85,15,false,medium,substitution,2-5y,"Библиотека поддерживает и чужие ускорители, но хуже.",,2016,2020,"Библиотека, в которой написано большинство исследований, ускоряется прежде всего на его железе — это и доказывает необходимость."
-meta,pytorch,funded_by,downstream,80,60,20,true,low,market,5y+,,,2016,2022,Библиотеку создала компания-покупатель ускорителей и передала независимому фонду.
+pytorch,meta,funded_by,upstream,80,60,20,true,low,market,5y+,,,2016,2022,Библиотеку создала компания-покупатель ускорителей и передала независимому фонду.
 jax,cuda,path_dependent_on,upstream,60,55,40,true,medium,substitution,2-5y,,,2018,,"Вторая библиотека обучения тоже работает через эту среду, хотя развивается вокруг чужого ускорителя."
 jax,pytorch,competes_with,lateral,60,50,40,true,medium,substitution,2-5y,,,2018,,Вторая половина дуополии библиотек обучения; экосистема заметно меньше.
 jax,google,funded_by,upstream,70,50,30,true,low,market,2-5y,,,2018,,"Библиотеку ведёт компания, у которой есть и своё облако, и свой ускоритель."
@@ -19,7 +19,7 @@ vllm,huggingface,standardizes_on,upstream,70,50,30,true,low,technical,1-2y,,,202
 sglang,vllm,competes_with,lateral,45,35,55,true,low,substitution,1-2y,,,2024,,"Второй открытый движок запуска моделей: слой конкурентный, а не запертый."
 huggingface,pytorch,standardizes_on,upstream,80,70,20,true,medium,technical,2-5y,,,2018,,Общая библиотека моделей построена вокруг библиотеки обучения: это точка стыковки всей экосистемы.
 huggingface,nvidia,validates_demand,downstream,70,65,30,true,medium,substitution,2-5y,Хаб поддерживает и чужие ускорители.,,2018,2023,Опубликованные в хабе модели работают прежде всего на его ускорителях: уйти значит потерять доступ к экосистеме.
-kubernetes,nvidia,standardizes_on,downstream,70,60,30,true,low,technical,5y+,,,2018,,Отраслевой стандарт запуска контейнеров: совместимость с ним обязательна для любого поставщика ускорителей.
+nvidia,kubernetes,standardizes_on,upstream,70,60,30,true,low,technical,5y+,,,2018,,Отраслевой стандарт запуска контейнеров: совместимость с ним обязательна для любого поставщика ускорителей.
 ray,nvidia,optimizes_for,downstream,50,45,50,true,low,technical,1-2y,,,2019,,Оркестратор распределённых вычислений раскладывает обучение по кластерам ускорителей.
 ray,kubernetes,standardizes_on,upstream,55,40,45,true,low,technical,1-2y,,,2019,,Оркестратор запускается поверх общего стандарта контейнеров.
 nim,nvidia,locks_in_platforms,bidirectional,45,45,55,true,low,substitution,1-2y,Открытые движки покрывают ту же задачу бесплатно.,,2024,,Готовые контейнеры запуска моделей от самого якоря: способ подняться из железа в слой инференса.

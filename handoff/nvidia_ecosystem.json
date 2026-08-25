@@ -1,6 +1,6 @@
 {
   "schema": "nvidia-ecosystem/2",
-  "generated": "2026-08-22",
+  "generated": "2026-08-23",
   "asOf": "2026-08",
   "source": "engine",
   "ecosystem": "nvidia",
@@ -9,7 +9,7 @@
     "entities": 106,
     "edges": 243,
     "layers": 16,
-    "cycles": 140,
+    "cycles": 146,
     "techNodes": 10
   },
   "layers": [
@@ -185,8 +185,8 @@
     },
     {
       "id": "L10",
-      "label": "ПЛАТФОРМА",
-      "caption": "CUDA · фреймворки",
+      "label": "СОФТ ДЛЯ GPU",
+      "caption": "CUDA · на чём пишут код",
       "plane": "orbit",
       "order": 10,
       "band": 5,
@@ -592,7 +592,7 @@
         "reach": 3,
         "layers": 4,
         "edgeTypes": 6,
-        "cycles": 5,
+        "cycles": 6,
         "score": 26,
         "signals": {}
       },
@@ -953,7 +953,7 @@
         "reach": 4,
         "layers": 5,
         "edgeTypes": 2,
-        "cycles": 17,
+        "cycles": 16,
         "score": 26,
         "signals": {}
       },
@@ -1026,7 +1026,7 @@
         "reach": 3,
         "layers": 5,
         "edgeTypes": 5,
-        "cycles": 9,
+        "cycles": 5,
         "score": 26,
         "signals": {}
       },
@@ -1247,7 +1247,7 @@
         "reach": 4,
         "layers": 4,
         "edgeTypes": 3,
-        "cycles": 6,
+        "cycles": 5,
         "score": 25,
         "signals": {}
       },
@@ -2416,7 +2416,7 @@
         "reach": 4,
         "layers": 4,
         "edgeTypes": 3,
-        "cycles": 6,
+        "cycles": 5,
         "score": 25,
         "signals": {}
       },
@@ -2566,7 +2566,7 @@
         "reach": 12,
         "layers": 7,
         "edgeTypes": 7,
-        "cycles": 55,
+        "cycles": 59,
         "score": 47,
         "signals": {}
       },
@@ -3739,7 +3739,7 @@
         "reach": 9,
         "layers": 7,
         "edgeTypes": 8,
-        "cycles": 44,
+        "cycles": 49,
         "score": 42,
         "signals": {}
       },
@@ -4174,8 +4174,8 @@
         "reach": 3,
         "layers": 5,
         "edgeTypes": 1,
-        "cycles": 1,
-        "score": 16,
+        "cycles": 0,
+        "score": 14,
         "signals": {}
       },
       "oneLiner": "Общий стандарт запуска контейнеров: на нём работает почти вся облачная инфраструктура.",
@@ -4617,7 +4617,7 @@
         "reach": 5,
         "layers": 4,
         "edgeTypes": 6,
-        "cycles": 7,
+        "cycles": 17,
         "score": 29,
         "signals": {}
       },
@@ -4840,7 +4840,7 @@
         "reach": 16,
         "layers": 9,
         "edgeTypes": 10,
-        "cycles": 41,
+        "cycles": 42,
         "score": 59,
         "signals": {}
       },
@@ -5419,7 +5419,7 @@
         "reach": 3,
         "layers": 6,
         "edgeTypes": 4,
-        "cycles": 5,
+        "cycles": 6,
         "score": 27,
         "signals": {}
       },
@@ -5502,7 +5502,7 @@
         "reach": 74,
         "layers": 15,
         "edgeTypes": 29,
-        "cycles": 139,
+        "cycles": 142,
         "score": 97,
         "signals": {}
       },
@@ -5651,7 +5651,7 @@
         "reach": 12,
         "layers": 8,
         "edgeTypes": 11,
-        "cycles": 52,
+        "cycles": 53,
         "score": 51,
         "signals": {}
       },
@@ -5795,7 +5795,7 @@
         "reach": 6,
         "layers": 5,
         "edgeTypes": 7,
-        "cycles": 30,
+        "cycles": 39,
         "score": 33,
         "signals": {}
       },
@@ -6162,7 +6162,7 @@
         "reach": 5,
         "layers": 6,
         "edgeTypes": 4,
-        "cycles": 8,
+        "cycles": 9,
         "score": 31,
         "signals": {}
       },
@@ -7393,7 +7393,7 @@
         "reach": 2,
         "layers": 4,
         "edgeTypes": 3,
-        "cycles": 8,
+        "cycles": 9,
         "score": 22,
         "signals": {}
       },
@@ -7827,7 +7827,7 @@
         "reach": 19,
         "layers": 8,
         "edgeTypes": 11,
-        "cycles": 40,
+        "cycles": 38,
         "score": 64,
         "signals": {}
       },
@@ -9494,57 +9494,6 @@
       ]
     },
     {
-      "id": "arm__tsmc__standardizes_on",
-      "source": "arm",
-      "target": "tsmc",
-      "type": "standardizes_on",
-      "spine": "moat",
-      "direction": "downstream",
-      "strength": 70,
-      "lockInDepth": 60,
-      "substitutability": 30,
-      "isReversible": true,
-      "status": "confirmed",
-      "confidence": 0.955,
-      "sourceTier": 2,
-      "confirmedSources": 2,
-      "risk": {
-        "level": "low",
-        "type": "technical",
-        "timeline": "5y+",
-        "mitigation": null
-      },
-      "techNode": "arm-isa",
-      "formed": "1990",
-      "strengthened": null,
-      "lastConfirmed": "2026-08",
-      "note": "Более 350 миллиардов выпущенных чипов используют эту архитектуру — общий знаменатель для фабрик.",
-      "evidence": [
-        {
-          "tier": 2,
-          "type": "sec_filing",
-          "title": "Arm 20-F FY2026",
-          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
-          "published": "2026-05-26",
-          "fetched": "2026-08-18",
-          "alive": true,
-          "quote": "more than 350 billion Arm-based chips were reported as shipped cumulatively.",
-          "confidence": 0.925
-        },
-        {
-          "tier": 2,
-          "type": "sec_filing",
-          "title": "Arm 20-F FY2026",
-          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
-          "published": "2026-05-26",
-          "fetched": "2026-08-18",
-          "alive": true,
-          "quote": "we receive a per-unit royalty on substantially all chips shipped.",
-          "confidence": 0.925
-        }
-      ]
-    },
-    {
       "id": "ase__astera-labs__packages",
       "source": "ase",
       "target": "astera-labs",
@@ -9909,57 +9858,6 @@
           "alive": true,
           "quote": "do business without an export license with entities on the U.S. Department of Commerce’s U.S.",
           "confidence": 0.975
-        }
-      ]
-    },
-    {
-      "id": "blackrock__microsoft__funded_by",
-      "source": "blackrock",
-      "target": "microsoft",
-      "type": "funded_by",
-      "spine": "capital",
-      "direction": "downstream",
-      "strength": 45,
-      "lockInDepth": 35,
-      "substitutability": 55,
-      "isReversible": true,
-      "status": "confirmed",
-      "confidence": 0.99,
-      "sourceTier": 1,
-      "confirmedSources": 2,
-      "risk": {
-        "level": "low",
-        "type": "market",
-        "timeline": "2-5y",
-        "mitigation": null
-      },
-      "techNode": null,
-      "formed": "2024",
-      "strengthened": null,
-      "lastConfirmed": "2026-08",
-      "note": "Инфраструктурный капитал финансирует площадки и энергию под облачные мощности.",
-      "evidence": [
-        {
-          "tier": 1,
-          "type": "sec_filing",
-          "title": "NVIDIA 10-K FY2026",
-          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
-          "published": "2026-02-25",
-          "fetched": "2026-08-18",
-          "alive": true,
-          "quote": "including sufficient energy for powering data centers using our products,",
-          "confidence": 0.975
-        },
-        {
-          "tier": 2,
-          "type": "sec_filing",
-          "title": "Eaton 10-K 2025",
-          "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/etn-20251231.htm",
-          "published": "2026-02-26",
-          "fetched": "2026-08-18",
-          "alive": true,
-          "quote": "We make products for the data center, utility, industrial, commercial, machine building,",
-          "confidence": 0.925
         }
       ]
     },
@@ -10724,46 +10622,6 @@
           "fetched": "2026-08-18",
           "alive": true,
           "quote": "the U.S. government, or USG, announced export restrictions and export licensing requirements targeting",
-          "confidence": 0.975
-        }
-      ]
-    },
-    {
-      "id": "chips-act__usa__standardizes_on",
-      "source": "chips-act",
-      "target": "usa",
-      "type": "standardizes_on",
-      "spine": "moat",
-      "direction": "upstream",
-      "strength": 60,
-      "lockInDepth": 40,
-      "substitutability": 40,
-      "isReversible": true,
-      "status": "high_confidence",
-      "confidence": 0.975,
-      "sourceTier": 1,
-      "confirmedSources": 1,
-      "risk": {
-        "level": "low",
-        "type": "regulatory",
-        "timeline": "ongoing",
-        "mitigation": null
-      },
-      "techNode": null,
-      "formed": "2022",
-      "strengthened": null,
-      "lastConfirmed": "2026-08",
-      "note": "Закон — инструмент, которым юрисдикция возвращает производство внутрь страны.",
-      "evidence": [
-        {
-          "tier": 1,
-          "type": "sec_filing",
-          "title": "NVIDIA 10-K FY2026",
-          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
-          "published": "2026-02-25",
-          "fetched": "2026-08-18",
-          "alive": true,
-          "quote": "do business without an export license with entities on the U.S. Department of Commerce’s U.S.",
           "confidence": 0.975
         }
       ]
@@ -12033,46 +11891,6 @@
       ]
     },
     {
-      "id": "eu-ai-act__eu__standardizes_on",
-      "source": "eu-ai-act",
-      "target": "eu",
-      "type": "standardizes_on",
-      "spine": "moat",
-      "direction": "upstream",
-      "strength": 50,
-      "lockInDepth": 30,
-      "substitutability": 50,
-      "isReversible": true,
-      "status": "high_confidence",
-      "confidence": 0.975,
-      "sourceTier": 1,
-      "confirmedSources": 1,
-      "risk": {
-        "level": "low",
-        "type": "regulatory",
-        "timeline": "ongoing",
-        "mitigation": null
-      },
-      "techNode": null,
-      "formed": "2024",
-      "strengthened": null,
-      "lastConfirmed": "2026-08",
-      "note": "Регламент — инструмент, которым блок задаёт правила для рынка ИИ.",
-      "evidence": [
-        {
-          "tier": 1,
-          "type": "sec_filing",
-          "title": "NVIDIA 10-K FY2026",
-          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
-          "published": "2026-02-25",
-          "fetched": "2026-08-18",
-          "alive": true,
-          "quote": "the U.S. government, or USG, announced export restrictions and export licensing requirements targeting",
-          "confidence": 0.975
-        }
-      ]
-    },
-    {
       "id": "eu-ai-act__openai__subject_to_restriction",
       "source": "eu-ai-act",
       "target": "openai",
@@ -12106,6 +11924,46 @@
           "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
           "published": "2026-02-25",
           "fetched": "2026-08-18",
+          "alive": true,
+          "quote": "the U.S. government, or USG, announced export restrictions and export licensing requirements targeting",
+          "confidence": 0.975
+        }
+      ]
+    },
+    {
+      "id": "eu__eu-ai-act__standardizes_on",
+      "source": "eu",
+      "target": "eu-ai-act",
+      "type": "standardizes_on",
+      "spine": "moat",
+      "direction": "downstream",
+      "strength": 50,
+      "lockInDepth": 30,
+      "substitutability": 50,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "low",
+        "type": "regulatory",
+        "timeline": "ongoing",
+        "mitigation": null
+      },
+      "techNode": null,
+      "formed": "2024",
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Регламент — инструмент, которым блок задаёт правила для рынка ИИ.",
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "NVIDIA 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "published": "2026-02-25",
+          "fetched": null,
           "alive": true,
           "quote": "the U.S. government, or USG, announced export restrictions and export licensing requirements targeting",
           "confidence": 0.975
@@ -13348,57 +13206,6 @@
       ]
     },
     {
-      "id": "kubernetes__nvidia__standardizes_on",
-      "source": "kubernetes",
-      "target": "nvidia",
-      "type": "standardizes_on",
-      "spine": "moat",
-      "direction": "downstream",
-      "strength": 70,
-      "lockInDepth": 60,
-      "substitutability": 30,
-      "isReversible": true,
-      "status": "confirmed",
-      "confidence": 0.99,
-      "sourceTier": 1,
-      "confirmedSources": 2,
-      "risk": {
-        "level": "low",
-        "type": "technical",
-        "timeline": "5y+",
-        "mitigation": null
-      },
-      "techNode": null,
-      "formed": "2018",
-      "strengthened": null,
-      "lastConfirmed": "2026-08",
-      "note": "Отраслевой стандарт запуска контейнеров: совместимость с ним обязательна для любого поставщика ускорителей.",
-      "evidence": [
-        {
-          "tier": 1,
-          "type": "sec_filing",
-          "title": "NVIDIA 10-K FY2026",
-          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
-          "published": "2026-02-25",
-          "fetched": "2026-08-18",
-          "alive": true,
-          "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
-          "confidence": 0.975
-        },
-        {
-          "tier": 2,
-          "type": "product_doc",
-          "title": "vLLM README",
-          "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
-          "published": "2026-08-01",
-          "fetched": "2026-08-18",
-          "alive": true,
-          "quote": "Support for NVIDIA GPUs, AMD GPUs, Intel GPUs, and x86/ARM/PowerPC CPUs.",
-          "confidence": 0.925
-        }
-      ]
-    },
-    {
       "id": "lam-research__micron__supplies",
       "source": "lam-research",
       "target": "micron",
@@ -13971,57 +13778,6 @@
       ]
     },
     {
-      "id": "meta__pytorch__funded_by",
-      "source": "meta",
-      "target": "pytorch",
-      "type": "funded_by",
-      "spine": "capital",
-      "direction": "downstream",
-      "strength": 80,
-      "lockInDepth": 60,
-      "substitutability": 20,
-      "isReversible": true,
-      "status": "confirmed",
-      "confidence": 0.955,
-      "sourceTier": 2,
-      "confirmedSources": 2,
-      "risk": {
-        "level": "low",
-        "type": "market",
-        "timeline": "5y+",
-        "mitigation": null
-      },
-      "techNode": null,
-      "formed": "2016",
-      "strengthened": "2022",
-      "lastConfirmed": "2026-08",
-      "note": "Библиотеку создала компания-покупатель ускорителей и передала независимому фонду.",
-      "evidence": [
-        {
-          "tier": 2,
-          "type": "product_doc",
-          "title": "PyTorch README",
-          "url": "https://raw.githubusercontent.com/pytorch/pytorch/main/README.md",
-          "published": "2026-08-01",
-          "fetched": "2026-08-18",
-          "alive": true,
-          "quote": "Tensor computation (like NumPy) with strong GPU acceleration",
-          "confidence": 0.925
-        },
-        {
-          "tier": 2,
-          "type": "sec_filing",
-          "title": "Meta 10-K 2025",
-          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
-          "published": "2026-01-29",
-          "fetched": "2026-08-18",
-          "alive": true,
-          "quote": "costs related to our data centers and technical infrastructure as well as other",
-          "confidence": 0.925
-        }
-      ]
-    },
-    {
       "id": "mgx__openai__invests_in",
       "source": "mgx",
       "target": "openai",
@@ -14222,6 +13978,57 @@
           "alive": true,
           "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC,",
           "confidence": 0.975
+        }
+      ]
+    },
+    {
+      "id": "microsoft__blackrock__funded_by",
+      "source": "microsoft",
+      "target": "blackrock",
+      "type": "funded_by",
+      "spine": "capital",
+      "direction": "upstream",
+      "strength": 45,
+      "lockInDepth": 35,
+      "substitutability": 55,
+      "isReversible": true,
+      "status": "confirmed",
+      "confidence": 0.99,
+      "sourceTier": 1,
+      "confirmedSources": 2,
+      "risk": {
+        "level": "low",
+        "type": "market",
+        "timeline": "2-5y",
+        "mitigation": null
+      },
+      "techNode": null,
+      "formed": "2024",
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Инфраструктурный капитал финансирует площадки и энергию под облачные мощности.",
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "NVIDIA 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "published": "2026-02-25",
+          "fetched": null,
+          "alive": true,
+          "quote": "including sufficient energy for powering data centers using our products,",
+          "confidence": 0.975
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Eaton 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/etn-20251231.htm",
+          "published": "2026-02-26",
+          "fetched": null,
+          "alive": true,
+          "quote": "We make products for the data center, utility, industrial, commercial, machine building,",
+          "confidence": 0.925
         }
       ]
     },
@@ -15155,6 +14962,57 @@
       ]
     },
     {
+      "id": "nventures__nvidia__funded_by",
+      "source": "nventures",
+      "target": "nvidia",
+      "type": "funded_by",
+      "spine": "capital",
+      "direction": "upstream",
+      "strength": 100,
+      "lockInDepth": 70,
+      "substitutability": 0,
+      "isReversible": false,
+      "status": "confirmed",
+      "confidence": 0.99,
+      "sourceTier": 1,
+      "confirmedSources": 2,
+      "risk": {
+        "level": "low",
+        "type": "none",
+        "timeline": "none",
+        "mitigation": null
+      },
+      "techNode": null,
+      "formed": "2022",
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Венчурное подразделение якоря: инструмент управления собственным риском, а не портфель ради доходности.",
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "NVIDIA 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "published": "2026-02-25",
+          "fetched": null,
+          "alive": true,
+          "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+          "confidence": 0.975
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Arista Networks 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+          "published": "2026-02-13",
+          "fetched": null,
+          "alive": true,
+          "quote": "Nvidia has made significant investments in several AI Neoclouds.",
+          "confidence": 0.925
+        }
+      ]
+    },
+    {
       "id": "nvidia__amazon__competes_with",
       "source": "nvidia",
       "target": "amazon",
@@ -16066,6 +15924,57 @@
       ]
     },
     {
+      "id": "nvidia__kubernetes__standardizes_on",
+      "source": "nvidia",
+      "target": "kubernetes",
+      "type": "standardizes_on",
+      "spine": "moat",
+      "direction": "upstream",
+      "strength": 70,
+      "lockInDepth": 60,
+      "substitutability": 30,
+      "isReversible": true,
+      "status": "confirmed",
+      "confidence": 0.99,
+      "sourceTier": 1,
+      "confirmedSources": 2,
+      "risk": {
+        "level": "low",
+        "type": "technical",
+        "timeline": "5y+",
+        "mitigation": null
+      },
+      "techNode": null,
+      "formed": "2018",
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Отраслевой стандарт запуска контейнеров: совместимость с ним обязательна для любого поставщика ускорителей.",
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "NVIDIA 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "published": "2026-02-25",
+          "fetched": null,
+          "alive": true,
+          "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+          "confidence": 0.975
+        },
+        {
+          "tier": 2,
+          "type": "product_doc",
+          "title": "vLLM README",
+          "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+          "published": "2026-08-01",
+          "fetched": null,
+          "alive": true,
+          "quote": "Support for NVIDIA GPUs, AMD GPUs, Intel GPUs, and x86/ARM/PowerPC CPUs.",
+          "confidence": 0.925
+        }
+      ]
+    },
+    {
       "id": "nvidia__lambda__hedges_against",
       "source": "nvidia",
       "target": "lambda",
@@ -16499,57 +16408,6 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": "Собственная структура якоря: контроль полный по определению.",
-      "evidence": [
-        {
-          "tier": 1,
-          "type": "sec_filing",
-          "title": "NVIDIA 10-K FY2026",
-          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
-          "published": "2026-02-25",
-          "fetched": "2026-08-18",
-          "alive": true,
-          "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
-          "confidence": 0.975
-        },
-        {
-          "tier": 2,
-          "type": "sec_filing",
-          "title": "Arista Networks 10-K 2025",
-          "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
-          "published": "2026-02-13",
-          "fetched": "2026-08-18",
-          "alive": true,
-          "quote": "Nvidia has made significant investments in several AI Neoclouds.",
-          "confidence": 0.925
-        }
-      ]
-    },
-    {
-      "id": "nvidia__nventures__funded_by",
-      "source": "nvidia",
-      "target": "nventures",
-      "type": "funded_by",
-      "spine": "capital",
-      "direction": "downstream",
-      "strength": 100,
-      "lockInDepth": 70,
-      "substitutability": 0,
-      "isReversible": false,
-      "status": "confirmed",
-      "confidence": 0.99,
-      "sourceTier": 1,
-      "confirmedSources": 2,
-      "risk": {
-        "level": "low",
-        "type": "none",
-        "timeline": "none",
-        "mitigation": null
-      },
-      "techNode": null,
-      "formed": "2022",
-      "strengthened": null,
-      "lastConfirmed": "2026-08",
-      "note": "Венчурное подразделение якоря: инструмент управления собственным риском, а не портфель ради доходности.",
       "evidence": [
         {
           "tier": 1,
@@ -17948,6 +17806,57 @@
           "fetched": "2026-08-18",
           "alive": true,
           "quote": "Support for NVIDIA GPUs, AMD GPUs, Intel GPUs, and x86/ARM/PowerPC CPUs.",
+          "confidence": 0.925
+        }
+      ]
+    },
+    {
+      "id": "pytorch__meta__funded_by",
+      "source": "pytorch",
+      "target": "meta",
+      "type": "funded_by",
+      "spine": "capital",
+      "direction": "upstream",
+      "strength": 80,
+      "lockInDepth": 60,
+      "substitutability": 20,
+      "isReversible": true,
+      "status": "confirmed",
+      "confidence": 0.955,
+      "sourceTier": 2,
+      "confirmedSources": 2,
+      "risk": {
+        "level": "low",
+        "type": "market",
+        "timeline": "5y+",
+        "mitigation": null
+      },
+      "techNode": null,
+      "formed": "2016",
+      "strengthened": "2022",
+      "lastConfirmed": "2026-08",
+      "note": "Библиотеку создала компания-покупатель ускорителей и передала независимому фонду.",
+      "evidence": [
+        {
+          "tier": 2,
+          "type": "product_doc",
+          "title": "PyTorch README",
+          "url": "https://raw.githubusercontent.com/pytorch/pytorch/main/README.md",
+          "published": "2026-08-01",
+          "fetched": null,
+          "alive": true,
+          "quote": "Tensor computation (like NumPy) with strong GPU acceleration",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Meta 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+          "published": "2026-01-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "costs related to our data centers and technical infrastructure as well as other",
           "confidence": 0.925
         }
       ]
@@ -19807,6 +19716,57 @@
       ]
     },
     {
+      "id": "tsmc__arm__standardizes_on",
+      "source": "tsmc",
+      "target": "arm",
+      "type": "standardizes_on",
+      "spine": "moat",
+      "direction": "upstream",
+      "strength": 70,
+      "lockInDepth": 60,
+      "substitutability": 30,
+      "isReversible": true,
+      "status": "confirmed",
+      "confidence": 0.955,
+      "sourceTier": 2,
+      "confirmedSources": 2,
+      "risk": {
+        "level": "low",
+        "type": "technical",
+        "timeline": "5y+",
+        "mitigation": null
+      },
+      "techNode": "arm-isa",
+      "formed": "1990",
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Более 350 миллиардов выпущенных чипов используют эту архитектуру — общий знаменатель для фабрик.",
+      "evidence": [
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Arm 20-F FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+          "published": "2026-05-26",
+          "fetched": null,
+          "alive": true,
+          "quote": "more than 350 billion Arm-based chips were reported as shipped cumulatively.",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Arm 20-F FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+          "published": "2026-05-26",
+          "fetched": null,
+          "alive": true,
+          "quote": "we receive a per-unit royalty on substantially all chips shipped.",
+          "confidence": 0.925
+        }
+      ]
+    },
+    {
       "id": "tsmc__astera-labs__manufactures",
       "source": "tsmc",
       "target": "astera-labs",
@@ -20137,6 +20097,46 @@
           "fetched": "2026-08-18",
           "alive": true,
           "quote": "the U.S. government, or USG, announced export restrictions and export licensing requirements targeting",
+          "confidence": 0.975
+        }
+      ]
+    },
+    {
+      "id": "usa__chips-act__standardizes_on",
+      "source": "usa",
+      "target": "chips-act",
+      "type": "standardizes_on",
+      "spine": "moat",
+      "direction": "downstream",
+      "strength": 60,
+      "lockInDepth": 40,
+      "substitutability": 40,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "low",
+        "type": "regulatory",
+        "timeline": "ongoing",
+        "mitigation": null
+      },
+      "techNode": null,
+      "formed": "2022",
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Закон — инструмент, которым юрисдикция возвращает производство внутрь страны.",
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "NVIDIA 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "published": "2026-02-25",
+          "fetched": null,
+          "alive": true,
+          "quote": "do business without an export license with entities on the U.S. Department of Commerce’s U.S.",
           "confidence": 0.975
         }
       ]
@@ -20882,6 +20882,22 @@
     },
     {
       "id": "c12",
+      "type": "lockin",
+      "path": [
+        "cuda",
+        "pytorch",
+        "meta",
+        "cuda"
+      ],
+      "edges": [
+        "cuda__pytorch__locks_in_developers",
+        "pytorch__meta__funded_by",
+        "meta__cuda__locks_in_platforms"
+      ],
+      "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —запирает платформы→ CUDA"
+    },
+    {
+      "id": "c13",
       "type": "financing",
       "path": [
         "nvidia",
@@ -20897,7 +20913,7 @@
       "note": "Контур финансирования: NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ NVIDIA"
     },
     {
-      "id": "c13",
+      "id": "c14",
       "type": "lockin",
       "path": [
         "amazon",
@@ -20913,7 +20929,7 @@
       "note": "Контур замка: Amazon —запирает платформы→ CUDA; CUDA —запирает платформы→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
     },
     {
-      "id": "c14",
+      "id": "c15",
       "type": "sales",
       "path": [
         "arista",
@@ -20929,7 +20945,7 @@
       "note": "Контур сбыта: Arista Networks —поставляет→ Microsoft; Microsoft —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c15",
+      "id": "c16",
       "type": "financing",
       "path": [
         "coreweave",
@@ -20945,7 +20961,7 @@
       "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —покупает у→ CoreWeave"
     },
     {
-      "id": "c16",
+      "id": "c17",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -20961,7 +20977,7 @@
       "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —страхуется через→ Hugging Face"
     },
     {
-      "id": "c17",
+      "id": "c18",
       "type": "financing",
       "path": [
         "nvidia",
@@ -20977,7 +20993,7 @@
       "note": "Контур финансирования: NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —покупает у→ NVIDIA"
     },
     {
-      "id": "c18",
+      "id": "c19",
       "type": "financing",
       "path": [
         "amazon",
@@ -20993,7 +21009,7 @@
       "note": "Контур финансирования: Amazon —вкладывается в→ Anthropic; Anthropic —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
     },
     {
-      "id": "c19",
+      "id": "c20",
       "type": "sales",
       "path": [
         "credo",
@@ -21009,7 +21025,7 @@
       "note": "Контур сбыта: Credo Technology —заточен под→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ Credo Technology"
     },
     {
-      "id": "c20",
+      "id": "c21",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -21025,7 +21041,7 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —имеет место в совете→ NVIDIA Ventures (NVentures); NVIDIA Ventures (NVentures) —вкладывается в→ Hugging Face"
     },
     {
-      "id": "c21",
+      "id": "c22",
       "type": "sales",
       "path": [
         "arista",
@@ -21041,23 +21057,39 @@
       "note": "Контур сбыта: Arista Networks —поставляет→ Meta; Meta —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c22",
+      "id": "c23",
+      "type": "lockin",
+      "path": [
+        "huggingface",
+        "pytorch",
+        "meta",
+        "huggingface"
+      ],
+      "edges": [
+        "huggingface__pytorch__standardizes_on",
+        "pytorch__meta__funded_by",
+        "meta__huggingface__enables"
+      ],
+      "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —делает возможным→ Hugging Face"
+    },
+    {
+      "id": "c24",
       "type": "lockin",
       "path": [
         "arm",
-        "tsmc",
         "nvidia",
+        "tsmc",
         "arm"
       ],
       "edges": [
-        "arm__tsmc__standardizes_on",
-        "tsmc__nvidia__manufactures",
-        "nvidia__arm__strategic_partner"
+        "arm__nvidia__supplies",
+        "nvidia__tsmc__co_designs",
+        "tsmc__arm__standardizes_on"
       ],
-      "note": "Контур замка: Arm —стандартизуется на→ TSMC; TSMC —производит для→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
+      "note": "Контур замка: Arm —поставляет→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —стандартизуется на→ Arm"
     },
     {
-      "id": "c23",
+      "id": "c25",
       "type": "sales",
       "path": [
         "china",
@@ -21073,7 +21105,7 @@
       "note": "Контур сбыта: Китай —шлюзует доступ к→ DeepSeek; DeepSeek —подтачивает→ NVIDIA; NVIDIA —ограничен режимом→ Китай"
     },
     {
-      "id": "c24",
+      "id": "c26",
       "type": "financing",
       "path": [
         "microsoft",
@@ -21089,7 +21121,7 @@
       "note": "Контур финансирования: Microsoft —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft"
     },
     {
-      "id": "c25",
+      "id": "c27",
       "type": "financing",
       "path": [
         "micron",
@@ -21105,7 +21137,7 @@
       "note": "Контур финансирования: Micron —конкурирует с→ SK Hynix; SK Hynix —поставляет→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron"
     },
     {
-      "id": "c26",
+      "id": "c28",
       "type": "financing",
       "path": [
         "nvidia",
@@ -21121,7 +21153,7 @@
       "note": "Контур финансирования: NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ NVIDIA"
     },
     {
-      "id": "c27",
+      "id": "c29",
       "type": "financing",
       "path": [
         "crusoe",
@@ -21137,7 +21169,7 @@
       "note": "Контур финансирования: Crusoe —делает возможным→ NVIDIA; NVIDIA —имеет место в совете→ NVIDIA Ventures (NVentures); NVIDIA Ventures (NVentures) —вкладывается в→ Crusoe"
     },
     {
-      "id": "c28",
+      "id": "c30",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -21153,7 +21185,7 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c29",
+      "id": "c31",
       "type": "lockin",
       "path": [
         "nvidia",
@@ -21169,7 +21201,7 @@
       "note": "Контур замка: NVIDIA —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA"
     },
     {
-      "id": "c30",
+      "id": "c32",
       "type": "financing",
       "path": [
         "nvidia",
@@ -21185,7 +21217,7 @@
       "note": "Контур финансирования: NVIDIA —стратегический партнёр→ SoftBank; SoftBank —стратегический партнёр→ Oracle; Oracle —покупает у→ NVIDIA"
     },
     {
-      "id": "c31",
+      "id": "c33",
       "type": "financing",
       "path": [
         "coreweave",
@@ -21201,23 +21233,25 @@
       "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ CoreWeave"
     },
     {
-      "id": "c32",
+      "id": "c34",
       "type": "lockin",
       "path": [
-        "arm",
-        "kubernetes",
+        "cuda",
+        "pytorch",
+        "meta",
         "nvidia",
-        "arm"
+        "cuda"
       ],
       "edges": [
-        "arm__kubernetes__standardizes_on",
-        "kubernetes__nvidia__standardizes_on",
-        "nvidia__arm__strategic_partner"
+        "cuda__pytorch__locks_in_developers",
+        "pytorch__meta__funded_by",
+        "meta__nvidia__customer_of",
+        "nvidia__cuda__enables"
       ],
-      "note": "Контур замка: Arm —стандартизуется на→ Kubernetes; Kubernetes —стандартизуется на→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
+      "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ NVIDIA; NVIDIA —делает возможным→ CUDA"
     },
     {
-      "id": "c33",
+      "id": "c35",
       "type": "lockin",
       "path": [
         "cuda",
@@ -21235,7 +21269,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c34",
+      "id": "c36",
       "type": "lockin",
       "path": [
         "cuda",
@@ -21253,7 +21287,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —стратегический партнёр→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c35",
+      "id": "c37",
       "type": "lockin",
       "path": [
         "cuda",
@@ -21271,7 +21305,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c36",
+      "id": "c38",
       "type": "sales",
       "path": [
         "broadcom",
@@ -21289,7 +21323,7 @@
       "note": "Контур сбыта: Broadcom —проектирует вместе с→ Google; Google —покупает у→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ Broadcom"
     },
     {
-      "id": "c37",
+      "id": "c39",
       "type": "lockin",
       "path": [
         "cuda",
@@ -21307,7 +21341,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —делает возможным→ CUDA"
     },
     {
-      "id": "c38",
+      "id": "c40",
       "type": "financing",
       "path": [
         "microsoft",
@@ -21325,7 +21359,7 @@
       "note": "Контур финансирования: Microsoft —вкладывается в→ OpenAI; OpenAI —покупает у→ Oracle; Oracle —покупает у→ NVIDIA; NVIDIA —поставляет→ Microsoft"
     },
     {
-      "id": "c39",
+      "id": "c41",
       "type": "financing",
       "path": [
         "arista",
@@ -21343,7 +21377,7 @@
       "note": "Контур финансирования: Arista Networks —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c40",
+      "id": "c42",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -21361,7 +21395,7 @@
       "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —делает возможным→ CUDA; CUDA —запирает платформы→ NVIDIA; NVIDIA —конкурирует с→ Broadcom"
     },
     {
-      "id": "c41",
+      "id": "c43",
       "type": "financing",
       "path": [
         "coreweave",
@@ -21379,7 +21413,7 @@
       "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —покупает у→ CoreWeave"
     },
     {
-      "id": "c42",
+      "id": "c44",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -21397,7 +21431,7 @@
       "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —имеет место в совете→ NVIDIA Ventures (NVentures); NVIDIA Ventures (NVentures) —вкладывается в→ Hugging Face"
     },
     {
-      "id": "c43",
+      "id": "c45",
       "type": "lockin",
       "path": [
         "amazon",
@@ -21415,7 +21449,7 @@
       "note": "Контур замка: Amazon —запирает платформы→ CUDA; CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
     },
     {
-      "id": "c44",
+      "id": "c46",
       "type": "lockin",
       "path": [
         "cuda",
@@ -21433,7 +21467,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —имеет место в совете→ NVIDIA Ventures (NVentures); NVIDIA Ventures (NVentures) —вкладывается в→ Hugging Face; Hugging Face —развивается вслед за→ CUDA"
     },
     {
-      "id": "c45",
+      "id": "c47",
       "type": "lockin",
       "path": [
         "cuda",
@@ -21451,7 +21485,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c46",
+      "id": "c48",
       "type": "lockin",
       "path": [
         "arista",
@@ -21469,7 +21503,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA; CUDA —запирает платформы→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c47",
+      "id": "c49",
       "type": "financing",
       "path": [
         "broadcom",
@@ -21487,7 +21521,7 @@
       "note": "Контур финансирования: Broadcom —подтачивает→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ Broadcom"
     },
     {
-      "id": "c48",
+      "id": "c50",
       "type": "lockin",
       "path": [
         "cuda",
@@ -21505,7 +21539,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c49",
+      "id": "c51",
       "type": "financing",
       "path": [
         "microsoft",
@@ -21523,7 +21557,7 @@
       "note": "Контур финансирования: Microsoft —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —стратегический партнёр→ Microsoft"
     },
     {
-      "id": "c50",
+      "id": "c52",
       "type": "sales",
       "path": [
         "astera-labs",
@@ -21541,25 +21575,7 @@
       "note": "Контур сбыта: Astera Labs —заточен под→ NVIDIA; NVIDIA —конкурирует с→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —производит для→ Astera Labs"
     },
     {
-      "id": "c51",
-      "type": "lockin",
-      "path": [
-        "arista",
-        "meta",
-        "pytorch",
-        "nvidia",
-        "arista"
-      ],
-      "edges": [
-        "arista__meta__supplies",
-        "meta__pytorch__funded_by",
-        "pytorch__nvidia__validates_demand",
-        "nvidia__arista__competes_with"
-      ],
-      "note": "Контур замка: Arista Networks —поставляет→ Meta; Meta —получает деньги от→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
-    },
-    {
-      "id": "c52",
+      "id": "c53",
       "type": "sales",
       "path": [
         "arista",
@@ -21577,7 +21593,7 @@
       "note": "Контур сбыта: Arista Networks —поставляет→ Microsoft; Microsoft —покупает у→ CoreWeave; CoreWeave —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c53",
+      "id": "c54",
       "type": "financing",
       "path": [
         "astera-labs",
@@ -21595,7 +21611,7 @@
       "note": "Контур финансирования: Astera Labs —заточен под→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ Astera Labs"
     },
     {
-      "id": "c54",
+      "id": "c55",
       "type": "lockin",
       "path": [
         "cuda",
@@ -21613,7 +21629,25 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c55",
+      "id": "c56",
+      "type": "lockin",
+      "path": [
+        "huggingface",
+        "pytorch",
+        "meta",
+        "nvidia",
+        "huggingface"
+      ],
+      "edges": [
+        "huggingface__pytorch__standardizes_on",
+        "pytorch__meta__funded_by",
+        "meta__nvidia__customer_of",
+        "nvidia__huggingface__hedges_against"
+      ],
+      "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ NVIDIA; NVIDIA —страхуется через→ Hugging Face"
+    },
+    {
+      "id": "c57",
       "type": "financing",
       "path": [
         "microsoft",
@@ -21631,7 +21665,7 @@
       "note": "Контур финансирования: Microsoft —вкладывается в→ OpenAI; OpenAI —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft"
     },
     {
-      "id": "c56",
+      "id": "c58",
       "type": "lockin",
       "path": [
         "arista",
@@ -21649,25 +21683,25 @@
       "note": "Контур замка: Arista Networks —поставляет→ Meta; Meta —запирает платформы→ CUDA; CUDA —запирает платформы→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c57",
+      "id": "c59",
       "type": "lockin",
       "path": [
-        "arm",
-        "tsmc",
         "cuda",
-        "nvidia",
-        "arm"
+        "huggingface",
+        "pytorch",
+        "meta",
+        "cuda"
       ],
       "edges": [
-        "arm__tsmc__standardizes_on",
-        "tsmc__cuda__enables",
-        "cuda__nvidia__locks_in_platforms",
-        "nvidia__arm__strategic_partner"
+        "cuda__huggingface__locks_in_developers",
+        "huggingface__pytorch__standardizes_on",
+        "pytorch__meta__funded_by",
+        "meta__cuda__locks_in_platforms"
       ],
-      "note": "Контур замка: Arm —стандартизуется на→ TSMC; TSMC —делает возможным→ CUDA; CUDA —запирает платформы→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
+      "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —запирает платформы→ CUDA"
     },
     {
-      "id": "c58",
+      "id": "c60",
       "type": "sales",
       "path": [
         "broadcom",
@@ -21685,7 +21719,7 @@
       "note": "Контур сбыта: Broadcom —покупает у→ TSMC; TSMC —производит для→ Credo Technology; Credo Technology —заточен под→ NVIDIA; NVIDIA —конкурирует с→ Broadcom"
     },
     {
-      "id": "c59",
+      "id": "c61",
       "type": "lockin",
       "path": [
         "china",
@@ -21703,7 +21737,7 @@
       "note": "Контур замка: Китай —шлюзует доступ к→ DeepSeek; DeepSeek —может вытеснить→ CUDA; CUDA —запирает платформы→ NVIDIA; NVIDIA —ограничен режимом→ Китай"
     },
     {
-      "id": "c60",
+      "id": "c62",
       "type": "lockin",
       "path": [
         "cuda",
@@ -21721,7 +21755,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —развивается вслед за→ CUDA"
     },
     {
-      "id": "c61",
+      "id": "c63",
       "type": "lockin",
       "path": [
         "cuda",
@@ -21739,7 +21773,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c62",
+      "id": "c64",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -21757,25 +21791,7 @@
       "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c63",
-      "type": "lockin",
-      "path": [
-        "arm",
-        "tsmc",
-        "broadcom",
-        "nvidia",
-        "arm"
-      ],
-      "edges": [
-        "arm__tsmc__standardizes_on",
-        "tsmc__broadcom__manufactures",
-        "broadcom__nvidia__threatens",
-        "nvidia__arm__strategic_partner"
-      ],
-      "note": "Контур замка: Arm —стандартизуется на→ TSMC; TSMC —производит для→ Broadcom; Broadcom —подтачивает→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
-    },
-    {
-      "id": "c64",
+      "id": "c65",
       "type": "financing",
       "path": [
         "credo",
@@ -21793,7 +21809,7 @@
       "note": "Контур финансирования: Credo Technology —заточен под→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ Credo Technology"
     },
     {
-      "id": "c65",
+      "id": "c66",
       "type": "lockin",
       "path": [
         "cuda",
@@ -21811,7 +21827,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face; Hugging Face —развивается вслед за→ CUDA"
     },
     {
-      "id": "c66",
+      "id": "c67",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -21829,7 +21845,7 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c67",
+      "id": "c68",
       "type": "lockin",
       "path": [
         "microsoft",
@@ -21847,7 +21863,25 @@
       "note": "Контур замка: Microsoft —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA; NVIDIA —поставляет→ Microsoft"
     },
     {
-      "id": "c68",
+      "id": "c69",
+      "type": "lockin",
+      "path": [
+        "arm",
+        "nvidia",
+        "broadcom",
+        "tsmc",
+        "arm"
+      ],
+      "edges": [
+        "arm__nvidia__supplies",
+        "nvidia__broadcom__competes_with",
+        "broadcom__tsmc__customer_of",
+        "tsmc__arm__standardizes_on"
+      ],
+      "note": "Контур замка: Arm —поставляет→ NVIDIA; NVIDIA —конкурирует с→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —стандартизуется на→ Arm"
+    },
+    {
+      "id": "c70",
       "type": "financing",
       "path": [
         "coreweave",
@@ -21865,7 +21899,7 @@
       "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft; Microsoft —покупает у→ CoreWeave"
     },
     {
-      "id": "c69",
+      "id": "c71",
       "type": "lockin",
       "path": [
         "cuda",
@@ -21883,7 +21917,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c70",
+      "id": "c72",
       "type": "lockin",
       "path": [
         "amazon",
@@ -21901,25 +21935,25 @@
       "note": "Контур замка: Amazon —запирает платформы→ CUDA; CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
     },
     {
-      "id": "c71",
+      "id": "c73",
       "type": "lockin",
       "path": [
         "arm",
-        "tsmc",
-        "astera-labs",
         "nvidia",
+        "synopsys",
+        "tsmc",
         "arm"
       ],
       "edges": [
-        "arm__tsmc__standardizes_on",
-        "tsmc__astera-labs__manufactures",
-        "astera-labs__nvidia__optimizes_for",
-        "nvidia__arm__strategic_partner"
+        "arm__nvidia__supplies",
+        "nvidia__synopsys__invests_in",
+        "synopsys__tsmc__optimizes_for",
+        "tsmc__arm__standardizes_on"
       ],
-      "note": "Контур замка: Arm —стандартизуется на→ TSMC; TSMC —производит для→ Astera Labs; Astera Labs —заточен под→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
+      "note": "Контур замка: Arm —поставляет→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —стандартизуется на→ Arm"
     },
     {
-      "id": "c72",
+      "id": "c74",
       "type": "financing",
       "path": [
         "broadcom",
@@ -21937,7 +21971,7 @@
       "note": "Контур финансирования: Broadcom —подтачивает→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Broadcom"
     },
     {
-      "id": "c73",
+      "id": "c75",
       "type": "financing",
       "path": [
         "coreweave",
@@ -21955,7 +21989,7 @@
       "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —покупает у→ CoreWeave"
     },
     {
-      "id": "c74",
+      "id": "c76",
       "type": "financing",
       "path": [
         "nvidia",
@@ -21973,7 +22007,7 @@
       "note": "Контур финансирования: NVIDIA —стратегический партнёр→ SoftBank; SoftBank —стратегический партнёр→ Oracle; Oracle —вкладывается в→ OpenAI; OpenAI —покупает у→ NVIDIA"
     },
     {
-      "id": "c75",
+      "id": "c77",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -21991,7 +22025,7 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —стандартизуется на→ Hugging Face"
     },
     {
-      "id": "c76",
+      "id": "c78",
       "type": "lockin",
       "path": [
         "arista",
@@ -22009,7 +22043,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Meta; Meta —делает возможным→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c77",
+      "id": "c79",
       "type": "financing",
       "path": [
         "astera-labs",
@@ -22027,25 +22061,7 @@
       "note": "Контур финансирования: Astera Labs —заточен под→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Astera Labs"
     },
     {
-      "id": "c78",
-      "type": "lockin",
-      "path": [
-        "arm",
-        "tsmc",
-        "credo",
-        "nvidia",
-        "arm"
-      ],
-      "edges": [
-        "arm__tsmc__standardizes_on",
-        "tsmc__credo__manufactures",
-        "credo__nvidia__optimizes_for",
-        "nvidia__arm__strategic_partner"
-      ],
-      "note": "Контур замка: Arm —стандартизуется на→ TSMC; TSMC —производит для→ Credo Technology; Credo Technology —заточен под→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
-    },
-    {
-      "id": "c79",
+      "id": "c80",
       "type": "lockin",
       "path": [
         "china",
@@ -22063,7 +22079,7 @@
       "note": "Контур замка: Китай —шлюзует доступ к→ DeepSeek; DeepSeek —делает возможным→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —ограничен режимом→ Китай"
     },
     {
-      "id": "c80",
+      "id": "c81",
       "type": "lockin",
       "path": [
         "nvidia",
@@ -22081,7 +22097,7 @@
       "note": "Контур замка: NVIDIA —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —конкурирует с→ TensorRT; TensorRT —запирает платформы→ NVIDIA"
     },
     {
-      "id": "c81",
+      "id": "c82",
       "type": "financing",
       "path": [
         "credo",
@@ -22099,7 +22115,25 @@
       "note": "Контур финансирования: Credo Technology —заточен под→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Credo Technology"
     },
     {
-      "id": "c82",
+      "id": "c83",
+      "type": "lockin",
+      "path": [
+        "arm",
+        "nvidia",
+        "samsung",
+        "tsmc",
+        "arm"
+      ],
+      "edges": [
+        "arm__nvidia__supplies",
+        "nvidia__samsung__diversifies_supply",
+        "samsung__tsmc__competes_with",
+        "tsmc__arm__standardizes_on"
+      ],
+      "note": "Контур замка: Arm —поставляет→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —стандартизуется на→ Arm"
+    },
+    {
+      "id": "c84",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -22117,7 +22151,7 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c83",
+      "id": "c85",
       "type": "lockin",
       "path": [
         "nvidia",
@@ -22135,7 +22169,7 @@
       "note": "Контур замка: NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA"
     },
     {
-      "id": "c84",
+      "id": "c86",
       "type": "lockin",
       "path": [
         "cuda",
@@ -22155,7 +22189,27 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —стратегический партнёр→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c85",
+      "id": "c87",
+      "type": "lockin",
+      "path": [
+        "cuda",
+        "pytorch",
+        "meta",
+        "nvidia",
+        "microsoft",
+        "cuda"
+      ],
+      "edges": [
+        "cuda__pytorch__locks_in_developers",
+        "pytorch__meta__funded_by",
+        "meta__nvidia__customer_of",
+        "nvidia__microsoft__supplies",
+        "microsoft__cuda__locks_in_platforms"
+      ],
+      "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA"
+    },
+    {
+      "id": "c88",
       "type": "lockin",
       "path": [
         "cuda",
@@ -22175,7 +22229,27 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —имеет место в совете→ NVIDIA Ventures (NVentures); NVIDIA Ventures (NVentures) —вкладывается в→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —развивается вслед за→ CUDA"
     },
     {
-      "id": "c86",
+      "id": "c89",
+      "type": "lockin",
+      "path": [
+        "cuda",
+        "pytorch",
+        "meta",
+        "nvidia",
+        "tsmc",
+        "cuda"
+      ],
+      "edges": [
+        "cuda__pytorch__locks_in_developers",
+        "pytorch__meta__funded_by",
+        "meta__nvidia__customer_of",
+        "nvidia__tsmc__co_designs",
+        "tsmc__cuda__enables"
+      ],
+      "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —делает возможным→ CUDA"
+    },
+    {
+      "id": "c90",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -22195,7 +22269,27 @@
       "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —делает возможным→ CUDA; CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Broadcom"
     },
     {
-      "id": "c87",
+      "id": "c91",
+      "type": "lockin",
+      "path": [
+        "cuda",
+        "huggingface",
+        "pytorch",
+        "meta",
+        "nvidia",
+        "cuda"
+      ],
+      "edges": [
+        "cuda__huggingface__locks_in_developers",
+        "huggingface__pytorch__standardizes_on",
+        "pytorch__meta__funded_by",
+        "meta__nvidia__customer_of",
+        "nvidia__cuda__enables"
+      ],
+      "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ NVIDIA; NVIDIA —делает возможным→ CUDA"
+    },
+    {
+      "id": "c92",
       "type": "lockin",
       "path": [
         "cuda",
@@ -22215,7 +22309,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c88",
+      "id": "c93",
       "type": "lockin",
       "path": [
         "cuda",
@@ -22235,7 +22329,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c89",
+      "id": "c94",
       "type": "lockin",
       "path": [
         "arista",
@@ -22255,7 +22349,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA; CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c90",
+      "id": "c95",
       "type": "financing",
       "path": [
         "broadcom",
@@ -22275,7 +22369,7 @@
       "note": "Контур финансирования: Broadcom —проектирует вместе с→ Google; Google —покупает у→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ Broadcom"
     },
     {
-      "id": "c91",
+      "id": "c96",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -22295,7 +22389,7 @@
       "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —делает возможным→ CUDA; CUDA —запирает платформы→ NVIDIA; NVIDIA —конкурирует с→ Google; Google —покупает у→ Broadcom"
     },
     {
-      "id": "c92",
+      "id": "c97",
       "type": "lockin",
       "path": [
         "cuda",
@@ -22315,7 +22409,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c93",
+      "id": "c98",
       "type": "lockin",
       "path": [
         "cuda",
@@ -22335,7 +22429,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —стратегический партнёр→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c94",
+      "id": "c99",
       "type": "lockin",
       "path": [
         "cuda",
@@ -22355,7 +22449,47 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —стратегический партнёр→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c95",
+      "id": "c100",
+      "type": "lockin",
+      "path": [
+        "huggingface",
+        "pytorch",
+        "meta",
+        "nvidia",
+        "nventures",
+        "huggingface"
+      ],
+      "edges": [
+        "huggingface__pytorch__standardizes_on",
+        "pytorch__meta__funded_by",
+        "meta__nvidia__customer_of",
+        "nvidia__nventures__board_seat",
+        "nventures__huggingface__invests_in"
+      ],
+      "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ NVIDIA; NVIDIA —имеет место в совете→ NVIDIA Ventures (NVentures); NVIDIA Ventures (NVentures) —вкладывается в→ Hugging Face"
+    },
+    {
+      "id": "c101",
+      "type": "lockin",
+      "path": [
+        "amazon",
+        "cuda",
+        "pytorch",
+        "meta",
+        "nvidia",
+        "amazon"
+      ],
+      "edges": [
+        "amazon__cuda__locks_in_platforms",
+        "cuda__pytorch__locks_in_developers",
+        "pytorch__meta__funded_by",
+        "meta__nvidia__customer_of",
+        "nvidia__amazon__competes_with"
+      ],
+      "note": "Контур замка: Amazon —запирает платформы→ CUDA; CUDA —запирает разработчиков→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
+    },
+    {
+      "id": "c102",
       "type": "lockin",
       "path": [
         "arista",
@@ -22375,7 +22509,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Meta; Meta —запирает платформы→ CUDA; CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c96",
+      "id": "c103",
       "type": "financing",
       "path": [
         "arista",
@@ -22395,7 +22529,7 @@
       "note": "Контур финансирования: Arista Networks —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —покупает у→ Oracle; Oracle —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c97",
+      "id": "c104",
       "type": "sales",
       "path": [
         "astera-labs",
@@ -22415,7 +22549,7 @@
       "note": "Контур сбыта: Astera Labs —заточен под→ NVIDIA; NVIDIA —конкурирует с→ Google; Google —покупает у→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —производит для→ Astera Labs"
     },
     {
-      "id": "c98",
+      "id": "c105",
       "type": "financing",
       "path": [
         "coreweave",
@@ -22435,7 +22569,7 @@
       "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —стратегический партнёр→ Microsoft; Microsoft —покупает у→ CoreWeave"
     },
     {
-      "id": "c99",
+      "id": "c106",
       "type": "lockin",
       "path": [
         "cuda",
@@ -22455,7 +22589,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —развивается вслед за→ CUDA"
     },
     {
-      "id": "c100",
+      "id": "c107",
       "type": "lockin",
       "path": [
         "cuda",
@@ -22475,7 +22609,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —развивается вслед за→ CUDA"
     },
     {
-      "id": "c101",
+      "id": "c108",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -22495,27 +22629,7 @@
       "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c102",
-      "type": "lockin",
-      "path": [
-        "arm",
-        "tsmc",
-        "cuda",
-        "pytorch",
-        "nvidia",
-        "arm"
-      ],
-      "edges": [
-        "arm__tsmc__standardizes_on",
-        "tsmc__cuda__enables",
-        "cuda__pytorch__locks_in_developers",
-        "pytorch__nvidia__validates_demand",
-        "nvidia__arm__strategic_partner"
-      ],
-      "note": "Контур замка: Arm —стандартизуется на→ TSMC; TSMC —делает возможным→ CUDA; CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
-    },
-    {
-      "id": "c103",
+      "id": "c109",
       "type": "lockin",
       "path": [
         "china",
@@ -22535,7 +22649,7 @@
       "note": "Контур замка: Китай —шлюзует доступ к→ DeepSeek; DeepSeek —может вытеснить→ CUDA; CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —ограничен режимом→ Китай"
     },
     {
-      "id": "c104",
+      "id": "c110",
       "type": "lockin",
       "path": [
         "cuda",
@@ -22555,7 +22669,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —развивается вслед за→ CUDA"
     },
     {
-      "id": "c105",
+      "id": "c111",
       "type": "lockin",
       "path": [
         "cuda",
@@ -22575,7 +22689,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c106",
+      "id": "c112",
       "type": "lockin",
       "path": [
         "amazon",
@@ -22595,27 +22709,7 @@
       "note": "Контур замка: Amazon —запирает платформы→ CUDA; CUDA —запирает разработчиков→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
     },
     {
-      "id": "c107",
-      "type": "lockin",
-      "path": [
-        "arm",
-        "tsmc",
-        "broadcom",
-        "google",
-        "nvidia",
-        "arm"
-      ],
-      "edges": [
-        "arm__tsmc__standardizes_on",
-        "tsmc__broadcom__manufactures",
-        "broadcom__google__co_designs",
-        "google__nvidia__customer_of",
-        "nvidia__arm__strategic_partner"
-      ],
-      "note": "Контур замка: Arm —стандартизуется на→ TSMC; TSMC —производит для→ Broadcom; Broadcom —проектирует вместе с→ Google; Google —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
-    },
-    {
-      "id": "c108",
+      "id": "c113",
       "type": "financing",
       "path": [
         "arista",
@@ -22635,7 +22729,7 @@
       "note": "Контур финансирования: Arista Networks —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —покупает у→ CoreWeave; CoreWeave —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c109",
+      "id": "c114",
       "type": "sales",
       "path": [
         "broadcom",
@@ -22655,7 +22749,7 @@
       "note": "Контур сбыта: Broadcom —покупает у→ TSMC; TSMC —производит для→ Credo Technology; Credo Technology —заточен под→ NVIDIA; NVIDIA —конкурирует с→ Google; Google —покупает у→ Broadcom"
     },
     {
-      "id": "c110",
+      "id": "c115",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -22675,7 +22769,7 @@
       "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —делает возможным→ CUDA; CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Broadcom"
     },
     {
-      "id": "c111",
+      "id": "c116",
       "type": "lockin",
       "path": [
         "cuda",
@@ -22695,7 +22789,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c112",
+      "id": "c117",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -22715,7 +22809,27 @@
       "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —стандартизуется на→ Hugging Face"
     },
     {
-      "id": "c113",
+      "id": "c118",
+      "type": "lockin",
+      "path": [
+        "arista",
+        "meta",
+        "huggingface",
+        "pytorch",
+        "nvidia",
+        "arista"
+      ],
+      "edges": [
+        "arista__meta__supplies",
+        "meta__huggingface__enables",
+        "huggingface__pytorch__standardizes_on",
+        "pytorch__nvidia__validates_demand",
+        "nvidia__arista__competes_with"
+      ],
+      "note": "Контур замка: Arista Networks —поставляет→ Meta; Meta —делает возможным→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
+    },
+    {
+      "id": "c119",
       "type": "financing",
       "path": [
         "broadcom",
@@ -22735,7 +22849,7 @@
       "note": "Контур финансирования: Broadcom —проектирует вместе с→ Google; Google —покупает у→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Broadcom"
     },
     {
-      "id": "c114",
+      "id": "c120",
       "type": "lockin",
       "path": [
         "cuda",
@@ -22755,7 +22869,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c115",
+      "id": "c121",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -22775,7 +22889,27 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —стандартизуется на→ Hugging Face"
     },
     {
-      "id": "c116",
+      "id": "c122",
+      "type": "lockin",
+      "path": [
+        "huggingface",
+        "pytorch",
+        "meta",
+        "nvidia",
+        "openai",
+        "huggingface"
+      ],
+      "edges": [
+        "huggingface__pytorch__standardizes_on",
+        "pytorch__meta__funded_by",
+        "meta__nvidia__customer_of",
+        "nvidia__openai__invests_in",
+        "openai__huggingface__competes_with"
+      ],
+      "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
+    },
+    {
+      "id": "c123",
       "type": "financing",
       "path": [
         "microsoft",
@@ -22795,7 +22929,7 @@
       "note": "Контур финансирования: Microsoft —вкладывается в→ OpenAI; OpenAI —покупает у→ Oracle; Oracle —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft"
     },
     {
-      "id": "c117",
+      "id": "c124",
       "type": "lockin",
       "path": [
         "arista",
@@ -22815,7 +22949,27 @@
       "note": "Контур замка: Arista Networks —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA; CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c118",
+      "id": "c125",
+      "type": "lockin",
+      "path": [
+        "arm",
+        "nvidia",
+        "google",
+        "broadcom",
+        "tsmc",
+        "arm"
+      ],
+      "edges": [
+        "arm__nvidia__supplies",
+        "nvidia__google__competes_with",
+        "google__broadcom__customer_of",
+        "broadcom__tsmc__customer_of",
+        "tsmc__arm__standardizes_on"
+      ],
+      "note": "Контур замка: Arm —поставляет→ NVIDIA; NVIDIA —конкурирует с→ Google; Google —покупает у→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —стандартизуется на→ Arm"
+    },
+    {
+      "id": "c126",
       "type": "lockin",
       "path": [
         "china",
@@ -22835,7 +22989,7 @@
       "note": "Контур замка: Китай —шлюзует доступ к→ DeepSeek; DeepSeek —делает возможным→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —ограничен режимом→ Китай"
     },
     {
-      "id": "c119",
+      "id": "c127",
       "type": "financing",
       "path": [
         "microsoft",
@@ -22855,27 +23009,7 @@
       "note": "Контур финансирования: Microsoft —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —стратегический партнёр→ Oracle; Oracle —вкладывается в→ OpenAI; OpenAI —стратегический партнёр→ Microsoft"
     },
     {
-      "id": "c120",
-      "type": "lockin",
-      "path": [
-        "arista",
-        "meta",
-        "pytorch",
-        "huggingface",
-        "nvidia",
-        "arista"
-      ],
-      "edges": [
-        "arista__meta__supplies",
-        "meta__pytorch__funded_by",
-        "pytorch__huggingface__enables",
-        "huggingface__nvidia__validates_demand",
-        "nvidia__arista__competes_with"
-      ],
-      "note": "Контур замка: Arista Networks —поставляет→ Meta; Meta —получает деньги от→ PyTorch; PyTorch —делает возможным→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
-    },
-    {
-      "id": "c121",
+      "id": "c128",
       "type": "financing",
       "path": [
         "coreweave",
@@ -22895,7 +23029,7 @@
       "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —покупает у→ CoreWeave"
     },
     {
-      "id": "c122",
+      "id": "c129",
       "type": "lockin",
       "path": [
         "microsoft",
@@ -22915,7 +23049,7 @@
       "note": "Контур замка: Microsoft —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —конкурирует с→ TensorRT; TensorRT —запирает платформы→ NVIDIA; NVIDIA —поставляет→ Microsoft"
     },
     {
-      "id": "c123",
+      "id": "c130",
       "type": "lockin",
       "path": [
         "arista",
@@ -22935,27 +23069,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Meta; Meta —запирает платформы→ CUDA; CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c124",
-      "type": "lockin",
-      "path": [
-        "arm",
-        "tsmc",
-        "cuda",
-        "huggingface",
-        "nvidia",
-        "arm"
-      ],
-      "edges": [
-        "arm__tsmc__standardizes_on",
-        "tsmc__cuda__enables",
-        "cuda__huggingface__locks_in_developers",
-        "huggingface__nvidia__validates_demand",
-        "nvidia__arm__strategic_partner"
-      ],
-      "note": "Контур замка: Arm —стандартизуется на→ TSMC; TSMC —делает возможным→ CUDA; CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
-    },
-    {
-      "id": "c125",
+      "id": "c131",
       "type": "lockin",
       "path": [
         "china",
@@ -22975,7 +23089,7 @@
       "note": "Контур замка: Китай —шлюзует доступ к→ DeepSeek; DeepSeek —может вытеснить→ CUDA; CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —ограничен режимом→ Китай"
     },
     {
-      "id": "c126",
+      "id": "c132",
       "type": "lockin",
       "path": [
         "cuda",
@@ -22995,7 +23109,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —развивается вслед за→ CUDA"
     },
     {
-      "id": "c127",
+      "id": "c133",
       "type": "lockin",
       "path": [
         "cuda",
@@ -23015,7 +23129,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c128",
+      "id": "c134",
       "type": "lockin",
       "path": [
         "cuda",
@@ -23035,7 +23149,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —развивается вслед за→ CUDA"
     },
     {
-      "id": "c129",
+      "id": "c135",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -23055,7 +23169,7 @@
       "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c130",
+      "id": "c136",
       "type": "lockin",
       "path": [
         "arista",
@@ -23075,7 +23189,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c131",
+      "id": "c137",
       "type": "lockin",
       "path": [
         "arista",
@@ -23095,7 +23209,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c132",
+      "id": "c138",
       "type": "lockin",
       "path": [
         "cuda",
@@ -23115,7 +23229,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face; Hugging Face —развивается вслед за→ CUDA"
     },
     {
-      "id": "c133",
+      "id": "c139",
       "type": "lockin",
       "path": [
         "cuda",
@@ -23135,7 +23249,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c134",
+      "id": "c140",
       "type": "financing",
       "path": [
         "coreweave",
@@ -23155,7 +23269,7 @@
       "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —стратегический партнёр→ Oracle; Oracle —вкладывается в→ OpenAI; OpenAI —покупает у→ CoreWeave"
     },
     {
-      "id": "c135",
+      "id": "c141",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -23175,7 +23289,7 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —стандартизуется на→ Hugging Face"
     },
     {
-      "id": "c136",
+      "id": "c142",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -23195,7 +23309,7 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c137",
+      "id": "c143",
       "type": "lockin",
       "path": [
         "microsoft",
@@ -23215,7 +23329,7 @@
       "note": "Контур замка: Microsoft —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft"
     },
     {
-      "id": "c138",
+      "id": "c144",
       "type": "lockin",
       "path": [
         "nvidia",
@@ -23235,7 +23349,7 @@
       "note": "Контур замка: NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —конкурирует с→ TensorRT; TensorRT —запирает платформы→ NVIDIA"
     },
     {
-      "id": "c139",
+      "id": "c145",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -23255,7 +23369,7 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —стратегический партнёр→ Oracle; Oracle —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c140",
+      "id": "c146",
       "type": "lockin",
       "path": [
         "nvidia",
@@ -23277,8 +23391,80 @@
   ],
   "changelog": {
     "month": "2026-08",
-    "added": [],
-    "removed": [],
+    "added": [
+      {
+        "kind": "edge",
+        "id": "eu__eu-ai-act__standardizes_on",
+        "why": "Регламент — инструмент, которым блок задаёт правила для рынка ИИ."
+      },
+      {
+        "kind": "edge",
+        "id": "microsoft__blackrock__funded_by",
+        "why": "Инфраструктурный капитал финансирует площадки и энергию под облачные мощности."
+      },
+      {
+        "kind": "edge",
+        "id": "nventures__nvidia__funded_by",
+        "why": "Венчурное подразделение якоря: инструмент управления собственным риском, а не портфель ради доходности."
+      },
+      {
+        "kind": "edge",
+        "id": "nvidia__kubernetes__standardizes_on",
+        "why": "Отраслевой стандарт запуска контейнеров: совместимость с ним обязательна для любого поставщика ускорителей."
+      },
+      {
+        "kind": "edge",
+        "id": "pytorch__meta__funded_by",
+        "why": "Библиотеку создала компания-покупатель ускорителей и передала независимому фонду."
+      },
+      {
+        "kind": "edge",
+        "id": "tsmc__arm__standardizes_on",
+        "why": "Более 350 миллиардов выпущенных чипов используют эту архитектуру — общий знаменатель для фабрик."
+      },
+      {
+        "kind": "edge",
+        "id": "usa__chips-act__standardizes_on",
+        "why": "Закон — инструмент, которым юрисдикция возвращает производство внутрь страны."
+      }
+    ],
+    "removed": [
+      {
+        "kind": "edge",
+        "id": "arm__tsmc__standardizes_on",
+        "why": "связь больше не заявлена"
+      },
+      {
+        "kind": "edge",
+        "id": "blackrock__microsoft__funded_by",
+        "why": "связь больше не заявлена"
+      },
+      {
+        "kind": "edge",
+        "id": "chips-act__usa__standardizes_on",
+        "why": "связь больше не заявлена"
+      },
+      {
+        "kind": "edge",
+        "id": "eu-ai-act__eu__standardizes_on",
+        "why": "связь больше не заявлена"
+      },
+      {
+        "kind": "edge",
+        "id": "kubernetes__nvidia__standardizes_on",
+        "why": "связь больше не заявлена"
+      },
+      {
+        "kind": "edge",
+        "id": "meta__pytorch__funded_by",
+        "why": "связь больше не заявлена"
+      },
+      {
+        "kind": "edge",
+        "id": "nvidia__nventures__funded_by",
+        "why": "связь больше не заявлена"
+      }
+    ],
     "changed": []
   }
 }
