@@ -19,7 +19,7 @@ import shutil
 import sys
 from pathlib import Path
 
-from engine import nveco, nvnet, nvnet_handoff, nvnet_ingest
+from engine import db, i18n, nveco, nvnet, nvnet_handoff, nvnet_ingest
 
 DELIVER_TO = Path.home() / "Desktop/BASE/Code/ab-investment/src/data/aiEcosystemNetwork.json"
 
@@ -47,6 +47,21 @@ def main(month: str, do_deliver: bool = False, offline: bool = False) -> int:
     if not offline:
         nvnet_ingest.persist(month, net)
         print("[persist] достройка записана в nvnet_* (семя не дублируется)")
+
+    # Переводы: файлы runs/<месяц>/_i18n/*.csv и runs/<месяц>/*/translations.csv.
+    # Грузятся ДО сборки выдачи, потому что валидатор контракта уронит выпуск,
+    # если у любого поля прозы окажется пустая сторона.
+    con = nveco.connect()
+    i18n.ensure(con)
+    loaded, bad = 0, []
+    for path in sorted(list((db.RUNS_DIR / month).glob("_i18n/*.csv"))
+                       + list((db.RUNS_DIR / month).glob("*/translations.csv"))):
+        s = i18n.load_csv(con, path, "nveco")
+        loaded += s["written"]; bad += s["bad"]
+    cov = i18n.coverage(con, "nveco")
+    print(f"[i18n]    {loaded} строк перевода загружено; в складе ru={cov['ru']} en={cov['en']}")
+    for b in bad[:8]:
+        print("           ОТКЛОНЕНО", b)
 
     h = nvnet_handoff.run(month, net)
     if not h["ok"]:

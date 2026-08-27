@@ -1,6 +1,6 @@
 {
   "schema": "nvidia-ecosystem/2",
-  "generated": "2026-08-23",
+  "generated": "2026-08-27",
   "asOf": "2026-08",
   "source": "engine",
   "ecosystem": "nvidia",
@@ -17,6 +17,8 @@
       "id": "L0",
       "label": "ГЕОПОЛИТИКА",
       "caption": "юрисдикции · контроль доступа",
+      "label_en": "GEOPOLITICS",
+      "caption_en": "jurisdictions · gatekeeping",
       "plane": "control",
       "order": 0,
       "band": null,
@@ -34,6 +36,8 @@
       "id": "L1",
       "label": "СЫРЬЁ И СТАНКИ",
       "caption": "материалы · оборудование",
+      "label_en": "INPUTS & TOOLS",
+      "caption_en": "materials · equipment",
       "plane": "orbit",
       "order": 1,
       "band": 1,
@@ -51,6 +55,8 @@
       "id": "L2",
       "label": "ПРОЕКТИРОВАНИЕ",
       "caption": "софт для чипов · лицензии",
+      "label_en": "CHIP DESIGN",
+      "caption_en": "EDA software · IP licences",
       "plane": "orbit",
       "order": 2,
       "band": 1,
@@ -68,6 +74,8 @@
       "id": "L3",
       "label": "ФАБРИКИ",
       "caption": "литография · процесс",
+      "label_en": "FABS",
+      "caption_en": "lithography · process",
       "plane": "orbit",
       "order": 3,
       "band": 2,
@@ -85,6 +93,8 @@
       "id": "L4",
       "label": "ПАМЯТЬ",
       "caption": "HBM · DRAM · хранение",
+      "label_en": "MEMORY",
+      "caption_en": "HBM · DRAM · storage",
       "plane": "orbit",
       "order": 4,
       "band": 2,
@@ -102,6 +112,8 @@
       "id": "L5",
       "label": "СИСТЕМЫ",
       "caption": "сборка · серверы · стойки",
+      "label_en": "SYSTEMS",
+      "caption_en": "assembly · servers · racks",
       "plane": "orbit",
       "order": 5,
       "band": 3,
@@ -119,6 +131,8 @@
       "id": "L6",
       "label": "ЭНЕРГИЯ",
       "caption": "генерация · передача тока",
+      "label_en": "POWER",
+      "caption_en": "generation · transmission",
       "plane": "orbit",
       "order": 6,
       "band": 3,
@@ -136,6 +150,8 @@
       "id": "L7",
       "label": "ОХЛАЖДЕНИЕ",
       "caption": "тепло · вода · жидкость",
+      "label_en": "COOLING",
+      "caption_en": "heat · water · liquid",
       "plane": "orbit",
       "order": 7,
       "band": 3,
@@ -153,6 +169,8 @@
       "id": "L8",
       "label": "СВЯЗЬ",
       "caption": "сеть · оптика · коммутация",
+      "label_en": "NETWORKING",
+      "caption_en": "fabric · optics · switching",
       "plane": "orbit",
       "order": 8,
       "band": 4,
@@ -170,6 +188,8 @@
       "id": "L9",
       "label": "ИНФРАСТРУКТУРА",
       "caption": "площадки · облака",
+      "label_en": "INFRASTRUCTURE",
+      "caption_en": "sites · clouds",
       "plane": "orbit",
       "order": 9,
       "band": 4,
@@ -187,6 +207,8 @@
       "id": "L10",
       "label": "СОФТ ДЛЯ GPU",
       "caption": "CUDA · на чём пишут код",
+      "label_en": "GPU SOFTWARE",
+      "caption_en": "CUDA · what you code against",
       "plane": "orbit",
       "order": 10,
       "band": 5,
@@ -204,6 +226,8 @@
       "id": "L11",
       "label": "ИНФЕРЕНС",
       "caption": "запуск моделей · оркестрация",
+      "label_en": "INFERENCE",
+      "caption_en": "serving · orchestration",
       "plane": "orbit",
       "order": 11,
       "band": 5,
@@ -221,6 +245,8 @@
       "id": "L12",
       "label": "ЛАБОРАТОРИИ",
       "caption": "модели · обучение",
+      "label_en": "FRONTIER LABS",
+      "caption_en": "models · training",
       "plane": "orbit",
       "order": 12,
       "band": 5,
@@ -238,6 +264,8 @@
       "id": "L13",
       "label": "ПРИЛОЖЕНИЯ",
       "caption": "ИИ в бизнесе · отрасли",
+      "label_en": "APPLICATIONS",
+      "caption_en": "AI in business · verticals",
       "plane": "orbit",
       "order": 13,
       "band": 5,
@@ -255,6 +283,8 @@
       "id": "L14",
       "label": "КАПИТАЛ",
       "caption": "кто владеет и финансирует",
+      "label_en": "CAPITAL",
+      "caption_en": "who owns and funds it",
       "plane": "nucleus",
       "order": 14,
       "band": null,
@@ -272,6 +302,8 @@
       "id": "L15",
       "label": "РЕГУЛИРОВАНИЕ",
       "caption": "правила · субсидии · стандарты",
+      "label_en": "REGULATION",
+      "caption_en": "rules · subsidies · norms",
       "plane": "control",
       "order": 15,
       "band": null,
@@ -290,191 +322,229 @@
     {
       "key": "jurisdiction",
       "label": "Юрисдикции",
+      "label_en": "Jurisdictions",
       "layer": "L0"
     },
     {
       "key": "materials",
       "label": "Материалы",
+      "label_en": "Materials",
       "layer": "L1"
     },
     {
       "key": "fab_equipment",
       "label": "Станки для фабрик",
+      "label_en": "Fab equipment",
       "layer": "L1"
     },
     {
       "key": "eda",
       "label": "Софт для чипов",
+      "label_en": "EDA software",
       "layer": "L2"
     },
     {
       "key": "chip_ip",
       "label": "Лицензии на схемы",
+      "label_en": "Chip IP licences",
       "layer": "L2"
     },
     {
       "key": "foundry",
       "label": "Фабрики",
+      "label_en": "Foundries",
       "layer": "L3"
     },
     {
       "key": "packaging",
       "label": "Упаковка кристаллов",
+      "label_en": "Die packaging",
       "layer": "L3"
     },
     {
       "key": "hbm",
       "label": "Память HBM",
+      "label_en": "HBM memory",
       "layer": "L4"
     },
     {
       "key": "dram",
       "label": "Оперативная память",
+      "label_en": "DRAM",
       "layer": "L4"
     },
     {
       "key": "storage",
       "label": "Хранение",
+      "label_en": "Storage",
       "layer": "L4"
     },
     {
       "key": "server_odm",
       "label": "Сборка серверов",
+      "label_en": "Server ODMs",
       "layer": "L5"
     },
     {
       "key": "rack_integration",
       "label": "Стойки",
+      "label_en": "Rack integration",
       "layer": "L5"
     },
     {
       "key": "generation",
       "label": "Генерация энергии",
+      "label_en": "Power generation",
       "layer": "L6"
     },
     {
       "key": "grid_power",
       "label": "Передача тока",
+      "label_en": "Grid and transmission",
       "layer": "L6"
     },
     {
       "key": "cooling",
       "label": "Охлаждение",
+      "label_en": "Cooling",
       "layer": "L7"
     },
     {
       "key": "thermal_materials",
       "label": "Теплоотвод",
+      "label_en": "Thermal materials",
       "layer": "L7"
     },
     {
       "key": "rack_power",
       "label": "Питание стоек",
+      "label_en": "Rack power",
       "layer": "L7"
     },
     {
       "key": "switching",
       "label": "Коммутаторы",
+      "label_en": "Switching",
       "layer": "L8"
     },
     {
       "key": "interconnect",
       "label": "Межсоединения",
+      "label_en": "Interconnect",
       "layer": "L8"
     },
     {
       "key": "optics",
       "label": "Оптика",
+      "label_en": "Optics",
       "layer": "L8"
     },
     {
       "key": "hyperscaler",
       "label": "Гиперскейлеры",
+      "label_en": "Hyperscalers",
       "layer": "L9"
     },
     {
       "key": "neocloud",
       "label": "GPU-облака",
+      "label_en": "GPU clouds",
       "layer": "L9"
     },
     {
       "key": "colocation",
       "label": "Площадки",
+      "label_en": "Colocation",
       "layer": "L9"
     },
     {
       "key": "gpu_platform",
       "label": "Платформа GPU",
+      "label_en": "GPU platform",
       "layer": "L10"
     },
     {
       "key": "ml_framework",
       "label": "Фреймворки обучения",
+      "label_en": "Training frameworks",
       "layer": "L10"
     },
     {
       "key": "compiler",
       "label": "Компиляторы",
+      "label_en": "Compilers",
       "layer": "L10"
     },
     {
       "key": "inference_engine",
       "label": "Движки инференса",
+      "label_en": "Inference engines",
       "layer": "L11"
     },
     {
       "key": "orchestration",
       "label": "Оркестрация",
+      "label_en": "Orchestration",
       "layer": "L11"
     },
     {
       "key": "model_hub",
       "label": "Хабы моделей",
+      "label_en": "Model hubs",
       "layer": "L11"
     },
     {
       "key": "frontier_lab",
       "label": "Передовые лаборатории",
+      "label_en": "Frontier labs",
       "layer": "L12"
     },
     {
       "key": "open_model",
       "label": "Открытые модели",
+      "label_en": "Open models",
       "layer": "L12"
     },
     {
       "key": "enterprise_ai",
       "label": "ИИ для бизнеса",
+      "label_en": "Enterprise AI",
       "layer": "L13"
     },
     {
       "key": "vertical_ai",
       "label": "Отраслевой ИИ",
+      "label_en": "Vertical AI",
       "layer": "L13"
     },
     {
       "key": "venture",
       "label": "Венчурный капитал",
+      "label_en": "Venture capital",
       "layer": "L14"
     },
     {
       "key": "strategic_capital",
       "label": "Стратегический капитал",
+      "label_en": "Strategic capital",
       "layer": "L14"
     },
     {
       "key": "export_authority",
       "label": "Экспортный контроль",
+      "label_en": "Export control",
       "layer": "L15"
     },
     {
       "key": "policy",
       "label": "Государственная политика",
+      "label_en": "Government policy",
       "layer": "L15"
     },
     {
       "key": "standards",
       "label": "Стандарты",
+      "label_en": "Standards",
       "layer": "L15"
     }
   ],
@@ -8242,6 +8312,7 @@
       "label": "Arm ISA",
       "owner": "arm",
       "note": "Набор команд процессоров",
+      "note_en": "The processor instruction set",
       "importance": "high"
     },
     {
@@ -8249,6 +8320,7 @@
       "label": "CoWoS",
       "owner": "tsmc",
       "note": "Упаковка «чип + память» на одной подложке",
+      "note_en": "Die-and-memory packaging on one substrate",
       "importance": "critical"
     },
     {
@@ -8256,6 +8328,7 @@
       "label": "EUV",
       "owner": "asml",
       "note": "Печать самых мелких элементов чипа",
+      "note_en": "Printing the finest features on a chip",
       "importance": "critical"
     },
     {
@@ -8263,6 +8336,7 @@
       "label": "HBM",
       "owner": "sk-hynix",
       "note": "Стековая память вплотную к ускорителю",
+      "note_en": "Stacked memory sitting against the accelerator",
       "importance": "critical"
     },
     {
@@ -8270,6 +8344,7 @@
       "label": "InfiniBand",
       "owner": "nvidia",
       "note": "Сеть между стойками кластера",
+      "note_en": "The network between racks of a cluster",
       "importance": "high"
     },
     {
@@ -8277,6 +8352,7 @@
       "label": "3 нм",
       "owner": "tsmc",
       "note": "Передовой техпроцесс производства",
+      "note_en": "The leading-edge process node",
       "importance": "critical"
     },
     {
@@ -8284,6 +8360,7 @@
       "label": "5 нм",
       "owner": "tsmc",
       "note": "Предыдущий передовой техпроцесс",
+      "note_en": "The previous leading-edge node",
       "importance": "high"
     },
     {
@@ -8291,6 +8368,7 @@
       "label": "NVLink",
       "owner": "nvidia",
       "note": "Связь ускорителей внутри стойки",
+      "note_en": "Accelerator-to-accelerator link inside the rack",
       "importance": "critical"
     },
     {
@@ -8298,6 +8376,7 @@
       "label": "PCIe",
       "owner": null,
       "note": "Общая шина подключения устройств",
+      "note_en": "The common bus for attaching devices",
       "importance": "medium"
     },
     {
@@ -8305,6 +8384,7 @@
       "label": "Spectrum-X",
       "owner": "nvidia",
       "note": "Ethernet-сеть под кластеры ускорителей",
+      "note_en": "Ethernet fabric built for accelerator clusters",
       "importance": "medium"
     }
   ],
@@ -23391,80 +23471,8 @@
   ],
   "changelog": {
     "month": "2026-08",
-    "added": [
-      {
-        "kind": "edge",
-        "id": "eu__eu-ai-act__standardizes_on",
-        "why": "Регламент — инструмент, которым блок задаёт правила для рынка ИИ."
-      },
-      {
-        "kind": "edge",
-        "id": "microsoft__blackrock__funded_by",
-        "why": "Инфраструктурный капитал финансирует площадки и энергию под облачные мощности."
-      },
-      {
-        "kind": "edge",
-        "id": "nventures__nvidia__funded_by",
-        "why": "Венчурное подразделение якоря: инструмент управления собственным риском, а не портфель ради доходности."
-      },
-      {
-        "kind": "edge",
-        "id": "nvidia__kubernetes__standardizes_on",
-        "why": "Отраслевой стандарт запуска контейнеров: совместимость с ним обязательна для любого поставщика ускорителей."
-      },
-      {
-        "kind": "edge",
-        "id": "pytorch__meta__funded_by",
-        "why": "Библиотеку создала компания-покупатель ускорителей и передала независимому фонду."
-      },
-      {
-        "kind": "edge",
-        "id": "tsmc__arm__standardizes_on",
-        "why": "Более 350 миллиардов выпущенных чипов используют эту архитектуру — общий знаменатель для фабрик."
-      },
-      {
-        "kind": "edge",
-        "id": "usa__chips-act__standardizes_on",
-        "why": "Закон — инструмент, которым юрисдикция возвращает производство внутрь страны."
-      }
-    ],
-    "removed": [
-      {
-        "kind": "edge",
-        "id": "arm__tsmc__standardizes_on",
-        "why": "связь больше не заявлена"
-      },
-      {
-        "kind": "edge",
-        "id": "blackrock__microsoft__funded_by",
-        "why": "связь больше не заявлена"
-      },
-      {
-        "kind": "edge",
-        "id": "chips-act__usa__standardizes_on",
-        "why": "связь больше не заявлена"
-      },
-      {
-        "kind": "edge",
-        "id": "eu-ai-act__eu__standardizes_on",
-        "why": "связь больше не заявлена"
-      },
-      {
-        "kind": "edge",
-        "id": "kubernetes__nvidia__standardizes_on",
-        "why": "связь больше не заявлена"
-      },
-      {
-        "kind": "edge",
-        "id": "meta__pytorch__funded_by",
-        "why": "связь больше не заявлена"
-      },
-      {
-        "kind": "edge",
-        "id": "nvidia__nventures__funded_by",
-        "why": "связь больше не заявлена"
-      }
-    ],
+    "added": [],
+    "removed": [],
     "changed": []
   }
 }

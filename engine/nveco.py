@@ -104,6 +104,10 @@ def sector_index() -> dict:
     return {s["key"]: s for s in sectors()}
 
 
+def tech_nodes() -> list:
+    return load_layers().get("tech_nodes", [])
+
+
 def criticality_bands() -> list:
     return load_layers().get("criticality_bands", [])
 

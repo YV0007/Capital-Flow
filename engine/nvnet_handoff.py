@@ -12,7 +12,7 @@ import json
 import sys
 from datetime import date
 
-from . import db, nveco, nvnet, nvnet_centrality, nvnet_spof, nvnet_subgraphs
+from . import db, i18n, nveco, nvnet, nvnet_centrality, nvnet_spof, nvnet_subgraphs
 
 OUT_JSON = db.HANDOFF_DIR / "ai_ecosystem_network.json"
 OUT_MD = db.HANDOFF_DIR / "AI-ECOSYSTEM-NETWORK-CHANGELOG.md"
@@ -63,12 +63,121 @@ def build(month: str, net: dict) -> dict:
             "subgraphNotes": sub["notes"],
         },
     }
+    return bilingualise(payload, nveco.connect())
+
+
+# ── двуязычие ────────────────────────────────────────────────────────────────
+# ОДИН проход в конце сборки, а не обёртка в двадцати местах. Причина простая:
+# список полей прозы — это контракт, и он должен читаться одним списком, а не
+# собираться по коду. Что здесь не перечислено, то и не оборачивается: цитаты
+# источников, id, слаги и URL остаются простыми строками.
+#
+# Русская сторона берётся из значения, которое уже лежит в выдаче (карта
+# экосистемы собиралась по-русски), английская — из склада переводов i18n_text
+# либо из ключа *_en рядом в конфиге. Пустая сторона НЕ подменяется другой:
+# валидатор ниже ищет именно её.
+BILINGUAL_FIELDS = {
+    "entity": ("oneLiner", "whyIrreplaceable", "whatBreaksIt"),
+    "entity_factor": ("irreplaceability", "lockInDepth", "timeToReplace",
+                      "strategicControl"),
+    "edge": ("note",),
+}
+
+# поле выдачи -> поле в складе переводов
+_I18N_KEY = {
+    "oneLiner": "one_liner", "whyIrreplaceable": "why_irreplaceable",
+    "whatBreaksIt": "what_breaks_it", "note": "note",
+    "irreplaceability": "why_irreplaceability", "lockInDepth": "why_lock_in",
+    "timeToReplace": "why_time", "strategicControl": "why_control",
+    "riskNote": "risk_note", "mitigation": "risk_mitigation",
+}
+
+
+def bilingualise(payload: dict, con) -> dict:
+    """Обернуть каждое поле прозы в {"ru": …, "en": …}. Меняет payload на месте."""
+    idx = i18n.index(con, "nveco")
+
+    def w(kind, oid, out_field, ru):
+        return i18n.wrap(idx, kind, oid, _I18N_KEY[out_field], fallback_ru=ru)
+
+    for e in payload["entities"]:
+        eid = e["id"]
+        for f in BILINGUAL_FIELDS["entity"]:
+            if e.get(f) is not None:
+                e[f] = w("entity", eid, f, e[f])
+        cw = e.get("criticalityWhy") or {}
+        for f in BILINGUAL_FIELDS["entity_factor"]:
+            if cw.get(f) is not None:
+                cw[f] = w("entity", eid, f, cw[f])
+        if (e.get("risk") or {}).get("note") is not None:
+            e["risk"]["note"] = w("entity", eid, "riskNote", e["risk"]["note"])
+
+    for x in payload["edges"]:
+        xid = x["id"]
+        if x.get("note") is not None:
+            x["note"] = w("edge", xid, "note", x["note"])
+        if (x.get("risk") or {}).get("mitigation") is not None:
+            x["risk"]["mitigation"] = w("edge", xid, "mitigation", x["risk"]["mitigation"])
+
+    for c in payload.get("cycles", []):
+        c["note"] = i18n.wrap(idx, "cycle", c["id"], "note",
+                              fallback_ru=c.get("note"), fallback_en=c.pop("noteEn", None))
+
+    # Конфигурные подписи: английское уже лежит рядом ключом *_en, склад не нужен.
+    for l in payload.get("layers", []):
+        l["label"] = i18n.bi(l.get("label"), l.pop("label_en", None))
+        l["caption"] = i18n.bi(l.get("caption"), l.pop("caption_en", None))
+    for s in payload.get("sectors", []):
+        s["label"] = i18n.bi(s.get("label"), s.pop("label_en", None))
+    for n_ in payload.get("techNodes", []):
+        n_["note"] = i18n.bi(n_.get("note"), n_.pop("note_en", None))
+    for sg in payload["network"]["subgraphs"]:
+        sg["label"] = i18n.bi(sg.get("label"), sg.pop("label_en", None))
+        sg["description"] = i18n.bi(sg.get("description"), sg.pop("description_en", None))
+    for s in payload["network"]["singlePointsOfFailure"]:
+        s["reason"] = i18n.bi(s.get("reason"), s.pop("reasonEn", None))
     return payload
+
+
+def bilingual_paths(payload: dict) -> list:
+    """(json-путь, значение) по КАЖДОМУ обёрнутому полю — вход валидатора."""
+    out = []
+    for i, e in enumerate(payload["entities"]):
+        for f in BILINGUAL_FIELDS["entity"]:
+            if f in e:
+                out.append((f"entities[{e['id']}].{f}", e[f]))
+        for f, v in (e.get("criticalityWhy") or {}).items():
+            out.append((f"entities[{e['id']}].criticalityWhy.{f}", v))
+        if (e.get("risk") or {}).get("note") is not None:
+            out.append((f"entities[{e['id']}].risk.note", e["risk"]["note"]))
+    for x in payload["edges"]:
+        if x.get("note") is not None:
+            out.append((f"edges[{x['id']}].note", x["note"]))
+        if (x.get("risk") or {}).get("mitigation") is not None:
+            out.append((f"edges[{x['id']}].risk.mitigation", x["risk"]["mitigation"]))
+    for c in payload.get("cycles", []):
+        out.append((f"cycles[{c['id']}].note", c.get("note")))
+    for l in payload.get("layers", []):
+        out += [(f"layers[{l['id']}].label", l["label"]),
+                (f"layers[{l['id']}].caption", l["caption"])]
+    for s in payload.get("sectors", []):
+        out.append((f"sectors[{s['key']}].label", s["label"]))
+    for n_ in payload.get("techNodes", []):
+        out.append((f"techNodes[{n_['id']}].note", n_["note"]))
+    for sg in payload["network"]["subgraphs"]:
+        out += [(f"subgraphs[{sg['id']}].label", sg["label"]),
+                (f"subgraphs[{sg['id']}].description", sg["description"])]
+    for s in payload["network"]["singlePointsOfFailure"]:
+        out.append((f"spof[{s['id']}].reason", s["reason"]))
+    return out
 
 
 # ── валидатор ────────────────────────────────────────────────────────────────
 def validate(payload: dict) -> list:
     errs = []
+    # Половина перевода — это ровно тот отказ, который мы убираем. Поэтому
+    # пустая сторона роняет выпуск, а не уезжает в дашборд «на потом».
+    errs += i18n.check(payload, bilingual_paths(payload))
     if payload.get("schema") != nvnet.SCHEMA_VERSION:
         errs.append(f"schema '{payload.get('schema')}' вместо {nvnet.SCHEMA_VERSION}")
     if "anchor" in payload:

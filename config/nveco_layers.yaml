@@ -16,85 +16,85 @@
 # band отсутствует у control и nucleus: у них своя палитра, не полосовая.
 
 layers:
-  - { id: L0,  label: "ГЕОПОЛИТИКА",    caption: "юрисдикции · контроль доступа", plane: control, order: 0,  band: null }
-  - { id: L1,  label: "СЫРЬЁ И СТАНКИ", caption: "материалы · оборудование",      plane: orbit,   order: 1,  band: 1 }
-  - { id: L2,  label: "ПРОЕКТИРОВАНИЕ", caption: "софт для чипов · лицензии",     plane: orbit,   order: 2,  band: 1 }
-  - { id: L3,  label: "ФАБРИКИ",        caption: "литография · процесс",          plane: orbit,   order: 3,  band: 2 }
-  - { id: L4,  label: "ПАМЯТЬ",         caption: "HBM · DRAM · хранение",         plane: orbit,   order: 4,  band: 2 }
-  - { id: L5,  label: "СИСТЕМЫ",        caption: "сборка · серверы · стойки",     plane: orbit,   order: 5,  band: 3 }
-  - { id: L6,  label: "ЭНЕРГИЯ",        caption: "генерация · передача тока",     plane: orbit,   order: 6,  band: 3 }
-  - { id: L7,  label: "ОХЛАЖДЕНИЕ",     caption: "тепло · вода · жидкость",       plane: orbit,   order: 7,  band: 3 }
-  - { id: L8,  label: "СВЯЗЬ",          caption: "сеть · оптика · коммутация",    plane: orbit,   order: 8,  band: 4 }
-  - { id: L9,  label: "ИНФРАСТРУКТУРА", caption: "площадки · облака",             plane: orbit,   order: 9,  band: 4 }
-  - { id: L10, label: "СОФТ ДЛЯ GPU",   caption: "CUDA · на чём пишут код",       plane: orbit,   order: 10, band: 5 }
-  - { id: L11, label: "ИНФЕРЕНС",       caption: "запуск моделей · оркестрация",  plane: orbit,   order: 11, band: 5 }
-  - { id: L12, label: "ЛАБОРАТОРИИ",    caption: "модели · обучение",             plane: orbit,   order: 12, band: 5 }
-  - { id: L13, label: "ПРИЛОЖЕНИЯ",     caption: "ИИ в бизнесе · отрасли",        plane: orbit,   order: 13, band: 5 }
-  - { id: L14, label: "КАПИТАЛ",        caption: "кто владеет и финансирует",     plane: nucleus, order: 14, band: null }
-  - { id: L15, label: "РЕГУЛИРОВАНИЕ",  caption: "правила · субсидии · стандарты", plane: control, order: 15, band: null }
+  - { id: L0,  label: "ГЕОПОЛИТИКА", label_en: "GEOPOLITICS",    caption: "юрисдикции · контроль доступа", caption_en: "jurisdictions · gatekeeping", plane: control, order: 0,  band: null }
+  - { id: L1,  label: "СЫРЬЁ И СТАНКИ", label_en: "INPUTS & TOOLS", caption: "материалы · оборудование", caption_en: "materials · equipment",      plane: orbit,   order: 1,  band: 1 }
+  - { id: L2,  label: "ПРОЕКТИРОВАНИЕ", label_en: "CHIP DESIGN", caption: "софт для чипов · лицензии", caption_en: "EDA software · IP licences",     plane: orbit,   order: 2,  band: 1 }
+  - { id: L3,  label: "ФАБРИКИ", label_en: "FABS",        caption: "литография · процесс", caption_en: "lithography · process",          plane: orbit,   order: 3,  band: 2 }
+  - { id: L4,  label: "ПАМЯТЬ", label_en: "MEMORY",         caption: "HBM · DRAM · хранение", caption_en: "HBM · DRAM · storage",         plane: orbit,   order: 4,  band: 2 }
+  - { id: L5,  label: "СИСТЕМЫ", label_en: "SYSTEMS",        caption: "сборка · серверы · стойки", caption_en: "assembly · servers · racks",     plane: orbit,   order: 5,  band: 3 }
+  - { id: L6,  label: "ЭНЕРГИЯ", label_en: "POWER",        caption: "генерация · передача тока", caption_en: "generation · transmission",     plane: orbit,   order: 6,  band: 3 }
+  - { id: L7,  label: "ОХЛАЖДЕНИЕ", label_en: "COOLING",     caption: "тепло · вода · жидкость", caption_en: "heat · water · liquid",       plane: orbit,   order: 7,  band: 3 }
+  - { id: L8,  label: "СВЯЗЬ", label_en: "NETWORKING",          caption: "сеть · оптика · коммутация", caption_en: "fabric · optics · switching",    plane: orbit,   order: 8,  band: 4 }
+  - { id: L9,  label: "ИНФРАСТРУКТУРА", label_en: "INFRASTRUCTURE", caption: "площадки · облака", caption_en: "sites · clouds",             plane: orbit,   order: 9,  band: 4 }
+  - { id: L10, label: "СОФТ ДЛЯ GPU", label_en: "GPU SOFTWARE",   caption: "CUDA · на чём пишут код", caption_en: "CUDA · what you code against",       plane: orbit,   order: 10, band: 5 }
+  - { id: L11, label: "ИНФЕРЕНС", label_en: "INFERENCE",       caption: "запуск моделей · оркестрация", caption_en: "serving · orchestration",  plane: orbit,   order: 11, band: 5 }
+  - { id: L12, label: "ЛАБОРАТОРИИ", label_en: "FRONTIER LABS",    caption: "модели · обучение", caption_en: "models · training",             plane: orbit,   order: 12, band: 5 }
+  - { id: L13, label: "ПРИЛОЖЕНИЯ", label_en: "APPLICATIONS",     caption: "ИИ в бизнесе · отрасли", caption_en: "AI in business · verticals",        plane: orbit,   order: 13, band: 5 }
+  - { id: L14, label: "КАПИТАЛ", label_en: "CAPITAL",        caption: "кто владеет и финансирует", caption_en: "who owns and funds it",     plane: nucleus, order: 14, band: null }
+  - { id: L15, label: "РЕГУЛИРОВАНИЕ", label_en: "REGULATION",  caption: "правила · субсидии · стандарты", caption_en: "rules · subsidies · norms", plane: control, order: 15, band: null }
 
 # Сектора — собственная таксономия карты. Ни одного поля, указывающего в DC-AI.
 # key используется в entities[].sector; label — то, что видит человек.
 sectors:
-  - { key: jurisdiction,      label: "Юрисдикции",             layer: L0 }
-  - { key: materials,         label: "Материалы",              layer: L1 }
-  - { key: fab_equipment,     label: "Станки для фабрик",      layer: L1 }
-  - { key: eda,               label: "Софт для чипов",         layer: L2 }
-  - { key: chip_ip,           label: "Лицензии на схемы",      layer: L2 }
-  - { key: foundry,           label: "Фабрики",                layer: L3 }
-  - { key: packaging,         label: "Упаковка кристаллов",    layer: L3 }
-  - { key: hbm,               label: "Память HBM",             layer: L4 }
-  - { key: dram,              label: "Оперативная память",     layer: L4 }
-  - { key: storage,           label: "Хранение",               layer: L4 }
-  - { key: server_odm,        label: "Сборка серверов",        layer: L5 }
-  - { key: rack_integration,  label: "Стойки",                 layer: L5 }
-  - { key: generation,        label: "Генерация энергии",      layer: L6 }
-  - { key: grid_power,        label: "Передача тока",          layer: L6 }
-  - { key: cooling,           label: "Охлаждение",             layer: L7 }
-  - { key: thermal_materials, label: "Теплоотвод",             layer: L7 }
-  - { key: rack_power,        label: "Питание стоек",          layer: L7 }
-  - { key: switching,         label: "Коммутаторы",            layer: L8 }
-  - { key: interconnect,      label: "Межсоединения",          layer: L8 }
-  - { key: optics,            label: "Оптика",                 layer: L8 }
-  - { key: hyperscaler,       label: "Гиперскейлеры",          layer: L9 }
-  - { key: neocloud,          label: "GPU-облака",             layer: L9 }
-  - { key: colocation,        label: "Площадки",               layer: L9 }
-  - { key: gpu_platform,      label: "Платформа GPU",          layer: L10 }
-  - { key: ml_framework,      label: "Фреймворки обучения",    layer: L10 }
-  - { key: compiler,          label: "Компиляторы",            layer: L10 }
-  - { key: inference_engine,  label: "Движки инференса",       layer: L11 }
-  - { key: orchestration,     label: "Оркестрация",            layer: L11 }
-  - { key: model_hub,         label: "Хабы моделей",           layer: L11 }
-  - { key: frontier_lab,      label: "Передовые лаборатории",  layer: L12 }
-  - { key: open_model,        label: "Открытые модели",        layer: L12 }
-  - { key: enterprise_ai,     label: "ИИ для бизнеса",         layer: L13 }
-  - { key: vertical_ai,       label: "Отраслевой ИИ",          layer: L13 }
-  - { key: venture,           label: "Венчурный капитал",      layer: L14 }
-  - { key: strategic_capital, label: "Стратегический капитал", layer: L14 }
-  - { key: export_authority,  label: "Экспортный контроль",    layer: L15 }
-  - { key: policy,            label: "Государственная политика", layer: L15 }
-  - { key: standards,         label: "Стандарты",              layer: L15 }
+  - { key: jurisdiction,      label: "Юрисдикции",      label_en: "Jurisdictions",             layer: L0 }
+  - { key: materials,         label: "Материалы",         label_en: "Materials",              layer: L1 }
+  - { key: fab_equipment,     label: "Станки для фабрик",     label_en: "Fab equipment",      layer: L1 }
+  - { key: eda,               label: "Софт для чипов",               label_en: "EDA software",         layer: L2 }
+  - { key: chip_ip,           label: "Лицензии на схемы",           label_en: "Chip IP licences",      layer: L2 }
+  - { key: foundry,           label: "Фабрики",           label_en: "Foundries",                layer: L3 }
+  - { key: packaging,         label: "Упаковка кристаллов",         label_en: "Die packaging",    layer: L3 }
+  - { key: hbm,               label: "Память HBM",               label_en: "HBM memory",             layer: L4 }
+  - { key: dram,              label: "Оперативная память",              label_en: "DRAM",     layer: L4 }
+  - { key: storage,           label: "Хранение",           label_en: "Storage",               layer: L4 }
+  - { key: server_odm,        label: "Сборка серверов",        label_en: "Server ODMs",        layer: L5 }
+  - { key: rack_integration,  label: "Стойки",  label_en: "Rack integration",                 layer: L5 }
+  - { key: generation,        label: "Генерация энергии",        label_en: "Power generation",      layer: L6 }
+  - { key: grid_power,        label: "Передача тока",        label_en: "Grid and transmission",          layer: L6 }
+  - { key: cooling,           label: "Охлаждение",           label_en: "Cooling",             layer: L7 }
+  - { key: thermal_materials, label: "Теплоотвод", label_en: "Thermal materials",             layer: L7 }
+  - { key: rack_power,        label: "Питание стоек",        label_en: "Rack power",          layer: L7 }
+  - { key: switching,         label: "Коммутаторы",         label_en: "Switching",            layer: L8 }
+  - { key: interconnect,      label: "Межсоединения",      label_en: "Interconnect",          layer: L8 }
+  - { key: optics,            label: "Оптика",            label_en: "Optics",                 layer: L8 }
+  - { key: hyperscaler,       label: "Гиперскейлеры",       label_en: "Hyperscalers",          layer: L9 }
+  - { key: neocloud,          label: "GPU-облака",          label_en: "GPU clouds",             layer: L9 }
+  - { key: colocation,        label: "Площадки",        label_en: "Colocation",               layer: L9 }
+  - { key: gpu_platform,      label: "Платформа GPU",      label_en: "GPU platform",          layer: L10 }
+  - { key: ml_framework,      label: "Фреймворки обучения",      label_en: "Training frameworks",    layer: L10 }
+  - { key: compiler,          label: "Компиляторы",          label_en: "Compilers",            layer: L10 }
+  - { key: inference_engine,  label: "Движки инференса",  label_en: "Inference engines",       layer: L11 }
+  - { key: orchestration,     label: "Оркестрация",     label_en: "Orchestration",            layer: L11 }
+  - { key: model_hub,         label: "Хабы моделей",         label_en: "Model hubs",           layer: L11 }
+  - { key: frontier_lab,      label: "Передовые лаборатории",      label_en: "Frontier labs",  layer: L12 }
+  - { key: open_model,        label: "Открытые модели",        label_en: "Open models",        layer: L12 }
+  - { key: enterprise_ai,     label: "ИИ для бизнеса",     label_en: "Enterprise AI",         layer: L13 }
+  - { key: vertical_ai,       label: "Отраслевой ИИ",       label_en: "Vertical AI",          layer: L13 }
+  - { key: venture,           label: "Венчурный капитал",           label_en: "Venture capital",      layer: L14 }
+  - { key: strategic_capital, label: "Стратегический капитал", label_en: "Strategic capital", layer: L14 }
+  - { key: export_authority,  label: "Экспортный контроль",  label_en: "Export control",    layer: L15 }
+  - { key: policy,            label: "Государственная политика",            label_en: "Government policy", layer: L15 }
+  - { key: standards,         label: "Стандарты",         label_en: "Standards",              layer: L15 }
 
 # Полосы критичности — как читать итоговый балл. Дашборд берёт подписи отсюда.
 criticality_bands:
-  - { min: 90, max: 100, key: critical,  label: "критично" }
-  - { min: 75, max: 89,  key: high,      label: "высоко" }
-  - { min: 60, max: 74,  key: medium,    label: "средне" }
-  - { min: 45, max: 59,  key: low_mid,   label: "ниже среднего" }
-  - { min: 0,  max: 44,  key: low,       label: "низко" }
+  - { min: 90, max: 100, key: critical,  label: "критично", label_en: "critical" }
+  - { min: 75, max: 89,  key: high,      label: "высоко", label_en: "high" }
+  - { min: 60, max: 74,  key: medium,    label: "средне", label_en: "medium" }
+  - { min: 45, max: 59,  key: low_mid,   label: "ниже среднего", label_en: "below average" }
+  - { min: 0,  max: 44,  key: low,       label: "низко", label_en: "low" }
 
 # Тех-узлы — ТЕХНОЛОГИИ, а не компании: процессы, упаковка, протоколы связи.
 # Компания, даже если она по сути платформа (CUDA), заводится СУЩНОСТЬЮ и живёт в
 # entities[] со своими связями; сюда попадает только то, что связью быть не может.
 # На ребре тех-узел работает подписью: он объясняет, ПОЧЕМУ зависимость неразрывна.
 tech_nodes:
-  - { id: euv,        label: "EUV",         owner: asml,     importance: critical, note: "Печать самых мелких элементов чипа" }
-  - { id: n3,         label: "3 нм",        owner: tsmc,     importance: critical, note: "Передовой техпроцесс производства" }
-  - { id: n5,         label: "5 нм",        owner: tsmc,     importance: high,     note: "Предыдущий передовой техпроцесс" }
-  - { id: cowos,      label: "CoWoS",       owner: tsmc,     importance: critical, note: "Упаковка «чип + память» на одной подложке" }
-  - { id: hbm,        label: "HBM",         owner: sk-hynix, importance: critical, note: "Стековая память вплотную к ускорителю" }
-  - { id: nvlink,     label: "NVLink",      owner: nvidia,   importance: critical, note: "Связь ускорителей внутри стойки" }
-  - { id: infiniband, label: "InfiniBand",  owner: nvidia,   importance: high,     note: "Сеть между стойками кластера" }
-  - { id: spectrum-x, label: "Spectrum-X",  owner: nvidia,   importance: medium,   note: "Ethernet-сеть под кластеры ускорителей" }
-  - { id: arm-isa,    label: "Arm ISA",     owner: arm,      importance: high,     note: "Набор команд процессоров" }
-  - { id: pcie,       label: "PCIe",        owner: null,     importance: medium,   note: "Общая шина подключения устройств" }
+  - { id: euv,        label: "EUV",         owner: asml,     importance: critical, note: "Печать самых мелких элементов чипа", note_en: "Printing the finest features on a chip" }
+  - { id: n3,         label: "3 нм",        owner: tsmc,     importance: critical, note: "Передовой техпроцесс производства", note_en: "The leading-edge process node" }
+  - { id: n5,         label: "5 нм",        owner: tsmc,     importance: high,     note: "Предыдущий передовой техпроцесс", note_en: "The previous leading-edge node" }
+  - { id: cowos,      label: "CoWoS",       owner: tsmc,     importance: critical, note: "Упаковка «чип + память» на одной подложке", note_en: "Die-and-memory packaging on one substrate" }
+  - { id: hbm,        label: "HBM",         owner: sk-hynix, importance: critical, note: "Стековая память вплотную к ускорителю", note_en: "Stacked memory sitting against the accelerator" }
+  - { id: nvlink,     label: "NVLink",      owner: nvidia,   importance: critical, note: "Связь ускорителей внутри стойки", note_en: "Accelerator-to-accelerator link inside the rack" }
+  - { id: infiniband, label: "InfiniBand",  owner: nvidia,   importance: high,     note: "Сеть между стойками кластера", note_en: "The network between racks of a cluster" }
+  - { id: spectrum-x, label: "Spectrum-X",  owner: nvidia,   importance: medium,   note: "Ethernet-сеть под кластеры ускорителей", note_en: "Ethernet fabric built for accelerator clusters" }
+  - { id: arm-isa,    label: "Arm ISA",     owner: arm,      importance: high,     note: "Набор команд процессоров", note_en: "The processor instruction set" }
+  - { id: pcie,       label: "PCIe",        owner: null,     importance: medium,   note: "Общая шина подключения устройств", note_en: "The common bus for attaching devices" }

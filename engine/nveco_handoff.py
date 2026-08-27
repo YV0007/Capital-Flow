@@ -51,12 +51,16 @@ def build(month: str, anchor: str = None) -> dict:
         if st and st["level"]:
             conc = {"level": st["level"], "hhi": st["hhi"],
                     "top": json.loads(st["top_json"] or "[]")}
+        # label_en/caption_en едут ДАЛЬШЕ КАК ЕСТЬ: контракт v2 их не описывает, но
+        # сеть v3 собирает из них двуязычные подписи. Лишний ключ в файле семени
+        # безвреден, потерянный — стоил бы отдельного чтения конфига в двух местах.
         layers.append({"id": l["id"], "label": l["label"], "caption": l["caption"],
+                       "label_en": l.get("label_en"), "caption_en": l.get("caption_en"),
                        "plane": l["plane"], "order": l["order"], "band": l.get("band"),
                        "concentration": conc})
 
-    sectors = [{"key": s["key"], "label": s["label"], "layer": s["layer"]}
-               for s in nveco.sectors()]
+    sectors = [{"key": s["key"], "label": s["label"], "label_en": s.get("label_en"),
+                "layer": s["layer"]} for s in nveco.sectors()]
 
     # источники
     src_by = {}
@@ -83,10 +87,15 @@ def build(month: str, anchor: str = None) -> dict:
 
     risks = {r["entity_id"]: r for r in con.execute("SELECT * FROM nveco_entity_risk")}
     tech_by_owner = {}
+    # note_en живёт в конфиге, а не в таблице: подпись тех-узла — это таксономия,
+    # а не исследованный факт, и заводить под неё колонку значило бы мигрировать
+    # схему ради строки, которая и так лежит рядом с русской.
+    tech_en = {n["id"]: n.get("note_en") for n in nveco.tech_nodes()}
     tech_nodes = []
     for r in con.execute("SELECT * FROM nveco_tech_node ORDER BY id"):
         tech_nodes.append({"id": r["id"], "label": r["label"], "owner": r["owner_id"],
-                           "note": r["note"], "importance": r["importance"]})
+                           "note": r["note"], "note_en": tech_en.get(r["id"]),
+                           "importance": r["importance"]})
         if r["owner_id"]:
             tech_by_owner.setdefault(r["owner_id"], []).append(r["id"])
 

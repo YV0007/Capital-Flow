@@ -25,49 +25,65 @@ types:
   manufactures:
     spine: physical
     verb: "производит для"
+    verb_en: "manufactures for"
     label: "Производство"
+    label_en: "Manufacturing"
     default_direction: upstream
     note: "Фабрика физически изготавливает чип для разработчика без своих фабрик."
   supplies:
     spine: physical
     verb: "поставляет"
+    verb_en: "supplies"
     label: "Поставка"
+    label_en: "Supply"
     default_direction: upstream
     note: "Поставщик отдаёт материал или компонент покупателю."
   packages:
     spine: physical
     verb: "упаковывает"
+    verb_en: "packages"
     label: "Упаковка кристаллов"
+    label_en: "Die packaging"
     default_direction: upstream
     note: "Подрядчик собирает кристаллы в готовый корпус."
   integrates:
     spine: physical
     verb: "собирает"
+    verb_en: "integrates"
     label: "Сборка систем"
+    label_en: "Systems integration"
     default_direction: downstream
     note: "Интегратор собирает готовую систему из чужих компонентов."
   delivers_to:
     spine: physical
     verb: "доставляет"
+    verb_en: "delivers to"
     label: "Логистика"
+    label_en: "Logistics"
     default_direction: downstream
     note: "Физическая доставка готового продукта."
   enables:
     spine: physical
     verb: "делает возможным"
+    verb_en: "makes possible"
     label: "Даёт возможность"
+    label_en: "Enabler"
     default_direction: bidirectional
     note: "Без первого бизнес второго не работает вовсе."
   co_designs:
     spine: physical
     verb: "проектирует вместе с"
+    verb_en: "co-designs with"
     label: "Совместная разработка"
+    label_en: "Joint development"
     default_direction: bidirectional
     note: "Обе стороны улучшают друг друга общей инженерией."
   optimizes_for:
     spine: physical
     verb: "заточен под"
+    verb_en: "is tuned for"
     label: "Заточка под платформу"
+    label_en: "Tuned to the platform"
     default_direction: downstream
     note: "Продукт спроектирован именно под требования другого."
 
@@ -75,13 +91,17 @@ types:
   invests_in:
     spine: capital
     verb: "вкладывается в"
+    verb_en: "invests in"
     label: "Инвестиция"
+    label_en: "Investment"
     default_direction: downstream
     note: "Деньги даются по стратегическим причинам, а не только ради доходности."
   funded_by:
     spine: capital
     verb: "получает деньги от"
+    verb_en: "takes money from"
     label: "Финансирование"
+    label_en: "Funding"
     default_direction: upstream
     # РОЛИ КОНЦОВ (нормализовано в выпуске v1.2, см. AI-ECOSYSTEM-NETWORK-BUILD-LOG §2-тер):
     #   source — КОГО СОДЕРЖАТ, target — КТО ПЛАТИТ.
@@ -95,31 +115,41 @@ types:
   board_seat:
     spine: capital
     verb: "имеет место в совете"
+    verb_en: "holds a board seat at"
     label: "Место в совете"
+    label_en: "Board seat"
     default_direction: downstream
     note: "Формальное влияние на управление."
   strategic_partner:
     spine: capital
     verb: "стратегический партнёр"
+    verb_en: "is a strategic partner of"
     label: "Стратегическое партнёрство"
+    label_en: "Strategic partnership"
     default_direction: bidirectional
     note: "Оформленное соглашение без обязательной доли в капитале."
   hedges_against:
     spine: capital
     verb: "страхуется через"
+    verb_en: "hedges through"
     label: "Хедж"
+    label_en: "Hedge"
     default_direction: downstream
     note: "Вложение делается, чтобы снизить риск от кого-то ТРЕТЬЕГО. Против кого именно — в risk_mitigation."
   diversifies_supply:
     spine: capital
     verb: "держит как запасной вариант"
+    verb_en: "keeps as a second source"
     label: "Второй источник"
+    label_en: "Second source"
     default_direction: upstream
     note: "Запасной поставщик на случай отказа основного."
   customer_of:
     spine: capital
     verb: "покупает у"
+    verb_en: "buys from"
     label: "Закупка"
+    label_en: "Procurement"
     default_direction: upstream
     note: "Обычная сделка купли-продажи. Отдельно от validates_demand: это деньги, а не доказательство."
 
@@ -127,43 +157,57 @@ types:
   validates_demand:
     spine: moat
     verb: "доказывает спрос на"
+    verb_en: "proves demand for"
     label: "Доказательство спроса"
+    label_en: "Proof of demand"
     default_direction: downstream
     note: "Само существование покупателя доказывает, что продукт необходим. Это не закупка."
   proves_roi:
     spine: moat
     verb: "доказывает окупаемость"
+    verb_en: "proves the payback of"
     label: "Доказательство окупаемости"
+    label_en: "Proof of payback"
     default_direction: downstream
     note: "Показывает, что на этом можно зарабатывать, а не только тратить."
   proves_use_case:
     spine: moat
     verb: "показывает применение"
+    verb_en: "shows a use case for"
     label: "Референсное применение"
+    label_en: "Reference deployment"
     default_direction: downstream
     note: "Эталонная реализация, на которую ссылаются остальные."
   locks_in_developers:
     spine: moat
     verb: "запирает разработчиков"
+    verb_en: "locks in the developers of"
     label: "Замок на разработчиках"
+    label_en: "Lock on developers"
     default_direction: bidirectional
     note: "Люди пишут код под эту среду и не могут уйти без переписывания."
   locks_in_platforms:
     spine: moat
     verb: "запирает платформы"
+    verb_en: "locks in the platforms of"
     label: "Замок на платформах"
+    label_en: "Lock on platforms"
     default_direction: bidirectional
     note: "Платформа зависит сразу на нескольких слоях и уйти целиком не может."
   path_dependent_on:
     spine: moat
     verb: "развивается вслед за"
+    verb_en: "follows the path of"
     label: "Зависимость траектории"
+    label_en: "Path dependence"
     default_direction: upstream
     note: "Развитие второго повторяет развитие первого."
   standardizes_on:
     spine: moat
     verb: "стандартизуется на"
+    verb_en: "standardises on"
     label: "Отраслевой стандарт"
+    label_en: "Industry standard"
     default_direction: upstream
     # РОЛИ КОНЦОВ (нормализовано в выпуске v1.2, см. AI-ECOSYSTEM-NETWORK-BUILD-LOG §2-тер):
     #   source — КТО ПРИНИМАЕТ стандарт, target — САМ СТАНДАРТ.
@@ -177,13 +221,17 @@ types:
   sets_benchmark:
     spine: moat
     verb: "задаёт планку"
+    verb_en: "sets the bar for"
     label: "Планка"
+    label_en: "Benchmark"
     default_direction: downstream
     note: "С этим сравнивают всех остальных."
   defines_category:
     spine: moat
     verb: "определяет категорию"
+    verb_en: "defines the category of"
     label: "Определение категории"
+    label_en: "Category definition"
     default_direction: downstream
     note: "Задаёт саму рамку, в которой отрасль думает о рынке."
 
@@ -191,25 +239,33 @@ types:
   controls_access_to:
     spine: control
     verb: "шлюзует доступ к"
+    verb_en: "gates access to"
     label: "Контроль доступа"
+    label_en: "Access control"
     default_direction: downstream
     note: "Может закрыть доступ к рынку или поставке решением, а не сделкой."
   subject_to_restriction:
     spine: control
     verb: "ограничен режимом"
+    verb_en: "is restricted by"
     label: "Под ограничением"
+    label_en: "Under restriction"
     default_direction: upstream
     note: "Сторона живёт под экспортным, импортным или инвестиционным ограничением."
   export_controlled_by:
     spine: control
     verb: "экспортно подконтролен"
+    verb_en: "is export-controlled by"
     label: "Экспортный контроль"
+    label_en: "Export control"
     default_direction: upstream
     note: "Право юрисдикции определяет, куда товар можно продать."
   geopolitically_dependent:
     spine: control
     verb: "геополитически зависит от"
+    verb_en: "geopolitically depends on"
     label: "Геополитическая зависимость"
+    label_en: "Geopolitical dependence"
     default_direction: upstream
     note: "Цепочка уязвима к статусу конкретной территории."
 
@@ -217,19 +273,25 @@ types:
   competes_with:
     spine: rivalry
     verb: "конкурирует с"
+    verb_en: "competes with"
     label: "Конкуренция"
+    label_en: "Competition"
     default_direction: lateral
     note: "Борются за один рынок и при этом остаются взаимозависимыми."
   threatens:
     spine: rivalry
     verb: "подтачивает"
+    verb_en: "erodes"
     label: "Угроза позиции"
+    label_en: "Threat to position"
     default_direction: downstream
     note: "Успех одного прямо ослабляет позицию другого."
   could_disrupt:
     spine: rivalry
     verb: "может вытеснить"
+    verb_en: "could displace"
     label: "Потенциальное вытеснение"
+    label_en: "Potential displacement"
     default_direction: downstream
     note: "Может заместить при определённых условиях; условия — в note."
 

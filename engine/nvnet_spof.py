@@ -89,14 +89,24 @@ def run(entities, adj, centrality) -> list:
         lost = base_pairs - _connected_pairs(cut)
         parts = len(_components(cut))
         share = round(100 * lost / base_pairs, 1) if base_pairs else 0.0
+        # Обе формулировки строятся из ОДНИХ И ТЕХ ЖЕ посчитанных чисел. Это не
+        # перевод: английская фраза собирается своим шаблоном со своим
+        # множественным числом, а не подстрочником с русского.
         if lost > 0:
-            reason = (f"убрать — и {lost} пар сущностей ({share}% связных пар) теряют "
-                      f"путь друг к другу; сеть распадается на {parts} "
-                      f"{_plural(parts, 'часть', 'части', 'частей')}")
+            reason_ru = (f"убрать — и {lost} пар сущностей ({share}% связных пар) теряют "
+                         f"путь друг к другу; сеть распадается на {parts} "
+                         f"{_plural(parts, 'часть', 'части', 'частей')}")
+            reason_en = (f"remove it and {lost} pairs of entities ({share}% of connected "
+                         f"pairs) lose their path to each other; the network breaks into "
+                         f"{parts} component{'' if parts == 1 else 's'}")
         else:
-            reason = (f"через узел проходит больше путей, чем через любого другого в "
-                      f"слое {layer} (betweenness {b}), но обходные маршруты "
-                      f"сохраняются — связность сети он не держит")
+            reason_ru = (f"через узел проходит больше путей, чем через любого другого в "
+                         f"слое {layer} (betweenness {b}), но обходные маршруты "
+                         f"сохраняются — связность сети он не держит")
+            reason_en = (f"more paths run through this node than through any other in "
+                         f"layer {layer} (betweenness {b}), but detours survive — it does "
+                         f"not hold the network together")
         out.append({"id": eid, "name": names.get(eid, eid), "layer": layer,
-                    "betweenness": b, "pairsLost": lost, "reason": reason})
+                    "betweenness": b, "pairsLost": lost,
+                    "reason": reason_ru, "reasonEn": reason_en})
     return out

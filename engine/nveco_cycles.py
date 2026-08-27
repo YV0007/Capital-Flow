@@ -20,7 +20,7 @@
 import json
 import sys
 
-from . import nveco
+from . import i18n, nveco
 
 MIN_LEN, MAX_LEN = 3, 5
 DFS_CAP = 400000        # предохранитель от разрастания, а не проектный предел
@@ -92,20 +92,36 @@ def classify(pairs) -> str:
     return cfg.get("fallback", "sales")
 
 
+# Подпись контура строится из ГЛАГОЛОВ типов связей, а не пишется руками, —
+# поэтому второй язык не требует перевода: он собирается из verb_en, который
+# лежит рядом с verb в той же таксономии. Имена компаний не переводятся ни в
+# одной версии: они одинаковы в обеих.
+_CYCLE_HEAD = {
+    "sales":     ("Контур сбыта", "Sales loop"),
+    "financing": ("Контур финансирования", "Financing loop"),
+    "lockin":    ("Контур замка", "Lock-in loop"),
+}
+
+
 def _note(path, meta, names, kind):
+    """(ru, en) — две параллельные подписи одного контура."""
     types = nveco.edge_types()
-    parts = []
+    ru_parts, en_parts = [], []
     for a, b in zip(path, path[1:] + [path[0]]):
-        verb = types.get(meta[(a, b)]["type"], {}).get("verb", meta[(a, b)]["type"])
-        parts.append(f"{names.get(a, a)} —{verb}→ {names.get(b, b)}")
-    head = {"sales": "Контур сбыта", "financing": "Контур финансирования",
-            "lockin": "Контур замка"}[kind]
-    return f"{head}: " + "; ".join(parts)
+        etype = meta[(a, b)]["type"]
+        spec = types.get(etype, {})
+        na, nb = names.get(a, a), names.get(b, b)
+        ru_parts.append(f"{na} —{spec.get('verb', etype)}→ {nb}")
+        en_parts.append(f"{na} —{spec.get('verb_en', etype)}→ {nb}")
+    ru_head, en_head = _CYCLE_HEAD[kind]
+    return (f"{ru_head}: " + "; ".join(ru_parts),
+            f"{en_head}: " + "; ".join(en_parts))
 
 
 def run(month: str, anchor: str = None) -> dict:
     acfg = nveco.anchor_cfg(anchor)
     con = nveco.connect()
+    i18n.ensure(con)
     adj, meta, names = _graph(con)
     cycles = find_cycles(adj)
 
@@ -124,8 +140,9 @@ def run(month: str, anchor: str = None) -> dict:
         kind = classify([(meta[p]["spine"], meta[p]["type"]) for p in pairs])
         edge_ids = [meta[p]["id"] for p in pairs]
         weakest = min(meta[p]["status"] for p in pairs)   # 'confirmed'<'high…'<'signal'
+        note_ru, note_en = _note(path, meta, names, kind)
         rec = {"id": f"c{i}", "type": kind, "path": path + [path[0]],
-               "edges": edge_ids, "note": _note(path, meta, names, kind),
+               "edges": edge_ids, "note": note_ru, "noteEn": note_en,
                "weakest": weakest, "anchored": acfg["id"] in path}
         con.execute(
             """INSERT OR IGNORE INTO nveco_cycle
@@ -133,6 +150,10 @@ def run(month: str, anchor: str = None) -> dict:
                VALUES (?,?,?,?,?,?,?)""",
             (rec["id"], month, acfg["id"], kind, json.dumps(rec["path"]),
              "|".join(sorted(path)), rec["note"]))
+        i18n.put(con, "nveco", "cycle", rec["id"], "note", "ru",
+                 note_ru, source="generated")
+        i18n.put(con, "nveco", "cycle", rec["id"], "note", "en",
+                 note_en, source="generated")
         for pos, eid in enumerate(edge_ids):
             con.execute("INSERT OR IGNORE INTO nveco_cycle_edge "
                         "(run_month,cycle_id,position,edge_id) VALUES (?,?,?,?)",

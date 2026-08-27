@@ -11,7 +11,9 @@ types:
   is_alternative_to:
     spine: rivalry
     verb: "жизнеспособная замена для"
+    verb_en: "is a viable replacement for"
     label: "Путь-замена"
+    label_en: "Replacement path"
     default_direction: lateral
     note: >
       Работающий путь-замена СУЩЕСТВУЕТ — это не то же самое, что активная конкуренция за
@@ -22,7 +24,9 @@ types:
   enables_interop:
     spine: physical
     verb: "сшивает через стандарт"
+    verb_en: "bridges through a standard"
     label: "Совместимость"
+    label_en: "Interoperability"
     default_direction: bidirectional
     note: >
       Стандарт позволяет двум иначе раздельным стекам разговаривать. Не поставка и не

@@ -18,7 +18,7 @@ import yaml
 
 from . import db, nveco
 
-SCHEMA_VERSION = "ai-ecosystem-network/1"
+SCHEMA_VERSION = "ai-ecosystem-network/2"
 NETWORK_ID = "ai-infrastructure-complete"
 
 _CFG = {}

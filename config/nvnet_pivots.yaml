@@ -26,8 +26,8 @@
 # схемы остаётся `ai-ecosystem-network/1`: потребитель, который о pagerank не знает,
 # продолжает читать файл как раньше.
 release:
-  major: 1
-  minor: 2
+  major: 2
+  minor: 0
 
 network_id: ai-infrastructure-complete
 seed: handoff/nvidia_ecosystem.json     # откуда берутся 106 сущностей и 243 связи

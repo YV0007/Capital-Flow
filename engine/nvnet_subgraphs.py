@@ -32,6 +32,9 @@ RULES = {
     # ── два среза пилота, оставлены без изменений ─────────────────────────────
     "gpu-ecosystem": {
         "label": "GPU-стек",
+        "label_en": "GPU stack",
+        "description_en": "Training and inference on GPUs: the accelerators, the programming "
+                           "environment, the libraries and the hyperscalers buying them",
         "description": "Обучение и инференс на GPU: ускорители, среда программирования, "
                        "библиотеки и покупатели-гиперскейлеры",
         "sectors": {"gpu_platform", "ml_framework", "compiler", "inference_engine",
@@ -43,6 +46,9 @@ RULES = {
     },
     "infrastructure-backbone": {
         "label": "Хребет инфраструктуры",
+        "label_en": "Infrastructure backbone",
+        "description_en": "The manufacturing and geopolitics common to both stacks: fabs, tools, "
+                           "design software, jurisdictions and capital",
         "description": "Производство и геополитика, общие для обоих стеков: фабрики, "
                        "станки, софт проектирования, юрисдикции и капитал",
         "sectors": {"foundry", "fab_equipment", "eda", "chip_ip", "packaging",
@@ -53,6 +59,9 @@ RULES = {
     # ── срезы v1.2: конкретные потоки, цепочки и подэкосистемы ────────────────
     "export-control": {
         "label": "Экспортный контроль",
+        "label_en": "Export control",
+        "description_en": "Who decides, and through which instrument, that advanced chips may be "
+                           "sold and bought",
         "description": "Кто и через какой документ решает, кому разрешено продавать и "
                        "покупать передовые чипы",
         # Группа определена ВИДОМ отношения, а не положением узлов: шлюз — это связь,
@@ -64,6 +73,9 @@ RULES = {
     },
     "power-and-cooling": {
         "label": "Энергия и охлаждение",
+        "label_en": "Power and cooling",
+        "description_en": "The physical datacenter build-out: generation, transmission, cooling "
+                           "and rack power — and everyone drawing on it",
         "description": "Физическая стройка дата-центра: генерация, передача тока, "
                        "охлаждение и питание стоек — и кто всё это потребляет",
         "sectors": {"generation", "grid_power", "cooling", "thermal_materials",
@@ -74,6 +86,9 @@ RULES = {
     },
     "labs-and-clouds": {
         "label": "Лаборатории и их облака",
+        "label_en": "Labs and their clouds",
+        "description_en": "Whose compute each frontier lab trains on, and what it pays for the "
+                           "privilege",
         "description": "На чьей мощности обучается каждая передовая лаборатория и чем "
                        "она за это платит",
         "sectors": {"frontier_lab", "open_model"},
@@ -81,6 +96,9 @@ RULES = {
     },
     "lithography-chain": {
         "label": "Цепочка литографии",
+        "label_en": "Lithography chain",
+        "description_en": "Who physically cannot be replaced in making a leading-edge die — from "
+                           "the tool and the wafer through to packaging",
         "description": "Кого физически нельзя заменить при изготовлении передового "
                        "кристалла — от станка и пластины до упаковки",
         "sectors": {"fab_equipment", "materials", "foundry", "packaging"},
@@ -90,6 +108,9 @@ RULES = {
     },
     "open-stack-vs-cuda": {
         "label": "Открытый стек против CUDA",
+        "label_en": "Open stack versus CUDA",
+        "description_en": "How real the exit from NVIDIA's programming environment is: what "
+                           "replaces it, and what stands in the way",
         "description": "Насколько реален выход из среды программирования NVIDIA: чем "
                        "именно её замещают и что этому мешает",
         "sectors": {"ml_framework", "compiler", "inference_engine", "model_hub"},
@@ -98,6 +119,9 @@ RULES = {
     },
     "build-capital": {
         "label": "Капитал стройки",
+        "label_en": "Capital behind the build",
+        "description_en": "Who pays for the stack — venture and strategic capital — and what the "
+                           "money bought",
         "description": "Кто оплачивает стек — венчур и стратегический капитал — и что "
                        "именно куплено на эти деньги",
         "sectors": {"venture", "strategic_capital"},
@@ -105,6 +129,9 @@ RULES = {
     },
     "network-fabric": {
         "label": "Сети и оптика",
+        "label_en": "Networking and optics",
+        "description_en": "The other half of a datacenter: the switching, interconnect and optics "
+                           "that bind accelerators into a cluster",
         "description": "Вторая половина дата-центра: коммутация, межсоединения и "
                        "оптика, связывающие ускорители в кластер",
         "sectors": {"switching", "interconnect", "optics"},
@@ -112,6 +139,9 @@ RULES = {
     },
     "hyperscaler-silicon": {
         "label": "Свой чип у покупателя",
+        "label_en": "Customers building silicon",
+        "description_en": "Buyers who started designing accelerators themselves, and what that "
+                           "costs their supplier",
         "description": "Покупатели, которые сами стали проектировать ускорители, и чем "
                        "это грозит их поставщику",
         "sectors": {"hyperscaler"},
@@ -122,6 +152,9 @@ RULES = {
     },
     "tpu-ecosystem": {
         "label": "TPU-стек",
+        "label_en": "TPU stack",
+        "description_en": "Google's vertical end to end: who designs and prints its accelerator, "
+                           "who computes on it, and who it still has to buy from",
         "description": "Вертикаль Google целиком: кто проектирует и печатает её "
                        "ускоритель, кто на нём считает и у кого она при этом покупает",
         "ids": {"google", "google-cloud", "google-deepmind", "jax"},
@@ -135,6 +168,9 @@ RULES = {
     },
     "memory-hbm": {
         "label": "Память и HBM",
+        "label_en": "Memory and HBM",
+        "description_en": "The fast-memory triopoly: who makes it, on whose tools, and what it "
+                           "feeds",
         "description": "Триополия быстрой памяти: кто её делает, на каких станках и "
                        "кого она кормит",
         "sectors": {"hbm", "dram", "storage"},
@@ -213,7 +249,9 @@ def run(entities, edges) -> dict:
         if isolated:
             notes.append(f"{sid}: без внутренних связей — {', '.join(isolated)}")
         out.append({"id": sid, "label": rule["label"],
+                    "label_en": rule.get("label_en"),
                     "description": rule["description"],
+                    "description_en": rule.get("description_en"),
                     "nodeIds": node_ids, "edgeIds": edge_ids,
                     "degenerate": degenerate})
     return {"subgraphs": out, "notes": notes}
