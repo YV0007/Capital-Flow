@@ -476,8 +476,9 @@ def ingest_month(month: str, anchor: str = None) -> dict:
         con.execute(
             """INSERT INTO nveco_entity (id,name,aliases,type,role,sector,primary_layer,
                  phase,ticker,public_private,geo,founded,revenue_usd_b,one_liner,
-                 why_irreplaceable,what_breaks_it,hops,first_seen,last_confirmed)
-               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+                 why_irreplaceable,what_breaks_it,hops,first_seen,last_confirmed,
+                 owner_agent)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
                ON CONFLICT(id) DO UPDATE SET
                  name=excluded.name, aliases=excluded.aliases, type=excluded.type,
                  role=excluded.role, sector=excluded.sector,
@@ -487,11 +488,12 @@ def ingest_month(month: str, anchor: str = None) -> dict:
                  revenue_usd_b=excluded.revenue_usd_b, one_liner=excluded.one_liner,
                  why_irreplaceable=excluded.why_irreplaceable,
                  what_breaks_it=excluded.what_breaks_it, hops=excluded.hops,
-                 last_confirmed=excluded.last_confirmed""",
+                 last_confirmed=excluded.last_confirmed,
+                 owner_agent=excluded.owner_agent""",
             (eid, e["name"], e["aliases"], e["type"], e["role"], e["sector"],
              e["primary_layer"], e["phase"], e["ticker"], e["public_private"], e["geo"],
              e["founded"], e["revenue_usd_b"], e["one_liner"], e["why_irreplaceable"],
-             e["what_breaks_it"], dist.get(eid), first_seen, month))
+             e["what_breaks_it"], dist.get(eid), first_seen, month, e.get("_agent")))
         con.execute("DELETE FROM nveco_entity_layer WHERE entity_id=?", (eid,))
         for l in e["layers"]:
             con.execute(
@@ -519,8 +521,8 @@ def ingest_month(month: str, anchor: str = None) -> dict:
             """INSERT INTO nveco_edge (id,source_id,target_id,type,spine,direction,
                  strength,lock_in_depth,substitutability,is_reversible,risk_level,
                  risk_type,risk_timeline,risk_mitigation,tech_node,formed,strengthened,
-                 last_confirmed,note)
-               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+                 last_confirmed,note,owner_agent)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
                ON CONFLICT(id) DO UPDATE SET
                  type=excluded.type, spine=excluded.spine, direction=excluded.direction,
                  strength=excluded.strength, lock_in_depth=excluded.lock_in_depth,
@@ -530,12 +532,13 @@ def ingest_month(month: str, anchor: str = None) -> dict:
                  risk_mitigation=excluded.risk_mitigation, tech_node=excluded.tech_node,
                  formed=COALESCE(nveco_edge.formed, excluded.formed),
                  strengthened=excluded.strengthened,
-                 last_confirmed=excluded.last_confirmed, note=excluded.note""",
+                 last_confirmed=excluded.last_confirmed, note=excluded.note,
+                 owner_agent=excluded.owner_agent""",
             (key, e["source"], e["target"], e["type"], e["spine"], e["direction"],
              e["strength"], e["lock_in_depth"], e["substitutability"],
              1 if e["is_reversible"] else 0, e["risk_level"], e["risk_type"],
              e["risk_timeline"], e["risk_mitigation"], e["tech_node"], e["formed"],
-             e["strengthened"], month, e["note"]))
+             e["strengthened"], month, e["note"], e.get("_agent")))
 
     for s in srcs:
         con.execute(

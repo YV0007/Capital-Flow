@@ -45,6 +45,10 @@ CREATE TABLE IF NOT EXISTS nveco_entity (
     hops           INTEGER,                 -- расстояние до якоря в шагах; считает score
     first_seen     TEXT,                    -- YYYY-MM, пишется один раз
     last_confirmed TEXT,
+    -- Какой агент написал эту строку в последний раз. Нужен для правила
+    -- «молчание — не свидетельство»: строку имеет право снять с карты
+    -- только тот агент, который в этом месяце реально выдал файл.
+    owner_agent    TEXT,
     stale          INTEGER NOT NULL DEFAULT 0,
     created_at     TEXT NOT NULL DEFAULT (datetime('now'))
 );
@@ -127,6 +131,8 @@ CREATE TABLE IF NOT EXISTS nveco_edge (
     formed          TEXT,
     strengthened    TEXT,
     last_confirmed  TEXT,
+    -- См. nveco_entity.owner_agent — то же правило для связей.
+    owner_agent     TEXT,
     note            TEXT,                  -- <=200 знаков
     clamped         TEXT,                  -- почему движок обрезал strength/risk; NULL если нет
     created_at      TEXT NOT NULL DEFAULT (datetime('now')),
