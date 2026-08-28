@@ -4443,6 +4443,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Венчурный фонд, вкладывающийся в прикладной и инфраструктурный софт вокруг моделей. Зарабатывает комиссией за управление и долей в прибыли фонда, то есть возврат считается на горизонте лет, а не кварталов. В карте фонд представляет самый заменимый вид капитала: денег в этом сегменте достаточно, и ценность участия не в сумме, а в доступе к следующим раундам и к сети покупателей. Ставки идут в слой, который переживает смену поколений железа.",
+        "en": "A venture fund investing in the application and infrastructure software around models. It earns a management fee plus carried interest, so returns are counted over years rather than quarters. On the map the fund represents the most replaceable kind of capital: money in this segment is plentiful, and the value of participation is access to later rounds and to a network of buyers rather than the amount. Its bets go into the layer that survives hardware generation changes."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -4812,6 +4816,10 @@
           "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Второй независимый подрядчик упаковки и теста, и его отличие от соседа по слою географическое: часть площадок расположена за пределами Азии. Деньги те же — плата за операцию сборки и тестирования. В карте эта деталь важнее объёма: наличие площадок в разных юрисдикциях превращает обычное дублирование поставщика в страховку от странового риска. Заказчики называют обоих подрядчиков в одном списке, то есть держат две линии сознательно.",
+        "en": "The second independent packaging and test subcontractor, differing from its neighbour geographically: some of its sites sit outside Asia. The money is the same — a fee for assembly and test operations. On the map that detail matters more than volume: sites in different jurisdictions turn ordinary supplier duplication into insurance against country risk. Customers name both subcontractors in one list, so the two lines are kept deliberately."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 4,
@@ -5064,8 +5072,34 @@
           "alive": true,
           "quote": "During fiscal 2025, two customers accounted for approximately 19% and 15%,",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Applied Materials 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm",
+          "published": "2025-12-12",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "two customers accounted for approximately 19% and 15%, respectively, of our net revenue",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Applied Materials 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/6951/000162828025056742/amat-20251026.htm",
+          "published": "2025-12-12",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "approximately 89% of our net revenue was to customers in regions outside the United States",
+          "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт оборудование для обработки пластины: нанесение слоёв, травление, модификация поверхности — всё, кроме печати рисунка. Деньги приходят продажей установок и последующим обслуживанием парка, а спрос определяется инвестиционным циклом нескольких заказчиков: в 2025 финансовом году два клиента дали примерно 19% и 15% выручки. Около 89% выручки приходит из-за пределов США, что делает компанию чувствительной к экспортным правилам собственной страны. В карте она стоит на слой ниже фабрики: без её установок передовой техпроцесс физически не реализуется.",
+        "en": "Sells wafer-processing equipment: deposition, etch, surface modification — everything except printing the pattern. The money is tool sales and subsequent servicing of the installed base, and demand follows a few customers' investment cycles: in fiscal 2025 two clients accounted for roughly 19% and 15% of revenue. About 89% of revenue comes from outside the United States, which makes the company sensitive to its own country's export rules. On the map it sits a layer beneath the fab: without its tools a leading-edge process cannot physically exist."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -5442,6 +5476,10 @@
           "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт упаковку и тестирование микросхем: превращает готовый кристалл в изделие, которое можно поставить в плату. Деньги — плата за операцию, и объём зависит не от цены чипа, а от количества корпусов. В карте компания названа в отчётности сразу нескольких разработчиков — и тех, кто делает ускорители, и тех, кто проектирует заказные чипы для облаков. Это тот редкий слой, где у заказчика есть реальный выбор из нескольких подрядчиков, и именно поэтому здесь чаще всего и держат вторую линию.",
+        "en": "Sells chip packaging and test: turning a finished die into a part that can be placed on a board. The money is a fee per operation, and volume depends on package count rather than chip price. On the map the company is named in the filings of several designers at once — both accelerator makers and those designing custom silicon for clouds. It is the rare layer where the customer has a genuine choice of subcontractors, which is why a second line is most often kept precisely here."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 4,
@@ -5696,8 +5734,34 @@
           "alive": true,
           "quote": "We use a fabless manufacturing model and partner with TSMC to fabricate all",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Astera Labs 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+          "published": "2026-02-11",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "one end customer represented more than 70% of our revenue",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Astera Labs 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+          "published": "2026-02-11",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "the top three end customers represented an aggregate of approximately 86% of our revenue",
+          "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт микросхемы связности внутри сервера: то, что соединяет ускорители, память и процессоры между собой без потери полосы. Деньги — продажа кремния, спроектированного под конкретную платформу, и это объясняет крайнюю концентрацию: один конечный заказчик даёт более 70% выручки, три крупнейших — около 86%. В карте компания показывает, как выглядит зависимость без страховки: своих заводов нет, все чипы делает одна фабрика, а спрос определяется циклом одного поколения систем. Ставка окупается ровно до следующей смены поколения.",
+        "en": "Sells connectivity chips inside the server: the parts joining accelerators, memory and processors without losing bandwidth. The money is silicon designed for one platform, which explains the extreme concentration: a single end customer is more than 70% of revenue and the top three about 86%. On the map it shows what dependence without insurance looks like: no plants of its own, every chip from one foundry, and demand set by one system generation's cycle. The bet pays exactly until the next generation change."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 4,
@@ -5933,6 +5997,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Управляет активами и в этой карте участвует через инфраструктурные фонды, финансирующие площадки и генерацию под облачные мощности. Зарабатывает комиссией с управляемого капитала, поэтому мотив — объём привлечённых денег, а не доходность конкретного объекта. В карте связь важна тем, что показывает механизм: облако получает стройку, не увеличивая собственный долг, а возврат обеспечивается будущей арендой. Такие деньги приходят снаружи отрасли и потому не заканчиваются вместе с её прибылью.",
+        "en": "Manages assets and participates on this map through infrastructure funds financing sites and generation for cloud capacity. It earns a fee on capital under management, so the motive is money raised rather than any one asset's return. On the map the link matters because it shows the mechanism: the cloud gets construction without adding to its own debt, and the return is secured by future rent. Money like this arrives from outside the industry and so does not run out with the industry's profits."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -6036,6 +6104,10 @@
           "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Управляет чужими деньгами, вложенными в реальные активы, и в этой карте владеет платформами площадок напрямую. Зарабатывает комиссией с размера фонда и долей в прибыли — доход растёт от объёма привлечённого капитала, а не от выработки самих объектов. В карте это показывает, какой слой инвесторы считают наименее подверженным технологическому риску: арендная модель переживает смену поколения ускорителей, ставка на конкретную платформу нет. Вход в капитал лаборатории с той же логикой — обеспечить заполнение построенного.",
+        "en": "Manages other people's money in real assets and, on this map, owns site platforms directly. It earns a fee on fund size plus a share of profits — income grows with capital raised rather than with the assets' output. On the map that shows which layer investors treat as least exposed to technology risk: a rental model survives an accelerator generation change, a bet on one platform does not. Taking equity in a lab follows the same logic — securing occupancy for what has been built."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -6139,6 +6211,10 @@
           "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт топливные элементы, которые ставятся прямо на площадке и дают питание, не дожидаясь подключения к сети. Деньги — продажа установок и долгосрочные соглашения на обслуживание и поставку энергии на объекте. В карте компания предлагает обход главного ограничения слоя: очередь на присоединение измеряется годами, а установка на месте разворачивается быстрее. Цена обхода — стоимость киловатта выше сетевой, поэтому решение выбирают там, где простой дороже переплаты.",
+        "en": "Sells fuel cells installed on the site itself, delivering power without waiting for a grid connection. The money is equipment sales plus long-term agreements for service and on-site energy supply. On the map the company offers a way around the layer's main constraint: the interconnection queue is measured in years, while on-site plant deploys faster. The price of the detour is a higher cost per kilowatt, so it is chosen where idle time costs more than the premium."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -6242,6 +6318,10 @@
           "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт теплоотводящие пластины и контуры, снимающие тепло непосредственно с кристалла — последний сантиметр охлаждения, который не заменяется ни залом, ни кондиционером. Деньги приходят с объёма, компонент недорогой, и потому в анализе рисков его обычно пропускают. В карте он показателен именно этим: цена и критичность здесь расходятся сильнее, чем где-либо ещё. Отсутствие такой пластины останавливает сборку так же надёжно, как отсутствие памяти.",
+        "en": "Sells cold plates and loops that take heat straight off the die — the last centimetre of cooling, replaceable by neither hall nor chiller. The money comes from volume, the component is inexpensive, and risk analysis usually skips it for that reason. On the map it is instructive precisely because of that: price and criticality diverge here more than anywhere else. A missing cold plate halts assembly as surely as missing memory does."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -6348,8 +6428,34 @@
           "alive": true,
           "quote": "The majority of our front-end wafer manufacturing operations is outsourced to external foundries,",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Broadcom 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+          "published": "2025-12-11",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "sales to our top five end customers, through all channels, accounted for approximately 40%",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Broadcom 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+          "published": "2025-12-11",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "For fiscal year 2025, sales to distributors accounted for 48% of our net revenue.",
+          "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт две разные вещи под одним именем: готовые микросхемы связи и хранения — и услугу проектирования заказного чипа для тех, кто хочет свой ускоритель, но не держит команду разработчиков кремния. Деньги приходят с продажи микросхем и с инженерных контрактов, а не с лицензии; в первом канале 48% выручки идёт через дистрибьюторов. Эта карта знает компанию прежде всего по второй роли: заказные ускорители облаков проектируются здесь и печатаются на той же фабрике, что и чипы конкурента. Концентрация соответствующая — на пять крупнейших конечных заказчиков приходится около 40% выручки. Открытие чужого протокола связи для заказных чипов показывает, что этот путь перестали считать нишевым.",
+        "en": "Sells two different things under one name: finished connectivity and storage chips, and the service of designing a custom chip for those who want their own accelerator without keeping a silicon team. The money comes from chip sales and engineering contracts rather than licences; in the first channel 48% of revenue runs through distributors. This map knows the company mainly for the second role: clouds' custom accelerators are designed here and printed at the same foundry as its rival's chips. The concentration matches — the top five end customers account for roughly 40% of revenue. A rival opening its interconnect to custom chips shows this route is no longer treated as niche."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 6,
@@ -6717,6 +6823,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Ведомство проверяет иностранное участие в американских активах и может остановить сделку, а чаще — растянуть её. Рычаг здесь временной: для стройки, расписанной по кварталам, отсрочка равносильна отказу, даже если формального запрета нет. В карте это шлюз, стоящий на пути капитала, а не товара: суверенные деньги, входящие в стройку вычислений, проходят именно здесь. Он дополняет экспортный контроль с противоположной стороны — один решает, кому продавать, другой кого впускать.",
+        "en": "The committee reviews foreign participation in American assets and can stop a transaction, though more often it stretches one out. The lever is time: for a build scheduled by quarters, delay is equivalent to refusal even without a formal prohibition. On the map it is a gate in the path of capital rather than goods: sovereign money entering the compute buildout passes through here. It complements export control from the opposite side — one decides who may be sold to, the other who may be let in."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -6821,6 +6931,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "В этой карте юрисдикция присутствует сразу в трёх ролях: крупный рынок сбыта, куда продажа ограничена лицензиями, дом собственных разработчиков ускорителей и площадка лаборатории, публикующей открытые веса. Рычаг работает в обе стороны — встречные ограничения на вывоз материалов и оборудования применялись как ответная мера. Ограничение доступа к передовым чипам создало здесь защищённый спрос на местный кремний, которого при открытой конкуренции не возникло бы. Для карты это единственный узел, где регулирование извне производит не только дефицит, но и конкурента.",
+        "en": "On this map the jurisdiction appears in three roles at once: a large market where selling is licence-limited, the home of domestic accelerator designers, and the base of a lab publishing open weights. The lever works both ways — counter-restrictions on exporting materials and equipment have been used in response. Limiting access to leading-edge chips created protected demand for local silicon that open competition would not have produced. For the map it is the only node where outside regulation manufactures not just scarcity but a competitor."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -6924,6 +7038,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Это инструмент, который меняет структуру деньгами, а не запретом: условия субсидии определяют, где и как строится новая фабрика. Рычаг медленный — от закона до первой пластины проходят годы, — но устойчивый, потому что не отменяется сменой настроения рынка. В карте закон объясняет, почему единственная американская попытка второй передовой фабрики держится на государственной программе, а не на заказах. Получатель субсидии становится зависимым от её условий сильнее, чем от собственных клиентов.",
+        "en": "An instrument that changes structure with money rather than prohibition: the subsidy's terms determine where and how a new fab is built. The lever is slow — years pass from statute to first wafer — but durable, because it does not lapse with market sentiment. On the map the act explains why the sole American attempt at a second leading-edge fab rests on a state programme rather than on orders. A subsidy recipient becomes more dependent on its terms than on its own customers."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -7027,6 +7145,10 @@
           "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт сетевое оборудование и софт к нему для корпоративных сетей и дата-центров, всё чаще по подписке. Деньги — продажа коробок плюс лицензии и поддержка, доля повторяющейся выручки растёт. В карте компания конкурирует за кластерные сети со специализированным поставщиком, и спор идёт не о широте линейки, а о поведении под равномерной нагрузкой. Универсальность здесь скорее мешает: заказчику нужен один режим работы, но идеально.",
+        "en": "Sells networking hardware and its software for corporate networks and data centres, increasingly by subscription. The money is box sales plus licences and support, with the recurring share growing. On the map it competes for cluster fabrics against a specialist supplier, and the argument is about behaviour under uniform load rather than breadth of range. Being general-purpose is a handicap here: the customer needs one regime, done perfectly."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -7129,8 +7251,23 @@
           "alive": true,
           "quote": "Coherent is a leading supplier of optical transceivers for AI datacenter and networking",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Coherent 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/820318/000082031826000020/iivi-20260630.htm",
+          "published": "2026-08-20",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "two customers each contributing more than 10% of total revenues in fiscal 2026",
+          "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт оптические компоненты и модули: лазеры, приёмники, трансиверы, которыми соединяют стойки на расстояниях, где электрический сигнал не проходит. Деньги — продажа компонентов производителям оборудования и напрямую операторам; двое заказчиков дают более 10% выручки каждый в 2026 финансовом году. В карте компания важна тем, что обслуживает и закрытый протокол платформы, и открытые стандарты — то есть спрос приходит с обеих сторон конкуренции в сетевом слое. Оптика при этом остаётся общим ограничением: её мощность конечна независимо от того, чей протокол победит.",
+        "en": "Sells optical components and modules: lasers, receivers, transceivers used to link racks across distances an electrical signal cannot cross. The money is component sales to equipment makers and directly to operators; two customers each account for more than 10% of revenue in fiscal 2026. On the map it matters because it serves both the platform's closed protocol and the open standards — demand arrives from both sides of the networking fight. Optics stays the shared constraint: its capacity is finite whichever protocol wins."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -7234,6 +7371,10 @@
           "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт электроэнергию по долгосрочным договорам, в том числе безуглеродную с атомных станций. Деньги — плата за поставленную энергию по контракту, заключённому на годы вперёд, что для площадки важнее цены за киловатт. В карте компания представляет сторону предложения энергии, где дефицит на стороне продавца: конкуренция за право продать слабая, и она проявляется в условиях, а не в цене. Контракт с площадкой здесь заключается раньше, чем закупаются ускорители.",
+        "en": "Sells electricity under long-term agreements, including carbon-free power from nuclear plants. The money is payment for delivered energy under a contract signed years ahead, which matters to a site more than the price per kilowatt. On the map the company represents the supply side of energy, where the scarcity sits with the seller: competition for the right to sell is weak and shows up in terms rather than price. A site contract here is signed before accelerators are ordered."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -7335,8 +7476,23 @@
           "alive": true,
           "quote": "all of the GPUs used in our infrastructure today are NVIDIA GPUs.",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "CoreWeave 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+          "published": "2026-02-25",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "Our revenue was $5.1 billion, $1.9 billion, and $229 million for the years ended",
+          "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт аренду кластеров ускорителей и ничего кроме: ни своих чипов, ни своего софта, ни розницы, которая финансировала бы стройку. Деньги — почасовая аренда и долгие контракты с предоплатой, под которые берётся долг на закупку железа. Выручка выросла с $229 млн до $1,9 млрд и затем до $5,1 млрд за три года — самый быстрый рост в этой карте и одновременно самый узкий: платформа одна, заказчиков мало. В карте компания стоит между продавцом ускорителей и лабораториями, забирая на себя капитальный риск, который те нести не хотят. Именно поэтому её и финансирует производитель чипов.",
+        "en": "Sells rented accelerator clusters and nothing else: no silicon of its own, no software, no retail arm to fund the buildout. The money is hourly rental plus long prepaid contracts, against which debt is raised to buy the hardware. Revenue went from $229 million to $1.9 billion and then to $5.1 billion across three years — the fastest growth on this map and the narrowest: one platform, few customers. It sits between the accelerator seller and the labs, absorbing the capital risk neither wants to carry. Which is precisely why the chipmaker funds it."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 5,
@@ -7439,8 +7595,34 @@
           "alive": true,
           "quote": "we exclusively used Taiwan Semiconductor Manufacturing Company Limited (TSMC) for semiconductor wafer production.",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Credo 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm",
+          "published": "2026-06-24",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "sales to our top 10 customers accounted for approximately 90% of our total revenue",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Credo 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm",
+          "published": "2026-06-24",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "we had two customers that accounted for 10% or more of our total revenue",
+          "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт активные кабели и микросхемы для них — соединения между стойками, где обычная медь уже не тянет полосу, а оптика дороже. Деньги — продажа кремния и готовых сборок под конкретные конфигурации кластера. Концентрация того же порядка, что у соседей по слою: десять крупнейших заказчиков дают около 90% выручки, из них двое — по 10% и более каждый. В карте компания занимает узкую нишу между стойкой и залом, и её существование объясняется тем, что кластер перестал помещаться в одну стойку.",
+        "en": "Sells active cables and the chips inside them — links between racks where ordinary copper no longer carries the bandwidth and optics costs more. The money is silicon and finished assemblies for specific cluster configurations. Concentration is of the same order as its neighbours': the ten largest customers are about 90% of revenue, two of them at 10% or more each. On the map it occupies a narrow niche between rack and hall, and it exists because a cluster stopped fitting into one rack."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 4,
@@ -7550,6 +7732,10 @@
           "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт аренду вычислений с площадок, построенных прямо у источников энергии — включая попутный газ и избыточную генерацию, которую иначе некуда девать. Деньги — та же аренда, что у других независимых облаков, но себестоимость определяется стоимостью энергии на месте, а не тарифом сети. В карте компания решает ограничение, которое деньгами не снимается: очередь на присоединение к сети измеряется годами. Логика обратная общепринятой — не подводить мощность к площадке, а ставить площадку туда, где мощность уже есть.",
+        "en": "Sells rented compute from sites built at the energy source — including flared gas and surplus generation with nowhere else to go. The money is the same rental other independent clouds earn, but the cost base is set by energy on site rather than by a grid tariff. On the map the company addresses a constraint money does not remove: the interconnection queue is measured in years. The logic is inverted — rather than bringing power to a site, put the site where the power already is."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 3,
@@ -7804,6 +7990,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Продаёт компаниям место, где их собственные данные превращаются в пригодные для обучения: хранение, обработка, обучение и запуск моделей в одном контуре. Деньги — потребление вычислений и хранилища с оплатой по факту, поверх облака заказчика, а не вместо него. В карте компания стоит на прикладном слое и покупает вычисления у облаков, добавляя к ним то, чего у лабораторий нет — доступ к корпоративным данным внутри периметра. Это и есть источник спроса, который начнётся, когда общедоступные тексты закончатся.",
+        "en": "Sells companies the place where their own data becomes trainable: storage, processing, training and serving in one loop. The money is consumption of compute and storage billed as used, on top of the customer's cloud rather than instead of it. On the map it sits on the application layer and buys compute from clouds, adding what labs lack — access to corporate data inside the perimeter. That is the source of demand that begins when publicly available text runs out."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 3,
@@ -8036,6 +8226,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Продаёт серверы и системы хранения корпоративным заказчикам вместе с поддержкой и финансированием покупки. Деньги — маржа на оборудовании плюс сервисные контракты, растянутые на срок службы. В карте компания работает каналом: доводит ускорители до тех, кто не покупает напрямую и не арендует у облаков, потому что держать инженеров под кластер им незачем. Нейтральность здесь принципиальна — компания работает сразу с несколькими разработчиками чипов и потому продаёт не платформу, а решение задачи.",
+        "en": "Sells servers and storage to enterprise customers together with support and purchase financing. The money is hardware margin plus service contracts stretched across the service life. On the map it works as a channel: it brings accelerators to those who neither buy direct nor rent from clouds, because keeping cluster engineers makes no sense for them. Neutrality is essential here — the company works with several chip developers at once, so what it sells is a solved problem rather than a platform."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -8144,6 +8338,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Продаёт преобразователи и модули питания, которые раздают электричество внутри стойки. Деньги — продажа компонентов производителям систем, объём зависит от количества стоек, а не от их стоимости. В карте компания важна тем, что её изделия приходится проектировать под конкретное поколение ускорителей: плотность мощности выросла настолько, что прежние решения физически не подходят. Это превратило стандартный компонент в предмет совместной разработки с производителем систем.",
+        "en": "Sells converters and power modules distributing electricity inside the rack. The money is component sales to system builders, with volume driven by rack count rather than rack value. On the map the company matters because its parts have to be designed for a specific accelerator generation: power density has risen enough that earlier solutions physically do not fit. That turned a standard component into an item of joint development with the system maker."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -8245,8 +8443,34 @@
           "alive": true,
           "quote": "colocation and interconnection solutions for customers across a variety of industry verticals.",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Digital Realty 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
+          "published": "2026-02-20",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "Our largest customer's total revenue is approximately 12 % of our total revenue base.",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Digital Realty 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
+          "published": "2026-02-20",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "Rental and other services revenue was $6.0 billion for the year ended December 31, 2025",
+          "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт готовые залы под ключ и подключения к ним — тот же товар, что у соседа по слою, но с упором на крупные площадки под одного арендатора. Деньги приходят арендой: выручка от аренды и сопутствующих услуг за 2025 год — $6,0 млрд, а на крупнейшего заказчика приходится около 12% выручки. Это существенно концентрированнее, чем у нейтральных площадок, и отражает модель: большие залы сдаются облакам целиком. В карте компания показывает, что стройка вычислений давно вынесена наружу — облака арендуют не меньше, чем строят.",
+        "en": "Sells finished halls turnkey and the connections into them — the same product as its neighbour on this layer, weighted toward large single-tenant sites. The money is rent: rental and other services revenue for 2025 was $6.0 billion, and the largest customer accounts for roughly 12% of revenue. That is materially more concentrated than at neutral sites and reflects the model: big halls are let to clouds whole. On the map it shows compute construction outsourced long ago — clouds rent no less than they build."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 4,
@@ -8349,8 +8573,23 @@
           "alive": true,
           "quote": "We make products for the data center, utility, industrial, commercial, machine building,",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Eaton 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/etn-20251231.htm",
+          "published": "2026-02-24",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "With revenues of $27.4 billion in 2025, the Company serves customers in 180 countries",
+          "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт электротехнику для распределения энергии: щиты, шины, аппараты защиты, системы управления питанием. Деньги — продажа оборудования проектам и обслуживание, спрос идёт волнами вместе со стройкой. При выручке $27,4 млрд в 2025 году компания обслуживает заказчиков в 180 странах, то есть спрос дата-центров конкурирует внутри неё с промышленным и коммунальным. Для карты это ключевая деталь: очередь на электрооборудование определяется не рынком ИИ, а общей загрузкой электротехнического производства.",
+        "en": "Sells electrical equipment for power distribution: switchgear, busways, protection devices, power management systems. The money is equipment sales into projects plus service, and demand arrives in waves with construction. With revenues of $27.4 billion in 2025 the company serves customers in 180 countries, so data-centre demand competes inside it with industrial and utility demand. That is the key detail for the map: the queue for electrical equipment is set by total electrical manufacturing load, not by the AI market."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -8452,8 +8691,34 @@
           "alive": true,
           "quote": "digital infrastructure company, shortening the path to boundless connectivity anywhere",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Equinix 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000032/eqix-20251231.htm",
+          "published": "2026-02-12",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "Total revenues attributed to the U.S. were $3.6 billion.",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Equinix 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000032/eqix-20251231.htm",
+          "published": "2026-02-12",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "no single customer accounted for 10% or greater of our accounts receivable",
+          "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт место в машинном зале и, что важнее, соединение: площадки устроены как точки обмена трафиком между сетями разных операторов. Деньги — арендная плата за стойку и мощность плюс плата за подключения, всё по долгим договорам. Выручка, отнесённая к США, составила $3,6 млрд, и ни один заказчик не даёт 10% и более выручки — редкая для этой карты распылённость. В карте компания даёт кластерам нейтральную площадку: сюда ставят вычисления те, кому нужен доступ сразу к нескольким облакам, а не мощность одного.",
+        "en": "Sells space in a machine hall and, more importantly, connection: the sites are built as exchange points between different operators' networks. The money is rent for rack and power plus interconnection fees, all on long contracts. Revenues attributed to the US were $3.6 billion, and no single customer accounts for 10% or more — a dispersion rare on this map. It gives clusters a neutral site: compute lands here when what is needed is reach into several clouds rather than capacity from one."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 6,
@@ -8558,6 +8823,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Блок управляет не производством, а выходом на рынок: требования адресованы тому, что предлагается пользователям, и доказывать соответствие обязан разработчик. Рычаг медленнее экспортного шлюза и мягче — здесь можно продать, соблюдя правила, а не оказаться перед запретом. Издержки при этом не зависят от выручки в регионе, поэтому давление сильнее на мелких участников, чем на крупных. В карте это единственный регулятор, действующий на прикладной слой, а не на производственный или экспортный.",
+        "en": "The bloc governs market entry rather than production: the requirements address what is offered to users, and the developer must demonstrate compliance. The lever is slower than an export gate and softer — here you may sell by following the rules rather than face a prohibition. The costs do not scale with regional revenue, so the pressure falls harder on small participants than on large ones. On the map it is the only regulator acting on the application layer rather than the manufacturing or export one."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -8661,6 +8930,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Регламент задаёт правила выпуска моделей на рынок: классификация по риску, требования к документации, прозрачности и оценке. Издержки соблюдения ложатся на того, кто выпускает модель, и не зависят от того, сколько он продал в регионе. В карте это первый регулятор, который адресуется не железу и не экспорту, а самому продукту прикладного слоя. Практическое следствие — барьер входа: крупная лаборатория распределяет издержки на объём, небольшая несёт их целиком.",
+        "en": "The regulation sets the rules for placing models on the market: risk classification, documentation, transparency and evaluation requirements. Compliance costs fall on whoever releases the model and do not scale with how much was sold in the region. On the map it is the first regulator addressing neither hardware nor export but the application-layer product itself. The practical consequence is a barrier to entry: a large lab spreads the cost over volume, a small one bears it whole."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -8764,6 +9037,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Собирает оптические модули по чужим проектам: разработчик проектирует, эта компания производит и тестирует. Деньги — контрактная плата за сборку, и один подрядчик обслуживает нескольких разработчиков сразу. В карте это создаёт то же явление, что и в упаковке чипов: конкуренты наверху опираются на общую мощность внизу. Поэтому дефицит оптики проявляется одновременно у всех заказчиков, а не у одного, и объясняется загрузкой подрядчика, а не решениями разработчиков.",
+        "en": "Assembles optical modules to other people's designs: the designer designs, this company builds and tests. The money is a contract assembly fee, and one contractor serves several designers at once. On the map that produces the same phenomenon as in chip packaging: competitors at the top rest on shared capacity below. So an optics shortage appears at every customer simultaneously rather than at one, explained by the contractor's load rather than by designers' decisions."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 3,
@@ -8869,6 +9146,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Собирает готовые изделия из чужих компонентов: ускорители, память, питание и охлаждение превращаются здесь в стойку, которую можно поставить в зал. Деньги — плата за сборку, маржа тонкая, а масштаб определяется площадями и рабочей силой, а не технологией. В карте компания названа поимённо в отчётности разработчика ускорителей среди контрактных производителей. Это тот предел, который не расшивается деньгами быстро: линия сборки стоек не масштабируется так же, как выпуск пластин.",
+        "en": "Assembles finished products from other people's components: accelerators, memory, power and cooling become a rack here that can be installed in a hall. The money is an assembly fee, the margin is thin, and scale is set by floor space and labour rather than technology. On the map the company is named outright among contract manufacturers in the accelerator designer's filings. This is a limit money does not quickly unwind: a rack assembly line does not scale the way wafer output does."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -8972,6 +9253,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Продаёт генерацию: турбины, оборудование для электростанций и сетевую аппаратуру, а также обслуживание установленного парка. Деньги приходят проектной поставкой и долгим сервисом, срок исполнения измеряется годами. В карте компания стоит там, где стройка вычислений упирается в физику: покупатель прямо называет достаточную энергию условием работы дата-центров. Очередь здесь длиннее, чем на ускорители, и место в ней нельзя купить деньгами так же быстро.",
+        "en": "Sells generation: turbines, power-plant equipment and grid apparatus, plus servicing of the installed base. The money comes from project supply and long service contracts, with lead times measured in years. On the map the company sits where the compute buildout meets physics: the buyer names sufficient power as a condition for running data centres outright. The queue here is longer than the one for accelerators, and a place in it cannot be bought as quickly."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -9452,6 +9737,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Второй корпоративный канал в карте с той же моделью: серверы, системы хранения и сети под ключ, с поддержкой и подпиской на потребление. Деньги — маржа на оборудовании плюс сервис, а в последние годы и аренда собственного парка по модели потребления. В карте наличие двух таких каналов означает, что корпоративный спрос не зависит от одного посредника. Оба продают ускорители нескольких производителей и потому усиливают ту часть рынка, где выбор платформы ещё существует.",
+        "en": "The second enterprise channel on the map with the same model: servers, storage and networking turnkey, with support and consumption-based subscription. The money is hardware margin plus service, and in recent years rental of its own fleet on a consumption model. On the map, two such channels mean enterprise demand does not hinge on one intermediary. Both sell accelerators from several makers and so strengthen the part of the market where a choice of platform still exists."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -9825,6 +10114,10 @@
           "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Управляет не готовыми чипами, а входами в их производство: пластинами, светочувствительными материалами и частью оборудования обработки. Рычаг здесь быстрее любого другого на карте — материалы расходуются непрерывно, запас на площадке измеряется неделями, и экспортные меры уже применялись как политический инструмент. Юрисдикция при этом сама зависит от заказчиков: спрос сосредоточен у нескольких фабрик за рубежом. В карте она стоит в самом низу, где стоимость входа мала, а последствия остановки максимальны.",
+        "en": "Governs not finished chips but the inputs to making them: wafers, photoresists and part of the processing equipment. The lever here is faster than any other on the map — materials are consumed continuously, on-site stock is measured in weeks, and export measures have already been used politically. The jurisdiction is itself dependent on its customers: demand is concentrated in a few fabs abroad. On the map it sits at the very bottom, where the cost of the input is small and the consequence of a stoppage is greatest."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -10046,6 +10339,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Продаёт флеш-память для дисков, на которых хранятся наборы данных обучения и контрольные точки моделей. Деньги — продажа микросхем по объёму, конкуренция ценовая, квалификация проще, чем у быстрой памяти рядом с кристаллом. В карте компания обозначает границу: здесь заканчивается дефицитная часть цепочки и начинается обычная закупка, где поставщика можно заменить без перепроектирования системы. Ценность в объёме, а не в незаменимости.",
+        "en": "Sells flash memory for the drives holding training datasets and model checkpoints. The money is volume chip sales, competition is on price, and qualification is simpler than for the fast memory beside the die. On the map the company marks a boundary: this is where the scarce part of the chain ends and ordinary procurement begins, with suppliers replaceable without redesigning the system. The value is volume, not irreplaceability."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -10148,8 +10445,34 @@
           "alive": true,
           "quote": "process control and process-enabling solutions for the semiconductor and",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "KLA 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+          "published": "2026-08-06",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "accounted for approximately 23% of our total revenues in fiscal 2026",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "KLA 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+          "published": "2026-08-06",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "International revenues accounted for approximately 87% of our total revenues",
+          "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт контроль процесса: установки, которые ищут дефекты на пластине и говорят, годится ли партия. Деньги приходят продажей оборудования и обслуживанием, причём сервис даёт около 23% выручки за 2026 финансовый год и растёт вместе с установленным парком, а не с новыми заказами. Международные продажи — примерно 87% выручки. В карте компания стоит рядом с литографией и решает вопрос, который деньгами не закрывается: на передовом узле без измерения выход годных падает до уровня, при котором производство теряет смысл.",
+        "en": "Sells process control: tools that find defects on the wafer and say whether a lot is usable. The money is equipment sales plus service, and service is roughly 23% of revenue in fiscal 2026, growing with the installed base rather than with new orders. International sales are about 87% of revenue. On the map it stands beside lithography and answers a question money cannot: on a leading-edge node, without measurement, yield falls to where manufacturing stops making sense."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -10254,6 +10577,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Стандарт запуска контейнеров: описывает, какие процессы где выполняются, сколько ресурсов получают и что делать при отказе. Денег не приносит никому — это открытый проект под фондом, и именно нейтральность делает его общим языком эксплуатации. В карте он стоит там, где ускорители превращаются в эксплуатируемую инфраструктуру: доступ к карте оформляется как ресурс кластера, и без этого её нельзя раздать нескольким задачам. Поставщику железа приходится под этот стандарт подстраиваться, а не диктовать ему — редкий случай на карте.",
+        "en": "A container standard: it describes which processes run where, how many resources they get and what happens on failure. It earns nobody anything — an open project under a foundation, and that neutrality is what makes it the common language of operations. On the map it sits where accelerators become operable infrastructure: access to a card is expressed as a cluster resource, and without that it cannot be shared across jobs. The hardware vendor has to fit the standard rather than dictate to it — a rare case on this map."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 3,
@@ -10355,8 +10682,34 @@
           "alive": true,
           "quote": "included Micron Technology, Inc., Samsung Electronics Company, Ltd., SK hynix Inc., and Taiwan",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Lam Research 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/707549/000070754926000037/lrcx-20260628.htm",
+          "published": "2026-08-12",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "Customer support-related revenue increased by $1.40 billion, or 20.2%, in fiscal year 2026",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Lam Research 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/707549/000070754926000037/lrcx-20260628.htm",
+          "published": "2026-08-12",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "five customers accounted for approximately 20 %, 16 %, 15 %, 11 %",
+          "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт установки травления и осаждения — те шаги, где формируется трёхмерная структура ячейки памяти и транзистора. Деньги приходят дважды: продажей установки и потом обслуживанием парка, причём вторая часть растёт независимо от цикла закупок — она прибавила $1,40 млрд, или 20,2%, за 2026 финансовый год. Концентрация видна в дебиторской задолженности: пять заказчиков дают примерно 20%, 16%, 15% и 11%. В карте компания стоит под памятью и под логикой одновременно, поэтому событие у неё задевает обе половины производства.",
+        "en": "Sells etch and deposition systems — the steps where the three-dimensional structure of a memory cell and a transistor is formed. The money arrives twice: from the tool and then from servicing the installed base, and the second stream grows independently of the purchasing cycle — it added $1.40 billion, or 20.2%, in fiscal 2026. Concentration shows in receivables: five customers account for roughly 20%, 16%, 15% and 11%. On the map it sits beneath memory and logic at once, so an event here touches both halves of manufacturing."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 4,
@@ -10460,6 +10813,10 @@
           "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт аренду ускорителей исследователям и небольшим командам: почасовой доступ и готовые рабочие станции, без корпоративного контура и долгих договоров. Деньги — та же аренда, но чеком меньше и клиентов больше. В карте компания важна как нижний край спроса: он не проходит через гиперскейлеров, не виден в их отчётности и не исчезает при паузе в корпоративных закупках. Именно здесь формируются привычки — код, написанный на арендованной карте, потом уезжает в продакшен вместе с платформой.",
+        "en": "Sells rented accelerators to researchers and small teams: hourly access and ready workstations, without an enterprise wrapper or long contracts. The money is the same rental, in smaller tickets across more customers. On the map the company matters as the lower edge of demand: it does not pass through hyperscalers, does not appear in their filings, and does not vanish when corporate procurement pauses. This is where habits form — code written on a rented card later moves into production along with the platform."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -10563,6 +10920,10 @@
           "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Ещё один венчурный фонд в раундах лабораторий, с той же моделью управления и той же ролью. Присутствие в карте нескольких таких фондов рядом — это и есть содержательный факт. Оно показывает, что участие любого из них заменимо, и потому влияние на решения лаборатории ограничено. Отличие от инфраструктурного капитала принципиальное: тот финансирует то, что стоит на земле, эти — право участвовать в следующем раунде.",
+        "en": "Another venture fund in labs' rounds, with the same management model and the same role. Several such funds appearing side by side on the map is itself the substantive fact. It shows that any one of them is replaceable, so influence over a lab's decisions is limited. The difference from infrastructure capital is fundamental: that finances what stands on the ground, these finance the right to join the next round."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -10666,6 +11027,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Продаёт блоки питания для серверов — компонент, который в этой карте выделяется своей обыкновенностью: поставщиков много, спецификации стандартны, замена не требует перепроектирования. Деньги приходят с объёма при тонкой марже. В карте эта связь держится как контрпример: она показывает, как выглядит нормальный конкурентный рынок рядом со всеми остальными слоями, где выбора почти нет. Риск здесь ценовой, а не структурный, и именно поэтому о нём никто не пишет.",
+        "en": "Sells server power supplies — a component that stands out on this map for being ordinary: many suppliers, standard specifications, replacement without redesign. The money comes from volume at a thin margin. On the map the edge is kept as a counterexample: it shows what a normal competitive market looks like beside every other layer, where there is barely a choice. The risk here is price, not structure, which is why nobody writes about it."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -10772,8 +11137,34 @@
           "alive": true,
           "quote": "Data Center and Communications markets, in a timely and effective manner,",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Marvell 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm",
+          "published": "2026-03-12",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "represented 82% of our total net revenue for fiscal 2026",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Marvell 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm",
+          "published": "2026-03-12",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "Sales shipped to customers with operations in Asia represented approximately 77%",
+          "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт микросхемы для передачи и хранения данных и, как сосед по слою, проектирует заказные чипы для облаков. Деньги — продажа кремния плюс инженерные контракты; концентрация крайняя, десять крупнейших заказчиков дают 82% выручки за 2026 финансовый год. Около 77% продаж отгружается заказчикам с операциями в Азии, что отражает географию производства и сборки, а не спроса. В карте компания существует как второй независимый проектировщик заказных ускорителей: наличие двух делает путь «сделать свой чип» доступным облакам без собственной команды.",
+        "en": "Sells chips for moving and storing data and, like its neighbour on this layer, designs custom silicon for clouds. The money is silicon sales plus engineering contracts; concentration is extreme, with the ten largest customers at 82% of revenue in fiscal 2026. About 77% of sales ship to customers with operations in Asia, which reflects the geography of manufacturing and assembly rather than of demand. On the map it exists as the second independent designer of custom accelerators: two of them make the «build your own chip» route available to clouds without a silicon team."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -11012,6 +11403,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Суверенный инвестор, входящий в стройку вычислений напрямую, минуя венчурный слой. Деньги здесь длинные и без требования к быстрому возврату, а мотив финансовый идёт рядом с политическим: участие в инфраструктуре означает и доступ к ней. В карте это тот тип капитала, который делает возможной стройку со сроком окупаемости длиннее горизонта обычного фонда. Обратная сторона — именно такие вложения проходят проверку иностранного участия, и срок рассмотрения становится частью графика проекта.",
+        "en": "A sovereign investor entering the compute buildout directly, skipping the venture layer. The money is long and carries no fast-return requirement, and the financial motive sits beside a political one: participating in infrastructure also means access to it. On the map it is the kind of capital that makes possible a build whose payback exceeds an ordinary fund's horizon. The flip side is that investments like these go through foreign-participation review, and the review clock becomes part of the project schedule."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 3,
@@ -11116,6 +11511,10 @@
           "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Третий поставщик быстрой памяти и единственный из названных за пределами Кореи. Деньги те же, что у соседей по слою: продажа микросхем по долгим контрактам под конкретное поколение систем. Ценность позиции в карте определяется не долей, а юрисдикцией — эта компания единственная разрывает совпадение «вся быстрая память приходит из одной страны». Разработчик ускорителей называет всех троих поставщиков поимённо, и наличие третьего имени — это заранее оплаченная возможность переключиться, а не текущий объём.",
+        "en": "The third supplier of fast memory and the only named one outside Korea. The money is the same as its neighbours': chip sales on long contracts for a specific system generation. Its value on the map comes from jurisdiction rather than share — it is the one company breaking the coincidence of «all fast memory from one country». The accelerator designer names all three suppliers outright, and the third name is an option to switch paid for in advance rather than volume today."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 3,
@@ -11343,6 +11742,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Продаёт доступ к своим моделям — по подписке и по токенам через интерфейс, плюс развёртывание внутри периметра заказчика, чего не предлагают крупнейшие лаборатории. Деньги те же, что у соседей по слою, но структура спроса другая: заметная часть выручки приходит от европейских компаний, для которых важно, где физически считается модель. В карте это проверка гипотезы о географии: платформа под лабораторией всё равно та же самая, что у американских. Локальная юрисдикция меняет условия продажи, но не выбор ускорителя.",
+        "en": "Sells access to its models — by subscription and per token through an interface, plus deployment inside the customer's own perimeter, which the largest labs do not offer. The money matches its neighbours', but the demand structure differs: a notable share comes from European companies for whom where the model physically runs matters. On the map it tests the geography hypothesis: the platform beneath the lab is the same one the American labs use. Local jurisdiction changes the terms of sale, not the choice of accelerator."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -11446,6 +11849,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Организация ведёт общие тесты производительности, по которым сравнивают ускорители и системы разных производителей. Денег с этого не зарабатывает — это консорциум, живущий взносами участников, и в этом его устройство. В карте он выполняет единственную функцию внешней проверки: заявление о скорости здесь нельзя сделать, его надо показать на общей задаче с опубликованной методикой. Ограничение тоже понятное — конфигурацию для теста выбирает участник, поэтому сравнение честное по методике, но не всегда по условиям.",
+        "en": "The organisation maintains the shared performance tests by which accelerators and systems from different makers are compared. It earns nothing from this — it is a consortium living on member fees, and that is its design. On the map it performs the single function of external verification: a speed claim cannot be made here, it has to be shown on a common task with a published methodology. The limitation is equally clear — the participant chooses the test configuration, so the comparison is fair in method but not always in conditions."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -11549,6 +11956,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Это библиотека коллективных операций: она собирает результаты со всех ускорителей кластера и рассылает их обратно на каждом шаге обучения. Денег не приносит и раздаётся вместе со средой — платят за железо, поверх которого она работает. В карте это самый незаметный из замков: прикладной код её не вызывает, обращается к ней фреймворк, и пользователь о существовании этого слоя обычно не знает. Именно поэтому перенос обучения на чужие ускорители упирается не во фреймворк, а в отсутствие эквивалента здесь.",
+        "en": "A collective-operations library: it gathers results from every accelerator in the cluster and sends them back at each training step. It earns nothing and ships with the environment — what is paid for is the hardware it runs on. On the map it is the least visible of the locks: application code never calls it, the framework does, and the user usually does not know the layer exists. Which is exactly why porting training to other accelerators binds not on the framework but on the absence of an equivalent here."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -11651,8 +12062,34 @@
           "alive": true,
           "quote": "We currently rely on Nvidia for the GPU chips we use",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Nebius 20-F 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+          "published": "2026-04-30",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "increased by $438.3 million, or 479%, from $91.5 million in 2024 to $529.8 million",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Nebius 20-F 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+          "published": "2026-04-30",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "Total revenues for the year ended December 31, 2025 increased by $438.3 million",
+          "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт то же, что и предыдущий арендодатель, но из Европы и на площадках, которые строит сама. Деньги — аренда вычислений по контрактам, где мощность бронируется заранее. Выручка за 2025 год выросла на 479%, до $529,8 млн, прибавив $438,3 млн: масштаб пока в разы меньше американских независимых облаков, темп сопоставим. В карте компания важна не размером, а юрисдикцией — она даёт лабораториям и компаниям вариант аренды, не выходящий за пределы европейского регулирования. Зависимость от одного поставщика чипов заявлена в её собственной отчётности как фактор риска.",
+        "en": "Sells what the previous landlord sells, but from Europe and on sites it builds itself. The money is rented compute under contracts where capacity is booked in advance. Revenue grew 479% in 2025 to $529.8 million, adding $438.3 million: the scale is still a multiple below the American independents, the pace is comparable. On this map it matters for jurisdiction rather than size — it gives labs and companies a rental option that stays inside European regulation. Dependence on a single chip supplier is stated in its own filing as a risk factor."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -11767,6 +12204,10 @@
           "confidence": 0.97
         }
       ],
+      "description": {
+        "ru": "Рычаг этой юрисдикции непропорционален её размеру: на её территории работает единственный в мире производитель установок для печати передовых чипов. Управление идёт через экспортные лицензии на конкретные позиции каталога, а не через владение компанией. В карте это означает, что решение одной страны определяет, кто на планете может строить фабрики передового уровня — и оно применяется в координации с другими юрисдикциями, но принимается отдельно. Никакой заменой этот шлюз не обходится: альтернативного производителя таких установок не существует нигде.",
+        "en": "This jurisdiction's leverage is out of proportion to its size: the world's only maker of leading-edge printing tools operates on its territory. Control runs through export licences on specific catalogue items rather than through ownership of the company. On the map that means one country's decision determines who on the planet can build leading-edge fabs — coordinated with other jurisdictions, but taken separately. No substitution routes around this gate: an alternative maker of such tools exists nowhere."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -11871,6 +12312,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Готовые контейнеры для запуска моделей, собранные самим производителем железа: модель, зависимости и оптимизации приезжают одним образом, который разворачивается командой. В отличие от остальных инструментов производителя, этот продаётся — доступ идёт по корпоративной подписке. В карте это движение платформы вверх по стеку: от чипа к готовому сервису, ближе к тому, кто платит. Конкурировать приходится с бесплатными открытыми библиотеками запуска, поэтому продаётся не скорость, а предсказуемость и поддержка.",
+        "en": "Ready-made containers for serving models, assembled by the hardware maker itself: model, dependencies and optimisations arrive as one image deployed with a single command. Unlike the maker's other tools, this one is sold — access comes with an enterprise subscription. On the map it is the platform climbing the stack: from chip toward finished service, closer to whoever pays. It has to compete with free open serving libraries, so what is sold is predictability and support rather than speed."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -11972,8 +12417,34 @@
           "alive": true,
           "quote": "We are an enclosures and liquid cooling leader in the U.S. and globally.",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "nVent 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1720635/000162828026008608/nvt-20251231.htm",
+          "published": "2026-02-17",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "The dollar amount of backlog as of December 31, 2025 was $2.3 billion.",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "nVent 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1720635/000162828026008608/nvt-20251231.htm",
+          "published": "2026-02-17",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "net sales to our largest customer represented approximately 11% of our consolidated net sales",
+          "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт шкафы, системы жидкостного охлаждения и защиту соединений — то, во что физически ставится стойка. Деньги приходят проектной поставкой, и объём будущих поставок виден отдельной строкой: портфель заказов на конец 2025 года — $2,3 млрд. Концентрация умеренная, на крупнейшего заказчика приходится около 11% продаж, то есть компания не зависит от одной стройки. В карте она стоит рядом с поставщиками питания и решает ту же задачу с другой стороны: воздух перестал справляться с плотностью, и охлаждение переехало внутрь конструкции.",
+        "en": "Sells enclosures, liquid cooling systems and connection protection — the physical thing a rack is installed into. The money comes from project supply, and future volume is reported on its own line: backlog at the end of 2025 was $2.3 billion. Concentration is moderate, with the largest customer at about 11% of sales, so the company does not depend on one build. On the map it stands beside the power suppliers and solves the same problem from the other side: air stopped coping with density, and cooling moved inside the design."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -12078,6 +12549,10 @@
           "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Венчурное подразделение производителя ускорителей: вкладывает его деньги в компании, которые затем закупают его же железо. Доходность фонда здесь не цель — цель в том, чтобы ключевые точки орбиты остались на платформе, поэтому вложения идут в независимые облака и в инструменты, где иначе возник бы спрос на чужие чипы. В карте это единственный узел, где обе стороны сделки принадлежат одному владельцу: деньги уходят инвестицией и возвращаются выручкой. Такой инвестор не может выйти из позиции, потому что не может выйти из собственной стратегии.",
+        "en": "The accelerator maker's venture arm: it deploys the parent's money into companies that then buy the parent's hardware. Fund returns are not the goal — the goal is keeping key points of the orbit on the platform, so the money goes into independent clouds and into tools where demand for rival silicon would otherwise appear. On the map it is the only node where both sides of a transaction belong to one owner: money leaves as investment and returns as revenue. Such an investor cannot exit a position because it cannot exit its own strategy."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 3,
@@ -12347,6 +12822,10 @@
           "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Разрабатывает малые реакторы и предлагает продавать не оборудование, а электроэнергию по долгосрочным договорам с площадок, которые сама же строит. Выручки от этой модели пока нет — компания находится на стадии лицензирования и строительства, а соглашения с операторами площадок оформлены как необязывающие письма о намерениях. В карте она присутствует именно как намерение, и это отражено в весе связей: намерение не создаёт мощности. Ценность узла в том, что он показывает, куда смотрят операторы, когда сетевая очередь перестаёт устраивать.",
+        "en": "Develops small reactors and proposes to sell electricity under long-term agreements from plants it builds itself, rather than selling equipment. There is no revenue from that model yet — the company is at the licensing and construction stage, and its arrangements with site operators are non-binding letters of intent. On the map it is present precisely as an intention, and the edge weights reflect that: an intention creates no capacity. The node's value is showing where operators look once the grid queue stops being acceptable."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -12613,6 +13092,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Продаёт корпоративный софт и базы данных, а в этой карте присутствует другой своей частью — облаком, которое строит мощности под контракты лабораторий. Деньги в облачной части — аренда вычислений по многолетним договорам, где объём законтрактован до того, как площадка построена. В карте компания берёт на себя капитальный риск стройки за арендатора и одновременно входит в капитал проекта, для которого строит. Совмещение ролей означает, что возврат вложения обеспечивается её же счетами за аренду.",
+        "en": "Sells enterprise software and databases, but appears on this map through a different part of itself — a cloud building capacity against labs' contracts. In the cloud business the money is rented compute on multi-year agreements, with volume contracted before the site exists. On the map the company takes the construction capital risk on the tenant's behalf while also holding equity in the project it builds for. Combining the roles means the return on that investment is secured by its own rental billing."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 5,
@@ -12834,6 +13317,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Третий тайваньский подрядчик сборки в карте: собирает серверные системы под конкретные платформы ускорителей. Деньги — та же плата за сборку с тонкой маржой, компенсируемой объёмом. Наличие трёх подрядчиков в карте — не избыточность, а необходимость: сборка идёт партиями, и одна линия не покрывает пиковый спрос. В карте это показывает, что физический предел распределён по нескольким площадкам, а не сосредоточен в одной точке.",
+        "en": "The third Taiwanese assembly contractor on the map: it builds server systems for specific accelerator platforms. The money is the same thin-margin assembly fee compensated by volume. Three contractors on the map is not redundancy but necessity: assembly runs in batches, and one line does not cover peak demand. On the map it shows the physical limit distributed across several sites rather than concentrated in one point."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -12938,6 +13425,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Оркестратор распределённых вычислений: раскладывает обучение и обработку данных по кластеру, решая, какая часть задачи считается на какой карте. Проект открытый, доход получает компания вокруг него — за управляемую версию и поддержку, а не за сам код. В карте он стоит между стандартом контейнеров и фреймворком обучения: первый даёт ресурсы, второй считает, а этот слой распределяет. От того, как он распределяет, зависит, работает ли кластер как одна машина или как набор карт.",
+        "en": "A distributed orchestrator: it spreads training and data processing across a cluster, deciding which part of a job runs on which card. The project is open, and the company around it earns from a managed version and support rather than from the code. On the map it sits between the container standard and the training framework: the first supplies resources, the second computes, and this layer distributes. How it distributes decides whether a cluster behaves as one machine or as a pile of cards."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -13039,8 +13530,23 @@
           "alive": true,
           "quote": "one of the largest supercomputers in biopharma, built in collaboration with NVIDIA.",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Recursion 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1601830/000160183026000039/rxrx-20251231.htm",
+          "published": "2026-02-26",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "Recursion is eligible to receive potential, success-based, future payments of up to $1.5 billion",
+          "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт не лекарство, а вероятность его найти: платформа ставит миллионы клеточных экспериментов и учит модели предсказывать, какая молекула стоит синтеза. Деньги приходят не с продаж препаратов, а от партнёрств с фармкомпаниями. По одному из соглашений компания может получить до $1,5 млрд последовательными выплатами плюс роялти. В карте это доказательство применимости за пределами ИТ: вычисления здесь заменяют не людей, а лабораторные опыты, и сравниваются с их стоимостью, а не с ценой другого сервера.",
+        "en": "Sells not a drug but the probability of finding one: the platform runs millions of cell experiments and trains models to predict which molecule is worth synthesising. The money comes not from drug sales but from pharma partnerships. Under one agreement the company is eligible for up to $1.5 billion in success-based payments plus royalties. On the map it is proof of applicability beyond IT: here compute replaces bench experiments rather than people, and is compared against their cost rather than another server's price."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -13144,6 +13650,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Продаёт систему управления отношениями с клиентами по подписке за рабочее место, и модели встраиваются в те процессы, за которые заказчик уже платит. Деньги — годовая подписка с многолетними договорами; вычисления внутри неё не отдельная статья, а часть себестоимости услуги. В карте компания стоит на стороне спроса и показывает его самый устойчивый вид: результат измеряется существующей метрикой отдела продаж, а не качеством модели. Такой спрос не требует отдельного обоснования бюджета и потому повторяется ежегодно.",
+        "en": "Sells customer relationship management on a per-seat subscription, with models embedded into processes the customer already pays for. The money is an annual subscription on multi-year contracts; compute inside it is not a separate line but part of the cost of service. On the map it sits on the demand side and shows its steadiest form: the result is measured by an existing sales metric rather than by model quality. Demand like that needs no separate budget case, and so repeats every year."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -13253,6 +13763,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Совмещает в одной компании две роли, которые карта считает по отдельности: производство памяти и контрактное изготовление чужих чипов. Деньги приходят и с продажи микросхем, и с платы за пластину, а внутренний спрос конкурирует с внешними заказами за одни и те же мощности. Разработчик ускорителей называет компанию и среди поставщиков памяти, и среди фабрик — редкое двойное присутствие. Для карты это удобно как второй маршрут и опасно как концентрация: событие у одного поставщика задевает сразу две линии снабжения.",
+        "en": "Combines in one company two roles the map counts separately: memory production and contract manufacturing of other people's chips. The money comes both from chip sales and from wafer fees, and internal demand competes with external orders for the same capacity. The accelerator designer names it among memory suppliers and among foundries alike — a rare double presence. For the map that is convenient as a second route and dangerous as concentration: an event at one supplier touches two supply lines at once."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 5,
@@ -13356,6 +13870,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Ещё один поставщик хранения в той же роли: объёмы данных обучения растут быстрее, чем ускоряется их обработка, и место под них нужно физически. Деньги те же — продажа по объёму на конкурентном рынке. Присутствие в карте двух таких поставщиков рядом показывает структуру наглядно: наверху цепочки поставщик один и незаменим, внизу их несколько и выбор реален. По этому признаку карта и отличает связывающие ограничения от обычных закупок.",
+        "en": "Another storage supplier in the same role: training data volumes grow faster than processing speeds, and the space for them is needed physically. The money is the same — volume sales in a competitive market. Two such suppliers side by side on the map show the structure plainly: at the top of the chain the supplier is single and irreplaceable, at the bottom there are several and the choice is real. That is the criterion separating binding constraints from ordinary purchasing."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -13459,6 +13977,10 @@
           "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт оборудование распределения энергии и системы управления питанием для площадок: щиты, шины, источники бесперебойного питания, охлаждение. Деньги — проектная поставка плюс обслуживание, спрос идёт волнами вместе со стройкой. В карте компания стоит рядом со вторым таким же поставщиком, и наличие двух — единственная форма страховки на этом слое. Дефицита это не снимает: оборудование делается для дата-центров, сетей и промышленности сразу, и очередь общая с другими отраслями.",
+        "en": "Sells power distribution equipment and power management systems for sites: switchgear, busways, uninterruptible supplies, cooling. The money is project supply plus service, and demand arrives in waves with construction. On the map it stands beside a second supplier of the same kind, and having two is the only form of insurance on this layer. That does not remove the shortage: the equipment is made for data centres, utilities and industry at once, and the queue is shared with other sectors."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -13562,6 +14084,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Продаёт софт для расчёта поведения молекул и, отдельно, собственные лекарственные программы, построенные на этом же расчёте. Деньги — лицензии на софт плюс доход от партнёрств и собственных разработок, то есть модель двойная. В карте компания представляет применение, у которого своя экономика: стоимость расчёта сравнивается со стоимостью лабораторного эксперимента, а не с ценой другого сервера. Поэтому спрос отсюда нечувствителен к цене ускорителя в широких пределах.",
+        "en": "Sells software for computing molecular behaviour and, separately, its own drug programmes built on that same computation. The money is software licences plus income from partnerships and in-house programmes — a double model. On the map it represents an application with economics of its own: the cost of a calculation is compared against a bench experiment, not against another server. Which makes demand from here insensitive to accelerator price across a wide range."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -13665,6 +14191,10 @@
           "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Венчурный фонд, участвующий в раундах лабораторий и инфраструктурных компаний. Модель та же — комиссия за управление и доля в прибыли, — но размер современных раундов таков, что фонд редко бывает единственным инвестором. В карте это важно: капитал такого типа заменим, и переговорной силы у него меньше, чем у инфраструктурных денег, которые финансируют физические объекты. Ценность участия здесь репутационная и информационная, а не определяющая.",
+        "en": "A venture fund participating in labs' and infrastructure companies' rounds. The model is the same — management fee plus carry — but the size of current rounds means the fund is rarely the only investor. That matters on the map: capital of this type is replaceable and carries less leverage than infrastructure money financing physical assets. The value of participating here is reputational and informational rather than decisive."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -13766,8 +14296,23 @@
           "alive": true,
           "quote": "including relationships with AWS, Google, Microsoft, and NVIDIA, among others.",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "ServiceNow 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000007/now-20251231.htm",
+          "published": "2026-01-28",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "Revenues from our direct sales organization represented 78% of our total revenues",
+          "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт компаниям единую систему рабочих процессов: заявки в ИТ, кадровые операции, обслуживание клиентов — в одном контуре. Деньги приходят подпиской за рабочее место с многолетними договорами, и 78% выручки даёт собственный отдел продаж, а не партнёры. В карте компания стоит на стороне спроса: она закупает вычисления у облаков и встраивает модели в процессы, за которые заказчики уже платят. Именно поэтому её спрос устойчивее лабораторного — он не требует отдельного обоснования бюджета.",
+        "en": "Sells companies a single system for workflows: IT tickets, HR operations, customer service — in one loop. The money is a per-seat subscription on multi-year contracts, and 78% of revenue comes through its own sales organisation rather than partners. On the map it sits on the demand side: it buys compute from clouds and embeds models into processes customers already pay for. Which is why its demand is steadier than a lab's — it needs no separate budget justification."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -13871,6 +14416,10 @@
           "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Вторая открытая система запуска моделей рядом с первой: та же задача — уместить больше запросов на карте, — но другое устройство планировщика. Денег не приносит, развивается исследовательским сообществом и теми, кому дорог инференс. В карте её существование важнее её доли: два независимых открытых проекта делают слой конкурентным, и приёмы перетекают между ними за недели, потому что код открыт. Это единственный слой карты, где скорость улучшения не зависит от планов одного поставщика.",
+        "en": "A second open serving system beside the first: the same task — fitting more requests onto a card — with a different scheduler design. It earns nothing and is developed by a research community and by those for whom inference is expensive. On the map its existence matters more than its share: two independent open projects make the layer competitive, and techniques cross between them within weeks because the code is open. It is the one layer where the pace of improvement does not depend on a single vendor's plans."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -13974,6 +14523,10 @@
           "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт расходуемую часть производства: кремниевые пластины и светочувствительные материалы, которые тратятся на каждом чипе, а не служат годами, как станок. Деньги приходят с объёма — цена за пластину невелика, но потребление непрерывно и растёт вместе с выпуском. В карте это самый нижний слой, и риск здесь иного рода: он не про капитальные вложения, а про непрерывность поставки. Экспортные меры на такие материалы уже применялись как политический инструмент, а запас на площадке измеряется неделями.",
+        "en": "Sells the consumable part of manufacturing: silicon wafers and photoresists spent on every chip rather than lasting years like a tool. The money comes from volume — the price per wafer is modest, but consumption is continuous and grows with output. On the map this is the lowest layer, and the risk here is of a different kind: it is about continuity of supply rather than capital. Export measures on such materials have already been used politically, and on-site stock is measured in weeks."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -14077,6 +14630,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Продаёт промышленную автоматизацию и софт для проектирования: системы управления производством, цифровые модели изделий и заводов. Деньги — продажа оборудования и лицензии на софт с обслуживанием, циклы закупки измеряются годами. В карте компания представляет применение моделей там, где результат проверяется физикой: расчёт либо совпадает с испытанием, либо нет. Такой спрос растёт медленно и не разворачивается — заводы не меняют инструмент проектирования по настроению рынка.",
+        "en": "Sells industrial automation and design software: manufacturing control systems, digital models of products and plants. The money is equipment sales and software licences with service, on procurement cycles measured in years. On the map it represents applying models where the result is checked by physics: a simulation either matches the test or it does not. Demand like that grows slowly and does not reverse — plants do not change design tools with market sentiment."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -14181,6 +14738,10 @@
           "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт третий по величине набор инструментов проектирования микросхем: верификация, тестопригодность, физический анализ. Деньги — лицензии на срок, как у двух более крупных соседей по слою. В карте компания показывает, что дуополия наверху не абсолютна: на отдельных этапах маршрута выбор существует, и заказчики держат её инструменты рядом с основными. Полноценной третьей альтернативой она при этом не становится — сертификация полного маршрута под передовые нормы стоит дороже, чем окупает нишевый спрос.",
+        "en": "Sells the third-largest set of chip design tools: verification, testability, physical analysis. The money is term licences, as with the two larger neighbours on this layer. On the map it shows the duopoly above is not absolute: at individual stages of the flow a choice exists, and customers keep its tools beside the main ones. It does not become a full third alternative, though — certifying a complete flow for leading-edge nodes costs more than niche demand repays."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -14284,6 +14845,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Второй крупный производитель турбин и оборудования для сетей в карте. Деньги те же: продажа оборудования проектами плюс обслуживание, а спрос дата-центров конкурирует с общим спросом энергетики. Наличие двух таких поставщиков не снимает дефицита — производственные мощности этой отрасли расширяются медленнее, чем растёт заказ. В карте это объясняет, почему сроки ввода площадок не сокращаются пропорционально вложенным деньгам.",
+        "en": "The second large maker of turbines and grid equipment on the map. The money is the same: project equipment sales plus service, with data-centre demand competing against general power-sector demand. Having two such suppliers does not remove the shortage — this industry's manufacturing capacity expands more slowly than orders grow. On the map it explains why site schedules do not shorten in proportion to money spent."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -14387,6 +14952,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Значение этого узла не в собственном спросе, а в том, что через него проходит перепродажа: логистический и финансовый хаб, где проверяют, не уходит ли товар в обход лицензионного режима. Рычаг принадлежит не самой юрисдикции, а тем, кто ведёт списки: ограничения действуют по цепочке владения, а не по границе. В карте узел показывает, что экспортный контроль — это не линия на карте, а сеть проверок у посредников. Именно поэтому обход обнаруживается с задержкой и всегда постфактум.",
+        "en": "This node matters not for its own demand but because resale passes through it: a logistics and financial hub where shipments are checked for routing around the licensing regime. The lever belongs not to the jurisdiction itself but to whoever maintains the lists: restrictions follow the chain of ownership, not the border. On the map the node shows export control to be a network of checks at intermediaries rather than a line on a map. Which is why circumvention surfaces late, and always after the fact."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -14493,6 +15062,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Продаёт память, и в этой карте важен один её вид — быстрая память с высокой пропускной способностью, которая ставится рядом с вычислительным кристаллом на одной подложке. Деньги приходят с продажи микросхем по контрактам, где объём бронируется под конкретное поколение ускорителей задолго до отгрузки. В карте компания стоит непосредственно под разработчиком ускорителей и названа в его отчётности среди поставщиков памяти. Квалификация нового типа памяти занимает месяцы, поэтому смена поставщика здесь невозможна как быстрая реакция — она планируется за поколение вперёд.",
+        "en": "Sells memory, and one kind of it matters on this map — the high-bandwidth memory placed next to the compute die on a shared substrate. The money comes from chip sales under contracts where volume is booked for a specific accelerator generation long before shipment. On the map the company sits directly beneath the accelerator designer and is named among memory suppliers in its filings. Qualifying a new memory type takes months, so switching supplier here cannot be a fast reaction — it is planned a generation ahead."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 4,
@@ -14596,6 +15169,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Продаёт хранилище данных, из которого компании считают аналитику, а теперь и обучают модели, не вынося данные наружу. Деньги — оплата по факту потребления вычислений и хранения, а не подписка за место. В карте компания рядом с соседом по слою решает ту же задачу с другой стороны: та даёт инструмент обработки, эта — порядок в самих данных. Обе доказывают одно: спрос на вычисления существует и там, где решение принимает не исследователь, а владелец данных.",
+        "en": "Sells the data warehouse companies run analytics from and now train models in, without moving the data outside. The money is pay-as-you-go consumption of compute and storage rather than a per-seat subscription. On the map it solves the same problem as its neighbour from the other side: that one supplies the processing tool, this one supplies order in the data itself. Both prove the same point: compute demand exists where the decision is made by the data owner rather than by a researcher."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -14700,6 +15277,10 @@
           "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Держатель капитала, берущий на себя финансовую ответственность за стройку вычислений, тогда как операционную несёт лаборатория. Зарабатывает не комиссией и не арендой, а стоимостью долей в том, что строит и во что вкладывается — включая владельца процессорной архитектуры, стоящей внутри этих же систем. В карте это редкая позиция: инвестор присутствует и в капитале стройки, и в технологии, которая на ней используется. Такое совмещение делает возврат менее зависимым от того, какая именно платформа победит.",
+        "en": "A capital holder taking financial responsibility for the compute buildout while the lab carries the operational side. It earns not from fees or rent but from the value of stakes in what it builds and backs — including the owner of the processor architecture sitting inside those same systems. On the map that is a rare position: the investor is present both in the buildout's equity and in the technology used on it. The overlap makes the return less dependent on which platform ultimately wins."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 4,
@@ -14804,6 +15385,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Юрисдикция держит производство быстрой памяти, без которой ускоритель не работает: два из трёх названных поставщиков этого типа памяти находятся здесь. Рычаг не регуляторный, а производственный — управление происходит через то, где физически стоят линии, а не через правила. Соседство с зоной военного риска превращает обычную концентрацию в геополитический фактор, который считают отдельно от коммерческого. В карте эта территория дублирует роль острова с фабриками: тот же тип риска, другой слой стека.",
+        "en": "The jurisdiction holds production of the fast memory an accelerator cannot work without: two of the three named suppliers of that memory sit here. The lever is industrial rather than regulatory — control comes from where the lines physically stand, not from rules. Proximity to a zone of military risk turns ordinary concentration into a geopolitical factor priced separately from the commercial one. On the map this territory duplicates the role of the island with the fabs: the same kind of risk, a different layer of the stack."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -14906,8 +15491,23 @@
           "alive": true,
           "quote": "We work closely with NVIDIA, Intel and AMD, among others, to develop products",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Supermicro 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536525000027/smci-20250630.htm",
+          "published": "2025-08-29",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "Sales to customers located outside of the United States represented 40.6%",
+          "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт серверы и стойки, собранные под конкретные ускорители, и делает это быстрее крупных производителей за счёт модульной конструкции. Деньги — маржа на сборке, невысокая в процентах и заметная в объёме, поэтому бизнес чувствителен к доступности чипов. Продажи за пределы США составили 40,6% выручки. В карте компания стоит между поставщиком ускорителей и площадкой: именно здесь чипы, память и питание превращаются в изделие, которое можно поставить в зал.",
+        "en": "Sells servers and racks built around specific accelerators, and does it faster than the large manufacturers thanks to a modular design. The money is assembly margin — thin in percent, visible in volume — which makes the business sensitive to chip availability. Sales outside the United States were 40.6% of revenue. On the map it stands between the accelerator supplier and the site: this is where chips, memory and power become a product that can be installed in a hall."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -15280,6 +15880,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Оптимизатор запуска: берёт обученную модель и перестраивает её под конкретную карту — объединяет операции, снижает точность там, где это безопасно, компилирует под целевое железо. Отдаётся бесплатно, потому что продаётся ускоритель, на котором результат работает. В карте это второй уровень привязки: сначала обучение в среде производителя, потом ускорение инструментом, который никуда не переносится. Открытые библиотеки запуска делают то же самое на нескольких платформах, и разница между ними — это и есть цена переносимости.",
+        "en": "A serving optimiser: it takes a trained model and rebuilds it for a specific card — fusing operations, lowering precision where safe, compiling for the target hardware. It is given away because what is sold is the accelerator the result runs on. On the map it is the second level of the tie: first training in the vendor's environment, then acceleration by a tool that ports nowhere. Open serving libraries do the same across several platforms, and the gap between them is precisely the price of portability."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -15383,6 +15987,10 @@
           "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Фонд поздних стадий: заходит в компании, которым нужен объём, а не первый чек. Зарабатывает тем же способом, что и соседи по слою, но конкурирует за место в раунде, а не за находку. В карте это показывает устройство финансирования лабораторий: раунды на миллиарды собираются из нескольких инвесторов, и ни один не является обязательным. Дефицитен здесь не капитал, а мощность, которую на него можно купить.",
+        "en": "A late-stage fund: it enters companies that need size rather than a first cheque. It earns the same way as its neighbours but competes for a place in the round rather than for the find. On the map that reveals how labs are financed: billion-dollar rounds are assembled from several investors and none of them is indispensable. What is scarce here is not capital but the capacity it can buy."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -15487,6 +16095,10 @@
           "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт установки обработки пластин: нанесение слоёв, проявление, очистка — операции между печатью рисунка и готовым транзистором. Деньги приходят продажей оборудования и обслуживанием парка, спрос идёт волнами вместе с инвестиционным циклом нескольких фабрик. В карте компания входит в тот узкий круг, о котором заказчики пишут, что оборудование доступно у ограниченного числа поставщиков. Специализация здесь такая, что замена означает не смену вендора, а перепроектирование участка процесса.",
+        "en": "Sells wafer-processing tools: deposition, development, cleaning — the operations between printing the pattern and a finished transistor. The money is equipment sales plus servicing the installed base, and demand arrives in waves with a few fabs' investment cycles. On the map the company belongs to the narrow circle its customers describe when they write that equipment is available from a limited number of suppliers. The specialisation is such that replacement means redesigning a section of the process, not switching vendor."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
@@ -15590,6 +16202,10 @@
           "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Язык и компилятор для написания вычислительных ядер: разработчик описывает, что нужно посчитать, а раскладывание на конкретное железо берёт на себя компилятор. Создан крупнейшим покупателем вычислений и открыт — мотив не в выручке с инструмента, а в снижении собственной себестоимости обучения. В карте это самый реальный путь наружу из привязки к среде: он не конкурирует со средой, он делает её выбор менее значимым. Пока сборка основных библиотек всё ещё требует поддерживаемой версии среды, и путь остаётся открытым, но узким.",
+        "en": "A language and compiler for writing compute kernels: the developer describes what to compute and the compiler handles mapping it onto specific hardware. Created by the largest buyer of compute and released openly — the motive is not tool revenue but lowering its own cost of training. On the map it is the most realistic way out of the environment tie: it does not compete with the environment, it makes the choice of one matter less. For now the main libraries still build against a supported version of that environment, so the path stays open but narrow."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 2,
@@ -15860,6 +16476,10 @@
           "confidence": 0.98
         }
       ],
+      "description": {
+        "ru": "Управляет доступом к вычислениям через экспортное право: правила определяют, какие чипы, в какие страны и по какой лицензии можно отгружать. Рычаг не денежный, а разрешительный — отгрузка без лицензии незаконна независимо от того, где заключён договор и где находится посредник. В карте юрисдикция стоит над всеми остальными слоями сразу: одна поправка меняет и выручку производителя, и доступность мощностей на другом континенте. Второй инструмент — деньги: субсидии на строительство фабрик внутри страны меняют экономику производства там, где запретом ничего не добиться. Оба рычага применяются одновременно и в разные стороны.",
+        "en": "Governs access to compute through export law: the rules decide which chips may ship, to which countries, and under which licence. The lever is permission rather than money — shipping without a licence is unlawful regardless of where the contract was signed or the intermediary sits. On the map the jurisdiction stands above every other layer at once: one amendment moves both a maker's revenue and the availability of capacity on another continent. The second instrument is money: subsidies for building fabs at home change manufacturing economics where prohibition achieves nothing. Both levers are applied at once, and in different directions."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 4,
@@ -15967,8 +16587,23 @@
           "alive": true,
           "quote": "Our partnership with NVIDIA supports the development of advanced power and thermal infrastructure",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Vertiv 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1674101/000167410126000008/vrt-20251231.htm",
+          "published": "2026-02-11",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "Vertiv's estimated combined order backlog was approximately $15.0 billion and $7.2 billion",
+          "confidence": 0.925
         }
       ],
+      "description": {
+        "ru": "Продаёт питание и охлаждение для машинных залов: источники бесперебойного питания, распределение, контуры жидкостного охлаждения и обслуживание всего этого. Деньги приходят с продажи оборудования плюс долгий сервисный контракт, привязанный к сроку жизни площадки. Портфель заказов вырос примерно с $7,2 млрд до $15,0 млрд за год — это и есть очередь на ввод мощностей, выраженная деньгами. В карте компания стоит там, где стройка упирается физически: плотность мощности на стойку выросла настолько, что охлаждение проектируется вместе с вычислителем, а не подбирается после него.",
+        "en": "Sells power and cooling for machine halls: uninterruptible supplies, distribution, liquid cooling loops and the service contracts around them. The money is equipment sales plus a long service agreement tied to the site's life. The order backlog grew from roughly $7.2 billion to $15.0 billion in a year — the queue for capacity expressed in money. On this map it sits where construction binds physically: power density per rack has risen far enough that cooling is designed with the computer rather than selected after it."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 4,
@@ -16201,6 +16836,10 @@
           "confidence": 0.975
         }
       ],
+      "description": {
+        "ru": "Ещё один контрактный производитель, названный в отчётности разработчика ускорителей среди независимых субподрядчиков. Продаёт сборку и тестирование готовых систем, зарабатывает на объёме, а не на технологии. В карте его присутствие подтверждает картину: между кремнием и залом стоит не одна компания, а несколько взаимозаменяемых, и именно поэтому этот слой не является ограничением поодиночке. Ограничением он становится в сумме, когда растут все заказы сразу.",
+        "en": "Another contract manufacturer, named among independent subcontractors in the accelerator designer's filings. It sells assembly and test of finished systems and earns on volume rather than technology. On the map its presence confirms the picture: between silicon and hall stands not one company but several interchangeable ones, which is why this layer is no constraint individually. It becomes one in aggregate, when every order grows at once."
+      },
       "pivotal": false,
       "centrality": {
         "degree": 1,
