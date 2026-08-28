@@ -11,7 +11,7 @@ microsoft,cuda,locks_in_platforms,bidirectional,80,85,20,true,medium,substitutio
 amazon,cuda,locks_in_platforms,bidirectional,75,80,25,true,medium,substitution,2-5y,Собственные ускорители со своей средой — попытка выйти из замка.,,2016,,Клиенты AWS требуют совместимости с CUDA, поэтому Amazon закупает NVIDIA даже под собственные чипы.
 huggingface,cuda,path_dependent_on,upstream,70,65,30,true,medium,substitution,2-5y,,,2018,,"Опубликованные модели оптимизируются под эту среду первой, остальные поддерживаются позже."
 pytorch,huggingface,enables,bidirectional,75,60,25,true,low,technical,2-5y,,,2018,,"Библиотека обучения и общий хаб моделей держат друг друга: одна даёт код, другой — веса."
-tsmc,cuda,enables,upstream,80,85,20,false,critical,geopolitical,2-5y,Без передового производства среда программирования не имеет носителя.,,2010,,"Замок CUDA держится, пока чипы есть кому печатать: 3 нм в объёме делает одна TSMC. Софт и фабрика держат друг друга."
+tsmc,cuda,enables,upstream,80,85,20,false,critical,geopolitical,2-5y,Без передового производства среда программирования не имеет носителя.,,2010,,"Замок CUDA держится, пока чипы есть кому печатать: передовой процесс в объёме освоила одна TSMC. Софт и фабрика держат друг друга."
 openai,oracle,validates_demand,downstream,80,60,25,true,medium,market,2-5y,,,2025,,"Контракт на гигаватты доказал, что стройка облачных мощностей под одну лабораторию окупается."
 broadcom,tsmc,customer_of,upstream,80,60,25,true,high,geopolitical,2-5y,,n3,2000,,"Проектировщик заказных ускорителей покупает у той же фабрики, что и NVIDIA: обе зависят от TSMC."
 google,broadcom,customer_of,upstream,80,60,25,true,medium,substitution,2-5y,,,2016,,Облако платит внешнему разработчику за проектирование собственного ускорителя.

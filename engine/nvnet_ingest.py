@@ -265,6 +265,59 @@ def build(month: str) -> dict:
             edges[eid]["_detail_en"] = en
             detail_rows += 1
 
+    # ── ПЕРЕПИСАННАЯ ПРОЗА: notes.csv и oneliners.csv ─────────────────────────
+    # Тот же путь, что у detail, и по той же причине: 262 связи и 107 сущностей
+    # приходят из замороженного семени v2, а проза переписывается чаще, чем
+    # меняется сама связь. Держать правку рядом дешевле, чем трогать семя.
+    #
+    # Перезапись ТОЛЬКО того, что прислано. Пустая ячейка — это «не трогай», а
+    # не «сотри»: иначе частичный проход по сильным связям обнулил бы остальные.
+    note_rows = liner_rows = 0
+    for adir in agent_dirs:
+        f = adir / "notes.csv"
+        if f.exists():
+            for line, row in _read(f):
+                eid = (row.get("edge_id") or "").strip()
+                ru = (row.get("note_ru") or "").strip()
+                en = (row.get("note_en") or "").strip()
+                if eid not in edges:
+                    rejects.append({"file": f"{adir.name}/notes.csv", "line": line,
+                                    "reason": f"note для неизвестной связи '{eid}'",
+                                    "row": str(row)[:200]})
+                    continue
+                if bool(ru) != bool(en):
+                    rejects.append({"file": f"{adir.name}/notes.csv", "line": line,
+                                    "reason": "note должен быть на обоих языках; "
+                                              "пустая сторона — это брак, а не пропуск",
+                                    "row": str(row)[:200]})
+                    continue
+                if not ru:
+                    continue
+                edges[eid]["note"] = ru
+                edges[eid]["_note_en"] = en
+                note_rows += 1
+        f = adir / "oneliners.csv"
+        if f.exists():
+            for line, row in _read(f):
+                nid = (row.get("entity_id") or "").strip()
+                ru = (row.get("one_liner_ru") or "").strip()
+                en = (row.get("one_liner_en") or "").strip()
+                if nid not in ents:
+                    rejects.append({"file": f"{adir.name}/oneliners.csv", "line": line,
+                                    "reason": f"one_liner для неизвестной сущности '{nid}'",
+                                    "row": str(row)[:200]})
+                    continue
+                if bool(ru) != bool(en):
+                    rejects.append({"file": f"{adir.name}/oneliners.csv", "line": line,
+                                    "reason": "one_liner должен быть на обоих языках",
+                                    "row": str(row)[:200]})
+                    continue
+                if not ru:
+                    continue
+                ents[nid]["oneLiner"] = ru
+                ents[nid]["_one_liner_en"] = en
+                liner_rows += 1
+
     # ── ЖЕЛЕЗНОЕ ПРАВИЛО: новая связь без источника не пишется ────────────────
     for eid in [k for k, v in edges.items() if not v.get("evidence")]:
         if src_by_owner.get(("edge", eid)):
@@ -337,7 +390,7 @@ def build(month: str) -> dict:
 
     return {"entities": entities, "edges": edges, "seed": seed,
             "newEntities": new_ent, "newEdges": new_edge, "newSources": new_src,
-            "details": detail_rows,
+            "details": detail_rows, "notes": note_rows, "oneLiners": liner_rows,
             "problems": problems, "rejects": rejects, "dropped": dropped,
             "missingPivots": missing_pivots, "pivots": sorted(pivot_set)}
 

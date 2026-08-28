@@ -995,3 +995,6 @@ edge,wistron__nvidia__integrates,risk_mitigation,en,Volumes redistribute between
 edge,a16z__databricks__invests_in,note,en,Venture capital in a data platform at the application layer.
 edge,amazon__anthropic__invests_in,note,en,"Convertible notes, part of them converted into non-voting stock: the cloud is funding its own customer."
 edge,amazon__anthropic__supplies,note,en,The cloud sells the lab up to five gigawatts of capacity on its own accelerators — alongside the investments already recorded.
+edge,arista__microsoft__supplies,note,en,Cluster switching for Microsoft: each of Arista's two largest customers accounts for more than 10% of its sales.
+edge,nvidia__synopsys__invests_in,note,en,NVIDIA bought into a Synopsys private placement — the company without whose software it cannot design its chips.
+edge,tsmc__cuda__enables,note,en,"The CUDA lock holds only while someone can print the chips: one company, TSMC, runs the leading-edge process at volume. Software and foundry hold each other up."

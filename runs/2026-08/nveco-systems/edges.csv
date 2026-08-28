@@ -16,7 +16,7 @@ broadcom,nvidia,threatens,downstream,80,75,20,true,high,substitution,2-5y,Уск
 broadcom,google,co_designs,bidirectional,85,70,20,false,medium,substitution,2-5y,,,2016,2023,Собственный ускоритель облака проектируется вместе с внешним разработчиком чипов.
 marvell,nvidia,threatens,downstream,55,45,45,true,medium,substitution,2-5y,Заказные чипы уступают в гибкости и в софте.,,2020,,Второй проектировщик заказных ускорителей для облаков.
 arista,nvidia,competes_with,lateral,70,55,35,true,medium,substitution,2-5y,Собственная сетевая платформа NVIDIA продаётся вместе с ускорителями.,infiniband,2019,2023,"Сети кластеров: собственный протокол NVIDIA продаётся комплектом с ускорителями, что вытесняет независимого поставщика."
-arista,microsoft,supplies,upstream,75,50,25,true,medium,market,1-2y,Клиентская база концентрирована на двух заказчиках.,,2010,,Коммутаторы для кластеров у гиперскейлера: два клиента дают больше 40% выручки поставщика.
+arista,microsoft,supplies,upstream,75,50,25,true,medium,market,1-2y,Клиентская база концентрирована на двух заказчиках.,,2010,,Коммутаторы для кластеров Microsoft: каждый из двух крупнейших клиентов Arista даёт больше 10% её продаж.
 arista,meta,supplies,upstream,70,45,30,true,medium,market,1-2y,,,2013,,Второй крупный заказчик коммутаторов по раскрытой концентрации.
 astera-labs,nvidia,optimizes_for,downstream,60,50,40,true,low,technical,2-5y,Функцию можно втянуть в коммутаторный чип.,pcie,2019,2024,Микросхемы связности проектируются под конкретную платформу ускорителей и входят в референсные конструкции.
 tsmc,astera-labs,manufactures,upstream,100,60,0,false,high,geopolitical,2-5y,Альтернативной фабрики для этих микросхем нет.,n5,2019,,ВСЕ микросхемы этой компании делает одна фабрика — зависимость абсолютная.

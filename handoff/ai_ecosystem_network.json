@@ -16825,8 +16825,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Коммутаторы для кластеров у гиперскейлера: два клиента дают больше 40% выручки поставщика.",
-        "en": "Cluster switching at a hyperscaler: two customers account for more than 40% of the supplier's revenue."
+        "ru": "Коммутаторы для кластеров Microsoft: каждый из двух крупнейших клиентов Arista даёт больше 10% её продаж.",
+        "en": "Cluster switching for Microsoft: each of Arista's two largest customers accounts for more than 10% of its sales."
       },
       "evidence": [
         {
@@ -25935,8 +25935,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Частное размещение на 2 млрд долларов в компании, без софта которой NVIDIA не может проектировать свои чипы.",
-        "en": "A $2B private placement in the company without whose software NVIDIA cannot design its own chips."
+        "ru": "NVIDIA выкупила частное размещение Synopsys — компании, без софта которой не может проектировать свои чипы.",
+        "en": "NVIDIA bought into a Synopsys private placement — the company without whose software it cannot design its chips."
       },
       "evidence": [
         {
@@ -29454,8 +29454,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Замок CUDA держится, пока чипы есть кому печатать: 3 нм в объёме делает одна TSMC. Софт и фабрика держат друг друга.",
-        "en": "The CUDA lock holds only while someone can print the chips: one company"
+        "ru": "Замок CUDA держится, пока чипы есть кому печатать: передовой процесс в объёме освоила одна TSMC. Софт и фабрика держат друг друга.",
+        "en": "The CUDA lock holds only while someone can print the chips: one company, TSMC, runs the leading-edge process at volume. Software and foundry hold each other up."
       },
       "evidence": [
         {
