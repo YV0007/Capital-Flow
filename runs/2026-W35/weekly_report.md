@@ -4,8 +4,8 @@
 - **NVDA (NVIDIA): 30 private flows converge**  _(rule: beneficiary_concentration, strength 30.0)_
 - **VRT (Vertiv): 21 private flows converge**  _(rule: beneficiary_concentration, strength 21.0)_
 - **ETN (Eaton): 15 private flows converge**  _(rule: beneficiary_concentration, strength 15.0)_
-- **ai_infrastructure: 14 key allocators converge (30d)**  _(rule: theme_swarm, strength 14.0)_
 - **GEV (GE Vernova): 14 private flows converge**  _(rule: beneficiary_concentration, strength 14.0)_
+- **ai_infrastructure: 13 key allocators converge (30d)**  _(rule: theme_swarm, strength 13.0)_
 - **ai-applications: 10 key allocators in 30d**  _(rule: sector_swarm, strength 10.0)_
 - **TSM (Taiwan Semiconductor): 10 private flows converge**  _(rule: beneficiary_concentration, strength 10.0)_
 - **PWR (Quanta Services): 9 private flows converge**  _(rule: beneficiary_concentration, strength 9.0)_
@@ -13,30 +13,28 @@
 - **ai_applications: 8 key allocators converge (30d)**  _(rule: theme_swarm, strength 8.0)_
 - **GOOGL (Alphabet): 8 private flows converge**  _(rule: beneficiary_concentration, strength 8.0)_
 - **ai-applications: smart money — Microsoft led, 6 followed in 21d**  _(rule: smart_money_follow, strength 7.0)_
-- **power-energy: 6 key allocators in 30d**  _(rule: sector_swarm, strength 6.0)_
-- **energy_for_ai: 6 key allocators converge (30d)**  _(rule: theme_swarm, strength 6.0)_
 - **datacenters: smart money — DigitalBridge led, 5 followed in 21d**  _(rule: smart_money_follow, strength 6.0)_
 - **ai-data: 5 key allocators in 30d**  _(rule: sector_swarm, strength 5.0)_
+- **power-energy: 5 key allocators in 30d**  _(rule: sector_swarm, strength 5.0)_
 - **ai-compute/gpu-capacity: 5 key allocators converge**  _(rule: subsector_swarm, strength 5.0)_
 - **cybersecurity/agentic-security: 5 key allocators converge**  _(rule: subsector_swarm, strength 5.0)_
+- **energy_for_ai: 5 key allocators converge (30d)**  _(rule: theme_swarm, strength 5.0)_
 - **ai-labs: smart money — Elad Gil led, 4 followed in 21d**  _(rule: smart_money_follow, strength 5.0)_
 - **cybersecurity: smart money — Andreessen Horowitz led, 4 followed in 21d**  _(rule: smart_money_follow, strength 5.0)_
 - **defense-tech: smart money — Jeff Bezos led, 4 followed in 21d**  _(rule: smart_money_follow, strength 5.0)_
 - **AMZN (Amazon.com Inc): 5 private flows converge**  _(rule: beneficiary_concentration, strength 5.0)_
 - **MSFT (Microsoft Corporation): 5 private flows converge**  _(rule: beneficiary_concentration, strength 5.0)_
 - **ai-labs: 4 key allocators in 30d**  _(rule: sector_swarm, strength 4.0)_
-- **cybersecurity: 4 key allocators in 30d**  _(rule: sector_swarm, strength 4.0)_
-- **datacenters: 4 key allocators in 30d**  _(rule: sector_swarm, strength 4.0)_
 - **defense-tech: 4 key allocators in 30d**  _(rule: sector_swarm, strength 4.0)_
 - **robotics: 4 key allocators in 30d**  _(rule: sector_swarm, strength 4.0)_
 - **ai-labs/world-models: 4 key allocators converge**  _(rule: subsector_swarm, strength 4.0)_
 - **power-energy/grid-storage: 4 key allocators converge**  _(rule: subsector_swarm, strength 4.0)_
-- **cyber_security: 4 key allocators converge (30d)**  _(rule: theme_swarm, strength 4.0)_
 - **defense_ai: 4 key allocators converge (30d)**  _(rule: theme_swarm, strength 4.0)_
 - **frontier_ai: 4 key allocators converge (30d)**  _(rule: theme_swarm, strength 4.0)_
 - **robotics_embodiment: 4 key allocators converge (30d)**  _(rule: theme_swarm, strength 4.0)_
 - **power-energy: smart money — Elon Musk led, 3 followed in 21d**  _(rule: smart_money_follow, strength 4.0)_
 - **MU (Micron): 4 private flows converge**  _(rule: beneficiary_concentration, strength 4.0)_
+- **cybersecurity: 3 key allocators in 30d**  _(rule: sector_swarm, strength 3.0)_
 - **neocloud: 3 key allocators in 30d**  _(rule: sector_swarm, strength 3.0)_
 - **semiconductors: 3 key allocators in 30d**  _(rule: sector_swarm, strength 3.0)_
 - **ai-applications/drug-discovery-ai: 3 key allocators converge**  _(rule: subsector_swarm, strength 3.0)_
@@ -125,91 +123,33 @@
 ## Top sectors — last 30 days
 | Sector | Capital | Deals | Distinct allocators |
 |---|--:|--:|--:|
-| datacenters | $454.8B | 28 | 14 |
-| ai-labs | $47.3B | 9 | 6 |
-| ai-compute | $36.5B | 12 | 11 |
-| diversified-pe | $33.6B | 2 | 1 |
+| datacenters | $185.3B | 22 | 12 |
+| ai-labs | $42.3B | 6 | 5 |
+| ai-compute | $36.5B | 11 | 10 |
+| diversified-pe | $33.6B | 1 | 1 |
 | nuclear | $18.5B | 3 | 2 |
 | ai-data | $15.0B | 5 | 5 |
-| power-energy | $7.5B | 13 | 9 |
+| power-energy | $7.5B | 10 | 8 |
 | defense-tech | $7.1B | 16 | 7 |
-| ai-applications | $2.9B | 20 | 12 |
+| ai-applications | $2.9B | 19 | 12 |
 | semiconductors | $2.4B | 14 | 4 |
 
 ## Themes — last 30 days
 | Theme | Capital | Deals | Distinct allocators |
 |---|--:|--:|--:|
-| ai_infrastructure | $473.7B | 73 | 21 |
-| frontier_ai | $47.3B | 9 | 6 |
-| sovereign_ai | $30.3B | 6 | 4 |
-| energy_for_ai | $24.0B | 15 | 9 |
-| ai_applications | $12.9B | 20 | 11 |
+| ai_infrastructure | $214.2B | 68 | 19 |
+| frontier_ai | $42.3B | 6 | 5 |
+| energy_for_ai | $24.0B | 12 | 8 |
+| sovereign_ai | $20.3B | 4 | 3 |
+| ai_applications | $12.9B | 19 | 11 |
 | defense_ai | $7.1B | 16 | 7 |
 | robotics_embodiment | $820M | 5 | 5 |
-| cyber_security | $214M | 5 | 5 |
+| cyber_security | $214M | 4 | 4 |
 | biotech_ai | $0 | 2 | 2 |
 
-## Public beneficiaries mapped (87)
+## Public beneficiaries mapped (29)
 | Ticker | Company | From flow | Confidence |
 |---|---|---|:-:|
-| NVDA | NVIDIA Corporation | Meta→BlackRock (El Paso Data Center JV) | high |
-| VRT | Vertiv Holdings | Meta→BlackRock (El Paso Data Center JV) | high |
-| ETN | Eaton Corporation | Meta→BlackRock (El Paso Data Center JV) | high |
-| LEU | Centrus Energy | Sequoia→Valar Atomics Inc. | high |
-| BWXT | BWX Technologies | Sequoia→Valar Atomics Inc. | medium |
-| CCJ | Cameco Corporation | Sequoia→Valar Atomics Inc. | low |
-| KTOS | Kratos Defense & Security Solutions | Sequoia→Neros Technologies | low |
-| AMBA | Ambarella Inc. | Sequoia→Neros Technologies | low |
-| NVDA | NVIDIA Corporation | Andreessen Horowitz→Volta AI Infra Holdings | high |
-| DELL | Dell Technologies | Andreessen Horowitz→Volta AI Infra Holdings | medium |
-| NVDA | NVIDIA Corporation | Altimeter→Volta AI Infra Holdings | high |
-| DELL | Dell Technologies | Altimeter→Volta AI Infra Holdings | medium |
-| TSM | Taiwan Semiconductor Manufacturing | Andreessen Horowitz→Etched | high |
-| TSM | Taiwan Semiconductor Manufacturing | Sequoia→Etched | high |
-| TSM | Taiwan Semiconductor Manufacturing | Peter Thiel→Etched | high |
-| GEV | GE Vernova | Elon Musk→APR Energy | medium |
-| COHR | Coherent Corp. | Elon Musk→Mesh Optical Technologies | low |
-| NEE | NextEra Energy | Brookfield→Paducah DOE Site AI Data Center Campus | high |
-| GEV | GE Vernova | Brookfield→Paducah DOE Site AI Data Center Campus | medium |
-| NVDA | NVIDIA Corporation | Apollo→AI Compute Infrastructure Financing Platform (NVIDIA-anchored) | high |
-| NVDA | NVIDIA Corporation | BlackRock→AI Compute Infrastructure Financing Platform (NVIDIA-anchored) | high |
-| NVDA | NVIDIA Corporation | Blackstone→AI Compute Infrastructure Financing Platform (NVIDIA-anchored) | high |
-| NVDA | NVIDIA Corporation | Brookfield→AI Compute Infrastructure Financing Platform (NVIDIA-anchored) | high |
-| NVDA | NVIDIA Corporation | Goldman Sachs→AI Compute Infrastructure Financing Platform (NVIDIA-anchored) | high |
-| NVDA | NVIDIA Corporation | KKR→AI Compute Infrastructure Financing Platform (NVIDIA-anchored) | high |
-| NEE | NextEra Energy | Brookfield→NextEra-Brookfield Paducah AI Data Center Campus | high |
-| GEV | GE Vernova | Brookfield→NextEra-Brookfield Paducah AI Data Center Campus | medium |
-| COHR | Coherent Corp. | US Government→GlobalFoundries | low |
-| COHR | Coherent Corp. | US Government→GlobalFoundries | low |
-| NVDA | NVIDIA Corporation | Meta→BlackRock (El Paso Data Center JV) | high |
-| VRT | Vertiv Holdings | Meta→BlackRock (El Paso Data Center JV) | high |
-| ETN | Eaton Corporation | Meta→BlackRock (El Paso Data Center JV) | high |
-| LEU | Centrus Energy | Sequoia→Valar Atomics Inc. | high |
-| BWXT | BWX Technologies | Sequoia→Valar Atomics Inc. | medium |
-| CCJ | Cameco Corporation | Sequoia→Valar Atomics Inc. | low |
-| KTOS | Kratos Defense & Security Solutions | Sequoia→Neros Technologies | low |
-| AMBA | Ambarella Inc. | Sequoia→Neros Technologies | low |
-| NVDA | NVIDIA Corporation | Andreessen Horowitz→Volta AI Infra Holdings | high |
-| DELL | Dell Technologies | Andreessen Horowitz→Volta AI Infra Holdings | medium |
-| NVDA | NVIDIA Corporation | Altimeter→Volta AI Infra Holdings | high |
-| DELL | Dell Technologies | Altimeter→Volta AI Infra Holdings | medium |
-| TSM | Taiwan Semiconductor Manufacturing | Andreessen Horowitz→Etched | high |
-| TSM | Taiwan Semiconductor Manufacturing | Sequoia→Etched | high |
-| TSM | Taiwan Semiconductor Manufacturing | Peter Thiel→Etched | high |
-| GEV | GE Vernova | Elon Musk→APR Energy | medium |
-| COHR | Coherent Corp. | Elon Musk→Mesh Optical Technologies | low |
-| NEE | NextEra Energy | Brookfield→Paducah DOE Site AI Data Center Campus | high |
-| GEV | GE Vernova | Brookfield→Paducah DOE Site AI Data Center Campus | medium |
-| NVDA | NVIDIA Corporation | Apollo→AI Compute Infrastructure Financing Platform (NVIDIA-anchored) | high |
-| NVDA | NVIDIA Corporation | BlackRock→AI Compute Infrastructure Financing Platform (NVIDIA-anchored) | high |
-| NVDA | NVIDIA Corporation | Blackstone→AI Compute Infrastructure Financing Platform (NVIDIA-anchored) | high |
-| NVDA | NVIDIA Corporation | Brookfield→AI Compute Infrastructure Financing Platform (NVIDIA-anchored) | high |
-| NVDA | NVIDIA Corporation | Goldman Sachs→AI Compute Infrastructure Financing Platform (NVIDIA-anchored) | high |
-| NVDA | NVIDIA Corporation | KKR→AI Compute Infrastructure Financing Platform (NVIDIA-anchored) | high |
-| NEE | NextEra Energy | Brookfield→NextEra-Brookfield Paducah AI Data Center Campus | high |
-| GEV | GE Vernova | Brookfield→NextEra-Brookfield Paducah AI Data Center Campus | medium |
-| COHR | Coherent Corp. | US Government→GlobalFoundries | low |
-| COHR | Coherent Corp. | US Government→GlobalFoundries | low |
 | NVDA | NVIDIA Corporation | Meta→BlackRock (El Paso Data Center JV) | high |
 | VRT | Vertiv Holdings | Meta→BlackRock (El Paso Data Center JV) | high |
 | ETN | Eaton Corporation | Meta→BlackRock (El Paso Data Center JV) | high |
@@ -261,6 +201,11 @@ _Silent this run (28) — verify these are genuinely quiet, not missed:_
 - **individual**: Alexandr Wang, Austin Russell, Daniel Gross, David Sacks, Delian Asparouhov, Dylan Field, Joe Lonsdale, Keith Rabois, Laura Deming, Lucy Guo, Luke Nosek, Max Levchin, Nat Friedman, Palmer Luckey, Reid Hoffman, Roelof Botha, Trae Stephens, Jeff Bezos, Marc Andreessen, Masayoshi Son, Sam Altman, Vinod Khosla
 - **sovereign**: MGX, Saudi PIF
 - **vc**: Coatue
+
+## Open leads to chase (3)
+- `8-K` **Alphabet** (2026-08-10) — https://www.sec.gov/Archives/edgar/data/1652044/000119312526342390/d171253d8k.htm
+- `8-K` **Microsoft** (2026-07-29) — https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-20260729.htm
+- `8-K` **Alphabet** (2026-07-22) — https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/goog-20260722.htm
 
 ## Discovered allocators — promote to watchlist? (12)
 - **American Strategic Technology Fund** (vc) — seen with Sequoia. Co-led Neros Technologies' $250M Series C alongside Sequoia -- a defense-focused fund appearing as a repeat co-lead on drone/defense-tech rounds this quarter.
