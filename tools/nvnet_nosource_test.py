@@ -89,6 +89,24 @@ def main(month):
         def _(d):
             d["entities"][0]["centrality"]["pagerank"] = 1.5
 
+        @case("detail с невыдуманным числом — цифра не из цитаты")
+        def _(d):
+            x = next(e for e in d["edges"] if e.get("detail"))
+            x["detail"]["ru"] = x["detail"]["ru"] + " Объём достиг 999 гигаватт."
+
+        @case("detail только на одном языке")
+        def _(d):
+            next(e for e in d["edges"] if e.get("detail"))["detail"]["en"] = ""
+
+        @case("detail дословно повторяет note")
+        def _(d):
+            x = next(e for e in d["edges"] if e.get("detail"))
+            x["detail"] = dict(x["note"])
+
+        @case("detail строкой вместо пары {ru, en}")
+        def _(d):
+            next(e for e in d["edges"] if e.get("detail"))["detail"] = "просто строка"
+
         @case("сумма pagerank не равна 1")
         def _(d):
             # Половина веса испаряется — так выглядит мера, посчитанная на другом

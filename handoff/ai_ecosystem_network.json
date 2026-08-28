@@ -1,7 +1,7 @@
 {
   "schema": "ai-ecosystem-network/2",
   "version": "v2.0-2026-08",
-  "generated": "2026-08-27",
+  "generated": "2026-08-28",
   "asOf": "2026-08",
   "source": "engine",
   "ecosystem": "ai-infrastructure-complete",
@@ -770,7 +770,10 @@
     },
     {
       "id": "n3",
-      "label": "3 нм",
+      "label": {
+        "ru": "3 нм",
+        "en": "3 nm"
+      },
       "owner": "tsmc",
       "note": {
         "ru": "Передовой техпроцесс производства",
@@ -780,7 +783,10 @@
     },
     {
       "id": "n5",
-      "label": "5 нм",
+      "label": {
+        "ru": "5 нм",
+        "en": "5 nm"
+      },
       "owner": "tsmc",
       "note": {
         "ru": "Предыдущий передовой техпроцесс",
@@ -3994,6 +4000,7 @@
         "score": 4,
         "signals": {}
       },
+      "domain": "a16z.com",
       "oneLiner": {
         "ru": "Венчурный фонд, один из крупнейших инвесторов в компании вокруг ИИ.",
         "en": "A venture fund, one of the largest investors in companies built around AI."
@@ -4103,6 +4110,7 @@
         "score": 26,
         "signals": {}
       },
+      "domain": "aboutamazon.com",
       "oneLiner": {
         "ru": "Крупнейшее облако и разработчик собственных ускорителей; инвестор второй лаборатории.",
         "en": "The largest cloud and a designer of its own accelerators; investor in the second lab."
@@ -4205,6 +4213,7 @@
         "score": 14,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Второй разработчик ускорителей для ИИ; делает их на той же фабрике, что и якорь.",
         "en": "The second designer of AI accelerators; it builds them at the same foundry as the anchor."
@@ -4308,6 +4317,7 @@
         "score": 14,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Второй независимый подрядчик по упаковке и тестированию, с площадками в США.",
         "en": "The second independent packaging and test contractor, with sites in the US."
@@ -4410,6 +4420,7 @@
         "score": 19,
         "signals": {}
       },
+      "domain": "anthropic.com",
       "oneLiner": {
         "ru": "Вторая лаборатория передовых моделей; её главный инфраструктурный партнёр — крупное облако.",
         "en": "The second frontier model lab; its main infrastructure partner is a major cloud."
@@ -4512,6 +4523,7 @@
         "score": 7,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Крупнейший поставщик оборудования для нанесения и травления слоёв на кремниевой пластине.",
         "en": "The largest supplier of tools for depositing and etching layers on a silicon wafer."
@@ -4614,6 +4626,7 @@
         "score": 26,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Коммутаторы для дата-центров: связывают тысячи ускорителей в один кластер.",
         "en": "Datacenter switching: it binds thousands of accelerators into a single cluster."
@@ -4717,6 +4730,7 @@
         "score": 26,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Лицензирует набор команд, на котором построены процессоры почти во всех устройствах.",
         "en": "Licenses the instruction set behind the processors in almost every device."
@@ -4822,6 +4836,7 @@
         "score": 14,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Крупнейший независимый подрядчик по упаковке кристаллов и тестированию.",
         "en": "The largest independent die packaging and test contractor."
@@ -4924,6 +4939,7 @@
         "score": 8,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Единственный в мире производитель станков EUV — тех, что печатают самые мелкие элементы чипа.",
         "en": "The only maker in the world of EUV tools — the ones that print a chip's finest features."
@@ -5028,6 +5044,7 @@
         "score": 25,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Микросхемы связности внутри стойки: соединяют ускорители с процессорами и памятью.",
         "en": "Connectivity silicon inside the rack: it links accelerators to processors and memory."
@@ -5082,7 +5099,10 @@
     },
     {
       "id": "bis",
-      "name": "Bureau of Industry and Security",
+      "name": {
+        "ru": "Бюро промышленности и безопасности",
+        "en": "Bureau of Industry and Security"
+      },
       "aliases": [
         "BIS",
         "Bureau of Industry and Security"
@@ -5131,6 +5151,7 @@
         "score": 11,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Американское ведомство, которое пишет экспортные правила на чипы и оборудование.",
         "en": "The US agency that writes the export rules on chips and equipment."
@@ -5235,6 +5256,7 @@
         "score": 6,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Крупнейший управляющий активами; через инфраструктурное подразделение финансирует площадки.",
         "en": "The largest asset manager; its infrastructure arm finances the sites."
@@ -5337,6 +5359,7 @@
         "score": 4,
         "signals": {}
       },
+      "domain": "blackstone.com",
       "oneLiner": {
         "ru": "Управляющий капиталом, владеющий платформами дата-центров напрямую.",
         "en": "A capital manager that owns datacenter platforms outright."
@@ -5439,6 +5462,7 @@
         "score": 4,
         "signals": {}
       },
+      "domain": "bloomenergy.com",
       "oneLiner": {
         "ru": "Топливные элементы: дают электричество прямо на площадке, не дожидаясь подключения к сети.",
         "en": "Fuel cells: power delivered on site, without waiting for a grid connection."
@@ -5541,6 +5565,7 @@
         "score": 7,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Теплоотводящие материалы и пластины, снимающие тепло прямо с кристалла.",
         "en": "Thermal materials and plates that pull heat straight off the die."
@@ -5648,6 +5673,7 @@
         "score": 35,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Делает коммутаторы для дата-центров и проектирует собственные ускорители для облаков.",
         "en": "Builds datacenter switches and designs custom accelerators for the clouds."
@@ -5756,6 +5782,7 @@
         "score": 12,
         "signals": {}
       },
+      "domain": "brookfield.com",
       "oneLiner": {
         "ru": "Управляющий инфраструктурным капиталом: владеет энергетикой и площадками, на которых стоят вычисления.",
         "en": "An infrastructure capital manager: it owns the power and the sites the compute stands on."
@@ -5858,6 +5885,7 @@
         "score": 8,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Второй из двух поставщиков софта для проектирования микросхем.",
         "en": "The second of the two suppliers of chip design software."
@@ -5960,6 +5988,7 @@
         "score": 10,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Межведомственный комитет, проверяющий иностранные инвестиции и сделки в США.",
         "en": "The interagency committee that reviews foreign investment and deals in the US."
@@ -6014,7 +6043,10 @@
     },
     {
       "id": "china",
-      "name": "Китай",
+      "name": {
+        "ru": "Китай",
+        "en": "China"
+      },
       "aliases": [
         "China",
         "PRC"
@@ -6063,6 +6095,7 @@
         "score": 21,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Закрытый ограничениями рынок и одновременно источник конкурентов и сырья.",
         "en": "A market closed by restrictions and, at the same time, a source of competitors and raw inputs."
@@ -6117,11 +6150,14 @@
     },
     {
       "id": "chips-act",
-      "name": "CHIPS Act",
+      "name": {
+        "ru": "Закон о чипах (CHIPS Act)",
+        "en": "CHIPS Act"
+      },
       "aliases": [
         "CHIPS and Science Act"
       ],
-      "type": "standards_body",
+      "type": "regulation",
       "role": "state",
       "sector": "policy",
       "layers": [
@@ -6165,6 +6201,7 @@
         "score": 8,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Американский закон о субсидиях на строительство фабрик внутри страны.",
         "en": "The US law subsidising fab construction inside the country."
@@ -6267,6 +6304,7 @@
         "score": 6,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Исторический лидер сетевого оборудования, теперь конкурент в сетях для ИИ.",
         "en": "The historical leader in networking equipment, now a competitor in AI fabrics."
@@ -6370,6 +6408,7 @@
         "score": 10,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Оптические модули: превращают электрический сигнал в свет для передачи между стойками.",
         "en": "Optical modules: they turn an electrical signal into light for transmission between racks."
@@ -6472,6 +6511,7 @@
         "score": 11,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Крупнейший в США владелец действующих атомных станций; продаёт выработку дата-центрам.",
         "en": "The largest US owner of operating nuclear plants; it sells the output to datacenters."
@@ -6574,6 +6614,7 @@
         "score": 33,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Независимое облако, которое сдаёт кластеры ускорителей в аренду лабораториям.",
         "en": "An independent cloud that rents accelerator clusters to the labs."
@@ -6677,6 +6718,7 @@
         "score": 25,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Активные кабели и приёмопередатчики, соединяющие стойки в большой кластер.",
         "en": "Active cables and transceivers that join racks into a large cluster."
@@ -6785,6 +6827,7 @@
         "score": 18,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Строит дата-центры прямо у источников энергии и сдаёт вычисления в аренду.",
         "en": "Builds datacenters directly at energy sources and rents the compute out."
@@ -6843,7 +6886,7 @@
       "aliases": [
         "NVIDIA CUDA"
       ],
-      "type": "company",
+      "type": "technology",
       "role": "platform",
       "sector": "gpu_platform",
       "layers": [
@@ -6887,6 +6930,7 @@
         "score": 47,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Среда программирования ускорителей: на ней написан почти весь код, который на них считает.",
         "en": "The accelerator programming environment: almost all the code that runs on them is written in it."
@@ -6989,6 +7033,7 @@
         "score": 15,
         "signals": {}
       },
+      "domain": "databricks.com",
       "oneLiner": {
         "ru": "Платформа, на которой компании готовят данные и обучают модели под свои задачи.",
         "en": "The platform where companies prepare data and train models for their own problems."
@@ -7091,6 +7136,7 @@
         "score": 28,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Китайская лаборатория, показавшая обучение сильной модели при меньших затратах вычислений.",
         "en": "A Chinese lab that showed a strong model can be trained on far less compute."
@@ -7193,6 +7239,7 @@
         "score": 8,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Собирает и продаёт корпоративные серверы для ИИ через собственный канал продаж.",
         "en": "Builds and sells enterprise AI servers through its own sales channel."
@@ -7300,6 +7347,7 @@
         "score": 7,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Блоки питания и преобразователи, которые раздают электричество внутри стойки.",
         "en": "Power supplies and converters that distribute electricity inside the rack."
@@ -7402,6 +7450,7 @@
         "score": 19,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Второй крупный оператор площадок для дата-центров, включая гиперскейл-кампусы.",
         "en": "The second large operator of datacenter sites, hyperscale campuses included."
@@ -7505,6 +7554,7 @@
         "score": 7,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Оборудование, которое доводит электричество от сети до стойки: щиты, шины, защита.",
         "en": "The equipment that carries power from the grid to the rack: switchgear, busways, protection."
@@ -7607,6 +7657,7 @@
         "score": 22,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Оператор нейтральных площадок: сдаёт помещения, питание и точки обмена трафиком.",
         "en": "A neutral site operator: it rents space, power and traffic exchange points."
@@ -7661,7 +7712,10 @@
     },
     {
       "id": "eu",
-      "name": "Европейский союз",
+      "name": {
+        "ru": "Европейский союз",
+        "en": "European Union"
+      },
       "aliases": [
         "European Union",
         "EU"
@@ -7710,6 +7764,7 @@
         "score": 11,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Регуляторный блок: правила по ИИ и данным меняют условия продаж на большом рынке.",
         "en": "A regulatory bloc: its AI and data rules change the terms of sale in a large market."
@@ -7764,11 +7819,14 @@
     },
     {
       "id": "eu-ai-act",
-      "name": "Регламент ЕС об ИИ",
+      "name": {
+        "ru": "Регламент ЕС об ИИ",
+        "en": "EU AI Act"
+      },
       "aliases": [
         "EU AI Act"
       ],
-      "type": "standards_body",
+      "type": "regulation",
       "role": "state",
       "sector": "policy",
       "layers": [
@@ -7812,6 +7870,7 @@
         "score": 8,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Европейские правила, которые делят применения ИИ по уровню риска и задают требования.",
         "en": "European rules that sort AI uses by risk level and set requirements for each."
@@ -7914,6 +7973,7 @@
         "score": 11,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Контрактный производитель оптических сборок; крупнейший заказчик — сам якорь.",
         "en": "A contract manufacturer of optical assemblies; its largest customer is the anchor itself."
@@ -8018,6 +8078,7 @@
         "score": 10,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Крупнейший в мире контрактный сборщик; собирает готовые серверы и стойки для ИИ.",
         "en": "The world's largest contract assembler; it builds finished AI servers and racks."
@@ -8120,6 +8181,7 @@
         "score": 6,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Газовые турбины и сетевое оборудование — самый быстрый способ дать площадке много энергии.",
         "en": "Gas turbines and grid equipment — the fastest way to give a site a lot of power."
@@ -8234,6 +8296,7 @@
         "score": 28,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Облако, собственный ускоритель седьмого поколения и собственная лаборатория одновременно.",
         "en": "A cloud, a seventh-generation in-house accelerator and its own lab, all at once."
@@ -8376,7 +8439,7 @@
           "title": "Anthropic выбирает Google Cloud",
           "url": "https://www.anthropic.com/news/anthropic-partners-with-google-cloud",
           "published": "2023-02-03",
-          "fetched": "2026-08-27",
+          "fetched": "2026-08-28",
           "alive": true,
           "quote": "an AI safety and research company, has selected Google Cloud",
           "confidence": 0.925
@@ -8439,6 +8502,7 @@
         "score": 14,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Исследовательская лаборатория внутри крупного облака, обучает модели на собственных чипах.",
         "en": "A research lab inside a major cloud, training its models on the owner's silicon."
@@ -8541,6 +8605,7 @@
         "score": 7,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Второй крупный корпоративный производитель серверов и систем для ИИ.",
         "en": "The second large enterprise maker of servers and systems for AI."
@@ -8643,6 +8708,7 @@
         "score": 42,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Хаб, где лежат готовые модели и библиотека, через которую их запускают.",
         "en": "The hub where finished models live, and the library through which they are run."
@@ -8746,6 +8812,7 @@
         "score": 15,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Американская фабрика и разработчик процессоров; пытается стать третьим контрактным производителем.",
         "en": "An American fab and processor designer, trying to become the third foundry."
@@ -8800,7 +8867,10 @@
     },
     {
       "id": "japan",
-      "name": "Япония",
+      "name": {
+        "ru": "Япония",
+        "en": "Japan"
+      },
       "aliases": [
         "Japan"
       ],
@@ -8848,6 +8918,7 @@
         "score": 8,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Юрисдикция поставщиков химии, материалов и части оборудования для фабрик.",
         "en": "The jurisdiction of the suppliers of chemicals, materials and some fab equipment."
@@ -8906,7 +8977,7 @@
       "aliases": [
         "Google JAX"
       ],
-      "type": "research_org",
+      "type": "technology",
       "role": "platform",
       "sector": "ml_framework",
       "layers": [
@@ -8950,6 +9021,7 @@
         "score": 14,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Вторая библиотека для обучения нейросетей, развивается вокруг собственного ускорителя облака.",
         "en": "The second training library, developed around a cloud's own accelerator."
@@ -9052,6 +9124,7 @@
         "score": 7,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Производитель флеш-памяти для дисков, на которых лежат данные обучения.",
         "en": "A maker of flash memory for the drives that hold training data."
@@ -9155,6 +9228,7 @@
         "score": 4,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Оборудование контроля: ищет дефекты на пластине до того, как брак уйдёт дальше.",
         "en": "Inspection equipment: it finds defects on the wafer before the scrap travels further."
@@ -9214,7 +9288,7 @@
         "K8s",
         "CNCF Kubernetes"
       ],
-      "type": "research_org",
+      "type": "technology",
       "role": "platform",
       "sector": "orchestration",
       "layers": [
@@ -9258,6 +9332,7 @@
         "score": 14,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Общий стандарт запуска контейнеров: на нём работает почти вся облачная инфраструктура.",
         "en": "The common standard for running containers: almost all cloud infrastructure runs on it."
@@ -9360,6 +9435,7 @@
         "score": 11,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Оборудование для травления и осаждения; его клиенты — все крупные производители памяти и фабрики.",
         "en": "Etch and deposition equipment; its customers are every large memory maker and foundry."
@@ -9462,6 +9538,7 @@
         "score": 8,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Небольшое независимое облако для аренды ускорителей, ориентированное на исследователей.",
         "en": "A small independent cloud renting accelerators, aimed at researchers."
@@ -9564,6 +9641,7 @@
         "score": 4,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Венчурный фонд с вложениями в инфраструктуру и в прикладной слой ИИ.",
         "en": "A venture fund invested in both AI infrastructure and the application layer."
@@ -9666,6 +9744,7 @@
         "score": 4,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Блоки питания для серверов и стоек, один из тайваньских поставщиков.",
         "en": "Power supplies for servers and racks, one of the Taiwanese suppliers."
@@ -9773,6 +9852,7 @@
         "score": 7,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Проектирует заказные чипы и компоненты межсоединений для дата-центров.",
         "en": "Designs custom silicon and interconnect components for datacenters."
@@ -9881,6 +9961,7 @@
         "score": 29,
         "signals": {}
       },
+      "domain": "meta.com",
       "oneLiner": {
         "ru": "Одновременно крупный покупатель ускорителей, автор открытых моделей и родитель главной библиотеки обучения.",
         "en": "At once a large accelerator buyer, an author of open models and the parent of the main training library."
@@ -9983,6 +10064,7 @@
         "score": 12,
         "signals": {}
       },
+      "domain": "mgx.ae",
       "oneLiner": {
         "ru": "Инвестиционная компания Абу-Даби, созданная специально под вложения в ИИ.",
         "en": "An Abu Dhabi investment company created specifically to invest in AI."
@@ -10086,6 +10168,7 @@
         "score": 17,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Третий производитель HBM и единственный американский производитель памяти такого масштаба.",
         "en": "The third HBM producer and the only American memory maker at this scale."
@@ -10194,6 +10277,7 @@
         "score": 59,
         "signals": {}
       },
+      "domain": "microsoft.com",
       "oneLiner": {
         "ru": "Гиперскейлер, крупнейший инвестор ведущей лаборатории и одновременно разработчик своих чипов.",
         "en": "A hyperscaler, the largest investor in the leading lab, and a designer of its own silicon."
@@ -10296,6 +10380,7 @@
         "score": 7,
         "signals": {}
       },
+      "domain": "mistral.ai",
       "oneLiner": {
         "ru": "Европейская лаборатория, выпускающая модели с открытыми весами.",
         "en": "A European lab releasing models with open weights."
@@ -10398,6 +10483,7 @@
         "score": 7,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Отраслевой консорциум, который ведёт общие тесты производительности для ИИ.",
         "en": "The industry consortium that maintains the common performance benchmarks for AI."
@@ -10456,7 +10542,7 @@
       "aliases": [
         "NVIDIA Collective Communications Library"
       ],
-      "type": "company",
+      "type": "technology",
       "role": "platform",
       "sector": "compiler",
       "layers": [
@@ -10500,6 +10586,7 @@
         "score": 10,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Библиотека обмена данными между ускорителями внутри кластера при обучении.",
         "en": "The library that moves data between accelerators inside a cluster during training."
@@ -10603,6 +10690,7 @@
         "score": 13,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Европейское независимое облако с кластерами ускорителей, работает по долгим контрактам.",
         "en": "A European independent cloud with accelerator clusters, working on long contracts."
@@ -10657,7 +10745,10 @@
     },
     {
       "id": "netherlands",
-      "name": "Нидерланды",
+      "name": {
+        "ru": "Нидерланды",
+        "en": "Netherlands"
+      },
       "aliases": [
         "Netherlands"
       ],
@@ -10705,6 +10796,7 @@
         "score": 8,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Юрисдикция, откуда экспортируют станки для печати самых сложных чипов.",
         "en": "The jurisdiction from which the tools that print the most complex chips are exported."
@@ -10764,7 +10856,7 @@
         "NIM",
         "NVIDIA Inference Microservices"
       ],
-      "type": "company",
+      "type": "technology",
       "role": "platform",
       "sector": "inference_engine",
       "layers": [
@@ -10808,6 +10900,7 @@
         "score": 11,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Готовые контейнеры якоря для запуска моделей: продают инференс как сервис на своём железе.",
         "en": "The anchor's ready-made containers for running models: inference sold as a service on its own hardware."
@@ -10910,6 +11003,7 @@
         "score": 13,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Шкафы и жидкостное охлаждение для стоек высокой плотности.",
         "en": "Enclosures and liquid cooling for high-density racks."
@@ -11013,6 +11107,7 @@
         "score": 27,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Венчурное подразделение якоря: вкладывается в компании, которые должны остаться на его платформе.",
         "en": "The anchor's venture arm: it invests in companies that should stay on its platform."
@@ -11126,6 +11221,7 @@
         "score": 97,
         "signals": {}
       },
+      "domain": "nvidia.com",
       "oneLiner": {
         "ru": "Якорь карты: делает ускорители для ИИ и владеет средой программирования, на которой пишет вся отрасль.",
         "en": "The anchor of the map: it makes AI accelerators and owns the programming environment the whole industry writes in."
@@ -11232,6 +11328,7 @@
         "score": 9,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Разработчик малых атомных реакторов; продаёт будущую энергию по долгим соглашениям.",
         "en": "A developer of small nuclear reactors; it sells future power under long agreements."
@@ -11335,6 +11432,7 @@
         "score": 51,
         "signals": {}
       },
+      "domain": "openai.com",
       "oneLiner": {
         "ru": "Лаборатория, которая обучает передовые модели и заказывает вычисления гигаваттами.",
         "en": "The lab that trains frontier models and orders compute by the gigawatt."
@@ -11437,6 +11535,7 @@
         "score": 33,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Облако, которое строит площадки под контракты лабораторий на гигаватты мощности.",
         "en": "A cloud building sites against lab contracts for gigawatts of capacity."
@@ -11495,7 +11594,7 @@
       "aliases": [
         "PyTorch Foundation"
       ],
-      "type": "research_org",
+      "type": "technology",
       "role": "platform",
       "sector": "ml_framework",
       "layers": [
@@ -11539,6 +11638,7 @@
         "score": 33,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Библиотека, в которой обучают нейросети: в ней написано большинство исследований.",
         "en": "The library neural networks are trained in: most research is written in it."
@@ -11641,6 +11741,7 @@
         "score": 7,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Тайваньский сборщик, один из трёх основных подрядчиков по серверам для ИИ.",
         "en": "A Taiwanese assembler, one of the three main contractors for AI servers."
@@ -11700,7 +11801,7 @@
         "Ray",
         "Anyscale"
       ],
-      "type": "research_org",
+      "type": "technology",
       "role": "platform",
       "sector": "orchestration",
       "layers": [
@@ -11744,6 +11845,7 @@
         "score": 11,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Оркестрация распределённых вычислений: раскладывает задачу по множеству машин.",
         "en": "Distributed compute orchestration: it spreads a job across many machines."
@@ -11846,6 +11948,7 @@
         "score": 7,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Биотехнологическая компания, которая ищет лекарства с помощью собственного суперкомпьютера.",
         "en": "A biotech company searching for drugs with its own supercomputer."
@@ -11948,6 +12051,7 @@
         "score": 7,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Крупнейшая платформа управления продажами; встраивает модели в работу отделов продаж.",
         "en": "The largest sales management platform; it embeds models into the work of sales teams."
@@ -12056,6 +12160,7 @@
         "score": 31,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Одновременно производитель памяти и фабрика — редкое сочетание в одной компании.",
         "en": "A memory maker and a foundry at once — a rare combination in one company."
@@ -12158,6 +12263,7 @@
         "score": 7,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Производитель флеш-памяти и накопителей, выделенный из Western Digital.",
         "en": "A maker of flash memory and drives, spun out of Western Digital."
@@ -12260,6 +12366,7 @@
         "score": 7,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Второй крупный поставщик оборудования питания и управления электричеством площадки.",
         "en": "The second large supplier of power and electrical management equipment for sites."
@@ -12362,6 +12469,7 @@
         "score": 7,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Компания, моделирующая молекулы на вычислительных кластерах для разработки лекарств.",
         "en": "A company that models molecules on compute clusters for drug discovery."
@@ -12464,6 +12572,7 @@
         "score": 4,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Венчурный фонд, вкладывающийся в компании прикладного слоя и инфраструктуры ИИ.",
         "en": "A venture fund investing in the AI application layer and in infrastructure."
@@ -12566,6 +12675,7 @@
         "score": 13,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Корпоративная платформа рабочих процессов, встраивающая модели в повседневную работу компаний.",
         "en": "An enterprise workflow platform embedding models into companies' daily work."
@@ -12624,7 +12734,7 @@
       "aliases": [
         "SGLang project"
       ],
-      "type": "research_org",
+      "type": "technology",
       "role": "platform",
       "sector": "inference_engine",
       "layers": [
@@ -12668,6 +12778,7 @@
         "score": 4,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Второй открытый движок запуска моделей, конкурирует с первым по скорости.",
         "en": "The second open model-serving engine, competing with the first on speed."
@@ -12770,6 +12881,7 @@
         "score": 8,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Крупнейший производитель кремниевых пластин и фоторезиста — расходников любой фабрики.",
         "en": "The largest maker of silicon wafers and photoresist — the consumables of any fab."
@@ -12872,6 +12984,7 @@
         "score": 7,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Промышленный концерн, который применяет модели в проектировании и на производстве.",
         "en": "An industrial group applying models in design and on the factory floor."
@@ -12975,6 +13088,7 @@
         "score": 7,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Третий поставщик софта для проектирования чипов, слабее двух первых по покрытию.",
         "en": "The third supplier of chip design software, weaker than the first two on coverage."
@@ -13077,6 +13191,7 @@
         "score": 4,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Второй производитель больших турбин и сетевого оборудования для площадок.",
         "en": "The second maker of large turbines and grid equipment for sites."
@@ -13131,7 +13246,10 @@
     },
     {
       "id": "singapore",
-      "name": "Сингапур",
+      "name": {
+        "ru": "Сингапур",
+        "en": "Singapore"
+      },
       "aliases": [
         "Singapore"
       ],
@@ -13179,6 +13297,7 @@
         "score": 7,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Узел перепродажи и логистики, за которым отдельно следят из-за обхода ограничений.",
         "en": "A resale and logistics hub, watched separately because of circumvention."
@@ -13282,6 +13401,7 @@
         "score": 21,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Ведущий производитель HBM — быстрой памяти, которую ставят вплотную к ускорителю.",
         "en": "The leading maker of HBM — the fast memory placed against the accelerator."
@@ -13386,6 +13506,7 @@
         "score": 7,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Облачное хранилище данных, на котором компании строят модели поверх собственных данных.",
         "en": "A cloud data warehouse on which companies build models over their own data."
@@ -13489,6 +13610,7 @@
         "score": 28,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Японский холдинг, взявший на себя финансовую ответственность за крупнейшую стройку вычислений.",
         "en": "The Japanese holding company that took on financial responsibility for the largest compute build."
@@ -13543,7 +13665,10 @@
     },
     {
       "id": "south-korea",
-      "name": "Южная Корея",
+      "name": {
+        "ru": "Южная Корея",
+        "en": "South Korea"
+      },
       "aliases": [
         "South Korea",
         "Korea"
@@ -13592,6 +13717,7 @@
         "score": 7,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Юрисдикция двух из трёх мировых производителей быстрой памяти для ускорителей.",
         "en": "The jurisdiction of two of the world's three makers of fast memory for accelerators."
@@ -13695,6 +13821,7 @@
         "score": 11,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Собирает серверы и стойки, проектируя их заранее под новые поколения ускорителей.",
         "en": "Builds servers and racks, designing them ahead of each new accelerator generation."
@@ -13797,6 +13924,7 @@
         "score": 22,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Софт, в котором проектируют микросхемы: без него современный чип не нарисовать.",
         "en": "The software chips are designed in: without it a modern chip cannot be drawn."
@@ -13851,7 +13979,10 @@
     },
     {
       "id": "taiwan",
-      "name": "Тайвань",
+      "name": {
+        "ru": "Тайвань",
+        "en": "Taiwan"
+      },
       "aliases": [
         "Taiwan"
       ],
@@ -13899,6 +14030,7 @@
         "score": 10,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Территория, где физически делают почти весь передовой кремний для ИИ.",
         "en": "The territory where almost all leading-edge silicon for AI is physically made."
@@ -13957,7 +14089,7 @@
       "aliases": [
         "NVIDIA TensorRT"
       ],
-      "type": "company",
+      "type": "technology",
       "role": "platform",
       "sector": "compiler",
       "layers": [
@@ -14001,6 +14133,7 @@
         "score": 17,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Оптимизатор моделей под ускорители якоря: ускоряет запуск обученной модели.",
         "en": "A model optimiser for the anchor's accelerators: it speeds up running a trained model."
@@ -14103,6 +14236,7 @@
         "score": 4,
         "signals": {}
       },
+      "domain": "thrivecap.com",
       "oneLiner": {
         "ru": "Фонд, специализирующийся на поздних раундах компаний вокруг моделей.",
         "en": "A fund specialising in late-stage rounds of companies built around models."
@@ -14206,6 +14340,7 @@
         "score": 4,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Японский производитель оборудования для обработки пластин, третий в мире по масштабу.",
         "en": "A Japanese maker of wafer processing equipment, third in the world by scale."
@@ -14264,7 +14399,7 @@
       "aliases": [
         "Triton"
       ],
-      "type": "research_org",
+      "type": "technology",
       "role": "platform",
       "sector": "compiler",
       "layers": [
@@ -14308,6 +14443,7 @@
         "score": 8,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Язык и компилятор, позволяющий писать вычислительные ядра, не углубляясь в среду ускорителя.",
         "en": "A language and compiler for writing compute kernels without going down into the accelerator's environment."
@@ -14411,6 +14547,7 @@
         "score": 64,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Фабрика, которая физически делает почти весь передовой кремний для ИИ.",
         "en": "The foundry that physically makes almost all leading-edge silicon for AI."
@@ -14469,7 +14606,10 @@
     },
     {
       "id": "usa",
-      "name": "США",
+      "name": {
+        "ru": "США",
+        "en": "United States"
+      },
       "aliases": [
         "United States"
       ],
@@ -14517,6 +14657,7 @@
         "score": 13,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Домашняя юрисдикция якоря и главный шлюз: решает, кому он имеет право продавать.",
         "en": "The anchor's home jurisdiction and the main gate: it decides who it may sell to."
@@ -14625,6 +14766,7 @@
         "score": 29,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Питание и жидкостное охлаждение стоек; проектирует их заранее под новые поколения ускорителей.",
         "en": "Rack power and liquid cooling; it designs them ahead of each new accelerator generation."
@@ -14683,7 +14825,7 @@
       "aliases": [
         "vLLM project"
       ],
-      "type": "research_org",
+      "type": "technology",
       "role": "platform",
       "sector": "inference_engine",
       "layers": [
@@ -14727,6 +14869,7 @@
         "score": 34,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Открытый движок, который запускает уже обученные модели быстро и дёшево.",
         "en": "An open engine that runs already-trained models fast and cheaply."
@@ -14829,6 +14972,7 @@
         "score": 7,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Тайваньский сборщик серверов и модулей, второй источник для крупных заказов.",
         "en": "A Taiwanese assembler of servers and modules, the second source for large orders."
@@ -14931,6 +15075,7 @@
         "score": 8,
         "signals": {}
       },
+      "domain": null,
       "oneLiner": {
         "ru": "Молодая лаборатория, построившая один из крупнейших кластеров ускорителей за рекордный срок.",
         "en": "A young lab that built one of the largest accelerator clusters in record time."
@@ -15053,7 +15198,7 @@
       "status": "confirmed",
       "confidence": 0.99,
       "sourceTier": 1,
-      "confirmedSources": 2,
+      "confirmedSources": 5,
       "risk": {
         "level": "medium",
         "type": "market",
@@ -15090,8 +15235,45 @@
           "alive": true,
           "quote": "investments in convertible notes from Anthropic, PBC (“Anthropic”), including $2.7 billion we",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Amazon 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+          "published": "2026-02-06",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "including $2.7 billion we invested in 2025. Cash",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Amazon 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+          "published": "2026-02-06",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "preferred stock in Anthropic, and the reclassification adjustments for the gains",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "partner_pr",
+          "title": "Anthropic: раунд Series H",
+          "url": "https://www.anthropic.com/news/series-h",
+          "published": "2026-05-01",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "We signed agreements with Amazon for up to five gigawatts of new capacity,",
+          "confidence": 0.925
         }
-      ]
+      ],
+      "detail": {
+        "ru": "Вложения оформлены конвертируемыми займами, из них 2,7 млрд долларов внесено в 2025 году. Часть займов уже конвертирована в неголосующие привилегированные акции — то есть деньги превратились в долю без права голоса. Рядом с этим идёт поставочный контракт на пять гигаватт: инвестор и поставщик здесь одно лицо.",
+        "en": "The investment is structured as convertible notes, of which $2.7 billion was funded in 2025. Part of those notes has since converted into non-voting preferred stock — money turned into a stake without a vote. Running alongside is a five-gigawatt supply contract: investor and supplier are the same party."
+      }
     },
     {
       "id": "amazon__anthropic__supplies",
@@ -15121,10 +15303,10 @@
         "en": "The cloud sells the lab up to five gigawatts of capacity on its own accelerators — alongside the investments already recorded."
       },
       "origin": "B-amazon",
-      "status": "signal",
-      "confidence": 0.875,
+      "status": "confirmed",
+      "confidence": 0.955,
       "sourceTier": 2,
-      "confirmedSources": 1,
+      "confirmedSources": 3,
       "lastConfirmed": "2026-08",
       "evidence": [
         {
@@ -15133,12 +15315,38 @@
           "title": "Anthropic: раунд Series H",
           "url": "https://www.anthropic.com/news/series-h",
           "published": "2026-05-01",
-          "fetched": "2026-08-27",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "We signed agreements with Amazon for up to five gigawatts of new capacity,",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "partner_pr",
+          "title": "Anthropic: раунд Series H",
+          "url": "https://www.anthropic.com/news/series-h",
+          "published": "2026-05-01",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "with Google and Broadcom for five gigawatts of next-generation TPU capacity, and",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "partner_pr",
+          "title": "Anthropic: раунд Series H",
+          "url": "https://www.anthropic.com/news/series-h",
+          "published": "2026-05-01",
+          "fetched": "2026-08-28",
           "alive": true,
           "quote": "We signed agreements with Amazon for up to five gigawatts of new capacity,",
           "confidence": 0.925
         }
-      ]
+      ],
+      "detail": {
+        "ru": "Соглашение — до пяти гигаватт новой мощности, заключено одновременно с раундом финансирования лаборатории. Второй поставщик подписал столько же на своих ускорителях, и это осознанная политика лаборатории: три платформы чипов вместо одной. Для облака контракт означает загрузку собственного кремния внешним заказчиком.",
+        "en": "The agreement covers up to five gigawatts of new capacity and was signed alongside the lab's funding round. A second supplier signed for the same amount on its own accelerators — a deliberate policy of running three chip platforms rather than one. For the cloud, the contract puts an external customer on its own silicon."
+      }
     },
     {
       "id": "amazon__cuda__locks_in_platforms",
@@ -15419,7 +15627,7 @@
           "title": "PyTorch README",
           "url": "https://raw.githubusercontent.com/pytorch/pytorch/main/README.md",
           "published": "2026-08-01",
-          "fetched": "2026-08-27",
+          "fetched": "2026-08-28",
           "alive": true,
           "quote": "AMD ROCm Support If you want to compile with ROCm support, install",
           "confidence": 0.925
@@ -15523,7 +15731,7 @@
           "title": "PyTorch README",
           "url": "https://raw.githubusercontent.com/pytorch/pytorch/main/README.md",
           "published": "2026-08-01",
-          "fetched": "2026-08-27",
+          "fetched": "2026-08-28",
           "alive": true,
           "quote": "AMD ROCm Support If you want to compile with ROCm support, install",
           "confidence": 0.925
@@ -15534,7 +15742,7 @@
           "title": "AMD 10-K 2025",
           "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
           "published": "2026-02-03",
-          "fetched": "2026-08-27",
+          "fetched": "2026-08-28",
           "alive": true,
           "quote": "We continue to invest in software capabilities and the open ecosystem through the AMD",
           "confidence": 0.925
@@ -15919,7 +16127,7 @@
           "title": "Anthropic: расширение использования Google Cloud TPU",
           "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
           "published": "2025-10-23",
-          "fetched": "2026-08-27",
+          "fetched": "2026-08-28",
           "alive": true,
           "quote": "we plan to expand our use of Google Cloud technologies, including up to one",
           "confidence": 0.925
@@ -16205,7 +16413,7 @@
       "status": "confirmed",
       "confidence": 0.955,
       "sourceTier": 2,
-      "confirmedSources": 2,
+      "confirmedSources": 4,
       "risk": {
         "level": "medium",
         "type": "market",
@@ -16245,8 +16453,34 @@
           "alive": true,
           "quote": "Both IB and NVLink are often sold as part of a vertical solution",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Arista Networks 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+          "published": "2026-02-13",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "Sales to these two customers represented 26% and 16% of our total revenue for",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Arista Networks 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+          "published": "2026-02-13",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "Two of our customers accounted for more than 10% of our sales for the",
+          "confidence": 0.925
         }
-      ]
+      ],
+      "detail": {
+        "ru": "Со стороны поставщика сетей: два заказчика дали 26% и 16% выручки за отчётный год, то есть Сети для кластеров ускорителей проектируются целиком, вместе с операционной системой и эксплуатацией, поэтому смена поставщика — это переделка сети и переобучение людей, а не замена коробок.",
+        "en": "From the network vendor's side: two customers accounted for 26% and 16% of revenue for the year Networks for accelerator clusters are designed as a whole, together with the operating system and the operations practice, so changing vendor means rebuilding the network and retraining people, not swapping boxes."
+      }
     },
     {
       "id": "arista__nvidia__competes_with",
@@ -16345,7 +16579,7 @@
           "title": "Intel 10-K 2025",
           "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
           "published": "2026-01-29",
-          "fetched": "2026-08-27",
+          "fetched": "2026-08-28",
           "alive": true,
           "quote": "ARM-based products and the ARM ecosystem have seen increased development and adoption in",
           "confidence": 0.925
@@ -16750,7 +16984,7 @@
       "status": "confirmed",
       "confidence": 0.955,
       "sourceTier": 2,
-      "confirmedSources": 3,
+      "confirmedSources": 7,
       "risk": {
         "level": "critical",
         "type": "regulatory",
@@ -16801,8 +17035,56 @@
           "alive": true,
           "quote": "Some of the equipment is available from a limited number of",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "ASML Annual Report 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "published": "2026-02-25",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "Total net sales to our largest customer amounted to €7,796.7 million , or 23.9%",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "ASML Annual Report 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "published": "2026-02-25",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "or 23.9% of total net sales in 2025 , compared with €4,682.4 million",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "ASML Annual Report 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "published": "2026-02-25",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "compared with €4,682.4 million , or 16.6% of total net sales in 2024",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "ASML Annual Report 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "published": "2026-02-25",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "38.0% of total net sales were made to our two largest customers.",
+          "confidence": 0.925
         }
-      ]
+      ],
+      "detail": {
+        "ru": "Со стороны поставщика станков: крупнейший заказчик дал 7 796,7 млн евро, или 23,9% продаж 2025 года против 16,6% в 2024-м; на двух крупнейших пришлось 38,0%. Рост доли за год на семь процентных пунктов показывает, как быстро передовое производство стягивается к нескольким покупателям. Альтернативы станкам этого класса в мире нет.",
+        "en": "From the equipment maker's side: its largest customer accounted for €7,796.7 million, or 23.9% of 2025 net sales against 16.6% in 2024; the top two made up 38.0%. A seven-point jump in a single year shows how fast leading-edge manufacturing is concentrating into a few buyers. There is no alternative to machines of this class anywhere."
+      }
     },
     {
       "id": "astera-labs__nvidia__optimizes_for",
@@ -16955,7 +17237,7 @@
           "title": "Anthropic: раунд Series H",
           "url": "https://www.anthropic.com/news/series-h",
           "published": "2026-05-01",
-          "fetched": "2026-08-27",
+          "fetched": "2026-08-28",
           "alive": true,
           "quote": "Significant investors in this round include AMP PBC, Baillie Gifford, Blackstone, Brookfield, D.E.",
           "confidence": 0.925
@@ -17357,7 +17639,7 @@
           "title": "Brookfield и AWS: облако и зелёная энергия",
           "url": "https://press.aboutamazon.com/2022/11/Brookfield-Asset-Management-Selects-AWS-to-Enhance-Its-Renewable-Energy-Operations",
           "published": "2022-11-30",
-          "fetched": "2026-08-27",
+          "fetched": "2026-08-28",
           "alive": true,
           "quote": "Brookfield Renewable agrees to provide clean energy capacity to power Amazon’s operations",
           "confidence": 0.925
@@ -17401,7 +17683,7 @@
           "title": "Anthropic: раунд Series H",
           "url": "https://www.anthropic.com/news/series-h",
           "published": "2026-05-01",
-          "fetched": "2026-08-27",
+          "fetched": "2026-08-28",
           "alive": true,
           "quote": "Significant investors in this round include AMP PBC, Baillie Gifford, Blackstone, Brookfield, D.E.",
           "confidence": 0.925
@@ -17656,7 +17938,7 @@
           "title": "Cadence 10-K 2025",
           "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000016/cdns-20251231.htm",
           "published": "2026-02-19",
-          "fetched": "2026-08-27",
+          "fetched": "2026-08-28",
           "alive": true,
           "quote": "Key competitors include Synopsys, Inc., Ansys, Inc. (acquired by Synopsys), Siemens EDA, and",
           "confidence": 0.925
@@ -18059,7 +18341,7 @@
       "status": "confirmed",
       "confidence": 0.99,
       "sourceTier": 1,
-      "confirmedSources": 2,
+      "confirmedSources": 4,
       "risk": {
         "level": "low",
         "type": "regulatory",
@@ -18099,8 +18381,34 @@
           "alive": true,
           "quote": "the signing of a 20-year power purchase agreement with Microsoft",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "partner_pr",
+          "title": "Constellation + Microsoft PPA",
+          "url": "https://www.constellationenergy.com/news/2024/Constellation-to-Launch-Crane-Clean-Energy-Center-Restoring-Jobs-and-Carbon-Free-Power-to-The-Grid.html",
+          "published": "2024-09-20",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "add approximately 835 megawatts of carbon-free energy to the grid;",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "partner_pr",
+          "title": "Constellation + Microsoft PPA",
+          "url": "https://www.constellationenergy.com/news/2024/Constellation-to-Launch-Crane-Clean-Energy-Center-Restoring-Jobs-and-Carbon-Free-Power-to-The-Grid.html",
+          "published": "2024-09-20",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "The CCEC is expected to be online in 2028.",
+          "confidence": 0.925
         }
-      ]
+      ],
+      "detail": {
+        "ru": "Договор на покупку электроэнергии подписан на 20 лет — крупнейший в истории продавца. Он оплачивает перезапуск остановленного энергоблока, который добавит в сеть около 835 мегаватт безуглеродной мощности; ввод ожидается в 2028 году. Покупатель получает не мегаватты как товар, а физический возврат генерации в сеть, которого без контракта не случилось бы.",
+        "en": "The power purchase agreement runs for 20 years — the largest in the seller's history. It pays for restarting a shut-down unit that will add roughly 835 megawatts of carbon-free capacity to the grid, expected online in 2028. The buyer is not purchasing megawatts as a commodity but funding generation back into the grid that would not have returned otherwise."
+      }
     },
     {
       "id": "coreweave__nvidia__customer_of",
@@ -19586,7 +19894,7 @@
       "status": "confirmed",
       "confidence": 0.99,
       "sourceTier": 1,
-      "confirmedSources": 2,
+      "confirmedSources": 4,
       "risk": {
         "level": "low",
         "type": "market",
@@ -19626,8 +19934,34 @@
           "alive": true,
           "quote": "NVIDIA Corporation and Cisco Systems, Inc. contributed 27.6% and 18.2%, respectively, of our revenues.",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Fabrinet 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871025000039/fn-20250627.htm",
+          "published": "2025-08-19",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "During fiscal year 2025, NVIDIA Corporation and Cisco Systems, Inc. contributed 27.6% and 18.2%,",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Fabrinet 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871025000039/fn-20250627.htm",
+          "published": "2025-08-19",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "During fiscal year 2024, NVIDIA Corporation and Cisco Systems, Inc. contributed 35.1% and 13.4%,",
+          "confidence": 0.925
         }
-      ]
+      ],
+      "detail": {
+        "ru": "Зависимость односторонняя и измеримая: заказчик дал подрядчику 27,6% выручки за 2025 финансовый год против 35,1% годом раньше, второй заказчик — 18,2% и 13,4%. Для подрядчика это концентрация, определяющая бизнес; для заказчика — один из нескольких сборщиков оптических модулей.",
+        "en": "The dependence runs one way and is measurable: the customer provided 27.6% of the contractor's fiscal 2025 revenue, down from 35.1% a year earlier, while a second customer provided 18.2% and 13.4%. For the contractor this is business-defining concentration; for the customer it is one optical-module assembler among several."
+      }
     },
     {
       "id": "foxconn__broadcom__integrates",
@@ -19834,7 +20168,7 @@
           "title": "Anthropic: раунд Series H",
           "url": "https://www.anthropic.com/news/series-h",
           "published": "2026-05-01",
-          "fetched": "2026-08-27",
+          "fetched": "2026-08-28",
           "alive": true,
           "quote": "We signed agreements with Amazon for up to five gigawatts of new capacity,",
           "confidence": 0.925
@@ -19845,7 +20179,7 @@
           "title": "Anthropic: раунд Series H",
           "url": "https://www.anthropic.com/news/series-h",
           "published": "2026-05-01",
-          "fetched": "2026-08-27",
+          "fetched": "2026-08-28",
           "alive": true,
           "quote": "with Google and Broadcom for five gigawatts of next-generation TPU capacity, and",
           "confidence": 0.925
@@ -19883,16 +20217,38 @@
       "status": "confirmed",
       "confidence": 0.955,
       "sourceTier": 2,
-      "confirmedSources": 2,
+      "confirmedSources": 4,
       "lastConfirmed": "2026-08",
       "evidence": [
+        {
+          "tier": 2,
+          "type": "partner_pr",
+          "title": "Anthropic: расширение использования Google Cloud TPU",
+          "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
+          "published": "2025-10-23",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "including up to one million TPUs, dramatically increasing our compute resources",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "partner_pr",
+          "title": "Anthropic: расширение использования Google Cloud TPU",
+          "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
+          "published": "2025-10-23",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "expected to bring well over a gigawatt of capacity online in 2026.",
+          "confidence": 0.925
+        },
         {
           "tier": 2,
           "type": "partner_pr",
           "title": "Anthropic выбирает Google Cloud",
           "url": "https://www.anthropic.com/news/anthropic-partners-with-google-cloud",
           "published": "2023-02-03",
-          "fetched": "2026-08-27",
+          "fetched": "2026-08-28",
           "alive": true,
           "quote": "an AI safety and research company, has selected Google Cloud",
           "confidence": 0.925
@@ -19903,12 +20259,16 @@
           "title": "Anthropic: расширение использования Google Cloud TPU",
           "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
           "published": "2025-10-23",
-          "fetched": "2026-08-27",
+          "fetched": "2026-08-28",
           "alive": true,
           "quote": "we plan to expand our use of Google Cloud technologies, including up to one",
           "confidence": 0.925
         }
-      ]
+      ],
+      "detail": {
+        "ru": "Лаборатория объявила о расширении до одного миллиона ускорителей облака. Сделка оценена в десятки миллиардов долларов и должна дать заметно больше гигаватта мощности в 2026 году. Лаборатория при этом намеренно держит три платформы чипов сразу, поэтому даже контракт такого размера не делает поставщика единственным.",
+        "en": "The lab announced an expansion to up to one million of the cloud's accelerators. The deal is worth tens of billions of dollars and is expected to bring well over a gigawatt of capacity online in 2026. The lab deliberately runs three chip platforms at once, so even a contract this size does not make the supplier exclusive."
+      }
     },
     {
       "id": "google-cloud__google-deepmind__enables",
@@ -19947,7 +20307,7 @@
           "title": "Anthropic выбирает Google Cloud",
           "url": "https://www.anthropic.com/news/anthropic-partners-with-google-cloud",
           "published": "2023-02-03",
-          "fetched": "2026-08-27",
+          "fetched": "2026-08-28",
           "alive": true,
           "quote": "an AI safety and research company, has selected Google Cloud",
           "confidence": 0.925
@@ -19991,7 +20351,7 @@
           "title": "Anthropic выбирает Google Cloud",
           "url": "https://www.anthropic.com/news/anthropic-partners-with-google-cloud",
           "published": "2023-02-03",
-          "fetched": "2026-08-27",
+          "fetched": "2026-08-28",
           "alive": true,
           "quote": "an AI safety and research company, has selected Google Cloud",
           "confidence": 0.925
@@ -20035,7 +20395,7 @@
           "title": "Anthropic: раунд Series H",
           "url": "https://www.anthropic.com/news/series-h",
           "published": "2026-05-01",
-          "fetched": "2026-08-27",
+          "fetched": "2026-08-28",
           "alive": true,
           "quote": "We signed agreements with Amazon for up to five gigawatts of new capacity,",
           "confidence": 0.925
@@ -20193,7 +20553,7 @@
           "title": "Anthropic: расширение использования Google Cloud TPU",
           "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
           "published": "2025-10-23",
-          "fetched": "2026-08-27",
+          "fetched": "2026-08-28",
           "alive": true,
           "quote": "we plan to expand our use of Google Cloud technologies, including up to one",
           "confidence": 0.925
@@ -20204,7 +20564,7 @@
           "title": "Anthropic: раунд Series H",
           "url": "https://www.anthropic.com/news/series-h",
           "published": "2026-05-01",
-          "fetched": "2026-08-27",
+          "fetched": "2026-08-28",
           "alive": true,
           "quote": "with Google and Broadcom for five gigawatts of next-generation TPU capacity, and",
           "confidence": 0.925
@@ -21978,7 +22338,7 @@
       "status": "confirmed",
       "confidence": 0.955,
       "sourceTier": 2,
-      "confirmedSources": 2,
+      "confirmedSources": 5,
       "risk": {
         "level": "high",
         "type": "market",
@@ -22018,8 +22378,45 @@
           "alive": true,
           "quote": "all of the GPUs used in our infrastructure today are NVIDIA GPUs.",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "CoreWeave 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+          "published": "2026-03-02",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "We recognized an aggregate of approximately 67% of our revenue from our top customer,",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "CoreWeave 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+          "published": "2026-03-02",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "approximately 77% of our revenue from our top two customers for the year ended",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "CoreWeave 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+          "published": "2026-03-02",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "approximately 73% of our revenue for the year ended December 31, 2023, from",
+          "confidence": 0.925
         }
-      ]
+      ],
+      "detail": {
+        "ru": "Один заказчик даёт 67% выручки облака за последний отчётный год; годом раньше на двух крупнейших приходилось 77%, ещё годом раньше на трёх — 73%. Концентрация снижается, но остаётся той величиной, при которой уход одного клиента ставит вопрос о существовании бизнеса. Зависимость односторонняя: для гиперскейлера это одна из нескольких внешних площадок.",
+        "en": "A single customer accounts for 67% of the cloud's latest full-year revenue; a year earlier the top two made up 77%, and the year before that the top three made up 73%. The concentration is easing but remains at the level where losing one client puts the business itself in question. The dependence runs one way: for the hyperscaler this is one external site among several."
+      }
     },
     {
       "id": "microsoft__cuda__locks_in_platforms",
@@ -22103,7 +22500,7 @@
       "status": "confirmed",
       "confidence": 0.955,
       "sourceTier": 2,
-      "confirmedSources": 2,
+      "confirmedSources": 5,
       "risk": {
         "level": "medium",
         "type": "market",
@@ -22143,8 +22540,45 @@
           "alive": true,
           "quote": "We currently rely on Nvidia for the GPU chips we use",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Nebius 20-F 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+          "published": "2026-04-30",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "total contract value is estimated to be up to about $17.4 billion through 2031.",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Nebius 20-F 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+          "published": "2026-04-30",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "Effective as of September 7, 2025, our wholly owned subsidiary, Nebius, Inc., entered",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Nebius 20-F 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+          "published": "2026-04-30",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "with the first tranche delivered in November 2025, and the second in February 2026.",
+          "confidence": 0.925
         }
-      ]
+      ],
+      "detail": {
+        "ru": "Соглашение вступило в силу 7 сентября 2025 года: выделенные кластеры на площадке в Вайнленде, Нью-Джерси, на пятилетний срок. Полная стоимость контракта оценена до 17,4 млрд долларов до 2031 года, поставка идёт траншами — первый в ноябре 2025-го, второй в феврале 2026-го. Для гиперскейлера это аренда чужой мощности при нехватке собственной.",
+        "en": "The agreement took effect on September 7, 2025: dedicated clusters at the Vineland, New Jersey site on a five-year term. Total contract value is estimated at up to $17.4 billion through 2031, delivered in tranches — the first in November 2025, the second in February 2026. For the hyperscaler this is renting someone else's capacity when its own runs short."
+      }
     },
     {
       "id": "microsoft__nvidia__customer_of",
@@ -22160,7 +22594,7 @@
       "status": "confirmed",
       "confidence": 0.99,
       "sourceTier": 1,
-      "confirmedSources": 2,
+      "confirmedSources": 5,
       "risk": {
         "level": "medium",
         "type": "market",
@@ -22200,8 +22634,45 @@
           "alive": true,
           "quote": "sales to one direct customer represented 22% of total revenue",
           "confidence": 0.975
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "NVIDIA 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "published": "2026-02-25",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "For fiscal year 2026, sales to one direct customer represented 22% of total revenue",
+          "confidence": 0.975
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "NVIDIA 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "published": "2026-02-25",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "and sales to another direct customer represented 14% of total revenue, all of which",
+          "confidence": 0.975
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "NVIDIA 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "published": "2026-02-25",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "Three direct customers accounted for 25 %, 18 %, and 13 % of our",
+          "confidence": 0.975
         }
-      ]
+      ],
+      "detail": {
+        "ru": "В 2026 финансовом году один прямой заказчик дал 22% выручки поставщика, второй — 14%. На конец периода три прямых заказчика держали 25%, 18% и 13% дебиторской задолженности, то есть концентрация видна не только в продажах, но и в том, кто сколько должен. Имён отчётность не называет, поэтому распределение между облаками остаётся оценкой.",
+        "en": "In fiscal 2026 one direct customer accounted for 22% of the supplier's revenue and another for 14%. At year-end three direct customers held 25%, 18% and 13% of accounts receivable, so the concentration shows up not only in sales but in who owes how much. The filing names no one, so the split between clouds remains an inference."
+      }
     },
     {
       "id": "microsoft__nvidia__threatens",
@@ -22274,7 +22745,7 @@
       "status": "confirmed",
       "confidence": 0.955,
       "sourceTier": 2,
-      "confirmedSources": 2,
+      "confirmedSources": 4,
       "risk": {
         "level": "medium",
         "type": "market",
@@ -22311,8 +22782,34 @@
           "alive": true,
           "quote": "We hold rights to OpenAI’s intellectual property, including models and infrastructure,",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Microsoft 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+          "published": "2026-07-29",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "In October 2025 and April 2026, we extended this partnership",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Microsoft 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+          "published": "2026-07-29",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "We have a long-term strategic partnership with OpenAI which was originally established in 2019.",
+          "confidence": 0.925
         }
-      ]
+      ],
+      "detail": {
+        "ru": "Партнёрство заключено в 2019 году и продлевалось дважды — в октябре 2025-го и в апреле 2026-го. Гиперскейлер остаётся крупнейшим инвестором, получает долю выручки и держит права на интеллектуальную собственность лаборатории, включая модели и инфраструктуру. Это не портфельная позиция: права на ИС встроены в продукты инвестора.",
+        "en": "The partnership dates to 2019 and has been extended twice — in October 2025 and April 2026. The hyperscaler remains the largest investor, takes a share of revenue and holds rights to the lab's intellectual property, including models and infrastructure. This is not a portfolio position: those IP rights are built into the investor's own products."
+      }
     },
     {
       "id": "mistral__nvidia__customer_of",
@@ -23505,10 +24002,10 @@
       "lockInDepth": 70,
       "substitutability": 0,
       "isReversible": false,
-      "status": "signal",
-      "confidence": 0.875,
+      "status": "confirmed",
+      "confidence": 0.955,
       "sourceTier": 2,
-      "confirmedSources": 1,
+      "confirmedSources": 4,
       "risk": {
         "level": "medium",
         "type": "market",
@@ -23537,8 +24034,45 @@
           "alive": true,
           "quote": "all of the GPUs used in our infrastructure today are NVIDIA GPUs.",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "CoreWeave 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+          "published": "2026-03-02",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "for the year ended December 31, 2025, three suppliers accounted for 23%, 20%, and",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "CoreWeave 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+          "published": "2026-03-02",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "three suppliers accounted for 23%, 20%, and 17% of total purchases,",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "CoreWeave 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+          "published": "2026-03-02",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "for the year ended December 31, 2024, three suppliers accounted for 46%, 16%, and",
+          "confidence": 0.925
         }
-      ]
+      ],
+      "detail": {
+        "ru": "Все ускорители в инфраструктуре облака — этого поставщика, и это записано в контрактах с его собственными клиентами, то есть закреплено не закупочной политикой, а обязательствами перед третьей стороной. В 2025 году три поставщика дали 23%, 20% и 17% всех закупок; годом раньше первый из них давал 46%. Смена платформы означала бы пересмотр клиентских договоров, а не только тендер.",
+        "en": "Every accelerator in the cloud's infrastructure comes from this supplier, and that is written into the contracts with its own customers — locked in by third-party obligations, not by procurement policy. Three suppliers accounted for 23%, 20% and 17% of total purchases, and a year earlier the largest of them for 46%. Switching platform would mean renegotiating customer contracts, not just running a tender."
+      }
     },
     {
       "id": "nvidia__crusoe__hedges_against",
@@ -24789,7 +25323,11 @@
           "quote": "OpenAI to build and deploy at least 10 gigawatts of AI datacenters with",
           "confidence": 0.925
         }
-      ]
+      ],
+      "detail": {
+        "ru": "Заявлено до 100 млрд долларов, раскрываемых постепенно — по мере ввода каждого гигаватта из десяти. Это не разовый чек, а привязка денег к физическому графику стройки: не построено — не выплачено. Поставщик финансирует собственного крупнейшего покупателя, то есть создаёт спрос на свой же товар.",
+        "en": "Up to $100 billion is committed, released progressively as each of the ten gigawatts comes online. This is not a single cheque but money tied to a physical build schedule: nothing built, nothing paid. The supplier is financing its own largest buyer — manufacturing demand for its own product."
+      }
     },
     {
       "id": "nvidia__samsung__diversifies_supply",
@@ -24916,7 +25454,7 @@
       "status": "confirmed",
       "confidence": 0.99,
       "sourceTier": 1,
-      "confirmedSources": 2,
+      "confirmedSources": 3,
       "risk": {
         "level": "medium",
         "type": "market",
@@ -24956,8 +25494,23 @@
           "alive": true,
           "quote": "We work closely with NVIDIA, Intel and AMD, among others, to develop products",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Supermicro 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536525000027/smci-20250630.htm",
+          "published": "2025-08-28",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "accounted for 10% or more of our net sales in fiscal year 2025 and",
+          "confidence": 0.925
         }
-      ]
+      ],
+      "detail": {
+        "ru": "Сборщик проектирует системы под новые платформы заранее и совместно с их разработчиками. Его собственная выручка концентрирована: четыре заказчика дали более 10% продаж каждый в 2025 финансовом году против одного такого заказчика годом раньше. Ранний доступ к платформе — единственное, что отличает его от прочих сборщиков стоек.",
+        "en": "The integrator designs systems for new platforms in advance and jointly with their developers. Its own revenue is concentrated: four customers each accounted for more than 10% of net sales in fiscal 2025, against a single such customer a year earlier. Early access to the platform is the only thing separating it from other rack builders."
+      }
     },
     {
       "id": "nvidia__synopsys__invests_in",
@@ -25230,7 +25783,7 @@
       "status": "confirmed",
       "confidence": 0.955,
       "sourceTier": 2,
-      "confirmedSources": 2,
+      "confirmedSources": 4,
       "risk": {
         "level": "medium",
         "type": "market",
@@ -25270,8 +25823,34 @@
           "alive": true,
           "quote": "all of the GPUs used in our infrastructure today are NVIDIA GPUs.",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "CoreWeave 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+          "published": "2026-03-02",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "committed to pay us up to approximately $6.5 billion through May 31, 2031",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "CoreWeave 10-K 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+          "published": "2026-03-02",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "In May 2025, we entered into a master services agreement with OpenAI OpCo, LLC",
+          "confidence": 0.925
         }
-      ]
+      ],
+      "detail": {
+        "ru": "Рамочное соглашение мая 2025 года и последующий заказ обязывают лабораторию заплатить до 6,5 млрд долларов к 31 мая 2031 года. Для облака это второй якорный контракт после гиперскейлера и единственный, который заметно снижает концентрацию на одном заказчике. Срок в шесть лет означает, что мощность резервируется заранее, а не покупается по мере надобности.",
+        "en": "A master services agreement from May 2025 and a subsequent order commit the lab to pay up to $6.5 billion through May 31, 2031. For the cloud this is the second anchor contract after the hyperscaler, and the only one that materially dilutes its single-customer concentration. A six-year term means capacity is reserved up front rather than bought as needed."
+      }
     },
     {
       "id": "openai__huggingface__competes_with",
@@ -25506,7 +26085,7 @@
       "status": "confirmed",
       "confidence": 0.99,
       "sourceTier": 1,
-      "confirmedSources": 2,
+      "confirmedSources": 3,
       "risk": {
         "level": "medium",
         "type": "market",
@@ -25546,8 +26125,23 @@
           "alive": true,
           "quote": "OpenAI to build and deploy at least 10 gigawatts of AI datacenters with",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "partner_pr",
+          "title": "OpenAI + NVIDIA: 10 GW",
+          "url": "https://openai.com/index/openai-nvidia-systems-partnership/",
+          "published": "2025-09-22",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "NVIDIA intends to invest up to $100 billion in OpenAI progressively as each",
+          "confidence": 0.925
         }
-      ]
+      ],
+      "detail": {
+        "ru": "Соглашение покрывает не менее 10 гигаватт систем поставщика, что на сегодняшних плотностях означает миллионы ускорителей. Встречно поставщик обязался вложить в лабораторию до 100 млрд долларов по мере ввода мощностей, поэтому закупка и финансирование закупки идут одним пакетом.",
+        "en": "The agreement covers at least 10 gigawatts of the supplier's systems — millions of accelerators at today's densities. In return the supplier committed up to $100 billion to the lab as that capacity comes online, so the purchase and the financing of the purchase travel as one package."
+      }
     },
     {
       "id": "openai__nvidia__path_dependent_on",
@@ -25707,7 +26301,11 @@
           "quote": "Oracle and OpenAI have entered an agreement to develop 4.5 gigawatts of additional",
           "confidence": 0.925
         }
-      ]
+      ],
+      "detail": {
+        "ru": "Соглашение покрывает 4,5 гигаватта дополнительной мощности площадок в США. Для облака этот контракт определяет профиль роста: мощность такого масштаба строится под конкретного заказчика, а не на общий рынок. Лаборатория при этом закупает параллельно у нескольких провайдеров, поэтому эксклюзивности здесь нет.",
+        "en": "The agreement covers 4.5 gigawatts of additional US data centre capacity. For the cloud this contract defines the growth profile: capacity at that scale is built for a named customer, not for the open market. The lab buys from several providers in parallel, so there is no exclusivity here."
+      }
     },
     {
       "id": "openai__oracle__validates_demand",
@@ -27276,7 +27874,7 @@
       "status": "confirmed",
       "confidence": 0.99,
       "sourceTier": 1,
-      "confirmedSources": 2,
+      "confirmedSources": 3,
       "risk": {
         "level": "high",
         "type": "market",
@@ -27316,8 +27914,23 @@
           "alive": true,
           "quote": "SK Group and NVIDIA today announced plans for a $500 billion plus comprehensive",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "partner_pr",
+          "title": "SK Group и NVIDIA",
+          "url": "https://news.skhynix.com/en/skhynix-nvidia-partnership-2026/",
+          "published": "2026-06-01",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "SK Group and NVIDIA expand strategic collaboration with a $500 billion plus initiative",
+          "confidence": 0.925
         }
-      ]
+      ],
+      "detail": {
+        "ru": "Партнёрство расширено до инициативы объёмом более 500 млрд долларов, охватывающей и стройку вычислительных площадок, и поставку памяти. Со стороны покупателя память идёт от трёх поставщиков сразу, поэтому даже соглашение такого масштаба не создаёт единственного источника — оно закрепляет первого среди равных.",
+        "en": "The partnership was expanded into an initiative worth more than $500 billion, covering both compute site construction and memory supply. On the buyer's side memory comes from three suppliers at once, so even an agreement of this size does not create a single source — it entrenches first among equals."
+      }
     },
     {
       "id": "snowflake__nvidia__proves_roi",
@@ -27914,7 +28527,7 @@
           "title": "TSMC 20-F 2025",
           "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
           "published": "2026-04-16",
-          "fetched": "2026-08-27",
+          "fetched": "2026-08-28",
           "alive": true,
           "quote": "the Creating Helpful Incentives to Produce Semiconductors and Science Act of 2022",
           "confidence": 0.925
@@ -28300,7 +28913,7 @@
       "status": "confirmed",
       "confidence": 0.955,
       "sourceTier": 2,
-      "confirmedSources": 2,
+      "confirmedSources": 4,
       "risk": {
         "level": "high",
         "type": "geopolitical",
@@ -28340,8 +28953,34 @@
           "alive": true,
           "quote": "including TSMC, Advanced Semiconductor Engineering, Inc., Foxconn Technology Group, Amkor Technology, Inc. and",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Broadcom 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+          "published": "2025-12-18",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "one customer accounted for 32 %, 28 % and 21 % of our net",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Broadcom 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+          "published": "2025-12-18",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "top five end customers, through all channels, accounted for approximately 40% of our net",
+          "confidence": 0.925
         }
-      ]
+      ],
+      "detail": {
+        "ru": "Проектировщик заказных ускорителей отдаёт большую часть производства пластин внешним фабрикам, и та же фабрика делает ускорители его главного конкурента. Концентрация спроса у самого проектировщика высокая: один заказчик дал 32%, 28% и 21% выручки за три года, пять крупнейших — около 40%. Узкое место у обеих сторон конкуренции общее.",
+        "en": "The custom-accelerator designer outsources most wafer manufacturing, and the same foundry makes its main rival's accelerators too. The designer's own demand is concentrated: one customer accounted for 32%, 28% and 21% of revenue over three years, and the top five for about 40%. Both sides of the rivalry share the same bottleneck."
+      }
     },
     {
       "id": "tsmc__credo__manufactures",
@@ -28497,7 +29136,7 @@
           "title": "TrendForce: чипы Google на 3 нм TSMC",
           "url": "https://www.trendforce.com/news/2025/10/21/news-googles-axion-cpu-reportedly-built-on-tsmcs-3nm-set-to-drive-foundrys-data-center-revenue-growth/",
           "published": "2025-10-21",
-          "fetched": "2026-08-27",
+          "fetched": "2026-08-28",
           "alive": true,
           "quote": "Google’s First Arm-Based CPU Axion Reportedly Built on TSMC 3nm with GUC Design",
           "confidence": 0.8
@@ -28518,7 +29157,7 @@
       "status": "confirmed",
       "confidence": 0.99,
       "sourceTier": 1,
-      "confirmedSources": 2,
+      "confirmedSources": 6,
       "risk": {
         "level": "critical",
         "type": "geopolitical",
@@ -28558,8 +29197,56 @@
           "alive": true,
           "quote": "Our largest customer in 2023 , 2024 and 2025 accounted for",
           "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "TSMC 20-F 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+          "published": "2026-04-16",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "Our largest customer in 2023 , 2024 and 2025 accounted for 25% , 22%",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "TSMC 20-F 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+          "published": "2026-04-16",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "and 2025 accounted for 25% , 22% and 19% of our net revenue",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "TSMC 20-F 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+          "published": "2026-04-16",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "ten largest customers in 2023 , 2024 and 2025 accounted for approximately, 70%",
+          "confidence": 0.925
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "TSMC 20-F 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+          "published": "2026-04-16",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "accounted for approximately, 70% , 76% and 78% of our net revenue in",
+          "confidence": 0.925
         }
-      ]
+      ],
+      "detail": {
+        "ru": "Со стороны фабрики: крупнейший заказчик дал 25%, 22% и 19% её выручки в 2023, 2024 и 2025 годах, а десять крупнейших — 70%, 76% и 78%. Со стороны разработчика зависимость полная: собственных заводов у него нет, все пластины делают внешние фабрики. Концентрация обоюдная, но асимметричная по последствиям: фабрика теряет долю выручки, разработчик — возможность выпускать продукт.",
+        "en": "From the foundry's side: its largest customer accounted for 25%, 22% and 19% of net revenue in 2023, 2024 and 2025, and its ten largest for 70%, 76% and 78%. From the designer's side the dependence is total — it owns no fabs and every wafer comes from outside. The concentration is mutual but the consequences are not: the foundry would lose a share of revenue, the designer would lose the ability to ship at all."
+      }
     },
     {
       "id": "tsmc__nvidia__packages",
@@ -28963,7 +29650,7 @@
           "title": "vLLM README",
           "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
           "published": "2026-08-01",
-          "fetched": "2026-08-27",
+          "fetched": "2026-08-28",
           "alive": true,
           "quote": "OpenAI-compatible API server, plus Anthropic Messages API and gRPC support -",
           "confidence": 0.925
@@ -29172,7 +29859,7 @@
           "title": "vLLM README",
           "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
           "published": "2026-08-01",
-          "fetched": "2026-08-27",
+          "fetched": "2026-08-28",
           "alive": true,
           "quote": "OpenAI-compatible API server, plus Anthropic Messages API and gRPC support -",
           "confidence": 0.925
