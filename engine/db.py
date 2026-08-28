@@ -83,7 +83,74 @@ def _migrate(con: sqlite3.Connection) -> None:
         cols = {r[1] for r in con.execute(f"PRAGMA table_info({tbl})")}
         if cols and "owner_agent" not in cols:
             con.execute(f"ALTER TABLE {tbl} ADD COLUMN owner_agent TEXT")
+    # Официальный домен сущности — заполняется только проверенный, см. схему.
+    ecols = {r[1] for r in con.execute("PRAGMA table_info(nveco_entity)")}
+    if ecols and "domain" not in ecols:
+        con.execute("ALTER TABLE nveco_entity ADD COLUMN domain TEXT")
+    _widen_entity_type(con)
     con.commit()
+
+
+def _widen_entity_type(con: sqlite3.Connection) -> None:
+    """Let nveco_entity.type hold 'technology' and 'regulation'.
+
+    SQLite cannot ALTER a CHECK constraint, so the table is rebuilt: rename,
+    recreate from the schema file, copy the rows across, drop the old one. Rows
+    and their first_seen history survive — dropping and re-ingesting from the
+    CSVs would silently reset first_seen to the current month, which is exactly
+    the kind of quiet data loss this pipeline is supposed to refuse.
+
+    RESUMABLE. The steps are separate statements, so a crash between them leaves
+    the rows in nveco_entity_old. Any later connect detects that table and
+    finishes the job instead of losing 106 rows to a half-run migration.
+
+    `PRAGMA foreign_keys` is a NO-OP inside a transaction, and sqlite3 opens one
+    implicitly on the first write — hence the commit before it. Without that the
+    final DROP fails on the child tables (entity_layer, entity_factor,
+    entity_risk) and the copy rolls back.
+    """
+    have = {r[0] for r in con.execute(
+        "SELECT name FROM sqlite_master WHERE type='table' "
+        "AND name IN ('nveco_entity','nveco_entity_old')")}
+    if "nveco_entity_old" not in have:
+        if "nveco_entity" not in have:
+            return                                        # таблицы нет вовсе
+        sql = con.execute("SELECT sql FROM sqlite_master WHERE type='table' "
+                          "AND name='nveco_entity'").fetchone()[0] or ""
+        if "'technology'" in sql:
+            return                                        # уже расширена
+        con.commit()
+        con.execute("PRAGMA foreign_keys=OFF")
+        # legacy_alter_table=ON is LOAD-BEARING. Since SQLite 3.25 a RENAME also
+        # rewrites every OTHER table's REFERENCES clause to follow the new name —
+        # so renaming nveco_entity away repoints five child tables at
+        # nveco_entity_old, and dropping it at the end leaves them referencing a
+        # table that no longer exists. The next write then dies with
+        # "no such table: main.nveco_entity_old". Legacy mode leaves the
+        # references pointing at the name we are about to recreate.
+        con.execute("PRAGMA legacy_alter_table=ON")
+        con.execute("ALTER TABLE nveco_entity RENAME TO nveco_entity_old")
+        con.execute("PRAGMA legacy_alter_table=OFF")
+        con.commit()
+    else:
+        con.commit()
+        con.execute("PRAGMA foreign_keys=OFF")
+
+    # Блок ИМЕННО nveco_entity: закрывающая скобка — та, что в начале строки.
+    # Первое ');' в тексте лежит внутри CHECK (type IN (...)).
+    ddl = ECO_SCHEMA_PATH.read_text()
+    start = ddl.index("CREATE TABLE IF NOT EXISTS nveco_entity (")
+    con.execute(ddl[start:ddl.index("\n);", start) + 3])
+
+    old_cols = [r[1] for r in con.execute("PRAGMA table_info(nveco_entity_old)")]
+    new_cols = {r[1] for r in con.execute("PRAGMA table_info(nveco_entity)")}
+    keep = ",".join(c for c in old_cols if c in new_cols)
+    con.execute(f"INSERT OR REPLACE INTO nveco_entity ({keep}) "
+                f"SELECT {keep} FROM nveco_entity_old")
+    con.execute("DROP TABLE nveco_entity_old")
+    con.commit()
+    con.execute("PRAGMA foreign_keys=ON")
+    con.executescript(ddl)          # индексы ушли с таблицей — вернуть
 
 
 def load_config() -> dict:

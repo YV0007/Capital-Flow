@@ -89,8 +89,8 @@ criticality_bands:
 # На ребре тех-узел работает подписью: он объясняет, ПОЧЕМУ зависимость неразрывна.
 tech_nodes:
   - { id: euv,        label: "EUV",         owner: asml,     importance: critical, note: "Печать самых мелких элементов чипа", note_en: "Printing the finest features on a chip" }
-  - { id: n3,         label: "3 нм",        owner: tsmc,     importance: critical, note: "Передовой техпроцесс производства", note_en: "The leading-edge process node" }
-  - { id: n5,         label: "5 нм",        owner: tsmc,     importance: high,     note: "Предыдущий передовой техпроцесс", note_en: "The previous leading-edge node" }
+  - { id: n3,         label: "3 нм", label_en: "3 nm",        owner: tsmc,     importance: critical, note: "Передовой техпроцесс производства", note_en: "The leading-edge process node" }
+  - { id: n5,         label: "5 нм", label_en: "5 nm",        owner: tsmc,     importance: high,     note: "Предыдущий передовой техпроцесс", note_en: "The previous leading-edge node" }
   - { id: cowos,      label: "CoWoS",       owner: tsmc,     importance: critical, note: "Упаковка «чип + память» на одной подложке", note_en: "Die-and-memory packaging on one substrate" }
   - { id: hbm,        label: "HBM",         owner: sk-hynix, importance: critical, note: "Стековая память вплотную к ускорителю", note_en: "Stacked memory sitting against the accelerator" }
   - { id: nvlink,     label: "NVLink",      owner: nvidia,   importance: critical, note: "Связь ускорителей внутри стойки", note_en: "Accelerator-to-accelerator link inside the rack" }

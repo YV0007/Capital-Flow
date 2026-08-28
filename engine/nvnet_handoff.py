@@ -9,6 +9,7 @@ Source приходят из семени без изменений. Новое 
 """
 
 import json
+import re
 import sys
 from datetime import date
 
@@ -80,13 +81,13 @@ BILINGUAL_FIELDS = {
     "entity": ("oneLiner", "whyIrreplaceable", "whatBreaksIt"),
     "entity_factor": ("irreplaceability", "lockInDepth", "timeToReplace",
                       "strategicControl"),
-    "edge": ("note",),
+    "edge": ("note", "detail"),
 }
 
 # поле выдачи -> поле в складе переводов
 _I18N_KEY = {
     "oneLiner": "one_liner", "whyIrreplaceable": "why_irreplaceable",
-    "whatBreaksIt": "what_breaks_it", "note": "note",
+    "whatBreaksIt": "what_breaks_it", "note": "note", "detail": "detail",
     "irreplaceability": "why_irreplaceability", "lockInDepth": "why_lock_in",
     "timeToReplace": "why_time", "strategicControl": "why_control",
     "riskNote": "risk_note", "mitigation": "risk_mitigation",
@@ -102,6 +103,13 @@ def bilingualise(payload: dict, con) -> dict:
 
     for e in payload["entities"]:
         eid = e["id"]
+        # ИМЯ оборачивается ТОЛЬКО когда перевод заведён. NVIDIA — это NVIDIA на
+        # обоих языках, и пара {ru: "NVIDIA", en: "NVIDIA"} была бы шумом; а вот
+        # «Китай» английскому читателю нечитаем. Контракт допускает обе формы,
+        # поэтому бренды остаются простой строкой.
+        nm = idx.get(("entity", eid, "name"))
+        if nm and nm.get("ru") and nm.get("en"):
+            e["name"] = i18n.bi(nm["ru"], nm["en"])
         for f in BILINGUAL_FIELDS["entity"]:
             if e.get(f) is not None:
                 e[f] = w("entity", eid, f, e[f])
@@ -116,6 +124,14 @@ def bilingualise(payload: dict, con) -> dict:
         xid = x["id"]
         if x.get("note") is not None:
             x["note"] = w("edge", xid, "note", x["note"])
+        if x.get("detail") is not None:
+            # Английская сторона пришла тем же CSV и лежит рядом: склад переводов для
+            # неё не нужен, но если он есть — он побеждает, как и у прочей прозы.
+            x["detail"] = i18n.wrap(idx, "edge", xid, "detail",
+                                    fallback_ru=x["detail"],
+                                    fallback_en=x.pop("_detail_en", None))
+        else:
+            x.pop("_detail_en", None)
         if (x.get("risk") or {}).get("mitigation") is not None:
             x["risk"]["mitigation"] = w("edge", xid, "mitigation", x["risk"]["mitigation"])
 
@@ -131,6 +147,10 @@ def bilingualise(payload: dict, con) -> dict:
         s["label"] = i18n.bi(s.get("label"), s.pop("label_en", None))
     for n_ in payload.get("techNodes", []):
         n_["note"] = i18n.bi(n_.get("note"), n_.pop("note_en", None))
+        # То же правило для подписи: «3 нм» переводится, «NVLink» — нет.
+        lab_en = n_.pop("label_en", None)
+        if lab_en:
+            n_["label"] = i18n.bi(n_.get("label"), lab_en)
     for sg in payload["network"]["subgraphs"]:
         sg["label"] = i18n.bi(sg.get("label"), sg.pop("label_en", None))
         sg["description"] = i18n.bi(sg.get("description"), sg.pop("description_en", None))
@@ -153,6 +173,8 @@ def bilingual_paths(payload: dict) -> list:
     for x in payload["edges"]:
         if x.get("note") is not None:
             out.append((f"edges[{x['id']}].note", x["note"]))
+        if x.get("detail") is not None:
+            out.append((f"edges[{x['id']}].detail", x["detail"]))
         if (x.get("risk") or {}).get("mitigation") is not None:
             out.append((f"edges[{x['id']}].risk.mitigation", x["risk"]["mitigation"]))
     for c in payload.get("cycles", []):
@@ -170,6 +192,87 @@ def bilingual_paths(payload: dict) -> list:
     for s in payload["network"]["singlePointsOfFailure"]:
         out.append((f"spof[{s['id']}].reason", s["reason"]))
     return out
+
+
+
+# ── detail: развёрнутый разбор связи ────────────────────────────────────────
+DETAIL_MIN_CHARS = 90          # короче — это второй `note`, а не разбор
+DETAIL_MAX_CHARS = 900         # длиннее — это уже не 2-5 предложений
+# Разделитель НЕ может стоять перед пробелом: иначе «May 31, 2031» слипается в одно
+# число 312031 и проверка начинает ругаться на несуществующую выдумку.
+_NUM = re.compile(r"\d+(?:[.,]\d+)*")
+_THOUSANDS = re.compile(r"\d{1,3}(?:[\u00a0 ]\d{3})+(?:[.,]\d+)?")
+
+
+def _numbers(text: str) -> set:
+    """Числовые токены в нормализованном виде.
+
+    Нормализация нужна, потому что одно и то же число в двух языках пишется
+    по-разному: «$6.5 billion» и «6,5 млрд». Приводим к общему виду — убираем
+    разделители тысяч, запятую-десятичную превращаем в точку, отбрасываем хвостовые
+    нули, — и сравниваем уже это.
+    """
+    # Русская типографика отделяет тысячи пробелом: «7 796,7 млрд». Склеиваем такие
+    # группы заранее, иначе число распадётся на «7» и «796,7» и не совпадёт с
+    # английским «7,796.7» из цитаты.
+    text = _THOUSANDS.sub(lambda m: m.group(0).replace("\u00a0", "").replace(" ", ""),
+                          text or "")
+    out = set()
+    for raw in _NUM.findall(text):
+        t = raw.replace("\u00a0", "").replace(" ", "")
+        if t.count(",") == 1 and len(t.split(",")[1]) <= 2 and "." not in t:
+            t = t.replace(",", ".")       # десятичная запятая
+        else:
+            t = t.replace(",", "")        # разделитель тысяч
+        t = t.rstrip(".")
+        if not t:
+            continue
+        if "." in t:
+            t = t.rstrip("0").rstrip(".")
+        out.add(t or "0")
+    return out
+
+
+def _check_detail(payload: dict) -> list:
+    """Правила поля `detail`. Главное из них — прослеживаемость цифр.
+
+    Число, которого нет ни в одной цитате этой связи, — выдумка, даже если оно верно.
+    Проверка механическая: все числовые токены обеих языковых версий обязаны
+    встретиться в evidence[].quote. Это единственный способ удержать обещание «цифры
+    только там, где они подтверждены»: обещание, которое никто не проверяет, живёт
+    ровно до первого напряжённого прогона.
+    """
+    errs = []
+    for x in payload["edges"]:
+        d = x.get("detail")
+        if d is None:
+            continue
+        if not isinstance(d, dict):
+            errs.append(f"связь {x['id']}: detail не пара {{ru, en}}")
+            continue
+        ru, en = (d.get("ru") or "").strip(), (d.get("en") or "").strip()
+        for lang, text in (("ru", ru), ("en", en)):
+            if not text:
+                errs.append(f"связь {x['id']}: detail.{lang} пуст — "
+                            f"поле либо заполнено на обоих языках, либо отсутствует")
+            elif not DETAIL_MIN_CHARS <= len(text) <= DETAIL_MAX_CHARS:
+                errs.append(f"связь {x['id']}: detail.{lang} {len(text)} знаков, "
+                            f"допустимо {DETAIL_MIN_CHARS}..{DETAIL_MAX_CHARS}")
+        note = x.get("note") or {}
+        if isinstance(note, dict):
+            for lang in ("ru", "en"):
+                a = (d.get(lang) or "").strip()
+                b = (note.get(lang) or "").strip()
+                if a and b and a == b:
+                    errs.append(f"связь {x['id']}: detail.{lang} дословно повторяет "
+                                f"note — такое поле не пишется, а опускается")
+        quoted = _numbers(" ".join(ev.get("quote", "") for ev in x.get("evidence", [])))
+        for lang in ("ru", "en"):
+            unbacked = sorted(_numbers(d.get(lang) or "") - quoted)
+            if unbacked:
+                errs.append(f"связь {x['id']}: числа в detail.{lang} не встречаются "
+                            f"ни в одной цитате: {', '.join(unbacked[:6])}")
+    return errs
 
 
 # ── валидатор ────────────────────────────────────────────────────────────────
@@ -272,6 +375,8 @@ def validate(payload: dict) -> list:
                             f"слов при пределе {nveco.MAX_QUOTE_WORDS}")
             if ev.get("tier") not in (1, 2, 3, 4, 5, 6):
                 errs.append(f"связь {x['id']}: тир источника '{ev.get('tier')}'")
+
+    errs += _check_detail(payload)
 
     # PageRank — доля важности, и сумма долей обязана равняться единице. Расхождение
     # означает, что мера посчитана на другом множестве узлов или обрезана после

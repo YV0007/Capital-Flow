@@ -1254,3 +1254,25 @@ edge,vllm__tensorrt__competes_with,note,en,The open model-serving engine against
 edge,wistron__nvidia__integrates,note,en,"The second assembly contractor, named in the anchor's filings."
 edge,xai__nvidia__customer_of,note,en,A young lab assembled one of the largest accelerator clusters in months.
 edge,xai__nvidia__validates_demand,note,en,"Proof of speed: a cluster of hundreds of thousands of accelerators is assembled in months, not years."
+entity,china,name,ru,Китай
+entity,china,name,en,China
+entity,usa,name,ru,США
+entity,usa,name,en,United States
+entity,taiwan,name,ru,Тайвань
+entity,taiwan,name,en,Taiwan
+entity,japan,name,ru,Япония
+entity,japan,name,en,Japan
+entity,netherlands,name,ru,Нидерланды
+entity,netherlands,name,en,Netherlands
+entity,south-korea,name,ru,Южная Корея
+entity,south-korea,name,en,South Korea
+entity,eu,name,ru,Европейский союз
+entity,eu,name,en,European Union
+entity,singapore,name,ru,Сингапур
+entity,singapore,name,en,Singapore
+entity,eu-ai-act,name,ru,Регламент ЕС об ИИ
+entity,eu-ai-act,name,en,EU AI Act
+entity,chips-act,name,ru,Закон о чипах (CHIPS Act)
+entity,chips-act,name,en,CHIPS Act
+entity,bis,name,ru,Бюро промышленности и безопасности
+entity,bis,name,en,Bureau of Industry and Security

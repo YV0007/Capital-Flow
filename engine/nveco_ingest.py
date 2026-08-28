@@ -25,6 +25,7 @@ from . import db, nveco
 from .ingest import is_search_url
 
 ENTITY_COLUMNS = ["id", "name", "aliases", "type", "role", "sector", "primary_layer",
+                  "domain",
                   "layers", "phase", "ticker", "public_private", "geo", "founded",
                   "revenue_usd_b", "one_liner", "why_irreplaceable", "what_breaks_it",
                   "geo_risk", "geo_risk_note", "export_regime", "concentration"]
@@ -144,6 +145,9 @@ def _validate_entity(row, layer_ids, sector_idx):
         "id": eid, "name": name,
         "aliases": _s(row, "aliases") or None, "type": etype, "role": role,
         "sector": sector, "primary_layer": primary, "layers": layers, "phase": phase,
+        # Домен принимается как есть и только проверенный: движок не достраивает
+        # его из имени — oracle.ai прошло бы такую проверку, не будучи Oracle.
+        "domain": (_s(row, "domain") or "").lower().removeprefix("www.") or None,
         "ticker": _s(row, "ticker") or None, "public_private": pp,
         "geo": _s(row, "geo") or None, "founded": _s(row, "founded") or None,
         "revenue_usd_b": rev, "one_liner": _s(row, "one_liner") or None,
@@ -477,8 +481,8 @@ def ingest_month(month: str, anchor: str = None) -> dict:
             """INSERT INTO nveco_entity (id,name,aliases,type,role,sector,primary_layer,
                  phase,ticker,public_private,geo,founded,revenue_usd_b,one_liner,
                  why_irreplaceable,what_breaks_it,hops,first_seen,last_confirmed,
-                 owner_agent)
-               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+                 owner_agent,domain)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
                ON CONFLICT(id) DO UPDATE SET
                  name=excluded.name, aliases=excluded.aliases, type=excluded.type,
                  role=excluded.role, sector=excluded.sector,
@@ -489,11 +493,13 @@ def ingest_month(month: str, anchor: str = None) -> dict:
                  why_irreplaceable=excluded.why_irreplaceable,
                  what_breaks_it=excluded.what_breaks_it, hops=excluded.hops,
                  last_confirmed=excluded.last_confirmed,
-                 owner_agent=excluded.owner_agent""",
+                 owner_agent=excluded.owner_agent,
+                 domain=COALESCE(excluded.domain, nveco_entity.domain)""",
             (eid, e["name"], e["aliases"], e["type"], e["role"], e["sector"],
              e["primary_layer"], e["phase"], e["ticker"], e["public_private"], e["geo"],
              e["founded"], e["revenue_usd_b"], e["one_liner"], e["why_irreplaceable"],
-             e["what_breaks_it"], dist.get(eid), first_seen, month, e.get("_agent")))
+             e["what_breaks_it"], dist.get(eid), first_seen, month, e.get("_agent"),
+             (e.get("domain") or "").strip().lower() or None))
         con.execute("DELETE FROM nveco_entity_layer WHERE entity_id=?", (eid,))
         for l in e["layers"]:
             con.execute(

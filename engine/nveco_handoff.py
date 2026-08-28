@@ -91,10 +91,12 @@ def build(month: str, anchor: str = None) -> dict:
     # а не исследованный факт, и заводить под неё колонку значило бы мигрировать
     # схему ради строки, которая и так лежит рядом с русской.
     tech_en = {n["id"]: n.get("note_en") for n in nveco.tech_nodes()}
+    tech_label_en = {n["id"]: n.get("label_en") for n in nveco.tech_nodes()}
     tech_nodes = []
     for r in con.execute("SELECT * FROM nveco_tech_node ORDER BY id"):
         tech_nodes.append({"id": r["id"], "label": r["label"], "owner": r["owner_id"],
                            "note": r["note"], "note_en": tech_en.get(r["id"]),
+                           "label_en": tech_label_en.get(r["id"]),
                            "importance": r["importance"]})
         if r["owner_id"]:
             tech_by_owner.setdefault(r["owner_id"], []).append(r["id"])
@@ -122,6 +124,9 @@ def build(month: str, anchor: str = None) -> dict:
             "criticalityWhy": {CAMEL[k]: w.get(k) for k in nveco.FACTORS},
             "gravity": gravity.get(e["id"], {"reach": 0, "layers": 0, "edgeTypes": 0,
                                              "cycles": 0, "score": 0, "signals": {}}),
+            # Пусто, если домен не проверен: дашборд не рисует ссылку вовсе.
+            # Это лучше, чем угаданный домен, ведущий не туда.
+            "domain": e["domain"],
             "oneLiner": e["one_liner"], "whyIrreplaceable": e["why_irreplaceable"],
             "whatBreaksIt": e["what_breaks_it"],
             "phase": e["phase"],

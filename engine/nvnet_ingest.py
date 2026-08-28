@@ -130,10 +130,15 @@ def build(month: str) -> dict:
         if month_dir.is_dir() else []
 
     for adir in agent_dirs:
+        # Каждый файл читается НЕЗАВИСИМО от соседей. Раньше здесь стоял `continue` по
+        # отсутствию entities.csv, и каталог без сущностей выпадал целиком вместе со
+        # своими sources.csv — так каталог достройки `nvnet-detail`, где сущностей нет
+        # по замыслу, молча терял все источники, а цифры в detail оставались
+        # неподтверждёнными. Отсутствие одного файла — не повод не читать остальные.
         f = adir / "entities.csv"
         if not f.exists():
-            continue
-        for line, row in _read(f):
+            f = None
+        for line, row in (_read(f) if f else ()):
             clean, errs, warns = _validate_entity(row, layer_ids, sector_idx)
             problems += [f"{adir.name}/entities.csv:{line} {w}" for w in warns]
             if errs:
@@ -203,6 +208,11 @@ def build(month: str) -> dict:
                               "lastConfirmed": month, "evidence": []}
                 new_edge += 1
 
+    # Источники — ВТОРЫМ проходом, когда связи всех каталогов уже загружены. Иначе
+    # порядок каталогов начинает решать: `nvnet-detail` сортируется раньше
+    # `nvnet-network`, и его источники к ещё не прочитанным связям отвергались как
+    # «связь неизвестна». Ссылка не должна зависеть от алфавита.
+    for adir in agent_dirs:
         f = adir / "sources.csv"
         if f.exists():
             for line, row in _read(f):
@@ -225,6 +235,36 @@ def build(month: str) -> dict:
                     "confidence": clean["confidence"]})
                 new_src += 1
 
+    # ── detail: развёрнутый разбор связи, отдельным файлом ────────────────────
+    # Отдельный вход, а не колонка в edges.csv, по двум причинам. Во-первых, 243 из
+    # 262 связей приходят из семени, и колонки в их CSV уже нет — дописывать поле
+    # пришлось бы в конвейер v2, который заморожен. Во-вторых, detail пишется
+    # выборочно и обновляется чаще самой связи: держать его рядом дешевле, чем
+    # перегенерировать семя ради одного абзаца.
+    detail_rows = 0
+    for adir in agent_dirs:
+        f = adir / "details.csv"
+        if not f.exists():
+            continue
+        for line, row in _read(f):
+            eid = (row.get("edge_id") or "").strip()
+            ru = (row.get("detail_ru") or "").strip()
+            en = (row.get("detail_en") or "").strip()
+            if eid not in edges:
+                rejects.append({"file": f"{adir.name}/details.csv", "line": line,
+                                "reason": f"detail для неизвестной связи '{eid}'",
+                                "row": str(row)[:200]})
+                continue
+            if not ru or not en:
+                rejects.append({"file": f"{adir.name}/details.csv", "line": line,
+                                "reason": "detail должен быть на обоих языках; "
+                                          "пустая сторона — это не пропуск, а брак",
+                                "row": str(row)[:200]})
+                continue
+            edges[eid]["detail"] = ru
+            edges[eid]["_detail_en"] = en
+            detail_rows += 1
+
     # ── ЖЕЛЕЗНОЕ ПРАВИЛО: новая связь без источника не пишется ────────────────
     for eid in [k for k, v in edges.items() if not v.get("evidence")]:
         if src_by_owner.get(("edge", eid)):
@@ -239,7 +279,15 @@ def build(month: str) -> dict:
     # ── прикрепление источников и статусов к новым строкам ────────────────────
     for (kind, key), rows in src_by_owner.items():
         if kind == "edge" and key in edges:
-            edges[key]["evidence"] = rows
+            # СЛИЯНИЕ, а не перезапись. Источник, добавленный к семенной связи ради
+            # цифр в `detail`, не должен стирать доказательства, на которых эта связь
+            # вообще стоит. Дедуп по (url, цитата): один и тот же абзац, поданный
+            # дважды, не должен считаться вторым подтверждением.
+            have = {(e["url"], e["quote"]) for e in edges[key].get("evidence") or []}
+            merged = list(edges[key].get("evidence") or [])
+            merged += [r for r in rows if (r["url"], r["quote"]) not in have]
+            edges[key]["evidence"] = merged
+            rows = merged
             tiers = [r["tier"] for r in rows]
             status, conf = _status_and_confidence(tiers)
             edges[key].update({"status": status, "confidence": conf,
@@ -289,6 +337,7 @@ def build(month: str) -> dict:
 
     return {"entities": entities, "edges": edges, "seed": seed,
             "newEntities": new_ent, "newEdges": new_edge, "newSources": new_src,
+            "details": detail_rows,
             "problems": problems, "rejects": rejects, "dropped": dropped,
             "missingPivots": missing_pivots, "pivots": sorted(pivot_set)}
 

@@ -24,10 +24,18 @@ CREATE TABLE IF NOT EXISTS nveco_entity (
     id             TEXT PRIMARY KEY,        -- slug ('tsmc'); СТАБИЛЕН между прогонами
     name           TEXT NOT NULL,
     aliases        TEXT,                    -- '|'-список; резолвинг идёт через entity_aliases
+    -- ДЕЙСТВУЮЩИЕ ЛИЦА против ВЕЩЕЙ. Актор может решать, покупать, судиться и
+    -- отвечать; вещь только принимают на вооружение или применяют. CUDA рядом с
+    -- NVIDIA в одном типе читалась как компания — отсюда разделение.
     type           TEXT NOT NULL CHECK (type IN
-                     ('company','geopolitical','agency','research_org','standards_body')),
+                     ('company','geopolitical','agency','research_org','standards_body',
+                      'technology','regulation')),
     role           TEXT NOT NULL CHECK (role IN
                      ('producer','platform','operator','demand','capital','state')),
+    -- Официальный домен сущности. Заполняется ТОЛЬКО когда проверен: гадать
+    -- нельзя — oracle.ai проходит проверку по имени, не будучи Oracle.
+    -- Пусто лучше, чем неверно: дашборд просто не рисует ссылку.
+    domain         TEXT,
     sector         TEXT,                    -- sectors[].key из config/nveco_layers.yaml
     primary_layer  TEXT NOT NULL,           -- валидируется ingest'ом против YAML
     phase          TEXT NOT NULL DEFAULT 'mature' CHECK (phase IN

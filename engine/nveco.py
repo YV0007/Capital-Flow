@@ -23,7 +23,11 @@ SCHEMA_VERSION = "nvidia-ecosystem/2"
 
 # Закрытые перечисления контракта. Они дублируют CHECK-констрейнты схемы намеренно:
 # ingest обязан отвергнуть строку С ПРИЧИНОЙ, а не уронить транзакцию на констрейнте.
-ENTITY_TYPES = {"company", "geopolitical", "agency", "research_org", "standards_body"}
+# Акторы решают и отвечают; вещи — принимают на вооружение. Тип отвечает на
+# ОДИН вопрос: это действующее лицо или предмет?
+ACTOR_TYPES = {"company", "geopolitical", "agency", "research_org", "standards_body"}
+THING_TYPES = {"technology", "regulation"}
+ENTITY_TYPES = ACTOR_TYPES | THING_TYPES
 ROLES = {"producer", "platform", "operator", "demand", "capital", "state"}
 PHASES = {"emerging", "scaling", "mature", "at_risk", "declining"}
 PUBLIC_PRIVATE = {"public", "private", "government", "academic"}
