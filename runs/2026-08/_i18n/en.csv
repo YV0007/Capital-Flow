@@ -1,41 +1,41 @@
 kind,id,field,lang,text
-entity,a16z,why_control,en,No relationship with the anchor
+entity,a16z,why_control,en,No relationship with NVIDIA
 entity,a16z,why_lock_in,en,Reaches models and applications
 entity,amazon,why_control,en,Purchasing and competitive at once
 entity,amazon,why_lock_in,en,"Reaches clouds, chips and models"
 entity,amd,why_control,en,A competitive relationship
 entity,amd,why_lock_in,en,Reaches chips and software
-entity,amkor,why_control,en,No direct relationship with the anchor
+entity,amkor,why_control,en,No direct relationship with NVIDIA
 entity,amkor,why_lock_in,en,Reaches packaging
-entity,anthropic,why_control,en,A public partnership without an anchor stake
+entity,anthropic,why_control,en,A public partnership without an NVIDIA stake
 entity,anthropic,why_lock_in,en,"Reaches clouds, models and applications"
-entity,applied-materials,why_control,en,No direct relationship with the anchor
+entity,applied-materials,why_control,en,No direct relationship with NVIDIA
 entity,applied-materials,why_lock_in,en,Reaches fabs and memory
 entity,arista,why_control,en,Competitive and partnered at the same time
 entity,arista,why_lock_in,en,Reaches the network and systems
 entity,arm,why_control,en,"Partnership and joint products, no stake"
 entity,arm,why_lock_in,en,"Reaches chips, systems, software and applications"
-entity,ase,why_control,en,No direct relationship with the anchor
+entity,ase,why_control,en,No direct relationship with NVIDIA
 entity,ase,why_lock_in,en,Reaches packaging and assembly
-entity,asml,why_control,en,No direct anchor relationship; the link runs through the foundry
+entity,asml,why_control,en,No direct NVIDIA relationship; the link runs through the foundry
 entity,asml,why_lock_in,en,"Reaches fabs, chips and memory"
 entity,astera-labs,why_control,en,Public partnership and a place in the reference designs
 entity,astera-labs,why_lock_in,en,Reaches the network and systems
 entity,bis,why_control,en,Only lobbying and testimony before Congress
 entity,bis,why_lock_in,en,"Reaches chips, systems, clouds and models"
-entity,blackrock,why_control,en,No relationship with the anchor
+entity,blackrock,why_control,en,No relationship with NVIDIA
 entity,blackrock,why_lock_in,en,Reaches power and sites
-entity,blackstone,why_control,en,No relationship with the anchor
+entity,blackstone,why_control,en,No relationship with NVIDIA
 entity,blackstone,why_lock_in,en,Reaches sites and power
-entity,bloom-energy,why_control,en,No relationship with the anchor
+entity,bloom-energy,why_control,en,No relationship with NVIDIA
 entity,bloom-energy,why_lock_in,en,Reaches power and sites
 entity,boyd,why_control,en,A purchasing relationship
 entity,boyd,why_lock_in,en,Reaches cooling only
 entity,broadcom,why_control,en,A competitive relationship
 entity,broadcom,why_lock_in,en,"Reaches chips, the network and clouds"
-entity,brookfield,why_control,en,No direct relationship with the anchor
+entity,brookfield,why_control,en,No direct relationship with NVIDIA
 entity,brookfield,why_lock_in,en,"Reaches power, sites and capital"
-entity,cadence,why_control,en,Joint platform development with the anchor
+entity,cadence,why_control,en,Joint platform development with NVIDIA
 entity,cadence,why_lock_in,en,Reaches chip design and chips
 entity,cfius,why_control,en,"No leverage, only procedure"
 entity,cfius,why_lock_in,en,Reaches deals and partnerships
@@ -47,17 +47,17 @@ entity,cisco,why_control,en,A competitive relationship
 entity,cisco,why_lock_in,en,Reaches the network only
 entity,coherent,why_control,en,A purchasing relationship
 entity,coherent,why_lock_in,en,Reaches the network only
-entity,constellation,why_control,en,No relationship with the anchor
+entity,constellation,why_control,en,No relationship with NVIDIA
 entity,constellation,why_lock_in,en,Reaches power and sites
-entity,coreweave,why_control,en,Anchor investment plus a supply agreement
+entity,coreweave,why_control,en,NVIDIA investment plus a supply agreement
 entity,coreweave,why_lock_in,en,Reaches the cloud layer only
 entity,credo,why_control,en,"Purchasing, plus participation in the ecosystem"
 entity,credo,why_lock_in,en,Reaches the network only
-entity,crusoe,why_control,en,The anchor holds an investment
+entity,crusoe,why_control,en,NVIDIA holds an investment
 entity,crusoe,why_lock_in,en,Reaches power and clouds
-entity,cuda,why_control,en,The anchor's own product
+entity,cuda,why_control,en,NVIDIA's own product
 entity,cuda,why_lock_in,en,"Reaches chips, software, models and applications"
-entity,databricks,why_control,en,Anchor investment and joint products
+entity,databricks,why_control,en,NVIDIA investment and joint products
 entity,databricks,why_lock_in,en,"Reaches data, inference and applications"
 entity,deepseek,why_control,en,"The relationship is hostile, access is restricted"
 entity,deepseek,why_lock_in,en,"Reaches models, demand and the platform"
@@ -65,11 +65,11 @@ entity,dell,why_control,en,"A public partnership, no stake"
 entity,dell,why_lock_in,en,Reaches assembly and sales
 entity,delta-electronics,why_control,en,"Joint development, no stake"
 entity,delta-electronics,why_lock_in,en,Reaches power and systems
-entity,digital-realty,why_control,en,No relationship with the anchor
+entity,digital-realty,why_control,en,No relationship with NVIDIA
 entity,digital-realty,why_lock_in,en,Reaches sites only
-entity,eaton,why_control,en,No direct relationship with the anchor
+entity,eaton,why_control,en,No direct relationship with NVIDIA
 entity,eaton,why_lock_in,en,Reaches power and sites
-entity,equinix,why_control,en,No relationship with the anchor
+entity,equinix,why_control,en,No relationship with NVIDIA
 entity,equinix,why_lock_in,en,Reaches sites and the network
 entity,eu,why_control,en,Engagement through industry associations
 entity,eu,why_lock_in,en,"Reaches sales, not manufacturing"
@@ -79,103 +79,103 @@ entity,fabrinet,why_control,en,A purchasing relationship
 entity,fabrinet,why_lock_in,en,Reaches the network only
 entity,foxconn,why_control,en,"Joint projects, no stake"
 entity,foxconn,why_lock_in,en,Reaches assembly and systems
-entity,ge-vernova,why_control,en,No relationship with the anchor
+entity,ge-vernova,why_control,en,No relationship with NVIDIA
 entity,ge-vernova,why_lock_in,en,Reaches power and sites
 entity,google,why_control,en,Purchasing and competitive at once
 entity,google,why_lock_in,en,"Reaches chips, clouds, the platform and models"
-entity,google-cloud,why_control,en,The anchor has no leverage over it
+entity,google-cloud,why_control,en,NVIDIA has no leverage over it
 entity,google-cloud,why_lock_in,en,"Reaches chips, clouds, software and models"
 entity,google-deepmind,why_control,en,A competitive relationship
 entity,google-deepmind,why_lock_in,en,"Reaches chips, models and clouds"
 entity,hpe,why_control,en,"A public partnership, no stake"
 entity,hpe,why_lock_in,en,Reaches assembly and sales
-entity,huggingface,why_control,en,Anchor investment and joint products
+entity,huggingface,why_control,en,NVIDIA investment and joint products
 entity,huggingface,why_lock_in,en,"Reaches software, models and applications"
-entity,intel,why_control,en,No manufacturing relationship with the anchor yet
+entity,intel,why_control,en,No manufacturing relationship with NVIDIA yet
 entity,intel,why_lock_in,en,Reaches fabs and chips
 entity,japan,why_control,en,No leverage
 entity,japan,why_lock_in,en,Reaches raw inputs and fabs
-entity,jax,why_control,en,No relationship with the anchor
+entity,jax,why_control,en,No relationship with NVIDIA
 entity,jax,why_lock_in,en,Reaches software and models
-entity,kioxia,why_control,en,No relationship with the anchor
+entity,kioxia,why_control,en,No relationship with NVIDIA
 entity,kioxia,why_lock_in,en,Reaches storage only
-entity,kla,why_control,en,No relationship with the anchor
+entity,kla,why_control,en,No relationship with NVIDIA
 entity,kla,why_lock_in,en,Reaches fabs and memory
-entity,kubernetes,why_control,en,"No relationship with the anchor, only compatibility"
+entity,kubernetes,why_control,en,"No relationship with NVIDIA, only compatibility"
 entity,kubernetes,why_lock_in,en,"Reaches clouds, inference and applications"
-entity,lam-research,why_control,en,No direct relationship with the anchor
+entity,lam-research,why_control,en,No direct relationship with NVIDIA
 entity,lam-research,why_lock_in,en,Reaches fabs and memory
-entity,lambda,why_control,en,The anchor holds an investment
+entity,lambda,why_control,en,NVIDIA holds an investment
 entity,lambda,why_lock_in,en,Reaches the cloud layer only
-entity,lightspeed,why_control,en,No relationship with the anchor
+entity,lightspeed,why_control,en,No relationship with NVIDIA
 entity,lightspeed,why_lock_in,en,Reaches applications
-entity,lite-on,why_control,en,No relationship with the anchor
+entity,lite-on,why_control,en,No relationship with NVIDIA
 entity,lite-on,why_lock_in,en,Reaches rack power only
 entity,marvell,why_control,en,A competitive relationship
 entity,marvell,why_lock_in,en,Reaches chips and the network
 entity,meta,why_control,en,"Joint open-source work, no stake"
 entity,meta,why_lock_in,en,"Reaches software, models, clouds and applications"
-entity,mgx,why_control,en,No direct relationship with the anchor
+entity,mgx,why_control,en,No direct relationship with NVIDIA
 entity,mgx,why_lock_in,en,Reaches clouds and sites
 entity,micron,why_control,en,A purchasing relationship
 entity,micron,why_lock_in,en,Reaches memory and chips
-entity,microsoft,why_control,en,A public partnership without an anchor stake
+entity,microsoft,why_control,en,A public partnership without an NVIDIA stake
 entity,microsoft,why_lock_in,en,"Reaches clouds, the platform, models and applications"
-entity,mistral,why_control,en,No formal relationship with the anchor
+entity,mistral,why_control,en,No formal relationship with NVIDIA
 entity,mistral,why_lock_in,en,Reaches models and applications
 entity,mlcommons,why_control,en,Consortium membership without control
 entity,mlcommons,why_lock_in,en,Reaches chips and systems
-entity,nccl,why_control,en,The anchor's own product
+entity,nccl,why_control,en,NVIDIA's own product
 entity,nccl,why_lock_in,en,"Reaches software, systems and training"
-entity,nebius,why_control,en,Anchor investment plus a supply contract
+entity,nebius,why_control,en,NVIDIA investment plus a supply contract
 entity,nebius,why_lock_in,en,Reaches the cloud layer only
 entity,netherlands,why_control,en,No leverage
 entity,netherlands,why_lock_in,en,Reaches fabs and everything below them in the stack
-entity,nim,why_control,en,The anchor's own product
+entity,nim,why_control,en,NVIDIA's own product
 entity,nim,why_lock_in,en,Reaches inference and applications
-entity,nvent,why_control,en,No direct relationship with the anchor
+entity,nvent,why_control,en,No direct relationship with NVIDIA
 entity,nvent,why_lock_in,en,Reaches cooling only
-entity,nventures,why_control,en,An entity the anchor owns
+entity,nventures,why_control,en,An entity NVIDIA owns
 entity,nventures,why_lock_in,en,"Reaches clouds, software, models and applications"
 entity,nvidia,why_control,en,Wholly owned: control is complete
 entity,nvidia,why_lock_in,en,"Reaches chips, systems, software, models and applications"
-entity,oklo,why_control,en,"Partnerships announced, no anchor money"
+entity,oklo,why_control,en,"Partnerships announced, no NVIDIA money"
 entity,oklo,why_lock_in,en,Reaches power only
-entity,openai,why_control,en,Anchor investment of up to $100B announced
+entity,openai,why_control,en,NVIDIA investment of up to $100B announced
 entity,openai,why_lock_in,en,"Reaches clouds, the platform, models and applications"
 entity,oracle,why_control,en,"A public partnership, no stake"
 entity,oracle,why_lock_in,en,Reaches clouds and sites
-entity,pytorch,why_control,en,"Anchor engineers contribute, but a foundation owns it"
+entity,pytorch,why_control,en,"NVIDIA engineers contribute, but a foundation owns it"
 entity,pytorch,why_lock_in,en,"Reaches software, models, research"
 entity,quanta,why_control,en,A purchasing relationship
 entity,quanta,why_lock_in,en,Reaches assembly only
-entity,ray,why_control,en,No relationship with the anchor
+entity,ray,why_control,en,No relationship with NVIDIA
 entity,ray,why_lock_in,en,Reaches inference and training
-entity,recursion,why_control,en,The supercomputer was built jointly with the anchor
+entity,recursion,why_control,en,The supercomputer was built jointly with NVIDIA
 entity,recursion,why_lock_in,en,Reaches applications only
 entity,salesforce,why_control,en,"A public partnership, no stake"
 entity,salesforce,why_lock_in,en,Reaches applications
 entity,samsung,why_control,en,"A purchasing relationship, no stake"
 entity,samsung,why_lock_in,en,"Reaches memory, fabs and packaging"
-entity,sandisk,why_control,en,No relationship with the anchor
+entity,sandisk,why_control,en,No relationship with NVIDIA
 entity,sandisk,why_lock_in,en,Reaches storage only
-entity,schneider,why_control,en,No direct relationship with the anchor
+entity,schneider,why_control,en,No direct relationship with NVIDIA
 entity,schneider,why_lock_in,en,Reaches power and sites
 entity,schrodinger,why_control,en,A purchasing relationship
 entity,schrodinger,why_lock_in,en,Reaches applications only
-entity,sequoia,why_control,en,No relationship with the anchor
+entity,sequoia,why_control,en,No relationship with NVIDIA
 entity,sequoia,why_lock_in,en,Reaches models and applications
 entity,servicenow,why_control,en,"An announced partnership, no stake"
 entity,servicenow,why_lock_in,en,Reaches applications and inference
-entity,sglang,why_control,en,No relationship with the anchor
+entity,sglang,why_control,en,No relationship with NVIDIA
 entity,sglang,why_lock_in,en,Reaches inference only
-entity,shin-etsu,why_control,en,No relationship with the anchor
+entity,shin-etsu,why_control,en,No relationship with NVIDIA
 entity,shin-etsu,why_lock_in,en,Reaches raw inputs and fabs
 entity,siemens,why_control,en,"A public partnership, no stake"
 entity,siemens,why_lock_in,en,Reaches applications only
-entity,siemens-eda,why_control,en,No formal relationship with the anchor
+entity,siemens-eda,why_control,en,No formal relationship with NVIDIA
 entity,siemens-eda,why_lock_in,en,Reaches chip design
-entity,siemens-energy,why_control,en,No relationship with the anchor
+entity,siemens-energy,why_control,en,No relationship with NVIDIA
 entity,siemens-energy,why_lock_in,en,Reaches power
 entity,singapore,why_control,en,No leverage
 entity,singapore,why_lock_in,en,Reaches sales
@@ -183,21 +183,21 @@ entity,sk-hynix,why_control,en,"An expanded partnership, no stake"
 entity,sk-hynix,why_lock_in,en,"Reaches memory, chips and systems"
 entity,snowflake,why_control,en,"A public partnership, no stake"
 entity,snowflake,why_lock_in,en,Reaches data and applications
-entity,softbank,why_control,en,No direct relationship with the anchor
+entity,softbank,why_control,en,No direct relationship with NVIDIA
 entity,softbank,why_lock_in,en,Reaches clouds and sites
 entity,south-korea,why_control,en,No leverage
 entity,south-korea,why_lock_in,en,Reaches memory and everything that depends on it
 entity,supermicro,why_control,en,"A public partnership, no stake"
 entity,supermicro,why_lock_in,en,Reaches assembly and systems
-entity,synopsys,why_control,en,The anchor bought a $2B stake in the company
+entity,synopsys,why_control,en,NVIDIA bought a $2B stake in the company
 entity,synopsys,why_lock_in,en,"Reaches chip design, fabs and chips"
 entity,taiwan,why_control,en,The company has no leverage at all
 entity,taiwan,why_lock_in,en,"Reaches chips, memory, packaging and everything above"
-entity,tensorrt,why_control,en,The anchor's own product
+entity,tensorrt,why_control,en,NVIDIA's own product
 entity,tensorrt,why_lock_in,en,Reaches software and inference
-entity,thrive,why_control,en,No relationship with the anchor
+entity,thrive,why_control,en,No relationship with NVIDIA
 entity,thrive,why_lock_in,en,Reaches models
-entity,tokyo-electron,why_control,en,No relationship with the anchor
+entity,tokyo-electron,why_control,en,No relationship with NVIDIA
 entity,tokyo-electron,why_lock_in,en,Reaches fabs
 entity,triton,why_control,en,Joint work without formal control
 entity,triton,why_lock_in,en,Reaches software and the platform
@@ -345,12 +345,12 @@ entity,nebius,why_time,en,An equivalent launches in a year
 entity,nebius,why_irreplaceability,en,There are several independent clouds
 entity,netherlands,why_time,en,Building tool manufacturing outside the country — more than seven years
 entity,netherlands,why_irreplaceability,en,"There is one EUV tool maker, and it is here"
-entity,nim,why_time,en,Replacing it with open engines — a year
-entity,nim,why_irreplaceability,en,Open engines cover the same job
+entity,nim,why_time,en,Replacing it with open servers — a year
+entity,nim,why_irreplaceability,en,Open servers cover the same job
 entity,nvent,why_time,en,Replacing the solution — a year
 entity,nvent,why_irreplaceability,en,There are several cooling suppliers
 entity,nventures,why_time,en,Winding the programme down and back up — one to two years
-entity,nventures,why_irreplaceability,en,The anchor has only one instrument of this kind
+entity,nventures,why_irreplaceability,en,NVIDIA has only one instrument of this kind
 entity,nvidia,why_time,en,Porting the installed code base — a decade
 entity,nvidia,why_irreplaceability,en,The accelerator is reproducible; the programming environment is not
 entity,oklo,why_time,en,A nuclear plant takes more than seven years to build
@@ -382,7 +382,7 @@ entity,sequoia,why_irreplaceability,en,Several venture funds of this class exist
 entity,servicenow,why_time,en,Replacement — one to two years
 entity,servicenow,why_irreplaceability,en,There are several enterprise platforms
 entity,sglang,why_time,en,Replacement — under a year
-entity,sglang,why_irreplaceability,en,There are several inference engines
+entity,sglang,why_irreplaceability,en,There are several model-serving systems
 entity,shin-etsu,why_time,en,Requalifying the material — one to two years
 entity,shin-etsu,why_irreplaceability,en,There are few wafer and resist suppliers
 entity,siemens,why_time,en,Replacement — one to two years
@@ -422,7 +422,7 @@ entity,usa,why_irreplaceability,en,The chain cannot be taken out of this jurisdi
 entity,vertiv,why_time,en,Rebuilding a site's cooling — two years
 entity,vertiv,why_irreplaceability,en,"There are several rack-cooling suppliers, but the tuning differs"
 entity,vllm,why_time,en,Catching up on the ecosystem — one to two years
-entity,vllm,why_irreplaceability,en,There are several inference engines; the advantage is inertia
+entity,vllm,why_irreplaceability,en,There are several model-serving systems; the advantage is inertia
 entity,wistron,why_time,en,Moving the volume — under six months
 entity,wistron,why_irreplaceability,en,"There are several contractors, and switching is quick"
 entity,xai,why_time,en,Taking its place — one to two years
@@ -431,7 +431,7 @@ entity,a16z,risk_note,en,Investments mostly in the US.
 entity,a16z,what_breaks_it,en,A contraction in venture funding.
 entity,amazon,risk_note,en,Infrastructure spread across dozens of countries.
 entity,amazon,what_breaks_it,en,In-house accelerators catch up on software and take the training workload.
-entity,amd,risk_note,en,Production on the same territory as the anchor's.
+entity,amd,risk_note,en,Production on the same territory as NVIDIA's.
 entity,amd,what_breaks_it,en,An open programming environment catches up on the volume of code written for it.
 entity,amkor,risk_note,en,"Some production has moved to the US, some remains in Asia."
 entity,amkor,what_breaks_it,en,Losing the largest customer.
@@ -440,7 +440,7 @@ entity,anthropic,what_breaks_it,en,"Losing access to a partner's capacity, or fa
 entity,applied-materials,risk_note,en,Sales into China are restricted by American rules.
 entity,applied-materials,what_breaks_it,en,Losing access to the largest fabs because of export restrictions.
 entity,arista,risk_note,en,"Production is contracted out, mostly outside China."
-entity,arista,what_breaks_it,en,"Clouds move to their own switches, or to the anchor's."
+entity,arista,what_breaks_it,en,"Clouds move to their own switches, or to NVIDIA's."
 entity,arm,risk_note,en,A British company under Japanese ownership; no export restrictions.
 entity,arm,what_breaks_it,en,An industry-wide move to the open RISC-V architecture.
 entity,ase,risk_note,en,Production concentrated in Taiwan.
@@ -556,11 +556,11 @@ entity,mlcommons,what_breaks_it,en,Another benchmark suite becoming the recognis
 entity,nccl,risk_note,en,Exported together with the hardware.
 entity,nccl,what_breaks_it,en,A mature portable collective-operations library.
 entity,nebius,risk_note,en,Sites in Europe and the US.
-entity,nebius,what_breaks_it,en,Cancellation of the anchor contract with a hyperscaler.
+entity,nebius,what_breaks_it,en,Cancellation of NVIDIA contract with a hyperscaler.
 entity,netherlands,risk_note,en,Lithography export rules are coordinated with the US and change with them.
 entity,netherlands,what_breaks_it,en,Tools of this class appearing outside the jurisdiction.
 entity,nim,risk_note,en,Exported together with the hardware.
-entity,nim,what_breaks_it,en,Open inference engines make this layer unnecessary.
+entity,nim,what_breaks_it,en,Open inference servers make this layer unnecessary.
 entity,nvent,risk_note,en,Production in the US and Europe.
 entity,nvent,what_breaks_it,en,Price pressure and the arrival of Asian manufacturers.
 entity,nventures,risk_note,en,Investments mostly in the US.
@@ -636,16 +636,16 @@ entity,usa,what_breaks_it,en,Full repeal of the export regime — a scenario now
 entity,vertiv,risk_note,en,"Production in the US, Europe and Asia."
 entity,vertiv,what_breaks_it,en,Hyperscalers standardise on their own cooling design.
 entity,vllm,risk_note,en,An open project run by many organisations.
-entity,vllm,what_breaks_it,en,A faster open engine appearing.
+entity,vllm,what_breaks_it,en,A faster open server appearing.
 entity,wistron,risk_note,en,Production in Taiwan and mainland China.
 entity,wistron,what_breaks_it,en,Failing qualification on a new generation of systems.
-entity,xai,risk_note,en,Sites in the US; power is the bottleneck.
+entity,xai,risk_note,en,Sites in the US; power limits how fast sites come online.
 entity,xai,what_breaks_it,en,Not enough funding for the next training run.
 entity,a16z,one_liner,en,"A venture fund, one of the largest investors in companies built around AI."
-entity,amazon,one_liner,en,The largest cloud and a designer of its own accelerators; investor in the second lab.
-entity,amd,one_liner,en,The second designer of AI accelerators; it builds them at the same foundry as the anchor.
-entity,amkor,one_liner,en,"The second independent packaging and test contractor, with sites in the US."
-entity,anthropic,one_liner,en,The second frontier model lab; its main infrastructure partner is a major cloud.
+entity,amazon,one_liner,en,"AWS, the largest cloud, and designer of its own Trainium accelerators; investor in Anthropic."
+entity,amd,one_liner,en,"A designer of AI accelerators, the main alternative to NVIDIA. Prints them where NVIDIA does — at TSMC."
+entity,amkor,one_liner,en,"The independent packaging and test contractor after ASE, with sites in the US."
+entity,anthropic,one_liner,en,The frontier model lab after OpenAI; its main infrastructure partner is Amazon.
 entity,applied-materials,one_liner,en,The largest supplier of tools for depositing and etching layers on a silicon wafer.
 entity,arista,one_liner,en,Datacenter switching: it binds thousands of accelerators into a single cluster.
 entity,arm,one_liner,en,Licenses the instruction set behind the processors in almost every device.
@@ -659,11 +659,11 @@ entity,bloom-energy,one_liner,en,"Fuel cells: power delivered on site, without w
 entity,boyd,one_liner,en,Thermal materials and plates that pull heat straight off the die.
 entity,broadcom,one_liner,en,Builds datacenter switches and designs custom accelerators for the clouds.
 entity,brookfield,one_liner,en,An infrastructure capital manager: it owns the power and the sites the compute stands on.
-entity,cadence,one_liner,en,The second of the two suppliers of chip design software.
+entity,cadence,one_liner,en,"One of the two suppliers of chip design software, alongside Synopsys."
 entity,cfius,one_liner,en,The interagency committee that reviews foreign investment and deals in the US.
-entity,china,one_liner,en,"A market closed by restrictions and, at the same time, a source of competitors and raw inputs."
+entity,china,one_liner,en,"A market closed by US export rules, and at the same time home to DeepSeek and Huawei."
 entity,chips-act,one_liner,en,The US law subsidising fab construction inside the country.
-entity,cisco,one_liner,en,"The historical leader in networking equipment, now a competitor in AI fabrics."
+entity,cisco,one_liner,en,"The historical leader in networking equipment, now a competitor to Arista and NVIDIA in AI fabrics."
 entity,coherent,one_liner,en,Optical modules: they turn an electrical signal into light for transmission between racks.
 entity,constellation,one_liner,en,The largest US owner of operating nuclear plants; it sells the output to datacenters.
 entity,coreweave,one_liner,en,An independent cloud that rents accelerator clusters to the labs.
@@ -674,22 +674,22 @@ entity,databricks,one_liner,en,The platform where companies prepare data and tra
 entity,deepseek,one_liner,en,A Chinese lab that showed a strong model can be trained on far less compute.
 entity,dell,one_liner,en,Builds and sells enterprise AI servers through its own sales channel.
 entity,delta-electronics,one_liner,en,Power supplies and converters that distribute electricity inside the rack.
-entity,digital-realty,one_liner,en,"The second large operator of datacenter sites, hyperscale campuses included."
+entity,digital-realty,one_liner,en,"The large datacenter site operator after Equinix, hyperscale campuses included."
 entity,eaton,one_liner,en,"The equipment that carries power from the grid to the rack: switchgear, busways, protection."
 entity,equinix,one_liner,en,"A neutral site operator: it rents space, power and traffic exchange points."
 entity,eu,one_liner,en,A regulatory bloc: its AI and data rules change the terms of sale in a large market.
 entity,eu-ai-act,one_liner,en,European rules that sort AI uses by risk level and set requirements for each.
-entity,fabrinet,one_liner,en,A contract manufacturer of optical assemblies; its largest customer is the anchor itself.
+entity,fabrinet,one_liner,en,A contract manufacturer of optical assemblies; NVIDIA is more than a quarter of its revenue.
 entity,foxconn,one_liner,en,The world's largest contract assembler; it builds finished AI servers and racks.
 entity,ge-vernova,one_liner,en,Gas turbines and grid equipment — the fastest way to give a site a lot of power.
 entity,google,one_liner,en,"A cloud, a seventh-generation in-house accelerator and its own lab, all at once."
 entity,google-cloud,one_liner,en,Google's cloud: the only one where a frontier lab can train on the owner's own silicon.
 entity,google-deepmind,one_liner,en,"A research lab inside a major cloud, training its models on the owner's silicon."
-entity,hpe,one_liner,en,The second large enterprise maker of servers and systems for AI.
+entity,hpe,one_liner,en,"An enterprise maker of AI servers and systems, second after Dell."
 entity,huggingface,one_liner,en,"The hub where finished models live, and the library through which they are run."
 entity,intel,one_liner,en,"An American fab and processor designer, trying to become the third foundry."
 entity,japan,one_liner,en,"The jurisdiction of the suppliers of chemicals, materials and some fab equipment."
-entity,jax,one_liner,en,"The second training library, developed around a cloud's own accelerator."
+entity,jax,one_liner,en,"Google's neural-network training library, second after PyTorch; built around TPU."
 entity,kioxia,one_liner,en,A maker of flash memory for the drives that hold training data.
 entity,kla,one_liner,en,Inspection equipment: it finds defects on the wafer before the scrap travels further.
 entity,kubernetes,one_liner,en,The common standard for running containers: almost all cloud infrastructure runs on it.
@@ -707,10 +707,10 @@ entity,mlcommons,one_liner,en,The industry consortium that maintains the common 
 entity,nccl,one_liner,en,The library that moves data between accelerators inside a cluster during training.
 entity,nebius,one_liner,en,"A European independent cloud with accelerator clusters, working on long contracts."
 entity,netherlands,one_liner,en,The jurisdiction from which the tools that print the most complex chips are exported.
-entity,nim,one_liner,en,The anchor's ready-made containers for running models: inference sold as a service on its own hardware.
+entity,nim,one_liner,en,NVIDIA's ready-made containers for running models: inference sold as a service on its own hardware.
 entity,nvent,one_liner,en,Enclosures and liquid cooling for high-density racks.
-entity,nventures,one_liner,en,The anchor's venture arm: it invests in companies that should stay on its platform.
-entity,nvidia,one_liner,en,The anchor of the map: it makes AI accelerators and owns the programming environment the whole industry writes in.
+entity,nventures,one_liner,en,NVIDIA's venture arm: it invests in companies that should stay on NVIDIA's platform.
+entity,nvidia,one_liner,en,"The centre of the map: it makes AI accelerators and owns CUDA, the environment the whole industry writes in."
 entity,oklo,one_liner,en,A developer of small nuclear reactors; it sells future power under long agreements.
 entity,openai,one_liner,en,The lab that trains frontier models and orders compute by the gigawatt.
 entity,oracle,one_liner,en,A cloud building sites against lab contracts for gigawatts of capacity.
@@ -721,15 +721,15 @@ entity,recursion,one_liner,en,A biotech company searching for drugs with its own
 entity,salesforce,one_liner,en,The largest sales management platform; it embeds models into the work of sales teams.
 entity,samsung,one_liner,en,A memory maker and a foundry at once — a rare combination in one company.
 entity,sandisk,one_liner,en,"A maker of flash memory and drives, spun out of Western Digital."
-entity,schneider,one_liner,en,The second large supplier of power and electrical management equipment for sites.
+entity,schneider,one_liner,en,"A large supplier of site power equipment, second after Eaton."
 entity,schrodinger,one_liner,en,A company that models molecules on compute clusters for drug discovery.
 entity,sequoia,one_liner,en,A venture fund investing in the AI application layer and in infrastructure.
 entity,servicenow,one_liner,en,An enterprise workflow platform embedding models into companies' daily work.
-entity,sglang,one_liner,en,"The second open model-serving engine, competing with the first on speed."
+entity,sglang,one_liner,en,"The second open model-serving system, competing with vLLM on speed."
 entity,shin-etsu,one_liner,en,The largest maker of silicon wafers and photoresist — the consumables of any fab.
 entity,siemens,one_liner,en,An industrial group applying models in design and on the factory floor.
 entity,siemens-eda,one_liner,en,"The third supplier of chip design software, weaker than the first two on coverage."
-entity,siemens-energy,one_liner,en,The second maker of large turbines and grid equipment for sites.
+entity,siemens-energy,one_liner,en,"A maker of large turbines and grid equipment, second after GE Vernova."
 entity,singapore,one_liner,en,"A resale and logistics hub, watched separately because of circumvention."
 entity,sk-hynix,one_liner,en,The leading maker of HBM — the fast memory placed against the accelerator.
 entity,snowflake,one_liner,en,A cloud data warehouse on which companies build models over their own data.
@@ -738,15 +738,15 @@ entity,south-korea,one_liner,en,The jurisdiction of two of the world's three mak
 entity,supermicro,one_liner,en,"Builds servers and racks, designing them ahead of each new accelerator generation."
 entity,synopsys,one_liner,en,The software chips are designed in: without it a modern chip cannot be drawn.
 entity,taiwan,one_liner,en,The territory where almost all leading-edge silicon for AI is physically made.
-entity,tensorrt,one_liner,en,A model optimiser for the anchor's accelerators: it speeds up running a trained model.
+entity,tensorrt,one_liner,en,A model optimiser for NVIDIA's accelerators: it speeds up running a trained model.
 entity,thrive,one_liner,en,A fund specialising in late-stage rounds of companies built around models.
 entity,tokyo-electron,one_liner,en,"A Japanese maker of wafer processing equipment, third in the world by scale."
 entity,triton,one_liner,en,A language and compiler for writing compute kernels without going down into the accelerator's environment.
 entity,tsmc,one_liner,en,The foundry that physically makes almost all leading-edge silicon for AI.
-entity,usa,one_liner,en,The anchor's home jurisdiction and the main gate: it decides who it may sell to.
+entity,usa,one_liner,en,NVIDIA's home jurisdiction and the main gate: it decides who NVIDIA may sell to.
 entity,vertiv,one_liner,en,Rack power and liquid cooling; it designs them ahead of each new accelerator generation.
-entity,vllm,one_liner,en,An open engine that runs already-trained models fast and cheaply.
-entity,wistron,one_liner,en,"A Taiwanese assembler of servers and modules, the second source for large orders."
+entity,vllm,one_liner,en,An open system that runs already-trained models fast and cheaply.
+entity,wistron,one_liner,en,"A Taiwanese assembler of servers and modules, the second source after Foxconn."
 entity,xai,one_liner,en,A young lab that built one of the largest accelerator clusters in record time.
 entity,a16z,why_irreplaceable,en,A second fund of the same class. That several exist is exactly why venture capital is never critical.
 entity,amazon,why_irreplaceable,en,The furthest along of the clouds on its own silicon. It is also one of the largest buyers — the dependence runs both ways.
@@ -756,15 +756,15 @@ entity,anthropic,why_irreplaceable,en,"Proof that demand is not concentrated in 
 entity,applied-materials,why_irreplaceable,en,"One of three suppliers at this scale. It can be replaced, but requalifying a process in a fab takes years."
 entity,arista,why_irreplaceable,en,"A fabric for accelerator clusters is designed whole, operating system and operations included. Changing vendor means rebuilding the network and retraining the people."
 entity,arm,why_irreplaceable,en,More than 350 billion shipped chips use this architecture. Moving to another means the whole industry rewriting its systems software.
-entity,ase,why_irreplaceable,en,"Packaging has become as tight a bottleneck as the chip itself. There are two or three contractors at this scale, and all of them are in Taiwan."
+entity,ase,why_irreplaceable,en,"Packaging has become as tight a constraint as the chip itself. There are two or three contractors at this scale, and all of them are in Taiwan."
 entity,asml,why_irreplaceable,en,"The company states in its own filing that it is the sole maker of such tools. Without them a leading-edge fab cannot be built, and building your own tools takes more than ten years."
-entity,astera-labs,why_irreplaceable,en,"It works precisely to the anchor's platform requirements, and its parts land in the reference designs. But the function can be pulled into the switch silicon."
+entity,astera-labs,why_irreplaceable,en,"It works precisely to NVIDIA's platform requirements, and its parts land in the reference designs. But the function can be pulled into the switch silicon."
 entity,bis,why_irreplaceable,en,"One published document from this agency closes or opens an entire market. It cannot be routed around, only complied with."
 entity,blackrock,why_irreplaceable,en,Infrastructure capital for sites and power. It differs from venture in the length of its horizon and its demand for predictable cash flow.
-entity,blackstone,why_irreplaceable,en,"It owns the sites rather than stakes in them. That makes it the owner of a bottleneck, not merely a source of money."
+entity,blackstone,why_irreplaceable,en,"It owns the sites rather than stakes in them. That makes it the owner of the scarcity itself, not merely a source of money."
 entity,bloom-energy,why_irreplaceable,en,"It solves the build's central problem — the interconnection queue. The technology is not unique, but competitors have less deployed capacity."
 entity,boyd,why_irreplaceable,en,"It works at the level of the chip package, not the site. There are several suppliers, and qualification takes months."
-entity,broadcom,why_irreplaceable,en,At once a supplier of networking silicon and the principal designer of alternative accelerators for the clouds. The second role makes it the most serious threat to the anchor's position.
+entity,broadcom,why_irreplaceable,en,At once a supplier of networking silicon and the principal designer of alternative accelerators for the clouds. The second role makes it the most serious threat to NVIDIA's position.
 entity,brookfield,why_irreplaceable,en,"Capital that creates assets rather than buying shares. It owns generation and sites at the same time, so it reaches into the stack through ownership."
 entity,cadence,why_irreplaceable,en,The other half of the duopoly. Its place-and-route tools have no substitute: the third-party suppliers have nothing like the coverage.
 entity,cfius,why_irreplaceable,en,It can block a purchase or a partnership with foreign participation. The mechanism cannot be avoided; the deal simply does not happen.
@@ -773,10 +773,10 @@ entity,chips-act,why_irreplaceable,en,Its money changes the economics of buildin
 entity,cisco,why_irreplaceable,en,"The largest networking company by installed base, but in AI clusters it loses to purpose-built alternatives."
 entity,coherent,why_irreplaceable,en,One of several optics suppliers for clusters. It supports both open and proprietary standards — which is precisely why it is replaceable.
 entity,constellation,why_irreplaceable,en,"It sells carbon-free output directly under long contracts. A new plant cannot be built quickly, so the value lies in the operating ones."
-entity,coreweave,why_irreplaceable,en,The existence of an independent capacity landlord stops the giant clouds monopolising inference. The value is strategic: all of its hardware comes from the anchor under contract.
+entity,coreweave,why_irreplaceable,en,The existence of an independent capacity landlord stops the giant clouds monopolising inference. The value is strategic: all of its hardware comes from NVIDIA under contract.
 entity,credo,why_irreplaceable,en,It specialises in the reliability of connections inside a cluster. Replacements exist; the advantage is in how proven it is.
 entity,crusoe,why_irreplaceable,en,It joins two shortages at once: power and compute. That is exactly why it builds where the grid cannot cope.
-entity,cuda,why_irreplaceable,en,The industry has been writing code for it for almost twenty years. Porting the installed base is not a project but a change of engineering generation. This is the anchor's principal moat.
+entity,cuda,why_irreplaceable,en,The industry has been writing code for it for almost twenty years. Porting the installed base is not a project but a change of engineering generation. This is NVIDIA's principal lock.
 entity,databricks,why_irreplaceable,en,Proof that compute pays for itself outside the labs: enterprise customers recover the cost on their own data.
 entity,deepseek,why_irreplaceable,en,A direct challenge to the assumption that model quality scales with accelerators purchased. That is why it erodes demand harder than its competitors do.
 entity,dell,why_irreplaceable,en,A sales channel into the enterprise segment — the thing the Taiwanese assemblers lack. But the assembly itself is reproducible.
@@ -786,7 +786,7 @@ entity,eaton,why_irreplaceable,en,"It puts the power equipment into AI sites. Th
 entity,equinix,why_irreplaceable,en,Neutrality is what the giant clouds cannot offer: everyone meets on one site. Hard to replace because of the density of connections.
 entity,eu,why_irreplaceable,en,"Its requirements on models and data shape how products are sold in Europe, but do not restrict manufacturing."
 entity,eu-ai-act,why_irreplaceable,en,It defines what may be sold in Europe and under what obligations. It affects applications far more than hardware.
-entity,fabrinet,why_irreplaceable,en,It assembles optics and modules to other people's designs. The dependence runs one way: the anchor accounts for more than a quarter of its revenue.
+entity,fabrinet,why_irreplaceable,en,It assembles optics and modules to other people's designs. The dependence runs one way: NVIDIA accounts for more than a quarter of its revenue.
 entity,foxconn,why_irreplaceable,en,"Scale and platform-specific expertise give it an edge, but assembly as such is reproducible: volumes redistribute between three or four contractors within a quarter."
 entity,ge-vernova,why_irreplaceable,en,"Three companies in the world build turbines of this class, and the queue is booked years out. That limits build speed more than price does."
 entity,google,why_irreplaceable,en,"The only company with its own chip, its own cloud and its own frontier lab. That makes it both the principal customer and the most complete alternative."
@@ -796,7 +796,7 @@ entity,hpe,why_irreplaceable,en,A direct analogue of the first enterprise manufa
 entity,huggingface,why_irreplaceable,en,It became the assembly point of the model ecosystem: the library is the common denominator between training and serving. Leaving it is technically possible; moving the ecosystem is expensive.
 entity,intel,why_irreplaceable,en,"The only alternative leading-edge manufacturing located in the US. It has not caught up on volume or yield, but that is exactly where its geopolitical value lies."
 entity,japan,why_irreplaceable,en,"Ultra-pure chemistry and packaging materials are made here by a narrow set of companies. Replacement is possible, but it requires requalifying the process."
-entity,jax,why_irreplaceable,en,"The other half of the duopoly. It exists and it works, but its ecosystem is visibly smaller — which is what makes the first library's moat visible."
+entity,jax,why_irreplaceable,en,"The other half of the duopoly. It exists and it works, but its ecosystem is visibly smaller — which is what makes the first library's lock visible."
 entity,kioxia,why_irreplaceable,en,Storage is the most replaceable memory layer: there are several suppliers and switching takes weeks.
 entity,kla,why_irreplaceable,en,"It dominates inspection and metrology. Without it, yield on leading-edge nodes falls, and the alternatives are visibly weaker."
 entity,kubernetes,why_irreplaceable,en,An industry standard quite apart from AI. That is precisely why accelerator access to it is mandatory for every hardware vendor.
@@ -805,18 +805,18 @@ entity,lambda,why_irreplaceable,en,"The third independent landlord. Each additio
 entity,lightspeed,why_irreplaceable,en,"Another fund of the same class. It matters to the map as part of a set, not on its own."
 entity,lite-on,why_irreplaceable,en,An interchangeable power supplier. Companies like this are exactly the ones that should score low: there are several and switching is quick.
 entity,marvell,why_irreplaceable,en,The second designer of custom accelerators for the clouds. That two such companies exist means the alternative path for the clouds is real.
-entity,meta,why_irreplaceable,en,The only buyer that handed the industry its training library. That makes it both a customer and a co-owner of the moat: the library cements the tie to the accelerators.
+entity,meta,why_irreplaceable,en,The only buyer that handed the industry its training library. That makes it both a customer and a co-owner of the lock: the library cements the tie to the accelerators.
 entity,mgx,why_irreplaceable,en,Sovereign capital entering the compute build directly. It differs from venture in having a longer horizon and a larger cheque.
 entity,micron,why_irreplaceable,en,"A second source of memory and the only one outside Korea. It is technologically catching up, but its existence lowers dependence on a single jurisdiction."
-entity,microsoft,why_irreplaceable,en,"It buys compute, builds alongside the anchor and designs its own accelerators. All three relationships are real, and the third is the source of the main risk."
+entity,microsoft,why_irreplaceable,en,"It buys compute, builds alongside NVIDIA and designs its own accelerators. All three relationships are real, and the third is the source of the main risk."
 entity,mistral,why_irreplaceable,en,It shows that frontier models are not made only in the US. It matters to the map as proof that demand is geographically distributed.
 entity,mlcommons,why_irreplaceable,en,"Its benchmarks became the common ruler: every accelerator maker is measured by the results, and that makes the bar public."
 entity,nccl,why_irreplaceable,en,"Training across thousands of accelerators runs into data exchange. This library is the de facto standard, and the alternatives for other hardware are visibly weaker."
-entity,nebius,why_irreplaceable,en,"Another independent capacity landlord, this time in Europe. It states its dependence on the anchor for silicon outright."
+entity,nebius,why_irreplaceable,en,"Another independent capacity landlord, this time in Europe. It states its dependence on NVIDIA for silicon outright."
 entity,netherlands,why_irreplaceable,en,"The sole maker of these tools sits here, so Dutch export rules determine who in the world can build a leading-edge fab."
-entity,nim,why_irreplaceable,en,The anchor's way of climbing from hardware into the serving layer. It runs only on its accelerators and therefore deepens the tie.
+entity,nim,why_irreplaceable,en,NVIDIA's way of climbing from hardware into the serving layer. It runs only on its accelerators and therefore deepens the tie.
 entity,nvent,why_irreplaceable,en,"The second supplier of liquid cooling. Having several makes the layer competitive, and the constraint is delivery time."
-entity,nventures,why_irreplaceable,en,This is not a portfolio for returns but an instrument for managing the anchor's own risk: the money goes where losing the ecosystem would cost it most.
+entity,nventures,why_irreplaceable,en,This is not a portfolio for returns but an instrument for managing NVIDIA's own risk: the money goes where losing the ecosystem would cost it most.
 entity,nvidia,why_irreplaceable,en,"The chip can be replaced; the environment cannot. The industry's code is written for it, and rewriting costs years. On top of that, the network and the systems are sold as one package."
 entity,oklo,why_irreplaceable,en,"Not one reactor built and not one binding power supply agreement. On this map it is a bet, not a supplier, and the scoring has to show that."
 entity,openai,why_irreplaceable,en,Its existence proved to the industry that accelerator demand is real: gigawatt sites are built for it. But as a source of demand it is replaceable by other labs.
@@ -832,20 +832,20 @@ entity,schneider,why_irreplaceable,en,"A direct analogue of the first power supp
 entity,schrodinger,why_irreplaceable,en,Another industry application with a long payback cycle. The number of such examples matters more than any one of them.
 entity,sequoia,why_irreplaceable,en,"Money is replaceable by money: a fund's value is in deal access and speed, not in the irreplaceability of its capital."
 entity,servicenow,why_irreplaceable,en,Proof of payback in the enterprise segment: models are embedded in processes companies already pay for.
-entity,sglang,why_irreplaceable,en,A direct competitor to the first engine. That two exist means this layer is competitive rather than locked.
+entity,sglang,why_irreplaceable,en,A direct competitor to vLLM. That two exist means this layer is competitive rather than locked.
 entity,shin-etsu,why_irreplaceable,en,"Wafers and photoresist are consumed on every chip. There are few suppliers, and requalifying a material in a fab takes a year or more."
 entity,siemens,why_irreplaceable,en,It shows the use case in physical manufacturing rather than software. For the map that is proof that demand reaches beyond the internet companies.
 entity,siemens-eda,why_irreplaceable,en,It holds particular niches in verification and manufacturing preparation. It is not a full replacement for the first two.
 entity,siemens-energy,why_irreplaceable,en,"The second of three companies able to build large turbines and transformers. The constraint is manufacturing capacity, not technology."
 entity,singapore,why_irreplaceable,en,"Meaningful shipment volumes move through the region, which is why it came into focus for re-export checks."
-entity,sk-hynix,why_irreplaceable,en,"First on the anchor's memory supplier list and the leader in HBM. A new memory generation qualifies over years, so the supplier cannot be changed within a generation."
+entity,sk-hynix,why_irreplaceable,en,"First on NVIDIA's memory supplier list and the leader in HBM. A new memory generation qualifies over years, so the supplier cannot be changed within a generation."
 entity,snowflake,why_irreplaceable,en,"Corporate data is the thing the labs do not have. This platform makes it usable for training, and that is its role on the map."
 entity,softbank,why_irreplaceable,en,Capital of this size behind a single project is hard to find: it is not a venture cheque but a commitment to fund construction years ahead.
 entity,south-korea,why_irreplaceable,en,"HBM — stacked memory sitting beside the chip — is made by three companies, two of them here. Moving memory production is a matter of years and tens of billions."
 entity,supermicro,why_irreplaceable,en,The value is in time to market: products are designed jointly with the processor makers before a platform ships. But others can build a rack too.
 entity,synopsys,why_irreplaceable,en,"A duopoly with Cadence. Design methodology is wired into engineers' processes, and changing tool set means years of retraining and rewriting."
 entity,taiwan,why_irreplaceable,en,"An equivalent fab takes seven to ten years to build. Production transfers have been announced, but the leading-edge nodes stay here."
-entity,tensorrt,why_irreplaceable,en,"The anchor's own tool, running only on its hardware. It raises the cost of leaving: moving a model means losing this optimisation."
+entity,tensorrt,why_irreplaceable,en,"NVIDIA's own tool, running only on its hardware. It raises the cost of leaving: moving a model means losing this optimisation."
 entity,thrive,why_irreplaceable,en,"Billion-dollar late-stage rounds are a narrow segment, but even there several investors operate."
 entity,tokyo-electron,why_irreplaceable,en,"One of the three equipment suppliers. Some operations only it performs, but for most there are alternatives."
 entity,triton,why_irreplaceable,en,An intermediate layer that in theory loosens the tie to the programming environment. For now it still runs best on that same environment.
@@ -858,7 +858,7 @@ entity,xai,why_irreplaceable,en,It proved a cluster of hundreds of thousands of 
 edge,amazon__anthropic__supplies,risk_mitigation,en,The lab runs three silicon platforms at once.
 edge,amazon__cuda__locks_in_platforms,risk_mitigation,en,In-house accelerators with their own environment — an attempt to break the lock.
 edge,amazon__nvidia__customer_of,risk_mitigation,en,Revenue is spread across several clouds.
-edge,amazon__nvidia__threatens,risk_mitigation,en,The software ecosystem remains the anchor's advantage.
+edge,amazon__nvidia__threatens,risk_mitigation,en,The software ecosystem remains NVIDIA's advantage.
 edge,amd__cuda__could_disrupt,risk_mitigation,en,The competitor's open environment still trails badly on ecosystem.
 edge,amd__cuda__is_alternative_to,risk_mitigation,en,"The path exists, but the volume of code written for it does not compare."
 edge,amd__nvidia__competes_with,risk_mitigation,en,The advantage is software: the competitor has no comparable programming environment.
@@ -868,7 +868,7 @@ edge,amkor__nvidia__packages,risk_mitigation,en,Several independent packaging co
 edge,anthropic__nvidia__validates_demand,risk_mitigation,en,The lab trains partly on other vendors' accelerators.
 edge,applied-materials__tsmc__supplies,risk_mitigation,en,Three equipment suppliers share the market.
 edge,arista__microsoft__supplies,risk_mitigation,en,The customer base is concentrated in two accounts.
-edge,arista__nvidia__competes_with,risk_mitigation,en,The anchor's own networking platform is sold together with the accelerators.
+edge,arista__nvidia__competes_with,risk_mitigation,en,NVIDIA's own networking platform is sold together with the accelerators.
 edge,arm__intel__competes_with,risk_mitigation,en,Its own architecture is being refreshed for AI workloads.
 edge,arm__nvidia__supplies,risk_mitigation,en,In-house processor cores and an open architecture as the alternative.
 edge,ase__nvidia__packages,risk_mitigation,en,Several independent packaging contractors.
@@ -890,7 +890,7 @@ edge,constellation__microsoft__supplies,risk_mitigation,en,A twenty-year contrac
 edge,coreweave__nvidia__proves_roi,risk_mitigation,en,The model rests on two customers.
 edge,credo__nvidia__optimizes_for,risk_mitigation,en,Clusters moving to optics reduces the role of active copper.
 edge,cuda__huggingface__locks_in_developers,risk_mitigation,en,Support for other vendors' accelerators in the hub is growing.
-edge,cuda__nvidia__defines_category,risk_mitigation,en,The industry thinks about AI compute in the terms the anchor set.
+edge,cuda__nvidia__defines_category,risk_mitigation,en,The industry thinks about AI compute in the terms NVIDIA set.
 edge,cuda__nvidia__locks_in_platforms,risk_mitigation,en,Opening part of the stack lowers the risk of rejection.
 edge,cuda__pytorch__locks_in_developers,risk_mitigation,en,Open compilers and portable layers gradually loosen the tie.
 edge,databricks__nvidia__proves_roi,risk_mitigation,en,Hyperscalers build the same functionality into their own clouds.
@@ -935,12 +935,12 @@ edge,microsoft__nvidia__threatens,risk_mitigation,en,Its own silicon still cover
 edge,nccl__nvidia__locks_in_platforms,risk_mitigation,en,Portable collective-operations libraries are still visibly weaker.
 edge,netherlands__asml__export_controlled_by,risk_mitigation,en,Licences agreed with the government; shipments to permitted jurisdictions.
 edge,netherlands__tsmc__controls_access_to,risk_mitigation,en,Licences are granted to allied jurisdictions; shipments continue under supervision.
-edge,nim__nvidia__locks_in_platforms,risk_mitigation,en,Open engines cover the same job for free.
+edge,nim__nvidia__locks_in_platforms,risk_mitigation,en,Open servers cover the same job for free.
 edge,nvent__nvidia__optimizes_for,risk_mitigation,en,There are several liquid-cooling suppliers.
 edge,nvidia__arm__diversifies_supply,risk_mitigation,en,In-house processor cores as an alternative to someone else's instruction set.
 edge,nvidia__china__subject_to_restriction,risk_mitigation,en,Revenue diversified across regions.
 edge,nvidia__coreweave__hedges_against,risk_mitigation,en,A hedge against the giant clouds monopolising compute rental: an independent cloud has to survive.
-edge,nvidia__coreweave__supplies,risk_mitigation,en,Customer contracts explicitly require the anchor's accelerators.
+edge,nvidia__coreweave__supplies,risk_mitigation,en,Customer contracts explicitly require NVIDIA's accelerators.
 edge,nvidia__crusoe__hedges_against,risk_mitigation,en,A hedge against power scarcity capping accelerator demand.
 edge,nvidia__google__competes_with,risk_mitigation,en,"The proprietary interconnect was opened to other accelerators, to keep them inside its own fabric."
 edge,nvidia__huggingface__hedges_against,risk_mitigation,en,A hedge against the model ecosystem moving to other vendors' accelerators.
@@ -990,289 +990,8 @@ edge,tsmc__nvidia__manufactures,risk_mitigation,en,A second foundry as insurance
 edge,tsmc__nvidia__packages,risk_mitigation,en,Packaging capacity expanded and independent contractors brought in.
 edge,usa__nvidia__controls_access_to,risk_mitigation,en,A restriction-compliant version of the accelerator shipped; lobbying to soften the rules continues.
 edge,vertiv__nvidia__co_designs,risk_mitigation,en,Hyperscalers may standardise on their own cooling design.
-edge,vllm__nvidia__validates_demand,risk_mitigation,en,"The engine supports other vendors' accelerators too, which loosens the tie."
+edge,vllm__nvidia__validates_demand,risk_mitigation,en,"vLLM supports other vendors' accelerators too, which loosens the tie."
 edge,wistron__nvidia__integrates,risk_mitigation,en,Volumes redistribute between contractors within a quarter.
 edge,a16z__databricks__invests_in,note,en,Venture capital in a data platform at the application layer.
 edge,amazon__anthropic__invests_in,note,en,"Convertible notes, part of them converted into non-voting stock: the cloud is funding its own customer."
 edge,amazon__anthropic__supplies,note,en,The cloud sells the lab up to five gigawatts of capacity on its own accelerators — alongside the investments already recorded.
-edge,amazon__cuda__locks_in_platforms,note,en,The second cloud is locked at the same level: customers demand compatibility with the anchor's environment.
-edge,amazon__nvidia__customer_of,note,en,The second giant cloud among the largest buyers.
-edge,amazon__nvidia__threatens,note,en,The cloud's own accelerators cover part of its training and inference.
-edge,amd__cuda__could_disrupt,note,en,The competitor's open programming environment is the only named way out of the lock.
-edge,amd__cuda__is_alternative_to,note,en,"AMD's open environment is a viable replacement path, not market competition: it is supported by the same training library."
-edge,amd__nvidia__competes_with,note,en,"A direct competitor in accelerators, dependent on the same foundry and the same memory suppliers."
-edge,amd__pytorch__enables,note,en,The training library also builds for AMD accelerators: this is the only named path out of the NVIDIA environment's lock.
-edge,amd__tsmc__manufactures,note,en,The anchor's competitor makes its chips at the same foundry: the bottleneck is shared by both.
-edge,amkor__astera-labs__packages,note,en,The second packaging contractor for connectivity silicon.
-edge,amkor__broadcom__packages,note,en,The second packaging contractor for custom silicon.
-edge,amkor__credo__packages,note,en,Packaging for rack connectivity silicon.
-edge,amkor__nvidia__packages,note,en,"The second independent packaging contractor, with sites in the US."
-edge,anthropic__amazon__strategic_partner,note,en,The cloud put billions into the lab and became its principal infrastructure partner.
-edge,anthropic__google-cloud__customer_of,note,en,The other side of the same deal: for the cloud this is one of its largest capacity contracts.
-edge,anthropic__nvidia__customer_of,note,en,A second lab buying compute — demand is not concentrated in one company.
-edge,anthropic__nvidia__validates_demand,note,en,"A second proof of demand: with a single buyer, the entire build-out would hang on it."
-edge,applied-materials__samsung__supplies,note,en,The second large customer of the equipment supplier by disclosed concentration.
-edge,applied-materials__tsmc__supplies,note,en,"Deposition equipment; customer concentration is disclosed without names, but the foundry is in the top two."
-edge,arista__meta__supplies,note,en,The second large switching customer by disclosed concentration.
-edge,arista__microsoft__supplies,note,en,Cluster switching at a hyperscaler: two customers account for more than 40% of the supplier's revenue.
-edge,arista__nvidia__competes_with,note,en,"Cluster fabrics: the anchor's own protocol is sold as a package with the accelerators, which squeezes out the independent supplier."
-edge,arm__intel__competes_with,note,en,The Arm architecture is taking datacenter share from x86; Intel names its growth directly in its competition section.
-edge,arm__kubernetes__standardizes_on,note,en,The processor architecture is supported by the common container standard on the same terms as the rest.
-edge,arm__nvidia__path_dependent_on,note,en,Server processor development on this architecture follows the requirements of the accelerator platforms.
-edge,arm__nvidia__supplies,note,en,The instruction set behind the processors in the accelerator platforms.
-edge,ase__astera-labs__packages,note,en,Packaging and test for connectivity silicon.
-edge,ase__broadcom__packages,note,en,Packaging and test for custom silicon.
-edge,ase__credo__packages,note,en,The second packaging contractor.
-edge,ase__nvidia__packages,note,en,Independent die packaging alongside the foundry's own; there are two or three contractors at this scale.
-edge,asml__tsmc__supplies,note,en,One company in the world makes the tools that print the finest features. Without them a leading-edge fab does not exist.
-edge,astera-labs__nvidia__optimizes_for,note,en,"Connectivity silicon designed for one specific accelerator platform, and written into its reference designs."
-edge,bis__nvidia__export_controlled_by,note,en,The agency that writes the chip export rules themselves. Exactly one published document closes an entire market.
-edge,blackstone__anthropic__invests_in,note,en,The owner of datacenter sites took a stake in the lab that fills them.
-edge,blackstone__digital-realty__invests_in,note,en,"The capital manager owns the site platforms outright, not stakes in them."
-edge,bloom-energy__oracle__supplies,note,en,"Fuel cells deliver power on site, without waiting for a grid connection."
-edge,boyd__nvidia__supplies,note,en,Thermal plates that pull heat straight off the accelerator die.
-edge,broadcom__google__co_designs,note,en,The cloud's own accelerator is designed jointly with an outside chip developer.
-edge,broadcom__nvidia__threatens,note,en,It designs the clouds their own accelerators — a direct alternative to buying from the anchor.
-edge,broadcom__tsmc__customer_of,note,en,The designer of custom accelerators buys from the same foundry as the anchor: the bottleneck is shared.
-edge,brookfield__amazon__supplies,note,en,The infrastructure owner sells the cloud wind and solar capacity under long-term contracts.
-edge,brookfield__anthropic__invests_in,note,en,Infrastructure capital took a stake in the lab — a rare case of an energy owner funding its own consumer.
-edge,brookfield__constellation__competes_with,note,en,Two generation owners competing for contracts with the sites.
-edge,brookfield__crusoe__invests_in,note,en,Infrastructure capital in a cloud that builds sites at the energy source.
-edge,brookfield__microsoft__supplies,note,en,The infrastructure owner supplies power to the giant cloud's sites.
-edge,cadence__nvidia__enables,note,en,The other half of the duopoly: placing and routing billions of transistors.
-edge,cadence__synopsys__competes_with,note,en,The two halves of the chip design software duopoly: each names the other as its first competitor.
-edge,cfius__mgx__controls_access_to,note,en,The committee reviews foreign investment and can block a sovereign capital deal.
-edge,cfius__nvidia__controls_access_to,note,en,Review of foreign participation stretches the timelines of the anchor's partnerships and acquisitions.
-edge,china__deepseek__controls_access_to,note,en,The lab operates under Chinese jurisdiction and under the restrictions imposed in return.
-edge,china__nvidia__subject_to_restriction,note,en,"The second-largest market, and one you cannot sell into without a licence. The restriction cuts both ways."
-edge,chips-act__intel__controls_access_to,note,en,Subsidies change the economics of building fabs in the US and therefore strengthen the domestic manufacturer.
-edge,cisco__arista__competes_with,note,en,The historical networking leader against a supplier purpose-built for clusters.
-edge,coherent__nvidia__supplies,note,en,Optical modules for clusters; they support both the anchor's own protocol and the open standards.
-edge,constellation__microsoft__supplies,note,en,A twenty-year nuclear power contract against datacenter demand: restarting a shut-down unit.
-edge,coreweave__nvidia__customer_of,note,en,The independent cloud buys billions of dollars of accelerators and resells them as rental.
-edge,coreweave__nvidia__proves_roi,note,en,A listed independent cloud proved that renting accelerators supports a real business.
-edge,credo__nvidia__optimizes_for,note,en,"Active cables joining racks into a cluster, built around the anchor's platform."
-edge,crusoe__nvidia__enables,note,en,"It builds sites directly at energy sources, removing the build's main constraint."
-edge,cuda__huggingface__locks_in_developers,note,en,Models in the common hub are optimised for this environment: moving the whole ecosystem costs more than buying the hardware.
-edge,cuda__nvidia__defines_category,note,en,Not merely a product but a frame: the industry describes AI compute in the terms the anchor introduced.
-edge,cuda__nvidia__locks_in_platforms,note,en,The environment runs only on the anchor's accelerators: leaving them means the industry rewriting its code.
-edge,cuda__pytorch__locks_in_developers,note,en,The training library builds for this environment and will not run on accelerators without it. In return: the library's ubiquity proves the environment's worth.
-edge,databricks__huggingface__standardizes_on,note,en,The enterprise platform takes models from the common hub rather than training them from scratch.
-edge,databricks__nvidia__proves_roi,note,en,"It shows that enterprise customers, not only labs, recover the cost of compute on their own data."
-edge,deepseek__cuda__could_disrupt,note,en,Training a strong model more cheaply undermines the link between more accelerators and a better model.
-edge,deepseek__huggingface__enables,note,en,The Chinese lab's open weights are published in the common hub and available to everyone.
-edge,deepseek__nvidia__threatens,note,en,It showed a strong model trained on less compute — a challenge to the assumption that quality scales with purchases.
-edge,dell__nvidia__delivers_to,note,en,It carries finished systems to the enterprise customers the anchor does not serve itself.
-edge,delta-electronics__nvidia__optimizes_for,note,en,"Converters distributing power inside the rack, built to one generation's requirements."
-edge,digital-realty__nvidia__enables,note,en,The second large operator of datacenter sites.
-edge,digital-realty__oracle__supplies,note,en,Sites for cloud capacity.
-edge,eaton__equinix__supplies,note,en,Power equipment at the neutral sites.
-edge,eaton__microsoft__supplies,note,en,"Power equipment at the sites: switchgear, busways, protection. The delivery queue runs to years."
-edge,equinix__coreweave__supplies,note,en,Neutral sites for the independent cloud's clusters.
-edge,equinix__microsoft__supplies,note,en,Sites and connections for the giant cloud.
-edge,equinix__nvidia__enables,note,en,Neutral sites and traffic exchange points through which clusters connect.
-edge,eu-ai-act__openai__subject_to_restriction,note,en,The requirements on models fall first on the labs and on the application layer.
-edge,eu__eu-ai-act__standardizes_on,note,en,The regulation is the instrument through which the bloc sets the rules for the AI market.
-edge,eu__nvidia__subject_to_restriction,note,en,"European AI rules raise the cost of selling, but do not restrict manufacturing."
-edge,fabrinet__cisco__integrates,note,en,The second large customer of the contract optics assembler — 18.2% of its revenue.
-edge,fabrinet__coherent__integrates,note,en,Contract assembly of optical modules for several designers.
-edge,fabrinet__nvidia__integrates,note,en,It assembles optical modules and sub-assemblies; the dependence runs one way — the anchor accounts for more than a quarter of its revenue.
-edge,foxconn__broadcom__integrates,note,en,Contract assembly and test for the designer of custom silicon.
-edge,foxconn__nvidia__integrates,note,en,"It assembles, tests and packages the anchor's finished products; it is named directly in the anchor's filings."
-edge,ge-vernova__microsoft__supplies,note,en,"Gas turbines for the sites: the fastest way to deliver a lot of power, but the queue runs to years."
-edge,google-cloud__amazon__competes_with,note,en,Both clouds sell the same lab capacity on their own accelerators.
-edge,google-cloud__anthropic__supplies,note,en,The lab chose this cloud as a capacity supplier and expanded the order to a million accelerators.
-edge,google-cloud__google-deepmind__enables,note,en,A lab inside the same corporation trains on this cloud's capacity and its silicon.
-edge,google-cloud__google__funded_by,note,en,"The cloud is a division of the parent company: its chips, its lab, its money."
-edge,google-cloud__microsoft__competes_with,note,en,The third giant cloud competes with the first two for the same lab contracts.
-edge,google-deepmind__google__funded_by,note,en,A lab inside the cloud: it trains on its owner's own silicon.
-edge,google-deepmind__nvidia__threatens,note,en,The only frontier lab training on its own owner's silicon — living proof that an alternative exists.
-edge,google__anthropic__supplies,note,en,Google sells the lab capacity on its own accelerators — up to a million chips and five gigawatts under the latest agreements.
-edge,google__broadcom__customer_of,note,en,The cloud pays an outside developer to design its own accelerator.
-edge,google__nvidia__customer_of,note,en,The third giant cloud: it buys and builds its own alternative at the same time.
-edge,google__nvidia__threatens,note,en,Its seventh-generation in-house accelerator covers part of the internal workload without purchases.
-edge,huggingface__cuda__path_dependent_on,note,en,Published models are optimised for this environment first; the rest are supported later.
-edge,huggingface__nvidia__validates_demand,note,en,Models published in the hub run above all on its accelerators: leaving means losing access to the ecosystem.
-edge,huggingface__pytorch__standardizes_on,note,en,The common model library is built around the training library: this is where the whole ecosystem joins up.
-edge,intel__nvidia__diversifies_supply,note,en,"The only leading-edge fab in the US: valuable geopolitically, not yet on volume."
-edge,intel__tsmc__competes_with,note,en,It is trying to become the third foundry for leading-edge chips.
-edge,japan__shin-etsu__geopolitically_dependent,note,en,Fab materials are made by a handful of Japanese companies; export measures have already been used.
-edge,japan__tsmc__controls_access_to,note,en,Export measures on fab materials have already been used as a political instrument.
-edge,jax__cuda__path_dependent_on,note,en,"The second training library also works through this environment, though it is developed around someone else's accelerator."
-edge,jax__google__funded_by,note,en,The library is led by a company that has both its own cloud and its own accelerator.
-edge,jax__pytorch__competes_with,note,en,The other half of the training library duopoly; the ecosystem is visibly smaller.
-edge,kioxia__nvidia__supplies,note,en,Flash memory for the drives that hold training data. The most replaceable memory layer.
-edge,kla__tsmc__supplies,note,en,"Defect inspection equipment: without it, yield on leading-edge nodes falls."
-edge,lam-research__micron__supplies,note,en,The second memory maker named among the significant customers.
-edge,lam-research__samsung__supplies,note,en,The third memory maker named among the significant customers.
-edge,lam-research__sk-hynix__supplies,note,en,The memory maker is named among the equipment supplier's most significant customers.
-edge,lam-research__tsmc__supplies,note,en,Etch and deposition equipment; the foundry is named among the most significant customers.
-edge,lightspeed__anthropic__invests_in,note,en,Venture capital in the second lab.
-edge,lite-on__supermicro__supplies,note,en,Power supplies for servers: an interchangeable component with many suppliers.
-edge,marvell__nvidia__threatens,note,en,The second designer of custom accelerators for the clouds.
-edge,meta__cuda__locks_in_platforms,note,en,The company that authored the training library is itself locked to the environment that library builds for.
-edge,meta__huggingface__enables,note,en,The company's open models are published in the common hub and make it the centre of the ecosystem.
-edge,meta__nvidia__customer_of,note,en,A large buyer that also handed the industry its main training library.
-edge,meta__nvidia__validates_demand,note,en,Capital spending on infrastructure proves demand from a company that could have done without it.
-edge,mgx__openai__invests_in,note,en,Abu Dhabi's sovereign capital among the four original capital holders of the build.
-edge,mgx__softbank__strategic_partner,note,en,Sovereign and private capital in one construction consortium.
-edge,micron__nvidia__supplies,note,en,The third memory supplier and the only one outside Korea: it lowers dependence on a single jurisdiction.
-edge,micron__sk-hynix__competes_with,note,en,Competition to qualify next-generation memory at a shared customer.
-edge,microsoft__blackrock__funded_by,note,en,Infrastructure capital funds the sites and the power behind cloud capacity.
-edge,microsoft__coreweave__customer_of,note,en,For the independent cloud this is 67% of revenue: the dependence is one-way and critical.
-edge,microsoft__cuda__locks_in_platforms,note,en,The cloud is tied to the programming environment at several levels at once and cannot leave wholesale.
-edge,microsoft__nebius__customer_of,note,en,A hyperscaler rents dedicated clusters from an independent cloud — demand exceeds its own capacity.
-edge,microsoft__nvidia__customer_of,note,en,One of the giant clouds buys accelerators in volumes that shape the anchor's quarterly revenue.
-edge,microsoft__nvidia__threatens,note,en,The hyperscaler's own accelerator is named among the competitors in the anchor's filings.
-edge,microsoft__openai__invests_in,note,en,"The largest investor in the lab, with rights to its intellectual property and a share of revenue."
-edge,mistral__nvidia__customer_of,note,en,A European lab buying compute: demand is geographically distributed.
-edge,mlcommons__nvidia__sets_benchmark,note,en,Common performance benchmarks made the bar public: every manufacturer is measured by the results.
-edge,nccl__nvidia__locks_in_platforms,note,en,Training across thousands of accelerators runs into the data exchange between them; this library is the de facto standard.
-edge,nccl__pytorch__enables,note,en,Distributed training in the library rests on this data-exchange library.
-edge,netherlands__asml__export_controlled_by,note,en,Dutch rules decide who in the world may buy the tools that print leading-edge chips.
-edge,netherlands__tsmc__controls_access_to,note,en,A Dutch licence decides whether the foundry may buy tools for leading-edge nodes. The gate sits above the foundry itself.
-edge,nim__nvidia__locks_in_platforms,note,en,Ready-made model-serving containers from the anchor itself: a way to climb from hardware into the inference layer.
-edge,nim__vllm__competes_with,note,en,The anchor's own engine against the open one: paid against free.
-edge,nvent__microsoft__supplies,note,en,Cooling and enclosures at the giant cloud's sites.
-edge,nvent__nvidia__optimizes_for,note,en,Enclosures and liquid cooling built for high-density racks.
-edge,nventures__crusoe__invests_in,note,en,The anchor's venture arm in a cloud built at the energy source.
-edge,nventures__huggingface__invests_in,note,en,The anchor's venture arm in the common model hub.
-edge,nventures__nvidia__funded_by,note,en,"The anchor's venture arm: an instrument for managing its own risk, not a portfolio for returns."
-edge,nvidia__amazon__competes_with,note,en,The second cloud in the same position: largest buyer and maker of the alternative.
-edge,nvidia__arista__competes_with,note,en,The anchor's own networking platform competes with independent switches inside clusters.
-edge,nvidia__arm__diversifies_supply,note,en,It keeps the processor architecture as a second option without depending on it entirely.
-edge,nvidia__arm__strategic_partner,note,en,Both are named key technology partners of the same compute build.
-edge,nvidia__broadcom__competes_with,note,en,Opening its own interconnect to other accelerators is the answer to the threat from custom silicon.
-edge,nvidia__cadence__co_designs,note,en,A jointly built compute platform for engineering simulation: the design software itself runs on accelerators.
-edge,nvidia__china__subject_to_restriction,note,en,The other side of the restriction: the share of revenue from the region fell sharply.
-edge,nvidia__coreweave__hedges_against,note,en,Investing in an independent cloud lowers the risk of the hyperscalers closing the whole accelerator rental market around themselves.
-edge,nvidia__coreweave__supplies,note,en,"EVERY accelerator in this cloud's infrastructure comes from the anchor, and that is written into the contracts with its customers."
-edge,nvidia__crusoe__hedges_against,note,en,An investment in a cloud building at the energy source: it removes the constraint that would otherwise cap demand.
-edge,nvidia__crusoe__supplies,note,en,The cloud that builds sites at energy sources runs on the anchor's accelerators.
-edge,nvidia__cuda__enables,note,en,The programming environment is the anchor's own product and its principal moat: it ships with every unit.
-edge,nvidia__cuda__standardizes_on,note,en,The industry settled on this environment as the common denominator: it is the de facto standard.
-edge,nvidia__dell__supplies,note,en,An enterprise server maker sells the accelerators through its own channel.
-edge,nvidia__google__competes_with,note,en,Customer and competitor at once: it buys accelerators and builds its own. Both facts are on the map.
-edge,nvidia__hpe__supplies,note,en,The second enterprise server maker in the sales channel.
-edge,nvidia__huggingface__hedges_against,note,en,"An investment in the common model hub: if the ecosystem moves to other hardware, the anchor's moat loses its value."
-edge,nvidia__kubernetes__standardizes_on,note,en,The industry standard for running containers: compatibility with it is mandatory for any accelerator vendor.
-edge,nvidia__lambda__hedges_against,note,en,A third independent cloud: each additional one lowers the giants' share of compute rental.
-edge,nvidia__lambda__supplies,note,en,A small independent cloud for researchers runs on the anchor's accelerators.
-edge,nvidia__micron__diversifies_supply,note,en,The American memory supplier is kept as insurance against memory concentrating in one country.
-edge,nvidia__microsoft__competes_with,note,en,"A third cloud with its own accelerator, named among the competitors in the anchor's filings."
-edge,nvidia__microsoft__supplies,note,en,Every large cloud buys the anchor's infrastructure — that is the foundation of its revenue.
-edge,nvidia__mlcommons__sets_benchmark,note,en,The anchor's results became the bar every other manufacturer is compared against.
-edge,nvidia__nebius__hedges_against,note,en,A second independent cloud in the portfolio: the same hedge extended to another market.
-edge,nvidia__nebius__supplies,note,en,The European independent cloud states its dependence on the anchor's accelerators outright.
-edge,nvidia__nventures__board_seat,note,en,An entity the anchor owns: control is complete by definition.
-edge,nvidia__nventures__hedges_against,note,en,The venture arm exists not for returns but to keep the key entities in the orbit on the platform.
-edge,nvidia__openai__co_designs,note,en,"Joint work on systems and optimisation: the lab writes the kernels, the anchor tunes the platform."
-edge,nvidia__openai__hedges_against,note,en,An investment in its own largest buyer — insurance against it moving to alternative hardware.
-edge,nvidia__openai__invests_in,note,en,"Up to $100B, unlocked as each gigawatt comes online — an investment in its own largest buyer."
-edge,nvidia__samsung__diversifies_supply,note,en,The second chip manufacturer is kept precisely as insurance against concentration on one territory.
-edge,nvidia__softbank__strategic_partner,note,en,The anchor is named a key technology partner of the build the holding company finances.
-edge,nvidia__supermicro__supplies,note,en,The assembler designs products for new platforms early and jointly.
-edge,nvidia__synopsys__invests_in,note,en,A $2B private placement in the company without whose software the anchor cannot design its own chips.
-edge,nvidia__tsmc__co_designs,note,en,"The process roadmap is agreed jointly: the chip is designed for a future process, and the process for a future chip."
-edge,nvidia__vertiv__strategic_partner,note,en,An announced partnership on next-generation power and cooling infrastructure.
-edge,oklo__equinix__strategic_partner,note,en,A non-binding letter of intent on future power supply. Below the drawing threshold.
-edge,oklo__vertiv__strategic_partner,note,en,Exploration of power options for the sites. Recorded below the drawing threshold precisely because it is not yet supply.
-edge,openai__coreweave__customer_of,note,en,The lab committed to pay the independent cloud up to $6.5B by 2031.
-edge,openai__huggingface__competes_with,note,en,Closed models on subscription against open weights in the common hub.
-edge,openai__microsoft__enables,note,en,The lab's models are built into the hyperscaler's products — that is its application layer.
-edge,openai__microsoft__strategic_partner,note,en,The hyperscaler is the lab's largest investor and holds rights to its intellectual property.
-edge,openai__microsoft__validates_demand,note,en,The lab's demand proved that AI cloud capacity pays back — and set everyone building.
-edge,openai__nvidia__customer_of,note,en,"The lab buys systems by the gigawatt: this is money, not proof. The proof runs on a separate edge."
-edge,openai__nvidia__path_dependent_on,note,en,The lab's stack is optimised for the anchor's platform at several levels: its development follows it.
-edge,openai__nvidia__validates_demand,note,en,Its existence proved to the industry that accelerators are necessary: ten-gigawatt sites are built for it.
-edge,openai__oracle__customer_of,note,en,An agreement for 4.5 gigawatts of additional capacity: the contract shapes the cloud's growth profile.
-edge,openai__oracle__validates_demand,note,en,A gigawatt-scale contract proved that building cloud capacity for a single lab pays back.
-edge,openai__vllm__enables,note,en,The open engine implements an interface compatible with the lab's — it became the common standard.
-edge,oracle__nvidia__customer_of,note,en,The cloud that builds sites against lab contracts buys accelerators by the gigawatt.
-edge,oracle__openai__invests_in,note,en,The cloud is at once an investor in the build and its contractor — which is what closes the loop.
-edge,pytorch__cuda__path_dependent_on,note,en,"The library's capabilities arrive after the environment's: there first, everywhere after."
-edge,pytorch__huggingface__enables,note,en,"The training library and the common model hub hold each other up: one supplies the code, the other the weights."
-edge,pytorch__meta__funded_by,note,en,The library was created by an accelerator buyer and handed to an independent foundation.
-edge,pytorch__nvidia__validates_demand,note,en,The library most research is written in accelerates above all on its hardware — which is what proves the necessity.
-edge,quanta__nvidia__integrates,note,en,The third Taiwanese assembler of AI server systems.
-edge,ray__kubernetes__standardizes_on,note,en,The orchestrator runs on top of the common container standard.
-edge,ray__nvidia__optimizes_for,note,en,The distributed compute orchestrator spreads training across accelerator clusters.
-edge,recursion__nvidia__proves_use_case,note,en,A drug discovery supercomputer built jointly with the anchor: a reference deployment outside the internet companies.
-edge,salesforce__nvidia__proves_roi,note,en,Another proof of payback in the enterprise segment — in sales teams.
-edge,samsung__nvidia__supplies,note,en,It supplies both memory and manufacturing capacity — a rare combination in one company.
-edge,samsung__tsmc__competes_with,note,en,The second foundry for leading-edge chips; it trails on volume and yield.
-edge,sandisk__nvidia__supplies,note,en,"Another storage supplier: the value is in volume, not uniqueness."
-edge,schneider__digital-realty__supplies,note,en,Power and control equipment at the operator's sites.
-edge,schneider__microsoft__supplies,note,en,The second supplier of site power equipment.
-edge,schrodinger__nvidia__proves_use_case,note,en,Molecular modelling on accelerator clusters for drug discovery.
-edge,sequoia__openai__invests_in,note,en,"Venture capital in the lab: money is replaceable by money, the value is in access to the deal."
-edge,servicenow__microsoft__strategic_partner,note,en,The enterprise platform runs across several clouds at once.
-edge,servicenow__nvidia__proves_roi,note,en,Models are embedded in enterprise processes companies already pay for: payback proved in another segment.
-edge,sglang__vllm__competes_with,note,en,"The second open model-serving engine: the layer is competitive, not locked."
-edge,shin-etsu__tsmc__supplies,note,en,Wafers and photoresist are consumed on every chip; there are few suppliers.
-edge,siemens-eda__nvidia__enables,note,en,"A third design tool set: it covers verification, but does not replace the duopoly."
-edge,siemens-energy__equinix__supplies,note,en,The second maker of turbines and grid equipment for sites.
-edge,siemens__nvidia__proves_use_case,note,en,Models applied in industrial design and on the factory floor.
-edge,singapore__nvidia__controls_access_to,note,en,A logistics hub through which circumvention of export restrictions is checked.
-edge,sk-hynix__nvidia__supplies,note,en,The fast memory placed against the accelerator. Named first on the memory supplier list.
-edge,snowflake__nvidia__proves_roi,note,en,Corporate data becomes usable for training — the thing the labs do not have.
-edge,softbank__openai__invests_in,note,en,A capital holder and the financially responsible partner of the compute build.
-edge,softbank__oracle__strategic_partner,note,en,Two of the four capital holders of one build.
-edge,south-korea__samsung__geopolitically_dependent,note,en,Both this company's memory and its chip manufacturing are concentrated in one jurisdiction.
-edge,south-korea__sk-hynix__geopolitically_dependent,note,en,Fast memory production is concentrated in one country beside a zone of military risk.
-edge,supermicro__nvidia__optimizes_for,note,en,Products are designed for specific accelerator generations before those generations ship.
-edge,synopsys__nvidia__enables,note,en,A modern chip cannot be drawn without design software. The duopoly makes the dependence structural.
-edge,synopsys__tsmc__optimizes_for,note,en,The design tools are tuned to the rules of one foundry's specific process.
-edge,taiwan__nvidia__geopolitically_dependent,note,en,The anchor depends on the territory through the foundry: it has no plants of its own at all.
-edge,taiwan__tsmc__geopolitically_dependent,note,en,All leading-edge production sits physically on this territory. This is tail risk with supply going to zero.
-edge,taiwan__usa__geopolitically_dependent,note,en,The US depends on the island for leading-edge chips so heavily that it pays for production to move home through a dedicated law.
-edge,tensorrt__nvidia__locks_in_platforms,note,en,The model-serving optimiser runs only on its accelerators: moving a model means losing the speed-up.
-edge,thrive__openai__invests_in,note,en,"Billion-dollar late-stage rounds are a narrow segment, but several investors operate in it."
-edge,tokyo-electron__tsmc__supplies,note,en,Japanese wafer processing equipment; three suppliers work at this class.
-edge,triton__cuda__could_disrupt,note,en,An intermediate layer for writing compute kernels without binding to the environment — a theoretical way out.
-edge,triton__openai__funded_by,note,en,The compiler was created by a lab — the largest buyer of accelerators.
-edge,tsmc__arm__standardizes_on,note,en,More than 350 billion shipped chips use this architecture — the common denominator for the foundries.
-edge,tsmc__astera-labs__manufactures,note,en,EVERY part this company makes comes from one foundry — the dependence is absolute.
-edge,tsmc__broadcom__manufactures,note,en,Custom accelerators for the clouds are made by the same foundry as the anchor's.
-edge,tsmc__credo__manufactures,note,en,The company states outright that it uses a SINGLE foundry exclusively.
-edge,tsmc__cuda__enables,note,en,A moat made of software works only while someone can print the hardware: the two bottlenecks hold each other up.
-edge,tsmc__google__manufactures,note,en,Google's own chips are made by the same foundry as NVIDIA's accelerators: competitors converge on one bottleneck.
-edge,tsmc__nvidia__manufactures,note,en,All of the anchor's accelerators are made by an outside foundry: it has no plants of its own. The process rules are wired into the chip's layout.
-edge,tsmc__nvidia__packages,note,en,The packaging that joins the compute die to memory is a separate bottleneck alongside manufacturing itself.
-edge,usa__bis__controls_access_to,note,en,The agency is the mechanism through which the jurisdiction gates exports.
-edge,usa__chips-act__standardizes_on,note,en,The law is the instrument through which the jurisdiction brings manufacturing back inside the country.
-edge,usa__nvidia__controls_access_to,note,en,Export rules decide who the anchor may sell to. The decision is taken in a day and takes effect immediately.
-edge,vertiv__coreweave__supplies,note,en,Power and cooling at the independent cloud's sites.
-edge,vertiv__microsoft__supplies,note,en,Power and cooling at the giant cloud's sites.
-edge,vertiv__nvidia__co_designs,note,en,"Rack power and cooling are designed jointly for future accelerator generations, not bought off the shelf."
-edge,vllm__anthropic__enables_interop,note,en,The same engine also supports the second lab's interface: the standard forms across both.
-edge,vllm__cuda__path_dependent_on,note,en,The engine's fast paths are built on this environment's capabilities.
-edge,vllm__huggingface__standardizes_on,note,en,The engine runs models published in the common hub and takes their definitions from there.
-edge,vllm__nvidia__validates_demand,note,en,The open model-serving engine lists the anchor's accelerators first among what it supports.
-edge,vllm__openai__enables_interop,note,en,"The open engine reproduces the lab's interface, and through that other stacks speak one language."
-edge,vllm__tensorrt__competes_with,note,en,The open model-serving engine against the anchor's own optimiser.
-edge,wistron__nvidia__integrates,note,en,"The second assembly contractor, named in the anchor's filings."
-edge,xai__nvidia__customer_of,note,en,A young lab assembled one of the largest accelerator clusters in months.
-edge,xai__nvidia__validates_demand,note,en,"Proof of speed: a cluster of hundreds of thousands of accelerators is assembled in months, not years."
-entity,china,name,ru,Китай
-entity,china,name,en,China
-entity,usa,name,ru,США
-entity,usa,name,en,United States
-entity,taiwan,name,ru,Тайвань
-entity,taiwan,name,en,Taiwan
-entity,japan,name,ru,Япония
-entity,japan,name,en,Japan
-entity,netherlands,name,ru,Нидерланды
-entity,netherlands,name,en,Netherlands
-entity,south-korea,name,ru,Южная Корея
-entity,south-korea,name,en,South Korea
-entity,eu,name,ru,Европейский союз
-entity,eu,name,en,European Union
-entity,singapore,name,ru,Сингапур
-entity,singapore,name,en,Singapore
-entity,eu-ai-act,name,ru,Регламент ЕС об ИИ
-entity,eu-ai-act,name,en,EU AI Act
-entity,chips-act,name,ru,Закон о чипах (CHIPS Act)
-entity,chips-act,name,en,CHIPS Act
-entity,bis,name,ru,Бюро промышленности и безопасности
-entity,bis,name,en,Bureau of Industry and Security

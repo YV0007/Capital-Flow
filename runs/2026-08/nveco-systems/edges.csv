@@ -1,21 +1,21 @@
 source,target,type,direction,strength,lock_in_depth,substitutability,is_reversible,risk_level,risk_type,risk_timeline,risk_mitigation,tech_node,formed,strengthened,note
-foxconn,nvidia,integrates,upstream,70,55,35,true,medium,geopolitical,1-2y,Три-четыре подрядчика сборки делят объёмы.,,2016,2023,"Собирает, тестирует и упаковывает готовые изделия якоря; назван в его отчётности поимённо."
-wistron,nvidia,integrates,upstream,45,35,60,true,low,market,1-2y,Объёмы перераспределяются между подрядчиками за квартал.,,2016,,"Второй подрядчик сборки, назван в отчётности якоря."
-fabrinet,nvidia,integrates,upstream,40,30,60,true,low,market,1-2y,Контрактных сборщиков оптики несколько.,,2016,,Собирает оптические модули и сборки; зависимость односторонняя — на якорь приходится больше четверти его выручки.
-quanta,nvidia,integrates,upstream,45,35,60,true,low,market,1-2y,Третий подрядчик сборки.,,2018,,Третий тайваньский сборщик серверных систем для ИИ.
+foxconn,nvidia,integrates,upstream,70,55,35,true,medium,geopolitical,1-2y,Три-четыре подрядчика сборки делят объёмы.,,2016,2023,"Собирает, тестирует и упаковывает готовые изделия NVIDIA; назван в его отчётности поимённо."
+wistron,nvidia,integrates,upstream,45,35,60,true,low,market,1-2y,Объёмы перераспределяются между подрядчиками за квартал.,,2016,,"Второй подрядчик сборки, назван в отчётности NVIDIA."
+fabrinet,nvidia,integrates,upstream,40,30,60,true,low,market,1-2y,Контрактных сборщиков оптики несколько.,,2016,,Собирает оптические модули и сборки; зависимость односторонняя — на NVIDIA приходится больше четверти его выручки.
+quanta,nvidia,integrates,upstream,45,35,60,true,low,market,1-2y,Третий подрядчик сборки.,,2018,,Quanta собирает серверные системы NVIDIA — третий тайваньский подрядчик после Foxconn и Wistron.
 nvidia,supermicro,supplies,downstream,90,60,15,true,medium,market,1-2y,Сборщиков стоек несколько.,,2016,2023,Сборщик проектирует продукты под новые платформы заранее и совместно.
 supermicro,nvidia,optimizes_for,downstream,70,50,30,true,low,market,1-2y,,,2016,,Продукты проектируются под конкретные поколения ускорителей до их выхода.
 nvidia,dell,supplies,downstream,70,50,30,true,low,market,1-2y,,,2016,,Корпоративный производитель серверов продаёт ускорители через собственный канал.
 nvidia,hpe,supplies,downstream,65,45,35,true,low,market,1-2y,,,2016,,Второй корпоративный производитель серверов в канале продаж.
-dell,nvidia,delivers_to,downstream,55,40,45,true,low,market,1-2y,,,2016,,"Доводит готовые системы до корпоративных заказчиков, которых якорь сам не обслуживает."
-tsmc,broadcom,manufactures,upstream,90,70,10,false,high,geopolitical,2-5y,Часть мощностей выносится в США.,n3,2000,,"Заказные ускорители для облаков делает та же фабрика, что и ускорители якоря."
+dell,nvidia,delivers_to,downstream,55,40,45,true,low,market,1-2y,,,2016,,"Доводит готовые системы до корпоративных заказчиков, которых NVIDIA сам не обслуживает."
+tsmc,broadcom,manufactures,upstream,90,70,10,false,high,geopolitical,2-5y,Часть мощностей выносится в США.,n3,2000,,"TSMC печатает заказные ускорители Broadcom на той же линии, что и чипы NVIDIA."
 ase,broadcom,packages,upstream,55,40,45,true,medium,market,1-2y,,cowos,2010,,Упаковка и тест заказных чипов.
 amkor,broadcom,packages,upstream,45,35,55,true,low,market,1-2y,,,2010,,Второй подрядчик упаковки заказных чипов.
 foxconn,broadcom,integrates,upstream,45,35,55,true,low,market,1-2y,,,2010,,Контрактная сборка и тест для проектировщика заказных чипов.
-broadcom,nvidia,threatens,downstream,80,75,20,true,high,substitution,2-5y,Ускорители общего назначения остаются гибче заказных под одну задачу.,,2016,2024,Проектирует облакам собственные ускорители — прямая альтернатива закупке у якоря.
+broadcom,nvidia,threatens,downstream,80,75,20,true,high,substitution,2-5y,Ускорители общего назначения остаются гибче заказных под одну задачу.,,2016,2024,Проектирует облакам собственные ускорители — прямая альтернатива закупке у NVIDIA.
 broadcom,google,co_designs,bidirectional,85,70,20,false,medium,substitution,2-5y,,,2016,2023,Собственный ускоритель облака проектируется вместе с внешним разработчиком чипов.
 marvell,nvidia,threatens,downstream,55,45,45,true,medium,substitution,2-5y,Заказные чипы уступают в гибкости и в софте.,,2020,,Второй проектировщик заказных ускорителей для облаков.
-arista,nvidia,competes_with,lateral,70,55,35,true,medium,substitution,2-5y,Собственная сетевая платформа якоря продаётся вместе с ускорителями.,infiniband,2019,2023,"Сети кластеров: собственный протокол якоря продаётся комплектом с ускорителями, что вытесняет независимого поставщика."
+arista,nvidia,competes_with,lateral,70,55,35,true,medium,substitution,2-5y,Собственная сетевая платформа NVIDIA продаётся вместе с ускорителями.,infiniband,2019,2023,"Сети кластеров: собственный протокол NVIDIA продаётся комплектом с ускорителями, что вытесняет независимого поставщика."
 arista,microsoft,supplies,upstream,75,50,25,true,medium,market,1-2y,Клиентская база концентрирована на двух заказчиках.,,2010,,Коммутаторы для кластеров у гиперскейлера: два клиента дают больше 40% выручки поставщика.
 arista,meta,supplies,upstream,70,45,30,true,medium,market,1-2y,,,2013,,Второй крупный заказчик коммутаторов по раскрытой концентрации.
 astera-labs,nvidia,optimizes_for,downstream,60,50,40,true,low,technical,2-5y,Функцию можно втянуть в коммутаторный чип.,pcie,2019,2024,Микросхемы связности проектируются под конкретную платформу ускорителей и входят в референсные конструкции.
@@ -25,31 +25,31 @@ amkor,astera-labs,packages,upstream,60,35,40,true,medium,market,1-2y,,,2019,,В�
 tsmc,credo,manufactures,upstream,100,55,0,false,high,geopolitical,2-5y,Альтернативной фабрики нет.,n5,2018,2026,"Компания прямо пишет, что использует ИСКЛЮЧИТЕЛЬНО одну фабрику."
 amkor,credo,packages,upstream,55,30,45,true,low,market,1-2y,,,2018,,Упаковка микросхем связности стоек.
 ase,credo,packages,upstream,55,30,45,true,low,market,1-2y,,,2018,,Второй подрядчик упаковки.
-credo,nvidia,optimizes_for,downstream,45,35,55,true,low,technical,1-2y,Переход кластеров на оптику снижает роль активной меди.,,2020,,"Активные кабели, соединяющие стойки в кластер вокруг платформы якоря."
-coherent,nvidia,supplies,upstream,50,40,50,true,medium,market,1-2y,Поставщиков оптических модулей несколько.,,2020,,"Оптические модули для кластеров; поддерживают и собственный протокол якоря, и открытые стандарты."
+credo,nvidia,optimizes_for,downstream,45,35,55,true,low,technical,1-2y,Переход кластеров на оптику снижает роль активной меди.,,2020,,"Активные кабели, соединяющие стойки в кластер вокруг платформы NVIDIA."
+coherent,nvidia,supplies,upstream,50,40,50,true,medium,market,1-2y,Поставщиков оптических модулей несколько.,,2020,,"Оптические модули для кластеров; поддерживают и собственный протокол NVIDIA, и открытые стандарты."
 fabrinet,coherent,integrates,upstream,35,25,65,true,low,market,1-2y,,,2010,,Контрактная сборка оптических модулей для нескольких разработчиков.
 fabrinet,cisco,integrates,upstream,30,20,70,true,low,market,1-2y,,,2010,,"Второй крупный заказчик контрактного сборщика оптики — 18,2% его выручки."
 cisco,arista,competes_with,lateral,60,40,40,true,low,market,1-2y,,,2008,,Исторический лидер сетевого оборудования против специализированного поставщика для кластеров.
-nvidia,microsoft,supplies,downstream,95,80,10,false,medium,substitution,2-5y,Диверсификация покупателей: облаков несколько.,,2016,2023,Все крупные облака закупают инфраструктуру якоря — это и есть основа его выручки.
-microsoft,nvidia,customer_of,upstream,90,70,20,true,medium,market,1-2y,Выручка распределена между несколькими облаками.,,2016,2023,"Одно из облаков-гигантов покупает ускорители в объёмах, определяющих квартальную выручку якоря."
+nvidia,microsoft,supplies,downstream,95,80,10,false,medium,substitution,2-5y,Диверсификация покупателей: облаков несколько.,,2016,2023,Все крупные облака закупают инфраструктуру NVIDIA — это и есть основа его выручки.
+microsoft,nvidia,customer_of,upstream,90,70,20,true,medium,market,1-2y,Выручка распределена между несколькими облаками.,,2016,2023,"Одно из облаков-гигантов покупает ускорители в объёмах, определяющих квартальную выручку NVIDIA."
 amazon,nvidia,customer_of,upstream,88,70,20,true,medium,market,1-2y,Выручка распределена между несколькими облаками.,,2016,2023,Второе облако-гигант в числе крупнейших покупателей.
 google,nvidia,customer_of,upstream,85,70,25,true,medium,substitution,1-2y,Собственный ускоритель покрывает часть внутренних задач.,,2016,2023,Третье облако-гигант: покупает и одновременно строит собственную альтернативу.
 oracle,nvidia,customer_of,upstream,75,55,30,true,medium,market,1-2y,,,2022,2025,"Облако, строящее площадки под контракты лабораторий, закупает ускорители гигаваттами."
 meta,nvidia,customer_of,upstream,85,70,25,true,medium,substitution,2-5y,Собственные чипы пока не покрывают обучение.,,2016,2023,"Крупный покупатель, который одновременно отдал отрасли главную библиотеку обучения."
 google,nvidia,threatens,downstream,75,70,25,true,high,substitution,2-5y,Универсальные ускорители остаются гибче под новые архитектуры моделей.,,2016,2025,Собственный ускоритель седьмого поколения закрывает часть внутренних задач без закупки.
-amazon,nvidia,threatens,downstream,65,60,35,true,high,substitution,2-5y,Софтовая экосистема остаётся преимуществом якоря.,,2018,2024,Собственные ускорители облака закрывают часть обучения и инференса.
-microsoft,nvidia,threatens,downstream,55,50,45,true,medium,substitution,2-5y,Собственный чип пока покрывает узкий круг задач.,,2023,,Собственный ускоритель гиперскейлера назван среди конкурентов в отчётности якоря.
-nvidia,coreweave,supplies,downstream,100,70,0,false,medium,market,1-2y,Контракты клиентов прямо предписывают использовать ускорители якоря.,,2019,2023,"ВСЕ ускорители в инфраструктуре этого облака — от якоря, и это прописано в контрактах с его клиентами."
+amazon,nvidia,threatens,downstream,65,60,35,true,high,substitution,2-5y,Софтовая экосистема остаётся преимуществом NVIDIA.,,2018,2024,Собственные ускорители облака закрывают часть обучения и инференса.
+microsoft,nvidia,threatens,downstream,55,50,45,true,medium,substitution,2-5y,Собственный чип пока покрывает узкий круг задач.,,2023,,Собственный ускоритель гиперскейлера назван среди конкурентов в отчётности NVIDIA.
+nvidia,coreweave,supplies,downstream,100,70,0,false,medium,market,1-2y,Контракты клиентов прямо предписывают использовать ускорители NVIDIA.,,2019,2023,"ВСЕ ускорители в инфраструктуре этого облака — от NVIDIA, и это прописано в контрактах с его клиентами."
 coreweave,nvidia,customer_of,upstream,70,50,30,true,medium,market,1-2y,,,2019,2023,Независимое облако закупает ускорители на миллиарды и перепродаёт их как аренду.
 microsoft,coreweave,customer_of,upstream,95,50,10,true,high,market,immediate,Второй крупный заказчик и выход на биржу снижают зависимость.,,2022,2023,Для независимого облака это 67% выручки: зависимость односторонняя и критическая.
 openai,coreweave,customer_of,upstream,75,55,25,true,medium,market,2-5y,Контракт до 2031 года фиксирует объём.,,2025,,"Лаборатория обязалась заплатить независимому облаку до 6,5 млрд долларов к 2031 году."
-nvidia,nebius,supplies,downstream,95,55,5,false,medium,market,1-2y,,,2023,,Европейское независимое облако прямо заявляет зависимость от ускорителей якоря.
+nvidia,nebius,supplies,downstream,95,55,5,false,medium,market,1-2y,,,2023,,Европейское независимое облако прямо заявляет зависимость от ускорителей NVIDIA.
 microsoft,nebius,customer_of,upstream,60,35,40,true,medium,market,2-5y,Контракт на пять лет фиксирует объём.,,2025,,Гиперскейлер арендует выделенные кластеры у независимого облака — спрос превышает собственные мощности.
-nvidia,lambda,supplies,downstream,85,40,15,true,low,market,1-2y,,,2020,,Небольшое независимое облако для исследователей работает на ускорителях якоря.
-nvidia,crusoe,supplies,downstream,80,45,20,true,low,market,1-2y,,,2021,,"Облако, строящее площадки у источников энергии, работает на ускорителях якоря."
+nvidia,lambda,supplies,downstream,85,40,15,true,low,market,1-2y,,,2020,,Небольшое независимое облако для исследователей работает на ускорителях NVIDIA.
+nvidia,crusoe,supplies,downstream,80,45,20,true,low,market,1-2y,,,2021,,"Облако, строящее площадки у источников энергии, работает на ускорителях NVIDIA."
 equinix,nvidia,enables,upstream,55,45,45,true,low,market,2-5y,Операторов площадок несколько.,,2020,,"Нейтральные площадки и точки обмена трафиком, через которые подключаются кластеры."
 digital-realty,nvidia,enables,upstream,50,40,50,true,low,market,2-5y,Операторов площадок несколько.,,2020,,Второй крупный оператор площадок для дата-центров.
 equinix,microsoft,supplies,upstream,50,35,50,true,low,market,1-2y,,,2010,,Площадки и подключения для облака-гиганта.
 digital-realty,oracle,supplies,upstream,45,30,55,true,low,market,1-2y,,,2015,,Площадки под облачные мощности.
-nvidia,arista,competes_with,lateral,70,55,35,true,medium,substitution,2-5y,,spectrum-x,2019,2023,Собственная сетевая платформа якоря конкурирует с независимыми коммутаторами в кластерах.
+nvidia,arista,competes_with,lateral,70,55,35,true,medium,substitution,2-5y,,spectrum-x,2019,2023,Собственная сетевая платформа NVIDIA конкурирует с независимыми коммутаторами в кластерах.
 nvidia,broadcom,competes_with,lateral,75,65,25,true,high,substitution,2-5y,,,2016,2024,Открытие собственного протокола связи чужим ускорителям — ответ на угрозу заказных чипов.

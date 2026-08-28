@@ -3988,8 +3988,8 @@
           "en": "Finding replacement capital — months"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем нет",
-          "en": "No relationship with the anchor"
+          "ru": "Отношений с NVIDIA нет",
+          "en": "No relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -4112,8 +4112,8 @@
       },
       "domain": "aboutamazon.com",
       "oneLiner": {
-        "ru": "Крупнейшее облако и разработчик собственных ускорителей; инвестор второй лаборатории.",
-        "en": "The largest cloud and a designer of its own accelerators; investor in the second lab."
+        "ru": "Крупнейшее облако AWS и разработчик собственных ускорителей Trainium; вложился в Anthropic.",
+        "en": "AWS, the largest cloud, and designer of its own Trainium accelerators; investor in Anthropic."
       },
       "whyIrreplaceable": {
         "ru": "Самый продвинутый среди облаков по собственному кремнию. Одновременно один из крупнейших покупателей — зависимость обоюдная.",
@@ -4215,8 +4215,8 @@
       },
       "domain": null,
       "oneLiner": {
-        "ru": "Второй разработчик ускорителей для ИИ; делает их на той же фабрике, что и якорь.",
-        "en": "The second designer of AI accelerators; it builds them at the same foundry as the anchor."
+        "ru": "Разработчик ускорителей для ИИ, главная альтернатива NVIDIA. Печатает их там же, где NVIDIA — на TSMC.",
+        "en": "A designer of AI accelerators, the main alternative to NVIDIA. Prints them where NVIDIA does — at TSMC."
       },
       "whyIrreplaceable": {
         "ru": "Единственный прямой конкурент по ускорителям с сопоставимым железом. Отстаёт не в кремнии, а в софте: его среда программирования не собрала сопоставимой экосистемы.",
@@ -4230,8 +4230,8 @@
       "risk": {
         "geopolitical": "high",
         "note": {
-          "ru": "Производство на той же территории, что и у якоря.",
-          "en": "Production on the same territory as the anchor's."
+          "ru": "Производство на той же территории, что и у NVIDIA.",
+          "en": "Production on the same territory as NVIDIA's."
         },
         "exportRegime": null,
         "concentration": 80
@@ -4305,8 +4305,8 @@
           "en": "Adding capacity — one to two years"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем напрямую нет",
-          "en": "No direct relationship with the anchor"
+          "ru": "Отношений с NVIDIA напрямую нет",
+          "en": "No direct relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -4319,8 +4319,8 @@
       },
       "domain": null,
       "oneLiner": {
-        "ru": "Второй независимый подрядчик по упаковке и тестированию, с площадками в США.",
-        "en": "The second independent packaging and test contractor, with sites in the US."
+        "ru": "Независимый подрядчик по упаковке и тестированию после ASE, с площадками в США.",
+        "en": "The independent packaging and test contractor after ASE, with sites in the US."
       },
       "whyIrreplaceable": {
         "ru": "Второй источник упаковки и единственный крупный американский. Один заказчик даёт почти треть его выручки, что делает зависимым скорее его.",
@@ -4408,8 +4408,8 @@
           "en": "Taking its place — two to three years"
         },
         "strategicControl": {
-          "ru": "Публичное партнёрство без доли якоря",
-          "en": "A public partnership without an anchor stake"
+          "ru": "Публичное партнёрство без доли NVIDIA",
+          "en": "A public partnership without an NVIDIA stake"
         }
       },
       "gravity": {
@@ -4422,8 +4422,8 @@
       },
       "domain": "anthropic.com",
       "oneLiner": {
-        "ru": "Вторая лаборатория передовых моделей; её главный инфраструктурный партнёр — крупное облако.",
-        "en": "The second frontier model lab; its main infrastructure partner is a major cloud."
+        "ru": "Лаборатория передовых моделей после OpenAI; её главный инфраструктурный партнёр — Amazon.",
+        "en": "The frontier model lab after OpenAI; its main infrastructure partner is Amazon."
       },
       "whyIrreplaceable": {
         "ru": "Доказывает, что спрос не сосредоточен в одной лаборатории. Это снижает риск для всей конструкции: если бы покупатель был один, вся стройка висела бы на нём.",
@@ -4511,8 +4511,8 @@
           "en": "Requalifying the process — two to three years"
         },
         "strategicControl": {
-          "ru": "Прямых отношений с якорем нет",
-          "en": "No direct relationship with the anchor"
+          "ru": "Прямых отношений с NVIDIA нет",
+          "en": "No direct relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -4636,8 +4636,8 @@
         "en": "A fabric for accelerator clusters is designed whole, operating system and operations included. Changing vendor means rebuilding the network and retraining the people."
       },
       "whatBreaksIt": {
-        "ru": "Облака переходят на собственные коммутаторы или на решения якоря.",
-        "en": "Clouds move to their own switches, or to the anchor's."
+        "ru": "Облака переходят на собственные коммутаторы или на решения NVIDIA.",
+        "en": "Clouds move to their own switches, or to NVIDIA's."
       },
       "phase": "mature",
       "risk": {
@@ -4824,8 +4824,8 @@
           "en": "Adding capacity — one to two years"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем напрямую нет",
-          "en": "No direct relationship with the anchor"
+          "ru": "Отношений с NVIDIA напрямую нет",
+          "en": "No direct relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -4842,8 +4842,8 @@
         "en": "The largest independent die packaging and test contractor."
       },
       "whyIrreplaceable": {
-        "ru": "Упаковка стала узким местом не меньшим, чем сам чип. Подрядчиков такого масштаба два-три, и все на Тайване.",
-        "en": "Packaging has become as tight a bottleneck as the chip itself. There are two or three contractors at this scale, and all of them are in Taiwan."
+        "ru": "Упаковка стала ограничением не меньшим, чем сам чип. Подрядчиков такого масштаба два-три, и все на Тайване.",
+        "en": "Packaging has become as tight a constraint as the chip itself. There are two or three contractors at this scale, and all of them are in Taiwan."
       },
       "whatBreaksIt": {
         "ru": "Перевод передовой упаковки внутрь фабрики.",
@@ -4927,8 +4927,8 @@
           "en": "Building tools domestically — more than seven years"
         },
         "strategicControl": {
-          "ru": "Прямых отношений с якорем нет, связь через фабрику",
-          "en": "No direct anchor relationship; the link runs through the foundry"
+          "ru": "Прямых отношений с NVIDIA нет, связь через фабрику",
+          "en": "No direct NVIDIA relationship; the link runs through the foundry"
         }
       },
       "gravity": {
@@ -5050,8 +5050,8 @@
         "en": "Connectivity silicon inside the rack: it links accelerators to processors and memory."
       },
       "whyIrreplaceable": {
-        "ru": "Работает точно под требования платформы якоря, и её продукты попадают в референсные конструкции. Но функцию можно втянуть в коммутаторный чип.",
-        "en": "It works precisely to the anchor's platform requirements, and its parts land in the reference designs. But the function can be pulled into the switch silicon."
+        "ru": "Работает точно под требования платформы NVIDIA, и её продукты попадают в референсные конструкции. Но функцию можно втянуть в коммутаторный чип.",
+        "en": "It works precisely to NVIDIA's platform requirements, and its parts land in the reference designs. But the function can be pulled into the switch silicon."
       },
       "whatBreaksIt": {
         "ru": "Функция ретаймера уходит внутрь коммутатора или ускорителя.",
@@ -5244,8 +5244,8 @@
           "en": "Replacing the capital — one to two years"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем нет",
-          "en": "No relationship with the anchor"
+          "ru": "Отношений с NVIDIA нет",
+          "en": "No relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -5347,8 +5347,8 @@
           "en": "Replacing the site owner — two years"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем нет",
-          "en": "No relationship with the anchor"
+          "ru": "Отношений с NVIDIA нет",
+          "en": "No relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -5365,8 +5365,8 @@
         "en": "A capital manager that owns datacenter platforms outright."
       },
       "whyIrreplaceable": {
-        "ru": "Владеет площадками, а не долями в них. Это делает его собственником узкого места, а не просто источником денег.",
-        "en": "It owns the sites rather than stakes in them. That makes it the owner of a bottleneck, not merely a source of money."
+        "ru": "Владеет площадками, а не долями в них. Это делает его собственником самого дефицита, а не просто источником денег.",
+        "en": "It owns the sites rather than stakes in them. That makes it the owner of the scarcity itself, not merely a source of money."
       },
       "whatBreaksIt": {
         "ru": "Разворот цикла на рынке дата-центров.",
@@ -5450,8 +5450,8 @@
           "en": "Deploying a comparable fleet — two years"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем нет",
-          "en": "No relationship with the anchor"
+          "ru": "Отношений с NVIDIA нет",
+          "en": "No relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -5679,8 +5679,8 @@
         "en": "Builds datacenter switches and designs custom accelerators for the clouds."
       },
       "whyIrreplaceable": {
-        "ru": "Одновременно поставщик сетевых чипов и главный проектировщик альтернативных ускорителей для облаков. Второе делает его самой серьёзной угрозой позиции якоря.",
-        "en": "At once a supplier of networking silicon and the principal designer of alternative accelerators for the clouds. The second role makes it the most serious threat to the anchor's position."
+        "ru": "Одновременно поставщик сетевых чипов и главный проектировщик альтернативных ускорителей для облаков. Второе делает его самой серьёзной угрозой позиции NVIDIA.",
+        "en": "At once a supplier of networking silicon and the principal designer of alternative accelerators for the clouds. The second role makes it the most serious threat to NVIDIA's position."
       },
       "whatBreaksIt": {
         "ru": "Облака возвращаются к универсальным ускорителям вместо заказных.",
@@ -5770,8 +5770,8 @@
           "en": "Replacing capital of this scale — two to three years"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем напрямую нет",
-          "en": "No direct relationship with the anchor"
+          "ru": "Отношений с NVIDIA напрямую нет",
+          "en": "No direct relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -5873,8 +5873,8 @@
           "en": "Changing methodology — five years"
         },
         "strategicControl": {
-          "ru": "Совместная разработка платформы с якорем",
-          "en": "Joint platform development with the anchor"
+          "ru": "Совместная разработка платформы с NVIDIA",
+          "en": "Joint platform development with NVIDIA"
         }
       },
       "gravity": {
@@ -5887,8 +5887,8 @@
       },
       "domain": null,
       "oneLiner": {
-        "ru": "Второй из двух поставщиков софта для проектирования микросхем.",
-        "en": "The second of the two suppliers of chip design software."
+        "ru": "Один из двух поставщиков софта для проектирования микросхем, наравне с Synopsys.",
+        "en": "One of the two suppliers of chip design software, alongside Synopsys."
       },
       "whyIrreplaceable": {
         "ru": "Вторая половина дуополии. Инструменты размещения и трассировки заменить нечем: у третьих поставщиков нет сопоставимого покрытия.",
@@ -6097,8 +6097,8 @@
       },
       "domain": null,
       "oneLiner": {
-        "ru": "Закрытый ограничениями рынок и одновременно источник конкурентов и сырья.",
-        "en": "A market closed by restrictions and, at the same time, a source of competitors and raw inputs."
+        "ru": "Рынок, закрытый экспортными правилами США, и одновременно родина DeepSeek и Huawei.",
+        "en": "A market closed by US export rules, and at the same time home to DeepSeek and Huawei."
       },
       "whyIrreplaceable": {
         "ru": "Второй по величине рынок, куда продавать нельзя без лицензии. Заместить его выручкой из других стран пока не получилось.",
@@ -6306,8 +6306,8 @@
       },
       "domain": null,
       "oneLiner": {
-        "ru": "Исторический лидер сетевого оборудования, теперь конкурент в сетях для ИИ.",
-        "en": "The historical leader in networking equipment, now a competitor in AI fabrics."
+        "ru": "Исторический лидер сетевого оборудования, теперь конкурент Arista и NVIDIA в сетях для ИИ.",
+        "en": "The historical leader in networking equipment, now a competitor to Arista and NVIDIA in AI fabrics."
       },
       "whyIrreplaceable": {
         "ru": "Крупнейшая сетевая компания по установленной базе, но в кластерах для ИИ уступает специализированным решениям.",
@@ -6499,8 +6499,8 @@
           "en": "A new plant takes more than seven years to build"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем нет",
-          "en": "No relationship with the anchor"
+          "ru": "Отношений с NVIDIA нет",
+          "en": "No relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -6602,8 +6602,8 @@
           "en": "An equivalent launches in one to two years"
         },
         "strategicControl": {
-          "ru": "Инвестиции якоря плюс контракт на поставку",
-          "en": "Anchor investment plus a supply agreement"
+          "ru": "Инвестиции NVIDIA плюс контракт на поставку",
+          "en": "NVIDIA investment plus a supply agreement"
         }
       },
       "gravity": {
@@ -6620,8 +6620,8 @@
         "en": "An independent cloud that rents accelerator clusters to the labs."
       },
       "whyIrreplaceable": {
-        "ru": "Существование независимого арендодателя мощностей мешает облакам-гигантам монополизировать инференс. Ценность стратегическая: всё железо у него — от якоря по контракту.",
-        "en": "The existence of an independent capacity landlord stops the giant clouds monopolising inference. The value is strategic: all of its hardware comes from the anchor under contract."
+        "ru": "Существование независимого арендодателя мощностей мешает облакам-гигантам монополизировать инференс. Ценность стратегическая: всё железо у него — от NVIDIA по контракту.",
+        "en": "The existence of an independent capacity landlord stops the giant clouds monopolising inference. The value is strategic: all of its hardware comes from NVIDIA under contract."
       },
       "whatBreaksIt": {
         "ru": "Уход крупнейшего заказчика: на двух клиентов приходится почти вся выручка.",
@@ -6815,8 +6815,8 @@
           "en": "Building a site at the source — one to two years"
         },
         "strategicControl": {
-          "ru": "Инвестиции якоря",
-          "en": "The anchor holds an investment"
+          "ru": "Инвестиции NVIDIA",
+          "en": "NVIDIA holds an investment"
         }
       },
       "gravity": {
@@ -6918,8 +6918,8 @@
           "en": "Porting the installed code base — more than ten years"
         },
         "strategicControl": {
-          "ru": "Собственный продукт якоря",
-          "en": "The anchor's own product"
+          "ru": "Собственный продукт NVIDIA",
+          "en": "NVIDIA's own product"
         }
       },
       "gravity": {
@@ -6936,8 +6936,8 @@
         "en": "The accelerator programming environment: almost all the code that runs on them is written in it."
       },
       "whyIrreplaceable": {
-        "ru": "Отрасль пишет код под неё почти двадцать лет. Перенос установленной базы — это не проект, а смена поколения инженеров. Это и есть главный ров якоря.",
-        "en": "The industry has been writing code for it for almost twenty years. Porting the installed base is not a project but a change of engineering generation. This is the anchor's principal moat."
+        "ru": "Отрасль пишет код под неё почти двадцать лет. Перенос установленной базы — это не проект, а смена поколения инженеров. Это и есть главный замок NVIDIA.",
+        "en": "The industry has been writing code for it for almost twenty years. Porting the installed base is not a project but a change of engineering generation. This is NVIDIA's principal lock."
       },
       "whatBreaksIt": {
         "ru": "Массовый переход на переносимую среду программирования ускорителей.",
@@ -7021,8 +7021,8 @@
           "en": "Replacement — two years"
         },
         "strategicControl": {
-          "ru": "Инвестиции якоря и совместные продукты",
-          "en": "Anchor investment and joint products"
+          "ru": "Инвестиции NVIDIA и совместные продукты",
+          "en": "NVIDIA investment and joint products"
         }
       },
       "gravity": {
@@ -7438,8 +7438,8 @@
           "en": "Building the campus — two to three years"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем нет",
-          "en": "No relationship with the anchor"
+          "ru": "Отношений с NVIDIA нет",
+          "en": "No relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -7452,8 +7452,8 @@
       },
       "domain": null,
       "oneLiner": {
-        "ru": "Второй крупный оператор площадок для дата-центров, включая гиперскейл-кампусы.",
-        "en": "The second large operator of datacenter sites, hyperscale campuses included."
+        "ru": "Крупный оператор площадок для дата-центров после Equinix, включая гиперскейл-кампусы.",
+        "en": "The large datacenter site operator after Equinix, hyperscale campuses included."
       },
       "whyIrreplaceable": {
         "ru": "Прямой аналог первого оператора площадок. Наличие двух делает слой конкурентным.",
@@ -7542,8 +7542,8 @@
           "en": "The queue for equipment — two years"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем напрямую нет",
-          "en": "No direct relationship with the anchor"
+          "ru": "Отношений с NVIDIA напрямую нет",
+          "en": "No direct relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -7645,8 +7645,8 @@
           "en": "Reproducing that density of interconnection — three years"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем нет",
-          "en": "No relationship with the anchor"
+          "ru": "Отношений с NVIDIA нет",
+          "en": "No relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -7975,12 +7975,12 @@
       },
       "domain": null,
       "oneLiner": {
-        "ru": "Контрактный производитель оптических сборок; крупнейший заказчик — сам якорь.",
-        "en": "A contract manufacturer of optical assemblies; its largest customer is the anchor itself."
+        "ru": "Контрактный производитель оптических сборок; на NVIDIA приходится больше четверти его выручки.",
+        "en": "A contract manufacturer of optical assemblies; NVIDIA is more than a quarter of its revenue."
       },
       "whyIrreplaceable": {
-        "ru": "Собирает оптику и модули по чужим проектам. Зависимость односторонняя: на якорь приходится больше четверти его выручки.",
-        "en": "It assembles optics and modules to other people's designs. The dependence runs one way: the anchor accounts for more than a quarter of its revenue."
+        "ru": "Собирает оптику и модули по чужим проектам. Зависимость односторонняя: на NVIDIA приходится больше четверти его выручки.",
+        "en": "It assembles optics and modules to other people's designs. The dependence runs one way: NVIDIA accounts for more than a quarter of its revenue."
       },
       "whatBreaksIt": {
         "ru": "Перевод сборки к другому подрядчику.",
@@ -8169,8 +8169,8 @@
           "en": "The queue for a turbine — three to five years"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем нет",
-          "en": "No relationship with the anchor"
+          "ru": "Отношений с NVIDIA нет",
+          "en": "No relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -8388,8 +8388,8 @@
           "en": "Reproducing the vertical — more than three years"
         },
         "strategicControl": {
-          "ru": "Рычага у якоря над ним нет",
-          "en": "The anchor has no leverage over it"
+          "ru": "Рычага у NVIDIA над ним нет",
+          "en": "NVIDIA has no leverage over it"
         }
       },
       "gravity": {
@@ -8607,8 +8607,8 @@
       },
       "domain": null,
       "oneLiner": {
-        "ru": "Второй крупный корпоративный производитель серверов и систем для ИИ.",
-        "en": "The second large enterprise maker of servers and systems for AI."
+        "ru": "Корпоративный производитель серверов и систем для ИИ, второй после Dell.",
+        "en": "An enterprise maker of AI servers and systems, second after Dell."
       },
       "whyIrreplaceable": {
         "ru": "Прямой аналог первого корпоративного производителя. Наличие обоих делает этот слой конкурентным.",
@@ -8696,8 +8696,8 @@
           "en": "Moving the model ecosystem — two to three years"
         },
         "strategicControl": {
-          "ru": "Инвестиции якоря и совместные продукты",
-          "en": "Anchor investment and joint products"
+          "ru": "Инвестиции NVIDIA и совместные продукты",
+          "en": "NVIDIA investment and joint products"
         }
       },
       "gravity": {
@@ -8800,8 +8800,8 @@
           "en": "Catching up on the leading-edge node — three to five years"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем по производству пока нет",
-          "en": "No manufacturing relationship with the anchor yet"
+          "ru": "Отношений с NVIDIA по производству пока нет",
+          "en": "No manufacturing relationship with NVIDIA yet"
         }
       },
       "gravity": {
@@ -9009,8 +9009,8 @@
           "en": "Catching up on the ecosystem — three to five years"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем нет",
-          "en": "No relationship with the anchor"
+          "ru": "Отношений с NVIDIA нет",
+          "en": "No relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -9023,12 +9023,12 @@
       },
       "domain": null,
       "oneLiner": {
-        "ru": "Вторая библиотека для обучения нейросетей, развивается вокруг собственного ускорителя облака.",
-        "en": "The second training library, developed around a cloud's own accelerator."
+        "ru": "Библиотека обучения нейросетей от Google, вторая после PyTorch; развивается вокруг TPU.",
+        "en": "Google's neural-network training library, second after PyTorch; built around TPU."
       },
       "whyIrreplaceable": {
-        "ru": "Вторая половина дуополии. Существует и работает, но её экосистема заметно меньше — именно это делает ров первой библиотеки заметным.",
-        "en": "The other half of the duopoly. It exists and it works, but its ecosystem is visibly smaller — which is what makes the first library's moat visible."
+        "ru": "Вторая половина дуополии. Существует и работает, но её экосистема заметно меньше — именно это делает замок первой библиотеки заметным.",
+        "en": "The other half of the duopoly. It exists and it works, but its ecosystem is visibly smaller — which is what makes the first library's lock visible."
       },
       "whatBreaksIt": {
         "ru": "Потеря поддержки со стороны владельца.",
@@ -9112,8 +9112,8 @@
           "en": "Switching supplier — months"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем нет",
-          "en": "No relationship with the anchor"
+          "ru": "Отношений с NVIDIA нет",
+          "en": "No relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -9216,8 +9216,8 @@
           "en": "Developing comparable control — three to five years"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем нет",
-          "en": "No relationship with the anchor"
+          "ru": "Отношений с NVIDIA нет",
+          "en": "No relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -9320,8 +9320,8 @@
           "en": "The industry changing standard — more than five years"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем нет, есть совместимость",
-          "en": "No relationship with the anchor, only compatibility"
+          "ru": "Отношений с NVIDIA нет, есть совместимость",
+          "en": "No relationship with NVIDIA, only compatibility"
         }
       },
       "gravity": {
@@ -9423,8 +9423,8 @@
           "en": "Requalifying the line — two to three years"
         },
         "strategicControl": {
-          "ru": "Прямых отношений с якорем нет",
-          "en": "No direct relationship with the anchor"
+          "ru": "Прямых отношений с NVIDIA нет",
+          "en": "No direct relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -9526,8 +9526,8 @@
           "en": "An equivalent launches in a year"
         },
         "strategicControl": {
-          "ru": "Инвестиции якоря",
-          "en": "The anchor holds an investment"
+          "ru": "Инвестиции NVIDIA",
+          "en": "NVIDIA holds an investment"
         }
       },
       "gravity": {
@@ -9629,8 +9629,8 @@
           "en": "Finding replacement capital — months"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем нет",
-          "en": "No relationship with the anchor"
+          "ru": "Отношений с NVIDIA нет",
+          "en": "No relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -9732,8 +9732,8 @@
           "en": "Switching supplier — months"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем нет",
-          "en": "No relationship with the anchor"
+          "ru": "Отношений с NVIDIA нет",
+          "en": "No relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -9967,8 +9967,8 @@
         "en": "At once a large accelerator buyer, an author of open models and the parent of the main training library."
       },
       "whyIrreplaceable": {
-        "ru": "Единственный покупатель, который отдал отрасли библиотеку обучения. Это делает его и клиентом, и совладельцем рва: библиотека закрепляет связку с ускорителями.",
-        "en": "The only buyer that handed the industry its training library. That makes it both a customer and a co-owner of the moat: the library cements the tie to the accelerators."
+        "ru": "Единственный покупатель, который отдал отрасли библиотеку обучения. Это делает его и клиентом, и совладельцем замка: библиотека закрепляет связку с ускорителями.",
+        "en": "The only buyer that handed the industry its training library. That makes it both a customer and a co-owner of the lock: the library cements the tie to the accelerators."
       },
       "whatBreaksIt": {
         "ru": "Перевод обучения на собственные чипы вместе с уходом библиотеки на другое железо.",
@@ -10052,8 +10052,8 @@
           "en": "Replacing the capital — one to two years"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем напрямую нет",
-          "en": "No direct relationship with the anchor"
+          "ru": "Отношений с NVIDIA напрямую нет",
+          "en": "No direct relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -10265,8 +10265,8 @@
           "en": "Rebuilding a relationship of this scale — two to three years"
         },
         "strategicControl": {
-          "ru": "Публичное партнёрство без доли якоря",
-          "en": "A public partnership without an anchor stake"
+          "ru": "Публичное партнёрство без доли NVIDIA",
+          "en": "A public partnership without an NVIDIA stake"
         }
       },
       "gravity": {
@@ -10283,8 +10283,8 @@
         "en": "A hyperscaler, the largest investor in the leading lab, and a designer of its own silicon."
       },
       "whyIrreplaceable": {
-        "ru": "Покупает вычисления, строит вместе с якорем и проектирует собственные ускорители. Все три отношения настоящие, и третье — источник главного риска.",
-        "en": "It buys compute, builds alongside the anchor and designs its own accelerators. All three relationships are real, and the third is the source of the main risk."
+        "ru": "Покупает вычисления, строит вместе с NVIDIA и проектирует собственные ускорители. Все три отношения настоящие, и третье — источник главного риска.",
+        "en": "It buys compute, builds alongside NVIDIA and designs its own accelerators. All three relationships are real, and the third is the source of the main risk."
       },
       "whatBreaksIt": {
         "ru": "Полный перевод обучения и инференса на собственные чипы.",
@@ -10368,8 +10368,8 @@
           "en": "Taking its place — one to two years"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем формально нет",
-          "en": "No formal relationship with the anchor"
+          "ru": "Отношений с NVIDIA формально нет",
+          "en": "No formal relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -10574,8 +10574,8 @@
           "en": "Catching up on maturity — two to three years"
         },
         "strategicControl": {
-          "ru": "Собственный продукт якоря",
-          "en": "The anchor's own product"
+          "ru": "Собственный продукт NVIDIA",
+          "en": "NVIDIA's own product"
         }
       },
       "gravity": {
@@ -10678,8 +10678,8 @@
           "en": "An equivalent launches in a year"
         },
         "strategicControl": {
-          "ru": "Инвестиции якоря и поставочный контракт",
-          "en": "Anchor investment plus a supply contract"
+          "ru": "Инвестиции NVIDIA и поставочный контракт",
+          "en": "NVIDIA investment plus a supply contract"
         }
       },
       "gravity": {
@@ -10696,12 +10696,12 @@
         "en": "A European independent cloud with accelerator clusters, working on long contracts."
       },
       "whyIrreplaceable": {
-        "ru": "Ещё один независимый арендодатель мощностей, теперь в Европе. Прямо заявляет зависимость от якоря по чипам.",
-        "en": "Another independent capacity landlord, this time in Europe. It states its dependence on the anchor for silicon outright."
+        "ru": "Ещё один независимый арендодатель мощностей, теперь в Европе. Прямо заявляет зависимость от NVIDIA по чипам.",
+        "en": "Another independent capacity landlord, this time in Europe. It states its dependence on NVIDIA for silicon outright."
       },
       "whatBreaksIt": {
-        "ru": "Отмена якорного контракта с гиперскейлером.",
-        "en": "Cancellation of the anchor contract with a hyperscaler."
+        "ru": "Отмена контракта с NVIDIA у гиперскейлера.",
+        "en": "Cancellation of NVIDIA contract with a hyperscaler."
       },
       "phase": "scaling",
       "risk": {
@@ -10876,20 +10876,20 @@
       },
       "criticalityWhy": {
         "irreplaceability": {
-          "ru": "Открытые движки покрывают ту же задачу",
-          "en": "Open engines cover the same job"
+          "ru": "Открытые системы запуска покрывают ту же задачу",
+          "en": "Open servers cover the same job"
         },
         "lockInDepth": {
           "ru": "Задевает инференс и приложения",
           "en": "Reaches inference and applications"
         },
         "timeToReplace": {
-          "ru": "Заместить открытыми движками — год",
-          "en": "Replacing it with open engines — a year"
+          "ru": "Заместить открытыми системами запуска — год",
+          "en": "Replacing it with open servers — a year"
         },
         "strategicControl": {
-          "ru": "Собственный продукт якоря",
-          "en": "The anchor's own product"
+          "ru": "Собственный продукт NVIDIA",
+          "en": "NVIDIA's own product"
         }
       },
       "gravity": {
@@ -10902,16 +10902,16 @@
       },
       "domain": null,
       "oneLiner": {
-        "ru": "Готовые контейнеры якоря для запуска моделей: продают инференс как сервис на своём железе.",
-        "en": "The anchor's ready-made containers for running models: inference sold as a service on its own hardware."
+        "ru": "Готовые контейнеры NVIDIA для запуска моделей: продают инференс как сервис на своём железе.",
+        "en": "NVIDIA's ready-made containers for running models: inference sold as a service on its own hardware."
       },
       "whyIrreplaceable": {
-        "ru": "Способ якоря подняться из железа в слой запуска моделей. Работает только на его ускорителях и потому углубляет привязку.",
-        "en": "The anchor's way of climbing from hardware into the serving layer. It runs only on its accelerators and therefore deepens the tie."
+        "ru": "Способ NVIDIA подняться из железа в слой запуска моделей. Работает только на его ускорителях и потому углубляет привязку.",
+        "en": "NVIDIA's way of climbing from hardware into the serving layer. It runs only on its accelerators and therefore deepens the tie."
       },
       "whatBreaksIt": {
-        "ru": "Открытые движки инференса делают этот слой ненужным.",
-        "en": "Open inference engines make this layer unnecessary."
+        "ru": "Открытые системы запуска моделей делают этот слой ненужным.",
+        "en": "Open inference servers make this layer unnecessary."
       },
       "phase": "scaling",
       "risk": {
@@ -10991,8 +10991,8 @@
           "en": "Replacing the solution — a year"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем напрямую нет",
-          "en": "No direct relationship with the anchor"
+          "ru": "Отношений с NVIDIA напрямую нет",
+          "en": "No direct relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -11083,8 +11083,8 @@
       },
       "criticalityWhy": {
         "irreplaceability": {
-          "ru": "Инструментов такого рода у якоря один",
-          "en": "The anchor has only one instrument of this kind"
+          "ru": "Инструментов такого рода у NVIDIA один",
+          "en": "NVIDIA has only one instrument of this kind"
         },
         "lockInDepth": {
           "ru": "Задевает облака, софт, модели и приложения",
@@ -11095,8 +11095,8 @@
           "en": "Winding the programme down and back up — one to two years"
         },
         "strategicControl": {
-          "ru": "Собственная структура якоря",
-          "en": "An entity the anchor owns"
+          "ru": "Собственная структура NVIDIA",
+          "en": "An entity NVIDIA owns"
         }
       },
       "gravity": {
@@ -11109,12 +11109,12 @@
       },
       "domain": null,
       "oneLiner": {
-        "ru": "Венчурное подразделение якоря: вкладывается в компании, которые должны остаться на его платформе.",
-        "en": "The anchor's venture arm: it invests in companies that should stay on its platform."
+        "ru": "Венчурное подразделение NVIDIA: вкладывается в компании, которые должны остаться на платформе NVIDIA.",
+        "en": "NVIDIA's venture arm: it invests in companies that should stay on NVIDIA's platform."
       },
       "whyIrreplaceable": {
-        "ru": "Это не портфель ради доходности, а инструмент управления собственным риском: деньги идут туда, где уход экосистемы был бы для якоря дороже всего.",
-        "en": "This is not a portfolio for returns but an instrument for managing the anchor's own risk: the money goes where losing the ecosystem would cost it most."
+        "ru": "Это не портфель ради доходности, а инструмент управления собственным риском: деньги идут туда, где уход экосистемы был бы для NVIDIA дороже всего.",
+        "en": "This is not a portfolio for returns but an instrument for managing NVIDIA's own risk: the money goes where losing the ecosystem would cost it most."
       },
       "whatBreaksIt": {
         "ru": "Сворачивание программы вложений при сжатии рынка.",
@@ -11223,8 +11223,8 @@
       },
       "domain": "nvidia.com",
       "oneLiner": {
-        "ru": "Якорь карты: делает ускорители для ИИ и владеет средой программирования, на которой пишет вся отрасль.",
-        "en": "The anchor of the map: it makes AI accelerators and owns the programming environment the whole industry writes in."
+        "ru": "Центр карты: делает ускорители для ИИ и владеет CUDA — средой, на которой пишет вся отрасль.",
+        "en": "The centre of the map: it makes AI accelerators and owns CUDA, the environment the whole industry writes in."
       },
       "whyIrreplaceable": {
         "ru": "Заменить можно чип, но не среду: код отрасли написан под неё, а переписывание стоит лет. Плюс сеть и системы продаются одним комплектом.",
@@ -11316,8 +11316,8 @@
           "en": "A nuclear plant takes more than seven years to build"
         },
         "strategicControl": {
-          "ru": "Партнёрства объявлены, денег якоря нет",
-          "en": "Partnerships announced, no anchor money"
+          "ru": "Партнёрства объявлены, денег NVIDIA нет",
+          "en": "Partnerships announced, no NVIDIA money"
         }
       },
       "gravity": {
@@ -11420,8 +11420,8 @@
           "en": "Taking its place — two to three years"
         },
         "strategicControl": {
-          "ru": "Объявлены вложения якоря до 100 млрд долларов",
-          "en": "Anchor investment of up to $100B announced"
+          "ru": "Объявлены вложения NVIDIA до 100 млрд долларов",
+          "en": "NVIDIA investment of up to $100B announced"
         }
       },
       "gravity": {
@@ -11626,8 +11626,8 @@
           "en": "Growing a comparable library — five years"
         },
         "strategicControl": {
-          "ru": "Инженеры якоря вносят вклад, но владеет фонд",
-          "en": "Anchor engineers contribute, but a foundation owns it"
+          "ru": "Инженеры NVIDIA вносят вклад, но владеет фонд",
+          "en": "NVIDIA engineers contribute, but a foundation owns it"
         }
       },
       "gravity": {
@@ -11833,8 +11833,8 @@
           "en": "Replacement — a year"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем нет",
-          "en": "No relationship with the anchor"
+          "ru": "Отношений с NVIDIA нет",
+          "en": "No relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -11936,8 +11936,8 @@
           "en": "Replacement — a year"
         },
         "strategicControl": {
-          "ru": "Суперкомпьютер построен совместно с якорем",
-          "en": "The supercomputer was built jointly with the anchor"
+          "ru": "Суперкомпьютер построен совместно с NVIDIA",
+          "en": "The supercomputer was built jointly with NVIDIA"
         }
       },
       "gravity": {
@@ -12251,8 +12251,8 @@
           "en": "Switching supplier — months"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем нет",
-          "en": "No relationship with the anchor"
+          "ru": "Отношений с NVIDIA нет",
+          "en": "No relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -12354,8 +12354,8 @@
           "en": "The queue for equipment — two years"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем напрямую нет",
-          "en": "No direct relationship with the anchor"
+          "ru": "Отношений с NVIDIA напрямую нет",
+          "en": "No direct relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -12368,8 +12368,8 @@
       },
       "domain": null,
       "oneLiner": {
-        "ru": "Второй крупный поставщик оборудования питания и управления электричеством площадки.",
-        "en": "The second large supplier of power and electrical management equipment for sites."
+        "ru": "Крупный поставщик оборудования питания для площадок, второй после Eaton.",
+        "en": "A large supplier of site power equipment, second after Eaton."
       },
       "whyIrreplaceable": {
         "ru": "Прямой аналог первого поставщика питания. Наличие двух-трёх делает слой конкурентным, а ограничение — не выбор, а срок поставки.",
@@ -12560,8 +12560,8 @@
           "en": "Finding replacement capital — months"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем нет",
-          "en": "No relationship with the anchor"
+          "ru": "Отношений с NVIDIA нет",
+          "en": "No relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -12754,8 +12754,8 @@
       },
       "criticalityWhy": {
         "irreplaceability": {
-          "ru": "Движков инференса несколько",
-          "en": "There are several inference engines"
+          "ru": "Систем запуска моделей несколько",
+          "en": "There are several model-serving systems"
         },
         "lockInDepth": {
           "ru": "Задевает только инференс",
@@ -12766,8 +12766,8 @@
           "en": "Replacement — under a year"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем нет",
-          "en": "No relationship with the anchor"
+          "ru": "Отношений с NVIDIA нет",
+          "en": "No relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -12780,12 +12780,12 @@
       },
       "domain": null,
       "oneLiner": {
-        "ru": "Второй открытый движок запуска моделей, конкурирует с первым по скорости.",
-        "en": "The second open model-serving engine, competing with the first on speed."
+        "ru": "Вторая открытая система запуска моделей, конкурирует с vLLM по скорости.",
+        "en": "The second open model-serving system, competing with vLLM on speed."
       },
       "whyIrreplaceable": {
-        "ru": "Прямой конкурент первому движку. Существование двух означает, что этот слой конкурентный, а не запертый.",
-        "en": "A direct competitor to the first engine. That two exist means this layer is competitive rather than locked."
+        "ru": "Прямой конкурент vLLM. Существование двух означает, что этот слой конкурентный, а не запертый.",
+        "en": "A direct competitor to vLLM. That two exist means this layer is competitive rather than locked."
       },
       "whatBreaksIt": {
         "ru": "Слияние сообщества вокруг конкурента.",
@@ -12869,8 +12869,8 @@
           "en": "Requalifying the material — one to two years"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем нет",
-          "en": "No relationship with the anchor"
+          "ru": "Отношений с NVIDIA нет",
+          "en": "No relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -13076,8 +13076,8 @@
           "en": "Replacement within the niche — one to two years"
         },
         "strategicControl": {
-          "ru": "Формальных отношений с якорем нет",
-          "en": "No formal relationship with the anchor"
+          "ru": "Формальных отношений с NVIDIA нет",
+          "en": "No formal relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -13179,8 +13179,8 @@
           "en": "The queue for equipment — three years"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем нет",
-          "en": "No relationship with the anchor"
+          "ru": "Отношений с NVIDIA нет",
+          "en": "No relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -13193,8 +13193,8 @@
       },
       "domain": null,
       "oneLiner": {
-        "ru": "Второй производитель больших турбин и сетевого оборудования для площадок.",
-        "en": "The second maker of large turbines and grid equipment for sites."
+        "ru": "Производитель больших турбин и сетевого оборудования, второй после GE Vernova.",
+        "en": "A maker of large turbines and grid equipment, second after GE Vernova."
       },
       "whyIrreplaceable": {
         "ru": "Вторая из трёх компаний, умеющих делать большие турбины и трансформаторы. Ограничение — производственные мощности, а не технология.",
@@ -13407,8 +13407,8 @@
         "en": "The leading maker of HBM — the fast memory placed against the accelerator."
       },
       "whyIrreplaceable": {
-        "ru": "Первый в списке поставщиков памяти якоря и лидер по HBM. Память нового поколения квалифицируется годами, поэтому сменить поставщика внутри поколения нельзя.",
-        "en": "First on the anchor's memory supplier list and the leader in HBM. A new memory generation qualifies over years, so the supplier cannot be changed within a generation."
+        "ru": "Первый в списке поставщиков памяти NVIDIA и лидер по HBM. Память нового поколения квалифицируется годами, поэтому сменить поставщика внутри поколения нельзя.",
+        "en": "First on NVIDIA's memory supplier list and the leader in HBM. A new memory generation qualifies over years, so the supplier cannot be changed within a generation."
       },
       "whatBreaksIt": {
         "ru": "Проигрыш квалификации на следующем поколении памяти.",
@@ -13598,8 +13598,8 @@
           "en": "Replacing the commitment — two to three years"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем напрямую нет",
-          "en": "No direct relationship with the anchor"
+          "ru": "Отношений с NVIDIA напрямую нет",
+          "en": "No direct relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -13912,8 +13912,8 @@
           "en": "Changing design methodology — five years"
         },
         "strategicControl": {
-          "ru": "Якорь купил долю в компании на 2 млрд долларов",
-          "en": "The anchor bought a $2B stake in the company"
+          "ru": "NVIDIA купил долю в компании на 2 млрд долларов",
+          "en": "NVIDIA bought a $2B stake in the company"
         }
       },
       "gravity": {
@@ -14121,8 +14121,8 @@
           "en": "Catching up on optimisation — two years"
         },
         "strategicControl": {
-          "ru": "Собственный продукт якоря",
-          "en": "The anchor's own product"
+          "ru": "Собственный продукт NVIDIA",
+          "en": "NVIDIA's own product"
         }
       },
       "gravity": {
@@ -14135,12 +14135,12 @@
       },
       "domain": null,
       "oneLiner": {
-        "ru": "Оптимизатор моделей под ускорители якоря: ускоряет запуск обученной модели.",
-        "en": "A model optimiser for the anchor's accelerators: it speeds up running a trained model."
+        "ru": "Оптимизатор моделей под ускорители NVIDIA: ускоряет запуск обученной модели.",
+        "en": "A model optimiser for NVIDIA's accelerators: it speeds up running a trained model."
       },
       "whyIrreplaceable": {
-        "ru": "Собственный инструмент якоря, работает только на его железе. Поднимает стоимость ухода: перенос модели означает потерю этой оптимизации.",
-        "en": "The anchor's own tool, running only on its hardware. It raises the cost of leaving: moving a model means losing this optimisation."
+        "ru": "Собственный инструмент NVIDIA, работает только на его железе. Поднимает стоимость ухода: перенос модели означает потерю этой оптимизации.",
+        "en": "NVIDIA's own tool, running only on its hardware. It raises the cost of leaving: moving a model means losing this optimisation."
       },
       "whatBreaksIt": {
         "ru": "Открытые оптимизаторы догоняют по скорости.",
@@ -14224,8 +14224,8 @@
           "en": "Finding replacement capital — months"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем нет",
-          "en": "No relationship with the anchor"
+          "ru": "Отношений с NVIDIA нет",
+          "en": "No relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -14328,8 +14328,8 @@
           "en": "Requalification — two to three years"
         },
         "strategicControl": {
-          "ru": "Отношений с якорем нет",
-          "en": "No relationship with the anchor"
+          "ru": "Отношений с NVIDIA нет",
+          "en": "No relationship with NVIDIA"
         }
       },
       "gravity": {
@@ -14659,8 +14659,8 @@
       },
       "domain": null,
       "oneLiner": {
-        "ru": "Домашняя юрисдикция якоря и главный шлюз: решает, кому он имеет право продавать.",
-        "en": "The anchor's home jurisdiction and the main gate: it decides who it may sell to."
+        "ru": "Домашняя юрисдикция NVIDIA и главный шлюз: решает, кому NVIDIA имеет право продавать.",
+        "en": "NVIDIA's home jurisdiction and the main gate: it decides who NVIDIA may sell to."
       },
       "whyIrreplaceable": {
         "ru": "Из-под американского права цепочку не вывести: правила тянутся за технологией в любую страну, где её применяют.",
@@ -14845,8 +14845,8 @@
       },
       "criticalityWhy": {
         "irreplaceability": {
-          "ru": "Движков инференса несколько, преимущество в инерции",
-          "en": "There are several inference engines; the advantage is inertia"
+          "ru": "Систем запуска моделей несколько, преимущество в инерции",
+          "en": "There are several model-serving systems; the advantage is inertia"
         },
         "lockInDepth": {
           "ru": "Задевает инференс и приложения",
@@ -14871,16 +14871,16 @@
       },
       "domain": null,
       "oneLiner": {
-        "ru": "Открытый движок, который запускает уже обученные модели быстро и дёшево.",
-        "en": "An open engine that runs already-trained models fast and cheaply."
+        "ru": "Открытая система запуска обученных моделей — быстро и дёшево.",
+        "en": "An open system that runs already-trained models fast and cheaply."
       },
       "whyIrreplaceable": {
         "ru": "Стал общим знаменателем для запуска моделей. Поддерживает разное железо, и именно поэтому снижает привязку к одному поставщику.",
         "en": "It became the common denominator for serving models. It supports varied hardware, and that is precisely why it lowers the tie to any one vendor."
       },
       "whatBreaksIt": {
-        "ru": "Появление более быстрого открытого движка.",
-        "en": "A faster open engine appearing."
+        "ru": "Появление более быстрой открытой системы запуска.",
+        "en": "A faster open server appearing."
       },
       "phase": "scaling",
       "risk": {
@@ -14974,8 +14974,8 @@
       },
       "domain": null,
       "oneLiner": {
-        "ru": "Тайваньский сборщик серверов и модулей, второй источник для крупных заказов.",
-        "en": "A Taiwanese assembler of servers and modules, the second source for large orders."
+        "ru": "Тайваньский сборщик серверов и модулей, второй источник после Foxconn.",
+        "en": "A Taiwanese assembler of servers and modules, the second source after Foxconn."
       },
       "whyIrreplaceable": {
         "ru": "Прямая альтернатива первому сборщику. Именно наличие второго и третьего подрядчика делает этот слой заменяемым.",
@@ -15092,8 +15092,8 @@
       "risk": {
         "geopolitical": "medium",
         "note": {
-          "ru": "Площадки в США, энергия — узкое место.",
-          "en": "Sites in the US; power is the bottleneck."
+          "ru": "Площадки в США, энергия ограничивает ввод площадок.",
+          "en": "Sites in the US; power limits how fast sites come online."
         },
         "exportRegime": null,
         "concentration": 30
@@ -15377,8 +15377,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Второе облако заперто на том же уровне: клиенты требуют совместимости со средой якоря.",
-        "en": "The second cloud is locked at the same level: customers demand compatibility with the anchor's environment."
+        "ru": "Клиенты AWS требуют совместимости с CUDA",
+        "en": "AWS customers demand CUDA compatibility"
       },
       "evidence": [
         {
@@ -15493,8 +15493,8 @@
         "type": "substitution",
         "timeline": "2-5y",
         "mitigation": {
-          "ru": "Софтовая экосистема остаётся преимуществом якоря.",
-          "en": "The software ecosystem remains the anchor's advantage."
+          "ru": "Софтовая экосистема остаётся преимуществом NVIDIA.",
+          "en": "The software ecosystem remains NVIDIA's advantage."
         }
       },
       "techNode": null,
@@ -15778,8 +15778,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Конкурент якоря делает свои чипы на той же фабрике: узкое место общее для обоих.",
-        "en": "The anchor's competitor makes its chips at the same foundry: the bottleneck is shared by both."
+        "ru": "AMD печатает ускорители там же",
+        "en": "AMD prints its accelerators where NVIDIA does: the rivalry is in design"
       },
       "evidence": [
         {
@@ -16502,8 +16502,8 @@
         "type": "substitution",
         "timeline": "2-5y",
         "mitigation": {
-          "ru": "Собственная сетевая платформа якоря продаётся вместе с ускорителями.",
-          "en": "The anchor's own networking platform is sold together with the accelerators."
+          "ru": "Собственная сетевая платформа NVIDIA продаётся вместе с ускорителями.",
+          "en": "NVIDIA's own networking platform is sold together with the accelerators."
         }
       },
       "techNode": "infiniband",
@@ -16511,8 +16511,8 @@
       "strengthened": "2023",
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Сети кластеров: собственный протокол якоря продаётся комплектом с ускорителями, что вытесняет независимого поставщика.",
-        "en": "Cluster fabrics: the anchor's own protocol is sold as a package with the accelerators, which squeezes out the independent supplier."
+        "ru": "Сети кластеров: собственный протокол NVIDIA продаётся комплектом с ускорителями, что вытесняет независимого поставщика.",
+        "en": "Cluster fabrics: NVIDIA's own protocol is sold as a package with the accelerators, which squeezes out the independent supplier."
       },
       "evidence": [
         {
@@ -17506,8 +17506,8 @@
       "strengthened": "2024",
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Проектирует облакам собственные ускорители — прямая альтернатива закупке у якоря.",
-        "en": "It designs the clouds their own accelerators — a direct alternative to buying from the anchor."
+        "ru": "Проектирует облакам собственные ускорители — прямая альтернатива закупке у NVIDIA.",
+        "en": "It designs the clouds their own accelerators — a direct alternative to buying from NVIDIA."
       },
       "evidence": [
         {
@@ -17571,8 +17571,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Проектировщик заказных ускорителей покупает у той же фабрики, что и якорь: узкое место общее.",
-        "en": "The designer of custom accelerators buys from the same foundry as the anchor: the bottleneck is shared."
+        "ru": "Проектировщик заказных ускорителей покупает у той же фабрики, что и NVIDIA: обе зависят от TSMC.",
+        "en": "The designer of custom accelerators buys from the same foundry as NVIDIA: both depend on TSMC."
       },
       "evidence": [
         {
@@ -18031,8 +18031,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Проверка иностранного участия удлиняет сроки партнёрств и покупок якоря.",
-        "en": "Review of foreign participation stretches the timelines of the anchor's partnerships and acquisitions."
+        "ru": "Проверка иностранного участия удлиняет сроки партнёрств и покупок NVIDIA.",
+        "en": "Review of foreign participation stretches the timelines of NVIDIA's partnerships and acquisitions."
       },
       "evidence": [
         {
@@ -18299,8 +18299,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Оптические модули для кластеров; поддерживают и собственный протокол якоря, и открытые стандарты.",
-        "en": "Optical modules for clusters; they support both the anchor's own protocol and the open standards."
+        "ru": "Оптические модули для кластеров; поддерживают и собственный протокол NVIDIA, и открытые стандарты.",
+        "en": "Optical modules for clusters; they support both NVIDIA's own protocol and the open standards."
       },
       "evidence": [
         {
@@ -18550,8 +18550,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Активные кабели, соединяющие стойки в кластер вокруг платформы якоря.",
-        "en": "Active cables joining racks into a cluster, built around the anchor's platform."
+        "ru": "Активные кабели, соединяющие стойки в кластер вокруг платформы NVIDIA.",
+        "en": "Active cables joining racks into a cluster, built around NVIDIA's platform."
       },
       "evidence": [
         {
@@ -18709,8 +18709,8 @@
         "type": "substitution",
         "timeline": "5y+",
         "mitigation": {
-          "ru": "Отрасль думает о вычислениях для ИИ в терминах, которые задал якорь.",
-          "en": "The industry thinks about AI compute in the terms the anchor set."
+          "ru": "Отрасль думает о вычислениях для ИИ в терминах, которые задал NVIDIA.",
+          "en": "The industry thinks about AI compute in the terms NVIDIA set."
         }
       },
       "techNode": null,
@@ -18718,8 +18718,8 @@
       "strengthened": "2016",
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Не просто продукт, а рамка: отрасль описывает вычисления для ИИ в понятиях, которые ввёл якорь.",
-        "en": "Not merely a product but a frame: the industry describes AI compute in the terms the anchor introduced."
+        "ru": "Не просто продукт, а рамка: отрасль описывает вычисления для ИИ в понятиях, которые ввёл NVIDIA.",
+        "en": "Not merely a product but a frame: the industry describes AI compute in the terms NVIDIA introduced."
       },
       "evidence": [
         {
@@ -18764,8 +18764,8 @@
       "strengthened": "2016",
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Среда работает только на ускорителях якоря: уход с них означает переписывание кода отрасли.",
-        "en": "The environment runs only on the anchor's accelerators: leaving them means the industry rewriting its code."
+        "ru": "Среда работает только на ускорителях NVIDIA: уход с них означает переписывание кода отрасли.",
+        "en": "The environment runs only on NVIDIA's accelerators: leaving them means the industry rewriting its code."
       },
       "evidence": [
         {
@@ -19043,8 +19043,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Открытые веса китайской лаборатории публикуются в общем хабе и доступны всем.",
-        "en": "The Chinese lab's open weights are published in the common hub and available to everyone."
+        "ru": "DeepSeek публикует открытые веса на Hugging Face — оттуда их может забрать кто угодно.",
+        "en": "DeepSeek publishes its open weights on Hugging Face"
       },
       "evidence": [
         {
@@ -19154,8 +19154,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Доводит готовые системы до корпоративных заказчиков, которых якорь сам не обслуживает.",
-        "en": "It carries finished systems to the enterprise customers the anchor does not serve itself."
+        "ru": "Доводит готовые системы до корпоративных заказчиков, которых NVIDIA сам не обслуживает.",
+        "en": "It carries finished systems to the enterprise customers NVIDIA does not serve itself."
       },
       "evidence": [
         {
@@ -19909,8 +19909,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Собирает оптические модули и сборки; зависимость односторонняя — на якорь приходится больше четверти его выручки.",
-        "en": "It assembles optical modules and sub-assemblies; the dependence runs one way — the anchor accounts for more than a quarter of its revenue."
+        "ru": "Собирает оптические модули и сборки; зависимость односторонняя — на NVIDIA приходится больше четверти его выручки.",
+        "en": "It assembles optical modules and sub-assemblies; the dependence runs one way — NVIDIA accounts for more than a quarter of its revenue."
       },
       "evidence": [
         {
@@ -20046,8 +20046,8 @@
       "strengthened": "2023",
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Собирает, тестирует и упаковывает готовые изделия якоря; назван в его отчётности поимённо.",
-        "en": "It assembles, tests and packages the anchor's finished products; it is named directly in the anchor's filings."
+        "ru": "Собирает, тестирует и упаковывает готовые изделия NVIDIA; назван в его отчётности поимённо.",
+        "en": "It assembles, tests and packages NVIDIA's finished products; it is named directly in NVIDIA's filings."
       },
       "evidence": [
         {
@@ -22609,8 +22609,8 @@
       "strengthened": "2023",
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Одно из облаков-гигантов покупает ускорители в объёмах, определяющих квартальную выручку якоря.",
-        "en": "One of the giant clouds buys accelerators in volumes that shape the anchor's quarterly revenue."
+        "ru": "Одно из облаков-гигантов покупает ускорители в объёмах, определяющих квартальную выручку NVIDIA.",
+        "en": "One of the giant clouds buys accelerators in volumes that shape NVIDIA's quarterly revenue."
       },
       "evidence": [
         {
@@ -22703,8 +22703,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Собственный ускоритель гиперскейлера назван среди конкурентов в отчётности якоря.",
-        "en": "The hyperscaler's own accelerator is named among the competitors in the anchor's filings."
+        "ru": "Собственный ускоритель гиперскейлера назван среди конкурентов в отчётности NVIDIA.",
+        "en": "The hyperscaler's own accelerator is named among the competitors in NVIDIA's filings."
       },
       "evidence": [
         {
@@ -23164,8 +23164,8 @@
         "type": "substitution",
         "timeline": "1-2y",
         "mitigation": {
-          "ru": "Открытые движки покрывают ту же задачу бесплатно.",
-          "en": "Open engines cover the same job for free."
+          "ru": "Открытые системы запуска покрывают ту же задачу бесплатно.",
+          "en": "Open servers cover the same job for free."
         }
       },
       "techNode": null,
@@ -23173,8 +23173,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Готовые контейнеры запуска моделей от самого якоря: способ подняться из железа в слой инференса.",
-        "en": "Ready-made model-serving containers from the anchor itself: a way to climb from hardware into the inference layer."
+        "ru": "Готовые контейнеры запуска моделей от самого NVIDIA: способ подняться из железа в слой инференса.",
+        "en": "Ready-made model-serving containers from NVIDIA itself: a way to climb from hardware into the inference layer."
       },
       "evidence": [
         {
@@ -23227,8 +23227,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Собственный движок якоря против открытого: платный против бесплатного.",
-        "en": "The anchor's own engine against the open one: paid against free."
+        "ru": "Платный сервер инференса NVIDIA против бесплатного vLLM — на одном и том же железе.",
+        "en": "NVIDIA's paid inference server against the free vLLM — on the same hardware."
       },
       "evidence": [
         {
@@ -23392,8 +23392,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Венчурное подразделение якоря в облаке у источников энергии.",
-        "en": "The anchor's venture arm in a cloud built at the energy source."
+        "ru": "NVentures вкладывается в Crusoe — облако",
+        "en": "NVentures invests in Crusoe"
       },
       "evidence": [
         {
@@ -23446,8 +23446,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Венчурное подразделение якоря в общем хабе моделей.",
-        "en": "The anchor's venture arm in the common model hub."
+        "ru": "NVentures вкладывается в Hugging Face — хаб",
+        "en": "NVentures invests in Hugging Face"
       },
       "evidence": [
         {
@@ -23500,8 +23500,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Венчурное подразделение якоря: инструмент управления собственным риском, а не портфель ради доходности.",
-        "en": "The anchor's venture arm: an instrument for managing its own risk, not a portfolio for returns."
+        "ru": "Венчурное подразделение NVIDIA: инструмент управления собственным риском, а не портфель ради доходности.",
+        "en": "NVIDIA's venture arm: an instrument for managing its own risk, not a portfolio for returns."
       },
       "evidence": [
         {
@@ -23608,8 +23608,8 @@
       "strengthened": "2023",
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Собственная сетевая платформа якоря конкурирует с независимыми коммутаторами в кластерах.",
-        "en": "The anchor's own networking platform competes with independent switches inside clusters."
+        "ru": "Собственная сетевая платформа NVIDIA конкурирует с независимыми коммутаторами в кластерах.",
+        "en": "NVIDIA's own networking platform competes with independent switches inside clusters."
       },
       "evidence": [
         {
@@ -24011,8 +24011,8 @@
         "type": "market",
         "timeline": "1-2y",
         "mitigation": {
-          "ru": "Контракты клиентов прямо предписывают использовать ускорители якоря.",
-          "en": "Customer contracts explicitly require the anchor's accelerators."
+          "ru": "Контракты клиентов прямо предписывают использовать ускорители NVIDIA.",
+          "en": "Customer contracts explicitly require NVIDIA's accelerators."
         }
       },
       "techNode": null,
@@ -24020,8 +24020,8 @@
       "strengthened": "2023",
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "ВСЕ ускорители в инфраструктуре этого облака — от якоря, и это прописано в контрактах с его клиентами.",
-        "en": "EVERY accelerator in this cloud's infrastructure comes from the anchor, and that is written into the contracts with its customers."
+        "ru": "ВСЕ ускорители в инфраструктуре этого облака — от NVIDIA, и это прописано в контрактах с его клиентами.",
+        "en": "EVERY accelerator in this cloud's infrastructure comes from NVIDIA, and that is written into the contracts with its customers."
       },
       "evidence": [
         {
@@ -24157,8 +24157,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Облако, строящее площадки у источников энергии, работает на ускорителях якоря.",
-        "en": "The cloud that builds sites at energy sources runs on the anchor's accelerators."
+        "ru": "Облако, строящее площадки у источников энергии, работает на ускорителях NVIDIA.",
+        "en": "The cloud that builds sites at energy sources runs on NVIDIA's accelerators."
       },
       "evidence": [
         {
@@ -24211,8 +24211,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Среда программирования — собственный продукт якоря и его главный ров: она входит в каждую поставку.",
-        "en": "The programming environment is the anchor's own product and its principal moat: it ships with every unit."
+        "ru": "CUDA — собственный продукт NVIDIA и её главный замок: среда входит в каждую поставку ускорителя.",
+        "en": "The programming environment is NVIDIA's own product and its principal lock: it ships with every unit."
       },
       "evidence": [
         {
@@ -24509,8 +24509,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Вложение в общий хаб моделей: если экосистема уйдёт на другое железо, ров якоря обесценится.",
-        "en": "An investment in the common model hub: if the ecosystem moves to other hardware, the anchor's moat loses its value."
+        "ru": "Вложение в общий хаб моделей: если экосистема уйдёт на другое железо, замок NVIDIA обесценится.",
+        "en": "An investment in the common model hub: if the ecosystem moves to other hardware, NVIDIA's lock loses its value."
       },
       "evidence": [
         {
@@ -24685,8 +24685,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Небольшое независимое облако для исследователей работает на ускорителях якоря.",
-        "en": "A small independent cloud for researchers runs on the anchor's accelerators."
+        "ru": "Небольшое независимое облако для исследователей работает на ускорителях NVIDIA.",
+        "en": "A small independent cloud for researchers runs on NVIDIA's accelerators."
       },
       "evidence": [
         {
@@ -24796,8 +24796,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Третье облако с собственным ускорителем, названное среди конкурентов в отчётности якоря.",
-        "en": "A third cloud with its own accelerator, named among the competitors in the anchor's filings."
+        "ru": "Третье облако с собственным ускорителем, названное среди конкурентов в отчётности NVIDIA.",
+        "en": "A third cloud with its own accelerator, named among the competitors in NVIDIA's filings."
       },
       "evidence": [
         {
@@ -24853,8 +24853,8 @@
       "strengthened": "2023",
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Все крупные облака закупают инфраструктуру якоря — это и есть основа его выручки.",
-        "en": "Every large cloud buys the anchor's infrastructure — that is the foundation of its revenue."
+        "ru": "Все крупные облака закупают инфраструктуру NVIDIA — это и есть основа его выручки.",
+        "en": "Every large cloud buys NVIDIA's infrastructure — that is the foundation of its revenue."
       },
       "evidence": [
         {
@@ -24896,8 +24896,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Результаты якоря стали планкой, с которой сравнивают всех остальных производителей.",
-        "en": "The anchor's results became the bar every other manufacturer is compared against."
+        "ru": "Результаты NVIDIA стали планкой, с которой сравнивают всех остальных производителей.",
+        "en": "NVIDIA's results became the bar every other manufacturer is compared against."
       },
       "evidence": [
         {
@@ -25018,8 +25018,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Европейское независимое облако прямо заявляет зависимость от ускорителей якоря.",
-        "en": "The European independent cloud states its dependence on the anchor's accelerators outright."
+        "ru": "Европейское независимое облако прямо заявляет зависимость от ускорителей NVIDIA.",
+        "en": "The European independent cloud states its dependence on NVIDIA's accelerators outright."
       },
       "evidence": [
         {
@@ -25072,8 +25072,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Собственная структура якоря: контроль полный по определению.",
-        "en": "An entity the anchor owns: control is complete by definition."
+        "ru": "Собственная структура NVIDIA: контроль полный по определению.",
+        "en": "An entity NVIDIA owns: control is complete by definition."
       },
       "evidence": [
         {
@@ -25183,8 +25183,8 @@
       "strengthened": "2025",
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Совместная работа над системами и оптимизациями: лаборатория пишет ядра, якорь подгоняет платформу.",
-        "en": "Joint work on systems and optimisation: the lab writes the kernels, the anchor tunes the platform."
+        "ru": "Совместная работа над системами и оптимизациями: лаборатория пишет ядра, NVIDIA подгоняет платформу.",
+        "en": "Joint work on systems and optimisation: the lab writes the kernels, NVIDIA tunes the platform."
       },
       "evidence": [
         {
@@ -25412,8 +25412,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Якорь назван ключевым технологическим партнёром стройки, которую финансирует холдинг.",
-        "en": "The anchor is named a key technology partner of the build the holding company finances."
+        "ru": "NVIDIA назван ключевым технологическим партнёром стройки, которую финансирует холдинг.",
+        "en": "NVIDIA is named a key technology partner of the build the holding company finances."
       },
       "evidence": [
         {
@@ -25538,8 +25538,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Частное размещение на 2 млрд долларов в компании, без софта которой якорь не может проектировать свои чипы.",
-        "en": "A $2B private placement in the company without whose software the anchor cannot design its own chips."
+        "ru": "Частное размещение на 2 млрд долларов в компании, без софта которой NVIDIA не может проектировать свои чипы.",
+        "en": "A $2B private placement in the company without whose software NVIDIA cannot design its own chips."
       },
       "evidence": [
         {
@@ -25848,8 +25848,8 @@
         }
       ],
       "detail": {
-        "ru": "Рамочное соглашение мая 2025 года и последующий заказ обязывают лабораторию заплатить до 6,5 млрд долларов к 31 мая 2031 года. Для облака это второй якорный контракт после гиперскейлера и единственный, который заметно снижает концентрацию на одном заказчике. Срок в шесть лет означает, что мощность резервируется заранее, а не покупается по мере надобности.",
-        "en": "A master services agreement from May 2025 and a subsequent order commit the lab to pay up to $6.5 billion through May 31, 2031. For the cloud this is the second anchor contract after the hyperscaler, and the only one that materially dilutes its single-customer concentration. A six-year term means capacity is reserved up front rather than bought as needed."
+        "ru": "Рамочное соглашение мая 2025 года и последующий заказ обязывают лабораторию заплатить до 6,5 млрд долларов к 31 мая 2031 года. Для облака это второй NVIDIA контракт после гиперскейлера и единственный, который заметно снижает концентрацию на одном заказчике. Срок в шесть лет означает, что мощность резервируется заранее, а не покупается по мере надобности.",
+        "en": "A master services agreement from May 2025 and a subsequent order commit the lab to pay up to $6.5 billion through May 31, 2031. For the cloud this is the second NVIDIA contract after the hyperscaler, and the only one that materially dilutes its single-customer concentration. A six-year term means capacity is reserved up front rather than bought as needed."
       }
     },
     {
@@ -26172,8 +26172,8 @@
       "strengthened": "2023",
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Стек лаборатории оптимизирован под платформу якоря на нескольких уровнях: развитие идёт вслед за ней.",
-        "en": "The lab's stack is optimised for the anchor's platform at several levels: its development follows it."
+        "ru": "Стек лаборатории оптимизирован под платформу NVIDIA на нескольких уровнях: развитие идёт вслед за ней.",
+        "en": "The lab's stack is optimised for NVIDIA's platform at several levels: its development follows it."
       },
       "evidence": [
         {
@@ -26387,8 +26387,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Открытый движок реализует совместимый с лабораторией программный интерфейс — он стал общим стандартом.",
-        "en": "The open engine implements an interface compatible with the lab's — it became the common standard."
+        "ru": "vLLM повторяет API OpenAI",
+        "en": "vLLM reproduces the OpenAI API"
       },
       "evidence": [
         {
@@ -26807,8 +26807,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Третий тайваньский сборщик серверных систем для ИИ.",
-        "en": "The third Taiwanese assembler of AI server systems."
+        "ru": "Quanta собирает серверные системы NVIDIA — третий тайваньский подрядчик после Foxconn и Wistron.",
+        "en": "Quanta assembles NVIDIA server systems — the third Taiwanese contractor after Foxconn and Wistron."
       },
       "evidence": [
         {
@@ -26972,8 +26972,8 @@
       "strengthened": "2023",
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Суперкомпьютер для поиска лекарств построен совместно с якорем: референсное применение вне интернет-компаний.",
-        "en": "A drug discovery supercomputer built jointly with the anchor: a reference deployment outside the internet companies."
+        "ru": "Суперкомпьютер для поиска лекарств построен совместно с NVIDIA: референсное применение вне интернет-компаний.",
+        "en": "A drug discovery supercomputer built jointly with NVIDIA: a reference deployment outside the internet companies."
       },
       "evidence": [
         {
@@ -27550,8 +27550,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Второй открытый движок запуска моделей: слой конкурентный, а не запертый.",
-        "en": "The second open model-serving engine: the layer is competitive, not locked."
+        "ru": "SGLang — вторая открытая система запуска моделей: слой конкурентный, а не запертый.",
+        "en": "SGLang is the second open model-serving system: the layer is competitive, not locked."
       },
       "evidence": [
         {
@@ -28402,8 +28402,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Якорь зависит от территории через фабрику: своих заводов у него нет вовсе.",
-        "en": "The anchor depends on the territory through the foundry: it has no plants of its own at all."
+        "ru": "NVIDIA зависит от территории через фабрику: своих заводов у него нет вовсе.",
+        "en": "NVIDIA depends on the territory through the foundry: it has no plants of its own at all."
       },
       "evidence": [
         {
@@ -28928,8 +28928,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Заказные ускорители для облаков делает та же фабрика, что и ускорители якоря.",
-        "en": "Custom accelerators for the clouds are made by the same foundry as the anchor's."
+        "ru": "TSMC печатает заказные ускорители Broadcom на той же линии, что и чипы NVIDIA.",
+        "en": "TSMC prints Broadcom's custom accelerators on the same line as NVIDIA's chips."
       },
       "evidence": [
         {
@@ -28978,8 +28978,8 @@
         }
       ],
       "detail": {
-        "ru": "Проектировщик заказных ускорителей отдаёт большую часть производства пластин внешним фабрикам, и та же фабрика делает ускорители его главного конкурента. Концентрация спроса у самого проектировщика высокая: один заказчик дал 32%, 28% и 21% выручки за три года, пять крупнейших — около 40%. Узкое место у обеих сторон конкуренции общее.",
-        "en": "The custom-accelerator designer outsources most wafer manufacturing, and the same foundry makes its main rival's accelerators too. The designer's own demand is concentrated: one customer accounted for 32%, 28% and 21% of revenue over three years, and the top five for about 40%. Both sides of the rivalry share the same bottleneck."
+        "ru": "Проектировщик заказных ускорителей отдаёт большую часть производства пластин внешним фабрикам, и та же TSMC печатает ускорители его главного конкурента. Концентрация спроса у самого проектировщика высокая: один заказчик дал 32%, 28% и 21% выручки за три года, пять крупнейших — около 40%. Обе стороны конкуренции зависят от одной фабрики.",
+        "en": "The custom-accelerator designer outsources most wafer manufacturing, and the same foundry makes its main rival's accelerators too. The designer's own demand is concentrated: one customer accounted for 32%, 28% and 21% of revenue over three years, and the top five for about 40%. Both sides of the rivalry depend on the same foundry."
       }
     },
     {
@@ -29057,8 +29057,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Ров из софта работает, только пока есть кому печатать железо: два узких места держат друг друга.",
-        "en": "A moat made of software works only while someone can print the hardware: the two bottlenecks hold each other up."
+        "ru": "Замок CUDA держится, пока чипы есть кому печатать: 3 нм в объёме делает одна TSMC. Софт и фабрика держат друг друга.",
+        "en": "The CUDA lock holds only while someone can print the chips: one company"
       },
       "evidence": [
         {
@@ -29120,8 +29120,8 @@
       "formed": "2018",
       "strengthened": "2025",
       "note": {
-        "ru": "Собственные чипы Google делает та же фабрика, что и ускорители NVIDIA: конкуренты сходятся в одном узком месте.",
-        "en": "Google's own chips are made by the same foundry as NVIDIA's accelerators: competitors converge on one bottleneck."
+        "ru": "Собственные чипы Google делает та же фабрика, что и ускорители NVIDIA: конкуренты сходятся на одной фабрике.",
+        "en": "Google's own chips are made by the same foundry as NVIDIA's accelerators: competitors converge on one foundry."
       },
       "origin": "A1",
       "status": "signal",
@@ -29172,8 +29172,8 @@
       "strengthened": "2020",
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Все ускорители якоря делает внешняя фабрика: собственных заводов у него нет. Правила процесса вшиты в топологию чипа.",
-        "en": "All of the anchor's accelerators are made by an outside foundry: it has no plants of its own. The process rules are wired into the chip's layout."
+        "ru": "Все ускорители NVIDIA делает внешняя фабрика: собственных заводов у него нет. Правила процесса вшиты в топологию чипа.",
+        "en": "All of NVIDIA's accelerators are made by an outside foundry: it has no plants of its own. The process rules are wired into the chip's layout."
       },
       "evidence": [
         {
@@ -29277,8 +29277,8 @@
       "strengthened": "2023",
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Упаковка, соединяющая вычислительный кристалл с памятью, — отдельное узкое место помимо самого производства.",
-        "en": "The packaging that joins the compute die to memory is a separate bottleneck alongside manufacturing itself."
+        "ru": "Упаковку CoWoS, соединяющую кристалл с памятью, делают два-три подрядчика — ограничение отдельно от самого производства.",
+        "en": "The packaging that joins the compute die to memory is made by two or three contractors — a constraint separate from manufacturing itself."
       },
       "evidence": [
         {
@@ -29420,8 +29420,8 @@
       "strengthened": "2025",
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Экспортные правила решают, кому якорь имеет право продавать. Решение принимается за сутки и действует немедленно.",
-        "en": "Export rules decide who the anchor may sell to. The decision is taken in a day and takes effect immediately."
+        "ru": "Экспортные правила решают, кому NVIDIA имеет право продавать. Решение принимается за сутки и действует немедленно.",
+        "en": "Export rules decide who NVIDIA may sell to. The decision is taken in a day and takes effect immediately."
       },
       "evidence": [
         {
@@ -29634,8 +29634,8 @@
       "formed": "2025",
       "strengthened": null,
       "note": {
-        "ru": "Тот же движок поддерживает и интерфейс второй лаборатории: стандарт складывается поверх обоих.",
-        "en": "The same engine also supports the second lab's interface: the standard forms across both."
+        "ru": "vLLM поддерживает и интерфейс Anthropic: стандарт складывается поверх обеих лабораторий.",
+        "en": "vLLM also supports Anthropic's interface: the standard forms across both."
       },
       "origin": "B-vllm",
       "status": "signal",
@@ -29683,8 +29683,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Быстрые режимы движка построены на возможностях этой среды.",
-        "en": "The engine's fast paths are built on this environment's capabilities."
+        "ru": "Самые быстрые режимы vLLM написаны под CUDA — на другом железе они просто отключаются.",
+        "en": "vLLM's fastest paths are written for CUDA — on other hardware they simply switch off."
       },
       "evidence": [
         {
@@ -29737,8 +29737,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Движок запускает модели, опубликованные в общем хабе, и берёт их описания оттуда.",
-        "en": "The engine runs models published in the common hub and takes their definitions from there."
+        "ru": "vLLM запускает модели, опубликованные в общем хабе, и берёт их описания оттуда.",
+        "en": "vLLM runs models published in the common hub and takes their definitions from there."
       },
       "evidence": [
         {
@@ -29785,8 +29785,8 @@
         "type": "substitution",
         "timeline": "1-2y",
         "mitigation": {
-          "ru": "Движок поддерживает и чужие ускорители — это ослабляет привязку.",
-          "en": "The engine supports other vendors' accelerators too, which loosens the tie."
+          "ru": "vLLM поддерживает и чужие ускорители — это ослабляет привязку.",
+          "en": "vLLM supports other vendors' accelerators too, which loosens the tie."
         }
       },
       "techNode": null,
@@ -29794,8 +29794,8 @@
       "strengthened": "2024",
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Открытый движок запуска моделей называет ускорители якоря первыми в списке поддержки.",
-        "en": "The open model-serving engine lists the anchor's accelerators first among what it supports."
+        "ru": "vLLM называет ускорители NVIDIA первыми в списке поддержки.",
+        "en": "vLLM lists NVIDIA's accelerators first among what it supports."
       },
       "evidence": [
         {
@@ -29843,8 +29843,8 @@
       "formed": "2023",
       "strengthened": "2025",
       "note": {
-        "ru": "Открытый движок повторяет программный интерфейс лаборатории, и благодаря этому чужие стеки говорят на одном языке.",
-        "en": "The open engine reproduces the lab's interface, and through that other stacks speak one language."
+        "ru": "vLLM повторяет программный интерфейс OpenAI, и благодаря этому чужие стеки говорят на одном языке.",
+        "en": "vLLM reproduces OpenAI's interface, and through that other stacks speak one language."
       },
       "origin": "B-vllm",
       "status": "signal",
@@ -29892,8 +29892,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Открытый движок запуска моделей против собственного оптимизатора якоря.",
-        "en": "The open model-serving engine against the anchor's own optimiser."
+        "ru": "vLLM против TensorRT: открытый запуск моделей против оптимизатора NVIDIA.",
+        "en": "vLLM against TensorRT: open model serving against NVIDIA's own optimiser."
       },
       "evidence": [
         {
@@ -29949,8 +29949,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Второй подрядчик сборки, назван в отчётности якоря.",
-        "en": "The second assembly contractor, named in the anchor's filings."
+        "ru": "Второй подрядчик сборки, назван в отчётности NVIDIA.",
+        "en": "The second assembly contractor, named in NVIDIA's filings."
       },
       "evidence": [
         {
