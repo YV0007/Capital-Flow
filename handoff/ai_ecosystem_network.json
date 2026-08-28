@@ -33514,79 +33514,11 @@
     "removedNodes": [],
     "relationshipsAdded": [],
     "relationshipsRemoved": [],
-    "relationshipsUpdated": [
-      {
-        "id": "amd__cuda__is_alternative_to",
-        "field": "status",
-        "from": "signal",
-        "to": "confirmed"
-      },
-      {
-        "id": "amd__cuda__is_alternative_to",
-        "field": "confirmedSources",
-        "from": 1,
-        "to": 4
-      },
-      {
-        "id": "amd__nvidia__competes_with",
-        "field": "confirmedSources",
-        "from": 2,
-        "to": 4
-      },
-      {
-        "id": "microsoft__nvidia__customer_of",
-        "field": "confirmedSources",
-        "from": 5,
-        "to": 6
-      },
-      {
-        "id": "nvidia__cuda__enables",
-        "field": "confirmedSources",
-        "from": 4,
-        "to": 6
-      },
-      {
-        "id": "tsmc__nvidia__manufactures",
-        "field": "confirmedSources",
-        "from": 6,
-        "to": 7
-      },
-      {
-        "id": "usa__nvidia__controls_access_to",
-        "field": "confirmedSources",
-        "from": 2,
-        "to": 4
-      }
-    ],
+    "relationshipsUpdated": [],
     "criticalityShifts": [],
     "phaseChanges": [],
     "riskEscalations": [],
-    "newSources": [
-      {
-        "id": "amd__cuda__is_alternative_to",
-        "count": 4
-      },
-      {
-        "id": "amd__nvidia__competes_with",
-        "count": 4
-      },
-      {
-        "id": "microsoft__nvidia__customer_of",
-        "count": 6
-      },
-      {
-        "id": "nvidia__cuda__enables",
-        "count": 6
-      },
-      {
-        "id": "tsmc__nvidia__manufactures",
-        "count": 7
-      },
-      {
-        "id": "usa__nvidia__controls_access_to",
-        "count": 4
-      }
-    ],
+    "newSources": [],
     "layerChanges": [],
     "month": "2026-08",
     "version": "v3.0-2026-08"
