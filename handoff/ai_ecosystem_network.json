@@ -41,6 +41,403 @@
     "cycles": 146,
     "techNodes": 10
   },
+  "spines": {
+    "physical": {
+      "label": {
+        "ru": "Физика",
+        "en": null
+      }
+    },
+    "capital": {
+      "label": {
+        "ru": "Капитал",
+        "en": null
+      }
+    },
+    "moat": {
+      "label": {
+        "ru": "Ров",
+        "en": null
+      }
+    },
+    "control": {
+      "label": {
+        "ru": "Шлюз",
+        "en": null
+      }
+    },
+    "rivalry": {
+      "label": {
+        "ru": "Соперничество",
+        "en": null
+      }
+    }
+  },
+  "edgeTypes": {
+    "manufactures": {
+      "spine": "physical",
+      "verb": {
+        "ru": "производит для",
+        "en": "manufactures for"
+      },
+      "label": {
+        "ru": "Производство",
+        "en": "Manufacturing"
+      }
+    },
+    "supplies": {
+      "spine": "physical",
+      "verb": {
+        "ru": "поставляет",
+        "en": "supplies"
+      },
+      "label": {
+        "ru": "Поставка",
+        "en": "Supply"
+      }
+    },
+    "packages": {
+      "spine": "physical",
+      "verb": {
+        "ru": "упаковывает",
+        "en": "packages"
+      },
+      "label": {
+        "ru": "Упаковка кристаллов",
+        "en": "Die packaging"
+      }
+    },
+    "integrates": {
+      "spine": "physical",
+      "verb": {
+        "ru": "собирает",
+        "en": "integrates"
+      },
+      "label": {
+        "ru": "Сборка систем",
+        "en": "Systems integration"
+      }
+    },
+    "delivers_to": {
+      "spine": "physical",
+      "verb": {
+        "ru": "доставляет",
+        "en": "delivers to"
+      },
+      "label": {
+        "ru": "Логистика",
+        "en": "Logistics"
+      }
+    },
+    "enables": {
+      "spine": "physical",
+      "verb": {
+        "ru": "делает возможным",
+        "en": "makes possible"
+      },
+      "label": {
+        "ru": "Даёт возможность",
+        "en": "Enabler"
+      }
+    },
+    "co_designs": {
+      "spine": "physical",
+      "verb": {
+        "ru": "проектирует вместе с",
+        "en": "co-designs with"
+      },
+      "label": {
+        "ru": "Совместная разработка",
+        "en": "Joint development"
+      }
+    },
+    "optimizes_for": {
+      "spine": "physical",
+      "verb": {
+        "ru": "заточен под",
+        "en": "is tuned for"
+      },
+      "label": {
+        "ru": "Заточка под платформу",
+        "en": "Tuned to the platform"
+      }
+    },
+    "invests_in": {
+      "spine": "capital",
+      "verb": {
+        "ru": "вкладывается в",
+        "en": "invests in"
+      },
+      "label": {
+        "ru": "Инвестиция",
+        "en": "Investment"
+      }
+    },
+    "funded_by": {
+      "spine": "capital",
+      "verb": {
+        "ru": "получает деньги от",
+        "en": "takes money from"
+      },
+      "label": {
+        "ru": "Финансирование",
+        "en": "Funding"
+      }
+    },
+    "board_seat": {
+      "spine": "capital",
+      "verb": {
+        "ru": "имеет место в совете",
+        "en": "holds a board seat at"
+      },
+      "label": {
+        "ru": "Место в совете",
+        "en": "Board seat"
+      }
+    },
+    "strategic_partner": {
+      "spine": "capital",
+      "verb": {
+        "ru": "стратегический партнёр",
+        "en": "is a strategic partner of"
+      },
+      "label": {
+        "ru": "Стратегическое партнёрство",
+        "en": "Strategic partnership"
+      }
+    },
+    "hedges_against": {
+      "spine": "capital",
+      "verb": {
+        "ru": "страхуется через",
+        "en": "hedges through"
+      },
+      "label": {
+        "ru": "Хедж",
+        "en": "Hedge"
+      }
+    },
+    "diversifies_supply": {
+      "spine": "capital",
+      "verb": {
+        "ru": "держит как запасной вариант",
+        "en": "keeps as a second source"
+      },
+      "label": {
+        "ru": "Второй источник",
+        "en": "Second source"
+      }
+    },
+    "customer_of": {
+      "spine": "capital",
+      "verb": {
+        "ru": "покупает у",
+        "en": "buys from"
+      },
+      "label": {
+        "ru": "Закупка",
+        "en": "Procurement"
+      }
+    },
+    "validates_demand": {
+      "spine": "moat",
+      "verb": {
+        "ru": "доказывает спрос на",
+        "en": "proves demand for"
+      },
+      "label": {
+        "ru": "Доказательство спроса",
+        "en": "Proof of demand"
+      }
+    },
+    "proves_roi": {
+      "spine": "moat",
+      "verb": {
+        "ru": "доказывает окупаемость",
+        "en": "proves the payback of"
+      },
+      "label": {
+        "ru": "Доказательство окупаемости",
+        "en": "Proof of payback"
+      }
+    },
+    "proves_use_case": {
+      "spine": "moat",
+      "verb": {
+        "ru": "показывает применение",
+        "en": "shows a use case for"
+      },
+      "label": {
+        "ru": "Референсное применение",
+        "en": "Reference deployment"
+      }
+    },
+    "locks_in_developers": {
+      "spine": "moat",
+      "verb": {
+        "ru": "запирает разработчиков",
+        "en": "locks in the developers of"
+      },
+      "label": {
+        "ru": "Замок на разработчиках",
+        "en": "Lock on developers"
+      }
+    },
+    "locks_in_platforms": {
+      "spine": "moat",
+      "verb": {
+        "ru": "запирает платформы",
+        "en": "locks in the platforms of"
+      },
+      "label": {
+        "ru": "Замок на платформах",
+        "en": "Lock on platforms"
+      }
+    },
+    "path_dependent_on": {
+      "spine": "moat",
+      "verb": {
+        "ru": "развивается вслед за",
+        "en": "follows the path of"
+      },
+      "label": {
+        "ru": "Зависимость траектории",
+        "en": "Path dependence"
+      }
+    },
+    "standardizes_on": {
+      "spine": "moat",
+      "verb": {
+        "ru": "стандартизуется на",
+        "en": "standardises on"
+      },
+      "label": {
+        "ru": "Отраслевой стандарт",
+        "en": "Industry standard"
+      }
+    },
+    "sets_benchmark": {
+      "spine": "moat",
+      "verb": {
+        "ru": "задаёт планку",
+        "en": "sets the bar for"
+      },
+      "label": {
+        "ru": "Планка",
+        "en": "Benchmark"
+      }
+    },
+    "defines_category": {
+      "spine": "moat",
+      "verb": {
+        "ru": "определяет категорию",
+        "en": "defines the category of"
+      },
+      "label": {
+        "ru": "Определение категории",
+        "en": "Category definition"
+      }
+    },
+    "controls_access_to": {
+      "spine": "control",
+      "verb": {
+        "ru": "шлюзует доступ к",
+        "en": "gates access to"
+      },
+      "label": {
+        "ru": "Контроль доступа",
+        "en": "Access control"
+      }
+    },
+    "subject_to_restriction": {
+      "spine": "control",
+      "verb": {
+        "ru": "ограничен режимом",
+        "en": "is restricted by"
+      },
+      "label": {
+        "ru": "Под ограничением",
+        "en": "Under restriction"
+      }
+    },
+    "export_controlled_by": {
+      "spine": "control",
+      "verb": {
+        "ru": "экспортно подконтролен",
+        "en": "is export-controlled by"
+      },
+      "label": {
+        "ru": "Экспортный контроль",
+        "en": "Export control"
+      }
+    },
+    "geopolitically_dependent": {
+      "spine": "control",
+      "verb": {
+        "ru": "геополитически зависит от",
+        "en": "geopolitically depends on"
+      },
+      "label": {
+        "ru": "Геополитическая зависимость",
+        "en": "Geopolitical dependence"
+      }
+    },
+    "competes_with": {
+      "spine": "rivalry",
+      "verb": {
+        "ru": "конкурирует с",
+        "en": "competes with"
+      },
+      "label": {
+        "ru": "Конкуренция",
+        "en": "Competition"
+      }
+    },
+    "threatens": {
+      "spine": "rivalry",
+      "verb": {
+        "ru": "подтачивает",
+        "en": "erodes"
+      },
+      "label": {
+        "ru": "Угроза позиции",
+        "en": "Threat to position"
+      }
+    },
+    "could_disrupt": {
+      "spine": "rivalry",
+      "verb": {
+        "ru": "может вытеснить",
+        "en": "could displace"
+      },
+      "label": {
+        "ru": "Потенциальное вытеснение",
+        "en": "Potential displacement"
+      }
+    },
+    "is_alternative_to": {
+      "spine": "rivalry",
+      "verb": {
+        "ru": "жизнеспособная замена для",
+        "en": "is a viable replacement for"
+      },
+      "label": {
+        "ru": "Путь-замена",
+        "en": "Replacement path"
+      }
+    },
+    "enables_interop": {
+      "spine": "physical",
+      "verb": {
+        "ru": "сшивает через стандарт",
+        "en": "bridges through a standard"
+      },
+      "label": {
+        "ru": "Совместимость",
+        "en": "Interoperability"
+      }
+    }
+  },
   "layers": [
     {
       "id": "L0",

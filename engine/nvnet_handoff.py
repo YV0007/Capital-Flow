@@ -48,6 +48,22 @@ def build(month: str, net: dict) -> dict:
         "totals": {"entities": len(entities), "edges": len(edges),
                    "layers": len(seed["layers"]), "cycles": len(seed.get("cycles", [])),
                    "techNodes": len(seed.get("techNodes", []))},
+        # ТАКСОНОМИЯ ЕДЕТ В ФАЙЛЕ, а не копируется потребителем.
+        #
+        # Дашборд держал свою копию таблицы типов, она отстала на два типа v3
+        # (is_alternative_to, enables_interop), и его фолбэк молча нарисовал их
+        # как «поставляет»: карта утверждала, что AMD ПОСТАВЛЯЕТ CUDA, хотя AMD
+        # ей альтернатива, и красила ребро по хребту «физика» вместо
+        # «соперничества». Тихий фолбэк, меняющий смысл связи, хуже отсутствующего.
+        #
+        # Пока таблица живёт двумя копиями, она будет расходиться — поэтому
+        # источник правды переезжает в саму поставку.
+        "spines": {k: {"label": i18n.bi(v.get("label"), v.get("label_en"))}
+                   for k, v in nveco.load_edge_types().get("spines", {}).items()},
+        "edgeTypes": {k: {"spine": v.get("spine"),
+                          "verb": i18n.bi(v.get("verb"), v.get("verb_en")),
+                          "label": i18n.bi(v.get("label"), v.get("label_en"))}
+                      for k, v in nvnet.edge_types().items()},
         # из семени — дословно, без пересчёта
         "layers": seed["layers"], "sectors": seed["sectors"],
         "techNodes": seed.get("techNodes", []), "cycles": seed.get("cycles", []),
@@ -350,6 +366,17 @@ def validate(payload: dict) -> list:
         seen.add(x["id"])
         if x["type"] not in types:
             errs.append(f"связь {x['id']}: тип '{x['type']}' вне таксономии v2+v3")
+        # Хребет — производная типа, а не независимое поле. Расхождение означало
+        # бы, что ребро покрашено не тем цветом и прочитано не тем механизмом.
+        elif x.get("spine") != types[x["type"]].get("spine"):
+            errs.append(f"связь {x['id']}: хребет '{x.get('spine')}' не совпадает "
+                        f"с хребтом типа '{x['type']}' "
+                        f"({types[x['type']].get('spine')})")
+        # И тип обязан быть в таблице, которую МЫ ЖЕ отдаём в этом файле:
+        # потребитель читает её отсюда, поэтому дыра в ней — это дыра у него.
+        if x["type"] not in (payload.get("edgeTypes") or {}):
+            errs.append(f"связь {x['id']}: тип '{x['type']}' отсутствует в "
+                        f"edgeTypes самой выдачи — потребитель не сможет его отрисовать")
         elif x["spine"] != nvnet.spine_of(x["type"]):
             errs.append(f"связь {x['id']}: хребет '{x['spine']}' не выведен из типа")
         if x["status"] not in nveco.STATUSES:
