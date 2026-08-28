@@ -5129,8 +5129,8 @@
       },
       "domain": null,
       "oneLiner": {
-        "ru": "Лицензирует набор команд, на котором построены процессоры почти во всех устройствах.",
-        "en": "Licenses the instruction set behind the processors in almost every device."
+        "ru": "Лицензирует набор команд для процессоров: к марту 2026 года выпущено больше 350 млрд чипов на Arm.",
+        "en": "Licenses the processor instruction set: by March 2026 more than 350 billion Arm-based chips had shipped."
       },
       "whyIrreplaceable": {
         "ru": "Более 350 миллиардов выпущенных чипов используют эту архитектуру. Переход на другую означает переписывание системного софта у всей отрасли.",
@@ -5164,15 +5164,15 @@
       "stale": false,
       "sources": [
         {
-          "tier": 1,
+          "tier": 2,
           "type": "sec_filing",
-          "title": "NVIDIA 10-K FY2026",
-          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
-          "published": "2026-02-25",
-          "fetched": "2026-08-18",
+          "title": "Arm 20-F FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+          "published": "2026-05-26",
+          "fetched": "2026-08-28",
           "alive": true,
-          "quote": "suppliers of Arm-based CPUs and companies that incorporate hardware and software for CPUs",
-          "confidence": 0.975
+          "quote": "As of March 31, 2026, more than 350 billion Arm-based chips were reported as shipped",
+          "confidence": 0.96
         }
       ],
       "pivotal": true,
@@ -5338,8 +5338,8 @@
       },
       "domain": null,
       "oneLiner": {
-        "ru": "Единственный в мире производитель станков EUV — тех, что печатают самые мелкие элементы чипа.",
-        "en": "The only maker in the world of EUV tools — the ones that print a chip's finest features."
+        "ru": "Единственный в мире производитель станков EUV: 535 проданных систем при выручке €32,7 млрд.",
+        "en": "The world's only maker of EUV lithography systems: 535 systems sold on €32.7bn of sales."
       },
       "whyIrreplaceable": {
         "ru": "Компания сама заявляет, что она единственный производитель таких станков. Без них передовую фабрику построить нельзя, а построить свои станки — больше десяти лет.",
@@ -5377,11 +5377,22 @@
           "type": "sec_filing",
           "title": "ASML Annual Report 2025",
           "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
-          "published": "2026-02-25",
-          "fetched": "2026-08-18",
+          "published": "2026-02-11",
+          "fetched": "2026-08-28",
           "alive": true,
-          "quote": "ASML is currently the world’s only manufacturer of EUV lithography systems.",
-          "confidence": 0.925
+          "quote": "ASML is currently the world's only manufacturer of EUV lithography systems.",
+          "confidence": 0.97
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "ASML Annual Report 2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "published": "2026-02-11",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "€32.7bn Total net sales 52.8% Gross margin €8.5bn Returned to shareholders 535 System sales",
+          "confidence": 0.96
         }
       ],
       "pivotal": true,
@@ -5496,10 +5507,7 @@
     },
     {
       "id": "bis",
-      "name": {
-        "ru": "Бюро промышленности и безопасности",
-        "en": "Bureau of Industry and Security"
-      },
+      "name": "Bureau of Industry and Security",
       "aliases": [
         "BIS",
         "Bureau of Industry and Security"
@@ -6440,10 +6448,7 @@
     },
     {
       "id": "china",
-      "name": {
-        "ru": "Китай",
-        "en": "China"
-      },
+      "name": "Китай",
       "aliases": [
         "China",
         "PRC"
@@ -6547,10 +6552,7 @@
     },
     {
       "id": "chips-act",
-      "name": {
-        "ru": "Закон о чипах (CHIPS Act)",
-        "en": "CHIPS Act"
-      },
+      "name": "CHIPS Act",
       "aliases": [
         "CHIPS and Science Act"
       ],
@@ -7329,8 +7331,8 @@
       },
       "domain": null,
       "oneLiner": {
-        "ru": "Среда программирования ускорителей: на ней написан почти весь код, который на них считает.",
-        "en": "The accelerator programming environment: almost all the code that runs on them is written in it."
+        "ru": "Среда программирования ускорителей NVIDIA: вышла в 2006 году, под неё написано 6000 приложений.",
+        "en": "NVIDIA's accelerator programming environment: shipped in 2006, with 6,000 applications written for it."
       },
       "whyIrreplaceable": {
         "ru": "Отрасль пишет код под неё почти двадцать лет. Перенос установленной базы — это не проект, а смена поколения инженеров. Это и есть главный замок NVIDIA.",
@@ -7367,10 +7369,21 @@
           "title": "NVIDIA 10-K FY2026",
           "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
           "published": "2026-02-25",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-28",
           "alive": true,
-          "quote": "the foundational NVIDIA CUDA development platform that runs on all NVIDIA GPUs,",
-          "confidence": 0.975
+          "quote": "With our introduction of CUDA in 2006, we opened the parallel processing capabilities",
+          "confidence": 0.98
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "NVIDIA 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "published": "2026-02-25",
+          "fetched": "2026-08-28",
+          "alive": true,
+          "quote": "With support for 6,000 applications, NVIDIA computing enables some of the most",
+          "confidence": 0.98
         }
       ],
       "pivotal": true,
@@ -8109,10 +8122,7 @@
     },
     {
       "id": "eu",
-      "name": {
-        "ru": "Европейский союз",
-        "en": "European Union"
-      },
+      "name": "Европейский союз",
       "aliases": [
         "European Union",
         "EU"
@@ -8216,10 +8226,7 @@
     },
     {
       "id": "eu-ai-act",
-      "name": {
-        "ru": "Регламент ЕС об ИИ",
-        "en": "EU AI Act"
-      },
+      "name": "Регламент ЕС об ИИ",
       "aliases": [
         "EU AI Act"
       ],
@@ -9264,10 +9271,7 @@
     },
     {
       "id": "japan",
-      "name": {
-        "ru": "Япония",
-        "en": "Japan"
-      },
+      "name": "Япония",
       "aliases": [
         "Japan"
       ],
@@ -11142,10 +11146,7 @@
     },
     {
       "id": "netherlands",
-      "name": {
-        "ru": "Нидерланды",
-        "en": "Netherlands"
-      },
+      "name": "Нидерланды",
       "aliases": [
         "Netherlands"
       ],
@@ -11195,8 +11196,8 @@
       },
       "domain": null,
       "oneLiner": {
-        "ru": "Юрисдикция, откуда экспортируют станки для печати самых сложных чипов.",
-        "en": "The jurisdiction from which the tools that print the most complex chips are exported."
+        "ru": "Юрисдикция ASML — единственного в мире производителя станков EUV для передовых чипов.",
+        "en": "The jurisdiction of ASML, the world's only maker of the EUV tools that print leading-edge chips."
       },
       "whyIrreplaceable": {
         "ru": "Единственный производитель этих станков находится здесь, поэтому голландские экспортные правила определяют, кто в мире может строить передовые фабрики.",
@@ -11232,11 +11233,11 @@
           "type": "sec_filing",
           "title": "ASML Annual Report 2025",
           "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
-          "published": "2026-02-25",
-          "fetched": "2026-08-18",
+          "published": "2026-02-11",
+          "fetched": "2026-08-28",
           "alive": true,
-          "quote": "ASML is currently the world’s only manufacturer of EUV lithography systems.",
-          "confidence": 0.925
+          "quote": "ASML is currently the world's only manufacturer of EUV lithography systems.",
+          "confidence": 0.97
         }
       ],
       "pivotal": false,
@@ -11620,8 +11621,8 @@
       },
       "domain": "nvidia.com",
       "oneLiner": {
-        "ru": "Центр карты: делает ускорители для ИИ и владеет CUDA — средой, на которой пишет вся отрасль.",
-        "en": "The centre of the map: it makes AI accelerators and owns CUDA, the environment the whole industry writes in."
+        "ru": "Делает ускорители для ИИ и владеет CUDA. Вложила больше $76,7 млрд в разработку с основания.",
+        "en": "Makes AI accelerators and owns CUDA. Has invested over $76.7 billion in R&D since founding."
       },
       "whyIrreplaceable": {
         "ru": "Заменить можно чип, но не среду: код отрасли написан под неё, а переписывание стоит лет. Плюс сеть и системы продаются одним комплектом.",
@@ -11662,10 +11663,10 @@
           "title": "NVIDIA 10-K FY2026",
           "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
           "published": "2026-02-25",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-28",
           "alive": true,
-          "quote": "the U.S. government, or USG, announced export restrictions and export licensing requirements targeting",
-          "confidence": 0.975
+          "quote": "We have invested over $76.7 billion in research and development since",
+          "confidence": 0.98
         }
       ],
       "pivotal": true,
@@ -13643,10 +13644,7 @@
     },
     {
       "id": "singapore",
-      "name": {
-        "ru": "Сингапур",
-        "en": "Singapore"
-      },
+      "name": "Сингапур",
       "aliases": [
         "Singapore"
       ],
@@ -14062,10 +14060,7 @@
     },
     {
       "id": "south-korea",
-      "name": {
-        "ru": "Южная Корея",
-        "en": "South Korea"
-      },
+      "name": "Южная Корея",
       "aliases": [
         "South Korea",
         "Korea"
@@ -14376,10 +14371,7 @@
     },
     {
       "id": "taiwan",
-      "name": {
-        "ru": "Тайвань",
-        "en": "Taiwan"
-      },
+      "name": "Тайвань",
       "aliases": [
         "Taiwan"
       ],
@@ -14946,8 +14938,8 @@
       },
       "domain": null,
       "oneLiner": {
-        "ru": "Фабрика, которая физически делает почти весь передовой кремний для ИИ.",
-        "en": "The foundry that physically makes almost all leading-edge silicon for AI."
+        "ru": "Фабрика, печатающая почти весь передовой кремний: 74% её выручки от пластин дают процессы 7 нм и тоньше.",
+        "en": "The foundry printing almost all leading-edge silicon: 74% of its wafer revenue comes from 7 nm and below."
       },
       "whyIrreplaceable": {
         "ru": "Правила её техпроцесса вшиты в саму топологию чипа, поэтому переход на другую фабрику — это перепроектирование. Равнозначное производство строится семь лет и больше.",
@@ -14987,11 +14979,11 @@
           "type": "sec_filing",
           "title": "TSMC 20-F 2025",
           "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
-          "published": "2026-04-16",
-          "fetched": "2026-08-18",
+          "published": "2026-04-15",
+          "fetched": "2026-08-28",
           "alive": true,
-          "quote": "Our largest customer in 2023 , 2024 and 2025 accounted for",
-          "confidence": 0.925
+          "quote": "Advanced technologies (7-nanometer and below) accounted for 74% of total wafer revenue",
+          "confidence": 0.96
         }
       ],
       "pivotal": true,
@@ -15003,10 +14995,7 @@
     },
     {
       "id": "usa",
-      "name": {
-        "ru": "США",
-        "en": "United States"
-      },
+      "name": "США",
       "aliases": [
         "United States"
       ],
@@ -15056,8 +15045,8 @@
       },
       "domain": null,
       "oneLiner": {
-        "ru": "Домашняя юрисдикция NVIDIA и главный шлюз: решает, кому NVIDIA имеет право продавать.",
-        "en": "NVIDIA's home jurisdiction and the main gate: it decides who NVIDIA may sell to."
+        "ru": "Домашняя юрисдикция NVIDIA: экспортные ограничения на чипы действуют с августа 2022 года.",
+        "en": "NVIDIA's home jurisdiction: export restrictions on chips have applied since August 2022."
       },
       "whyIrreplaceable": {
         "ru": "Из-под американского права цепочку не вывести: правила тянутся за технологией в любую страну, где её применяют.",
@@ -15094,10 +15083,10 @@
           "title": "NVIDIA 10-K FY2026",
           "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
           "published": "2026-02-25",
-          "fetched": "2026-08-18",
+          "fetched": "2026-08-28",
           "alive": true,
-          "quote": "the U.S. government, or USG, announced export restrictions and export licensing requirements targeting",
-          "confidence": 0.975
+          "quote": "In August 2022, the U.S. government, or USG, announced export restrictions",
+          "confidence": 0.98
         }
       ],
       "pivotal": false,

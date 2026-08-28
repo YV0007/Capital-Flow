@@ -998,3 +998,291 @@ edge,amazon__anthropic__supplies,note,en,The cloud sells the lab up to five giga
 edge,arista__microsoft__supplies,note,en,Cluster switching for Microsoft: each of Arista's two largest customers accounts for more than 10% of its sales.
 edge,nvidia__synopsys__invests_in,note,en,NVIDIA bought into a Synopsys private placement — the company without whose software it cannot design its chips.
 edge,tsmc__cuda__enables,note,en,"The CUDA lock holds only while someone can print the chips: one company, TSMC, runs the leading-edge process at volume. Software and foundry hold each other up."
+edge,amazon__anthropic__invests_in,detail,en,"The investment is structured as convertible notes, of which $2.7 billion was funded in 2025. Part of those notes has since converted into non-voting preferred stock — money turned into a stake without a vote. Running alongside is a five-gigawatt supply contract: investor and supplier are the same party."
+edge,amazon__anthropic__supplies,detail,en,"The agreement covers up to five gigawatts of new capacity and was signed alongside the lab's funding round. A second supplier signed for the same amount on its own accelerators — a deliberate policy of running three chip platforms rather than one. For the cloud, the contract puts an external customer on its own silicon."
+edge,amazon__cuda__locks_in_platforms,note,en,AWS customers demand CUDA compatibility
+edge,amazon__nvidia__customer_of,note,en,The second giant cloud among the largest buyers.
+edge,amazon__nvidia__threatens,note,en,The cloud's own accelerators cover part of its training and inference.
+edge,amd__cuda__could_disrupt,note,en,The competitor's open programming environment is the only named way out of the lock.
+edge,amd__cuda__is_alternative_to,detail,en,"ROCm is AMD's open software platform and the direct replacement for CUDA. In 2025 AMD expanded its framework and library support and stated its commitment to the open ecosystem. The practical proof that the replacement path is real came in October 2025: OpenAI signed an agreement to deploy 6 gigawatts of AMD accelerators, the first gigawatt on Instinct MI450. The gap is one of time: CUDA shipped in 2006, and the code written for it has to be ported."
+edge,amd__cuda__is_alternative_to,note,en,AMD's answer to CUDA is the open ROCm platform: in 2025 AMD expanded its framework support. CUDA has existed since 2006 — hence the gap.
+edge,amd__nvidia__competes_with,note,en,AMD sells Instinct MI350 accelerators and in October 2025 signed a 6-gigawatt supply deal with OpenAI — the first gigawatt on MI450.
+edge,amd__pytorch__enables,note,en,The training library also builds for AMD accelerators: this is the only named path out of the NVIDIA environment's lock.
+edge,amd__tsmc__manufactures,note,en,"AMD prints its Instinct accelerators at TSMC — where NVIDIA prints too. The rivalry is in design, not in manufacturing."
+edge,amkor__astera-labs__packages,note,en,The second packaging contractor for connectivity silicon.
+edge,amkor__broadcom__packages,note,en,The second packaging contractor for custom silicon.
+edge,amkor__credo__packages,note,en,Packaging for rack connectivity silicon.
+edge,amkor__nvidia__packages,note,en,"The second independent packaging contractor, with sites in the US."
+edge,anthropic__amazon__strategic_partner,note,en,The cloud put billions into the lab and became its principal infrastructure partner.
+edge,anthropic__google-cloud__customer_of,note,en,The other side of the same deal: for the cloud this is one of its largest capacity contracts.
+edge,anthropic__nvidia__customer_of,note,en,A second lab buying compute — demand is not concentrated in one company.
+edge,anthropic__nvidia__validates_demand,note,en,"A second proof of demand: with a single buyer, the entire build-out would hang on it."
+edge,applied-materials__samsung__supplies,note,en,The second large customer of the equipment supplier by disclosed concentration.
+edge,applied-materials__tsmc__supplies,note,en,"Deposition equipment; customer concentration is disclosed without names, but the foundry is in the top two."
+edge,arista__meta__supplies,note,en,The second large switching customer by disclosed concentration.
+edge,arista__microsoft__supplies,detail,en,"From the network vendor's side: two customers accounted for 26% and 16% of revenue for the year Networks for accelerator clusters are designed as a whole, together with the operating system and the operations practice, so changing vendor means rebuilding the network and retraining people, not swapping boxes."
+edge,arista__nvidia__competes_with,note,en,"Cluster fabrics: NVIDIA's own protocol is sold as a package with the accelerators, which squeezes out the independent supplier."
+edge,arm__intel__competes_with,note,en,The Arm architecture is taking datacenter share from x86; Intel names its growth directly in its competition section.
+edge,arm__kubernetes__standardizes_on,note,en,The processor architecture is supported by the common container standard on the same terms as the rest.
+edge,arm__nvidia__path_dependent_on,note,en,Server processor development on this architecture follows the requirements of the accelerator platforms.
+edge,arm__nvidia__supplies,note,en,The instruction set behind the processors in the accelerator platforms.
+edge,ase__astera-labs__packages,note,en,Packaging and test for connectivity silicon.
+edge,ase__broadcom__packages,note,en,Packaging and test for custom silicon.
+edge,ase__credo__packages,note,en,The second packaging contractor.
+edge,ase__nvidia__packages,note,en,Independent die packaging alongside the foundry's own; there are two or three contractors at this scale.
+edge,asml__tsmc__supplies,detail,en,"From the equipment maker's side: its largest customer accounted for €7,796.7 million, or 23.9% of 2025 net sales against 16.6% in 2024; the top two made up 38.0%. A seven-point jump in a single year shows how fast leading-edge manufacturing is concentrating into a few buyers. There is no alternative to machines of this class anywhere."
+edge,asml__tsmc__supplies,note,en,One company in the world makes the tools that print the finest features. Without them a leading-edge fab does not exist.
+edge,astera-labs__nvidia__optimizes_for,note,en,"Connectivity silicon designed for one specific accelerator platform, and written into its reference designs."
+edge,bis__nvidia__export_controlled_by,note,en,The agency that writes the chip export rules themselves. Exactly one published document closes an entire market.
+edge,blackstone__anthropic__invests_in,note,en,The owner of datacenter sites took a stake in the lab that fills them.
+edge,blackstone__digital-realty__invests_in,note,en,"The capital manager owns the site platforms outright, not stakes in them."
+edge,bloom-energy__oracle__supplies,note,en,"Fuel cells deliver power on site, without waiting for a grid connection."
+edge,boyd__nvidia__supplies,note,en,Thermal plates that pull heat straight off the accelerator die.
+edge,broadcom__google__co_designs,note,en,The cloud's own accelerator is designed jointly with an outside chip developer.
+edge,broadcom__nvidia__threatens,note,en,It designs the clouds their own accelerators — a direct alternative to buying from NVIDIA.
+edge,broadcom__tsmc__customer_of,note,en,The designer of custom accelerators buys from the same foundry as NVIDIA: both depend on TSMC.
+edge,brookfield__amazon__supplies,note,en,The infrastructure owner sells the cloud wind and solar capacity under long-term contracts.
+edge,brookfield__anthropic__invests_in,note,en,Infrastructure capital took a stake in the lab — a rare case of an energy owner funding its own consumer.
+edge,brookfield__constellation__competes_with,note,en,Two generation owners competing for contracts with the sites.
+edge,brookfield__crusoe__invests_in,note,en,Infrastructure capital in a cloud that builds sites at the energy source.
+edge,brookfield__microsoft__supplies,note,en,The infrastructure owner supplies power to the giant cloud's sites.
+edge,cadence__nvidia__enables,note,en,The other half of the duopoly: placing and routing billions of transistors.
+edge,cadence__synopsys__competes_with,note,en,The two halves of the chip design software duopoly: each names the other as its first competitor.
+edge,cfius__mgx__controls_access_to,note,en,The committee reviews foreign investment and can block a sovereign capital deal.
+edge,cfius__nvidia__controls_access_to,note,en,Review of foreign participation stretches the timelines of NVIDIA's partnerships and acquisitions.
+edge,china__deepseek__controls_access_to,note,en,The lab operates under Chinese jurisdiction and under the restrictions imposed in return.
+edge,china__nvidia__subject_to_restriction,note,en,"The second-largest market, and one you cannot sell into without a licence. The restriction cuts both ways."
+edge,chips-act__intel__controls_access_to,note,en,Subsidies change the economics of building fabs in the US and therefore strengthen the domestic manufacturer.
+edge,cisco__arista__competes_with,note,en,The historical networking leader against a supplier purpose-built for clusters.
+edge,coherent__nvidia__supplies,note,en,Optical modules for clusters; they support both NVIDIA's own protocol and the open standards.
+edge,constellation__microsoft__supplies,detail,en,"The power purchase agreement runs for 20 years — the largest in the seller's history. It pays for restarting a shut-down unit that will add roughly 835 megawatts of carbon-free capacity to the grid, expected online in 2028. The buyer is not purchasing megawatts as a commodity but funding generation back into the grid that would not have returned otherwise."
+edge,constellation__microsoft__supplies,note,en,A twenty-year nuclear power contract against datacenter demand: restarting a shut-down unit.
+edge,coreweave__nvidia__customer_of,note,en,The independent cloud buys billions of dollars of accelerators and resells them as rental.
+edge,coreweave__nvidia__proves_roi,note,en,A listed independent cloud proved that renting accelerators supports a real business.
+edge,credo__nvidia__optimizes_for,note,en,"Active cables joining racks into a cluster, built around NVIDIA's platform."
+edge,crusoe__nvidia__enables,note,en,"It builds sites directly at energy sources, removing the build's main constraint."
+edge,cuda__huggingface__locks_in_developers,note,en,Models in the common hub are optimised for this environment: moving the whole ecosystem costs more than buying the hardware.
+edge,cuda__nvidia__defines_category,note,en,Not merely a product but a frame: the industry describes AI compute in the terms NVIDIA introduced.
+edge,cuda__nvidia__locks_in_platforms,note,en,The environment runs only on NVIDIA's accelerators: leaving them means the industry rewriting its code.
+edge,cuda__pytorch__locks_in_developers,note,en,The training library builds for this environment and will not run on accelerators without it. In return: the library's ubiquity proves the environment's worth.
+edge,databricks__huggingface__standardizes_on,note,en,The enterprise platform takes models from the common hub rather than training them from scratch.
+edge,databricks__nvidia__proves_roi,note,en,"It shows that enterprise customers, not only labs, recover the cost of compute on their own data."
+edge,deepseek__cuda__could_disrupt,note,en,Training a strong model more cheaply undermines the link between more accelerators and a better model.
+edge,deepseek__huggingface__enables,note,en,DeepSeek publishes its open weights on Hugging Face
+edge,deepseek__nvidia__threatens,note,en,It showed a strong model trained on less compute — a challenge to the assumption that quality scales with purchases.
+edge,dell__nvidia__delivers_to,note,en,It carries finished systems to the enterprise customers NVIDIA does not serve itself.
+edge,delta-electronics__nvidia__optimizes_for,note,en,"Converters distributing power inside the rack, built to one generation's requirements."
+edge,digital-realty__nvidia__enables,note,en,The second large operator of datacenter sites.
+edge,digital-realty__oracle__supplies,note,en,Sites for cloud capacity.
+edge,eaton__equinix__supplies,note,en,Power equipment at the neutral sites.
+edge,eaton__microsoft__supplies,note,en,"Power equipment at the sites: switchgear, busways, protection. The delivery queue runs to years."
+edge,equinix__coreweave__supplies,note,en,Neutral sites for the independent cloud's clusters.
+edge,equinix__microsoft__supplies,note,en,Sites and connections for the giant cloud.
+edge,equinix__nvidia__enables,note,en,Neutral sites and traffic exchange points through which clusters connect.
+edge,eu-ai-act__openai__subject_to_restriction,note,en,The requirements on models fall first on the labs and on the application layer.
+edge,eu__eu-ai-act__standardizes_on,note,en,The regulation is the instrument through which the bloc sets the rules for the AI market.
+edge,eu__nvidia__subject_to_restriction,note,en,"European AI rules raise the cost of selling, but do not restrict manufacturing."
+edge,fabrinet__cisco__integrates,note,en,The second large customer of the contract optics assembler — 18.2% of its revenue.
+edge,fabrinet__coherent__integrates,note,en,Contract assembly of optical modules for several designers.
+edge,fabrinet__nvidia__integrates,detail,en,"The dependence runs one way and is measurable: the customer provided 27.6% of the contractor's fiscal 2025 revenue, down from 35.1% a year earlier, while a second customer provided 18.2% and 13.4%. For the contractor this is business-defining concentration; for the customer it is one optical-module assembler among several."
+edge,fabrinet__nvidia__integrates,note,en,It assembles optical modules and sub-assemblies; the dependence runs one way — NVIDIA accounts for more than a quarter of its revenue.
+edge,foxconn__broadcom__integrates,note,en,Contract assembly and test for the designer of custom silicon.
+edge,foxconn__nvidia__integrates,note,en,"It assembles, tests and packages NVIDIA's finished products; it is named directly in NVIDIA's filings."
+edge,ge-vernova__microsoft__supplies,note,en,"Gas turbines for the sites: the fastest way to deliver a lot of power, but the queue runs to years."
+edge,google-cloud__amazon__competes_with,note,en,Both clouds sell the same lab capacity on their own accelerators.
+edge,google-cloud__anthropic__supplies,detail,en,"The lab announced an expansion to up to one million of the cloud's accelerators. The deal is worth tens of billions of dollars and is expected to bring well over a gigawatt of capacity online in 2026. The lab deliberately runs three chip platforms at once, so even a contract this size does not make the supplier exclusive."
+edge,google-cloud__anthropic__supplies,note,en,The lab chose this cloud as a capacity supplier and expanded the order to a million accelerators.
+edge,google-cloud__google-deepmind__enables,note,en,A lab inside the same corporation trains on this cloud's capacity and its silicon.
+edge,google-cloud__google__funded_by,note,en,"The cloud is a division of the parent company: its chips, its lab, its money."
+edge,google-cloud__microsoft__competes_with,note,en,The third giant cloud competes with the first two for the same lab contracts.
+edge,google-deepmind__google__funded_by,note,en,A lab inside the cloud: it trains on its owner's own silicon.
+edge,google-deepmind__nvidia__threatens,note,en,The only frontier lab training on its own owner's silicon — living proof that an alternative exists.
+edge,google__anthropic__supplies,note,en,Google sells the lab capacity on its own accelerators — up to a million chips and five gigawatts under the latest agreements.
+edge,google__broadcom__customer_of,note,en,The cloud pays an outside developer to design its own accelerator.
+edge,google__nvidia__customer_of,note,en,The third giant cloud: it buys and builds its own alternative at the same time.
+edge,google__nvidia__threatens,note,en,Its seventh-generation in-house accelerator covers part of the internal workload without purchases.
+edge,huggingface__cuda__path_dependent_on,note,en,Published models are optimised for this environment first; the rest are supported later.
+edge,huggingface__nvidia__validates_demand,note,en,Models published in the hub run above all on its accelerators: leaving means losing access to the ecosystem.
+edge,huggingface__pytorch__standardizes_on,note,en,The common model library is built around the training library: this is where the whole ecosystem joins up.
+edge,intel__nvidia__diversifies_supply,note,en,"The only leading-edge fab in the US: valuable geopolitically, not yet on volume."
+edge,intel__tsmc__competes_with,note,en,It is trying to become the third foundry for leading-edge chips.
+edge,japan__shin-etsu__geopolitically_dependent,note,en,Fab materials are made by a handful of Japanese companies; export measures have already been used.
+edge,japan__tsmc__controls_access_to,note,en,Export measures on fab materials have already been used as a political instrument.
+edge,jax__cuda__path_dependent_on,note,en,"The second training library also works through this environment, though it is developed around someone else's accelerator."
+edge,jax__google__funded_by,note,en,The library is led by a company that has both its own cloud and its own accelerator.
+edge,jax__pytorch__competes_with,note,en,The other half of the training library duopoly; the ecosystem is visibly smaller.
+edge,kioxia__nvidia__supplies,note,en,Flash memory for the drives that hold training data. The most replaceable memory layer.
+edge,kla__tsmc__supplies,note,en,"Defect inspection equipment: without it, yield on leading-edge nodes falls."
+edge,lam-research__micron__supplies,note,en,The second memory maker named among the significant customers.
+edge,lam-research__samsung__supplies,note,en,The third memory maker named among the significant customers.
+edge,lam-research__sk-hynix__supplies,note,en,The memory maker is named among the equipment supplier's most significant customers.
+edge,lam-research__tsmc__supplies,note,en,Etch and deposition equipment; the foundry is named among the most significant customers.
+edge,lightspeed__anthropic__invests_in,note,en,Venture capital in the second lab.
+edge,lite-on__supermicro__supplies,note,en,Power supplies for servers: an interchangeable component with many suppliers.
+edge,marvell__nvidia__threatens,note,en,The second designer of custom accelerators for the clouds.
+edge,meta__cuda__locks_in_platforms,note,en,The company that authored the training library is itself locked to the environment that library builds for.
+edge,meta__huggingface__enables,note,en,The company's open models are published in the common hub and make it the centre of the ecosystem.
+edge,meta__nvidia__customer_of,note,en,A large buyer that also handed the industry its main training library.
+edge,meta__nvidia__validates_demand,note,en,Capital spending on infrastructure proves demand from a company that could have done without it.
+edge,mgx__openai__invests_in,note,en,Abu Dhabi's sovereign capital among the four original capital holders of the build.
+edge,mgx__softbank__strategic_partner,note,en,Sovereign and private capital in one construction consortium.
+edge,micron__nvidia__supplies,note,en,The third memory supplier and the only one outside Korea: it lowers dependence on a single jurisdiction.
+edge,micron__sk-hynix__competes_with,note,en,Competition to qualify next-generation memory at a shared customer.
+edge,microsoft__blackrock__funded_by,note,en,Infrastructure capital funds the sites and the power behind cloud capacity.
+edge,microsoft__coreweave__customer_of,detail,en,"A single customer accounts for 67% of the cloud's latest full-year revenue; a year earlier the top two made up 77%, and the year before that the top three made up 73%. The concentration is easing but remains at the level where losing one client puts the business itself in question. The dependence runs one way: for the hyperscaler this is one external site among several."
+edge,microsoft__coreweave__customer_of,note,en,For the independent cloud this is 67% of revenue: the dependence is one-way and critical.
+edge,microsoft__cuda__locks_in_platforms,note,en,The cloud is tied to the programming environment at several levels at once and cannot leave wholesale.
+edge,microsoft__nebius__customer_of,detail,en,"The agreement took effect on September 7, 2025: dedicated clusters at the Vineland, New Jersey site on a five-year term. Total contract value is estimated at up to $17.4 billion through 2031, delivered in tranches — the first in November 2025, the second in February 2026. For the hyperscaler this is renting someone else's capacity when its own runs short."
+edge,microsoft__nebius__customer_of,note,en,A hyperscaler rents dedicated clusters from an independent cloud — demand exceeds its own capacity.
+edge,microsoft__nvidia__customer_of,detail,en,"NVIDIA discloses customer concentration without naming the customers: in fiscal 2026 one direct customer accounted for 22% of revenue and another for 14%, both primarily in the Compute & Networking segment. That is the upper bound on how far revenue depends on a handful of clouds; the filing names none of them."
+edge,microsoft__nvidia__customer_of,note,en,"NVIDIA discloses the concentration without naming it: one direct customer was 22% of fiscal 2026 revenue, another 14%."
+edge,microsoft__nvidia__threatens,note,en,The hyperscaler's own accelerator is named among the competitors in NVIDIA's filings.
+edge,microsoft__openai__invests_in,detail,en,"The partnership dates to 2019 and has been extended twice — in October 2025 and April 2026. The hyperscaler remains the largest investor, takes a share of revenue and holds rights to the lab's intellectual property, including models and infrastructure. This is not a portfolio position: those IP rights are built into the investor's own products."
+edge,microsoft__openai__invests_in,note,en,"The largest investor in the lab, with rights to its intellectual property and a share of revenue."
+edge,mistral__nvidia__customer_of,note,en,A European lab buying compute: demand is geographically distributed.
+edge,mlcommons__nvidia__sets_benchmark,note,en,Common performance benchmarks made the bar public: every manufacturer is measured by the results.
+edge,nccl__nvidia__locks_in_platforms,note,en,Training across thousands of accelerators runs into the data exchange between them; this library is the de facto standard.
+edge,nccl__pytorch__enables,note,en,Distributed training in the library rests on this data-exchange library.
+edge,netherlands__asml__export_controlled_by,note,en,Dutch rules decide who in the world may buy the tools that print leading-edge chips.
+edge,netherlands__tsmc__controls_access_to,note,en,A Dutch licence decides whether the foundry may buy tools for leading-edge nodes. The gate sits above the foundry itself.
+edge,nim__nvidia__locks_in_platforms,note,en,Ready-made model-serving containers from NVIDIA itself: a way to climb from hardware into the inference layer.
+edge,nim__vllm__competes_with,note,en,NVIDIA's paid inference server against the free vLLM — on the same hardware.
+edge,nvent__microsoft__supplies,note,en,Cooling and enclosures at the giant cloud's sites.
+edge,nvent__nvidia__optimizes_for,note,en,Enclosures and liquid cooling built for high-density racks.
+edge,nventures__crusoe__invests_in,note,en,NVentures invests in Crusoe
+edge,nventures__huggingface__invests_in,note,en,NVentures invests in Hugging Face
+edge,nventures__nvidia__funded_by,note,en,"NVIDIA's venture arm: an instrument for managing its own risk, not a portfolio for returns."
+edge,nvidia__amazon__competes_with,note,en,The second cloud in the same position: largest buyer and maker of the alternative.
+edge,nvidia__arista__competes_with,note,en,NVIDIA's own networking platform competes with independent switches inside clusters.
+edge,nvidia__arm__diversifies_supply,note,en,It keeps the processor architecture as a second option without depending on it entirely.
+edge,nvidia__arm__strategic_partner,note,en,Both are named key technology partners of the same compute build.
+edge,nvidia__broadcom__competes_with,note,en,Opening its own interconnect to other accelerators is the answer to the threat from custom silicon.
+edge,nvidia__cadence__co_designs,note,en,A jointly built compute platform for engineering simulation: the design software itself runs on accelerators.
+edge,nvidia__china__subject_to_restriction,note,en,The other side of the restriction: the share of revenue from the region fell sharply.
+edge,nvidia__coreweave__hedges_against,note,en,Investing in an independent cloud lowers the risk of the hyperscalers closing the whole accelerator rental market around themselves.
+edge,nvidia__coreweave__supplies,detail,en,"Every accelerator in the cloud's infrastructure comes from this supplier, and that is written into the contracts with its own customers — locked in by third-party obligations, not by procurement policy. Three suppliers accounted for 23%, 20% and 17% of total purchases, and a year earlier the largest of them for 46%. Switching platform would mean renegotiating customer contracts, not just running a tender."
+edge,nvidia__coreweave__supplies,note,en,"EVERY accelerator in this cloud's infrastructure comes from NVIDIA, and that is written into the contracts with its customers."
+edge,nvidia__crusoe__hedges_against,note,en,An investment in a cloud building at the energy source: it removes the constraint that would otherwise cap demand.
+edge,nvidia__crusoe__supplies,note,en,The cloud that builds sites at energy sources runs on NVIDIA's accelerators.
+edge,nvidia__cuda__enables,note,en,"CUDA shipped in 2006 and comes with every accelerator; 6,000 applications run on the NVIDIA platform."
+edge,nvidia__cuda__standardizes_on,note,en,The industry settled on this environment as the common denominator: it is the de facto standard.
+edge,nvidia__dell__supplies,note,en,An enterprise server maker sells the accelerators through its own channel.
+edge,nvidia__google__competes_with,note,en,Customer and competitor at once: it buys accelerators and builds its own. Both facts are on the map.
+edge,nvidia__hpe__supplies,note,en,The second enterprise server maker in the sales channel.
+edge,nvidia__huggingface__hedges_against,note,en,"An investment in the common model hub: if the ecosystem moves to other hardware, NVIDIA's lock loses its value."
+edge,nvidia__kubernetes__standardizes_on,note,en,The industry standard for running containers: compatibility with it is mandatory for any accelerator vendor.
+edge,nvidia__lambda__hedges_against,note,en,A third independent cloud: each additional one lowers the giants' share of compute rental.
+edge,nvidia__lambda__supplies,note,en,A small independent cloud for researchers runs on NVIDIA's accelerators.
+edge,nvidia__micron__diversifies_supply,note,en,The American memory supplier is kept as insurance against memory concentrating in one country.
+edge,nvidia__microsoft__competes_with,note,en,"A third cloud with its own accelerator, named among the competitors in NVIDIA's filings."
+edge,nvidia__microsoft__supplies,note,en,Every large cloud buys NVIDIA's infrastructure — that is the foundation of its revenue.
+edge,nvidia__mlcommons__sets_benchmark,note,en,NVIDIA's results became the bar every other manufacturer is compared against.
+edge,nvidia__nebius__hedges_against,note,en,A second independent cloud in the portfolio: the same hedge extended to another market.
+edge,nvidia__nebius__supplies,note,en,The European independent cloud states its dependence on NVIDIA's accelerators outright.
+edge,nvidia__nventures__board_seat,note,en,An entity NVIDIA owns: control is complete by definition.
+edge,nvidia__nventures__hedges_against,note,en,The venture arm exists not for returns but to keep the key entities in the orbit on the platform.
+edge,nvidia__openai__co_designs,note,en,"Joint work on systems and optimisation: the lab writes the kernels, NVIDIA tunes the platform."
+edge,nvidia__openai__hedges_against,note,en,An investment in its own largest buyer — insurance against it moving to alternative hardware.
+edge,nvidia__openai__invests_in,detail,en,"Up to $100 billion is committed, released progressively as each of the ten gigawatts comes online. This is not a single cheque but money tied to a physical build schedule: nothing built, nothing paid. The supplier is financing its own largest buyer — manufacturing demand for its own product."
+edge,nvidia__openai__invests_in,note,en,"Up to $100B, unlocked as each gigawatt comes online — an investment in its own largest buyer."
+edge,nvidia__samsung__diversifies_supply,note,en,The second chip manufacturer is kept precisely as insurance against concentration on one territory.
+edge,nvidia__softbank__strategic_partner,note,en,NVIDIA is named a key technology partner of the build the holding company finances.
+edge,nvidia__supermicro__supplies,detail,en,"The integrator designs systems for new platforms in advance and jointly with their developers. Its own revenue is concentrated: four customers each accounted for more than 10% of net sales in fiscal 2025, against a single such customer a year earlier. Early access to the platform is the only thing separating it from other rack builders."
+edge,nvidia__supermicro__supplies,note,en,The assembler designs products for new platforms early and jointly.
+edge,nvidia__tsmc__co_designs,note,en,"The process roadmap is agreed jointly: the chip is designed for a future process, and the process for a future chip."
+edge,nvidia__vertiv__strategic_partner,note,en,An announced partnership on next-generation power and cooling infrastructure.
+edge,oklo__equinix__strategic_partner,note,en,A non-binding letter of intent on future power supply. Below the drawing threshold.
+edge,oklo__vertiv__strategic_partner,note,en,Exploration of power options for the sites. Recorded below the drawing threshold precisely because it is not yet supply.
+edge,openai__coreweave__customer_of,detail,en,"A master services agreement from May 2025 and a subsequent order commit the lab to pay up to $6.5 billion through May 31, 2031. For the cloud this is the second NVIDIA contract after the hyperscaler, and the only one that materially dilutes its single-customer concentration. A six-year term means capacity is reserved up front rather than bought as needed."
+edge,openai__coreweave__customer_of,note,en,The lab committed to pay the independent cloud up to $6.5B by 2031.
+edge,openai__huggingface__competes_with,note,en,Closed models on subscription against open weights in the common hub.
+edge,openai__microsoft__enables,note,en,The lab's models are built into the hyperscaler's products — that is its application layer.
+edge,openai__microsoft__strategic_partner,note,en,The hyperscaler is the lab's largest investor and holds rights to its intellectual property.
+edge,openai__microsoft__validates_demand,note,en,The lab's demand proved that AI cloud capacity pays back — and set everyone building.
+edge,openai__nvidia__customer_of,detail,en,"The agreement covers at least 10 gigawatts of the supplier's systems — millions of accelerators at today's densities. In return the supplier committed up to $100 billion to the lab as that capacity comes online, so the purchase and the financing of the purchase travel as one package."
+edge,openai__nvidia__customer_of,note,en,"The lab buys systems by the gigawatt: this is money, not proof. The proof runs on a separate edge."
+edge,openai__nvidia__path_dependent_on,note,en,The lab's stack is optimised for NVIDIA's platform at several levels: its development follows it.
+edge,openai__nvidia__validates_demand,note,en,Its existence proved to the industry that accelerators are necessary: ten-gigawatt sites are built for it.
+edge,openai__oracle__customer_of,detail,en,"The agreement covers 4.5 gigawatts of additional US data centre capacity. For the cloud this contract defines the growth profile: capacity at that scale is built for a named customer, not for the open market. The lab buys from several providers in parallel, so there is no exclusivity here."
+edge,openai__oracle__customer_of,note,en,An agreement for 4.5 gigawatts of additional capacity: the contract shapes the cloud's growth profile.
+edge,openai__oracle__validates_demand,note,en,A gigawatt-scale contract proved that building cloud capacity for a single lab pays back.
+edge,openai__vllm__enables,note,en,vLLM reproduces the OpenAI API
+edge,oracle__nvidia__customer_of,note,en,The cloud that builds sites against lab contracts buys accelerators by the gigawatt.
+edge,oracle__openai__invests_in,note,en,The cloud is at once an investor in the build and its contractor — which is what closes the loop.
+edge,pytorch__cuda__path_dependent_on,note,en,"The library's capabilities arrive after the environment's: there first, everywhere after."
+edge,pytorch__huggingface__enables,note,en,"The training library and the common model hub hold each other up: one supplies the code, the other the weights."
+edge,pytorch__meta__funded_by,note,en,The library was created by an accelerator buyer and handed to an independent foundation.
+edge,pytorch__nvidia__validates_demand,note,en,The library most research is written in accelerates above all on its hardware — which is what proves the necessity.
+edge,quanta__nvidia__integrates,note,en,Quanta assembles NVIDIA server systems — the third Taiwanese contractor after Foxconn and Wistron.
+edge,ray__kubernetes__standardizes_on,note,en,The orchestrator runs on top of the common container standard.
+edge,ray__nvidia__optimizes_for,note,en,The distributed compute orchestrator spreads training across accelerator clusters.
+edge,recursion__nvidia__proves_use_case,note,en,A drug discovery supercomputer built jointly with NVIDIA: a reference deployment outside the internet companies.
+edge,salesforce__nvidia__proves_roi,note,en,Another proof of payback in the enterprise segment — in sales teams.
+edge,samsung__nvidia__supplies,note,en,It supplies both memory and manufacturing capacity — a rare combination in one company.
+edge,samsung__tsmc__competes_with,note,en,The second foundry for leading-edge chips; it trails on volume and yield.
+edge,sandisk__nvidia__supplies,note,en,"Another storage supplier: the value is in volume, not uniqueness."
+edge,schneider__digital-realty__supplies,note,en,Power and control equipment at the operator's sites.
+edge,schneider__microsoft__supplies,note,en,The second supplier of site power equipment.
+edge,schrodinger__nvidia__proves_use_case,note,en,Molecular modelling on accelerator clusters for drug discovery.
+edge,sequoia__openai__invests_in,note,en,"Venture capital in the lab: money is replaceable by money, the value is in access to the deal."
+edge,servicenow__microsoft__strategic_partner,note,en,The enterprise platform runs across several clouds at once.
+edge,servicenow__nvidia__proves_roi,note,en,Models are embedded in enterprise processes companies already pay for: payback proved in another segment.
+edge,sglang__vllm__competes_with,note,en,"SGLang is the second open model-serving system: the layer is competitive, not locked."
+edge,shin-etsu__tsmc__supplies,note,en,Wafers and photoresist are consumed on every chip; there are few suppliers.
+edge,siemens-eda__nvidia__enables,note,en,"A third design tool set: it covers verification, but does not replace the duopoly."
+edge,siemens-energy__equinix__supplies,note,en,The second maker of turbines and grid equipment for sites.
+edge,siemens__nvidia__proves_use_case,note,en,Models applied in industrial design and on the factory floor.
+edge,singapore__nvidia__controls_access_to,note,en,A logistics hub through which circumvention of export restrictions is checked.
+edge,sk-hynix__nvidia__supplies,detail,en,"The partnership was expanded into an initiative worth more than $500 billion, covering both compute site construction and memory supply. On the buyer's side memory comes from three suppliers at once, so even an agreement of this size does not create a single source — it entrenches first among equals."
+edge,sk-hynix__nvidia__supplies,note,en,The fast memory placed against the accelerator. Named first on the memory supplier list.
+edge,snowflake__nvidia__proves_roi,note,en,Corporate data becomes usable for training — the thing the labs do not have.
+edge,softbank__openai__invests_in,note,en,A capital holder and the financially responsible partner of the compute build.
+edge,softbank__oracle__strategic_partner,note,en,Two of the four capital holders of one build.
+edge,south-korea__samsung__geopolitically_dependent,note,en,Both this company's memory and its chip manufacturing are concentrated in one jurisdiction.
+edge,south-korea__sk-hynix__geopolitically_dependent,note,en,Fast memory production is concentrated in one country beside a zone of military risk.
+edge,supermicro__nvidia__optimizes_for,note,en,Products are designed for specific accelerator generations before those generations ship.
+edge,synopsys__nvidia__enables,note,en,A modern chip cannot be drawn without design software. The duopoly makes the dependence structural.
+edge,synopsys__tsmc__optimizes_for,note,en,The design tools are tuned to the rules of one foundry's specific process.
+edge,taiwan__nvidia__geopolitically_dependent,note,en,NVIDIA depends on the territory through the foundry: it has no plants of its own at all.
+edge,taiwan__tsmc__geopolitically_dependent,note,en,All leading-edge production sits physically on this territory. This is tail risk with supply going to zero.
+edge,taiwan__usa__geopolitically_dependent,note,en,The US depends on the island for leading-edge chips so heavily that it pays for production to move home through a dedicated law.
+edge,tensorrt__nvidia__locks_in_platforms,note,en,The model-serving optimiser runs only on its accelerators: moving a model means losing the speed-up.
+edge,thrive__openai__invests_in,note,en,"Billion-dollar late-stage rounds are a narrow segment, but several investors operate in it."
+edge,tokyo-electron__tsmc__supplies,note,en,Japanese wafer processing equipment; three suppliers work at this class.
+edge,triton__cuda__could_disrupt,note,en,An intermediate layer for writing compute kernels without binding to the environment — a theoretical way out.
+edge,triton__openai__funded_by,note,en,The compiler was created by a lab — the largest buyer of accelerators.
+edge,tsmc__arm__standardizes_on,note,en,More than 350 billion shipped chips use this architecture — the common denominator for the foundries.
+edge,tsmc__astera-labs__manufactures,note,en,EVERY part this company makes comes from one foundry — the dependence is absolute.
+edge,tsmc__broadcom__manufactures,detail,en,"The custom-accelerator designer outsources most wafer manufacturing, and the same foundry makes its main rival's accelerators too. The designer's own demand is concentrated: one customer accounted for 32%, 28% and 21% of revenue over three years, and the top five for about 40%. Both sides of the rivalry depend on the same foundry."
+edge,tsmc__broadcom__manufactures,note,en,TSMC prints Broadcom's custom accelerators on the same line as NVIDIA's chips.
+edge,tsmc__credo__manufactures,note,en,The company states outright that it uses a SINGLE foundry exclusively.
+edge,tsmc__google__manufactures,note,en,Google's own chips are made by the same foundry as NVIDIA's accelerators: competitors converge on one foundry.
+edge,tsmc__nvidia__manufactures,detail,en,"From the foundry's side: its largest customer accounted for 25%, 22% and 19% of net revenue in 2023, 2024 and 2025, and its ten largest for 70%, 76% and 78%. From the designer's side the dependence is total — it owns no fabs and every wafer comes from outside. The concentration is mutual but the consequences are not: the foundry would lose a share of revenue, the designer would lose the ability to ship at all."
+edge,tsmc__nvidia__manufactures,note,en,"NVIDIA owns no fabs: TSMC and Samsung print its wafers. Process rules are wired into the layout, so changing foundry means redesigning."
+edge,tsmc__nvidia__packages,note,en,NVIDIA packages its dies with CoWoS — the technology that joins the compute die to HBM memory in one package.
+edge,usa__bis__controls_access_to,note,en,The agency is the mechanism through which the jurisdiction gates exports.
+edge,usa__chips-act__standardizes_on,note,en,The law is the instrument through which the jurisdiction brings manufacturing back inside the country.
+edge,usa__nvidia__controls_access_to,note,en,Export restrictions have applied since August 2022. In February 2026 the US granted a licence for small H200 shipments — no revenue under it yet.
+edge,vertiv__coreweave__supplies,note,en,Power and cooling at the independent cloud's sites.
+edge,vertiv__microsoft__supplies,note,en,Power and cooling at the giant cloud's sites.
+edge,vertiv__nvidia__co_designs,note,en,"Rack power and cooling are designed jointly for future accelerator generations, not bought off the shelf."
+edge,vllm__anthropic__enables_interop,note,en,vLLM also supports Anthropic's interface: the standard forms across both.
+edge,vllm__cuda__path_dependent_on,note,en,vLLM's fastest paths are written for CUDA — on other hardware they simply switch off.
+edge,vllm__huggingface__standardizes_on,note,en,vLLM runs models published in the common hub and takes their definitions from there.
+edge,vllm__nvidia__validates_demand,note,en,vLLM lists NVIDIA's accelerators first among what it supports.
+edge,vllm__openai__enables_interop,note,en,"vLLM reproduces OpenAI's interface, and through that other stacks speak one language."
+edge,vllm__tensorrt__competes_with,note,en,vLLM against TensorRT: open model serving against NVIDIA's own optimiser.
+edge,wistron__nvidia__integrates,note,en,"The second assembly contractor, named in NVIDIA's filings."
+edge,xai__nvidia__customer_of,note,en,A young lab assembled one of the largest accelerator clusters in months.
+edge,xai__nvidia__validates_demand,note,en,"Proof of speed: a cluster of hundreds of thousands of accelerators is assembled in months, not years."
+entity,bis,name,en,Bureau of Industry and Security
+entity,china,name,en,China
+entity,chips-act,name,en,CHIPS Act
+entity,eu,name,en,European Union
+entity,eu-ai-act,name,en,EU AI Act
+entity,japan,name,en,Japan
+entity,netherlands,name,en,Netherlands
+entity,singapore,name,en,Singapore
+entity,south-korea,name,en,South Korea
+entity,taiwan,name,en,Taiwan
+entity,usa,name,en,United States

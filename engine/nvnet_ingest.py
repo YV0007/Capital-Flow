@@ -302,7 +302,7 @@ def build(month: str) -> dict:
                 nid = (row.get("entity_id") or "").strip()
                 ru = (row.get("one_liner_ru") or "").strip()
                 en = (row.get("one_liner_en") or "").strip()
-                if nid not in ents:
+                if nid not in entities:
                     rejects.append({"file": f"{adir.name}/oneliners.csv", "line": line,
                                     "reason": f"one_liner для неизвестной сущности '{nid}'",
                                     "row": str(row)[:200]})
@@ -314,8 +314,8 @@ def build(month: str) -> dict:
                     continue
                 if not ru:
                     continue
-                ents[nid]["oneLiner"] = ru
-                ents[nid]["_one_liner_en"] = en
+                entities[nid]["oneLiner"] = ru
+                entities[nid]["_one_liner_en"] = en
                 liner_rows += 1
 
     # ── ЖЕЛЕЗНОЕ ПРАВИЛО: новая связь без источника не пишется ────────────────

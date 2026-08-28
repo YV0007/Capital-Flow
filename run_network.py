@@ -53,13 +53,18 @@ def main(month: str, do_deliver: bool = False, offline: bool = False) -> int:
     # если у любого поля прозы окажется пустая сторона.
     con = nveco.connect()
     i18n.ensure(con)
+    # Файлы перевода — манифест, а не приращение: сначала снимаем то, что пришло
+    # из них в прошлый раз, потом грузим заново. Иначе строка, удалённая из
+    # файла, живёт в складе вечно и продолжает уезжать в дашборд.
+    dropped = i18n.reset_csv_scope(con, "nveco")
     loaded, bad = 0, []
     for path in sorted(list((db.RUNS_DIR / month).glob("_i18n/*.csv"))
                        + list((db.RUNS_DIR / month).glob("*/translations.csv"))):
         s = i18n.load_csv(con, path, "nveco")
         loaded += s["written"]; bad += s["bad"]
     cov = i18n.coverage(con, "nveco")
-    print(f"[i18n]    {loaded} строк перевода загружено; в складе ru={cov['ru']} en={cov['en']}")
+    print(f"[i18n]    {loaded} строк перевода загружено (снято прошлых {dropped}); "
+          f"в складе ru={cov['ru']} en={cov['en']}")
     for b in bad[:8]:
         print("           ОТКЛОНЕНО", b)
 
