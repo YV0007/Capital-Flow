@@ -18,7 +18,12 @@ import yaml
 
 from . import db, nveco
 
-SCHEMA_VERSION = "ai-ecosystem-network/2"
+# /3 — добавлено entities[].description: развёрнутое описание узла, {ru, en}.
+# Поле АДДИТИВНОЕ: ни одно существующее не изменено и не удалено, потребитель /2
+# продолжает читать файл как раньше. Идентификатор всё же поднят (в отличие от
+# pagerank, который приехал внутри /1): description — это не третья мера в готовом
+# блоке, а новая колонка панели, и дашборд должен уметь спросить «а есть ли она».
+SCHEMA_VERSION = "ai-ecosystem-network/3"
 NETWORK_ID = "ai-infrastructure-complete"
 
 _CFG = {}

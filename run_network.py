@@ -31,6 +31,7 @@ def main(month: str, do_deliver: bool = False, offline: bool = False) -> int:
     print(f"[ingest]  {len(net['entities'])} сущностей, {len(net['edges'])} связей "
           f"(семя {len(net['seed']['entities'])}/{len(net['seed']['edges'])}, "
           f"достройка +{net['newEntities']}/+{net['newEdges']})")
+    print(f"          прочитано описаний сущностей: {net['descriptions']}")
     print(f"          пивотов на карте: {len(net['pivots'])}"
           + (f"; НЕТ В ДАННЫХ: {', '.join(net['missingPivots'])}"
              if net["missingPivots"] else ""))
@@ -45,8 +46,19 @@ def main(month: str, do_deliver: bool = False, offline: bool = False) -> int:
               f"{', '.join(net['dropped'][:8])}")
 
     if not offline:
-        nvnet_ingest.persist(month, net)
+        r = nvnet_ingest.persist(month, net)
         print("[persist] достройка записана в nvnet_* (семя не дублируется)")
+        if r["entities"] or r["edges"] or r["pairs"]:
+            print(f"          снято с карты: {len(r['entities'])} сущностей, "
+                  f"{len(r['edges'])} связей, {len(r['pairs'])} пар без связи")
+            for i in (r["entities"] + r["edges"] + r["pairs"])[:10]:
+                print("           снято", i)
+        for a in r["broken"]:
+            print(f"          {a}: файл сдан, но не выжила ни одна строка — "
+                  f"строки этого каталога НЕ сняты")
+        for i in r["held"]:
+            print(f"          сущность '{i}' больше не заявлена, но на неё ссылается "
+                  f"связь — оставлена")
 
     # Переводы: файлы runs/<месяц>/_i18n/*.csv и runs/<месяц>/*/translations.csv.
     # Грузятся ДО сборки выдачи, потому что валидатор контракта уронит выпуск,
@@ -81,6 +93,13 @@ def main(month: str, do_deliver: bool = False, offline: bool = False) -> int:
               f"{len(s['edgeIds'])} связей{mark}")
     for note in n.get("subgraphNotes", []):
         print("           ", note)
+    dc = h["descriptions"]
+    print(f"[описания] description есть у {dc['have']} из {dc['total']} сущностей; "
+          f"пивотов {dc['pivots_have']}/{dc['pivots']}")
+    if dc["pivots_missing"]:
+        # Названы поимённо, а не числом: порядок работы — сначала пивоты, и список
+        # того, что осталось, и есть задание на следующий прогон.
+        print("           без описания пивоты: " + ", ".join(dc["pivots_missing"]))
     print(f"[handoff] {h['entities']} сущностей, {h['edges']} связей, версия "
           f"{h['version']} -> {h['path']}")
 

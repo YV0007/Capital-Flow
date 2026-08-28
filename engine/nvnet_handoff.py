@@ -84,9 +84,15 @@ BILINGUAL_FIELDS = {
     "edge": ("note", "detail"),
 }
 
+# Поля, английская сторона которых приезжает ТЕМ ЖЕ CSV, что и русская, а не из
+# склада переводов: их пишет исследователь сразу на двух языках. Склад всё равно
+# побеждает, если перевод в нём заведён, — правило для всей прозы одно.
+CSV_BILINGUAL = {"entity": ("description",), "edge": ("detail",)}
+
 # поле выдачи -> поле в складе переводов
 _I18N_KEY = {
     "oneLiner": "one_liner", "whyIrreplaceable": "why_irreplaceable",
+    "description": "description",
     "whatBreaksIt": "what_breaks_it", "note": "note", "detail": "detail",
     "irreplaceability": "why_irreplaceability", "lockInDepth": "why_lock_in",
     "timeToReplace": "why_time", "strategicControl": "why_control",
@@ -113,6 +119,13 @@ def bilingualise(payload: dict, con) -> dict:
         for f in BILINGUAL_FIELDS["entity"]:
             if e.get(f) is not None:
                 e[f] = w("entity", eid, f, e[f])
+        # description — как detail у связи: обе стороны пришли одной строкой CSV.
+        if e.get("description") is not None:
+            e["description"] = i18n.wrap(idx, "entity", eid, "description",
+                                         fallback_ru=e["description"],
+                                         fallback_en=e.pop("_description_en", None))
+        else:
+            e.pop("_description_en", None)
         cw = e.get("criticalityWhy") or {}
         for f in BILINGUAL_FIELDS["entity_factor"]:
             if cw.get(f) is not None:
@@ -163,7 +176,7 @@ def bilingual_paths(payload: dict) -> list:
     """(json-путь, значение) по КАЖДОМУ обёрнутому полю — вход валидатора."""
     out = []
     for i, e in enumerate(payload["entities"]):
-        for f in BILINGUAL_FIELDS["entity"]:
+        for f in BILINGUAL_FIELDS["entity"] + CSV_BILINGUAL["entity"]:
             if f in e:
                 out.append((f"entities[{e['id']}].{f}", e[f]))
         for f, v in (e.get("criticalityWhy") or {}).items():
@@ -204,6 +217,45 @@ _NUM = re.compile(r"\d+(?:[.,]\d+)*")
 _THOUSANDS = re.compile(r"\d{1,3}(?:[\u00a0 ]\d{3})+(?:[.,]\d+)?")
 
 
+def _readings(token: str) -> set:
+    """Все допустимые прочтения одного числового токена.
+
+    «2,788» по-русски это 2.788, по-английски — 2788, и по самому токену это не
+    различить. Поэтому токен раскрывается в набор прочтений, а подтверждённым
+    считается число, у которого цитата подтверждает ХОТЯ БЫ ОДНО. Требовать
+    совпадения всех прочтений нельзя — это отвергало бы верное число; принимать
+    любое похожее тоже нельзя — тогда проверка перестаёт что-либо значить.
+    """
+    t = token.replace("\u00a0", "").replace(" ", "")
+    frac = t.split(",")[1] if t.count(",") == 1 and "." not in t else ""
+    if frac and len(frac) <= 2:
+        cands = [t.replace(",", ".")]                    # десятичная запятая
+    elif frac and len(frac) == 3:
+        cands = [t.replace(",", "."), t.replace(",", "")]  # 2,788 -> 2.788 или 2788
+    else:
+        cands = [t.replace(",", "")]                     # разделитель тысяч
+    out = set()
+    for c in cands:
+        c = c.rstrip(".")
+        if "." in c:
+            c = c.rstrip("0").rstrip(".")
+        if c:
+            out.add(c)
+    return out
+
+
+def _unbacked(text: str, quoted: set) -> list:
+    """Числа текста, ни одно прочтение которых не встречается в цитатах."""
+    text = _THOUSANDS.sub(lambda m: m.group(0).replace("\u00a0", "").replace(" ", ""),
+                          text or "")
+    bad = []
+    for raw in _NUM.findall(text):
+        r = _readings(raw)
+        if r and not (r & quoted):
+            bad.append(raw)
+    return sorted(set(bad))
+
+
 def _numbers(text: str) -> set:
     """Числовые токены в нормализованном виде.
 
@@ -219,17 +271,7 @@ def _numbers(text: str) -> set:
                           text or "")
     out = set()
     for raw in _NUM.findall(text):
-        t = raw.replace("\u00a0", "").replace(" ", "")
-        if t.count(",") == 1 and len(t.split(",")[1]) <= 2 and "." not in t:
-            t = t.replace(",", ".")       # десятичная запятая
-        else:
-            t = t.replace(",", "")        # разделитель тысяч
-        t = t.rstrip(".")
-        if not t:
-            continue
-        if "." in t:
-            t = t.rstrip("0").rstrip(".")
-        out.add(t or "0")
+        out |= _readings(raw)
     return out
 
 
@@ -268,11 +310,115 @@ def _check_detail(payload: dict) -> list:
                                 f"note — такое поле не пишется, а опускается")
         quoted = _numbers(" ".join(ev.get("quote", "") for ev in x.get("evidence", [])))
         for lang in ("ru", "en"):
-            unbacked = sorted(_numbers(d.get(lang) or "") - quoted)
+            unbacked = _unbacked(d.get(lang) or "", quoted)
             if unbacked:
                 errs.append(f"связь {x['id']}: числа в detail.{lang} не встречаются "
                             f"ни в одной цитате: {', '.join(unbacked[:6])}")
     return errs
+
+
+# ── description: развёрнутое описание узла ───────────────────────────────────
+# Панель сущности задаёт пять вопросов подряд: что продаёт, откуда деньги, где стоит
+# в стеке, какого размера, что изменилось. Проверить машиной можно не «отвечает ли
+# текст», а форму и добросовестность: длину, обе стороны, прослеживаемость цифр и
+# отсутствие оборотов, которые остаются правдой под любой компанией.
+DESCRIPTION_MIN_SENTENCES = 4
+DESCRIPTION_MAX_SENTENCES = 7
+DESCRIPTION_MIN_CHARS = 260     # короче — это второй oneLiner, а не описание
+DESCRIPTION_MAX_CHARS = 1400    # длиннее — это уже не 4–7 предложений
+
+# Границей считается точка (или ? !) С ПРОБЕЛОМ после неё. Отсюда прямое требование
+# к тексту: внутри предложения такой пары быть не должно. «$3.4 млрд» и «85%»
+# безопасны — там за точкой идёт цифра; а «U.S. government» и «т. е.» сломали бы
+# счёт, поэтому в описании они не пишутся. Это не обход проблемы, а то же правило
+# «без жаргона и сокращений», только проверяемое.
+_SENT_SPLIT = re.compile(r'(?<=[.!?…])["»)]?\s+')
+
+# Обороты, которые остаются правдой под другой компанией. Список короткий и
+# намеренно бесспорный: каждый из них — оценка без факта, и ни один не бывает
+# единственным способом сказать то, что нужно.
+_SUBSTITUTABLE = (
+    "лидер рынка", "рыночный лидер", "лидер отрасли", "ключевой игрок",
+    "сильные позиции", "прочные позиции", "одна из ведущих", "один из ведущих",
+    "одним из ведущих", "широко признан", "хорошо известн", "успешно развива",
+    "market leader", "industry leader", "key player", "strong position",
+    "strong market position", "one of the leading", "widely recognized",
+    "well known for", "successfully develop",
+)
+
+
+def _sentences(text: str) -> list:
+    return [s for s in (p.strip() for p in _SENT_SPLIT.split((text or "").strip())) if s]
+
+
+def _check_description(payload: dict) -> list:
+    """Правила поля `description`. Те же, что у `detail`, плюс счёт предложений.
+
+    Прослеживаемость цифр — главное и здесь. Панель читают как данные, поэтому
+    число, которого нет ни в одной цитате ЭТОЙ сущности, не отгружается, даже если
+    оно верно: проверить его читателю неоткуда, а подпись «источник» под ним была бы
+    ложью. Правило заставляет исследователя приносить цитату вместе с цифрой —
+    ровно так же, как «нет цитаты — нет связи» заставляет приносить её вместе с ребром.
+    """
+    errs = []
+    for e in payload["entities"]:
+        d = e.get("description")
+        if d is None:
+            continue
+        if not isinstance(d, dict):
+            errs.append(f"сущность {e['id']}: description не пара {{ru, en}}")
+            continue
+        for lang in ("ru", "en"):
+            text = (d.get(lang) or "").strip()
+            if not text:
+                errs.append(f"сущность {e['id']}: description.{lang} пуст — поле либо "
+                            f"заполнено на обоих языках, либо отсутствует")
+                continue
+            if not DESCRIPTION_MIN_CHARS <= len(text) <= DESCRIPTION_MAX_CHARS:
+                errs.append(f"сущность {e['id']}: description.{lang} {len(text)} знаков, "
+                            f"допустимо {DESCRIPTION_MIN_CHARS}..{DESCRIPTION_MAX_CHARS}")
+            sents = _sentences(text)
+            if not DESCRIPTION_MIN_SENTENCES <= len(sents) <= DESCRIPTION_MAX_SENTENCES:
+                errs.append(f"сущность {e['id']}: description.{lang} — {len(sents)} "
+                            f"предложений, нужно {DESCRIPTION_MIN_SENTENCES}–"
+                            f"{DESCRIPTION_MAX_SENTENCES}")
+            if sents and sents[-1][-1] not in ".!?…":
+                errs.append(f"сущность {e['id']}: description.{lang} обрывается без "
+                            f"знака конца предложения")
+            low = text.lower()
+            for phrase in _SUBSTITUTABLE:
+                if phrase in low:
+                    errs.append(f"сущность {e['id']}: description.{lang} содержит "
+                                f"'{phrase}' — оборот остался бы правдой под другой "
+                                f"компанией, тест на подстановку не пройден")
+            # Пересказ соседнего поля — не описание: те поля отрисованы рядом и
+            # отвечают на другие вопросы.
+            for other in ("oneLiner", "whyIrreplaceable", "whatBreaksIt"):
+                v = e.get(other)
+                s = (v.get(lang) if isinstance(v, dict) else None) or ""
+                if s.strip() and s.strip() in text:
+                    errs.append(f"сущность {e['id']}: description.{lang} дословно "
+                                f"повторяет {other} — описание добавляет, а не пересказывает")
+        quoted = _numbers(" ".join(s.get("quote", "") for s in e.get("sources", [])))
+        for lang in ("ru", "en"):
+            unbacked = _unbacked(d.get(lang) or "", quoted)
+            if unbacked:
+                errs.append(f"сущность {e['id']}: числа в description.{lang} не "
+                            f"встречаются ни в одной цитате этой сущности: "
+                            f"{', '.join(unbacked[:6])}")
+    return errs
+
+
+def description_coverage(payload: dict) -> dict:
+    """Сколько узлов уже описано. Для отчёта прогона, не для валидатора: описание —
+    поле необязательное, и месяц, где его получили 27 узлов из 107, обязан
+    отгрузиться, а не упасть."""
+    ents = payload["entities"]
+    piv = set(payload.get("pivots") or [])
+    have = {e["id"] for e in ents if e.get("description")}
+    return {"total": len(ents), "have": len(have),
+            "pivots": len(piv), "pivots_have": len(piv & have),
+            "pivots_missing": sorted(piv - have)}
 
 
 # ── валидатор ────────────────────────────────────────────────────────────────
@@ -377,6 +523,7 @@ def validate(payload: dict) -> list:
                 errs.append(f"связь {x['id']}: тир источника '{ev.get('tier')}'")
 
     errs += _check_detail(payload)
+    errs += _check_description(payload)
 
     # PageRank — доля важности, и сумма долей обязана равняться единице. Расхождение
     # означает, что мера посчитана на другом множестве узлов или обрезана после
@@ -563,7 +710,8 @@ def run(month: str, net: dict) -> dict:
     return {"ok": True, "errors": [], "path": str(OUT_JSON),
             "entities": payload["totals"]["entities"],
             "edges": payload["totals"]["edges"],
-            "version": payload["version"], "network": payload["network"]}
+            "version": payload["version"], "network": payload["network"],
+            "descriptions": description_coverage(payload)}
 
 
 if __name__ == "__main__":

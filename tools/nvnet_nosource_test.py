@@ -107,6 +107,46 @@ def main(month):
         def _(d):
             next(e for e in d["edges"] if e.get("detail"))["detail"] = "просто строка"
 
+        # ── description: развёрнутое описание узла (контракт /3) ──────────
+        def _described(d):
+            return next(e for e in d["entities"] if e.get("description"))
+
+        @case("description только на одном языке")
+        def _(d):
+            _described(d)["description"]["en"] = ""
+
+        @case("description строкой вместо пары {ru, en}")
+        def _(d):
+            _described(d)["description"] = "просто строка"
+
+        @case("description из трёх предложений")
+        def _(d):
+            e = _described(d)
+            for lang in ("ru", "en"):
+                e["description"][lang] = ("Первое предложение достаточной длины для "
+                                          "порога знаков. " * 3).strip()
+
+        @case("description из восьми предложений")
+        def _(d):
+            e = _described(d)
+            for lang in ("ru", "en"):
+                e["description"][lang] = ("Предложение о продукте и его цене. " * 8).strip()
+
+        @case("description с числом не из цитаты")
+        def _(d):
+            e = _described(d)
+            e["description"]["ru"] += " Мощность площадок достигла 999 гигаватт."
+
+        @case("description дословно повторяет oneLiner")
+        def _(d):
+            e = _described(d)
+            e["description"]["ru"] = e["oneLiner"]["ru"] + " " + e["description"]["ru"]
+
+        @case("description с оборотом, верным под любой компанией")
+        def _(d):
+            e = _described(d)
+            e["description"]["en"] = "It is a market leader. " + e["description"]["en"]
+
         @case("сумма pagerank не равна 1")
         def _(d):
             # Половина веса испаряется — так выглядит мера, посчитанная на другом

@@ -266,7 +266,7 @@ criticality shifts, phase changes, risk escalations, new sources, layer changes.
 
 `handoff/ai_ecosystem_network.json` → `ab-investment/src/data/aiEcosystemNetwork.json`
 
-Contract **`ai-ecosystem-network/2`**, release `v2.0-2026-08`.
+Contract **`ai-ecosystem-network/3`**, release `v3.0-2026-08`.
 
 | | current |
 |---|---|
@@ -281,9 +281,17 @@ Contract **`ai-ecosystem-network/2`**, release `v2.0-2026-08`.
 | density / avg degree / clustering | 0.0358 / 3.79 / 0.5066 |
 
 **Per entity:** id, name, type, role, sector, layers, criticality + the four
-factors + a reason for each, gravity, oneLiner, whyIrreplaceable, whatBreaksIt,
-phase, risk, ticker, geo, revenue, techNodes, hops, firstSeen, lastConfirmed,
-stale, sources, pivotal, centrality (degree / betweenness / pagerank).
+factors + a reason for each, gravity, oneLiner, description, whyIrreplaceable,
+whatBreaksIt, phase, risk, ticker, geo, revenue, techNodes, hops, firstSeen,
+lastConfirmed, stale, sources, pivotal, centrality (degree / betweenness / pagerank).
+
+**`description` — what the node is and how it earns.** Added in `/3`. Four to
+seven sentences answering, in order: what it sells, where the money comes from,
+what it consumes and supplies *on this map*, its scale in figures, and what
+changed recently. It is not a longer `oneLiner` (that stays a ≤110-character lead
+for tooltips) and it does not restate `whyIrreplaceable`, `whatBreaksIt` or the
+chips beside it. Optional by design — an incomplete month ships rather than
+failing — but strict when present: see the rules in §9.
 
 **Per edge:** id, source, target, type, spine, direction, strength, lockInDepth,
 substitutability, isReversible, status, confidence, sourceTier, risk, techNode,
@@ -294,7 +302,9 @@ sides always non-empty or the payload refuses to write. Source quotes stay
 unwrapped in the language of their document: a translated quote is not a quote.
 
 **Validators refuse to write a broken file.** Two corruption suites prove it:
-`nveco_corrupt_test` 13/13, `nvnet_nosource_test` 12/12.
+`nveco_corrupt_test` 13/13, `nvnet_nosource_test` 23/23. Two retirement suites
+prove the ingest deletes what left the CSVs: `nveco_retire_test` 7/7,
+`nvnet_retire_test` 3/3.
 
 ---
 
@@ -302,15 +312,72 @@ unwrapped in the language of their document: a translated quote is not a quote.
 
 Honest list. None of these are hidden in the payload.
 
-**The ingest never deletes.** `INSERT … ON CONFLICT DO UPDATE` handles new and
-changed rows; a row that disappears from a CSV stays in the database forever.
-There is no `DELETE` for `nveco_edge` anywhere in the engine. Consequence: a
-correction cannot be published, and because edge ids are derived from their ends
-(`source__target__type`), a direction fix *renames* rather than edits — leaving
-both versions active and mutually contradictory. This happened during the v1.2
-direction normalisation: 250 edges instead of 243, cleaned by hand.
-`owner_agent` was added as the foundation for a fix; retirement itself is not
-built yet.
+**Retirement is per-agent, not per-month.** *(Was a gap; fixed.)* The ingest is
+now authoritative for the month it ingests: a row that disappears from a CSV is
+deleted along with its sources, its translations and its place in any cycle. It
+had to be, because edge ids are derived from their ends
+(`source__target__type`), so a direction fix *renames* rather than edits — the
+v1.2 normalisation left both versions active, 250 edges instead of 243, cleaned
+by hand.
+
+The delete is scoped by `owner_agent`, not by month, because a month where two of
+eight agents ran is a legal run and the other six's silence retracts nothing.
+A file that is absent means the agent did not work; a file that is present but
+empty means the agent claims nothing and its rows go; a file where *every* row
+was rejected is an output accident, not a retraction, and retires nothing — it is
+reported in the run's warnings instead. Rows with no `owner_agent` (written
+before the column existed) are never retired, and an entity still referenced by
+a silent agent's edge is held on the map rather than cascaded away. Same rule in
+`nvnet_ingest.persist` for the extension tables. Proven by
+`tools/nveco_retire_test.py` (7 cases) and `tools/nvnet_retire_test.py` (3).
+
+**Node descriptions cover 27 of 107.** *(Was 0 of 107; the 27 pivots are done.)*
+`entities[].description` now carries a researched 4–7 sentence profile of every
+pivot in both languages. The other 80 nodes have none, and the panel keeps its
+placeholder for them. The order for the next run is fixed: by criticality
+downward, which is also the order people click in.
+
+Three rules make the field safe to read as data, all enforced by
+`nvnet_handoff._check_description`, all of which will refuse the release rather
+than ship a soft version:
+
+* **Every number must appear in a quote attached to that entity.** A figure the
+  reader cannot check is worse than no figure, so an unquoted number fails the
+  contract. This is the same rule `edges[].detail` already lived under, and it is
+  why the 27 descriptions brought 58 new source rows with them: the quote comes
+  with the number or the number does not ship.
+* **Both languages or neither.** A Russian-only description fails `i18n:check` on
+  the dashboard side, so it fails here first.
+* **No sentence that stays true under another company.** A short list of pure
+  filler ("market leader", "key player", "одна из ведущих") is refused outright.
+  The list cannot catch every empty sentence, but it catches the ones that get
+  written when the research came up short — which is exactly when they appear.
+
+Two limits worth naming. The sentence counter treats "a period followed by a
+space" as a boundary, so abbreviations like "U.S." would miscount and are simply
+not written. And the filler list is a proxy for a judgement call, not a
+replacement for it.
+
+**Edge explainers cover 114 of 262.** *(Was 20 of 262.)* `edges[].detail` answers
+how a link actually works — what is bought, on what terms, and what the link
+unlocks further down the chain. Every pivot-to-pivot edge now has one: **104 of
+104**, in both languages, under the same rule as `description` — a figure that is
+not in a quote attached to that edge fails the contract.
+
+The rule this was written against, after the dashboard showed link text that read
+as filler: *a link describes the link, not the node.* «Молодая лаборатория
+собрала один из крупнейших кластеров» is about xAI; what belongs on the edge is
+that Colossus 1 holds over 220,000 accelerators, went up in 4 months against a
+24-month estimate, and that the buyer now resells that capacity to a rival lab —
+so the purchase turned its buyer into a landlord. The remaining 148 edges are
+non-pivot pairs, in criticality order.
+
+**Two revenue chips are a year stale.** Found while writing the descriptions,
+not fixed here: `nvidia.revenueUsdB` is 130.5 and `meta.revenueUsdB` is 164.5,
+which are FY2025 figures, while the FY2026 filings the map already cites say
+$215.9 billion and $200.97 billion. The descriptions route around this — they
+quote segment growth and capex rather than the total — but the chips themselves
+come from the frozen v2 seed and need a v2 re-run to correct.
 
 **NVIDIA's 37% connectivity is partly an artefact.** The map grew outward from
 NVIDIA, so it has degree 74 against a network average of 3.79. It is genuinely
@@ -344,6 +411,8 @@ Fixing it needs a v2 re-run, not a network change.
 | Schemas | `db/schema_nveco.sql`, `db/schema_nvnet.sql` |
 | Orchestrators | `run_nvidia.py`, `run_network.py` |
 | Corruption tests | `tools/nveco_corrupt_test.py`, `tools/nvnet_nosource_test.py` |
+| Retirement tests | `tools/nveco_retire_test.py`, `tools/nvnet_retire_test.py` |
+| Node descriptions (research) | `runs/<month>/nvnet-descriptions/`, brief in `agents/nvnet-descriptions.md` |
 | Build logs | `handoff/NVIDIA-ECOSYSTEM-BUILD-LOG.md`, `handoff/AI-ECOSYSTEM-NETWORK-BUILD-LOG.md` |
 
 ---
