@@ -43,10 +43,12 @@ Capital Flow/
 │   ├── nveco.py          # monthly: shared vocabulary + stable ids
 │   └── nveco_ingest.py  nveco_verify.py  nveco_score.py  nveco_cycles.py  nveco_handoff.py
 ├── tools/
-│   └── nveco_corrupt_test.py # proves the handoff validator rejects broken files
+│   ├── nveco_corrupt_test.py # proves the handoff validator rejects broken files
+│   └── nveco_retire_test.py  # proves a row dropped from a CSV leaves the database
 ├── runs/                 # per-period raw agent outputs, kept as the audit trail
 │   ├── 2026-W32/<agent>/    verified_events.csv, candidate_events.csv, source_log.csv
-│   └── 2026-08/nveco-<agent>/ entities.csv, factors.csv, edges.csv, sources.csv
+│   ├── 2026-08/nveco-<agent>/ entities.csv, factors.csv, edges.csv, sources.csv
+│   └── 2026-08/nvnet-descriptions/ descriptions.csv + sources.csv (entities[].description)
 │                            (+ runs/<month>/_rejected/ — fed back to agents next run)
 ├── handoff/              # what the dashboard side consumes
 │   ├── capital_map.json  nvidia_ecosystem.json  ECOSYSTEM-V2-CHANGELOG.md
@@ -95,7 +97,8 @@ unconnected maps sharing only the shell.
   -> engine/nveco_score.py    again — gravity counts the cycles an entity stands on
   -> engine/nveco_handoff.py  handoff/nvidia_ecosystem.json + ECOSYSTEM-V2-CHANGELOG.md
 ```
-Prove the validator still bites with `python tools/nveco_corrupt_test.py`.
+Prove the validator still bites with `python tools/nveco_corrupt_test.py`, and that the
+ingest retires what left the CSVs with `python tools/nveco_retire_test.py`.
 
 **The map has a centre.** `anchor` (`config/nveco_anchors.yaml`) is the question the map
 answers. An entity more than 2 hops from it is rejected at ingest with a reason — that is

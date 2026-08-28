@@ -15,6 +15,11 @@ config/aliases.yaml и грузит в nveco_*.
 и считаются в nveco_run. Это то, что следующий месяц вернёт агентам.
 
 Идемпотентно: ключ — постоянный id, повторный прогон обновляет на месте.
+
+И АВТОРИТЕТНО за свой месяц: строка, исчезнувшая из CSV, снимается с карты вместе с
+источниками, переводом и участием в контурах. Снимается только за теми агентами, кто в
+этом месяце реально сдал файл, — молчание остальных ничего не отзывает. Правило целиком
+и его четыре случая — над `_retiring_agents`.
 """
 
 import csv
@@ -319,6 +324,100 @@ def _hops_from_anchor(anchor_id, edges):
     return dist
 
 
+# ── снятие с карты ───────────────────────────────────────────────────────────
+# Загрузка обязана быть АВТОРИТЕТНОЙ за тот месяц, который грузит: строка, исчезнувшая
+# из CSV, обязана исчезнуть из базы. Иначе исправление невозможно опубликовать — id
+# ребра выводится из его концов (`source__target__type`), и разворот ориентации не
+# правит строку, а ПЕРЕИМЕНОВЫВАЕТ её: 2026-08-23 семь развёрнутых рёбер дали 250 строк
+# вместо 243, старая и новая версии одновременно и противореча друг другу.
+#
+# Но авторитет не абсолютный, а ПОАГЕНТНЫЙ. Месяц, где выдачу дали два агента из
+# восьми, — легальный прогон (см. check_agent_outputs в run_nvidia.py), и молчание
+# шести остальных не отзывает их строки. Отсюда четыре случая:
+#
+#   файла нет                      -> агент не работал: не трогаем ничего;
+#   файл есть, строк нет           -> агент заявил «у меня пусто»: снимаем всё его;
+#   файл есть, часть строк выжила  -> снимаем всё остальное, что числится за ним;
+#   файл есть, не выжила ни одна   -> это авария выдачи, а не отзыв: НЕ снимаем.
+#
+# Последний случай — единственная поблажка, и она не произвольная: агент, у которого
+# сдвинулась колонка и отвергнуты все строки, неотличим по результату от агента,
+# который не запускался. Стирать по такому сигналу нельзя, но и молчать нельзя —
+# случай уходит в warnings прогона.
+def _retiring_agents(per_file, fname, survivors):
+    """(кто вправе снимать свои строки, у кого выдача пустая при непустом файле)."""
+    allowed, broken = [], []
+    for (agent, f), rows_in in sorted(per_file.items()):
+        if f != fname:
+            continue
+        (broken if rows_in and not survivors.get(agent) else allowed).append(agent)
+    return allowed, broken
+
+
+def _owned_by(con, table, agents, keep):
+    """id строк таблицы, что числятся за этими агентами и не пришли в этом месяце.
+
+    owner_agent IS NULL не снимается никогда: это строка, записанная до появления
+    колонки, и приписать её агенту сейчас — значит угадать. Пусть лучше висит видимо,
+    чем исчезнет по догадке.
+    """
+    return [r["id"] for r in con.execute(
+        f"SELECT id, owner_agent FROM {table} WHERE owner_agent IS NOT NULL")
+        if r["owner_agent"] in agents and r["id"] not in keep]
+
+
+def _drop_i18n(con, kind, ids):
+    """Перевод снятой строки — сирота: показывать его не на чем, а склад он засоряет."""
+    if not ids or not con.execute(
+            "SELECT 1 FROM sqlite_master WHERE type='table' AND name='i18n_text'").fetchone():
+        return
+    for oid in ids:
+        con.execute("DELETE FROM i18n_text WHERE scope='nveco' AND kind=? AND obj_id=?",
+                    (kind, oid))
+
+
+def _retire_edges(con, agents, keep):
+    """Снять рёбра вместе с их источниками и участием в контурах.
+
+    Зависимые строки удаляются ЯВНО, хотя nveco_cycle_edge и связан внешним ключом с
+    ON DELETE CASCADE: `PRAGMA foreign_keys` — состояние соединения, а не свойство
+    схемы, и молчаливая опора на него означала бы, что один забытый PRAGMA оставляет
+    базу с висячими источниками. nveco_source внешнего ключа не имеет вовсе —
+    owner_id там свободный текст на две таблицы сразу.
+    """
+    stale = _owned_by(con, "nveco_edge", agents, keep)
+    for eid in stale:
+        con.execute("DELETE FROM nveco_cycle_edge WHERE edge_id=?", (eid,))
+        con.execute("DELETE FROM nveco_source WHERE owner_kind='edge' AND owner_id=?", (eid,))
+        con.execute("DELETE FROM nveco_edge WHERE id=?", (eid,))
+    _drop_i18n(con, "edge", stale)
+    return stale
+
+
+def _retire_entities(con, agents, keep):
+    """Снять сущности вместе со слоями, факторами, риском и источниками.
+
+    Сущность, на которую ещё ссылается ЧЬЁ-ТО ребро, остаётся: source_id и target_id
+    объявлены с ON DELETE CASCADE, и снос такой сущности утащил бы за собой ребро
+    агента, который в этом месяце просто не работал, — вместе с его доказательствами.
+    Возвращается вторым списком, чтобы это было видно в прогоне, а не только в базе.
+    """
+    stale, held = [], []
+    for eid in _owned_by(con, "nveco_entity", agents, keep):
+        used = con.execute("SELECT COUNT(*) c FROM nveco_edge WHERE source_id=? OR target_id=?",
+                           (eid, eid)).fetchone()["c"]
+        (held if used else stale).append(eid)
+    for eid in stale:
+        con.execute("UPDATE nveco_tech_node SET owner_id=NULL WHERE owner_id=?", (eid,))
+        con.execute("DELETE FROM nveco_source WHERE owner_kind='entity' AND owner_id=?", (eid,))
+        con.execute("DELETE FROM nveco_entity_factor WHERE entity_id=?", (eid,))
+        con.execute("DELETE FROM nveco_entity_layer WHERE entity_id=?", (eid,))
+        con.execute("DELETE FROM nveco_entity_risk WHERE entity_id=?", (eid,))
+        con.execute("DELETE FROM nveco_entity WHERE id=?", (eid,))
+    _drop_i18n(con, "entity", stale)
+    return stale, held
+
+
 def ingest_month(month: str, anchor: str = None) -> dict:
     if not nveco.month_ok(month):
         raise ValueError(f"месяц должен быть YYYY-MM, получено '{month}'")
@@ -338,6 +437,10 @@ def ingest_month(month: str, anchor: str = None) -> dict:
 
     rejected = {}          # agent -> [ {file,line,reason,row} ]
     per_agent = {}
+    # (агент, файл) -> сколько строк в файле БЫЛО. Пустой файл и отсутствующий файл
+    # здесь перестают быть одним и тем же: первый — заявление «у меня ничего», второй —
+    # молчание. От этого различия зависит, кому позволено снимать строки с карты.
+    per_file = {}
     warnings = []
     ents, facts, edges, srcs = {}, {}, {}, []
 
@@ -354,8 +457,10 @@ def ingest_month(month: str, anchor: str = None) -> dict:
         f = adir / "entities.csv"
         if not f.exists():
             continue
+        per_file[(agent, "entities.csv")] = 0
         for line, row in _read(f):
             per_agent[agent]["rows_in"] += 1
+            per_file[(agent, "entities.csv")] += 1
             clean, errs, warns = _validate_entity(row, layer_ids, sector_idx)
             warnings += [f"{agent}/entities.csv:{line} {w}" for w in warns]
             if errs:
@@ -402,8 +507,10 @@ def ingest_month(month: str, anchor: str = None) -> dict:
         f = adir / "edges.csv"
         if not f.exists():
             continue
+        per_file[(agent, "edges.csv")] = 0
         for line, row in _read(f):
             per_agent[agent]["rows_in"] += 1
+            per_file[(agent, "edges.csv")] += 1
             clean, errs, warns = _validate_edge(row, types)
             warnings += [f"{agent}/edges.csv:{line} {w}" for w in warns]
             if not errs:
@@ -564,6 +671,29 @@ def ingest_month(month: str, anchor: str = None) -> dict:
                  importance=excluded.importance""",
             (t["id"], t["label"], owner, t.get("note"), t.get("importance")))
 
+    # --- снятие с карты: то, что агент этого месяца больше не заявляет
+    # Считается по ВЫЖИВШИМ строкам, а не по прошедшим валидацию: ребро, потерявшее
+    # цитату, и сущность, выпавшая за два шага, до базы не дошли, и агент, у которого
+    # так отпало всё, ничего в этом месяце не подтвердил.
+    ent_alive, edge_alive = {}, {}
+    for e in ents.values():
+        ent_alive[e.get("_agent")] = ent_alive.get(e.get("_agent"), 0) + 1
+    for e in edges.values():
+        edge_alive[e.get("_agent")] = edge_alive.get(e.get("_agent"), 0) + 1
+
+    may_edges, broken_edges = _retiring_agents(per_file, "edges.csv", edge_alive)
+    retired_edges = _retire_edges(con, set(may_edges), set(edges))
+    may_ents, broken_ents = _retiring_agents(per_file, "entities.csv", ent_alive)
+    retired_ents, held_ents = _retire_entities(con, set(may_ents), set(ents))
+
+    for agent in broken_edges + broken_ents:
+        warnings.append(f"{agent}: файл сдан, но не выжила ни одна строка — "
+                        f"строки этого агента НЕ сняты с карты (авария выдачи "
+                        f"неотличима от отзыва, и стирать по ней нельзя)")
+    for eid in held_ents:
+        warnings.append(f"сущность '{eid}' больше не заявлена, но на неё ссылается "
+                        f"связь другого агента — оставлена на карте")
+
     for agent, st in per_agent.items():
         con.execute(
             """INSERT INTO nveco_run (month,anchor,agent,rows_in,rows_kept,rejected)
@@ -594,6 +724,9 @@ def ingest_month(month: str, anchor: str = None) -> dict:
             "sources": len(srcs), "factors": len(facts),
             "rejected": sum(len(v) for v in rejected.values()),
             "rejected_by_agent": {a: len(v) for a, v in rejected.items()},
+            "retired_entities": retired_ents, "retired_edges": retired_edges,
+            "held_entities": held_ents,
+            "broken_agents": sorted(set(broken_edges + broken_ents)),
             "warnings": warnings,
             "rejects_dir": str(rej_dir) if rejected else None}
 
@@ -601,6 +734,7 @@ def ingest_month(month: str, anchor: str = None) -> dict:
 if __name__ == "__main__":
     s = ingest_month(sys.argv[1] if len(sys.argv) > 1 else nveco.current_month())
     print(f"nveco_ingest: {s['entities']} сущностей, {s['edges']} связей, "
-          f"{s['sources']} источников, {s['rejected']} отклонено")
+          f"{s['sources']} источников, {s['rejected']} отклонено, "
+          f"снято {len(s['retired_entities'])}/{len(s['retired_edges'])}")
     for w in s["warnings"][:30]:
         print("  ", w)

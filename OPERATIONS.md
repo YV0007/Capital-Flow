@@ -147,7 +147,9 @@ while runs shipped green. See §10.
 
 `*_handoff.py` runs the contract's hard rules before writing and **refuses to
 overwrite a good file with a broken one.** Yesterday's truth beats today's lie.
-`tools/nveco_corrupt_test.py` proves the validator still bites.
+`tools/nveco_corrupt_test.py` proves the validator still bites, and
+`tools/nveco_retire_test.py` proves the ingest deletes what disappeared from the
+CSVs instead of leaving a second, contradicting copy of a corrected row.
 
 ---
 

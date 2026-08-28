@@ -38,6 +38,11 @@ CREATE TABLE IF NOT EXISTS nvnet_entity (
     geo_risk_note  TEXT,
     export_regime  TEXT,
     concentration  INTEGER CHECK (concentration BETWEEN 0 AND 100),
+    -- Какой каталог runs/<месяц>/nvnet-*/ написал строку. Без этого достройка не
+    -- может снять с карты то, что из её CSV исчезло: снимать «всё, чего нет в
+    -- файлах» нельзя — каталог, который в этом месяце не запускался, молчит, а не
+    -- отзывает. См. nveco_entity.owner_agent, правило то же.
+    owner_agent    TEXT,
     created_at     TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
@@ -95,6 +100,7 @@ CREATE TABLE IF NOT EXISTS nvnet_edge (
     note            TEXT,
     clamped         TEXT,
     origin          TEXT,                  -- 'A1'…'A11' | 'B-<пивот>' | 'GC'
+    owner_agent     TEXT,                  -- см. nvnet_entity.owner_agent
     created_at      TEXT NOT NULL DEFAULT (datetime('now')),
     UNIQUE (source_id, target_id, type)
 );

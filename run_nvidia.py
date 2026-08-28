@@ -54,6 +54,21 @@ def main(month: str, anchor: str = None, do_deliver: bool = False,
           f"{s['rejected']} отклонено")
     for a, n in sorted(s["rejected_by_agent"].items(), key=lambda x: -x[1]):
         print(f"          отклонено у {a}: {n}")
+    if s["retired_entities"] or s["retired_edges"]:
+        print(f"          снято с карты: {len(s['retired_entities'])} сущностей, "
+              f"{len(s['retired_edges'])} связей "
+              f"(больше не заявлены агентом, который в этом месяце выдал файл)")
+        for i in (s["retired_entities"] + s["retired_edges"])[:10]:
+            print("           снято", i)
+    # Печатается ОТДЕЛЬНО от warnings: список предупреждений режется двадцатью
+    # строками, а «агент сдал файл, из которого не выжило ничего» — то, ради чего
+    # прогон стоит перезапустить, и потеряться в обрезке оно не должно.
+    for a in s["broken_agents"]:
+        print(f"          {a}: файл сдан, но не выжила ни одна строка — строки этого "
+              f"агента НЕ сняты с карты; посмотрите его файл в _rejected/")
+    for i in s["held_entities"]:
+        print(f"          сущность '{i}' больше не заявлена, но на неё ссылается связь "
+              f"молчавшего агента — оставлена на карте")
     for w in s["warnings"][:20]:
         print("          ", w)
     if s["rejects_dir"]:

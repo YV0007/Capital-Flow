@@ -79,7 +79,7 @@ def _migrate(con: sqlite3.Connection) -> None:
     # Who wrote this row. Without it the ingest cannot tell "the agent looked and
     # dropped this" from "the agent did not run this month" — and so can never
     # retire anything safely. See RUNBOOK, «молчание — не свидетельство».
-    for tbl in ("nveco_entity", "nveco_edge"):
+    for tbl in ("nveco_entity", "nveco_edge", "nvnet_entity", "nvnet_edge"):
         cols = {r[1] for r in con.execute(f"PRAGMA table_info({tbl})")}
         if cols and "owner_agent" not in cols:
             con.execute(f"ALTER TABLE {tbl} ADD COLUMN owner_agent TEXT")

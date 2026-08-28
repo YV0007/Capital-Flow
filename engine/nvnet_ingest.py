@@ -20,8 +20,8 @@ from datetime import date
 
 from . import db, nveco, nvnet
 from .ingest import is_search_url
-from .nveco_ingest import (_validate_entity, _validate_factors, _validate_source,
-                           WHY_COLUMNS)
+from .nveco_ingest import (_owned_by, _retiring_agents, _validate_entity,
+                           _validate_factors, _validate_source, WHY_COLUMNS)
 
 CAMEL = {"irreplaceability": "irreplaceability", "lock_in_depth": "lockInDepth",
          "time_to_replace": "timeToReplace", "strategic_control": "strategicControl"}
@@ -116,6 +116,13 @@ def build(month: str) -> dict:
     entities = {e["id"]: dict(e) for e in seed["entities"]}
     edges = {e["id"]: dict(e) for e in seed["edges"]}
     problems, rejects = [], []
+    # Владельцы строк достройки и размеры их файлов — рядом с данными, а не внутри
+    # них: сущность и связь уезжают в файл передачи как есть, и лишнее поле там
+    # уронил бы валидатор контракта. Оба словаря нужны persist'у, чтобы снять с
+    # карты то, что из CSV исчезло, и только за теми каталогами, кто в этом месяце
+    # действительно сдал файл.
+    owners = {"entity": {}, "edge": {}}
+    per_file = {}                       # (каталог, файл) -> сколько строк БЫЛО
 
     # ── достройка из runs/<month>/nvnet-*/ ────────────────────────────────────
     month_dir = db.RUNS_DIR / month
@@ -138,7 +145,10 @@ def build(month: str) -> dict:
         f = adir / "entities.csv"
         if not f.exists():
             f = None
+        else:
+            per_file[(adir.name, "entities.csv")] = 0
         for line, row in (_read(f) if f else ()):
+            per_file[(adir.name, "entities.csv")] += 1
             clean, errs, warns = _validate_entity(row, layer_ids, sector_idx)
             problems += [f"{adir.name}/entities.csv:{line} {w}" for w in warns]
             if errs:
@@ -171,6 +181,7 @@ def build(month: str) -> dict:
                 "hops": None, "firstSeen": month, "lastConfirmed": month,
                 "stale": False, "sources": [],
             }
+            owners["entity"][clean["id"]] = adir.name
             new_ent += 1
 
         f = adir / "factors.csv"
@@ -185,7 +196,9 @@ def build(month: str) -> dict:
 
         f = adir / "edges.csv"
         if f.exists():
+            per_file[(adir.name, "edges.csv")] = 0
             for line, row in _read(f):
+                per_file[(adir.name, "edges.csv")] += 1
                 clean, errs, warns = _validate_edge(row, types)
                 problems += [f"{adir.name}/edges.csv:{line} {w}" for w in warns]
                 if not errs:
@@ -206,6 +219,7 @@ def build(month: str) -> dict:
                 edges[eid] = {"id": eid, **clean, "status": "signal", "confidence": None,
                               "sourceTier": None, "confirmedSources": 0,
                               "lastConfirmed": month, "evidence": []}
+                owners["edge"][eid] = adir.name
                 new_edge += 1
 
     # Источники — ВТОРЫМ проходом, когда связи всех каталогов уже загружены. Иначе
@@ -265,6 +279,41 @@ def build(month: str) -> dict:
             edges[eid]["_detail_en"] = en
             detail_rows += 1
 
+    # ── description: развёрнутое описание узла, отдельным файлом ──────────────
+    # Отдельный вход по тем же двум причинам, что и details.csv у связи: 106 из 107
+    # сущностей приходят из семени, где такой колонки нет и не будет (конвейер v2
+    # заморожен), а описание обновляется чаще самого профиля. Файл — единственный дом
+    # текста: в nvnet_entity он не кладётся, потому что там живёт только достройка, а
+    # описание пишется в первую очередь СЕМЕННЫМ сущностям.
+    desc_rows = 0
+    for adir in agent_dirs:
+        f = adir / "descriptions.csv"
+        if not f.exists():
+            continue
+        per_file[(adir.name, "descriptions.csv")] = 0
+        for line, row in _read(f):
+            per_file[(adir.name, "descriptions.csv")] += 1
+            eid = (row.get("entity_id") or "").strip()
+            ru = (row.get("description_ru") or "").strip()
+            en = (row.get("description_en") or "").strip()
+            if eid not in entities:
+                rejects.append({"file": f"{adir.name}/descriptions.csv", "line": line,
+                                "reason": f"описание для неизвестной сущности '{eid}'",
+                                "row": str(row)[:200]})
+                continue
+            if not ru or not en:
+                rejects.append({"file": f"{adir.name}/descriptions.csv", "line": line,
+                                "reason": "описание должно быть на обоих языках; "
+                                          "пустая сторона — это не пропуск, а брак",
+                                "row": str(row)[:200]})
+                continue
+            if entities[eid].get("description"):
+                problems.append(f"{adir.name}/descriptions.csv:{line} у '{eid}' уже "
+                                f"есть описание от другого каталога — перезаписано")
+            entities[eid]["description"] = ru
+            entities[eid]["_description_en"] = en
+            desc_rows += 1
+
     # ── ЖЕЛЕЗНОЕ ПРАВИЛО: новая связь без источника не пишется ────────────────
     for eid in [k for k, v in edges.items() if not v.get("evidence")]:
         if src_by_owner.get(("edge", eid)):
@@ -304,7 +353,14 @@ def build(month: str) -> dict:
                 if why:
                     edges[key]["clamped"] = "; ".join(why) + ": нет источника тира 1–3"
         elif kind == "entity" and key in entities:
-            entities[key]["sources"] = rows
+            # СЛИЯНИЕ, а не перезапись — по той же причине, что у связи выше.
+            # Источник, добавленный ради цифры в `description`, не должен стирать
+            # документ, на котором стоит сам профиль: у семенных сущностей это
+            # единственная строка доказательств, и перезапись молча уносила бы её.
+            have = {(s["url"], s["quote"]) for s in entities[key].get("sources") or []}
+            entities[key]["sources"] = (list(entities[key].get("sources") or [])
+                                        + [r for r in rows
+                                           if (r["url"], r["quote"]) not in have])
 
     # ── критичность новых сущностей по той же рубрике ─────────────────────────
     for eid, fs in factors_by_ent.items():
@@ -336,14 +392,85 @@ def build(month: str) -> dict:
         edges.pop(k)
 
     return {"entities": entities, "edges": edges, "seed": seed,
+            "owners": owners, "perFile": per_file,
             "newEntities": new_ent, "newEdges": new_edge, "newSources": new_src,
-            "details": detail_rows,
+            "details": detail_rows, "descriptions": desc_rows,
             "problems": problems, "rejects": rejects, "dropped": dropped,
             "missingPivots": missing_pivots, "pivots": sorted(pivot_set)}
 
 
-def persist(month: str, net: dict) -> None:
-    """Сохраняет ТОЛЬКО достройку: семя живёт в nveco_* и не дублируется."""
+def _drop_i18n(con, kind, ids):
+    """Перевод снятой строки — сирота. Удаляется ТОЛЬКО если id не живёт в v2:
+    склад переводов один на обе карты (scope='nveco'), и id, который ещё есть в
+    nveco_*, принадлежит не нам."""
+    if not ids or not con.execute(
+            "SELECT 1 FROM sqlite_master WHERE type='table' AND name='i18n_text'").fetchone():
+        return
+    v2 = "nveco_entity" if kind == "entity" else "nveco_edge"
+    for oid in ids:
+        if con.execute(f"SELECT 1 FROM {v2} WHERE id=?", (oid,)).fetchone():
+            continue
+        con.execute("DELETE FROM i18n_text WHERE scope='nveco' AND kind=? AND obj_id=?",
+                    (kind, oid))
+
+
+def _retire(con, month, net) -> dict:
+    """Снять с карты строки достройки, которых больше нет в CSV этого месяца.
+
+    Правило и его четыре случая — общие с v2, см. `_retiring_agents` в
+    nveco_ingest: снимает только каталог, который в этом месяце реально сдал файл
+    и сдал не пустой мусор. Семя не трогается вовсе — оно живёт в nveco_* и в
+    nvnet_* его нет.
+    """
+    alive = {"entity": {}, "edge": {}}
+    for kind, key in (("entity", "entities"), ("edge", "edges")):
+        for oid, agent in net["owners"][kind].items():
+            if oid in net[key]:
+                alive[kind][agent] = alive[kind].get(agent, 0) + 1
+
+    may_edges, broken = _retiring_agents(net["perFile"], "edges.csv", alive["edge"])
+    stale_edges = _owned_by(con, "nvnet_edge", set(may_edges), set(net["edges"]))
+    for eid in stale_edges:
+        con.execute("DELETE FROM nvnet_source WHERE owner_kind='edge' AND owner_id=?", (eid,))
+        con.execute("DELETE FROM nvnet_edge WHERE id=?", (eid,))
+    _drop_i18n(con, "edge", stale_edges)
+
+    may_ents, broken_e = _retiring_agents(net["perFile"], "entities.csv", alive["entity"])
+    stale_ents, held = [], []
+    for eid in _owned_by(con, "nvnet_entity", set(may_ents), set(net["entities"])):
+        # nvnet_edge ссылается на сущности БЕЗ внешнего ключа: source_id там свободный
+        # текст, потому что половина концов лежит в семени. Каскада нет — значит и
+        # висячей ссылки быть не должно, проверяем руками.
+        used = con.execute("SELECT COUNT(*) c FROM nvnet_edge WHERE source_id=? OR target_id=?",
+                           (eid, eid)).fetchone()["c"]
+        (held if used else stale_ents).append(eid)
+    for eid in stale_ents:
+        con.execute("DELETE FROM nvnet_source WHERE owner_kind='entity' AND owner_id=?", (eid,))
+        con.execute("DELETE FROM nvnet_entity_factor WHERE entity_id=?", (eid,))
+        con.execute("DELETE FROM nvnet_entity WHERE id=?", (eid,))
+    _drop_i18n(con, "entity", stale_ents)
+
+    # Пары БЕЗ связи — тот же вопрос: файл существует, значит он и есть полный список
+    # проверенных пар этого месяца. Файла нет — прошлый список остаётся как был.
+    stale_pairs = []
+    gaps = db.RUNS_DIR / month / "nvnet-gaps" / "not_found.csv"
+    if gaps.exists():
+        keep = {(row.get("pair_id") or "").strip() for _, row in _read(gaps)}
+        stale_pairs = [r["pair_id"] for r in con.execute("SELECT pair_id FROM nvnet_not_found")
+                       if r["pair_id"] not in keep]
+        for pid in stale_pairs:
+            con.execute("DELETE FROM nvnet_not_found WHERE pair_id=?", (pid,))
+
+    return {"entities": stale_ents, "edges": stale_edges, "pairs": stale_pairs,
+            "held": held, "broken": sorted(set(broken + broken_e))}
+
+
+def persist(month: str, net: dict) -> dict:
+    """Сохраняет ТОЛЬКО достройку: семя живёт в nveco_* и не дублируется.
+
+    Авторитетно за свой месяц: строка, исчезнувшая из CSV каталога, который в этом
+    месяце выдал файл, снимается вместе с источниками и переводом. Возвращает, что
+    было снято."""
     con = db.connect()
     con.executescript((db.ROOT / "db" / "schema_nvnet.sql").read_text())
     seed_ids = {e["id"] for e in net["seed"]["entities"]}
@@ -355,14 +482,14 @@ def persist(month: str, net: dict) -> None:
             """INSERT OR REPLACE INTO nvnet_entity (id,name,aliases,type,role,sector,
                  primary_layer,layers,phase,ticker,public_private,geo,founded,
                  revenue_usd_b,one_liner,why_irreplaceable,what_breaks_it,geo_risk,
-                 geo_risk_note,export_regime,concentration)
-               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                 geo_risk_note,export_regime,concentration,owner_agent)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
             (eid, e["name"], "|".join(e["aliases"]), e["type"], e["role"], e["sector"],
              e["primaryLayer"], "|".join(l["layer"] for l in e["layers"]), e["phase"],
              e["ticker"], e["publicPrivate"], e["geo"], e["founded"], e["revenueUsdB"],
              e["oneLiner"], e["whyIrreplaceable"], e["whatBreaksIt"],
              e["risk"]["geopolitical"], e["risk"]["note"], e["risk"]["exportRegime"],
-             e["risk"]["concentration"]))
+             e["risk"]["concentration"], net["owners"]["entity"].get(eid)))
     for eid, x in net["edges"].items():
         if eid in seed_edges:
             continue
@@ -371,8 +498,8 @@ def persist(month: str, net: dict) -> None:
                  direction,strength,lock_in_depth,substitutability,is_reversible,status,
                  confidence,source_tier,confirmed_sources,risk_level,risk_type,
                  risk_timeline,risk_mitigation,tech_node,formed,strengthened,
-                 last_confirmed,note,clamped,origin)
-               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                 last_confirmed,note,clamped,origin,owner_agent)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
             (eid, x["source"], x["target"], x["type"], x["spine"], x["direction"],
              x["strength"], x.get("lockInDepth"), x.get("substitutability"),
              1 if x.get("isReversible") else 0, x["status"], x["confidence"],
@@ -380,7 +507,7 @@ def persist(month: str, net: dict) -> None:
              (x["risk"] or {}).get("type"), (x["risk"] or {}).get("timeline"),
              (x["risk"] or {}).get("mitigation"), x.get("techNode"), x.get("formed"),
              x.get("strengthened"), x.get("lastConfirmed"), x.get("note"),
-             x.get("clamped"), x.get("origin")))
+             x.get("clamped"), x.get("origin"), net["owners"]["edge"].get(eid)))
         for ev in x["evidence"]:
             con.execute(
                 """INSERT OR IGNORE INTO nvnet_source (owner_kind,owner_id,tier,type,
@@ -397,8 +524,10 @@ def persist(month: str, net: dict) -> None:
                      (pair_id,entity_a,entity_b,expected,reason) VALUES (?,?,?,?,?)""",
                 (row["pair_id"], row["entity_a"], row["entity_b"],
                  row.get("expected"), row["reason"]))
+    retired = _retire(con, month, net)
     con.commit()
     con.close()
+    return retired
 
 
 if __name__ == "__main__":
