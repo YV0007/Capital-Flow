@@ -6,7 +6,7 @@
 
 Очередь отвечает на один вопрос: **что делать дальше и почему именно это.**
 Сортирует по важности, показывает уже сделанное, и умеет отдать транш в том
-виде, в каком его ждёт агент `nveco-prose`.
+виде, в каком его ждёт агент `nvnet-prose`.
 
     python tools/prose_queue.py                 # состояние очереди
     python tools/prose_queue.py --next 20       # следующий транш
@@ -108,7 +108,7 @@ def tranche(edges, ents, n):
 
 
 def write_csv(rows, month):
-    d = OUT_DIR / month / "nveco-prose"
+    d = OUT_DIR / month / "nvnet-prose"
     d.mkdir(parents=True, exist_ok=True)
     ed = [r for r in rows if r["kind"] == "edge"]
     en = [r for r in rows if r["kind"] == "entity"]

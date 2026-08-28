@@ -1,4 +1,4 @@
-# nveco-prose — переписывание прозы карты с источниками
+# nvnet-prose — переписывание прозы карты с источниками
 
 **Сначала `agents/nveco-CONTEXT.md`.** Затем `docs/ECOSYSTEM-ENGINE.md` (как
 устроена карта) и текущая поставка `handoff/ai_ecosystem_network.json`.
@@ -124,7 +124,7 @@ AMD или CUDA. **А таксономия и так на экране**: кар
 
 ## 6. Выдача
 
-Пишите в `runs/<YYYY-MM>/nveco-prose/`:
+Пишите в `runs/<YYYY-MM>/nvnet-prose/`:
 
 ```
 notes.csv       edge_id,note_ru,note_en
