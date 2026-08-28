@@ -1,0 +1,201 @@
+[
+  {
+    "target": "BlackRock (El Paso Data Center JV)",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Meta"
+    ],
+    "last_event": "2026-07-28",
+    "capital_usd": 2300000000.0,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/meta-announces-new-strategic-venture-with-blackrock-to-develop-data-center-in-el-paso-302836040.html"
+    ]
+  },
+  {
+    "target": "APR Energy",
+    "target_type": "private",
+    "sector": "power-energy",
+    "allocators": [
+      "Elon Musk"
+    ],
+    "last_event": "2026-06-23",
+    "capital_usd": 1000000000.0,
+    "deal_source_urls": [
+      "https://www.ftc.gov/legal-library/browse/early-termination-notices/20261350"
+    ]
+  },
+  {
+    "target": "Amazon.com Inc.",
+    "target_type": "public",
+    "sector": "cloud-hyperscale",
+    "allocators": [
+      "Thrive Capital"
+    ],
+    "last_event": "2026-08-14",
+    "capital_usd": 215500000.0,
+    "deal_source_urls": [
+      "https://www.bloomberg.com/news/articles/2026-08-14/kushner-s-thrive-capital-invests-215-million-in-amazon"
+    ]
+  },
+  {
+    "target": "Strategic Bauxite USA",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-08-07",
+    "capital_usd": 85500000.0,
+    "deal_source_urls": [
+      "https://www.war.gov/News/Releases/Release/Article/4566604/department-of-war-announces-an-855-million-agreement-with-strategic-bauxite-usa/"
+    ]
+  },
+  {
+    "target": "Volta AI Infra Holdings",
+    "target_type": "private",
+    "sector": "neocloud",
+    "allocators": [
+      "Andreessen Horowitz",
+      "Altimeter"
+    ],
+    "last_event": "2026-08-04",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.bloomberg.com/news/articles/2026-08-04/nvidia-dell-back-ai-cloud-startup-volta-at-2-4-billion-value"
+    ]
+  },
+  {
+    "target": "Valar Atomics Inc.",
+    "target_type": "private",
+    "sector": "nuclear",
+    "allocators": [
+      "Sequoia"
+    ],
+    "last_event": "2026-08-03",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://techcrunch.com/2026/08/03/sequoias-shaun-maguire-leads-1b-round-for-nuclear-startup-valar-atomics/"
+    ]
+  },
+  {
+    "target": "Stack Infrastructure (Melbourne data center)",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Blue Owl"
+    ],
+    "last_event": "2026-07-30",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.bloomberg.com/news/articles/2026-07-30/blue-owl-s-stack-seeks-5-9-billion-loan-extending-ai-debt-boom"
+    ]
+  },
+  {
+    "target": "Point2 Technology",
+    "target_type": "private",
+    "sector": "networking",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-08-10",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://point2tech.com/point2-completes-136m-series-b-funding-with-arm-lb-investment-and-maverick-silicon/"
+    ]
+  },
+  {
+    "target": "NextEra-Brookfield Paducah AI Data Center Campus",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Brookfield"
+    ],
+    "last_event": "2026-07-29",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.energy.gov/articles/energy-department-announces-partnership-expand-reliable-affordable-energy-access-and-power"
+    ]
+  },
+  {
+    "target": "Neros Technologies",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "Sequoia"
+    ],
+    "last_event": "2026-08-11",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/neros-raises-250m-series-c-at-2-5b-valuation-to-scale-autonomous-and-interceptor-drone-programs-302848736.html"
+    ]
+  },
+  {
+    "target": "Mexico private credit / infrastructure market",
+    "target_type": "asset",
+    "sector": "private-credit",
+    "allocators": [
+      "Apollo"
+    ],
+    "last_event": "2026-07-16",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.bloomberg.com/news/articles/2026-07-16/apollo-bets-on-mexico-with-20-billion-target-for-private-credit"
+    ]
+  },
+  {
+    "target": "Mate Security",
+    "target_type": "private",
+    "sector": "cybersecurity",
+    "allocators": [
+      "Microsoft"
+    ],
+    "last_event": "2026-07-28",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.securityweek.com/mate-security-raises-35-million-for-agentic-soc/"
+    ]
+  },
+  {
+    "target": "Gradium",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Eric Schmidt"
+    ],
+    "last_event": "2026-07-09",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://techcrunch.com/2026/07/09/paris-based-ai-voice-startup-gradium-raises-100m-seed-backed-by-nvidia/"
+    ]
+  },
+  {
+    "target": "Blacksmith",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Alphabet"
+    ],
+    "last_event": "2026-08-12",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.blacksmith.sh/blog/announcing-blacksmiths-series-b-led-by-peak-xv-partners"
+    ]
+  },
+  {
+    "target": "AI Compute Infrastructure Financing Platform (NVIDIA-anchored)",
+    "target_type": "project",
+    "sector": "ai-compute",
+    "allocators": [
+      "Blackstone",
+      "BlackRock",
+      "Brookfield",
+      "KKR"
+    ],
+    "last_event": "2026-08-10",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Partners-With-Apollo-BlackRock-Blackstone-Brookfield-Goldman-Sachs-and-KKR-to-Establish-AI-Compute-Infrastructure-Financing-Platforms-to-Mobilize-Over-500-Billion-of-Third-Party-Capital/default.aspx"
+    ]
+  }
+]

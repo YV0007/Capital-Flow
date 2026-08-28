@@ -1,0 +1,187 @@
+[
+  {
+    "target": "BlackRock (El Paso Data Center JV)",
+    "description": "Joint venture between Meta and BlackRock funds to build a ~1GW AI data-center campus in El Paso, Texas, at ~$14B total development cost. BlackRock funds hold 80% and Meta 20%; Meta contributed land/construction-in-progress (~$2.3B) and BlackRock made a ~$4.9B cash contribution. Announced July 28, 2026, first capacity due 2028.",
+    "website": null,
+    "read_more": {"label": "CNBC", "url": "https://www.cnbc.com/2026/07/28/meta-blackrock-partner-on-14-billion-el-paso-data-center.html"},
+    "sources": [
+      "https://www.prnewswire.com/news-releases/meta-announces-new-strategic-venture-with-blackrock-to-develop-data-center-in-el-paso-302836040.html",
+      "https://about.fb.com/news/2026/07/meta-announces-new-venture-with-blackrock-to-develop-data-center-in-el-paso/",
+      "https://www.forbes.com/sites/maryroeloffs/2026/07/28/blackrock-will-own-80-of-metas-massive-new-ai-data-center-in-el-paso/",
+      "https://www.cnbc.com/2026/07/28/meta-blackrock-partner-on-14-billion-el-paso-data-center.html"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "APR Energy",
+    "description": "Jacksonville, FL mobile power-generation firm operating one of the world's largest mobile gas/diesel turbine fleets (1.1+ GW), serving data centers and utilities with rapidly deployable on-site power. Quietly acquired by Elon Musk in a deal estimated at $1B+, disclosed via a May 2026 FTC early-termination filing and reported to be aimed at powering xAI's compute buildout.",
+    "website": "https://www.aprenergy.com",
+    "read_more": {"label": "Tom's Hardware", "url": "https://www.tomshardware.com/tech-industry/data-centers/elon-musk-spent-estimated-usd1-billion-on-an-energy-company-to-power-xai-filings-reveal-apr-energy-owns-a-fleet-of-trailer-mounted-gas-and-diesel-turbines-capable-of-generating-more-than-1-gigawatt"},
+    "sources": [
+      "https://www.ftc.gov/legal-library/browse/early-termination-notices/20261350",
+      "https://www.datacenterdynamics.com/en/news/elon-musk-quietly-acquires-mobile-gas-generation-firm-apr-energy-report/",
+      "https://www.tomshardware.com/tech-industry/data-centers/elon-musk-spent-estimated-usd1-billion-on-an-energy-company-to-power-xai-filings-reveal-apr-energy-owns-a-fleet-of-trailer-mounted-gas-and-diesel-turbines-capable-of-generating-more-than-1-gigawatt",
+      "https://www.aprenergy.com/about/"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "Amazon.com Inc.",
+    "description": "Public e-commerce and cloud-computing company (AWS). In August 2026 Joshua Kushner's Thrive Capital disclosed a $215.5M public-market stake (~904,000 shares as of Q2 2026), part of Thrive's broader push into large public AI-adjacent holdings alongside Figma, Shopify and StubHub.",
+    "website": "https://www.amazon.com",
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-08-14/kushner-s-thrive-capital-invests-215-million-in-amazon"},
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2026-08-14/kushner-s-thrive-capital-invests-215-million-in-amazon",
+      "https://www.benzinga.com/markets/private-markets/26/08/61226006/josh-kushners-thrive-capital-owns-nearly-1-million-amazon-shares",
+      "https://thenextweb.com/news/thrive-capital-amazon-215-million-public-markets"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "Strategic Bauxite USA",
+    "description": "Strategic Bauxite USA, LLC (SBX) is building a vertically integrated U.S. refractory-grade bauxite supply chain after acquiring the First Bauxite mine in Guyana. In August 2026 the Department of War committed $85.5M equity (via its IBAS program, plus $64.5M private co-investment) to expand the mine and build calcination/brown-fused-alumina processing, reducing reliance on Chinese sources.",
+    "website": null,
+    "read_more": {"label": "U.S. Department of War", "url": "https://www.war.gov/News/Releases/Release/Article/4566604/department-of-war-announces-an-855-million-agreement-with-strategic-bauxite-usa/"},
+    "sources": [
+      "https://www.war.gov/News/Releases/Release/Article/4566604/department-of-war-announces-an-855-million-agreement-with-strategic-bauxite-usa/",
+      "https://www.globalsecurity.org/military/library/news/2026/08/mil-260807-dod04.htm",
+      "https://guyanachronicle.com/2026/08/09/us-to-invest-us85-5m-to-expand-bauxite-operations-in-guyana/"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "Volta AI Infra Holdings",
+    "description": "Neocloud/AI-infrastructure startup founded in 2026 by ex-Brookfield infrastructure executives Ricard Boada and Sofia Gumuzio, targeting mid-sized 'Little Tech' AI labs. Emerged from stealth in August 2026 with a $300M round co-led by a16z and Altimeter (NVIDIA and Michael Dell participating) at a $2.4B valuation, alongside a $10B six-year compute contract and $5B infrastructure financing.",
+    "website": "https://www.voltainfra.com/",
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-08-04/nvidia-dell-back-ai-cloud-startup-volta-at-2-4-billion-value"},
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2026-08-04/nvidia-dell-back-ai-cloud-startup-volta-at-2-4-billion-value",
+      "https://techfundingnews.com/volta-raises-300m-at-2-4b-valuation-with-nvidia-and-dell-backing/",
+      "https://www.businesswire.com/news/home/20260804493428/en/Volta-Emerges-From-Stealth-With-$10-Billion-AI-Lab-Partnership-and-$5-Billion-AI-Infrastructure-Program",
+      "https://www.voltainfra.com/"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "Valar Atomics Inc.",
+    "description": "Nuclear startup building small modular reactors (factory-built SMRs) for AI-factory power, having demonstrated its Ward 250 reactor powering an NVIDIA Blackwell system. Raised a $1B Series B led by Sequoia partner Shaun Maguire in August 2026 at a $6B valuation (tripling its prior mark), plus a $200M credit line from Erebor and other banks.",
+    "website": "https://www.valaratomics.com",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/08/03/sequoias-shaun-maguire-leads-1b-round-for-nuclear-startup-valar-atomics/"},
+    "sources": [
+      "https://techcrunch.com/2026/08/03/sequoias-shaun-maguire-leads-1b-round-for-nuclear-startup-valar-atomics/",
+      "https://www.bloomberg.com/news/articles/2026-08-03/sequoia-leads-1-billion-funding-round-for-nuclear-startup-valar",
+      "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia",
+      "https://techfundingnews.com/a-high-school-dropouts-nuclear-startup-just-landed-1b-from-sequoia-at-a-6b-valuation/"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "Stack Infrastructure (Melbourne data center)",
+    "description": "Blue Owl Capital-owned hyperscale data-center developer/operator (STACK Infrastructure). In July 2026 it was seeking an A$8.5B (~$5.9B) syndicated loan to fund its third Melbourne, Australia data-center campus, extending the broader AI-datacenter debt-financing boom; talks were reported at an early stage.",
+    "website": "https://www.stackinfra.com/",
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-07-30/blue-owl-s-stack-seeks-5-9-billion-loan-extending-ai-debt-boom"},
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2026-07-30/blue-owl-s-stack-seeks-5-9-billion-loan-extending-ai-debt-boom",
+      "https://www.marketscreener.com/news/blue-owl-capital-s-stack-infrastructure-seeks-5-9-billion-loan-for-melbourne-data-center-ce7f50dad081fe26",
+      "https://www.stackinfra.com/"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "Point2 Technology",
+    "description": "Fabless semiconductor company building e-Tube, an RF-over-plastic-waveguide interconnect for multi-terabit AI data-center and automotive links, pitched as lower-power, longer-reach than copper. Closed a $136M total Series B in August 2026, the latest tranche led by LB Investment with new backing from Arm alongside NVIDIA, Maverick Silicon, Molex and Bosch Ventures.",
+    "website": "https://point2tech.com",
+    "read_more": {"label": "Point2 Technology", "url": "https://point2tech.com/point2-completes-136m-series-b-funding-with-arm-lb-investment-and-maverick-silicon/"},
+    "sources": [
+      "https://point2tech.com/point2-completes-136m-series-b-funding-with-arm-lb-investment-and-maverick-silicon/",
+      "https://www.citybiz.co/article/886627/point2-technology-raises-series-b-total-to-136m-for-ai-data-center-interconnects/",
+      "https://app.dealroom.co/news/note/point2-technology-completes-136m-series-b-with-arm-lb-investment-and-maverick-silicon"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "NextEra-Brookfield Paducah AI Data Center Campus",
+    "description": "A planned $100B+ AI data-center campus at the U.S. Department of Energy's former Paducah, Kentucky uranium-enrichment site, announced July 2026. Brookfield (DOE-selected via RFO) will lease, own and operate the data-center campus; NextEra Energy will build/own up to ~2GW dedicated gas plus ~2.6GW battery storage. Expected to support ~1.8GW utility and 1.2GW+ compute capacity.",
+    "website": null,
+    "read_more": {"label": "Department of Energy", "url": "https://www.energy.gov/articles/energy-department-announces-partnership-expand-reliable-affordable-energy-access-and-power"},
+    "sources": [
+      "https://www.energy.gov/articles/energy-department-announces-partnership-expand-reliable-affordable-energy-access-and-power",
+      "https://www.bloomberg.com/news/articles/2026-07-29/nextera-brookfield-to-build-100-billion-kentucky-data-campus",
+      "https://www.datacenterknowledge.com/data-center-construction/brookfield-nextera-launch-100b-ai-campus-at-doe-s-paducah-site",
+      "https://www.powermag.com/brookfield-nextera-to-develop-100b-data-center-campus-at-does-paducah-site-paired-with-4-6-gw-of-dedicated-generation/"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "Neros Technologies",
+    "description": "U.S. defense-tech maker of FPV/autonomous and counter-drone (interceptor) systems, including its Archer AI platform and Bandit c-UAS interceptor, aiming for 1M drones/year by 2028. Raised a $250M Series C in August 2026 co-led by Sequoia and the American Strategic Technology Fund at a $2.5B valuation, with Thiel Capital, Spark Capital, Valor Equity and others participating.",
+    "website": "https://www.neros.tech",
+    "read_more": {"label": "PR Newswire", "url": "https://www.prnewswire.com/news-releases/neros-raises-250m-series-c-at-2-5b-valuation-to-scale-autonomous-and-interceptor-drone-programs-302848736.html"},
+    "sources": [
+      "https://www.prnewswire.com/news-releases/neros-raises-250m-series-c-at-2-5b-valuation-to-scale-autonomous-and-interceptor-drone-programs-302848736.html",
+      "https://dronexl.co/2026/08/18/neros-250m-series-c-army-million-drones/",
+      "https://www.neros.tech/articles/neros-raises-250m-series-c-at-2-5b-valuation-to-scale-autonomous-and-interceptor-drone-programs"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "Mexico private credit / infrastructure market",
+    "description": "Not a single entity — the private-credit/infrastructure financing opportunity in Mexico that Apollo Global Management is targeting. In July 2026 Apollo said it aims to deploy up to $20B there via loans and structured financing for infrastructure projects, aligning with Mexico's push (under President Sheinbaum) to attract private capital. This is a stated deployment target, not a committed fund or single transaction.",
+    "website": null,
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-07-16/apollo-bets-on-mexico-with-20-billion-target-for-private-credit"},
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2026-07-16/apollo-bets-on-mexico-with-20-billion-target-for-private-credit",
+      "https://www.privateequitywire.co.uk/apollo-targets-up-to-20bn-of-private-credit-investments-in-mexico/",
+      "https://mexiconewsdaily.com/news/private-equity-giant-apollo-bets-us-20-billion-on-mexicos-infrastructure-buildout/"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "Mate Security",
+    "description": "Tel Aviv-based cybersecurity startup (founded 2025 by ex-Wiz/Microsoft veterans) building an agentic Security Operations Center platform that maintains a per-organization security context graph to automate detection, triage and response. Raised a $35M Series A in July 2026 led by Canaan Partners, with Insight Partners, Microsoft's M12 fund and Team8 participating, bringing total funding to $50M+.",
+    "website": "https://mate.security/",
+    "read_more": {"label": "SecurityWeek", "url": "https://www.securityweek.com/mate-security-raises-35-million-for-agentic-soc/"},
+    "sources": [
+      "https://www.securityweek.com/mate-security-raises-35-million-for-agentic-soc/",
+      "https://www.calcalistech.com/ctechnews/article/ryb30q8bge",
+      "https://thenewstack.io/mate-security-context-graph/"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "Gradium",
+    "description": "Paris-based voice-AI startup spun out of French lab Kyutai, co-founded by ex-Google Brain/DeepMind researcher Neil Zeghidour, building low-latency text-to-speech, speech-to-text and voice-cloning models. Reopened its seed round to reach $100M total in July 2026, adding NVIDIA alongside earlier backers Eric Schmidt, FirstMark, Eurazeo, DST Global Partners and Xavier Niel.",
+    "website": "https://gradium.ai",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/07/09/paris-based-ai-voice-startup-gradium-raises-100m-seed-backed-by-nvidia/"},
+    "sources": [
+      "https://techcrunch.com/2026/07/09/paris-based-ai-voice-startup-gradium-raises-100m-seed-backed-by-nvidia/",
+      "https://sifted.eu/articles/gradium-nvidia-30m-extension-seed",
+      "https://gradium.ai/"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "Blacksmith",
+    "description": "San Francisco startup providing cloud infrastructure for faster CI/CD and code-validation workflows (used by 6,000+ companies including Supabase and Clerk), positioned to handle rising AI-generated-code test volume. Raised a $45M Series B in August 2026 led by Peak XV Partners, with Y Combinator and GV participating, at a $550M valuation.",
+    "website": "https://www.blacksmith.sh",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/08/12/blacksmiths-valuation-jumps-10x-to-550m-as-ai-coding-fuels-software-validation/"},
+    "sources": [
+      "https://www.blacksmith.sh/blog/announcing-blacksmiths-series-b-led-by-peak-xv-partners",
+      "https://techcrunch.com/2026/08/12/blacksmiths-valuation-jumps-10x-to-550m-as-ai-coding-fuels-software-validation/",
+      "https://www.prnewswire.com/news-releases/blacksmith-raises-45m-series-b-from-peak-xv-partners-as-ai-generated-code-drives-demand-for-faster-code-validation-302849104.html"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "AI Compute Infrastructure Financing Platform (NVIDIA-anchored)",
+    "description": "A set of independent, NVIDIA-anchored financing platforms announced August 10, 2026 via MOUs with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR, aiming to mobilize $500B+ of third-party capital to fund data centers, power and AI infrastructure built on NVIDIA hardware — kept off NVIDIA's own balance sheet.",
+    "website": null,
+    "read_more": {"label": "NVIDIA Newsroom", "url": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital"},
+    "sources": [
+      "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Partners-With-Apollo-BlackRock-Blackstone-Brookfield-Goldman-Sachs-and-KKR-to-Establish-AI-Compute-Infrastructure-Financing-Platforms-to-Mobilize-Over-500-Billion-of-Third-Party-Capital/default.aspx",
+      "https://www.apollo.com/insights-news/pressreleases/2026/08/nvidia-partners-with-apollo",
+      "https://www.blackstone.com/news/press/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital/"
+    ],
+    "as_of": "2026-08-24"
+  }
+]

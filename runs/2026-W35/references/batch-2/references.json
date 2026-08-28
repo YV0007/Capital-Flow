@@ -1,0 +1,171 @@
+[
+  {
+    "target": "Poolside",
+    "description": "AI model-development startup building open-weight coding models (the Laguna family) via its internal \"Model Factory.\" NVIDIA struck a non-exclusive $6B licensing deal for that technology and separately invested $1B in a growth round at a $12-13B valuation, while extending offers to over 100 Poolside researchers.",
+    "website": "https://poolside.ai",
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-08-20/nvidia-to-pay-ai-startup-poolside-a-6-billion-license-newcomer-says"},
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2026-08-20/nvidia-to-pay-ai-startup-poolside-a-6-billion-license-newcomer-says",
+      "https://www.theinformation.com/briefings/nvidia-reportedly-pay-6-billion-licensing-hiring-deal-ai-model-startup-poolside",
+      "https://www.newcomer.co/p/sources-poolside-strikes-6-billion"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "Kepler",
+    "description": "Moraga, California startup (keplercompute.com) developing AI memory/logic chips using 3D-stacked ferroelectric architecture that puts compute next to weight storage, aimed at easing the von Neumann bottleneck. Signed a Commerce Dept. CHIPS Act letter of intent for up to $245M R&D funding (part of an $874M, 7-company tranche), with the government taking a minority equity stake. Note: batch context cites $490M; public reporting on this LOI states $245M for Kepler specifically.",
+    "website": "https://keplercompute.com",
+    "read_more": {"label": "NIST", "url": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million"},
+    "sources": [
+      "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million",
+      "https://www.benzinga.com/markets/tech/26/07/60830001/trump-administration-unveils-874-million-chips-act-ai-push-with-globalfoundries-securing-top-award",
+      "https://keplercompute.com/"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "Gravis Robotics",
+    "description": "ETH Zurich spinout (founded 2022, ~75 people) building the \"Gravis Rack,\" a hardware-agnostic retrofit system that makes existing excavators and heavy construction equipment (Caterpillar, John Deere, JCB, Hitachi, Volvo) autonomous. Raised a $200M Series A solely from SoftBank on Aug 17, 2026 — the largest in construction-robotics history — valuing it at $1B.",
+    "website": "https://www.gravisrobotics.com",
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-08-17/softbank-invests-200-million-in-construction-startup-gravis-robotics"},
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2026-08-17/softbank-invests-200-million-in-construction-startup-gravis-robotics",
+      "https://www.forbes.com/sites/johnkoetsier/2026/08/17/excavators-meet-ai-gravis-nabs-200-million-from-softbank-to-give-construction-equipment-brains/",
+      "https://www.gravisrobotics.com/series-a"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "Aeluma Inc.",
+    "description": "Publicly traded (Nasdaq: ALMU) semiconductor company developing non-InP substrate photonics for high-speed datacom, quantum, and AI-interconnect applications. Signed a Dept. of Commerce CHIPS R&D Office letter of intent on July 29, 2026 for up to $30M to scale domestic manufacturing of photodetectors and lasers for next-gen AI networking; award still subject to due diligence and definitive documents.",
+    "website": "https://www.aeluma.com",
+    "read_more": {"label": "GlobeNewswire", "url": "https://www.globenewswire.com/news-release/2026/07/29/3335059/0/en/Aeluma-and-Department-of-Commerce-Sign-CHIPS-Research-Development-Office-CRDO-Letter-of-Intent-for-up-to-30-Million-to-Accelerate-U-S-Leadership-in-AI-and-Advanced-Computing.html"},
+    "sources": [
+      "https://www.globenewswire.com/news-release/2026/07/29/3335059/0/en/Aeluma-and-Department-of-Commerce-Sign-CHIPS-Research-Development-Office-CRDO-Letter-of-Intent-for-up-to-30-Million-to-Accelerate-U-S-Leadership-in-AI-and-Advanced-Computing.html",
+      "https://www.aeluma.com/investors/news-events/press-releases/detail/110/aeluma-and-department-of-commerce-sign-chips-research",
+      "https://www.sec.gov/Archives/edgar/data/0001828805/000121390026083005/ea029978601ex99-1.htm"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "Veeda AI",
+    "description": "Toronto \"world model\" startup founded in 2026 by ex-NVIDIA researcher Sanja Fidler with Huan Ling and Zan Gojcic, building multimodal foundation models that simulate physical reality to train embodied/robotics AI. Raised a $90M+ seed co-led by Khosla Ventures and Radical Ventures on Aug 19, 2026 — one of the largest Canadian seed rounds ever, just three months after founding.",
+    "website": "https://veeda.ai",
+    "read_more": {"label": "SiliconANGLE", "url": "https://siliconangle.com/2026/08/19/sanja-fidlers-world-model-startup-veeda-ai-raises-90m-in-seed-funding/"},
+    "sources": [
+      "https://siliconangle.com/2026/08/19/sanja-fidlers-world-model-startup-veeda-ai-raises-90m-in-seed-funding/",
+      "https://betakit.com/former-nvidia-lab-leader-sanja-fidler-launches-veeda-ai-to-tackle-world-models/",
+      "https://veeda.ai/"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "Thrive Holdings Inc",
+    "description": "New York holding company spun out of Thrive Capital (Josh Kushner) that acquires legacy services businesses — accounting (Current, 50+ firms) and IT (Shield, ~20 firms) — and embeds AI into their operations; OpenAI took an equity stake in December 2025. Raised $2B at a $12B valuation on Aug 12, 2026 from Altimeter Capital, D1 Capital Partners and SoftBank.",
+    "website": "https://www.thriveholdings.com",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/"},
+    "sources": [
+      "https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/",
+      "https://www.pymnts.com/news/artificial-intelligence/2026/thrive-holdings-raises-2-billion-to-buy-and-rewire-services-firms-with-ai/",
+      "https://www.thriveholdings.com/"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "Rillet",
+    "description": "AI-native accounting/ERP platform serving 600+ finance teams. Raised a $100M Series C led by ICONIQ with Sequoia Capital and Andreessen Horowitz participating (Aug 19, 2026), hitting unicorn status at a $1B valuation two years after emerging from stealth; prior rounds were a $25M Series A (Sequoia) and $70M Series B (ICONIQ/a16z).",
+    "website": "https://www.rillet.com",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/08/19/rillet-raises-100m-series-c-at-1b-valuation-2-years-after-emerging-from-stealth/"},
+    "sources": [
+      "https://techcrunch.com/2026/08/19/rillet-raises-100m-series-c-at-1b-valuation-2-years-after-emerging-from-stealth/",
+      "https://fortune.com/2026/08/18/rillet-unicorn-1-billion-valuation-series-c-nicolas-kopp-accounting-ai/",
+      "https://www.rillet.com/blog/rillet-raises-100m-series-c-at-1b-valuation-to-build-accounting-superintelligence"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "Paducah DOE Site AI Data Center Campus",
+    "description": "A roughly $100B AI data-center campus planned on the DOE's Paducah, Kentucky site (a former uranium-enrichment plant), developed and operated by Brookfield with NextEra Energy building dedicated gas and battery generation (up to 4.6GW). Announced July 29, 2026; targets up to 1.2GW of compute load by 2032, with first components online as early as 2028.",
+    "website": null,
+    "read_more": {"label": "Brookfield (BAM)", "url": "https://bam.brookfield.com/press-releases/doe-site-western-kentucky-revitalized-data-center-campus-and-dedicated-energy"},
+    "sources": [
+      "https://bam.brookfield.com/press-releases/doe-site-western-kentucky-revitalized-data-center-campus-and-dedicated-energy",
+      "https://www.energy.gov/articles/energy-department-announces-partnership-expand-reliable-affordable-energy-access-and-power",
+      "https://www.datacenterdynamics.com/en/news/brookfield-to-develop-gigawatt-scale-data-center-campus-at-does-kentucky-nuclear-enrichment-plant/"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "Network Bio",
+    "description": "Biotech-AI startup founded 2022 (Asad Ali Ahmad, Raphael Potter) built on a research network of academic biobanks (Mass General Brigham, UPenn, CU Anschutz) providing the world's largest patient tissue/blood/clinical training dataset for disease-specific AI models, plus an NVIDIA collaboration on a cell-free-RNA foundation model. Launched publicly Aug 19, 2026 with $50M from Founders Fund, Section 32, Thiel Bio, Breyer Capital and others.",
+    "website": "https://www.network.bio",
+    "read_more": {"label": "citybiz", "url": "https://www.citybiz.co/article/891371/network-bio-launches-with-50m-to-scale-ai-driven-biomedical-platform/"},
+    "sources": [
+      "https://www.citybiz.co/article/891371/network-bio-launches-with-50m-to-scale-ai-driven-biomedical-platform/",
+      "https://pharmaphorum.com/news/50m-network-bio-launch-nvidia-collaboration",
+      "https://www.network.bio/"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "NVIDIA AI Compute Infrastructure Financing Platform",
+    "description": "Not a company but a set of MOU-based financing platforms NVIDIA is establishing with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to mobilize over $500B of third-party capital for AI-compute/datacenter buildout across NVIDIA's customer ecosystem (frontier labs, enterprises, neoclouds). Announced Aug 10, 2026; MOUs signed, no capital deployed under the framework yet.",
+    "website": null,
+    "read_more": {"label": "NVIDIA Newsroom", "url": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital"},
+    "sources": [
+      "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+      "https://www.blackstone.com/news/press/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital/",
+      "https://www.apollo.com/insights-news/pressreleases/2026/08/nvidia-partners-with-apollo"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "Mesh Optical Technologies",
+    "description": "Los Angeles startup founded by three former SpaceX Starlink laser-comms engineers (Travis Brashears, Cameron Ramos, Serena Grown-Haeberli) building optical transceivers (Alpha C1, 1.6Tbps) linking GPUs across AI datacenters at lower power than copper. Raised a $50M Series A led by Thrive Capital in Feb 2026; Elon Musk personally got FTC clearance to acquire the company on June 25, 2026 (terms undisclosed).",
+    "website": "https://www.meshoptical.com",
+    "read_more": {"label": "Data Center Dynamics", "url": "https://www.datacenterdynamics.com/en/news/elon-musk-gets-ftc-nod-to-acquire-data-center-optics-business-mesh-optical/"},
+    "sources": [
+      "https://www.ftc.gov/legal-library/browse/early-termination-notices/20261601",
+      "https://www.datacenterdynamics.com/en/news/elon-musk-gets-ftc-nod-to-acquire-data-center-optics-business-mesh-optical/",
+      "https://siliconangle.com/2026/02/17/mesh-optical-technologies-raises-50m-mass-produce-american-made-data-center-links/",
+      "https://www.meshoptical.com/"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "Khosla Ventures (new fund family, unnamed)",
+    "description": "Vinod Khosla's venture firm is in talks to raise a record $5.5B across a new set of funds (~$1B seed, $2B early-stage, $2.5B growth) — its largest fundraise ever, reflecting heavy AI conviction (early OpenAI, Cognition, Sakana AI backer). Reported by Bloomberg July 23, 2026; talks were private and fund sizes/names not yet finalized.",
+    "website": "https://www.khoslaventures.com",
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-07-23/khosla-ventures-in-talks-to-raise-5-5-billion-in-new-funds"},
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2026-07-23/khosla-ventures-in-talks-to-raise-5-5-billion-in-new-funds",
+      "https://dealroom.co/news/141179-khosla-ventures-targets-record-5-5b-fund-most-for-early-stage-ai/",
+      "https://pulse2.com/khosla-ventures-reportedly-in-talks-to-raise-5-5-billion-in-new-funds/"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "Castelion",
+    "description": "Defense-tech startup developing Blackbeard, a low-cost mass-producible hypersonic strike missile (program of record, fielding targeted 2027), with $500M+ in US military contracts over 18 months. Raised a $1B Series C ($800M equity + $250M credit facility) on Aug 19, 2026, co-led by J.P. Morgan's Strategic Investment Group, Andreessen Horowitz and Carlyle, with Altimeter, Lightspeed and General Catalyst participating; values Castelion at $13B.",
+    "website": "https://www.castelion.com",
+    "read_more": {"label": "SpaceNews", "url": "https://spacenews.com/hypersonic-missile-startup-castelion-raises-1-billion/"},
+    "sources": [
+      "https://www.prnewswire.com/news-releases/castelion-raises-1-billion-series-c-to-scale-production-of-low-cost-hypersonic-weapons-302855711.html",
+      "https://spacenews.com/hypersonic-missile-startup-castelion-raises-1-billion/",
+      "https://www.castelion.com/news/series-c/"
+    ],
+    "as_of": "2026-08-24"
+  },
+  {
+    "target": "Akita AI Data Center (BitGrid / S2 JV)",
+    "description": "A planned ~2 trillion yen (~$12.6B), up to 500MW AI data-center project in Akita, Japan, via a joint special-purpose company formed by US startup Bitgrit and local firm S2 (first MOU with Akita city, Oct 2025); a smaller 1.5MW facility is targeted for late 2027. UAE sovereign fund Mubadala (via MGX) is reportedly weighing an investment of up to ~$6.3-6.8B. Note: batch spells the partner \"BitGrid\"; press coverage consistently spells it \"Bitgrit\" — likely the same entity, spelling unconfirmed.",
+    "website": null,
+    "read_more": {"label": "Data Center Dynamics", "url": "https://www.datacenterdynamics.com/en/news/uaes-mubadala-considers-investing-in-500mw-bitgrit-s2-data-center-in-akita-japan/"},
+    "sources": [
+      "https://www.datacenterdynamics.com/en/news/uaes-mubadala-considers-investing-in-500mw-bitgrit-s2-data-center-in-akita-japan/",
+      "https://www.japantimes.co.jp/business/2026/08/06/uae-fund-data-center/",
+      "https://www.investmentmonitor.ai/news/mubadala-talks-japans-12-6bn-data-centre/"
+    ],
+    "as_of": "2026-08-24"
+  }
+]

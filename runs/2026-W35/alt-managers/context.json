@@ -1,0 +1,186 @@
+{
+  "week": "2026-W35",
+  "agent": "alt-managers",
+  "feedback_from_runs": [
+    "2026-W32",
+    "2026-W33",
+    "2026-W34"
+  ],
+  "how_to_use": "1) WHAT YOU ALREADY HAVE \u2014 search FORWARD from each entity's last_event_date; don't re-find old deals. Use the deterministic EDGAR path when cik is present (agents/CONTEXT.md \u2192 Tools) and run `engine.edgar exists` before writing a row. Aliases are the SAME entity \u2014 never file one as new. stale_candidates are existing rows needing a Tier-1 confirm, not new deals to re-file. 2) WHAT WORKED \u2014 check `check_first` sources before searching broadly. 3) WHAT YOU GOT WRONG \u2014 these are real rejects from recent runs; don't repeat them.",
+  "what_you_already_have": {
+    "entities": [
+      {
+        "allocator": "Apollo",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": null,
+        "events_on_file": 0,
+        "sectors_active": [],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": null,
+        "ticker": null,
+        "edgar_path": "search",
+        "recent_targets": []
+      },
+      {
+        "allocator": "BlackRock",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": null,
+        "events_on_file": 0,
+        "sectors_active": [],
+        "known_vehicles": [],
+        "aliases": [
+          "blackrock (gip)",
+          "blackrock / gip",
+          "blackrock/gip",
+          "gip",
+          "global infrastructure partners"
+        ],
+        "cik": "0002012383",
+        "ticker": "BLK",
+        "edgar_path": "deterministic",
+        "recent_targets": []
+      },
+      {
+        "allocator": "Blackstone",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": null,
+        "events_on_file": 0,
+        "sectors_active": [],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": "0001393818",
+        "ticker": "BX",
+        "edgar_path": "deterministic",
+        "recent_targets": []
+      },
+      {
+        "allocator": "Brookfield",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "CA",
+        "network": null,
+        "last_event_date": null,
+        "events_on_file": 0,
+        "sectors_active": [],
+        "known_vehicles": [],
+        "aliases": [
+          "brookfield asset management",
+          "brookfield infrastructure"
+        ],
+        "cik": "0001937926",
+        "ticker": "BAM",
+        "edgar_path": "deterministic",
+        "recent_targets": []
+      },
+      {
+        "allocator": "DigitalBridge",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": null,
+        "events_on_file": 0,
+        "sectors_active": [],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": "0001679688",
+        "ticker": "DBRG",
+        "edgar_path": "deterministic",
+        "recent_targets": []
+      },
+      {
+        "allocator": "Goldman Sachs",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": null,
+        "events_on_file": 0,
+        "sectors_active": [],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": "0000886982",
+        "ticker": "GS",
+        "edgar_path": "deterministic",
+        "recent_targets": []
+      },
+      {
+        "allocator": "SoftBank",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "JP",
+        "network": null,
+        "last_event_date": null,
+        "events_on_file": 0,
+        "sectors_active": [],
+        "known_vehicles": [],
+        "aliases": [
+          "softbank group",
+          "softbank group corp",
+          "softbank vision fund"
+        ],
+        "cik": "0001065521",
+        "ticker": "SFTBF",
+        "edgar_path": "deterministic",
+        "recent_targets": []
+      }
+    ],
+    "stale_candidates": []
+  },
+  "what_worked": {
+    "check_first": [],
+    "detail": []
+  },
+  "what_you_got_wrong": {
+    "this_class": [
+      {
+        "code": "W7",
+        "lesson": "a >=$1B fund/firm has no holdings collected.",
+        "occurrences": 10,
+        "examples": [
+          "Brookfield: $153.9B fund/firm with no holdings collected",
+          "BlackRock: $44.9B fund/firm with no holdings collected"
+        ]
+      },
+      {
+        "code": "W3",
+        "lesson": "a key allocator with events has no profile yet (profiler coverage gap).",
+        "occurrences": 4,
+        "examples": [
+          "Apollo: key allocator with events but no profile",
+          "Goldman Sachs: key allocator with events but no profile"
+        ]
+      }
+    ],
+    "all_classes": [
+      {
+        "code": "W8",
+        "lesson": "a >=$1B investable target has no ai_posture tag.",
+        "occurrences": 21,
+        "examples": [
+          "Electronic Arts: $33.6B investable target with no ai_posture",
+          "OpenAI Group PBC: $21.3B investable target with no ai_posture"
+        ]
+      },
+      {
+        "code": "W7",
+        "lesson": "a >=$1B fund/firm has no holdings collected.",
+        "occurrences": 7,
+        "examples": [
+          "KKR: $24.7B fund/firm with no holdings collected",
+          "KKR Global Infrastructure Investors V: $19.2B fund/firm with no holdings collected"
+        ]
+      }
+    ]
+  }
+}
