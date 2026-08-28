@@ -1,0 +1,88 @@
+# Conviction model constants (spec §B2). EVERY constant here is [PROPOSED] — the
+# model is documented in docs/conviction-model.md and is meant to be tuned against
+# real bets, not treated as settled. The engine reads this file; nothing is
+# hardcoded in Python, so tuning never requires a code change.
+#
+# version is stamped onto every score in fund_position_deltas.conviction_components,
+# so a score can always be traced back to the constants that produced it.
+version: "1.0-PROPOSED"
+
+# ── Component weights. MUST sum to 1.0 (engine/fund_conviction.py asserts it). ──
+weights:
+  position_weight:  0.28   # [PROPOSED] how big the line is in the book
+  weight_rank:      0.12   # [PROPOSED] where it sits in the ranking
+  action:           0.22   # [PROPOSED] NEW / ADD / HOLD / TRIM, share-based
+  persistence:      0.12   # [PROPOSED] consecutive quarters held
+  conviction_add:   0.14   # [PROPOSED] added while the position was down
+  book_concentration: 0.07 # [PROPOSED] fund-level context
+  differentiation:  0.05   # [PROPOSED] lone bet vs crowded trade
+
+# ── Component shapes ────────────────────────────────────────────────────────
+position_weight:
+  # weight / cap, clipped to 1. A 15% line is already maximum conviction; going
+  # to 30% should not score double.
+  full_credit_at: 0.15     # [PROPOSED]
+
+weight_rank:
+  # rank 1 -> 1.0, decaying to 0 past the tail cutoff.
+  full_credit_rank: 1      # [PROPOSED]
+  zero_credit_rank: 20     # [PROPOSED]
+
+action:
+  NEW:  0.85              # [PROPOSED] a new line is a decision, but unproven
+  ADD:  0.70              # [PROPOSED] base; scaled up by share_delta_pct below
+  HOLD: 0.45              # [PROPOSED]
+  TRIM: 0.15              # [PROPOSED]
+  EXIT: 0.00              # [PROPOSED] conviction_score measures LONG conviction
+  # ADD gets action = ADD_base + (1-ADD_base) * min(1, share_delta_pct / full_add_at)
+  add_full_credit_delta_pct: 0.50   # [PROPOSED] +50% shares = a maximal add
+
+persistence:
+  full_credit_quarters: 8  # [PROPOSED] matches the 8-quarter backfill
+
+book_concentration:
+  # fund's top-10 share of book, rescaled: 0.30 -> 0, 0.90 -> 1
+  floor: 0.30              # [PROPOSED]
+  ceiling: 0.90            # [PROPOSED]
+
+differentiation:
+  # 1 tracked holder -> 1.0 (differentiated); all tracked funds -> 0 (crowded)
+  # Uses the count of tracked funds holding the name that period.
+  crowded_at: 6            # [PROPOSED] holders at which differentiation credit hits 0
+
+# ── Instrument handling. A put is a hedge or a short expression, NEVER a long
+# conviction bet, so it is scored on its own track and excluded from the long
+# conviction feed entirely. Calls are a levered long expression but not shares. ──
+# null = NOT scored on the long-conviction track at all. Only instruments the fund
+# actually owns carry a conviction score; everything else is a derivative or a debt
+# line, reported by 13F at the notional value of the underlying rather than at
+# money-at-risk, and scoring it would rank a hedge alongside a holding.
+instrument_multiplier:
+  common:      1.00        # [PROPOSED] ownership
+  adr:         1.00        # [PROPOSED] ownership — a depositary receipt IS the shares
+  call:        null        # a levered expression, not ownership
+  put:         null        # a bet the stock FALLS
+  warrant:     null
+  right:       null
+  unit:        null
+  convertible: null
+  prn:         null
+  other:       null
+
+# ── §8b.6 interpretation guards, enforced in the model not left to the reader ──
+display_guards:
+  # Guard 1: a large % change on a small position is meaningless. Below BOTH of
+  # these the % figure is not displayable and the dashboard must suppress it.
+  min_weight_for_pct_change: 0.005     # [PROPOSED] 0.5% of book
+  min_value_for_pct_change_usd: 25000000   # [PROPOSED] $25m
+  # Guard 2: a 13F position is up to 4.5 months old. Above this a NEW flag must
+  # be rendered with its latency attached, never on its own.
+  stale_position_days: 45              # [PROPOSED] the statutory filing lag itself
+  very_stale_position_days: 100        # [PROPOSED]
+
+# ── Audit thresholds (§7) ───────────────────────────────────────────────────
+audit:
+  max_pct_of_shares_outstanding: 1.0   # a holder cannot own >100% of a class
+  implied_price_min: 0.01              # value/shares sanity band, in dollars
+  implied_price_max: 100000.0
+  max_book_value_usd: 2.0e12           # a single 13F book above this is a unit error

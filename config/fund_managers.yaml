@@ -1,0 +1,377 @@
+# FUND TRACKER (Section 3) — the closed, curated universe.
+#
+# This list is NOT discovered and NOT extended by the engine. Adding a fund is a
+# deliberate edit here; engine/fund_ingest.py refuses any CIK it does not find in
+# this file (it logs it to fund_unmapped_ciks instead of guessing).
+#
+# Every CIK below was resolved against EDGAR company search and then VERIFIED
+# against https://data.sec.gov/submissions/CIK##########.json — the seed step
+# re-verifies on every run and fails loudly on a name mismatch rather than
+# ingesting somebody else's book.
+#
+# style_tag drives HOW a filing is read; manager_class drives WHETHER we ingest.
+#   conviction_weight is the multiplier applied to every conviction_score.
+#   multistrat_mm = 0.0 on 13F  -> the 13F is market-making inventory, not conviction
+#   quant         = 0.0         -> not ingested at all
+#
+# primary_source names the layer that BEATS the 13F for this manager. For a
+# full-disclosure vehicle the 13F is the fallback, not the source of record.
+
+sec:
+  # SEC fair-access policy: a declared User-Agent with a real contact email and
+  # <=10 req/s. Set FUND_SEC_USER_AGENT in the environment (or user_agent here) —
+  # the client REFUSES to make a network call without one rather than sending a
+  # fake header and getting the whole section IP-blocked.
+  user_agent: null            # e.g. "Capital Flow research <you@example.com>"
+  max_requests_per_second: 8  # under the 10/s guidance, centrally enforced
+  backfill_quarters: 8        # run-now principle: meaningful deltas on day one
+
+managers:
+
+  # ── Concentrated AI / tech conviction ──────────────────────────────────────
+  - slug: situational-awareness
+    name: Situational Awareness LP
+    cik: "0002045724"
+    principal: Leopold Aschenbrenner
+    style_tag: concentrated
+    conviction_weight: 1.0
+    country: US
+    why_tracked: >-
+      Pure single-theme AI fund. Concentration is structural, not a choice — the
+      whole book is one thesis, so every line in it is a conviction statement.
+      The template case for what this section is built to read.
+    focus: >-
+      AGI and the compute/energy/security build-out around it; US-listed AI
+      infrastructure and semiconductors.
+    primary_source: 13F-HR
+    entities:
+      - { cik: "0002045724", name: Situational Awareness LP, relationship: self }
+      - { cik: "0002038540", name: Situational Awareness Partners LP, relationship: fund_vehicle }
+
+  - slug: coatue
+    name: Coatue Management LLC
+    cik: "0001135730"
+    principal: Philippe Laffont
+    style_tag: crossover_tech
+    conviction_weight: 0.9
+    country: US
+    why_tracked: >-
+      Crossover: writes private cheques and holds the public names, so it turns
+      up in S-1 Principal Stockholders tables long before any 13F shows the
+      position. High turnover — trust the direction, flag the churn.
+    focus: Global technology, public and private; AI, internet, software, semis.
+    primary_source: 13F-HR
+    notes: >-
+      Files under one adviser CIK; the ~40 Coatue fund entities file 13F-NT
+      (notice that holdings are reported by the adviser). Only the adviser rolls up.
+    entities:
+      - { cik: "0001135730", name: COATUE MANAGEMENT LLC, relationship: self }
+
+  - slug: altimeter
+    name: Altimeter Capital Management, LP
+    cik: "0001541617"
+    principal: Brad Gerstner
+    style_tag: crossover_tech
+    conviction_weight: 0.9
+    country: US
+    why_tracked: >-
+      Concentrated and unusually vocal — the public thesis is stated on the
+      record, so the book can be read against what the manager says it believes.
+    focus: Technology growth equity, public and late-stage private; AI platforms.
+    primary_source: 13F-HR
+
+  - slug: whale-rock
+    name: Whale Rock Capital Management LLC
+    cik: "0001387322"
+    principal: Alex Sacerdote
+    style_tag: crossover_tech
+    conviction_weight: 0.9
+    country: US
+    why_tracked: >-
+      Genuinely tight tech book — few names, large weights. Concentration here is
+      real rather than nominal, which is what makes the weight ranks informative.
+    focus: Technology, media and telecom; growth equity with a hardware/AI tilt.
+    primary_source: 13F-HR
+
+  - slug: lone-pine
+    name: Lone Pine Capital LLC
+    cik: "0001061165"
+    principal: Stephen Mandel (founder); Kelly Granat / David Craver (CIOs)
+    style_tag: crossover_tech
+    conviction_weight: 0.9
+    country: US
+    why_tracked: >-
+      Tiger-cub lineage with a long, checkable record and a concentrated long
+      book. Position size has historically meant something at this shop.
+    focus: Global growth and value equity; software, internet, payments, semis.
+    primary_source: 13F-HR
+
+  # ── Activists — intent is DISCLOSED, not inferred ──────────────────────────
+  - slug: elliott
+    name: Elliott Investment Management L.P.
+    cik: "0001791786"
+    principal: Paul Singer / Jesse Cohn
+    style_tag: activist
+    conviction_weight: 1.0
+    country: US
+    why_tracked: >-
+      The 13F understates Elliott badly — much of the book is credit, distressed
+      and non-US. The 13D Item 4 and the 8-K settlement are the real signal.
+    focus: Activist equity, credit and distressed; technology, industrials, energy.
+    primary_source: SC 13D
+    notes: >-
+      Also runs credit/distressed positions that surface in PACER dockets rather
+      than in EDGAR. Not ingested here — noted so the coverage gap is explicit.
+    entities:
+      - { cik: "0001791786", name: Elliott Investment Management L.P., relationship: self }
+      - { cik: "0001048445", name: Elliott Management Corporation, relationship: predecessor, rollup: false }
+
+  - slug: starboard
+    name: Starboard Value LP
+    cik: "0001517137"
+    principal: Jeffrey Smith
+    style_tag: activist
+    conviction_weight: 1.0
+    country: US
+    why_tracked: >-
+      High conversion rate from 13D to an actual 8-K settlement — the campaigns
+      resolve, which makes the Item 4 intent text unusually predictive.
+    focus: US mid-cap activism; technology, healthcare, consumer, industrials.
+    primary_source: SC 13D
+    entities:
+      - { cik: "0001517137", name: Starboard Value LP, relationship: self }
+      - { cik: "0001517138", name: Starboard Value GP LLC, relationship: general_partner, rollup: false }
+
+  - slug: pershing-square
+    name: Pershing Square Capital Management, L.P.
+    cik: "0001336528"
+    principal: Bill Ackman
+    style_tag: activist
+    conviction_weight: 1.0
+    country: US
+    why_tracked: >-
+      Extreme concentration plus a listed vehicle that publishes the full book and
+      a regular NAV — so for once the 13F is the WORSE source and can be checked
+      against something better.
+    focus: North American large-cap; restaurants, real estate, transport, hotels.
+    primary_source: PSH portfolio + NAV
+    primary_source_url: https://pershingsquareholdings.com/
+    vehicle: PSH
+    entities:
+      - { cik: "0001336528", name: Pershing Square Capital Management, L.P., relationship: self }
+      - { cik: "0002026053", name: PERSHING SQUARE INC., relationship: related_adviser }
+
+  # ── Concentrated macro-equity ──────────────────────────────────────────────
+  - slug: duquesne
+    name: Duquesne Family Office LLC
+    cik: "0001536411"
+    principal: Stanley Druckenmiller
+    style_tag: concentrated
+    conviction_weight: 1.0
+    manager_class: sparse_coverage
+    country: US
+    why_tracked: >-
+      Small, concentrated, closely watched — the top five lines carry the whole
+      view. One of the few books where reading the 13F literally is defensible.
+    focus: Global macro expressed in equities; tech, energy, financials, gold.
+    primary_source: 13F-HR
+    notes: >-
+      A FAMILY OFFICE (§8b.3). It clears the $100M 13F bar and does file, but a
+      family office only ever surfaces at mandatory thresholds — a thin record
+      here means "below the disclosure line", NOT "quiet quarter". The UI must
+      render the coverage as intentionally partial.
+
+  - slug: thiel-macro
+    name: Thiel Macro LLC
+    cik: "0001562087"
+    principal: Peter Thiel
+    style_tag: concentrated
+    conviction_weight: 1.0
+    manager_class: sparse_coverage
+    country: US
+    why_tracked: >-
+      Eight lines, one theme. The Q2 2026 book is 72% power and utilities behind a
+      single mega-cap — a macro view on electricity demand expressed in equities,
+      not a diversified book. At that width every line is a statement, which is the
+      only condition under which reading a 13F literally is defensible.
+    focus: >-
+      Macro expressed in US-listed equities; power generation, regulated utilities,
+      nuclear, oil and gas, and the hyperscaler drawing on them.
+    primary_source: 13F-HR
+    notes: >-
+      SPARSE BY NATURE, and more so than Duquesne (§8b.3). This filer goes to ZERO
+      for long stretches: Q1 2026 was a NIL filing — one placeholder row, CUSIP
+      000000000, $0 — and there is a four-year gap between 2020-11 and 2025-02 with
+      no 13F at all. An empty quarter here means "book below the disclosure line or
+      flat", NEVER "quiet quarter", and the UI must not render a gap as a decline.
+      The corollary is that Q2 2026 reads as eight NEW positions against a nil base,
+      which is a real signal rather than an artefact of first ingest.
+      Peter Thiel's private capital (Founders Fund, Mithril) is OUT OF SCOPE here —
+      it never surfaces in a 13F. Mithril II GP LP (CIK 0001878232) last filed
+      2025-11-12 and has filed nothing in 2026; Clarium Capital stopped in 2010.
+      Thiel Macro is the only live 13F filer in the group.
+    entities:
+      - { cik: "0001562087", name: Thiel Macro LLC, relationship: self }
+
+  - slug: appaloosa
+    name: Appaloosa LP
+    cik: "0001656456"
+    principal: David Tepper
+    style_tag: concentrated
+    conviction_weight: 1.0
+    country: US
+    why_tracked: >-
+      Concentrated, and Tepper states theses publicly and on the record — so the
+      book can be reconciled against a stated view instead of guessed at.
+    focus: Distressed and deep-value equity; tech, financials, airlines, energy.
+    primary_source: 13F-HR
+    entities:
+      - { cik: "0001656456", name: Appaloosa LP, relationship: self }
+      - { cik: "0001006438", name: APPALOOSA MANAGEMENT LP, relationship: predecessor, rollup: false }
+
+  # ── Full-disclosure vehicles — the best data quality on the list ───────────
+  - slug: third-point
+    name: Third Point LLC
+    cik: "0001040273"
+    principal: Daniel Loeb
+    style_tag: full_disclosure
+    conviction_weight: 1.0
+    country: US
+    why_tracked: >-
+      TPOU publishes a monthly portfolio and the quarterly letters state the
+      reasoning. Monthly beats quarterly-plus-45-days by a wide margin.
+    focus: Event-driven and activist equity, credit, structured; tech and healthcare.
+    primary_source: TPOU monthly portfolio + quarterly letter
+    primary_source_url: https://www.thirdpointlimited.com/
+    vehicle: TPOU
+
+  - slug: greenlight
+    name: Greenlight Capital
+    cik: "0001489933"
+    principal: David Einhorn
+    style_tag: full_disclosure
+    conviction_weight: 1.0
+    country: US
+    why_tracked: >-
+      Greenlight Re discloses actual LONGS AND SHORTS. A disclosed short book is
+      rare and disproportionately valuable — the 13F structurally cannot show one.
+    focus: Long/short value equity; industrials, housing, energy, gold, financials.
+    primary_source: Greenlight Re disclosures + quarterly letter
+    primary_source_url: https://greenlightre.com/
+    vehicle: GLRE
+    notes: >-
+      The live 13F filer is DME Capital Management, LP (0001489933); DME Advisors
+      files 13F-NT and GREENLIGHT CAPITAL INC stopped filing 13F-HR in 2024. All
+      three roll up to one manager — without that this book reads at a fraction
+      of its real size.
+    entities:
+      - { cik: "0001489933", name: DME Capital Management, LP, relationship: self }
+      - { cik: "0001300763", name: DME Advisors, LP, relationship: related_adviser }
+      - { cik: "0001079114", name: GREENLIGHT CAPITAL INC, relationship: predecessor }
+
+  - slug: berkshire
+    name: Berkshire Hathaway Inc
+    cik: "0001067983"
+    principal: Warren Buffett
+    style_tag: full_disclosure
+    conviction_weight: 1.0
+    country: US
+    why_tracked: >-
+      The annual letter gives the full thesis in the manager's own words, and the
+      13F-HR/A amendments matter more here than anywhere else: Berkshire has
+      repeatedly used confidential treatment to build a stake before revealing it.
+    focus: >-
+      Large-cap US equity held for decades; insurance, rail, energy, consumer,
+      technology (Apple), Japanese trading houses.
+    primary_source: Annual letter + 10-K, with 13F-HR/A watched for CT releases
+    primary_source_url: https://www.berkshirehathaway.com/
+    vehicle: BRK
+
+  # ── Daily disclosure — the only zero-latency full book on the list ─────────
+  - slug: ark
+    name: ARK Investment Management LLC
+    cik: "0001697748"
+    principal: Cathie Wood
+    style_tag: daily_disclosure
+    conviction_weight: 1.0
+    country: US
+    why_tracked: >-
+      Publishes the entire book every trading day. Zero latency, position-level —
+      this is the layer that proves the fast ladder works and keeps the timeline
+      alive on days when nobody else discloses anything.
+    focus: Disruptive innovation; AI, genomics, robotics, energy storage, crypto.
+    primary_source: ARK daily holdings CSV
+    primary_source_url: https://www.ark-funds.com/download-fund-materials
+    daily_csv: true
+
+# ── §B3 WATCH-ONLY. 13F is NOT ingested for these. ──────────────────────────
+# There is no separate CIK for a "conviction sleeve" inside a multi-strat, and
+# the 13F carries no strategy attribution — so the conviction desk CANNOT be
+# parsed out of the filing. Anyone claiming otherwise is guessing. These four
+# enter the section only on a disclosure that market-making mechanically cannot
+# produce, and they appear in the UI only when a trigger fires.
+watch_only:
+  - slug: citadel
+    name: Citadel Advisors LLC
+    cik: "0001423053"
+    principal: Ken Griffin
+    style_tag: multistrat_mm
+    conviction_weight: 0.0
+    focus: Multi-strategy; equities, commodities, credit, quant, fixed income.
+    why_tracked: >-
+      The 13F is thousands of lines of market-making inventory and hedges. It is
+      not read here. A 13D, a >5% 13G, a Form 4, a named EU/UK short or an S-1
+      cap-table appearance is — none of those fall out of market making.
+    primary_source: Trigger-only (13D / 13G>5% / Form 4 / short register / S-1)
+  - slug: millennium
+    name: Millennium Management LLC
+    cik: "0001273087"
+    principal: Israel Englander
+    style_tag: multistrat_mm
+    conviction_weight: 0.0
+    focus: Multi-strategy pod platform; equities, macro, quant, credit.
+    why_tracked: >-
+      Pod platform — the 13F is the sum of hundreds of independent books and
+      means nothing as a single view. Trigger-only.
+    primary_source: Trigger-only (13D / 13G>5% / Form 4 / short register / S-1)
+  - slug: point72
+    name: Point72 Asset Management, L.P.
+    cik: "0001603466"
+    principal: Steven Cohen
+    style_tag: multistrat_mm
+    conviction_weight: 0.0
+    focus: Multi-strategy; discretionary long/short, macro, quant.
+    why_tracked: >-
+      Same pod problem, plus the book is split across six filing entities. The
+      rollup exists so a trigger is attributed to one manager, not six.
+    primary_source: Trigger-only (13D / 13G>5% / Form 4 / short register / S-1)
+    entities:
+      - { cik: "0001603466", name: Point72 Asset Management, L.P., relationship: self }
+      - { cik: "0001599822", name: Point72 Hong Kong Ltd, relationship: regional_entity }
+      - { cik: "0001666791", name: Point72 Asia (Singapore) Pte. Ltd., relationship: regional_entity }
+      - { cik: "0001698051", name: Point72 Europe (London) LLP, relationship: regional_entity }
+      - { cik: "0002017863", name: Point72 (DIFC) Ltd, relationship: regional_entity }
+  - slug: balyasny
+    name: Balyasny Asset Management LLC
+    cik: "0001218710"
+    principal: Dmitry Balyasny
+    style_tag: multistrat_mm
+    conviction_weight: 0.0
+    focus: Multi-strategy pod platform; equities long/short, macro, commodities.
+    why_tracked: >-
+      Pod platform. Trigger-only, same reasoning as Millennium.
+    primary_source: Trigger-only (13D / 13G>5% / Form 4 / short register / S-1)
+
+# ── EXPLICITLY EXCLUDED. Recorded so the decision is documented, not lost. ──
+excluded:
+  - { name: Renaissance Technologies, reason: "quant — 13F is model output, not conviction; ingesting it would poison every cross-fund count" }
+  - { name: Two Sigma Investments, reason: "quant — same" }
+  - { name: D. E. Shaw & Co., reason: "quant — same" }
+  - { name: AQR Capital Management, reason: "quant/systematic — same" }
+
+# ── CANDIDATES, deliberately NOT tracked. Kept under 15 names on purpose. ───
+# Uncomment to promote; that is the only way a fund enters this section.
+candidates:
+  - { name: Tiger Global Management, reason: "large and diffuse — hundreds of lines; conviction signal drowns in the tail" }
+  - { name: Baillie Gifford, reason: "very large, long-horizon and effectively index-adjacent at the top of the book" }
+  - { name: Viking Global Investors, reason: "strong record but a wide book; would dilute the concentrated cohort" }

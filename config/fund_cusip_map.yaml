@@ -1,0 +1,28 @@
+# CUSIP -> ticker overrides for the Fund Tracker. VERSIONED and AUDITABLE (§7).
+#
+# There is no free, licensable CUSIP->ticker file: CUSIP is a commercial identifier
+# and the SEC publishes no public crosswalk. So the engine derives the map itself
+# by matching a 13F's `nameOfIssuer` against SEC's own company_tickers.json, and
+# records HOW each mapping was made (fund_cusip_map.method / .confidence) so any
+# ticker on the dashboard can be traced back to the reasoning that produced it.
+#
+# This file is the manual override layer, and it wins over every derived mapping.
+# Use it for the cases name matching genuinely cannot solve:
+#   * multi-class issuers (a CUSIP that is the A share, not the C share)
+#   * issuers whose 13F name differs from their SEC registrant name
+#   * ADRs and foreign private issuers
+#   * a mapping a human checked and wants pinned
+#
+# An unmapped CUSIP is LOGGED to fund_cusip_unmapped and the position is kept with
+# ticker=NULL. It is never dropped — a missing ticker is a display gap, a dropped
+# position is a lie about the size of the book.
+#
+# Bump `version` whenever entries change; it is stamped onto every row this file
+# produces, so a bad mapping can be found and reversed by version.
+version: "1.0"
+
+overrides: {}
+  # Format:
+  # "037833100": { ticker: AAPL,  issuer: "Apple Inc",       note: "common" }
+  # "02079K305": { ticker: GOOGL, issuer: "Alphabet Inc",    note: "Class A" }
+  # "02079K107": { ticker: GOOG,  issuer: "Alphabet Inc",    note: "Class C" }

@@ -1,0 +1,107 @@
+# Non-SEC sources for the Fund Tracker. FILINGS AND OFFICIAL REGISTERS ONLY.
+# No news, no socials, no forums, no aggregators — anything that cannot be traced
+# to a mandated disclosure or an official register download does not belong here.
+#
+# Every entry carries `enabled`. A disabled source is a DECLARED coverage gap that
+# the payload reports as such; the engine never silently substitutes a weaker one.
+
+edgar:
+  submissions: "https://data.sec.gov/submissions/CIK{cik}.json"
+  archives:    "https://www.sec.gov/Archives/edgar/data/{cik_int}/{accn_nodash}/"
+  index_json:  "https://www.sec.gov/Archives/edgar/data/{cik_int}/{accn_nodash}/index.json"
+  full_text_search: "https://efts.sec.gov/LATEST/search-index"
+  company_facts: "https://data.sec.gov/api/xbrl/companyfacts/CIK{cik}.json"
+  company_tickers: "https://www.sec.gov/files/company_tickers.json"
+  # Quarterly 13F aggregate structured data — the reverse-lookup (§8b.5) input.
+  form13f_datasets: "https://www.sec.gov/dera/data/form-13f"
+  adv: "https://reports.adviserinfo.sec.gov/reports/ADV/{crd}/PDF/{crd}.pdf"
+
+# ARK publishes the full book daily. Official ARK URLs only.
+ark:
+  enabled: true
+  csv_base: "https://assets.ark-funds.com/fund-documents/funds-etf-csv/"
+  funds:
+    ARKK: ARK_INNOVATION_ETF_ARKK_HOLDINGS.csv
+    ARKQ: ARK_AUTONOMOUS_TECH._&_ROBOTICS_ETF_ARKQ_HOLDINGS.csv
+    ARKW: ARK_NEXT_GENERATION_INTERNET_ETF_ARKW_HOLDINGS.csv
+    ARKG: ARK_GENOMIC_REVOLUTION_ETF_ARKG_HOLDINGS.csv
+    ARKF: ARK_FINTECH_INNOVATION_ETF_ARKF_HOLDINGS.csv
+    ARKX: ARK_SPACE_EXPLORATION_&_INNOVATION_ETF_ARKX_HOLDINGS.csv
+
+# NAMED short registers. These are the only sources that attribute a short to a
+# fund by name. Thresholds: EU 0.5% of issued share capital, UK 0.5%.
+short_registers:
+  FCA:
+    enabled: true
+    kind: uk
+    url: "https://www.fca.org.uk/publication/data/short-positions-daily-update.xlsx"
+    note: "Daily. Named positions >=0.5%; below that the FCA publishes aggregates only."
+  ESMA:
+    enabled: false
+    kind: eu
+    url: null
+    note: >-
+      ESMA hosts a consolidated view but the authoritative daily files are the
+      national registers below. Left DISABLED rather than pointed at a scraped
+      mirror — a declared gap beats a source we cannot cite.
+  BaFin:
+    enabled: false
+    kind: eu
+    url: "https://portal.mvp.bafin.de/database/ShortVolumeInfo/"
+    note: "Germany. Needs a session-scoped export; disabled until an official file URL is wired."
+  AMF:
+    enabled: false
+    kind: eu
+    url: "https://www.data.gouv.fr/fr/datasets/historique-des-positions-courtes-nettes-sur-actions/"
+    note: "France. Open-data CSV; disabled until the exact file path is pinned and verified."
+
+# Listed / full-disclosure vehicles. Portfolio + NAV beat the 13F for these.
+vehicles:
+  PSH:
+    enabled: true
+    manager: pershing-square
+    site: "https://pershingsquareholdings.com/"
+    note: "Weekly NAV, monthly/annual portfolio. Full book incl. non-US names."
+  TPOU:
+    enabled: true
+    manager: third-point
+    site: "https://www.thirdpointlimited.com/"
+    note: "Monthly portfolio + quarterly letter."
+  GLRE:
+    enabled: true
+    manager: greenlight
+    site: "https://greenlightre.com/"
+    note: "Discloses LONGS AND SHORTS — rare and high value."
+  BRK:
+    enabled: true
+    manager: berkshire
+    site: "https://www.berkshirehathaway.com/"
+    note: "Annual letter + 10-K; 13F-HR/A watched for confidential-treatment releases."
+
+# ── Aggregate-only. CONTEXT, never attributed to a named fund (audit rule A6). ──
+aggregate_only:
+  finra_short_interest:
+    enabled: false
+    url: "https://www.finra.org/finra-data/browse-catalog/short-interest"
+    note: "Exchange/FINRA short interest is ANONYMOUS. Never write it to fund_shorts."
+  cftc_cot:
+    enabled: false
+    url: "https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm"
+    note: "Trader CATEGORIES, not funds. Context only."
+
+# ── Known dead end. Documented so nobody re-opens it. ──────────────────────────
+dead_ends:
+  form_pf:
+    note: >-
+      Form PF is filed confidentially to the SEC/FSOC and is not public. There is
+      no access path. Not a gap to close — a wall.
+
+# ── §8b.2 Non-US registers. Scoped, not built: each needs its own parser and an
+# official file endpoint. Declared here so the coverage gap is visible in the
+# payload rather than implied away. ────────────────────────────────────────────
+non_us_registers:
+  UK_TR1:      { enabled: false, threshold_pct: 3.0, source: "FCA National Storage Mechanism / RNS" }
+  EU_TD:       { enabled: false, threshold_pct: "3-5 (varies by member state)", source: "national transparency registers" }
+  JP_5PCT:     { enabled: false, threshold_pct: 5.0, source: "EDINET 大量保有報告書" }
+  CA_EARLYWARN: { enabled: false, threshold_pct: 10.0, source: "SEDAR+ / SEDI early warning" }
+  AU_SUBSTANTIAL: { enabled: false, threshold_pct: 5.0, source: "ASX substantial holder notices" }

@@ -1,0 +1,151 @@
+# FUND TRACKER — sector of the ISSUER, derived from its SIC code.
+#
+# Why SIC and not a bought taxonomy. Every issuer in these books already files
+# with the SEC, and EDGAR publishes its SIC on the submissions endpoint we
+# already call. So the sector arrives with the identity we were fetching anyway:
+# no vendor, no key, no licence, and every value traces to a primary source the
+# reader can open. GICS would be cleaner and is not free.
+#
+# Why not the capital map's 18 sectors. Those are an AI-infrastructure taxonomy
+# (datacenters, ai-compute, nuclear, defense-tech). They describe the *thesis*
+# these funds are being read for, not the *businesses* they own. Third Point
+# holds Kenvue, Tapestry and Lennar; no AI taxonomy classifies a homebuilder, and
+# forcing one would leave most of a generalist book blank. Two taxonomies for two
+# questions is the honest answer.
+#
+# ─────────────────────────────────────────────────────────────────────────────
+# HOW THE RULES ARE READ. Ordered list, FIRST MATCH WINS. That is the whole
+# mechanism, and it is why order is load-bearing: 2834 (pharma) must be tested
+# before 2800-2899 (chemicals), and 6798 (REIT) before 6700-6799 (holding
+# companies). Narrow ranges are therefore written above the broad ones that
+# contain them, and the file must be read top to bottom.
+#
+# A code matching NOTHING is not guessed. It is stored with sector `null`, listed
+# by the audit, and the holding still ships — with a blank sector rather than a
+# wrong one. `unmapped_is_an_error: false` says that out loud: an unclassified
+# issuer is a gap to close, not a reason to refuse the payload.
+unmapped_is_an_error: false
+
+sectors:
+  energy:         { label: "Energy",                 note: "Extraction, refining, pipelines, oilfield services" }
+  utilities:      { label: "Utilities",              note: "Regulated and merchant electric, gas, water" }
+  materials:      { label: "Materials",              note: "Mining, chemicals, paper, steel, building materials" }
+  industrials:    { label: "Industrials",            note: "Machinery, aerospace and defense, transport, engineering" }
+  technology:     { label: "Technology",             note: "Semiconductors, hardware, software, IT services" }
+  healthcare:     { label: "Health Care",            note: "Pharma, biotech, devices, providers, life-science tools" }
+  financials:     { label: "Financials",             note: "Banks, brokers, insurers, asset managers" }
+  real_estate:    { label: "Real Estate",            note: "REITs, operators, developers" }
+  consumer_disc:  { label: "Consumer Discretionary", note: "Retail, autos, apparel, hotels, homebuilding" }
+  consumer_staple: { label: "Consumer Staples",       note: "Food, beverage, tobacco, household and personal products" }
+  communications: { label: "Communication Services", note: "Telecom, media, entertainment, interactive" }
+
+# ── rules: [from, to] inclusive on the 4-digit SIC, first match wins ─────────
+rules:
+  # -- narrow overrides that must outrank the broad ranges below --------------
+  - { from: 1531, to: 1531, sector: consumer_disc,   why: "operative builders — homebuilders are consumer cyclicals, not construction services" }
+  - { from: 2833, to: 2836, sector: healthcare,      why: "pharma and biological products, ahead of the chemicals block" }
+  - { from: 2840, to: 2844, sector: consumer_staple, why: "soap, detergents, cosmetics — household products, ahead of chemicals" }
+  - { from: 2911, to: 2911, sector: energy,          why: "petroleum refining, ahead of manufacturing" }
+  - { from: 3826, to: 3826, sector: healthcare,      why: "laboratory analytical instruments — life-science tools" }
+  - { from: 4610, to: 4613, sector: energy,          why: "pipelines, ahead of the transportation block" }
+  - { from: 5122, to: 5122, sector: consumer_staple, why: "drugs and toiletries wholesale" }
+  - { from: 5171, to: 5172, sector: energy,          why: "petroleum wholesale" }
+  - { from: 5912, to: 5912, sector: consumer_staple, why: "drug stores" }
+  - { from: 6798, to: 6798, sector: real_estate,     why: "REIT, ahead of holding and investment offices" }
+
+  # -- services and the rest of manufacturing ---------------------------------
+  # Added after the first backfill: 69 held issuers matched no rule, and 46 of
+  # them sat in the 7300-8799 services block. Listed by SIC, narrow first.
+  - { from: 2451, to: 2451, sector: consumer_disc,   why: "mobile homes — sold to households, ahead of the lumber range" }
+  - { from: 2400, to: 2499, sector: materials,       why: "lumber, plywood, structural wood" }
+  - { from: 3021, to: 3021, sector: consumer_disc,   why: "rubber and plastics footwear — branded athletic and casual shoes" }
+  - { from: 3080, to: 3089, sector: materials,       why: "plastics products" }
+  - { from: 3861, to: 3861, sector: technology,      why: "photographic and imaging equipment" }
+  - { from: 3990, to: 3999, sector: industrials,     why: "miscellaneous manufacturing — toys already claimed above" }
+  - { from: 4600, to: 4799, sector: industrials,     why: "freight arrangement and transportation services — pipelines claimed above" }
+  - { from: 7310, to: 7319, sector: communications,  why: "advertising and agencies — media, not commercial services" }
+  - { from: 7320, to: 7329, sector: industrials,     why: "credit reporting and collection — commercial and professional services" }
+  - { from: 7340, to: 7359, sector: industrials,     why: "building services, equipment rental and leasing" }
+  - { from: 7380, to: 7389, sector: industrials,     why: "miscellaneous business services, security services" }
+  - { from: 7510, to: 7519, sector: industrials,     why: "auto rental and leasing" }
+  - { from: 8200, to: 8299, sector: consumer_disc,   why: "education services — a consumer purchase" }
+  - { from: 8740, to: 8749, sector: industrials,     why: "management and consulting services" }
+
+  # -- energy ----------------------------------------------------------------
+  - { from: 1200, to: 1399, sector: energy,          why: "coal, oil and gas extraction, oilfield services" }
+
+  # -- materials -------------------------------------------------------------
+  - { from: 1000, to: 1099, sector: materials,       why: "metal mining" }
+  - { from: 1400, to: 1499, sector: materials,       why: "nonmetallic minerals" }
+
+  # -- consumer staples ------------------------------------------------------
+  - { from: 100,  to: 999,  sector: consumer_staple, why: "agriculture, forestry, fishing" }
+  - { from: 2000, to: 2199, sector: consumer_staple, why: "food, beverage, tobacco" }
+
+  # -- consumer discretionary ------------------------------------------------
+  - { from: 2300, to: 2399, sector: consumer_disc,   why: "apparel" }
+  - { from: 2500, to: 2599, sector: consumer_disc,   why: "furniture and fixtures" }
+  - { from: 3100, to: 3199, sector: consumer_disc,   why: "leather goods and footwear" }
+
+  # -- communication services ------------------------------------------------
+  - { from: 2700, to: 2799, sector: communications,  why: "publishing and printing" }
+
+  # -- materials (chemicals, paper, glass, metals) ---------------------------
+  - { from: 2600, to: 2699, sector: materials,       why: "paper" }
+  - { from: 2800, to: 2899, sector: materials,       why: "chemicals — pharma and household already claimed above" }
+  - { from: 3200, to: 3299, sector: materials,       why: "stone, clay, glass, concrete" }
+  - { from: 3300, to: 3399, sector: materials,       why: "primary metals" }
+
+  # -- technology ------------------------------------------------------------
+  - { from: 3570, to: 3579, sector: technology,      why: "computer and office equipment" }
+  - { from: 3661, to: 3679, sector: technology,      why: "communications equipment, semiconductors, components" }
+  - { from: 3690, to: 3699, sector: technology,      why: "miscellaneous electrical and electronic" }
+  - { from: 7370, to: 7379, sector: technology,      why: "software, data processing, IT services" }
+
+  # -- healthcare ------------------------------------------------------------
+  - { from: 3841, to: 3851, sector: healthcare,      why: "medical devices and ophthalmic goods" }
+  - { from: 8000, to: 8099, sector: healthcare,      why: "health services" }
+  - { from: 8731, to: 8731, sector: healthcare,      why: "commercial physical and biological research — where most pre-revenue biotech files" }
+
+  # -- consumer discretionary (autos, appliances, retail, leisure) -----------
+  - { from: 3630, to: 3639, sector: consumer_disc,   why: "household appliances" }
+  - { from: 3710, to: 3716, sector: consumer_disc,   why: "motor vehicles and bodies" }
+  - { from: 3751, to: 3751, sector: consumer_disc,   why: "motorcycles and bicycles" }
+  - { from: 3940, to: 3949, sector: consumer_disc,   why: "toys and sporting goods" }
+  - { from: 5200, to: 5799, sector: consumer_disc,   why: "retail — food stores claimed below" }
+  - { from: 5800, to: 5899, sector: consumer_disc,   why: "eating and drinking places" }
+  - { from: 5900, to: 5999, sector: consumer_disc,   why: "miscellaneous retail" }
+  - { from: 7000, to: 7099, sector: consumer_disc,   why: "hotels and lodging" }
+
+  # -- consumer staples (food retail) ----------------------------------------
+  - { from: 5400, to: 5499, sector: consumer_staple, why: "food stores" }
+
+  # -- industrials -----------------------------------------------------------
+  - { from: 1500, to: 1799, sector: industrials,     why: "construction and engineering — homebuilders claimed above" }
+  - { from: 3400, to: 3499, sector: industrials,     why: "fabricated metal products" }
+  - { from: 3500, to: 3569, sector: industrials,     why: "industrial machinery" }
+  - { from: 3580, to: 3599, sector: industrials,     why: "general industrial machinery" }
+  - { from: 3600, to: 3629, sector: industrials,     why: "electrical industrial apparatus" }
+  - { from: 3700, to: 3709, sector: industrials,     why: "transportation equipment" }
+  - { from: 3720, to: 3749, sector: industrials,     why: "aerospace, defense, rail and ship building" }
+  - { from: 3760, to: 3799, sector: industrials,     why: "guided missiles, space vehicles, other transport equipment" }
+  - { from: 3800, to: 3825, sector: industrials,     why: "measuring and controlling instruments" }
+  - { from: 3827, to: 3840, sector: industrials,     why: "optical and other instruments" }
+  - { from: 4000, to: 4599, sector: industrials,     why: "rail, trucking, water and air transport — pipelines claimed above" }
+  - { from: 8700, to: 8713, sector: industrials,     why: "engineering, architectural and management services" }
+
+  # -- communication services ------------------------------------------------
+  - { from: 4800, to: 4899, sector: communications,  why: "telecom, broadcasting, cable" }
+  - { from: 7810, to: 7841, sector: communications,  why: "motion pictures" }
+  - { from: 7900, to: 7999, sector: communications,  why: "entertainment and recreation — where motorsport and live media file" }
+
+  # -- utilities -------------------------------------------------------------
+  - { from: 4900, to: 4999, sector: utilities,       why: "electric, gas, water, sanitary services" }
+
+  # -- wholesale -> industrials ----------------------------------------------
+  - { from: 5000, to: 5199, sector: industrials,     why: "durable and nondurable wholesale — petroleum and drugs claimed above" }
+
+  # -- financials and real estate --------------------------------------------
+  - { from: 6000, to: 6499, sector: financials,      why: "banks, credit, brokers, insurance" }
+  - { from: 6500, to: 6599, sector: real_estate,     why: "real estate operators and agents" }
+  - { from: 6700, to: 6799, sector: financials,      why: "holding and investment offices — REITs claimed above" }
