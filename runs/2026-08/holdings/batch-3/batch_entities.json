@@ -1,0 +1,279 @@
+[
+  {
+    "entity": "DigitalBridge Credit II",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "DigitalBridge"
+    ],
+    "capital_usd": 711350516.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2014474/000201447426000004/primary_doc.xml"
+    ],
+    "reason": "missing",
+    "already_have": 0,
+    "known_true_total": null,
+    "portfolio_url": null,
+    "target_minimum": 25,
+    "instruction": "No holdings collected yet. Return at least 25, ranked, each with its own source_url.",
+    "rank_by": [
+      "ai-labs",
+      "ai-compute",
+      "semiconductors",
+      "fab-equipment",
+      "cloud-hyperscale",
+      "neocloud",
+      "datacenters",
+      "power-energy",
+      "nuclear",
+      "networking",
+      "robotics",
+      "defense-tech",
+      "cybersecurity",
+      "ai-applications",
+      "ai-data"
+    ]
+  },
+  {
+    "entity": "Greenoaks",
+    "kind": "firm",
+    "class": "vc",
+    "parent_hint": [],
+    "capital_usd": 692000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2141341/000184073526000020/primary_doc.xml",
+      "https://www.sec.gov/Archives/edgar/data/2141340/000214134026000002/primary_doc.xml"
+    ],
+    "reason": "missing",
+    "already_have": 0,
+    "known_true_total": null,
+    "portfolio_url": null,
+    "target_minimum": 25,
+    "instruction": "No holdings collected yet. Return at least 25, ranked, each with its own source_url.",
+    "rank_by": [
+      "ai-labs",
+      "ai-compute",
+      "semiconductors",
+      "fab-equipment",
+      "cloud-hyperscale",
+      "neocloud",
+      "datacenters",
+      "power-energy",
+      "nuclear",
+      "networking",
+      "robotics",
+      "defense-tech",
+      "cybersecurity",
+      "ai-applications",
+      "ai-data"
+    ]
+  },
+  {
+    "entity": "Greenoaks Prime Radiant Founders LP",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Greenoaks"
+    ],
+    "capital_usd": 576519835.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2141341/000184073526000020/primary_doc.xml"
+    ],
+    "reason": "missing",
+    "already_have": 0,
+    "known_true_total": null,
+    "portfolio_url": null,
+    "target_minimum": 25,
+    "instruction": "No holdings collected yet. Return at least 25, ranked, each with its own source_url.",
+    "rank_by": [
+      "ai-labs",
+      "ai-compute",
+      "semiconductors",
+      "fab-equipment",
+      "cloud-hyperscale",
+      "neocloud",
+      "datacenters",
+      "power-energy",
+      "nuclear",
+      "networking",
+      "robotics",
+      "defense-tech",
+      "cybersecurity",
+      "ai-applications",
+      "ai-data"
+    ]
+  },
+  {
+    "entity": "Coatue Growth Fund VI Private Investors Cayman, L.P.",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Coatue"
+    ],
+    "capital_usd": 526955000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2143818/000214381826000001/primary_doc.xml"
+    ],
+    "reason": "missing",
+    "already_have": 0,
+    "known_true_total": null,
+    "portfolio_url": null,
+    "target_minimum": 25,
+    "instruction": "No holdings collected yet. Return at least 25, ranked, each with its own source_url.",
+    "rank_by": [
+      "ai-labs",
+      "ai-compute",
+      "semiconductors",
+      "fab-equipment",
+      "cloud-hyperscale",
+      "neocloud",
+      "datacenters",
+      "power-energy",
+      "nuclear",
+      "networking",
+      "robotics",
+      "defense-tech",
+      "cybersecurity",
+      "ai-applications",
+      "ai-data"
+    ]
+  },
+  {
+    "entity": "Greenoaks Prime Radiant Founders Offshore LP",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Greenoaks"
+    ],
+    "capital_usd": 115480165.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2141340/000214134026000002/primary_doc.xml"
+    ],
+    "reason": "missing",
+    "already_have": 0,
+    "known_true_total": null,
+    "portfolio_url": null,
+    "target_minimum": 25,
+    "instruction": "No holdings collected yet. Return at least 25, ranked, each with its own source_url.",
+    "rank_by": [
+      "ai-labs",
+      "ai-compute",
+      "semiconductors",
+      "fab-equipment",
+      "cloud-hyperscale",
+      "neocloud",
+      "datacenters",
+      "power-energy",
+      "nuclear",
+      "networking",
+      "robotics",
+      "defense-tech",
+      "cybersecurity",
+      "ai-applications",
+      "ai-data"
+    ]
+  },
+  {
+    "entity": "Khosla Ventures MM SPV, LLC",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Vinod Khosla"
+    ],
+    "capital_usd": 60500000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2148181/000214818126000001/xslFormDX01/primary_doc.xml"
+    ],
+    "reason": "missing",
+    "already_have": 0,
+    "known_true_total": null,
+    "portfolio_url": null,
+    "target_minimum": 25,
+    "instruction": "No holdings collected yet. Return at least 25, ranked, each with its own source_url.",
+    "rank_by": [
+      "ai-labs",
+      "ai-compute",
+      "semiconductors",
+      "fab-equipment",
+      "cloud-hyperscale",
+      "neocloud",
+      "datacenters",
+      "power-energy",
+      "nuclear",
+      "networking",
+      "robotics",
+      "defense-tech",
+      "cybersecurity",
+      "ai-applications",
+      "ai-data"
+    ]
+  },
+  {
+    "entity": "Altimeter Himalaya Fund I, L.P.",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Altimeter"
+    ],
+    "capital_usd": 40000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2139124/000213912426000001/primary_doc.xml"
+    ],
+    "reason": "missing",
+    "already_have": 0,
+    "known_true_total": null,
+    "portfolio_url": null,
+    "target_minimum": 25,
+    "instruction": "No holdings collected yet. Return at least 25, ranked, each with its own source_url.",
+    "rank_by": [
+      "ai-labs",
+      "ai-compute",
+      "semiconductors",
+      "fab-equipment",
+      "cloud-hyperscale",
+      "neocloud",
+      "datacenters",
+      "power-energy",
+      "nuclear",
+      "networking",
+      "robotics",
+      "defense-tech",
+      "cybersecurity",
+      "ai-applications",
+      "ai-data"
+    ]
+  },
+  {
+    "entity": "Apollo",
+    "kind": "firm",
+    "class": "alt_manager",
+    "parent_hint": [],
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://x.com/jensenhuang/status/2086934705207959965?s=46"
+    ],
+    "reason": "thin",
+    "already_have": 15,
+    "known_true_total": 190,
+    "portfolio_url": null,
+    "target_minimum": 50,
+    "instruction": "We already hold 15 of a known 190 holdings for this entity. Return a DEEPER list \u2014 at least 50 \u2014 not a re-send of the same names. Where the portfolio is far larger than that, choose by RELEVANCE to this map first (see rank_by), then by stake size and notability: 50 chosen names beat 15 arbitrary ones.",
+    "rank_by": [
+      "ai-labs",
+      "ai-compute",
+      "semiconductors",
+      "fab-equipment",
+      "cloud-hyperscale",
+      "neocloud",
+      "datacenters",
+      "power-energy",
+      "nuclear",
+      "networking",
+      "robotics",
+      "defense-tech",
+      "cybersecurity",
+      "ai-applications",
+      "ai-data"
+    ]
+  }
+]

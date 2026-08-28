@@ -319,6 +319,33 @@ CREATE TABLE IF NOT EXISTS trend_narratives (
     updated_at  TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
+-- What each holdings run ASKED FOR, and what came back (post-mortem of W33/W34).
+-- Without this, a skipped collection step and a genuinely quiet month both print
+-- "0 portfolios" and both ship green — which is exactly how 36 funds stayed empty
+-- for three weeks. A request row is written when a batch input is generated and
+-- flipped to delivered=1 on ingest; anything still at 0 is a step that did not run.
+CREATE TABLE IF NOT EXISTS holdings_requests (
+    period          TEXT NOT NULL,      -- run id ('2026-08' for the monthly job)
+    entity          TEXT NOT NULL,
+    batch           TEXT,
+    reason          TEXT NOT NULL CHECK (reason IN ('missing','thin')),
+    already_have    INTEGER NOT NULL DEFAULT 0,
+    true_total      INTEGER,
+    delivered       INTEGER NOT NULL DEFAULT 0,
+    delivered_count INTEGER,
+    shortfall       INTEGER NOT NULL DEFAULT 0,   -- 1 = came back under the floor
+    -- Why a request has no holdings. 'not_run' is a broken STEP and escalates to an
+    -- audit error; 'no_disclosure' is a researched vehicle whose holdings are
+    -- genuinely not public — an SPV documented only by a Form D — and must never
+    -- escalate, because there is nothing to fix.
+    outcome         TEXT CHECK (outcome IN ('delivered','no_disclosure','not_run')),
+    created_at      TEXT NOT NULL DEFAULT (datetime('now')),
+    resolved_at     TEXT,
+    UNIQUE (period, entity)
+);
+CREATE INDEX IF NOT EXISTS idx_holdings_requests_entity
+    ON holdings_requests (entity, period);
+
 -- Detected themes: output of the theme engine, one row per (theme, run_week).
 CREATE TABLE IF NOT EXISTS themes (
     id          INTEGER PRIMARY KEY,

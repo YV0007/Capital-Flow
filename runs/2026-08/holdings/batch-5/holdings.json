@@ -1,0 +1,690 @@
+[
+  {
+    "entity": "Goldman Sachs",
+    "portfolio_url": "https://am.gs.com/en-us/advisors/products/gs-growth",
+    "holdings_count": 114,
+    "as_of": "2026-08-27",
+    "holdings": [
+      {
+        "name": "Anthropic",
+        "sector": "ai-labs",
+        "subsector": "frontier-models",
+        "note": "AI safety and research company building reliable, interpretable and steerable AI systems.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Databricks",
+        "sector": "ai-data",
+        "subsector": "data-platform",
+        "note": "Data and AI lakehouse platform for data engineering, analytics and machine learning.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Anduril",
+        "sector": "defense-tech",
+        "subsector": "autonomous-systems",
+        "note": "Defense technology company building autonomous systems for US and allied militaries.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Locus Robotics",
+        "sector": "robotics",
+        "subsector": "industrial-automation",
+        "note": "Enterprise warehouse automation using autonomous mobile robots for order fulfilment.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Exotec",
+        "sector": "robotics",
+        "subsector": "industrial-automation",
+        "note": "Robotic warehouse systems automating logistics operations globally.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Simbe",
+        "sector": "robotics",
+        "subsector": "industrial-automation",
+        "note": "Store intelligence robots using AI and computer vision for retail shelf visibility.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "H2O",
+        "sector": "ai-data",
+        "subsector": "data-platform",
+        "note": "Data science and machine learning platform for building and deploying AI models.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Redis",
+        "sector": "ai-data",
+        "subsector": "data-platform",
+        "note": "Real-time data platform behind open-source Redis, used as an application data layer.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Striim",
+        "sector": "ai-data",
+        "subsector": "data-platform",
+        "note": "Real-time data integration and streaming platform for cloud and on-premise data stores.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Crux",
+        "sector": "ai-data",
+        "subsector": "data-platform",
+        "note": "Data management platform powering enterprise external-data distribution pipelines.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Nasuni",
+        "sector": "ai-data",
+        "subsector": "data-platform",
+        "note": "Cloud-native enterprise file storage replacing network-attached storage and backup.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Infinidat",
+        "sector": "ai-data",
+        "subsector": "data-platform",
+        "note": "Hybrid enterprise storage systems for large-scale data centre workloads.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Aryaka",
+        "sector": "networking",
+        "subsector": null,
+        "note": "Cloud-first SD-WAN and SASE provider delivering secure global enterprise connectivity.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Forward Networks",
+        "sector": "networking",
+        "subsector": null,
+        "note": "Network digital-twin software for modelling and verifying large enterprise networks.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "PICO",
+        "sector": "networking",
+        "subsector": null,
+        "note": "Infrastructure, connectivity and market-data technology services for financial markets.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Vanta",
+        "sector": "cybersecurity",
+        "subsector": "infrastructure-security",
+        "note": "Trust management platform automating security compliance for organisations.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Armis",
+        "sector": "cybersecurity",
+        "subsector": "infrastructure-security",
+        "note": "Continuous threat exposure management across IT, OT, IoT and medical assets.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Sysdig",
+        "sector": "cybersecurity",
+        "subsector": "infrastructure-security",
+        "note": "Cloud-native security platform securing containers, Kubernetes and cloud workloads.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Fortanix",
+        "sector": "cybersecurity",
+        "subsector": "infrastructure-security",
+        "note": "Data and AI security platform, a pioneer in confidential computing.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Tines",
+        "sector": "cybersecurity",
+        "subsector": "agentic-security",
+        "note": "Workflow automation platform for mission-critical security and IT operations.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Secure Code Warrior",
+        "sector": "cybersecurity",
+        "subsector": "agentic-security",
+        "note": "Developer security upskilling platform for writing secure software.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Immersive Labs",
+        "sector": "cybersecurity",
+        "subsector": null,
+        "note": "AI-powered cyber resilience platform for benchmarking and reporting cyber readiness.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Bastille",
+        "sector": "cybersecurity",
+        "subsector": "infrastructure-security",
+        "note": "Wireless airspace cybersecurity for enterprises and government facilities.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Transmit",
+        "sector": "cybersecurity",
+        "subsector": "infrastructure-security",
+        "note": "Transmit Security provides identity verification and authentication infrastructure.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Trulioo",
+        "sector": "cybersecurity",
+        "subsector": "infrastructure-security",
+        "note": "Global identity verification network for regulatory compliance and fraud prevention.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Very Good Security",
+        "sector": "cybersecurity",
+        "subsector": "infrastructure-security",
+        "note": "Sensitive-data security and compliance platform for regulated data handling.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Solink",
+        "sector": "cybersecurity",
+        "subsector": "infrastructure-security",
+        "note": "Visual intelligence platform combining video security with business operations data.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "AlphaSense",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Enterprise AI market intelligence platform for business and financial research.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Automation Anywhere",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Intelligent automation platform combining robotic process automation and AI agents.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Aidoc",
+        "sector": "ai-applications",
+        "subsector": "healthcare-ai",
+        "note": "Clinical radiology AI platform deployed across hospital imaging workflows.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Navina",
+        "sector": "ai-applications",
+        "subsector": "healthcare-ai",
+        "note": "AI copilot giving providers and care teams clinical intelligence at the point of care.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Neural Concept",
+        "sector": "ai-applications",
+        "subsector": "ai-for-science",
+        "note": "AI-first engineering platform for product development in automotive and aerospace.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "ScienceLogic",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "AIOps platform for IT monitoring across hybrid-cloud environments.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Fieldguide",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "AI automation platform digitising audit and advisory engagements for CPA firms.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/news/press-release/2026/fieldguide-growth-equity"
+      },
+      {
+        "name": "Persado",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "AI platform generating marketing language using computational linguistics.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Federato",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "AI-native full policy lifecycle platform for insurance underwriting.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Taktile",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Decision automation platform for automated risk decisioning at financial institutions.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Hightouch",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Agentic marketing and customer data platform activating first-party data.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "ORO Labs",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Enterprise procurement orchestration platform for regulated global organisations.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "BLP",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Automation platform for document-based ERP processes in finance and logistics.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Digibee",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "AI-native integration platform for large-scale, mission-critical enterprises.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Spectro Cloud",
+        "sector": "ai-applications",
+        "subsector": null,
+        "note": "Kubernetes orchestration platform for managing the full container lifecycle.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Project44",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Real-time supply chain visibility for shippers and third-party logistics firms.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Rippling",
+        "sector": "ai-applications",
+        "subsector": "vertical-saas-ai",
+        "note": "Workforce management platform unifying HR, IT and finance on one data model.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Canva",
+        "sector": "ai-applications",
+        "subsector": "vertical-saas-ai",
+        "note": "Visual software suite with AI-powered tools for presentations and design.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Clio",
+        "sector": "ai-applications",
+        "subsector": "legal-regulatory-ai",
+        "note": "Legal practice management software for law firms.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Lightricks",
+        "sector": "ai-applications",
+        "subsector": "vertical-saas-ai",
+        "note": "Image and video editing applications for mobile and web creators.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "CallMiner",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Conversation intelligence capturing and analysing speech-based customer interactions.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Revenue.io",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "AI-driven sales acceleration tools for inside sales teams and revenue leaders.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Limble",
+        "sector": "ai-applications",
+        "subsector": "vertical-saas-ai",
+        "note": "AI-powered maintenance and asset management platform for frontline teams.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Fleetio",
+        "sector": "ai-applications",
+        "subsector": "vertical-saas-ai",
+        "note": "Fleet optimisation platform for managing vehicle assets and repair workflows.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "OutSystems",
+        "sector": "ai-applications",
+        "subsector": "vertical-saas-ai",
+        "note": "Low-code application development platform using automation and AI.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Unqork",
+        "sector": "ai-applications",
+        "subsector": "vertical-saas-ai",
+        "note": "Low-code application platform for large enterprises building custom software.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Stackline",
+        "sector": "ai-applications",
+        "subsector": "vertical-saas-ai",
+        "note": "Ecommerce enablement and performance analytics platform for brands.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "LeanTaas",
+        "sector": "ai-applications",
+        "subsector": "healthcare-ai",
+        "note": "Cloud software optimising hospital asset and capacity utilisation.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "H1",
+        "sector": "ai-applications",
+        "subsector": "healthcare-ai",
+        "note": "Global healthcare provider data platform used by biopharma and health systems.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Judi Health",
+        "sector": "ai-applications",
+        "subsector": "healthcare-ai",
+        "note": "Pharmacy and medical benefit administration platform for health plans and systems.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "TraceLink",
+        "sector": "ai-applications",
+        "subsector": "healthcare-ai",
+        "note": "Pharmaceutical digital supply network for regulatory compliance and traceability.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Stripe",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Programmable financial services and payments infrastructure for businesses.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Ramp",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Financial operations platform for cards, payments, procurement and bookkeeping.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Revolut",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Global financial app for spending, transfers, FX and wealth for 65M+ customers.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Carta",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Cap table and private-capital ERP connecting data, people and workflows.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "iCapital",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "End-to-end platform for alternative investments and structured investments.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Starling Bank",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Fully-licensed UK digital bank offering current accounts, payments and lending.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Vestwell",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Fintech platform powering workplace savings and retirement programmes.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "ComplyAdvantage",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "AI-driven financial crime risk data and detection technology.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "Canoe",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Alternative investment data intelligence for institutional investors.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      },
+      {
+        "name": "73 Strings",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Data extraction, portfolio monitoring and valuation platform for private markets.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://am.gs.com/en-us/advisors/products/gs-growth"
+      }
+    ]
+  }
+]

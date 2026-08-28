@@ -1,0 +1,282 @@
+[
+  {
+    "entity": "Saudi PIF strategic investments (US export credit facility)",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "US Government"
+    ],
+    "capital_usd": 15000000000.0,
+    "deal_source_urls": [
+      "https://www.pif.gov.sa/en/news-and-insights/press-releases/2026/pif-us-exim-15-billion-usd-mou-export-credit/"
+    ],
+    "reason": "missing",
+    "already_have": 0,
+    "known_true_total": null,
+    "portfolio_url": null,
+    "target_minimum": 25,
+    "instruction": "No holdings collected yet. Return at least 25, ranked, each with its own source_url.",
+    "rank_by": [
+      "ai-labs",
+      "ai-compute",
+      "semiconductors",
+      "fab-equipment",
+      "cloud-hyperscale",
+      "neocloud",
+      "datacenters",
+      "power-energy",
+      "nuclear",
+      "networking",
+      "robotics",
+      "defense-tech",
+      "cybersecurity",
+      "ai-applications",
+      "ai-data"
+    ]
+  },
+  {
+    "entity": "SoftBank",
+    "kind": "firm",
+    "class": "alt_manager",
+    "parent_hint": [],
+    "capital_usd": 14000000000.0,
+    "deal_source_urls": [
+      "https://group.softbank/en/news/press/20260701",
+      "https://group.softbank/en/news/press/20260702",
+      "https://www.bloomberg.com/news/articles/2026-07-21/banks-wrap-up-loan-backing-softbank-s-5-4-billion-robotics-bet"
+    ],
+    "reason": "missing",
+    "already_have": 0,
+    "known_true_total": null,
+    "portfolio_url": null,
+    "target_minimum": 25,
+    "instruction": "No holdings collected yet. Return at least 25, ranked, each with its own source_url.",
+    "rank_by": [
+      "ai-labs",
+      "ai-compute",
+      "semiconductors",
+      "fab-equipment",
+      "cloud-hyperscale",
+      "neocloud",
+      "datacenters",
+      "power-energy",
+      "nuclear",
+      "networking",
+      "robotics",
+      "defense-tech",
+      "cybersecurity",
+      "ai-applications",
+      "ai-data"
+    ]
+  },
+  {
+    "entity": "KIC strategic investment account (AI / data centers / strategic industries)",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Korea Investment Corporation"
+    ],
+    "capital_usd": 14000000000.0,
+    "deal_source_urls": [
+      "https://www.bloomberg.com/news/articles/2026-07-30/korea-plans-14-billion-for-wealth-fund-s-ai-bets-after-rout"
+    ],
+    "reason": "missing",
+    "already_have": 0,
+    "known_true_total": null,
+    "portfolio_url": null,
+    "target_minimum": 25,
+    "instruction": "No holdings collected yet. Return at least 25, ranked, each with its own source_url.",
+    "rank_by": [
+      "ai-labs",
+      "ai-compute",
+      "semiconductors",
+      "fab-equipment",
+      "cloud-hyperscale",
+      "neocloud",
+      "datacenters",
+      "power-energy",
+      "nuclear",
+      "networking",
+      "robotics",
+      "defense-tech",
+      "cybersecurity",
+      "ai-applications",
+      "ai-data"
+    ]
+  },
+  {
+    "entity": "Sequoia",
+    "kind": "firm",
+    "class": "vc",
+    "parent_hint": [],
+    "capital_usd": 12755000000.0,
+    "deal_source_urls": [
+      "https://www.businesswire.com/news/home/20260713849009/en/Chai-Discovery-Announces-$400M-Series-C-to-Advance-AI-Driven-Molecular-Design",
+      "https://www.prnewswire.com/news-releases/senra-systems-announces-65-million-series-b-plans-for-third-manufacturing-facility-302825664.html",
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=Glow&type=D&dateb=&owner=include&count=40"
+    ],
+    "reason": "missing",
+    "already_have": 0,
+    "known_true_total": null,
+    "portfolio_url": null,
+    "target_minimum": 25,
+    "instruction": "No holdings collected yet. Return at least 25, ranked, each with its own source_url.",
+    "rank_by": [
+      "ai-labs",
+      "ai-compute",
+      "semiconductors",
+      "fab-equipment",
+      "cloud-hyperscale",
+      "neocloud",
+      "datacenters",
+      "power-energy",
+      "nuclear",
+      "networking",
+      "robotics",
+      "defense-tech",
+      "cybersecurity",
+      "ai-applications",
+      "ai-data"
+    ]
+  },
+  {
+    "entity": "Andreessen Horowitz",
+    "kind": "firm",
+    "class": "vc",
+    "parent_hint": [],
+    "capital_usd": 10637000000.0,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/senra-systems-announces-65-million-series-b-plans-for-third-manufacturing-facility-302825664.html",
+      "https://www.sec.gov/Archives/edgar/data/2107841/000110465926084291/primary_doc.xml",
+      "https://www.sec.gov/Archives/edgar/data/2107847/000110465926084290/primary_doc.xml"
+    ],
+    "reason": "thin",
+    "already_have": 49,
+    "known_true_total": 1458,
+    "portfolio_url": "https://a16z.com/investment-list/",
+    "target_minimum": 50,
+    "instruction": "We already hold 49 of a known 1458 holdings for this entity. Return a DEEPER list \u2014 at least 50 \u2014 not a re-send of the same names. Where the portfolio is far larger than that, choose by RELEVANCE to this map first (see rank_by), then by stake size and notability: 50 chosen names beat 49 arbitrary ones.",
+    "rank_by": [
+      "ai-labs",
+      "ai-compute",
+      "semiconductors",
+      "fab-equipment",
+      "cloud-hyperscale",
+      "neocloud",
+      "datacenters",
+      "power-energy",
+      "nuclear",
+      "networking",
+      "robotics",
+      "defense-tech",
+      "cybersecurity",
+      "ai-applications",
+      "ai-data"
+    ]
+  },
+  {
+    "entity": "Coatue retail fund",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Coatue"
+    ],
+    "capital_usd": 8000000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002044519&type=&dateb=&owner=include&count=40"
+    ],
+    "reason": "missing",
+    "already_have": 0,
+    "known_true_total": null,
+    "portfolio_url": null,
+    "target_minimum": 25,
+    "instruction": "No holdings collected yet. Return at least 25, ranked, each with its own source_url.",
+    "rank_by": [
+      "ai-labs",
+      "ai-compute",
+      "semiconductors",
+      "fab-equipment",
+      "cloud-hyperscale",
+      "neocloud",
+      "datacenters",
+      "power-energy",
+      "nuclear",
+      "networking",
+      "robotics",
+      "defense-tech",
+      "cybersecurity",
+      "ai-applications",
+      "ai-data"
+    ]
+  },
+  {
+    "entity": "Brookfield Infrastructure Fund VI (flagship)",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Brookfield"
+    ],
+    "capital_usd": 7900000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1937926/000117184326005272/exh_991.htm"
+    ],
+    "reason": "missing",
+    "already_have": 0,
+    "known_true_total": null,
+    "portfolio_url": null,
+    "target_minimum": 25,
+    "instruction": "No holdings collected yet. Return at least 25, ranked, each with its own source_url.",
+    "rank_by": [
+      "ai-labs",
+      "ai-compute",
+      "semiconductors",
+      "fab-equipment",
+      "cloud-hyperscale",
+      "neocloud",
+      "datacenters",
+      "power-energy",
+      "nuclear",
+      "networking",
+      "robotics",
+      "defense-tech",
+      "cybersecurity",
+      "ai-applications",
+      "ai-data"
+    ]
+  },
+  {
+    "entity": "Thrive Capital",
+    "kind": "firm",
+    "class": "vc",
+    "parent_hint": [],
+    "capital_usd": 6430000000.0,
+    "deal_source_urls": [
+      "https://www.businesswire.com/news/home/20260713849009/en/Chai-Discovery-Announces-$400M-Series-C-to-Advance-AI-Driven-Molecular-Design",
+      "https://www.businesswire.com/news/home/20260803203117/en/Base-Power-Announces-$1B-Series-D-and-Launches-Base-Core-First-of-its-Kind-Home-Battery-Built-in-the-United-States",
+      "https://ambrook.com/series-b"
+    ],
+    "reason": "missing",
+    "already_have": 0,
+    "known_true_total": null,
+    "portfolio_url": null,
+    "target_minimum": 25,
+    "instruction": "No holdings collected yet. Return at least 25, ranked, each with its own source_url.",
+    "rank_by": [
+      "ai-labs",
+      "ai-compute",
+      "semiconductors",
+      "fab-equipment",
+      "cloud-hyperscale",
+      "neocloud",
+      "datacenters",
+      "power-energy",
+      "nuclear",
+      "networking",
+      "robotics",
+      "defense-tech",
+      "cybersecurity",
+      "ai-applications",
+      "ai-data"
+    ]
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "entity": "Quiet Select TX LP",
+    "kind": "vehicle",
+    "class": "fund",
+    "parent_hint": [
+      "Brian Singerman"
+    ],
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/2147584/000123191926000805/primary_doc.xml"
+    ],
+    "reason": "missing",
+    "already_have": 0,
+    "known_true_total": null,
+    "portfolio_url": null,
+    "target_minimum": 25,
+    "instruction": "No holdings collected yet. Return at least 25, ranked, each with its own source_url.",
+    "rank_by": [
+      "ai-labs",
+      "ai-compute",
+      "semiconductors",
+      "fab-equipment",
+      "cloud-hyperscale",
+      "neocloud",
+      "datacenters",
+      "power-energy",
+      "nuclear",
+      "networking",
+      "robotics",
+      "defense-tech",
+      "cybersecurity",
+      "ai-applications",
+      "ai-data"
+    ]
+  }
+]

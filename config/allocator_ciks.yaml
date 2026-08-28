@@ -1,0 +1,111 @@
+# Capital-map allocators that ALSO file a 13F — the PUBLIC book.
+#
+# Deliberately a sibling of config/fund_managers.yaml rather than an extension of
+# it. That file is the Fund Tracker's closed, curated universe of managers we read
+# for conviction; it is meant to stay under fifteen names and its loader refuses to
+# grow past twenty. These are capital-map allocators, a different set answering a
+# different question: "this firm also has a marketable book, here it is." Coatue
+# and Altimeter appear in both, and for those the position data is READ FROM the
+# Fund Tracker rather than fetched twice.
+#
+# Every CIK below was resolved against EDGAR and verified to carry a CURRENT
+# 13F-HR. The verification runs again on every refresh: a CIK that stops resolving
+# to the expected name is a hard stop, not a silent re-point.
+#
+# `cik: null` is a POSITIVE finding, not a to-do. A fund with no 13F emits no
+# `public_book` key at all (contract §7: absent ≠ empty), and the reason is
+# recorded here so nobody re-investigates it every quarter.
+
+version: "1.0"
+
+allocators:
+
+  # ── file a current 13F ────────────────────────────────────────────────────
+  - entity: Brookfield
+    cik: "0001001085"
+    filer_name: BROOKFIELD Corp /ON/
+    note: Files as the parent corporation; the book is the listed-securities sleeve.
+
+  - entity: Blackstone
+    cik: "0001393818"
+    filer_name: Blackstone Inc.
+
+  - entity: BlackRock
+    cik: "0002012383"
+    filer_name: BlackRock, Inc.
+    flow_driven: true
+    flow_note: >-
+      ~50,000 positions. This is the index and ETF complex, not a conviction book;
+      BlackRock holds a slice of nearly every listed company because its funds
+      track the market. Ranking it by weight produces a list of mega-caps that says
+      nothing about belief. Rendered as ownership data, never as conviction.
+    note: >-
+      The current filer. The older BlackRock Finance, Inc. (0001364742) stopped
+      filing 13F-HR in 2024 — pointing at it returns a two-year-old book that
+      looks perfectly plausible.
+
+  - entity: Blue Owl
+    cik: "0001858703"
+    filer_name: Blue Owl Capital Holdings LP
+
+  - entity: Apollo
+    cik: "0001449434"
+    filer_name: Apollo Management Holdings, L.P.
+
+  - entity: Goldman Sachs
+    cik: "0000886982"
+    filer_name: GOLDMAN SACHS GROUP INC
+    flow_driven: true
+    flow_note: >-
+      ~14,000 positions spanning market-making inventory, client facilitation and
+      asset-management funds. The filing has no strategy attribution, so no filter
+      separates a conviction desk from flow. Shown as ownership, not as belief.
+
+  - entity: SoftBank
+    cik: "0001065521"
+    filer_name: SOFTBANK GROUP CORP.
+    note: >-
+      Files a 13F for its US-listed sleeve only. The Vision Fund private book is
+      the far larger half and appears nowhere in EDGAR — this is the clearest case
+      on the map of the two books needing to stay separate and never summed.
+
+  # ── in the Fund Tracker too: positions are reused, not re-fetched ──────────
+  - entity: Coatue
+    cik: "0001135730"
+    filer_name: COATUE MANAGEMENT LLC
+    fund_tracker: coatue
+    note: >-
+      The proof case for carrying both books: coatue.com/privates-portfolio is the
+      venture list, and this CIK is the marketable one. Same firm, two disjoint
+      sets of companies, different provenance and cadence.
+
+  - entity: Altimeter
+    cik: "0001541617"
+    filer_name: Altimeter Capital Management, LP
+    fund_tracker: altimeter
+
+  # ── no 13F. Recorded so the question is not reopened every quarter. ────────
+  - entity: KKR
+    cik: null
+    reason: >-
+      No current 13F filer. The last was KKR Credit Advisors (US) LLC in 2013;
+      KKR & Co. Inc. (0001404912) has never filed one. KKR's marketable exposure
+      is held through insurance and subsidiary vehicles that report separately, so
+      there is no firm-level 13F to show — an absence of the filing, not of data.
+  - entity: Sequoia
+    cik: null
+    reason: Venture manager; positions are private companies, which no 13F covers.
+  - entity: Thrive Capital
+    cik: null
+    reason: >-
+      Private book only — OpenAI, Stripe, SpaceX, Anthropic. None of these appear
+      in any 13F, ever. Pointing 13F at this fund returns nothing and reads as a bug.
+  - entity: Founders Fund
+    cik: null
+    reason: Venture manager; private positions only.
+  - entity: Khosla Ventures
+    cik: null
+    reason: Venture manager; private positions only.
+  - entity: MGX Fund I
+    cik: null
+    reason: Sovereign-backed AI vehicle; private positions, no US reporting obligation.

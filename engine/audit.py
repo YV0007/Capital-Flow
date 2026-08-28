@@ -15,6 +15,10 @@ ERRORS (block deployment):
   E3  event missing its confidence grade (reliability/credibility/score)
   E4  track-record row with no source_url (unsourced numbers must not ship)
   E5  current-fiscal-year / YTD track-record row not flagged provisional
+  E6  a large fund (>= $5B) asked for holdings in two consecutive runs and given
+      none. One miss is a quiet month; two in a row is a step that is not running.
+      This is an ERROR precisely because it spent three weeks as a warning while
+      36 funds shipped empty and every week went out green.
 
 WARNINGS (ship, but surfaced):
   W1  sector outside the canonical taxonomy
@@ -30,9 +34,16 @@ WARNINGS (ship, but surfaced):
       portfolio view would be empty
   W8  investable target with >= $1B confirmed capital but no ai_posture tag —
       the dashboard's moat / AI-resilience factor stays dark for it
+  W9  a portfolio delivered UNDER the 25-holding floor its own holdings_count
+      says it could clear — the fund renders as "top 16 of 250", which reads as
+      the engine giving up
 """
 
 HOLDINGS_MIN_USD = 1e9
+# The threshold above which a persistent holdings gap stops being cosmetic. These
+# are the funds a user actually clicks; shipping them empty is shipping broken.
+HOLDINGS_ERROR_MIN_USD = 5e9
+HOLDINGS_ERROR_RUNS = 2
 CLASSIFY_MIN_USD = 1e9
 # Mirror the dashboard's investable gate (classification.js): these never get
 # deal-level classification, so don't flag them for missing it.
@@ -135,7 +146,7 @@ def _check_references(con, warnings, errors):
     return con.execute("SELECT COUNT(*) c FROM target_references").fetchone()["c"]
 
 
-def _check_holdings(con, warnings):
+def _check_holdings(con, warnings, errors=None):
     gaps = con.execute(
         """SELECT label, cap FROM (
              SELECT a.name AS label, SUM(COALESCE(e.amount_usd,0)) cap
@@ -151,9 +162,29 @@ def _check_holdings(con, warnings):
            WHERE cap >= ?
              AND label NOT IN (SELECT entity FROM portfolios WHERE holdings_count > 0)
            ORDER BY cap DESC""", (HOLDINGS_MIN_USD,)).fetchall()
+    from .holdings import MIN_HOLDINGS, unresolved
+    stuck = set(unresolved(con, HOLDINGS_ERROR_RUNS)) if errors is not None else set()
     for g in gaps:
-        warnings.append(f"W7 {g['label']}: ${g['cap']/1e9:.1f}B fund/firm with no "
-                        f"holdings collected")
+        if (errors is not None and g["label"] in stuck
+                and g["cap"] >= HOLDINGS_ERROR_MIN_USD):
+            errors.append(
+                f"E6 {g['label']}: ${g['cap']/1e9:.1f}B fund asked for holdings in "
+                f"{HOLDINGS_ERROR_RUNS} consecutive runs and given none — the "
+                f"collection step is not running, not the fund being quiet")
+        else:
+            warnings.append(f"W7 {g['label']}: ${g['cap']/1e9:.1f}B fund/firm with no "
+                            f"holdings collected")
+
+    # W9 — present but thinner than its own true total says it need be.
+    for r in con.execute(
+            """SELECT p.entity, p.holdings_count, COUNT(h.id) got
+               FROM portfolios p LEFT JOIN holdings h ON h.entity = p.entity
+               GROUP BY p.entity
+               HAVING got > 0 AND got < ? AND p.holdings_count > got""",
+            (MIN_HOLDINGS,)):
+        warnings.append(f"W9 {r['entity']}: {r['got']} of {r['holdings_count']} "
+                        f"holdings shipped — under the {MIN_HOLDINGS} floor; renders "
+                        f"as 'top {r['got']} of {r['holdings_count']}'")
     return con.execute("SELECT COUNT(*) c FROM holdings").fetchone()["c"]
 
 
@@ -200,7 +231,7 @@ def run(week: str) -> dict:
     n_tr = _check_track_records(con, errors)
     n_prof = _check_profiles(con, warnings)
     n_refs = _check_references(con, warnings, errors)
-    n_hold = _check_holdings(con, warnings)
+    n_hold = _check_holdings(con, warnings, errors)
     n_cls = _check_classification(con, warnings)
     stats = _stats(con)
     con.close()

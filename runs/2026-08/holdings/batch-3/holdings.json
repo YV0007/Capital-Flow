@@ -1,0 +1,3026 @@
+[
+  {
+    "entity": "Altimeter",
+    "portfolio_url": null,
+    "holdings_count": 18,
+    "as_of": "2026-08-27",
+    "holdings": [
+      {
+        "name": "Anthropic",
+        "sector": "ai-labs",
+        "subsector": "frontier-models",
+        "note": "AI lab building Claude; Altimeter co-led the $65B Series H at $965B post-money.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.anthropic.com/news/series-h"
+      },
+      {
+        "name": "OpenAI",
+        "sector": "ai-labs",
+        "subsector": "frontier-models",
+        "note": "Frontier AI lab; Altimeter in the syndicate contributing $2.5B to the $40B SoftBank-led round.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.calcalistech.com/ctechnews/article/o0j3ezqoa"
+      },
+      {
+        "name": "Baseten",
+        "sector": "ai-compute",
+        "subsector": null,
+        "note": "AI inference infrastructure; Altimeter co-led the $1.5B Series F at $13B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.baseten.co/blog/announcing-our-series-f/"
+      },
+      {
+        "name": "Volta",
+        "sector": "neocloud",
+        "subsector": "gpu-capacity",
+        "note": "AI cloud / AI-factory developer; Altimeter co-led the $300M Series A at $2.4B alongside Azora, a16z and NVIDIA.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-27",
+        "source_url": "https://volta.com/news/volta-launches-the-utility-of-compute/"
+      },
+      {
+        "name": "Cerebras Systems",
+        "sector": "semiconductors",
+        "subsector": "custom-silicon",
+        "note": "Wafer-scale AI chips and inference systems; participated in the $1B Series H.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.cerebras.ai/press-release/cerebras-systems-raises-usd1-billion-series-h"
+      },
+      {
+        "name": "Hadrian",
+        "sector": "defense-tech",
+        "subsector": "defense-manufacturing",
+        "note": "Automated precision-manufacturing factories for defense and aerospace; $1.37B Series D at $7.87B.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html"
+      },
+      {
+        "name": "Base Power",
+        "sector": "power-energy",
+        "subsector": "grid-storage",
+        "note": "Home battery systems aggregated into distributed grid capacity; $1B Series D at $13B.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://techcrunch.com/2026/08/03/base-power-raises-another-1b-to-save-the-grid-using-backyard-batteries/"
+      },
+      {
+        "name": "Castelion",
+        "sector": "defense-tech",
+        "subsector": "defense-manufacturing",
+        "note": "Mass-produced low-cost hypersonic strike weapons; Altimeter co-led the $350M Series B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.prnewswire.com/news-releases/castelion-closes-350-million-series-b-to-mass-produce-us-hypersonic-weapons-302633732.html"
+      },
+      {
+        "name": "Thrive Holdings",
+        "sector": "ai-applications",
+        "subsector": null,
+        "note": "Holding company applying AI to traditional enterprises; $2B raise at $12B.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/"
+      },
+      {
+        "name": "K2 Space",
+        "sector": "defense-tech",
+        "subsector": null,
+        "note": "Large high-power satellites for defense and commercial missions; $500M Series D at $6.8B.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.prnewswire.com/news-releases/k2-space-raises-500m-series-d-at-6-8b-valuation-to-scale-large-high-power-satellites-302838793.html"
+      },
+      {
+        "name": "Glean",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Enterprise AI search and work assistant; Altimeter led the Series E and remains an existing backer at $7.2B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.glean.com/blog/glean-series-f-announcement"
+      },
+      {
+        "name": "dbt Labs",
+        "sector": "ai-data",
+        "subsector": "data-platform",
+        "note": "Analytics engineering / data transformation platform; Altimeter led the $222M Series D at $4.2B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.prnewswire.com/news-releases/dbt-labs-raises-222m-in-series-d-funding-at-4-2b-valuation-led-by-altimeter-with-participation-from-databricks-and-snowflake-301489733.html"
+      },
+      {
+        "name": "ClickHouse",
+        "sector": "ai-data",
+        "subsector": "data-platform",
+        "note": "High-speed open-source analytical database; Altimeter co-led the $250M Series B at $2B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-27",
+        "source_url": "https://clickhouse.com/blog/click-house-raises-a-250m-series-b-at-a-2b-valuationand-we-are-hiring"
+      },
+      {
+        "name": "Hammerspace",
+        "sector": "ai-data",
+        "subsector": "data-platform",
+        "note": "Unstructured-data orchestration across storage and clouds for AI training pipelines; $100M round.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://techcrunch.com/2025/04/16/hammerspace-an-unstructured-data-wrangler-100m/"
+      },
+      {
+        "name": "Elorian",
+        "sector": "ai-applications",
+        "subsector": null,
+        "note": "AI company; Altimeter backed the $55M seed round in July 2026.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://datapile.co/investors/altimeter-capital"
+      },
+      {
+        "name": "Benchling",
+        "sector": "ai-applications",
+        "subsector": "ai-for-science",
+        "note": "R&D cloud for life-sciences data; Altimeter co-led the $100M Series F.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.prnewswire.com/news-releases/benchling-raises-100m-in-series-f-financing-co-led-by-altimeter-and-franklin-templeton-301428052.html"
+      },
+      {
+        "name": "Parloa",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Conversational AI agents for customer service; Altimeter backed the $66M round.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://techcrunch.com/2024/04/24/parloa-a-conversational-ai-platform-for-customer-service-raises-66m/"
+      },
+      {
+        "name": "Plaid",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Bank-account connectivity infrastructure for fintech; Altimeter led the $425M Series D at $13.4B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-27",
+        "source_url": "https://techcrunch.com/2021/04/07/plaid-raises-425m-series-d-from-altimeter-as-it-charts-a-post-visa-future/"
+      }
+    ]
+  },
+  {
+    "entity": "Khosla Ventures",
+    "portfolio_url": "https://www.khoslaventures.com/portfolio",
+    "holdings_count": 113,
+    "as_of": "2026-08-27",
+    "holdings": [
+      {
+        "name": "OpenAI",
+        "sector": "ai-labs",
+        "subsector": "frontier-models",
+        "note": "Frontier AI lab; Khosla was its first venture investor.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "Physical Intelligence",
+        "sector": "robotics",
+        "subsector": "robot-foundation-models",
+        "note": "Bringing general-purpose AI foundation models into the physical world.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "Commonwealth Fusion Systems",
+        "sector": "nuclear",
+        "subsector": "fusion",
+        "note": "High-field tokamak fusion energy company building the SPARC and ARC machines.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/sustainability"
+      },
+      {
+        "name": "Cognition",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Applied AI lab; makers of Devin, an autonomous AI software engineer.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "Sakana AI",
+        "sector": "ai-labs",
+        "subsector": "sovereign-compute",
+        "note": "Tokyo lab building native Japanese AI foundation models.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "Sarvam AI",
+        "sector": "ai-labs",
+        "subsector": "sovereign-compute",
+        "note": "Building the full generative-AI stack for India.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "General Intuition",
+        "sector": "ai-labs",
+        "subsector": "world-models",
+        "note": "AI lab building world models.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "ClickHouse",
+        "sector": "ai-data",
+        "subsector": "data-platform",
+        "note": "Real-time data warehouse and open-source analytical database.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "Sagence AI",
+        "sector": "semiconductors",
+        "subsector": "inference-asic",
+        "note": "Analog in-memory compute silicon for AI inference.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "PrismML",
+        "sector": "semiconductors",
+        "subsector": "inference-asic",
+        "note": "Chip company focused on producing more intelligence per watt.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "Vinci",
+        "sector": "semiconductors",
+        "subsector": "custom-silicon",
+        "note": "AI-driven hardware and chip design.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "Oratomic",
+        "sector": "semiconductors",
+        "subsector": "custom-silicon",
+        "note": "Building fault-tolerant quantum computers.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "Vercel",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Agentic frontend cloud and deployment infrastructure for AI-era apps.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "Parallel Web Systems",
+        "sector": "ai-data",
+        "subsector": "data-platform",
+        "note": "Adapting the web into structured infrastructure for AI agents.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "Twenty",
+        "sector": "cybersecurity",
+        "subsector": "military-cyber",
+        "note": "Industrializing cyber warfare capabilities.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "Mach Industries",
+        "sector": "defense-tech",
+        "subsector": "defense-manufacturing",
+        "note": "Next-generation defense systems and distributed munitions manufacturing.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "Norm Ai",
+        "sector": "ai-applications",
+        "subsector": "legal-regulatory-ai",
+        "note": "Agentic law: AI agents for regulatory and legal work; Khosla led the $120M Series C at $1.2B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.prnewswire.com/news-releases/norm-ai-raises-120-million-at-a-1-2-billion-valuation-led-by-khosla-ventures-to-deliver-the-full-stack-model-for-legal-ai-302819152.html"
+      },
+      {
+        "name": "Factory",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Autonomous agents that automate software development.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "Distyl",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "AI applications and deployment for Fortune 500 enterprises.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "Highlight AI",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Proactive AI assistant built for high-velocity teams.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "FieldAI",
+        "sector": "robotics",
+        "subsector": "robot-foundation-models",
+        "note": "On-edge robotic autonomy foundation models for industrial fields.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "Genesis",
+        "sector": "robotics",
+        "subsector": "robot-foundation-models",
+        "note": "Building robots that work like people.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "Reflex Robotics",
+        "sector": "robotics",
+        "subsector": "robot-foundation-models",
+        "note": "General-purpose wheeled humanoid robots.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "Rhoda",
+        "sector": "robotics",
+        "subsector": "robot-foundation-models",
+        "note": "Redefining robotic intelligence.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "Waabi",
+        "sector": "robotics",
+        "subsector": "autonomous-mobility",
+        "note": "Generative-AI self-driving trucks.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "Monumental",
+        "sector": "robotics",
+        "subsector": "industrial-automation",
+        "note": "Making construction autonomous with bricklaying robots.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "AIM",
+        "sector": "robotics",
+        "subsector": "critical-minerals-automation",
+        "note": "Planetary-scale autonomous earthmoving.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "Terra AI",
+        "sector": "robotics",
+        "subsector": "critical-minerals-automation",
+        "note": "Intelligent systems for critical-resource exploration and development.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/sustainability"
+      },
+      {
+        "name": "Mariana Minerals",
+        "sector": "defense-tech",
+        "subsector": "critical-materials",
+        "note": "Software-first, vertically integrated critical-minerals company.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/sustainability"
+      },
+      {
+        "name": "Realta Fusion",
+        "sector": "nuclear",
+        "subsector": "fusion",
+        "note": "Compact, scalable, modular magnetic-mirror fusion reactors.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/sustainability"
+      },
+      {
+        "name": "Mainspring Energy",
+        "sector": "power-energy",
+        "subsector": "baseload-generation",
+        "note": "Linear generators for local, fuel-flexible zero-carbon power.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/sustainability"
+      },
+      {
+        "name": "Redoxblox",
+        "sector": "power-energy",
+        "subsector": "grid-storage",
+        "note": "Thermochemical long-duration energy storage.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/sustainability"
+      },
+      {
+        "name": "Mazama",
+        "sector": "power-energy",
+        "subsector": "baseload-generation",
+        "note": "Extracting geothermal heat from superhot rocks.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/sustainability"
+      },
+      {
+        "name": "Hertha Metals",
+        "sector": "power-energy",
+        "subsector": "energy-infrastructure",
+        "note": "Low-emission steel produced more cheaply than coal-based steel.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/sustainability"
+      },
+      {
+        "name": "Fortera",
+        "sector": "power-energy",
+        "subsector": "energy-infrastructure",
+        "note": "Low-CO2 cement produced cheaper than ordinary Portland cement.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/sustainability"
+      },
+      {
+        "name": "LanzaTech",
+        "sector": "power-energy",
+        "subsector": "energy-infrastructure",
+        "note": "Gas-fermentation technology turning industrial pollution into fuels and chemicals.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/sustainability"
+      },
+      {
+        "name": "QuantumScape",
+        "sector": "ev-automotive",
+        "subsector": null,
+        "note": "Solid-state lithium-metal batteries for electric vehicles (NYSE: QS).",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/sustainability"
+      },
+      {
+        "name": "Rocket Lab",
+        "sector": "defense-tech",
+        "subsector": null,
+        "note": "Small-launch and space systems provider (NASDAQ: RKLB).",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "Hermeus",
+        "sector": "defense-tech",
+        "subsector": "autonomous-systems",
+        "note": "Mach 5 hypersonic aircraft for defense and commercial flight.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "Varda",
+        "sector": "defense-tech",
+        "subsector": null,
+        "note": "In-space manufacturing and hypersonic re-entry capsules.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "WindBorne",
+        "sector": "ai-applications",
+        "subsector": "ai-for-science",
+        "note": "AI-powered long-duration weather balloons and forecasting models.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "Glydways",
+        "sector": "robotics",
+        "subsector": "autonomous-mobility",
+        "note": "Autonomous high-capacity urban mass transit pods.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/sustainability"
+      },
+      {
+        "name": "Spellbook",
+        "sector": "ai-applications",
+        "subsector": "legal-regulatory-ai",
+        "note": "AI contract review and drafting for legal teams.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "Poly AI",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Superhuman voice assistants for customer support.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "Basis",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "AI agents that automate core accounting workflows.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "Lovable",
+        "sector": "ai-applications",
+        "subsector": null,
+        "note": "AI app builder that turns prompts into working web applications.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/consumer-and-retail"
+      },
+      {
+        "name": "Emergent",
+        "sector": "ai-applications",
+        "subsector": null,
+        "note": "AI agent that builds websites and apps from natural language.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/consumer-and-retail"
+      },
+      {
+        "name": "Abridge",
+        "sector": "ai-applications",
+        "subsector": "healthcare-ai",
+        "note": "AI for clinical conversations and medical documentation.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/digital-health"
+      },
+      {
+        "name": "Rad AI",
+        "sector": "ai-applications",
+        "subsector": "healthcare-ai",
+        "note": "AI radiology workflow automation.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/digital-health"
+      },
+      {
+        "name": "Stripe",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Financial infrastructure and payments for the internet.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/fintech"
+      },
+      {
+        "name": "Ramp",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "AI-native corporate cards and finance-operations platform.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/fintech"
+      },
+      {
+        "name": "Rubrik",
+        "sector": "cybersecurity",
+        "subsector": "infrastructure-security",
+        "note": "Data security and cyber-resilience for enterprises (NYSE: RBRK).",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "Okta",
+        "sector": "cybersecurity",
+        "subsector": "infrastructure-security",
+        "note": "Enterprise identity and access management (NASDAQ: OKTA).",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "Nutanix",
+        "sector": "cloud-hyperscale",
+        "subsector": null,
+        "note": "Hybrid multicloud platform for running apps and data anywhere (NASDAQ: NTNX).",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "GitLab",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "DevSecOps platform for software development (NASDAQ: GTLB).",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "Ultima Genomics",
+        "sector": "ai-applications",
+        "subsector": "ai-for-science",
+        "note": "Ultra-low-cost high-throughput DNA sequencing platform.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/med-tech-and-diagnostics"
+      },
+      {
+        "name": "Vivodyne",
+        "sector": "ai-applications",
+        "subsector": "drug-discovery-ai",
+        "note": "Robotic lab-grown human organ tissue for drug testing.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/med-tech-and-diagnostics"
+      },
+      {
+        "name": "Opentrons",
+        "sector": "robotics",
+        "subsector": "industrial-automation",
+        "note": "Lab robots automating biology workflows.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/med-tech-and-diagnostics"
+      },
+      {
+        "name": "Synchron",
+        "sector": "ai-applications",
+        "subsector": "healthcare-ai",
+        "note": "Endovascular brain-computer interface for paralysis.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/med-tech-and-diagnostics"
+      },
+      {
+        "name": "State Affairs",
+        "sector": "ai-applications",
+        "subsector": "legal-regulatory-ai",
+        "note": "AI platform tracking state and federal policy and regulation in real time; $70M round.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.prnewswire.com/news-releases/state-affairs-raises-70-million-to-help-institutions-navigate-the-policy-and-regulatory-economy-302824501.html"
+      },
+      {
+        "name": "Glean",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Enterprise AI search and work assistant; Khosla joined as a new investor at $7.2B.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.glean.com/blog/glean-series-f-announcement"
+      }
+    ]
+  },
+  {
+    "entity": "Khosla Ventures 2026 fund family",
+    "portfolio_url": "https://www.khoslaventures.com/portfolio",
+    "holdings_count": 40,
+    "as_of": "2026-08-27",
+    "holdings": [
+      {
+        "name": "OpenAI",
+        "sector": "ai-labs",
+        "subsector": "frontier-models",
+        "note": "Frontier AI lab; Khosla was its first venture investor. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "Physical Intelligence",
+        "sector": "robotics",
+        "subsector": "robot-foundation-models",
+        "note": "Bringing general-purpose AI foundation models into the physical world. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "Cognition",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Applied AI lab; makers of Devin, an autonomous AI software engineer. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "Sakana AI",
+        "sector": "ai-labs",
+        "subsector": "sovereign-compute",
+        "note": "Tokyo lab building native Japanese AI foundation models. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "Sarvam AI",
+        "sector": "ai-labs",
+        "subsector": "sovereign-compute",
+        "note": "Building the full generative-AI stack for India. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "General Intuition",
+        "sector": "ai-labs",
+        "subsector": "world-models",
+        "note": "AI lab building world models. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "Sagence AI",
+        "sector": "semiconductors",
+        "subsector": "inference-asic",
+        "note": "Analog in-memory compute silicon for AI inference. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "PrismML",
+        "sector": "semiconductors",
+        "subsector": "inference-asic",
+        "note": "Chip company focused on producing more intelligence per watt. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "Vinci",
+        "sector": "semiconductors",
+        "subsector": "custom-silicon",
+        "note": "AI-driven hardware and chip design. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "Oratomic",
+        "sector": "semiconductors",
+        "subsector": "custom-silicon",
+        "note": "Building fault-tolerant quantum computers. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "Vercel",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Agentic frontend cloud and deployment infrastructure for AI-era apps. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "Parallel Web Systems",
+        "sector": "ai-data",
+        "subsector": "data-platform",
+        "note": "Adapting the web into structured infrastructure for AI agents. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "Twenty",
+        "sector": "cybersecurity",
+        "subsector": "military-cyber",
+        "note": "Industrializing cyber warfare capabilities. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "Mach Industries",
+        "sector": "defense-tech",
+        "subsector": "defense-manufacturing",
+        "note": "Next-generation defense systems and distributed munitions manufacturing. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "Norm Ai",
+        "sector": "ai-applications",
+        "subsector": "legal-regulatory-ai",
+        "note": "Agentic law: AI agents for regulatory and legal work; Khosla led the $120M Series C at $1.2B. (via parent Khosla Venture",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.prnewswire.com/news-releases/norm-ai-raises-120-million-at-a-1-2-billion-valuation-led-by-khosla-ventures-to-deliver-the-full-stack-model-for-legal-ai-302819152.html"
+      },
+      {
+        "name": "Factory",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Autonomous agents that automate software development. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "Distyl",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "AI applications and deployment for Fortune 500 enterprises. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "Highlight AI",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Proactive AI assistant built for high-velocity teams. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "FieldAI",
+        "sector": "robotics",
+        "subsector": "robot-foundation-models",
+        "note": "On-edge robotic autonomy foundation models for industrial fields. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "Genesis",
+        "sector": "robotics",
+        "subsector": "robot-foundation-models",
+        "note": "Building robots that work like people. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "Reflex Robotics",
+        "sector": "robotics",
+        "subsector": "robot-foundation-models",
+        "note": "General-purpose wheeled humanoid robots. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "Rhoda",
+        "sector": "robotics",
+        "subsector": "robot-foundation-models",
+        "note": "Redefining robotic intelligence. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "Waabi",
+        "sector": "robotics",
+        "subsector": "autonomous-mobility",
+        "note": "Generative-AI self-driving trucks. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "Monumental",
+        "sector": "robotics",
+        "subsector": "industrial-automation",
+        "note": "Making construction autonomous with bricklaying robots. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "AIM",
+        "sector": "robotics",
+        "subsector": "critical-minerals-automation",
+        "note": "Planetary-scale autonomous earthmoving. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "Terra AI",
+        "sector": "robotics",
+        "subsector": "critical-minerals-automation",
+        "note": "Intelligent systems for critical-resource exploration and development. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/sustainability"
+      },
+      {
+        "name": "Mariana Minerals",
+        "sector": "defense-tech",
+        "subsector": "critical-materials",
+        "note": "Software-first, vertically integrated critical-minerals company. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/sustainability"
+      },
+      {
+        "name": "Realta Fusion",
+        "sector": "nuclear",
+        "subsector": "fusion",
+        "note": "Compact, scalable, modular magnetic-mirror fusion reactors. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/sustainability"
+      },
+      {
+        "name": "Commonwealth Fusion Systems",
+        "sector": "nuclear",
+        "subsector": "fusion",
+        "note": "High-field tokamak fusion energy company building the SPARC and ARC machines. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/sustainability"
+      },
+      {
+        "name": "Mainspring Energy",
+        "sector": "power-energy",
+        "subsector": "baseload-generation",
+        "note": "Linear generators for local, fuel-flexible zero-carbon power. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/sustainability"
+      },
+      {
+        "name": "Redoxblox",
+        "sector": "power-energy",
+        "subsector": "grid-storage",
+        "note": "Thermochemical long-duration energy storage. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/sustainability"
+      },
+      {
+        "name": "Mazama",
+        "sector": "power-energy",
+        "subsector": "baseload-generation",
+        "note": "Extracting geothermal heat from superhot rocks. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/sustainability"
+      },
+      {
+        "name": "Hertha Metals",
+        "sector": "power-energy",
+        "subsector": "energy-infrastructure",
+        "note": "Low-emission steel produced more cheaply than coal-based steel. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/sustainability"
+      },
+      {
+        "name": "ClickHouse",
+        "sector": "ai-data",
+        "subsector": "data-platform",
+        "note": "Real-time data warehouse and open-source analytical database. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      },
+      {
+        "name": "Lovable",
+        "sector": "ai-applications",
+        "subsector": null,
+        "note": "AI app builder that turns prompts into working web applications. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/consumer-and-retail"
+      },
+      {
+        "name": "Emergent",
+        "sector": "ai-applications",
+        "subsector": null,
+        "note": "AI agent that builds websites and apps from natural language. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/consumer-and-retail"
+      },
+      {
+        "name": "State Affairs",
+        "sector": "ai-applications",
+        "subsector": "legal-regulatory-ai",
+        "note": "AI platform tracking state and federal policy and regulation in real time; $70M round. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.prnewswire.com/news-releases/state-affairs-raises-70-million-to-help-institutions-navigate-the-policy-and-regulatory-economy-302824501.html"
+      },
+      {
+        "name": "Glean",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Enterprise AI search and work assistant; Khosla joined as a new investor at $7.2B. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.glean.com/blog/glean-series-f-announcement"
+      },
+      {
+        "name": "WindBorne",
+        "sector": "ai-applications",
+        "subsector": "ai-for-science",
+        "note": "AI-powered long-duration weather balloons and forecasting models. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/frontier"
+      },
+      {
+        "name": "Spellbook",
+        "sector": "ai-applications",
+        "subsector": "legal-regulatory-ai",
+        "note": "AI contract review and drafting for legal teams. (via parent Khosla Ventures)",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.khoslaventures.com/category/enterprise"
+      }
+    ]
+  },
+  {
+    "entity": "Azora",
+    "portfolio_url": null,
+    "holdings_count": 28,
+    "as_of": "2026-08-27",
+    "holdings": [
+      {
+        "name": "Volta",
+        "sector": "neocloud",
+        "subsector": "gpu-capacity",
+        "note": "AI cloud / AI-factory platform; Azora led the $300M Series A and runs a $5B AI infrastructure programme for it.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-27",
+        "source_url": "https://volta.com/news/volta-launches-the-utility-of-compute/"
+      },
+      {
+        "name": "Quetta Data Centers",
+        "sector": "datacenters",
+        "subsector": "colocation",
+        "note": "Iberian edge data-centre platform managed by Azora; >EUR500M for six sites in Spain and Portugal.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/azora-in-collaboration-with-core-capital-launches-quetta-platform-to-invest-more-than-e500m-into-iberian-data-centers/"
+      },
+      {
+        "name": "Zaragoza data centre",
+        "sector": "datacenters",
+        "subsector": "hyperscale-campus",
+        "note": "EUR2bn Aragon data-centre project with a 150MW grid connection, powered by renewables.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/azora-to-invest-e2-billion-in-zaragoza-data-centre/"
+      },
+      {
+        "name": "mylight150",
+        "sector": "power-energy",
+        "subsector": "energy-infrastructure",
+        "note": "French cleantech in solar self-consumption and smart energy management; EUR100M growth investment.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/mylight150-secures-e100m-to-accelerate-the-expansion-of-its-solar-self-consumption-smart-energy-management-solutions-in-europe/"
+      },
+      {
+        "name": "Abatable",
+        "sector": "power-energy",
+        "subsector": "energy-infrastructure",
+        "note": "Tech-enabled carbon procurement platform; Azora took a strategic stake with $13.5M.",
+        "stake": "$13.5M",
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/azora-acquires-strategic-stake-in-tech-enabled-carbon-procurement-company-abatable-with-$13.5-million-investment/"
+      },
+      {
+        "name": "Nestar",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Spanish affordable residential rental platform; EUR640M financing package secured by Azora.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/azora-secures-c.-eur-640-million-financing-package-for-spanish-affordable-residential-rental-platform-nestar/"
+      },
+      {
+        "name": "Advenir Azora",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "$3bn US residential housing platform, a partnership between Azora and Advenir.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/advenir-azora-create-$3bn-partnership-to-address-national-housing-shortage/"
+      },
+      {
+        "name": "Brisa",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Spanish build-to-rent residential platform; 195-home development in Alcala de Henares.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/brisa-launches-a-btr-development-of-195-rental-homes-in-alcala-de-henares-developed-by-aedas-homes/"
+      },
+      {
+        "name": "Stephouse",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Student-accommodation brand managed by Azora, launched across Spain.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/stephouse-the-student-accommodation-brand-managed-by-azora-has-officially-launched-across-spain/"
+      },
+      {
+        "name": "Romano Senior",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Spanish senior-care platform; acquired 11 care homes from the DomusVi group for EUR92M.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/romano-senior-acquires-11-care-homes-from-the-domusvi-group-for-92-million-euros/"
+      },
+      {
+        "name": "Medplaya",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "One of the leading hotel operators in Spain; acquisition completed by Azora.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/azora-completes-the-acquisition-of-medplaya-one-of-the-leading-hotel-operators-in-spain/"
+      },
+      {
+        "name": "emeis senior independent living (France)",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "emeis Group's French senior independent-living business, acquired by Azora.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/azora-enters-the-french-market-with-the-acquisition-of-emeis-group%E2%80%99s-senior-independent-living-business/"
+      },
+      {
+        "name": "Greek hospitality joint venture (Ioannou family)",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Greek hotel joint venture formed by Azora with the Ioannou family.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/azora-and-the-ioannou-family-form-greek-hospitality-joint-venture/"
+      },
+      {
+        "name": "Milepro",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Azora-managed logistics real-estate vehicle, listed on BME Growth.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/azora-announces-listing-milepro-bme-growth/"
+      },
+      {
+        "name": "Praia D'El Rey Hotel & Golf Resort",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Five-star hotel and golf resort in Portugal added to Azora's hotel portfolio.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/azora-further-strenghtens-its-hotel-portoflio-in-portugal-with-the-acquisition-of-praia-del-rey-hotel-5-golf-resort/"
+      },
+      {
+        "name": "Brussels urban hotels (LaTroupe)",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Two urban hotels in Brussels acquired by Azora, to be managed by LaTroupe.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/azora-acquires-two-urban-hotels-in-brussels-which-will-be-managed-by-latroupe/"
+      },
+      {
+        "name": "Dublin and Barcelona urban hostels",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Two urban hostel assets acquired by Azora in Dublin and Barcelona.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/azora-acquires-two-urban-hostels-in-dublin-and-barcelona/"
+      },
+      {
+        "name": "ML28 Madrid Urban Hub",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Azora's first urban campus in central Madrid.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/azora-launches-ml28-madrid-urban-hub-the-first-urban-campus-in-the-center-of-madrid/"
+      },
+      {
+        "name": "Planetocio leisure centre",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Madrid leisure centre acquired on behalf of Azora's multi-strategy vehicle.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/azora-acquires-the-planetocio-leisure-center-in-madrid-on-behalf-of-its-multi-strategy-vehicle/"
+      },
+      {
+        "name": "Valdecarros land (Madrid)",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "475,000 sqm Madrid residential development land expanding Azora's development platform.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/azora-further-expands-residential-development-platform-with-475000-m2-valdecarros-acquisition-in-madrid/"
+      },
+      {
+        "name": "Spanish student housing portfolio (ex-EQT Exeter)",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Spanish student-housing portfolio acquired from EQT Exeter.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/eqt-exeter-completes-spanish-student-housing-portfolio-sale-to-azora/"
+      },
+      {
+        "name": "Cerdanyola del Valles student residence",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Barcelona-area student residence acquired from LaSalle and Urbania.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/azora-acquires-a-student-residence-in-cerdanyola-del-valles-(barcelona)-from-lasalle-and-urbania/"
+      },
+      {
+        "name": "Boston mixed-use office asset",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "US prime office asset in Boston acquired for $101 million.",
+        "stake": "$101M",
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/azora-continues-its-commitment-to-the-us-prime-office-market-acquiring-mixed-use-office-asset-in-boston-for-$101-million/"
+      },
+      {
+        "name": "Boston office building",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Office building in Boston acquired by Azora.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/azora-acquires-office-building-in-boston/"
+      },
+      {
+        "name": "Miami logistics facility",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Logistics facility in Miami, Florida acquired for $12.8 million.",
+        "stake": "$12.8M",
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/azora-strengthens-position-in-the-u.s-with-$12.8m-acquisition-of-a-logistics-facility-in-miami-florida/"
+      },
+      {
+        "name": "European logistics asset portfolio",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "EUR91 million European logistics asset portfolio acquired by Azora.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/azora-strenghtens-european-logistic-presence-with-the-acquisition-of-a-e91-million-asset-portfolio/"
+      },
+      {
+        "name": "Madrid city-centre office building",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Office building in the centre of Madrid acquired by Azora.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/azora-buys-an-office-building-in-the-centre-of-madrid/"
+      },
+      {
+        "name": "La Termica Malaga residential (Naiz Homes)",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Partnership with Naiz Homes to develop nearly 600 homes at La Termica, Malaga.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.azora.com/en/blog/azora-and-naiz-homes-partner-to-develop-nearly-600-homes-at-la-termica-in-malaga/"
+      }
+    ]
+  },
+  {
+    "entity": "Brookfield AI Infrastructure strategy",
+    "portfolio_url": null,
+    "holdings_count": 25,
+    "as_of": "2026-08-27",
+    "holdings": [
+      {
+        "name": "Radiant",
+        "sector": "neocloud",
+        "subsector": "gpu-capacity",
+        "note": "Vertically integrated AI-factory platform, BAIIF's compute vehicle and an NVIDIA Cloud Partner; merged with Ori Industries.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-27",
+        "source_url": "https://radiant.co/press-release-launch"
+      },
+      {
+        "name": "Bloom Energy",
+        "sector": "power-energy",
+        "subsector": "baseload-generation",
+        "note": "Solid-oxide fuel cells for behind-the-meter AI data-centre power; partnership expanded to $25B / up to 1GW.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.bloomenergy.com/news/brookfield-and-bloom-energy-expand-ai-infrastructure-partnership/"
+      },
+      {
+        "name": "Westinghouse Electric",
+        "sector": "nuclear",
+        "subsector": "smr",
+        "note": "AP1000 reactor technology, fuel and services; Brookfield 51% with Cameco 49%.",
+        "stake": "51%",
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.cameco.com/media/news/united-states-government-brookfield-and-cameco-announce-transformational-partnership"
+      },
+      {
+        "name": "Qai AI infrastructure joint venture (Qatar)",
+        "sector": "datacenters",
+        "subsector": "sovereign-datacenter",
+        "note": "$20B JV with the Qatar Investment Authority for integrated AI compute centres, via BAIIF.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.qia.qa/en/Newsroom/Pages/Brookfield-and-Qai-Form-$20-Billion-Strategic-Investment-Partnership-for-AI-Infrastructure.aspx"
+      },
+      {
+        "name": "NAVER GAK Sejong AI factory",
+        "sector": "datacenters",
+        "subsector": "sovereign-datacenter",
+        "note": "200MW NVIDIA DSX sovereign AI factory in Korea; Brookfield up to $9B of the $10B project.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://nvidianews.nvidia.com/news/naver-nvidia-and-brookfield-to-expand-koreas-national-ai-factory-infrastructure-buildout"
+      },
+      {
+        "name": "Compass Datacenters",
+        "sector": "datacenters",
+        "subsector": "hyperscale-campus",
+        "note": "North American hyperscale data-centre developer; acquired with Ontario Teachers'.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.compassdatacenters.com/news/brookfield-infrastructure-and-ontario-teachers-to-acquire-compass-datacenters-from-redbird-capital-partners-and-azrieli-group/"
+      },
+      {
+        "name": "Data4",
+        "sector": "datacenters",
+        "subsector": "hyperscale-campus",
+        "note": "European hyperscale data-centre platform: 31 sites across 6 countries, 850MW.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://alts.axa-im.com/media-centre/axa-im-alts-agrees-sale-data4-european-leading-data-centre-platform-brookfield-infrastructure"
+      },
+      {
+        "name": "Centersquare",
+        "sector": "datacenters",
+        "subsector": "colocation",
+        "note": "US retail colocation platform, 320MW across 50+ sites (Evoque + Cyxtera combination).",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.datacenterfrontier.com/colocation/article/55016615/brookfield-infrastructures-evoque-cyxtera-data-center-collaboration-emerges-as-centersquare"
+      },
+      {
+        "name": "Strangnas AI centre (Sweden)",
+        "sector": "datacenters",
+        "subsector": "hyperscale-campus",
+        "note": "Swedish data-centre site expanding from 300MW to 750MW; SEK95bn programme.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.barchart.com/story/news/32750671/brookfield-to-advance-ai-infrastructure-in-sweden-through-sek-95-billion-investment"
+      },
+      {
+        "name": "Cambrai AI factory (France)",
+        "sector": "datacenters",
+        "subsector": "sovereign-datacenter",
+        "note": "Up to 1GW AI data centre in Hauts-de-France; EUR15B of a EUR20B France programme.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://techcrunch.com/2025/02/09/investments-in-french-ai-ecosystem-reach-85b-as-brookfield-commits-20b/"
+      },
+      {
+        "name": "Santa Clara data centres (Old Ironsides Drive)",
+        "sector": "datacenters",
+        "subsector": "colocation",
+        "note": "Two Centersquare-occupied Santa Clara data centres bought from Menlo Equities for $55M and $42M.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.datacenterdynamics.com/en/news/brookfield-acquires-two-centersquare-occupied-data-centers-in-california-from-menlo/"
+      },
+      {
+        "name": "Sunnyvale data centre (Equinix-leased)",
+        "sector": "datacenters",
+        "subsector": "colocation",
+        "note": "120,000 sq ft Sunnyvale data centre leased to Equinix, acquired for $90.3M.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://therealdeal.com/san-francisco/2026/05/15/divcowest-sells-sunnyvale-data-center-to-brookfield/"
+      },
+      {
+        "name": "The OpenAI Deployment Company",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Enterprise AI deployment venture formed with OpenAI; $500M led by Brookfield Business Corporation.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.bnnbloomberg.ca/press-releases/2026/05/11/brookfield-to-invest-500-million-in-strategic-partnership-with-openai/"
+      },
+      {
+        "name": "Intel Arizona fab JV (SCIP)",
+        "sector": "fab-equipment",
+        "subsector": "advanced-packaging",
+        "note": "Two leading-edge chip fabs at Intel's Ocotillo campus, Chandler AZ; Brookfield 49% of a $30B programme.",
+        "stake": "49%",
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.intc.com/news-events/press-releases/detail/1568/intel-advances-smart-capital-introduces-first-of-its-kind"
+      },
+      {
+        "name": "V.C. Summer nuclear project",
+        "sector": "nuclear",
+        "subsector": "smr",
+        "note": "Two unfinished AP1000 reactors in South Carolina being restarted; ~2,200 MWe.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.ans.org/news/article-7493/santee-cooper-opts-to-reboot-summer-reactor-project/"
+      },
+      {
+        "name": "Aypa Power",
+        "sector": "power-energy",
+        "subsector": "grid-storage",
+        "note": "Largest North American standalone battery-storage developer; acquired from Blackstone.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://bep.brookfield.com/press-releases/bep/brookfield-acquire-aypa-power-leading-north-american-battery-storage-platform"
+      },
+      {
+        "name": "Neoen",
+        "sector": "power-energy",
+        "subsector": "grid-storage",
+        "note": "French renewables IPP across solar, wind and battery storage; 53.32% at EUR6.1B equity value.",
+        "stake": "53.32%",
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://bep.brookfield.com/brookfield-enters-exclusive-negotiations-impala-and-other-shareholders-acquire-majority-stake-neoen"
+      },
+      {
+        "name": "Deriva Energy",
+        "sector": "power-energy",
+        "subsector": "baseload-generation",
+        "note": "US wind, solar and storage platform (ex-Duke Energy Renewables); ~5,900MW, $2.8B.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.prnewswire.com/news-releases/duke-energy-renewables-rebrands-as-deriva-energy-under-brookfield-ownership-301967769.html"
+      },
+      {
+        "name": "Boralex",
+        "sector": "power-energy",
+        "subsector": null,
+        "note": "Global independent renewable power producer.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.brookfield.com/our-businesses/renewable-power-transition"
+      },
+      {
+        "name": "GD Towers",
+        "sector": "networking",
+        "subsector": null,
+        "note": "German and Austrian telecom tower platform from Deutsche Telekom; 51% with DigitalBridge, EUR17.5B EV.",
+        "stake": "51%",
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.telekom.com/en/media/media-information/archive/deutsche-telekom-completes-tower-transaction-1025420"
+      },
+      {
+        "name": "Hotwire Communications",
+        "sector": "networking",
+        "subsector": null,
+        "note": "Bulk fibre-to-the-home operator building and running regional fibre networks.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://bip.brookfield.com/bip/reports-filings/letters-unitholders/bip-q2-2025-letter-unitholders"
+      },
+      {
+        "name": "U.K. fibre connections portfolio",
+        "sector": "networking",
+        "subsector": null,
+        "note": "Roughly 50,000 in-place UK fibre connections acquired from a homebuilder.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://bip.brookfield.com/bip/reports-filings/letters-unitholders/bip-q2-2025-letter-unitholders"
+      },
+      {
+        "name": "Colonial Enterprises",
+        "sector": "power-energy",
+        "subsector": "energy-infrastructure",
+        "note": "Largest US refined-products pipeline, 5,500 miles Texas to New Jersey; ~$9B EV.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.pipeline-journal.net/news/brookfield-infrastructure-acquire-colonial-pipeline-9-billion-deal"
+      },
+      {
+        "name": "Triton International",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "World's largest intermodal container lessor, 7.6M CEU; $13.3B take-private.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://bip.brookfield.com/press-releases/bip/triton-international-be-acquired-brookfield-infrastructure-133-billion-take"
+      },
+      {
+        "name": "Oaktree Capital Management",
+        "sector": "private-credit",
+        "subsector": null,
+        "note": "Global credit and distressed-debt manager; Brookfield moved to 100% ownership.",
+        "stake": "100%",
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.fundssociety.com/en/news/business/brookfield-to-acquire-remaining-26-of-oaktree-for-approximately-3-billion-dollars/"
+      }
+    ]
+  },
+  {
+    "entity": "Mubadala Capital (credit platform)",
+    "portfolio_url": "https://www.mubadalacapital.ae/portfolio",
+    "holdings_count": 36,
+    "as_of": "2026-08-27",
+    "holdings": [
+      {
+        "name": "Crusoe",
+        "sector": "neocloud",
+        "subsector": "gpu-capacity",
+        "note": "Vertically integrated AI infrastructure and energy-first AI cloud provider.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "IonQ",
+        "sector": "semiconductors",
+        "subsector": "custom-silicon",
+        "note": "Trapped-ion quantum computing systems (NYSE: IONQ).",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Photonic",
+        "sector": "semiconductors",
+        "subsector": "custom-silicon",
+        "note": "Silicon-spin photonic quantum computing and networking.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Waymo",
+        "sector": "robotics",
+        "subsector": "autonomous-mobility",
+        "note": "Autonomous driving technology and robotaxi operator.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Writer",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Full-stack generative AI platform for enterprises.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Balbix",
+        "sector": "cybersecurity",
+        "subsector": "agentic-security",
+        "note": "AI-based cyber-risk quantification and exposure management.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "People.ai",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "AI revenue-intelligence platform for enterprise sales teams.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Innovaccer",
+        "sector": "ai-applications",
+        "subsector": "healthcare-ai",
+        "note": "Healthcare data and AI platform for providers and payers.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Esentia Energy Systems",
+        "sector": "power-energy",
+        "subsector": "energy-infrastructure",
+        "note": "Mexican natural-gas transportation and midstream infrastructure.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Acelen",
+        "sector": "power-energy",
+        "subsector": "energy-infrastructure",
+        "note": "Brazilian refining and fuels business (ex-Petrobras RLAM refinery).",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Acelen Renewables",
+        "sector": "power-energy",
+        "subsector": "energy-infrastructure",
+        "note": "Brazilian renewable fuels producer developing macauba-based SAF and HVO.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Atvos",
+        "sector": "power-energy",
+        "subsector": "energy-infrastructure",
+        "note": "Brazilian sugarcane ethanol and bioenergy producer.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "WaterBridge Resources II",
+        "sector": "power-energy",
+        "subsector": "energy-infrastructure",
+        "note": "US produced-water infrastructure for oil and gas basins.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Fortress Investment Group",
+        "sector": "private-credit",
+        "subsector": null,
+        "note": "Global alternative asset manager and the anchor of Mubadala Capital's credit platform.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "EasyPost",
+        "sector": "ai-applications",
+        "subsector": null,
+        "note": "Shipping and logistics API platform.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Spotnana",
+        "sector": "ai-applications",
+        "subsector": null,
+        "note": "Travel-as-a-service infrastructure platform for corporate travel.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Storyblok",
+        "sector": "ai-applications",
+        "subsector": null,
+        "note": "Headless content management system for digital teams.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Turvo",
+        "sector": "ai-applications",
+        "subsector": null,
+        "note": "Collaborative supply-chain and logistics management software.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Brex",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Corporate cards and spend management for startups and enterprises.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Klarna",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Buy-now-pay-later payments and shopping network.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Snap",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Camera and messaging company behind Snapchat (NYSE: SNAP).",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Ocrolus",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Document AI and data extraction for lending decisions.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Matera",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Brazilian core banking and instant-payments software.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Arbol",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Parametric climate insurance and risk data platform.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Cerc",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Brazilian receivables registry and credit infrastructure.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Alliance Laundry Systems",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "World's largest commercial laundry equipment manufacturer.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Mauser Packaging Solutions",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Global industrial rigid packaging manufacturer and reconditioner.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Culligan International",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Global water treatment and filtration products and services.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Cegid Group",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "European cloud business-management software for finance, tax, HR and retail.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Babel Group",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Spanish IT services and digital transformation firm; majority stake acquired.",
+        "stake": "majority",
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/newsroom-articles/mubadala-capital-acquires-majority-stake-in-babel-in-partnership-with-the-executive-team-and-founders/"
+      },
+      {
+        "name": "Aman Hotels",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Ultra-luxury hotel and resort group.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Whataburger",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "US quick-service restaurant chain.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Canada Cartage",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Canadian dedicated fleet outsourcing and logistics provider.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "MetroRio",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Rio de Janeiro metro concession operator.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "Rota das Bandeiras",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Brazilian toll-road concession in Sao Paulo state.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      },
+      {
+        "name": "YES Network",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "US regional sports network carrying the New York Yankees and Brooklyn Nets.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.mubadalacapital.ae/portfolio"
+      }
+    ]
+  },
+  {
+    "entity": "Founders Fund",
+    "portfolio_url": "https://foundersfund.com/portfolio/",
+    "holdings_count": 58,
+    "as_of": "2026-08-27",
+    "holdings": [
+      {
+        "name": "SpaceX",
+        "sector": "defense-tech",
+        "subsector": null,
+        "note": "Reusable launch systems and the Starlink satellite broadband constellation.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/spacex/"
+      },
+      {
+        "name": "Anduril",
+        "sector": "defense-tech",
+        "subsector": "autonomous-systems",
+        "note": "Autonomous defense systems and the Lattice command-and-control software platform.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/anduril/"
+      },
+      {
+        "name": "OpenAI",
+        "sector": "ai-labs",
+        "subsector": "frontier-models",
+        "note": "Frontier AI research and deployment company behind ChatGPT.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/openai/"
+      },
+      {
+        "name": "Palantir",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Software for analysing large-scale government and enterprise data (NASDAQ: PLTR).",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/palantir/"
+      },
+      {
+        "name": "Crusoe",
+        "sector": "neocloud",
+        "subsector": "gpu-capacity",
+        "note": "Vertically integrated AI infrastructure provider pairing energy with GPU compute.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/crusoe/"
+      },
+      {
+        "name": "Cognition",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Applied AI lab focused on reasoning; makers of the Devin coding agent.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/cognition/"
+      },
+      {
+        "name": "Scale",
+        "sector": "ai-data",
+        "subsector": "data-labeling",
+        "note": "Data labeling and evaluation infrastructure for AI models.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/scale/"
+      },
+      {
+        "name": "PsiQuantum",
+        "sector": "semiconductors",
+        "subsector": "custom-silicon",
+        "note": "Silicon-photonics quantum computer built on existing semiconductor manufacturing.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/psiquantum/"
+      },
+      {
+        "name": "Hadrian",
+        "sector": "defense-tech",
+        "subsector": "defense-manufacturing",
+        "note": "Highly automated precision factories serving the defense industrial base.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/hadrian/"
+      },
+      {
+        "name": "General Matter",
+        "sector": "nuclear",
+        "subsector": "uranium-fuel",
+        "note": "US uranium enrichment company producing domestic nuclear fuel.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/general-matter/"
+      },
+      {
+        "name": "Neuralink",
+        "sector": "ai-applications",
+        "subsector": "healthcare-ai",
+        "note": "Ultra-high-bandwidth brain-machine interfaces connecting humans and computers.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/neuralink/"
+      },
+      {
+        "name": "Nanotronics",
+        "sector": "semiconductors",
+        "subsector": "advanced-packaging",
+        "note": "Optical inspection tools and AI process control for semiconductor manufacturing.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/nanotronics/"
+      },
+      {
+        "name": "Varda",
+        "sector": "defense-tech",
+        "subsector": null,
+        "note": "In-space factories producing materials that can only be made in microgravity.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/varda/"
+      },
+      {
+        "name": "Impulse",
+        "sector": "defense-tech",
+        "subsector": null,
+        "note": "In-space transportation and orbital manoeuvring vehicles.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/impulse/"
+      },
+      {
+        "name": "EnduroSat",
+        "sector": "defense-tech",
+        "subsector": null,
+        "note": "Modular satellites turning space access into a streamlined data service.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/endurosat/"
+      },
+      {
+        "name": "Nominal",
+        "sector": "defense-tech",
+        "subsector": "autonomous-systems",
+        "note": "Test and operations data platform for aerospace, defense, robotics and energy hardware.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/nominal/"
+      },
+      {
+        "name": "Flock Safety",
+        "sector": "cybersecurity",
+        "subsector": "infrastructure-security",
+        "note": "Public-safety operating system of camera networks for law enforcement and communities.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/flock-safety/"
+      },
+      {
+        "name": "Persona",
+        "sector": "cybersecurity",
+        "subsector": "infrastructure-security",
+        "note": "Identity verification and fraud-prevention infrastructure for businesses.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/persona/"
+      },
+      {
+        "name": "Boring Company",
+        "sector": "robotics",
+        "subsector": "industrial-automation",
+        "note": "Tunnel boring for low-cost transportation, utility and freight tunnels.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/boring-company/"
+      },
+      {
+        "name": "Solugen",
+        "sector": "power-energy",
+        "subsector": "energy-infrastructure",
+        "note": "Bio-based chemicals manufacturing for agriculture, energy, water and personal care.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/solugen/"
+      },
+      {
+        "name": "Senra Systems",
+        "sector": "defense-tech",
+        "subsector": "defense-manufacturing",
+        "note": "Software-driven wire-harness manufacturing for aerospace and defense; $65M Series B.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.prnewswire.com/news-releases/senra-systems-announces-65-million-series-b-plans-for-third-manufacturing-facility-302825664.html"
+      },
+      {
+        "name": "State Affairs",
+        "sector": "ai-applications",
+        "subsector": "legal-regulatory-ai",
+        "note": "AI platform tracking policy and regulation across all 50 states and the federal government.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.prnewswire.com/news-releases/state-affairs-raises-70-million-to-help-institutions-navigate-the-policy-and-regulatory-economy-302824501.html"
+      },
+      {
+        "name": "Netic",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "AI-driven automation platform for service enterprises.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/netic/"
+      },
+      {
+        "name": "Monaco",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "AI sales platform automating customer acquisition for startups.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/monaco/"
+      },
+      {
+        "name": "Enter",
+        "sector": "ai-applications",
+        "subsector": "legal-regulatory-ai",
+        "note": "AI agents that manage litigation at scale for Latin American enterprises.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/enter/"
+      },
+      {
+        "name": "River",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Custom software helping financial institutions become AI-native.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/river/"
+      },
+      {
+        "name": "Stripe",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Payments and financial infrastructure for internet businesses.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/stripe/"
+      },
+      {
+        "name": "Ramp",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Corporate cards with automated accounting and spend controls.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/ramp/"
+      },
+      {
+        "name": "Rippling",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "System of record for workforce data: payroll, benefits, devices and apps.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/rippling/"
+      },
+      {
+        "name": "Polymarket",
+        "sector": "ai-applications",
+        "subsector": null,
+        "note": "The world's largest prediction market for future events.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/polymarket/"
+      },
+      {
+        "name": "Figma",
+        "sector": "ai-applications",
+        "subsector": null,
+        "note": "Collaborative interface design and product development platform.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/figma/"
+      },
+      {
+        "name": "Lighter",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Verifiable financial infrastructure for digital assets.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/lighter/"
+      },
+      {
+        "name": "Paxos",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Regulated blockchain infrastructure for enterprises and stablecoins.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/paxos/"
+      },
+      {
+        "name": "Nubank",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Latin America's largest digital bank (NYSE: NU).",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/nubank/"
+      },
+      {
+        "name": "Trade Republic",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "European commission-free mobile investing platform.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/trade-republic/"
+      },
+      {
+        "name": "Affirm",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Buy-now-pay-later consumer credit without hidden fees (NASDAQ: AFRM).",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/affirm/"
+      },
+      {
+        "name": "Aven",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Home-equity-backed credit card offering lower-cost consumer credit.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/aven/"
+      },
+      {
+        "name": "Found",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "All-in-one banking, bookkeeping and taxes for the self-employed.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/found/"
+      },
+      {
+        "name": "Wave",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Mobile money infrastructure for Sub-Saharan Africa.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/wave/"
+      },
+      {
+        "name": "Traba",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Marketplace connecting industrial businesses with reliable shift workers.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/traba/"
+      },
+      {
+        "name": "BuildOps",
+        "sector": "ai-applications",
+        "subsector": "vertical-saas-ai",
+        "note": "End-to-end software platform for commercial trade contractors.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/buildops/"
+      },
+      {
+        "name": "Flexport",
+        "sector": "ai-applications",
+        "subsector": "vertical-saas-ai",
+        "note": "Technology-driven international freight forwarding and supply-chain services.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/flexport/"
+      },
+      {
+        "name": "Workrise",
+        "sector": "ai-applications",
+        "subsector": "vertical-saas-ai",
+        "note": "Workforce management platform for the skilled trades.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/workrise/"
+      },
+      {
+        "name": "Faire",
+        "sector": "ai-applications",
+        "subsector": null,
+        "note": "Curated wholesale marketplace connecting independent retailers with brands.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/faire-2/"
+      },
+      {
+        "name": "Kavak",
+        "sector": "ev-automotive",
+        "subsector": null,
+        "note": "Leading pre-owned car marketplace in emerging markets.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/kavak/"
+      },
+      {
+        "name": "Sword Health",
+        "sector": "ai-applications",
+        "subsector": "healthcare-ai",
+        "note": "AI-assisted clinical-grade digital physical therapy.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/sword-health/"
+      },
+      {
+        "name": "Cedar",
+        "sector": "ai-applications",
+        "subsector": "healthcare-ai",
+        "note": "Patient payment and billing platform for healthcare providers.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/cedar/"
+      },
+      {
+        "name": "Oscar",
+        "sector": "ai-applications",
+        "subsector": "healthcare-ai",
+        "note": "Technology-driven health insurance company (NYSE: OSCR).",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/oscar/"
+      },
+      {
+        "name": "ZocDoc",
+        "sector": "ai-applications",
+        "subsector": "healthcare-ai",
+        "note": "Online marketplace for booking doctor appointments.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/zocdoc/"
+      },
+      {
+        "name": "Fortell",
+        "sector": "ai-applications",
+        "subsector": "healthcare-ai",
+        "note": "AI-powered hearing aids separating speech from noise, with its own audiology clinics.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/fortell/"
+      },
+      {
+        "name": "Until",
+        "sector": "ai-applications",
+        "subsector": "ai-for-science",
+        "note": "Reversible organ-scale cryopreservation and medical preservation infrastructure.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/until/"
+      },
+      {
+        "name": "ARQ",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Platform opening major assets and markets to travelers, investors and professionals.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/arq/"
+      },
+      {
+        "name": "Mnzil",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Technology-enabled workforce housing and living environments.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/mnzil/"
+      },
+      {
+        "name": "Airbnb",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Global marketplace for short-term lodging and experiences (NASDAQ: ABNB).",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/airbnb/"
+      },
+      {
+        "name": "Spotify",
+        "sector": "diversified-pe",
+        "subsector": null,
+        "note": "Global music and audio streaming service (NYSE: SPOT).",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/spotify/"
+      },
+      {
+        "name": "Twilio",
+        "sector": "ai-applications",
+        "subsector": null,
+        "note": "Programmable communications APIs for voice, messaging and email (NYSE: TWLO).",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/twilio/"
+      },
+      {
+        "name": "Asana",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Work management platform for teams (NYSE: ASAN).",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/asana/"
+      },
+      {
+        "name": "Lyft",
+        "sector": "ev-automotive",
+        "subsector": null,
+        "note": "North American ridesharing marketplace (NASDAQ: LYFT).",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://foundersfund.com/company/lyft/"
+      }
+    ]
+  },
+  {
+    "entity": "Coatue Growth Fund VI Private Investors US, LLC",
+    "portfolio_url": "https://www.coatue.com/privates-portfolio",
+    "holdings_count": 30,
+    "as_of": "2026-08-27",
+    "holdings": [
+      {
+        "name": "OpenAI",
+        "sector": "ai-labs",
+        "subsector": "frontier-models",
+        "note": "Frontier AI lab behind ChatGPT; Coatue private position (parent-manager book).",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.coatue.com/privates-portfolio"
+      },
+      {
+        "name": "Anthropic",
+        "sector": "ai-labs",
+        "subsector": "frontier-models",
+        "note": "AI lab building Claude; Coatue co-led the $30B Series G at $380B post.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
+      },
+      {
+        "name": "SpaceX",
+        "sector": "defense-tech",
+        "subsector": null,
+        "note": "Reusable launch systems and Starlink; Coatue private position.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.coatue.com/privates-portfolio"
+      },
+      {
+        "name": "Anduril Industries",
+        "sector": "defense-tech",
+        "subsector": "autonomous-systems",
+        "note": "Autonomous defense systems and the Lattice platform.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.coatue.com/privates-portfolio"
+      },
+      {
+        "name": "Databricks",
+        "sector": "ai-data",
+        "subsector": "data-platform",
+        "note": "Data and AI lakehouse platform; $5B round at $190B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-27",
+        "source_url": "https://techcrunch.com/2026/08/13/databricks-wanted-to-raise-1b-investors-wanted-15b-it-settled-on-5b-at-a-190b-valuation/"
+      },
+      {
+        "name": "CoreWeave",
+        "sector": "neocloud",
+        "subsector": "gpu-capacity",
+        "note": "GPU cloud platform purpose-built for AI training and inference.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.coatue.com/privates-portfolio"
+      },
+      {
+        "name": "Cerebras Systems",
+        "sector": "semiconductors",
+        "subsector": "custom-silicon",
+        "note": "Wafer-scale AI chips; participated in the $1B Series H at ~$23B.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.cerebras.ai/press-release/cerebras-systems-raises-usd1-billion-series-h"
+      },
+      {
+        "name": "Anysphere (Cursor)",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "AI coding agent; Coatue co-led the $2.3B Series D at ~$29.3B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.hedgeweek.com/coatue-co-leads-2-3bn-raise-for-ai-platform/"
+      },
+      {
+        "name": "Scale AI",
+        "sector": "ai-data",
+        "subsector": "data-labeling",
+        "note": "Data labeling and evaluation infrastructure for frontier models.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.coatue.com/privates-portfolio"
+      },
+      {
+        "name": "ByteDance",
+        "sector": "ai-applications",
+        "subsector": null,
+        "note": "Owner of TikTok and Douyin; large-scale recommendation AI.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.coatue.com/privates-portfolio"
+      },
+      {
+        "name": "Firmus",
+        "sector": "datacenters",
+        "subsector": "hyperscale-campus",
+        "note": "Energy-efficient APAC AI data centres; Coatue led $505M strategic equity at $5.5B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-27",
+        "source_url": "https://firmus.co/newsroom/firmus-raises-usdusd505-million-in-strategic-equity-investment-led-by-coatue"
+      },
+      {
+        "name": "Base Power",
+        "sector": "power-energy",
+        "subsector": "grid-storage",
+        "note": "Home batteries aggregated into distributed grid capacity; $1B Series D at $13B.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://techcrunch.com/2026/08/03/base-power-raises-another-1b-to-save-the-grid-using-backyard-batteries/"
+      },
+      {
+        "name": "Cyera",
+        "sector": "cybersecurity",
+        "subsector": "agentic-security",
+        "note": "AI data-security posture management; $600M Series G at $12B.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.cyera.com/press-releases/cyera-raises-600-million-at-12-billion-valuation-to-continue-building-the-trust-layer-for-the-ai-era"
+      },
+      {
+        "name": "Island",
+        "sector": "cybersecurity",
+        "subsector": "infrastructure-security",
+        "note": "Enterprise browser with built-in security controls; $250M at $4.8B.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://techcrunch.com/2025/03/26/island-lands-250m-in-funding-at-a-4-8b-valuation/"
+      },
+      {
+        "name": "ClickHouse",
+        "sector": "ai-data",
+        "subsector": "data-platform",
+        "note": "High-speed open-source analytical database; Coatue co-led the $250M Series B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-27",
+        "source_url": "https://clickhouse.com/blog/click-house-raises-a-250m-series-b-at-a-2b-valuationand-we-are-hiring"
+      },
+      {
+        "name": "Grafana Labs",
+        "sector": "ai-data",
+        "subsector": "data-platform",
+        "note": "Open-source observability and dashboarding platform.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.coatue.com/privates-portfolio"
+      },
+      {
+        "name": "Supabase",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Open-source Postgres agentic backend; $500M Series F at $10.5B.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.prnewswire.com/news-releases/supabase-raises-500m-at-10-5b-to-accelerate-lead-in-agentic-infrastructure-302791787.html"
+      },
+      {
+        "name": "Harvey",
+        "sector": "ai-applications",
+        "subsector": "legal-regulatory-ai",
+        "note": "AI agents for legal work; Coatue co-led the $300M Series E at $5B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.harvey.ai/blog/harvey-raises-series-e"
+      },
+      {
+        "name": "Decagon",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Conversational AI agents for customer experience; co-led $250M Series D at $4.5B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-27",
+        "source_url": "https://decagon.ai/blog/series-d-announcement"
+      },
+      {
+        "name": "OpenEvidence",
+        "sector": "ai-applications",
+        "subsector": "healthcare-ai",
+        "note": "AI clinical decision-support search for physicians.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.coatue.com/privates-portfolio"
+      },
+      {
+        "name": "Sunday Robotics",
+        "sector": "robotics",
+        "subsector": "robot-foundation-models",
+        "note": "Household humanoid robots; $1.15B valuation round.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://techcrunch.com/2026/03/12/humanoid-robotics-maker-sunday-reaches-1-15b-valuation-to-build-household-robots/"
+      },
+      {
+        "name": "Applied Intuition",
+        "sector": "robotics",
+        "subsector": "autonomous-mobility",
+        "note": "Autonomy software and tooling for vehicles and defense platforms; $175M Series D co-led by Coatue.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.prnewswire.com/news-releases/applied-intuition-raises-175m-series-d-co-led-by-elad-gil-addition-and-coatue-management-at-3-6b-valuation-301422396.html"
+      },
+      {
+        "name": "Kalshi",
+        "sector": "ai-applications",
+        "subsector": null,
+        "note": "Regulated event and prediction market exchange; $1B Series F at $22B.",
+        "stake": null,
+        "lead": true,
+        "as_of": "2026-08-27",
+        "source_url": "https://techcrunch.com/2026/05/07/kalshi-doubles-valuation-in-5-months-hitting-22-billion/"
+      },
+      {
+        "name": "Notion",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Connected workspace with AI-native documents and databases.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.coatue.com/privates-portfolio"
+      },
+      {
+        "name": "Canva",
+        "sector": "ai-applications",
+        "subsector": null,
+        "note": "Online visual design and content-creation platform.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.coatue.com/privates-portfolio"
+      },
+      {
+        "name": "Rippling",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "System of record for workforce data; payroll, benefits and devices.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://techcrunch.com/2024/04/22/ripplings-parker-conrad-on-the-companys-brand-new-round-its-brand-new-sf-lease-and-also-its-brand-new-critic/"
+      },
+      {
+        "name": "Ramp",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "AI-native corporate cards and finance-operations platform.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.coatue.com/privates-portfolio"
+      },
+      {
+        "name": "Deel",
+        "sector": "ai-applications",
+        "subsector": "enterprise-ai-agents",
+        "note": "Global payroll, EOR and compliance platform.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.coatue.com/privates-portfolio"
+      },
+      {
+        "name": "Stripe",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "Payments and financial infrastructure for the internet.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.coatue.com/privates-portfolio"
+      },
+      {
+        "name": "Revolut",
+        "sector": "ai-applications",
+        "subsector": "fintech-ai",
+        "note": "European digital banking and financial super-app.",
+        "stake": null,
+        "lead": false,
+        "as_of": "2026-08-27",
+        "source_url": "https://www.coatue.com/privates-portfolio"
+      }
+    ]
+  }
+]

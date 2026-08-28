@@ -288,3 +288,201 @@ python tools/nveco_corrupt_test.py
 Нужна одна запись в `config/nveco_anchors.yaml` и прогон с `--anchor <id>`. Слои, типы
 связей и рубрика от якоря не зависят. Больше в движке ничего «на вырост» нет и делать не
 надо.
+
+---
+
+# RUNBOOK — the FUND TRACKER (Section 3, daily)
+
+Different from the other two pipelines: **no research agents.** This section is a
+registry, not a discovery loop. Every row traces to a mandated filing or an
+official register download, and the whole thing is deterministic Python.
+
+## Required first step — declare yourself to EDGAR
+
+The SEC requires a User-Agent with a real contact address and ≤10 requests/second.
+The client **refuses to make a single call without one** rather than send a
+fabricated header and get the IP blocked, which would take down the whole section.
+
+```bash
+export FUND_SEC_USER_AGENT="Your Name <you@example.com>"
+```
+
+Or set `sec.user_agent` in `config/fund_managers.yaml`. The rate limiter is central
+(`engine/fund_sec._Limiter`), so every stage shares one budget.
+
+## First run — backfill 8 quarters
+
+Do not stand up an empty system and wait two quarters for it to become useful.
+Deltas, persistence and conviction are meaningless on a single period.
+
+```bash
+python run_funds.py --backfill
+```
+
+Walks full filing history for all 14 managers, parses ~8 quarters of 13F each,
+pulls Form ADV, and scans for pre-IPO cap-table mentions. Takes several minutes —
+it is rate-limited on purpose. Run it once.
+
+## The normal loop — daily
+
+```bash
+python run_funds.py
+```
+
+Polls every tracked CIK's submissions JSON, diffs against the last-seen accession,
+and ingests anything new **in the same run**. It reacts to disclosures, not to the
+calendar. Around the 13F deadlines (~Feb 14 / May 15 / Aug 14 / Nov 14) it widens
+its window automatically, because the whole universe files within a few days.
+
+Re-running is always safe: everything keys on accession number.
+
+Useful flags:
+
+| flag | what it does |
+|---|---|
+| `--offline` | recompute deltas, scores and the payload from what is stored; no network |
+| `--adv` | refresh Form ADV records (quarterly is enough) |
+| `--crosscheck` | run the 13F vs DEF 14A comparison (network-heavy) |
+| `--cap-tables` | full-text search for tracked names in S-1 / DEF 14A holder tables |
+| `--deliver` | copy the payload to the dashboard repo — **blocked if the audit fails** |
+
+## What to read after a run
+
+1. `runs/<run-id>/fund_audit_report.md` — errors block delivery, warnings ship listed.
+2. `handoff/FUND-TRACKER-CHANGELOG.md` — what is new, what is flagged, what triggered.
+3. `handoff/fund_tracker.json` — the payload itself.
+
+Read the **diff**, not the data.
+
+## Listed vehicles — the one assisted step
+
+PSH, TPOU, Greenlight Re and Berkshire publish full portfolios (Greenlight Re
+including **shorts**, which no 13F can show) as investor-relations documents whose
+layout changes without notice. Rather than parse them blind and print confidently
+wrong numbers, drop validated CSVs:
+
+```
+runs/<YYYY-MM>/fund-vehicles/holdings.csv       vehicle,as_of,name,ticker,weight,direction,source_doc,note
+runs/<YYYY-MM>/fund-vehicles/nav.csv            vehicle,as_of,nav_per_share,currency,mtd_pct,ytd_pct,source_doc
+runs/<YYYY-MM>/fund-vehicles/track_record.csv   manager,fiscal_year,return_pct,metric,scope,source_url,note
+```
+
+Every row needs a resolvable `source_doc` / `source_url`; rows without one are
+rejected by line number. When nothing is supplied the payload **declares the gap**
+and states that the manager has fallen back to a 4.5-month-stale 13F.
+
+## What "it broke" looks like
+
+- **`[seed] HALT — CIK mismatches`** — a CIK in `config/fund_managers.yaml` no
+  longer resolves to the expected name at EDGAR. Nothing is ingested. Fix the
+  config; do not bypass this, it is the guard against silently ingesting a
+  stranger's book.
+- **`No SEC User-Agent configured`** — see the first step above.
+- **`[handoff] CONTRACT VIOLATED — file NOT written`** — the payload broke a hard
+  rule (a missing source URL, a missing `latencyDays`, a put in a long feed). The
+  previous good file is left in place on purpose.
+- **`PARSE FAIL`** lines — a filing that could not be read. It stays visible in
+  `fund_filings.parse_status` and in the audit rather than disappearing.
+- **Audit `F5`** — a watch-only manager grew a 13F book. The §B3 carve-out has been
+  breached and the numbers downstream are wrong.
+
+## Adding a fund
+
+Edit `config/fund_managers.yaml` — that is the only door in. Fill `why_tracked`,
+`focus`, `style_tag`, `primary_source` properly; they are stored fields and the
+dashboard renders them verbatim. Map every filing CIK under `entities:` or the
+manager will read at a fraction of its real size. Then:
+
+```bash
+python run_funds.py --backfill
+```
+
+Quant managers are refused at seed with an error. That is deliberate.
+
+---
+
+# RUNBOOK — FUND PORTFOLIOS (monthly)
+
+Fills the **ПОРТФЕЛЬ ФОНДА** block on every allocator. Two books, one run.
+
+| | private book | public book |
+|---|---|---|
+| what | venture / PE stakes the fund owns | 13F marketable positions |
+| source | the fund's own portfolio page | SEC EDGAR 13F-HR |
+| who | Thrive, Sequoia, Founders Fund, Khosla, MGX | BlackRock, Blackstone, Apollo, Coatue … |
+| node key | `holdings[]` | `public_book` |
+
+They are **never merged and never summed**. A firm can have both — Coatue's
+privates page and its 13F name two disjoint sets of companies.
+
+## The run
+
+```bash
+python run_holdings.py            # current month
+python run_holdings.py 2026-08    # a specific month
+```
+
+It generates batches, **launches the collection agents itself**, ingests, refreshes
+the 13F book, audits and emits. No step waits on a person — that hand-off is what
+had never been done, and why 36 funds rendered empty for three weeks.
+
+| flag | effect |
+|---|---|
+| `--no-agents` | ingest what is already on disk; still fails the run for uncollected batches |
+| `--deliver` | copy the payload to the dashboard |
+| `--push` | build-gate, then commit and push |
+
+## It needs an agent launcher
+
+The collection step runs a real external program. Resolution order:
+
+1. `$HOLDINGS_AGENT_CMD` — your own runner. Placeholders: `{batch_dir}`,
+   `{prompt_file}`, `{brief}`, `{period}`, `{batch}`.
+2. the `claude` CLI on PATH, headless `-p` mode.
+3. nothing → **the run fails loudly and does not deploy.**
+
+That third case is deliberate. A missing launcher used to be indistinguishable
+from a quiet month; both printed `0 portfolios` and shipped green.
+
+## Schedule it
+
+```bash
+bash tools/install_holdings_schedule.sh
+```
+
+launchd, 22nd of each month at 09:07. The 22nd because 13F filings land ~45 days
+after quarter end, so a late-month run also catches the new quarter. launchd rather
+than cron because a monthly cron entry silently skips if the machine was asleep,
+and a missed fire is a missed month. `--show` prints the plist, `--remove`
+uninstalls.
+
+## What makes a run FAIL (rather than ship green)
+
+- a batch input was written and no `holdings.json` came back — a step that did not
+  run, reported separately from "0 new holdings"
+- no agent launcher available
+- `--no-agents` with batches still pending
+- audit errors, including **E6**: a ≥$5B fund asked for holdings in two consecutive
+  runs and given none
+
+## Depth
+
+`agents/holdings-profiler.md` has always mandated ≥25 holdings per entity. The
+pipeline now enforces it: under the floor while the entity's own `holdings_count`
+says more exist is an under-delivery — logged as **W9**, and the entity is
+re-queued next run. Entities below a **50** coverage target are re-queued too, so
+a16z at 49 of 1,458 gets one deeper, relevance-ranked pass rather than counting as
+done.
+
+An SPV that genuinely holds one company and discloses it in a single Form D is
+**complete at one holding**, not short. And an entity whose batch came back without
+it is recorded as `no_disclosure` — researched, nothing public — which never
+escalates to E6, because there is nothing to fix.
+
+## Adding an allocator's public book
+
+Edit `config/allocator_ciks.yaml`. `cik: null` with a `reason` is a real answer:
+KKR has no current 13F filer (its last was 2013), and recording that stops the
+question being reopened every quarter. A node with no filing emits **no**
+`public_book` key at all — absent means "not a filer", an empty `positions` array
+with a real `filed` date means "filed, held nothing reportable".

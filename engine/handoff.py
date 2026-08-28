@@ -384,6 +384,28 @@ def _build_map(con, week: str | None = None) -> dict:
             "name": h["name"], "sector": h["sector"], "subsector": h["subsector"],
             "note": h["note"], "stake": h["stake"], "lead": bool(h["lead"]),
             "as_of": h["as_of"], "source_url": h["source_url"]})
+    # The PUBLIC book (13F), attached under its own key and never merged into
+    # holdings[]. They are different objects: a 13F line is a marketable position
+    # with a share count and a quarter stamp; a portfolio-page line is a venture
+    # stake with no exit date. A firm can genuinely have both — Coatue's
+    # privates-portfolio page and its 13F name two disjoint sets of companies —
+    # and summing them would double-count and state something false.
+    from . import fund_sectors, public_book
+    try:
+        issuer_sectors = fund_sectors.by_cusip(con)
+    except Exception:                       # sector layer optional
+        issuer_sectors = {}
+    for alloc in public_book.filers():
+        node = next((n for n in nodes.values() if n["label"] == alloc["entity"]), None)
+        if not node:
+            continue
+        block = public_book.payload(con, alloc["entity"], sectors=issuer_sectors)
+        # Absent is not empty. No key at all means "not a filer / not mapped"; an
+        # empty positions array with a real filed date means "filed, held nothing
+        # reportable". Emitting a placeholder object would merge two facts into one.
+        if block:
+            node["public_book"] = block
+
     for n in nodes.values():
         p, hs = portfolios.get(n["label"]), holdings_by.get(n["label"])
         if not p and not hs:

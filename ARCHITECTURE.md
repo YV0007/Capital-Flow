@@ -56,10 +56,17 @@ Capital Flow/
 └── run_nvidia.py         # MONTHLY orchestrator: NVIDIA ecosystem map
 ```
 
-## Two pipelines, one database
-The repo runs **two** pipelines against the same `db/capital.db`, because entity identity
-is shared — NVIDIA has to be one NVIDIA on both maps, and that is what `config/aliases.yaml`
+## Three pipelines, one database
+The repo runs **three** pipelines against the same `db/capital.db`, because entity identity
+is shared — NVIDIA has to be one NVIDIA on every map, and that is what `config/aliases.yaml`
 + `entity_aliases` guarantee.
+
+The third — the **Fund Tracker** (`run_funds.py`, tables `fund_*`) — is shaped unlike the
+other two. Weekly is discovery-shaped (agents hunt leads → dated `events`); monthly is
+dependency-shaped (an anchor and its orbit). Section 3 is **registry-shaped**: a closed,
+curated list of 14 managers whose *positions, stakes and deltas* are held as a standing
+book. It has no research agents at all — every row traces to a mandated filing or an
+official register download. See its own section below.
 
 | | Weekly — **Потоки** | Monthly — **Экосистема NVIDIA** |
 |---|---|---|
@@ -165,3 +172,95 @@ workflow ⏳ (dashboard side)  11. Automation ⏳ (B2)
     (agents/trend-writer.md) writes the grounded narrative. Ships trends{week,month,all}.
 
 Remaining: scheduling (B2) and the dashboard-side consumer of the v3 blocks.
+
+
+## Fund Tracker (Section 3) — the registry pipeline
+
+| | Daily — **Фонды** |
+|---|---|
+| Question | What are the ~14 funds we respect doing with their book, right now |
+| Unit | A **position / stake / delta**, not an event |
+| Universe | **Closed and curated** (`config/fund_managers.yaml`) — never auto-extended |
+| Sources | Mandated filings and official registers ONLY. No news, socials or aggregators. |
+| Tables | `fund_*` (schema in `db/schema_fund.sql`) |
+| Agents | **none** — fully deterministic |
+| Orchestrator | `run_funds.py` |
+| Handoff | `handoff/fund_tracker.json` + `FUND-TRACKER-CHANGELOG.md` |
+
+```
+config/fund_managers.yaml  -> fund.seed()          every CIK re-verified against EDGAR's
+                                                   own name for it; a mismatch HALTS the run
+  -> fund_ingest.poll      diff each CIK's submissions JSON; new accession = ingest now
+  -> fund_13f              information table -> positions; value UNITS DETECTED per filing
+  -> fund_fast             13D/G + verbatim Item 4, Form 3/4/5, material 8-K
+  -> fund_ark              the daily full book — zero disclosure lag
+  -> fund_shorts           NAMED shorts, FCA/EU registers (the only attributed shorts)
+  -> fund_watch            §B3 triggers for the four multi-strats (no standing book)
+  -> fund_deltas           SHARE-based deltas + conviction scores
+  -> fund_audit            §7 — errors block delivery
+  -> fund_handoff          payload, with a contract validator that refuses a broken write
+```
+
+**Two problems define the design.**
+
+*Latency.* A 13F is up to 4.5 months stale, so it is the backbone and never the heartbeat.
+A ladder of faster layers (ARK daily · registers daily · Form 4 ~T+2 · 13D ~T+5 · 8-K live)
+fills the gap, and `latency_days` is a first-class field on every dated row. The handoff
+**refuses to write** an event that lacks it — a "new position" without its latency is
+actively misleading.
+
+*Conviction vs noise.* A 13F is a legal aggregation, not a statement of belief. Handled
+structurally by `style_tag` / `conviction_weight` (multi-strat 0.0, quant never ingested)
+and analytically by the 0–100 model in `docs/conviction-model.md`, every constant
+`[PROPOSED]` and tunable in `config/fund_conviction.yaml`. **Deltas are computed on share
+count, never on value** — a value-based delta invents adds that never happened.
+
+**The multi-strat carve-out.** There is no separate CIK for a "conviction sleeve" inside
+Citadel, and the 13F carries no strategy attribution — so the conviction desk cannot be
+parsed out of the filing. Citadel, Millennium, Point72 and Balyasny are `watch_only`:
+their 13F is never read, and they surface only on a 13D, a >5% 13G, a Form 3/4, a named
+short-register entry, or a cap-table appearance.
+
+**Entity resolution is mandatory, not optional.** Point72 files under six CIKs and
+Greenlight under three (its live 13F filer is *DME Capital Management*, not "Greenlight").
+`fund_manager_entities` rolls children to a parent; without it the same fund appears three
+times at a third of its real size and every conviction score is wrong.
+
+
+## Fund portfolios — the layer below the map's flows
+
+The map shows LP money flowing INTO a fund. `holdings[]` and `public_book` show
+where that fund then deploys it. Run monthly by `run_holdings.py`; scheduled with
+`tools/install_holdings_schedule.sh`.
+
+```
+make_holdings_batches   funds with no portfolio, OR below the 25-holding floor,
+                        OR below the 50 coverage target — capital-ordered, so a
+                        partial run loses the tail rather than a slice of everything
+  -> holdings_agents    ONE AGENT PER BATCH, launched and awaited. This step never
+                        existed; it was a line in the runbook addressed to a person,
+                        skipped in two of three weeks, and the reason 36 funds were
+                        empty. No launcher => the run FAILS, never ships green.
+  -> holdings.ingest    unchanged, plus a depth check and a request ledger
+  -> public_book        13F for allocators that file one (config/allocator_ciks.yaml)
+  -> audit -> handoff -> build gate -> deploy
+```
+
+**Two books, never summed.** `holdings[]` is researched from a fund's own portfolio
+page — the only possible source for a venture manager, since Form 13F covers
+US-listed equity only and Thrive's book (OpenAI, Stripe, SpaceX) appears in no 13F
+ever. `public_book` is the 13F. Coatue has both, naming two disjoint sets of
+companies; adding them would double-count.
+
+**`positions[]` is what a fund OWNS, not what it traded.** Only `common` and `adr`
+count as ownership; puts, calls, warrants, rights, units, convertibles and `PRN`
+debt are split into `derivatives[]` and excluded from every weight and total. This
+is correctness, not taste: 13F reports an option at the NOTIONAL value of the
+underlying, so one index put outweighs every real holding and rescales the whole
+book. Before the split, Elliott's largest "holding" was a $2.5bn put on QQQ — a bet
+the Nasdaq falls, rendered as its top conviction. Exited zero-share rows are
+likewise not holdings; the trade flow lives in `activity[]`.
+
+**A skipped run is loud.** `holdings_requests` records what each run asked for, so
+"no result" is provably a step that did not run rather than a quiet month, and a
+≥$5B fund missed twice becomes audit error E6 instead of a warning nobody reads.
