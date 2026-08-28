@@ -48,6 +48,22 @@ def build(month: str, net: dict) -> dict:
         "totals": {"entities": len(entities), "edges": len(edges),
                    "layers": len(seed["layers"]), "cycles": len(seed.get("cycles", [])),
                    "techNodes": len(seed.get("techNodes", []))},
+        # ТАКСОНОМИЯ ЕДЕТ В ФАЙЛЕ, а не копируется потребителем.
+        #
+        # Дашборд держал свою копию таблицы типов, она отстала на два типа v3
+        # (is_alternative_to, enables_interop), и его фолбэк молча нарисовал их
+        # как «поставляет»: карта утверждала, что AMD ПОСТАВЛЯЕТ CUDA, хотя AMD
+        # ей альтернатива, и красила ребро по хребту «физика» вместо
+        # «соперничества». Тихий фолбэк, меняющий смысл связи, хуже отсутствующего.
+        #
+        # Пока таблица живёт двумя копиями, она будет расходиться — поэтому
+        # источник правды переезжает в саму поставку.
+        "spines": {k: {"label": i18n.bi(v.get("label"), v.get("label_en"))}
+                   for k, v in nveco.load_edge_types().get("spines", {}).items()},
+        "edgeTypes": {k: {"spine": v.get("spine"),
+                          "verb": i18n.bi(v.get("verb"), v.get("verb_en")),
+                          "label": i18n.bi(v.get("label"), v.get("label_en"))}
+                      for k, v in nvnet.edge_types().items()},
         # из семени — дословно, без пересчёта
         "layers": seed["layers"], "sectors": seed["sectors"],
         "techNodes": seed.get("techNodes", []), "cycles": seed.get("cycles", []),
@@ -118,7 +134,12 @@ def bilingualise(payload: dict, con) -> dict:
             e["name"] = i18n.bi(nm["ru"], nm["en"])
         for f in BILINGUAL_FIELDS["entity"]:
             if e.get(f) is not None:
-                e[f] = w("entity", eid, f, e[f])
+                # Переписанная агентом сторона выигрывает у склада переводов:
+                # склад хранит перевод СТАРОГО текста, и подставить его к новому
+                # значило бы показать двум читателям разные утверждения.
+                fresh_en = e.pop("_one_liner_en", None) if f == "oneLiner" else None
+                e[f] = (i18n.bi(e[f], fresh_en) if fresh_en
+                        else w("entity", eid, f, e[f]))
         # description — как detail у связи: обе стороны пришли одной строкой CSV.
         if e.get("description") is not None:
             e["description"] = i18n.wrap(idx, "entity", eid, "description",
@@ -136,7 +157,9 @@ def bilingualise(payload: dict, con) -> dict:
     for x in payload["edges"]:
         xid = x["id"]
         if x.get("note") is not None:
-            x["note"] = w("edge", xid, "note", x["note"])
+            fresh_en = x.pop("_note_en", None)
+            x["note"] = (i18n.bi(x["note"], fresh_en) if fresh_en
+                         else w("edge", xid, "note", x["note"]))
         if x.get("detail") is not None:
             # Английская сторона пришла тем же CSV и лежит рядом: склад переводов для
             # неё не нужен, но если он есть — он побеждает, как и у прочей прозы.
@@ -217,6 +240,9 @@ _NUM = re.compile(r"\d+(?:[.,]\d+)*")
 _THOUSANDS = re.compile(r"\d{1,3}(?:[\u00a0 ]\d{3})+(?:[.,]\d+)?")
 
 
+_IN_NAME = re.compile(r"(?<=[A-Za-zА-Яа-я])[-–]?\d+(?:\.\d+)?")
+
+
 def _readings(token: str) -> set:
     """Все допустимые прочтения одного числового токена.
 
@@ -245,7 +271,11 @@ def _readings(token: str) -> set:
 
 
 def _unbacked(text: str, quoted: set) -> list:
-    """Числа текста, ни одно прочтение которых не встречается в цитатах."""
+    """Числа текста, ни одно прочтение которых не встречается в цитатах.
+
+    Имена с цифрами («H100», «x86») вычищаются тем же правилом, что и в
+    `_numbers`: это названия, а не количества, и источник для них не нужен."""
+    text = _IN_NAME.sub(" ", text or "")
     text = _THOUSANDS.sub(lambda m: m.group(0).replace("\u00a0", "").replace(" ", ""),
                           text or "")
     bad = []
@@ -267,8 +297,13 @@ def _numbers(text: str) -> set:
     # Русская типографика отделяет тысячи пробелом: «7 796,7 млрд». Склеиваем такие
     # группы заранее, иначе число распадётся на «7» и «796,7» и не совпадёт с
     # английским «7,796.7» из цитаты.
+    # ЦИФРЫ ВНУТРИ ИМЁН — не количества. «x86», «H100», «GPT-4», «Spectrum-X»:
+    # это названия, и требовать для них источник бессмысленно. Отличие в том, что
+    # перед цифрой стоит буква без пробела. Без этой чистки «x86» превращался в
+    # число 86 и валил выпуск на ровном месте.
+    text = _IN_NAME.sub(" ", text or "")
     text = _THOUSANDS.sub(lambda m: m.group(0).replace("\u00a0", "").replace(" ", ""),
-                          text or "")
+                          text)
     out = set()
     for raw in _NUM.findall(text):
         out |= _readings(raw)
@@ -421,9 +456,81 @@ def description_coverage(payload: dict) -> dict:
             "pivots_missing": sorted(piv - have)}
 
 
+# ── стиль прозы: то, что можно проверить машиной ─────────────────────────────
+# Правила из хендоффа 2026-08-28. Проверяются здесь, а не только отчётом, потому
+# что отчёт можно не посмотреть, а выпуск, который не пишется, — нельзя.
+BANNED_PROSE = {
+    "якорь": r"якор[ьяюеё]\w*",          # карта не якорная: 27 равноправных пивотов
+    "ров": r"\bров\b|\bрва\b|\bрву\b|\bровом\b",
+    "узкое место": r"узк\w+\s+мест\w+",
+    "движок": r"движ[ко]\w*",
+    "anchor": r"\banchors?\b|\banchor's\b",
+    "moat": r"\bmoats?\b",
+    "bottleneck": r"\bbottlenecks?\b",
+    "engine": r"\bengines?\b",
+}
+
+
+def _prose_style_errors(payload: dict) -> list:
+    """Запрещённая лексика в любом пользовательском поле прозы.
+
+    Цитаты источников НЕ проверяются: они на языке своего документа и стилю
+    карты не подчиняются. Перефразировать цитату — значит перестать её цитировать.
+    """
+    import re
+    errs = []
+    # ТАКСОНОМИЯ ИСКЛЮЧЕНА. Запрет касается прозы, которая должна называть
+    # вещи; подпись слоя, сектора или типа связи — это и есть имя категории, и
+    # «Движки инференса» там правильный термин, а не отговорка.
+    TAXONOMY = ("layers[", "sectors[", "techNodes[", "subgraphs[")
+    for path, val in bilingual_paths(payload):
+        if not isinstance(val, dict) or path.startswith(TAXONOMY):
+            continue
+        for lang in ("ru", "en"):
+            s = val.get(lang) or ""
+            for word, pat in BANNED_PROSE.items():
+                if re.search(pat, s, re.I):
+                    errs.append(f"{path}.{lang}: запрещённое слово «{word}» — "
+                                f"назови сущность или механизм, а не категорию")
+    return errs
+
+
+def _unsourced_numbers(payload: dict) -> list:
+    """Число в note или oneLiner, которого нет ни в одной цитате этого объекта.
+
+    То же правило, что уже действует для detail. Эти поля читаются как данные и
+    цитируются как данные, поэтому цифра без источника здесь дороже, чем
+    отсутствие цифры.
+    """
+    errs = []
+    for x in payload["edges"]:
+        note = x.get("note")
+        if not isinstance(note, dict):
+            continue
+        quoted = _numbers(" ".join(ev.get("quote", "") for ev in x.get("evidence", [])))
+        for lang in ("ru", "en"):
+            bad = sorted(_numbers(note.get(lang) or "") - quoted)
+            if bad:
+                errs.append(f"связь {x['id']}: числа в note.{lang} не встречаются "
+                            f"ни в одной цитате: {', '.join(bad[:6])}")
+    for e in payload["entities"]:
+        ol = e.get("oneLiner")
+        if not isinstance(ol, dict):
+            continue
+        quoted = _numbers(" ".join(s.get("quote", "") for s in e.get("sources", [])))
+        for lang in ("ru", "en"):
+            bad = sorted(_numbers(ol.get(lang) or "") - quoted)
+            if bad:
+                errs.append(f"сущность {e['id']}: числа в oneLiner.{lang} не "
+                            f"встречаются ни в одной цитате: {', '.join(bad[:6])}")
+    return errs
+
+
 # ── валидатор ────────────────────────────────────────────────────────────────
 def validate(payload: dict) -> list:
     errs = []
+    errs += _prose_style_errors(payload)
+    errs += _unsourced_numbers(payload)
     # Половина перевода — это ровно тот отказ, который мы убираем. Поэтому
     # пустая сторона роняет выпуск, а не уезжает в дашборд «на потом».
     errs += i18n.check(payload, bilingual_paths(payload))
@@ -496,6 +603,17 @@ def validate(payload: dict) -> list:
         seen.add(x["id"])
         if x["type"] not in types:
             errs.append(f"связь {x['id']}: тип '{x['type']}' вне таксономии v2+v3")
+        # Хребет — производная типа, а не независимое поле. Расхождение означало
+        # бы, что ребро покрашено не тем цветом и прочитано не тем механизмом.
+        elif x.get("spine") != types[x["type"]].get("spine"):
+            errs.append(f"связь {x['id']}: хребет '{x.get('spine')}' не совпадает "
+                        f"с хребтом типа '{x['type']}' "
+                        f"({types[x['type']].get('spine')})")
+        # И тип обязан быть в таблице, которую МЫ ЖЕ отдаём в этом файле:
+        # потребитель читает её отсюда, поэтому дыра в ней — это дыра у него.
+        if x["type"] not in (payload.get("edgeTypes") or {}):
+            errs.append(f"связь {x['id']}: тип '{x['type']}' отсутствует в "
+                        f"edgeTypes самой выдачи — потребитель не сможет его отрисовать")
         elif x["spine"] != nvnet.spine_of(x["type"]):
             errs.append(f"связь {x['id']}: хребет '{x['spine']}' не выведен из типа")
         if x["status"] not in nveco.STATUSES:

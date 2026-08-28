@@ -1,7 +1,7 @@
 source,target,type,direction,strength,lock_in_depth,substitutability,is_reversible,risk_level,risk_type,risk_timeline,risk_mitigation,tech_node,formed,strengthened,note
 openai,nvidia,customer_of,upstream,95,80,15,true,medium,market,1-2y,Спрос распределён между несколькими лабораториями.,,2016,2025,"Лаборатория закупает системы гигаваттами: это деньги, а не доказательство. Доказательство идёт отдельным ребром."
 openai,nvidia,validates_demand,downstream,95,85,15,false,medium,substitution,2-5y,"Если спрос упрётся в окупаемость, доказательство ослабнет.",,2020,2025,"Своим существованием доказала отрасли, что ускорители необходимы: под неё строят площадки на десять гигаватт."
-nvidia,openai,co_designs,bidirectional,85,75,20,true,medium,technical,2-5y,,,2019,2025,"Совместная работа над системами и оптимизациями: лаборатория пишет ядра, якорь подгоняет платформу."
+nvidia,openai,co_designs,bidirectional,85,75,20,true,medium,technical,2-5y,,,2019,2025,"Совместная работа над системами и оптимизациями: лаборатория пишет ядра, NVIDIA подгоняет платформу."
 anthropic,nvidia,customer_of,upstream,80,65,25,true,medium,market,1-2y,,,2021,2024,Вторая лаборатория закупает вычисления — спрос не сосредоточен в одной компании.
 anthropic,nvidia,validates_demand,downstream,80,70,25,false,medium,substitution,2-5y,Лаборатория частично обучает на чужих ускорителях.,,2021,2024,"Второе доказательство спроса: если бы покупатель был один, вся стройка висела бы на нём."
 meta,nvidia,validates_demand,downstream,85,75,20,false,medium,substitution,2-5y,Компания строит собственные чипы для части задач.,,2016,2023,"Капитальные вложения в инфраструктуру доказывают спрос со стороны компании, которая могла бы обойтись без неё."
@@ -20,11 +20,11 @@ servicenow,nvidia,proves_roi,downstream,55,45,45,true,low,market,1-2y,,,2024,,"�
 servicenow,microsoft,strategic_partner,bidirectional,45,30,55,true,low,market,1-2y,,,2020,,Корпоративная платформа работает поверх нескольких облаков одновременно.
 salesforce,nvidia,proves_roi,downstream,45,40,55,true,low,market,1-2y,,,2024,,Ещё одно доказательство окупаемости в корпоративном сегменте — в отделах продаж.
 snowflake,nvidia,proves_roi,downstream,45,40,55,true,low,market,1-2y,,,2024,,"Данные корпораций становятся пригодными для обучения — то, чего нет у лабораторий."
-recursion,nvidia,proves_use_case,downstream,50,40,50,true,low,market,2-5y,Клинические результаты моделей ещё не подтверждены.,,2020,2023,Суперкомпьютер для поиска лекарств построен совместно с якорем: референсное применение вне интернет-компаний.
+recursion,nvidia,proves_use_case,downstream,50,40,50,true,low,market,2-5y,Клинические результаты моделей ещё не подтверждены.,,2020,2023,Суперкомпьютер для поиска лекарств построен совместно с NVIDIA: референсное применение вне интернет-компаний.
 siemens,nvidia,proves_use_case,downstream,45,40,55,true,low,market,2-5y,,,2023,,Применение моделей в промышленном проектировании и на производстве.
 schrodinger,nvidia,proves_use_case,downstream,35,30,65,true,low,market,2-5y,,,2021,,Моделирование молекул на кластерах ускорителей для разработки лекарств.
 databricks,huggingface,standardizes_on,upstream,55,40,45,true,low,technical,1-2y,,,2023,,"Корпоративная платформа берёт модели из общего хаба, а не обучает их с нуля."
 openai,huggingface,competes_with,lateral,40,35,60,true,low,market,2-5y,,,2022,,Закрытые модели по подписке против открытых весов в общем хабе.
 meta,huggingface,enables,downstream,65,50,35,true,low,market,2-5y,,,2023,,Открытые модели компании публикуются в общем хабе и делают его центром экосистемы.
-openai,vllm,enables,downstream,50,40,50,true,low,technical,1-2y,,,2023,,Открытый движок реализует совместимый с лабораторией программный интерфейс — он стал общим стандартом.
-deepseek,huggingface,enables,downstream,45,35,55,true,medium,regulatory,1-2y,,,2024,,Открытые веса китайской лаборатории публикуются в общем хабе и доступны всем.
+openai,vllm,enables,downstream,50,40,50,true,low,technical,1-2y,,,2023,,vLLM повторяет API OpenAI, поэтому код под OpenAI работает на своих серверах без переписывания — так этот API стал отраслевым стандартом.
+deepseek,huggingface,enables,downstream,45,35,55,true,medium,regulatory,1-2y,,,2024,,DeepSeek публикует открытые веса на Hugging Face — оттуда их может забрать кто угодно.
