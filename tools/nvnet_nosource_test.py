@@ -170,6 +170,68 @@ def main(month):
         def _(d):
             _edge_with_evidence(d)["sidedness"] = "как-то-так"
 
+        # ── РЕЕСТР ФАКТОВ ────────────────────────────────────────────────────
+        # Правило подкрепления включается ПО ОБЪЕКТУ: у кого есть реестр, тот
+        # проверяется по реестру и откатиться к цитатам не может. Проверяется именно
+        # это — и то, что расписка выписана на ту сумму, которая в ней стоит.
+
+        def _with_facts(d):
+            """Первая связь, у которой есть реестр фактов."""
+            return next(x for x in d["edges"] if x.get("facts"))
+
+        @case("число в тексте, которого нет в реестре фактов")
+        def _(d):
+            x = _with_facts(d)
+            x["detail"]["ru"] = x["detail"]["ru"] + " Доля выросла до 47.3%."
+
+        @case("объект с реестром откатился к цитатам")
+        def _(d):
+            # Величина есть в ЦИТАТЕ, но не в реестре. До /5 это прошло бы; у
+            # переписанного объекта — нет, иначе реестр ничего не значит.
+            x = _with_facts(d)
+            x["evidence"][0]["quote"] = "capacity reached 777 units in the quarter"
+            for lang in ("ru", "en"):
+                x["detail"][lang] = x["detail"][lang] + " Ещё величина: 777."
+
+        @case("числовой факт без verbatim")
+        def _(d):
+            # Именно ЧИСЛОВОЙ: у факта без цифры (условие договора, наличие
+            # программы) фрагмент необязателен, и это правило тоже проверяется —
+            # тем, что тест берёт не первый попавшийся факт.
+            num = next(f for x in d["edges"] for f in (x.get("facts") or [])
+                       if any(c.isdigit() for c in str(f.get("value") or "")))
+            num["verbatim"] = None
+
+        @case("величина не встречается в собственном фрагменте")
+        def _(d):
+            f = next(f for x in d["edges"] for f in (x.get("facts") or [])
+                     if f.get("verbatim") and any(c.isdigit() for c in str(f.get("value"))))
+            f["value"] = "999.9"
+
+        @case("факт связи о постороннем узле")
+        def _(d):
+            x = _with_facts(d)
+            outsider = next(e["id"] for e in d["entities"]
+                            if e["id"] not in (x["source"], x["target"]))
+            x["facts"][0]["about"] = outsider
+
+        @case("единица измерения не из списка")
+        def _(d):
+            _with_facts(d)["facts"][0]["unit"] = "попугаев"
+
+        @case("величина записана русской прозой")
+        def _(d):
+            _with_facts(d)["facts"][0]["value"] = "серийный выпуск"
+
+        @case("подпись величины на одном языке")
+        def _(d):
+            _with_facts(d)["facts"][0]["label"] = {"ru": "Выручка", "en": ""}
+
+        @case("переписанный объект говорит «one customer» вместо имени")
+        def _(d):
+            x = _with_facts(d)
+            x["detail"]["en"] = "Revenue is concentrated: one customer took most of it."
+
         # ── ЦИФРА ИЗ ЦИТАТЫ, ТЕПЕРЬ И В ОБОСНОВАНИЯХ ─────────────────────────
         # Правило «каждая цифра в прозе — из цитаты» распространено Фазой 1 на
         # обоснования факторов. Повод — четвёртый фактор: доля функции без
