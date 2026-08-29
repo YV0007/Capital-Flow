@@ -1,0 +1,763 @@
+{
+  "month": "2026-08",
+  "batch": 11,
+  "tier": "core",
+  "size": 5,
+  "как читать": "1) ЧТО УЖЕ ЗНАЕМ — sources_now показывает, ЧЬИМ словом стоит профиль: self=null значит, что о сущности говорит кто-то другой. Такой профиль исследуется с нуля, а не дополняется. 2) ЧТО СВЕРЯТЬ — to_reconcile: связи, которые второй конец не подтверждал. Цитата из документов ЭТОГО узла поднимает их до bilateral, и это самая дешёвая работа пакета. 3) ЧЕГО НЕ ХВАТАЕТ — membership.fails: какие проверки узел сегодня не проходит. 4) ОТКАЗЫ — rejected_last_time: движок отверг эти строки с причиной, не присылайте их такими же. Тир источника, integration, core и sidedness вы НЕ пишете.",
+  "выход": "dossier.json рядом с этим файлом; формат — agents/eco-dossier.md",
+  "отклонено_и_на_карту_не_попало": [],
+  "entities": [
+    {
+      "id": "blackrock",
+      "name": "BlackRock",
+      "type": "company",
+      "role": "capital",
+      "layers": [
+        "L14"
+      ],
+      "primary_layer": "L14",
+      "domains": [
+        "blackrock.com"
+      ],
+      "cik": "0002012383",
+      "own_publisher": true,
+      "integration": 4,
+      "rank": 96,
+      "rotation_tier": "tail",
+      "core": false,
+      "rota_rank": 101,
+      "crit_rank": 92,
+      "rota_basis": "criticality",
+      "profile_now": {
+        "one_liner": "Крупнейший управляющий активами; через инфраструктурное подразделение финансирует площадки.",
+        "why_irreplaceable": "Инфраструктурный капитал под площадки и энергию. Отличается от венчура длиной горизонта и требованием предсказуемого денежного потока.",
+        "what_breaks_it": "Разворот цикла на рынке инфраструктуры.",
+        "phase": "mature",
+        "ticker": "NYSE: BLK",
+        "geo": "US",
+        "revenue_usd_b": 20.0
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 40,
+          "why": "Инфраструктурных управляющих несколько"
+        },
+        "lock_in_depth": {
+          "value": 45,
+          "why": "Задевает энергию и площадки"
+        },
+        "time_to_replace": {
+          "value": 50,
+          "why": "Заместить капитал — год-два"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "quote": "including sufficient energy for powering data centers using our products,",
+          "published": "2026-02-25",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "1"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources",
+          "min_confirmed_edges"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "microsoft__blackrock__funded_by",
+          "source": "microsoft",
+          "target": "blackrock",
+          "type": "funded_by",
+          "direction": "upstream",
+          "role": "вверх по стеку",
+          "counterparty": "microsoft",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [],
+          "note": "Инфраструктурный капитал финансирует площадки и энергию под облачные мощности.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "including sufficient energy for powering data centers using our products,",
+              "self": null,
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/etn-20251231.htm",
+              "quote": "We make products for the data center, utility, industrial, commercial, machine building,",
+              "self": null,
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "microsoft__blackrock__funded_by",
+          "counterparty": "microsoft",
+          "type": "funded_by",
+          "нужна цитата": "документ blackrock, где названа связь с microsoft"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "ase",
+      "name": "ASE Technology",
+      "type": "company",
+      "role": "producer",
+      "layers": [
+        "L3"
+      ],
+      "primary_layer": "L3",
+      "domains": [
+        "aseglobal.com"
+      ],
+      "cik": "0001122411",
+      "own_publisher": true,
+      "integration": 7,
+      "rank": 55,
+      "rotation_tier": "tail",
+      "core": false,
+      "rota_rank": 77,
+      "crit_rank": 59,
+      "rota_basis": "integration",
+      "profile_now": {
+        "one_liner": "Крупнейший независимый подрядчик по упаковке кристаллов и тестированию.",
+        "why_irreplaceable": "Упаковка стала ограничением не меньшим, чем сам чип. Подрядчиков такого масштаба два-три, и все на Тайване.",
+        "what_breaks_it": "Перевод передовой упаковки внутрь фабрики.",
+        "phase": "mature",
+        "ticker": "NYSE: ASX",
+        "geo": "TW",
+        "revenue_usd_b": 20.0
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 60,
+          "why": "Подрядчиков такого масштаба два-три"
+        },
+        "lock_in_depth": {
+          "value": 55,
+          "why": "Задевает упаковку и сборку"
+        },
+        "time_to_replace": {
+          "value": 60,
+          "why": "Нарастить мощности — год-два"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+          "quote": "including TSMC, Advanced Semiconductor Engineering, Inc., Foxconn Technology Group, Amkor Technology, Inc. and",
+          "published": "2025-12-18",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "4"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "ase__astera-labs__packages",
+          "source": "ase",
+          "target": "astera-labs",
+          "type": "packages",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "astera-labs",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "astera-labs"
+          ],
+          "note": "Упаковка и тест микросхем связности.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+              "quote": "We use Advanced Semiconductor Engineering and Amkor Technologies to assemble, package, and test",
+              "self": "astera-labs",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+              "quote": "We use a fabless manufacturing model and partner with TSMC to fabricate all",
+              "self": "astera-labs",
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "ase__broadcom__packages",
+          "source": "ase",
+          "target": "broadcom",
+          "type": "packages",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "broadcom",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "broadcom"
+          ],
+          "note": "Broadcom называет ASE среди сборщиков, которым отдано большинство операций сборки и теста.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+              "quote": "including TSMC, Advanced Semiconductor Engineering, Inc., Foxconn Technology Group, Amkor Technology, Inc. and",
+              "self": "broadcom",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+              "quote": "The majority of our front-end wafer manufacturing operations is outsourced to external foundries,",
+              "self": "broadcom",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+              "quote": "including TSMC, Advanced Semiconductor Engineering, Inc., Foxconn Technology Group, Amkor Technology, Inc.",
+              "self": "broadcom",
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "ase__credo__packages",
+          "source": "ase",
+          "target": "credo",
+          "type": "packages",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "credo",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "credo"
+          ],
+          "note": "Второй подрядчик упаковки.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm",
+              "quote": "including Amkor Technology Inc. (Amkor) and Advanced Semiconductor Engineering, Inc. (ASE) for packaging",
+              "self": "credo",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm",
+              "quote": "we exclusively used Taiwan Semiconductor Manufacturing Company Limited (TSMC) for semiconductor wafer production.",
+              "self": "credo",
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "ase__nvidia__packages",
+          "source": "ase",
+          "target": "nvidia",
+          "type": "packages",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "nvidia",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "nvidia"
+          ],
+          "note": "Независимая упаковка кристаллов помимо фабричной; подрядчиков такого масштаба два-три.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+              "quote": "including TSMC, Advanced Semiconductor Engineering, Inc., Foxconn Technology Group, Amkor Technology, Inc. and",
+              "self": null,
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "We utilize CoWoS technology for semiconductor packaging.",
+              "self": "nvidia",
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "ase__astera-labs__packages",
+          "counterparty": "astera-labs",
+          "type": "packages",
+          "нужна цитата": "документ ase, где названа связь с astera-labs"
+        },
+        {
+          "edge": "ase__broadcom__packages",
+          "counterparty": "broadcom",
+          "type": "packages",
+          "нужна цитата": "документ ase, где названа связь с broadcom"
+        },
+        {
+          "edge": "ase__credo__packages",
+          "counterparty": "credo",
+          "type": "packages",
+          "нужна цитата": "документ ase, где названа связь с credo"
+        },
+        {
+          "edge": "ase__nvidia__packages",
+          "counterparty": "nvidia",
+          "type": "packages",
+          "нужна цитата": "документ ase, где названа связь с nvidia"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "kioxia",
+      "name": "Kioxia",
+      "type": "company",
+      "role": "producer",
+      "layers": [
+        "L4"
+      ],
+      "primary_layer": "L4",
+      "domains": [
+        "kioxia.com"
+      ],
+      "cik": null,
+      "own_publisher": true,
+      "integration": 11,
+      "rank": 28,
+      "rotation_tier": "mid",
+      "core": true,
+      "rota_rank": 46,
+      "crit_rank": 106,
+      "rota_basis": "integration",
+      "profile_now": {
+        "one_liner": "Производитель флеш-памяти для дисков, на которых лежат данные обучения.",
+        "why_irreplaceable": "Хранение — самый заменяемый слой памяти: поставщиков несколько и переключение занимает недели.",
+        "what_breaks_it": "Ценовая война на рынке флеш-памяти.",
+        "phase": "mature",
+        "ticker": "TSE: 285A",
+        "geo": "JP",
+        "revenue_usd_b": 11.0
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 35,
+          "why": "Поставщиков флеш-памяти несколько"
+        },
+        "lock_in_depth": {
+          "value": 30,
+          "why": "Задевает только хранение"
+        },
+        "time_to_replace": {
+          "value": 30,
+          "why": "Смена поставщика — месяцы"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "quote": "We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung.",
+          "published": "2026-02-25",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "1"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources",
+          "min_confirmed_edges"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "kioxia__nvidia__supplies",
+          "source": "kioxia",
+          "target": "nvidia",
+          "type": "supplies",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "nvidia",
+          "status": "signal",
+          "sidedness": "single",
+          "claimed_by": [
+            "nvidia"
+          ],
+          "note": "Флеш-память для дисков, на которых лежат данные обучения. Самый заменяемый слой памяти.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung.",
+              "self": "nvidia",
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "micron__kioxia__competes_with",
+          "source": "micron",
+          "target": "kioxia",
+          "type": "competes_with",
+          "direction": "lateral",
+          "role": "вверх по стеку",
+          "counterparty": "micron",
+          "status": "high_confidence",
+          "sidedness": "single",
+          "claimed_by": [
+            "micron"
+          ],
+          "note": "Названа в отчётности Micron среди конкурентов на рынках памяти и накопителей.",
+          "evidence": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+              "quote": "including Samsung Electronics Co., Ltd.; SK hynix Inc.; Kioxia Holdings Corporation; Sandisk Corporation",
+              "self": "micron",
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "sandisk__kioxia__strategic_partner",
+          "source": "sandisk",
+          "target": "kioxia",
+          "type": "strategic_partner",
+          "direction": "bidirectional",
+          "role": "вверх по стеку",
+          "counterparty": "sandisk",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "sandisk"
+          ],
+          "note": "Совместное предприятие Flash Ventures: пока оно работает, обе стороны не вправе выпускать флеш-память с третьими лицами.",
+          "evidence": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+              "quote": "We depend on Flash Ventures for the development and manufacture of flash-based memory.",
+              "self": "sandisk",
+              "counter": false
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+              "quote": "we and Kioxia are restricted from working with third parties to manufacture flash-based memory",
+              "self": "sandisk",
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "kioxia__nvidia__supplies",
+          "counterparty": "nvidia",
+          "type": "supplies",
+          "нужна цитата": "документ kioxia, где названа связь с nvidia"
+        },
+        {
+          "edge": "micron__kioxia__competes_with",
+          "counterparty": "micron",
+          "type": "competes_with",
+          "нужна цитата": "документ kioxia, где названа связь с micron"
+        },
+        {
+          "edge": "sandisk__kioxia__strategic_partner",
+          "counterparty": "sandisk",
+          "type": "strategic_partner",
+          "нужна цитата": "документ kioxia, где названа связь с sandisk"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "shin-etsu",
+      "name": "Shin-Etsu Chemical",
+      "type": "company",
+      "role": "producer",
+      "layers": [
+        "L1"
+      ],
+      "primary_layer": "L1",
+      "domains": [
+        "shinetsu.co.jp"
+      ],
+      "cik": null,
+      "own_publisher": true,
+      "integration": 5,
+      "rank": 85,
+      "rotation_tier": "tail",
+      "core": false,
+      "rota_rank": 72,
+      "crit_rank": 50,
+      "rota_basis": "criticality",
+      "profile_now": {
+        "one_liner": "Крупнейший производитель кремниевых пластин и фоторезиста — расходников любой фабрики.",
+        "why_irreplaceable": "Пластины и светочувствительный слой расходуются на каждом чипе. Поставщиков немного, а переквалификация материала на фабрике занимает год и больше.",
+        "what_breaks_it": "Потеря лидерства в пластинах в пользу корейских производителей.",
+        "phase": "mature",
+        "ticker": "TSE: 4063",
+        "geo": "JP",
+        "revenue_usd_b": 16.0
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 70,
+          "why": "Поставщиков пластин и резиста немного"
+        },
+        "lock_in_depth": {
+          "value": 55,
+          "why": "Задевает сырьё и фабрики"
+        },
+        "time_to_replace": {
+          "value": 65,
+          "why": "Переквалификация материала — год-два"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+          "quote": "Some of the equipment is available from a limited number of",
+          "published": "2026-04-16",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "2"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "japan__shin-etsu__geopolitically_dependent",
+          "source": "japan",
+          "target": "shin-etsu",
+          "type": "geopolitically_dependent",
+          "direction": "upstream",
+          "role": "вверх по стеку",
+          "counterparty": "japan",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [],
+          "note": "Материалы для фабрик делают несколько японских компаний; экспортные меры уже применялись.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+              "quote": "Some of the equipment is available from a limited number of",
+              "self": null,
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+              "quote": "These items now require an export license when shipped abroad.",
+              "self": null,
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "shin-etsu__tsmc__supplies",
+          "source": "shin-etsu",
+          "target": "tsmc",
+          "type": "supplies",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "tsmc",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "tsmc"
+          ],
+          "note": "Пластины и светочувствительный слой расходуются на каждом чипе; поставщиков немного.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+              "quote": "Some of the equipment is available from a limited number of",
+              "self": "tsmc",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC,",
+              "self": null,
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "japan__shin-etsu__geopolitically_dependent",
+          "counterparty": "japan",
+          "type": "geopolitically_dependent",
+          "нужна цитата": "документ shin-etsu, где названа связь с japan"
+        },
+        {
+          "edge": "shin-etsu__tsmc__supplies",
+          "counterparty": "tsmc",
+          "type": "supplies",
+          "нужна цитата": "документ shin-etsu, где названа связь с tsmc"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "lightspeed",
+      "name": "Lightspeed Venture Partners",
+      "type": "company",
+      "role": "capital",
+      "layers": [
+        "L14"
+      ],
+      "primary_layer": "L14",
+      "domains": [
+        "lsvp.com"
+      ],
+      "cik": null,
+      "own_publisher": true,
+      "integration": 3,
+      "rank": 103,
+      "rotation_tier": "tail",
+      "core": false,
+      "rota_rank": 105,
+      "crit_rank": 107,
+      "rota_basis": "integration",
+      "profile_now": {
+        "one_liner": "Венчурный фонд с вложениями в инфраструктуру и в прикладной слой ИИ.",
+        "why_irreplaceable": "Ещё один фонд того же класса. Для карты важен как часть множества, а не по отдельности.",
+        "what_breaks_it": "Сжатие венчурного финансирования.",
+        "phase": "mature",
+        "ticker": null,
+        "geo": "US",
+        "revenue_usd_b": null
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 25,
+          "why": "Венчурных фондов такого класса несколько"
+        },
+        "lock_in_depth": {
+          "value": 35,
+          "why": "Задевает приложения"
+        },
+        "time_to_replace": {
+          "value": 30,
+          "why": "Найти замену капиталу — месяцы"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+          "quote": "investments in convertible notes from Anthropic, PBC (“Anthropic”), including $2.7 billion we",
+          "published": "2026-02-06",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "1"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources",
+          "min_confirmed_edges"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "lightspeed__anthropic__invests_in",
+          "source": "lightspeed",
+          "target": "anthropic",
+          "type": "invests_in",
+          "direction": "downstream",
+          "role": "вниз по стеку",
+          "counterparty": "anthropic",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [],
+          "note": "Венчурный капитал во второй лаборатории.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+              "quote": "investments in convertible notes from Anthropic, PBC (“Anthropic”), including $2.7 billion we",
+              "self": null,
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+              "self": null,
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "lightspeed__anthropic__invests_in",
+          "counterparty": "anthropic",
+          "type": "invests_in",
+          "нужна цитата": "документ lightspeed, где названа связь с anthropic"
+        }
+      ],
+      "rejected_last_time": []
+    }
+  ]
+}

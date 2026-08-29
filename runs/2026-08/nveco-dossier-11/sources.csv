@@ -1,0 +1,31 @@
+owner_kind,owner_key,tier,type,title,url,published,quote,confidence,counter
+entity,google-cloud,,product_doc,Google Cloud TPU,https://cloud.google.com/tpu,2026-08-29,"TPUs are powered by Google Cloud's AI Hypercomputer, a groundbreaking architecture that brings",,false
+entity,google-cloud,,product_doc,Google Cloud TPU,https://cloud.google.com/tpu,2026-08-29,"high performance support for PyTorch and JAX, and support the vLLM engine for fast inference",,false
+entity,google-cloud,,product_doc,Google Cloud TPU,https://cloud.google.com/tpu,2026-08-29,Manage and scale these deployments reliably across global clusters with Google Kubernetes Engine (GKE).,,false
+entity,google-cloud,,product_doc,Google Cloud TPU,https://cloud.google.com/tpu,2026-08-29,custom-designed with open software to power the entire AI lifecycle—from frontier training and large-scale inference,,false
+edge,google-cloud__pytorch__integrates,,product_doc,Google Cloud TPU,https://cloud.google.com/tpu,2026-08-29,"high performance support for PyTorch and JAX, and support the vLLM engine for fast inference",,false
+edge,google-cloud__jax__integrates,,product_doc,Google Cloud TPU,https://cloud.google.com/tpu,2026-08-29,"high performance support for PyTorch and JAX, and support the vLLM engine for fast inference",,false
+edge,google-cloud__vllm__integrates,,product_doc,Google Cloud TPU,https://cloud.google.com/tpu,2026-08-29,"high performance support for PyTorch and JAX, and support the vLLM engine for fast inference",,false
+edge,google-cloud__kubernetes__standardizes_on,,product_doc,Google Cloud TPU,https://cloud.google.com/tpu,2026-08-29,Manage and scale these deployments reliably across global clusters with Google Kubernetes Engine (GKE).,,false
+entity,blackrock,,sec_filing,BlackRock 10-K FY2025,https://www.sec.gov/Archives/edgar/data/2012383/000119312526071966/blk-20251231.htm,2026-02-25,We are a fiduciary to our clients,,false
+entity,blackrock,,sec_filing,BlackRock 10-K FY2025,https://www.sec.gov/Archives/edgar/data/2012383/000119312526071966/blk-20251231.htm,2026-02-25,BlackRock is among the world's largest managers of pension plan assets,,false
+entity,blackrock,,sec_filing,BlackRock 10-K FY2025,https://www.sec.gov/Archives/edgar/data/2012383/000119312526071966/blk-20251231.htm,2026-02-25,Technology services and subscription revenue of $2.0 billion was up 24% year-over-year.,,false
+entity,blackrock,,sec_filing,BlackRock 10-K FY2025,https://www.sec.gov/Archives/edgar/data/2012383/000119312526071966/blk-20251231.htm,2026-02-25,"Investment advisory, administration fees and securities lending revenue of $19.2 billion in 2025",,false
+entity,ase,,sec_filing,ASE Technology 20-F FY2025,https://www.sec.gov/Archives/edgar/data/1122411/000119312526135585/d50802d20f.htm,2026-04-01,the highly competitive markets of semiconductor packaging and testing and EMS,,false
+entity,ase,,sec_filing,ASE Technology 20-F FY2025,https://www.sec.gov/Archives/edgar/data/1122411/000119312526135585/d50802d20f.htm,2026-04-01,"Revenues from our export sales were NT$511,422.0 million",,false
+entity,ase,,sec_filing,ASE Technology 20-F FY2025,https://www.sec.gov/Archives/edgar/data/1122411/000119312526135585/d50802d20f.htm,2026-04-01,the Group's ten largest customers accounted for 47 % and 50 % of trade receivables,,false
+entity,ase,,sec_filing,ASE Technology 20-F FY2025,https://www.sec.gov/Archives/edgar/data/1122411/000119312526135585/d50802d20f.htm,2026-04-01,some foundry players have actively invested and expanded their advanced packaging capacity,,false
+entity,ase,,sec_filing,ASE Technology 20-F FY2025,https://www.sec.gov/Archives/edgar/data/1122411/000119312526135585/d50802d20f.htm,2026-04-01,"As of December 31, 2024 and 2025, the Group's ten largest customers",,false
+edge,ase__amkor__competes_with,,sec_filing,ASE Technology 20-F FY2025,https://www.sec.gov/Archives/edgar/data/1122411/000119312526135585/d50802d20f.htm,2026-04-01,the highly competitive markets of semiconductor packaging and testing and EMS,,false
+edge,tsmc__ase__competes_with,,sec_filing,ASE Technology 20-F FY2025,https://www.sec.gov/Archives/edgar/data/1122411/000119312526135585/d50802d20f.htm,2026-04-01,some foundry players have actively invested and expanded their advanced packaging capacity,,false
+entity,kioxia,,company_pr,About KIOXIA,https://americas.kioxia.com/en-us/about.html,2026-08-29,a leading global supplier of flash memory and solid state drives (SSDs),,false
+entity,kioxia,,company_pr,About KIOXIA,https://americas.kioxia.com/en-us/about.html,2026-08-29,"In 1987, KIOXIA invented the world's first NAND flash memory",,false
+entity,kioxia,,company_pr,About KIOXIA,https://americas.kioxia.com/en-us/about.html,2026-08-29,3D flash memory BiCS FLASH™ technology that delivers even greater storage capacity,,false
+entity,kioxia,,company_pr,About KIOXIA,https://americas.kioxia.com/en-us/about.html,2026-08-29,KIOXIA Group is one of the largest manufacturers of NAND flash memory,,false
+entity,shin-etsu,,company_pr,Shin-Etsu Chemical — Company Profile,https://www.shinetsu.co.jp/en/company/profile/,2026-08-29,"Date of Establishment September 16, 1926",,false
+entity,shin-etsu,,company_pr,Shin-Etsu Chemical — Company Profile,https://www.shinetsu.co.jp/en/company/profile/,2026-08-29,"Capital 119,419 million yen Number of Employees Consolidated 27,342",,false
+entity,shin-etsu,,company_pr,Shin-Etsu Chemical — Company Profile,https://www.shinetsu.co.jp/en/company/profile/,2026-08-29,"Main Products Electronics Materials Semiconductor silicon, Rare earth magnets",,false
+entity,lightspeed,,company_pr,Lightspeed — About,https://lsvp.com/about/,2026-08-29,stand behind our companies with high conviction from Seed to Series F and beyond,,false
+entity,lightspeed,,company_pr,Lightspeed — About,https://lsvp.com/about/,2026-08-29,For over twenty years Lightspeed has been the first investor and an early backer,,false
+entity,lightspeed,,company_pr,Lightspeed — About,https://lsvp.com/about/,2026-08-29,We pursue those opportunities based on their merits regardless of where the founder resides.,,false
+entity,lightspeed,,company_pr,Lightspeed — About,https://lsvp.com/about/,2026-08-29,We believe in investing behind bold ideas and the founders brave enough to build them.,,false

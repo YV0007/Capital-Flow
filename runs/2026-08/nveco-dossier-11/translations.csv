@@ -1,0 +1,41 @@
+kind,id,field,lang,text
+entity,google-cloud,why_irreplaceability,en,The only cloud selling capacity on its own tensor processor
+entity,google-cloud,why_lock_in,en,The processors run on the site's own architecture rather than a common one
+entity,google-cloud,why_time,en,"The top of the stack is open — PyTorch, JAX and vLLM — so leaving does not require rewriting the model"
+entity,google-cloud,why_concentration,en,Its own accelerator makes the vertical exclusive but grants no share of the cloud market
+entity,google-cloud,one_liner,en,Google's cloud: the only one where a frontier lab can train on the owner's own silicon.
+entity,google-cloud,why_irreplaceable,en,"What sets it apart from other clouds is not scale but the vertical: its own accelerator, its own lab and its own training library in one stack. It can be replaced, but that vertical has no alternative."
+entity,google-cloud,what_breaks_it,en,Ending sales of capacity on its own silicon to outside labs.
+entity,google-cloud,geo_risk_note,en,Infrastructure spread across dozens of countries; the same restrictions as every other cloud.
+edge,google-cloud__pytorch__integrates,risk_mitigation,en,"Two frameworks are supported at once, so neither is required"
+edge,google-cloud__pytorch__integrates,note,en,The cloud's tensor processors support it alongside JAX as a way to train on its own site.
+edge,google-cloud__jax__integrates,risk_mitigation,en,"Two frameworks are supported at once, so neither is required"
+edge,google-cloud__jax__integrates,note,en,Supported alongside PyTorch on the site's tensor processors.
+edge,google-cloud__vllm__integrates,risk_mitigation,en,The open inference server is available outside this site too
+edge,google-cloud__vllm__integrates,note,en,Named on the tensor processor page as the way to fast inference on them.
+edge,google-cloud__kubernetes__standardizes_on,risk_mitigation,en,The orchestrator is open and runs on any site
+edge,google-cloud__kubernetes__standardizes_on,note,en,The site manages deployment clusters through its own managed orchestrator.
+entity,blackrock,why_irreplaceability,en,Dozens of managers bring capital into infrastructure; no single one is exclusive
+entity,blackrock,why_lock_in,en,"Technology services and subscriptions gave $2.0 billion — a term relationship, not one-off"
+entity,blackrock,why_time,en,A source of capital changes inside a fundraising cycle
+entity,blackrock,why_concentration,en,"Among the world's largest managers of pension plan assets, but not the only one"
+entity,ase,why_irreplaceability,en,The company itself calls the packaging market highly competitive
+entity,ase,why_lock_in,en,"A package is qualified against the customer's product, and moving it requires requalification"
+entity,ase,why_time,en,Advanced packaging capacity is being added by the foundry players themselves
+entity,ase,why_concentration,en,The ten largest customers accounted for 50 % of trade receivables
+edge,ase__amkor__competes_with,risk_mitigation,en,Customers keep several qualified packaging contractors at once
+edge,ase__amkor__competes_with,note,en,Both cover the same step — packaging and testing — in a market ASE calls highly competitive.
+edge,tsmc__ase__competes_with,risk_mitigation,en,The step stays divided: packaging contractors hold capacity of their own
+edge,tsmc__ase__competes_with,note,en,Foundry players have themselves invested in advanced packaging and gained some customers.
+entity,kioxia,why_irreplaceability,en,"One of the largest NAND manufacturers, but by its own count not the only one"
+entity,kioxia,why_lock_in,en,Manufacturing runs through a joint venture and both sides are bound by its agreements
+entity,kioxia,why_time,en,The technology runs from the invention of NAND flash in 1987 and grows by three-dimensional stacking
+entity,kioxia,why_concentration,en,One of the largest NAND flash manufacturers by its own description
+entity,shin-etsu,why_irreplaceability,en,Semiconductor silicon stands first in its own list of electronics materials
+entity,shin-etsu,why_lock_in,en,"A wafer is qualified against a fab route, and changing supplier means requalification"
+entity,shin-etsu,why_time,en,The company has operated since 16 September 1926: such a base takes decades to reproduce
+entity,shin-etsu,why_concentration,en,Semiconductor silicon is named by it as the first product among electronics materials
+entity,lightspeed,why_irreplaceability,en,Venture capital enters this layer from dozens of comparable funds
+entity,lightspeed,why_lock_in,en,Participation runs from seed to Series F but creates no technical tie
+entity,lightspeed,why_time,en,A source of capital changes inside a single round
+entity,lightspeed,why_concentration,en,Over twenty years in a market where dozens of comparable funds operate

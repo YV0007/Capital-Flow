@@ -2,10 +2,9 @@ id,name,sources,self_sources,own_publisher,edges,in_scope,min_sources,min_self_s
 a16z,Andreessen Horowitz,5,4,1,1,1,1,1,0,0
 amd,AMD,1,1,1,3,1,0,1,1,0
 applied-materials,Applied Materials,1,1,1,1,1,0,1,0,0
-ase,ASE Technology,1,0,1,4,1,0,0,1,0
 asml,ASML,1,1,1,4,1,0,1,1,0
 astera-labs,Astera Labs,1,1,1,3,1,0,1,1,0
-blackrock,BlackRock,1,0,1,1,1,0,0,0,0
+blackrock,BlackRock,5,4,1,1,1,1,1,0,0
 blackstone,Blackstone,6,5,1,1,1,1,1,0,0
 bloom-energy,Bloom Energy,1,1,1,1,1,0,1,0,0
 boyd,Boyd Corporation,1,0,1,1,1,0,0,0,0
@@ -19,12 +18,13 @@ delta-electronics,Delta Electronics,1,0,1,1,1,0,0,0,0
 eaton,Eaton,1,1,1,2,1,0,1,1,0
 eu-ai-act,Регламент ЕС об ИИ,5,4,1,1,1,1,1,0,0
 ge-vernova,GE Vernova,6,5,1,1,1,1,1,0,0
+google-cloud,Google Cloud,4,4,1,0,1,1,1,0,0
 hpe,HPE,8,7,1,1,1,1,1,0,0
 jax,JAX,1,0,1,3,1,0,0,1,0
-kioxia,Kioxia,1,0,1,1,1,0,0,0,0
+kioxia,Kioxia,5,4,1,1,1,1,1,0,0
 kla,KLA,1,1,1,1,1,0,1,0,0
 lam-research,Lam Research,1,1,1,4,1,0,1,1,0
-lightspeed,Lightspeed Venture Partners,1,0,1,1,1,0,0,0,0
+lightspeed,Lightspeed Venture Partners,5,4,1,1,1,1,1,0,0
 lite-on,LiteOn Technology,1,0,1,1,1,0,0,0,0
 marvell,Marvell,1,1,1,1,1,0,1,0,0
 mgx,MGX,1,0,1,3,1,0,0,1,0
@@ -38,7 +38,6 @@ salesforce,Salesforce,5,4,1,1,1,1,1,0,0
 schrodinger,Schrödinger,6,5,1,1,1,1,1,0,0
 sequoia,Sequoia Capital,1,0,1,1,1,0,0,0,0
 servicenow,ServiceNow,1,1,1,1,1,0,1,0,0
-shin-etsu,Shin-Etsu Chemical,1,0,1,2,1,0,0,1,0
 siemens,Siemens,5,4,1,1,1,1,1,0,0
 siemens-eda,Siemens EDA,4,3,1,1,1,1,1,0,0
 siemens-energy,Siemens Energy,6,5,1,1,1,1,1,0,0
@@ -55,6 +54,7 @@ amkor,Amkor Technology,6,5,1,4,1,1,1,1,1
 anthropic,Anthropic,6,5,1,5,1,1,1,1,1
 arista,Arista Networks,6,6,1,5,1,1,1,1,1
 arm,Arm,6,4,1,6,1,1,1,1,1
+ase,ASE Technology,6,5,1,4,1,1,1,1,1
 bis,Bureau of Industry and Security,5,3,1,2,1,1,1,1,1
 broadcom,Broadcom,5,5,1,9,1,1,1,1,1
 cfius,CFIUS,4,0,0,2,1,1,1,1,1
@@ -95,6 +95,7 @@ samsung,Samsung,6,4,1,5,1,1,1,1,1
 sandisk,SanDisk,8,7,1,2,1,1,1,1,1
 schneider,Schneider Electric,5,4,1,2,1,1,1,1,1
 sglang,SGLang,7,6,1,2,1,1,1,1,1
+shin-etsu,Shin-Etsu Chemical,4,3,1,2,1,1,1,1,1
 sk-hynix,SK Hynix,6,5,1,4,1,1,1,1,1
 softbank,SoftBank,6,4,1,4,1,1,1,1,1
 south-korea,Южная Корея,5,4,1,2,1,1,1,1,1

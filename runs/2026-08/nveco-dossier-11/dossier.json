@@ -1,0 +1,667 @@
+[
+ {
+  "id": "google-cloud",
+  "as_of": "2026-08-29",
+  "profile": {
+   "id": "google-cloud",
+   "name": "Google Cloud",
+   "aliases": "GCP|Google Cloud Platform",
+   "type": "company",
+   "role": "operator",
+   "sector": "hyperscaler",
+   "primary_layer": "L9",
+   "layers": "L9",
+   "phase": "scaling",
+   "public_private": "public",
+   "geo": "US",
+   "founded": "2008",
+   "domain": "cloud.google.com",
+   "one_liner": {
+    "ru": "Облако Google: единственное, где передовую лабораторию можно обучать на чипах самого владельца.",
+    "en": "Google's cloud: the only one where a frontier lab can train on the owner's own silicon."
+   },
+   "why_irreplaceable": {
+    "ru": "Отличается от остальных облаков не масштабом, а вертикалью: собственный ускоритель, собственная лаборатория и собственная библиотека обучения в одном стеке. Заменить можно, но альтернативы этой вертикали нет.",
+    "en": "What sets it apart from other clouds is not scale but the vertical: its own accelerator, its own lab and its own training library in one stack. It can be replaced, but that vertical has no alternative."
+   },
+   "what_breaks_it": {
+    "ru": "Отказ от продажи мощностей на собственных чипах внешним лабораториям.",
+    "en": "Ending sales of capacity on its own silicon to outside labs."
+   },
+   "geo_risk": "low",
+   "geo_risk_note": {
+    "ru": "Инфраструктура распределена по десяткам стран; ограничения те же, что у остальных облаков.",
+    "en": "Infrastructure spread across dozens of countries; the same restrictions as every other cloud."
+   },
+   "concentration": 25
+  },
+  "description": {
+   "ru": "Google Cloud продаёт вычисления на собственных тензорных процессорах, а не только на покупных ускорителях. Свою архитектуру облако описывает как AI Hypercomputer, на которой эти процессоры и работают. Стек заявлен открытым сверху: поддержаны PyTorch и JAX, а для быстрого вывода — vLLM. Развёртывания предлагается вести кластерами через собственный управляемый оркестратор облака. Отсюда положение узла на карте: это единственное облако, где лаборатория может обучаться на кремнии самого владельца площадки.",
+   "en": "Google Cloud sells compute on its own tensor processors, not only on bought-in accelerators. It describes the architecture those processors run on as the AI Hypercomputer. The stack is stated open at the top: PyTorch and JAX are supported, and vLLM for fast inference. Deployments are offered as clusters through the cloud's own managed orchestrator. Hence the node's place on the map: it is the only cloud where a laboratory can train on the silicon of the site's own owner."
+  },
+  "profile_sources": [
+   {
+    "type": "product_doc",
+    "title": "Google Cloud TPU",
+    "url": "https://cloud.google.com/tpu",
+    "published": "2026-08-29",
+    "quote": "TPUs are powered by Google Cloud's AI Hypercomputer, a groundbreaking architecture that brings",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "product_doc",
+    "title": "Google Cloud TPU",
+    "url": "https://cloud.google.com/tpu",
+    "published": "2026-08-29",
+    "quote": "high performance support for PyTorch and JAX, and support the vLLM engine for fast inference"
+   },
+   {
+    "type": "product_doc",
+    "title": "Google Cloud TPU",
+    "url": "https://cloud.google.com/tpu",
+    "published": "2026-08-29",
+    "quote": "Manage and scale these deployments reliably across global clusters with Google Kubernetes Engine (GKE)."
+   },
+   {
+    "type": "product_doc",
+    "title": "Google Cloud TPU",
+    "url": "https://cloud.google.com/tpu",
+    "published": "2026-08-29",
+    "quote": "custom-designed with open software to power the entire AI lifecycle—from frontier training and large-scale inference"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 62,
+    "why": {
+     "ru": "Единственное облако, продающее мощность на собственном тензорном процессоре",
+     "en": "The only cloud selling capacity on its own tensor processor"
+    }
+   },
+   "lock_in_depth": {
+    "value": 70,
+    "why": {
+     "ru": "Процессоры работают на собственной архитектуре площадки, а не на общей",
+     "en": "The processors run on the site's own architecture rather than a common one"
+    }
+   },
+   "time_to_replace": {
+    "value": 65,
+    "why": {
+     "ru": "Верх стека открыт — PyTorch, JAX и vLLM, — поэтому уход не требует переписывания модели",
+     "en": "The top of the stack is open — PyTorch, JAX and vLLM — so leaving does not require rewriting the model"
+    }
+   },
+   "concentration": {
+    "value": 45,
+    "why": {
+     "ru": "Собственный ускоритель делает вертикаль исключительной, но доли рынка облаков это не даёт",
+     "en": "Its own accelerator makes the vertical exclusive but grants no share of the cloud market"
+    }
+   }
+  },
+  "edges": [
+   {
+    "direction": "upstream",
+    "strength": 65,
+    "lock_in_depth": 35,
+    "substitutability": 60,
+    "is_reversible": true,
+    "risk_level": "low",
+    "risk_type": "technical",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "google-cloud",
+    "target": "pytorch",
+    "type": "integrates",
+    "note": {
+     "ru": "Тензорные процессоры облака поддерживают его наравне с JAX как способ обучения на своей площадке.",
+     "en": "The cloud's tensor processors support it alongside JAX as a way to train on its own site."
+    },
+    "risk_mitigation": {
+     "ru": "Поддержаны два каркаса сразу, поэтому ни один не является обязательным",
+     "en": "Two frameworks are supported at once, so neither is required"
+    },
+    "sources": [
+     {
+      "type": "product_doc",
+      "title": "Google Cloud TPU",
+      "url": "https://cloud.google.com/tpu",
+      "published": "2026-08-29",
+      "quote": "high performance support for PyTorch and JAX, and support the vLLM engine for fast inference"
+     }
+    ]
+   },
+   {
+    "direction": "upstream",
+    "strength": 70,
+    "lock_in_depth": 45,
+    "substitutability": 50,
+    "is_reversible": true,
+    "risk_level": "low",
+    "risk_type": "technical",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "google-cloud",
+    "target": "jax",
+    "type": "integrates",
+    "note": {
+     "ru": "Поддержан наравне с PyTorch на тензорных процессорах площадки.",
+     "en": "Supported alongside PyTorch on the site's tensor processors."
+    },
+    "risk_mitigation": {
+     "ru": "Поддержаны два каркаса сразу, поэтому ни один не является обязательным",
+     "en": "Two frameworks are supported at once, so neither is required"
+    },
+    "sources": [
+     {
+      "type": "product_doc",
+      "title": "Google Cloud TPU",
+      "url": "https://cloud.google.com/tpu",
+      "published": "2026-08-29",
+      "quote": "high performance support for PyTorch and JAX, and support the vLLM engine for fast inference"
+     }
+    ]
+   },
+   {
+    "direction": "upstream",
+    "strength": 60,
+    "lock_in_depth": 30,
+    "substitutability": 65,
+    "is_reversible": true,
+    "risk_level": "low",
+    "risk_type": "technical",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "google-cloud",
+    "target": "vllm",
+    "type": "integrates",
+    "note": {
+     "ru": "Назван на странице тензорных процессоров как способ быстрого вывода на них.",
+     "en": "Named on the tensor processor page as the way to fast inference on them."
+    },
+    "risk_mitigation": {
+     "ru": "Открытый сервер вывода доступен и вне этой площадки",
+     "en": "The open inference server is available outside this site too"
+    },
+    "sources": [
+     {
+      "type": "product_doc",
+      "title": "Google Cloud TPU",
+      "url": "https://cloud.google.com/tpu",
+      "published": "2026-08-29",
+      "quote": "high performance support for PyTorch and JAX, and support the vLLM engine for fast inference"
+     }
+    ]
+   },
+   {
+    "direction": "upstream",
+    "strength": 70,
+    "lock_in_depth": 40,
+    "substitutability": 55,
+    "is_reversible": true,
+    "risk_level": "low",
+    "risk_type": "technical",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "google-cloud",
+    "target": "kubernetes",
+    "type": "standardizes_on",
+    "note": {
+     "ru": "Кластерами развёртываний площадка управляет через собственный управляемый оркестратор.",
+     "en": "The site manages deployment clusters through its own managed orchestrator."
+    },
+    "risk_mitigation": {
+     "ru": "Оркестратор открытый и работает на любой площадке",
+     "en": "The orchestrator is open and runs on any site"
+    },
+    "sources": [
+     {
+      "type": "product_doc",
+      "title": "Google Cloud TPU",
+      "url": "https://cloud.google.com/tpu",
+      "published": "2026-08-29",
+      "quote": "Manage and scale these deployments reliably across global clusters with Google Kubernetes Engine (GKE)."
+     }
+    ]
+   }
+  ],
+  "candidates": [],
+  "gaps": "Узел до этого прохода жил только в достройке сети и в месячный конвейер не был заявлен: отчёт членства покрывал 107 из 108 сущностей. Досье пишет его паспорт, и разрыв закрывается."
+ },
+ {
+  "id": "blackrock",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "BlackRock — управляющий активами, чью роль на карте определяет не размер портфеля, а то, что он вкладывает в саму инфраструктуру. Собственную позицию компания описывает как фидуциарную по отношению к клиентам. Она входит в число крупнейших управляющих пенсионными активами в мире. Выручка от технологических услуг и подписок составила $2.0 billion с ростом на 24% год к году; выручка от инвестиционного консультирования и администрирования — $19.2 billion в 2025 году. На карте узел стоит в слое капитала, финансирующего площадки и энергетику, а не модели.",
+   "en": "BlackRock is an asset manager whose place on the map is set not by portfolio size but by the fact that it invests in the infrastructure itself. The company describes its own position as fiduciary to its clients. It is among the world's largest managers of pension plan assets. Technology services and subscription revenue was $2.0 billion, up 24% year-over-year; investment advisory and administration revenue was $19.2 billion in 2025. On the map the node sits in the capital layer that funds sites and power rather than models."
+  },
+  "profile_sources": [
+   {
+    "type": "sec_filing",
+    "title": "BlackRock 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526071966/blk-20251231.htm",
+    "published": "2026-02-25",
+    "quote": "We are a fiduciary to our clients"
+   },
+   {
+    "type": "sec_filing",
+    "title": "BlackRock 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526071966/blk-20251231.htm",
+    "published": "2026-02-25",
+    "quote": "BlackRock is among the world's largest managers of pension plan assets",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "sec_filing",
+    "title": "BlackRock 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526071966/blk-20251231.htm",
+    "published": "2026-02-25",
+    "quote": "Technology services and subscription revenue of $2.0 billion was up 24% year-over-year."
+   },
+   {
+    "type": "sec_filing",
+    "title": "BlackRock 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526071966/blk-20251231.htm",
+    "published": "2026-02-25",
+    "quote": "Investment advisory, administration fees and securities lending revenue of $19.2 billion in 2025"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 48,
+    "why": {
+     "ru": "Капитал в инфраструктуру несут десятки управляющих; исключительности у одного нет",
+     "en": "Dozens of managers bring capital into infrastructure; no single one is exclusive"
+    }
+   },
+   "lock_in_depth": {
+    "value": 50,
+    "why": {
+     "ru": "Технологические услуги и подписки дали $2.0 billion — это отношения на срок, а не разовые",
+     "en": "Technology services and subscriptions gave $2.0 billion — a term relationship, not one-off"
+    }
+   },
+   "time_to_replace": {
+    "value": 42,
+    "why": {
+     "ru": "Источник капитала меняется в пределах цикла привлечения",
+     "en": "A source of capital changes inside a fundraising cycle"
+    }
+   },
+   "concentration": {
+    "value": 56,
+    "why": {
+     "ru": "Входит в число крупнейших управляющих пенсионными активами в мире, но не единственный",
+     "en": "Among the world's largest managers of pension plan assets, but not the only one"
+    }
+   }
+  },
+  "edges": [],
+  "candidates": [],
+  "gaps": "Отчётность не называет ни одной из компаний карты поимённо в контексте вложений в инфраструктуру ИИ."
+ },
+ {
+  "id": "ase",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "ASE Technology корпусирует и тестирует полупроводники и параллельно ведёт контрактную сборку электроники. Свой рынок компания описывает как высококонкурентный — и добавляет, что часть контрактных производителей кремния сама вложилась в передовое корпусирование и отняла часть заказчиков. Экспортные продажи составили NT$511,422.0 million. Концентрацию она раскрывает по задолженности: на десятку крупнейших заказчиков пришлось 47 % и 50 % торговой дебиторской задолженности на конец 2024 и 2025 годов. На карте узел стоит рядом с Amkor: вторая площадка того же передела.",
+   "en": "ASE Technology packages and tests semiconductors and runs contract electronics assembly alongside. It describes its own market as highly competitive — and adds that some foundry players have themselves invested in advanced packaging and taken some customers. Export sales were NT$511,422.0 million. It discloses concentration through receivables: the ten largest customers accounted for 47 % and 50 % of trade receivables at the end of 2024 and 2025. On the map the node stands beside Amkor: the second site of the same step."
+  },
+  "profile_sources": [
+   {
+    "type": "sec_filing",
+    "title": "ASE Technology 20-F FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1122411/000119312526135585/d50802d20f.htm",
+    "published": "2026-04-01",
+    "quote": "the highly competitive markets of semiconductor packaging and testing and EMS"
+   },
+   {
+    "type": "sec_filing",
+    "title": "ASE Technology 20-F FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1122411/000119312526135585/d50802d20f.htm",
+    "published": "2026-04-01",
+    "quote": "Revenues from our export sales were NT$511,422.0 million"
+   },
+   {
+    "type": "sec_filing",
+    "title": "ASE Technology 20-F FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1122411/000119312526135585/d50802d20f.htm",
+    "published": "2026-04-01",
+    "quote": "the Group's ten largest customers accounted for 47 % and 50 % of trade receivables",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "sec_filing",
+    "title": "ASE Technology 20-F FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1122411/000119312526135585/d50802d20f.htm",
+    "published": "2026-04-01",
+    "quote": "some foundry players have actively invested and expanded their advanced packaging capacity"
+   },
+   {
+    "type": "sec_filing",
+    "title": "ASE Technology 20-F FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1122411/000119312526135585/d50802d20f.htm",
+    "published": "2026-04-01",
+    "quote": "As of December 31, 2024 and 2025, the Group's ten largest customers"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 60,
+    "why": {
+     "ru": "Рынок корпусирования компания сама называет высококонкурентным",
+     "en": "The company itself calls the packaging market highly competitive"
+    }
+   },
+   "lock_in_depth": {
+    "value": 64,
+    "why": {
+     "ru": "Корпус квалифицируется под изделие заказчика, и перенос требует повторной квалификации",
+     "en": "A package is qualified against the customer's product, and moving it requires requalification"
+    }
+   },
+   "time_to_replace": {
+    "value": 62,
+    "why": {
+     "ru": "Мощности передового корпусирования наращивают и сами контрактные производители кремния",
+     "en": "Advanced packaging capacity is being added by the foundry players themselves"
+    }
+   },
+   "concentration": {
+    "value": 55,
+    "why": {
+     "ru": "На десятку крупнейших заказчиков пришлось 50 % торговой дебиторской задолженности",
+     "en": "The ten largest customers accounted for 50 % of trade receivables"
+    }
+   }
+  },
+  "edges": [
+   {
+    "direction": "lateral",
+    "strength": 70,
+    "lock_in_depth": 30,
+    "substitutability": 55,
+    "is_reversible": true,
+    "risk_level": "medium",
+    "risk_type": "market",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "ase",
+    "target": "amkor",
+    "type": "competes_with",
+    "note": {
+     "ru": "Оба закрывают один передел — корпусирование и тестирование — на рынке, который ASE называет высококонкурентным.",
+     "en": "Both cover the same step — packaging and testing — in a market ASE calls highly competitive."
+    },
+    "risk_mitigation": {
+     "ru": "Заказчики держат несколько квалифицированных подрядчиков корпусирования сразу",
+     "en": "Customers keep several qualified packaging contractors at once"
+    },
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "ASE Technology 20-F FY2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/1122411/000119312526135585/d50802d20f.htm",
+      "published": "2026-04-01",
+      "quote": "the highly competitive markets of semiconductor packaging and testing and EMS"
+     }
+    ]
+   },
+   {
+    "direction": "lateral",
+    "strength": 55,
+    "lock_in_depth": 25,
+    "substitutability": 60,
+    "is_reversible": true,
+    "risk_level": "medium",
+    "risk_type": "market",
+    "risk_timeline": "2-5y",
+    "stance": "confirms",
+    "source": "tsmc",
+    "target": "ase",
+    "type": "competes_with",
+    "note": {
+     "ru": "Контрактные производители кремния сами вложились в передовое корпусирование и получили часть заказчиков.",
+     "en": "Foundry players have themselves invested in advanced packaging and gained some customers."
+    },
+    "risk_mitigation": {
+     "ru": "Передел остаётся разделённым: подрядчики корпусирования держат собственные мощности",
+     "en": "The step stays divided: packaging contractors hold capacity of their own"
+    },
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "ASE Technology 20-F FY2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/1122411/000119312526135585/d50802d20f.htm",
+      "published": "2026-04-01",
+      "quote": "some foundry players have actively invested and expanded their advanced packaging capacity"
+     }
+    ]
+   }
+  ],
+  "candidates": [],
+  "gaps": "Заказчики поимённо в отчётности не названы: раскрытие идёт по долям задолженности."
+ },
+ {
+  "id": "kioxia",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Kioxia поставляет флеш-память и твердотельные накопители и относит себя к крупнейшим производителям памяти NAND. Происхождение технологии компания записывает за собой прямо: в 1987 году она изобрела первую в мире память NAND, не требующую источника питания. Сегодняшняя её линейка строится на трёхмерной памяти BiCS FLASH, дающей большую ёмкость. На карте узел стоит в слое хранения, а не памяти для обучения: он даёт ёмкость под данные, а не полосу под ускоритель. Производство он ведёт совместно с Sandisk через предприятие Flash Ventures.",
+   "en": "Kioxia supplies flash memory and solid state drives and places itself among the largest NAND manufacturers. It records the origin of the technology plainly: in 1987 it invented the world's first NAND flash memory that requires no power source. Its present line rests on three-dimensional BiCS FLASH memory delivering greater capacity. On the map the node sits in the storage layer rather than the training-memory one: it gives capacity for data, not bandwidth for an accelerator. It manufactures jointly with Sandisk through the Flash Ventures venture."
+  },
+  "profile_sources": [
+   {
+    "type": "company_pr",
+    "title": "About KIOXIA",
+    "url": "https://americas.kioxia.com/en-us/about.html",
+    "published": "2026-08-29",
+    "quote": "a leading global supplier of flash memory and solid state drives (SSDs)"
+   },
+   {
+    "type": "company_pr",
+    "title": "About KIOXIA",
+    "url": "https://americas.kioxia.com/en-us/about.html",
+    "published": "2026-08-29",
+    "quote": "In 1987, KIOXIA invented the world's first NAND flash memory"
+   },
+   {
+    "type": "company_pr",
+    "title": "About KIOXIA",
+    "url": "https://americas.kioxia.com/en-us/about.html",
+    "published": "2026-08-29",
+    "quote": "3D flash memory BiCS FLASH™ technology that delivers even greater storage capacity"
+   },
+   {
+    "type": "company_pr",
+    "title": "About KIOXIA",
+    "url": "https://americas.kioxia.com/en-us/about.html",
+    "published": "2026-08-29",
+    "quote": "KIOXIA Group is one of the largest manufacturers of NAND flash memory",
+    "backs": [
+     "concentration"
+    ]
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 58,
+    "why": {
+     "ru": "Один из крупнейших производителей памяти NAND, но по собственному счёту — не единственный",
+     "en": "One of the largest NAND manufacturers, but by its own count not the only one"
+    }
+   },
+   "lock_in_depth": {
+    "value": 66,
+    "why": {
+     "ru": "Производство ведётся совместным предприятием, и обе стороны связаны его соглашениями",
+     "en": "Manufacturing runs through a joint venture and both sides are bound by its agreements"
+    }
+   },
+   "time_to_replace": {
+    "value": 64,
+    "why": {
+     "ru": "Технология ведётся от изобретения памяти NAND в 1987 году и наращивается трёхмерной укладкой",
+     "en": "The technology runs from the invention of NAND flash in 1987 and grows by three-dimensional stacking"
+    }
+   },
+   "concentration": {
+    "value": 58,
+    "why": {
+     "ru": "Один из крупнейших производителей памяти NAND по собственному описанию",
+     "en": "One of the largest NAND flash manufacturers by its own description"
+    }
+   }
+  },
+  "edges": [],
+  "candidates": [],
+  "gaps": "Страница «о компании» не называет ни Sandisk, ни NVIDIA: обе связи подтверждены со стороны контрагента."
+ },
+ {
+  "id": "shin-etsu",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Shin-Etsu Chemical работает с 16 сентября 1926 года, её капитал составляет 119,419 million yen, в консолидированном периметре 27,342 сотрудника. Основную продукцию компания перечисляет сама, и первым в списке электронных материалов стоит полупроводниковый кремний — то есть пластины, с которых начинается любой чип. Рядом в том же списке идут редкоземельные магниты и материалы для герметизации полупроводников. На карте узел стоит в самом низу стека: без пластины не начинается ни один маршрут. Именно поэтому его молчание было заметнее прочих — профиль стоял на чужой строке.",
+   "en": "Shin-Etsu Chemical has operated since 16 September 1926, its capital is 119,419 million yen and its consolidated headcount is 27,342. It lists its main products itself, and first among electronics materials stands semiconductor silicon — the wafers every chip begins on. Beside them in the same list are rare earth magnets and semiconductor encapsulating materials. On the map the node sits at the very bottom of the stack: no route starts without a wafer. That is why its silence was more conspicuous than others — the profile stood on someone else's line."
+  },
+  "profile_sources": [
+   {
+    "type": "company_pr",
+    "title": "Shin-Etsu Chemical — Company Profile",
+    "url": "https://www.shinetsu.co.jp/en/company/profile/",
+    "published": "2026-08-29",
+    "quote": "Date of Establishment September 16, 1926"
+   },
+   {
+    "type": "company_pr",
+    "title": "Shin-Etsu Chemical — Company Profile",
+    "url": "https://www.shinetsu.co.jp/en/company/profile/",
+    "published": "2026-08-29",
+    "quote": "Capital 119,419 million yen Number of Employees Consolidated 27,342"
+   },
+   {
+    "type": "company_pr",
+    "title": "Shin-Etsu Chemical — Company Profile",
+    "url": "https://www.shinetsu.co.jp/en/company/profile/",
+    "published": "2026-08-29",
+    "quote": "Main Products Electronics Materials Semiconductor silicon, Rare earth magnets",
+    "backs": [
+     "concentration"
+    ]
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 86,
+    "why": {
+     "ru": "Полупроводниковый кремний стоит первым в её собственном списке электронных материалов",
+     "en": "Semiconductor silicon stands first in its own list of electronics materials"
+    }
+   },
+   "lock_in_depth": {
+    "value": 82,
+    "why": {
+     "ru": "Пластина квалифицируется под маршрут фабрики, и смена поставщика означает переквалификацию",
+     "en": "A wafer is qualified against a fab route, and changing supplier means requalification"
+    }
+   },
+   "time_to_replace": {
+    "value": 88,
+    "why": {
+     "ru": "Компания работает с 16 сентября 1926 года: такую производственную базу воспроизводят десятилетиями",
+     "en": "The company has operated since 16 September 1926: such a base takes decades to reproduce"
+    }
+   },
+   "concentration": {
+    "value": 82,
+    "why": {
+     "ru": "Полупроводниковый кремний назван ею первым продуктом среди электронных материалов",
+     "en": "Semiconductor silicon is named by it as the first product among electronics materials"
+    }
+   }
+  },
+  "edges": [],
+  "candidates": [],
+  "gaps": "Страница профиля не даёт доли компании в пластинах: 300-мм лидерство описано на продуктовой странице, которая на момент прохода отдаёт 404. Цифра доли поэтому не поехала."
+ },
+ {
+  "id": "lightspeed",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Lightspeed Venture Partners вкладывается в компании от посевной стадии до серии F и дальше. Свою позицию фирма описывает как высокую убеждённость: она стоит за своими компаниями от начала и до поздних раундов. Более двадцати лет она была первым инвестором и ранним вкладчиком в компании, которые сама называет одними из самых инновационных в мире. Отбор она формулирует независимым от географии — по существу возможности, а не по месту жительства основателя. На карте узел стоит в слое капитала рядом с другими фондами, финансирующими спрос на вычисления.",
+   "en": "Lightspeed Venture Partners invests in companies from seed to Series F and beyond. It describes its own stance as high conviction: it stands behind its companies from the start through late rounds. For over twenty years it has been the first investor and an early backer of companies it calls some of the most innovative in the world. It frames selection as independent of geography — on the merits of the opportunity rather than where the founder lives. On the map the node sits in the capital layer beside other funds financing demand for compute."
+  },
+  "profile_sources": [
+   {
+    "type": "company_pr",
+    "title": "Lightspeed — About",
+    "url": "https://lsvp.com/about/",
+    "published": "2026-08-29",
+    "quote": "stand behind our companies with high conviction from Seed to Series F and beyond"
+   },
+   {
+    "type": "company_pr",
+    "title": "Lightspeed — About",
+    "url": "https://lsvp.com/about/",
+    "published": "2026-08-29",
+    "quote": "For over twenty years Lightspeed has been the first investor and an early backer",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "company_pr",
+    "title": "Lightspeed — About",
+    "url": "https://lsvp.com/about/",
+    "published": "2026-08-29",
+    "quote": "We pursue those opportunities based on their merits regardless of where the founder resides."
+   },
+   {
+    "type": "company_pr",
+    "title": "Lightspeed — About",
+    "url": "https://lsvp.com/about/",
+    "published": "2026-08-29",
+    "quote": "We believe in investing behind bold ideas and the founders brave enough to build them."
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 38,
+    "why": {
+     "ru": "Венчурный капитал в этот слой несут десятки фондов сопоставимого размера",
+     "en": "Venture capital enters this layer from dozens of comparable funds"
+    }
+   },
+   "lock_in_depth": {
+    "value": 35,
+    "why": {
+     "ru": "Участие идёт от посевной стадии до серии F, но технической привязки не создаёт",
+     "en": "Participation runs from seed to Series F but creates no technical tie"
+    }
+   },
+   "time_to_replace": {
+    "value": 32,
+    "why": {
+     "ru": "Источник капитала меняется в пределах одного раунда",
+     "en": "A source of capital changes inside a single round"
+    }
+   },
+   "concentration": {
+    "value": 36,
+    "why": {
+     "ru": "Более двадцати лет на рынке, где действуют десятки сопоставимых фондов",
+     "en": "Over twenty years in a market where dozens of comparable funds operate"
+    }
+   }
+  },
+  "edges": [],
+  "candidates": [],
+  "gaps": "Портфель на странице «о фирме» перечислен без компаний этой карты: связей из него не выводится."
+ }
+]

@@ -12,10 +12,10 @@
     "broadcom",
     "cisco",
     "coreweave",
-    "crusoe",
     "cuda",
     "equinix",
     "google",
+    "google-cloud",
     "huggingface",
     "intel",
     "kioxia",
@@ -45,19 +45,17 @@
     "coreRule": "top-30 by integration",
     "coreCount": 30,
     "membership": {
-      "admitted": 56,
+      "admitted": 58,
       "retired": 0,
-      "queued": 51,
+      "queued": 50,
       "enforced": false,
-      "covered": 107,
-      "uncovered": [
-        "google-cloud"
-      ],
+      "covered": 108,
+      "uncovered": [],
       "checks": {
         "in_scope": 0,
-        "min_sources": 36,
-        "min_self_sources": 16,
-        "min_confirmed_edges": 33
+        "min_sources": 31,
+        "min_self_sources": 11,
+        "min_confirmed_edges": 34
       }
     },
     "deprecated": {
@@ -66,9 +64,9 @@
   },
   "totals": {
     "entities": 108,
-    "edges": 308,
+    "edges": 314,
     "layers": 16,
-    "cycles": 199,
+    "cycles": 225,
     "techNodes": 10
   },
   "spines": {
@@ -507,11 +505,11 @@
       "band": 1,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1464,
+        "hhi": 0.1456,
         "top": [
           "zeiss-smt",
           "asml",
-          "tokyo-electron"
+          "shin-etsu"
         ]
       }
     },
@@ -553,7 +551,7 @@
       "band": 2,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1286,
+        "hhi": 0.1284,
         "top": [
           "tsmc",
           "broadcom",
@@ -576,7 +574,7 @@
       "band": 2,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.2164,
+        "hhi": 0.2038,
         "top": [
           "sk-hynix",
           "samsung",
@@ -691,7 +689,7 @@
       "band": 4,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1035,
+        "hhi": 0.0938,
         "top": [
           "google",
           "microsoft",
@@ -806,11 +804,11 @@
       "band": null,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1072,
+        "hhi": 0.1067,
         "top": [
           "blackstone",
           "softbank",
-          "mgx"
+          "blackrock"
         ]
       }
     },
@@ -1901,6 +1899,44 @@
     },
     {
       "id": "c35",
+      "type": "sales",
+      "path": [
+        "ase",
+        "broadcom",
+        "tsmc",
+        "ase"
+      ],
+      "edges": [
+        "ase__broadcom__packages",
+        "broadcom__tsmc__customer_of",
+        "tsmc__ase__competes_with"
+      ],
+      "note": {
+        "ru": "Контур сбыта: ASE Technology —упаковывает→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —конкурирует с→ ASE Technology",
+        "en": "Sales loop: ASE Technology —packages→ Broadcom; Broadcom —buys from→ TSMC; TSMC —competes with→ ASE Technology"
+      }
+    },
+    {
+      "id": "c36",
+      "type": "sales",
+      "path": [
+        "ase",
+        "nvidia",
+        "tsmc",
+        "ase"
+      ],
+      "edges": [
+        "ase__nvidia__packages",
+        "nvidia__tsmc__co_designs",
+        "tsmc__ase__competes_with"
+      ],
+      "note": {
+        "ru": "Контур сбыта: ASE Technology —упаковывает→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —конкурирует с→ ASE Technology",
+        "en": "Sales loop: ASE Technology —packages→ NVIDIA; NVIDIA —co-designs with→ TSMC; TSMC —competes with→ ASE Technology"
+      }
+    },
+    {
+      "id": "c37",
       "type": "financing",
       "path": [
         "nvidia",
@@ -1919,7 +1955,7 @@
       }
     },
     {
-      "id": "c36",
+      "id": "c38",
       "type": "financing",
       "path": [
         "coreweave",
@@ -1938,7 +1974,7 @@
       }
     },
     {
-      "id": "c37",
+      "id": "c39",
       "type": "financing",
       "path": [
         "micron",
@@ -1957,7 +1993,7 @@
       }
     },
     {
-      "id": "c38",
+      "id": "c40",
       "type": "financing",
       "path": [
         "kioxia",
@@ -1976,7 +2012,7 @@
       }
     },
     {
-      "id": "c39",
+      "id": "c41",
       "type": "financing",
       "path": [
         "micron",
@@ -1995,7 +2031,7 @@
       }
     },
     {
-      "id": "c40",
+      "id": "c42",
       "type": "lockin",
       "path": [
         "cuda",
@@ -2016,7 +2052,7 @@
       }
     },
     {
-      "id": "c41",
+      "id": "c43",
       "type": "lockin",
       "path": [
         "cuda",
@@ -2037,7 +2073,7 @@
       }
     },
     {
-      "id": "c42",
+      "id": "c44",
       "type": "lockin",
       "path": [
         "cuda",
@@ -2058,7 +2094,7 @@
       }
     },
     {
-      "id": "c43",
+      "id": "c45",
       "type": "lockin",
       "path": [
         "cuda",
@@ -2079,7 +2115,7 @@
       }
     },
     {
-      "id": "c44",
+      "id": "c46",
       "type": "sales",
       "path": [
         "broadcom",
@@ -2100,7 +2136,7 @@
       }
     },
     {
-      "id": "c45",
+      "id": "c47",
       "type": "lockin",
       "path": [
         "cuda",
@@ -2121,7 +2157,7 @@
       }
     },
     {
-      "id": "c46",
+      "id": "c48",
       "type": "financing",
       "path": [
         "microsoft",
@@ -2142,7 +2178,7 @@
       }
     },
     {
-      "id": "c47",
+      "id": "c49",
       "type": "financing",
       "path": [
         "arista",
@@ -2163,7 +2199,7 @@
       }
     },
     {
-      "id": "c48",
+      "id": "c50",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -2184,7 +2220,7 @@
       }
     },
     {
-      "id": "c49",
+      "id": "c51",
       "type": "financing",
       "path": [
         "coreweave",
@@ -2205,7 +2241,7 @@
       }
     },
     {
-      "id": "c50",
+      "id": "c52",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -2226,7 +2262,7 @@
       }
     },
     {
-      "id": "c51",
+      "id": "c53",
       "type": "lockin",
       "path": [
         "amazon",
@@ -2247,7 +2283,7 @@
       }
     },
     {
-      "id": "c52",
+      "id": "c54",
       "type": "lockin",
       "path": [
         "cuda",
@@ -2268,7 +2304,7 @@
       }
     },
     {
-      "id": "c53",
+      "id": "c55",
       "type": "lockin",
       "path": [
         "cuda",
@@ -2289,7 +2325,7 @@
       }
     },
     {
-      "id": "c54",
+      "id": "c56",
       "type": "lockin",
       "path": [
         "arista",
@@ -2310,7 +2346,7 @@
       }
     },
     {
-      "id": "c55",
+      "id": "c57",
       "type": "financing",
       "path": [
         "broadcom",
@@ -2331,7 +2367,7 @@
       }
     },
     {
-      "id": "c56",
+      "id": "c58",
       "type": "lockin",
       "path": [
         "cuda",
@@ -2352,7 +2388,7 @@
       }
     },
     {
-      "id": "c57",
+      "id": "c59",
       "type": "financing",
       "path": [
         "microsoft",
@@ -2373,7 +2409,7 @@
       }
     },
     {
-      "id": "c58",
+      "id": "c60",
       "type": "sales",
       "path": [
         "astera-labs",
@@ -2394,7 +2430,7 @@
       }
     },
     {
-      "id": "c59",
+      "id": "c61",
       "type": "financing",
       "path": [
         "amazon",
@@ -2415,7 +2451,7 @@
       }
     },
     {
-      "id": "c60",
+      "id": "c62",
       "type": "sales",
       "path": [
         "arista",
@@ -2436,7 +2472,7 @@
       }
     },
     {
-      "id": "c61",
+      "id": "c63",
       "type": "financing",
       "path": [
         "astera-labs",
@@ -2457,7 +2493,7 @@
       }
     },
     {
-      "id": "c62",
+      "id": "c64",
       "type": "lockin",
       "path": [
         "cuda",
@@ -2478,7 +2514,7 @@
       }
     },
     {
-      "id": "c63",
+      "id": "c65",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -2499,7 +2535,7 @@
       }
     },
     {
-      "id": "c64",
+      "id": "c66",
       "type": "financing",
       "path": [
         "microsoft",
@@ -2520,7 +2556,7 @@
       }
     },
     {
-      "id": "c65",
+      "id": "c67",
       "type": "lockin",
       "path": [
         "arista",
@@ -2541,7 +2577,7 @@
       }
     },
     {
-      "id": "c66",
+      "id": "c68",
       "type": "financing",
       "path": [
         "broadcom",
@@ -2562,7 +2598,7 @@
       }
     },
     {
-      "id": "c67",
+      "id": "c69",
       "type": "lockin",
       "path": [
         "cuda",
@@ -2583,7 +2619,7 @@
       }
     },
     {
-      "id": "c68",
+      "id": "c70",
       "type": "financing",
       "path": [
         "arm",
@@ -2604,7 +2640,7 @@
       }
     },
     {
-      "id": "c69",
+      "id": "c71",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -2625,7 +2661,7 @@
       }
     },
     {
-      "id": "c70",
+      "id": "c72",
       "type": "sales",
       "path": [
         "broadcom",
@@ -2646,7 +2682,7 @@
       }
     },
     {
-      "id": "c71",
+      "id": "c73",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -2667,7 +2703,7 @@
       }
     },
     {
-      "id": "c72",
+      "id": "c74",
       "type": "lockin",
       "path": [
         "china",
@@ -2688,7 +2724,7 @@
       }
     },
     {
-      "id": "c73",
+      "id": "c75",
       "type": "lockin",
       "path": [
         "cuda",
@@ -2709,7 +2745,7 @@
       }
     },
     {
-      "id": "c74",
+      "id": "c76",
       "type": "lockin",
       "path": [
         "cuda",
@@ -2730,7 +2766,7 @@
       }
     },
     {
-      "id": "c75",
+      "id": "c77",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -2751,7 +2787,7 @@
       }
     },
     {
-      "id": "c76",
+      "id": "c78",
       "type": "financing",
       "path": [
         "amazon",
@@ -2772,7 +2808,7 @@
       }
     },
     {
-      "id": "c77",
+      "id": "c79",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -2793,7 +2829,7 @@
       }
     },
     {
-      "id": "c78",
+      "id": "c80",
       "type": "financing",
       "path": [
         "credo",
@@ -2814,7 +2850,7 @@
       }
     },
     {
-      "id": "c79",
+      "id": "c81",
       "type": "lockin",
       "path": [
         "cuda",
@@ -2835,7 +2871,7 @@
       }
     },
     {
-      "id": "c80",
+      "id": "c82",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -2856,7 +2892,7 @@
       }
     },
     {
-      "id": "c81",
+      "id": "c83",
       "type": "lockin",
       "path": [
         "microsoft",
@@ -2877,7 +2913,7 @@
       }
     },
     {
-      "id": "c82",
+      "id": "c84",
       "type": "lockin",
       "path": [
         "arm",
@@ -2898,7 +2934,7 @@
       }
     },
     {
-      "id": "c83",
+      "id": "c85",
       "type": "financing",
       "path": [
         "coreweave",
@@ -2919,7 +2955,7 @@
       }
     },
     {
-      "id": "c84",
+      "id": "c86",
       "type": "lockin",
       "path": [
         "cuda",
@@ -2940,7 +2976,7 @@
       }
     },
     {
-      "id": "c85",
+      "id": "c87",
       "type": "lockin",
       "path": [
         "amazon",
@@ -2961,7 +2997,7 @@
       }
     },
     {
-      "id": "c86",
+      "id": "c88",
       "type": "lockin",
       "path": [
         "arm",
@@ -2982,7 +3018,7 @@
       }
     },
     {
-      "id": "c87",
+      "id": "c89",
       "type": "financing",
       "path": [
         "broadcom",
@@ -3003,7 +3039,7 @@
       }
     },
     {
-      "id": "c88",
+      "id": "c90",
       "type": "financing",
       "path": [
         "broadcom",
@@ -3024,7 +3060,7 @@
       }
     },
     {
-      "id": "c89",
+      "id": "c91",
       "type": "financing",
       "path": [
         "coreweave",
@@ -3045,7 +3081,7 @@
       }
     },
     {
-      "id": "c90",
+      "id": "c92",
       "type": "financing",
       "path": [
         "nvidia",
@@ -3066,7 +3102,28 @@
       }
     },
     {
-      "id": "c91",
+      "id": "c93",
+      "type": "sales",
+      "path": [
+        "ase",
+        "broadcom",
+        "nvidia",
+        "tsmc",
+        "ase"
+      ],
+      "edges": [
+        "ase__broadcom__packages",
+        "broadcom__nvidia__threatens",
+        "nvidia__tsmc__co_designs",
+        "tsmc__ase__competes_with"
+      ],
+      "note": {
+        "ru": "Контур сбыта: ASE Technology —упаковывает→ Broadcom; Broadcom —подтачивает→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —конкурирует с→ ASE Technology",
+        "en": "Sales loop: ASE Technology —packages→ Broadcom; Broadcom —erodes→ NVIDIA; NVIDIA —co-designs with→ TSMC; TSMC —competes with→ ASE Technology"
+      }
+    },
+    {
+      "id": "c94",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -3087,7 +3144,7 @@
       }
     },
     {
-      "id": "c92",
+      "id": "c95",
       "type": "lockin",
       "path": [
         "arista",
@@ -3108,7 +3165,7 @@
       }
     },
     {
-      "id": "c93",
+      "id": "c96",
       "type": "financing",
       "path": [
         "astera-labs",
@@ -3129,7 +3186,7 @@
       }
     },
     {
-      "id": "c94",
+      "id": "c97",
       "type": "financing",
       "path": [
         "micron",
@@ -3150,7 +3207,7 @@
       }
     },
     {
-      "id": "c95",
+      "id": "c98",
       "type": "lockin",
       "path": [
         "china",
@@ -3171,7 +3228,7 @@
       }
     },
     {
-      "id": "c96",
+      "id": "c99",
       "type": "sales",
       "path": [
         "arista",
@@ -3192,7 +3249,7 @@
       }
     },
     {
-      "id": "c97",
+      "id": "c100",
       "type": "lockin",
       "path": [
         "nvidia",
@@ -3213,7 +3270,28 @@
       }
     },
     {
-      "id": "c98",
+      "id": "c101",
+      "type": "sales",
+      "path": [
+        "amkor",
+        "broadcom",
+        "tsmc",
+        "ase",
+        "amkor"
+      ],
+      "edges": [
+        "amkor__broadcom__packages",
+        "broadcom__tsmc__customer_of",
+        "tsmc__ase__competes_with",
+        "ase__amkor__competes_with"
+      ],
+      "note": {
+        "ru": "Контур сбыта: Amkor Technology —упаковывает→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —конкурирует с→ ASE Technology; ASE Technology —конкурирует с→ Amkor Technology",
+        "en": "Sales loop: Amkor Technology —packages→ Broadcom; Broadcom —buys from→ TSMC; TSMC —competes with→ ASE Technology; ASE Technology —competes with→ Amkor Technology"
+      }
+    },
+    {
+      "id": "c102",
       "type": "lockin",
       "path": [
         "arm",
@@ -3234,7 +3312,7 @@
       }
     },
     {
-      "id": "c99",
+      "id": "c103",
       "type": "financing",
       "path": [
         "arm",
@@ -3255,7 +3333,49 @@
       }
     },
     {
-      "id": "c100",
+      "id": "c104",
+      "type": "sales",
+      "path": [
+        "ase",
+        "astera-labs",
+        "nvidia",
+        "tsmc",
+        "ase"
+      ],
+      "edges": [
+        "ase__astera-labs__packages",
+        "astera-labs__nvidia__optimizes_for",
+        "nvidia__tsmc__co_designs",
+        "tsmc__ase__competes_with"
+      ],
+      "note": {
+        "ru": "Контур сбыта: ASE Technology —упаковывает→ Astera Labs; Astera Labs —заточен под→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —конкурирует с→ ASE Technology",
+        "en": "Sales loop: ASE Technology —packages→ Astera Labs; Astera Labs —is tuned for→ NVIDIA; NVIDIA —co-designs with→ TSMC; TSMC —competes with→ ASE Technology"
+      }
+    },
+    {
+      "id": "c105",
+      "type": "financing",
+      "path": [
+        "ase",
+        "nvidia",
+        "synopsys",
+        "tsmc",
+        "ase"
+      ],
+      "edges": [
+        "ase__nvidia__packages",
+        "nvidia__synopsys__invests_in",
+        "synopsys__tsmc__optimizes_for",
+        "tsmc__ase__competes_with"
+      ],
+      "note": {
+        "ru": "Контур финансирования: ASE Technology —упаковывает→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —конкурирует с→ ASE Technology",
+        "en": "Financing loop: ASE Technology —packages→ NVIDIA; NVIDIA —invests in→ Synopsys; Synopsys —is tuned for→ TSMC; TSMC —competes with→ ASE Technology"
+      }
+    },
+    {
+      "id": "c106",
       "type": "financing",
       "path": [
         "credo",
@@ -3276,7 +3396,28 @@
       }
     },
     {
-      "id": "c101",
+      "id": "c107",
+      "type": "sales",
+      "path": [
+        "amkor",
+        "nvidia",
+        "tsmc",
+        "ase",
+        "amkor"
+      ],
+      "edges": [
+        "amkor__nvidia__packages",
+        "nvidia__tsmc__co_designs",
+        "tsmc__ase__competes_with",
+        "ase__amkor__competes_with"
+      ],
+      "note": {
+        "ru": "Контур сбыта: Amkor Technology —упаковывает→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —конкурирует с→ ASE Technology; ASE Technology —конкурирует с→ Amkor Technology",
+        "en": "Sales loop: Amkor Technology —packages→ NVIDIA; NVIDIA —co-designs with→ TSMC; TSMC —competes with→ ASE Technology; ASE Technology —competes with→ Amkor Technology"
+      }
+    },
+    {
+      "id": "c108",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -3297,7 +3438,7 @@
       }
     },
     {
-      "id": "c102",
+      "id": "c109",
       "type": "financing",
       "path": [
         "micron",
@@ -3318,7 +3459,7 @@
       }
     },
     {
-      "id": "c103",
+      "id": "c110",
       "type": "lockin",
       "path": [
         "arm",
@@ -3339,7 +3480,7 @@
       }
     },
     {
-      "id": "c104",
+      "id": "c111",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -3360,7 +3501,7 @@
       }
     },
     {
-      "id": "c105",
+      "id": "c112",
       "type": "lockin",
       "path": [
         "nvidia",
@@ -3381,7 +3522,49 @@
       }
     },
     {
-      "id": "c106",
+      "id": "c113",
+      "type": "sales",
+      "path": [
+        "ase",
+        "credo",
+        "nvidia",
+        "tsmc",
+        "ase"
+      ],
+      "edges": [
+        "ase__credo__packages",
+        "credo__nvidia__optimizes_for",
+        "nvidia__tsmc__co_designs",
+        "tsmc__ase__competes_with"
+      ],
+      "note": {
+        "ru": "Контур сбыта: ASE Technology —упаковывает→ Credo Technology; Credo Technology —заточен под→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —конкурирует с→ ASE Technology",
+        "en": "Sales loop: ASE Technology —packages→ Credo Technology; Credo Technology —is tuned for→ NVIDIA; NVIDIA —co-designs with→ TSMC; TSMC —competes with→ ASE Technology"
+      }
+    },
+    {
+      "id": "c114",
+      "type": "financing",
+      "path": [
+        "ase",
+        "nvidia",
+        "samsung",
+        "tsmc",
+        "ase"
+      ],
+      "edges": [
+        "ase__nvidia__packages",
+        "nvidia__samsung__diversifies_supply",
+        "samsung__tsmc__competes_with",
+        "tsmc__ase__competes_with"
+      ],
+      "note": {
+        "ru": "Контур финансирования: ASE Technology —упаковывает→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —конкурирует с→ ASE Technology",
+        "en": "Financing loop: ASE Technology —packages→ NVIDIA; NVIDIA —keeps as a second source→ Samsung; Samsung —competes with→ TSMC; TSMC —competes with→ ASE Technology"
+      }
+    },
+    {
+      "id": "c115",
       "type": "financing",
       "path": [
         "kioxia",
@@ -3402,7 +3585,7 @@
       }
     },
     {
-      "id": "c107",
+      "id": "c116",
       "type": "financing",
       "path": [
         "micron",
@@ -3423,7 +3606,7 @@
       }
     },
     {
-      "id": "c108",
+      "id": "c117",
       "type": "lockin",
       "path": [
         "cuda",
@@ -3446,7 +3629,7 @@
       }
     },
     {
-      "id": "c109",
+      "id": "c118",
       "type": "lockin",
       "path": [
         "cuda",
@@ -3469,7 +3652,7 @@
       }
     },
     {
-      "id": "c110",
+      "id": "c119",
       "type": "lockin",
       "path": [
         "cuda",
@@ -3492,7 +3675,7 @@
       }
     },
     {
-      "id": "c111",
+      "id": "c120",
       "type": "lockin",
       "path": [
         "cuda",
@@ -3515,7 +3698,7 @@
       }
     },
     {
-      "id": "c112",
+      "id": "c121",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -3538,7 +3721,7 @@
       }
     },
     {
-      "id": "c113",
+      "id": "c122",
       "type": "lockin",
       "path": [
         "cuda",
@@ -3561,7 +3744,7 @@
       }
     },
     {
-      "id": "c114",
+      "id": "c123",
       "type": "lockin",
       "path": [
         "cuda",
@@ -3584,7 +3767,7 @@
       }
     },
     {
-      "id": "c115",
+      "id": "c124",
       "type": "lockin",
       "path": [
         "cuda",
@@ -3607,7 +3790,7 @@
       }
     },
     {
-      "id": "c116",
+      "id": "c125",
       "type": "lockin",
       "path": [
         "arista",
@@ -3630,7 +3813,7 @@
       }
     },
     {
-      "id": "c117",
+      "id": "c126",
       "type": "financing",
       "path": [
         "broadcom",
@@ -3653,7 +3836,7 @@
       }
     },
     {
-      "id": "c118",
+      "id": "c127",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -3676,7 +3859,7 @@
       }
     },
     {
-      "id": "c119",
+      "id": "c128",
       "type": "lockin",
       "path": [
         "cuda",
@@ -3699,7 +3882,7 @@
       }
     },
     {
-      "id": "c120",
+      "id": "c129",
       "type": "lockin",
       "path": [
         "cuda",
@@ -3722,7 +3905,7 @@
       }
     },
     {
-      "id": "c121",
+      "id": "c130",
       "type": "lockin",
       "path": [
         "cuda",
@@ -3745,7 +3928,7 @@
       }
     },
     {
-      "id": "c122",
+      "id": "c131",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -3768,7 +3951,7 @@
       }
     },
     {
-      "id": "c123",
+      "id": "c132",
       "type": "lockin",
       "path": [
         "amazon",
@@ -3791,7 +3974,7 @@
       }
     },
     {
-      "id": "c124",
+      "id": "c133",
       "type": "lockin",
       "path": [
         "arm",
@@ -3814,7 +3997,7 @@
       }
     },
     {
-      "id": "c125",
+      "id": "c134",
       "type": "lockin",
       "path": [
         "coreweave",
@@ -3837,7 +4020,7 @@
       }
     },
     {
-      "id": "c126",
+      "id": "c135",
       "type": "lockin",
       "path": [
         "arista",
@@ -3860,7 +4043,7 @@
       }
     },
     {
-      "id": "c127",
+      "id": "c136",
       "type": "financing",
       "path": [
         "arista",
@@ -3883,7 +4066,7 @@
       }
     },
     {
-      "id": "c128",
+      "id": "c137",
       "type": "sales",
       "path": [
         "astera-labs",
@@ -3906,7 +4089,7 @@
       }
     },
     {
-      "id": "c129",
+      "id": "c138",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -3929,7 +4112,7 @@
       }
     },
     {
-      "id": "c130",
+      "id": "c139",
       "type": "financing",
       "path": [
         "coreweave",
@@ -3952,7 +4135,7 @@
       }
     },
     {
-      "id": "c131",
+      "id": "c140",
       "type": "lockin",
       "path": [
         "cuda",
@@ -3975,7 +4158,7 @@
       }
     },
     {
-      "id": "c132",
+      "id": "c141",
       "type": "lockin",
       "path": [
         "cuda",
@@ -3998,7 +4181,7 @@
       }
     },
     {
-      "id": "c133",
+      "id": "c142",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -4021,7 +4204,7 @@
       }
     },
     {
-      "id": "c134",
+      "id": "c143",
       "type": "financing",
       "path": [
         "amazon",
@@ -4044,7 +4227,7 @@
       }
     },
     {
-      "id": "c135",
+      "id": "c144",
       "type": "lockin",
       "path": [
         "china",
@@ -4067,7 +4250,7 @@
       }
     },
     {
-      "id": "c136",
+      "id": "c145",
       "type": "lockin",
       "path": [
         "cuda",
@@ -4090,7 +4273,7 @@
       }
     },
     {
-      "id": "c137",
+      "id": "c146",
       "type": "lockin",
       "path": [
         "cuda",
@@ -4113,7 +4296,7 @@
       }
     },
     {
-      "id": "c138",
+      "id": "c147",
       "type": "financing",
       "path": [
         "amazon",
@@ -4136,7 +4319,7 @@
       }
     },
     {
-      "id": "c139",
+      "id": "c148",
       "type": "lockin",
       "path": [
         "amazon",
@@ -4159,7 +4342,7 @@
       }
     },
     {
-      "id": "c140",
+      "id": "c149",
       "type": "financing",
       "path": [
         "arm",
@@ -4182,7 +4365,7 @@
       }
     },
     {
-      "id": "c141",
+      "id": "c150",
       "type": "financing",
       "path": [
         "arista",
@@ -4205,7 +4388,7 @@
       }
     },
     {
-      "id": "c142",
+      "id": "c151",
       "type": "sales",
       "path": [
         "broadcom",
@@ -4228,7 +4411,7 @@
       }
     },
     {
-      "id": "c143",
+      "id": "c152",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -4251,7 +4434,7 @@
       }
     },
     {
-      "id": "c144",
+      "id": "c153",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -4274,7 +4457,7 @@
       }
     },
     {
-      "id": "c145",
+      "id": "c154",
       "type": "lockin",
       "path": [
         "cuda",
@@ -4297,7 +4480,7 @@
       }
     },
     {
-      "id": "c146",
+      "id": "c155",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -4320,7 +4503,7 @@
       }
     },
     {
-      "id": "c147",
+      "id": "c156",
       "type": "lockin",
       "path": [
         "arista",
@@ -4343,7 +4526,7 @@
       }
     },
     {
-      "id": "c148",
+      "id": "c157",
       "type": "financing",
       "path": [
         "broadcom",
@@ -4366,7 +4549,7 @@
       }
     },
     {
-      "id": "c149",
+      "id": "c158",
       "type": "lockin",
       "path": [
         "cuda",
@@ -4389,7 +4572,7 @@
       }
     },
     {
-      "id": "c150",
+      "id": "c159",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -4412,7 +4595,7 @@
       }
     },
     {
-      "id": "c151",
+      "id": "c160",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -4435,7 +4618,7 @@
       }
     },
     {
-      "id": "c152",
+      "id": "c161",
       "type": "financing",
       "path": [
         "microsoft",
@@ -4458,7 +4641,7 @@
       }
     },
     {
-      "id": "c153",
+      "id": "c162",
       "type": "lockin",
       "path": [
         "arista",
@@ -4481,7 +4664,7 @@
       }
     },
     {
-      "id": "c154",
+      "id": "c163",
       "type": "lockin",
       "path": [
         "arm",
@@ -4504,7 +4687,30 @@
       }
     },
     {
-      "id": "c155",
+      "id": "c164",
+      "type": "sales",
+      "path": [
+        "ase",
+        "broadcom",
+        "google",
+        "nvidia",
+        "tsmc",
+        "ase"
+      ],
+      "edges": [
+        "ase__broadcom__packages",
+        "broadcom__google__co_designs",
+        "google__nvidia__customer_of",
+        "nvidia__tsmc__co_designs",
+        "tsmc__ase__competes_with"
+      ],
+      "note": {
+        "ru": "Контур сбыта: ASE Technology —упаковывает→ Broadcom; Broadcom —проектирует вместе с→ Google; Google —покупает у→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —конкурирует с→ ASE Technology",
+        "en": "Sales loop: ASE Technology —packages→ Broadcom; Broadcom —co-designs with→ Google; Google —buys from→ NVIDIA; NVIDIA —co-designs with→ TSMC; TSMC —competes with→ ASE Technology"
+      }
+    },
+    {
+      "id": "c165",
       "type": "financing",
       "path": [
         "broadcom",
@@ -4527,7 +4733,7 @@
       }
     },
     {
-      "id": "c156",
+      "id": "c166",
       "type": "lockin",
       "path": [
         "china",
@@ -4550,7 +4756,7 @@
       }
     },
     {
-      "id": "c157",
+      "id": "c167",
       "type": "financing",
       "path": [
         "microsoft",
@@ -4573,7 +4779,7 @@
       }
     },
     {
-      "id": "c158",
+      "id": "c168",
       "type": "lockin",
       "path": [
         "astera-labs",
@@ -4596,7 +4802,7 @@
       }
     },
     {
-      "id": "c159",
+      "id": "c169",
       "type": "lockin",
       "path": [
         "arm",
@@ -4619,7 +4825,7 @@
       }
     },
     {
-      "id": "c160",
+      "id": "c170",
       "type": "lockin",
       "path": [
         "arm",
@@ -4642,7 +4848,7 @@
       }
     },
     {
-      "id": "c161",
+      "id": "c171",
       "type": "financing",
       "path": [
         "coreweave",
@@ -4665,7 +4871,7 @@
       }
     },
     {
-      "id": "c162",
+      "id": "c172",
       "type": "lockin",
       "path": [
         "microsoft",
@@ -4688,7 +4894,7 @@
       }
     },
     {
-      "id": "c163",
+      "id": "c173",
       "type": "lockin",
       "path": [
         "arista",
@@ -4711,7 +4917,7 @@
       }
     },
     {
-      "id": "c164",
+      "id": "c174",
       "type": "lockin",
       "path": [
         "cuda",
@@ -4734,7 +4940,7 @@
       }
     },
     {
-      "id": "c165",
+      "id": "c175",
       "type": "lockin",
       "path": [
         "nvidia",
@@ -4757,7 +4963,7 @@
       }
     },
     {
-      "id": "c166",
+      "id": "c176",
       "type": "lockin",
       "path": [
         "arm",
@@ -4780,7 +4986,7 @@
       }
     },
     {
-      "id": "c167",
+      "id": "c177",
       "type": "financing",
       "path": [
         "arm",
@@ -4803,7 +5009,7 @@
       }
     },
     {
-      "id": "c168",
+      "id": "c178",
       "type": "financing",
       "path": [
         "arm",
@@ -4826,7 +5032,7 @@
       }
     },
     {
-      "id": "c169",
+      "id": "c179",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -4849,7 +5055,7 @@
       }
     },
     {
-      "id": "c170",
+      "id": "c180",
       "type": "financing",
       "path": [
         "broadcom",
@@ -4872,7 +5078,7 @@
       }
     },
     {
-      "id": "c171",
+      "id": "c181",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -4895,7 +5101,7 @@
       }
     },
     {
-      "id": "c172",
+      "id": "c182",
       "type": "lockin",
       "path": [
         "china",
@@ -4918,7 +5124,7 @@
       }
     },
     {
-      "id": "c173",
+      "id": "c183",
       "type": "lockin",
       "path": [
         "coreweave",
@@ -4941,7 +5147,7 @@
       }
     },
     {
-      "id": "c174",
+      "id": "c184",
       "type": "lockin",
       "path": [
         "cuda",
@@ -4964,7 +5170,7 @@
       }
     },
     {
-      "id": "c175",
+      "id": "c185",
       "type": "lockin",
       "path": [
         "cuda",
@@ -4987,7 +5193,7 @@
       }
     },
     {
-      "id": "c176",
+      "id": "c186",
       "type": "lockin",
       "path": [
         "cuda",
@@ -5010,7 +5216,7 @@
       }
     },
     {
-      "id": "c177",
+      "id": "c187",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -5033,7 +5239,7 @@
       }
     },
     {
-      "id": "c178",
+      "id": "c188",
       "type": "financing",
       "path": [
         "amazon",
@@ -5056,7 +5262,30 @@
       }
     },
     {
-      "id": "c179",
+      "id": "c189",
+      "type": "sales",
+      "path": [
+        "amkor",
+        "broadcom",
+        "nvidia",
+        "tsmc",
+        "ase",
+        "amkor"
+      ],
+      "edges": [
+        "amkor__broadcom__packages",
+        "broadcom__nvidia__threatens",
+        "nvidia__tsmc__co_designs",
+        "tsmc__ase__competes_with",
+        "ase__amkor__competes_with"
+      ],
+      "note": {
+        "ru": "Контур сбыта: Amkor Technology —упаковывает→ Broadcom; Broadcom —подтачивает→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —конкурирует с→ ASE Technology; ASE Technology —конкурирует с→ Amkor Technology",
+        "en": "Sales loop: Amkor Technology —packages→ Broadcom; Broadcom —erodes→ NVIDIA; NVIDIA —co-designs with→ TSMC; TSMC —competes with→ ASE Technology; ASE Technology —competes with→ Amkor Technology"
+      }
+    },
+    {
+      "id": "c190",
       "type": "lockin",
       "path": [
         "arista",
@@ -5079,7 +5308,7 @@
       }
     },
     {
-      "id": "c180",
+      "id": "c191",
       "type": "lockin",
       "path": [
         "arista",
@@ -5102,7 +5331,30 @@
       }
     },
     {
-      "id": "c181",
+      "id": "c192",
+      "type": "financing",
+      "path": [
+        "ase",
+        "broadcom",
+        "nvidia",
+        "synopsys",
+        "tsmc",
+        "ase"
+      ],
+      "edges": [
+        "ase__broadcom__packages",
+        "broadcom__nvidia__threatens",
+        "nvidia__synopsys__invests_in",
+        "synopsys__tsmc__optimizes_for",
+        "tsmc__ase__competes_with"
+      ],
+      "note": {
+        "ru": "Контур финансирования: ASE Technology —упаковывает→ Broadcom; Broadcom —подтачивает→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —конкурирует с→ ASE Technology",
+        "en": "Financing loop: ASE Technology —packages→ Broadcom; Broadcom —erodes→ NVIDIA; NVIDIA —invests in→ Synopsys; Synopsys —is tuned for→ TSMC; TSMC —competes with→ ASE Technology"
+      }
+    },
+    {
+      "id": "c193",
       "type": "lockin",
       "path": [
         "cuda",
@@ -5125,7 +5377,7 @@
       }
     },
     {
-      "id": "c182",
+      "id": "c194",
       "type": "lockin",
       "path": [
         "arm",
@@ -5148,7 +5400,7 @@
       }
     },
     {
-      "id": "c183",
+      "id": "c195",
       "type": "financing",
       "path": [
         "astera-labs",
@@ -5171,7 +5423,7 @@
       }
     },
     {
-      "id": "c184",
+      "id": "c196",
       "type": "lockin",
       "path": [
         "cuda",
@@ -5194,7 +5446,7 @@
       }
     },
     {
-      "id": "c185",
+      "id": "c197",
       "type": "lockin",
       "path": [
         "arm",
@@ -5217,7 +5469,7 @@
       }
     },
     {
-      "id": "c186",
+      "id": "c198",
       "type": "financing",
       "path": [
         "broadcom",
@@ -5240,7 +5492,7 @@
       }
     },
     {
-      "id": "c187",
+      "id": "c199",
       "type": "financing",
       "path": [
         "coreweave",
@@ -5263,7 +5515,76 @@
       }
     },
     {
-      "id": "c188",
+      "id": "c200",
+      "type": "sales",
+      "path": [
+        "amkor",
+        "astera-labs",
+        "nvidia",
+        "tsmc",
+        "ase",
+        "amkor"
+      ],
+      "edges": [
+        "amkor__astera-labs__packages",
+        "astera-labs__nvidia__optimizes_for",
+        "nvidia__tsmc__co_designs",
+        "tsmc__ase__competes_with",
+        "ase__amkor__competes_with"
+      ],
+      "note": {
+        "ru": "Контур сбыта: Amkor Technology —упаковывает→ Astera Labs; Astera Labs —заточен под→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —конкурирует с→ ASE Technology; ASE Technology —конкурирует с→ Amkor Technology",
+        "en": "Sales loop: Amkor Technology —packages→ Astera Labs; Astera Labs —is tuned for→ NVIDIA; NVIDIA —co-designs with→ TSMC; TSMC —competes with→ ASE Technology; ASE Technology —competes with→ Amkor Technology"
+      }
+    },
+    {
+      "id": "c201",
+      "type": "sales",
+      "path": [
+        "ase",
+        "astera-labs",
+        "nvidia",
+        "broadcom",
+        "tsmc",
+        "ase"
+      ],
+      "edges": [
+        "ase__astera-labs__packages",
+        "astera-labs__nvidia__optimizes_for",
+        "nvidia__broadcom__competes_with",
+        "broadcom__tsmc__customer_of",
+        "tsmc__ase__competes_with"
+      ],
+      "note": {
+        "ru": "Контур сбыта: ASE Technology —упаковывает→ Astera Labs; Astera Labs —заточен под→ NVIDIA; NVIDIA —конкурирует с→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —конкурирует с→ ASE Technology",
+        "en": "Sales loop: ASE Technology —packages→ Astera Labs; Astera Labs —is tuned for→ NVIDIA; NVIDIA —competes with→ Broadcom; Broadcom —buys from→ TSMC; TSMC —competes with→ ASE Technology"
+      }
+    },
+    {
+      "id": "c202",
+      "type": "financing",
+      "path": [
+        "ase",
+        "broadcom",
+        "hpe",
+        "nvidia",
+        "tsmc",
+        "ase"
+      ],
+      "edges": [
+        "ase__broadcom__packages",
+        "broadcom__hpe__supplies",
+        "hpe__nvidia__strategic_partner",
+        "nvidia__tsmc__co_designs",
+        "tsmc__ase__competes_with"
+      ],
+      "note": {
+        "ru": "Контур финансирования: ASE Technology —упаковывает→ Broadcom; Broadcom —поставляет→ HPE; HPE —стратегический партнёр→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —конкурирует с→ ASE Technology",
+        "en": "Financing loop: ASE Technology —packages→ Broadcom; Broadcom —supplies→ HPE; HPE —is a strategic partner of→ NVIDIA; NVIDIA —co-designs with→ TSMC; TSMC —competes with→ ASE Technology"
+      }
+    },
+    {
+      "id": "c203",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -5286,7 +5607,7 @@
       }
     },
     {
-      "id": "c189",
+      "id": "c204",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -5309,7 +5630,30 @@
       }
     },
     {
-      "id": "c190",
+      "id": "c205",
+      "type": "financing",
+      "path": [
+        "ase",
+        "astera-labs",
+        "nvidia",
+        "synopsys",
+        "tsmc",
+        "ase"
+      ],
+      "edges": [
+        "ase__astera-labs__packages",
+        "astera-labs__nvidia__optimizes_for",
+        "nvidia__synopsys__invests_in",
+        "synopsys__tsmc__optimizes_for",
+        "tsmc__ase__competes_with"
+      ],
+      "note": {
+        "ru": "Контур финансирования: ASE Technology —упаковывает→ Astera Labs; Astera Labs —заточен под→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —конкурирует с→ ASE Technology",
+        "en": "Financing loop: ASE Technology —packages→ Astera Labs; Astera Labs —is tuned for→ NVIDIA; NVIDIA —invests in→ Synopsys; Synopsys —is tuned for→ TSMC; TSMC —competes with→ ASE Technology"
+      }
+    },
+    {
+      "id": "c206",
       "type": "financing",
       "path": [
         "credo",
@@ -5332,7 +5676,7 @@
       }
     },
     {
-      "id": "c191",
+      "id": "c207",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -5355,7 +5699,7 @@
       }
     },
     {
-      "id": "c192",
+      "id": "c208",
       "type": "lockin",
       "path": [
         "microsoft",
@@ -5378,7 +5722,30 @@
       }
     },
     {
-      "id": "c193",
+      "id": "c209",
+      "type": "financing",
+      "path": [
+        "amkor",
+        "nvidia",
+        "synopsys",
+        "tsmc",
+        "ase",
+        "amkor"
+      ],
+      "edges": [
+        "amkor__nvidia__packages",
+        "nvidia__synopsys__invests_in",
+        "synopsys__tsmc__optimizes_for",
+        "tsmc__ase__competes_with",
+        "ase__amkor__competes_with"
+      ],
+      "note": {
+        "ru": "Контур финансирования: Amkor Technology —упаковывает→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —конкурирует с→ ASE Technology; ASE Technology —конкурирует с→ Amkor Technology",
+        "en": "Financing loop: Amkor Technology —packages→ NVIDIA; NVIDIA —invests in→ Synopsys; Synopsys —is tuned for→ TSMC; TSMC —competes with→ ASE Technology; ASE Technology —competes with→ Amkor Technology"
+      }
+    },
+    {
+      "id": "c210",
       "type": "financing",
       "path": [
         "micron",
@@ -5401,7 +5768,7 @@
       }
     },
     {
-      "id": "c194",
+      "id": "c211",
       "type": "lockin",
       "path": [
         "arm",
@@ -5424,7 +5791,7 @@
       }
     },
     {
-      "id": "c195",
+      "id": "c212",
       "type": "lockin",
       "path": [
         "arm",
@@ -5447,7 +5814,7 @@
       }
     },
     {
-      "id": "c196",
+      "id": "c213",
       "type": "lockin",
       "path": [
         "arm",
@@ -5470,7 +5837,30 @@
       }
     },
     {
-      "id": "c197",
+      "id": "c214",
+      "type": "lockin",
+      "path": [
+        "ase",
+        "nvidia",
+        "dell",
+        "broadcom",
+        "tsmc",
+        "ase"
+      ],
+      "edges": [
+        "ase__nvidia__packages",
+        "nvidia__dell__supplies",
+        "dell__broadcom__path_dependent_on",
+        "broadcom__tsmc__customer_of",
+        "tsmc__ase__competes_with"
+      ],
+      "note": {
+        "ru": "Контур замка: ASE Technology —упаковывает→ NVIDIA; NVIDIA —поставляет→ Dell; Dell —развивается вслед за→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —конкурирует с→ ASE Technology",
+        "en": "Lock-in loop: ASE Technology —packages→ NVIDIA; NVIDIA —supplies→ Dell; Dell —follows the path of→ Broadcom; Broadcom —buys from→ TSMC; TSMC —competes with→ ASE Technology"
+      }
+    },
+    {
+      "id": "c215",
       "type": "lockin",
       "path": [
         "nvidia",
@@ -5493,7 +5883,99 @@
       }
     },
     {
-      "id": "c198",
+      "id": "c216",
+      "type": "sales",
+      "path": [
+        "amkor",
+        "credo",
+        "nvidia",
+        "tsmc",
+        "ase",
+        "amkor"
+      ],
+      "edges": [
+        "amkor__credo__packages",
+        "credo__nvidia__optimizes_for",
+        "nvidia__tsmc__co_designs",
+        "tsmc__ase__competes_with",
+        "ase__amkor__competes_with"
+      ],
+      "note": {
+        "ru": "Контур сбыта: Amkor Technology —упаковывает→ Credo Technology; Credo Technology —заточен под→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —конкурирует с→ ASE Technology; ASE Technology —конкурирует с→ Amkor Technology",
+        "en": "Sales loop: Amkor Technology —packages→ Credo Technology; Credo Technology —is tuned for→ NVIDIA; NVIDIA —co-designs with→ TSMC; TSMC —competes with→ ASE Technology; ASE Technology —competes with→ Amkor Technology"
+      }
+    },
+    {
+      "id": "c217",
+      "type": "financing",
+      "path": [
+        "ase",
+        "broadcom",
+        "nvidia",
+        "samsung",
+        "tsmc",
+        "ase"
+      ],
+      "edges": [
+        "ase__broadcom__packages",
+        "broadcom__nvidia__threatens",
+        "nvidia__samsung__diversifies_supply",
+        "samsung__tsmc__competes_with",
+        "tsmc__ase__competes_with"
+      ],
+      "note": {
+        "ru": "Контур финансирования: ASE Technology —упаковывает→ Broadcom; Broadcom —подтачивает→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —конкурирует с→ ASE Technology",
+        "en": "Financing loop: ASE Technology —packages→ Broadcom; Broadcom —erodes→ NVIDIA; NVIDIA —keeps as a second source→ Samsung; Samsung —competes with→ TSMC; TSMC —competes with→ ASE Technology"
+      }
+    },
+    {
+      "id": "c218",
+      "type": "sales",
+      "path": [
+        "ase",
+        "credo",
+        "nvidia",
+        "broadcom",
+        "tsmc",
+        "ase"
+      ],
+      "edges": [
+        "ase__credo__packages",
+        "credo__nvidia__optimizes_for",
+        "nvidia__broadcom__competes_with",
+        "broadcom__tsmc__customer_of",
+        "tsmc__ase__competes_with"
+      ],
+      "note": {
+        "ru": "Контур сбыта: ASE Technology —упаковывает→ Credo Technology; Credo Technology —заточен под→ NVIDIA; NVIDIA —конкурирует с→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —конкурирует с→ ASE Technology",
+        "en": "Sales loop: ASE Technology —packages→ Credo Technology; Credo Technology —is tuned for→ NVIDIA; NVIDIA —competes with→ Broadcom; Broadcom —buys from→ TSMC; TSMC —competes with→ ASE Technology"
+      }
+    },
+    {
+      "id": "c219",
+      "type": "financing",
+      "path": [
+        "ase",
+        "credo",
+        "nvidia",
+        "synopsys",
+        "tsmc",
+        "ase"
+      ],
+      "edges": [
+        "ase__credo__packages",
+        "credo__nvidia__optimizes_for",
+        "nvidia__synopsys__invests_in",
+        "synopsys__tsmc__optimizes_for",
+        "tsmc__ase__competes_with"
+      ],
+      "note": {
+        "ru": "Контур финансирования: ASE Technology —упаковывает→ Credo Technology; Credo Technology —заточен под→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —конкурирует с→ ASE Technology",
+        "en": "Financing loop: ASE Technology —packages→ Credo Technology; Credo Technology —is tuned for→ NVIDIA; NVIDIA —invests in→ Synopsys; Synopsys —is tuned for→ TSMC; TSMC —competes with→ ASE Technology"
+      }
+    },
+    {
+      "id": "c220",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -5516,7 +5998,7 @@
       }
     },
     {
-      "id": "c199",
+      "id": "c221",
       "type": "lockin",
       "path": [
         "nvidia",
@@ -5536,6 +6018,98 @@
       "note": {
         "ru": "Контур замка: NVIDIA —стратегический партнёр→ SoftBank; SoftBank —стратегический партнёр→ Oracle; Oracle —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA",
         "en": "Lock-in loop: NVIDIA —is a strategic partner of→ SoftBank; SoftBank —is a strategic partner of→ Oracle; Oracle —invests in→ OpenAI; OpenAI —makes possible→ vLLM; vLLM —proves demand for→ NVIDIA"
+      }
+    },
+    {
+      "id": "c222",
+      "type": "financing",
+      "path": [
+        "ase",
+        "astera-labs",
+        "nvidia",
+        "samsung",
+        "tsmc",
+        "ase"
+      ],
+      "edges": [
+        "ase__astera-labs__packages",
+        "astera-labs__nvidia__optimizes_for",
+        "nvidia__samsung__diversifies_supply",
+        "samsung__tsmc__competes_with",
+        "tsmc__ase__competes_with"
+      ],
+      "note": {
+        "ru": "Контур финансирования: ASE Technology —упаковывает→ Astera Labs; Astera Labs —заточен под→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —конкурирует с→ ASE Technology",
+        "en": "Financing loop: ASE Technology —packages→ Astera Labs; Astera Labs —is tuned for→ NVIDIA; NVIDIA —keeps as a second source→ Samsung; Samsung —competes with→ TSMC; TSMC —competes with→ ASE Technology"
+      }
+    },
+    {
+      "id": "c223",
+      "type": "financing",
+      "path": [
+        "ase",
+        "nvidia",
+        "micron",
+        "samsung",
+        "tsmc",
+        "ase"
+      ],
+      "edges": [
+        "ase__nvidia__packages",
+        "nvidia__micron__diversifies_supply",
+        "micron__samsung__competes_with",
+        "samsung__tsmc__competes_with",
+        "tsmc__ase__competes_with"
+      ],
+      "note": {
+        "ru": "Контур финансирования: ASE Technology —упаковывает→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron; Micron —конкурирует с→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —конкурирует с→ ASE Technology",
+        "en": "Financing loop: ASE Technology —packages→ NVIDIA; NVIDIA —keeps as a second source→ Micron; Micron —competes with→ Samsung; Samsung —competes with→ TSMC; TSMC —competes with→ ASE Technology"
+      }
+    },
+    {
+      "id": "c224",
+      "type": "financing",
+      "path": [
+        "amkor",
+        "nvidia",
+        "samsung",
+        "tsmc",
+        "ase",
+        "amkor"
+      ],
+      "edges": [
+        "amkor__nvidia__packages",
+        "nvidia__samsung__diversifies_supply",
+        "samsung__tsmc__competes_with",
+        "tsmc__ase__competes_with",
+        "ase__amkor__competes_with"
+      ],
+      "note": {
+        "ru": "Контур финансирования: Amkor Technology —упаковывает→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —конкурирует с→ ASE Technology; ASE Technology —конкурирует с→ Amkor Technology",
+        "en": "Financing loop: Amkor Technology —packages→ NVIDIA; NVIDIA —keeps as a second source→ Samsung; Samsung —competes with→ TSMC; TSMC —competes with→ ASE Technology; ASE Technology —competes with→ Amkor Technology"
+      }
+    },
+    {
+      "id": "c225",
+      "type": "financing",
+      "path": [
+        "ase",
+        "credo",
+        "nvidia",
+        "samsung",
+        "tsmc",
+        "ase"
+      ],
+      "edges": [
+        "ase__credo__packages",
+        "credo__nvidia__optimizes_for",
+        "nvidia__samsung__diversifies_supply",
+        "samsung__tsmc__competes_with",
+        "tsmc__ase__competes_with"
+      ],
+      "note": {
+        "ru": "Контур финансирования: ASE Technology —упаковывает→ Credo Technology; Credo Technology —заточен под→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —конкурирует с→ ASE Technology",
+        "en": "Financing loop: ASE Technology —packages→ Credo Technology; Credo Technology —is tuned for→ NVIDIA; NVIDIA —keeps as a second source→ Samsung; Samsung —competes with→ TSMC; TSMC —competes with→ ASE Technology"
       }
     }
   ],
@@ -5718,13 +6292,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.004467
+        "pagerank": 0.004456
       },
       "integration": {
         "score": 3,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.004467,
+        "pagerank": 0.004456,
         "layersSpanned": 2,
         "edgeTypes": 1,
         "cycles": 0
@@ -5917,14 +6491,14 @@
       },
       "centrality": {
         "degree": 8,
-        "betweenness": 0.007649,
-        "pagerank": 0.005795
+        "betweenness": 0.006635,
+        "pagerank": 0.005667
       },
       "integration": {
         "score": 15,
         "degree": 8,
-        "betweenness": 0.007649,
-        "pagerank": 0.005795,
+        "betweenness": 0.006635,
+        "pagerank": 0.005667,
         "layersSpanned": 8,
         "edgeTypes": 8,
         "cycles": 11
@@ -6078,14 +6652,14 @@
       },
       "centrality": {
         "degree": 7,
-        "betweenness": 0.002661,
-        "pagerank": 0.009909
+        "betweenness": 0.002678,
+        "pagerank": 0.009757
       },
       "integration": {
         "score": 11,
         "degree": 7,
-        "betweenness": 0.002661,
-        "pagerank": 0.009909,
+        "betweenness": 0.002678,
+        "pagerank": 0.009757,
         "layersSpanned": 5,
         "edgeTypes": 7,
         "cycles": 0
@@ -6147,11 +6721,11 @@
         "renormalized": false
       },
       "gravity": {
-        "reach": 4,
+        "reach": 5,
         "layers": 4,
-        "edgeTypes": 1,
-        "cycles": 0,
-        "score": 14,
+        "edgeTypes": 2,
+        "cycles": 7,
+        "score": 27,
         "signals": {}
       },
       "domain": null,
@@ -6283,18 +6857,18 @@
         "en": "Amkor packages and tests other companies' chips once the wafer has left the fab. It names most of the world's largest semiconductor companies as its customers and discloses concentration plainly: the ten largest gave 72% of net sales in 2025. Two of them are named — direct sales to Apple and Qualcomm were 29.8% and 11.1% of net sales. The company sells a whole cycle: package design, wafer bump, probe, back-grind, packaging, burn-in and final test. Computing, including data centre and infrastructure, accounts for 20 % of its sales."
       },
       "centrality": {
-        "degree": 4,
+        "degree": 5,
         "betweenness": 0.000132,
-        "pagerank": 0.010179
+        "pagerank": 0.010174
       },
       "integration": {
-        "score": 7,
-        "degree": 4,
+        "score": 8,
+        "degree": 5,
         "betweenness": 0.000132,
-        "pagerank": 0.010179,
+        "pagerank": 0.010174,
         "layersSpanned": 4,
-        "edgeTypes": 1,
-        "cycles": 0
+        "edgeTypes": 2,
+        "cycles": 7
       },
       "core": false,
       "pivotal": false
@@ -6528,14 +7102,14 @@
       },
       "centrality": {
         "degree": 9,
-        "betweenness": 0.036181,
-        "pagerank": 0.007366
+        "betweenness": 0.034967,
+        "pagerank": 0.007253
       },
       "integration": {
         "score": 17,
         "degree": 9,
-        "betweenness": 0.036181,
-        "pagerank": 0.007366,
+        "betweenness": 0.034967,
+        "pagerank": 0.007253,
         "layersSpanned": 9,
         "edgeTypes": 6,
         "cycles": 6
@@ -6690,13 +7264,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.006849
+        "pagerank": 0.006841
       },
       "integration": {
         "score": 5,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.006849,
+        "pagerank": 0.006841,
         "layersSpanned": 3,
         "edgeTypes": 1,
         "cycles": 0
@@ -6880,14 +7454,14 @@
       },
       "centrality": {
         "degree": 4,
-        "betweenness": 0.000362,
-        "pagerank": 0.005344
+        "betweenness": 0.000342,
+        "pagerank": 0.005267
       },
       "integration": {
         "score": 8,
         "degree": 4,
-        "betweenness": 0.000362,
-        "pagerank": 0.005344,
+        "betweenness": 0.000342,
+        "pagerank": 0.005267,
         "layersSpanned": 5,
         "edgeTypes": 2,
         "cycles": 17
@@ -7140,14 +7714,14 @@
       },
       "centrality": {
         "degree": 5,
-        "betweenness": 0.002104,
-        "pagerank": 0.011438
+        "betweenness": 0.002145,
+        "pagerank": 0.011395
       },
       "integration": {
         "score": 13,
         "degree": 5,
-        "betweenness": 0.002104,
-        "pagerank": 0.011438,
+        "betweenness": 0.002145,
+        "pagerank": 0.011395,
         "layersSpanned": 7,
         "edgeTypes": 6,
         "cycles": 20
@@ -7169,47 +7743,51 @@
         {
           "layer": "L3",
           "primary": true,
-          "criticality": 58
+          "criticality": 61
         }
       ],
       "primaryLayer": "L3",
-      "criticality": 58,
+      "criticality": 61,
       "criticalityFactors": {
         "irreplaceability": 60,
-        "lockInDepth": 55,
-        "timeToReplace": 60,
-        "concentration": null
+        "lockInDepth": 64,
+        "timeToReplace": 62,
+        "concentration": 55
       },
       "criticalityWhy": {
         "irreplaceability": {
-          "ru": "Подрядчиков такого масштаба два-три",
-          "en": "Two or three contractors work at this scale"
+          "ru": "Рынок корпусирования компания сама называет высококонкурентным",
+          "en": "The company itself calls the packaging market highly competitive"
         },
         "lockInDepth": {
-          "ru": "Задевает упаковку и сборку",
-          "en": "Reaches packaging and assembly"
+          "ru": "Корпус квалифицируется под изделие заказчика, и перенос требует повторной квалификации",
+          "en": "A package is qualified against the customer's product, and moving it requires requalification"
         },
         "timeToReplace": {
-          "ru": "Нарастить мощности — год-два",
-          "en": "Adding capacity — one to two years"
+          "ru": "Мощности передового корпусирования наращивают и сами контрактные производители кремния",
+          "en": "Advanced packaging capacity is being added by the foundry players themselves"
         },
-        "concentration": null
+        "concentration": {
+          "ru": "На десятку крупнейших заказчиков пришлось 50 % торговой дебиторской задолженности",
+          "en": "The ten largest customers accounted for 50 % of trade receivables"
+        }
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
-        "reach": 4,
+        "reach": 6,
         "layers": 4,
-        "edgeTypes": 1,
-        "cycles": 0,
-        "score": 14,
+        "edgeTypes": 2,
+        "cycles": 26,
+        "score": 28,
         "signals": {}
       },
       "domain": null,
@@ -7250,6 +7828,71 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "ASE Technology 20-F FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1122411/000119312526135585/d50802d20f.htm",
+          "published": "2026-04-01",
+          "fetched": null,
+          "alive": true,
+          "quote": "the highly competitive markets of semiconductor packaging and testing and EMS",
+          "confidence": 0.975,
+          "self": "ase",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "ASE Technology 20-F FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1122411/000119312526135585/d50802d20f.htm",
+          "published": "2026-04-01",
+          "fetched": null,
+          "alive": true,
+          "quote": "Revenues from our export sales were NT$511,422.0 million",
+          "confidence": 0.975,
+          "self": "ase",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "ASE Technology 20-F FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1122411/000119312526135585/d50802d20f.htm",
+          "published": "2026-04-01",
+          "fetched": null,
+          "alive": true,
+          "quote": "the Group's ten largest customers accounted for 47 % and 50 % of trade receivables",
+          "confidence": 0.975,
+          "self": "ase",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "ASE Technology 20-F FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1122411/000119312526135585/d50802d20f.htm",
+          "published": "2026-04-01",
+          "fetched": null,
+          "alive": true,
+          "quote": "some foundry players have actively invested and expanded their advanced packaging capacity",
+          "confidence": 0.975,
+          "self": "ase",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "ASE Technology 20-F FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1122411/000119312526135585/d50802d20f.htm",
+          "published": "2026-04-01",
+          "fetched": null,
+          "alive": true,
+          "quote": "As of December 31, 2024 and 2025, the Group's ten largest customers",
+          "confidence": 0.975,
+          "self": "ase",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "Broadcom 10-K FY2025",
@@ -7264,29 +7907,30 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 6,
+        "selfSourced": 5,
         "byTier": {
+          "1": 5,
           "2": 1
         }
       },
       "description": {
-        "ru": "Продаёт упаковку и тестирование микросхем: превращает готовый кристалл в изделие, которое можно поставить в плату. Деньги — плата за операцию, и объём зависит не от цены чипа, а от количества корпусов. В карте компания названа в отчётности сразу нескольких разработчиков — и тех, кто делает ускорители, и тех, кто проектирует заказные чипы для облаков. Это тот редкий слой, где у заказчика есть реальный выбор из нескольких подрядчиков, и именно поэтому здесь чаще всего и держат вторую линию.",
-        "en": "Sells chip packaging and test: turning a finished die into a part that can be placed on a board. The money is a fee per operation, and volume depends on package count rather than chip price. On the map the company is named in the filings of several designers at once — both accelerator makers and those designing custom silicon for clouds. It is the rare layer where the customer has a genuine choice of subcontractors, which is why a second line is most often kept precisely here."
+        "ru": "ASE Technology корпусирует и тестирует полупроводники и параллельно ведёт контрактную сборку электроники. Свой рынок компания описывает как высококонкурентный — и добавляет, что часть контрактных производителей кремния сама вложилась в передовое корпусирование и отняла часть заказчиков. Экспортные продажи составили NT$511,422.0 million. Концентрацию она раскрывает по задолженности: на десятку крупнейших заказчиков пришлось 47 % и 50 % торговой дебиторской задолженности на конец 2024 и 2025 годов. На карте узел стоит рядом с Amkor: вторая площадка того же передела.",
+        "en": "ASE Technology packages and tests semiconductors and runs contract electronics assembly alongside. It describes its own market as highly competitive — and adds that some foundry players have themselves invested in advanced packaging and taken some customers. Export sales were NT$511,422.0 million. It discloses concentration through receivables: the ten largest customers accounted for 47 % and 50 % of trade receivables at the end of 2024 and 2025. On the map the node stands beside Amkor: the second site of the same step."
       },
       "centrality": {
-        "degree": 4,
-        "betweenness": 0.000132,
-        "pagerank": 0.010179
+        "degree": 6,
+        "betweenness": 0.000454,
+        "pagerank": 0.010174
       },
       "integration": {
-        "score": 7,
-        "degree": 4,
-        "betweenness": 0.000132,
-        "pagerank": 0.010179,
+        "score": 9,
+        "degree": 6,
+        "betweenness": 0.000454,
+        "pagerank": 0.010174,
         "layersSpanned": 4,
-        "edgeTypes": 1,
-        "cycles": 0
+        "edgeTypes": 2,
+        "cycles": 26
       },
       "core": false,
       "pivotal": false
@@ -7466,13 +8110,13 @@
       "centrality": {
         "degree": 4,
         "betweenness": 0.01955,
-        "pagerank": 0.010469
+        "pagerank": 0.01046
       },
       "integration": {
         "score": 9,
         "degree": 4,
         "betweenness": 0.01955,
-        "pagerank": 0.010469,
+        "pagerank": 0.01046,
         "layersSpanned": 4,
         "edgeTypes": 4,
         "cycles": 0
@@ -7532,7 +8176,7 @@
         "reach": 4,
         "layers": 4,
         "edgeTypes": 3,
-        "cycles": 7,
+        "cycles": 12,
         "score": 25,
         "signals": {}
       },
@@ -7626,17 +8270,17 @@
       },
       "centrality": {
         "degree": 4,
-        "betweenness": 0.000835,
-        "pagerank": 0.003481
+        "betweenness": 0.000322,
+        "pagerank": 0.003472
       },
       "integration": {
         "score": 7,
         "degree": 4,
-        "betweenness": 0.000835,
-        "pagerank": 0.003481,
+        "betweenness": 0.000322,
+        "pagerank": 0.003472,
         "layersSpanned": 4,
         "edgeTypes": 3,
-        "cycles": 7
+        "cycles": 12
       },
       "core": false,
       "pivotal": false
@@ -7847,13 +8491,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.006565
+        "pagerank": 0.006532
       },
       "integration": {
         "score": 7,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.006565,
+        "pagerank": 0.006532,
         "layersSpanned": 5,
         "edgeTypes": 2,
         "cycles": 0
@@ -7876,40 +8520,44 @@
         {
           "layer": "L14",
           "primary": true,
-          "criticality": 45
+          "criticality": 48
         }
       ],
       "primaryLayer": "L14",
-      "criticality": 45,
+      "criticality": 48,
       "criticalityFactors": {
-        "irreplaceability": 40,
-        "lockInDepth": 45,
-        "timeToReplace": 50,
-        "concentration": null
+        "irreplaceability": 48,
+        "lockInDepth": 50,
+        "timeToReplace": 42,
+        "concentration": 56
       },
       "criticalityWhy": {
         "irreplaceability": {
-          "ru": "Инфраструктурных управляющих несколько",
-          "en": "There are several infrastructure managers"
+          "ru": "Капитал в инфраструктуру несут десятки управляющих; исключительности у одного нет",
+          "en": "Dozens of managers bring capital into infrastructure; no single one is exclusive"
         },
         "lockInDepth": {
-          "ru": "Задевает энергию и площадки",
-          "en": "Reaches power and sites"
+          "ru": "Технологические услуги и подписки дали $2.0 billion — это отношения на срок, а не разовые",
+          "en": "Technology services and subscriptions gave $2.0 billion — a term relationship, not one-off"
         },
         "timeToReplace": {
-          "ru": "Заместить капитал — год-два",
-          "en": "Replacing the capital — one to two years"
+          "ru": "Источник капитала меняется в пределах цикла привлечения",
+          "en": "A source of capital changes inside a fundraising cycle"
         },
-        "concentration": null
+        "concentration": {
+          "ru": "Входит в число крупнейших управляющих пенсионными активами в мире, но не единственный",
+          "en": "Among the world's largest managers of pension plan assets, but not the only one"
+        }
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
         "reach": 1,
@@ -7957,6 +8605,58 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "BlackRock 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526071966/blk-20251231.htm",
+          "published": "2026-02-25",
+          "fetched": null,
+          "alive": true,
+          "quote": "We are a fiduciary to our clients",
+          "confidence": 0.975,
+          "self": "blackrock",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "BlackRock 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526071966/blk-20251231.htm",
+          "published": "2026-02-25",
+          "fetched": null,
+          "alive": true,
+          "quote": "BlackRock is among the world's largest managers of pension plan assets",
+          "confidence": 0.975,
+          "self": "blackrock",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "BlackRock 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526071966/blk-20251231.htm",
+          "published": "2026-02-25",
+          "fetched": null,
+          "alive": true,
+          "quote": "Technology services and subscription revenue of $2.0 billion was up 24% year-over-year.",
+          "confidence": 0.975,
+          "self": "blackrock",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "BlackRock 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526071966/blk-20251231.htm",
+          "published": "2026-02-25",
+          "fetched": null,
+          "alive": true,
+          "quote": "Investment advisory, administration fees and securities lending revenue of $19.2 billion in 2025",
+          "confidence": 0.975,
+          "self": "blackrock",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "NVIDIA 10-K FY2026",
@@ -7971,26 +8671,27 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 5,
+        "selfSourced": 4,
         "byTier": {
+          "1": 4,
           "2": 1
         }
       },
       "description": {
-        "ru": "Управляет активами и в этой карте участвует через инфраструктурные фонды, финансирующие площадки и генерацию под облачные мощности. Зарабатывает комиссией с управляемого капитала, поэтому мотив — объём привлечённых денег, а не доходность конкретного объекта. В карте связь важна тем, что показывает механизм: облако получает стройку, не увеличивая собственный долг, а возврат обеспечивается будущей арендой. Такие деньги приходят снаружи отрасли и потому не заканчиваются вместе с её прибылью.",
-        "en": "Manages assets and participates on this map through infrastructure funds financing sites and generation for cloud capacity. It earns a fee on capital under management, so the motive is money raised rather than any one asset's return. On the map the link matters because it shows the mechanism: the cloud gets construction without adding to its own debt, and the return is secured by future rent. Money like this arrives from outside the industry and so does not run out with the industry's profits."
+        "ru": "BlackRock — управляющий активами, чью роль на карте определяет не размер портфеля, а то, что он вкладывает в саму инфраструктуру. Собственную позицию компания описывает как фидуциарную по отношению к клиентам. Она входит в число крупнейших управляющих пенсионными активами в мире. Выручка от технологических услуг и подписок составила $2.0 billion с ростом на 24% год к году; выручка от инвестиционного консультирования и администрирования — $19.2 billion в 2025 году. На карте узел стоит в слое капитала, финансирующего площадки и энергетику, а не модели.",
+        "en": "BlackRock is an asset manager whose place on the map is set not by portfolio size but by the fact that it invests in the infrastructure itself. The company describes its own position as fiduciary to its clients. It is among the world's largest managers of pension plan assets. Technology services and subscription revenue was $2.0 billion, up 24% year-over-year; investment advisory and administration revenue was $19.2 billion in 2025. On the map the node sits in the capital layer that funds sites and power rather than models."
       },
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003905
+        "pagerank": 0.003889
       },
       "integration": {
         "score": 4,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003905,
+        "pagerank": 0.003889,
         "layersSpanned": 3,
         "edgeTypes": 1,
         "cycles": 0
@@ -8188,14 +8889,14 @@
       },
       "centrality": {
         "degree": 2,
-        "betweenness": 0.000301,
-        "pagerank": 0.00755
+        "betweenness": 0.000294,
+        "pagerank": 0.007513
       },
       "integration": {
         "score": 5,
         "degree": 2,
-        "betweenness": 0.000301,
-        "pagerank": 0.00755,
+        "betweenness": 0.000294,
+        "pagerank": 0.007513,
         "layersSpanned": 3,
         "edgeTypes": 1,
         "cycles": 0
@@ -8324,13 +9025,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.004853
+        "pagerank": 0.004836
       },
       "integration": {
         "score": 3,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.004853,
+        "pagerank": 0.004836,
         "layersSpanned": 2,
         "edgeTypes": 1,
         "cycles": 0
@@ -8459,13 +9160,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.006565
+        "pagerank": 0.006532
       },
       "integration": {
         "score": 5,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.006565,
+        "pagerank": 0.006532,
         "layersSpanned": 4,
         "edgeTypes": 1,
         "cycles": 0
@@ -8534,7 +9235,7 @@
         "reach": 10,
         "layers": 6,
         "edgeTypes": 10,
-        "cycles": 40,
+        "cycles": 51,
         "score": 44,
         "signals": {}
       },
@@ -8680,17 +9381,17 @@
       },
       "centrality": {
         "degree": 10,
-        "betweenness": 0.008357,
-        "pagerank": 0.015068
+        "betweenness": 0.007722,
+        "pagerank": 0.015291
       },
       "integration": {
         "score": 16,
         "degree": 10,
-        "betweenness": 0.008357,
-        "pagerank": 0.015068,
+        "betweenness": 0.007722,
+        "pagerank": 0.015291,
         "layersSpanned": 6,
         "edgeTypes": 10,
-        "cycles": 40
+        "cycles": 51
       },
       "core": true,
       "pivotal": true
@@ -8861,14 +9562,14 @@
       },
       "centrality": {
         "degree": 5,
-        "betweenness": 0.002606,
-        "pagerank": 0.006981
+        "betweenness": 0.002582,
+        "pagerank": 0.006925
       },
       "integration": {
         "score": 8,
         "degree": 5,
-        "betweenness": 0.002606,
-        "pagerank": 0.006981,
+        "betweenness": 0.002582,
+        "pagerank": 0.006925,
         "layersSpanned": 4,
         "edgeTypes": 3,
         "cycles": 0
@@ -9010,13 +9711,13 @@
       "centrality": {
         "degree": 3,
         "betweenness": 0.0,
-        "pagerank": 0.006565
+        "pagerank": 0.006532
       },
       "integration": {
         "score": 7,
         "degree": 3,
         "betweenness": 0.0,
-        "pagerank": 0.006565,
+        "pagerank": 0.006532,
         "layersSpanned": 4,
         "edgeTypes": 3,
         "cycles": 0
@@ -9186,14 +9887,14 @@
       },
       "centrality": {
         "degree": 2,
-        "betweenness": 0.004396,
-        "pagerank": 0.009994
+        "betweenness": 0.004391,
+        "pagerank": 0.009943
       },
       "integration": {
         "score": 7,
         "degree": 2,
-        "betweenness": 0.004396,
-        "pagerank": 0.009994,
+        "betweenness": 0.004391,
+        "pagerank": 0.009943,
         "layersSpanned": 5,
         "edgeTypes": 1,
         "cycles": 0
@@ -9380,13 +10081,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.010231
+        "pagerank": 0.010166
       },
       "integration": {
         "score": 8,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.010231,
+        "pagerank": 0.010166,
         "layersSpanned": 5,
         "edgeTypes": 2,
         "cycles": 6
@@ -9513,13 +10214,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 8.8e-05,
-        "pagerank": 0.011437
+        "pagerank": 0.011393
       },
       "integration": {
         "score": 6,
         "degree": 2,
         "betweenness": 8.8e-05,
-        "pagerank": 0.011437,
+        "pagerank": 0.011393,
         "layersSpanned": 3,
         "edgeTypes": 2,
         "cycles": 0
@@ -9743,14 +10444,14 @@
       },
       "centrality": {
         "degree": 9,
-        "betweenness": 0.004765,
-        "pagerank": 0.003481
+        "betweenness": 0.004733,
+        "pagerank": 0.003472
       },
       "integration": {
         "score": 11,
         "degree": 9,
-        "betweenness": 0.004765,
-        "pagerank": 0.003481,
+        "betweenness": 0.004733,
+        "pagerank": 0.003472,
         "layersSpanned": 6,
         "edgeTypes": 3,
         "cycles": 0
@@ -9894,13 +10595,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.006565
+        "pagerank": 0.006532
       },
       "integration": {
         "score": 5,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.006565,
+        "pagerank": 0.006532,
         "layersSpanned": 3,
         "edgeTypes": 2,
         "cycles": 0
@@ -10029,13 +10730,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.003905
+        "pagerank": 0.003889
       },
       "integration": {
         "score": 6,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.003905,
+        "pagerank": 0.003889,
         "layersSpanned": 4,
         "edgeTypes": 2,
         "cycles": 0
@@ -10258,14 +10959,14 @@
       },
       "centrality": {
         "degree": 6,
-        "betweenness": 0.002022,
-        "pagerank": 0.006568
+        "betweenness": 0.002003,
+        "pagerank": 0.006475
       },
       "integration": {
         "score": 12,
         "degree": 6,
-        "betweenness": 0.002022,
-        "pagerank": 0.006568,
+        "betweenness": 0.002003,
+        "pagerank": 0.006475,
         "layersSpanned": 7,
         "edgeTypes": 4,
         "cycles": 15
@@ -10326,7 +11027,7 @@
         "reach": 4,
         "layers": 4,
         "edgeTypes": 3,
-        "cycles": 7,
+        "cycles": 12,
         "score": 25,
         "signals": {}
       },
@@ -10420,17 +11121,17 @@
       },
       "centrality": {
         "degree": 4,
-        "betweenness": 0.000835,
-        "pagerank": 0.003481
+        "betweenness": 0.000322,
+        "pagerank": 0.003472
       },
       "integration": {
         "score": 7,
         "degree": 4,
-        "betweenness": 0.000835,
-        "pagerank": 0.003481,
+        "betweenness": 0.000322,
+        "pagerank": 0.003472,
         "layersSpanned": 4,
         "edgeTypes": 3,
-        "cycles": 7
+        "cycles": 12
       },
       "core": false,
       "pivotal": false
@@ -10619,20 +11320,20 @@
       },
       "centrality": {
         "degree": 4,
-        "betweenness": 0.009272,
-        "pagerank": 0.006565
+        "betweenness": 0.009196,
+        "pagerank": 0.006532
       },
       "integration": {
         "score": 10,
         "degree": 4,
-        "betweenness": 0.009272,
-        "pagerank": 0.006565,
+        "betweenness": 0.009196,
+        "pagerank": 0.006532,
         "layersSpanned": 6,
         "edgeTypes": 4,
         "cycles": 1
       },
-      "core": true,
-      "pivotal": true
+      "core": false,
+      "pivotal": false
     },
     {
       "id": "cuda",
@@ -10864,14 +11565,14 @@
       },
       "centrality": {
         "degree": 12,
-        "betweenness": 0.021047,
-        "pagerank": 0.01333
+        "betweenness": 0.019529,
+        "pagerank": 0.012431
       },
       "integration": {
         "score": 18,
         "degree": 12,
-        "betweenness": 0.021047,
-        "pagerank": 0.01333,
+        "betweenness": 0.019529,
+        "pagerank": 0.012431,
         "layersSpanned": 7,
         "edgeTypes": 8,
         "cycles": 62
@@ -11057,13 +11758,13 @@
       "centrality": {
         "degree": 3,
         "betweenness": 0.018692,
-        "pagerank": 0.003481
+        "pagerank": 0.003472
       },
       "integration": {
         "score": 9,
         "degree": 3,
         "betweenness": 0.018692,
-        "pagerank": 0.003481,
+        "pagerank": 0.003472,
         "layersSpanned": 6,
         "edgeTypes": 3,
         "cycles": 0
@@ -11278,13 +11979,13 @@
       "centrality": {
         "degree": 4,
         "betweenness": 0.00022,
-        "pagerank": 0.004313
+        "pagerank": 0.004276
       },
       "integration": {
         "score": 10,
         "degree": 4,
         "betweenness": 0.00022,
-        "pagerank": 0.004313,
+        "pagerank": 0.004276,
         "layersSpanned": 6,
         "edgeTypes": 4,
         "cycles": 6
@@ -11348,7 +12049,7 @@
         "reach": 3,
         "layers": 4,
         "edgeTypes": 4,
-        "cycles": 8,
+        "cycles": 9,
         "score": 24,
         "signals": {}
       },
@@ -11483,16 +12184,16 @@
       "centrality": {
         "degree": 3,
         "betweenness": 0.0,
-        "pagerank": 0.006565
+        "pagerank": 0.006532
       },
       "integration": {
         "score": 7,
         "degree": 3,
         "betweenness": 0.0,
-        "pagerank": 0.006565,
+        "pagerank": 0.006532,
         "layersSpanned": 4,
         "edgeTypes": 4,
-        "cycles": 8
+        "cycles": 9
       },
       "core": false,
       "pivotal": false
@@ -11623,13 +12324,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003481
+        "pagerank": 0.003472
       },
       "integration": {
         "score": 6,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003481,
+        "pagerank": 0.003472,
         "layersSpanned": 5,
         "edgeTypes": 1,
         "cycles": 0
@@ -11852,14 +12553,14 @@
       },
       "centrality": {
         "degree": 4,
-        "betweenness": 0.014157,
-        "pagerank": 0.007937
+        "betweenness": 0.01406,
+        "pagerank": 0.007896
       },
       "integration": {
         "score": 10,
         "degree": 4,
-        "betweenness": 0.014157,
-        "pagerank": 0.007937,
+        "betweenness": 0.01406,
+        "pagerank": 0.007896,
         "layersSpanned": 6,
         "edgeTypes": 3,
         "cycles": 0
@@ -12002,13 +12703,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.008092
+        "pagerank": 0.008047
       },
       "integration": {
         "score": 5,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.008092,
+        "pagerank": 0.008047,
         "layersSpanned": 3,
         "edgeTypes": 1,
         "cycles": 0
@@ -12231,14 +12932,14 @@
       },
       "centrality": {
         "degree": 6,
-        "betweenness": 0.034138,
-        "pagerank": 0.014778
+        "betweenness": 0.034085,
+        "pagerank": 0.014677
       },
       "integration": {
         "score": 12,
         "degree": 6,
-        "betweenness": 0.034138,
-        "pagerank": 0.014778,
+        "betweenness": 0.034085,
+        "pagerank": 0.014677,
         "layersSpanned": 6,
         "edgeTypes": 3,
         "cycles": 0
@@ -12424,14 +13125,14 @@
       },
       "centrality": {
         "degree": 2,
-        "betweenness": 0.006705,
-        "pagerank": 0.003481
+        "betweenness": 0.006697,
+        "pagerank": 0.003472
       },
       "integration": {
         "score": 7,
         "degree": 2,
-        "betweenness": 0.006705,
-        "pagerank": 0.003481,
+        "betweenness": 0.006697,
+        "pagerank": 0.003472,
         "layersSpanned": 5,
         "edgeTypes": 2,
         "cycles": 0
@@ -12617,13 +13318,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.000309,
-        "pagerank": 0.00496
+        "pagerank": 0.004948
       },
       "integration": {
         "score": 5,
         "degree": 2,
         "betweenness": 0.000309,
-        "pagerank": 0.00496,
+        "pagerank": 0.004948,
         "layersSpanned": 3,
         "edgeTypes": 2,
         "cycles": 0
@@ -12821,14 +13522,14 @@
       },
       "centrality": {
         "degree": 4,
-        "betweenness": 0.000241,
-        "pagerank": 0.01461
+        "betweenness": 0.000231,
+        "pagerank": 0.014523
       },
       "integration": {
         "score": 9,
         "degree": 4,
-        "betweenness": 0.000241,
-        "pagerank": 0.01461,
+        "betweenness": 0.000231,
+        "pagerank": 0.014523,
         "layersSpanned": 5,
         "edgeTypes": 1,
         "cycles": 0
@@ -13056,13 +13757,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.0087
+        "pagerank": 0.008698
       },
       "integration": {
         "score": 6,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.0087,
+        "pagerank": 0.008698,
         "layersSpanned": 4,
         "edgeTypes": 1,
         "cycles": 0
@@ -13273,14 +13974,14 @@
       },
       "centrality": {
         "degree": 2,
-        "betweenness": 0.000225,
-        "pagerank": 0.0053
+        "betweenness": 0.00022,
+        "pagerank": 0.005277
       },
       "integration": {
         "score": 5,
         "degree": 2,
-        "betweenness": 0.000225,
-        "pagerank": 0.0053,
+        "betweenness": 0.00022,
+        "pagerank": 0.005277,
         "layersSpanned": 3,
         "edgeTypes": 1,
         "cycles": 0
@@ -13356,7 +14057,7 @@
         "reach": 6,
         "layers": 6,
         "edgeTypes": 6,
-        "cycles": 20,
+        "cycles": 21,
         "score": 34,
         "signals": {}
       },
@@ -13493,17 +14194,17 @@
       },
       "centrality": {
         "degree": 8,
-        "betweenness": 0.014038,
-        "pagerank": 0.02367
+        "betweenness": 0.011831,
+        "pagerank": 0.0246
       },
       "integration": {
         "score": 16,
         "degree": 8,
-        "betweenness": 0.014038,
-        "pagerank": 0.02367,
+        "betweenness": 0.011831,
+        "pagerank": 0.0246,
         "layersSpanned": 7,
         "edgeTypes": 8,
-        "cycles": 20
+        "cycles": 21
       },
       "core": true,
       "pivotal": true
@@ -13536,26 +14237,36 @@
       "criticalityWhy": {
         "irreplaceability": {
           "ru": "Облаков несколько, но вертикаль есть только здесь",
-          "en": "There are several clouds, but only this one owns the whole vertical"
+          "en": "The only cloud selling capacity on its own tensor processor"
         },
         "lockInDepth": {
           "ru": "Задевает чипы, облака, софт и модели",
-          "en": "Reaches chips, clouds, software and models"
+          "en": "The processors run on the site's own architecture rather than a common one"
         },
         "timeToReplace": {
           "ru": "Воспроизвести вертикаль — больше трёх лет",
-          "en": "Reproducing the vertical — more than three years"
+          "en": "The top of the stack is open — PyTorch, JAX and vLLM — so leaving does not require rewriting the model"
         },
         "concentration": null
       },
+      "criticalityBasis": {
+        "factorsUsed": 3,
+        "factors": [
+          "irreplaceability",
+          "lock_in_depth",
+          "time_to_replace"
+        ],
+        "renormalized": true
+      },
       "gravity": {
-        "reach": 0,
-        "layers": 0,
-        "edgeTypes": 0,
+        "reach": 4,
+        "layers": 2,
+        "edgeTypes": 2,
         "cycles": 0,
-        "score": 0,
+        "score": 12,
         "signals": {}
       },
+      "domain": "cloud.google.com",
       "oneLiner": {
         "ru": "Облако Google: единственное, где передовую лабораторию можно обучать на чипах самого владельца.",
         "en": "Google's cloud: the only one where a frontier lab can train on the owner's own silicon."
@@ -13582,12 +14293,68 @@
       "publicPrivate": "public",
       "geo": "US",
       "founded": "2008",
-      "revenueUsdB": 50.0,
+      "revenueUsdB": null,
       "techNodes": [],
+      "domains": [
+        "cloud.google.com"
+      ],
+      "cik": null,
       "firstSeen": "2026-08",
       "lastConfirmed": "2026-08",
       "stale": false,
       "sources": [
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "Google Cloud TPU",
+          "url": "https://cloud.google.com/tpu",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "TPUs are powered by Google Cloud's AI Hypercomputer, a groundbreaking architecture that brings",
+          "confidence": 0.975,
+          "self": "google-cloud",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "Google Cloud TPU",
+          "url": "https://cloud.google.com/tpu",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "high performance support for PyTorch and JAX, and support the vLLM engine for fast inference",
+          "confidence": 0.975,
+          "self": "google-cloud",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "Google Cloud TPU",
+          "url": "https://cloud.google.com/tpu",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Manage and scale these deployments reliably across global clusters with Google Kubernetes Engine (GKE).",
+          "confidence": 0.975,
+          "self": "google-cloud",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "Google Cloud TPU",
+          "url": "https://cloud.google.com/tpu",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "custom-designed with open software to power the entire AI lifecycle—from frontier training and large-scale inference",
+          "confidence": 0.975,
+          "self": "google-cloud",
+          "counter": false
+        },
         {
           "tier": 2,
           "type": "sec_filing",
@@ -13628,46 +14395,34 @@
           "self": null
         }
       ],
-      "domains": [
-        "cloud.google.com"
-      ],
-      "cik": null,
       "sourcing": {
-        "total": 3,
-        "selfSourced": 0,
+        "total": 7,
+        "selfSourced": 4,
         "byTier": {
+          "1": 4,
           "2": 3
         }
       },
-      "criticalityBasis": {
-        "factorsUsed": 3,
-        "factors": [
-          "irreplaceability",
-          "lock_in_depth",
-          "time_to_replace"
-        ],
-        "renormalized": true
-      },
       "description": {
-        "ru": "Продаёт аренду вычислений, хранилища и готовых моделей; отличается от соседей тем, что сдаёт ещё и собственный ускоритель, а не только чужие. Деньги — почасовая аренда и многолетние контракты; законтрактованная, но не выставленная выручка копится и видна отдельной строкой. В этой карте это единственное облако, где арендатору доступны обе платформы сразу, поэтому через него проходят лаборатории, которым нужен второй источник вычислений. Выручка облака выросла на $15,5 млрд за 2025 год, а незакрытых обязательств по контрактам накоплено $242,8 млрд. Крупные лаборатории берут здесь мощности TPU целыми гигаваттами — это и есть проверка того, что альтернативный ускоритель годится для передового обучения.",
-        "en": "Sells rented compute, storage and ready-made models, and differs from its neighbours in also renting out an accelerator of its own rather than only other people's. The money is hourly rental plus multi-year contracts; revenue that is contracted but not yet billed accumulates and is reported as its own line. On this map it is the only cloud where a tenant can reach both platforms, which is why labs needing a second source of compute pass through it. Cloud revenues increased $15.5 billion in 2025, and $242.8 billion of remaining performance obligations has accumulated. Large labs take TPU capacity here by the gigawatt — which is the real test of whether the alternative accelerator is fit for frontier training."
+        "ru": "Google Cloud продаёт вычисления на собственных тензорных процессорах, а не только на покупных ускорителях. Свою архитектуру облако описывает как AI Hypercomputer, на которой эти процессоры и работают. Стек заявлен открытым сверху: поддержаны PyTorch и JAX, а для быстрого вывода — vLLM. Развёртывания предлагается вести кластерами через собственный управляемый оркестратор облака. Отсюда положение узла на карте: это единственное облако, где лаборатория может обучаться на кремнии самого владельца площадки.",
+        "en": "Google Cloud sells compute on its own tensor processors, not only on bought-in accelerators. It describes the architecture those processors run on as the AI Hypercomputer. The stack is stated open at the top: PyTorch and JAX are supported, and vLLM for fast inference. Deployments are offered as clusters through the cloud's own managed orchestrator. Hence the node's place on the map: it is the only cloud where a laboratory can train on the silicon of the site's own owner."
       },
       "centrality": {
-        "degree": 5,
-        "betweenness": 0.00194,
-        "pagerank": 0.005656
+        "degree": 9,
+        "betweenness": 0.006127,
+        "pagerank": 0.00797
       },
       "integration": {
-        "score": 7,
-        "degree": 5,
-        "betweenness": 0.00194,
-        "pagerank": 0.005656,
-        "layersSpanned": 3,
-        "edgeTypes": 5,
+        "score": 12,
+        "degree": 9,
+        "betweenness": 0.006127,
+        "pagerank": 0.00797,
+        "layersSpanned": 5,
+        "edgeTypes": 7,
         "cycles": 0
       },
-      "core": false,
-      "pivotal": false
+      "core": true,
+      "pivotal": true
     },
     {
       "id": "google-deepmind",
@@ -13847,14 +14602,14 @@
       },
       "centrality": {
         "degree": 3,
-        "betweenness": 0.001899,
-        "pagerank": 0.003481
+        "betweenness": 0.001016,
+        "pagerank": 0.003472
       },
       "integration": {
         "score": 9,
         "degree": 3,
-        "betweenness": 0.001899,
-        "pagerank": 0.003481,
+        "betweenness": 0.001016,
+        "pagerank": 0.003472,
         "layersSpanned": 6,
         "edgeTypes": 3,
         "cycles": 0
@@ -13918,7 +14673,7 @@
         "reach": 5,
         "layers": 4,
         "edgeTypes": 3,
-        "cycles": 8,
+        "cycles": 9,
         "score": 27,
         "signals": {}
       },
@@ -14079,16 +14834,16 @@
       "centrality": {
         "degree": 5,
         "betweenness": 0.000476,
-        "pagerank": 0.006565
+        "pagerank": 0.006532
       },
       "integration": {
         "score": 8,
         "degree": 5,
         "betweenness": 0.000476,
-        "pagerank": 0.006565,
+        "pagerank": 0.006532,
         "layersSpanned": 4,
         "edgeTypes": 3,
-        "cycles": 8
+        "cycles": 9
       },
       "core": false,
       "pivotal": false
@@ -14297,14 +15052,14 @@
       },
       "centrality": {
         "degree": 10,
-        "betweenness": 0.005143,
-        "pagerank": 0.006851
+        "betweenness": 0.005229,
+        "pagerank": 0.006617
       },
       "integration": {
         "score": 16,
         "degree": 10,
-        "betweenness": 0.005143,
-        "pagerank": 0.006851,
+        "betweenness": 0.005229,
+        "pagerank": 0.006617,
         "layersSpanned": 7,
         "edgeTypes": 9,
         "cycles": 52
@@ -14542,14 +15297,14 @@
       },
       "centrality": {
         "degree": 6,
-        "betweenness": 0.011959,
-        "pagerank": 0.006574
+        "betweenness": 0.011994,
+        "pagerank": 0.006553
       },
       "integration": {
         "score": 12,
         "degree": 6,
-        "betweenness": 0.011959,
-        "pagerank": 0.006574,
+        "betweenness": 0.011994,
+        "pagerank": 0.006553,
         "layersSpanned": 7,
         "edgeTypes": 5,
         "cycles": 0
@@ -14775,13 +15530,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.00923
+        "pagerank": 0.009231
       },
       "integration": {
         "score": 5,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.00923,
+        "pagerank": 0.009231,
         "layersSpanned": 3,
         "edgeTypes": 2,
         "cycles": 0
@@ -14838,11 +15593,11 @@
         "renormalized": true
       },
       "gravity": {
-        "reach": 3,
+        "reach": 4,
         "layers": 4,
-        "edgeTypes": 3,
+        "edgeTypes": 4,
         "cycles": 0,
-        "score": 14,
+        "score": 16,
         "signals": {}
       },
       "domain": null,
@@ -14924,17 +15679,17 @@
         "en": "The second training library: the same arrays as NumPy plus function transformations — differentiation, compilation and parallelisation across many devices. It earns nothing and is open source, developed by a team inside the owner of a rival accelerator, which is the point of its existence. On this map it matters as a second path: models that need a chip other than the one at the centre of the map are trained on it. Underneath sits the XLA compiler, which maps the computation onto TPUs rather than only onto GPUs. A minority of research is written in it, but it is what makes the alternative accelerator usable for frontier training."
       },
       "centrality": {
-        "degree": 3,
-        "betweenness": 0.000169,
-        "pagerank": 0.003481
+        "degree": 4,
+        "betweenness": 0.000176,
+        "pagerank": 0.003472
       },
       "integration": {
         "score": 7,
-        "degree": 3,
-        "betweenness": 0.000169,
-        "pagerank": 0.003481,
+        "degree": 4,
+        "betweenness": 0.000176,
+        "pagerank": 0.003472,
         "layersSpanned": 4,
-        "edgeTypes": 3,
+        "edgeTypes": 4,
         "cycles": 0
       },
       "core": false,
@@ -14953,40 +15708,44 @@
         {
           "layer": "L4",
           "primary": true,
-          "criticality": 32
+          "criticality": 62
         }
       ],
       "primaryLayer": "L4",
-      "criticality": 32,
+      "criticality": 62,
       "criticalityFactors": {
-        "irreplaceability": 35,
-        "lockInDepth": 30,
-        "timeToReplace": 30,
-        "concentration": null
+        "irreplaceability": 58,
+        "lockInDepth": 66,
+        "timeToReplace": 64,
+        "concentration": 58
       },
       "criticalityWhy": {
         "irreplaceability": {
-          "ru": "Поставщиков флеш-памяти несколько",
-          "en": "There are several flash-memory suppliers"
+          "ru": "Один из крупнейших производителей памяти NAND, но по собственному счёту — не единственный",
+          "en": "One of the largest NAND manufacturers, but by its own count not the only one"
         },
         "lockInDepth": {
-          "ru": "Задевает только хранение",
-          "en": "Reaches storage only"
+          "ru": "Производство ведётся совместным предприятием, и обе стороны связаны его соглашениями",
+          "en": "Manufacturing runs through a joint venture and both sides are bound by its agreements"
         },
         "timeToReplace": {
-          "ru": "Смена поставщика — месяцы",
-          "en": "Switching supplier — months"
+          "ru": "Технология ведётся от изобретения памяти NAND в 1987 году и наращивается трёхмерной укладкой",
+          "en": "The technology runs from the invention of NAND flash in 1987 and grows by three-dimensional stacking"
         },
-        "concentration": null
+        "concentration": {
+          "ru": "Один из крупнейших производителей памяти NAND по собственному описанию",
+          "en": "One of the largest NAND flash manufacturers by its own description"
+        }
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
         "reach": 3,
@@ -15034,6 +15793,58 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "About KIOXIA",
+          "url": "https://americas.kioxia.com/en-us/about.html",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "a leading global supplier of flash memory and solid state drives (SSDs)",
+          "confidence": 0.975,
+          "self": "kioxia",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "About KIOXIA",
+          "url": "https://americas.kioxia.com/en-us/about.html",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "In 1987, KIOXIA invented the world's first NAND flash memory",
+          "confidence": 0.975,
+          "self": "kioxia",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "About KIOXIA",
+          "url": "https://americas.kioxia.com/en-us/about.html",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "3D flash memory BiCS FLASH™ technology that delivers even greater storage capacity",
+          "confidence": 0.975,
+          "self": "kioxia",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "About KIOXIA",
+          "url": "https://americas.kioxia.com/en-us/about.html",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "KIOXIA Group is one of the largest manufacturers of NAND flash memory",
+          "confidence": 0.975,
+          "self": "kioxia",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "NVIDIA 10-K FY2026",
@@ -15048,26 +15859,27 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 5,
+        "selfSourced": 4,
         "byTier": {
+          "1": 4,
           "2": 1
         }
       },
       "description": {
-        "ru": "Продаёт флеш-память для дисков, на которых хранятся наборы данных обучения и контрольные точки моделей. Деньги — продажа микросхем по объёму, конкуренция ценовая, квалификация проще, чем у быстрой памяти рядом с кристаллом. В карте компания обозначает границу: здесь заканчивается дефицитная часть цепочки и начинается обычная закупка, где поставщика можно заменить без перепроектирования системы. Ценность в объёме, а не в незаменимости.",
-        "en": "Sells flash memory for the drives holding training datasets and model checkpoints. The money is volume chip sales, competition is on price, and qualification is simpler than for the fast memory beside the die. On the map the company marks a boundary: this is where the scarce part of the chain ends and ordinary procurement begins, with suppliers replaceable without redesigning the system. The value is volume, not irreplaceability."
+        "ru": "Kioxia поставляет флеш-память и твердотельные накопители и относит себя к крупнейшим производителям памяти NAND. Происхождение технологии компания записывает за собой прямо: в 1987 году она изобрела первую в мире память NAND, не требующую источника питания. Сегодняшняя её линейка строится на трёхмерной памяти BiCS FLASH, дающей большую ёмкость. На карте узел стоит в слое хранения, а не памяти для обучения: он даёт ёмкость под данные, а не полосу под ускоритель. Производство он ведёт совместно с Sandisk через предприятие Flash Ventures.",
+        "en": "Kioxia supplies flash memory and solid state drives and places itself among the largest NAND manufacturers. It records the origin of the technology plainly: in 1987 it invented the world's first NAND flash memory that requires no power source. Its present line rests on three-dimensional BiCS FLASH memory delivering greater capacity. On the map the node sits in the storage layer rather than the training-memory one: it gives capacity for data, not bandwidth for an accelerator. It manufactures jointly with Sandisk through the Flash Ventures venture."
       },
       "centrality": {
         "degree": 3,
         "betweenness": 0.0,
-        "pagerank": 0.043768
+        "pagerank": 0.043545
       },
       "integration": {
         "score": 11,
         "degree": 3,
         "betweenness": 0.0,
-        "pagerank": 0.043768,
+        "pagerank": 0.043545,
         "layersSpanned": 4,
         "edgeTypes": 3,
         "cycles": 2
@@ -15223,13 +16035,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.004989
+        "pagerank": 0.00499
       },
       "integration": {
         "score": 3,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.004989,
+        "pagerank": 0.00499,
         "layersSpanned": 2,
         "edgeTypes": 1,
         "cycles": 0
@@ -15291,11 +16103,11 @@
         "renormalized": false
       },
       "gravity": {
-        "reach": 4,
+        "reach": 5,
         "layers": 8,
         "edgeTypes": 2,
         "cycles": 8,
-        "score": 31,
+        "score": 33,
         "signals": {}
       },
       "domain": null,
@@ -15429,15 +16241,15 @@
         "en": "Kubernetes is an open source system that automates deployment, scaling and management of containerized applications. Google open sourced the project in 2014 and it has lived under the Cloud Native Computing Foundation since, with graduated status. The project states its own origin plainly: it builds on a decade and a half of Google experience running production workloads. For the map it is the layer everything else standardizes on: training and inference stacks ride on top of it rather than beside it. The node has no revenue of its own — it is not a company but a standard with a steering committee."
       },
       "centrality": {
-        "degree": 4,
-        "betweenness": 0.000363,
-        "pagerank": 0.011285
+        "degree": 5,
+        "betweenness": 0.001766,
+        "pagerank": 0.014623
       },
       "integration": {
         "score": 12,
-        "degree": 4,
-        "betweenness": 0.000363,
-        "pagerank": 0.011285,
+        "degree": 5,
+        "betweenness": 0.001766,
+        "pagerank": 0.014623,
         "layersSpanned": 8,
         "edgeTypes": 2,
         "cycles": 8
@@ -15592,13 +16404,13 @@
       "centrality": {
         "degree": 4,
         "betweenness": 0.001173,
-        "pagerank": 0.01522
+        "pagerank": 0.015169
       },
       "integration": {
         "score": 7,
         "degree": 4,
         "betweenness": 0.001173,
-        "pagerank": 0.01522,
+        "pagerank": 0.015169,
         "layersSpanned": 3,
         "edgeTypes": 1,
         "cycles": 0
@@ -15785,13 +16597,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003481
+        "pagerank": 0.003472
       },
       "integration": {
         "score": 5,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003481,
+        "pagerank": 0.003472,
         "layersSpanned": 4,
         "edgeTypes": 2,
         "cycles": 0
@@ -15812,40 +16624,44 @@
         {
           "layer": "L14",
           "primary": true,
-          "criticality": 30
+          "criticality": 35
         }
       ],
       "primaryLayer": "L14",
-      "criticality": 30,
+      "criticality": 35,
       "criticalityFactors": {
-        "irreplaceability": 25,
+        "irreplaceability": 38,
         "lockInDepth": 35,
-        "timeToReplace": 30,
-        "concentration": null
+        "timeToReplace": 32,
+        "concentration": 36
       },
       "criticalityWhy": {
         "irreplaceability": {
-          "ru": "Венчурных фондов такого класса несколько",
-          "en": "Several venture funds of this class exist"
+          "ru": "Венчурный капитал в этот слой несут десятки фондов сопоставимого размера",
+          "en": "Venture capital enters this layer from dozens of comparable funds"
         },
         "lockInDepth": {
-          "ru": "Задевает приложения",
-          "en": "Reaches applications"
+          "ru": "Участие идёт от посевной стадии до серии F, но технической привязки не создаёт",
+          "en": "Participation runs from seed to Series F but creates no technical tie"
         },
         "timeToReplace": {
-          "ru": "Найти замену капиталу — месяцы",
-          "en": "Finding replacement capital — months"
+          "ru": "Источник капитала меняется в пределах одного раунда",
+          "en": "A source of capital changes inside a single round"
         },
-        "concentration": null
+        "concentration": {
+          "ru": "Более двадцати лет на рынке, где действуют десятки сопоставимых фондов",
+          "en": "Over twenty years in a market where dozens of comparable funds operate"
+        }
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
         "reach": 1,
@@ -15893,6 +16709,58 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Lightspeed — About",
+          "url": "https://lsvp.com/about/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "stand behind our companies with high conviction from Seed to Series F and beyond",
+          "confidence": 0.975,
+          "self": "lightspeed",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Lightspeed — About",
+          "url": "https://lsvp.com/about/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "For over twenty years Lightspeed has been the first investor and an early backer",
+          "confidence": 0.975,
+          "self": "lightspeed",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Lightspeed — About",
+          "url": "https://lsvp.com/about/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "We pursue those opportunities based on their merits regardless of where the founder resides.",
+          "confidence": 0.975,
+          "self": "lightspeed",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Lightspeed — About",
+          "url": "https://lsvp.com/about/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "We believe in investing behind bold ideas and the founders brave enough to build them.",
+          "confidence": 0.975,
+          "self": "lightspeed",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "Amazon 10-K 2025",
@@ -15907,26 +16775,27 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 5,
+        "selfSourced": 4,
         "byTier": {
+          "1": 4,
           "2": 1
         }
       },
       "description": {
-        "ru": "Ещё один венчурный фонд в раундах лабораторий, с той же моделью управления и той же ролью. Присутствие в карте нескольких таких фондов рядом — это и есть содержательный факт. Оно показывает, что участие любого из них заменимо, и потому влияние на решения лаборатории ограничено. Отличие от инфраструктурного капитала принципиальное: тот финансирует то, что стоит на земле, эти — право участвовать в следующем раунде.",
-        "en": "Another venture fund in labs' rounds, with the same management model and the same role. Several such funds appearing side by side on the map is itself the substantive fact. It shows that any one of them is replaceable, so influence over a lab's decisions is limited. The difference from infrastructure capital is fundamental: that finances what stands on the ground, these finance the right to join the next round."
+        "ru": "Lightspeed Venture Partners вкладывается в компании от посевной стадии до серии F и дальше. Свою позицию фирма описывает как высокую убеждённость: она стоит за своими компаниями от начала и до поздних раундов. Более двадцати лет она была первым инвестором и ранним вкладчиком в компании, которые сама называет одними из самых инновационных в мире. Отбор она формулирует независимым от географии — по существу возможности, а не по месту жительства основателя. На карте узел стоит в слое капитала рядом с другими фондами, финансирующими спрос на вычисления.",
+        "en": "Lightspeed Venture Partners invests in companies from seed to Series F and beyond. It describes its own stance as high conviction: it stands behind its companies from the start through late rounds. For over twenty years it has been the first investor and an early backer of companies it calls some of the most innovative in the world. It frames selection as independent of geography — on the merits of the opportunity rather than where the founder lives. On the map the node sits in the capital layer beside other funds financing demand for compute."
       },
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.004177
+        "pagerank": 0.004157
       },
       "integration": {
         "score": 3,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.004177,
+        "pagerank": 0.004157,
         "layersSpanned": 2,
         "edgeTypes": 1,
         "cycles": 0
@@ -16055,13 +16924,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.00496
+        "pagerank": 0.004948
       },
       "integration": {
         "score": 3,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.00496,
+        "pagerank": 0.004948,
         "layersSpanned": 2,
         "edgeTypes": 1,
         "cycles": 0
@@ -16221,13 +17090,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003481
+        "pagerank": 0.003472
       },
       "integration": {
         "score": 5,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003481,
+        "pagerank": 0.003472,
         "layersSpanned": 4,
         "edgeTypes": 1,
         "cycles": 0
@@ -16447,14 +17316,14 @@
       },
       "centrality": {
         "degree": 6,
-        "betweenness": 0.000617,
-        "pagerank": 0.006772
+        "betweenness": 0.0006,
+        "pagerank": 0.006488
       },
       "integration": {
         "score": 12,
         "degree": 6,
-        "betweenness": 0.000617,
-        "pagerank": 0.006772,
+        "betweenness": 0.0006,
+        "pagerank": 0.006488,
         "layersSpanned": 6,
         "edgeTypes": 6,
         "cycles": 20
@@ -16583,13 +17452,13 @@
       "centrality": {
         "degree": 3,
         "betweenness": 0.000411,
-        "pagerank": 0.008069
+        "pagerank": 0.008025
       },
       "integration": {
         "score": 6,
         "degree": 3,
         "betweenness": 0.000411,
-        "pagerank": 0.008069,
+        "pagerank": 0.008025,
         "layersSpanned": 3,
         "edgeTypes": 3,
         "cycles": 0
@@ -16654,7 +17523,7 @@
         "reach": 6,
         "layers": 6,
         "edgeTypes": 3,
-        "cycles": 14,
+        "cycles": 15,
         "score": 32,
         "signals": {}
       },
@@ -16801,17 +17670,17 @@
       },
       "centrality": {
         "degree": 6,
-        "betweenness": 0.003668,
-        "pagerank": 0.006565
+        "betweenness": 0.00364,
+        "pagerank": 0.006532
       },
       "integration": {
         "score": 11,
         "degree": 6,
-        "betweenness": 0.003668,
-        "pagerank": 0.006565,
+        "betweenness": 0.00364,
+        "pagerank": 0.006532,
         "layersSpanned": 6,
         "edgeTypes": 3,
-        "cycles": 14
+        "cycles": 15
       },
       "core": true,
       "pivotal": true
@@ -17025,14 +17894,14 @@
       },
       "centrality": {
         "degree": 19,
-        "betweenness": 0.090468,
-        "pagerank": 0.007983
+        "betweenness": 0.089303,
+        "pagerank": 0.007842
       },
       "integration": {
-        "score": 25,
+        "score": 24,
         "degree": 19,
-        "betweenness": 0.090468,
-        "pagerank": 0.007983,
+        "betweenness": 0.089303,
+        "pagerank": 0.007842,
         "layersSpanned": 9,
         "edgeTypes": 10,
         "cycles": 43
@@ -17217,14 +18086,14 @@
       },
       "centrality": {
         "degree": 4,
-        "betweenness": 0.013661,
-        "pagerank": 0.009406
+        "betweenness": 0.013578,
+        "pagerank": 0.009387
       },
       "integration": {
         "score": 9,
         "degree": 4,
-        "betweenness": 0.013661,
-        "pagerank": 0.009406,
+        "betweenness": 0.013578,
+        "pagerank": 0.009387,
         "layersSpanned": 6,
         "edgeTypes": 1,
         "cycles": 0
@@ -17423,13 +18292,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.006565
+        "pagerank": 0.006532
       },
       "integration": {
         "score": 5,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.006565,
+        "pagerank": 0.006532,
         "layersSpanned": 4,
         "edgeTypes": 1,
         "cycles": 0
@@ -17629,13 +18498,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.007406
+        "pagerank": 0.007234
       },
       "integration": {
         "score": 5,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.007406,
+        "pagerank": 0.007234,
         "layersSpanned": 3,
         "edgeTypes": 2,
         "cycles": 0
@@ -17790,14 +18659,14 @@
       },
       "centrality": {
         "degree": 3,
-        "betweenness": 0.000481,
-        "pagerank": 0.003905
+        "betweenness": 0.000456,
+        "pagerank": 0.003889
       },
       "integration": {
         "score": 9,
         "degree": 3,
-        "betweenness": 0.000481,
-        "pagerank": 0.003905,
+        "betweenness": 0.000456,
+        "pagerank": 0.003889,
         "layersSpanned": 6,
         "edgeTypes": 4,
         "cycles": 0
@@ -18010,13 +18879,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.007956
+        "pagerank": 0.007954
       },
       "integration": {
         "score": 5,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.007956,
+        "pagerank": 0.007954,
         "layersSpanned": 3,
         "edgeTypes": 2,
         "cycles": 0
@@ -18205,13 +19074,13 @@
       "centrality": {
         "degree": 4,
         "betweenness": 5.9e-05,
-        "pagerank": 0.012529
+        "pagerank": 0.012292
       },
       "integration": {
         "score": 8,
         "degree": 4,
         "betweenness": 5.9e-05,
-        "pagerank": 0.012529,
+        "pagerank": 0.012292,
         "layersSpanned": 4,
         "edgeTypes": 3,
         "cycles": 0
@@ -18366,13 +19235,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.003905
+        "pagerank": 0.003889
       },
       "integration": {
         "score": 8,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.003905,
+        "pagerank": 0.003889,
         "layersSpanned": 6,
         "edgeTypes": 2,
         "cycles": 0
@@ -18560,13 +19429,13 @@
       "centrality": {
         "degree": 3,
         "betweenness": 0.000143,
-        "pagerank": 0.005708
+        "pagerank": 0.005664
       },
       "integration": {
         "score": 10,
         "degree": 3,
         "betweenness": 0.000143,
-        "pagerank": 0.005708,
+        "pagerank": 0.005664,
         "layersSpanned": 7,
         "edgeTypes": 4,
         "cycles": 6
@@ -18641,7 +19510,7 @@
         "reach": 77,
         "layers": 15,
         "edgeTypes": 29,
-        "cycles": 194,
+        "cycles": 218,
         "score": 97,
         "signals": {}
       },
@@ -18817,17 +19686,17 @@
       },
       "centrality": {
         "degree": 77,
-        "betweenness": 0.80405,
-        "pagerank": 0.137889
+        "betweenness": 0.799017,
+        "pagerank": 0.136785
       },
       "integration": {
         "score": 100,
         "degree": 77,
-        "betweenness": 0.80405,
-        "pagerank": 0.137889,
+        "betweenness": 0.799017,
+        "pagerank": 0.136785,
         "layersSpanned": 15,
         "edgeTypes": 29,
-        "cycles": 194
+        "cycles": 218
       },
       "core": true,
       "pivotal": true
@@ -19023,13 +19892,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 8.8e-05,
-        "pagerank": 0.013949
+        "pagerank": 0.013868
       },
       "integration": {
         "score": 6,
         "degree": 2,
         "betweenness": 8.8e-05,
-        "pagerank": 0.013949,
+        "pagerank": 0.013868,
         "layersSpanned": 3,
         "edgeTypes": 1,
         "cycles": 0
@@ -19307,14 +20176,14 @@
       },
       "centrality": {
         "degree": 12,
-        "betweenness": 0.060503,
-        "pagerank": 0.012957
+        "betweenness": 0.060444,
+        "pagerank": 0.012789
       },
       "integration": {
         "score": 22,
         "degree": 12,
-        "betweenness": 0.060503,
-        "pagerank": 0.012957,
+        "betweenness": 0.060444,
+        "pagerank": 0.012789,
         "layersSpanned": 8,
         "edgeTypes": 12,
         "cycles": 62
@@ -19500,13 +20369,13 @@
       "centrality": {
         "degree": 6,
         "betweenness": 0.020021,
-        "pagerank": 0.008069
+        "pagerank": 0.008025
       },
       "integration": {
         "score": 14,
         "degree": 6,
         "betweenness": 0.020021,
-        "pagerank": 0.008069,
+        "pagerank": 0.008025,
         "layersSpanned": 8,
         "edgeTypes": 6,
         "cycles": 13
@@ -19567,11 +20436,11 @@
         "renormalized": false
       },
       "gravity": {
-        "reach": 7,
-        "layers": 5,
+        "reach": 8,
+        "layers": 6,
         "edgeTypes": 8,
         "cycles": 42,
-        "score": 36,
+        "score": 39,
         "signals": {}
       },
       "domain": null,
@@ -19705,16 +20574,16 @@
         "en": "PyTorch is the library in which neural networks are described and trained. Its own README names two pillars: tensor computation with GPU acceleration and a tape-based autograd system. It takes no money: this is an open project living on contributions from companies that need a shared layer under their own hardware. Building with CUDA support is described in its own instructions as a separate choice, so the tie to accelerators runs through a separate layer rather than being wired in. A set of adjacent projects has gathered around the library, among them vLLM, DeepSpeed and Ray."
       },
       "centrality": {
-        "degree": 8,
-        "betweenness": 0.005065,
-        "pagerank": 0.005931
+        "degree": 9,
+        "betweenness": 0.006741,
+        "pagerank": 0.005785
       },
       "integration": {
-        "score": 14,
-        "degree": 8,
-        "betweenness": 0.005065,
-        "pagerank": 0.005931,
-        "layersSpanned": 6,
+        "score": 15,
+        "degree": 9,
+        "betweenness": 0.006741,
+        "pagerank": 0.005785,
+        "layersSpanned": 7,
         "edgeTypes": 8,
         "cycles": 42
       },
@@ -19842,13 +20711,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.006565
+        "pagerank": 0.006532
       },
       "integration": {
         "score": 4,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.006565,
+        "pagerank": 0.006532,
         "layersSpanned": 3,
         "edgeTypes": 1,
         "cycles": 0
@@ -20037,13 +20906,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.003481
+        "pagerank": 0.003472
       },
       "integration": {
         "score": 6,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.003481,
+        "pagerank": 0.003472,
         "layersSpanned": 4,
         "edgeTypes": 2,
         "cycles": 0
@@ -20185,13 +21054,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003481
+        "pagerank": 0.003472
       },
       "integration": {
         "score": 5,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003481,
+        "pagerank": 0.003472,
         "layersSpanned": 4,
         "edgeTypes": 1,
         "cycles": 0
@@ -20377,13 +21246,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003481
+        "pagerank": 0.003472
       },
       "integration": {
         "score": 5,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003481,
+        "pagerank": 0.003472,
         "layersSpanned": 4,
         "edgeTypes": 1,
         "cycles": 0
@@ -20453,7 +21322,7 @@
         "reach": 7,
         "layers": 7,
         "edgeTypes": 4,
-        "cycles": 19,
+        "cycles": 25,
         "score": 36,
         "signals": {}
       },
@@ -20587,17 +21456,17 @@
       },
       "centrality": {
         "degree": 7,
-        "betweenness": 0.021308,
-        "pagerank": 0.006565
+        "betweenness": 0.021265,
+        "pagerank": 0.006532
       },
       "integration": {
         "score": 13,
         "degree": 7,
-        "betweenness": 0.021308,
-        "pagerank": 0.006565,
+        "betweenness": 0.021265,
+        "pagerank": 0.006532,
         "layersSpanned": 7,
         "edgeTypes": 4,
-        "cycles": 19
+        "cycles": 25
       },
       "core": true,
       "pivotal": true
@@ -20819,13 +21688,13 @@
       "centrality": {
         "degree": 5,
         "betweenness": 0.000281,
-        "pagerank": 0.043768
+        "pagerank": 0.043545
       },
       "integration": {
         "score": 13,
         "degree": 5,
         "betweenness": 0.000281,
-        "pagerank": 0.043768,
+        "pagerank": 0.043545,
         "layersSpanned": 5,
         "edgeTypes": 3,
         "cycles": 5
@@ -21011,14 +21880,14 @@
       },
       "centrality": {
         "degree": 2,
-        "betweenness": 0.000554,
-        "pagerank": 0.007278
+        "betweenness": 0.000547,
+        "pagerank": 0.007245
       },
       "integration": {
         "score": 5,
         "degree": 2,
-        "betweenness": 0.000554,
-        "pagerank": 0.007278,
+        "betweenness": 0.000547,
+        "pagerank": 0.007245,
         "layersSpanned": 3,
         "edgeTypes": 1,
         "cycles": 0
@@ -21217,13 +22086,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003481
+        "pagerank": 0.003472
       },
       "integration": {
         "score": 5,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003481,
+        "pagerank": 0.003472,
         "layersSpanned": 4,
         "edgeTypes": 1,
         "cycles": 0
@@ -21352,13 +22221,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.004705
+        "pagerank": 0.00468
       },
       "integration": {
         "score": 3,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.004705,
+        "pagerank": 0.00468,
         "layersSpanned": 2,
         "edgeTypes": 1,
         "cycles": 0
@@ -21500,13 +22369,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.003905
+        "pagerank": 0.003889
       },
       "integration": {
         "score": 8,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.003905,
+        "pagerank": 0.003889,
         "layersSpanned": 6,
         "edgeTypes": 2,
         "cycles": 0
@@ -21718,14 +22587,14 @@
       },
       "centrality": {
         "degree": 8,
-        "betweenness": 0.002548,
-        "pagerank": 0.007991
+        "betweenness": 0.002625,
+        "pagerank": 0.007965
       },
       "integration": {
         "score": 12,
         "degree": 8,
-        "betweenness": 0.002548,
-        "pagerank": 0.007991,
+        "betweenness": 0.002625,
+        "pagerank": 0.007965,
         "layersSpanned": 7,
         "edgeTypes": 4,
         "cycles": 0
@@ -21746,40 +22615,44 @@
         {
           "layer": "L1",
           "primary": true,
-          "criticality": 63
+          "criticality": 85
         }
       ],
       "primaryLayer": "L1",
-      "criticality": 63,
+      "criticality": 85,
       "criticalityFactors": {
-        "irreplaceability": 70,
-        "lockInDepth": 55,
-        "timeToReplace": 65,
-        "concentration": null
+        "irreplaceability": 86,
+        "lockInDepth": 82,
+        "timeToReplace": 88,
+        "concentration": 82
       },
       "criticalityWhy": {
         "irreplaceability": {
-          "ru": "Поставщиков пластин и резиста немного",
-          "en": "There are few wafer and resist suppliers"
+          "ru": "Полупроводниковый кремний стоит первым в её собственном списке электронных материалов",
+          "en": "Semiconductor silicon stands first in its own list of electronics materials"
         },
         "lockInDepth": {
-          "ru": "Задевает сырьё и фабрики",
-          "en": "Reaches raw inputs and fabs"
+          "ru": "Пластина квалифицируется под маршрут фабрики, и смена поставщика означает переквалификацию",
+          "en": "A wafer is qualified against a fab route, and changing supplier means requalification"
         },
         "timeToReplace": {
-          "ru": "Переквалификация материала — год-два",
-          "en": "Requalifying the material — one to two years"
+          "ru": "Компания работает с 16 сентября 1926 года: такую производственную базу воспроизводят десятилетиями",
+          "en": "The company has operated since 16 September 1926: such a base takes decades to reproduce"
         },
-        "concentration": null
+        "concentration": {
+          "ru": "Полупроводниковый кремний назван ею первым продуктом среди электронных материалов",
+          "en": "Semiconductor silicon is named by it as the first product among electronics materials"
+        }
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
         "reach": 2,
@@ -21827,6 +22700,45 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Shin-Etsu Chemical — Company Profile",
+          "url": "https://www.shinetsu.co.jp/en/company/profile/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Date of Establishment September 16, 1926",
+          "confidence": 0.975,
+          "self": "shin-etsu",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Shin-Etsu Chemical — Company Profile",
+          "url": "https://www.shinetsu.co.jp/en/company/profile/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Capital 119,419 million yen Number of Employees Consolidated 27,342",
+          "confidence": 0.975,
+          "self": "shin-etsu",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Shin-Etsu Chemical — Company Profile",
+          "url": "https://www.shinetsu.co.jp/en/company/profile/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Main Products Electronics Materials Semiconductor silicon, Rare earth magnets",
+          "confidence": 0.975,
+          "self": "shin-etsu",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "TSMC 20-F 2025",
@@ -21841,26 +22753,27 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 4,
+        "selfSourced": 3,
         "byTier": {
+          "1": 3,
           "2": 1
         }
       },
       "description": {
-        "ru": "Продаёт расходуемую часть производства: кремниевые пластины и светочувствительные материалы, которые тратятся на каждом чипе, а не служат годами, как станок. Деньги приходят с объёма — цена за пластину невелика, но потребление непрерывно и растёт вместе с выпуском. В карте это самый нижний слой, и риск здесь иного рода: он не про капитальные вложения, а про непрерывность поставки. Экспортные меры на такие материалы уже применялись как политический инструмент, а запас на площадке измеряется неделями.",
-        "en": "Sells the consumable part of manufacturing: silicon wafers and photoresists spent on every chip rather than lasting years like a tool. The money comes from volume — the price per wafer is modest, but consumption is continuous and grows with output. On the map this is the lowest layer, and the risk here is of a different kind: it is about continuity of supply rather than capital. Export measures on such materials have already been used politically, and on-site stock is measured in weeks."
+        "ru": "Shin-Etsu Chemical работает с 16 сентября 1926 года, её капитал составляет 119,419 million yen, в консолидированном периметре 27,342 сотрудника. Основную продукцию компания перечисляет сама, и первым в списке электронных материалов стоит полупроводниковый кремний — то есть пластины, с которых начинается любой чип. Рядом в том же списке идут редкоземельные магниты и материалы для герметизации полупроводников. На карте узел стоит в самом низу стека: без пластины не начинается ни один маршрут. Именно поэтому его молчание было заметнее прочих — профиль стоял на чужой строке.",
+        "en": "Shin-Etsu Chemical has operated since 16 September 1926, its capital is 119,419 million yen and its consolidated headcount is 27,342. It lists its main products itself, and first among electronics materials stands semiconductor silicon — the wafers every chip begins on. Beside them in the same list are rare earth magnets and semiconductor encapsulating materials. On the map the node sits at the very bottom of the stack: no route starts without a wafer. That is why its silence was more conspicuous than others — the profile stood on someone else's line."
       },
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.004989
+        "pagerank": 0.00499
       },
       "integration": {
         "score": 5,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.004989,
+        "pagerank": 0.00499,
         "layersSpanned": 3,
         "edgeTypes": 2,
         "cycles": 0
@@ -22046,13 +22959,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003481
+        "pagerank": 0.003472
       },
       "integration": {
         "score": 5,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003481,
+        "pagerank": 0.003472,
         "layersSpanned": 4,
         "edgeTypes": 1,
         "cycles": 0
@@ -22226,13 +23139,13 @@
       "centrality": {
         "degree": 3,
         "betweenness": 0.0,
-        "pagerank": 0.006565
+        "pagerank": 0.006532
       },
       "integration": {
         "score": 7,
         "degree": 3,
         "betweenness": 0.0,
-        "pagerank": 0.006565,
+        "pagerank": 0.006532,
         "layersSpanned": 4,
         "edgeTypes": 2,
         "cycles": 0
@@ -22431,13 +23344,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.007668
+        "pagerank": 0.007631
       },
       "integration": {
         "score": 4,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.007668,
+        "pagerank": 0.007631,
         "layersSpanned": 2,
         "edgeTypes": 1,
         "cycles": 0
@@ -22623,13 +23536,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.006565
+        "pagerank": 0.006532
       },
       "integration": {
         "score": 5,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.006565,
+        "pagerank": 0.006532,
         "layersSpanned": 4,
         "edgeTypes": 1,
         "cycles": 0
@@ -22830,14 +23743,14 @@
       },
       "centrality": {
         "degree": 5,
-        "betweenness": 0.011333,
-        "pagerank": 0.006565
+        "betweenness": 0.011279,
+        "pagerank": 0.006532
       },
       "integration": {
         "score": 10,
         "degree": 5,
-        "betweenness": 0.011333,
-        "pagerank": 0.006565,
+        "betweenness": 0.011279,
+        "pagerank": 0.006532,
         "layersSpanned": 6,
         "edgeTypes": 3,
         "cycles": 2
@@ -23035,14 +23948,14 @@
       },
       "centrality": {
         "degree": 4,
-        "betweenness": 0.001059,
-        "pagerank": 0.003481
+        "betweenness": 0.001049,
+        "pagerank": 0.003472
       },
       "integration": {
         "score": 9,
         "degree": 4,
-        "betweenness": 0.001059,
-        "pagerank": 0.003481,
+        "betweenness": 0.001049,
+        "pagerank": 0.003472,
         "layersSpanned": 6,
         "edgeTypes": 3,
         "cycles": 0
@@ -23241,14 +24154,14 @@
       },
       "centrality": {
         "degree": 5,
-        "betweenness": 0.0058,
-        "pagerank": 0.01583
+        "betweenness": 0.005795,
+        "pagerank": 0.015743
       },
       "integration": {
         "score": 12,
         "degree": 5,
-        "betweenness": 0.0058,
-        "pagerank": 0.01583,
+        "betweenness": 0.005795,
+        "pagerank": 0.015743,
         "layersSpanned": 7,
         "edgeTypes": 2,
         "cycles": 27
@@ -23436,13 +24349,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 6e-05,
-        "pagerank": 0.008131
+        "pagerank": 0.008099
       },
       "integration": {
         "score": 5,
         "degree": 2,
         "betweenness": 6e-05,
-        "pagerank": 0.008131,
+        "pagerank": 0.008099,
         "layersSpanned": 3,
         "edgeTypes": 1,
         "cycles": 0
@@ -23585,13 +24498,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.018692,
-        "pagerank": 0.003481
+        "pagerank": 0.003472
       },
       "integration": {
         "score": 6,
         "degree": 2,
         "betweenness": 0.018692,
-        "pagerank": 0.003481,
+        "pagerank": 0.003472,
         "layersSpanned": 4,
         "edgeTypes": 2,
         "cycles": 0
@@ -23651,7 +24564,7 @@
         "reach": 3,
         "layers": 5,
         "edgeTypes": 4,
-        "cycles": 10,
+        "cycles": 15,
         "score": 26,
         "signals": {}
       },
@@ -23746,16 +24659,16 @@
       "centrality": {
         "degree": 4,
         "betweenness": 0.001481,
-        "pagerank": 0.006565
+        "pagerank": 0.006532
       },
       "integration": {
         "score": 9,
         "degree": 4,
         "betweenness": 0.001481,
-        "pagerank": 0.006565,
+        "pagerank": 0.006532,
         "layersSpanned": 5,
         "edgeTypes": 4,
-        "cycles": 10
+        "cycles": 15
       },
       "core": false,
       "pivotal": false
@@ -23977,13 +24890,13 @@
       "centrality": {
         "degree": 3,
         "betweenness": 0.000741,
-        "pagerank": 0.013236
+        "pagerank": 0.013185
       },
       "integration": {
         "score": 8,
         "degree": 3,
         "betweenness": 0.000741,
-        "pagerank": 0.013236,
+        "pagerank": 0.013185,
         "layersSpanned": 5,
         "edgeTypes": 1,
         "cycles": 0
@@ -24182,14 +25095,14 @@
       },
       "centrality": {
         "degree": 5,
-        "betweenness": 0.000226,
-        "pagerank": 0.008237
+        "betweenness": 0.000212,
+        "pagerank": 0.008038
       },
       "integration": {
         "score": 8,
         "degree": 5,
-        "betweenness": 0.000226,
-        "pagerank": 0.008237,
+        "betweenness": 0.000212,
+        "pagerank": 0.008038,
         "layersSpanned": 4,
         "edgeTypes": 3,
         "cycles": 5
@@ -24318,13 +25231,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.004705
+        "pagerank": 0.00468
       },
       "integration": {
         "score": 3,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.004705,
+        "pagerank": 0.00468,
         "layersSpanned": 2,
         "edgeTypes": 1,
         "cycles": 0
@@ -24524,13 +25437,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.004989
+        "pagerank": 0.00499
       },
       "integration": {
         "score": 3,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.004989,
+        "pagerank": 0.00499,
         "layersSpanned": 2,
         "edgeTypes": 1,
         "cycles": 0
@@ -24730,14 +25643,14 @@
       },
       "centrality": {
         "degree": 4,
-        "betweenness": 0.000622,
-        "pagerank": 0.003481
+        "betweenness": 0.000605,
+        "pagerank": 0.003472
       },
       "integration": {
         "score": 8,
         "degree": 4,
-        "betweenness": 0.000622,
-        "pagerank": 0.003481,
+        "betweenness": 0.000605,
+        "pagerank": 0.003472,
         "layersSpanned": 5,
         "edgeTypes": 3,
         "cycles": 0
@@ -24799,11 +25712,11 @@
         "renormalized": false
       },
       "gravity": {
-        "reach": 19,
+        "reach": 20,
         "layers": 8,
         "edgeTypes": 11,
-        "cycles": 59,
-        "score": 64,
+        "cycles": 85,
+        "score": 66,
         "signals": {}
       },
       "domain": null,
@@ -24990,18 +25903,18 @@
         "en": "TSMC manufactures other companies' chips to order and sells none of its own. Advanced nodes of 7 nm and below brought 74% of wafer revenue against 69% a year earlier, and 2-nanometer production started in 2025. It earns a price per wafer, so utilisation of the advanced fabs sets both revenue and margin. Its customers are concentrated: the largest accounted for 19% of revenue and the ten largest for 78%. Manufacturing itself rests on equipment available from a limited number of suppliers."
       },
       "centrality": {
-        "degree": 20,
-        "betweenness": 0.135713,
-        "pagerank": 0.021295
+        "degree": 21,
+        "betweenness": 0.136659,
+        "pagerank": 0.021429
       },
       "integration": {
-        "score": 30,
-        "degree": 20,
-        "betweenness": 0.135713,
-        "pagerank": 0.021295,
+        "score": 31,
+        "degree": 21,
+        "betweenness": 0.136659,
+        "pagerank": 0.021429,
         "layersSpanned": 10,
         "edgeTypes": 11,
-        "cycles": 59
+        "cycles": 85
       },
       "core": true,
       "pivotal": true
@@ -25197,14 +26110,14 @@
       },
       "centrality": {
         "degree": 4,
-        "betweenness": 0.007778,
-        "pagerank": 0.012146
+        "betweenness": 0.007743,
+        "pagerank": 0.012084
       },
       "integration": {
         "score": 9,
         "degree": 4,
-        "betweenness": 0.007778,
-        "pagerank": 0.012146,
+        "betweenness": 0.007743,
+        "pagerank": 0.012084,
         "layersSpanned": 5,
         "edgeTypes": 3,
         "cycles": 0
@@ -25408,13 +26321,13 @@
       "centrality": {
         "degree": 4,
         "betweenness": 0.009081,
-        "pagerank": 0.014778
+        "pagerank": 0.014677
       },
       "integration": {
         "score": 12,
         "degree": 4,
         "betweenness": 0.009081,
-        "pagerank": 0.014778,
+        "pagerank": 0.014677,
         "layersSpanned": 7,
         "edgeTypes": 3,
         "cycles": 11
@@ -25475,11 +26388,11 @@
         "renormalized": false
       },
       "gravity": {
-        "reach": 7,
-        "layers": 5,
+        "reach": 8,
+        "layers": 6,
         "edgeTypes": 6,
         "cycles": 21,
-        "score": 34,
+        "score": 38,
         "signals": {}
       },
       "domain": null,
@@ -25627,16 +26540,16 @@
         "en": "vLLM is an open library for inference and serving of large language models. Its own README calls it fast and easy to use and names memory-efficient handling of attention keys and values as its core. The project takes no money: it lives on community contributions, and the README counts over 2000 contributors from universities and companies. Accelerators from several vendors are supported at once, so the library works as an adapter between a model and the hardware. It pulls models straight from the Hugging Face hub, which makes it a continuation of that path rather than a separate world."
       },
       "centrality": {
-        "degree": 8,
-        "betweenness": 0.003816,
-        "pagerank": 0.0054
+        "degree": 9,
+        "betweenness": 0.006062,
+        "pagerank": 0.005365
       },
       "integration": {
-        "score": 12,
-        "degree": 8,
-        "betweenness": 0.003816,
-        "pagerank": 0.0054,
-        "layersSpanned": 5,
+        "score": 13,
+        "degree": 9,
+        "betweenness": 0.006062,
+        "pagerank": 0.005365,
+        "layersSpanned": 6,
         "edgeTypes": 7,
         "cycles": 21
       },
@@ -25764,13 +26677,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.006565
+        "pagerank": 0.006532
       },
       "integration": {
         "score": 4,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.006565,
+        "pagerank": 0.006532,
         "layersSpanned": 3,
         "edgeTypes": 1,
         "cycles": 0
@@ -25939,13 +26852,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.003481
+        "pagerank": 0.003472
       },
       "integration": {
         "score": 7,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.003481,
+        "pagerank": 0.003472,
         "layersSpanned": 5,
         "edgeTypes": 3,
         "cycles": 0
@@ -26197,13 +27110,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.006447
+        "pagerank": 0.006436
       },
       "integration": {
         "score": 3,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.006447,
+        "pagerank": 0.006436,
         "layersSpanned": 1,
         "edgeTypes": 2,
         "cycles": 0
@@ -28711,6 +29624,59 @@
           "quote": "A portion of our near-term revenue is dependent on commercial arrangements with SoftBank Group",
           "confidence": 0.975,
           "self": "arm",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "ase__amkor__competes_with",
+      "source": "ase",
+      "target": "amkor",
+      "type": "competes_with",
+      "spine": "rivalry",
+      "direction": "lateral",
+      "strength": 70,
+      "lockInDepth": 30,
+      "substitutability": 55,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "medium",
+        "type": "market",
+        "timeline": "1-2y",
+        "mitigation": {
+          "ru": "Заказчики держат несколько квалифицированных подрядчиков корпусирования сразу",
+          "en": "Customers keep several qualified packaging contractors at once"
+        }
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": {
+        "ru": "Оба закрывают один передел — корпусирование и тестирование — на рынке, который ASE называет высококонкурентным.",
+        "en": "Both cover the same step — packaging and testing — in a market ASE calls highly competitive."
+      },
+      "sidedness": "single",
+      "claimedBy": [
+        "ase"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "ASE Technology 20-F FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1122411/000119312526135585/d50802d20f.htm",
+          "published": "2026-04-01",
+          "fetched": null,
+          "alive": true,
+          "quote": "the highly competitive markets of semiconductor packaging and testing and EMS",
+          "confidence": 0.975,
+          "self": "ase",
           "counter": false
         }
       ],
@@ -34119,6 +35085,112 @@
       "counterEvidence": []
     },
     {
+      "id": "google-cloud__jax__integrates",
+      "source": "google-cloud",
+      "target": "jax",
+      "type": "integrates",
+      "spine": "physical",
+      "direction": "upstream",
+      "strength": 70,
+      "lockInDepth": 45,
+      "substitutability": 50,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "low",
+        "type": "technical",
+        "timeline": "1-2y",
+        "mitigation": {
+          "ru": "Поддержаны два каркаса сразу, поэтому ни один не является обязательным",
+          "en": "Two frameworks are supported at once, so neither is required"
+        }
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": {
+        "ru": "Поддержан наравне с PyTorch на тензорных процессорах площадки.",
+        "en": "Supported alongside PyTorch on the site's tensor processors."
+      },
+      "sidedness": "single",
+      "claimedBy": [
+        "google-cloud"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "Google Cloud TPU",
+          "url": "https://cloud.google.com/tpu",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "high performance support for PyTorch and JAX, and support the vLLM engine for fast inference",
+          "confidence": 0.975,
+          "self": "google-cloud",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "google-cloud__kubernetes__standardizes_on",
+      "source": "google-cloud",
+      "target": "kubernetes",
+      "type": "standardizes_on",
+      "spine": "moat",
+      "direction": "upstream",
+      "strength": 70,
+      "lockInDepth": 40,
+      "substitutability": 55,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "low",
+        "type": "technical",
+        "timeline": "1-2y",
+        "mitigation": {
+          "ru": "Оркестратор открытый и работает на любой площадке",
+          "en": "The orchestrator is open and runs on any site"
+        }
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": {
+        "ru": "Кластерами развёртываний площадка управляет через собственный управляемый оркестратор.",
+        "en": "The site manages deployment clusters through its own managed orchestrator."
+      },
+      "sidedness": "single",
+      "claimedBy": [
+        "google-cloud"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "Google Cloud TPU",
+          "url": "https://cloud.google.com/tpu",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Manage and scale these deployments reliably across global clusters with Google Kubernetes Engine (GKE).",
+          "confidence": 0.975,
+          "self": "google-cloud",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
       "id": "google-cloud__microsoft__competes_with",
       "source": "google-cloud",
       "target": "microsoft",
@@ -34169,6 +35241,112 @@
       },
       "sidedness": "single",
       "claimedBy": [],
+      "counterEvidence": []
+    },
+    {
+      "id": "google-cloud__pytorch__integrates",
+      "source": "google-cloud",
+      "target": "pytorch",
+      "type": "integrates",
+      "spine": "physical",
+      "direction": "upstream",
+      "strength": 65,
+      "lockInDepth": 35,
+      "substitutability": 60,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "low",
+        "type": "technical",
+        "timeline": "1-2y",
+        "mitigation": {
+          "ru": "Поддержаны два каркаса сразу, поэтому ни один не является обязательным",
+          "en": "Two frameworks are supported at once, so neither is required"
+        }
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": {
+        "ru": "Тензорные процессоры облака поддерживают его наравне с JAX как способ обучения на своей площадке.",
+        "en": "The cloud's tensor processors support it alongside JAX as a way to train on its own site."
+      },
+      "sidedness": "single",
+      "claimedBy": [
+        "google-cloud"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "Google Cloud TPU",
+          "url": "https://cloud.google.com/tpu",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "high performance support for PyTorch and JAX, and support the vLLM engine for fast inference",
+          "confidence": 0.975,
+          "self": "google-cloud",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "google-cloud__vllm__integrates",
+      "source": "google-cloud",
+      "target": "vllm",
+      "type": "integrates",
+      "spine": "physical",
+      "direction": "upstream",
+      "strength": 60,
+      "lockInDepth": 30,
+      "substitutability": 65,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "low",
+        "type": "technical",
+        "timeline": "1-2y",
+        "mitigation": {
+          "ru": "Открытый сервер вывода доступен и вне этой площадки",
+          "en": "The open inference server is available outside this site too"
+        }
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": {
+        "ru": "Назван на странице тензорных процессоров как способ быстрого вывода на них.",
+        "en": "Named on the tensor processor page as the way to fast inference on them."
+      },
+      "sidedness": "single",
+      "claimedBy": [
+        "google-cloud"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "Google Cloud TPU",
+          "url": "https://cloud.google.com/tpu",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "high performance support for PyTorch and JAX, and support the vLLM engine for fast inference",
+          "confidence": 0.975,
+          "self": "google-cloud",
+          "counter": false
+        }
+      ],
       "counterEvidence": []
     },
     {
@@ -46717,6 +47895,59 @@
       }
     },
     {
+      "id": "tsmc__ase__competes_with",
+      "source": "tsmc",
+      "target": "ase",
+      "type": "competes_with",
+      "spine": "rivalry",
+      "direction": "lateral",
+      "strength": 55,
+      "lockInDepth": 25,
+      "substitutability": 60,
+      "isReversible": true,
+      "status": "signal",
+      "confidence": 0.875,
+      "sourceTier": 2,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "medium",
+        "type": "market",
+        "timeline": "2-5y",
+        "mitigation": {
+          "ru": "Передел остаётся разделённым: подрядчики корпусирования держат собственные мощности",
+          "en": "The step stays divided: packaging contractors hold capacity of their own"
+        }
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": {
+        "ru": "Контрактные производители кремния сами вложились в передовое корпусирование и получили часть заказчиков.",
+        "en": "Foundry players have themselves invested in advanced packaging and gained some customers."
+      },
+      "sidedness": "single",
+      "claimedBy": [
+        "ase"
+      ],
+      "evidence": [
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "ASE Technology 20-F FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1122411/000119312526135585/d50802d20f.htm",
+          "published": "2026-04-01",
+          "fetched": null,
+          "alive": true,
+          "quote": "some foundry players have actively invested and expanded their advanced packaging capacity",
+          "confidence": 0.925,
+          "self": "ase",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
       "id": "tsmc__astera-labs__manufactures",
       "source": "tsmc",
       "target": "astera-labs",
@@ -48505,18 +49736,18 @@
   "network": {
     "id": "ai-infrastructure-complete",
     "totalNodes": 108,
-    "totalEdges": 308,
+    "totalEdges": 314,
     "pivotalNodes": 30,
     "secondaryNodes": 78,
-    "density": 0.0424,
-    "averageDegree": 4.54,
-    "clusteringCoefficient": 0.5038,
+    "density": 0.0434,
+    "averageDegree": 4.65,
+    "clusteringCoefficient": 0.5165,
     "singlePointsOfFailure": [
       {
         "id": "nvidia",
         "name": "NVIDIA",
         "layer": "L10",
-        "betweenness": 0.80405,
+        "betweenness": 0.799017,
         "pairsLost": 1392,
         "reason": {
           "ru": "убрать — и 1392 пар сущностей (24.5% связных пар) теряют путь друг к другу; сеть распадается на 14 частей",
@@ -48527,7 +49758,7 @@
         "id": "tsmc",
         "name": "TSMC",
         "layer": "L3",
-        "betweenness": 0.135713,
+        "betweenness": 0.136659,
         "pairsLost": 417,
         "reason": {
           "ru": "убрать — и 417 пар сущностей (7.4% связных пар) теряют путь друг к другу; сеть распадается на 4 части",
@@ -48538,7 +49769,7 @@
         "id": "microsoft",
         "name": "Microsoft",
         "layer": "L9",
-        "betweenness": 0.090468,
+        "betweenness": 0.089303,
         "pairsLost": 106,
         "reason": {
           "ru": "убрать — и 106 пар сущностей (1.9% связных пар) теряют путь друг к другу; сеть распадается на 2 части",
@@ -48549,7 +49780,7 @@
         "id": "openai",
         "name": "OpenAI",
         "layer": "L12",
-        "betweenness": 0.060503,
+        "betweenness": 0.060444,
         "pairsLost": 211,
         "reason": {
           "ru": "убрать — и 211 пар сущностей (3.7% связных пар) теряют путь друг к другу; сеть распадается на 3 части",
@@ -48560,7 +49791,7 @@
         "id": "equinix",
         "name": "Equinix",
         "layer": "L9",
-        "betweenness": 0.034138,
+        "betweenness": 0.034085,
         "pairsLost": 106,
         "reason": {
           "ru": "убрать — и 106 пар сущностей (1.9% связных пар) теряют путь друг к другу; сеть распадается на 2 части",
@@ -48571,11 +49802,11 @@
         "id": "samsung",
         "name": "Samsung",
         "layer": "L4",
-        "betweenness": 0.021308,
+        "betweenness": 0.021265,
         "pairsLost": 0,
         "reason": {
-          "ru": "через узел проходит больше путей, чем через любого другого в слое L4 (betweenness 0.021308), но обходные маршруты сохраняются — связность сети он не держит",
-          "en": "more paths run through this node than through any other in layer L4 (betweenness 0.021308), but detours survive — it does not hold the network together"
+          "ru": "через узел проходит больше путей, чем через любого другого в слое L4 (betweenness 0.021265), но обходные маршруты сохраняются — связность сети он не держит",
+          "en": "more paths run through this node than through any other in layer L4 (betweenness 0.021265), but detours survive — it does not hold the network together"
         }
       },
       {
@@ -48664,7 +49895,10 @@
           "cuda__pytorch__locks_in_developers",
           "google-cloud__amazon__competes_with",
           "google-cloud__google__funded_by",
+          "google-cloud__jax__integrates",
           "google-cloud__microsoft__competes_with",
+          "google-cloud__pytorch__integrates",
+          "google-cloud__vllm__integrates",
           "google__nvidia__customer_of",
           "google__nvidia__threatens",
           "huggingface__cuda__path_dependent_on",
@@ -48790,6 +50024,7 @@
           "applied-materials__tsmc__supplies",
           "arm__intel__competes_with",
           "arm__softbank__strategic_partner",
+          "ase__amkor__competes_with",
           "asml__tsmc__supplies",
           "brookfield__constellation__competes_with",
           "cadence__synopsys__competes_with",
@@ -48812,6 +50047,7 @@
           "taiwan__usa__geopolitically_dependent",
           "tokyo-electron__tsmc__supplies",
           "tsmc__arm__standardizes_on",
+          "tsmc__ase__competes_with",
           "usa__bis__controls_access_to",
           "usa__chips-act__standardizes_on",
           "zeiss-smt__asml__strategic_partner",
@@ -49052,6 +50288,7 @@
           "google-cloud__google-deepmind__enables",
           "google-cloud__google__funded_by",
           "google-cloud__microsoft__competes_with",
+          "google-cloud__vllm__integrates",
           "google-deepmind__google__funded_by",
           "google-deepmind__nvidia__threatens",
           "google__anthropic__supplies",
@@ -49142,6 +50379,7 @@
           "amkor__credo__packages",
           "amkor__nvidia__packages",
           "applied-materials__tsmc__supplies",
+          "ase__amkor__competes_with",
           "ase__astera-labs__packages",
           "ase__broadcom__packages",
           "ase__credo__packages",
@@ -49159,6 +50397,7 @@
           "nvidia__tsmc__co_designs",
           "shin-etsu__tsmc__supplies",
           "tokyo-electron__tsmc__supplies",
+          "tsmc__ase__competes_with",
           "tsmc__astera-labs__manufactures",
           "tsmc__broadcom__manufactures",
           "tsmc__credo__manufactures",
@@ -49459,6 +50698,7 @@
           "google-cloud__anthropic__supplies",
           "google-cloud__google-deepmind__enables",
           "google-cloud__google__funded_by",
+          "google-cloud__jax__integrates",
           "google-deepmind__google__funded_by",
           "google-deepmind__nvidia__threatens",
           "google__anthropic__supplies",
@@ -49520,7 +50760,7 @@
       }
     ],
     "subgraphNotes": [
-      "infrastructure-backbone: без внутренних связей — a16z, amkor, ase, blackrock, blackstone, bloom-energy, china, eaton, ge-vernova, lightspeed, nventures, oklo, schneider, sequoia, siemens-energy, singapore, south-korea, thrive"
+      "infrastructure-backbone: без внутренних связей — a16z, blackrock, blackstone, bloom-energy, china, eaton, ge-vernova, lightspeed, nventures, oklo, schneider, sequoia, siemens-energy, singapore, south-korea, thrive"
     ]
   },
   "changelog": {
@@ -49528,87 +50768,86 @@
     "removedNodes": [],
     "relationshipsAdded": [
       {
-        "id": "siemens-eda__cadence__competes_with",
+        "id": "ase__amkor__competes_with",
         "why": {
-          "ru": "Оба закрывают проектирование, верификацию и подготовку к производству интегральных схем.",
-          "en": "Both cover design, verification and manufacturing preparation of integrated circuits."
+          "ru": "Оба закрывают один передел — корпусирование и тестирование — на рынке, который ASE называет высококонкурентным.",
+          "en": "Both cover the same step — packaging and testing — in a market ASE calls highly competitive."
         }
       },
       {
-        "id": "siemens-eda__synopsys__competes_with",
+        "id": "google-cloud__jax__integrates",
         "why": {
-          "ru": "Оба закрывают проектирование, верификацию и подготовку к производству интегральных схем.",
-          "en": "Both cover design, verification and manufacturing preparation of integrated circuits."
+          "ru": "Поддержан наравне с PyTorch на тензорных процессорах площадки.",
+          "en": "Supported alongside PyTorch on the site's tensor processors."
+        }
+      },
+      {
+        "id": "google-cloud__kubernetes__standardizes_on",
+        "why": {
+          "ru": "Кластерами развёртываний площадка управляет через собственный управляемый оркестратор.",
+          "en": "The site manages deployment clusters through its own managed orchestrator."
+        }
+      },
+      {
+        "id": "google-cloud__pytorch__integrates",
+        "why": {
+          "ru": "Тензорные процессоры облака поддерживают его наравне с JAX как способ обучения на своей площадке.",
+          "en": "The cloud's tensor processors support it alongside JAX as a way to train on its own site."
+        }
+      },
+      {
+        "id": "google-cloud__vllm__integrates",
+        "why": {
+          "ru": "Назван на странице тензорных процессоров как способ быстрого вывода на них.",
+          "en": "Named on the tensor processor page as the way to fast inference on them."
+        }
+      },
+      {
+        "id": "tsmc__ase__competes_with",
+        "why": {
+          "ru": "Контрактные производители кремния сами вложились в передовое корпусирование и получили часть заказчиков.",
+          "en": "Foundry players have themselves invested in advanced packaging and gained some customers."
         }
       }
     ],
     "relationshipsRemoved": [],
-    "relationshipsUpdated": [
-      {
-        "id": "eu__eu-ai-act__standardizes_on",
-        "field": "status",
-        "from": "signal",
-        "to": "confirmed"
-      },
-      {
-        "id": "eu__eu-ai-act__standardizes_on",
-        "field": "confirmedSources",
-        "from": 1,
-        "to": 2
-      }
-    ],
+    "relationshipsUpdated": [],
     "criticalityShifts": [
       {
-        "id": "eu",
-        "from": 45,
-        "to": 77
-      },
-      {
-        "id": "eu-ai-act",
-        "from": 41,
-        "to": 80
-      },
-      {
-        "id": "japan",
-        "from": 63,
-        "to": 71
-      },
-      {
-        "id": "schneider",
-        "from": 55,
+        "id": "kioxia",
+        "from": 32,
         "to": 62
       },
       {
-        "id": "siemens",
-        "from": 43,
-        "to": 58
-      },
-      {
-        "id": "siemens-eda",
-        "from": 48,
-        "to": 77
-      },
-      {
-        "id": "siemens-energy",
-        "from": 61,
-        "to": 77
-      },
-      {
-        "id": "singapore",
-        "from": 38,
-        "to": 49
+        "id": "shin-etsu",
+        "from": 63,
+        "to": 85
       }
     ],
     "phaseChanges": [],
     "riskEscalations": [],
-    "newSources": [
+    "newSources": [],
+    "layerChanges": [],
+    "coreChanges": [
       {
-        "id": "eu__eu-ai-act__standardizes_on",
-        "count": 2
+        "id": "google-cloud",
+        "move": "in",
+        "integration": 12,
+        "why": {
+          "ru": "поднялся в верхние по интеграции",
+          "en": "rose into the top by integration"
+        }
+      },
+      {
+        "id": "crusoe",
+        "move": "out",
+        "integration": 10,
+        "why": {
+          "ru": "опустился ниже порога ядра",
+          "en": "fell below the core threshold"
+        }
       }
     ],
-    "layerChanges": [],
-    "coreChanges": [],
     "month": "2026-08",
     "version": "v4.0-2026-08"
   }
