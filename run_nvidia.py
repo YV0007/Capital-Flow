@@ -1,15 +1,19 @@
-"""Оркестратор карты «Экосистема NVIDIA» (v2).
+"""Оркестратор карты экосистемы ИИ-инфраструктуры (контракт nvidia-ecosystem/4).
 
 Usage:
-  python run_nvidia.py [YYYY-MM] [--anchor nvidia] [--skip-agents] [--deliver]
+  python run_nvidia.py [YYYY-MM] [--skip-agents] [--deliver]
                        [--offline] [--verify-limit N]
+
+Имя скрипта и префикс `nveco_` историчны: пилот был картой одной орбиты. Карта с v4
+центра не имеет, а переименование 13 модулей и 18 таблиц посреди миграции контракта —
+чистый риск без выигрыша. См. handoff/AI-ECOSYSTEM-V4-BUILD-LOG.md.
 
 Конвейер — тот же порядок, что у первого месячного, содержание другое:
 
     8 агентов (Claude Code, пишут CSV в runs/<YYYY-MM>/nveco-*/)
-      -> nveco_ingest   валидация против конфигов, резолвинг, правило двух шагов
+      -> nveco_ingest   валидация против конфигов, резолвинг, охват и членство
       -> nveco_verify   переобход КАЖДОЙ ссылки, alive/fetched
-      -> nveco_score    рубрика, хребет, статус, гравитация, концентрация, обрезки
+      -> nveco_score    пересчёт тиров, рубрика, хребет, статус, стороны, гравитация
       -> nveco_cycles   контуры 3–5, sales / financing / lockin
       -> nveco_handoff  handoff/nvidia_ecosystem.json + чейнджлог, с валидатором на выходе
 
@@ -39,16 +43,15 @@ def check_agent_outputs(month: str) -> list:
             if not (base / a).is_dir() or not (base / a / "edges.csv").exists()]
 
 
-def main(month: str, anchor: str = None, do_deliver: bool = False,
+def main(month: str, do_deliver: bool = False,
          offline: bool = False, verify_limit: int = None) -> int:
-    acfg = nveco.anchor_cfg(anchor)
-    print(f"== Экосистема {acfg['name']} ({acfg['id']}): {month} ==")
+    print(f"== Экосистема ИИ-инфраструктуры ({nveco.SCOPE_ID}): {month} ==")
 
     missing = check_agent_outputs(month)
     if missing:
         print(f"[agents]  нет выдачи: {', '.join(missing)}")
 
-    s = nveco_ingest.ingest_month(month, anchor)
+    s = nveco_ingest.ingest_month(month)
     print(f"[ingest]  {s['entities']} сущностей, {s['edges']} связей, "
           f"{s['sources']} источников, {s['factors']} наборов факторов, "
           f"{s['rejected']} отклонено")
@@ -73,6 +76,14 @@ def main(month: str, anchor: str = None, do_deliver: bool = False,
         print("          ", w)
     if s["rejects_dir"]:
         print(f"          отказы -> {s['rejects_dir']} (вернутся агентам в следующем месяце)")
+    m = s["membership"]
+    print(f"[членство] прошли бы три проверки {m['passed']} из "
+          f"{m['passed'] + m['failed']}; проверки "
+          f"{'ВКЛЮЧЕНЫ' if m['enforced'] else 'выключены (Фаза 0) — никто не отклонён'}")
+    for k, v in m["fails"].items():
+        if v:
+            print(f"          не проходят {k}: {len(v)}")
+    print(f"          отчёт -> {m['path']}")
 
     v = nveco_verify.run(month, offline=offline, limit=verify_limit)
     if offline:
@@ -83,24 +94,25 @@ def main(month: str, anchor: str = None, do_deliver: bool = False,
     for u in v["dead_urls"][:10]:
         print("          МЁРТВАЯ", u)
 
-    sc = nveco_score.run(month, anchor)
+    sc = nveco_score.run(month)
     print(f"[score]   {sc['entities']} сущностей; статусы связей {sc['status_mix']}; "
           f"обрезано {sc['clamped']}; блёкнет {sc['stale']}")
+    print(f"          тир пересчитан относительно предмета: изменено {sc['retiered']} "
+          f"источников; стороны {sc['sidedness_mix']}")
     print("          топ критичности: " +
           ", ".join(f"{k}={c}" for k, c in sc["top"]))
     for line in sc["log"][:12]:
         print("          ", line)
 
-    cy = nveco_cycles.run(month, anchor)
-    print(f"[cycles]  {cy['cycles']} контуров {cy['by_type']}, "
-          f"через якорь проходит {cy['anchored']}")
+    cy = nveco_cycles.run(month)
+    print(f"[cycles]  {cy['cycles']} контуров {cy['by_type']}")
     for c in cy["detail"][:6]:
         print(f"           {c['id']} {c['type']}: {' -> '.join(c['path'])}")
 
     # второй проход оценки: теперь известны контуры, и гравитация их учитывает
-    nveco_score.run(month, anchor)
+    nveco_score.run(month)
 
-    h = nveco_handoff.run(month, anchor)
+    h = nveco_handoff.run(month)
     if not h["ok"]:
         print(f"[handoff] КОНТРАКТ НАРУШЕН — файл НЕ записан ({len(h['errors'])} ошибок):")
         for e in h["errors"][:25]:
@@ -113,7 +125,7 @@ def main(month: str, anchor: str = None, do_deliver: bool = False,
     print(f"          чейнджлог: +{h['added']} / -{h['removed']} / ~{h['changed']}")
 
     if do_deliver:
-        dest = Path(acfg["deliver_to"]).expanduser()
+        dest = Path(nveco.scope_cfg()["deliver_to"]).expanduser()
         if not dest.parent.is_dir():
             print(f"[deliver] ПРОПУЩЕНО — нет директории {dest.parent}")
         else:
@@ -125,22 +137,15 @@ def main(month: str, anchor: str = None, do_deliver: bool = False,
 if __name__ == "__main__":
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     month = args[0] if args else nveco.current_month()
-    anchor, limit = None, None
+    limit = None
     for i, a in enumerate(sys.argv[1:]):
-        if a == "--anchor" and i + 2 <= len(sys.argv[1:]):
-            anchor = sys.argv[i + 2]
-        elif a.startswith("--anchor="):
-            anchor = a.split("=", 1)[1]
-        elif a.startswith("--month="):
+        if a.startswith("--month="):
             month = a.split("=", 1)[1]
         elif a.startswith("--verify-limit="):
             limit = int(a.split("=", 1)[1])
         elif a == "--verify-limit" and i + 2 <= len(sys.argv[1:]):
             limit = int(sys.argv[i + 2])
-    if anchor in args:
-        args.remove(anchor)
-        month = args[0] if args else nveco.current_month()
     # --skip-agents принимается ради симметрии с run_month.py: агентский слой и так
     # отрабатывает вне этого скрипта, флаг документирует намерение.
-    sys.exit(main(month, anchor, do_deliver="--deliver" in sys.argv,
+    sys.exit(main(month, do_deliver="--deliver" in sys.argv,
                   offline="--offline" in sys.argv, verify_limit=limit))

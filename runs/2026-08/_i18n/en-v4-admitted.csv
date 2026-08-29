@@ -1,0 +1,10 @@
+kind,id,field,lang,text
+entity,zeiss-smt,one_liner,en,"The sole supplier of optics for EUV machines: lenses, mirrors, collectors."
+entity,zeiss-smt,why_irreplaceable,en,"ASML's own report names it the sole supplier of optics, under an exclusive agreement. That constraint sits above ASML itself."
+entity,zeiss-smt,what_breaks_it,en,ASML develops its own optics or qualifies a second supplier.
+entity,zeiss-smt,risk_note,en,Production is concentrated in one country and in one company.
+entity,zeiss-smt,why_irreplaceability,en,"Sole supplier, exclusive agreement"
+entity,zeiss-smt,why_lock_in,en,Reaches the machines and through them the fabs
+entity,zeiss-smt,why_time,en,Optics of that class of one's own — over seven years
+edge,zeiss-smt__asml__supplies,note,en,"The sole supplier of optics for the machines, under an exclusive agreement. The constraint sits above the machine maker itself."
+edge,zeiss-smt__asml__supplies,risk_mitigation,en,Joint ownership of capacity and a long-term agreement.

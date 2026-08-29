@@ -6,9 +6,13 @@
 
 Что считается:
   criticality  — 0.30·irreplaceability + 0.30·lockInDepth + 0.25·timeToReplace
-                 + 0.15·strategicControl (веса заморожены контрактом)
+                 + 0.15·concentration (веса заморожены контрактом; при отсутствующем
+                 concentration три остальных ПЕРЕНОРМИРУЮТСЯ — см. nveco.criticality)
   spine        — из типа связи, по config/nveco_edges.yaml
+  tier         — ЗАНОВО по config/entity_domains.yaml, относительно концов связи,
+                 а не относительно одной компании
   status       — по правилу подтверждения из тиров ЖИВЫХ источников
+  sidedness    — сколько концов подтвердило связь СВОИМИ документами
   confidence   — из тира лучшего живого источника
   gravity      — структурно по графу: охват, слои, типы связей, контуры
   concentration— HHI по критичности внутри слоя
@@ -37,36 +41,59 @@ CLAMP_MAX_STRENGTH = 80
 STALE_MONTHS = 6
 
 
-def _status_and_confidence(tiers):
+def _status_and_confidence(tiers, claimed_by=(), disputed=False):
     """Правило подтверждения. Не смягчается.
 
+    bilateral       — ОБА конца утверждают связь в СОБСТВЕННЫХ документах
     confirmed       — два и более источника тира 1–2, ЛИБО один тира 1 плюс один тира 3
     high_confidence — один тира 1, ЛИБО два тира 2–3
     signal          — всё остальное
+    disputed        — один конец утверждает, второй в своих документах опровергает
+
+    Почему `bilateral` строго сильнее `confirmed`. «Два источника тира 1–2» — это два
+    документа, и оба могут быть изданы ОДНОЙ стороной: 10-K и пресс-релиз одной и той
+    же компании про одну и ту же сделку — два источника и одно свидетельство.
+    `bilateral` требует двух РАЗНЫХ издателей, и притом именно тех двух, кого связь
+    касается. Это единственный статус, который нельзя набрать, говоря сам за себя.
+
+    `disputed` стоит ВЫШЕ всей лестницы и не сравнивается с ней: расхождение двух
+    компаний в описании собственных отношений — это находка, а не слабое место в
+    доказательстве, и схлопывать его в `confirmed` нельзя, сколько бы цитат ни было.
     """
-    t12 = sum(1 for t in tiers if t in (1, 2))
-    t1 = sum(1 for t in tiers if t == 1)
-    t3 = sum(1 for t in tiers if t == 3)
-    t23 = sum(1 for t in tiers if t in (2, 3))
-    if t12 >= 2 or (t1 >= 1 and t3 >= 1):
-        status = "confirmed"
-    elif t1 >= 1 or t23 >= 2:
-        status = "high_confidence"
+    if disputed:
+        status = "disputed"
+    elif len(set(claimed_by)) >= 2:
+        status = "bilateral"
     else:
-        status = "signal"
+        t12 = sum(1 for t in tiers if t in (1, 2))
+        t1 = sum(1 for t in tiers if t == 1)
+        t3 = sum(1 for t in tiers if t == 3)
+        t23 = sum(1 for t in tiers if t in (2, 3))
+        if t12 >= 2 or (t1 >= 1 and t3 >= 1):
+            status = "confirmed"
+        elif t1 >= 1 or t23 >= 2:
+            status = "high_confidence"
+        else:
+            status = "signal"
     best = min(tiers) if tiers else 6
     conf = nveco.tier_confidence(best)
     # Подтверждение несколькими источниками добавляет уверенности, но не выше потолка
     # своего тира: два вторичных источника не делают слух первичным фактом.
-    if status == "confirmed":
+    if status == "bilateral":
+        conf = min(0.99, conf + 0.04)
+    elif status == "confirmed":
         conf = min(0.99, conf + 0.03)
     elif status == "signal":
         conf = max(0.40, conf - 0.05)
+    elif status == "disputed":
+        # Спор не понижает качество ДОКАЗАТЕЛЬСТВ, он понижает уверенность в
+        # утверждении. Потолок ниже подтверждённого, дно выше сигнала.
+        conf = min(0.75, conf)
     return status, round(conf, 3)
 
 
-def run(month: str, anchor: str = None) -> dict:
-    acfg = nveco.anchor_cfg(anchor)
+def run(month: str, scope_id: str = None) -> dict:
+    scope_id = scope_id or nveco.SCOPE_ID
     con = nveco.connect()
     log = []
 
@@ -90,18 +117,40 @@ def run(month: str, anchor: str = None) -> dict:
 
     # ── хребет из типа + статус из тиров + обрезки ───────────────────────────
     srcs = {}
-    for r in con.execute("SELECT owner_id, tier, alive FROM nveco_source "
-                         "WHERE owner_kind='edge'"):
-        srcs.setdefault(r["owner_id"], []).append((r["tier"], r["alive"]))
+    for r in con.execute("SELECT id, owner_id, url, tier, alive, self_of, counter "
+                         "FROM nveco_source WHERE owner_kind='edge'"):
+        srcs.setdefault(r["owner_id"], []).append(dict(r))
 
+    # ── ТИР СЧИТАЕТСЯ ЗАНОВО, а не берётся из базы ───────────────────────────
+    # Число, лежащее в nveco_source.tier, написал агент по шкале, которой больше нет.
+    # Пересчёт идёт по реестру издателей относительно КОНЦОВ ЭТОЙ СВЯЗИ: первый конец —
+    # предмет, второй — контрагент. Часть тиров при этом падает, и это правильный
+    # результат: «тир 1, потому что nvidia.com» перестаёт быть тиром 1 везде, где
+    # предмет — не NVIDIA.
+    retiered = 0
     clamped = 0
     for e in con.execute("SELECT * FROM nveco_edge").fetchall():
         spine = nveco.spine_of(e["type"])
         rows = srcs.get(e["id"], [])
-        live = [t for t, alive in rows if alive]
-        tiers = live or []                      # мёртвый источник не подтверждает
-        status, conf = _status_and_confidence(tiers)
-        best_tier = min(tiers) if tiers else (min(t for t, _ in rows) if rows else 6)
+        for r in rows:
+            t, _ = nveco.source_tier(r["url"], e["source_id"], e["target_id"])
+            r["new_tier"] = t or 6
+            if r["new_tier"] != r["tier"]:
+                retiered += 1
+                con.execute("UPDATE nveco_source SET tier=?, confidence=? WHERE id=?",
+                            (r["new_tier"], nveco.tier_confidence(r["new_tier"]), r["id"]))
+        live = [r for r in rows if r["alive"]]  # мёртвый источник не подтверждает
+        tiers = [r["new_tier"] for r in live if not r["counter"]]
+        # `claimed_by` — концы, ИЗДАВШИЕ собственную цитату под эту связь. Это и есть
+        # вход `bilateral`: два разных издателя, и притом именно те два, кого связь
+        # касается. Контрцитата в claimed_by не идёт — она утверждает обратное.
+        claimed = {r["self_of"] for r in live if r["self_of"] and not r["counter"]}
+        disputed = any(r["counter"] for r in live)
+        status, conf = _status_and_confidence(tiers, claimed, disputed)
+        sidedness = ("disputed" if disputed else
+                     "bilateral" if len(claimed) >= 2 else "single")
+        best_tier = min(tiers) if tiers else (min((r["new_tier"] for r in rows),
+                                                  default=6))
 
         strength, risk_level, why = e["strength"], e["risk_level"], None
         if not any(t in PRIMARY_TIERS for t in tiers):
@@ -118,9 +167,22 @@ def run(month: str, anchor: str = None) -> dict:
 
         con.execute(
             """UPDATE nveco_edge SET spine=?, status=?, confidence=?, source_tier=?,
-                 confirmed_sources=?, strength=?, risk_level=?, clamped=? WHERE id=?""",
+                 confirmed_sources=?, strength=?, risk_level=?, clamped=?,
+                 sidedness=?, claimed_by=? WHERE id=?""",
             (spine, status, conf, best_tier, len(tiers), strength, risk_level, why,
-             e["id"]))
+             sidedness, "|".join(sorted(claimed)) or None, e["id"]))
+    # Источники ПРОФИЛЯ: предмет — сама сущность, второго конца нет.
+    for r in con.execute("SELECT id, owner_id, url, tier FROM nveco_source "
+                         "WHERE owner_kind='entity'").fetchall():
+        t, _ = nveco.source_tier(r["url"], r["owner_id"])
+        t = t or 6
+        if t != r["tier"]:
+            retiered += 1
+            con.execute("UPDATE nveco_source SET tier=?, confidence=? WHERE id=?",
+                        (t, nveco.tier_confidence(t), r["id"]))
+        con.execute("UPDATE nveco_source SET self_of=? WHERE id=?",
+                    (r["owner_id"] if nveco.is_self_source(r["url"], r["owner_id"])
+                     else None, r["id"]))
     con.commit()
 
     # ── гравитация ───────────────────────────────────────────────────────────
@@ -218,7 +280,10 @@ def run(month: str, anchor: str = None) -> dict:
 
     out = {
         "entities": len(entities), "clamped": clamped, "stale": stale,
-        "anchor": acfg["id"],
+        "scope": scope_id, "retiered": retiered,
+        "sidedness_mix": {s: con.execute(
+            "SELECT COUNT(*) c FROM nveco_edge WHERE sidedness=?", (s,)).fetchone()["c"]
+            for s in nveco.SIDEDNESS},
         "status_mix": {s: con.execute("SELECT COUNT(*) c FROM nveco_edge WHERE status=?",
                                       (s,)).fetchone()["c"] for s in nveco.STATUSES},
         "top": [(r["id"], r["criticality"]) for r in con.execute(

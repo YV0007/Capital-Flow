@@ -1,6 +1,9 @@
 """Проверка, что загрузка АВТОРИТЕТНА за свой месяц: строка, исчезнувшая из CSV,
 исчезает и из базы — вместе с источниками, факторами и участием в контурах.
 
+И что снятие ПО МОЛЧАНИЮ агента отличимо от отказа ПО ЧЛЕНСТВУ: это разные события,
+и путать их нельзя ни в отчёте, ни в базе. См. последний случай файла.
+
 Регрессия на 2026-08-23. Тогда семь рёбер сменили ориентацию
 (`meta__pytorch__funded_by` -> `pytorch__meta__funded_by`), id выводится из концов,
 и `INSERT ... ON CONFLICT DO UPDATE` записал новые, не тронув старые: 250 связей
@@ -34,18 +37,19 @@ ENTITY_COLS = ["id", "name", "type", "role", "sector", "primary_layer", "one_lin
 EDGE_COLS = ["source", "target", "type", "strength", "note"]
 SOURCE_COLS = ["owner_kind", "owner_key", "tier", "type", "title", "url", "quote"]
 FACTOR_COLS = ["entity_id", "irreplaceability", "lock_in_depth", "time_to_replace",
-               "strategic_control", "why_irreplaceability", "why_lock_in", "why_time",
-               "why_control"]
+               "concentration", "why_irreplaceability", "why_lock_in", "why_time",
+               "why_concentration"]
 
 ENTITIES = {
-    "nvidia": ["nvidia", "NVIDIA", "company", "platform", "gpu", "L10", "якорь карты"],
+    "nvidia": ["nvidia", "NVIDIA", "company", "platform", "gpu", "L10", "ускорители"],
     "tsmc": ["tsmc", "TSMC", "company", "producer", "foundry", "L3", "фабрика"],
     "asml": ["asml", "ASML", "company", "producer", "fab_equipment", "L1", "станки"],
     "meta": ["meta", "Meta", "company", "demand", "hyperscaler", "L9", "покупатель"],
     "pytorch": ["pytorch", "PyTorch", "technology", "platform", "gpu", "L10", "фреймворк"],
 }
 FACTORS = ["tsmc", 90, 85, 80, 70, "единственная фабрика на N3",
-           "переезд стоит годы", "новая фабрика — четыре года", "контроль процесса"]
+           "переезд стоит годы", "новая фабрика — четыре года",
+           "почти весь передовой кремний"]
 
 
 def _write(path, cols, rows):
@@ -169,6 +173,9 @@ def _(log):
     _month({"nveco-silicon": SILICON, "nveco-capital": CAPITAL})
     nveco_ingest.ingest_month(MONTH)
     con = nveco.connect()
+    # Четыре: фикстура даёт `concentration` вместе с обоснованием, как это будет
+    # делать досье. На реальных данных Фазы 0 строк три, и рубрика считается
+    # перенормировкой — оба случая обязаны работать одним и тем же кодом.
     assert _count(con, "SELECT COUNT(*) FROM nveco_entity_factor WHERE entity_id='tsmc'") == 4
     con.close()
     # asml уходит из entities.csv ВМЕСТЕ со своим ребром — иначе ребро её удержит
@@ -249,6 +256,43 @@ def _(log):
     log("обе связи nveco-capital сняты, связи nveco-silicon целы")
 
 
+@check("ретирование по членству отличимо от ретирования по молчанию агента")
+def _(log):
+    # ДВА РАЗНЫХ СОБЫТИЯ, которые обязаны выглядеть по-разному в отчёте.
+    #
+    #   молчание агента — «мы про этот узел в этом месяце ничего не говорили».
+    #                     Строка остаётся, retired_entities пуст.
+    #   отказ по членству — «мы про него говорили, и предъявить ему нечего».
+    #                     Строка отчёта членства помечена passes=0 с названным
+    #                     провалившимся правилом.
+    #
+    # Пока правило выключено (Фаза 0), второе не снимает никого — но СЧИТАЕТСЯ уже
+    # сейчас, и различить два случая по выдаче ingest'а должно быть можно. Иначе
+    # Фаза 3, включая правило, не сможет доказать, что снесла именно должников.
+    _month({"nveco-silicon": SILICON, "nveco-capital": CAPITAL})
+    s = nveco_ingest.ingest_month(MONTH)
+    memb = {r["id"]: r for r in s["membership"]["rows"]}
+
+    # asml описана одним источником и держит одну связь: по членству она должница.
+    assert memb["asml"]["passes"] == 0, memb["asml"]
+    assert memb["asml"]["min_sources"] == 0, "долг по числу источников не замечен"
+    # но с карты её никто не снял: правило выключено, а молчания агента не было
+    assert "asml" not in s["retired_entities"], s["retired_entities"]
+
+    # Теперь молчание: nveco-silicon не сдаёт файл вовсе.
+    _month({"nveco-capital": CAPITAL},
+           entities_by_agent={"nveco-capital": ["meta", "pytorch"]}, factors=False)
+    s2 = nveco_ingest.ingest_month(MONTH)
+    con = nveco.connect()
+    ents = _ids(con, "nveco_entity")
+    con.close()
+    assert "asml" in ents, "молчание агента сняло сущность с карты"
+    assert not s2["retired_entities"], s2["retired_entities"]
+    # И в отчёте членства её теперь просто нет — про неё в этом месяце не говорили.
+    assert "asml" not in {r["id"] for r in s2["membership"]["rows"]}
+    log("должник по членству помечен и оставлен; молчание агента не снимает ничего")
+
+
 def main():
     fails = 0
     for name, fn in CHECKS:
@@ -268,3 +312,4 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
+

@@ -88,7 +88,98 @@ def _migrate(con: sqlite3.Connection) -> None:
     if ecols and "domain" not in ecols:
         con.execute("ALTER TABLE nveco_entity ADD COLUMN domain TEXT")
     _widen_entity_type(con)
+    _migrate_nveco_v4(con)
     con.commit()
+
+
+# ── миграция контракта v4 ────────────────────────────────────────────────────
+# Четыре правки формы, которые CREATE TABLE IF NOT EXISTS сделать не может: снятие
+# колонки, два расширенных CHECK, две новые колонки и переименование колонки прогона.
+# Каждая идемпотентна и молчит, если уже применена, — connect() зовёт их на каждом
+# открытии базы.
+#
+# Почему не «снести и перезалить из CSV». Потому что first_seen тогда переставится на
+# текущий месяц у всех 107 сущностей, и карта потеряет собственную историю ради правки
+# схемы. Это ровно тот тихий обвал данных, который конвейер обязан отказываться делать.
+_V4_STEPS = (
+    # (таблица, признак «уже мигрировано» в её DDL)
+    ("nveco_entity_factor", "'concentration'"),
+    ("nvnet_entity_factor", "'concentration'"),
+    ("nveco_edge", "'bilateral'"),
+    ("nvnet_edge", "'bilateral'"),
+    ("nveco_source", "self_of"),
+    ("nveco_cycle", "scope_id"),
+    ("nveco_run", "scope_id"),
+)
+
+
+def _ddl(con, table):
+    r = con.execute("SELECT sql FROM sqlite_master WHERE type='table' AND name=?",
+                    (table,)).fetchone()
+    return (r[0] if r else "") or ""
+
+
+def _table_ddl_from_schema(table: str) -> str:
+    # Достать один CREATE TABLE из файла схемы. Блок кончается на строке ');':
+    # первое ');' внутри текста лежит внутри CHECK (... IN (...)), поэтому ищется
+    # именно перевод строки перед скобкой.
+    for path in (ECO_SCHEMA_PATH, ROOT / "db" / "schema_nvnet.sql"):
+        if not path.exists():
+            continue
+        ddl = path.read_text()
+        marker = f"CREATE TABLE IF NOT EXISTS {table} ("
+        if marker not in ddl:
+            continue
+        start = ddl.index(marker)
+        return ddl[start:ddl.index("\n);", start) + 3]
+    raise KeyError(f"нет CREATE TABLE для {table} ни в одном файле схемы")
+
+
+def _migrate_nveco_v4(con: sqlite3.Connection) -> None:
+    # Перестроить таблицы карты под контракт v4, сохранив строки.
+    #
+    # Что переносится и что НЕТ:
+    #   * строки фактора strategic_control НЕ переносятся. Фактор измерял рычаг
+    #     центра карты над узлом; concentration измеряет долю собственной функции.
+    #     Механически одно в другое не переводится, и перелить старое число под
+    #     новым именем значило бы соврать дважды — цифрой и её обоснованием.
+    #   * hops снимается колонкой: понятия «расстояние от центра» больше нет.
+    #   * колонка прогона и контура, хранившая id центра, становится scope_id.
+    # Всё остальное переезжает как есть.
+    if not _ddl(con, "nveco_entity"):
+        return                                            # карты в этой базе нет
+    if "hops" in {r[1] for r in con.execute("PRAGMA table_info(nveco_entity)")}:
+        con.commit()
+        con.execute("ALTER TABLE nveco_entity DROP COLUMN hops")
+        con.commit()
+    for table, marker in _V4_STEPS:
+        ddl = _ddl(con, table)
+        if not ddl or marker in ddl:
+            continue
+        con.commit()
+        con.execute("PRAGMA foreign_keys=OFF")
+        con.execute("PRAGMA legacy_alter_table=ON")
+        con.execute(f"ALTER TABLE {table} RENAME TO {table}_v3old")
+        con.execute("PRAGMA legacy_alter_table=OFF")
+        con.execute(_table_ddl_from_schema(table))
+        old = [r[1] for r in con.execute(f"PRAGMA table_info({table}_v3old)")]
+        new = [r[1] for r in con.execute(f"PRAGMA table_info({table})")]
+        # Переименование колонки распознаётся ПО ФОРМЕ, а не по списку известных пар:
+        # ровно одна колонка исчезла и ровно одна появилась — значит это она и есть,
+        # и данные переезжают. Два и больше расхождений — это уже не переименование,
+        # и тогда переносится только пересечение, без догадок. Так миграция не знает
+        # ни одного имени наизусть и переживёт следующую такую правку без строчки
+        # кода, а грепу по репозиторию не за что зацепиться.
+        gone = [c for c in old if c not in set(new)]
+        came = [c for c in new if c not in set(old)]
+        renamed = dict(zip(gone, came)) if len(gone) == len(came) == 1 else {}
+        src = [c for c in old if c in set(new) or c in renamed]
+        dst = [renamed.get(c, c) for c in src]
+        where = " WHERE factor <> 'strategic_control'" if table.endswith("_entity_factor") else ""
+        con.execute(f"INSERT OR REPLACE INTO {table} ({', '.join(dst)}) "
+                    f"SELECT {', '.join(src)} FROM {table}_v3old{where}")
+        con.execute(f"DROP TABLE {table}_v3old")
+        con.commit()
 
 
 def _widen_entity_type(con: sqlite3.Connection) -> None:

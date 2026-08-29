@@ -28,7 +28,8 @@ Capital Flow/
 │   ├── rules.yaml        # weekly signal rules
 │   ├── nveco_layers.yaml # 16 layers + sectors + tech nodes (FROZEN taxonomy)
 │   ├── nveco_edges.yaml  # 31 edge types -> 5 spines (FROZEN taxonomy)
-│   ├── nveco_anchors.yaml# anchor registry — the centre of each ecosystem
+│   ├── nveco_scope.yaml  # what the map IS about: 16 layers + 3 membership checks
+│   ├── entity_domains.yaml # who publishes what — the input to the SELF tier rule
 │   └── nveco_watchlist.yaml # seed entities per agent
 ├── agents/               # Claude Code research agent briefs (the autonomous layer)
 │   ├── CONTEXT.md        # shared context for the WEEKLY agents
@@ -72,11 +73,11 @@ official register download. See its own section below.
 
 | | Weekly — **Потоки** | Monthly — **Экосистема NVIDIA** |
 |---|---|---|
-| Question | Where did money go this week | Who makes NVIDIA irreplaceable, who is locked into its orbit, who gates it, what does it hedge with |
+| Question | Where did money go this week | Who holds a function the stack cannot run without, how deeply they are wired in, what breaks without them |
 | Unit | A dated capital-allocation **event** | An undated standing **dependency** |
-| Node | Allocator / target | **Entity** in the orbit of an anchor |
+| Node | Allocator / target | **Entity** working in at least one layer of the scope |
 | Node size | Capital | **Criticality** (4-factor rubric, 0–100 each) |
-| Centre | none | **anchor** — nothing further than 2 hops from it exists |
+| Centre | none | **none** — membership is scope + own dossier + confirmed edges |
 | Tables | `events`, `allocators`, … | `nveco_*` (schema in `db/schema_nveco.sql`) |
 | Agents | 6 by allocator class (`agents/*.md`) | 8 by stack layer (`agents/nveco-*.md`) |
 | Orchestrator | `run_week.py` | `run_nvidia.py` |
@@ -100,10 +101,20 @@ unconnected maps sharing only the shell.
 Prove the validator still bites with `python tools/nveco_corrupt_test.py`, and that the
 ingest retires what left the CSVs with `python tools/nveco_retire_test.py`.
 
-**The map has a centre.** `anchor` (`config/nveco_anchors.yaml`) is the question the map
-answers. An entity more than 2 hops from it is rejected at ingest with a reason — that is
-the line between "NVIDIA's orbit" and "the world semiconductor industry". A second anchor
-costs one config entry and one run; nothing else in the engine is anchor-aware.
+**The map has NO centre — since contract /4.** It has a SUBJECT: the 16 layers of
+`config/nveco_scope.yaml`, and they are the border. Three checks decide membership, and
+none of them names a company: works in at least one layer of the scope · has its own
+dossier (>=3 sources, >=1 published by itself) · has >=2 confirmed edges to entities on
+the map. Rejection is written to `runs/<month>/_rejected/` with a reason, never silently.
+
+Until contract /4 the border was "no further than 2 hops from NVIDIA". That rule did two
+jobs badly at once: it admitted anything NVIDIA happened to name in its own filings, and
+it kept out Carl Zeiss SMT — sole supplier of EUV optics, three hops away.
+
+**Rank is computed, not assigned.** `entities[].integration` (degree, betweenness,
+pagerank, layers spanned, edge types, cycles — weights in `config/nvnet_edges.yaml`) is
+the map's primary rank, and the top N by it ARE the core. There is no hand-kept list of
+important nodes anywhere in the repo.
 
 **Five spines, not two.** `physical` · `capital` · `moat` · `control` · `rivalry`. A moat
 and a gate are not kinds of supply and not kinds of money — they are separate mechanics of

@@ -7,9 +7,13 @@ config/aliases.yaml и грузит в nveco_*.
 
 Три вещи, которые модуль отказывается делать:
   * записать ребро без источника с дословной цитатой;
-  * записать сущность дальше двух шагов от якоря (последний проход);
-  * записать вычисляемое поле со слов агента — spine, criticality, status, gravity
-    считает nveco_score, и попытка агента их прислать игнорируется.
+  * записать сущность, не работающую ни в одном слое охвата (config/nveco_scope.yaml);
+  * записать вычисляемое поле со слов агента — spine, criticality, status, gravity,
+    sidedness и тир источника считает движок, и попытка агента их прислать
+    игнорируется.
+
+Правило «не дальше двух шагов от центра» отсюда ВЫРЕЗАНО в v4 вместе с полем `hops`:
+центра у карты больше нет, а границу задают три проверки — см. блок «членство» ниже.
 
 Отвергнутые строки не молчат: пишутся в runs/<month>/_rejected/<agent>.csv с причиной
 и считаются в nveco_run. Это то, что следующий месяц вернёт агентам.
@@ -24,7 +28,6 @@ config/aliases.yaml и грузит в nveco_*.
 
 import csv
 import sys
-from collections import deque
 
 from . import db, nveco
 from .ingest import is_search_url
@@ -35,8 +38,8 @@ ENTITY_COLUMNS = ["id", "name", "aliases", "type", "role", "sector", "primary_la
                   "revenue_usd_b", "one_liner", "why_irreplaceable", "what_breaks_it",
                   "geo_risk", "geo_risk_note", "export_regime", "concentration"]
 FACTOR_COLUMNS = ["entity_id", "irreplaceability", "lock_in_depth", "time_to_replace",
-                  "strategic_control", "why_irreplaceability", "why_lock_in",
-                  "why_time", "why_control"]
+                  "concentration", "why_irreplaceability", "why_lock_in",
+                  "why_time", "why_concentration"]
 EDGE_COLUMNS = ["source", "target", "type", "direction", "strength", "lock_in_depth",
                 "substitutability", "is_reversible", "risk_level", "risk_type",
                 "risk_timeline", "risk_mitigation", "tech_node", "formed",
@@ -45,7 +48,7 @@ SOURCE_COLUMNS = ["owner_kind", "owner_key", "tier", "type", "title", "url",
                   "published", "quote", "confidence"]
 
 WHY_COLUMNS = {"irreplaceability": "why_irreplaceability", "lock_in_depth": "why_lock_in",
-               "time_to_replace": "why_time", "strategic_control": "why_control"}
+               "time_to_replace": "why_time", "concentration": "why_concentration"}
 
 
 def _s(row, key):
@@ -164,21 +167,44 @@ def _validate_entity(row, layer_ids, sector_idx):
 
 
 def _validate_factors(row):
-    errors = []
+    """Три обязательных фактора и один необязательный.
+
+    `concentration` необязателен НЕ ради послабления, а потому что его источник —
+    досье узла, которого у большинства сущностей ещё нет. Пустая клетка честно
+    значит «доля функции не измерена»; выдуманный ноль значил бы «функции у узла
+    нет», и с весом 0.15 эта выдумка попала бы в каждую оценку карты.
+
+    Строгость там, где она нужна: если цифра ЕСТЬ, обоснование обязательно, а
+    обоснование обязано опираться на цитату — это проверяет валидатор выдачи.
+    Пустая пара «нет цифры и нет обоснования» проходит; «цифра без обоснования» и
+    «обоснование без цифры» — нет.
+    """
+    errors, warnings = [], []
     eid = _s(row, "entity_id")
     if not eid:
         return None, ["нет entity_id"], []
+    if _s(row, "strategic_control"):
+        warnings.append("колонка strategic_control из контракта v3 игнорируется: "
+                        "фактор снят вместе с центром карты, на его месте "
+                        "concentration — доля СВОЕЙ функции, не рычаг чужой компании")
     out = {"entity_id": eid, "factors": {}}
     for f in nveco.FACTORS:
-        v, err = _int(row.get(f), 0, 100)
-        if err:
-            errors.append(f"{f}: {err} (нужны все четыре фактора 0..100)")
+        required = f in nveco.REQUIRED_FACTORS
+        raw = (row.get(f) or "").strip()
         why = _s(row, WHY_COLUMNS[f])
+        if not raw and not required:
+            if why:
+                errors.append(f"{WHY_COLUMNS[f]}: обоснование есть, а цифры нет")
+            continue
+        v, err = _int(raw, 0, 100)
+        if err:
+            errors.append(f"{f}: {err}"
+                          + (" (обязательный фактор, 0..100)" if required else ""))
         _limit(errors, WHY_COLUMNS[f], why, nveco.TEXT_LIMITS["why"])
         if not why:
             errors.append(f"{WHY_COLUMNS[f]}: пусто — оценка без обоснования не принимается")
         out["factors"][f] = (v, why)
-    return (None, errors, []) if errors else (out, [], [])
+    return (None, errors, warnings) if errors else (out, [], warnings)
 
 
 def _validate_edge(row, types):
@@ -268,12 +294,17 @@ def _validate_source(row):
         errors.append(f"цитата {nveco.word_count(quote)} слов при пределе "
                       f"{nveco.MAX_QUOTE_WORDS} — возьмите фразу, где отношение названо")
 
-    # Тир — свойство источника, а не мнение агента.
+    # Тир — свойство источника ОТНОСИТЕЛЬНО ПРЕДМЕТА, а не мнение агента. Здесь
+    # известен только владелец строки, поэтому предметом считается он: для источника
+    # сущности это она сама, для источника связи — её первый конец. Второй конец
+    # подставит nveco_score, когда связь уже собрана, и там тир пересчитывается
+    # начисто. Здесь только предупреждение — расхождение не повод терять цитату.
     if url and tier:
-        expect, _ = nveco.domain_tier(url)
+        subject = key if kind == "entity" else (key.split("__")[0] if key else None)
+        expect, _ = nveco.source_tier(url, subject)
         if expect and expect != tier:
-            warnings.append(f"тир {tier} заявлен для домена, у которого по "
-                            f"config/sources.yaml тир {expect}")
+            warnings.append(f"тир {tier} заявлен там, где по реестру издателей "
+                            f"относительно '{subject}' тир {expect}")
 
     conf = None
     if _s(row, "confidence"):
@@ -302,26 +333,99 @@ def _read(path):
             yield i, row
 
 
-def _hops_from_anchor(anchor_id, edges):
-    """Кратчайшее расстояние до якоря по НЕОРИЕНТИРОВАННОМУ графу связей.
+# ── членство ─────────────────────────────────────────────────────────────────
+# Правило «не дальше двух шагов от центра» вырезано целиком. На его месте три проверки из
+# config/nveco_scope.yaml, и ни одна из них не называет ни одной компании:
+#
+#   1  in_scope            — сущность работает хотя бы в одном слое охвата
+#   2  min_sources         — у неё СВОЁ досье: >= N источников,
+#      min_self_sources      из них >= M изданы ею самой
+#   3  min_confirmed_edges — >= K подтверждённых связей с сущностями на карте
+#
+# Почему прежнее правило пришлось выбросить, а не подкрутить. Оно отвечало на вопрос
+# «далеко ли отсюда до центра», а вопрос членства звучит иначе: «занимается ли эта
+# сущность нашим предметом и знаем ли мы о ней хоть что-то из первых рук». Второй
+# вопрос центра не требует. Практическое следствие: Carl Zeiss SMT — три шага от
+# NVIDIA и потому вне старой карты, при том что у него есть и подтверждённые связи с
+# ASML, и собственные публикации. Новое правило впускает его, не двигая ни одного
+# порога.
+#
+# В ФАЗЕ 0 ПРОВЕРКИ СЧИТАЮТСЯ, НО НЕ ОТКЛОНЯЮТ (membership.enforce: false). Причина
+# в журнале сборки: сорока сущностям карты нечего предъявить от себя, и включение
+# правила сегодня снесло бы две пятых карты раньше, чем приедут досье. Отчёт пишется
+# всегда — молча не проходит ничего.
 
-    Ненаправленно намеренно: «поставляет NVIDIA» и «покупает у NVIDIA» одинаково
-    делают сущность частью орбиты. Направление важно для смысла ребра, но не для
-    вопроса «входит ли эта компания в экосистему».
+
+def membership_report(ents, edges, srcs, statuses=None) -> dict:
+    """Кто прошёл бы три проверки, а кто нет. Ничего не отклоняет.
+
+    statuses — {edge_id: status} с прошлого прогона, если он есть: подтверждённость
+    связи считает nveco_score ПОСЛЕ загрузки, и на первом прогоне её ещё нет. Когда
+    статусов нет, третья проверка считается по числу связей вообще, и это записано
+    в самом отчёте, чтобы цифру нельзя было принять за подтверждённые.
     """
-    adj = {}
-    for e in edges:
-        adj.setdefault(e["source"], set()).add(e["target"])
-        adj.setdefault(e["target"], set()).add(e["source"])
-    dist = {anchor_id: 0}
-    q = deque([anchor_id])
-    while q:
-        cur = q.popleft()
-        for nxt in adj.get(cur, ()):
-            if nxt not in dist:
-                dist[nxt] = dist[cur] + 1
-                q.append(nxt)
-    return dist
+    cfg = nveco.membership_cfg()
+    scope_layers = set(nveco.scope_layers())
+    min_src = int(cfg.get("min_sources", 0))
+    min_self = int(cfg.get("min_self_sources", 0))
+    min_edges = int(cfg.get("min_confirmed_edges", 0))
+    strong = ("bilateral", "confirmed")
+
+    by_ent = {}
+    for s in srcs:
+        if s["owner_kind"] == "entity":
+            by_ent.setdefault(s["owner_key"], []).append(s)
+    deg = {}
+    for e in edges.values():
+        ok = True if statuses is None else statuses.get(e.get("id") or "") in strong
+        if not ok:
+            continue
+        for side in (e["source"], e["target"]):
+            deg[side] = deg.get(side, 0) + 1
+
+    rows, fails = [], {"in_scope": [], "min_sources": [], "min_self_sources": [],
+                       "min_confirmed_edges": []}
+    for eid, e in sorted(ents.items()):
+        mine = by_ent.get(eid, [])
+        layers = set(e.get("layers") or [])
+        self_n = sum(1 for s in mine if nveco.is_self_source(s["url"], eid))
+        # У сущности без собственного издателя проверка на self-источник СНИМАЕТСЯ
+        # самим этим фактом: у закона нет пресс-службы. Исключения в коде нет —
+        # есть пустой список доменов в реестре, и он читается как факт о мире.
+        needs_self = nveco.has_own_publisher(eid)
+        checks = {
+            "in_scope": bool(layers & scope_layers),
+            "min_sources": len(mine) >= min_src,
+            "min_self_sources": (self_n >= min_self) if needs_self else True,
+            "min_confirmed_edges": deg.get(eid, 0) >= min_edges,
+        }
+        for k, ok in checks.items():
+            if not ok:
+                fails[k].append(eid)
+        rows.append({"id": eid, "name": e["name"], "sources": len(mine),
+                     "self_sources": self_n, "own_publisher": int(needs_self),
+                     "edges": deg.get(eid, 0),
+                     **{k: int(v) for k, v in checks.items()},
+                     "passes": int(all(checks.values()))})
+    return {"rows": rows, "fails": fails,
+            "passed": sum(r["passes"] for r in rows),
+            "failed": sum(1 for r in rows if not r["passes"]),
+            "edge_basis": "confirmed" if statuses is not None else "all_edges",
+            "enforced": bool(cfg.get("enforce", False))}
+
+
+def write_membership_report(month: str, report: dict) -> str:
+    out = db.RUNS_DIR / month / "_membership"
+    out.mkdir(parents=True, exist_ok=True)
+    path = out / "report.csv"
+    cols = ["id", "name", "sources", "self_sources", "own_publisher", "edges",
+            "in_scope", "min_sources", "min_self_sources", "min_confirmed_edges",
+            "passes"]
+    with path.open("w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=cols)
+        w.writeheader()
+        w.writerows(sorted(report["rows"], key=lambda r: (r["passes"], r["id"])))
+    return str(path)
 
 
 # ── снятие с карты ───────────────────────────────────────────────────────────
@@ -418,13 +522,24 @@ def _retire_entities(con, agents, keep):
     return stale, held
 
 
-def ingest_month(month: str, anchor: str = None) -> dict:
+def ingest_month(month: str, scope_id: str = None) -> dict:
     if not nveco.month_ok(month):
         raise ValueError(f"месяц должен быть YYYY-MM, получено '{month}'")
-    acfg = nveco.anchor_cfg(anchor)
-    anchor_id, max_hops = acfg["id"], int(acfg.get("hops", 2))
+    scope_id = scope_id or nveco.SCOPE_ID
+    # Охват обязан быть подмножеством таксономии слоёв. Разойдясь молча, он сузил бы
+    # карту на слой, о котором никто не спрашивал.
+    unknown_scope = [l for l in nveco.scope_layers() if l not in set(nveco.layer_ids())]
+    if unknown_scope:
+        raise ValueError(f"config/nveco_scope.yaml называет слои, которых нет в "
+                         f"config/nveco_layers.yaml: {', '.join(unknown_scope)}")
 
     con = nveco.connect()
+    # Статусы связей снимаются ДО записи: nveco_score считает их следующей стадией,
+    # и после INSERT в базе лежат свежие строки со статусом по умолчанию. Прочитать
+    # их там значило бы утверждать, что подтверждённых связей ноль, — на чистой базе
+    # это неправда с первого же прогона.
+    prev_status = {r["id"]: r["status"] for r in
+                   con.execute("SELECT id, status FROM nveco_edge")} or None
     layer_ids = set(nveco.layer_ids())
     sector_idx = nveco.sector_index()
     types = nveco.edge_types()
@@ -561,15 +676,18 @@ def ingest_month(month: str, anchor: str = None) -> dict:
                    "нет ни одного источника с дословной цитатой — ребро не пишется",
                    {"edge": key})
 
-    # --- правило двух шагов: всё, до чего от якоря дальше, в карту не входит
-    dist = _hops_from_anchor(anchor_id, edges.values())
+    # --- членство. Проверка 1 (охват) действует ВСЕГДА: сущность, не работающая ни
+    # в одном слое предмета, — это не про эту карту, и держать её значило бы стереть
+    # границу. Проверки 2 и 3 считаются и отчитываются, но отклоняют только когда
+    # membership.enforce включён (Фаза 3).
+    scope_layers = set(nveco.scope_layers())
     for eid in list(ents):
-        h = dist.get(eid)
-        if h is None or h > max_hops:
-            e = ents.pop(eid)
+        e = ents[eid]
+        if not (set(e.get("layers") or []) & scope_layers):
+            ents.pop(eid)
             reject(e.get("_agent", "?"), "entities.csv", 0,
-                   f"до якоря '{anchor_id}' {'нет пути' if h is None else str(h) + ' шага'} "
-                   f"при пределе {max_hops} — вне орбиты",
+                   f"не работает ни в одном слое охвата "
+                   f"({', '.join(sorted(scope_layers))}) — вне предмета карты",
                    {"id": eid, "name": e["name"]})
             facts.pop(eid, None)
     for key in list(edges):
@@ -587,9 +705,9 @@ def ingest_month(month: str, anchor: str = None) -> dict:
         con.execute(
             """INSERT INTO nveco_entity (id,name,aliases,type,role,sector,primary_layer,
                  phase,ticker,public_private,geo,founded,revenue_usd_b,one_liner,
-                 why_irreplaceable,what_breaks_it,hops,first_seen,last_confirmed,
+                 why_irreplaceable,what_breaks_it,first_seen,last_confirmed,
                  owner_agent,domain)
-               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
                ON CONFLICT(id) DO UPDATE SET
                  name=excluded.name, aliases=excluded.aliases, type=excluded.type,
                  role=excluded.role, sector=excluded.sector,
@@ -598,14 +716,14 @@ def ingest_month(month: str, anchor: str = None) -> dict:
                  geo=excluded.geo, founded=excluded.founded,
                  revenue_usd_b=excluded.revenue_usd_b, one_liner=excluded.one_liner,
                  why_irreplaceable=excluded.why_irreplaceable,
-                 what_breaks_it=excluded.what_breaks_it, hops=excluded.hops,
+                 what_breaks_it=excluded.what_breaks_it,
                  last_confirmed=excluded.last_confirmed,
                  owner_agent=excluded.owner_agent,
                  domain=COALESCE(excluded.domain, nveco_entity.domain)""",
             (eid, e["name"], e["aliases"], e["type"], e["role"], e["sector"],
              e["primary_layer"], e["phase"], e["ticker"], e["public_private"], e["geo"],
              e["founded"], e["revenue_usd_b"], e["one_liner"], e["why_irreplaceable"],
-             e["what_breaks_it"], dist.get(eid), first_seen, month, e.get("_agent"),
+             e["what_breaks_it"], first_seen, month, e.get("_agent"),
              (e.get("domain") or "").strip().lower() or None))
         con.execute("DELETE FROM nveco_entity_layer WHERE entity_id=?", (eid,))
         for l in e["layers"]:
@@ -653,12 +771,23 @@ def ingest_month(month: str, anchor: str = None) -> dict:
              e["risk_timeline"], e["risk_mitigation"], e["tech_node"], e["formed"],
              e["strengthened"], month, e["note"], e.get("_agent")))
 
+    # `self_of` — id того конца, который издал ссылку. Считается ЗДЕСЬ, а не в
+    # score, чтобы правило min_self_sources и статус `bilateral` читали одну и ту же
+    # разметку, а не две разные её реконструкции.
     for s in srcs:
+        if s["owner_kind"] == "entity":
+            ends = [s["owner_key"]]
+        else:
+            ends = s["owner_key"].split("__")[:2]
+        self_of = next((x for x in ends if nveco.is_self_source(s["url"], x)), None)
         con.execute(
             """INSERT OR IGNORE INTO nveco_source (owner_kind,owner_id,tier,type,title,
-                 url,published,quote,confidence) VALUES (?,?,?,?,?,?,?,?,?)""",
+                 url,published,quote,confidence,self_of) VALUES (?,?,?,?,?,?,?,?,?,?)""",
             (s["owner_kind"], s["owner_key"], s["tier"], s["type"], s["title"],
-             s["url"], s["published"], s["quote"], s["confidence"]))
+             s["url"], s["published"], s["quote"], s["confidence"], self_of))
+        con.execute("UPDATE nveco_source SET self_of=? WHERE owner_kind=? AND "
+                    "owner_id=? AND url=? AND quote=?",
+                    (self_of, s["owner_kind"], s["owner_key"], s["url"], s["quote"]))
 
     # Тех-узлы — из конфига, а не из выдачи агента: это словарь, а не находка.
     for t in nveco.load_layers().get("tech_nodes", []) or []:
@@ -696,12 +825,18 @@ def ingest_month(month: str, anchor: str = None) -> dict:
 
     for agent, st in per_agent.items():
         con.execute(
-            """INSERT INTO nveco_run (month,anchor,agent,rows_in,rows_kept,rejected)
+            """INSERT INTO nveco_run (month,scope_id,agent,rows_in,rows_kept,rejected)
                VALUES (?,?,?,?,?,?)
-               ON CONFLICT(month,anchor,agent) DO UPDATE SET
+               ON CONFLICT(month,scope_id,agent) DO UPDATE SET
                  rows_in=excluded.rows_in, rows_kept=excluded.rows_kept,
                  rejected=excluded.rejected""",
-            (month, anchor_id, agent, st["rows_in"], st["rows_kept"], st["rejected"]))
+            (month, scope_id, agent, st["rows_in"], st["rows_kept"], st["rejected"]))
+    # --- членство: считается по ВЫЖИВШИМ строкам и отчитывается всегда
+    for key in edges:
+        edges[key].setdefault("id", key)
+    memb = membership_report(ents, edges, srcs, prev_status)
+    memb["path"] = write_membership_report(month, memb)
+
     con.commit()
     con.close()
 
@@ -727,6 +862,7 @@ def ingest_month(month: str, anchor: str = None) -> dict:
             "retired_entities": retired_ents, "retired_edges": retired_edges,
             "held_entities": held_ents,
             "broken_agents": sorted(set(broken_edges + broken_ents)),
+            "membership": memb,
             "warnings": warnings,
             "rejects_dir": str(rej_dir) if rejected else None}
 

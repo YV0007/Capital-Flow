@@ -1,4 +1,4 @@
-"""Оркестратор сети ИИ-инфраструктуры (v3).
+"""Оркестратор сети ИИ-инфраструктуры (контракт ai-ecosystem-network/4).
 
 Usage: python run_network.py [YYYY-MM] [--deliver] [--offline]
 
@@ -8,8 +8,8 @@ Usage: python run_network.py [YYYY-MM] [--deliver] [--offline]
 
     handoff/nvidia_ecosystem.json (семя: 106 сущностей, 243 связи)
       + runs/<месяц>/nvnet-*/       (достройка: новая сущность и связи пивот↔пивот)
-      -> nvnet_ingest      pivotal, hops от ближайшего пивота, проверка новых строк
-      -> nvnet_centrality  degree и betweenness (Брандес, чистый Python)
+      -> nvnet_ingest      достройка, прозрачность профиля, проверка новых строк
+      -> nvnet_centrality  degree, betweenness, pagerank, integration и ядро
       -> nvnet_subgraphs   три подграфа ПРАВИЛОМ, вырожденность не скрывается
       -> nvnet_spof        точки отказа: удалить узел и посчитать разрыв
       -> nvnet_handoff     handoff/ai_ecosystem_network.json + чейнджлог, с валидатором
@@ -32,9 +32,6 @@ def main(month: str, do_deliver: bool = False, offline: bool = False) -> int:
           f"(семя {len(net['seed']['entities'])}/{len(net['seed']['edges'])}, "
           f"достройка +{net['newEntities']}/+{net['newEdges']})")
     print(f"          прочитано описаний сущностей: {net['descriptions']}")
-    print(f"          пивотов на карте: {len(net['pivots'])}"
-          + (f"; НЕТ В ДАННЫХ: {', '.join(net['missingPivots'])}"
-             if net["missingPivots"] else ""))
     for p in net["problems"][:15]:
         print("          ", p)
     if net["rejects"]:
@@ -42,8 +39,7 @@ def main(month: str, do_deliver: bool = False, offline: bool = False) -> int:
         for r in net["rejects"][:10]:
             print(f"           {r['file']}:{r['line']} {r['reason'][:110]}")
     if net["dropped"]:
-        print(f"          вне сети (дальше {nvnet.hops_limit()} шагов от любого пивота): "
-              f"{', '.join(net['dropped'][:8])}")
+        print(f"          вне сети: {', '.join(net['dropped'][:8])}")
 
     if not offline:
         r = nvnet_ingest.persist(month, net)
@@ -89,6 +85,12 @@ def main(month: str, do_deliver: bool = False, offline: bool = False) -> int:
     n = h["network"]
     print(f"[metrics] плотность {n['density']}, средняя степень {n['averageDegree']}, "
           f"кластеризация {n['clusteringCoefficient']}")
+    print(f"[ядро]    {h['coreRule']}: " + ", ".join(
+        f"{e['id']}({e['integration']['score']})" for e in h["coreTop"]))
+    mm = h["membership"]
+    print(f"[членство] впустило бы {mm['admitted']}, в очереди {mm['queued']}, "
+          f"снято {mm['retired']}; проверки "
+          f"{'ВКЛЮЧЕНЫ' if mm['enforced'] else 'выключены (Фаза 0)'}")
     print(f"[spof]    {len(n['singlePointsOfFailure'])} точек отказа: " +
           ", ".join(f"{s['id']}({s['betweenness']})"
                     for s in n["singlePointsOfFailure"][:6]))

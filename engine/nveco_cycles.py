@@ -1,8 +1,8 @@
 """Замкнутые контуры — главный аргумент этой карты.
 
 Цепочка поставок контуров не имеет: она идёт снизу вверх и заканчивается. Экосистема
-их имеет, и именно они отвечают на вопрос «почему это держится»: якорь финансирует
-лабораторию, лаборатория платит облаку, облако платит якорю.
+их имеет, и именно они отвечают на вопрос «почему это держится»: производитель
+финансирует лабораторию, лаборатория платит облаку, облако платит производителю.
 
 Направление берётся ТАКИМ, КАК ЗАПИСАНО В РЕБРЕ, без разворотов. Это возможно потому,
 что таксономия v2 содержит типы обеих ориентаций сразу: `customer_of` пишется от
@@ -118,8 +118,16 @@ def _note(path, meta, names, kind):
             f"{en_head}: " + "; ".join(en_parts))
 
 
-def run(month: str, anchor: str = None) -> dict:
-    acfg = nveco.anchor_cfg(anchor)
+# Порядок статусов от сильного к слабому. `weakest` в контуре обязан считаться ПО
+# ЭТОМУ списку, а не по алфавиту: с приходом v4 'bilateral' встал бы перед
+# 'confirmed' случайно, а 'disputed' — между 'confirmed' и 'high_confidence', и самое
+# спорное ребро контура молча перестало бы быть самым слабым.
+_STATUS_RANK = {s: i for i, s in enumerate(
+    ("bilateral", "confirmed", "high_confidence", "signal", "disputed"))}
+
+
+def run(month: str, scope_id: str = None) -> dict:
+    scope_id = scope_id or nveco.SCOPE_ID
     con = nveco.connect()
     i18n.ensure(con)
     adj, meta, names = _graph(con)
@@ -139,16 +147,17 @@ def run(month: str, anchor: str = None) -> dict:
         pairs = list(zip(path, path[1:] + [path[0]]))
         kind = classify([(meta[p]["spine"], meta[p]["type"]) for p in pairs])
         edge_ids = [meta[p]["id"] for p in pairs]
-        weakest = min(meta[p]["status"] for p in pairs)   # 'confirmed'<'high…'<'signal'
+        weakest = max((meta[p]["status"] for p in pairs),
+                      key=lambda st: _STATUS_RANK.get(st, 99))
         note_ru, note_en = _note(path, meta, names, kind)
         rec = {"id": f"c{i}", "type": kind, "path": path + [path[0]],
                "edges": edge_ids, "note": note_ru, "noteEn": note_en,
-               "weakest": weakest, "anchored": acfg["id"] in path}
+               "weakest": weakest}
         con.execute(
             """INSERT OR IGNORE INTO nveco_cycle
-                 (id,run_month,anchor,cycle_type,path_json,members,note)
+                 (id,run_month,scope_id,cycle_type,path_json,members,note)
                VALUES (?,?,?,?,?,?,?)""",
-            (rec["id"], month, acfg["id"], kind, json.dumps(rec["path"]),
+            (rec["id"], month, scope_id, kind, json.dumps(rec["path"]),
              "|".join(sorted(path)), rec["note"]))
         i18n.put(con, "nveco", "cycle", rec["id"], "note", "ru",
                  note_ru, source="generated")
@@ -164,7 +173,6 @@ def run(month: str, anchor: str = None) -> dict:
     return {"cycles": len(out),
             "by_type": {k: sum(1 for c in out if c["type"] == k)
                         for k in ("sales", "financing", "lockin")},
-            "anchored": sum(1 for c in out if c["anchored"]),
             "detail": out}
 
 

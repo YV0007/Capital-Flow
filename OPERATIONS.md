@@ -74,7 +74,7 @@ guarantee that.
 |---|---|---|---|---|
 | Question | Where did money go this week | Who is structurally irreplaceable, who is locked in, who gates whom | What do the ~14 funds we respect hold right now | Interpretation, and the sections with no engine |
 | Unit | A dated **event** | An undated standing **dependency** | A **position / stake / delta** | A read, a news item, a price |
-| Universe | Discovery-shaped — agents hunt leads | Anchor-shaped — nothing >2 hops from the anchor | **Closed and curated**, never auto-extended | Fixed list |
+| Universe | Discovery-shaped — agents hunt leads | Scope-shaped — 16 layers plus three membership checks | **Closed and curated**, never auto-extended | Fixed list |
 | Agents | 6, by allocator class | 8, by stack layer | **none** — fully deterministic | 2 skills |
 | Orchestrator | `run_week.py` | `run_network.py` (v3) · `run_nvidia.py` (v2) | `run_funds.py` | npm scripts + skills |
 | Tables | `events`, `allocators`, … | `nveco_*` | `fund_*` | — |
@@ -105,7 +105,7 @@ The core mechanic of the whole system. Nothing skips it.
 | 4 | SemiAnalysis, Stratechery, conference talks | Specialist analysis |
 | 5 | Podcasts, YouTube, X, LinkedIn, blogs | **Lead discovery only.** Never stored as verified. |
 
-**Ecosystem pipeline (`nveco_tiers`) — ranks by closeness to the anchor.** A
+**Ecosystem pipeline (`nveco_tiers`) — ranks by closeness to the SUBJECT of the claim.** A
 partner's press release about NVIDIA is **tier 2 here, not tier 1**, because it is
 not NVIDIA speaking about NVIDIA. Same document, different ladder.
 
@@ -211,10 +211,19 @@ locked in, who gates whom, what hedges what.
    → nveco_handoff.py  handoff/ai_ecosystem_network.json + changelog
 ```
 
-**The map has a centre.** An entity more than **2 hops** from the anchor is
-rejected at ingest with a reason. That is the line between "NVIDIA's orbit" and
-"the world semiconductor industry". A second anchor costs one config entry and one
-run; nothing else in the engine is anchor-aware.
+**The map has no centre — since contract /4.** It has a subject: the 16 layers. An
+entity is admitted by three checks that name no company (in scope · own dossier ·
+confirmed edges), and the core is the top 30 by computed `integration`, recomputed every
+run. What follows described the rule that was replaced:
+
+> An entity more than **2 hops** from the anchor is rejected at ingest with a
+> reason. That is the line between "NVIDIA's orbit" and "the world semiconductor
+> industry". A second anchor costs one config entry and one run; nothing else in
+> the engine is anchor-aware.
+
+It did two jobs badly at once: it admitted whatever NVIDIA happened to name in its
+own filings, and it kept out Carl Zeiss SMT — sole supplier of EUV optics, three
+hops away. See `handoff/AI-ECOSYSTEM-V4-BUILD-LOG.md`.
 
 **Five spines, not two:** `physical` · `capital` · `moat` · `control` · `rivalry`.
 A moat and a gate are not kinds of supply and not kinds of money — they are
@@ -222,7 +231,7 @@ separate mechanics of power. The spine is **derived from the edge type**; neithe
 the agent nor the dashboard computes it.
 
 **Criticality** is a 4-factor rubric with frozen weights, computed by the engine:
-irreplaceability 0.30 · lock-in depth 0.30 · time-to-replace 0.25 · strategic
+irreplaceability 0.30 · lock-in depth 0.30 · time-to-replace 0.25 · concentration
 control 0.15. The engine also ships one line of reasoning per factor
 (`criticalityWhy`) — a bare "95" nobody can argue with is the opposite of useful.
 
@@ -306,7 +315,7 @@ Intelligence Platform, not a news aggregator.
 | Feature | File in dashboard | Contract | Ultimate source | Cadence |
 |---|---|---|---|---|
 | Capital Flow map | `src/data/capitalMap.json` | — | Agent research over the tier ladder | Weekly |
-| Ecosystem map | `src/data/aiEcosystemNetwork.json` | `ai-ecosystem-network/2` | 8 `nveco_*` agents, anchor-relative tiers | Monthly |
+| Ecosystem map | `src/data/aiEcosystemNetwork.json` | `ai-ecosystem-network/4` | 8 `nveco_*` agents, subject-relative tiers | Monthly |
 | Fund Tracker | `src/data/fundTracker.json` | `fund-tracker/1` | SEC EDGAR 13F-HR / 13D / 13G, FCA/EU short registers | Per filing |
 | NVIDIA ecosystem (reserve) | `src/data/nvidiaEcosystem.json` | `nvidia-ecosystem/2` | v2 pilot; **also the frozen taxonomy source** | Frozen |
 | Fund portfolios (private book) | `capitalMap.json` → `nodes[].holdings[]` | `agents/holdings-profiler.md` | Fund portfolio pages, Form D, ADV, press releases | **Monthly (planned)** |

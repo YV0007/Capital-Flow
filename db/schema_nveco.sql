@@ -17,8 +17,8 @@
 PRAGMA foreign_keys = ON;
 
 -- ─────────────────────────────────────────────────────────────────────────────
--- Сущность. Компания, государство, агентство, стандарт — всё, что может стоять
--- в орбите якоря.
+-- Сущность. Компания, государство, агентство, стандарт — всё, что работает хотя бы
+-- в одном слое охвата (config/nveco_scope.yaml).
 -- ─────────────────────────────────────────────────────────────────────────────
 CREATE TABLE IF NOT EXISTS nveco_entity (
     id             TEXT PRIMARY KEY,        -- slug ('tsmc'); СТАБИЛЕН между прогонами
@@ -50,7 +50,6 @@ CREATE TABLE IF NOT EXISTS nveco_entity (
     why_irreplaceable TEXT,                 -- <=280 знаков
     what_breaks_it TEXT,                    -- <=110 знаков
     criticality    INTEGER CHECK (criticality BETWEEN 0 AND 100),  -- считает nveco_score
-    hops           INTEGER,                 -- расстояние до якоря в шагах; считает score
     first_seen     TEXT,                    -- YYYY-MM, пишется один раз
     last_confirmed TEXT,
     -- Какой агент написал эту строку в последний раз. Нужен для правила
@@ -73,13 +72,18 @@ CREATE TABLE IF NOT EXISTS nveco_entity_layer (
     UNIQUE (entity_id, layer_id)
 );
 
--- Четыре строки на сущность. Фактор и его обоснование живут вместе — так
+-- До четырёх строк на сущность. Фактор и его обоснование живут вместе — так
 -- criticalityWhy собирается без отдельной таблицы, и невозможно записать оценку,
 -- забыв объяснить её.
+--
+-- v4: `strategic_control` («рычаг якоря над узлом») выброшен вместе с якорем;
+-- на его месте `concentration` («какую долю СВОЕЙ ФУНКЦИИ узел держит»). Строк
+-- может быть три: `concentration` приезжает досье, и до тех пор критичность
+-- считается перенормировкой по трём — см. nveco.criticality().
 CREATE TABLE IF NOT EXISTS nveco_entity_factor (
     entity_id TEXT NOT NULL REFERENCES nveco_entity(id) ON DELETE CASCADE,
     factor    TEXT NOT NULL CHECK (factor IN
-                ('irreplaceability','lock_in_depth','time_to_replace','strategic_control')),
+                ('irreplaceability','lock_in_depth','time_to_replace','concentration')),
     value     INTEGER NOT NULL CHECK (value BETWEEN 0 AND 100),
     why       TEXT,                       -- <=120 знаков, по-русски
     UNIQUE (entity_id, factor)
@@ -124,8 +128,16 @@ CREATE TABLE IF NOT EXISTS nveco_edge (
     lock_in_depth   INTEGER CHECK (lock_in_depth BETWEEN 0 AND 100),
     substitutability INTEGER CHECK (substitutability BETWEEN 0 AND 100),  -- ОБРАТНАЯ шкала
     is_reversible   INTEGER NOT NULL DEFAULT 1,
+    -- v4: два новых значения. `bilateral` — оба конца утверждают связь в СВОИХ
+    -- документах (строго сильнее прежнего «два источника тира 1–2»). `disputed` —
+    -- один конец утверждает, второй в своих документах опровергает; это находка,
+    -- а не ошибка, и движок её не «решает».
     status          TEXT NOT NULL DEFAULT 'signal' CHECK (status IN
-                      ('confirmed','high_confidence','signal')),
+                      ('bilateral','confirmed','high_confidence','signal','disputed')),
+    -- Сколько сторон подтвердило связь СОБСТВЕННЫМИ документами. Считается по
+    -- config/entity_domains.yaml, агент назначить его не может.
+    sidedness       TEXT CHECK (sidedness IN ('bilateral','single','disputed')),
+    claimed_by      TEXT,                  -- '|'-набор id концов, издавших свою цитату
     confidence      REAL CHECK (confidence BETWEEN 0 AND 1),
     source_tier     INTEGER CHECK (source_tier BETWEEN 1 AND 6),
     confirmed_sources INTEGER NOT NULL DEFAULT 0,
@@ -172,6 +184,12 @@ CREATE TABLE IF NOT EXISTS nveco_source (
     http_note  TEXT,                       -- что ответила ссылка при последней проверке
     quote      TEXT NOT NULL,              -- ДОСЛОВНО, <= 15 слов
     confidence REAL CHECK (confidence BETWEEN 0 AND 1),
+    -- v4: чьё это слово. self_of — id конца, издавшего ссылку (NULL, если издатель
+    -- не сторона утверждения); counter — цитата ПРОТИВОПОЛОЖНОЙ стороны, из-за
+    -- которой связь получает статус `disputed`. Обе колонки считает движок по
+    -- config/entity_domains.yaml, агент их не пишет.
+    self_of    TEXT,
+    counter    INTEGER NOT NULL DEFAULT 0,
     UNIQUE (owner_kind, owner_id, url, quote)
 );
 
@@ -189,7 +207,7 @@ CREATE TABLE IF NOT EXISTS nveco_tech_node (
 CREATE TABLE IF NOT EXISTS nveco_cycle (
     id         TEXT NOT NULL,              -- 'c1', уникален внутри прогона
     run_month  TEXT NOT NULL,
-    anchor     TEXT NOT NULL,
+    scope_id   TEXT NOT NULL,              -- какая карта; v4: network_id охвата
     cycle_type TEXT NOT NULL CHECK (cycle_type IN ('sales','financing','lockin')),
     path_json  TEXT NOT NULL,              -- JSON-массив id сущностей, первый повторён последним
     members    TEXT NOT NULL,              -- отсортированный '|'-набор участников — ключ дедупа
@@ -206,17 +224,17 @@ CREATE TABLE IF NOT EXISTS nveco_cycle_edge (
     UNIQUE (run_month, cycle_id, position)
 );
 
--- Прогон. anchor живёт ЗДЕСЬ, а не в сущности: сущность может входить в орбиту двух
--- якорей, а прогон всегда ровно про один. Это всё, что нужно для второго якоря.
+-- Прогон. scope_id живёт ЗДЕСЬ, а не в сущности: сущность может стоять на нескольких
+-- картах, а прогон всегда ровно про одну.
 CREATE TABLE IF NOT EXISTS nveco_run (
     id         INTEGER PRIMARY KEY,
     month      TEXT NOT NULL,
-    anchor     TEXT NOT NULL,
+    scope_id   TEXT NOT NULL,
     agent      TEXT NOT NULL,
     rows_in    INTEGER NOT NULL DEFAULT 0,
     rows_kept  INTEGER NOT NULL DEFAULT 0,
     rejected   INTEGER NOT NULL DEFAULT 0,
     notes      TEXT,
     created_at TEXT NOT NULL DEFAULT (datetime('now')),
-    UNIQUE (month, anchor, agent)
+    UNIQUE (month, scope_id, agent)
 );

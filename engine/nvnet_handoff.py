@@ -1,13 +1,16 @@
 """Сборка handoff/ai_ecosystem_network.json + валидатор + чейнджлог по 10 категориям.
 
-Контракт v3 РАСШИРЯЕТ v2, а не заменяет: 16 слоёв, 5 хребтов, рубрика, тиры и форма
-Source приходят из семени без изменений. Новое здесь — `pivots` вместо `anchor`,
-`pivotal` на сущности, `centrality`, блок `network` и версия выпуска.
+Контракт /4 ЛОМАЕТ форму: снят `hops`, снят `strategicControl`, снят корневой
+`ecosystem`. 16 слоёв, 5 хребтов, рубрика, тиры и форма Source по-прежнему приходят из
+семени без изменений. Новое здесь — `integration` и выведенное из неё `core` на
+сущности, блок `meta` с предметом карты и состоянием членства, `centrality`, блок
+`network` и версия выпуска.
 
-Как и в v2, файл, не прошедший валидатор, НЕ ПИШЕТСЯ. Предыдущий остаётся: отдать
-дашборду битую сеть хуже, чем не отдать новую.
+Файл, не прошедший валидатор, НЕ ПИШЕТСЯ. Предыдущий остаётся: отдать дашборду битую
+сеть хуже, чем не отдать новую.
 """
 
+import csv
 import json
 import re
 import sys
@@ -23,6 +26,49 @@ class ContractError(AssertionError):
     pass
 
 
+def _membership_meta(month: str, entities) -> dict:
+    """Сколько узлов карта впустила, сняла и держит в очереди.
+
+    Читает отчёт, который написал nveco_ingest: считать проверки второй раз здесь
+    значило бы завести вторую их реализацию, а расхождение двух копий одного правила
+    страшнее, чем чтение файла.
+
+    В ФАЗЕ 0 `retired` — ноль по построению: проверки членства выключены
+    (membership.enforce), и никого они не снимают. Поле не спрятано и не подменено
+    прочерком именно поэтому: ноль здесь — это утверждение «правило есть, но пока
+    молчит», и оно должно быть видно, а не выводиться из отсутствия поля.
+    """
+    path = db.RUNS_DIR / month / "_membership" / "report.csv"
+    enforced = bool(nveco.membership_cfg().get("enforce", False))
+    if not path.exists():
+        return {"admitted": 0, "retired": 0, "queued": 0, "enforced": enforced,
+                "note": "отчёт членства за этот месяц не найден"}
+    rows = list(csv.DictReader(path.open(encoding="utf-8")))
+    on_map = {e["id"] for e in entities}
+    rows = [r for r in rows if r["id"] in on_map]
+    passing = [r for r in rows if r["passes"] == "1"]
+    # Отчёт пишет nveco_ingest, и он не видит сущностей, заведённых ДОСТРОЙКОЙ: их
+    # CSV лежат в другом каталоге прогона и грузятся позже. Разрыв не заглаживается
+    # молча — он выносится числом, иначе `queued` читался бы как «весь остаток
+    # карты», будучи на самом деле остатком её первой половины.
+    uncovered = sorted(on_map - {r["id"] for r in rows})
+    return {
+        # Впущено — те, кто прошёл бы все три проверки, будь они включены.
+        "admitted": len(passing),
+        # Снято по членству. Пока правило выключено — ноль, и это факт, а не пробел.
+        "retired": 0,
+        # Очередь: стоят на карте, но своего досье пока не предъявили. Это и есть
+        # размер долга, который закрывают Фазы 1–2.
+        "queued": len(rows) - len(passing),
+        "enforced": enforced,
+        "covered": len(rows),
+        "uncovered": uncovered,
+        "checks": {k: sum(1 for r in rows if r[k] == "0")
+                   for k in ("in_scope", "min_sources", "min_self_sources",
+                             "min_confirmed_edges")},
+    }
+
+
 def build(month: str, net: dict) -> dict:
     seed = net["seed"]
     entities = [net["entities"][k] for k in sorted(net["entities"])]
@@ -33,18 +79,51 @@ def build(month: str, net: dict) -> dict:
     for e in entities:
         e["centrality"] = metrics["centrality"][e["id"]]
 
+    # ── интеграция и ядро ────────────────────────────────────────────────────
+    # Ядро — ВЫХОД, а не вход: верхние N по вычисленной мере, пересчёт каждый прогон.
+    # Списка руками нет нигде, и это единственное место, где карта решает, кто в ядре.
+    layers_of = {e["id"]: [l["layer"] for l in e.get("layers") or []] for e in entities}
+    struct = nvnet_centrality.structural([e["id"] for e in entities], edges,
+                                         layers_of, seed.get("cycles") or [])
+    integ = nvnet_centrality.integration(metrics["centrality"], struct,
+                                         nvnet.integration_weights())
+    core = set(nvnet_centrality.core_ids(integ, nveco.core_n()))
+    for e in entities:
+        e["integration"] = integ[e["id"]]
+        e["core"] = e["id"] in core
+        # `pivotal` — ЗЕРКАЛО `core` ровно на выпуск v4.0. Дашборд читает это поле
+        # сегодня, и гасить его до его собственного прохода нельзя. Помечено
+        # deprecated, удаляется в /5; чтобы оно не разошлось с `core`, оно и не
+        # вычисляется отдельно, а присваивается здесь одной строкой.
+        e["pivotal"] = e["core"]
+
     sub = nvnet_subgraphs.run(entities, edges)
     spof = nvnet_spof.run(entities, metrics["adjacency"], metrics["centrality"])
 
-    pivotal = sum(1 for e in entities if e["pivotal"])
+    pivotal = len(core)
     payload = {
         "schema": nvnet.SCHEMA_VERSION,
         "version": nvnet.release_version(month),
         "generated": date.today().isoformat(),
         "asOf": month,
         "source": "engine",
-        "ecosystem": nvnet.NETWORK_ID,
-        "pivots": [p for p in nvnet.pivot_ids() if p in net["entities"]],
+        # Корневой `ecosystem` снят контрактом /4: он называл карту именем компании.
+        # Идентификатор сети живёт в network.id и в meta.
+        #
+        # `pivots` остаётся ровно на этот выпуск и содержит СОСТАВ ЯДРА, а не список
+        # из конфига: дашборд читает это поле сегодня, и подменить его смысл тише,
+        # чем погасить, — здесь единственный способ не сломать его до его прохода.
+        "pivots": sorted(core),
+        "meta": {
+            "scope": {"ru": seed["scope"]["ru"], "en": seed["scope"]["en"]},
+            "scopeId": seed["scope"]["id"],
+            "coreRule": f"top-{nveco.core_n()} by integration",
+            "coreCount": len(core),
+            "membership": _membership_meta(month, entities),
+            "deprecated": {
+                "pivotal": "зеркало core; удаляется в ai-ecosystem-network/5",
+            },
+        },
         "totals": {"entities": len(entities), "edges": len(edges),
                    "layers": len(seed["layers"]), "cycles": len(seed.get("cycles", [])),
                    "techNodes": len(seed.get("techNodes", []))},
@@ -96,7 +175,7 @@ def build(month: str, net: dict) -> dict:
 BILINGUAL_FIELDS = {
     "entity": ("oneLiner", "whyIrreplaceable", "whatBreaksIt"),
     "entity_factor": ("irreplaceability", "lockInDepth", "timeToReplace",
-                      "strategicControl"),
+                      "concentration"),
     "edge": ("note", "detail"),
 }
 
@@ -111,7 +190,7 @@ _I18N_KEY = {
     "description": "description",
     "whatBreaksIt": "what_breaks_it", "note": "note", "detail": "detail",
     "irreplaceability": "why_irreplaceability", "lockInDepth": "why_lock_in",
-    "timeToReplace": "why_time", "strategicControl": "why_control",
+    "timeToReplace": "why_time", "concentration": "why_concentration",
     "riskNote": "risk_note", "mitigation": "risk_mitigation",
 }
 
@@ -460,7 +539,10 @@ def description_coverage(payload: dict) -> dict:
 # Правила из хендоффа 2026-08-28. Проверяются здесь, а не только отчётом, потому
 # что отчёт можно не посмотреть, а выпуск, который не пишется, — нельзя.
 BANNED_PROSE = {
-    "якорь": r"якор[ьяюеё]\w*",          # карта не якорная: 27 равноправных пивотов
+    # Слово, называвшее карту орбитой одной компании. Запрещено В ПРОЗЕ ВЫДАЧИ, и
+    # именно поэтому названо здесь буквально: правило, которое нельзя записать, нельзя
+    # и применить. С v4 у карты нет центра ни в механике, ни в словах.
+    "якорь": r"якор[ьяюеё]\w*",
     "ров": r"\bров\b|\bрва\b|\bрву\b|\bровом\b",
     "узкое место": r"узк\w+\s+мест\w+",
     "движок": r"движ[ко]\w*",
@@ -536,10 +618,16 @@ def validate(payload: dict) -> list:
     errs += i18n.check(payload, bilingual_paths(payload))
     if payload.get("schema") != nvnet.SCHEMA_VERSION:
         errs.append(f"schema '{payload.get('schema')}' вместо {nvnet.SCHEMA_VERSION}")
-    if "anchor" in payload:
-        errs.append("v3: поле anchor заменено на pivots — оба сразу быть не должны")
+    for k in ("anchor", "ecosystem"):
+        if k in payload:
+            errs.append(f"/4: поле '{k}' снято — у карты нет центра")
     if not payload.get("pivots"):
-        errs.append("v3: пустой список pivots")
+        errs.append("пустой список pivots (в /4 это состав ядра)")
+    m = payload.get("meta") or {}
+    if not ((m.get("scope") or {}).get("ru") and (m.get("scope") or {}).get("en")):
+        errs.append("meta.scope: карта обязана называть свой предмет на обоих языках")
+    if not m.get("coreRule"):
+        errs.append("meta: нет coreRule")
 
     ids = [e["id"] for e in payload["entities"]]
     if len(ids) != len(set(ids)):
@@ -551,12 +639,37 @@ def validate(payload: dict) -> list:
 
     for p in payload["pivots"]:
         if p not in idset:
-            errs.append(f"пивот '{p}' отсутствует среди сущностей")
+            errs.append(f"узел ядра '{p}' отсутствует среди сущностей")
 
-    hops_limit = nvnet.hops_limit()
+    core_ids = {e["id"] for e in payload["entities"] if e.get("core")}
+    if core_ids != set(payload["pivots"]):
+        errs.append("pivots не совпадает с составом core — поле обязано быть зеркалом")
+    if len(core_ids) != nveco.core_n():
+        errs.append(f"в ядре {len(core_ids)} узлов при правиле top-{nveco.core_n()}")
     for e in payload["entities"]:
         if "pivotal" not in e or not isinstance(e["pivotal"], bool):
             errs.append(f"сущность {e['id']}: нет булева pivotal")
+        if "core" not in e or not isinstance(e["core"], bool):
+            errs.append(f"сущность {e['id']}: нет булева core")
+        if e.get("pivotal") != e.get("core"):
+            errs.append(f"сущность {e['id']}: pivotal разошёлся с core, "
+                        f"а обязан быть его зеркалом весь выпуск /4")
+        if "hops" in e:
+            errs.append(f"сущность {e['id']}: поле hops снято контрактом /4")
+        ig = e.get("integration") or {}
+        if not isinstance(ig.get("score"), int) or not 0 <= ig["score"] <= 100:
+            errs.append(f"сущность {e['id']}: integration.score вне 0..100")
+        for k in ("degree", "betweenness", "pagerank", "layersSpanned",
+                  "edgeTypes", "cycles"):
+            if k not in ig:
+                errs.append(f"сущность {e['id']}: в integration нет {k}")
+        sg = e.get("sourcing") or {}
+        if sg.get("total") != len(e.get("sources") or []):
+            errs.append(f"сущность {e['id']}: sourcing.total не сходится с sources[]")
+        if sg.get("selfSourced") is None:
+            errs.append(f"сущность {e['id']}: нет sourcing.selfSourced")
+        if "domains" not in e or not isinstance(e["domains"], list):
+            errs.append(f"сущность {e['id']}: нет списка domains")
         c = e.get("centrality") or {}
         if not isinstance(c.get("degree"), int) or c["degree"] < 0:
             errs.append(f"сущность {e['id']}: centrality.degree не целое")
@@ -566,9 +679,6 @@ def validate(payload: dict) -> list:
         pr = c.get("pagerank")
         if not isinstance(pr, (int, float)) or isinstance(pr, bool) or not 0 <= pr <= 1:
             errs.append(f"сущность {e['id']}: centrality.pagerank вне 0..1")
-        if e.get("hops") is None or e["hops"] > hops_limit:
-            errs.append(f"сущность {e['id']} в {e.get('hops')} шагах от ближайшего "
-                        f"пивота при пределе {hops_limit}")
         if e["role"] not in nveco.ROLES:
             errs.append(f"сущность {e['id']}: role '{e['role']}'")
         if e["phase"] not in nveco.PHASES:
@@ -582,9 +692,11 @@ def validate(payload: dict) -> list:
         expect = nveco.criticality({"irreplaceability": f.get("irreplaceability"),
                                     "lock_in_depth": f.get("lockInDepth"),
                                     "time_to_replace": f.get("timeToReplace"),
-                                    "strategic_control": f.get("strategicControl")})
+                                    "concentration": f.get("concentration")})
+        if "strategicControl" in f:
+            errs.append(f"сущность {e['id']}: фактор strategicControl снят контрактом /4")
         if expect is None:
-            errs.append(f"сущность {e['id']}: не все четыре фактора заполнены")
+            errs.append(f"сущность {e['id']}: нет одного из трёх обязательных факторов")
         elif expect != e["criticality"]:
             errs.append(f"сущность {e['id']}: criticality {e['criticality']} "
                         f"не сходится с рубрикой ({expect})")
@@ -601,6 +713,25 @@ def validate(payload: dict) -> list:
         if x["id"] in seen:
             errs.append(f"дублирующийся id связи {x['id']}")
         seen.add(x["id"])
+        # ── лестница доказательства /4 ───────────────────────────────────────
+        # Те же четыре правила, что в валидаторе семени. Дублируются НЕ копией
+        # текста, а копией смысла: обе половины карты уезжают одному потребителю,
+        # и статус, проверенный в одной и не проверенный в другой, — это дыра
+        # ровно там, где данные и смешиваются.
+        if x.get("status") not in nveco.STATUSES:
+            errs.append(f"связь {x['id']}: status '{x.get('status')}'")
+        if x.get("sidedness") not in nveco.SIDEDNESS:
+            errs.append(f"связь {x['id']}: sidedness '{x.get('sidedness')}'")
+        claimed = set(x.get("claimedBy") or [])
+        if x.get("status") == "bilateral" and len(claimed) < 2:
+            errs.append(f"связь {x['id']}: статус bilateral при {len(claimed)} "
+                        f"подтвердивших стороне(ах) — нужны обе")
+        if claimed - {x["source"], x["target"]}:
+            errs.append(f"связь {x['id']}: claimedBy называет сторону вне связи")
+        if x.get("status") == "disputed" and not x.get("counterEvidence"):
+            errs.append(f"связь {x['id']}: статус disputed без контрцитаты")
+        if x.get("counterEvidence") and x.get("status") != "disputed":
+            errs.append(f"связь {x['id']}: есть контрцитата, а статус не disputed")
         if x["type"] not in types:
             errs.append(f"связь {x['id']}: тип '{x['type']}' вне таксономии v2+v3")
         # Хребет — производная типа, а не независимое поле. Расхождение означало
@@ -703,6 +834,10 @@ def _changelog(prev, cur, net):
         cl["newSources"] = [{"id": x["id"], "count": len(x["evidence"])}
                             for x in cur["edges"]
                             if x["id"] not in {y["id"] for y in net["seed"]["edges"]}]
+        cl["coreChanges"] = [{"id": e["id"], "move": "in",
+                              "integration": e["integration"]["score"],
+                              "why": "первый выпуск, где ядро вычислено"}
+                             for e in cur["entities"] if e["core"]]
         return cl
 
     pe = {x["id"]: x for x in prev.get("entities", [])}
@@ -727,6 +862,24 @@ def _changelog(prev, cur, net):
                  "to": (cg[i].get("risk") or {}).get("level")})
         if len(pg[i].get("evidence", [])) != len(cg[i].get("evidence", [])):
             cl["newSources"].append({"id": i, "count": len(cg[i].get("evidence", []))})
+    # ВХОД И ВЫХОД ИЗ ЯДРА. Сравнивается с тем, что прошлый выпуск НАЗЫВАЛ ядром,
+    # каким бы способом он к этому ни пришёл: в /3 это был список из конфига, в /4 —
+    # верхние 30 по integration. Именно поэтому сравнение идёт по признаку в файле, а
+    # не по правилу: переход от назначенного ядра к вычисленному сам по себе есть
+    # изменение состава, и спрятать его за «правило поменялось» нельзя.
+    def _core_of(payload):
+        got = {x["id"] for x in payload.get("entities", []) if x.get("core")}
+        return got or set(payload.get("pivots") or [])
+
+    pc, cc = _core_of(prev), _core_of(cur)
+    cl["coreChanges"] = (
+        [{"id": i, "move": "in", "integration": ce[i]["integration"]["score"],
+          "why": "поднялся в верхние по интеграции"} for i in sorted(cc - pc)]
+        + [{"id": i, "move": "out",
+            "integration": (ce[i]["integration"]["score"] if i in ce else None),
+            "why": "опустился ниже порога ядра" if i in ce else "ушёл с карты"}
+           for i in sorted(pc - cc)])
+
     for i in sorted(set(ce) & set(pe)):
         a, b = pe[i].get("criticality"), ce[i].get("criticality")
         if a is not None and b is not None and abs(b - a) > 5:
@@ -797,9 +950,25 @@ def _changelog_md(cur, cl, net) -> str:
           "relationshipsAdded": "связи +", "relationshipsRemoved": "связи −",
           "relationshipsUpdated": "связи ~", "criticalityShifts": "сдвиг критичности >5",
           "phaseChanges": "смена фазы", "riskEscalations": "эскалация риска",
-          "newSources": "новые источники", "layerChanges": "смена слоя"}
+          "newSources": "новые источники", "layerChanges": "смена слоя",
+          "coreChanges": "вход/выход из ядра"}
     L += [f"| {RU[k]} | {len(cl.get(k) or [])} |" for k in nvnet.CHANGE_CATEGORIES]
     L += [""]
+
+    core = cl.get("coreChanges") or []
+    if core:
+        ins = [c for c in core if c["move"] == "in"]
+        outs = [c for c in core if c["move"] == "out"]
+        L += [f"## Вход и выход из ядра ({len(ins)} / {len(outs)})", "",
+              f"Ядро вычисляется, а не назначается: {cur['meta']['coreRule']}. "
+              f"Движение состава — такая же находка карты, как новая связь.", ""]
+        if ins:
+            L += ["**Вошли.**", ""] + [
+                f"- `{c['id']}` — интеграция {c['integration']}" for c in ins[:40]] + [""]
+        if outs:
+            L += ["**Вышли.**", ""] + [
+                f"- `{c['id']}` — интеграция {c['integration']}, {c['why']}"
+                for c in outs[:40]] + [""]
 
     added = cl.get("relationshipsAdded") or []
     if added:
@@ -825,10 +994,15 @@ def run(month: str, net: dict) -> dict:
     OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
     OUT_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
     OUT_MD.write_text(_changelog_md(payload, cl, net))
+    core_top = sorted((e for e in payload["entities"] if e["core"]),
+                      key=lambda e: -e["integration"]["score"])[:8]
     return {"ok": True, "errors": [], "path": str(OUT_JSON),
             "entities": payload["totals"]["entities"],
             "edges": payload["totals"]["edges"],
             "version": payload["version"], "network": payload["network"],
+            "coreRule": payload["meta"]["coreRule"],
+            "coreTop": core_top,
+            "membership": payload["meta"]["membership"],
             "descriptions": description_coverage(payload)}
 
 

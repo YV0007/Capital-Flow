@@ -209,3 +209,88 @@ def run(entity_ids, edges, dependence_map=None) -> dict:
         "dependenceEdges": sum(len(v) for v in dep["adj"].values()),
         "unknownDependenceTypes": dep["unknownTypes"],
     }
+
+
+# ── интеграция ───────────────────────────────────────────────────────────────
+# ОСНОВНОЙ РАНГ КАРТЫ v4 и прямая замена назначенному списку центров.
+#
+# Вопрос, на который она отвечает: насколько глубоко узел вшит в экосистему. Не
+# «насколько он важен» — это вторая, авторская ось (criticality из досье), и они
+# намеренно не сливаются в одно число. Расхождение осей и есть самое интересное, что
+# карта умеет показать: высокая критичность при низкой интеграции — скрытая точка
+# удушения, низкая критичность при высокой интеграции — хаб.
+#
+# Шесть слагаемых, все уже считаются движком; веса — в config/nvnet_edges.yaml.
+# Нормировка ПО МАКСИМУМУ В ТЕКУЩЕМ ГРАФЕ, а не по абсолютной шкале. Следствие, о
+# котором нужно помнить: 100 всегда у кого-то есть, и абсолютные числа двух выпусков
+# несравнимы — сравнивать можно ранг и разрыв между соседями.
+
+def structural(entity_ids, edges, layers_of, cycles) -> dict:
+    """layersSpanned, edgeTypes и cycles по ВСЕЙ сети, а не по семени.
+
+    Считается здесь, а не переносится из `gravity`, по одной причине: гравитация
+    посчитана на семени, и сущность, заведённая достройкой, получила бы нули по всем
+    трём слагаемым — то есть систематически заниженный ранг ровно у тех узлов, что
+    появились последними. `gravity` при этом не трогается и едет как есть.
+
+    layersSpanned — сколько РАЗНЫХ слоёв узел достаёт своими связями (слои
+    контрагентов плюс свои). Именно достаёт: узел, стоящий в одном слое, но
+    связанный с пятью, вшит глубже, чем узел, записанный в пять слоёв и ни с кем не
+    связанный.
+    """
+    out = {e: {"layersSpanned": set(), "edgeTypes": set(), "cycles": 0}
+           for e in entity_ids}
+    for e in entity_ids:
+        out[e]["layersSpanned"] |= set(layers_of.get(e, ()))
+    for x in edges:
+        s, t = x["source"], x["target"]
+        for me, other in ((s, t), (t, s)):
+            if me not in out:
+                continue
+            out[me]["edgeTypes"].add(x["type"])
+            out[me]["layersSpanned"] |= set(layers_of.get(other, ()))
+    for c in cycles or ():
+        for m in set(c.get("path") or ()):
+            if m in out:
+                out[m]["cycles"] += 1
+    return {k: {"layersSpanned": len(v["layersSpanned"]),
+                "edgeTypes": len(v["edgeTypes"]), "cycles": v["cycles"]}
+            for k, v in out.items()}
+
+
+def integration(centrality, struct, weights) -> dict:
+    """0..100 на узел плюс разложение по слагаемым.
+
+    Нулевой максимум по слагаемому даёт нулевой вклад ВСЕМ, а не делению на ноль:
+    граф без единого контура — законный граф, и мера обязана его пережить.
+    """
+    ids = list(centrality)
+    raw = {}
+    for i in ids:
+        c, st = centrality[i], struct.get(i, {})
+        raw[i] = {"degree": c["degree"], "betweenness": c["betweenness"],
+                  "pagerank": c["pagerank"],
+                  "layers_spanned": st.get("layersSpanned", 0),
+                  "edge_types": st.get("edgeTypes", 0),
+                  "cycles": st.get("cycles", 0)}
+    peak = {k: max((raw[i][k] for i in ids), default=0) for k in weights}
+    out = {}
+    for i in ids:
+        score = sum(w * (raw[i][k] / peak[k] if peak[k] else 0.0)
+                    for k, w in weights.items())
+        out[i] = {"score": round(100 * score),
+                  "degree": raw[i]["degree"],
+                  "betweenness": raw[i]["betweenness"],
+                  "pagerank": raw[i]["pagerank"],
+                  "layersSpanned": raw[i]["layers_spanned"],
+                  "edgeTypes": raw[i]["edge_types"],
+                  "cycles": raw[i]["cycles"]}
+    return out
+
+
+def core_ids(integ, n: int) -> list:
+    """Верхние n по integration.score. Ничьих не бывает: при равном счёте побеждает
+    больший degree, потом алфавит — иначе состав ядра прыгал бы между прогонами на
+    одних и тех же данных, а карта обязана быть детерминированной."""
+    order = sorted(integ, key=lambda i: (-integ[i]["score"], -integ[i]["degree"], i))
+    return order[:n]

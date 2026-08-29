@@ -4,8 +4,8 @@
 сущностей и 243 связи это первый полный прогон, и переисследовать его нельзя. Правки
 ровно три, все механические:
 
-  * `pivotal: true/false` каждой сущности по config/nvnet_pivots.yaml;
-  * `hops` пересчитывается от БЛИЖАЙШЕГО пивота, а не от единственного якоря;
+  * `core` и его зеркало `pivotal` — ВЫЧИСЛЯЮТСЯ по integration в nvnet_handoff;
+  * членство держат три проверки охвата, а не расстояние до назначенного центра;
   * добавляются новые сущности и связи из runs/<month>/nvnet-*/ .
 
 Новые строки проходят те же проверки, что в v2 (тип связи существует, цитата ≤15 слов,
@@ -23,8 +23,9 @@ from .ingest import is_search_url
 from .nveco_ingest import (_owned_by, _retiring_agents, _validate_entity,
                            _validate_factors, _validate_source, WHY_COLUMNS)
 
-CAMEL = {"irreplaceability": "irreplaceability", "lock_in_depth": "lockInDepth",
-         "time_to_replace": "timeToReplace", "strategic_control": "strategicControl"}
+CAMEL = {"concentration": "concentration",
+         "irreplaceability": "irreplaceability", "lock_in_depth": "lockInDepth",
+         "time_to_replace": "timeToReplace"}
 
 
 def _read(path):
@@ -102,14 +103,14 @@ def _validate_edge(row, types):
     }, [], warnings
 
 
-def _status_and_confidence(tiers):
+def _status_and_confidence(tiers, claimed=(), disputed=False):
+    """Одно правило подтверждения на обе половины карты — импортом, не копией."""
     from .nveco_score import _status_and_confidence as f
-    return f(tiers)
+    return f(tiers, claimed, disputed)
 
 
 def build(month: str) -> dict:
     seed = nvnet.load_seed()
-    pivots = [p for p in nvnet.pivot_ids()]
     types = nvnet.edge_types()
     today = date.today().isoformat()
 
@@ -178,8 +179,11 @@ def build(month: str) -> dict:
                 "ticker": clean["ticker"], "publicPrivate": clean["public_private"],
                 "geo": clean["geo"], "founded": clean["founded"],
                 "revenueUsdB": clean["revenue_usd_b"], "techNodes": [],
-                "hops": None, "firstSeen": month, "lastConfirmed": month,
+                "firstSeen": month, "lastConfirmed": month,
                 "stale": False, "sources": [],
+                "domains": nveco.entity_domains(clean["id"]),
+                "cik": nveco.entity_cik(clean["id"]),
+                "sourcing": {"total": 0, "selfSourced": 0, "byTier": {}},
             }
             owners["entity"][clean["id"]] = adir.name
             new_ent += 1
@@ -421,24 +425,84 @@ def build(month: str) -> dict:
         vals = {k: v[0] for k, v in fs.items()}
         c = nveco.criticality(vals)
         entities[eid]["criticality"] = c
-        entities[eid]["criticalityFactors"] = {CAMEL[k]: vals[k] for k in nveco.FACTORS}
-        entities[eid]["criticalityWhy"] = {CAMEL[k]: fs[k][1] for k in nveco.FACTORS}
+        # Отсутствующий фактор едет ЯВНЫМ null, а не пропущенным ключом: «не
+        # измерено» и «поля нет» — разные утверждения, и потребитель обязан их
+        # различать. Ключ `concentration` присутствует у всех, значение — у тех,
+        # у кого есть досье.
+        entities[eid]["criticalityFactors"] = {CAMEL[k]: vals.get(k)
+                                               for k in nveco.FACTORS}
+        entities[eid]["criticalityWhy"] = {CAMEL[k]: (fs[k][1] if k in fs else None)
+                                           for k in nveco.FACTORS}
         for l in entities[eid]["layers"]:
             l["criticality"] = c if l["primary"] else round((c or 0) * 0.5)
 
-    # ── pivotal + правило «≤2 шагов от ЛЮБОГО пивота» ─────────────────────────
-    pivot_set = {p for p in pivots if p in entities}
-    missing_pivots = [p for p in pivots if p not in entities]
-    dist = nvnet.hops_from_pivots(pivot_set, edges.values())
-    limit = nvnet.hops_limit()
+    # ── ЕДИНЫЙ ПЕРЕСЧЁТ ТИРОВ ПО ВСЕЙ СЕТИ ───────────────────────────────────
+    # Половины карты собираются по-разному: сущности и связи семени приезжают уже
+    # оценёнными из nveco_score, а достройка приносит источники со СЛОВ АГЕНТА и
+    # доклеивает их к семенным строкам. До v4 разница была незаметна, потому что
+    # шкала была одна на всех. Теперь тир зависит от того, ЧЕЙ это документ
+    # относительно предмета, и оставить в файле два способа его получить значило бы
+    # выдать карту, где одна и та же ссылка стоит тиром 1 у одной строки и тиром 2 у
+    # соседней. Поэтому здесь тир считается заново для КАЖДОГО источника карты — и
+    # для семени, и для достройки, — а статус связи выводится из результата.
+    for eid, e in entities.items():
+        for src in e.get("sources") or []:
+            t, _ = nveco.source_tier(src.get("url"), eid)
+            src["tier"] = t or 6
+            src["confidence"] = nveco.tier_confidence(src["tier"])
+            src["self"] = eid if nveco.is_self_source(src.get("url"), eid) else None
+    for key, x in edges.items():
+        live, claimed = [], set()
+        for src in x.get("evidence") or []:
+            t, _ = nveco.source_tier(src.get("url"), x["source"], x["target"])
+            src["tier"] = t or 6
+            src["confidence"] = nveco.tier_confidence(src["tier"])
+            owner = next((end for end in (x["source"], x["target"])
+                          if nveco.is_self_source(src.get("url"), end)), None)
+            src["self"] = owner
+            live.append(src["tier"])
+            if owner:
+                claimed.add(owner)
+        counter = x.get("counterEvidence") or []
+        for src in counter:
+            t, _ = nveco.source_tier(src.get("url"), x["source"], x["target"])
+            src["tier"] = t or 6
+            src["self"] = next((end for end in (x["source"], x["target"])
+                                if nveco.is_self_source(src.get("url"), end)), None)
+        status, conf = _status_and_confidence(live, claimed, bool(counter))
+        x["status"] = status
+        x["confidence"] = conf
+        x["sourceTier"] = min(live) if live else 6
+        x["confirmedSources"] = len(live)
+        x["sidedness"] = ("disputed" if counter else
+                          "bilateral" if len(claimed) >= 2 else "single")
+        x["claimedBy"] = sorted(claimed)
+        x.setdefault("counterEvidence", [])
+
+    # ── прозрачность профиля у ВСЕХ, включая достройку ───────────────────────
+    # Семя привозит `sourcing` посчитанным, но у сущности, заведённой достройкой,
+    # источники приезжают отдельным файлом, и блок пришлось бы собирать дважды.
+    # Считается он здесь по итоговому списку — одному на обе половины карты.
+    for eid, e in entities.items():
+        srcs = e.get("sources") or []
+        by_tier = {}
+        for x in srcs:
+            by_tier[str(x.get("tier"))] = by_tier.get(str(x.get("tier")), 0) + 1
+        e["domains"] = nveco.entity_domains(eid)
+        e["cik"] = nveco.entity_cik(eid)
+        e["sourcing"] = {
+            "total": len(srcs),
+            "selfSourced": sum(1 for x in srcs
+                               if nveco.is_self_source(x.get("url"), eid)),
+            "byTier": {k: by_tier[k] for k in sorted(by_tier)}}
+
+    # ── членство держат три проверки охвата, а не расстояние до центра ────────
+    # Раньше здесь стоял обход графа от 27 назначенных пивотов, и всё, до чего от них
+    # дальше двух шагов, выбрасывалось молча-с-причиной. Правило вырезано целиком:
+    # сеть — это уже собранная карта, границу которой держит nveco_ingest, и вторая
+    # граница поверх первой только резала бы её вслепую. Связь без обоих концов
+    # по-прежнему не едет: это правило целостности, а не членства.
     dropped = []
-    for eid in list(entities):
-        h = dist.get(eid)
-        entities[eid]["pivotal"] = eid in pivot_set
-        entities[eid]["hops"] = h
-        if h is None or h > limit:
-            dropped.append(eid)
-            entities.pop(eid)
     for k in [k for k, v in edges.items()
               if v["source"] not in entities or v["target"] not in entities]:
         edges.pop(k)
@@ -448,8 +512,7 @@ def build(month: str) -> dict:
             "newEntities": new_ent, "newEdges": new_edge, "newSources": new_src,
             "details": detail_rows, "descriptions": desc_rows,
             "notes": note_rows, "oneLiners": liner_rows,
-            "problems": problems, "rejects": rejects, "dropped": dropped,
-            "missingPivots": missing_pivots, "pivots": sorted(pivot_set)}
+            "problems": problems, "rejects": rejects, "dropped": dropped}
 
 
 def _drop_i18n(con, kind, ids):

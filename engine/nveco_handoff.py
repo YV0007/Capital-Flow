@@ -12,7 +12,7 @@
   1  id сущностей и связей стабильны и уникальны
   2  source/target каждой связи есть в entities[]
   3  evidence непустой у каждой связи, цитата <= 15 слов
-  4  каждая сущность не дальше anchor.hops шагов от якоря
+  4  каждая сущность работает хотя бы в одном слое охвата (config/nveco_scope.yaml)
   5  вычисляемые поля на месте и в своих диапазонах
   6  layers переменной длины, но каждая запись полна (plane, order)
   7  ни одного поля, указывающего в DC-AI
@@ -33,9 +33,26 @@ class ContractError(AssertionError):
     """Нарушение железного правила. Файл не пишется."""
 
 
+def _sourcing(sources, entity_id: str) -> dict:
+    """Прозрачность профиля: всего, из них собственных, и разбивка по тирам.
+
+    Считается по УЖЕ собранным источникам, ничего не добывая. Смысл поля — сделать
+    видимым то, что раньше приходилось выяснять запросом к файлу: сколько узлов
+    описаны только чужими документами. Ответ на 2026-08 — 74 из 107, и именно это
+    число превращает «карта из 107 сущностей» в «карта из 33 исследованных сущностей
+    и 74 упоминаний».
+    """
+    by_tier = {}
+    for x in sources:
+        by_tier[str(x["tier"])] = by_tier.get(str(x["tier"]), 0) + 1
+    return {"total": len(sources),
+            "selfSourced": sum(1 for x in sources if x.get("self") == entity_id),
+            "byTier": {k: by_tier[k] for k in sorted(by_tier)}}
+
+
 # ── сборка ───────────────────────────────────────────────────────────────────
-def build(month: str, anchor: str = None) -> dict:
-    acfg = nveco.anchor_cfg(anchor)
+def build(month: str, scope_id: str = None) -> dict:
+    scope_id = scope_id or nveco.SCOPE_ID
     con = nveco.connect()
     lidx = nveco.layer_index()
 
@@ -69,7 +86,10 @@ def build(month: str, anchor: str = None) -> dict:
             "tier": r["tier"], "type": r["type"], "title": r["title"], "url": r["url"],
             "published": r["published"], "fetched": r["fetched"],
             "alive": bool(r["alive"]), "quote": r["quote"],
-            "confidence": r["confidence"]})
+            "confidence": r["confidence"],
+            # Чьё это слово. `self` ставится по config/entity_domains.yaml и едет в
+            # файл, чтобы тир можно было ПРОВЕРИТЬ, а не принять на веру.
+            "self": r["self_of"], "counter": bool(r["counter"])})
 
     gravity = {}
     if con.execute("SELECT name FROM sqlite_master WHERE name='nveco_gravity'").fetchone():
@@ -103,7 +123,7 @@ def build(month: str, anchor: str = None) -> dict:
 
     # camelCase-имена факторов — язык передачи, snake_case остаётся языком исследования
     CAMEL = {"irreplaceability": "irreplaceability", "lock_in_depth": "lockInDepth",
-             "time_to_replace": "timeToReplace", "strategic_control": "strategicControl"}
+             "time_to_replace": "timeToReplace", "concentration": "concentration"}
 
     entities = []
     for e in con.execute("SELECT * FROM nveco_entity ORDER BY id"):
@@ -137,10 +157,18 @@ def build(month: str, anchor: str = None) -> dict:
             "ticker": e["ticker"], "publicPrivate": e["public_private"],
             "geo": e["geo"], "founded": e["founded"], "revenueUsdB": e["revenue_usd_b"],
             "techNodes": tech_by_owner.get(e["id"], []),
-            "hops": e["hops"],
+            # Реестр издателей едет В ФАЙЛЕ, а не остаётся конфигом движка: без него
+            # потребитель не может проверить ни один тир и вынужден верить на слово.
+            "domains": nveco.entity_domains(e["id"]),
+            "cik": nveco.entity_cik(e["id"]),
             "firstSeen": e["first_seen"], "lastConfirmed": e["last_confirmed"],
             "stale": bool(e["stale"]),
             "sources": src_by.get(("entity", e["id"]), []),
+            # Прозрачность профиля. Число «сколько всего источников» ничего не говорит,
+            # пока не видно, сколько из них — слово самой сущности: профиль из пяти
+            # чужих документов и профиль с одним своим — разные вещи, и разница
+            # обязана быть видна, а не выводиться читателем.
+            "sourcing": _sourcing(src_by.get(("entity", e["id"]), []), e["id"]),
         })
         entities[-1]["gravity"].setdefault("signals", {})
 
@@ -159,7 +187,14 @@ def build(month: str, anchor: str = None) -> dict:
             "techNode": r["tech_node"], "formed": r["formed"],
             "strengthened": r["strengthened"], "lastConfirmed": r["last_confirmed"],
             "note": r["note"],
-            "evidence": src_by.get(("edge", r["id"]), []),
+            # Сколько СТОРОН стоит за связью, и каких именно. `single` — не изъян
+            # доказательства, а честная пометка: второй конец о связи молчит.
+            "sidedness": r["sidedness"] or "single",
+            "claimedBy": [x for x in (r["claimed_by"] or "").split("|") if x],
+            "evidence": [ev for ev in src_by.get(("edge", r["id"]), [])
+                         if not ev.get("counter")],
+            "counterEvidence": [ev for ev in src_by.get(("edge", r["id"]), [])
+                                if ev.get("counter")],
         })
 
     cycles = []
@@ -180,8 +215,10 @@ def build(month: str, anchor: str = None) -> dict:
         "generated": date.today().isoformat(),
         "asOf": month,
         "source": "engine",
-        "ecosystem": acfg.get("ecosystem", acfg["id"]),
-        "anchor": acfg["id"],
+        "scope": {"id": scope_id,
+                  "ru": nveco.scope_cfg()["scope"]["ru"].strip(),
+                  "en": nveco.scope_cfg()["scope"]["en"].strip(),
+                  "layers": nveco.scope_layers()},
         "totals": {"entities": len(entities), "edges": len(edges),
                    "layers": len(layers), "cycles": len(cycles),
                    "techNodes": len(tech_nodes)},
@@ -193,8 +230,9 @@ def build(month: str, anchor: str = None) -> dict:
 
 
 # ── валидатор ────────────────────────────────────────────────────────────────
-def validate(payload: dict, max_hops: int = 2) -> list:
+def validate(payload: dict) -> list:
     errs = []
+    scope_layers = set(payload.get("scope", {}).get("layers") or nveco.scope_layers())
     ids = [e["id"] for e in payload["entities"]]
     if len(ids) != len(set(ids)):
         errs.append("правило 1: дублирующиеся id сущностей")
@@ -250,13 +288,15 @@ def validate(payload: dict, max_hops: int = 2) -> list:
             errs.append(f"сущность {e['id']}: сектор '{e['sector']}' вне таксономии")
         # правило 5 — вычисляемое на месте и сходится с рубрикой
         f = e["criticalityFactors"]
+        if "strategicControl" in f:
+            errs.append(f"сущность {e['id']}: фактор strategicControl снят контрактом /4")
         snake = {"irreplaceability": f.get("irreplaceability"),
                  "lock_in_depth": f.get("lockInDepth"),
                  "time_to_replace": f.get("timeToReplace"),
-                 "strategic_control": f.get("strategicControl")}
+                 "concentration": f.get("concentration")}
         expect = nveco.criticality(snake)
         if expect is None:
-            errs.append(f"сущность {e['id']}: не все четыре фактора заполнены")
+            errs.append(f"сущность {e['id']}: нет одного из трёх обязательных факторов")
         elif expect != e["criticality"]:
             errs.append(f"сущность {e['id']}: criticality {e['criticality']} "
                         f"не сходится с рубрикой ({expect})")
@@ -266,10 +306,18 @@ def validate(payload: dict, max_hops: int = 2) -> list:
         prim = [l for l in e["layers"] if l["primary"]]
         if prim and prim[0]["criticality"] != e["criticality"]:
             errs.append(f"сущность {e['id']}: критичность основного слоя не равна общей")
-        # правило 4 — не дальше двух шагов от якоря
-        if e.get("hops") is None or e["hops"] > max_hops:
-            errs.append(f"правило 4: сущность {e['id']} в {e.get('hops')} шагах "
-                        f"от якоря при пределе {max_hops}")
+        # правило 4 — сущность работает хотя бы в одном слое охвата
+        if "hops" in e:
+            errs.append(f"сущность {e['id']}: поле hops снято контрактом /4")
+        if not ({l["layer"] for l in e["layers"]} & scope_layers):
+            errs.append(f"правило 4: сущность {e['id']} не работает ни в одном слое "
+                        f"охвата — она не про этот предмет")
+        # sourcing — вычисленное поле, а не украшение: по нему видно долг профиля
+        sg = e.get("sourcing") or {}
+        if sg.get("total") != len(e.get("sources") or []):
+            errs.append(f"сущность {e['id']}: sourcing.total не сходится с sources[]")
+        if sg.get("selfSourced") is None or sg.get("byTier") is None:
+            errs.append(f"сущность {e['id']}: нет блока sourcing")
         for lim, field in ((110, "oneLiner"), (280, "whyIrreplaceable"),
                            (110, "whatBreaksIt")):
             if e.get(field) and len(e[field]) > lim:
@@ -299,6 +347,20 @@ def validate(payload: dict, max_hops: int = 2) -> list:
             errs.append(f"связь {x['id']}: direction '{x['direction']}'")
         if x["status"] not in nveco.STATUSES:
             errs.append(f"связь {x['id']}: status '{x['status']}'")
+        if x.get("sidedness") not in nveco.SIDEDNESS:
+            errs.append(f"связь {x['id']}: sidedness '{x.get('sidedness')}'")
+        # `bilateral` обязан опираться на ДВА РАЗНЫХ конца. Один издатель, назвавший
+        # себя дважды, — это по-прежнему одна сторона, и статус так набрать нельзя.
+        claimed = set(x.get("claimedBy") or [])
+        if x["status"] == "bilateral" and len(claimed) < 2:
+            errs.append(f"связь {x['id']}: статус bilateral при {len(claimed)} "
+                        f"подтвердивших стороне(ах) — нужны обе")
+        if claimed - {x["source"], x["target"]}:
+            errs.append(f"связь {x['id']}: claimedBy называет сторону вне связи")
+        if x["status"] == "disputed" and not x.get("counterEvidence"):
+            errs.append(f"связь {x['id']}: статус disputed без контрцитаты")
+        if x.get("counterEvidence") and x["status"] != "disputed":
+            errs.append(f"связь {x['id']}: есть контрцитата, а статус не disputed")
         # правило 9 — числа числа и в диапазонах
         for field, lo, hi in (("strength", 0, 100), ("lockInDepth", 0, 100),
                               ("substitutability", 0, 100), ("confidence", 0, 1)):
@@ -347,8 +409,12 @@ def validate(payload: dict, max_hops: int = 2) -> list:
 
     if payload.get("schema") != nveco.SCHEMA_VERSION:
         errs.append(f"schema '{payload.get('schema')}' вместо {nveco.SCHEMA_VERSION}")
-    if payload.get("anchor") not in idset:
-        errs.append(f"якоря '{payload.get('anchor')}' нет среди сущностей")
+    for k in ("ecosystem", "anchor"):
+        if k in payload:
+            errs.append(f"поле '{k}' снято контрактом /4 — у карты нет центра")
+    sc = payload.get("scope") or {}
+    if not (sc.get("ru") and sc.get("en") and sc.get("layers")):
+        errs.append("нет блока scope: карта обязана называть свой предмет")
     return errs
 
 
@@ -387,11 +453,11 @@ def _diff(prev, cur):
 
 def _changelog_md(cur, diff) -> str:
     t = cur["totals"]
-    conf = sum(1 for e in cur["edges"] if e["status"] == "confirmed")
+    conf = sum(1 for e in cur["edges"] if e["status"] in ("bilateral", "confirmed"))
     prim = sum(1 for e in cur["edges"] if (e["sourceTier"] or 6) <= 3)
     dead = sum(1 for e in cur["edges"] for ev in e["evidence"] if not ev["alive"])
-    L = [f"# ЭКОСИСТЕМА NVIDIA — {cur['asOf']}", "",
-         f"Якорь: **{cur['anchor']}**. {t['entities']} сущностей, {t['edges']} связей, "
+    L = [f"# ЭКОСИСТЕМА ИИ-ИНФРАСТРУКТУРЫ — {cur['asOf']}", "",
+         f"{t['entities']} сущностей, {t['edges']} связей, "
          f"{t['cycles']} контуров, {t['techNodes']} тех-узлов. "
          f"Сгенерировано {cur['generated']}, схема `{cur['schema']}`.", "",
          "## Состояние",
@@ -438,9 +504,8 @@ def _changelog_md(cur, diff) -> str:
     return "\n".join(L)
 
 
-def run(month: str, anchor: str = None) -> dict:
-    acfg = nveco.anchor_cfg(anchor)
-    out_json = db.ROOT / acfg["handoff"]
+def run(month: str, scope_id: str = None) -> dict:
+    out_json = db.ROOT / nveco.scope_cfg()["handoff"]
     prev = None
     if out_json.exists():
         try:
@@ -448,8 +513,8 @@ def run(month: str, anchor: str = None) -> dict:
         except json.JSONDecodeError:
             prev = None
 
-    payload = build(month, anchor)
-    errors = validate(payload, max_hops=int(acfg.get("hops", 2)))
+    payload = build(month, scope_id)
+    errors = validate(payload)
     if errors:
         # Файл НЕ пишется. Предыдущий остаётся на месте — лучше вчерашняя правда,
         # чем сегодняшняя ложь.

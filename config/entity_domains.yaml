@@ -1,0 +1,145 @@
+# РЕЕСТР ИЗДАТЕЛЕЙ. Кто чей URL — единственный вход правила SELF.
+#
+# Зачем он существует. До v4 тир источника считался по одной зашитой таблице, где
+# nvidia.com стоял тиром 1, а всё остальное — тиром 2. Это была не шкала
+# «официальности», а шкала «близости к NVIDIA»: пресс-релиз TSMC про TSMC получал тир 2
+# у себя же дома. Здесь точка отсчёта переезжает к ПРЕДМЕТУ: тир 1 — это когда о
+# сущности говорит она сама, кем бы она ни была.
+#
+# Как читается запись:
+#   domains — хосты и префиксы путей, которые сущность издаёт САМА.
+#             Запись без «/» матчится по хосту с учётом поддоменов:
+#             `nvidia.com` покрывает `blogs.nvidia.com` и `nvidianews.nvidia.com`.
+#             Запись со «/» матчится по «хост+путь»: `github.com/pytorch/` —
+#             это PyTorch, а не GitHub, потому что общий хост принадлежит всем.
+#   cik     — код эмитента в EDGAR. Отчётность по этому CIK — тоже SELF, даже если
+#             хост общий (sec.gov один на всех).
+#   from    — откуда взято: sources (доказано URL, уже лежащим в собранных данных),
+#             external_ids (config/external_ids.yaml), known (общеизвестно, данными
+#             этого прогона НЕ подтверждено — кандидат на проверку в Фазе 1).
+#
+# ОДИН ДОМЕН МОЖЕТ ПРИНАДЛЕЖАТЬ НЕСКОЛЬКИМ СУЩНОСТЯМ, и это не ошибка: побеждает
+# САМОЕ ДЛИННОЕ совпадение, поэтому `developer.nvidia.com/cuda` — это CUDA, а
+# `nvidia.com` — это NVIDIA. Разведение сделано намеренно: 10-K NVIDIA не является
+# собственным словом CUDA о себе, хотя владелец у них один.
+#
+# ПУСТОЙ `domains` — ЭТО ФАКТ, А НЕ ПРОБЕЛ. У закона нет своего издателя: текст
+# публикует законодатель, а не сам закон. Правило `min_self_sources` для такой
+# сущности снимается ровно этим фактом, а не исключением в коде.
+
+entities:
+  a16z:               { domains: [a16z.com],                                  from: known }
+  amazon:             { domains: [amazon.com, aboutamazon.com],               cik: "0001018724", from: sources }
+  amd:                { domains: [amd.com],                                   cik: "0000002488", from: sources }
+  amkor:              { domains: [amkor.com],                                 cik: "0001047127", from: sources }
+  anthropic:          { domains: [anthropic.com],                             from: sources }
+  applied-materials:  { domains: [appliedmaterials.com],                      cik: "0000006951", from: sources }
+  arista:             { domains: [arista.com],                                cik: "0001596532", from: sources }
+  arm:                { domains: [arm.com],                                   cik: "0001973239", from: sources }
+  ase:                { domains: [aseglobal.com],                             from: known }
+  asml:               { domains: [asml.com],                                  cik: "0000937966", from: sources }
+  astera-labs:        { domains: [asteralabs.com],                            cik: "0001736297", from: sources }
+  bis:                { domains: [bis.doc.gov],                               from: known }
+  blackrock:          { domains: [blackrock.com],                             cik: "0002012383", from: external_ids }
+  blackstone:         { domains: [blackstone.com],                            cik: "0001393818", from: external_ids }
+  bloom-energy:       { domains: [bloomenergy.com],                           cik: "0001664703", from: sources }
+  boyd:               { domains: [boydcorp.com],                              from: known }
+  broadcom:           { domains: [broadcom.com],                              cik: "0001730168", from: sources }
+  brookfield:         { domains: [brookfield.com],                            cik: "0001937926", from: external_ids }
+  cadence:            { domains: [cadence.com],                               cik: "0000813672", from: sources }
+  # У межведомственного комитета нет собственного издателя: его решения выходят
+  # документами Минфина США. Пусто — точнее, чем присвоить ему home.treasury.gov.
+  cfius:              { domains: [],                                          from: none }
+  china:              { domains: [gov.cn],                                    from: known }
+  # Закон не издаёт сам себя. Текст публикует Конгресс, и congress.gov — домен
+  # законодателя, а не этой сущности.
+  chips-act:          { domains: [],                                          from: none }
+  cisco:              { domains: [cisco.com],                                 from: known }
+  coherent:           { domains: [coherent.com, ii-vi.com],                   cik: "0000820318", from: sources }
+  constellation:      { domains: [constellationenergy.com],                   from: sources }
+  coreweave:          { domains: [coreweave.com],                             cik: "0001769628", from: sources }
+  credo:              { domains: [credosemi.com],                             cik: "0001807794", from: sources }
+  crusoe:             { domains: [crusoe.ai, crusoeenergy.com],               from: known }
+  cuda:               { domains: [developer.nvidia.com/cuda, docs.nvidia.com/cuda], from: known }
+  databricks:         { domains: [databricks.com],                            from: known }
+  deepseek:           { domains: [deepseek.com, github.com/deepseek-ai/, raw.githubusercontent.com/deepseek-ai/], from: known }
+  dell:               { domains: [dell.com],                                  from: known }
+  delta-electronics:  { domains: [deltaww.com],                               from: known }
+  digital-realty:     { domains: [digitalrealty.com],                         cik: "0001297996", from: sources }
+  eaton:              { domains: [eaton.com],                                 cik: "0001551182", from: sources }
+  equinix:            { domains: [equinix.com],                               cik: "0001101239", from: sources }
+  eu:                 { domains: [europa.eu],                                 from: known }
+  eu-ai-act:          { domains: [eur-lex.europa.eu],                         from: known }
+  fabrinet:           { domains: [fabrinet.com],                              cik: "0001408710", from: sources }
+  foxconn:            { domains: [foxconn.com, honhai.com],                   from: known }
+  ge-vernova:         { domains: [gevernova.com],                             from: known }
+  google:             { domains: [google.com, abc.xyz, blog.google, about.google], cik: "0001652044", from: sources }
+  google-cloud:       { domains: [cloud.google.com],                          from: known }
+  google-deepmind:    { domains: [deepmind.google, deepmind.com],             from: known }
+  hpe:                { domains: [hpe.com],                                   from: known }
+  huggingface:        { domains: [huggingface.co, github.com/huggingface/, raw.githubusercontent.com/huggingface/], from: sources }
+  intel:              { domains: [intel.com],                                 cik: "0000050863", from: sources }
+  japan:              { domains: [japan.go.jp, meti.go.jp],                   from: known }
+  jax:                { domains: [docs.jax.dev, github.com/jax-ml/, raw.githubusercontent.com/jax-ml/], from: sources }
+  kioxia:             { domains: [kioxia.com],                                from: known }
+  kla:                { domains: [kla.com],                                   cik: "0000319201", from: sources }
+  kubernetes:         { domains: [kubernetes.io, github.com/kubernetes/],     from: known }
+  lam-research:       { domains: [lamresearch.com],                           cik: "0000707549", from: sources }
+  lambda:             { domains: [lambdalabs.com, lambda.ai],                 from: known }
+  lightspeed:         { domains: [lsvp.com],                                  from: known }
+  lite-on:            { domains: [liteon.com],                                from: known }
+  marvell:            { domains: [marvell.com],                               cik: "0001835632", from: sources }
+  meta:               { domains: [meta.com, about.fb.com, ai.meta.com, engineering.fb.com], cik: "0001326801", from: sources }
+  mgx:                { domains: [mgx.ae],                                    from: known }
+  micron:             { domains: [micron.com],                                from: known }
+  microsoft:          { domains: [microsoft.com],                             cik: "0000789019", from: sources }
+  mistral:            { domains: [mistral.ai],                                from: known }
+  mlcommons:          { domains: [mlcommons.org],                             from: known }
+  nccl:               { domains: [developer.nvidia.com/nccl, docs.nvidia.com/deeplearning/nccl], from: known }
+  nebius:             { domains: [nebius.com],                                cik: "0001513845", from: sources }
+  netherlands:        { domains: [government.nl, rijksoverheid.nl],           from: known }
+  nim:                { domains: [developer.nvidia.com/nim, docs.nvidia.com/nim, build.nvidia.com], from: known }
+  nvent:              { domains: [nvent.com],                                 cik: "0001720635", from: sources }
+  nventures:          { domains: [nvidia.com/en-us/ventures],                 from: known }
+  nvidia:             { domains: [nvidia.com],                                cik: "0001045810", from: sources }
+  oklo:               { domains: [oklo.com],                                  cik: "0001849056", from: sources }
+  openai:             { domains: [openai.com, github.com/openai/],            from: sources }
+  oracle:             { domains: [oracle.com],                                cik: "0001341439", from: external_ids }
+  pytorch:            { domains: [pytorch.org, github.com/pytorch/, raw.githubusercontent.com/pytorch/], from: sources }
+  quanta:             { domains: [quantatw.com],                              from: known }
+  ray:                { domains: [ray.io, anyscale.com, github.com/ray-project/], from: known }
+  recursion:          { domains: [recursion.com],                             cik: "0001601830", from: sources }
+  salesforce:         { domains: [salesforce.com],                            from: known }
+  samsung:            { domains: [samsung.com],                               from: known }
+  sandisk:            { domains: [sandisk.com],                               from: known }
+  schneider:          { domains: [se.com, schneider-electric.com],            from: known }
+  schrodinger:        { domains: [schrodinger.com],                           from: known }
+  sequoia:            { domains: [sequoiacap.com],                            from: known }
+  servicenow:         { domains: [servicenow.com],                            cik: "0001373715", from: sources }
+  sglang:             { domains: [github.com/sgl-project/, raw.githubusercontent.com/sgl-project/], from: known }
+  shin-etsu:          { domains: [shinetsu.co.jp],                            from: known }
+  siemens:            { domains: [siemens.com],                               from: known }
+  siemens-eda:        { domains: [eda.sw.siemens.com],                        from: known }
+  siemens-energy:     { domains: [siemens-energy.com],                        from: known }
+  singapore:          { domains: [gov.sg],                                    from: known }
+  sk-hynix:           { domains: [skhynix.com],                               from: sources }
+  snowflake:          { domains: [snowflake.com],                             from: known }
+  softbank:           { domains: [group.softbank],                            cik: "0001065521", from: external_ids }
+  south-korea:        { domains: [korea.kr],                                  from: known }
+  supermicro:         { domains: [supermicro.com],                            cik: "0001375365", from: sources }
+  synopsys:           { domains: [synopsys.com],                              cik: "0000883241", from: sources }
+  taiwan:             { domains: [gov.tw],                                    from: known }
+  tensorrt:           { domains: [developer.nvidia.com/tensorrt, docs.nvidia.com/deeplearning/tensorrt], from: known }
+  thrive:             { domains: [thrivecap.com],                             from: known }
+  tokyo-electron:     { domains: [tel.com],                                   from: known }
+  triton:             { domains: [github.com/triton-lang/, github.com/openai/triton, triton-lang.org], from: known }
+  tsmc:               { domains: [tsmc.com],                                  cik: "0001046179", from: sources }
+  usa:                { domains: [whitehouse.gov, usa.gov],                   from: known }
+  vertiv:             { domains: [vertiv.com],                                cik: "0001674101", from: sources }
+  vllm:               { domains: [docs.vllm.ai, blog.vllm.ai, github.com/vllm-project/, raw.githubusercontent.com/vllm-project/], from: sources }
+  wistron:            { domains: [wistron.com],                               from: known }
+  xai:                { domains: [x.ai],                                      from: sources }
+  # Carl Zeiss SMT — до v4 его на карте не было: он в трёх шагах от прежнего центра,
+  # и правило шагов не впускало его, хотя выдача агента называла его с 2026-08.
+  # Собственный издатель у него есть. См. журнал сборки, раздел про членство.
+  zeiss-smt:          { domains: [zeiss.com],                                 from: known }

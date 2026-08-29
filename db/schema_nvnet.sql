@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS nvnet_entity (
 CREATE TABLE IF NOT EXISTS nvnet_entity_factor (
     entity_id TEXT NOT NULL REFERENCES nvnet_entity(id) ON DELETE CASCADE,
     factor    TEXT NOT NULL CHECK (factor IN
-                ('irreplaceability','lock_in_depth','time_to_replace','strategic_control')),
+                ('irreplaceability','lock_in_depth','time_to_replace','concentration')),
     value     INTEGER NOT NULL CHECK (value BETWEEN 0 AND 100),
     why       TEXT,
     UNIQUE (entity_id, factor)
@@ -83,7 +83,9 @@ CREATE TABLE IF NOT EXISTS nvnet_edge (
     substitutability INTEGER CHECK (substitutability BETWEEN 0 AND 100),
     is_reversible   INTEGER NOT NULL DEFAULT 1,
     status          TEXT NOT NULL DEFAULT 'signal' CHECK (status IN
-                      ('confirmed','high_confidence','signal')),
+                      ('bilateral','confirmed','high_confidence','signal','disputed')),
+    sidedness       TEXT CHECK (sidedness IN ('bilateral','single','disputed')),
+    claimed_by      TEXT,
     confidence      REAL CHECK (confidence BETWEEN 0 AND 1),
     source_tier     INTEGER CHECK (source_tier BETWEEN 1 AND 6),
     confirmed_sources INTEGER NOT NULL DEFAULT 0,

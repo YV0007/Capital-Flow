@@ -1,15 +1,19 @@
-"""Общий слой сети v3 — достройка поверх карты, якорной на NVIDIA.
+"""Сетевой слой карты — достройка и вычисленные меры поверх семени.
 
 Строится ПОВЕРХ engine/nveco.py, а не рядом: 16 слоёв, 5 хребтов, рубрика критичности,
-тиры и правило подтверждения берутся из v2 без единой копии. Здесь только то, что
-добавляет контракт v3:
+тиры и правило подтверждения берутся оттуда без единой копии. Здесь только то, что
+добавляет сетевой контракт:
 
-  * реестр пивотов (config/nvnet_pivots.yaml) вместо одного якоря;
-  * два новых типа связи (config/nvnet_edges.yaml) поверх 31 типа v2;
-  * правило включения «≤2 шагов от ЛЮБОГО пивота» вместо «от единственного якоря».
+  * два новых типа связи (config/nvnet_edges.yaml) поверх 31 типа семени;
+  * `integration` — вычисленный ранг узла в графе, и выведенное из него ядро.
 
-Семя — handoff/nvidia_ecosystem.json. Оно НЕ переисследуется и не переписывается: это
-первый полный прогон, и сеть его поглощает как есть.
+ЧТО УШЛО В v4. Реестра центров больше нет. До неё членство считалось шагами до
+ближайшего из 27 назначенных пивотов, а сам список лежал в конфиге и был ВХОДОМ.
+Теперь состав ядра — ВЫХОД: верхние N по integration.score, пересчёт каждый прогон,
+список руками не ведётся нигде. Границу карты держат три проверки членства из
+config/nveco_scope.yaml, и ни одна из них не называет ни одной компании.
+
+Семя — handoff/nvidia_ecosystem.json. Оно НЕ переисследуется и не переписывается.
 """
 
 import json
@@ -18,12 +22,12 @@ import yaml
 
 from . import db, nveco
 
-# /3 — добавлено entities[].description: развёрнутое описание узла, {ru, en}.
-# Поле АДДИТИВНОЕ: ни одно существующее не изменено и не удалено, потребитель /2
-# продолжает читать файл как раньше. Идентификатор всё же поднят (в отличие от
-# pagerank, который приехал внутри /1): description — это не третья мера в готовом
-# блоке, а новая колонка панели, и дашборд должен уметь спросить «а есть ли она».
-SCHEMA_VERSION = "ai-ecosystem-network/3"
+# /4 — ЛОМАЮЩАЯ правка формы, поэтому major, а не третий аддитивный шаг.
+# Ушло: entities[].hops, criticalityFactors.strategicControl, корневой ecosystem.
+# Пришло: entities[].integration (основной ранг), .sourcing, .core, .domains, .cik;
+#         edges[].sidedness, .claimedBy, .counterEvidence; корневой meta.
+# `pivotal` остаётся ровно на этот выпуск зеркалом `core` и удаляется в /5.
+SCHEMA_VERSION = "ai-ecosystem-network/4"
 NETWORK_ID = "ai-infrastructure-complete"
 
 _CFG = {}
@@ -36,16 +40,19 @@ def _load(name: str) -> dict:
     return _CFG[name]
 
 
-def load_pivots_cfg() -> dict:
+def load_release_cfg() -> dict:
     return _load("nvnet_pivots.yaml")
 
 
-def pivot_ids() -> list:
-    return [p["id"] for p in load_pivots_cfg().get("pivots", [])]
-
-
-def pivot_groups() -> dict:
-    return {p["id"]: p.get("group") for p in load_pivots_cfg().get("pivots", [])}
+def integration_weights() -> dict:
+    """Веса меры интеграции. Правятся конфигом, не кодом — см. nvnet_edges.yaml."""
+    w = _load("nvnet_edges.yaml").get("integration_weights") or {}
+    if not w:
+        raise KeyError("config/nvnet_edges.yaml: нет блока integration_weights")
+    total = sum(w.values())
+    if abs(total - 1.0) > 1e-6:
+        raise ValueError(f"integration_weights в сумме дают {total}, а должны 1.0")
+    return w
 
 
 _TYPES = None
@@ -78,7 +85,7 @@ def pagerank_dependence() -> dict:
 
 
 def seed_path():
-    return db.ROOT / load_pivots_cfg().get("seed", "handoff/nvidia_ecosystem.json")
+    return db.ROOT / load_release_cfg().get("seed", "handoff/nvidia_ecosystem.json")
 
 
 def load_seed() -> dict:
@@ -93,48 +100,26 @@ def load_seed() -> dict:
     return d
 
 
-def hops_limit() -> int:
-    return int(load_pivots_cfg().get("hops", 2))
-
-
-def hops_from_pivots(pivots, edges) -> dict:
-    """Кратчайшее расстояние до БЛИЖАЙШЕГО пивота по неориентированному графу.
-
-    В v2 точка отсчёта была одна; здесь их 26, и обход стартует сразу со всех — это и
-    есть «коллективная мера» вместо одноточечной. Ненаправленность сохранена по той же
-    причине, что и в v2: «поставляет» и «покупает у» одинаково делают сущность частью
-    сети.
-    """
-    from collections import deque
-    adj = {}
-    for e in edges:
-        adj.setdefault(e["source"], set()).add(e["target"])
-        adj.setdefault(e["target"], set()).add(e["source"])
-    dist = {p: 0 for p in pivots}
-    q = deque(pivots)
-    while q:
-        cur = q.popleft()
-        for nxt in adj.get(cur, ()):
-            if nxt not in dist:
-                dist[nxt] = dist[cur] + 1
-                q.append(nxt)
-    return dist
-
-
 def release_version(month: str, major: int = None, minor: int = None) -> str:
     """vX.Y-YYYY-MM. X растёт при перестройке формы, Y — при выпуске без ломки формы.
 
     Номер лежит в config/nvnet_pivots.yaml, а не литералом в коде: выпуск — это решение,
     и оно должно быть видно в конфиге, а не в диффе Python.
     """
-    cfg = load_pivots_cfg().get("release", {}) or {}
+    cfg = load_release_cfg().get("release", {}) or {}
     return f"v{major or cfg.get('major', 1)}.{minor if minor is not None else cfg.get('minor', 0)}-{month}"
 
 
-# 10 категорий изменений блюпринта. Первый выпуск заполняет только первые две и
-# `newSources`; остальные пусты — это не пробел, а отсутствие предыдущей версии.
+# Категории изменений. Первый выпуск заполняет только первые две и `newSources`;
+# остальные пусты — это не пробел, а отсутствие предыдущей версии.
+#
+# `coreChanges` добавлена в /4 и стоит особняком от остальных десяти. Те отвечают на
+# «что изменилось в данных»; эта — на «кого карта СТАЛА считать глубже вшитым, чем
+# месяц назад». Раньше такой категории и быть не могло: состав центров лежал в
+# конфиге, менялся правкой файла и потому не был событием карты. Теперь он выход
+# вычисления, и его движение — такая же находка, как новая связь.
 CHANGE_CATEGORIES = [
     "newNodes", "removedNodes", "relationshipsAdded", "relationshipsRemoved",
     "relationshipsUpdated", "criticalityShifts", "phaseChanges", "riskEscalations",
-    "newSources", "layerChanges",
+    "newSources", "layerChanges", "coreChanges",
 ]

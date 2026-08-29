@@ -30,6 +30,10 @@ BAD = {"source": "openai", "target": "asml", "type": "customer_of",
        "origin": "TEST"}
 
 
+def _edge_with_evidence(d):
+    return next(e for e in d["edges"] if e.get("evidence"))
+
+
 def main(month):
     edges = ROOT / "runs" / month / "nvnet-network" / "edges.csv"
     if not edges.exists():
@@ -73,9 +77,98 @@ def main(month):
         def _(d):
             d["edges"][0]["evidence"] = []
 
-        @case("пивот, которого нет среди сущностей")
+        @case("узел ядра, которого нет среди сущностей")
         def _(d):
             d["pivots"] = list(d["pivots"]) + ["no-such-pivot"]
+
+        @case("состав ядра разошёлся с флагом core")
+        def _(d):
+            d["pivots"] = d["pivots"][:-1]
+
+        @case("pivotal разошёлся с core")
+        def _(d):
+            e = next(x for x in d["entities"] if x["core"])
+            e["pivotal"] = False
+
+        @case("ядро не того размера, что велит правило")
+        def _(d):
+            e = next(x for x in d["entities"] if not x["core"])
+            e["core"] = e["pivotal"] = True
+            d["pivots"] = sorted(list(d["pivots"]) + [e["id"]])
+
+        @case("сущность без блока integration")
+        def _(d):
+            d["entities"][0].pop("integration", None)
+
+        @case("integration.score вне 0..100")
+        def _(d):
+            d["entities"][0]["integration"]["score"] = 140
+
+        @case("в integration нет слагаемого cycles")
+        def _(d):
+            d["entities"][0]["integration"].pop("cycles", None)
+
+        @case("сущность без блока sourcing")
+        def _(d):
+            d["entities"][0].pop("sourcing", None)
+
+        @case("sourcing.total не сходится с sources[]")
+        def _(d):
+            d["entities"][0]["sourcing"]["total"] += 3
+
+        @case("сущность без списка domains")
+        def _(d):
+            d["entities"][0].pop("domains", None)
+
+        @case("вернувшееся поле hops")
+        def _(d):
+            d["entities"][0]["hops"] = 2
+
+        @case("вернувшийся фактор strategicControl")
+        def _(d):
+            d["entities"][0]["criticalityFactors"]["strategicControl"] = 40
+
+        @case("вернувшийся корневой ecosystem")
+        def _(d):
+            d["ecosystem"] = "nvidia"
+
+        @case("карта без предмета в meta")
+        def _(d):
+            d["meta"]["scope"] = {"ru": "", "en": ""}
+
+        @case("meta без правила ядра")
+        def _(d):
+            d["meta"].pop("coreRule", None)
+
+        # ── ЛЕСТНИЦА ДОКАЗАТЕЛЬСТВА v4 ───────────────────────────────────────
+        # Три случая, ради которых лестница и переписана. Первый — про то, что
+        # `disputed` нельзя тихо повысить до подтверждённой связи. Второй — про то,
+        # что `bilateral` нельзя набрать, говоря сам за себя. Третий — про то, что
+        # контрцитата обязана иметь статус, а статус — контрцитату.
+
+        @case("disputed схлопнут в confirmed")
+        def _(d):
+            e = _edge_with_evidence(d)
+            e["counterEvidence"] = [dict(e["evidence"][0])]
+            e["status"] = "confirmed"
+            e["sidedness"] = "single"
+
+        @case("bilateral, когда обе цитаты с одного домена")
+        def _(d):
+            # Один и тот же издатель, названный дважды, — это по-прежнему одна
+            # сторона: claimedBy схлопывается в один id, и статус развалиться обязан.
+            e = _edge_with_evidence(d)
+            e["status"] = "bilateral"
+            e["sidedness"] = "bilateral"
+            e["claimedBy"] = [e["source"]]
+
+        @case("claimedBy называет сторону вне связи")
+        def _(d):
+            _edge_with_evidence(d)["claimedBy"] = ["постороннийузел"]
+
+        @case("выдуманный sidedness")
+        def _(d):
+            _edge_with_evidence(d)["sidedness"] = "как-то-так"
 
         @case("betweenness-заглушка вне 0..1")
         def _(d):
@@ -158,7 +251,7 @@ def main(month):
         def _(d):
             d["entities"][0].pop("pivotal", None)
 
-        @case("остался anchor от v2")
+        @case("остался корневой anchor")
         def _(d):
             d["anchor"] = "nvidia"
 
