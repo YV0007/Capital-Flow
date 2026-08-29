@@ -1,0 +1,12 @@
+source,target,type,direction,strength,lock_in_depth,substitutability,is_reversible,risk_level,risk_type,risk_timeline,risk_mitigation,tech_node,formed,strengthened,note
+triton,amd,optimizes_for,downstream,55,25,65,True,low,technical,1-2y,"Поддержка заявлена сразу для двух вендоров, поэтому ни один не обязателен",,,,Ускорители AMD на ROCm поддерживаются наравне с ускорителями другого вендора.
+triton,nvidia,optimizes_for,downstream,65,35,60,True,low,technical,1-2y,"Поддержка заявлена сразу для двух вендоров, поэтому ни один не обязателен",,,,Ускорители NVIDIA от восьмого поколения вычислительных возможностей поддерживаются наравне с чужими.
+sglang,xai,delivers_to,downstream,60,35,55,True,low,technical,1-2y,"Каркас открытый, и принявшая сторона не привязана к его сопровождению",,,,"Названа первой в списке тех, кто принял каркас в работу."
+sglang,nvidia,optimizes_for,downstream,70,40,55,True,low,technical,1-2y,"Поддержаны также ускорители AMD, процессоры Intel и тензорные процессоры Google",,,,Работает на ускорителях вендора и назван среди принятых им проектов.
+sglang,amd,optimizes_for,downstream,60,30,60,True,low,technical,1-2y,Поддержка нескольких вендоров заявлена одной строкой README,,,,Ускорители AMD поддержаны наравне с ускорителями другого вендора.
+sglang,intel,optimizes_for,downstream,50,25,65,True,low,technical,1-2y,Поддержка нескольких вендоров заявлена одной строкой README,,,,Процессоры Intel Xeon названы среди поддержанного оборудования.
+sglang,oracle,delivers_to,downstream,50,30,60,True,low,market,1-2y,Каркас принят несколькими облаками сразу,,,,"Названа среди облаков, принявших каркас в работу."
+sglang,nebius,delivers_to,downstream,45,25,65,True,low,market,1-2y,Каркас принят несколькими облаками сразу,,,,"Названа среди облачных площадок, принявших каркас в работу."
+asml,mistral,customer_of,downstream,50,25,70,True,low,market,1-2y,Заказчик не привязан к одной лаборатории: веса открыты и переносимы,,,,Названа лабораторией первой в собственном списке заказчиков.
+snowflake,mistral,customer_of,downstream,45,20,70,True,low,market,1-2y,Заказчик не привязан к одной лаборатории: веса открыты и переносимы,,,,Названа лабораторией в собственном списке заказчиков.
+cisco,mistral,customer_of,downstream,45,20,70,True,low,market,1-2y,Заказчик не привязан к одной лаборатории: веса открыты и переносимы,,,,Названа лабораторией в собственном списке заказчиков.

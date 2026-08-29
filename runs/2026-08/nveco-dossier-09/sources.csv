@@ -1,0 +1,55 @@
+owner_kind,owner_key,tier,type,title,url,published,quote,confidence,counter
+entity,foxconn,,company_pr,About Hon Hai — group profile,https://www.honhai.com/en-us/about/group-profile,2026-08-29,Hon Hai Technology Group (Foxconn) (TWSE: 2317) is the world's largest electronics manufacturer.,,false
+entity,foxconn,,company_pr,Hon Hai FY2025 & 4Q25 results,https://www.honhai.com/en-us/press-center/press-releases/latest-news/1978,2026-03-16,"The Group's full year revenue reached NT$8.1 trillion, a record high.",,false
+entity,foxconn,,company_pr,Hon Hai FY2025 & 4Q25 results,https://www.honhai.com/en-us/press-center/press-releases/latest-news/1978,2026-03-16,revenue from cloud and networking products surpassed that of smart consumer electronics products,,false
+entity,foxconn,,company_pr,Hon Hai FY2025 & 4Q25 results,https://www.honhai.com/en-us/press-center/press-releases/latest-news/1978,2026-03-16,"Foxconn, as the world's largest AI server provider, will definitely seize this opportunity",,false
+entity,foxconn,,company_pr,About Hon Hai — group profile,https://www.honhai.com/en-us/about/group-profile,2026-08-29,"Established in Taiwan in 1974, Hon Hai Technology Group (Foxconn) (TWSE: 2317)",,false
+entity,foxconn,,company_pr,About Hon Hai — group profile,https://www.honhai.com/en-us/about/group-profile,2026-08-29,"Foxconn is also the leading technological solution provider, and it continuously leverages its expertise",,false
+entity,foxconn,,company_pr,Hon Hai FY2025 & 4Q25 results,https://www.honhai.com/en-us/press-center/press-releases/latest-news/1978,2026-03-16,Hon Hai Technology Group (Foxconn) Announces FY2025 & 4Q25 Financial Results,,false
+edge,foxconn__nvidia__integrates,,company_pr,Hon Hai FY2025 & 4Q25 results,https://www.honhai.com/en-us/press-center/press-releases/latest-news/1978,2026-03-16,"Foxconn, as the world's largest AI server provider, will definitely seize this opportunity",,false
+entity,tokyo-electron,,product_doc,Tokyo Electron — Company Info,https://www.tel.com/about/summary/,2026-08-29,Major Products and Services Semiconductor Production Equipment Capital ¥54.9Billion,,false
+entity,tokyo-electron,,product_doc,Tokyo Electron — Company Info,https://www.tel.com/about/summary/,2026-08-29,"Net Sales ¥2,443.5 Billion (Fiscal 2026) Number of Employees 2,436 (non-consolidated) 20,812 (consolidated)",,false
+entity,tokyo-electron,,product_doc,Tokyo Electron — Company Info,https://www.tel.com/about/summary/,2026-08-29,"Established November 11, 1963",,false
+entity,tokyo-electron,,product_doc,About Tokyo Electron,https://www.tel.com/careers/careercenter/about-us.html,2026-08-29,"we engineer, manufacture, sell, and service semiconductor production equipment and other product lines",,false
+entity,tokyo-electron,,product_doc,About Tokyo Electron,https://www.tel.com/careers/careercenter/about-us.html,2026-08-29,"As our competitors began pulling out of research and development, we continued to develop",,false
+entity,mlcommons,,product_doc,MLCommons,https://mlcommons.org/,2026-08-29,"Building trusted, safe, and efficient AI requires better systems for measurement and accountability.",,false
+entity,mlcommons,,product_doc,MLCommons,https://mlcommons.org/,2026-08-29,"MLCommons is supported by over 125 members and affiliates, including startups, leading companies, academics",,false
+entity,mlcommons,,product_doc,MLCommons,https://mlcommons.org/,2026-08-29,10 Benchmark Suites,,false
+entity,mlcommons,,product_doc,MLCommons,https://mlcommons.org/,2026-08-29,89.7 k + MLPerf Performance Results to-date,,false
+entity,mlcommons,,product_doc,MLCommons,https://mlcommons.org/,2026-08-29,MLCommons' collective engineering with industry and academia continually measures and improves the accuracy,,false
+entity,triton,,product_doc,triton-lang/triton — README,https://github.com/triton-lang/triton,2026-08-29,"Triton, a language and compiler for writing highly efficient custom Deep-Learning primitives",,false
+entity,triton,,product_doc,triton-lang/triton — README,https://github.com/triton-lang/triton,2026-08-29,an open-source environment to write fast code at higher productivity than CUDA,,false
+entity,triton,,product_doc,triton-lang/triton — README,https://github.com/triton-lang/triton,2026-08-29,NVIDIA GPUs (Compute Capability 8.0+),,false
+entity,triton,,product_doc,triton-lang/triton — README,https://github.com/triton-lang/triton,2026-08-29,AMD GPUs (ROCm 6.2+),,false
+entity,triton,,product_doc,triton-lang/triton — README,https://github.com/triton-lang/triton,2026-08-29,Supported Platforms: Linux,,false
+edge,triton__cuda__could_disrupt,,product_doc,triton-lang/triton — README,https://github.com/triton-lang/triton,2026-08-29,an open-source environment to write fast code at higher productivity than CUDA,,false
+edge,triton__amd__optimizes_for,,product_doc,triton-lang/triton — README,https://github.com/triton-lang/triton,2026-08-29,AMD GPUs (ROCm 6.2+),,false
+edge,triton__nvidia__optimizes_for,,product_doc,triton-lang/triton — README,https://github.com/triton-lang/triton,2026-08-29,NVIDIA GPUs (Compute Capability 8.0+),,false
+entity,sglang,,product_doc,sgl-project/sglang — README,https://github.com/sgl-project/sglang,2026-08-29,SGLang is a high-performance serving framework for large language models and multimodal models.,,false
+entity,sglang,,product_doc,sgl-project/sglang — README,https://github.com/sgl-project/sglang,2026-08-29,"SGLang has been deployed at large scale, generating trillions of tokens in production each day.",,false
+entity,sglang,,product_doc,sgl-project/sglang — README,https://github.com/sgl-project/sglang,2026-08-29,"adopted by a wide range of leading enterprises and institutions, including xAI, NVIDIA",,false
+entity,sglang,,product_doc,sgl-project/sglang — README,https://github.com/sgl-project/sglang,2026-08-29,"AMD, Intel, LinkedIn, Cursor, Oracle Cloud, Google Cloud, Microsoft Azure, AWS, Atlas Cloud, Voltage Park",,false
+entity,sglang,,product_doc,sgl-project/sglang — README,https://github.com/sgl-project/sglang,2026-08-29,"Runs on NVIDIA GPUs (GB200/B300/H100/A100/Spark/5090), AMD GPUs (MI355/MI300), Intel Xeon CPUs",,false
+entity,sglang,,product_doc,sgl-project/sglang — README,https://github.com/sgl-project/sglang,2026-08-29,"Voltage Park, Nebius, DataCrunch, Novita, RunPod, InnoMatrix, Modal, MIT, UCLA",,false
+edge,sglang__xai__delivers_to,,product_doc,sgl-project/sglang — README,https://github.com/sgl-project/sglang,2026-08-29,"adopted by a wide range of leading enterprises and institutions, including xAI, NVIDIA",,false
+edge,sglang__nvidia__optimizes_for,,product_doc,sgl-project/sglang — README,https://github.com/sgl-project/sglang,2026-08-29,"adopted by a wide range of leading enterprises and institutions, including xAI, NVIDIA",,false
+edge,sglang__nvidia__optimizes_for,,product_doc,sgl-project/sglang — README,https://github.com/sgl-project/sglang,2026-08-29,"Runs on NVIDIA GPUs (GB200/B300/H100/A100/Spark/5090), AMD GPUs (MI355/MI300), Intel Xeon CPUs",,false
+edge,sglang__amd__optimizes_for,,product_doc,sgl-project/sglang — README,https://github.com/sgl-project/sglang,2026-08-29,"Runs on NVIDIA GPUs (GB200/B300/H100/A100/Spark/5090), AMD GPUs (MI355/MI300), Intel Xeon CPUs",,false
+edge,sglang__intel__optimizes_for,,product_doc,sgl-project/sglang — README,https://github.com/sgl-project/sglang,2026-08-29,"Runs on NVIDIA GPUs (GB200/B300/H100/A100/Spark/5090), AMD GPUs (MI355/MI300), Intel Xeon CPUs",,false
+edge,sglang__oracle__delivers_to,,product_doc,sgl-project/sglang — README,https://github.com/sgl-project/sglang,2026-08-29,"AMD, Intel, LinkedIn, Cursor, Oracle Cloud, Google Cloud, Microsoft Azure, AWS, Atlas Cloud, Voltage Park",,false
+edge,sglang__nebius__delivers_to,,product_doc,sgl-project/sglang — README,https://github.com/sgl-project/sglang,2026-08-29,"Voltage Park, Nebius, DataCrunch, Novita, RunPod, InnoMatrix, Modal, MIT, UCLA",,false
+entity,mistral,,company_pr,Mistral AI — about,https://mistral.ai/about,2026-08-29,"In April 2023, Mistral was born to put frontier AI in everyone's hands.",,false
+entity,mistral,,company_pr,Mistral AI — about,https://mistral.ai/about,2026-08-29,"frontier AI open to all, and together solve the world's hardest problems",,false
+entity,mistral,,company_pr,Mistral AI — about,https://mistral.ai/about,2026-08-29,"ASML, CMA CGM, HSBC, BMW, Stellantis, IBM, BNP Paribas, SAP, Snowflake, Orange, AXA, TotalEnergies, Cisco",,false
+entity,mistral,,company_pr,Mistral AI — about,https://mistral.ai/about,2026-08-29,frontier-scale infrastructure for training and inference,,false
+edge,asml__mistral__customer_of,,company_pr,Mistral AI — about,https://mistral.ai/about,2026-08-29,"ASML, CMA CGM, HSBC, BMW, Stellantis, IBM, BNP Paribas, SAP, Snowflake, Orange, AXA, TotalEnergies, Cisco",,false
+edge,snowflake__mistral__customer_of,,company_pr,Mistral AI — about,https://mistral.ai/about,2026-08-29,"ASML, CMA CGM, HSBC, BMW, Stellantis, IBM, BNP Paribas, SAP, Snowflake, Orange, AXA, TotalEnergies, Cisco",,false
+edge,cisco__mistral__customer_of,,company_pr,Mistral AI — about,https://mistral.ai/about,2026-08-29,"ASML, CMA CGM, HSBC, BMW, Stellantis, IBM, BNP Paribas, SAP, Snowflake, Orange, AXA, TotalEnergies, Cisco",,false
+entity,lambda,,company_pr,Lambda — about,https://lambda.ai/about,2026-08-29,Lambda is an AI-only company founded by ML engineers in 2012.,,false
+entity,lambda,,company_pr,Lambda — about,https://lambda.ai/about,2026-08-29,"Lambda builds modular AI factories — power, liquid cooling, and high-bandwidth interconnects",,false
+entity,lambda,,company_pr,Lambda — about,https://lambda.ai/about,2026-08-29,"From one GPU to hundreds of thousands, we build the infrastructure powering AI services",,false
+entity,lambda,,company_pr,Lambda — about,https://lambda.ai/about,2026-08-29,make compute as ubiquitous as electricity and give everyone in America the power of superintelligence,,false
+entity,a16z,,company_pr,a16z — about,https://a16z.com/about/,2026-08-29,we have over $100B+ under management across multiple funds,,false
+entity,a16z,,company_pr,a16z — about,https://a16z.com/about/,2026-08-29,in seed to venture to growth-stage technology companies,,false
+entity,a16z,,company_pr,a16z — about,https://a16z.com/about/,2026-08-29,"AI, bio + healthcare, consumer, crypto, enterprise, fintech, games, infrastructure",,false
+entity,a16z,,company_pr,a16z — about,https://a16z.com/about/,2026-08-29,a16z pioneered the platform model—the largest team of operators in venture,,false

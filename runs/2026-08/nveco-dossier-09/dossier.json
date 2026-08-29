@@ -1,0 +1,1049 @@
+[
+ {
+  "id": "foxconn",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Hon Hai, известная как Foxconn, основана на Тайване в 1974 году и называет себя крупнейшим в мире производителем электроники. Выручка группы за полный год достигла NT$8.1 trillion — рекорд. В том же году выручка от облачных и сетевых продуктов впервые превысила выручку от бытовой электроники и стала крупнейшей товарной категорией квартала. Себя в этом сегменте компания описывает прямо: «the world's largest AI server provider». На карте узел стоит там, где ускоритель, память и питание собираются в стойку, которую увозят на площадку.",
+   "en": "Hon Hai, known as Foxconn, was established in Taiwan in 1974 and calls itself the world's largest electronics manufacturer. The group's full year revenue reached NT$8.1 trillion, a record high. In the same year revenue from cloud and networking products passed that of smart consumer electronics for the first time and became the largest product category of the quarter. In that segment the company describes itself plainly: \"the world's largest AI server provider\". On the map the node sits where accelerator, memory and power are assembled into the rack that ships to site."
+  },
+  "profile_sources": [
+   {
+    "type": "company_pr",
+    "title": "About Hon Hai — group profile",
+    "url": "https://www.honhai.com/en-us/about/group-profile",
+    "published": "2026-08-29",
+    "quote": "Hon Hai Technology Group (Foxconn) (TWSE: 2317) is the world's largest electronics manufacturer."
+   },
+   {
+    "type": "company_pr",
+    "title": "Hon Hai FY2025 & 4Q25 results",
+    "url": "https://www.honhai.com/en-us/press-center/press-releases/latest-news/1978",
+    "published": "2026-03-16",
+    "quote": "The Group's full year revenue reached NT$8.1 trillion, a record high."
+   },
+   {
+    "type": "company_pr",
+    "title": "Hon Hai FY2025 & 4Q25 results",
+    "url": "https://www.honhai.com/en-us/press-center/press-releases/latest-news/1978",
+    "published": "2026-03-16",
+    "quote": "revenue from cloud and networking products surpassed that of smart consumer electronics products"
+   },
+   {
+    "type": "company_pr",
+    "title": "Hon Hai FY2025 & 4Q25 results",
+    "url": "https://www.honhai.com/en-us/press-center/press-releases/latest-news/1978",
+    "published": "2026-03-16",
+    "quote": "Foxconn, as the world's largest AI server provider, will definitely seize this opportunity",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "company_pr",
+    "title": "About Hon Hai — group profile",
+    "url": "https://www.honhai.com/en-us/about/group-profile",
+    "published": "2026-08-29",
+    "quote": "Established in Taiwan in 1974, Hon Hai Technology Group (Foxconn) (TWSE: 2317)"
+   },
+   {
+    "type": "company_pr",
+    "title": "About Hon Hai — group profile",
+    "url": "https://www.honhai.com/en-us/about/group-profile",
+    "published": "2026-08-29",
+    "quote": "Foxconn is also the leading technological solution provider, and it continuously leverages its expertise"
+   },
+   {
+    "type": "company_pr",
+    "title": "Hon Hai FY2025 & 4Q25 results",
+    "url": "https://www.honhai.com/en-us/press-center/press-releases/latest-news/1978",
+    "published": "2026-03-16",
+    "quote": "Hon Hai Technology Group (Foxconn) Announces FY2025 & 4Q25 Financial Results"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 74,
+    "why": {
+     "ru": "Называет себя крупнейшим в мире производителем электроники и крупнейшим поставщиком серверов для ИИ",
+     "en": "Calls itself the world's largest electronics manufacturer and the largest AI server provider"
+    }
+   },
+   "lock_in_depth": {
+    "value": 68,
+    "why": {
+     "ru": "Сборка идёт под конкретную платформу заказчика, а не по типовому каталогу",
+     "en": "Assembly runs against a specific customer platform rather than a standard catalogue"
+    }
+   },
+   "time_to_replace": {
+    "value": 66,
+    "why": {
+     "ru": "Мощности такого масштаба вводятся постепенно: выручка группы за полный год достигла NT$8.1 trillion",
+     "en": "Capacity of this scale comes online gradually: full year revenue reached NT$8.1 trillion"
+    }
+   },
+   "concentration": {
+    "value": 76,
+    "why": {
+     "ru": "По собственному счёту — крупнейший в мире поставщик серверов для ИИ",
+     "en": "By its own count, the world's largest AI server provider"
+    }
+   }
+  },
+  "edges": [
+   {
+    "id": "foxconn__nvidia__integrates",
+    "stance": "confirms",
+    "sources": [
+     {
+      "type": "company_pr",
+      "title": "Hon Hai FY2025 & 4Q25 results",
+      "url": "https://www.honhai.com/en-us/press-center/press-releases/latest-news/1978",
+      "published": "2026-03-16",
+      "quote": "Foxconn, as the world's largest AI server provider, will definitely seize this opportunity"
+     }
+    ]
+   }
+  ],
+  "candidates": [
+   {
+    "name": "SK Group",
+    "why": "названа Foxconn партнёром по инфраструктуре ИИ, дата-центрам и энергетике; на карте есть только SK hynix",
+    "url": "https://www.honhai.com/en-us/press-center/press-releases/latest-news/1978",
+    "quote": "Foxconn and SK Group Deepen Collaboration on AI Infrastructure"
+   }
+  ],
+  "gaps": "Broadcom в собственных документах Foxconn не назван: связь с ним подтверждена только со стороны заказчика."
+ },
+ {
+  "id": "tokyo-electron",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Tokyo Electron делает оборудование для производства полупроводников и работает с 11 ноября 1963 года. Выручка за 2026 финансовый год составила ¥2,443.5 Billion, в компании 20,812 человек в консолидированном периметре. Оборудование покрывает четыре ключевых процесса — осаждение, нанесение и проявление, травление и очистку. Собственная страница описывает происхождение прямо: компания начиналась с ввоза американского оборудования в Японию и осталась в разработке, когда конкуренты из неё уходили. На карте узел стоит выше фабрик: без его установок пластина не проходит свой маршрут.",
+   "en": "Tokyo Electron makes semiconductor production equipment and has operated since 11 November 1963. Net sales for fiscal 2026 were ¥2,443.5 Billion and the consolidated headcount is 20,812. Its equipment covers four key processes — deposition, coater and developer, etching and cleaning. Its own page describes the origin plainly: the company began by bringing American production equipment into Japan and stayed in research when competitors were pulling out. On the map the node sits above the fabs: without its tools a wafer does not complete its route."
+  },
+  "profile_sources": [
+   {
+    "type": "product_doc",
+    "title": "Tokyo Electron — Company Info",
+    "url": "https://www.tel.com/about/summary/",
+    "published": "2026-08-29",
+    "quote": "Major Products and Services Semiconductor Production Equipment Capital ¥54.9Billion"
+   },
+   {
+    "type": "product_doc",
+    "title": "Tokyo Electron — Company Info",
+    "url": "https://www.tel.com/about/summary/",
+    "published": "2026-08-29",
+    "quote": "Net Sales ¥2,443.5 Billion (Fiscal 2026) Number of Employees 2,436 (non-consolidated) 20,812 (consolidated)"
+   },
+   {
+    "type": "product_doc",
+    "title": "Tokyo Electron — Company Info",
+    "url": "https://www.tel.com/about/summary/",
+    "published": "2026-08-29",
+    "quote": "Established November 11, 1963"
+   },
+   {
+    "type": "product_doc",
+    "title": "About Tokyo Electron",
+    "url": "https://www.tel.com/careers/careercenter/about-us.html",
+    "published": "2026-08-29",
+    "quote": "we engineer, manufacture, sell, and service semiconductor production equipment and other product lines",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "product_doc",
+    "title": "About Tokyo Electron",
+    "url": "https://www.tel.com/careers/careercenter/about-us.html",
+    "published": "2026-08-29",
+    "quote": "As our competitors began pulling out of research and development, we continued to develop"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 84,
+    "why": {
+     "ru": "Оборудование покрывает четыре ключевых процесса производства пластины сразу",
+     "en": "Its equipment covers four key wafer production processes at once"
+    }
+   },
+   "lock_in_depth": {
+    "value": 80,
+    "why": {
+     "ru": "Установку квалифицируют под маршрут фабрики, и обслуживает её сам изготовитель",
+     "en": "A tool is qualified against the fab's route and is serviced by its maker"
+    }
+   },
+   "time_to_replace": {
+    "value": 85,
+    "why": {
+     "ru": "Компания работает с 1963 года и осталась в разработке, когда конкуренты из неё уходили",
+     "en": "The company has operated since 1963 and stayed in research when competitors pulled out"
+    }
+   },
+   "concentration": {
+    "value": 80,
+    "why": {
+     "ru": "Производит, продаёт и обслуживает оборудование по четырём ключевым процессам сразу",
+     "en": "It makes, sells and services equipment across four key processes at once"
+    }
+   }
+  },
+  "edges": [],
+  "candidates": [],
+  "gaps": "TSMC в собственных документах компании не назван: связь с ним подтверждена только со стороны фабрики."
+ },
+ {
+  "id": "mlcommons",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "MLCommons — организация, измеряющая ИИ-системы: она ведёт наборы тестов и публикует результаты. Своё основание она формулирует как утверждение о самой отрасли: доверенный, безопасный и эффективный ИИ требует более совершенных систем измерения и подотчётности. Организацию поддерживают более 125 участников и аффилированных лиц — стартапы, компании, академия и некоммерческие организации. Она держит 10 наборов тестов и накопила 89.7 k + результатов производительности MLPerf. Отдельная ветка работы — риск и надёжность ИИ, а также данные и исследования.",
+   "en": "MLCommons is the organization that measures AI systems: it maintains benchmark suites and publishes results. It frames its own founding as a claim about the industry: trusted, safe and efficient AI requires better systems for measurement and accountability. It is supported by over 125 members and affiliates — startups, companies, academics and non-profits. It maintains 10 benchmark suites and has accumulated 89.7 k + MLPerf performance results. A separate strand of work covers AI risk and reliability, and data and research."
+  },
+  "profile_sources": [
+   {
+    "type": "product_doc",
+    "title": "MLCommons",
+    "url": "https://mlcommons.org/",
+    "published": "2026-08-29",
+    "quote": "Building trusted, safe, and efficient AI requires better systems for measurement and accountability."
+   },
+   {
+    "type": "product_doc",
+    "title": "MLCommons",
+    "url": "https://mlcommons.org/",
+    "published": "2026-08-29",
+    "quote": "MLCommons is supported by over 125 members and affiliates, including startups, leading companies, academics",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "product_doc",
+    "title": "MLCommons",
+    "url": "https://mlcommons.org/",
+    "published": "2026-08-29",
+    "quote": "10 Benchmark Suites"
+   },
+   {
+    "type": "product_doc",
+    "title": "MLCommons",
+    "url": "https://mlcommons.org/",
+    "published": "2026-08-29",
+    "quote": "89.7 k + MLPerf Performance Results to-date"
+   },
+   {
+    "type": "product_doc",
+    "title": "MLCommons",
+    "url": "https://mlcommons.org/",
+    "published": "2026-08-29",
+    "quote": "MLCommons' collective engineering with industry and academia continually measures and improves the accuracy"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 68,
+    "why": {
+     "ru": "Единый набор тестов, на который ссылаются поставщики ускорителей при сравнении",
+     "en": "A single benchmark suite accelerator vendors refer to when comparing"
+    }
+   },
+   "lock_in_depth": {
+    "value": 42,
+    "why": {
+     "ru": "Участие добровольное: организацию поддерживают более 125 участников и аффилированных лиц",
+     "en": "Participation is voluntary: over 125 members and affiliates support the organization"
+    }
+   },
+   "time_to_replace": {
+    "value": 58,
+    "why": {
+     "ru": "Накоплено 89.7 k + результатов производительности — сравнимость новой шкалы пришлось бы набирать заново",
+     "en": "89.7 k + performance results are accumulated; a new scale would have to earn comparability from scratch"
+    }
+   },
+   "concentration": {
+    "value": 72,
+    "why": {
+     "ru": "10 наборов тестов и более 125 участников в одной организации",
+     "en": "10 benchmark suites and over 125 members inside one organization"
+    }
+   }
+  },
+  "edges": [],
+  "candidates": [],
+  "gaps": "NVIDIA среди участников поимённо на главной странице не названа: связь остаётся односторонней."
+ },
+ {
+  "id": "triton",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Triton — язык и компилятор для написания примитивов глубокого обучения. Цель проекта записана в его же репозитории и прямо противопоставлена закрытому стеку: дать открытую среду, где код пишется быстрее, чем на CUDA, и гибче, чем на других предметных языках. Поддерживаются ускорители двух вендоров сразу — NVIDIA от восьмого поколения вычислительных возможностей и AMD на ROCm; работа над процессорами идёт. Платформа одна — Linux. На карте это узел, из-за которого замок вокруг одного набора инструментов перестаёт быть абсолютным.",
+   "en": "Triton is a language and compiler for writing deep-learning primitives. The project's aim is written in its own repository and set directly against the closed stack: to give an open environment where code is written faster than in CUDA and more flexibly than in other domain-specific languages. Accelerators of two vendors are supported at once — NVIDIA from the eighth compute-capability generation and AMD on ROCm; work on CPUs is under way. There is one platform, Linux. On the map this is the node that keeps the lock around one toolset from being absolute."
+  },
+  "profile_sources": [
+   {
+    "type": "product_doc",
+    "title": "triton-lang/triton — README",
+    "url": "https://github.com/triton-lang/triton",
+    "published": "2026-08-29",
+    "quote": "Triton, a language and compiler for writing highly efficient custom Deep-Learning primitives"
+   },
+   {
+    "type": "product_doc",
+    "title": "triton-lang/triton — README",
+    "url": "https://github.com/triton-lang/triton",
+    "published": "2026-08-29",
+    "quote": "an open-source environment to write fast code at higher productivity than CUDA",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "product_doc",
+    "title": "triton-lang/triton — README",
+    "url": "https://github.com/triton-lang/triton",
+    "published": "2026-08-29",
+    "quote": "NVIDIA GPUs (Compute Capability 8.0+)"
+   },
+   {
+    "type": "product_doc",
+    "title": "triton-lang/triton — README",
+    "url": "https://github.com/triton-lang/triton",
+    "published": "2026-08-29",
+    "quote": "AMD GPUs (ROCm 6.2+)"
+   },
+   {
+    "type": "product_doc",
+    "title": "triton-lang/triton — README",
+    "url": "https://github.com/triton-lang/triton",
+    "published": "2026-08-29",
+    "quote": "Supported Platforms: Linux"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 62,
+    "why": {
+     "ru": "Открытая среда, поддерживающая ускорители двух вендоров сразу",
+     "en": "An open environment supporting two vendors' accelerators at once"
+    }
+   },
+   "lock_in_depth": {
+    "value": 40,
+    "why": {
+     "ru": "Код пишется в открытом репозитории и переносится между поддерживаемыми ускорителями",
+     "en": "Code is written in an open repository and moves between supported accelerators"
+    }
+   },
+   "time_to_replace": {
+    "value": 45,
+    "why": {
+     "ru": "Проект развивается открыто, и его цель — снять привязку, а не создать новую",
+     "en": "The project develops in the open and its aim is to remove a tie, not create one"
+    }
+   },
+   "concentration": {
+    "value": 38,
+    "why": {
+     "ru": "Заявленная цель — быть открытой альтернативой CUDA, а не занять её место одному",
+     "en": "Its stated aim is to be an open alternative to CUDA, not to take its place alone"
+    }
+   }
+  },
+  "edges": [
+   {
+    "id": "triton__cuda__could_disrupt",
+    "stance": "confirms",
+    "sources": [
+     {
+      "type": "product_doc",
+      "title": "triton-lang/triton — README",
+      "url": "https://github.com/triton-lang/triton",
+      "published": "2026-08-29",
+      "quote": "an open-source environment to write fast code at higher productivity than CUDA"
+     }
+    ]
+   },
+   {
+    "direction": "downstream",
+    "strength": 55,
+    "lock_in_depth": 25,
+    "substitutability": 65,
+    "is_reversible": true,
+    "risk_level": "low",
+    "risk_type": "technical",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "triton",
+    "target": "amd",
+    "type": "optimizes_for",
+    "note": {
+     "ru": "Ускорители AMD на ROCm поддерживаются наравне с ускорителями другого вендора.",
+     "en": "AMD accelerators on ROCm are supported alongside the other vendor's."
+    },
+    "risk_mitigation": {
+     "ru": "Поддержка заявлена сразу для двух вендоров, поэтому ни один не обязателен",
+     "en": "Support is stated for two vendors at once, so neither is required"
+    },
+    "sources": [
+     {
+      "type": "product_doc",
+      "title": "triton-lang/triton — README",
+      "url": "https://github.com/triton-lang/triton",
+      "published": "2026-08-29",
+      "quote": "AMD GPUs (ROCm 6.2+)"
+     }
+    ]
+   },
+   {
+    "direction": "downstream",
+    "strength": 65,
+    "lock_in_depth": 35,
+    "substitutability": 60,
+    "is_reversible": true,
+    "risk_level": "low",
+    "risk_type": "technical",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "triton",
+    "target": "nvidia",
+    "type": "optimizes_for",
+    "note": {
+     "ru": "Ускорители NVIDIA от восьмого поколения вычислительных возможностей поддерживаются наравне с чужими.",
+     "en": "NVIDIA accelerators from compute capability 8.0 are supported alongside others."
+    },
+    "risk_mitigation": {
+     "ru": "Поддержка заявлена сразу для двух вендоров, поэтому ни один не обязателен",
+     "en": "Support is stated for two vendors at once, so neither is required"
+    },
+    "sources": [
+     {
+      "type": "product_doc",
+      "title": "triton-lang/triton — README",
+      "url": "https://github.com/triton-lang/triton",
+      "published": "2026-08-29",
+      "quote": "NVIDIA GPUs (Compute Capability 8.0+)"
+     }
+    ]
+   }
+  ],
+  "candidates": [],
+  "gaps": "README не называет владельца проекта, поэтому связь triton -> openai подтверждена только со стороны лаборатории."
+ },
+ {
+  "id": "sglang",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "SGLang — открытый каркас обслуживания больших языковых и мультимодальных моделей, рассчитанный на низкую задержку и высокую пропускную способность. Проект пишет о собственном масштабе прямо: развёрнут широко и генерирует триллионы токенов в продакшене ежедневно. Список тех, кто его принял, включает xAI, NVIDIA, AMD, Intel, Oracle Cloud, Google Cloud, Microsoft Azure, AWS и Nebius. Работает он на ускорителях NVIDIA и AMD, процессорах Intel Xeon, тензорных процессорах Google и Ascend NPU. На карте это узел, из-за которого обслуживание моделей перестало быть привязано к одному вендору.",
+   "en": "SGLang is an open serving framework for large language and multimodal models, aimed at low latency and high throughput. The project writes about its own scale plainly: deployed at large scale and generating trillions of tokens in production each day. Its list of adopters includes xAI, NVIDIA, AMD, Intel, Oracle Cloud, Google Cloud, Microsoft Azure, AWS and Nebius. It runs on NVIDIA and AMD accelerators, Intel Xeon CPUs, Google TPUs and Ascend NPUs. On the map this is the node that stopped model serving from being tied to one vendor."
+  },
+  "profile_sources": [
+   {
+    "type": "product_doc",
+    "title": "sgl-project/sglang — README",
+    "url": "https://github.com/sgl-project/sglang",
+    "published": "2026-08-29",
+    "quote": "SGLang is a high-performance serving framework for large language models and multimodal models."
+   },
+   {
+    "type": "product_doc",
+    "title": "sgl-project/sglang — README",
+    "url": "https://github.com/sgl-project/sglang",
+    "published": "2026-08-29",
+    "quote": "SGLang has been deployed at large scale, generating trillions of tokens in production each day."
+   },
+   {
+    "type": "product_doc",
+    "title": "sgl-project/sglang — README",
+    "url": "https://github.com/sgl-project/sglang",
+    "published": "2026-08-29",
+    "quote": "adopted by a wide range of leading enterprises and institutions, including xAI, NVIDIA",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "product_doc",
+    "title": "sgl-project/sglang — README",
+    "url": "https://github.com/sgl-project/sglang",
+    "published": "2026-08-29",
+    "quote": "AMD, Intel, LinkedIn, Cursor, Oracle Cloud, Google Cloud, Microsoft Azure, AWS, Atlas Cloud, Voltage Park"
+   },
+   {
+    "type": "product_doc",
+    "title": "sgl-project/sglang — README",
+    "url": "https://github.com/sgl-project/sglang",
+    "published": "2026-08-29",
+    "quote": "Runs on NVIDIA GPUs (GB200/B300/H100/A100/Spark/5090), AMD GPUs (MI355/MI300), Intel Xeon CPUs"
+   },
+   {
+    "type": "product_doc",
+    "title": "sgl-project/sglang — README",
+    "url": "https://github.com/sgl-project/sglang",
+    "published": "2026-08-29",
+    "quote": "Voltage Park, Nebius, DataCrunch, Novita, RunPod, InnoMatrix, Modal, MIT, UCLA"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 60,
+    "why": {
+     "ru": "Каркас обслуживания моделей открытый, и рядом на карте стоят проекты того же назначения",
+     "en": "The serving framework is open, and projects of the same purpose stand beside it on the map"
+    }
+   },
+   "lock_in_depth": {
+    "value": 45,
+    "why": {
+     "ru": "Работает на ускорителях двух вендоров, процессорах и тензорных процессорах сразу",
+     "en": "It runs on two vendors' accelerators, on CPUs and on TPUs at once"
+    }
+   },
+   "time_to_replace": {
+    "value": 48,
+    "why": {
+     "ru": "Развёрнут широко и даёт триллионы токенов в сутки, но заменяется другим каркасом того же слоя",
+     "en": "Deployed at large scale with trillions of tokens a day, yet replaceable by another framework of the same layer"
+    }
+   },
+   "concentration": {
+    "value": 55,
+    "why": {
+     "ru": "Принят и лабораториями, и производителями ускорителей, и облаками одновременно",
+     "en": "Adopted by laboratories, accelerator makers and clouds at the same time"
+    }
+   }
+  },
+  "edges": [
+   {
+    "direction": "downstream",
+    "strength": 60,
+    "lock_in_depth": 35,
+    "substitutability": 55,
+    "is_reversible": true,
+    "risk_level": "low",
+    "risk_type": "technical",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "sglang",
+    "target": "xai",
+    "type": "delivers_to",
+    "note": {
+     "ru": "Названа первой в списке тех, кто принял каркас в работу.",
+     "en": "Named first in the list of those who adopted the framework."
+    },
+    "risk_mitigation": {
+     "ru": "Каркас открытый, и принявшая сторона не привязана к его сопровождению",
+     "en": "The framework is open and the adopter is not tied to its maintenance"
+    },
+    "sources": [
+     {
+      "type": "product_doc",
+      "title": "sgl-project/sglang — README",
+      "url": "https://github.com/sgl-project/sglang",
+      "published": "2026-08-29",
+      "quote": "adopted by a wide range of leading enterprises and institutions, including xAI, NVIDIA"
+     }
+    ]
+   },
+   {
+    "direction": "downstream",
+    "strength": 70,
+    "lock_in_depth": 40,
+    "substitutability": 55,
+    "is_reversible": true,
+    "risk_level": "low",
+    "risk_type": "technical",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "sglang",
+    "target": "nvidia",
+    "type": "optimizes_for",
+    "note": {
+     "ru": "Работает на ускорителях вендора и назван среди принятых им проектов.",
+     "en": "Runs on the vendor's accelerators and is named among the projects it adopted."
+    },
+    "risk_mitigation": {
+     "ru": "Поддержаны также ускорители AMD, процессоры Intel и тензорные процессоры Google",
+     "en": "AMD accelerators, Intel CPUs and Google TPUs are supported as well"
+    },
+    "sources": [
+     {
+      "type": "product_doc",
+      "title": "sgl-project/sglang — README",
+      "url": "https://github.com/sgl-project/sglang",
+      "published": "2026-08-29",
+      "quote": "adopted by a wide range of leading enterprises and institutions, including xAI, NVIDIA"
+     },
+     {
+      "type": "product_doc",
+      "title": "sgl-project/sglang — README",
+      "url": "https://github.com/sgl-project/sglang",
+      "published": "2026-08-29",
+      "quote": "Runs on NVIDIA GPUs (GB200/B300/H100/A100/Spark/5090), AMD GPUs (MI355/MI300), Intel Xeon CPUs"
+     }
+    ]
+   },
+   {
+    "direction": "downstream",
+    "strength": 60,
+    "lock_in_depth": 30,
+    "substitutability": 60,
+    "is_reversible": true,
+    "risk_level": "low",
+    "risk_type": "technical",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "sglang",
+    "target": "amd",
+    "type": "optimizes_for",
+    "note": {
+     "ru": "Ускорители AMD поддержаны наравне с ускорителями другого вендора.",
+     "en": "AMD accelerators are supported alongside the other vendor's."
+    },
+    "risk_mitigation": {
+     "ru": "Поддержка нескольких вендоров заявлена одной строкой README",
+     "en": "Support for several vendors is stated in one README line"
+    },
+    "sources": [
+     {
+      "type": "product_doc",
+      "title": "sgl-project/sglang — README",
+      "url": "https://github.com/sgl-project/sglang",
+      "published": "2026-08-29",
+      "quote": "Runs on NVIDIA GPUs (GB200/B300/H100/A100/Spark/5090), AMD GPUs (MI355/MI300), Intel Xeon CPUs"
+     }
+    ]
+   },
+   {
+    "direction": "downstream",
+    "strength": 50,
+    "lock_in_depth": 25,
+    "substitutability": 65,
+    "is_reversible": true,
+    "risk_level": "low",
+    "risk_type": "technical",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "sglang",
+    "target": "intel",
+    "type": "optimizes_for",
+    "note": {
+     "ru": "Процессоры Intel Xeon названы среди поддержанного оборудования.",
+     "en": "Intel Xeon CPUs are named among the supported hardware."
+    },
+    "risk_mitigation": {
+     "ru": "Поддержка нескольких вендоров заявлена одной строкой README",
+     "en": "Support for several vendors is stated in one README line"
+    },
+    "sources": [
+     {
+      "type": "product_doc",
+      "title": "sgl-project/sglang — README",
+      "url": "https://github.com/sgl-project/sglang",
+      "published": "2026-08-29",
+      "quote": "Runs on NVIDIA GPUs (GB200/B300/H100/A100/Spark/5090), AMD GPUs (MI355/MI300), Intel Xeon CPUs"
+     }
+    ]
+   },
+   {
+    "direction": "downstream",
+    "strength": 50,
+    "lock_in_depth": 30,
+    "substitutability": 60,
+    "is_reversible": true,
+    "risk_level": "low",
+    "risk_type": "market",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "sglang",
+    "target": "oracle",
+    "type": "delivers_to",
+    "note": {
+     "ru": "Названа среди облаков, принявших каркас в работу.",
+     "en": "Named among the clouds that adopted the framework."
+    },
+    "risk_mitigation": {
+     "ru": "Каркас принят несколькими облаками сразу",
+     "en": "The framework is adopted by several clouds at once"
+    },
+    "sources": [
+     {
+      "type": "product_doc",
+      "title": "sgl-project/sglang — README",
+      "url": "https://github.com/sgl-project/sglang",
+      "published": "2026-08-29",
+      "quote": "AMD, Intel, LinkedIn, Cursor, Oracle Cloud, Google Cloud, Microsoft Azure, AWS, Atlas Cloud, Voltage Park"
+     }
+    ]
+   },
+   {
+    "direction": "downstream",
+    "strength": 45,
+    "lock_in_depth": 25,
+    "substitutability": 65,
+    "is_reversible": true,
+    "risk_level": "low",
+    "risk_type": "market",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "sglang",
+    "target": "nebius",
+    "type": "delivers_to",
+    "note": {
+     "ru": "Названа среди облачных площадок, принявших каркас в работу.",
+     "en": "Named among the cloud providers that adopted the framework."
+    },
+    "risk_mitigation": {
+     "ru": "Каркас принят несколькими облаками сразу",
+     "en": "The framework is adopted by several clouds at once"
+    },
+    "sources": [
+     {
+      "type": "product_doc",
+      "title": "sgl-project/sglang — README",
+      "url": "https://github.com/sgl-project/sglang",
+      "published": "2026-08-29",
+      "quote": "Voltage Park, Nebius, DataCrunch, Novita, RunPod, InnoMatrix, Modal, MIT, UCLA"
+     }
+    ]
+   }
+  ],
+  "candidates": [
+   {
+    "name": "Cursor",
+    "why": "названа SGLang среди принявших каркас; слоя приложений поверх моделей на карте нет",
+    "url": "https://github.com/sgl-project/sglang",
+    "quote": "AMD, Intel, LinkedIn, Cursor, Oracle Cloud, Google Cloud, Microsoft Azure, AWS, Atlas Cloud, Voltage Park"
+   }
+  ],
+  "gaps": "vLLM в README не назван, поэтому связь sglang -> vllm остаётся односторонней."
+ },
+ {
+  "id": "mistral",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Mistral AI — европейская лаборатория, основанная в апреле 2023 года, чья заявленная цель — держать передовой ИИ открытым. Модели она выпускает линейками: Mistral OCR, Mistral Medium, Mistral Small, Voxtral. Финансирование шло последовательными раундами — от посевного до серии C. Заказчиков компания называет поимённо, и среди них есть узлы этой карты: ASML, Snowflake и Cisco. Отдельно она строит собственную вычислительную инфраструктуру для обучения и вывода в Европе.",
+   "en": "Mistral AI is a European laboratory founded in April 2023 whose stated aim is to keep frontier AI open. It ships models in families: Mistral OCR, Mistral Medium, Mistral Small, Voxtral. Funding ran in successive rounds, from a seed to a Series C. It names its customers, and among them are nodes of this map: ASML, Snowflake and Cisco. Separately it builds its own compute infrastructure for training and inference in Europe."
+  },
+  "profile_sources": [
+   {
+    "type": "company_pr",
+    "title": "Mistral AI — about",
+    "url": "https://mistral.ai/about",
+    "published": "2026-08-29",
+    "quote": "In April 2023, Mistral was born to put frontier AI in everyone's hands."
+   },
+   {
+    "type": "company_pr",
+    "title": "Mistral AI — about",
+    "url": "https://mistral.ai/about",
+    "published": "2026-08-29",
+    "quote": "frontier AI open to all, and together solve the world's hardest problems"
+   },
+   {
+    "type": "company_pr",
+    "title": "Mistral AI — about",
+    "url": "https://mistral.ai/about",
+    "published": "2026-08-29",
+    "quote": "ASML, CMA CGM, HSBC, BMW, Stellantis, IBM, BNP Paribas, SAP, Snowflake, Orange, AXA, TotalEnergies, Cisco",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "company_pr",
+    "title": "Mistral AI — about",
+    "url": "https://mistral.ai/about",
+    "published": "2026-08-29",
+    "quote": "frontier-scale infrastructure for training and inference"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 52,
+    "why": {
+     "ru": "Европейская лаборатория с открытыми весами, но не единственная в своём слое",
+     "en": "A European laboratory with open weights, yet not the only one in its layer"
+    }
+   },
+   "lock_in_depth": {
+    "value": 40,
+    "why": {
+     "ru": "Открытость весов сама по себе снимает замок, который держат закрытые лаборатории",
+     "en": "Open weights themselves remove the lock closed laboratories hold"
+    }
+   },
+   "time_to_replace": {
+    "value": 45,
+    "why": {
+     "ru": "Лаборатория основана в апреле 2023 года и прошла путь от посевного раунда до серии C",
+     "en": "The laboratory was founded in April 2023 and went from a seed round to a Series C"
+    }
+   },
+   "concentration": {
+    "value": 35,
+    "why": {
+     "ru": "Заказчики разложены по отраслям: от полупроводникового оборудования до банков и автопроизводителей",
+     "en": "Customers spread across industries: from semiconductor equipment to banks and carmakers"
+    }
+   }
+  },
+  "edges": [
+   {
+    "direction": "downstream",
+    "strength": 50,
+    "lock_in_depth": 25,
+    "substitutability": 70,
+    "is_reversible": true,
+    "risk_level": "low",
+    "risk_type": "market",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "asml",
+    "target": "mistral",
+    "type": "customer_of",
+    "note": {
+     "ru": "Названа лабораторией первой в собственном списке заказчиков.",
+     "en": "Named first by the laboratory in its own customer list."
+    },
+    "risk_mitigation": {
+     "ru": "Заказчик не привязан к одной лаборатории: веса открыты и переносимы",
+     "en": "The customer is not tied to one laboratory: the weights are open and portable"
+    },
+    "sources": [
+     {
+      "type": "company_pr",
+      "title": "Mistral AI — about",
+      "url": "https://mistral.ai/about",
+      "published": "2026-08-29",
+      "quote": "ASML, CMA CGM, HSBC, BMW, Stellantis, IBM, BNP Paribas, SAP, Snowflake, Orange, AXA, TotalEnergies, Cisco"
+     }
+    ]
+   },
+   {
+    "direction": "downstream",
+    "strength": 45,
+    "lock_in_depth": 20,
+    "substitutability": 70,
+    "is_reversible": true,
+    "risk_level": "low",
+    "risk_type": "market",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "snowflake",
+    "target": "mistral",
+    "type": "customer_of",
+    "note": {
+     "ru": "Названа лабораторией в собственном списке заказчиков.",
+     "en": "Named by the laboratory in its own customer list."
+    },
+    "risk_mitigation": {
+     "ru": "Заказчик не привязан к одной лаборатории: веса открыты и переносимы",
+     "en": "The customer is not tied to one laboratory: the weights are open and portable"
+    },
+    "sources": [
+     {
+      "type": "company_pr",
+      "title": "Mistral AI — about",
+      "url": "https://mistral.ai/about",
+      "published": "2026-08-29",
+      "quote": "ASML, CMA CGM, HSBC, BMW, Stellantis, IBM, BNP Paribas, SAP, Snowflake, Orange, AXA, TotalEnergies, Cisco"
+     }
+    ]
+   },
+   {
+    "direction": "downstream",
+    "strength": 45,
+    "lock_in_depth": 20,
+    "substitutability": 70,
+    "is_reversible": true,
+    "risk_level": "low",
+    "risk_type": "market",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "cisco",
+    "target": "mistral",
+    "type": "customer_of",
+    "note": {
+     "ru": "Названа лабораторией в собственном списке заказчиков.",
+     "en": "Named by the laboratory in its own customer list."
+    },
+    "risk_mitigation": {
+     "ru": "Заказчик не привязан к одной лаборатории: веса открыты и переносимы",
+     "en": "The customer is not tied to one laboratory: the weights are open and portable"
+    },
+    "sources": [
+     {
+      "type": "company_pr",
+      "title": "Mistral AI — about",
+      "url": "https://mistral.ai/about",
+      "published": "2026-08-29",
+      "quote": "ASML, CMA CGM, HSBC, BMW, Stellantis, IBM, BNP Paribas, SAP, Snowflake, Orange, AXA, TotalEnergies, Cisco"
+     }
+    ]
+   }
+  ],
+  "candidates": [
+   {
+    "name": "SAP",
+    "why": "названа Mistral заказчиком; корпоративного софта такого масштаба на карте нет",
+    "url": "https://mistral.ai/about",
+    "quote": "ASML, CMA CGM, HSBC, BMW, Stellantis, IBM, BNP Paribas, SAP, Snowflake, Orange, AXA, TotalEnergies, Cisco"
+   }
+  ],
+  "gaps": "NVIDIA в разделе «о компании» не названа: связь mistral -> nvidia подтверждена только со стороны поставщика."
+ },
+ {
+  "id": "lambda",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Lambda — компания, основанная инженерами машинного обучения в 2012 году и с тех пор занимающаяся только вычислениями для ИИ. Свою продукцию она описывает не как аренду карт, а как модульные фабрики ИИ: питание, жидкостное охлаждение и высокоскоростные соединения. Масштаб она формулирует сама: от одного ускорителя до сотен тысяч. Продуктовые линейки — суперкластеры, кластеры в один клик и отдельные инстансы. На карте узел стоит между производителем ускорителей и лабораторией, которой нужна мощность без собственного дата-центра.",
+   "en": "Lambda is a company founded by ML engineers in 2012 and has done nothing but AI compute since. It describes its product not as card rental but as modular AI factories: power, liquid cooling and high-bandwidth interconnects. It states its own scale: from one GPU to hundreds of thousands. The product lines are superclusters, one-click clusters and instances. On the map the node sits between the accelerator maker and the laboratory that needs capacity without a data centre of its own."
+  },
+  "profile_sources": [
+   {
+    "type": "company_pr",
+    "title": "Lambda — about",
+    "url": "https://lambda.ai/about",
+    "published": "2026-08-29",
+    "quote": "Lambda is an AI-only company founded by ML engineers in 2012."
+   },
+   {
+    "type": "company_pr",
+    "title": "Lambda — about",
+    "url": "https://lambda.ai/about",
+    "published": "2026-08-29",
+    "quote": "Lambda builds modular AI factories — power, liquid cooling, and high-bandwidth interconnects"
+   },
+   {
+    "type": "company_pr",
+    "title": "Lambda — about",
+    "url": "https://lambda.ai/about",
+    "published": "2026-08-29",
+    "quote": "From one GPU to hundreds of thousands, we build the infrastructure powering AI services",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "company_pr",
+    "title": "Lambda — about",
+    "url": "https://lambda.ai/about",
+    "published": "2026-08-29",
+    "quote": "make compute as ubiquitous as electricity and give everyone in America the power of superintelligence"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 45,
+    "why": {
+     "ru": "Мощность в аренду продают десятки площадок, и переход между ними технически не заперт",
+     "en": "Rented capacity is sold by dozens of providers and moving between them is not technically locked"
+    }
+   },
+   "lock_in_depth": {
+    "value": 48,
+    "why": {
+     "ru": "Продаётся площадка целиком — питание, охлаждение и соединения, а не отдельная карта",
+     "en": "What is sold is a whole site — power, cooling and interconnects — not a single card"
+    }
+   },
+   "time_to_replace": {
+    "value": 42,
+    "why": {
+     "ru": "Компания работает с 2012 года, но её продукт заменяется другой площадкой в пределах договора",
+     "en": "The company has operated since 2012, but its product is replaced by another site inside a contract term"
+    }
+   },
+   "concentration": {
+    "value": 38,
+    "why": {
+     "ru": "От одного ускорителя до сотен тысяч — диапазон широкий, доля функции не исключительная",
+     "en": "From one GPU to hundreds of thousands — a wide range, but no exclusive share of the function"
+    }
+   }
+  },
+  "edges": [],
+  "candidates": [],
+  "gaps": "NVIDIA на странице «о компании» не названа: обе связи с ней подтверждены только со стороны поставщика."
+ },
+ {
+  "id": "a16z",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Andreessen Horowitz — венчурная фирма, названная именами двух своих основателей. Под управлением у неё более $100B+ в нескольких фондах. Вкладывается она от посевной стадии до стадии роста и перечисляет свои направления сама: ИИ, био и здравоохранение, потребительский сектор, крипто, корпоративный софт, финтех, игры и инфраструктура. Собственную модель фирма описывает как платформенную — с командой операторов, помогающих основателям в маркетинге, найме, юридических и политических вопросах. На карте узел стоит в слое капитала, который финансирует спрос на вычисления.",
+   "en": "Andreessen Horowitz is a venture firm named after its two founders. It has over $100B+ under management across multiple funds. It invests from seed to growth stage and lists its own sectors: AI, bio and healthcare, consumer, crypto, enterprise, fintech, games and infrastructure. The firm describes its own model as a platform one — with a team of operators helping founders on marketing, talent, legal and policy. On the map the node sits in the capital layer that funds demand for compute."
+  },
+  "profile_sources": [
+   {
+    "type": "company_pr",
+    "title": "a16z — about",
+    "url": "https://a16z.com/about/",
+    "published": "2026-08-29",
+    "quote": "we have over $100B+ under management across multiple funds",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "company_pr",
+    "title": "a16z — about",
+    "url": "https://a16z.com/about/",
+    "published": "2026-08-29",
+    "quote": "in seed to venture to growth-stage technology companies"
+   },
+   {
+    "type": "company_pr",
+    "title": "a16z — about",
+    "url": "https://a16z.com/about/",
+    "published": "2026-08-29",
+    "quote": "AI, bio + healthcare, consumer, crypto, enterprise, fintech, games, infrastructure"
+   },
+   {
+    "type": "company_pr",
+    "title": "a16z — about",
+    "url": "https://a16z.com/about/",
+    "published": "2026-08-29",
+    "quote": "a16z pioneered the platform model—the largest team of operators in venture"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 42,
+    "why": {
+     "ru": "Венчурный капитал в этот слой несут десятки фондов; исключительности у одного нет",
+     "en": "Venture capital flows into this layer from dozens of funds; no single one is exclusive"
+    }
+   },
+   "lock_in_depth": {
+    "value": 38,
+    "why": {
+     "ru": "Вложение даёт долю и место в совете, но не техническую привязку",
+     "en": "An investment gives a stake and a board seat, not a technical tie"
+    }
+   },
+   "time_to_replace": {
+    "value": 35,
+    "why": {
+     "ru": "Источник капитала меняется в пределах одного раунда",
+     "en": "A source of capital changes inside a single round"
+    }
+   },
+   "concentration": {
+    "value": 48,
+    "why": {
+     "ru": "Более $100B+ под управлением при десятках сопоставимых фондов в том же слое",
+     "en": "Over $100B+ under management against dozens of comparable funds in the same layer"
+    }
+   }
+  },
+  "edges": [],
+  "candidates": [],
+  "gaps": "Портфельных компаний страница не называет поимённо: связь a16z -> databricks подтверждена только со стороны портфельной компании."
+ }
+]

@@ -6,6 +6,7 @@
   "source": "engine",
   "pivots": [
     "amazon",
+    "amd",
     "anthropic",
     "arm",
     "broadcom",
@@ -13,8 +14,6 @@
     "coreweave",
     "crusoe",
     "cuda",
-    "deepseek",
-    "digital-realty",
     "equinix",
     "google",
     "huggingface",
@@ -30,6 +29,7 @@
     "pytorch",
     "samsung",
     "sandisk",
+    "sglang",
     "sk-hynix",
     "softbank",
     "tsmc",
@@ -45,9 +45,9 @@
     "coreRule": "top-30 by integration",
     "coreCount": 30,
     "membership": {
-      "admitted": 48,
+      "admitted": 53,
       "retired": 0,
-      "queued": 59,
+      "queued": 54,
       "enforced": false,
       "covered": 107,
       "uncovered": [
@@ -55,9 +55,9 @@
       ],
       "checks": {
         "in_scope": 0,
-        "min_sources": 52,
-        "min_self_sources": 32,
-        "min_confirmed_edges": 35
+        "min_sources": 44,
+        "min_self_sources": 24,
+        "min_confirmed_edges": 34
       }
     },
     "deprecated": {
@@ -66,7 +66,7 @@
   },
   "totals": {
     "entities": 108,
-    "edges": 295,
+    "edges": 306,
     "layers": 16,
     "cycles": 199,
     "techNodes": 10
@@ -507,11 +507,11 @@
       "band": 1,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.147,
+        "hhi": 0.1464,
         "top": [
           "zeiss-smt",
           "asml",
-          "kla"
+          "tokyo-electron"
         ]
       }
     },
@@ -599,7 +599,7 @@
       "band": 3,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.155,
+        "hhi": 0.1556,
         "top": [
           "nvidia",
           "foxconn",
@@ -668,7 +668,7 @@
       "band": 4,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1154,
+        "hhi": 0.1151,
         "top": [
           "nvidia",
           "broadcom",
@@ -691,7 +691,7 @@
       "band": 4,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1047,
+        "hhi": 0.1035,
         "top": [
           "google",
           "microsoft",
@@ -714,7 +714,7 @@
       "band": 5,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1301,
+        "hhi": 0.1306,
         "top": [
           "cuda",
           "nvidia",
@@ -737,7 +737,7 @@
       "band": 5,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1732,
+        "hhi": 0.1706,
         "top": [
           "kubernetes",
           "huggingface",
@@ -806,7 +806,7 @@
       "band": null,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1074,
+        "hhi": 0.1072,
         "top": [
           "blackstone",
           "softbank",
@@ -829,7 +829,7 @@
       "band": null,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.2184,
+        "hhi": 0.2162,
         "top": [
           "bis",
           "cfius",
@@ -5553,40 +5553,44 @@
         {
           "layer": "L14",
           "primary": true,
-          "criticality": 35
+          "criticality": 40
         }
       ],
       "primaryLayer": "L14",
-      "criticality": 35,
+      "criticality": 40,
       "criticalityFactors": {
-        "irreplaceability": 30,
-        "lockInDepth": 40,
+        "irreplaceability": 42,
+        "lockInDepth": 38,
         "timeToReplace": 35,
-        "concentration": null
+        "concentration": 48
       },
       "criticalityWhy": {
         "irreplaceability": {
-          "ru": "Венчурных фондов такого класса несколько",
-          "en": "Several venture funds of this class exist"
+          "ru": "Венчурный капитал в этот слой несут десятки фондов; исключительности у одного нет",
+          "en": "Venture capital flows into this layer from dozens of funds; no single one is exclusive"
         },
         "lockInDepth": {
-          "ru": "Задевает модели и приложения",
-          "en": "Reaches models and applications"
+          "ru": "Вложение даёт долю и место в совете, но не техническую привязку",
+          "en": "An investment gives a stake and a board seat, not a technical tie"
         },
         "timeToReplace": {
-          "ru": "Найти замену капиталу — месяцы",
-          "en": "Finding replacement capital — months"
+          "ru": "Источник капитала меняется в пределах одного раунда",
+          "en": "A source of capital changes inside a single round"
         },
-        "concentration": null
+        "concentration": {
+          "ru": "Более $100B+ под управлением при десятках сопоставимых фондов в том же слое",
+          "en": "Over $100B+ under management against dozens of comparable funds in the same layer"
+        }
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
         "reach": 1,
@@ -5634,6 +5638,58 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "a16z — about",
+          "url": "https://a16z.com/about/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "we have over $100B+ under management across multiple funds",
+          "confidence": 0.975,
+          "self": "a16z",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "a16z — about",
+          "url": "https://a16z.com/about/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "in seed to venture to growth-stage technology companies",
+          "confidence": 0.975,
+          "self": "a16z",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "a16z — about",
+          "url": "https://a16z.com/about/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "AI, bio + healthcare, consumer, crypto, enterprise, fintech, games, infrastructure",
+          "confidence": 0.975,
+          "self": "a16z",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "a16z — about",
+          "url": "https://a16z.com/about/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "a16z pioneered the platform model—the largest team of operators in venture",
+          "confidence": 0.975,
+          "self": "a16z",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "NVIDIA 10-K FY2026",
@@ -5648,26 +5704,27 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 5,
+        "selfSourced": 4,
         "byTier": {
+          "1": 4,
           "2": 1
         }
       },
       "description": {
-        "ru": "Венчурный фонд, вкладывающийся в прикладной и инфраструктурный софт вокруг моделей. Зарабатывает комиссией за управление и долей в прибыли фонда, то есть возврат считается на горизонте лет, а не кварталов. В карте фонд представляет самый заменимый вид капитала: денег в этом сегменте достаточно, и ценность участия не в сумме, а в доступе к следующим раундам и к сети покупателей. Ставки идут в слой, который переживает смену поколений железа.",
-        "en": "A venture fund investing in the application and infrastructure software around models. It earns a management fee plus carried interest, so returns are counted over years rather than quarters. On the map the fund represents the most replaceable kind of capital: money in this segment is plentiful, and the value of participation is access to later rounds and to a network of buyers rather than the amount. Its bets go into the layer that survives hardware generation changes."
+        "ru": "Andreessen Horowitz — венчурная фирма, названная именами двух своих основателей. Под управлением у неё более $100B+ в нескольких фондах. Вкладывается она от посевной стадии до стадии роста и перечисляет свои направления сама: ИИ, био и здравоохранение, потребительский сектор, крипто, корпоративный софт, финтех, игры и инфраструктура. Собственную модель фирма описывает как платформенную — с командой операторов, помогающих основателям в маркетинге, найме, юридических и политических вопросах. На карте узел стоит в слое капитала, который финансирует спрос на вычисления.",
+        "en": "Andreessen Horowitz is a venture firm named after its two founders. It has over $100B+ under management across multiple funds. It invests from seed to growth stage and lists its own sectors: AI, bio and healthcare, consumer, crypto, enterprise, fintech, games and infrastructure. The firm describes its own model as a platform one — with a team of operators helping founders on marketing, talent, legal and policy. On the map the node sits in the capital layer that funds demand for compute."
       },
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.004489
+        "pagerank": 0.004467
       },
       "integration": {
         "score": 3,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.004489,
+        "pagerank": 0.004467,
         "layersSpanned": 2,
         "edgeTypes": 1,
         "cycles": 0
@@ -5860,14 +5917,14 @@
       },
       "centrality": {
         "degree": 8,
-        "betweenness": 0.007787,
-        "pagerank": 0.005825
+        "betweenness": 0.007649,
+        "pagerank": 0.005795
       },
       "integration": {
         "score": 15,
         "degree": 8,
-        "betweenness": 0.007787,
-        "pagerank": 0.005825,
+        "betweenness": 0.007649,
+        "pagerank": 0.005795,
         "layersSpanned": 8,
         "edgeTypes": 8,
         "cycles": 11
@@ -5924,11 +5981,11 @@
         "renormalized": true
       },
       "gravity": {
-        "reach": 4,
-        "layers": 4,
-        "edgeTypes": 4,
+        "reach": 6,
+        "layers": 5,
+        "edgeTypes": 5,
         "cycles": 0,
-        "score": 16,
+        "score": 22,
         "signals": {}
       },
       "domain": null,
@@ -6020,21 +6077,21 @@
         "en": "Sells EPYC server processors and Instinct accelerators — the direct alternative to what sits at the centre of this map. It earns hardware margin and gives the software layer away: ROCm is free because what is sold is the chip underneath it. On the map it stands beside NVIDIA both as a rival and as a neighbour in the same queue at the foundry, since both order wafers in the same place. Data Center net revenue was $16.6 billion, up 32%, and the segment's operating income was $3.6 billion in 2025. The gap with NVIDIA is not in the die but in the software: code written against another environment does not port for free."
       },
       "centrality": {
-        "degree": 5,
-        "betweenness": 0.001251,
-        "pagerank": 0.007245
+        "degree": 7,
+        "betweenness": 0.002661,
+        "pagerank": 0.009909
       },
       "integration": {
-        "score": 9,
-        "degree": 5,
-        "betweenness": 0.001251,
-        "pagerank": 0.007245,
-        "layersSpanned": 4,
-        "edgeTypes": 6,
+        "score": 11,
+        "degree": 7,
+        "betweenness": 0.002661,
+        "pagerank": 0.009909,
+        "layersSpanned": 5,
+        "edgeTypes": 7,
         "cycles": 0
       },
-      "core": false,
-      "pivotal": false
+      "core": true,
+      "pivotal": true
     },
     {
       "id": "amkor",
@@ -6228,13 +6285,13 @@
       "centrality": {
         "degree": 4,
         "betweenness": 0.000132,
-        "pagerank": 0.010177
+        "pagerank": 0.010179
       },
       "integration": {
         "score": 7,
         "degree": 4,
         "betweenness": 0.000132,
-        "pagerank": 0.010177,
+        "pagerank": 0.010179,
         "layersSpanned": 4,
         "edgeTypes": 1,
         "cycles": 0
@@ -6471,14 +6528,14 @@
       },
       "centrality": {
         "degree": 9,
-        "betweenness": 0.036796,
-        "pagerank": 0.007424
+        "betweenness": 0.036181,
+        "pagerank": 0.007366
       },
       "integration": {
         "score": 17,
         "degree": 9,
-        "betweenness": 0.036796,
-        "pagerank": 0.007424,
+        "betweenness": 0.036181,
+        "pagerank": 0.007366,
         "layersSpanned": 9,
         "edgeTypes": 6,
         "cycles": 6
@@ -6633,13 +6690,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.006864
+        "pagerank": 0.006849
       },
       "integration": {
         "score": 5,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.006864,
+        "pagerank": 0.006849,
         "layersSpanned": 3,
         "edgeTypes": 1,
         "cycles": 0
@@ -6824,13 +6881,13 @@
       "centrality": {
         "degree": 4,
         "betweenness": 0.000362,
-        "pagerank": 0.005381
+        "pagerank": 0.005344
       },
       "integration": {
         "score": 8,
         "degree": 4,
         "betweenness": 0.000362,
-        "pagerank": 0.005381,
+        "pagerank": 0.005344,
         "layersSpanned": 5,
         "edgeTypes": 2,
         "cycles": 17
@@ -7083,14 +7140,14 @@
       },
       "centrality": {
         "degree": 5,
-        "betweenness": 0.00223,
-        "pagerank": 0.011595
+        "betweenness": 0.002104,
+        "pagerank": 0.011438
       },
       "integration": {
         "score": 13,
         "degree": 5,
-        "betweenness": 0.00223,
-        "pagerank": 0.011595,
+        "betweenness": 0.002104,
+        "pagerank": 0.011438,
         "layersSpanned": 7,
         "edgeTypes": 6,
         "cycles": 20
@@ -7220,13 +7277,13 @@
       "centrality": {
         "degree": 4,
         "betweenness": 0.000132,
-        "pagerank": 0.010177
+        "pagerank": 0.010179
       },
       "integration": {
         "score": 7,
         "degree": 4,
         "betweenness": 0.000132,
-        "pagerank": 0.010177,
+        "pagerank": 0.010179,
         "layersSpanned": 4,
         "edgeTypes": 1,
         "cycles": 0
@@ -7283,11 +7340,11 @@
         "renormalized": true
       },
       "gravity": {
-        "reach": 3,
-        "layers": 3,
-        "edgeTypes": 3,
+        "reach": 4,
+        "layers": 4,
+        "edgeTypes": 4,
         "cycles": 0,
-        "score": 12,
+        "score": 16,
         "signals": {}
       },
       "domain": null,
@@ -7407,17 +7464,17 @@
         "en": "Sells lithography scanners — the machines that print the circuit pattern onto a silicon wafer; an EUV system fills a shop floor and costs as much as a small factory. The money arrives twice: first from the system sale, then from servicing and upgrading the installed base, and the second stream repeats for years. On this map the company sits below the fab: without its machines there are no leading-edge nodes, and therefore no accelerators. It is the world's only maker of EUV systems; net sales rose €4.4 billion, or 15.6%, and for the current year it expects between €34 billion and €39 billion. Sales of the most advanced machines run on Dutch export licences, so the geography of shipments is set by permits rather than by demand."
       },
       "centrality": {
-        "degree": 3,
-        "betweenness": 0.018692,
-        "pagerank": 0.012496
+        "degree": 4,
+        "betweenness": 0.01955,
+        "pagerank": 0.010469
       },
       "integration": {
-        "score": 7,
-        "degree": 3,
-        "betweenness": 0.018692,
-        "pagerank": 0.012496,
-        "layersSpanned": 3,
-        "edgeTypes": 3,
+        "score": 9,
+        "degree": 4,
+        "betweenness": 0.01955,
+        "pagerank": 0.010469,
+        "layersSpanned": 4,
+        "edgeTypes": 4,
         "cycles": 0
       },
       "core": false,
@@ -7569,14 +7626,14 @@
       },
       "centrality": {
         "degree": 4,
-        "betweenness": 0.00087,
-        "pagerank": 0.003498
+        "betweenness": 0.000835,
+        "pagerank": 0.003481
       },
       "integration": {
         "score": 7,
         "degree": 4,
-        "betweenness": 0.00087,
-        "pagerank": 0.003498,
+        "betweenness": 0.000835,
+        "pagerank": 0.003481,
         "layersSpanned": 4,
         "edgeTypes": 3,
         "cycles": 7
@@ -7790,13 +7847,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.00655
+        "pagerank": 0.006565
       },
       "integration": {
         "score": 7,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.00655,
+        "pagerank": 0.006565,
         "layersSpanned": 5,
         "edgeTypes": 2,
         "cycles": 0
@@ -7927,13 +7984,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003934
+        "pagerank": 0.003905
       },
       "integration": {
         "score": 4,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003934,
+        "pagerank": 0.003905,
         "layersSpanned": 3,
         "edgeTypes": 1,
         "cycles": 0
@@ -8132,13 +8189,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.000301,
-        "pagerank": 0.007746
+        "pagerank": 0.00755
       },
       "integration": {
         "score": 5,
         "degree": 2,
         "betweenness": 0.000301,
-        "pagerank": 0.007746,
+        "pagerank": 0.00755,
         "layersSpanned": 3,
         "edgeTypes": 1,
         "cycles": 0
@@ -8267,13 +8324,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.005293
+        "pagerank": 0.004853
       },
       "integration": {
         "score": 3,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.005293,
+        "pagerank": 0.004853,
         "layersSpanned": 2,
         "edgeTypes": 1,
         "cycles": 0
@@ -8402,13 +8459,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.00655
+        "pagerank": 0.006565
       },
       "integration": {
         "score": 5,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.00655,
+        "pagerank": 0.006565,
         "layersSpanned": 4,
         "edgeTypes": 1,
         "cycles": 0
@@ -8623,14 +8680,14 @@
       },
       "centrality": {
         "degree": 10,
-        "betweenness": 0.008884,
-        "pagerank": 0.015109
+        "betweenness": 0.008357,
+        "pagerank": 0.015068
       },
       "integration": {
         "score": 16,
         "degree": 10,
-        "betweenness": 0.008884,
-        "pagerank": 0.015109,
+        "betweenness": 0.008357,
+        "pagerank": 0.015068,
         "layersSpanned": 6,
         "edgeTypes": 10,
         "cycles": 40
@@ -8804,14 +8861,14 @@
       },
       "centrality": {
         "degree": 5,
-        "betweenness": 0.002641,
-        "pagerank": 0.007017
+        "betweenness": 0.002606,
+        "pagerank": 0.006981
       },
       "integration": {
         "score": 8,
         "degree": 5,
-        "betweenness": 0.002641,
-        "pagerank": 0.007017,
+        "betweenness": 0.002606,
+        "pagerank": 0.006981,
         "layersSpanned": 4,
         "edgeTypes": 3,
         "cycles": 0
@@ -8953,13 +9010,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.00655
+        "pagerank": 0.006565
       },
       "integration": {
         "score": 7,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.00655,
+        "pagerank": 0.006565,
         "layersSpanned": 4,
         "edgeTypes": 3,
         "cycles": 0
@@ -9129,14 +9186,14 @@
       },
       "centrality": {
         "degree": 2,
-        "betweenness": 0.004369,
-        "pagerank": 0.010141
+        "betweenness": 0.004396,
+        "pagerank": 0.009994
       },
       "integration": {
         "score": 7,
         "degree": 2,
-        "betweenness": 0.004369,
-        "pagerank": 0.010141,
+        "betweenness": 0.004396,
+        "pagerank": 0.009994,
         "layersSpanned": 5,
         "edgeTypes": 1,
         "cycles": 0
@@ -9323,13 +9380,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.010236
+        "pagerank": 0.010231
       },
       "integration": {
         "score": 8,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.010236,
+        "pagerank": 0.010231,
         "layersSpanned": 5,
         "edgeTypes": 2,
         "cycles": 6
@@ -9456,13 +9513,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 8.8e-05,
-        "pagerank": 0.010726
+        "pagerank": 0.011437
       },
       "integration": {
         "score": 6,
         "degree": 2,
         "betweenness": 8.8e-05,
-        "pagerank": 0.010726,
+        "pagerank": 0.011437,
         "layersSpanned": 3,
         "edgeTypes": 2,
         "cycles": 0
@@ -9523,11 +9580,11 @@
         "renormalized": false
       },
       "gravity": {
-        "reach": 8,
+        "reach": 9,
         "layers": 6,
-        "edgeTypes": 2,
+        "edgeTypes": 3,
         "cycles": 0,
-        "score": 25,
+        "score": 28,
         "signals": {}
       },
       "domain": null,
@@ -9685,17 +9742,17 @@
         "en": "Cisco makes network infrastructure and in its own filing places itself squarely in the AI training and inference layer: \"We provide network infrastructure to power AI training and inference workloads\". The company sells not only boxes but lifecycle services around them. Software revenue for fiscal 2025 was $22.3 billion, up 21%. No single customer accounted for 10% or more of revenue in any of the last three years — the node carries no demand concentration. The competitor list is the company's own, and it names Arista, Broadcom, Dell, HPE, Microsoft and NVIDIA."
       },
       "centrality": {
-        "degree": 8,
-        "betweenness": 0.003014,
-        "pagerank": 0.003498
+        "degree": 9,
+        "betweenness": 0.004765,
+        "pagerank": 0.003481
       },
       "integration": {
-        "score": 10,
-        "degree": 8,
-        "betweenness": 0.003014,
-        "pagerank": 0.003498,
+        "score": 11,
+        "degree": 9,
+        "betweenness": 0.004765,
+        "pagerank": 0.003481,
         "layersSpanned": 6,
-        "edgeTypes": 2,
+        "edgeTypes": 3,
         "cycles": 0
       },
       "core": true,
@@ -9837,13 +9894,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.00655
+        "pagerank": 0.006565
       },
       "integration": {
         "score": 5,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.00655,
+        "pagerank": 0.006565,
         "layersSpanned": 3,
         "edgeTypes": 2,
         "cycles": 0
@@ -9972,13 +10029,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.003934
+        "pagerank": 0.003905
       },
       "integration": {
         "score": 6,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.003934,
+        "pagerank": 0.003905,
         "layersSpanned": 4,
         "edgeTypes": 2,
         "cycles": 0
@@ -10201,14 +10258,14 @@
       },
       "centrality": {
         "degree": 6,
-        "betweenness": 0.002164,
-        "pagerank": 0.006797
+        "betweenness": 0.002022,
+        "pagerank": 0.006568
       },
       "integration": {
         "score": 12,
         "degree": 6,
-        "betweenness": 0.002164,
-        "pagerank": 0.006797,
+        "betweenness": 0.002022,
+        "pagerank": 0.006568,
         "layersSpanned": 7,
         "edgeTypes": 4,
         "cycles": 15
@@ -10363,14 +10420,14 @@
       },
       "centrality": {
         "degree": 4,
-        "betweenness": 0.00087,
-        "pagerank": 0.003498
+        "betweenness": 0.000835,
+        "pagerank": 0.003481
       },
       "integration": {
         "score": 7,
         "degree": 4,
-        "betweenness": 0.00087,
-        "pagerank": 0.003498,
+        "betweenness": 0.000835,
+        "pagerank": 0.003481,
         "layersSpanned": 4,
         "edgeTypes": 3,
         "cycles": 7
@@ -10562,14 +10619,14 @@
       },
       "centrality": {
         "degree": 4,
-        "betweenness": 0.009257,
-        "pagerank": 0.00655
+        "betweenness": 0.009272,
+        "pagerank": 0.006565
       },
       "integration": {
         "score": 10,
         "degree": 4,
-        "betweenness": 0.009257,
-        "pagerank": 0.00655,
+        "betweenness": 0.009272,
+        "pagerank": 0.006565,
         "layersSpanned": 6,
         "edgeTypes": 4,
         "cycles": 1
@@ -10807,14 +10864,14 @@
       },
       "centrality": {
         "degree": 12,
-        "betweenness": 0.031887,
-        "pagerank": 0.013389
+        "betweenness": 0.021047,
+        "pagerank": 0.01333
       },
       "integration": {
-        "score": 19,
+        "score": 18,
         "degree": 12,
-        "betweenness": 0.031887,
-        "pagerank": 0.013389,
+        "betweenness": 0.021047,
+        "pagerank": 0.01333,
         "layersSpanned": 7,
         "edgeTypes": 8,
         "cycles": 62
@@ -11000,13 +11057,13 @@
       "centrality": {
         "degree": 3,
         "betweenness": 0.018692,
-        "pagerank": 0.003498
+        "pagerank": 0.003481
       },
       "integration": {
         "score": 9,
         "degree": 3,
         "betweenness": 0.018692,
-        "pagerank": 0.003498,
+        "pagerank": 0.003481,
         "layersSpanned": 6,
         "edgeTypes": 3,
         "cycles": 0
@@ -11220,20 +11277,20 @@
       },
       "centrality": {
         "degree": 4,
-        "betweenness": 0.000279,
-        "pagerank": 0.004337
+        "betweenness": 0.00022,
+        "pagerank": 0.004313
       },
       "integration": {
         "score": 10,
         "degree": 4,
-        "betweenness": 0.000279,
-        "pagerank": 0.004337,
+        "betweenness": 0.00022,
+        "pagerank": 0.004313,
         "layersSpanned": 6,
         "edgeTypes": 4,
         "cycles": 6
       },
-      "core": true,
-      "pivotal": true
+      "core": false,
+      "pivotal": false
     },
     {
       "id": "dell",
@@ -11426,13 +11483,13 @@
       "centrality": {
         "degree": 3,
         "betweenness": 0.0,
-        "pagerank": 0.00655
+        "pagerank": 0.006565
       },
       "integration": {
-        "score": 8,
+        "score": 7,
         "degree": 3,
         "betweenness": 0.0,
-        "pagerank": 0.00655,
+        "pagerank": 0.006565,
         "layersSpanned": 4,
         "edgeTypes": 4,
         "cycles": 8
@@ -11566,13 +11623,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003498
+        "pagerank": 0.003481
       },
       "integration": {
         "score": 6,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003498,
+        "pagerank": 0.003481,
         "layersSpanned": 5,
         "edgeTypes": 1,
         "cycles": 0
@@ -11795,20 +11852,20 @@
       },
       "centrality": {
         "degree": 4,
-        "betweenness": 0.014005,
-        "pagerank": 0.008345
+        "betweenness": 0.014157,
+        "pagerank": 0.007937
       },
       "integration": {
         "score": 10,
         "degree": 4,
-        "betweenness": 0.014005,
-        "pagerank": 0.008345,
+        "betweenness": 0.014157,
+        "pagerank": 0.007937,
         "layersSpanned": 6,
         "edgeTypes": 3,
         "cycles": 0
       },
-      "core": true,
-      "pivotal": true
+      "core": false,
+      "pivotal": false
     },
     {
       "id": "eaton",
@@ -11945,13 +12002,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.008149
+        "pagerank": 0.008092
       },
       "integration": {
         "score": 5,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.008149,
+        "pagerank": 0.008092,
         "layersSpanned": 3,
         "edgeTypes": 1,
         "cycles": 0
@@ -12174,14 +12231,14 @@
       },
       "centrality": {
         "degree": 6,
-        "betweenness": 0.034154,
-        "pagerank": 0.014877
+        "betweenness": 0.034138,
+        "pagerank": 0.014778
       },
       "integration": {
         "score": 12,
         "degree": 6,
-        "betweenness": 0.034154,
-        "pagerank": 0.014877,
+        "betweenness": 0.034138,
+        "pagerank": 0.014778,
         "layersSpanned": 6,
         "edgeTypes": 3,
         "cycles": 0
@@ -12310,14 +12367,14 @@
       },
       "centrality": {
         "degree": 2,
-        "betweenness": 0.00669,
-        "pagerank": 0.003498
+        "betweenness": 0.006705,
+        "pagerank": 0.003481
       },
       "integration": {
         "score": 7,
         "degree": 2,
-        "betweenness": 0.00669,
-        "pagerank": 0.003498,
+        "betweenness": 0.006705,
+        "pagerank": 0.003481,
         "layersSpanned": 5,
         "edgeTypes": 2,
         "cycles": 0
@@ -12445,14 +12502,14 @@
       },
       "centrality": {
         "degree": 2,
-        "betweenness": 0.000367,
-        "pagerank": 0.004985
+        "betweenness": 0.000309,
+        "pagerank": 0.00496
       },
       "integration": {
         "score": 5,
         "degree": 2,
-        "betweenness": 0.000367,
-        "pagerank": 0.004985,
+        "betweenness": 0.000309,
+        "pagerank": 0.00496,
         "layersSpanned": 3,
         "edgeTypes": 2,
         "cycles": 0
@@ -12651,13 +12708,13 @@
       "centrality": {
         "degree": 4,
         "betweenness": 0.000241,
-        "pagerank": 0.01608
+        "pagerank": 0.01461
       },
       "integration": {
         "score": 9,
         "degree": 4,
         "betweenness": 0.000241,
-        "pagerank": 0.01608,
+        "pagerank": 0.01461,
         "layersSpanned": 5,
         "edgeTypes": 1,
         "cycles": 0
@@ -12680,40 +12737,44 @@
         {
           "layer": "L5",
           "primary": true,
-          "criticality": 50
+          "criticality": 70
         }
       ],
       "primaryLayer": "L5",
-      "criticality": 50,
+      "criticality": 70,
       "criticalityFactors": {
-        "irreplaceability": 45,
-        "lockInDepth": 50,
-        "timeToReplace": 55,
-        "concentration": null
+        "irreplaceability": 74,
+        "lockInDepth": 68,
+        "timeToReplace": 66,
+        "concentration": 76
       },
       "criticalityWhy": {
         "irreplaceability": {
-          "ru": "Подрядчиков сопоставимого масштаба три-четыре",
-          "en": "Three or four contractors work at comparable scale"
+          "ru": "Называет себя крупнейшим в мире производителем электроники и крупнейшим поставщиком серверов для ИИ",
+          "en": "Calls itself the world's largest electronics manufacturer and the largest AI server provider"
         },
         "lockInDepth": {
-          "ru": "Задевает сборку и системы",
-          "en": "Reaches assembly and systems"
+          "ru": "Сборка идёт под конкретную платформу заказчика, а не по типовому каталогу",
+          "en": "Assembly runs against a specific customer platform rather than a standard catalogue"
         },
         "timeToReplace": {
-          "ru": "Перевести объёмы — от полугода до года",
-          "en": "Moving the volume — six months to a year"
+          "ru": "Мощности такого масштаба вводятся постепенно: выручка группы за полный год достигла NT$8.1 trillion",
+          "en": "Capacity of this scale comes online gradually: full year revenue reached NT$8.1 trillion"
         },
-        "concentration": null
+        "concentration": {
+          "ru": "По собственному счёту — крупнейший в мире поставщик серверов для ИИ",
+          "en": "By its own count, the world's largest AI server provider"
+        }
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
         "reach": 2,
@@ -12762,6 +12823,97 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "About Hon Hai — group profile",
+          "url": "https://www.honhai.com/en-us/about/group-profile",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Hon Hai Technology Group (Foxconn) (TWSE: 2317) is the world's largest electronics manufacturer.",
+          "confidence": 0.975,
+          "self": "foxconn",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Hon Hai FY2025 & 4Q25 results",
+          "url": "https://www.honhai.com/en-us/press-center/press-releases/latest-news/1978",
+          "published": "2026-03-16",
+          "fetched": null,
+          "alive": true,
+          "quote": "The Group's full year revenue reached NT$8.1 trillion, a record high.",
+          "confidence": 0.975,
+          "self": "foxconn",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Hon Hai FY2025 & 4Q25 results",
+          "url": "https://www.honhai.com/en-us/press-center/press-releases/latest-news/1978",
+          "published": "2026-03-16",
+          "fetched": null,
+          "alive": true,
+          "quote": "revenue from cloud and networking products surpassed that of smart consumer electronics products",
+          "confidence": 0.975,
+          "self": "foxconn",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Hon Hai FY2025 & 4Q25 results",
+          "url": "https://www.honhai.com/en-us/press-center/press-releases/latest-news/1978",
+          "published": "2026-03-16",
+          "fetched": null,
+          "alive": true,
+          "quote": "Foxconn, as the world's largest AI server provider, will definitely seize this opportunity",
+          "confidence": 0.975,
+          "self": "foxconn",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "About Hon Hai — group profile",
+          "url": "https://www.honhai.com/en-us/about/group-profile",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Established in Taiwan in 1974, Hon Hai Technology Group (Foxconn) (TWSE: 2317)",
+          "confidence": 0.975,
+          "self": "foxconn",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "About Hon Hai — group profile",
+          "url": "https://www.honhai.com/en-us/about/group-profile",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Foxconn is also the leading technological solution provider, and it continuously leverages its expertise",
+          "confidence": 0.975,
+          "self": "foxconn",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Hon Hai FY2025 & 4Q25 results",
+          "url": "https://www.honhai.com/en-us/press-center/press-releases/latest-news/1978",
+          "published": "2026-03-16",
+          "fetched": null,
+          "alive": true,
+          "quote": "Hon Hai Technology Group (Foxconn) Announces FY2025 & 4Q25 Financial Results",
+          "confidence": 0.975,
+          "self": "foxconn",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "NVIDIA 10-K FY2026",
@@ -12776,26 +12928,27 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 8,
+        "selfSourced": 7,
         "byTier": {
+          "1": 7,
           "2": 1
         }
       },
       "description": {
-        "ru": "Собирает готовые изделия из чужих компонентов: ускорители, память, питание и охлаждение превращаются здесь в стойку, которую можно поставить в зал. Деньги — плата за сборку, маржа тонкая, а масштаб определяется площадями и рабочей силой, а не технологией. В карте компания названа поимённо в отчётности разработчика ускорителей среди контрактных производителей. Это тот предел, который не расшивается деньгами быстро: линия сборки стоек не масштабируется так же, как выпуск пластин.",
-        "en": "Assembles finished products from other people's components: accelerators, memory, power and cooling become a rack here that can be installed in a hall. The money is an assembly fee, the margin is thin, and scale is set by floor space and labour rather than technology. On the map the company is named outright among contract manufacturers in the accelerator designer's filings. This is a limit money does not quickly unwind: a rack assembly line does not scale the way wafer output does."
+        "ru": "Hon Hai, известная как Foxconn, основана на Тайване в 1974 году и называет себя крупнейшим в мире производителем электроники. Выручка группы за полный год достигла NT$8.1 trillion — рекорд. В том же году выручка от облачных и сетевых продуктов впервые превысила выручку от бытовой электроники и стала крупнейшей товарной категорией квартала. Себя в этом сегменте компания описывает прямо: «the world's largest AI server provider». На карте узел стоит там, где ускоритель, память и питание собираются в стойку, которую увозят на площадку.",
+        "en": "Hon Hai, known as Foxconn, was established in Taiwan in 1974 and calls itself the world's largest electronics manufacturer. The group's full year revenue reached NT$8.1 trillion, a record high. In the same year revenue from cloud and networking products passed that of smart consumer electronics for the first time and became the largest product category of the quarter. In that segment the company describes itself plainly: \"the world's largest AI server provider\". On the map the node sits where accelerator, memory and power are assembled into the rack that ships to site."
       },
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.00869
+        "pagerank": 0.0087
       },
       "integration": {
         "score": 6,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.00869,
+        "pagerank": 0.0087,
         "layersSpanned": 4,
         "edgeTypes": 1,
         "cycles": 0
@@ -13007,13 +13160,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.000225,
-        "pagerank": 0.005326
+        "pagerank": 0.0053
       },
       "integration": {
         "score": 5,
         "degree": 2,
         "betweenness": 0.000225,
-        "pagerank": 0.005326,
+        "pagerank": 0.0053,
         "layersSpanned": 3,
         "edgeTypes": 1,
         "cycles": 0
@@ -13226,14 +13379,14 @@
       },
       "centrality": {
         "degree": 8,
-        "betweenness": 0.014176,
-        "pagerank": 0.023769
+        "betweenness": 0.014038,
+        "pagerank": 0.02367
       },
       "integration": {
-        "score": 17,
+        "score": 16,
         "degree": 8,
-        "betweenness": 0.014176,
-        "pagerank": 0.023769,
+        "betweenness": 0.014038,
+        "pagerank": 0.02367,
         "layersSpanned": 7,
         "edgeTypes": 8,
         "cycles": 20
@@ -13388,13 +13541,13 @@
       "centrality": {
         "degree": 5,
         "betweenness": 0.00194,
-        "pagerank": 0.005686
+        "pagerank": 0.005656
       },
       "integration": {
         "score": 7,
         "degree": 5,
         "betweenness": 0.00194,
-        "pagerank": 0.005686,
+        "pagerank": 0.005656,
         "layersSpanned": 3,
         "edgeTypes": 5,
         "cycles": 0
@@ -13580,14 +13733,14 @@
       },
       "centrality": {
         "degree": 3,
-        "betweenness": 0.001868,
-        "pagerank": 0.003498
+        "betweenness": 0.001899,
+        "pagerank": 0.003481
       },
       "integration": {
         "score": 9,
         "degree": 3,
-        "betweenness": 0.001868,
-        "pagerank": 0.003498,
+        "betweenness": 0.001899,
+        "pagerank": 0.003481,
         "layersSpanned": 6,
         "edgeTypes": 3,
         "cycles": 0
@@ -13811,14 +13964,14 @@
       },
       "centrality": {
         "degree": 5,
-        "betweenness": 0.0005,
-        "pagerank": 0.00655
+        "betweenness": 0.000476,
+        "pagerank": 0.006565
       },
       "integration": {
         "score": 8,
         "degree": 5,
-        "betweenness": 0.0005,
-        "pagerank": 0.00655,
+        "betweenness": 0.000476,
+        "pagerank": 0.006565,
         "layersSpanned": 4,
         "edgeTypes": 3,
         "cycles": 8
@@ -14030,14 +14183,14 @@
       },
       "centrality": {
         "degree": 10,
-        "betweenness": 0.005752,
-        "pagerank": 0.00691
+        "betweenness": 0.005143,
+        "pagerank": 0.006851
       },
       "integration": {
         "score": 16,
         "degree": 10,
-        "betweenness": 0.005752,
-        "pagerank": 0.00691,
+        "betweenness": 0.005143,
+        "pagerank": 0.006851,
         "layersSpanned": 7,
         "edgeTypes": 9,
         "cycles": 52
@@ -14099,11 +14252,11 @@
         "renormalized": false
       },
       "gravity": {
-        "reach": 4,
-        "layers": 5,
-        "edgeTypes": 4,
+        "reach": 5,
+        "layers": 6,
+        "edgeTypes": 5,
         "cycles": 0,
-        "score": 18,
+        "score": 22,
         "signals": {}
       },
       "domain": null,
@@ -14274,17 +14427,17 @@
         "en": "Intel designs and manufactures processors itself, and lately sells manufacturing to others as well. Its own filing names third-party foundry services to external customers as a separate line of business. Its technical card is the Intel 18A process, the first in high-volume manufacturing to combine gate-all-around transistors with backside power delivery. The company writes that in the United States it is the only one running both leading-edge logic research and the matching manufacturing. It also names as a risk the participation of the government, which acquired a significant equity interest in it."
       },
       "centrality": {
-        "degree": 5,
-        "betweenness": 0.011071,
-        "pagerank": 0.00489
+        "degree": 6,
+        "betweenness": 0.011959,
+        "pagerank": 0.006574
       },
       "integration": {
-        "score": 10,
-        "degree": 5,
-        "betweenness": 0.011071,
-        "pagerank": 0.00489,
-        "layersSpanned": 6,
-        "edgeTypes": 4,
+        "score": 12,
+        "degree": 6,
+        "betweenness": 0.011959,
+        "pagerank": 0.006574,
+        "layersSpanned": 7,
+        "edgeTypes": 5,
         "cycles": 0
       },
       "core": true,
@@ -14412,13 +14565,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.009265
+        "pagerank": 0.00923
       },
       "integration": {
-        "score": 6,
+        "score": 5,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.009265,
+        "pagerank": 0.00923,
         "layersSpanned": 3,
         "edgeTypes": 2,
         "cycles": 0
@@ -14562,14 +14715,14 @@
       },
       "centrality": {
         "degree": 3,
-        "betweenness": 0.000213,
-        "pagerank": 0.003498
+        "betweenness": 0.000169,
+        "pagerank": 0.003481
       },
       "integration": {
         "score": 7,
         "degree": 3,
-        "betweenness": 0.000213,
-        "pagerank": 0.003498,
+        "betweenness": 0.000169,
+        "pagerank": 0.003481,
         "layersSpanned": 4,
         "edgeTypes": 3,
         "cycles": 0
@@ -14698,13 +14851,13 @@
       "centrality": {
         "degree": 3,
         "betweenness": 0.0,
-        "pagerank": 0.043664
+        "pagerank": 0.043768
       },
       "integration": {
         "score": 11,
         "degree": 3,
         "betweenness": 0.0,
-        "pagerank": 0.043664,
+        "pagerank": 0.043768,
         "layersSpanned": 4,
         "edgeTypes": 3,
         "cycles": 2
@@ -14860,13 +15013,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.005008
+        "pagerank": 0.004989
       },
       "integration": {
         "score": 3,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.005008,
+        "pagerank": 0.004989,
         "layersSpanned": 2,
         "edgeTypes": 1,
         "cycles": 0
@@ -15068,13 +15221,13 @@
       "centrality": {
         "degree": 4,
         "betweenness": 0.000363,
-        "pagerank": 0.011322
+        "pagerank": 0.011285
       },
       "integration": {
         "score": 12,
         "degree": 4,
         "betweenness": 0.000363,
-        "pagerank": 0.011322,
+        "pagerank": 0.011285,
         "layersSpanned": 8,
         "edgeTypes": 2,
         "cycles": 8
@@ -15228,14 +15381,14 @@
       },
       "centrality": {
         "degree": 4,
-        "betweenness": 0.001261,
-        "pagerank": 0.015215
+        "betweenness": 0.001173,
+        "pagerank": 0.01522
       },
       "integration": {
         "score": 7,
         "degree": 4,
-        "betweenness": 0.001261,
-        "pagerank": 0.015215,
+        "betweenness": 0.001173,
+        "pagerank": 0.01522,
         "layersSpanned": 3,
         "edgeTypes": 1,
         "cycles": 0
@@ -15256,40 +15409,44 @@
         {
           "layer": "L9",
           "primary": true,
-          "criticality": 35
+          "criticality": 44
         }
       ],
       "primaryLayer": "L9",
-      "criticality": 35,
+      "criticality": 44,
       "criticalityFactors": {
-        "irreplaceability": 35,
-        "lockInDepth": 30,
-        "timeToReplace": 40,
-        "concentration": null
+        "irreplaceability": 45,
+        "lockInDepth": 48,
+        "timeToReplace": 42,
+        "concentration": 38
       },
       "criticalityWhy": {
         "irreplaceability": {
-          "ru": "Независимых облаков несколько",
-          "en": "There are several independent clouds"
+          "ru": "Мощность в аренду продают десятки площадок, и переход между ними технически не заперт",
+          "en": "Rented capacity is sold by dozens of providers and moving between them is not technically locked"
         },
         "lockInDepth": {
-          "ru": "Задевает только облачный слой",
-          "en": "Reaches the cloud layer only"
+          "ru": "Продаётся площадка целиком — питание, охлаждение и соединения, а не отдельная карта",
+          "en": "What is sold is a whole site — power, cooling and interconnects — not a single card"
         },
         "timeToReplace": {
-          "ru": "Аналог запускается за год",
-          "en": "An equivalent launches in a year"
+          "ru": "Компания работает с 2012 года, но её продукт заменяется другой площадкой в пределах договора",
+          "en": "The company has operated since 2012, but its product is replaced by another site inside a contract term"
         },
-        "concentration": null
+        "concentration": {
+          "ru": "От одного ускорителя до сотен тысяч — диапазон широкий, доля функции не исключительная",
+          "en": "From one GPU to hundreds of thousands — a wide range, but no exclusive share of the function"
+        }
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
         "reach": 1,
@@ -15338,6 +15495,58 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Lambda — about",
+          "url": "https://lambda.ai/about",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Lambda is an AI-only company founded by ML engineers in 2012.",
+          "confidence": 0.975,
+          "self": "lambda",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Lambda — about",
+          "url": "https://lambda.ai/about",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Lambda builds modular AI factories — power, liquid cooling, and high-bandwidth interconnects",
+          "confidence": 0.975,
+          "self": "lambda",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Lambda — about",
+          "url": "https://lambda.ai/about",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "From one GPU to hundreds of thousands, we build the infrastructure powering AI services",
+          "confidence": 0.975,
+          "self": "lambda",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Lambda — about",
+          "url": "https://lambda.ai/about",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "make compute as ubiquitous as electricity and give everyone in America the power of superintelligence",
+          "confidence": 0.975,
+          "self": "lambda",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "Arista Networks 10-K 2025",
@@ -15352,26 +15561,27 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 5,
+        "selfSourced": 4,
         "byTier": {
+          "1": 4,
           "2": 1
         }
       },
       "description": {
-        "ru": "Продаёт аренду ускорителей исследователям и небольшим командам: почасовой доступ и готовые рабочие станции, без корпоративного контура и долгих договоров. Деньги — та же аренда, но чеком меньше и клиентов больше. В карте компания важна как нижний край спроса: он не проходит через гиперскейлеров, не виден в их отчётности и не исчезает при паузе в корпоративных закупках. Именно здесь формируются привычки — код, написанный на арендованной карте, потом уезжает в продакшен вместе с платформой.",
-        "en": "Sells rented accelerators to researchers and small teams: hourly access and ready workstations, without an enterprise wrapper or long contracts. The money is the same rental, in smaller tickets across more customers. On the map the company matters as the lower edge of demand: it does not pass through hyperscalers, does not appear in their filings, and does not vanish when corporate procurement pauses. This is where habits form — code written on a rented card later moves into production along with the platform."
+        "ru": "Lambda — компания, основанная инженерами машинного обучения в 2012 году и с тех пор занимающаяся только вычислениями для ИИ. Свою продукцию она описывает не как аренду карт, а как модульные фабрики ИИ: питание, жидкостное охлаждение и высокоскоростные соединения. Масштаб она формулирует сама: от одного ускорителя до сотен тысяч. Продуктовые линейки — суперкластеры, кластеры в один клик и отдельные инстансы. На карте узел стоит между производителем ускорителей и лабораторией, которой нужна мощность без собственного дата-центра.",
+        "en": "Lambda is a company founded by ML engineers in 2012 and has done nothing but AI compute since. It describes its product not as card rental but as modular AI factories: power, liquid cooling and high-bandwidth interconnects. It states its own scale: from one GPU to hundreds of thousands. The product lines are superclusters, one-click clusters and instances. On the map the node sits between the accelerator maker and the laboratory that needs capacity without a data centre of its own."
       },
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003498
+        "pagerank": 0.003481
       },
       "integration": {
         "score": 5,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003498,
+        "pagerank": 0.003481,
         "layersSpanned": 4,
         "edgeTypes": 2,
         "cycles": 0
@@ -15500,13 +15710,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.004199
+        "pagerank": 0.004177
       },
       "integration": {
         "score": 3,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.004199,
+        "pagerank": 0.004177,
         "layersSpanned": 2,
         "edgeTypes": 1,
         "cycles": 0
@@ -15635,13 +15845,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.004985
+        "pagerank": 0.00496
       },
       "integration": {
         "score": 3,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.004985,
+        "pagerank": 0.00496,
         "layersSpanned": 2,
         "edgeTypes": 1,
         "cycles": 0
@@ -15801,13 +16011,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003498
+        "pagerank": 0.003481
       },
       "integration": {
         "score": 5,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003498,
+        "pagerank": 0.003481,
         "layersSpanned": 4,
         "edgeTypes": 1,
         "cycles": 0
@@ -16027,14 +16237,14 @@
       },
       "centrality": {
         "degree": 6,
-        "betweenness": 0.000652,
-        "pagerank": 0.006808
+        "betweenness": 0.000617,
+        "pagerank": 0.006772
       },
       "integration": {
         "score": 12,
         "degree": 6,
-        "betweenness": 0.000652,
-        "pagerank": 0.006808,
+        "betweenness": 0.000617,
+        "pagerank": 0.006772,
         "layersSpanned": 6,
         "edgeTypes": 6,
         "cycles": 20
@@ -16162,14 +16372,14 @@
       },
       "centrality": {
         "degree": 3,
-        "betweenness": 0.00047,
-        "pagerank": 0.008449
+        "betweenness": 0.000411,
+        "pagerank": 0.008069
       },
       "integration": {
         "score": 6,
         "degree": 3,
-        "betweenness": 0.00047,
-        "pagerank": 0.008449,
+        "betweenness": 0.000411,
+        "pagerank": 0.008069,
         "layersSpanned": 3,
         "edgeTypes": 3,
         "cycles": 0
@@ -16381,14 +16591,14 @@
       },
       "centrality": {
         "degree": 6,
-        "betweenness": 0.003666,
-        "pagerank": 0.00655
+        "betweenness": 0.003677,
+        "pagerank": 0.006565
       },
       "integration": {
         "score": 11,
         "degree": 6,
-        "betweenness": 0.003666,
-        "pagerank": 0.00655,
+        "betweenness": 0.003677,
+        "pagerank": 0.006565,
         "layersSpanned": 6,
         "edgeTypes": 3,
         "cycles": 14
@@ -16605,14 +16815,14 @@
       },
       "centrality": {
         "degree": 19,
-        "betweenness": 0.091101,
-        "pagerank": 0.008212
+        "betweenness": 0.090468,
+        "pagerank": 0.007983
       },
       "integration": {
         "score": 25,
         "degree": 19,
-        "betweenness": 0.091101,
-        "pagerank": 0.008212,
+        "betweenness": 0.090468,
+        "pagerank": 0.007983,
         "layersSpanned": 9,
         "edgeTypes": 10,
         "cycles": 43
@@ -16633,47 +16843,51 @@
         {
           "layer": "L12",
           "primary": true,
-          "criticality": 45
+          "criticality": 44
         }
       ],
       "primaryLayer": "L12",
-      "criticality": 45,
+      "criticality": 44,
       "criticalityFactors": {
-        "irreplaceability": 40,
-        "lockInDepth": 45,
-        "timeToReplace": 50,
-        "concentration": null
+        "irreplaceability": 52,
+        "lockInDepth": 40,
+        "timeToReplace": 45,
+        "concentration": 35
       },
       "criticalityWhy": {
         "irreplaceability": {
-          "ru": "Лабораторий несколько",
-          "en": "There are several labs"
+          "ru": "Европейская лаборатория с открытыми весами, но не единственная в своём слое",
+          "en": "A European laboratory with open weights, yet not the only one in its layer"
         },
         "lockInDepth": {
-          "ru": "Задевает модели и приложения",
-          "en": "Reaches models and applications"
+          "ru": "Открытость весов сама по себе снимает замок, который держат закрытые лаборатории",
+          "en": "Open weights themselves remove the lock closed laboratories hold"
         },
         "timeToReplace": {
-          "ru": "Занять её место — год-два",
-          "en": "Taking its place — one to two years"
+          "ru": "Лаборатория основана в апреле 2023 года и прошла путь от посевного раунда до серии C",
+          "en": "The laboratory was founded in April 2023 and went from a seed round to a Series C"
         },
-        "concentration": null
+        "concentration": {
+          "ru": "Заказчики разложены по отраслям: от полупроводникового оборудования до банков и автопроизводителей",
+          "en": "Customers spread across industries: from semiconductor equipment to banks and carmakers"
+        }
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
-        "reach": 1,
-        "layers": 3,
+        "reach": 4,
+        "layers": 5,
         "edgeTypes": 1,
         "cycles": 0,
-        "score": 7,
+        "score": 16,
         "signals": {}
       },
       "domain": "mistral.ai",
@@ -16714,6 +16928,58 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Mistral AI — about",
+          "url": "https://mistral.ai/about",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "In April 2023, Mistral was born to put frontier AI in everyone's hands.",
+          "confidence": 0.975,
+          "self": "mistral",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Mistral AI — about",
+          "url": "https://mistral.ai/about",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "frontier AI open to all, and together solve the world's hardest problems",
+          "confidence": 0.975,
+          "self": "mistral",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Mistral AI — about",
+          "url": "https://mistral.ai/about",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "ASML, CMA CGM, HSBC, BMW, Stellantis, IBM, BNP Paribas, SAP, Snowflake, Orange, AXA, TotalEnergies, Cisco",
+          "confidence": 0.975,
+          "self": "mistral",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Mistral AI — about",
+          "url": "https://mistral.ai/about",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "frontier-scale infrastructure for training and inference",
+          "confidence": 0.975,
+          "self": "mistral",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "NVIDIA 10-K FY2026",
@@ -16728,27 +16994,28 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 5,
+        "selfSourced": 4,
         "byTier": {
+          "1": 4,
           "2": 1
         }
       },
       "description": {
-        "ru": "Продаёт доступ к своим моделям — по подписке и по токенам через интерфейс, плюс развёртывание внутри периметра заказчика, чего не предлагают крупнейшие лаборатории. Деньги те же, что у соседей по слою, но структура спроса другая: заметная часть выручки приходит от европейских компаний, для которых важно, где физически считается модель. В карте это проверка гипотезы о географии: платформа под лабораторией всё равно та же самая, что у американских. Локальная юрисдикция меняет условия продажи, но не выбор ускорителя.",
-        "en": "Sells access to its models — by subscription and per token through an interface, plus deployment inside the customer's own perimeter, which the largest labs do not offer. The money matches its neighbours', but the demand structure differs: a notable share comes from European companies for whom where the model physically runs matters. On the map it tests the geography hypothesis: the platform beneath the lab is the same one the American labs use. Local jurisdiction changes the terms of sale, not the choice of accelerator."
+        "ru": "Mistral AI — европейская лаборатория, основанная в апреле 2023 года, чья заявленная цель — держать передовой ИИ открытым. Модели она выпускает линейками: Mistral OCR, Mistral Medium, Mistral Small, Voxtral. Финансирование шло последовательными раундами — от посевного до серии C. Заказчиков компания называет поимённо, и среди них есть узлы этой карты: ASML, Snowflake и Cisco. Отдельно она строит собственную вычислительную инфраструктуру для обучения и вывода в Европе.",
+        "en": "Mistral AI is a European laboratory founded in April 2023 whose stated aim is to keep frontier AI open. It ships models in families: Mistral OCR, Mistral Medium, Mistral Small, Voxtral. Funding ran in successive rounds, from a seed to a Series C. It names its customers, and among them are nodes of this map: ASML, Snowflake and Cisco. Separately it builds its own compute infrastructure for training and inference in Europe."
       },
       "centrality": {
-        "degree": 1,
-        "betweenness": 0.0,
-        "pagerank": 0.003498
+        "degree": 4,
+        "betweenness": 0.013719,
+        "pagerank": 0.009406
       },
       "integration": {
-        "score": 5,
-        "degree": 1,
-        "betweenness": 0.0,
-        "pagerank": 0.003498,
-        "layersSpanned": 4,
+        "score": 9,
+        "degree": 4,
+        "betweenness": 0.013719,
+        "pagerank": 0.009406,
+        "layersSpanned": 6,
         "edgeTypes": 1,
         "cycles": 0
       },
@@ -16768,40 +17035,44 @@
         {
           "layer": "L15",
           "primary": true,
-          "criticality": 50
+          "criticality": 58
         }
       ],
       "primaryLayer": "L15",
-      "criticality": 50,
+      "criticality": 58,
       "criticalityFactors": {
-        "irreplaceability": 55,
-        "lockInDepth": 45,
-        "timeToReplace": 50,
-        "concentration": null
+        "irreplaceability": 68,
+        "lockInDepth": 42,
+        "timeToReplace": 58,
+        "concentration": 72
       },
       "criticalityWhy": {
         "irreplaceability": {
-          "ru": "Признанный набор тестов один",
-          "en": "There is one recognised benchmark suite"
+          "ru": "Единый набор тестов, на который ссылаются поставщики ускорителей при сравнении",
+          "en": "A single benchmark suite accelerator vendors refer to when comparing"
         },
         "lockInDepth": {
-          "ru": "Задевает чипы и системы",
-          "en": "Reaches chips and systems"
+          "ru": "Участие добровольное: организацию поддерживают более 125 участников и аффилированных лиц",
+          "en": "Participation is voluntary: over 125 members and affiliates support the organization"
         },
         "timeToReplace": {
-          "ru": "Создать признанную альтернативу — два-три года",
-          "en": "Creating a recognised alternative — two to three years"
+          "ru": "Накоплено 89.7 k + результатов производительности — сравнимость новой шкалы пришлось бы набирать заново",
+          "en": "89.7 k + performance results are accumulated; a new scale would have to earn comparability from scratch"
         },
-        "concentration": null
+        "concentration": {
+          "ru": "10 наборов тестов и более 125 участников в одной организации",
+          "en": "10 benchmark suites and over 125 members inside one organization"
+        }
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
         "reach": 1,
@@ -16849,6 +17120,71 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "MLCommons",
+          "url": "https://mlcommons.org/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Building trusted, safe, and efficient AI requires better systems for measurement and accountability.",
+          "confidence": 0.975,
+          "self": "mlcommons",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "MLCommons",
+          "url": "https://mlcommons.org/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "MLCommons is supported by over 125 members and affiliates, including startups, leading companies, academics",
+          "confidence": 0.975,
+          "self": "mlcommons",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "MLCommons",
+          "url": "https://mlcommons.org/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "10 Benchmark Suites",
+          "confidence": 0.975,
+          "self": "mlcommons",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "MLCommons",
+          "url": "https://mlcommons.org/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "89.7 k + MLPerf Performance Results to-date",
+          "confidence": 0.975,
+          "self": "mlcommons",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "MLCommons",
+          "url": "https://mlcommons.org/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "MLCommons' collective engineering with industry and academia continually measures and improves the accuracy",
+          "confidence": 0.975,
+          "self": "mlcommons",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "NVIDIA 10-K FY2026",
@@ -16863,26 +17199,27 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 6,
+        "selfSourced": 5,
         "byTier": {
+          "1": 5,
           "2": 1
         }
       },
       "description": {
-        "ru": "Организация ведёт общие тесты производительности, по которым сравнивают ускорители и системы разных производителей. Денег с этого не зарабатывает — это консорциум, живущий взносами участников, и в этом его устройство. В карте он выполняет единственную функцию внешней проверки: заявление о скорости здесь нельзя сделать, его надо показать на общей задаче с опубликованной методикой. Ограничение тоже понятное — конфигурацию для теста выбирает участник, поэтому сравнение честное по методике, но не всегда по условиям.",
-        "en": "The organisation maintains the shared performance tests by which accelerators and systems from different makers are compared. It earns nothing from this — it is a consortium living on member fees, and that is its design. On the map it performs the single function of external verification: a speed claim cannot be made here, it has to be shown on a common task with a published methodology. The limitation is equally clear — the participant chooses the test configuration, so the comparison is fair in method but not always in conditions."
+        "ru": "MLCommons — организация, измеряющая ИИ-системы: она ведёт наборы тестов и публикует результаты. Своё основание она формулирует как утверждение о самой отрасли: доверенный, безопасный и эффективный ИИ требует более совершенных систем измерения и подотчётности. Организацию поддерживают более 125 участников и аффилированных лиц — стартапы, компании, академия и некоммерческие организации. Она держит 10 наборов тестов и накопила 89.7 k + результатов производительности MLPerf. Отдельная ветка работы — риск и надёжность ИИ, а также данные и исследования.",
+        "en": "MLCommons is the organization that measures AI systems: it maintains benchmark suites and publishes results. It frames its own founding as a claim about the industry: trusted, safe and efficient AI requires better systems for measurement and accountability. It is supported by over 125 members and affiliates — startups, companies, academics and non-profits. It maintains 10 benchmark suites and has accumulated 89.7 k + MLPerf performance results. A separate strand of work covers AI risk and reliability, and data and research."
       },
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.00655
+        "pagerank": 0.006565
       },
       "integration": {
         "score": 5,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.00655,
+        "pagerank": 0.006565,
         "layersSpanned": 4,
         "edgeTypes": 1,
         "cycles": 0
@@ -17082,13 +17419,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.007394
+        "pagerank": 0.007406
       },
       "integration": {
         "score": 5,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.007394,
+        "pagerank": 0.007406,
         "layersSpanned": 3,
         "edgeTypes": 2,
         "cycles": 0
@@ -17146,11 +17483,11 @@
         "renormalized": true
       },
       "gravity": {
-        "reach": 2,
-        "layers": 5,
-        "edgeTypes": 3,
+        "reach": 3,
+        "layers": 6,
+        "edgeTypes": 4,
         "cycles": 0,
-        "score": 13,
+        "score": 17,
         "signals": {}
       },
       "domain": null,
@@ -17242,17 +17579,17 @@
         "en": "Sells what the previous landlord sells, but from Europe and on sites it builds itself. The money is rented compute under contracts where capacity is booked in advance. Revenue grew 479% in 2025 to $529.8 million, adding $438.3 million: the scale is still a multiple below the American independents, the pace is comparable. On this map it matters for jurisdiction rather than size — it gives labs and companies a rental option that stays inside European regulation. Dependence on a single chip supplier is stated in its own filing as a risk factor."
       },
       "centrality": {
-        "degree": 2,
-        "betweenness": 0.0,
-        "pagerank": 0.003934
+        "degree": 3,
+        "betweenness": 0.000481,
+        "pagerank": 0.003905
       },
       "integration": {
-        "score": 7,
-        "degree": 2,
-        "betweenness": 0.0,
-        "pagerank": 0.003934,
-        "layersSpanned": 5,
-        "edgeTypes": 3,
+        "score": 9,
+        "degree": 3,
+        "betweenness": 0.000481,
+        "pagerank": 0.003905,
+        "layersSpanned": 6,
+        "edgeTypes": 4,
         "cycles": 0
       },
       "core": false,
@@ -17463,13 +17800,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.010319
+        "pagerank": 0.007956
       },
       "integration": {
-        "score": 6,
+        "score": 5,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.010319,
+        "pagerank": 0.007956,
         "layersSpanned": 3,
         "edgeTypes": 2,
         "cycles": 0
@@ -17657,14 +17994,14 @@
       },
       "centrality": {
         "degree": 4,
-        "betweenness": 0.007076,
-        "pagerank": 0.013818
+        "betweenness": 5.9e-05,
+        "pagerank": 0.012529
       },
       "integration": {
         "score": 8,
         "degree": 4,
-        "betweenness": 0.007076,
-        "pagerank": 0.013818,
+        "betweenness": 5.9e-05,
+        "pagerank": 0.012529,
         "layersSpanned": 4,
         "edgeTypes": 3,
         "cycles": 0
@@ -17819,13 +18156,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.003934
+        "pagerank": 0.003905
       },
       "integration": {
         "score": 8,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.003934,
+        "pagerank": 0.003905,
         "layersSpanned": 6,
         "edgeTypes": 2,
         "cycles": 0
@@ -18013,13 +18350,13 @@
       "centrality": {
         "degree": 3,
         "betweenness": 0.000143,
-        "pagerank": 0.005729
+        "pagerank": 0.005708
       },
       "integration": {
         "score": 10,
         "degree": 3,
         "betweenness": 0.000143,
-        "pagerank": 0.005729,
+        "pagerank": 0.005708,
         "layersSpanned": 7,
         "edgeTypes": 4,
         "cycles": 6
@@ -18041,12 +18378,12 @@
         {
           "layer": "L5",
           "primary": false,
-          "criticality": 81
+          "criticality": 78
         },
         {
           "layer": "L8",
           "primary": false,
-          "criticality": 83
+          "criticality": 80
         },
         {
           "layer": "L10",
@@ -18091,7 +18428,7 @@
         "renormalized": false
       },
       "gravity": {
-        "reach": 75,
+        "reach": 77,
         "layers": 15,
         "edgeTypes": 29,
         "cycles": 194,
@@ -18269,15 +18606,15 @@
         "en": "NVIDIA sells accelerators and whole racks for training and serving models, and ships its own software environment with them. Revenue for fiscal year 2026 was $215.9 billion, up 65%, while Data Center revenue rose 68%. The company owns no fabs: wafers come from outside foundries, among which it names TSMC and Samsung, and memory is bought from SK Hynix, Micron and Samsung. Money comes from clouds, labs and enterprises that buy complete systems rather than single chips. More than 7.5 million developers write for CUDA, which is what makes a move to someone else's accelerators expensive."
       },
       "centrality": {
-        "degree": 75,
-        "betweenness": 0.80571,
-        "pagerank": 0.136423
+        "degree": 77,
+        "betweenness": 0.805143,
+        "pagerank": 0.137889
       },
       "integration": {
         "score": 100,
-        "degree": 75,
-        "betweenness": 0.80571,
-        "pagerank": 0.136423,
+        "degree": 77,
+        "betweenness": 0.805143,
+        "pagerank": 0.137889,
         "layersSpanned": 15,
         "edgeTypes": 29,
         "cycles": 194
@@ -18476,13 +18813,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 8.8e-05,
-        "pagerank": 0.014036
+        "pagerank": 0.013949
       },
       "integration": {
         "score": 6,
         "degree": 2,
         "betweenness": 8.8e-05,
-        "pagerank": 0.014036,
+        "pagerank": 0.013949,
         "layersSpanned": 3,
         "edgeTypes": 1,
         "cycles": 0
@@ -18760,14 +19097,14 @@
       },
       "centrality": {
         "degree": 12,
-        "betweenness": 0.067687,
-        "pagerank": 0.014992
+        "betweenness": 0.060503,
+        "pagerank": 0.012957
       },
       "integration": {
         "score": 22,
         "degree": 12,
-        "betweenness": 0.067687,
-        "pagerank": 0.014992,
+        "betweenness": 0.060503,
+        "pagerank": 0.012957,
         "layersSpanned": 8,
         "edgeTypes": 12,
         "cycles": 62
@@ -18828,11 +19165,11 @@
         "renormalized": false
       },
       "gravity": {
-        "reach": 5,
-        "layers": 7,
-        "edgeTypes": 5,
+        "reach": 6,
+        "layers": 8,
+        "edgeTypes": 6,
         "cycles": 13,
-        "score": 33,
+        "score": 37,
         "signals": {}
       },
       "domain": null,
@@ -18951,17 +19288,17 @@
         "en": "Oracle sells databases, application software and cloud infrastructure, and in AI it earns by renting compute under long contracts. Contracted but unrecognised revenue grew to $638 billion against $138 billion a year earlier, which the company itself attributes to large cloud contracts. Its cloud compute services run from virtual machines and GPU-based offerings to bare metal servers. CoreWeave names an OpenAI commitment as one such contract, which shows the terms and sums on which venues now compete. Software and databases remain the source of current revenue while the venues are being built."
       },
       "centrality": {
-        "degree": 5,
-        "betweenness": 0.019558,
-        "pagerank": 0.008449
+        "degree": 6,
+        "betweenness": 0.020021,
+        "pagerank": 0.008069
       },
       "integration": {
-        "score": 13,
-        "degree": 5,
-        "betweenness": 0.019558,
-        "pagerank": 0.008449,
-        "layersSpanned": 7,
-        "edgeTypes": 5,
+        "score": 14,
+        "degree": 6,
+        "betweenness": 0.020021,
+        "pagerank": 0.008069,
+        "layersSpanned": 8,
+        "edgeTypes": 6,
         "cycles": 13
       },
       "core": true,
@@ -19159,14 +19496,14 @@
       },
       "centrality": {
         "degree": 8,
-        "betweenness": 0.00509,
-        "pagerank": 0.005963
+        "betweenness": 0.005065,
+        "pagerank": 0.005931
       },
       "integration": {
         "score": 14,
         "degree": 8,
-        "betweenness": 0.00509,
-        "pagerank": 0.005963,
+        "betweenness": 0.005065,
+        "pagerank": 0.005931,
         "layersSpanned": 6,
         "edgeTypes": 8,
         "cycles": 42
@@ -19295,13 +19632,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.00655
+        "pagerank": 0.006565
       },
       "integration": {
         "score": 4,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.00655,
+        "pagerank": 0.006565,
         "layersSpanned": 3,
         "edgeTypes": 1,
         "cycles": 0
@@ -19490,13 +19827,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.003498
+        "pagerank": 0.003481
       },
       "integration": {
         "score": 6,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.003498,
+        "pagerank": 0.003481,
         "layersSpanned": 4,
         "edgeTypes": 2,
         "cycles": 0
@@ -19638,13 +19975,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003498
+        "pagerank": 0.003481
       },
       "integration": {
         "score": 5,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003498,
+        "pagerank": 0.003481,
         "layersSpanned": 4,
         "edgeTypes": 1,
         "cycles": 0
@@ -19830,13 +20167,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003498
+        "pagerank": 0.003481
       },
       "integration": {
         "score": 5,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003498,
+        "pagerank": 0.003481,
         "layersSpanned": 4,
         "edgeTypes": 1,
         "cycles": 0
@@ -20040,14 +20377,14 @@
       },
       "centrality": {
         "degree": 7,
-        "betweenness": 0.021453,
-        "pagerank": 0.00655
+        "betweenness": 0.021346,
+        "pagerank": 0.006565
       },
       "integration": {
         "score": 13,
         "degree": 7,
-        "betweenness": 0.021453,
-        "pagerank": 0.00655,
+        "betweenness": 0.021346,
+        "pagerank": 0.006565,
         "layersSpanned": 7,
         "edgeTypes": 4,
         "cycles": 19
@@ -20272,13 +20609,13 @@
       "centrality": {
         "degree": 5,
         "betweenness": 0.000281,
-        "pagerank": 0.043664
+        "pagerank": 0.043768
       },
       "integration": {
         "score": 13,
         "degree": 5,
         "betweenness": 0.000281,
-        "pagerank": 0.043664,
+        "pagerank": 0.043768,
         "layersSpanned": 5,
         "edgeTypes": 3,
         "cycles": 5
@@ -20408,13 +20745,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.000554,
-        "pagerank": 0.007481
+        "pagerank": 0.007278
       },
       "integration": {
         "score": 5,
         "degree": 2,
         "betweenness": 0.000554,
-        "pagerank": 0.007481,
+        "pagerank": 0.007278,
         "layersSpanned": 3,
         "edgeTypes": 1,
         "cycles": 0
@@ -20613,13 +20950,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003498
+        "pagerank": 0.003481
       },
       "integration": {
         "score": 5,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003498,
+        "pagerank": 0.003481,
         "layersSpanned": 4,
         "edgeTypes": 1,
         "cycles": 0
@@ -20748,13 +21085,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.004914
+        "pagerank": 0.004705
       },
       "integration": {
         "score": 3,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.004914,
+        "pagerank": 0.004705,
         "layersSpanned": 2,
         "edgeTypes": 1,
         "cycles": 0
@@ -20896,13 +21233,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.003934
+        "pagerank": 0.003905
       },
       "integration": {
         "score": 8,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.003934,
+        "pagerank": 0.003905,
         "layersSpanned": 6,
         "edgeTypes": 2,
         "cycles": 0
@@ -20923,47 +21260,51 @@
         {
           "layer": "L11",
           "primary": true,
-          "criticality": 41
+          "criticality": 52
         }
       ],
       "primaryLayer": "L11",
-      "criticality": 41,
+      "criticality": 52,
       "criticalityFactors": {
-        "irreplaceability": 40,
-        "lockInDepth": 40,
-        "timeToReplace": 45,
-        "concentration": null
+        "irreplaceability": 60,
+        "lockInDepth": 45,
+        "timeToReplace": 48,
+        "concentration": 55
       },
       "criticalityWhy": {
         "irreplaceability": {
-          "ru": "Систем запуска моделей несколько",
-          "en": "There are several model-serving systems"
+          "ru": "Каркас обслуживания моделей открытый, и рядом на карте стоят проекты того же назначения",
+          "en": "The serving framework is open, and projects of the same purpose stand beside it on the map"
         },
         "lockInDepth": {
-          "ru": "Задевает только инференс",
-          "en": "Reaches inference only"
+          "ru": "Работает на ускорителях двух вендоров, процессорах и тензорных процессорах сразу",
+          "en": "It runs on two vendors' accelerators, on CPUs and on TPUs at once"
         },
         "timeToReplace": {
-          "ru": "Замена — до года",
-          "en": "Replacement — under a year"
+          "ru": "Развёрнут широко и даёт триллионы токенов в сутки, но заменяется другим каркасом того же слоя",
+          "en": "Deployed at large scale with trillions of tokens a day, yet replaceable by another framework of the same layer"
         },
-        "concentration": null
+        "concentration": {
+          "ru": "Принят и лабораториями, и производителями ускорителей, и облаками одновременно",
+          "en": "Adopted by laboratories, accelerator makers and clouds at the same time"
+        }
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
-        "reach": 2,
-        "layers": 1,
-        "edgeTypes": 2,
+        "reach": 8,
+        "layers": 7,
+        "edgeTypes": 4,
         "cycles": 0,
-        "score": 6,
+        "score": 28,
         "signals": {}
       },
       "domain": null,
@@ -21005,6 +21346,84 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "sgl-project/sglang — README",
+          "url": "https://github.com/sgl-project/sglang",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "SGLang is a high-performance serving framework for large language models and multimodal models.",
+          "confidence": 0.975,
+          "self": "sglang",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "sgl-project/sglang — README",
+          "url": "https://github.com/sgl-project/sglang",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "SGLang has been deployed at large scale, generating trillions of tokens in production each day.",
+          "confidence": 0.975,
+          "self": "sglang",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "sgl-project/sglang — README",
+          "url": "https://github.com/sgl-project/sglang",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "adopted by a wide range of leading enterprises and institutions, including xAI, NVIDIA",
+          "confidence": 0.975,
+          "self": "sglang",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "sgl-project/sglang — README",
+          "url": "https://github.com/sgl-project/sglang",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "AMD, Intel, LinkedIn, Cursor, Oracle Cloud, Google Cloud, Microsoft Azure, AWS, Atlas Cloud, Voltage Park",
+          "confidence": 0.975,
+          "self": "sglang",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "sgl-project/sglang — README",
+          "url": "https://github.com/sgl-project/sglang",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Runs on NVIDIA GPUs (GB200/B300/H100/A100/Spark/5090), AMD GPUs (MI355/MI300), Intel Xeon CPUs",
+          "confidence": 0.975,
+          "self": "sglang",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "sgl-project/sglang — README",
+          "url": "https://github.com/sgl-project/sglang",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Voltage Park, Nebius, DataCrunch, Novita, RunPod, InnoMatrix, Modal, MIT, UCLA",
+          "confidence": 0.975,
+          "self": "sglang",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "product_doc",
           "title": "vLLM README",
@@ -21019,32 +21438,33 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 7,
+        "selfSourced": 6,
         "byTier": {
+          "1": 6,
           "2": 1
         }
       },
       "description": {
-        "ru": "Вторая открытая система запуска моделей рядом с первой: та же задача — уместить больше запросов на карте, — но другое устройство планировщика. Денег не приносит, развивается исследовательским сообществом и теми, кому дорог инференс. В карте её существование важнее её доли: два независимых открытых проекта делают слой конкурентным, и приёмы перетекают между ними за недели, потому что код открыт. Это единственный слой карты, где скорость улучшения не зависит от планов одного поставщика.",
-        "en": "A second open serving system beside the first: the same task — fitting more requests onto a card — with a different scheduler design. It earns nothing and is developed by a research community and by those for whom inference is expensive. On the map its existence matters more than its share: two independent open projects make the layer competitive, and techniques cross between them within weeks because the code is open. It is the one layer where the pace of improvement does not depend on a single vendor's plans."
+        "ru": "SGLang — открытый каркас обслуживания больших языковых и мультимодальных моделей, рассчитанный на низкую задержку и высокую пропускную способность. Проект пишет о собственном масштабе прямо: развёрнут широко и генерирует триллионы токенов в продакшене ежедневно. Список тех, кто его принял, включает xAI, NVIDIA, AMD, Intel, Oracle Cloud, Google Cloud, Microsoft Azure, AWS и Nebius. Работает он на ускорителях NVIDIA и AMD, процессорах Intel Xeon, тензорных процессорах Google и Ascend NPU. На карте это узел, из-за которого обслуживание моделей перестало быть привязано к одному вендору.",
+        "en": "SGLang is an open serving framework for large language and multimodal models, aimed at low latency and high throughput. The project writes about its own scale plainly: deployed at large scale and generating trillions of tokens in production each day. Its list of adopters includes xAI, NVIDIA, AMD, Intel, Oracle Cloud, Google Cloud, Microsoft Azure, AWS and Nebius. It runs on NVIDIA and AMD accelerators, Intel Xeon CPUs, Google TPUs and Ascend NPUs. On the map this is the node that stopped model serving from being tied to one vendor."
       },
       "centrality": {
-        "degree": 2,
-        "betweenness": 0.0,
-        "pagerank": 0.003498
+        "degree": 8,
+        "betweenness": 0.002548,
+        "pagerank": 0.007991
       },
       "integration": {
-        "score": 3,
-        "degree": 2,
-        "betweenness": 0.0,
-        "pagerank": 0.003498,
-        "layersSpanned": 1,
-        "edgeTypes": 2,
+        "score": 12,
+        "degree": 8,
+        "betweenness": 0.002548,
+        "pagerank": 0.007991,
+        "layersSpanned": 7,
+        "edgeTypes": 4,
         "cycles": 0
       },
-      "core": false,
-      "pivotal": false
+      "core": true,
+      "pivotal": true
     },
     {
       "id": "shin-etsu",
@@ -21167,13 +21587,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.005008
+        "pagerank": 0.004989
       },
       "integration": {
         "score": 5,
         "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.005008,
+        "pagerank": 0.004989,
         "layersSpanned": 3,
         "edgeTypes": 2,
         "cycles": 0
@@ -21302,13 +21722,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003498
+        "pagerank": 0.003481
       },
       "integration": {
         "score": 5,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.003498,
+        "pagerank": 0.003481,
         "layersSpanned": 4,
         "edgeTypes": 1,
         "cycles": 0
@@ -21438,13 +21858,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.00655
+        "pagerank": 0.006565
       },
       "integration": {
         "score": 5,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.00655,
+        "pagerank": 0.006565,
         "layersSpanned": 4,
         "edgeTypes": 1,
         "cycles": 0
@@ -21573,13 +21993,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.007713
+        "pagerank": 0.007668
       },
       "integration": {
         "score": 4,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.007713,
+        "pagerank": 0.007668,
         "layersSpanned": 2,
         "edgeTypes": 1,
         "cycles": 0
@@ -21708,13 +22128,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.00655
+        "pagerank": 0.006565
       },
       "integration": {
         "score": 5,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.00655,
+        "pagerank": 0.006565,
         "layersSpanned": 4,
         "edgeTypes": 1,
         "cycles": 0
@@ -21915,14 +22335,14 @@
       },
       "centrality": {
         "degree": 5,
-        "betweenness": 0.011314,
-        "pagerank": 0.00655
+        "betweenness": 0.011342,
+        "pagerank": 0.006565
       },
       "integration": {
         "score": 10,
         "degree": 5,
-        "betweenness": 0.011314,
-        "pagerank": 0.00655,
+        "betweenness": 0.011342,
+        "pagerank": 0.006565,
         "layersSpanned": 6,
         "edgeTypes": 3,
         "cycles": 2
@@ -21983,11 +22403,11 @@
         "renormalized": false
       },
       "gravity": {
-        "reach": 3,
+        "reach": 4,
         "layers": 5,
-        "edgeTypes": 2,
+        "edgeTypes": 3,
         "cycles": 0,
-        "score": 15,
+        "score": 17,
         "signals": {}
       },
       "domain": null,
@@ -22119,17 +22539,17 @@
         "en": "Snowflake sells a data platform built on someone else's public cloud infrastructure and calls it the foundation of its AI Data Cloud. As of 31 January 2026 it had 13,328 customers against 10,996 a year earlier. The largest corporate customers gave approximately 43% of revenue for the same year. Capacity arrangements produced about 97% of revenue — subscription, not one-off sales. The competitors it names are the three largest public clouds, the very ones it runs on."
       },
       "centrality": {
-        "degree": 3,
-        "betweenness": 0.000131,
-        "pagerank": 0.003498
+        "degree": 4,
+        "betweenness": 0.001059,
+        "pagerank": 0.003481
       },
       "integration": {
-        "score": 8,
-        "degree": 3,
-        "betweenness": 0.000131,
-        "pagerank": 0.003498,
+        "score": 9,
+        "degree": 4,
+        "betweenness": 0.001059,
+        "pagerank": 0.003481,
         "layersSpanned": 6,
-        "edgeTypes": 2,
+        "edgeTypes": 3,
         "cycles": 0
       },
       "core": false,
@@ -22326,14 +22746,14 @@
       },
       "centrality": {
         "degree": 5,
-        "betweenness": 0.005825,
-        "pagerank": 0.016637
+        "betweenness": 0.0058,
+        "pagerank": 0.01583
       },
       "integration": {
         "score": 12,
         "degree": 5,
-        "betweenness": 0.005825,
-        "pagerank": 0.016637,
+        "betweenness": 0.0058,
+        "pagerank": 0.01583,
         "layersSpanned": 7,
         "edgeTypes": 2,
         "cycles": 27
@@ -22521,13 +22941,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 6e-05,
-        "pagerank": 0.008137
+        "pagerank": 0.008131
       },
       "integration": {
         "score": 5,
         "degree": 2,
         "betweenness": 6e-05,
-        "pagerank": 0.008137,
+        "pagerank": 0.008131,
         "layersSpanned": 3,
         "edgeTypes": 1,
         "cycles": 0
@@ -22670,13 +23090,13 @@
       "centrality": {
         "degree": 2,
         "betweenness": 0.018692,
-        "pagerank": 0.003498
+        "pagerank": 0.003481
       },
       "integration": {
         "score": 6,
         "degree": 2,
         "betweenness": 0.018692,
-        "pagerank": 0.003498,
+        "pagerank": 0.003481,
         "layersSpanned": 4,
         "edgeTypes": 2,
         "cycles": 0
@@ -22830,14 +23250,14 @@
       },
       "centrality": {
         "degree": 3,
-        "betweenness": 0.000799,
-        "pagerank": 0.00655
+        "betweenness": 0.000741,
+        "pagerank": 0.006565
       },
       "integration": {
         "score": 9,
         "degree": 3,
-        "betweenness": 0.000799,
-        "pagerank": 0.00655,
+        "betweenness": 0.000741,
+        "pagerank": 0.006565,
         "layersSpanned": 5,
         "edgeTypes": 4,
         "cycles": 10
@@ -23061,14 +23481,14 @@
       },
       "centrality": {
         "degree": 3,
-        "betweenness": 0.000799,
-        "pagerank": 0.013209
+        "betweenness": 0.000741,
+        "pagerank": 0.013236
       },
       "integration": {
         "score": 8,
         "degree": 3,
-        "betweenness": 0.000799,
-        "pagerank": 0.013209,
+        "betweenness": 0.000741,
+        "pagerank": 0.013236,
         "layersSpanned": 5,
         "edgeTypes": 1,
         "cycles": 0
@@ -23267,14 +23687,14 @@
       },
       "centrality": {
         "degree": 5,
-        "betweenness": 0.000285,
-        "pagerank": 0.008233
+        "betweenness": 0.000226,
+        "pagerank": 0.008237
       },
       "integration": {
         "score": 8,
         "degree": 5,
-        "betweenness": 0.000285,
-        "pagerank": 0.008233,
+        "betweenness": 0.000226,
+        "pagerank": 0.008237,
         "layersSpanned": 4,
         "edgeTypes": 3,
         "cycles": 5
@@ -23403,13 +23823,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.004914
+        "pagerank": 0.004705
       },
       "integration": {
         "score": 3,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.004914,
+        "pagerank": 0.004705,
         "layersSpanned": 2,
         "edgeTypes": 1,
         "cycles": 0
@@ -23431,40 +23851,44 @@
         {
           "layer": "L1",
           "primary": true,
-          "criticality": 63
+          "criticality": 82
         }
       ],
       "primaryLayer": "L1",
-      "criticality": 63,
+      "criticality": 82,
       "criticalityFactors": {
-        "irreplaceability": 65,
-        "lockInDepth": 55,
-        "timeToReplace": 70,
-        "concentration": null
+        "irreplaceability": 84,
+        "lockInDepth": 80,
+        "timeToReplace": 85,
+        "concentration": 80
       },
       "criticalityWhy": {
         "irreplaceability": {
-          "ru": "Поставщиков такого масштаба три",
-          "en": "Three suppliers work at this scale"
+          "ru": "Оборудование покрывает четыре ключевых процесса производства пластины сразу",
+          "en": "Its equipment covers four key wafer production processes at once"
         },
         "lockInDepth": {
-          "ru": "Задевает фабрики",
-          "en": "Reaches fabs"
+          "ru": "Установку квалифицируют под маршрут фабрики, и обслуживает её сам изготовитель",
+          "en": "A tool is qualified against the fab's route and is serviced by its maker"
         },
         "timeToReplace": {
-          "ru": "Переквалификация — два-три года",
-          "en": "Requalification — two to three years"
+          "ru": "Компания работает с 1963 года и осталась в разработке, когда конкуренты из неё уходили",
+          "en": "The company has operated since 1963 and stayed in research when competitors pulled out"
         },
-        "concentration": null
+        "concentration": {
+          "ru": "Производит, продаёт и обслуживает оборудование по четырём ключевым процессам сразу",
+          "en": "It makes, sells and services equipment across four key processes at once"
+        }
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
         "reach": 1,
@@ -23512,6 +23936,71 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "Tokyo Electron — Company Info",
+          "url": "https://www.tel.com/about/summary/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Major Products and Services Semiconductor Production Equipment Capital ¥54.9Billion",
+          "confidence": 0.975,
+          "self": "tokyo-electron",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "Tokyo Electron — Company Info",
+          "url": "https://www.tel.com/about/summary/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Net Sales ¥2,443.5 Billion (Fiscal 2026) Number of Employees 2,436 (non-consolidated) 20,812 (consolidated)",
+          "confidence": 0.975,
+          "self": "tokyo-electron",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "Tokyo Electron — Company Info",
+          "url": "https://www.tel.com/about/summary/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Established November 11, 1963",
+          "confidence": 0.975,
+          "self": "tokyo-electron",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "About Tokyo Electron",
+          "url": "https://www.tel.com/careers/careercenter/about-us.html",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "we engineer, manufacture, sell, and service semiconductor production equipment and other product lines",
+          "confidence": 0.975,
+          "self": "tokyo-electron",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "About Tokyo Electron",
+          "url": "https://www.tel.com/careers/careercenter/about-us.html",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "As our competitors began pulling out of research and development, we continued to develop",
+          "confidence": 0.975,
+          "self": "tokyo-electron",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "TSMC 20-F 2025",
@@ -23526,26 +24015,27 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 6,
+        "selfSourced": 5,
         "byTier": {
+          "1": 5,
           "2": 1
         }
       },
       "description": {
-        "ru": "Продаёт установки обработки пластин: нанесение слоёв, проявление, очистка — операции между печатью рисунка и готовым транзистором. Деньги приходят продажей оборудования и обслуживанием парка, спрос идёт волнами вместе с инвестиционным циклом нескольких фабрик. В карте компания входит в тот узкий круг, о котором заказчики пишут, что оборудование доступно у ограниченного числа поставщиков. Специализация здесь такая, что замена означает не смену вендора, а перепроектирование участка процесса.",
-        "en": "Sells wafer-processing tools: deposition, development, cleaning — the operations between printing the pattern and a finished transistor. The money is equipment sales plus servicing the installed base, and demand arrives in waves with a few fabs' investment cycles. On the map the company belongs to the narrow circle its customers describe when they write that equipment is available from a limited number of suppliers. The specialisation is such that replacement means redesigning a section of the process, not switching vendor."
+        "ru": "Tokyo Electron делает оборудование для производства полупроводников и работает с 11 ноября 1963 года. Выручка за 2026 финансовый год составила ¥2,443.5 Billion, в компании 20,812 человек в консолидированном периметре. Оборудование покрывает четыре ключевых процесса — осаждение, нанесение и проявление, травление и очистку. Собственная страница описывает происхождение прямо: компания начиналась с ввоза американского оборудования в Японию и осталась в разработке, когда конкуренты из неё уходили. На карте узел стоит выше фабрик: без его установок пластина не проходит свой маршрут.",
+        "en": "Tokyo Electron makes semiconductor production equipment and has operated since 11 November 1963. Net sales for fiscal 2026 were ¥2,443.5 Billion and the consolidated headcount is 20,812. Its equipment covers four key processes — deposition, coater and developer, etching and cleaning. Its own page describes the origin plainly: the company began by bringing American production equipment into Japan and stayed in research when competitors were pulling out. On the map the node sits above the fabs: without its tools a wafer does not complete its route."
       },
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.005008
+        "pagerank": 0.004989
       },
       "integration": {
         "score": 3,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.005008,
+        "pagerank": 0.004989,
         "layersSpanned": 2,
         "edgeTypes": 1,
         "cycles": 0
@@ -23566,47 +24056,51 @@
         {
           "layer": "L10",
           "primary": true,
-          "criticality": 51
+          "criticality": 48
         }
       ],
       "primaryLayer": "L10",
-      "criticality": 51,
+      "criticality": 48,
       "criticalityFactors": {
-        "irreplaceability": 50,
-        "lockInDepth": 50,
-        "timeToReplace": 55,
-        "concentration": null
+        "irreplaceability": 62,
+        "lockInDepth": 40,
+        "timeToReplace": 45,
+        "concentration": 38
       },
       "criticalityWhy": {
         "irreplaceability": {
-          "ru": "Компиляторов такого рода несколько",
-          "en": "There are several compilers of this kind"
+          "ru": "Открытая среда, поддерживающая ускорители двух вендоров сразу",
+          "en": "An open environment supporting two vendors' accelerators at once"
         },
         "lockInDepth": {
-          "ru": "Задевает софт и платформу",
-          "en": "Reaches software and the platform"
+          "ru": "Код пишется в открытом репозитории и переносится между поддерживаемыми ускорителями",
+          "en": "Code is written in an open repository and moves between supported accelerators"
         },
         "timeToReplace": {
-          "ru": "Довести до переносимости — два-три года",
-          "en": "Getting it portable — two to three years"
+          "ru": "Проект развивается открыто, и его цель — снять привязку, а не создать новую",
+          "en": "The project develops in the open and its aim is to remove a tie, not create one"
         },
-        "concentration": null
+        "concentration": {
+          "ru": "Заявленная цель — быть открытой альтернативой CUDA, а не занять её место одному",
+          "en": "Its stated aim is to be an open alternative to CUDA, not to take its place alone"
+        }
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
-        "reach": 2,
-        "layers": 2,
-        "edgeTypes": 2,
+        "reach": 4,
+        "layers": 5,
+        "edgeTypes": 3,
         "cycles": 0,
-        "score": 8,
+        "score": 17,
         "signals": {}
       },
       "domain": null,
@@ -23649,6 +24143,71 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "triton-lang/triton — README",
+          "url": "https://github.com/triton-lang/triton",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Triton, a language and compiler for writing highly efficient custom Deep-Learning primitives",
+          "confidence": 0.975,
+          "self": "triton",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "triton-lang/triton — README",
+          "url": "https://github.com/triton-lang/triton",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "an open-source environment to write fast code at higher productivity than CUDA",
+          "confidence": 0.975,
+          "self": "triton",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "triton-lang/triton — README",
+          "url": "https://github.com/triton-lang/triton",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "NVIDIA GPUs (Compute Capability 8.0+)",
+          "confidence": 0.975,
+          "self": "triton",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "triton-lang/triton — README",
+          "url": "https://github.com/triton-lang/triton",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "AMD GPUs (ROCm 6.2+)",
+          "confidence": 0.975,
+          "self": "triton",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "triton-lang/triton — README",
+          "url": "https://github.com/triton-lang/triton",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Supported Platforms: Linux",
+          "confidence": 0.975,
+          "self": "triton",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "product_doc",
           "title": "PyTorch README",
@@ -23663,28 +24222,29 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 6,
+        "selfSourced": 5,
         "byTier": {
+          "1": 5,
           "2": 1
         }
       },
       "description": {
-        "ru": "Язык и компилятор для написания вычислительных ядер: разработчик описывает, что нужно посчитать, а раскладывание на конкретное железо берёт на себя компилятор. Создан крупнейшим покупателем вычислений и открыт — мотив не в выручке с инструмента, а в снижении собственной себестоимости обучения. В карте это самый реальный путь наружу из привязки к среде: он не конкурирует со средой, он делает её выбор менее значимым. Пока сборка основных библиотек всё ещё требует поддерживаемой версии среды, и путь остаётся открытым, но узким.",
-        "en": "A language and compiler for writing compute kernels: the developer describes what to compute and the compiler handles mapping it onto specific hardware. Created by the largest buyer of compute and released openly — the motive is not tool revenue but lowering its own cost of training. On the map it is the most realistic way out of the environment tie: it does not compete with the environment, it makes the choice of one matter less. For now the main libraries still build against a supported version of that environment, so the path stays open but narrow."
+        "ru": "Triton — язык и компилятор для написания примитивов глубокого обучения. Цель проекта записана в его же репозитории и прямо противопоставлена закрытому стеку: дать открытую среду, где код пишется быстрее, чем на CUDA, и гибче, чем на других предметных языках. Поддерживаются ускорители двух вендоров сразу — NVIDIA от восьмого поколения вычислительных возможностей и AMD на ROCm; работа над процессорами идёт. Платформа одна — Linux. На карте это узел, из-за которого замок вокруг одного набора инструментов перестаёт быть абсолютным.",
+        "en": "Triton is a language and compiler for writing deep-learning primitives. The project's aim is written in its own repository and set directly against the closed stack: to give an open environment where code is written faster than in CUDA and more flexibly than in other domain-specific languages. Accelerators of two vendors are supported at once — NVIDIA from the eighth compute-capability generation and AMD on ROCm; work on CPUs is under way. There is one platform, Linux. On the map this is the node that keeps the lock around one toolset from being absolute."
       },
       "centrality": {
-        "degree": 2,
-        "betweenness": 0.000255,
-        "pagerank": 0.003498
+        "degree": 4,
+        "betweenness": 0.000622,
+        "pagerank": 0.003481
       },
       "integration": {
-        "score": 4,
-        "degree": 2,
-        "betweenness": 0.000255,
-        "pagerank": 0.003498,
-        "layersSpanned": 2,
-        "edgeTypes": 2,
+        "score": 8,
+        "degree": 4,
+        "betweenness": 0.000622,
+        "pagerank": 0.003481,
+        "layersSpanned": 5,
+        "edgeTypes": 3,
         "cycles": 0
       },
       "core": false,
@@ -23936,14 +24496,14 @@
       },
       "centrality": {
         "degree": 20,
-        "betweenness": 0.150417,
-        "pagerank": 0.021321
+        "betweenness": 0.135598,
+        "pagerank": 0.021295
       },
       "integration": {
         "score": 30,
         "degree": 20,
-        "betweenness": 0.150417,
-        "pagerank": 0.021321,
+        "betweenness": 0.135598,
+        "pagerank": 0.021295,
         "layersSpanned": 10,
         "edgeTypes": 11,
         "cycles": 59
@@ -24142,14 +24702,14 @@
       },
       "centrality": {
         "degree": 4,
-        "betweenness": 0.008034,
-        "pagerank": 0.012117
+        "betweenness": 0.007778,
+        "pagerank": 0.012146
       },
       "integration": {
         "score": 9,
         "degree": 4,
-        "betweenness": 0.008034,
-        "pagerank": 0.012117,
+        "betweenness": 0.007778,
+        "pagerank": 0.012146,
         "layersSpanned": 5,
         "edgeTypes": 3,
         "cycles": 0
@@ -24353,13 +24913,13 @@
       "centrality": {
         "degree": 4,
         "betweenness": 0.009081,
-        "pagerank": 0.014877
+        "pagerank": 0.014778
       },
       "integration": {
         "score": 12,
         "degree": 4,
         "betweenness": 0.009081,
-        "pagerank": 0.014877,
+        "pagerank": 0.014778,
         "layersSpanned": 7,
         "edgeTypes": 3,
         "cycles": 11
@@ -24573,14 +25133,14 @@
       },
       "centrality": {
         "degree": 8,
-        "betweenness": 0.014819,
-        "pagerank": 0.005615
+        "betweenness": 0.003816,
+        "pagerank": 0.0054
       },
       "integration": {
         "score": 12,
         "degree": 8,
-        "betweenness": 0.014819,
-        "pagerank": 0.005615,
+        "betweenness": 0.003816,
+        "pagerank": 0.0054,
         "layersSpanned": 5,
         "edgeTypes": 7,
         "cycles": 21
@@ -24709,13 +25269,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.00655
+        "pagerank": 0.006565
       },
       "integration": {
         "score": 4,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.00655,
+        "pagerank": 0.006565,
         "layersSpanned": 3,
         "edgeTypes": 1,
         "cycles": 0
@@ -24772,11 +25332,11 @@
         "renormalized": true
       },
       "gravity": {
-        "reach": 1,
-        "layers": 3,
-        "edgeTypes": 2,
+        "reach": 2,
+        "layers": 4,
+        "edgeTypes": 3,
         "cycles": 0,
-        "score": 8,
+        "score": 12,
         "signals": {}
       },
       "domain": null,
@@ -24882,17 +25442,17 @@
         "en": "Sells a Grok subscription and API access, and gets its distribution from the social network the model is already embedded in. The money is a seat subscription plus per-token billing, with a separate line for selling access to its own cluster. On this map it is the lab that built its compute itself instead of renting it from a hyperscaler. The Colossus cluster holds 200,000 H100 accelerators on one fabric, the second half added in 92 days, and the apps reach roughly 600 million people a month. Owning the site and the generation removes the queue for capacity, but moves the entire capital risk onto the company."
       },
       "centrality": {
-        "degree": 1,
+        "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.003498
+        "pagerank": 0.003481
       },
       "integration": {
-        "score": 5,
-        "degree": 1,
+        "score": 7,
+        "degree": 2,
         "betweenness": 0.0,
-        "pagerank": 0.003498,
-        "layersSpanned": 4,
-        "edgeTypes": 2,
+        "pagerank": 0.003481,
+        "layersSpanned": 5,
+        "edgeTypes": 3,
         "cycles": 0
       },
       "core": false,
@@ -25142,13 +25702,13 @@
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.008809
+        "pagerank": 0.006447
       },
       "integration": {
         "score": 3,
         "degree": 1,
         "betweenness": 0.0,
-        "pagerank": 0.008809,
+        "pagerank": 0.006447,
         "layersSpanned": 1,
         "edgeTypes": 2,
         "cycles": 0
@@ -27949,6 +28509,59 @@
       }
     },
     {
+      "id": "asml__mistral__customer_of",
+      "source": "asml",
+      "target": "mistral",
+      "type": "customer_of",
+      "spine": "capital",
+      "direction": "downstream",
+      "strength": 50,
+      "lockInDepth": 25,
+      "substitutability": 70,
+      "isReversible": true,
+      "status": "signal",
+      "confidence": 0.875,
+      "sourceTier": 2,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "low",
+        "type": "market",
+        "timeline": "1-2y",
+        "mitigation": {
+          "ru": "Заказчик не привязан к одной лаборатории: веса открыты и переносимы",
+          "en": "The customer is not tied to one laboratory: the weights are open and portable"
+        }
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": {
+        "ru": "Названа лабораторией первой в собственном списке заказчиков.",
+        "en": "Named first by the laboratory in its own customer list."
+      },
+      "sidedness": "single",
+      "claimedBy": [
+        "mistral"
+      ],
+      "evidence": [
+        {
+          "tier": 2,
+          "type": "company_pr",
+          "title": "Mistral AI — about",
+          "url": "https://mistral.ai/about",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "ASML, CMA CGM, HSBC, BMW, Stellantis, IBM, BNP Paribas, SAP, Snowflake, Orange, AXA, TotalEnergies, Cisco",
+          "confidence": 0.925,
+          "self": "mistral",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
       "id": "asml__tsmc__supplies",
       "source": "asml",
       "target": "tsmc",
@@ -30027,6 +30640,59 @@
           "quote": "Ltd.; Microsoft Corporation; New Relic, Inc.; Nokia Corporation; Nvidia Corporation; Palo Alto Networks, Inc.;",
           "confidence": 0.975,
           "self": "cisco",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "cisco__mistral__customer_of",
+      "source": "cisco",
+      "target": "mistral",
+      "type": "customer_of",
+      "spine": "capital",
+      "direction": "downstream",
+      "strength": 45,
+      "lockInDepth": 20,
+      "substitutability": 70,
+      "isReversible": true,
+      "status": "signal",
+      "confidence": 0.875,
+      "sourceTier": 2,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "low",
+        "type": "market",
+        "timeline": "1-2y",
+        "mitigation": {
+          "ru": "Заказчик не привязан к одной лаборатории: веса открыты и переносимы",
+          "en": "The customer is not tied to one laboratory: the weights are open and portable"
+        }
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": {
+        "ru": "Названа лабораторией в собственном списке заказчиков.",
+        "en": "Named by the laboratory in its own customer list."
+      },
+      "sidedness": "single",
+      "claimedBy": [
+        "mistral"
+      ],
+      "evidence": [
+        {
+          "tier": 2,
+          "type": "company_pr",
+          "title": "Mistral AI — about",
+          "url": "https://mistral.ai/about",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "ASML, CMA CGM, HSBC, BMW, Stellantis, IBM, BNP Paribas, SAP, Snowflake, Orange, AXA, TotalEnergies, Cisco",
+          "confidence": 0.925,
+          "self": "mistral",
           "counter": false
         }
       ],
@@ -32479,10 +33145,10 @@
       "lockInDepth": 55,
       "substitutability": 35,
       "isReversible": true,
-      "status": "confirmed",
-      "confidence": 0.955,
-      "sourceTier": 2,
-      "confirmedSources": 2,
+      "status": "bilateral",
+      "confidence": 0.99,
+      "sourceTier": 1,
+      "confirmedSources": 3,
       "risk": {
         "level": "medium",
         "type": "geopolitical",
@@ -32500,11 +33166,25 @@
         "ru": "Собирает, тестирует и упаковывает готовые изделия NVIDIA; назван в его отчётности поимённо.",
         "en": "It assembles, tests and packages NVIDIA's finished products; it is named directly in NVIDIA's filings."
       },
-      "sidedness": "single",
+      "sidedness": "bilateral",
       "claimedBy": [
+        "foxconn",
         "nvidia"
       ],
       "evidence": [
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Hon Hai FY2025 & 4Q25 results",
+          "url": "https://www.honhai.com/en-us/press-center/press-releases/latest-news/1978",
+          "published": "2026-03-16",
+          "fetched": null,
+          "alive": true,
+          "quote": "Foxconn, as the world's largest AI server provider, will definitely seize this opportunity",
+          "confidence": 0.975,
+          "self": "foxconn",
+          "counter": false
+        },
         {
           "tier": 2,
           "type": "sec_filing",
@@ -43025,6 +43705,284 @@
       }
     },
     {
+      "id": "sglang__amd__optimizes_for",
+      "source": "sglang",
+      "target": "amd",
+      "type": "optimizes_for",
+      "spine": "physical",
+      "direction": "downstream",
+      "strength": 60,
+      "lockInDepth": 30,
+      "substitutability": 60,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "low",
+        "type": "technical",
+        "timeline": "1-2y",
+        "mitigation": {
+          "ru": "Поддержка нескольких вендоров заявлена одной строкой README",
+          "en": "Support for several vendors is stated in one README line"
+        }
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": {
+        "ru": "Ускорители AMD поддержаны наравне с ускорителями другого вендора.",
+        "en": "AMD accelerators are supported alongside the other vendor's."
+      },
+      "sidedness": "single",
+      "claimedBy": [
+        "sglang"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "sgl-project/sglang — README",
+          "url": "https://github.com/sgl-project/sglang",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Runs on NVIDIA GPUs (GB200/B300/H100/A100/Spark/5090), AMD GPUs (MI355/MI300), Intel Xeon CPUs",
+          "confidence": 0.975,
+          "self": "sglang",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "sglang__intel__optimizes_for",
+      "source": "sglang",
+      "target": "intel",
+      "type": "optimizes_for",
+      "spine": "physical",
+      "direction": "downstream",
+      "strength": 50,
+      "lockInDepth": 25,
+      "substitutability": 65,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "low",
+        "type": "technical",
+        "timeline": "1-2y",
+        "mitigation": {
+          "ru": "Поддержка нескольких вендоров заявлена одной строкой README",
+          "en": "Support for several vendors is stated in one README line"
+        }
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": {
+        "ru": "Процессоры Intel Xeon названы среди поддержанного оборудования.",
+        "en": "Intel Xeon CPUs are named among the supported hardware."
+      },
+      "sidedness": "single",
+      "claimedBy": [
+        "sglang"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "sgl-project/sglang — README",
+          "url": "https://github.com/sgl-project/sglang",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Runs on NVIDIA GPUs (GB200/B300/H100/A100/Spark/5090), AMD GPUs (MI355/MI300), Intel Xeon CPUs",
+          "confidence": 0.975,
+          "self": "sglang",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "sglang__nebius__delivers_to",
+      "source": "sglang",
+      "target": "nebius",
+      "type": "delivers_to",
+      "spine": "physical",
+      "direction": "downstream",
+      "strength": 45,
+      "lockInDepth": 25,
+      "substitutability": 65,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "low",
+        "type": "market",
+        "timeline": "1-2y",
+        "mitigation": {
+          "ru": "Каркас принят несколькими облаками сразу",
+          "en": "The framework is adopted by several clouds at once"
+        }
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": {
+        "ru": "Названа среди облачных площадок, принявших каркас в работу.",
+        "en": "Named among the cloud providers that adopted the framework."
+      },
+      "sidedness": "single",
+      "claimedBy": [
+        "sglang"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "sgl-project/sglang — README",
+          "url": "https://github.com/sgl-project/sglang",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Voltage Park, Nebius, DataCrunch, Novita, RunPod, InnoMatrix, Modal, MIT, UCLA",
+          "confidence": 0.975,
+          "self": "sglang",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "sglang__nvidia__optimizes_for",
+      "source": "sglang",
+      "target": "nvidia",
+      "type": "optimizes_for",
+      "spine": "physical",
+      "direction": "downstream",
+      "strength": 70,
+      "lockInDepth": 40,
+      "substitutability": 55,
+      "isReversible": true,
+      "status": "confirmed",
+      "confidence": 0.99,
+      "sourceTier": 1,
+      "confirmedSources": 2,
+      "risk": {
+        "level": "low",
+        "type": "technical",
+        "timeline": "1-2y",
+        "mitigation": {
+          "ru": "Поддержаны также ускорители AMD, процессоры Intel и тензорные процессоры Google",
+          "en": "AMD accelerators, Intel CPUs and Google TPUs are supported as well"
+        }
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": {
+        "ru": "Работает на ускорителях вендора и назван среди принятых им проектов.",
+        "en": "Runs on the vendor's accelerators and is named among the projects it adopted."
+      },
+      "sidedness": "single",
+      "claimedBy": [
+        "sglang"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "sgl-project/sglang — README",
+          "url": "https://github.com/sgl-project/sglang",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "adopted by a wide range of leading enterprises and institutions, including xAI, NVIDIA",
+          "confidence": 0.975,
+          "self": "sglang",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "sgl-project/sglang — README",
+          "url": "https://github.com/sgl-project/sglang",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Runs on NVIDIA GPUs (GB200/B300/H100/A100/Spark/5090), AMD GPUs (MI355/MI300), Intel Xeon CPUs",
+          "confidence": 0.975,
+          "self": "sglang",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "sglang__oracle__delivers_to",
+      "source": "sglang",
+      "target": "oracle",
+      "type": "delivers_to",
+      "spine": "physical",
+      "direction": "downstream",
+      "strength": 50,
+      "lockInDepth": 30,
+      "substitutability": 60,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "low",
+        "type": "market",
+        "timeline": "1-2y",
+        "mitigation": {
+          "ru": "Каркас принят несколькими облаками сразу",
+          "en": "The framework is adopted by several clouds at once"
+        }
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": {
+        "ru": "Названа среди облаков, принявших каркас в работу.",
+        "en": "Named among the clouds that adopted the framework."
+      },
+      "sidedness": "single",
+      "claimedBy": [
+        "sglang"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "sgl-project/sglang — README",
+          "url": "https://github.com/sgl-project/sglang",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "AMD, Intel, LinkedIn, Cursor, Oracle Cloud, Google Cloud, Microsoft Azure, AWS, Atlas Cloud, Voltage Park",
+          "confidence": 0.975,
+          "self": "sglang",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
       "id": "sglang__vllm__competes_with",
       "source": "sglang",
       "target": "vllm",
@@ -43090,6 +44048,59 @@
         "ru": "Вторая открытая система запуска моделей, и её существование делает слой конкурентным, а не захваченным: обе свободно лицензированы и работают на нескольких платформах. Конкуренция здесь ускоряет обе — приёмы перенимаются за недели, потому что код открыт. Для карты это единственный слой, где скорость улучшения не зависит от планов одного поставщика.",
         "en": "A second open serving system, and its existence makes the layer competitive rather than captured: both are freely licensed and run on several platforms. Competition here speeds both up — techniques are adopted within weeks because the code is open. For the map it is the only layer where the pace of improvement does not depend on one vendor's roadmap."
       }
+    },
+    {
+      "id": "sglang__xai__delivers_to",
+      "source": "sglang",
+      "target": "xai",
+      "type": "delivers_to",
+      "spine": "physical",
+      "direction": "downstream",
+      "strength": 60,
+      "lockInDepth": 35,
+      "substitutability": 55,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "low",
+        "type": "technical",
+        "timeline": "1-2y",
+        "mitigation": {
+          "ru": "Каркас открытый, и принявшая сторона не привязана к его сопровождению",
+          "en": "The framework is open and the adopter is not tied to its maintenance"
+        }
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": {
+        "ru": "Названа первой в списке тех, кто принял каркас в работу.",
+        "en": "Named first in the list of those who adopted the framework."
+      },
+      "sidedness": "single",
+      "claimedBy": [
+        "sglang"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "sgl-project/sglang — README",
+          "url": "https://github.com/sgl-project/sglang",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "adopted by a wide range of leading enterprises and institutions, including xAI, NVIDIA",
+          "confidence": 0.975,
+          "self": "sglang",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
     },
     {
       "id": "shin-etsu__tsmc__supplies",
@@ -43634,6 +44645,59 @@
           "quote": "including Amazon Web Services (AWS), Microsoft Azure (Azure), and Google Cloud Platform (GCP);",
           "confidence": 0.975,
           "self": "snowflake",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "snowflake__mistral__customer_of",
+      "source": "snowflake",
+      "target": "mistral",
+      "type": "customer_of",
+      "spine": "capital",
+      "direction": "downstream",
+      "strength": 45,
+      "lockInDepth": 20,
+      "substitutability": 70,
+      "isReversible": true,
+      "status": "signal",
+      "confidence": 0.875,
+      "sourceTier": 2,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "low",
+        "type": "market",
+        "timeline": "1-2y",
+        "mitigation": {
+          "ru": "Заказчик не привязан к одной лаборатории: веса открыты и переносимы",
+          "en": "The customer is not tied to one laboratory: the weights are open and portable"
+        }
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": {
+        "ru": "Названа лабораторией в собственном списке заказчиков.",
+        "en": "Named by the laboratory in its own customer list."
+      },
+      "sidedness": "single",
+      "claimedBy": [
+        "mistral"
+      ],
+      "evidence": [
+        {
+          "tier": 2,
+          "type": "company_pr",
+          "title": "Mistral AI — about",
+          "url": "https://mistral.ai/about",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "ASML, CMA CGM, HSBC, BMW, Stellantis, IBM, BNP Paribas, SAP, Snowflake, Orange, AXA, TotalEnergies, Cisco",
+          "confidence": 0.925,
+          "self": "mistral",
           "counter": false
         }
       ],
@@ -44714,6 +45778,59 @@
       }
     },
     {
+      "id": "triton__amd__optimizes_for",
+      "source": "triton",
+      "target": "amd",
+      "type": "optimizes_for",
+      "spine": "physical",
+      "direction": "downstream",
+      "strength": 55,
+      "lockInDepth": 25,
+      "substitutability": 65,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "low",
+        "type": "technical",
+        "timeline": "1-2y",
+        "mitigation": {
+          "ru": "Поддержка заявлена сразу для двух вендоров, поэтому ни один не обязателен",
+          "en": "Support is stated for two vendors at once, so neither is required"
+        }
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": {
+        "ru": "Ускорители AMD на ROCm поддерживаются наравне с ускорителями другого вендора.",
+        "en": "AMD accelerators on ROCm are supported alongside the other vendor's."
+      },
+      "sidedness": "single",
+      "claimedBy": [
+        "triton"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "triton-lang/triton — README",
+          "url": "https://github.com/triton-lang/triton",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "AMD GPUs (ROCm 6.2+)",
+          "confidence": 0.975,
+          "self": "triton",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
       "id": "triton__cuda__could_disrupt",
       "source": "triton",
       "target": "cuda",
@@ -44725,9 +45842,9 @@
       "substitutability": 50,
       "isReversible": true,
       "status": "confirmed",
-      "confidence": 0.955,
-      "sourceTier": 2,
-      "confirmedSources": 2,
+      "confidence": 0.99,
+      "sourceTier": 1,
+      "confirmedSources": 3,
       "risk": {
         "level": "medium",
         "type": "substitution",
@@ -44746,8 +45863,23 @@
         "en": "An intermediate layer for writing compute kernels without binding to the environment — a theoretical way out."
       },
       "sidedness": "single",
-      "claimedBy": [],
+      "claimedBy": [
+        "triton"
+      ],
       "evidence": [
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "triton-lang/triton — README",
+          "url": "https://github.com/triton-lang/triton",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "an open-source environment to write fast code at higher productivity than CUDA",
+          "confidence": 0.975,
+          "self": "triton",
+          "counter": false
+        },
         {
           "tier": 2,
           "type": "product_doc",
@@ -44780,6 +45912,59 @@
         "ru": "Промежуточный слой позволяет писать вычислительные ядра, не привязываясь к конкретной среде: разработчик описывает вычисление, а компилятор раскладывает его на целевое железо. Подрыв здесь потенциальный, а не случившийся — сборка библиотек обучения по-прежнему требует выбрать поддерживаемую версию среды. Но именно такой слой, а не конкурирующая среда, является реальным путём наружу.",
         "en": "The intermediate layer lets kernels be written without binding to one environment: the developer describes the computation and the compiler maps it onto the target hardware. The disruption here is potential rather than realised — building the training libraries still requires selecting a supported version of the environment. But it is a layer like this, not a competing environment, that is the real way out."
       }
+    },
+    {
+      "id": "triton__nvidia__optimizes_for",
+      "source": "triton",
+      "target": "nvidia",
+      "type": "optimizes_for",
+      "spine": "physical",
+      "direction": "downstream",
+      "strength": 65,
+      "lockInDepth": 35,
+      "substitutability": 60,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "low",
+        "type": "technical",
+        "timeline": "1-2y",
+        "mitigation": {
+          "ru": "Поддержка заявлена сразу для двух вендоров, поэтому ни один не обязателен",
+          "en": "Support is stated for two vendors at once, so neither is required"
+        }
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": {
+        "ru": "Ускорители NVIDIA от восьмого поколения вычислительных возможностей поддерживаются наравне с чужими.",
+        "en": "NVIDIA accelerators from compute capability 8.0 are supported alongside others."
+      },
+      "sidedness": "single",
+      "claimedBy": [
+        "triton"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "triton-lang/triton — README",
+          "url": "https://github.com/triton-lang/triton",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "NVIDIA GPUs (Compute Capability 8.0+)",
+          "confidence": 0.975,
+          "self": "triton",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
     },
     {
       "id": "triton__openai__funded_by",
@@ -46704,40 +47889,40 @@
   "network": {
     "id": "ai-infrastructure-complete",
     "totalNodes": 108,
-    "totalEdges": 295,
+    "totalEdges": 306,
     "pivotalNodes": 30,
     "secondaryNodes": 78,
-    "density": 0.0402,
-    "averageDegree": 4.3,
-    "clusteringCoefficient": 0.5038,
+    "density": 0.0421,
+    "averageDegree": 4.5,
+    "clusteringCoefficient": 0.4979,
     "singlePointsOfFailure": [
       {
         "id": "nvidia",
         "name": "NVIDIA",
         "layer": "L10",
-        "betweenness": 0.80571,
-        "pairsLost": 1665,
+        "betweenness": 0.805143,
+        "pairsLost": 1484,
         "reason": {
-          "ru": "убрать — и 1665 пар сущностей (29.4% связных пар) теряют путь друг к другу; сеть распадается на 17 частей",
-          "en": "remove it and 1665 pairs of entities (29.4% of connected pairs) lose their path to each other; the network breaks into 17 components"
+          "ru": "убрать — и 1484 пар сущностей (26.2% связных пар) теряют путь друг к другу; сеть распадается на 15 частей",
+          "en": "remove it and 1484 pairs of entities (26.2% of connected pairs) lose their path to each other; the network breaks into 15 components"
         }
       },
       {
         "id": "tsmc",
         "name": "TSMC",
         "layer": "L3",
-        "betweenness": 0.150417,
-        "pairsLost": 717,
+        "betweenness": 0.135598,
+        "pairsLost": 417,
         "reason": {
-          "ru": "убрать — и 717 пар сущностей (12.6% связных пар) теряют путь друг к другу; сеть распадается на 5 частей",
-          "en": "remove it and 717 pairs of entities (12.6% of connected pairs) lose their path to each other; the network breaks into 5 components"
+          "ru": "убрать — и 417 пар сущностей (7.4% связных пар) теряют путь друг к другу; сеть распадается на 4 части",
+          "en": "remove it and 417 pairs of entities (7.4% of connected pairs) lose their path to each other; the network breaks into 4 components"
         }
       },
       {
         "id": "microsoft",
         "name": "Microsoft",
         "layer": "L9",
-        "betweenness": 0.091101,
+        "betweenness": 0.090468,
         "pairsLost": 106,
         "reason": {
           "ru": "убрать — и 106 пар сущностей (1.9% связных пар) теряют путь друг к другу; сеть распадается на 2 части",
@@ -46748,7 +47933,7 @@
         "id": "openai",
         "name": "OpenAI",
         "layer": "L12",
-        "betweenness": 0.067687,
+        "betweenness": 0.060503,
         "pairsLost": 211,
         "reason": {
           "ru": "убрать — и 211 пар сущностей (3.7% связных пар) теряют путь друг к другу; сеть распадается на 3 части",
@@ -46759,7 +47944,7 @@
         "id": "equinix",
         "name": "Equinix",
         "layer": "L9",
-        "betweenness": 0.034154,
+        "betweenness": 0.034138,
         "pairsLost": 106,
         "reason": {
           "ru": "убрать — и 106 пар сущностей (1.9% связных пар) теряют путь друг к другу; сеть распадается на 2 части",
@@ -46770,18 +47955,18 @@
         "id": "samsung",
         "name": "Samsung",
         "layer": "L4",
-        "betweenness": 0.021453,
+        "betweenness": 0.021346,
         "pairsLost": 0,
         "reason": {
-          "ru": "через узел проходит больше путей, чем через любого другого в слое L4 (betweenness 0.021453), но обходные маршруты сохраняются — связность сети он не держит",
-          "en": "more paths run through this node than through any other in layer L4 (betweenness 0.021453), but detours survive — it does not hold the network together"
+          "ru": "через узел проходит больше путей, чем через любого другого в слое L4 (betweenness 0.021346), но обходные маршруты сохраняются — связность сети он не держит",
+          "en": "more paths run through this node than through any other in layer L4 (betweenness 0.021346), but detours survive — it does not hold the network together"
         }
       },
       {
         "id": "asml",
         "name": "ASML",
         "layer": "L1",
-        "betweenness": 0.018692,
+        "betweenness": 0.01955,
         "pairsLost": 106,
         "reason": {
           "ru": "убрать — и 106 пар сущностей (1.9% связных пар) теряют путь друг к другу; сеть распадается на 2 части",
@@ -46808,17 +47993,6 @@
         "reason": {
           "ru": "убрать — и 106 пар сущностей (1.9% связных пар) теряют путь друг к другу; сеть распадается на 2 части",
           "en": "remove it and 106 pairs of entities (1.9% of connected pairs) lose their path to each other; the network breaks into 2 components"
-        }
-      },
-      {
-        "id": "vllm",
-        "name": "vLLM",
-        "layer": "L11",
-        "betweenness": 0.014819,
-        "pairsLost": 0,
-        "reason": {
-          "ru": "через узел проходит больше путей, чем через любого другого в слое L11 (betweenness 0.014819), но обходные маршруты сохраняются — связность сети он не держит",
-          "en": "more paths run through this node than through any other in layer L11 (betweenness 0.014819), but detours survive — it does not hold the network together"
         }
       }
     ],
@@ -46920,11 +48094,17 @@
           "pytorch__huggingface__enables",
           "pytorch__meta__funded_by",
           "pytorch__nvidia__validates_demand",
+          "sglang__amd__optimizes_for",
+          "sglang__nebius__delivers_to",
+          "sglang__nvidia__optimizes_for",
+          "sglang__oracle__delivers_to",
           "sglang__vllm__competes_with",
           "tensorrt__huggingface__integrates",
           "tensorrt__nvidia__locks_in_platforms",
           "tensorrt__pytorch__integrates",
+          "triton__amd__optimizes_for",
           "triton__cuda__could_disrupt",
+          "triton__nvidia__optimizes_for",
           "vllm__cuda__path_dependent_on",
           "vllm__huggingface__standardizes_on",
           "vllm__nvidia__validates_demand",
@@ -47203,7 +48383,9 @@
           "amazon",
           "anthropic",
           "arista",
+          "asml",
           "broadcom",
+          "cisco",
           "coreweave",
           "deepseek",
           "google",
@@ -47216,6 +48398,7 @@
           "nvidia",
           "openai",
           "oracle",
+          "snowflake",
           "vllm",
           "xai"
         ],
@@ -47233,8 +48416,15 @@
           "arista__meta__supplies",
           "arista__microsoft__supplies",
           "arista__nvidia__competes_with",
+          "asml__mistral__customer_of",
           "broadcom__google__co_designs",
           "broadcom__nvidia__threatens",
+          "cisco__amazon__competes_with",
+          "cisco__arista__competes_with",
+          "cisco__broadcom__competes_with",
+          "cisco__microsoft__competes_with",
+          "cisco__mistral__customer_of",
+          "cisco__nvidia__competes_with",
           "coreweave__nvidia__customer_of",
           "coreweave__nvidia__proves_roi",
           "deepseek__huggingface__enables",
@@ -47285,6 +48475,10 @@
           "openai__vllm__enables",
           "oracle__nvidia__customer_of",
           "oracle__openai__invests_in",
+          "snowflake__amazon__competes_with",
+          "snowflake__microsoft__competes_with",
+          "snowflake__mistral__customer_of",
+          "snowflake__nvidia__proves_roi",
           "vllm__anthropic__enables_interop",
           "vllm__huggingface__standardizes_on",
           "vllm__nvidia__validates_demand",
@@ -47412,11 +48606,15 @@
           "pytorch__cuda__path_dependent_on",
           "pytorch__huggingface__enables",
           "pytorch__nvidia__validates_demand",
+          "sglang__amd__optimizes_for",
+          "sglang__nvidia__optimizes_for",
           "sglang__vllm__competes_with",
           "tensorrt__huggingface__integrates",
           "tensorrt__nvidia__locks_in_platforms",
           "tensorrt__pytorch__integrates",
+          "triton__amd__optimizes_for",
           "triton__cuda__could_disrupt",
+          "triton__nvidia__optimizes_for",
           "vllm__cuda__path_dependent_on",
           "vllm__huggingface__standardizes_on",
           "vllm__nvidia__validates_demand",
@@ -47712,64 +48910,99 @@
     "removedNodes": [],
     "relationshipsAdded": [
       {
-        "id": "fabrinet__amazon__integrates",
+        "id": "asml__mistral__customer_of",
         "why": {
-          "ru": "Названа Fabrinet среди четырёх заказчиков, каждый из которых дал свыше десятой доли её выручки за год.",
-          "en": "Named by Fabrinet among four customers, each of which gave over a tenth of its revenues in the year."
+          "ru": "Названа лабораторией первой в собственном списке заказчиков.",
+          "en": "Named first by the laboratory in its own customer list."
         }
       },
       {
-        "id": "nim__sglang__integrates",
+        "id": "cisco__mistral__customer_of",
         "why": {
-          "ru": "Назван среди серверов вывода, на которых построены контейнеры.",
-          "en": "Named among the inference servers the containers are built on."
+          "ru": "Названа лабораторией в собственном списке заказчиков.",
+          "en": "Named by the laboratory in its own customer list."
         }
       },
       {
-        "id": "nim__tensorrt__integrates",
+        "id": "sglang__amd__optimizes_for",
         "why": {
-          "ru": "Назван первым среди серверов вывода, на которых построены контейнеры.",
-          "en": "Named first among the inference servers the containers are built on."
+          "ru": "Ускорители AMD поддержаны наравне с ускорителями другого вендора.",
+          "en": "AMD accelerators are supported alongside the other vendor's."
         }
       },
       {
-        "id": "nim__vllm__integrates",
+        "id": "sglang__intel__optimizes_for",
         "why": {
-          "ru": "Серверы вывода внутри контейнеров построены на сторонних проектах, и vLLM назван среди них.",
-          "en": "The inference servers inside the containers are built on third-party projects, and vLLM is named among them."
+          "ru": "Процессоры Intel Xeon названы среди поддержанного оборудования.",
+          "en": "Intel Xeon CPUs are named among the supported hardware."
         }
       },
       {
-        "id": "tensorrt__huggingface__integrates",
+        "id": "sglang__nebius__delivers_to",
         "why": {
-          "ru": "Встраивается напрямую наравне с PyTorch, давая 6X ускорение вывода одной строкой.",
-          "en": "Plugs in directly alongside PyTorch, giving 6X faster inference with a single line."
+          "ru": "Названа среди облачных площадок, принявших каркас в работу.",
+          "en": "Named among the cloud providers that adopted the framework."
         }
       },
       {
-        "id": "tensorrt__pytorch__integrates",
+        "id": "sglang__nvidia__optimizes_for",
         "why": {
-          "ru": "Встраивается напрямую и даёт 6X ускорение вывода одной строкой кода.",
-          "en": "Plugs in directly and gives 6X faster inference with a single line of code."
+          "ru": "Работает на ускорителях вендора и назван среди принятых им проектов.",
+          "en": "Runs on the vendor's accelerators and is named among the projects it adopted."
+        }
+      },
+      {
+        "id": "sglang__oracle__delivers_to",
+        "why": {
+          "ru": "Названа среди облаков, принявших каркас в работу.",
+          "en": "Named among the clouds that adopted the framework."
+        }
+      },
+      {
+        "id": "sglang__xai__delivers_to",
+        "why": {
+          "ru": "Названа первой в списке тех, кто принял каркас в работу.",
+          "en": "Named first in the list of those who adopted the framework."
+        }
+      },
+      {
+        "id": "snowflake__mistral__customer_of",
+        "why": {
+          "ru": "Названа лабораторией в собственном списке заказчиков.",
+          "en": "Named by the laboratory in its own customer list."
+        }
+      },
+      {
+        "id": "triton__amd__optimizes_for",
+        "why": {
+          "ru": "Ускорители AMD на ROCm поддерживаются наравне с ускорителями другого вендора.",
+          "en": "AMD accelerators on ROCm are supported alongside the other vendor's."
+        }
+      },
+      {
+        "id": "triton__nvidia__optimizes_for",
+        "why": {
+          "ru": "Ускорители NVIDIA от восьмого поколения вычислительных возможностей поддерживаются наравне с чужими.",
+          "en": "NVIDIA accelerators from compute capability 8.0 are supported alongside others."
         }
       }
     ],
     "relationshipsRemoved": [],
     "relationshipsUpdated": [
       {
-        "id": "fabrinet__cisco__integrates",
+        "id": "foxconn__nvidia__integrates",
+        "field": "status",
+        "from": "confirmed",
+        "to": "bilateral"
+      },
+      {
+        "id": "foxconn__nvidia__integrates",
         "field": "confirmedSources",
         "from": 2,
         "to": 3
       },
       {
-        "id": "fabrinet__nvidia__integrates",
-        "field": "confirmedSources",
-        "from": 4,
-        "to": 5
-      },
-      {
-        "id": "ray__kubernetes__standardizes_on",
+        "id": "triton__cuda__could_disrupt",
         "field": "confirmedSources",
         "from": 2,
         "to": 3
@@ -47777,59 +49010,82 @@
     ],
     "criticalityShifts": [
       {
-        "id": "amkor",
+        "id": "foxconn",
         "from": 50,
-        "to": 64
-      },
-      {
-        "id": "fabrinet",
-        "from": 38,
-        "to": 65
-      },
-      {
-        "id": "nccl",
-        "from": 70,
-        "to": 79
-      },
-      {
-        "id": "nim",
-        "from": 47,
-        "to": 59
-      },
-      {
-        "id": "oklo",
-        "from": 32,
-        "to": 43
-      },
-      {
-        "id": "schrodinger",
-        "from": 35,
-        "to": 50
-      },
-      {
-        "id": "tensorrt",
-        "from": 60,
         "to": 70
+      },
+      {
+        "id": "lambda",
+        "from": 35,
+        "to": 44
+      },
+      {
+        "id": "mlcommons",
+        "from": 50,
+        "to": 58
+      },
+      {
+        "id": "sglang",
+        "from": 41,
+        "to": 52
+      },
+      {
+        "id": "tokyo-electron",
+        "from": 63,
+        "to": 82
       }
     ],
     "phaseChanges": [],
     "riskEscalations": [],
     "newSources": [
       {
-        "id": "fabrinet__cisco__integrates",
+        "id": "foxconn__nvidia__integrates",
         "count": 3
       },
       {
-        "id": "fabrinet__nvidia__integrates",
-        "count": 5
-      },
-      {
-        "id": "ray__kubernetes__standardizes_on",
+        "id": "triton__cuda__could_disrupt",
         "count": 3
       }
     ],
     "layerChanges": [],
-    "coreChanges": [],
+    "coreChanges": [
+      {
+        "id": "amd",
+        "move": "in",
+        "integration": 11,
+        "why": {
+          "ru": "поднялся в верхние по интеграции",
+          "en": "rose into the top by integration"
+        }
+      },
+      {
+        "id": "sglang",
+        "move": "in",
+        "integration": 12,
+        "why": {
+          "ru": "поднялся в верхние по интеграции",
+          "en": "rose into the top by integration"
+        }
+      },
+      {
+        "id": "deepseek",
+        "move": "out",
+        "integration": 10,
+        "why": {
+          "ru": "опустился ниже порога ядра",
+          "en": "fell below the core threshold"
+        }
+      },
+      {
+        "id": "digital-realty",
+        "move": "out",
+        "integration": 10,
+        "why": {
+          "ru": "опустился ниже порога ядра",
+          "en": "fell below the core threshold"
+        }
+      }
+    ],
     "month": "2026-08",
     "version": "v4.0-2026-08"
   }

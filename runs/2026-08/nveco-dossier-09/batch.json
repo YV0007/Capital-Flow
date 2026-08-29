@@ -1,0 +1,1051 @@
+{
+  "month": "2026-08",
+  "batch": 9,
+  "tier": "core",
+  "size": 8,
+  "как читать": "1) ЧТО УЖЕ ЗНАЕМ — sources_now показывает, ЧЬИМ словом стоит профиль: self=null значит, что о сущности говорит кто-то другой. Такой профиль исследуется с нуля, а не дополняется. 2) ЧТО СВЕРЯТЬ — to_reconcile: связи, которые второй конец не подтверждал. Цитата из документов ЭТОГО узла поднимает их до bilateral, и это самая дешёвая работа пакета. 3) ЧЕГО НЕ ХВАТАЕТ — membership.fails: какие проверки узел сегодня не проходит. 4) ОТКАЗЫ — rejected_last_time: движок отверг эти строки с причиной, не присылайте их такими же. Тир источника, integration, core и sidedness вы НЕ пишете.",
+  "выход": "dossier.json рядом с этим файлом; формат — agents/eco-dossier.md",
+  "отклонено_и_на_карту_не_попало": [],
+  "entities": [
+    {
+      "id": "foxconn",
+      "name": "Foxconn",
+      "type": "company",
+      "role": "producer",
+      "layers": [
+        "L5"
+      ],
+      "primary_layer": "L5",
+      "domains": [
+        "foxconn.com",
+        "honhai.com"
+      ],
+      "cik": null,
+      "own_publisher": true,
+      "integration": 6,
+      "rank": 65,
+      "rotation_tier": "tail",
+      "core": false,
+      "rota_rank": 80,
+      "crit_rank": 71,
+      "rota_basis": "integration",
+      "profile_now": {
+        "one_liner": "Крупнейший в мире контрактный сборщик; собирает готовые серверы и стойки для ИИ.",
+        "why_irreplaceable": "Масштаб и квалификация под конкретные платформы дают преимущество, но сборка как таковая воспроизводима: объёмы перераспределяются между тремя-четырьмя подрядчиками за квартал.",
+        "what_breaks_it": "Перераспределение заказов к Quanta или Wistron.",
+        "phase": "mature",
+        "ticker": "TWSE: 2317",
+        "geo": "TW",
+        "revenue_usd_b": 215.0
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 45,
+          "why": "Подрядчиков сопоставимого масштаба три-четыре"
+        },
+        "lock_in_depth": {
+          "value": 50,
+          "why": "Задевает сборку и системы"
+        },
+        "time_to_replace": {
+          "value": 55,
+          "why": "Перевести объёмы — от полугода до года"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "quote": "We engage with independent subcontractors and contract manufacturers such as Hon Hai",
+          "published": "2026-02-25",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "2"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "foxconn__broadcom__integrates",
+          "source": "foxconn",
+          "target": "broadcom",
+          "type": "integrates",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "broadcom",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "broadcom"
+          ],
+          "note": "Контрактная сборка и тест для проектировщика заказных чипов.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+              "quote": "including TSMC, Advanced Semiconductor Engineering, Inc., Foxconn Technology Group, Amkor Technology, Inc. and",
+              "self": "broadcom",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+              "quote": "The majority of our front-end wafer manufacturing operations is outsourced to external foundries,",
+              "self": "broadcom",
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "foxconn__nvidia__integrates",
+          "source": "foxconn",
+          "target": "nvidia",
+          "type": "integrates",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "nvidia",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "nvidia"
+          ],
+          "note": "Собирает, тестирует и упаковывает готовые изделия NVIDIA; назван в его отчётности поимённо.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "We engage with independent subcontractors and contract manufacturers such as Hon Hai",
+              "self": "nvidia",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+              "self": "nvidia",
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "foxconn__broadcom__integrates",
+          "counterparty": "broadcom",
+          "type": "integrates",
+          "нужна цитата": "документ foxconn, где названа связь с broadcom"
+        },
+        {
+          "edge": "foxconn__nvidia__integrates",
+          "counterparty": "nvidia",
+          "type": "integrates",
+          "нужна цитата": "документ foxconn, где названа связь с nvidia"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "tokyo-electron",
+      "name": "Tokyo Electron",
+      "type": "company",
+      "role": "producer",
+      "layers": [
+        "L1"
+      ],
+      "primary_layer": "L1",
+      "domains": [
+        "tel.com"
+      ],
+      "cik": null,
+      "own_publisher": true,
+      "integration": 3,
+      "rank": 107,
+      "rotation_tier": "tail",
+      "core": false,
+      "rota_rank": 64,
+      "crit_rank": 45,
+      "rota_basis": "criticality",
+      "profile_now": {
+        "one_liner": "Японский производитель оборудования для обработки пластин, третий в мире по масштабу.",
+        "why_irreplaceable": "Входит в тройку поставщиков оборудования. Часть операций делает только он, но по большинству есть альтернативы.",
+        "what_breaks_it": "Японские экспортные меры или потеря позиций в нанесении покрытий.",
+        "phase": "mature",
+        "ticker": "TSE: 8035",
+        "geo": "JP",
+        "revenue_usd_b": 15.0
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 65,
+          "why": "Поставщиков такого масштаба три"
+        },
+        "lock_in_depth": {
+          "value": 55,
+          "why": "Задевает фабрики"
+        },
+        "time_to_replace": {
+          "value": 70,
+          "why": "Переквалификация — два-три года"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+          "quote": "Some of the equipment is available from a limited number of",
+          "published": "2026-04-16",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "0"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources",
+          "min_confirmed_edges"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "tokyo-electron__tsmc__supplies",
+          "source": "tokyo-electron",
+          "target": "tsmc",
+          "type": "supplies",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "tsmc",
+          "status": "signal",
+          "sidedness": "single",
+          "claimed_by": [
+            "tsmc"
+          ],
+          "note": "Японское оборудование обработки пластин; поставщиков такого класса три.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+              "quote": "Some of the equipment is available from a limited number of",
+              "self": "tsmc",
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "tokyo-electron__tsmc__supplies",
+          "counterparty": "tsmc",
+          "type": "supplies",
+          "нужна цитата": "документ tokyo-electron, где названа связь с tsmc"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "mlcommons",
+      "name": "MLCommons",
+      "type": "standards_body",
+      "role": "operator",
+      "layers": [
+        "L15"
+      ],
+      "primary_layer": "L15",
+      "domains": [
+        "mlcommons.org"
+      ],
+      "cik": null,
+      "own_publisher": true,
+      "integration": 5,
+      "rank": 86,
+      "rotation_tier": "tail",
+      "core": false,
+      "rota_rank": 88,
+      "crit_rank": 73,
+      "rota_basis": "criticality",
+      "profile_now": {
+        "one_liner": "Отраслевой консорциум, который ведёт общие тесты производительности для ИИ.",
+        "why_irreplaceable": "Его тесты стали общей линейкой: результатами меряются все производители ускорителей, и это делает планку публичной.",
+        "what_breaks_it": "Появление другого признанного набора тестов.",
+        "phase": "mature",
+        "ticker": null,
+        "geo": "US",
+        "revenue_usd_b": null
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 55,
+          "why": "Признанный набор тестов один"
+        },
+        "lock_in_depth": {
+          "value": 45,
+          "why": "Задевает чипы и системы"
+        },
+        "time_to_replace": {
+          "value": 50,
+          "why": "Создать признанную альтернативу — два-три года"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+          "published": "2026-02-25",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "2"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "mlcommons__nvidia__sets_benchmark",
+          "source": "mlcommons",
+          "target": "nvidia",
+          "type": "sets_benchmark",
+          "direction": "downstream",
+          "role": "вниз по стеку",
+          "counterparty": "nvidia",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "nvidia"
+          ],
+          "note": "Общие тесты производительности сделали планку публичной: результатами меряются все производители.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+              "self": "nvidia",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "the foundational NVIDIA CUDA development platform that runs on all NVIDIA GPUs,",
+              "self": "nvidia",
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "nvidia__mlcommons__sets_benchmark",
+          "source": "nvidia",
+          "target": "mlcommons",
+          "type": "sets_benchmark",
+          "direction": "downstream",
+          "role": "вверх по стеку",
+          "counterparty": "nvidia",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "nvidia"
+          ],
+          "note": "Результаты NVIDIA стали планкой, с которой сравнивают всех остальных производителей.",
+          "evidence": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+              "self": "nvidia",
+              "counter": false
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "the foundational NVIDIA CUDA development platform that runs on all NVIDIA GPUs,",
+              "self": "nvidia",
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "mlcommons__nvidia__sets_benchmark",
+          "counterparty": "nvidia",
+          "type": "sets_benchmark",
+          "нужна цитата": "документ mlcommons, где названа связь с nvidia"
+        },
+        {
+          "edge": "nvidia__mlcommons__sets_benchmark",
+          "counterparty": "nvidia",
+          "type": "sets_benchmark",
+          "нужна цитата": "документ mlcommons, где названа связь с nvidia"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "triton",
+      "name": "OpenAI Triton",
+      "type": "technology",
+      "role": "platform",
+      "layers": [
+        "L10"
+      ],
+      "primary_layer": "L10",
+      "domains": [
+        "github.com/triton-lang/",
+        "github.com/openai/triton",
+        "triton-lang.org"
+      ],
+      "cik": null,
+      "own_publisher": true,
+      "integration": 4,
+      "rank": 94,
+      "rotation_tier": "tail",
+      "core": false,
+      "rota_rank": 82,
+      "crit_rank": 67,
+      "rota_basis": "criticality",
+      "profile_now": {
+        "one_liner": "Язык и компилятор, позволяющий писать вычислительные ядра, не углубляясь в среду ускорителя.",
+        "why_irreplaceable": "Промежуточный слой, который теоретически ослабляет привязку к среде программирования. Пока он сам работает лучше всего на ней же.",
+        "what_breaks_it": "Появление зрелой поддержки чужих ускорителей.",
+        "phase": "scaling",
+        "ticker": null,
+        "geo": "US",
+        "revenue_usd_b": null
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 50,
+          "why": "Компиляторов такого рода несколько"
+        },
+        "lock_in_depth": {
+          "value": 50,
+          "why": "Задевает софт и платформу"
+        },
+        "time_to_replace": {
+          "value": 55,
+          "why": "Довести до переносимости — два-три года"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://raw.githubusercontent.com/pytorch/pytorch/main/README.md",
+          "quote": "If you want to compile with CUDA support, [select a supported version",
+          "published": "2026-08-01",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "2"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "triton__cuda__could_disrupt",
+          "source": "triton",
+          "target": "cuda",
+          "type": "could_disrupt",
+          "direction": "downstream",
+          "role": "вниз по стеку",
+          "counterparty": "cuda",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [],
+          "note": "Промежуточный слой, позволяющий писать вычислительные ядра без привязки к среде — теоретический путь наружу.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://raw.githubusercontent.com/pytorch/pytorch/main/README.md",
+              "quote": "If you want to compile with CUDA support, [select a supported version",
+              "self": null,
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://raw.githubusercontent.com/pytorch/pytorch/main/README.md",
+              "quote": "Tensor computation (like NumPy) with strong GPU acceleration",
+              "self": null,
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "triton__openai__funded_by",
+          "source": "triton",
+          "target": "openai",
+          "type": "funded_by",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "openai",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "openai"
+          ],
+          "note": "Компилятор создан лабораторией — крупнейшим покупателем ускорителей.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://openai.com/index/openai-nvidia-systems-partnership/",
+              "quote": "OpenAI to build and deploy at least 10 gigawatts of AI datacenters with",
+              "self": "openai",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://openai.com/index/openai-nvidia-systems-partnership/",
+              "quote": "NVIDIA intends to invest up to $100 billion in OpenAI progressively as each",
+              "self": "openai",
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "triton__cuda__could_disrupt",
+          "counterparty": "cuda",
+          "type": "could_disrupt",
+          "нужна цитата": "документ triton, где названа связь с cuda"
+        },
+        {
+          "edge": "triton__openai__funded_by",
+          "counterparty": "openai",
+          "type": "funded_by",
+          "нужна цитата": "документ triton, где названа связь с openai"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "sglang",
+      "name": "SGLang",
+      "type": "technology",
+      "role": "platform",
+      "layers": [
+        "L11"
+      ],
+      "primary_layer": "L11",
+      "domains": [
+        "github.com/sgl-project/",
+        "raw.githubusercontent.com/sgl-project/"
+      ],
+      "cik": null,
+      "own_publisher": true,
+      "integration": 3,
+      "rank": 99,
+      "rotation_tier": "tail",
+      "core": false,
+      "rota_rank": 102,
+      "crit_rank": 96,
+      "rota_basis": "criticality",
+      "profile_now": {
+        "one_liner": "Вторая открытая система запуска моделей, конкурирует с vLLM по скорости.",
+        "why_irreplaceable": "Прямой конкурент vLLM. Существование двух означает, что этот слой конкурентный, а не запертый.",
+        "what_breaks_it": "Слияние сообщества вокруг конкурента.",
+        "phase": "scaling",
+        "ticker": null,
+        "geo": "US",
+        "revenue_usd_b": null
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 40,
+          "why": "Систем запуска моделей несколько"
+        },
+        "lock_in_depth": {
+          "value": 40,
+          "why": "Задевает только инференс"
+        },
+        "time_to_replace": {
+          "value": 45,
+          "why": "Замена — до года"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+          "quote": "vLLM is a fast and easy-to-use library for LLM inference and serving.",
+          "published": "2026-08-01",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "1"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources",
+          "min_confirmed_edges"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "nim__sglang__integrates",
+          "source": "nim",
+          "target": "sglang",
+          "type": "integrates",
+          "direction": "upstream",
+          "role": "вверх по стеку",
+          "counterparty": "nim",
+          "status": "high_confidence",
+          "sidedness": "single",
+          "claimed_by": [
+            "nim"
+          ],
+          "note": "Назван среди серверов вывода, на которых построены контейнеры.",
+          "evidence": [
+            {
+              "tier": 1,
+              "url": "https://developer.nvidia.com/nim",
+              "quote": "including TensorRT, TensorRT-LLM, vLLM, SGLang, and more, NIM is engineered to facilitate seamless AI inferencing",
+              "self": "nim",
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "sglang__vllm__competes_with",
+          "source": "sglang",
+          "target": "vllm",
+          "type": "competes_with",
+          "direction": "lateral",
+          "role": "вниз по стеку",
+          "counterparty": "vllm",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "vllm"
+          ],
+          "note": "SGLang — вторая открытая система запуска моделей: слой конкурентный, а не запертый.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "vLLM is a fast and easy-to-use library for LLM inference and serving.",
+              "self": "vllm",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "Support for NVIDIA GPUs, AMD GPUs, Intel GPUs, and x86/ARM/PowerPC CPUs.",
+              "self": "vllm",
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "nim__sglang__integrates",
+          "counterparty": "nim",
+          "type": "integrates",
+          "нужна цитата": "документ sglang, где названа связь с nim"
+        },
+        {
+          "edge": "sglang__vllm__competes_with",
+          "counterparty": "vllm",
+          "type": "competes_with",
+          "нужна цитата": "документ sglang, где названа связь с vllm"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "mistral",
+      "name": "Mistral AI",
+      "type": "company",
+      "role": "demand",
+      "layers": [
+        "L12"
+      ],
+      "primary_layer": "L12",
+      "domains": [
+        "mistral.ai"
+      ],
+      "cik": null,
+      "own_publisher": true,
+      "integration": 5,
+      "rank": 85,
+      "rotation_tier": "tail",
+      "core": false,
+      "rota_rank": 96,
+      "crit_rank": 89,
+      "rota_basis": "integration",
+      "profile_now": {
+        "one_liner": "Европейская лаборатория, выпускающая модели с открытыми весами.",
+        "why_irreplaceable": "Показывает, что передовые модели делают не только в США. Для карты важна как доказательство географической распределённости спроса.",
+        "what_breaks_it": "Отставание от американских лабораторий на поколение.",
+        "phase": "scaling",
+        "ticker": null,
+        "geo": "FR",
+        "revenue_usd_b": 0.3
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 40,
+          "why": "Лабораторий несколько"
+        },
+        "lock_in_depth": {
+          "value": 45,
+          "why": "Задевает модели и приложения"
+        },
+        "time_to_replace": {
+          "value": 50,
+          "why": "Занять её место — год-два"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+          "published": "2026-02-25",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "1"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources",
+          "min_confirmed_edges"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "mistral__nvidia__customer_of",
+          "source": "mistral",
+          "target": "nvidia",
+          "type": "customer_of",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "nvidia",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "nvidia"
+          ],
+          "note": "Европейская лаборатория закупает вычисления: спрос географически распределён.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+              "self": "nvidia",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "sales to one direct customer represented 22% of total revenue",
+              "self": "nvidia",
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "mistral__nvidia__customer_of",
+          "counterparty": "nvidia",
+          "type": "customer_of",
+          "нужна цитата": "документ mistral, где названа связь с nvidia"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "lambda",
+      "name": "Lambda Labs",
+      "type": "company",
+      "role": "operator",
+      "layers": [
+        "L9"
+      ],
+      "primary_layer": "L9",
+      "domains": [
+        "lambdalabs.com",
+        "lambda.ai"
+      ],
+      "cik": null,
+      "own_publisher": true,
+      "integration": 5,
+      "rank": 83,
+      "rotation_tier": "tail",
+      "core": false,
+      "rota_rank": 95,
+      "crit_rank": 101,
+      "rota_basis": "integration",
+      "profile_now": {
+        "one_liner": "Небольшое независимое облако для аренды ускорителей, ориентированное на исследователей.",
+        "why_irreplaceable": "Третий независимый арендодатель. Каждый следующий снижает риск монополии облаков-гигантов на инференс, но по отдельности они малы.",
+        "what_breaks_it": "Сжатие финансирования независимых облаков.",
+        "phase": "scaling",
+        "ticker": null,
+        "geo": "US",
+        "revenue_usd_b": 0.5
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 35,
+          "why": "Независимых облаков несколько"
+        },
+        "lock_in_depth": {
+          "value": 30,
+          "why": "Задевает только облачный слой"
+        },
+        "time_to_replace": {
+          "value": 40,
+          "why": "Аналог запускается за год"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+          "quote": "Nvidia has made significant investments in several AI Neoclouds.",
+          "published": "2026-02-13",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "2"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "nvidia__lambda__hedges_against",
+          "source": "nvidia",
+          "target": "lambda",
+          "type": "hedges_against",
+          "direction": "downstream",
+          "role": "вверх по стеку",
+          "counterparty": "nvidia",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "nvidia"
+          ],
+          "note": "Третье независимое облако: каждое следующее снижает долю гигантов в аренде вычислений.",
+          "evidence": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+              "self": "nvidia",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+              "quote": "Nvidia has made significant investments in several AI Neoclouds.",
+              "self": null,
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "nvidia__lambda__supplies",
+          "source": "nvidia",
+          "target": "lambda",
+          "type": "supplies",
+          "direction": "downstream",
+          "role": "вверх по стеку",
+          "counterparty": "nvidia",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "nvidia"
+          ],
+          "note": "Небольшое независимое облако для исследователей работает на ускорителях NVIDIA.",
+          "evidence": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+              "self": "nvidia",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+              "quote": "Nvidia has made significant investments in several AI Neoclouds.",
+              "self": null,
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "nvidia__lambda__hedges_against",
+          "counterparty": "nvidia",
+          "type": "hedges_against",
+          "нужна цитата": "документ lambda, где названа связь с nvidia"
+        },
+        {
+          "edge": "nvidia__lambda__supplies",
+          "counterparty": "nvidia",
+          "type": "supplies",
+          "нужна цитата": "документ lambda, где названа связь с nvidia"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "a16z",
+      "name": "Andreessen Horowitz",
+      "type": "company",
+      "role": "capital",
+      "layers": [
+        "L14"
+      ],
+      "primary_layer": "L14",
+      "domains": [
+        "a16z.com"
+      ],
+      "cik": null,
+      "own_publisher": true,
+      "integration": 3,
+      "rank": 100,
+      "rotation_tier": "tail",
+      "core": false,
+      "rota_rank": 104,
+      "crit_rank": 100,
+      "rota_basis": "integration",
+      "profile_now": {
+        "one_liner": "Венчурный фонд, один из крупнейших инвесторов в компании вокруг ИИ.",
+        "why_irreplaceable": "Второй фонд того же класса. Наличие нескольких — причина, по которой венчурный капитал не бывает критичным.",
+        "what_breaks_it": "Сжатие венчурного финансирования.",
+        "phase": "mature",
+        "ticker": null,
+        "geo": "US",
+        "revenue_usd_b": null
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 30,
+          "why": "Венчурных фондов такого класса несколько"
+        },
+        "lock_in_depth": {
+          "value": 40,
+          "why": "Задевает модели и приложения"
+        },
+        "time_to_replace": {
+          "value": 35,
+          "why": "Найти замену капиталу — месяцы"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+          "published": "2026-02-25",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "1"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources",
+          "min_confirmed_edges"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "a16z__databricks__invests_in",
+          "source": "a16z",
+          "target": "databricks",
+          "type": "invests_in",
+          "direction": "downstream",
+          "role": "вниз по стеку",
+          "counterparty": "databricks",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [],
+          "note": "Венчурный капитал в платформе данных прикладного слоя.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+              "self": null,
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://raw.githubusercontent.com/huggingface/transformers/main/README.md",
+              "quote": "is the pivot across frameworks: if a model definition is supported, it will",
+              "self": null,
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "a16z__databricks__invests_in",
+          "counterparty": "databricks",
+          "type": "invests_in",
+          "нужна цитата": "документ a16z, где названа связь с databricks"
+        }
+      ],
+      "rejected_last_time": []
+    }
+  ]
+}

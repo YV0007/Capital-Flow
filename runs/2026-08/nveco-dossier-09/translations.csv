@@ -1,0 +1,55 @@
+kind,id,field,lang,text
+entity,foxconn,why_irreplaceability,en,Calls itself the world's largest electronics manufacturer and the largest AI server provider
+entity,foxconn,why_lock_in,en,Assembly runs against a specific customer platform rather than a standard catalogue
+entity,foxconn,why_time,en,Capacity of this scale comes online gradually: full year revenue reached NT$8.1 trillion
+entity,foxconn,why_concentration,en,"By its own count, the world's largest AI server provider"
+entity,tokyo-electron,why_irreplaceability,en,Its equipment covers four key wafer production processes at once
+entity,tokyo-electron,why_lock_in,en,A tool is qualified against the fab's route and is serviced by its maker
+entity,tokyo-electron,why_time,en,The company has operated since 1963 and stayed in research when competitors pulled out
+entity,tokyo-electron,why_concentration,en,"It makes, sells and services equipment across four key processes at once"
+entity,mlcommons,why_irreplaceability,en,A single benchmark suite accelerator vendors refer to when comparing
+entity,mlcommons,why_lock_in,en,Participation is voluntary: over 125 members and affiliates support the organization
+entity,mlcommons,why_time,en,89.7 k + performance results are accumulated; a new scale would have to earn comparability from scratch
+entity,mlcommons,why_concentration,en,10 benchmark suites and over 125 members inside one organization
+entity,triton,why_irreplaceability,en,An open environment supporting two vendors' accelerators at once
+entity,triton,why_lock_in,en,Code is written in an open repository and moves between supported accelerators
+entity,triton,why_time,en,"The project develops in the open and its aim is to remove a tie, not create one"
+entity,triton,why_concentration,en,"Its stated aim is to be an open alternative to CUDA, not to take its place alone"
+edge,triton__amd__optimizes_for,risk_mitigation,en,"Support is stated for two vendors at once, so neither is required"
+edge,triton__amd__optimizes_for,note,en,AMD accelerators on ROCm are supported alongside the other vendor's.
+edge,triton__nvidia__optimizes_for,risk_mitigation,en,"Support is stated for two vendors at once, so neither is required"
+edge,triton__nvidia__optimizes_for,note,en,NVIDIA accelerators from compute capability 8.0 are supported alongside others.
+entity,sglang,why_irreplaceability,en,"The serving framework is open, and projects of the same purpose stand beside it on the map"
+entity,sglang,why_lock_in,en,"It runs on two vendors' accelerators, on CPUs and on TPUs at once"
+entity,sglang,why_time,en,"Deployed at large scale with trillions of tokens a day, yet replaceable by another framework of the same layer"
+entity,sglang,why_concentration,en,"Adopted by laboratories, accelerator makers and clouds at the same time"
+edge,sglang__xai__delivers_to,risk_mitigation,en,The framework is open and the adopter is not tied to its maintenance
+edge,sglang__xai__delivers_to,note,en,Named first in the list of those who adopted the framework.
+edge,sglang__nvidia__optimizes_for,risk_mitigation,en,"AMD accelerators, Intel CPUs and Google TPUs are supported as well"
+edge,sglang__nvidia__optimizes_for,note,en,Runs on the vendor's accelerators and is named among the projects it adopted.
+edge,sglang__amd__optimizes_for,risk_mitigation,en,Support for several vendors is stated in one README line
+edge,sglang__amd__optimizes_for,note,en,AMD accelerators are supported alongside the other vendor's.
+edge,sglang__intel__optimizes_for,risk_mitigation,en,Support for several vendors is stated in one README line
+edge,sglang__intel__optimizes_for,note,en,Intel Xeon CPUs are named among the supported hardware.
+edge,sglang__oracle__delivers_to,risk_mitigation,en,The framework is adopted by several clouds at once
+edge,sglang__oracle__delivers_to,note,en,Named among the clouds that adopted the framework.
+edge,sglang__nebius__delivers_to,risk_mitigation,en,The framework is adopted by several clouds at once
+edge,sglang__nebius__delivers_to,note,en,Named among the cloud providers that adopted the framework.
+entity,mistral,why_irreplaceability,en,"A European laboratory with open weights, yet not the only one in its layer"
+entity,mistral,why_lock_in,en,Open weights themselves remove the lock closed laboratories hold
+entity,mistral,why_time,en,The laboratory was founded in April 2023 and went from a seed round to a Series C
+entity,mistral,why_concentration,en,Customers spread across industries: from semiconductor equipment to banks and carmakers
+edge,asml__mistral__customer_of,risk_mitigation,en,The customer is not tied to one laboratory: the weights are open and portable
+edge,asml__mistral__customer_of,note,en,Named first by the laboratory in its own customer list.
+edge,snowflake__mistral__customer_of,risk_mitigation,en,The customer is not tied to one laboratory: the weights are open and portable
+edge,snowflake__mistral__customer_of,note,en,Named by the laboratory in its own customer list.
+edge,cisco__mistral__customer_of,risk_mitigation,en,The customer is not tied to one laboratory: the weights are open and portable
+edge,cisco__mistral__customer_of,note,en,Named by the laboratory in its own customer list.
+entity,lambda,why_irreplaceability,en,Rented capacity is sold by dozens of providers and moving between them is not technically locked
+entity,lambda,why_lock_in,en,"What is sold is a whole site — power, cooling and interconnects — not a single card"
+entity,lambda,why_time,en,"The company has operated since 2012, but its product is replaced by another site inside a contract term"
+entity,lambda,why_concentration,en,"From one GPU to hundreds of thousands — a wide range, but no exclusive share of the function"
+entity,a16z,why_irreplaceability,en,Venture capital flows into this layer from dozens of funds; no single one is exclusive
+entity,a16z,why_lock_in,en,"An investment gives a stake and a board seat, not a technical tie"
+entity,a16z,why_time,en,A source of capital changes inside a single round
+entity,a16z,why_concentration,en,Over $100B+ under management against dozens of comparable funds in the same layer
