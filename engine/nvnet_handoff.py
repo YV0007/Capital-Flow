@@ -1049,18 +1049,33 @@ def _changelog_md(cur, cl, net) -> str:
     return "\n".join(L)
 
 
-# Ярус ротации. Считается от `integration`, потому что вопрос ротации — «насколько
-# глубоко узел вшит в карту», а не «насколько он важен сам по себе». Ядро — верхние N,
-# средний ярус — следующая треть, хвост — остальное. Пороги живут здесь, а не в
-# конфиге, ровно до Фазы 2: она решает, считать ли ярус по максимуму из двух осей, и
-# тогда правило переезжает в YAML вместе с этим решением.
-MID_TIER_SHARE = 0.33
+# ЯРУС РОТАЦИИ — по ЛУЧШЕМУ из двух рангов, а не по одной интеграции.
+#
+# Фаза 0 задала этот вопрос и не стала решать его сама: «возможно, ярус должен
+# считаться по максимуму из двух осей». Фаза 2 решила — да, и вот почему.
+#
+# По интеграции ASML 52-я, Carl Zeiss SMT 108-й из 108. По критичности они же 7-я и
+# 9-й. Ярус от одной интеграции отправил бы обоих в квартальный и триггерный циклы,
+# то есть исследовал бы РЕЖЕ ВСЕГО те узлы, про которые карта знает МЕНЬШЕ ВСЕГО.
+# Низкая интеграция такого узла — в большой мере мера нашего незнания о нём: у ASML
+# на карте три связи не потому, что их три, а потому, что их никто не искал. Ротация,
+# считающая ярус по интеграции, закрепляла бы это незнание навсегда.
+#
+# `core` в payload при этом остаётся ЧИСТО интеграционным: контракт определяет его
+# как топ-30 по integration, дашборд ранжирует по нему. Ярус ротации и состав ядра —
+# два разных вопроса, и слить их в одно понятие значило бы повторить ошибку якоря,
+# который делал три работы сразу. Поэтому rota_tier='core' и core=1 расходятся, и
+# расхождение записано колонкой `rota_basis`: по какой оси узел попал в свой ярус.
+#
+# Пороги — config/nveco_scope.yaml, блок `rotation`.
 
 
-def rotation_tier(rank: int, total: int, core_n: int) -> str:
+def rotation_tier(rank: int, total: int, core_n: int, mid_share: float = None) -> str:
+    if mid_share is None:
+        mid_share = nveco.rotation_cfg()["mid_share"]
     if rank < core_n:
         return "core"
-    return "mid" if rank < core_n + round((total - core_n) * MID_TIER_SHARE) else "tail"
+    return "mid" if rank < core_n + round((total - core_n) * mid_share) else "tail"
 
 
 def persist_integration(month: str, payload: dict) -> int:
@@ -1076,19 +1091,49 @@ def persist_integration(month: str, payload: dict) -> int:
                      degree INTEGER, betweenness REAL, pagerank REAL,
                      layers_spanned INTEGER, edge_types INTEGER, cycles INTEGER,
                      rank INTEGER, core INTEGER, rota_tier TEXT)""")
+    for col, decl in (("crit_rank", "INTEGER"), ("rota_rank", "INTEGER"),
+                      ("rota_basis", "TEXT")):
+        if col not in {r[1] for r in con.execute("PRAGMA table_info(nvnet_integration)")}:
+            con.execute(f"ALTER TABLE nvnet_integration ADD COLUMN {col} {decl}")
     ents = sorted(payload["entities"], key=lambda e: (-e["integration"]["score"],
                                                       -e["integration"]["degree"], e["id"]))
+    rot = nveco.rotation_cfg()
     core_n = nveco.core_n()
+    int_rank = {e["id"]: i for i, e in enumerate(ents)}
+    # Второй ранг — по критичности. Ничьи разрешаются так же, как у интеграции
+    # (по степени, затем по id), иначе ярус прыгал бы между прогонами на одних
+    # и тех же данных.
+    by_crit = sorted(payload["entities"],
+                     key=lambda e: (-(e.get("criticality") or 0),
+                                    -e["integration"]["degree"], e["id"]))
+    crit_rank = {e["id"]: i for i, e in enumerate(by_crit)}
+    basis = rot["basis"]
     con.execute("DELETE FROM nvnet_integration")
-    for rank, e in enumerate(ents):
+    rows = []
+    for e in ents:
+        ir, cr = int_rank[e["id"]], crit_rank[e["id"]]
+        if basis == "integration":
+            rr, why = ir, "integration"
+        elif basis == "criticality":
+            rr, why = cr, "criticality"
+        else:
+            rr = min(ir, cr)
+            why = "integration" if ir <= cr else "criticality"
+        rows.append((e, ir, cr, rr, why))
+    # Ранг ротации пересортировывается заново: min() двух рангов даёт дубли, а ярус
+    # обязан быть сплошным порядком, иначе «верхние 30» окажутся не тридцатью.
+    rows.sort(key=lambda x: (x[3], x[1], x[0]["id"]))
+    for pos, (e, ir, cr, rr, why) in enumerate(rows):
         ig = e["integration"]
         con.execute("""INSERT INTO nvnet_integration (entity_id, run_month, score, degree,
                          betweenness, pagerank, layers_spanned, edge_types, cycles,
-                         rank, core, rota_tier) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)""",
+                         rank, core, rota_tier, crit_rank, rota_rank, rota_basis)
+                       VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
                     (e["id"], month, ig["score"], ig["degree"], ig["betweenness"],
                      ig["pagerank"], ig["layersSpanned"], ig["edgeTypes"], ig["cycles"],
-                     rank + 1, 1 if e.get("core") else 0,
-                     rotation_tier(rank, len(ents), core_n)))
+                     ir + 1, 1 if e.get("core") else 0,
+                     rotation_tier(pos, len(rows), rot["core_n"], rot["mid_share"]),
+                     cr + 1, pos + 1, why))
     con.commit()
     con.close()
     return len(ents)

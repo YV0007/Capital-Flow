@@ -295,3 +295,25 @@ CREATE TABLE IF NOT EXISTS nveco_candidate (
     decided_month TEXT,
     entity_id     TEXT                     -- id на карте, если принят или уже стоит
 );
+
+-- Отработанные досье. Ровно эта таблица отвечает на вопрос «покрыт ли узел», от
+-- которого зависят ДВА разных механизма:
+--
+--   ротация  — когда узлу пора в следующий раз (каденция яруса от last_month);
+--   членство — можно ли вообще применять к нему min_sources / min_self_sources.
+--
+-- Второе — правка спеки по итогам Фазы 0. Проверять на «≥3 источника» узел, до
+-- которого ещё не дошла очередь ротации, значит наказывать за отсутствие
+-- ИССЛЕДОВАНИЯ, а не за отсутствие оснований. Непокрытый узел несёт pendingDossier
+-- и не ретируется; ретируется только тот, кого посмотрели и кому нечего предъявить.
+CREATE TABLE IF NOT EXISTS nveco_dossier_run (
+    entity_id  TEXT NOT NULL,
+    month      TEXT NOT NULL,
+    batch      TEXT NOT NULL,
+    tier       TEXT,                       -- ярус, по которому узел попал в пакет
+    sources    INTEGER NOT NULL DEFAULT 0, -- сколько источников профиля принесло досье
+    self_srcs  INTEGER NOT NULL DEFAULT 0, -- из них собственных
+    edges      INTEGER NOT NULL DEFAULT 0,
+    created_at TEXT NOT NULL DEFAULT (datetime('now')),
+    PRIMARY KEY (entity_id, month)
+);

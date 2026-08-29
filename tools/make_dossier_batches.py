@@ -31,8 +31,13 @@ watchlist; здесь — ОДИН УЗЕЛ, сделанный как след�
 сегодня собирал то, что ротация закажет завтра.
 
 Usage:
-  python tools/make_dossier_batches.py <YYYY-MM> [--tier core|mid|tail|all]
-                                       [--size 8] [--ids a,b,c]
+  python tools/make_dossier_batches.py <YYYY-MM> [--tier core|mid|tail|all|due]
+                                       [--size 8] [--ids a,b,c] [--start 1]
+
+`--tier=due` — то, что заказывает РОТАЦИЯ на этот месяц: ядро ежемесячно, средний
+ярус ежеквартально, хвост по триггеру или устарелости, с причиной на каждого узла.
+Что не влезло в месячный бюджет, печатается отдельной строкой: тихая обрезка читается
+как «покрыли всё» там, где покрыто сорок из ста.
 """
 
 import csv
@@ -47,6 +52,73 @@ BATCH_SIZE = 8
 DOSSIER_DIR = "nveco-dossier-{:02d}"
 
 
+def _months_between(a: str, b: str) -> int:
+    """Сколько месяцев прошло от a до b. Оба — 'YYYY-MM'."""
+    ay, am = int(a[:4]), int(a[5:7])
+    by, bm = int(b[:4]), int(b[5:7])
+    return (by - ay) * 12 + (bm - am)
+
+
+def _due(con, month: str, tiers: dict) -> list:
+    """Кого ротация заказывает в ЭТОМ месяце, с причиной на каждого.
+
+    Три правила яруса, и ни одно не про «дошли руки»:
+
+      ядро          — каждый месяц;
+      средний ярус  — раз в квартал;
+      хвост         — по триггеру (новая связь коснулась узла после его последнего
+                      досье) либо по устарелости (полгода без подтверждения).
+
+    Узел, которого не исследовали ни разу, просрочен по определению: у него нет
+    даты, от которой каденцию можно отсчитать. Именно эти узлы и составляют долг
+    кампании, поэтому они идут первыми — внутри яруса по рангу ротации.
+    """
+    rot = nveco.rotation_cfg()
+    cadence = {"core": rot["core_cadence_months"], "mid": rot["mid_cadence_months"]}
+    last = {}
+    for r in con.execute("SELECT entity_id, MAX(month) m FROM nveco_dossier_run "
+                         "GROUP BY entity_id"):
+        last[r["entity_id"]] = r["m"]
+    # Триггер хвоста: связь, ПОДТВЕРЖДЁННАЯ позже последнего досье узла. У ребра нет
+    # колонки «когда завелось» — есть `last_confirmed`, месяц последнего прогона, в
+    # котором его заявили. Для триггера этого достаточно и даже честнее: вопрос
+    # хвоста — «изменилось ли что-то вокруг узла с тех пор, как мы его смотрели», а
+    # не «завелась ли строка ровно тогда-то».
+    touched = {}
+    for r in con.execute("SELECT source_id, target_id, last_confirmed FROM nveco_edge"):
+        when = r["last_confirmed"]
+        if not when:
+            continue
+        when = when[:7]
+        for side in (r["source_id"], r["target_id"]):
+            if side not in touched or when > touched[side]:
+                touched[side] = when
+
+    out = []
+    for eid, t in tiers.items():
+        tier, rank = t["tier"], t["rota_rank"] or t["rank"] or 999
+        seen = last.get(eid)
+        if not seen:
+            out.append((rank, eid, tier, "досье не отрабатывалось ни разу"))
+            continue
+        age = _months_between(seen, month)
+        if tier in cadence:
+            if age >= cadence[tier]:
+                out.append((rank, eid, tier,
+                            f"каденция яруса {cadence[tier]} мес., прошло {age}"))
+            continue
+        if age >= rot["tail_stale_months"]:
+            out.append((rank, eid, tier,
+                        f"хвост: {age} мес. без подтверждения при пороге "
+                        f"{rot['tail_stale_months']}"))
+        elif touched.get(eid) and touched[eid] > seen:
+            out.append((rank, eid, tier,
+                        f"хвост по триггеру: связь заведена в {touched[eid]}, "
+                        f"досье от {seen}"))
+    out.sort()
+    return out
+
+
 def _tiers(con) -> dict:
     """{id: (ярус, ранг, integration)} из последнего прогона сети."""
     has = con.execute("SELECT name FROM sqlite_master WHERE type='table' "
@@ -54,6 +126,8 @@ def _tiers(con) -> dict:
     if not has:
         return {}
     return {r["entity_id"]: {"tier": r["rota_tier"], "rank": r["rank"],
+                             "rota_rank": r["rota_rank"], "crit_rank": r["crit_rank"],
+                             "rota_basis": r["rota_basis"],
                              "integration": r["score"], "core": bool(r["core"])}
             for r in con.execute("SELECT * FROM nvnet_integration")}
 
@@ -132,6 +206,8 @@ def _entity_pack(con, eid: str, memb: dict, rejects: dict, tier: dict) -> dict:
         "own_publisher": nveco.has_own_publisher(eid),
         "integration": tier.get("integration"), "rank": tier.get("rank"),
         "rotation_tier": tier.get("tier"), "core": tier.get("core"),
+        "rota_rank": tier.get("rota_rank"), "crit_rank": tier.get("crit_rank"),
+        "rota_basis": tier.get("rota_basis"),
         "profile_now": {"one_liner": e["one_liner"],
                         "why_irreplaceable": e["why_irreplaceable"],
                         "what_breaks_it": e["what_breaks_it"],
@@ -148,17 +224,26 @@ def _entity_pack(con, eid: str, memb: dict, rejects: dict, tier: dict) -> dict:
     }
 
 
-def run(month: str, tier: str = "core", size: int = BATCH_SIZE, ids=None) -> dict:
+def run(month: str, tier: str = "core", size: int = BATCH_SIZE, ids=None,
+        start: int = 1) -> dict:
     con = nveco.connect()
     tiers = _tiers(con)
     memb = _membership(month)
 
+    due = []
     if ids:
         chosen = [i for i in ids if con.execute(
             "SELECT 1 FROM nveco_entity WHERE id=?", (i,)).fetchone()]
         missing = [i for i in ids if i not in chosen]
+    elif tier == "due":
+        due = _due(con, month, tiers)
+        budget = nveco.rotation_cfg()["monthly_budget"]
+        # Бюджет режет ХВОСТ очереди, и это записывается вслух: тихая обрезка
+        # читается как «покрыли всё», когда покрыто сорок из ста.
+        chosen = [eid for _, eid, _, _ in due][:budget]
+        missing = []
     else:
-        rows = [(v["rank"], k) for k, v in tiers.items()
+        rows = [(v["rota_rank"] or v["rank"], k) for k, v in tiers.items()
                 if tier == "all" or v["tier"] == tier]
         chosen = [k for _, k in sorted(rows)]
         missing = []
@@ -182,10 +267,10 @@ def run(month: str, tier: str = "core", size: int = BATCH_SIZE, ids=None) -> dic
     written = []
     for n in range(0, len(packs), size):
         batch = packs[n:n + size]
-        d = db.RUNS_DIR / month / DOSSIER_DIR.format(n // size + 1)
+        d = db.RUNS_DIR / month / DOSSIER_DIR.format(n // size + start)
         d.mkdir(parents=True, exist_ok=True)
         (d / "batch.json").write_text(json.dumps({
-            "month": month, "batch": n // size + 1,
+            "month": month, "batch": n // size + start,
             "tier": tier, "size": len(batch),
             "как читать": (
                 "1) ЧТО УЖЕ ЗНАЕМ — sources_now показывает, ЧЬИМ словом стоит профиль: "
@@ -206,13 +291,16 @@ def run(month: str, tier: str = "core", size: int = BATCH_SIZE, ids=None) -> dic
         written.append({"dir": str(d), "n": len(batch),
                         "ids": [b["id"] for b in batch]})
     return {"batches": written, "entities": len(packs), "missing": missing,
-            "tier": tier, "offmap_rejections": len(offmap)}
+            "tier": tier, "offmap_rejections": len(offmap),
+            "due": [{"id": e, "tier": t, "why": w} for _, e, t, w in due],
+            "over_budget": [{"id": e, "tier": t, "why": w}
+                            for _, e, t, w in due[len(chosen):]]}
 
 
 if __name__ == "__main__":
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     month = args[0] if args else nveco.current_month()
-    tier, size, ids = "core", BATCH_SIZE, None
+    tier, size, ids, start = "core", BATCH_SIZE, None, 1
     for a in sys.argv[1:]:
         if a.startswith("--tier="):
             tier = a.split("=", 1)[1]
@@ -220,12 +308,21 @@ if __name__ == "__main__":
             size = int(a.split("=", 1)[1])
         elif a.startswith("--ids="):
             ids = [x.strip() for x in a.split("=", 1)[1].split(",") if x.strip()]
-    out = run(month, tier, size, ids)
+        elif a.startswith("--start="):
+            # Догоняющий проход внутри уже начатого месяца: пакеты 01–05 отработаны,
+            # новые обязаны лечь рядом, а не поверх.
+            start = int(a.split("=", 1)[1])
+    out = run(month, tier, size, ids, start)
     print(f"ярус {out['tier']}: {out['entities']} узлов, {len(out['batches'])} пакетов")
     for b in out["batches"]:
         print(f"  {b['dir']}  {b['n']}: {', '.join(b['ids'])}")
     if out["missing"]:
         print(f"  нет на карте: {', '.join(out['missing'])}")
+    if out.get("over_budget"):
+        print(f"  СВЕРХ БЮДЖЕТА и в этот месяц НЕ ПОПАЛИ: "
+              f"{len(out['over_budget'])} узлов — "
+              f"{', '.join(x['id'] for x in out['over_budget'][:12])}"
+              + (" …" if len(out["over_budget"]) > 12 else ""))
     if out["offmap_rejections"]:
         print(f"  нерешённых отказов, чей предмет вне карты: "
               f"{out['offmap_rejections']} — лежат в каждом пакете")

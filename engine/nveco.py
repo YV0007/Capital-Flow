@@ -174,6 +174,17 @@ def membership_cfg() -> dict:
     return scope_cfg()["membership"]
 
 
+_ROTATION_DEFAULTS = {"basis": "best_of_two", "core_n": 30, "mid_share": 0.33,
+                      "core_cadence_months": 1, "mid_cadence_months": 3,
+                      "tail_stale_months": 6, "batch_size": 8, "monthly_budget": 40}
+
+
+def rotation_cfg() -> dict:
+    """Правила ротации. Пороги в конфиге, а не в коде: как часто исследовать узел —
+    это решение, и оно должно быть видно в YAML, а не в диффе Python."""
+    return {**_ROTATION_DEFAULTS, **(scope_cfg().get("rotation") or {})}
+
+
 def core_n() -> int:
     return int((scope_cfg().get("core") or {}).get("n", 30))
 

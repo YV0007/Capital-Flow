@@ -1,0 +1,1265 @@
+{
+  "month": "2026-08",
+  "batch": 6,
+  "tier": "core",
+  "size": 8,
+  "как читать": "1) ЧТО УЖЕ ЗНАЕМ — sources_now показывает, ЧЬИМ словом стоит профиль: self=null значит, что о сущности говорит кто-то другой. Такой профиль исследуется с нуля, а не дополняется. 2) ЧТО СВЕРЯТЬ — to_reconcile: связи, которые второй конец не подтверждал. Цитата из документов ЭТОГО узла поднимает их до bilateral, и это самая дешёвая работа пакета. 3) ЧЕГО НЕ ХВАТАЕТ — membership.fails: какие проверки узел сегодня не проходит. 4) ОТКАЗЫ — rejected_last_time: движок отверг эти строки с причиной, не присылайте их такими же. Тир источника, integration, core и sidedness вы НЕ пишете.",
+  "выход": "dossier.json рядом с этим файлом; формат — agents/eco-dossier.md",
+  "отклонено_и_на_карту_не_попало": [],
+  "entities": [
+    {
+      "id": "zeiss-smt",
+      "name": "Carl Zeiss SMT",
+      "type": "company",
+      "role": "producer",
+      "layers": [
+        "L1"
+      ],
+      "primary_layer": "L1",
+      "domains": [
+        "zeiss.com"
+      ],
+      "cik": null,
+      "own_publisher": true,
+      "integration": 2,
+      "rank": 108,
+      "rotation_tier": "core",
+      "core": false,
+      "rota_rank": 13,
+      "crit_rank": 8,
+      "rota_basis": "criticality",
+      "profile_now": {
+        "one_liner": "Единственный поставщик оптики для станков EUV: линзы, зеркала, коллекторы.",
+        "why_irreplaceable": "В отчёте ASML прямо назван единственным поставщиком оптики, с которым действует эксклюзивное соглашение. Это ограничение лежит выше самой ASML.",
+        "what_breaks_it": "ASML разрабатывает собственную оптику или квалифицирует второго поставщика.",
+        "phase": "mature",
+        "ticker": null,
+        "geo": "DE",
+        "revenue_usd_b": null
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 95,
+          "why": "Единственный поставщик, эксклюзивное соглашение"
+        },
+        "lock_in_depth": {
+          "value": 75,
+          "why": "Задевает станки и через них фабрики"
+        },
+        "time_to_replace": {
+          "value": 95,
+          "why": "Своя оптика такого класса — больше семи лет"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "quote": "Carl Zeiss SMT, our sole supplier of lenses, mirrors, illuminators, collectors",
+          "published": "2026-02-25",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "0"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources",
+          "min_confirmed_edges"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "zeiss-smt__asml__supplies",
+          "source": "zeiss-smt",
+          "target": "asml",
+          "type": "supplies",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "asml",
+          "status": "signal",
+          "sidedness": "single",
+          "claimed_by": [
+            "asml"
+          ],
+          "note": "Единственный поставщик оптики для станков, с эксклюзивным соглашением. Ограничение лежит выше самого производителя станков.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+              "quote": "Carl Zeiss SMT, our sole supplier of lenses, mirrors, illuminators, collectors",
+              "self": "asml",
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "zeiss-smt__asml__supplies",
+          "counterparty": "asml",
+          "type": "supplies",
+          "нужна цитата": "документ zeiss-smt, где названа связь с asml"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "taiwan",
+      "name": "Тайвань",
+      "type": "geopolitical",
+      "role": "state",
+      "layers": [
+        "L0"
+      ],
+      "primary_layer": "L0",
+      "domains": [
+        "gov.tw"
+      ],
+      "cik": null,
+      "own_publisher": true,
+      "integration": 8,
+      "rank": 36,
+      "rotation_tier": "core",
+      "core": false,
+      "rota_rank": 2,
+      "crit_rank": 1,
+      "rota_basis": "criticality",
+      "profile_now": {
+        "one_liner": "Территория, где физически делают почти весь передовой кремний для ИИ.",
+        "why_irreplaceable": "Равнозначная фабрика строится семь–десять лет. Перенос производства объявлен, но передовые узлы остаются здесь.",
+        "what_breaks_it": "Военный конфликт или блокада — сценарий с хвостовой вероятностью и полным обнулением поставок.",
+        "phase": "mature",
+        "ticker": null,
+        "geo": "TW",
+        "revenue_usd_b": null
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 95,
+          "why": "Другой территории с таким производством нет"
+        },
+        "lock_in_depth": {
+          "value": 90,
+          "why": "Задевает чипы, память, упаковку и всё, что выше"
+        },
+        "time_to_replace": {
+          "value": 95,
+          "why": "Равнозначное производство — семь лет и больше"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+          "quote": "Our largest customer in 2023 , 2024 and 2025 accounted for",
+          "published": "2026-04-16",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "2"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "taiwan__nvidia__geopolitically_dependent",
+          "source": "taiwan",
+          "target": "nvidia",
+          "type": "geopolitically_dependent",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "nvidia",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "nvidia"
+          ],
+          "note": "NVIDIA зависит от территории через фабрику: своих заводов у него нет вовсе.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC,",
+              "self": "nvidia",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+              "quote": "Our largest customer in 2023 , 2024 and 2025 accounted for",
+              "self": null,
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "taiwan__tsmc__geopolitically_dependent",
+          "source": "taiwan",
+          "target": "tsmc",
+          "type": "geopolitically_dependent",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "tsmc",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "tsmc"
+          ],
+          "note": "Всё передовое производство физически находится на этой территории. Это хвостовой риск с полным обнулением поставок.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+              "quote": "Our largest customer in 2023 , 2024 and 2025 accounted for",
+              "self": "tsmc",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC,",
+              "self": null,
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "taiwan__nvidia__geopolitically_dependent",
+          "counterparty": "nvidia",
+          "type": "geopolitically_dependent",
+          "нужна цитата": "документ taiwan, где названа связь с nvidia"
+        },
+        {
+          "edge": "taiwan__tsmc__geopolitically_dependent",
+          "counterparty": "tsmc",
+          "type": "geopolitically_dependent",
+          "нужна цитата": "документ taiwan, где названа связь с tsmc"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "netherlands",
+      "name": "Нидерланды",
+      "type": "geopolitical",
+      "role": "state",
+      "layers": [
+        "L0"
+      ],
+      "primary_layer": "L0",
+      "domains": [
+        "government.nl",
+        "rijksoverheid.nl"
+      ],
+      "cik": null,
+      "own_publisher": true,
+      "integration": 5,
+      "rank": 71,
+      "rotation_tier": "core",
+      "core": false,
+      "rota_rank": 15,
+      "crit_rank": 9,
+      "rota_basis": "criticality",
+      "profile_now": {
+        "one_liner": "Юрисдикция, откуда экспортируют станки для печати самых сложных чипов.",
+        "why_irreplaceable": "Единственный производитель этих станков находится здесь, поэтому голландские экспортные правила определяют, кто в мире может строить передовые фабрики.",
+        "what_breaks_it": "Появление станков такого класса вне юрисдикции.",
+        "phase": "mature",
+        "ticker": null,
+        "geo": "NL",
+        "revenue_usd_b": null
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 90,
+          "why": "Производитель EUV-станков один и он здесь"
+        },
+        "lock_in_depth": {
+          "value": 80,
+          "why": "Задевает фабрики и всё, что ниже по стеку"
+        },
+        "time_to_replace": {
+          "value": 90,
+          "why": "Построить производство станков вне страны — больше семи лет"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "quote": "ASML is currently the world’s only manufacturer of EUV lithography systems.",
+          "published": "2026-02-25",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "2"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "netherlands__asml__export_controlled_by",
+          "source": "netherlands",
+          "target": "asml",
+          "type": "export_controlled_by",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "asml",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "asml"
+          ],
+          "note": "Голландские правила решают, кто в мире может купить станки для печати передовых чипов.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+              "quote": "ASML is currently the world’s only manufacturer of EUV lithography systems.",
+              "self": "asml",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+              "quote": "These items now require an export license when shipped abroad.",
+              "self": "asml",
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "netherlands__tsmc__controls_access_to",
+          "source": "netherlands",
+          "target": "tsmc",
+          "type": "controls_access_to",
+          "direction": "downstream",
+          "role": "вниз по стеку",
+          "counterparty": "tsmc",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "tsmc"
+          ],
+          "note": "Голландская лицензия решает, может ли фабрика купить станки для передовых узлов. Шлюз стоит выше самой фабрики.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+              "quote": "These items now require an export license when shipped abroad.",
+              "self": null,
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+              "quote": "Some of the equipment is available from a limited number of",
+              "self": "tsmc",
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "netherlands__asml__export_controlled_by",
+          "counterparty": "asml",
+          "type": "export_controlled_by",
+          "нужна цитата": "документ netherlands, где названа связь с asml"
+        },
+        {
+          "edge": "netherlands__tsmc__controls_access_to",
+          "counterparty": "tsmc",
+          "type": "controls_access_to",
+          "нужна цитата": "документ netherlands, где названа связь с tsmc"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "south-korea",
+      "name": "Южная Корея",
+      "type": "geopolitical",
+      "role": "state",
+      "layers": [
+        "L0"
+      ],
+      "primary_layer": "L0",
+      "domains": [
+        "korea.kr"
+      ],
+      "cik": null,
+      "own_publisher": true,
+      "integration": 5,
+      "rank": 74,
+      "rotation_tier": "core",
+      "core": false,
+      "rota_rank": 30,
+      "crit_rank": 18,
+      "rota_basis": "criticality",
+      "profile_now": {
+        "one_liner": "Юрисдикция двух из трёх мировых производителей быстрой памяти для ускорителей.",
+        "why_irreplaceable": "Память HBM (стековая память рядом с чипом) делают три компании, две из них здесь. Перенос производства памяти — это годы и десятки миллиардов.",
+        "what_breaks_it": "Региональный конфликт или потеря обеими компаниями технологического лидерства.",
+        "phase": "mature",
+        "ticker": null,
+        "geo": "KR",
+        "revenue_usd_b": null
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 75,
+          "why": "Две из трёх компаний по памяти находятся здесь"
+        },
+        "lock_in_depth": {
+          "value": 70,
+          "why": "Задевает память и всё, что от неё зависит"
+        },
+        "time_to_replace": {
+          "value": 80,
+          "why": "Перенести производство памяти — пять лет и больше"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "quote": "We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung.",
+          "published": "2026-02-25",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "2"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "south-korea__samsung__geopolitically_dependent",
+          "source": "south-korea",
+          "target": "samsung",
+          "type": "geopolitically_dependent",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "samsung",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [],
+          "note": "И память, и производство чипов у этой компании сосредоточены в одной юрисдикции.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung.",
+              "self": null,
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC,",
+              "self": null,
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "south-korea__sk-hynix__geopolitically_dependent",
+          "source": "south-korea",
+          "target": "sk-hynix",
+          "type": "geopolitically_dependent",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "sk-hynix",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "sk-hynix"
+          ],
+          "note": "Производство быстрой памяти сосредоточено в одной стране рядом с зоной военного риска.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung.",
+              "self": null,
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://news.skhynix.com/en/skhynix-nvidia-partnership-2026/",
+              "quote": "SK Group and NVIDIA today announced plans for a $500 billion plus comprehensive",
+              "self": "sk-hynix",
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "south-korea__samsung__geopolitically_dependent",
+          "counterparty": "samsung",
+          "type": "geopolitically_dependent",
+          "нужна цитата": "документ south-korea, где названа связь с samsung"
+        },
+        {
+          "edge": "south-korea__sk-hynix__geopolitically_dependent",
+          "counterparty": "sk-hynix",
+          "type": "geopolitically_dependent",
+          "нужна цитата": "документ south-korea, где названа связь с sk-hynix"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "kubernetes",
+      "name": "Kubernetes",
+      "type": "technology",
+      "role": "platform",
+      "layers": [
+        "L11"
+      ],
+      "primary_layer": "L11",
+      "domains": [
+        "kubernetes.io",
+        "github.com/kubernetes/"
+      ],
+      "cik": null,
+      "own_publisher": true,
+      "integration": 8,
+      "rank": 34,
+      "rotation_tier": "core",
+      "core": false,
+      "rota_rank": 28,
+      "crit_rank": 17,
+      "rota_basis": "criticality",
+      "profile_now": {
+        "one_liner": "Общий стандарт запуска контейнеров: на нём работает почти вся облачная инфраструктура.",
+        "why_irreplaceable": "Отраслевой стандарт вне зависимости от ИИ. Именно поэтому доступ ускорителей к нему обязателен для всех поставщиков железа.",
+        "what_breaks_it": "Смена парадигмы развёртывания приложений.",
+        "phase": "mature",
+        "ticker": null,
+        "geo": "US",
+        "revenue_usd_b": null
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 80,
+          "why": "Стандарт один на отрасль"
+        },
+        "lock_in_depth": {
+          "value": 75,
+          "why": "Задевает облака, инференс и приложения"
+        },
+        "time_to_replace": {
+          "value": 80,
+          "why": "Смена стандарта отраслью — больше пяти лет"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+          "published": "2026-02-25",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "3"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "arm__kubernetes__standardizes_on",
+          "source": "arm",
+          "target": "kubernetes",
+          "type": "standardizes_on",
+          "direction": "downstream",
+          "role": "вверх по стеку",
+          "counterparty": "arm",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "arm"
+          ],
+          "note": "Архитектура процессоров поддержана общим стандартом контейнеров наравне с остальными.",
+          "evidence": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+              "quote": "more than 350 billion Arm-based chips were reported as shipped cumulatively.",
+              "self": "arm",
+              "counter": false
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+              "quote": "we receive a per-unit royalty on substantially all chips shipped.",
+              "self": "arm",
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "nvidia__kubernetes__standardizes_on",
+          "source": "nvidia",
+          "target": "kubernetes",
+          "type": "standardizes_on",
+          "direction": "upstream",
+          "role": "вверх по стеку",
+          "counterparty": "nvidia",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "nvidia"
+          ],
+          "note": "Отраслевой стандарт запуска контейнеров: совместимость с ним обязательна для любого поставщика ускорителей.",
+          "evidence": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+              "self": "nvidia",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "Support for NVIDIA GPUs, AMD GPUs, Intel GPUs, and x86/ARM/PowerPC CPUs.",
+              "self": null,
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "ray__kubernetes__standardizes_on",
+          "source": "ray",
+          "target": "kubernetes",
+          "type": "standardizes_on",
+          "direction": "upstream",
+          "role": "вверх по стеку",
+          "counterparty": "ray",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [],
+          "note": "Оркестратор запускается поверх общего стандарта контейнеров.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+              "self": null,
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "vLLM is a fast and easy-to-use library for LLM inference and serving.",
+              "self": null,
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "arm__kubernetes__standardizes_on",
+          "counterparty": "arm",
+          "type": "standardizes_on",
+          "нужна цитата": "документ kubernetes, где названа связь с arm"
+        },
+        {
+          "edge": "nvidia__kubernetes__standardizes_on",
+          "counterparty": "nvidia",
+          "type": "standardizes_on",
+          "нужна цитата": "документ kubernetes, где названа связь с nvidia"
+        },
+        {
+          "edge": "ray__kubernetes__standardizes_on",
+          "counterparty": "ray",
+          "type": "standardizes_on",
+          "нужна цитата": "документ kubernetes, где названа связь с ray"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "micron",
+      "name": "Micron",
+      "type": "company",
+      "role": "producer",
+      "layers": [
+        "L4"
+      ],
+      "primary_layer": "L4",
+      "domains": [
+        "micron.com"
+      ],
+      "cik": null,
+      "own_publisher": true,
+      "integration": 8,
+      "rank": 35,
+      "rotation_tier": "mid",
+      "core": false,
+      "rota_rank": 45,
+      "crit_rank": 32,
+      "rota_basis": "criticality",
+      "profile_now": {
+        "one_liner": "Третий производитель HBM и единственный американский производитель памяти такого масштаба.",
+        "why_irreplaceable": "Второй источник памяти и единственный вне Кореи. Технологически догоняет, но его существование снижает зависимость от одной юрисдикции.",
+        "what_breaks_it": "Провал квалификации на новом поколении памяти.",
+        "phase": "mature",
+        "ticker": "NASDAQ: MU",
+        "geo": "US",
+        "revenue_usd_b": 25.1
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 60,
+          "why": "Один из трёх поставщиков памяти"
+        },
+        "lock_in_depth": {
+          "value": 65,
+          "why": "Задевает память и чипы"
+        },
+        "time_to_replace": {
+          "value": 75,
+          "why": "Нарастить долю — два-три года"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/707549/000070754926000037/lrcx-20260628.htm",
+          "quote": "included Micron Technology, Inc., Samsung Electronics Company, Ltd., SK hynix Inc., and Taiwan",
+          "published": "2026-08-07",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "4"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "lam-research__micron__supplies",
+          "source": "lam-research",
+          "target": "micron",
+          "type": "supplies",
+          "direction": "upstream",
+          "role": "вверх по стеку",
+          "counterparty": "lam-research",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "lam-research"
+          ],
+          "note": "Второй производитель памяти назван среди значимых клиентов.",
+          "evidence": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/707549/000070754926000037/lrcx-20260628.htm",
+              "quote": "included Micron Technology, Inc., Samsung Electronics Company, Ltd., SK hynix Inc., and Taiwan",
+              "self": "lam-research",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung.",
+              "self": null,
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "micron__nvidia__supplies",
+          "source": "micron",
+          "target": "nvidia",
+          "type": "supplies",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "nvidia",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "nvidia"
+          ],
+          "note": "Третий поставщик памяти и единственный вне Кореи: снижает зависимость от одной юрисдикции.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung.",
+              "self": "nvidia",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC,",
+              "self": "nvidia",
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "micron__sk-hynix__competes_with",
+          "source": "micron",
+          "target": "sk-hynix",
+          "type": "competes_with",
+          "direction": "lateral",
+          "role": "вниз по стеку",
+          "counterparty": "sk-hynix",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [],
+          "note": "Конкуренция за квалификацию памяти нового поколения у общего заказчика.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung.",
+              "self": null,
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC,",
+              "self": null,
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "nvidia__micron__diversifies_supply",
+          "source": "nvidia",
+          "target": "micron",
+          "type": "diversifies_supply",
+          "direction": "downstream",
+          "role": "вверх по стеку",
+          "counterparty": "nvidia",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "nvidia"
+          ],
+          "note": "Американский поставщик памяти держится как страховка от концентрации памяти в одной стране.",
+          "evidence": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung.",
+              "self": "nvidia",
+              "counter": false
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC,",
+              "self": "nvidia",
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "lam-research__micron__supplies",
+          "counterparty": "lam-research",
+          "type": "supplies",
+          "нужна цитата": "документ micron, где названа связь с lam-research"
+        },
+        {
+          "edge": "micron__nvidia__supplies",
+          "counterparty": "nvidia",
+          "type": "supplies",
+          "нужна цитата": "документ micron, где названа связь с nvidia"
+        },
+        {
+          "edge": "micron__sk-hynix__competes_with",
+          "counterparty": "sk-hynix",
+          "type": "competes_with",
+          "нужна цитата": "документ micron, где названа связь с sk-hynix"
+        },
+        {
+          "edge": "nvidia__micron__diversifies_supply",
+          "counterparty": "nvidia",
+          "type": "diversifies_supply",
+          "нужна цитата": "документ micron, где названа связь с nvidia"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "china",
+      "name": "Китай",
+      "type": "geopolitical",
+      "role": "state",
+      "layers": [
+        "L0"
+      ],
+      "primary_layer": "L0",
+      "domains": [
+        "gov.cn"
+      ],
+      "cik": null,
+      "own_publisher": true,
+      "integration": 8,
+      "rank": 37,
+      "rotation_tier": "mid",
+      "core": false,
+      "rota_rank": 48,
+      "crit_rank": 34,
+      "rota_basis": "criticality",
+      "profile_now": {
+        "one_liner": "Рынок, закрытый экспортными правилами США, и одновременно родина DeepSeek и Huawei.",
+        "why_irreplaceable": "Второй по величине рынок, куда продавать нельзя без лицензии. Заместить его выручкой из других стран пока не получилось.",
+        "what_breaks_it": "Снятие ограничений или, наоборот, полный запрет — оба сценария меняют картину резко.",
+        "phase": "at_risk",
+        "ticker": null,
+        "geo": "CN",
+        "revenue_usd_b": null
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 70,
+          "why": "Рынок такого размера один"
+        },
+        "lock_in_depth": {
+          "value": 60,
+          "why": "Задевает выручку и цепочку материалов"
+        },
+        "time_to_replace": {
+          "value": 70,
+          "why": "Заместить рынок такого масштаба — годы"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "quote": "the U.S. government, or USG, announced export restrictions and export licensing requirements targeting",
+          "published": "2026-02-25",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "3"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "china__deepseek__controls_access_to",
+          "source": "china",
+          "target": "deepseek",
+          "type": "controls_access_to",
+          "direction": "downstream",
+          "role": "вниз по стеку",
+          "counterparty": "deepseek",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [],
+          "note": "Лаборатория работает под китайской юрисдикцией и под встречными ограничениями.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "the U.S. government, or USG, announced export restrictions and export licensing requirements targeting",
+              "self": null,
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "do business without an export license with entities on the U.S. Department of Commerce’s U.S.",
+              "self": null,
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "china__nvidia__subject_to_restriction",
+          "source": "china",
+          "target": "nvidia",
+          "type": "subject_to_restriction",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "nvidia",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "nvidia"
+          ],
+          "note": "Второй по величине рынок, куда продавать нельзя без лицензии. Ограничение действует в обе стороны.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "the U.S. government, or USG, announced export restrictions and export licensing requirements targeting",
+              "self": "nvidia",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "do business without an export license with entities on the U.S. Department of Commerce’s U.S.",
+              "self": "nvidia",
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "nvidia__china__subject_to_restriction",
+          "source": "nvidia",
+          "target": "china",
+          "type": "subject_to_restriction",
+          "direction": "downstream",
+          "role": "вверх по стеку",
+          "counterparty": "nvidia",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "nvidia"
+          ],
+          "note": "Обратная сторона ограничения: доля выручки из региона резко сократилась.",
+          "evidence": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "the U.S. government, or USG, announced export restrictions and export licensing requirements targeting",
+              "self": "nvidia",
+              "counter": false
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "do business without an export license with entities on the U.S. Department of Commerce’s U.S.",
+              "self": "nvidia",
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "china__deepseek__controls_access_to",
+          "counterparty": "deepseek",
+          "type": "controls_access_to",
+          "нужна цитата": "документ china, где названа связь с deepseek"
+        },
+        {
+          "edge": "china__nvidia__subject_to_restriction",
+          "counterparty": "nvidia",
+          "type": "subject_to_restriction",
+          "нужна цитата": "документ china, где названа связь с nvidia"
+        },
+        {
+          "edge": "nvidia__china__subject_to_restriction",
+          "counterparty": "nvidia",
+          "type": "subject_to_restriction",
+          "нужна цитата": "документ china, где названа связь с nvidia"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "cfius",
+      "name": "CFIUS",
+      "type": "agency",
+      "role": "state",
+      "layers": [
+        "L15"
+      ],
+      "primary_layer": "L15",
+      "domains": [],
+      "cik": null,
+      "own_publisher": false,
+      "integration": 7,
+      "rank": 49,
+      "rotation_tier": "mid",
+      "core": false,
+      "rota_rank": 32,
+      "crit_rank": 20,
+      "rota_basis": "criticality",
+      "profile_now": {
+        "one_liner": "Межведомственный комитет, проверяющий иностранные инвестиции и сделки в США.",
+        "why_irreplaceable": "Может заблокировать покупку или партнёрство с иностранным участием. Обойти механизм нельзя, сделка просто не состоится.",
+        "what_breaks_it": "Смягчение режима проверки.",
+        "phase": "mature",
+        "ticker": null,
+        "geo": "US",
+        "revenue_usd_b": null
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 80,
+          "why": "Механизм проверки один"
+        },
+        "lock_in_depth": {
+          "value": 60,
+          "why": "Задевает сделки и партнёрства"
+        },
+        "time_to_replace": {
+          "value": 85,
+          "why": "Режим действует десятилетиями"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "quote": "do business without an export license with entities on the U.S. Department of Commerce’s U.S.",
+          "published": "2026-02-25",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "2"
+        },
+        "fails": [
+          "min_sources"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "cfius__mgx__controls_access_to",
+          "source": "cfius",
+          "target": "mgx",
+          "type": "controls_access_to",
+          "direction": "downstream",
+          "role": "вниз по стеку",
+          "counterparty": "mgx",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [],
+          "note": "Комитет проверяет иностранные инвестиции и может заблокировать сделку суверенного капитала.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "do business without an export license with entities on the U.S. Department of Commerce’s U.S.",
+              "self": null,
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://openai.com/index/announcing-the-stargate-project/",
+              "quote": "The initial equity funders in Stargate are SoftBank, OpenAI, Oracle, and MGX.",
+              "self": null,
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "cfius__nvidia__controls_access_to",
+          "source": "cfius",
+          "target": "nvidia",
+          "type": "controls_access_to",
+          "direction": "downstream",
+          "role": "вниз по стеку",
+          "counterparty": "nvidia",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "nvidia"
+          ],
+          "note": "Проверка иностранного участия удлиняет сроки партнёрств и покупок NVIDIA.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "do business without an export license with entities on the U.S. Department of Commerce’s U.S.",
+              "self": "nvidia",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "the U.S. government, or USG, announced export restrictions and export licensing requirements targeting",
+              "self": "nvidia",
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "cfius__mgx__controls_access_to",
+          "counterparty": "mgx",
+          "type": "controls_access_to",
+          "нужна цитата": "документ cfius, где названа связь с mgx"
+        },
+        {
+          "edge": "cfius__nvidia__controls_access_to",
+          "counterparty": "nvidia",
+          "type": "controls_access_to",
+          "нужна цитата": "документ cfius, где названа связь с nvidia"
+        }
+      ],
+      "rejected_last_time": []
+    }
+  ]
+}

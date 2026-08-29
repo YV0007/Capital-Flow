@@ -90,7 +90,7 @@ def split_one(path: Path, month: str) -> dict:
         raise SystemExit(f"{path}: dossier.json — массив объектов, по одному на сущность")
     out = {"entities": [], "factors": [], "edges": [], "sources": [],
            "descriptions": [], "i18n": [], "candidates": [], "errors": [],
-           "counters": 0, "confirms": 0}
+           "covered": [], "counters": 0, "confirms": 0}
 
     for d in data:
         eid = (d.get("id") or "").strip()
@@ -208,6 +208,19 @@ def split_one(path: Path, month: str) -> dict:
                     out["sources"].append(r)
             out["counters" if stance == "counters" else "confirms"] += 1
 
+        # --- отметка о покрытии. Пишется здесь, а не при загрузке, потому что
+        # «досье отработано» — это факт о работе агента, а не о том, сколько строк
+        # из неё пережило валидацию. Узел, чьё досье не нашло ничего, покрыт: его
+        # смотрели, и это ровно то, что нужно знать членству, чтобы отличить
+        # «нечего предъявить» от «до него не дошла очередь».
+        my_srcs = [r for r in rows if r["owner_key"] == eid]
+        out["covered"].append({
+            "entity_id": eid, "batch": path.parent.name,
+            "sources": len(my_srcs),
+            "self_srcs": sum(1 for r in my_srcs
+                             if nveco.is_self_source(r["url"], eid)),
+            "edges": len(d.get("edges") or [])})
+
         # --- кандидаты
         for c in d.get("candidates") or []:
             out["candidates"].append({
@@ -235,7 +248,7 @@ def run(month: str, only: str = None, check: bool = False) -> dict:
     dirs = sorted(p for p in base.iterdir()
                   if p.is_dir() and p.name.startswith("nveco-dossier")
                   and (only is None or p.name == only)) if base.is_dir() else []
-    stats, all_candidates, errors = [], [], []
+    stats, all_candidates, errors, covered = [], [], [], []
     for d in dirs:
         f = d / "dossier.json"
         if not f.exists():
@@ -262,6 +275,7 @@ def run(month: str, only: str = None, check: bool = False) -> dict:
             _write(dp, ["entity_id", "description_ru", "description_en"],
                    prev + o["descriptions"])
         all_candidates += o["candidates"]
+        covered += o["covered"]
         stats.append({"dir": d.name, "factors": len(o["factors"]),
                       "edges": len(o["edges"]), "sources": len(o["sources"]),
                       "descriptions": len(o["descriptions"]),
@@ -283,8 +297,26 @@ def run(month: str, only: str = None, check: bool = False) -> dict:
         queued["on_map"] = nveco_feedback.mark_on_map(con, month)
         con.commit()
         con.close()
+    if covered and not check:
+        con = nveco.connect()
+        tiers = {r["entity_id"]: r["rota_tier"] for r in
+                 con.execute("SELECT entity_id, rota_tier FROM nvnet_integration")} \
+            if con.execute("SELECT name FROM sqlite_master WHERE type='table' AND "
+                           "name='nvnet_integration'").fetchone() else {}
+        for c in covered:
+            con.execute("""INSERT INTO nveco_dossier_run
+                             (entity_id, month, batch, tier, sources, self_srcs, edges)
+                           VALUES (?,?,?,?,?,?,?)
+                           ON CONFLICT(entity_id, month) DO UPDATE SET
+                             batch=excluded.batch, tier=excluded.tier,
+                             sources=excluded.sources, self_srcs=excluded.self_srcs,
+                             edges=excluded.edges""",
+                        (c["entity_id"], month, c["batch"], tiers.get(c["entity_id"]),
+                         c["sources"], c["self_srcs"], c["edges"]))
+        con.commit()
+        con.close()
     return {"batches": stats, "errors": errors, "candidates": len(all_candidates),
-            "queue": queued}
+            "queue": queued, "covered": len(covered)}
 
 
 if __name__ == "__main__":
@@ -300,7 +332,8 @@ if __name__ == "__main__":
               + (f"  ОШИБОК {s['errors']}" if s["errors"] else ""))
     for e in out["errors"]:
         print("  ОШИБКА", e)
-    print(f"кандидатов всего: {out['candidates']}")
+    print(f"кандидатов всего: {out['candidates']}; досье отработано у "
+          f"{out.get('covered', 0)} узлов")
     q = out.get("queue") or {}
     if q:
         print(f"очередь в базе: новых {q.get('new', 0)}, повторно названо "
