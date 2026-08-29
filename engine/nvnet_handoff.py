@@ -250,9 +250,12 @@ def bilingualise(payload: dict, con) -> dict:
                         else w("entity", eid, f, e[f]))
         # description — как detail у связи: обе стороны пришли одной строкой CSV.
         if e.get("description") is not None:
-            e["description"] = i18n.wrap(idx, "entity", eid, "description",
-                                         fallback_ru=e["description"],
-                                         fallback_en=e.pop("_description_en", None))
+            # Та же причина, что у detail: пара приезжает одной строкой, и свежая
+            # английская сторона обязана победить перевод прежнего текста.
+            fresh_en = e.pop("_description_en", None)
+            e["description"] = (i18n.bi(e["description"], fresh_en) if fresh_en
+                                else i18n.wrap(idx, "entity", eid, "description",
+                                               fallback_ru=e["description"]))
         else:
             e.pop("_description_en", None)
         cw = e.get("criticalityWhy") or {}
@@ -269,11 +272,16 @@ def bilingualise(payload: dict, con) -> dict:
             x["note"] = (i18n.bi(x["note"], fresh_en) if fresh_en
                          else w("edge", xid, "note", x["note"]))
         if x.get("detail") is not None:
-            # Английская сторона пришла тем же CSV и лежит рядом: склад переводов для
-            # неё не нужен, но если он есть — он побеждает, как и у прочей прозы.
-            x["detail"] = i18n.wrap(idx, "edge", xid, "detail",
-                                    fallback_ru=x["detail"],
-                                    fallback_en=x.pop("_detail_en", None))
+            # СВЕЖАЯ ПАРА ПОБЕЖДАЕТ СКЛАД. Обе стороны приезжают одной строкой CSV, и
+            # если строка переписана, то склад хранит перевод СТАРОГО текста. Раньше
+            # побеждал склад — и первый же переписанный разбор уехал бы с русским
+            # текстом о новых величинах и английским о старых. Поймал это валидатор
+            # чисел: в английской стороне осталась цифра, которой в новом реестре
+            # фактов уже нет.
+            fresh_en = x.pop("_detail_en", None)
+            x["detail"] = (i18n.bi(x["detail"], fresh_en) if fresh_en
+                           else i18n.wrap(idx, "edge", xid, "detail",
+                                          fallback_ru=x["detail"]))
         else:
             x.pop("_detail_en", None)
         if (x.get("risk") or {}).get("mitigation") is not None:
@@ -700,6 +708,48 @@ def _check_facts(payload: dict) -> list:
     return errs
 
 
+# ОБЕЗЛИЧИВАНИЕ. Ровно то, ради чего перевёрнут порядок работы: когда текст пишется
+# вокруг цитаты, в него переезжает язык цитаты — «one customer», «the designer», — и
+# карта, весь смысл которой в том, чтобы называть, перестаёт называть. Список
+# двуязычный, потому что провал случился именно в английской стороне.
+FACELESS = (
+    "the designer", "the custom-accelerator", "one customer", "its main rival",
+    "the vendor's own", "the supplier's own", "the foundry's own",
+    "крупный облачный провайдер", "его главный конкурент",
+    "проектировщик заказных", "тот же поставщик",
+)
+
+
+def _faceless(text: str) -> list:
+    low = (text or "").lower()
+    return [p for p in FACELESS if p in low]
+
+
+def _faceless_prose(payload: dict) -> list:
+    """Перифраз вместо имени — ошибка ТОЛЬКО у переписанных объектов.
+
+    Правило включается по объекту, как и правило чисел: у кого есть реестр фактов,
+    тот исследован заново и обязан называть стороны. У остальных это долг, и он
+    считается в отчёте прогона — иначе правило было бы невключаемым.
+    """
+    errs = []
+    for kind, seq, name in (("edge", payload["edges"], "связь"),
+                            ("entity", payload["entities"], "сущность")):
+        for obj in seq:
+            if not obj.get("facts"):
+                continue
+            for field in ("note", "detail", "description", "oneLiner"):
+                v = obj.get(field)
+                if not isinstance(v, dict):
+                    continue
+                for lang in ("ru", "en"):
+                    for phrase in _faceless(v.get(lang)):
+                        errs.append(f"{name} {obj['id']}: {field}.{lang} говорит "
+                                    f"«{phrase}» вместо имени — объект исследован "
+                                    f"заново и обязан называть стороны")
+    return errs
+
+
 def prose_debt(payload: dict) -> dict:
     """Кто ещё держит числа прозы на цитатах, а не на реестре.
 
@@ -707,7 +757,7 @@ def prose_debt(payload: dict) -> dict:
     реестра работает по-старому; но молча это оставлять нельзя, иначе переход
     остановится на первой же сотне и никто этого не заметит.
     """
-    rewritten, debt, one_doc = [], [], []
+    rewritten, debt, one_doc, faceless = [], [], [], []
     for kind, seq, fields in (
             ("edge", payload["edges"], ("note", "detail")),
             ("entity", payload["entities"], ("oneLiner", "description"))):
@@ -722,6 +772,8 @@ def prose_debt(payload: dict) -> dict:
                     if isinstance(v, dict):
                         texts += [v.get("ru") or "", v.get("en") or ""]
             has_numbers = any(_numbers(t) for t in texts)
+            if any(_faceless(t) for t in texts):
+                faceless.append(obj["id"])
             if obj.get("facts"):
                 rewritten.append(obj["id"])
                 if nveco_facts.one_document(obj["facts"]):
@@ -729,7 +781,7 @@ def prose_debt(payload: dict) -> dict:
             elif has_numbers:
                 debt.append(obj["id"])
     return {"rewritten": sorted(rewritten), "debt": sorted(debt),
-            "oneDocument": sorted(one_doc)}
+            "oneDocument": sorted(one_doc), "faceless": sorted(faceless)}
 
 
 # ── валидатор ────────────────────────────────────────────────────────────────
@@ -935,6 +987,7 @@ def validate(payload: dict) -> list:
     errs += _check_detail(payload)
     errs += _check_description(payload)
     errs += _check_facts(payload)
+    errs += _faceless_prose(payload)
 
     # PageRank — доля важности, и сумма долей обязана равняться единице. Расхождение
     # означает, что мера посчитана на другом множестве узлов или обрезана после

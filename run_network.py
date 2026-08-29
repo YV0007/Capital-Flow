@@ -107,6 +107,9 @@ def main(month: str, do_deliver: bool = False, offline: bool = False) -> int:
     pr = h["prose"]
     print(f"[реестр]  величины лежат у {len(pr['rewritten'])} объектов; "
           f"числа на цитатах, а не в реестре, ещё у {len(pr['debt'])} — это долг")
+    if pr["faceless"]:
+        print(f"          перифраз вместо имени ещё у {len(pr['faceless'])}: "
+              + ", ".join(pr["faceless"][:6]))
     if pr["oneDocument"]:
         print(f"          все расписки одного документа у {len(pr['oneDocument'])}: "
               + ", ".join(pr["oneDocument"][:6]))

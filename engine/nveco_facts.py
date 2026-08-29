@@ -54,6 +54,7 @@ UNITS = {"usd_b", "usd_m", "usd_k", "usd", "pct", "pp", "mw", "gw", "kwh",
 
 AS_OF_RE = re.compile(r"^\d{4}(-(0[1-9]|1[0-2])(-\d{2})?|-Q[1-4]|-H[12]|-FY)?$")
 _DIGIT = re.compile(r"\d")
+_CYRILLIC = re.compile(r"[А-Яа-яЁё]")
 
 
 def has_number(value: str) -> bool:
@@ -119,6 +120,14 @@ def validate_fact(row: dict, ids: set = None, where: str = "") -> list:
     if len(value) > 40:
         errs.append(f"{where}value длиной {len(value)} — это уже предложение, "
                     f"а не величина")
+    # ВЕЛИЧИНА — НЕ ПРОЗА. Двуязычная сторона факта это `label`; в `value` стоит
+    # число, дата или имя из источника, и переводить его не нужно и нельзя.
+    # Русский текст здесь означает, что подпись перепутали с величиной, — и он
+    # немедленно всплывает в аудите перевода на стороне дашборда как строка,
+    # которую английский читатель видит по-русски. Поймано ровно так.
+    if _CYRILLIC.search(value):
+        errs.append(f"{where}value «{value}» по-русски — величина не переводится, "
+                    f"а двуязычная подпись живёт в label")
 
     unit = (row.get("unit") or "").strip().lower()
     if unit and unit not in UNITS:
