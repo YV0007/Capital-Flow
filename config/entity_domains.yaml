@@ -39,7 +39,9 @@ entities:
   ase:                { domains: [aseglobal.com],                             from: known }
   asml:               { domains: [asml.com],                                  cik: "0000937966", from: sources }
   astera-labs:        { domains: [asteralabs.com],                            cik: "0001736297", from: sources }
-  bis:                { domains: [bis.doc.gov],                               from: known }
+  # Домен исправлен Фазой 1: bis.doc.gov больше не отдаёт страницы, пресс-релизы
+  # живут на bis.gov. Старый оставлен рядом — ссылки на него ещё встречаются.
+  bis:                { domains: [bis.gov, bis.doc.gov],                     from: sources }
   blackrock:          { domains: [blackrock.com],                             cik: "0002012383", from: external_ids }
   blackstone:         { domains: [blackstone.com],                            cik: "0001393818", from: external_ids }
   bloom-energy:       { domains: [bloomenergy.com],                           cik: "0001664703", from: sources }
@@ -59,10 +61,10 @@ entities:
   constellation:      { domains: [constellationenergy.com],                   from: sources }
   coreweave:          { domains: [coreweave.com],                             cik: "0001769628", from: sources }
   credo:              { domains: [credosemi.com],                             cik: "0001807794", from: sources }
-  crusoe:             { domains: [crusoe.ai, crusoeenergy.com],               from: known }
-  cuda:               { domains: [developer.nvidia.com/cuda, docs.nvidia.com/cuda], from: known }
-  databricks:         { domains: [databricks.com],                            from: known }
-  deepseek:           { domains: [deepseek.com, github.com/deepseek-ai/, raw.githubusercontent.com/deepseek-ai/], from: known }
+  crusoe:             { domains: [crusoe.ai, crusoeenergy.com],               from: sources }
+  cuda:               { domains: [developer.nvidia.com/cuda, docs.nvidia.com/cuda], from: sources }
+  databricks:         { domains: [databricks.com],                            from: sources }
+  deepseek:           { domains: [deepseek.com, github.com/deepseek-ai/, raw.githubusercontent.com/deepseek-ai/], from: sources }
   dell:               { domains: [dell.com],                                  from: known }
   delta-electronics:  { domains: [deltaww.com],                               from: known }
   digital-realty:     { domains: [digitalrealty.com],                         cik: "0001297996", from: sources }
@@ -75,7 +77,7 @@ entities:
   ge-vernova:         { domains: [gevernova.com],                             from: known }
   google:             { domains: [google.com, abc.xyz, blog.google, about.google], cik: "0001652044", from: sources }
   google-cloud:       { domains: [cloud.google.com],                          from: known }
-  google-deepmind:    { domains: [deepmind.google, deepmind.com],             from: known }
+  google-deepmind:    { domains: [deepmind.google, deepmind.com],             from: sources }
   hpe:                { domains: [hpe.com],                                   from: known }
   huggingface:        { domains: [huggingface.co, github.com/huggingface/, raw.githubusercontent.com/huggingface/], from: sources }
   intel:              { domains: [intel.com],                                 cik: "0000050863", from: sources }
@@ -100,7 +102,9 @@ entities:
   netherlands:        { domains: [government.nl, rijksoverheid.nl],           from: known }
   nim:                { domains: [developer.nvidia.com/nim, docs.nvidia.com/nim, build.nvidia.com], from: known }
   nvent:              { domains: [nvent.com],                                 cik: "0001720635", from: sources }
-  nventures:          { domains: [nvidia.com/en-us/ventures],                 from: known }
+  # Путь исправлен Фазой 1: nvidia.com/en-us/ventures отдаёт 404, страница живёт
+  # в /startups/. Домен из «known» стал подтверждённым собранным URL.
+  nventures:          { domains: [nvidia.com/en-us/startups/nventures, nvidia.com/en-us/nventures], from: sources }
   nvidia:             { domains: [nvidia.com],                                cik: "0001045810", from: sources }
   oklo:               { domains: [oklo.com],                                  cik: "0001849056", from: sources }
   openai:             { domains: [openai.com, github.com/openai/],            from: sources }
@@ -110,7 +114,7 @@ entities:
   ray:                { domains: [ray.io, anyscale.com, github.com/ray-project/], from: known }
   recursion:          { domains: [recursion.com],                             cik: "0001601830", from: sources }
   salesforce:         { domains: [salesforce.com],                            from: known }
-  samsung:            { domains: [samsung.com],                               from: known }
+  samsung:            { domains: [samsung.com],                               from: sources }
   sandisk:            { domains: [sandisk.com],                               from: known }
   schneider:          { domains: [se.com, schneider-electric.com],            from: known }
   schrodinger:        { domains: [schrodinger.com],                           from: known }
@@ -122,7 +126,7 @@ entities:
   siemens-eda:        { domains: [eda.sw.siemens.com],                        from: known }
   siemens-energy:     { domains: [siemens-energy.com],                        from: known }
   singapore:          { domains: [gov.sg],                                    from: known }
-  sk-hynix:           { domains: [skhynix.com],                               from: sources }
+  sk-hynix:           { domains: [skhynix.com],                               cik: "0002120882", from: sources }
   snowflake:          { domains: [snowflake.com],                             from: known }
   softbank:           { domains: [group.softbank],                            cik: "0001065521", from: external_ids }
   south-korea:        { domains: [korea.kr],                                  from: known }
@@ -134,7 +138,7 @@ entities:
   tokyo-electron:     { domains: [tel.com],                                   from: known }
   triton:             { domains: [github.com/triton-lang/, github.com/openai/triton, triton-lang.org], from: known }
   tsmc:               { domains: [tsmc.com],                                  cik: "0001046179", from: sources }
-  usa:                { domains: [whitehouse.gov, usa.gov],                   from: known }
+  usa:                { domains: [whitehouse.gov, usa.gov],                   from: sources }
   vertiv:             { domains: [vertiv.com],                                cik: "0001674101", from: sources }
   vllm:               { domains: [docs.vllm.ai, blog.vllm.ai, github.com/vllm-project/, raw.githubusercontent.com/vllm-project/], from: sources }
   wistron:            { domains: [wistron.com],                               from: known }

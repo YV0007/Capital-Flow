@@ -28,6 +28,16 @@ DFS_CAP = 400000        # предохранитель от разрастани
 
 def _graph(con):
     adj, meta, names = {}, {}, {}
+    # Английские имена сущностей — оттуда же, откуда их берёт выдача. Бренды в складе
+    # переводов не лежат и не должны: NVIDIA — это NVIDIA на обоих языках. А вот
+    # юрисдикции лежат, и без них английская подпись контура получалась с «Китай»
+    # посреди фразы. Это и поймал аудит перевода на стороне дашборда.
+    names_en = {}
+    if con.execute("SELECT 1 FROM sqlite_master WHERE type='table' "
+                   "AND name='i18n_text'").fetchone():
+        for r in con.execute("SELECT obj_id, text FROM i18n_text WHERE scope='nveco' "
+                             "AND kind='entity' AND field='name' AND lang='en'"):
+            names_en[r["obj_id"]] = r["text"]
     for r in con.execute(
             """SELECT e.id, e.type, e.spine, e.strength, e.status,
                       e.source_id AS s, e.target_id AS t,
@@ -48,7 +58,7 @@ def _graph(con):
         elif (-cand["strength"], cand["id"]) < (-cur["strength"], cur["id"]):
             meta[(r["s"], r["t"])] = cand
         names[r["s"]], names[r["t"]] = r["sname"], r["tname"]
-    return adj, meta, names
+    return adj, meta, names, names_en
 
 
 def find_cycles(adj, min_len=MIN_LEN, max_len=MAX_LEN, cap=DFS_CAP):
@@ -94,8 +104,11 @@ def classify(pairs) -> str:
 
 # Подпись контура строится из ГЛАГОЛОВ типов связей, а не пишется руками, —
 # поэтому второй язык не требует перевода: он собирается из verb_en, который
-# лежит рядом с verb в той же таксономии. Имена компаний не переводятся ни в
-# одной версии: они одинаковы в обеих.
+# лежит рядом с verb в той же таксономии. Имена компаний не переводятся: NVIDIA —
+# это NVIDIA на обоих языках. А вот ЮРИСДИКЦИИ переводятся, и их английские имена
+# берутся из склада переводов: без этого в английской подписи оставался «Китай».
+# На холодной базе склад ещё пуст (переводы грузит run_network), и подпись
+# получится с русским именем — следующий месячный прогон её перезапишет.
 _CYCLE_HEAD = {
     "sales":     ("Контур сбыта", "Sales loop"),
     "financing": ("Контур финансирования", "Financing loop"),
@@ -103,16 +116,18 @@ _CYCLE_HEAD = {
 }
 
 
-def _note(path, meta, names, kind):
+def _note(path, meta, names, kind, names_en=None):
     """(ru, en) — две параллельные подписи одного контура."""
+    names_en = names_en or {}
     types = nveco.edge_types()
     ru_parts, en_parts = [], []
     for a, b in zip(path, path[1:] + [path[0]]):
         etype = meta[(a, b)]["type"]
         spec = types.get(etype, {})
         na, nb = names.get(a, a), names.get(b, b)
+        ea, eb = names_en.get(a, na), names_en.get(b, nb)
         ru_parts.append(f"{na} —{spec.get('verb', etype)}→ {nb}")
-        en_parts.append(f"{na} —{spec.get('verb_en', etype)}→ {nb}")
+        en_parts.append(f"{ea} —{spec.get('verb_en', etype)}→ {eb}")
     ru_head, en_head = _CYCLE_HEAD[kind]
     return (f"{ru_head}: " + "; ".join(ru_parts),
             f"{en_head}: " + "; ".join(en_parts))
@@ -130,7 +145,7 @@ def run(month: str, scope_id: str = None) -> dict:
     scope_id = scope_id or nveco.SCOPE_ID
     con = nveco.connect()
     i18n.ensure(con)
-    adj, meta, names = _graph(con)
+    adj, meta, names, names_en = _graph(con)
     cycles = find_cycles(adj)
 
     def strength(path):
@@ -149,7 +164,7 @@ def run(month: str, scope_id: str = None) -> dict:
         edge_ids = [meta[p]["id"] for p in pairs]
         weakest = max((meta[p]["status"] for p in pairs),
                       key=lambda st: _STATUS_RANK.get(st, 99))
-        note_ru, note_en = _note(path, meta, names, kind)
+        note_ru, note_en = _note(path, meta, names, kind, names_en)
         rec = {"id": f"c{i}", "type": kind, "path": path + [path[0]],
                "edges": edge_ids, "note": note_ru, "noteEn": note_en,
                "weakest": weakest}
