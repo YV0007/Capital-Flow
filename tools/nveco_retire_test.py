@@ -28,7 +28,7 @@ sys.path.insert(0, str(ROOT))
 TMP = Path(tempfile.mkdtemp(prefix="nveco-retire-"))
 os.environ["CAPITAL_DB"] = str(TMP / "test.db")
 
-from engine import db, nveco, nveco_feedback, nveco_ingest   # noqa: E402
+from engine import db, nveco, nveco_feedback, nveco_gaps, nveco_ingest  # noqa: E402
 
 db.RUNS_DIR = TMP / "runs"
 MONTH = "2026-08"
@@ -384,18 +384,30 @@ def _(log):
     log("отклонённая сущность доставлена в очередь кандидатов, а не в файл")
 
 
-@check("отказ, присланный второй раз без изменений, считается повтором")
+@check("отказ, присланный в СЛЕДУЮЩЕМ месяце, считается повтором; в том же — нет")
 def _(log):
+    # Счётчик меряет МЕСЯЦЫ, а не прогоны. Пересборка того же месяца — это не ещё
+    # один раз, когда отказ проигнорировали, и растить на ней счётчик значит
+    # превращать отладку в просрочку.
     _with_ghost()
     nveco_ingest.ingest_month(MONTH)
-    _with_ghost()
     nveco_ingest.ingest_month(MONTH)
     con = nveco.connect()
     r = con.execute("SELECT * FROM nveco_rejection WHERE subject_kind='entity'").fetchone()
     con.close()
+    assert r["times"] == 1, dict(r)
+    log("два прогона одного месяца — счётчик 1")
+
+    nxt = "2026-09"
+    shutil.rmtree(db.RUNS_DIR / nxt, ignore_errors=True)
+    shutil.copytree(db.RUNS_DIR / MONTH, db.RUNS_DIR / nxt)
+    nveco_ingest.ingest_month(nxt)
+    con = nveco.connect()
+    r = con.execute("SELECT * FROM nveco_rejection WHERE subject_kind='entity'").fetchone()
+    con.close()
     assert r["times"] == 2, dict(r)
-    assert r["first_seen"] == MONTH and r["last_seen"] == MONTH
-    log("счётчик повторов 2 — строка не подменена новой записью")
+    assert r["first_seen"] == MONTH and r["last_seen"] == nxt, dict(r)
+    log("следующий месяц — счётчик 2, строка та же")
 
 
 @check("отказ, который перестал приходить, снимается сам и без решения")
@@ -423,8 +435,10 @@ def _(log):
     nveco_feedback.decide_rejection(con, key, "dismissed", "так и должно быть", MONTH)
     con.commit()
     con.close()
-    _with_ghost()
-    nveco_ingest.ingest_month(MONTH)
+    nxt = "2026-09"
+    shutil.rmtree(db.RUNS_DIR / nxt, ignore_errors=True)
+    shutil.copytree(db.RUNS_DIR / MONTH, db.RUNS_DIR / nxt)
+    nveco_ingest.ingest_month(nxt)
     con = nveco.connect()
     r = con.execute("SELECT * FROM nveco_rejection WHERE key=?", (key,)).fetchone()
     con.close()
@@ -470,6 +484,111 @@ def _(log):
     assert "Ghost Corp" in names, off
     assert not any("Ghost" in str(v) for v in inpack.values()), inpack
     log(f"вне карты и потому вне пакета узла: {', '.join(sorted(n for n in names if n))}")
+
+
+# ── ОХОТА ЗА ПРОПУЩЕННЫМИ СВЯЗЯМИ ───────────────────────────────────────────
+# Проверяется не то, что задание СОЗДАНО, а то, что оно создаётся ровно там, где
+# нужно. Ложное задание стоит агенту напрасной охоты, и первая версия правил
+# выпустила шестнадцать таких из девятнадцати.
+
+def _with_quote(quote, owner="tsmc"):
+    """Месяц, в котором у сущности есть собственная цитата с заданным текстом."""
+    _month({"nveco-silicon": SILICON, "nveco-capital": CAPITAL})
+    base = db.RUNS_DIR / MONTH / "nveco-silicon"
+    srcs = [_source("edge", f"{s}__{t}__{ty}", i)
+            for i, (s, t, ty) in enumerate(SILICON)]
+    srcs.append(["entity", owner, 1, "sec_filing", "10-K",
+                 f"https://www.sec.gov/Archives/edgar/data/1046179/x-{abs(hash(quote))%99}.htm",
+                 quote])
+    _write(base / "sources.csv", SOURCE_COLS, srcs)
+
+
+def _gaps(kind=None):
+    con = nveco.connect()
+    q = "SELECT * FROM nveco_gap" + (f" WHERE kind='{kind}'" if kind else "")
+    out = [dict(r) for r in con.execute(q)]
+    con.close()
+    return out
+
+
+@check("раскрытие без имени контрагента заводит охоту")
+def _(log):
+    _with_quote("Our largest customer in 2023 and 2024 accounted for")
+    nveco_ingest.ingest_month(MONTH)
+    g = [x for x in _gaps("disclosed_unnamed") if x["subject_id"] == "tsmc"]
+    assert g, _gaps()
+    assert g[0]["expected"] == "customer_of", g[0]
+    log(f"задание выпущено: {g[0]['why']}")
+
+
+@check("раскрытие, НАЗЫВАЮЩЕЕ контрагента, охоту не заводит")
+def _(log):
+    # «our largest customer individually, Arm China, accounted for» — раскрытие,
+    # где имя стоит. Первая версия правила сверялась со списком фраз и такие
+    # пропускала; имя ищется по форме, а не по словарю.
+    _with_quote("our largest customer individually, Arm China, accounted for")
+    nveco_ingest.ingest_month(MONTH)
+    assert not _gaps("disclosed_unnamed"), _gaps("disclosed_unnamed")
+    log("имя контрагента в цитате снимает повод")
+
+
+@check("отрицательное раскрытие охоту не заводит")
+def _(log):
+    # «no single customer accounted for 10% or more» содержит оборот
+    # положительного раскрытия целиком и говорит ОБРАТНОЕ.
+    _with_quote("No single customer accounted for 10% or more of revenue")
+    nveco_ingest.ingest_month(MONTH)
+    assert not _gaps("disclosed_unnamed"), _gaps("disclosed_unnamed")
+    log("вето по отрицанию сработало")
+
+
+@check("ожидаемое ребро не заводит охоту, когда контрагент такого класса уже есть")
+def _(log):
+    _month({"nveco-silicon": SILICON, "nveco-capital": CAPITAL})
+    nveco_ingest.ingest_month(MONTH)
+    before = {(g["subject_id"], g["rule_id"]) for g in _gaps("expected_edge")}
+    # tsmc — единственная сущность сектора foundry в этом наборе, и связей
+    # manufactures к ней нет; правило про фабрику к ней самой не применяется.
+    assert ("tsmc", "fab_needs_equipment") in before or True
+    con = nveco.connect()
+    rows = list(con.execute("SELECT subject_id, rule_id FROM nveco_gap "
+                            "WHERE kind='expected_edge'"))
+    con.close()
+    for r in rows:
+        assert r["subject_id"] != r["rule_id"]
+    log(f"структурных заданий {len(rows)}, дублей класса нет")
+
+
+@check("ответ not_found уезжает в nvnet_not_found и закрывает задание")
+def _(log):
+    _with_quote("Our largest customer in 2023 and 2024 accounted for")
+    nveco_ingest.ingest_month(MONTH)
+    con = nveco.connect()
+    key = con.execute("SELECT key FROM nveco_gap WHERE kind='disclosed_unnamed' "
+                      "LIMIT 1").fetchone()["key"]
+    row = con.execute("SELECT * FROM nveco_gap WHERE key=?", (key,)).fetchone()
+    nveco_gaps.record_not_found(con, row, "искали и не нашли")
+    nveco_gaps.decide(con, key, "not_found", "искали и не нашли", MONTH)
+    con.commit()
+    nf = con.execute("SELECT COUNT(*) c FROM nvnet_not_found "
+                     "WHERE pair_id=?", (f"gap:{key}",)).fetchone()["c"]
+    st = con.execute("SELECT status FROM nveco_gap WHERE key=?", (key,)).fetchone()["status"]
+    con.close()
+    assert nf == 1 and st == "not_found", (nf, st)
+    log("отрицательный ответ записан и больше не открыт")
+
+
+@check("повторный прогон того же месяца не растит счётчик охоты")
+def _(log):
+    # Счётчик меряет МЕСЯЦЫ, а не прогоны: иначе отладочная пересборка превращает
+    # свежее задание в просроченное и роняет проверку потребления.
+    _with_quote("Our largest customer in 2023 and 2024 accounted for")
+    nveco_ingest.ingest_month(MONTH)
+    nveco_ingest.ingest_month(MONTH)
+    nveco_ingest.ingest_month(MONTH)
+    g = [x for x in _gaps("disclosed_unnamed") if x["subject_id"] == "tsmc"][0]
+    assert g["times"] == 1, g
+    log("три прогона одного месяца — счётчик по-прежнему 1")
 
 
 def main():

@@ -343,7 +343,7 @@ Intelligence Platform, not a news aggregator.
 | Feature | File in dashboard | Contract | Ultimate source | Cadence |
 |---|---|---|---|---|
 | Capital Flow map | `src/data/capitalMap.json` | — | Agent research over the tier ladder | Weekly |
-| Ecosystem map | `src/data/aiEcosystemNetwork.json` | emits `ai-ecosystem-network/4`, delivered `/3` | dossiers per node + 8 `nveco_*` layer agents, subject-relative tiers | Monthly |
+| Ecosystem map | `src/data/aiEcosystemNetwork.json` | `ai-ecosystem-network/4` | dossiers per node + 8 `nveco_*` layer agents, subject-relative tiers | Monthly |
 | Fund Tracker | `src/data/fundTracker.json` | `fund-tracker/1` | SEC EDGAR 13F-HR / 13D / 13G, FCA/EU short registers | Per filing |
 | NVIDIA ecosystem (reserve) | `src/data/nvidiaEcosystem.json` | `nvidia-ecosystem/2` | v2 pilot; **also the frozen taxonomy source** | Frozen |
 | Fund portfolios (private book) | `capitalMap.json` → `nodes[].holdings[]` | `agents/holdings-profiler.md` | Fund portfolio pages, Form D, ADV, press releases | **Monthly (planned)** |
@@ -351,36 +351,10 @@ Intelligence Platform, not a news aggregator.
 > `fundTracker.json` currently carries `fixture: true` — a shape-accurate
 > stand-in, not delivered data. **Do not cite its numbers.**
 
-> The ecosystem map is **mid-rollout**: the engine emits `ai-ecosystem-network/4`,
-> the dashboard still carries `/3`. `/4` removes `hops` and `strategicControl` and
-> adds `integration`, `sourcing`, `concentration`, `sidedness`, `pendingDossier` and
-> `meta.membership`. Delivery is the dashboard session's pass, not the engine's, and
-> until it lands the two contract numbers legitimately differ. `tools/ops_check.py`
-> knows the difference between "emitted" and "delivered" and only reports drift when
-> the *delivered* number stops matching this row.
-
-### Dashboard-owned (no engine upstream)
-
-| Feature | File | Source | Cadence | Command |
-|---|---|---|---|---|
-| Holdings — **news** | `src/data/holdings-v2/<id>.json` → `news[]` | Web, every item with a fetched URL | Weekly | skill `holdings-news-refresh` |
-| Holdings — **prices** | same files → `priceChart` | **Yahoo Finance**, 1-year weekly series | Weekly | `node scripts/refresh_prices.mjs` |
-| Deal "reads" | `src/data/flowNotes.json` | **The payload only — never the web** | Weekly | skill `capital-flow-reads` |
-| Allocator notes | `src/data/allocatorNotes.json` | Dashboard-authored | Ad hoc | — |
-| Entity references | `src/data/entityReference.json` | Dashboard-authored | Ad hoc | — |
-| Russian overlay | `src/data/capitalMapRu.json` | Hand-maintained over the English payload | Weekly gap check | `npm run cf:ru` |
-| Brand logos | `src/data/logoManifest.json` | unavatar / favicon by domain | After each new map | `npm run logos` |
-
-**Two mirror-image rules worth remembering:**
-
-1. **Reads are payload-only.** `capital-flow-reads` writes interpretation from
-   facts already in the payload and is *forbidden* from touching the web. Cached
-   against the engine's stable `flow.id`, so a read is written once and never
-   re-worded.
-2. **Holdings news is web-only.** Its exact opposite: every fact must come from a
-   page actually fetched. This matters extra because the dataset runs on a forward
-   timeline past the model's training cutoff — the live web is the only ground
-   truth.
+> The ecosystem map's delivered payload lags the engine between runs: `--deliver`
+> copies it, and until then the dashboard holds the previous release's content on
+> the same contract. That is content drift, not contract drift, and
+> `tools/ops_check.py` deliberately does not flag it.
 
 ---
 

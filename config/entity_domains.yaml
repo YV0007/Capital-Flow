@@ -33,6 +33,7 @@ entities:
   amd:                { domains: [amd.com],                                   cik: "0000002488", from: sources }
   amkor:              { domains: [amkor.com],                                 cik: "0001047127", from: sources }
   anthropic:          { domains: [anthropic.com],                             from: sources }
+  apple:              { domains: [apple.com],                                cik: "0000320193", from: sources }
   applied-materials:  { domains: [appliedmaterials.com],                      cik: "0000006951", from: sources }
   arista:             { domains: [arista.com],                                cik: "0001596532", from: sources }
   arm:                { domains: [arm.com],                                   cik: "0001973239", from: sources }
@@ -110,6 +111,7 @@ entities:
   openai:             { domains: [openai.com, github.com/openai/],            from: sources }
   oracle:             { domains: [oracle.com],                                cik: "0001341439", from: external_ids }
   pytorch:            { domains: [pytorch.org, github.com/pytorch/, raw.githubusercontent.com/pytorch/], from: sources }
+  qualcomm:           { domains: [qualcomm.com],                             cik: "0000804328", from: sources }
   quanta:             { domains: [quantatw.com],                              from: known }
   ray:                { domains: [ray.io, anyscale.com, github.com/ray-project/], from: known }
   recursion:          { domains: [recursion.com],                             cik: "0001601830", from: sources }

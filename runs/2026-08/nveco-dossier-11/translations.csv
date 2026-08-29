@@ -6,7 +6,7 @@ entity,google-cloud,why_concentration,en,Its own accelerator makes the vertical 
 entity,google-cloud,one_liner,en,Google's cloud: the only one where a frontier lab can train on the owner's own silicon.
 entity,google-cloud,why_irreplaceable,en,"What sets it apart from other clouds is not scale but the vertical: its own accelerator, its own lab and its own training library in one stack. It can be replaced, but that vertical has no alternative."
 entity,google-cloud,what_breaks_it,en,Ending sales of capacity on its own silicon to outside labs.
-entity,google-cloud,geo_risk_note,en,Infrastructure spread across dozens of countries; the same restrictions as every other cloud.
+entity,google-cloud,risk_note,en,Infrastructure spread across dozens of countries; the same restrictions as every other cloud.
 edge,google-cloud__pytorch__integrates,risk_mitigation,en,"Two frameworks are supported at once, so neither is required"
 edge,google-cloud__pytorch__integrates,note,en,The cloud's tensor processors support it alongside JAX as a way to train on its own site.
 edge,google-cloud__jax__integrates,risk_mitigation,en,"Two frameworks are supported at once, so neither is required"

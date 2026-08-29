@@ -27,10 +27,10 @@
     ]
   },
   "totals": {
-    "entities": 108,
-    "edges": 295,
+    "entities": 110,
+    "edges": 302,
     "layers": 16,
-    "cycles": 225,
+    "cycles": 305,
     "techNodes": 10
   },
   "layers": [
@@ -102,7 +102,7 @@
       "band": 2,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1284,
+        "hhi": 0.0971,
         "top": [
           "tsmc",
           "broadcom",
@@ -273,7 +273,7 @@
       "band": 5,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1072,
+        "hhi": 0.1087,
         "top": [
           "openai",
           "anthropic",
@@ -380,6 +380,12 @@
       "key": "packaging",
       "label": "Упаковка кристаллов",
       "label_en": "Die packaging",
+      "layer": "L3"
+    },
+    {
+      "key": "fabless_silicon",
+      "label": "Проектировщики кремния",
+      "label_en": "Fabless silicon",
       "layer": "L3"
     },
     {
@@ -738,7 +744,7 @@
         {
           "layer": "L12",
           "primary": false,
-          "criticality": 36
+          "criticality": 30
         }
       ],
       "primaryLayer": "L9",
@@ -766,11 +772,11 @@
         "renormalized": false
       },
       "gravity": {
-        "reach": 6,
-        "layers": 5,
-        "edgeTypes": 7,
-        "cycles": 11,
-        "score": 33,
+        "reach": 7,
+        "layers": 6,
+        "edgeTypes": 8,
+        "cycles": 30,
+        "score": 37,
         "signals": {}
       },
       "domain": "aboutamazon.com",
@@ -1174,7 +1180,7 @@
         "reach": 5,
         "layers": 7,
         "edgeTypes": 4,
-        "cycles": 6,
+        "cycles": 12,
         "score": 33,
         "signals": {}
       },
@@ -1288,6 +1294,154 @@
         "byTier": {
           "1": 5,
           "2": 1
+        }
+      }
+    },
+    {
+      "id": "apple",
+      "name": "Apple",
+      "aliases": [
+        "Apple Inc."
+      ],
+      "type": "company",
+      "role": "producer",
+      "sector": "fabless_silicon",
+      "layers": [
+        {
+          "layer": "L3",
+          "primary": true,
+          "criticality": 76
+        }
+      ],
+      "primaryLayer": "L3",
+      "criticality": 76,
+      "criticalityFactors": {
+        "irreplaceability": 72,
+        "lockInDepth": 78,
+        "timeToReplace": 80,
+        "concentration": 74
+      },
+      "criticalityWhy": {
+        "irreplaceability": "Давний крупнейший заказчик передового узла; таких заказчиков единицы",
+        "lockInDepth": "Кремний проектируется под конкретный процесс конкретной фабрики",
+        "timeToReplace": "Второй площадки того же класса не существует, а своей фабрики у компании нет",
+        "concentration": "Забирает почти половину начальной ёмкости передового узла"
+      },
+      "criticalityBasis": {
+        "factorsUsed": 4,
+        "factors": [
+          "irreplaceability",
+          "lock_in_depth",
+          "time_to_replace",
+          "concentration"
+        ],
+        "renormalized": false
+      },
+      "gravity": {
+        "reach": 1,
+        "layers": 1,
+        "edgeTypes": 1,
+        "cycles": 0,
+        "score": 4,
+        "signals": {}
+      },
+      "domain": "apple.com",
+      "oneLiner": "Проектировщик кремния без единой фабрики: давний крупнейший заказчик передовых узлов.",
+      "whyIrreplaceable": "На карте важен не как продавец устройств, а как узел, который забирает большую часть первой партии самого передового процесса. Кто получил эту ёмкость, тот определил, что физически можно выпустить в этом году.",
+      "whatBreaksIt": "Переход на собственное производство или на второй передовой узел, которого пока нет.",
+      "phase": "mature",
+      "risk": {
+        "geopolitical": "high",
+        "note": "Ёмкость передового узла сосредоточена на одной территории.",
+        "exportRegime": null,
+        "concentration": null
+      },
+      "ticker": "NASDAQ: AAPL",
+      "publicPrivate": "public",
+      "geo": "US",
+      "founded": "1976",
+      "revenueUsdB": null,
+      "techNodes": [],
+      "domains": [
+        "apple.com"
+      ],
+      "cik": "0000320193",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false,
+      "sources": [
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Apple 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+          "published": "2025-10-31",
+          "fetched": null,
+          "alive": true,
+          "quote": "The Company designs, manufactures and markets smartphones, personal computers, tablets, wearables and accessories",
+          "confidence": 0.975,
+          "self": "apple",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Apple 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+          "published": "2025-10-31",
+          "fetched": null,
+          "alive": true,
+          "quote": "Total net sales $ 416,161 $ 391,035 $ 383,285",
+          "confidence": 0.975,
+          "self": "apple",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Apple 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+          "published": "2025-10-31",
+          "fetched": null,
+          "alive": true,
+          "quote": "representing a majority of the Company's total net sales, and the Company believes",
+          "confidence": 0.975,
+          "self": "apple",
+          "counter": false
+        },
+        {
+          "tier": 4,
+          "type": "press",
+          "title": "TrendForce: TSMC 2nm customer surge",
+          "url": "https://www.trendforce.com/news/2025/09/22/news-tsmc-2nm-customer-surge-15-clients-reportedly-secured-10-in-hpc/",
+          "published": "2025-09-22",
+          "fetched": null,
+          "alive": true,
+          "quote": "Apple, TSMC's long-standing top customer, is reportedly set to take nearly half",
+          "confidence": 0.8,
+          "self": null,
+          "counter": false
+        },
+        {
+          "tier": 4,
+          "type": "press",
+          "title": "TrendForce: Apple takes most of TSMC's 2nm capacity",
+          "url": "https://www.trendforce.com/news/2025/10/28/news-apple-reportedly-takes-most-of-tsmcs-2nm-capacity-for-a20-series-in-foldable-iphone-and-iphone-18/",
+          "published": "2025-10-28",
+          "fetched": null,
+          "alive": true,
+          "quote": "Commercial Times notes that Apple has already secured most of TSMC's initial 2nm capacity",
+          "confidence": 0.8,
+          "self": null,
+          "counter": false
+        }
+      ],
+      "sourcing": {
+        "total": 5,
+        "selfSourced": 3,
+        "byTier": {
+          "1": 3,
+          "4": 2
         }
       }
     },
@@ -2746,7 +2900,7 @@
         "reach": 10,
         "layers": 6,
         "edgeTypes": 10,
-        "cycles": 51,
+        "cycles": 73,
         "score": 44,
         "signals": {}
       },
@@ -3838,7 +3992,7 @@
         "reach": 6,
         "layers": 7,
         "edgeTypes": 4,
-        "cycles": 15,
+        "cycles": 24,
         "score": 34,
         "signals": {}
       },
@@ -4261,7 +4415,7 @@
         "reach": 12,
         "layers": 7,
         "edgeTypes": 7,
-        "cycles": 62,
+        "cycles": 77,
         "score": 47,
         "signals": {}
       },
@@ -4721,7 +4875,7 @@
         "reach": 3,
         "layers": 4,
         "edgeTypes": 4,
-        "cycles": 9,
+        "cycles": 13,
         "score": 24,
         "signals": {}
       },
@@ -6230,7 +6384,7 @@
         "reach": 6,
         "layers": 6,
         "edgeTypes": 6,
-        "cycles": 21,
+        "cycles": 27,
         "score": 34,
         "signals": {}
       },
@@ -6865,7 +7019,7 @@
         "reach": 10,
         "layers": 7,
         "edgeTypes": 9,
-        "cycles": 52,
+        "cycles": 62,
         "score": 45,
         "signals": {}
       },
@@ -8321,7 +8475,7 @@
         {
           "layer": "L3",
           "primary": false,
-          "criticality": 17
+          "criticality": 58
         },
         {
           "layer": "L8",
@@ -8353,11 +8507,11 @@
         "renormalized": true
       },
       "gravity": {
-        "reach": 1,
-        "layers": 3,
-        "edgeTypes": 1,
-        "cycles": 0,
-        "score": 7,
+        "reach": 2,
+        "layers": 4,
+        "edgeTypes": 2,
+        "cycles": 7,
+        "score": 21,
         "signals": {}
       },
       "domain": null,
@@ -8716,7 +8870,7 @@
         "reach": 6,
         "layers": 6,
         "edgeTypes": 3,
-        "cycles": 15,
+        "cycles": 19,
         "score": 32,
         "signals": {}
       },
@@ -8865,7 +9019,7 @@
         {
           "layer": "L12",
           "primary": false,
-          "criticality": 30
+          "criticality": 28
         }
       ],
       "primaryLayer": "L9",
@@ -8893,11 +9047,11 @@
         "renormalized": false
       },
       "gravity": {
-        "reach": 18,
-        "layers": 9,
-        "edgeTypes": 10,
-        "cycles": 43,
-        "score": 63,
+        "reach": 19,
+        "layers": 10,
+        "edgeTypes": 11,
+        "cycles": 69,
+        "score": 67,
         "signals": {}
       },
       "domain": "microsoft.com",
@@ -10191,7 +10345,7 @@
         "reach": 77,
         "layers": 15,
         "edgeTypes": 29,
-        "cycles": 218,
+        "cycles": 296,
         "score": 97,
         "signals": {}
       },
@@ -10514,11 +10668,11 @@
         "renormalized": false
       },
       "gravity": {
-        "reach": 12,
-        "layers": 8,
-        "edgeTypes": 11,
-        "cycles": 62,
-        "score": 51,
+        "reach": 13,
+        "layers": 9,
+        "edgeTypes": 12,
+        "cycles": 99,
+        "score": 55,
         "signals": {}
       },
       "domain": "openai.com",
@@ -10692,7 +10846,7 @@
         "reach": 6,
         "layers": 8,
         "edgeTypes": 6,
-        "cycles": 13,
+        "cycles": 18,
         "score": 37,
         "signals": {}
       },
@@ -10840,7 +10994,7 @@
         "reach": 8,
         "layers": 6,
         "edgeTypes": 8,
-        "cycles": 42,
+        "cycles": 45,
         "score": 39,
         "signals": {}
       },
@@ -10956,6 +11110,140 @@
         "byTier": {
           "1": 5,
           "2": 1
+        }
+      }
+    },
+    {
+      "id": "qualcomm",
+      "name": "Qualcomm",
+      "aliases": [
+        "QUALCOMM Incorporated"
+      ],
+      "type": "company",
+      "role": "producer",
+      "sector": "fabless_silicon",
+      "layers": [
+        {
+          "layer": "L3",
+          "primary": true,
+          "criticality": 58
+        }
+      ],
+      "primaryLayer": "L3",
+      "criticality": 58,
+      "criticalityFactors": {
+        "irreplaceability": 58,
+        "lockInDepth": 62,
+        "timeToReplace": 55,
+        "concentration": 52
+      },
+      "criticalityWhy": {
+        "irreplaceability": "Мобильный кремний проектируют несколько компаний сопоставимого масштаба",
+        "lockInDepth": "Проекты привязаны к процессу фабрики, но поставщиков ёмкости названо трое",
+        "timeToReplace": "Три названных поставщика ёмкости дают запас, которого нет у заказчиков с одним",
+        "concentration": "Поставщиков ёмкости названо трое, а не один"
+      },
+      "criticalityBasis": {
+        "factorsUsed": 4,
+        "factors": [
+          "irreplaceability",
+          "lock_in_depth",
+          "time_to_replace",
+          "concentration"
+        ],
+        "renormalized": false
+      },
+      "gravity": {
+        "reach": 2,
+        "layers": 2,
+        "edgeTypes": 1,
+        "cycles": 0,
+        "score": 7,
+        "signals": {}
+      },
+      "domain": "qualcomm.com",
+      "oneLiner": "Проектировщик кремния, называющий своих фабрик поимённо — редкость на этой карте.",
+      "whyIrreplaceable": "Держит связь между мобильным кремнием и передовым узлом и в отличие от большинства заказчиков называет своих поставщиков ёмкости в собственной отчётности.",
+      "whatBreaksIt": "Потеря доступа к передовому узлу или переход заказчиков на собственный кремний.",
+      "phase": "mature",
+      "risk": {
+        "geopolitical": "high",
+        "note": "Основная ёмкость сосредоточена на одной территории.",
+        "exportRegime": null,
+        "concentration": null
+      },
+      "ticker": "NASDAQ: QCOM",
+      "publicPrivate": "public",
+      "geo": "US",
+      "founded": "1985",
+      "revenueUsdB": null,
+      "techNodes": [],
+      "domains": [
+        "qualcomm.com"
+      ],
+      "cik": "0000804328",
+      "firstSeen": "2026-08",
+      "lastConfirmed": "2026-08",
+      "stale": false,
+      "sources": [
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Qualcomm 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/804328/000080432825000085/qcom-20250928.htm",
+          "published": "2025-11-05",
+          "fetched": null,
+          "alive": true,
+          "quote": "circuits include Taiwan Semiconductor Manufacturing Company (TSMC), Samsung Electronics and Global Foundries.",
+          "confidence": 0.975,
+          "self": "qualcomm",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Qualcomm 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/804328/000080432825000085/qcom-20250928.htm",
+          "published": "2025-11-05",
+          "fetched": null,
+          "alive": true,
+          "quote": "We are organized on the basis of products and services and have three reportable segments.",
+          "confidence": 0.975,
+          "self": "qualcomm",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Qualcomm 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/804328/000080432825000085/qcom-20250928.htm",
+          "published": "2025-11-05",
+          "fetched": null,
+          "alive": true,
+          "quote": "We are also investing in research and development of data center products.",
+          "confidence": 0.975,
+          "self": "qualcomm",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Qualcomm 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/804328/000080432825000085/qcom-20250928.htm",
+          "published": "2025-11-05",
+          "fetched": null,
+          "alive": true,
+          "quote": "Revenues from providing services and licensing system software were each less than 5 %",
+          "confidence": 0.975,
+          "self": "qualcomm",
+          "counter": false
+        }
+      ],
+      "sourcing": {
+        "total": 4,
+        "selfSourced": 4,
+        "byTier": {
+          "1": 4
         }
       }
     },
@@ -11493,11 +11781,11 @@
         "renormalized": false
       },
       "gravity": {
-        "reach": 7,
+        "reach": 8,
         "layers": 7,
-        "edgeTypes": 4,
-        "cycles": 25,
-        "score": 36,
+        "edgeTypes": 5,
+        "cycles": 42,
+        "score": 39,
         "signals": {}
       },
       "domain": null,
@@ -13976,7 +14264,7 @@
         "reach": 3,
         "layers": 5,
         "edgeTypes": 4,
-        "cycles": 15,
+        "cycles": 28,
         "score": 26,
         "signals": {}
       },
@@ -14219,7 +14507,7 @@
         "reach": 5,
         "layers": 4,
         "edgeTypes": 3,
-        "cycles": 5,
+        "cycles": 6,
         "score": 27,
         "signals": {}
       },
@@ -14798,11 +15086,11 @@
         "renormalized": false
       },
       "gravity": {
-        "reach": 20,
-        "layers": 8,
+        "reach": 26,
+        "layers": 10,
         "edgeTypes": 11,
-        "cycles": 85,
-        "score": 66,
+        "cycles": 165,
+        "score": 78,
         "signals": {}
       },
       "domain": null,
@@ -15267,7 +15555,7 @@
         "reach": 8,
         "layers": 6,
         "edgeTypes": 6,
-        "cycles": 21,
+        "cycles": 29,
         "score": 38,
         "signals": {}
       },
@@ -29382,6 +29670,53 @@
       "counterEvidence": []
     },
     {
+      "id": "samsung__qualcomm__manufactures",
+      "source": "samsung",
+      "target": "qualcomm",
+      "type": "manufactures",
+      "spine": "physical",
+      "direction": "upstream",
+      "strength": 50,
+      "lockInDepth": 40,
+      "substitutability": 60,
+      "isReversible": false,
+      "status": "signal",
+      "confidence": 0.875,
+      "sourceTier": 2,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "medium",
+        "type": "market",
+        "timeline": "2-5y",
+        "mitigation": "Три названных поставщика ёмкости позволяют переносить заказ между ними"
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Названа Qualcomm вторым поставщиком ёмкости наравне с первым.",
+      "sidedness": "single",
+      "claimedBy": [
+        "qualcomm"
+      ],
+      "evidence": [
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Qualcomm 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/804328/000080432825000085/qcom-20250928.htm",
+          "published": "2025-11-05",
+          "fetched": null,
+          "alive": true,
+          "quote": "circuits include Taiwan Semiconductor Manufacturing Company (TSMC), Samsung Electronics and Global Foundries.",
+          "confidence": 0.925,
+          "self": "qualcomm",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
       "id": "samsung__tsmc__competes_with",
       "source": "samsung",
       "target": "tsmc",
@@ -32036,6 +32371,109 @@
       "counterEvidence": []
     },
     {
+      "id": "tsmc__amazon__manufactures",
+      "source": "tsmc",
+      "target": "amazon",
+      "type": "manufactures",
+      "spine": "physical",
+      "direction": "upstream",
+      "strength": 65,
+      "lockInDepth": 55,
+      "substitutability": 35,
+      "isReversible": false,
+      "status": "signal",
+      "confidence": 0.75,
+      "sourceTier": 4,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "high",
+        "type": "geopolitical",
+        "timeline": "2-5y",
+        "mitigation": "Передовые узлы делает одна территория, и альтернативной площадки того же класса нет."
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Собственные ускорители облака Trainium и Inferentia выпускает эта фабрика.",
+      "sidedness": "single",
+      "claimedBy": [],
+      "evidence": [
+        {
+          "tier": 4,
+          "type": "press",
+          "title": "TrendForce: Microsoft eyes Maia 300, seeks TSMC capacity",
+          "url": "https://www.trendforce.com/news/2026/08/11/news-microsoft-eyes-maia-300-launch-in-sep-reportedly-seeks-300k-tsmc-capacity-as-google-aws-race-ahead/",
+          "published": "2026-08-11",
+          "fetched": null,
+          "alive": true,
+          "quote": "AWS's Trainium and Inferentia chips are both manufactured by TSMC, Next Apple reports.",
+          "confidence": 0.8,
+          "self": null,
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "tsmc__apple__manufactures",
+      "source": "tsmc",
+      "target": "apple",
+      "type": "manufactures",
+      "spine": "physical",
+      "direction": "upstream",
+      "strength": 70,
+      "lockInDepth": 60,
+      "substitutability": 30,
+      "isReversible": false,
+      "status": "signal",
+      "confidence": 0.75,
+      "sourceTier": 4,
+      "confirmedSources": 2,
+      "risk": {
+        "level": "high",
+        "type": "geopolitical",
+        "timeline": "2-5y",
+        "mitigation": "Передовые узлы делает одна территория, и альтернативной площадки того же класса нет."
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Давний крупнейший заказчик фабрики: по сообщению Commercial Times, забрал большую часть начальной ёмкости 2nm.",
+      "sidedness": "single",
+      "claimedBy": [],
+      "evidence": [
+        {
+          "tier": 4,
+          "type": "press",
+          "title": "TrendForce: TSMC 2nm customer surge",
+          "url": "https://www.trendforce.com/news/2025/09/22/news-tsmc-2nm-customer-surge-15-clients-reportedly-secured-10-in-hpc/",
+          "published": "2025-09-22",
+          "fetched": null,
+          "alive": true,
+          "quote": "Apple, TSMC's long-standing top customer, is reportedly set to take nearly half",
+          "confidence": 0.8,
+          "self": null,
+          "counter": false
+        },
+        {
+          "tier": 4,
+          "type": "press",
+          "title": "TrendForce: Apple takes most of TSMC's 2nm capacity",
+          "url": "https://www.trendforce.com/news/2025/10/28/news-apple-reportedly-takes-most-of-tsmcs-2nm-capacity-for-a20-series-in-foldable-iphone-and-iphone-18/",
+          "published": "2025-10-28",
+          "fetched": null,
+          "alive": true,
+          "quote": "Commercial Times notes that Apple has already secured most of TSMC's initial 2nm capacity",
+          "confidence": 0.8,
+          "self": null,
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
       "id": "tsmc__arm__standardizes_on",
       "source": "tsmc",
       "target": "arm",
@@ -32370,6 +32808,124 @@
       "counterEvidence": []
     },
     {
+      "id": "tsmc__marvell__manufactures",
+      "source": "tsmc",
+      "target": "marvell",
+      "type": "manufactures",
+      "spine": "physical",
+      "direction": "upstream",
+      "strength": 70,
+      "lockInDepth": 65,
+      "substitutability": 30,
+      "isReversible": false,
+      "status": "confirmed",
+      "confidence": 0.955,
+      "sourceTier": 2,
+      "confirmedSources": 2,
+      "risk": {
+        "level": "high",
+        "type": "geopolitical",
+        "timeline": "2-5y",
+        "mitigation": "Передовые узлы делает одна территория, и альтернативной площадки того же класса нет."
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Партнёрство протянуто через три поколения процесса подряд и объявлено самой компанией.",
+      "sidedness": "single",
+      "claimedBy": [
+        "marvell"
+      ],
+      "evidence": [
+        {
+          "tier": 2,
+          "type": "company_pr",
+          "title": "Marvell: industry's first 2nm platform",
+          "url": "https://www.marvell.com/company/newsroom/marvell-announces-industry-first-2nm-platform-for-accelerated-infrastructure-silicon.html",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Marvell extends its longstanding partnership with TSMC to 2nm manufacturing.",
+          "confidence": 0.925,
+          "self": "marvell",
+          "counter": false
+        },
+        {
+          "tier": 2,
+          "type": "company_pr",
+          "title": "Marvell: industry's first 2nm platform",
+          "url": "https://www.marvell.com/company/newsroom/marvell-announces-industry-first-2nm-platform-for-accelerated-infrastructure-silicon.html",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Our partnership with TSMC on our 5nm, 3nm and now 2nm platforms has been instrumental",
+          "confidence": 0.925,
+          "self": "marvell",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "tsmc__microsoft__manufactures",
+      "source": "tsmc",
+      "target": "microsoft",
+      "type": "manufactures",
+      "spine": "physical",
+      "direction": "upstream",
+      "strength": 55,
+      "lockInDepth": 45,
+      "substitutability": 45,
+      "isReversible": false,
+      "status": "signal",
+      "confidence": 0.75,
+      "sourceTier": 4,
+      "confirmedSources": 2,
+      "risk": {
+        "level": "medium",
+        "type": "geopolitical",
+        "timeline": "2-5y",
+        "mitigation": "Передовые узлы делает одна территория, и альтернативной площадки того же класса нет."
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Собственный ускоритель Maia выпускается здесь же; переговоры об ёмкости идут отдельно.",
+      "sidedness": "single",
+      "claimedBy": [],
+      "evidence": [
+        {
+          "tier": 4,
+          "type": "press",
+          "title": "TrendForce: Microsoft eyes Maia 300, seeks TSMC capacity",
+          "url": "https://www.trendforce.com/news/2026/08/11/news-microsoft-eyes-maia-300-launch-in-sep-reportedly-seeks-300k-tsmc-capacity-as-google-aws-race-ahead/",
+          "published": "2026-08-11",
+          "fetched": null,
+          "alive": true,
+          "quote": "Microsoft is also stepping up its in-house AI chip push, with TSMC poised to benefit.",
+          "confidence": 0.8,
+          "self": null,
+          "counter": false
+        },
+        {
+          "tier": 4,
+          "type": "press",
+          "title": "TrendForce: Microsoft eyes Maia 300, seeks TSMC capacity",
+          "url": "https://www.trendforce.com/news/2026/08/11/news-microsoft-eyes-maia-300-launch-in-sep-reportedly-seeks-300k-tsmc-capacity-as-google-aws-race-ahead/",
+          "published": "2026-08-11",
+          "fetched": null,
+          "alive": true,
+          "quote": "Microsoft could unveil its next-generation Maia 300 as early as September and is in talks",
+          "confidence": 0.8,
+          "self": null,
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
       "id": "tsmc__nvidia__manufactures",
       "source": "tsmc",
       "target": "nvidia",
@@ -32472,6 +33028,98 @@
           "quote": "We utilize CoWoS technology for semiconductor packaging.",
           "confidence": 0.925,
           "self": "nvidia",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "tsmc__openai__manufactures",
+      "source": "tsmc",
+      "target": "openai",
+      "type": "manufactures",
+      "spine": "physical",
+      "direction": "upstream",
+      "strength": 60,
+      "lockInDepth": 50,
+      "substitutability": 40,
+      "isReversible": false,
+      "status": "signal",
+      "confidence": 0.75,
+      "sourceTier": 4,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "high",
+        "type": "geopolitical",
+        "timeline": "2-5y",
+        "mitigation": "Передовые узлы делает одна территория, и альтернативной площадки того же класса нет."
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Первый собственный чип лаборатории готовится к серийному выпуску здесь же.",
+      "sidedness": "single",
+      "claimedBy": [],
+      "evidence": [
+        {
+          "tier": 4,
+          "type": "press",
+          "title": "TrendForce: TSMC 2nm customer surge",
+          "url": "https://www.trendforce.com/news/2025/09/22/news-tsmc-2nm-customer-surge-15-clients-reportedly-secured-10-in-hpc/",
+          "published": "2025-09-22",
+          "fetched": null,
+          "alive": true,
+          "quote": "OpenAI is preparing to mass produce its first custom chip using TSMC's 3nm technology",
+          "confidence": 0.8,
+          "self": null,
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "tsmc__qualcomm__manufactures",
+      "source": "tsmc",
+      "target": "qualcomm",
+      "type": "manufactures",
+      "spine": "physical",
+      "direction": "upstream",
+      "strength": 65,
+      "lockInDepth": 60,
+      "substitutability": 45,
+      "isReversible": false,
+      "status": "signal",
+      "confidence": 0.875,
+      "sourceTier": 2,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "medium",
+        "type": "geopolitical",
+        "timeline": "2-5y",
+        "mitigation": "Рядом названы ещё две фабрики, поэтому источник ёмкости не единственный"
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Названа Qualcomm первой среди поставщиков ёмкости для её интегральных схем.",
+      "sidedness": "single",
+      "claimedBy": [
+        "qualcomm"
+      ],
+      "evidence": [
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Qualcomm 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/804328/000080432825000085/qcom-20250928.htm",
+          "published": "2025-11-05",
+          "fetched": null,
+          "alive": true,
+          "quote": "circuits include Taiwan Semiconductor Manufacturing Company (TSMC), Samsung Electronics and Global Foundries.",
+          "confidence": 0.925,
+          "self": "qualcomm",
           "counter": false
         }
       ],
@@ -33602,6 +34250,38 @@
     },
     {
       "id": "c14",
+      "type": "sales",
+      "path": [
+        "nvidia",
+        "tsmc",
+        "openai",
+        "nvidia"
+      ],
+      "edges": [
+        "nvidia__tsmc__co_designs",
+        "tsmc__openai__manufactures",
+        "openai__nvidia__customer_of"
+      ],
+      "note": "Контур сбыта: NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ OpenAI; OpenAI —покупает у→ NVIDIA"
+    },
+    {
+      "id": "c15",
+      "type": "sales",
+      "path": [
+        "amazon",
+        "nvidia",
+        "tsmc",
+        "amazon"
+      ],
+      "edges": [
+        "amazon__nvidia__customer_of",
+        "nvidia__tsmc__co_designs",
+        "tsmc__amazon__manufactures"
+      ],
+      "note": "Контур сбыта: Amazon —покупает у→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ Amazon"
+    },
+    {
+      "id": "c16",
       "type": "lockin",
       "path": [
         "amazon",
@@ -33617,7 +34297,7 @@
       "note": "Контур замка: Amazon —запирает платформы→ CUDA; CUDA —запирает платформы→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
     },
     {
-      "id": "c15",
+      "id": "c17",
       "type": "sales",
       "path": [
         "arista",
@@ -33633,7 +34313,7 @@
       "note": "Контур сбыта: Arista Networks —поставляет→ Microsoft; Microsoft —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c16",
+      "id": "c18",
       "type": "financing",
       "path": [
         "coreweave",
@@ -33649,7 +34329,7 @@
       "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —покупает у→ CoreWeave"
     },
     {
-      "id": "c17",
+      "id": "c19",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -33665,7 +34345,7 @@
       "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —страхуется через→ Hugging Face"
     },
     {
-      "id": "c18",
+      "id": "c20",
       "type": "financing",
       "path": [
         "nvidia",
@@ -33681,7 +34361,7 @@
       "note": "Контур финансирования: NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —покупает у→ NVIDIA"
     },
     {
-      "id": "c19",
+      "id": "c21",
       "type": "financing",
       "path": [
         "amazon",
@@ -33697,7 +34377,7 @@
       "note": "Контур финансирования: Amazon —вкладывается в→ Anthropic; Anthropic —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
     },
     {
-      "id": "c20",
+      "id": "c22",
       "type": "sales",
       "path": [
         "credo",
@@ -33713,7 +34393,7 @@
       "note": "Контур сбыта: Credo Technology —заточен под→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ Credo Technology"
     },
     {
-      "id": "c21",
+      "id": "c23",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -33729,7 +34409,23 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —имеет место в совете→ NVIDIA Ventures (NVentures); NVIDIA Ventures (NVentures) —вкладывается в→ Hugging Face"
     },
     {
-      "id": "c22",
+      "id": "c24",
+      "type": "sales",
+      "path": [
+        "microsoft",
+        "nvidia",
+        "tsmc",
+        "microsoft"
+      ],
+      "edges": [
+        "microsoft__nvidia__customer_of",
+        "nvidia__tsmc__co_designs",
+        "tsmc__microsoft__manufactures"
+      ],
+      "note": "Контур сбыта: Microsoft —покупает у→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ Microsoft"
+    },
+    {
+      "id": "c25",
       "type": "sales",
       "path": [
         "arista",
@@ -33745,7 +34441,7 @@
       "note": "Контур сбыта: Arista Networks —поставляет→ Meta; Meta —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c23",
+      "id": "c26",
       "type": "lockin",
       "path": [
         "google",
@@ -33761,7 +34457,7 @@
       "note": "Контур замка: Google —покупает у→ NVIDIA; NVIDIA —стандартизуется на→ Kubernetes; Kubernetes —развивается вслед за→ Google"
     },
     {
-      "id": "c24",
+      "id": "c27",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -33777,7 +34473,7 @@
       "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —делает возможным→ Hugging Face"
     },
     {
-      "id": "c25",
+      "id": "c28",
       "type": "lockin",
       "path": [
         "arm",
@@ -33793,7 +34489,7 @@
       "note": "Контур замка: Arm —поставляет→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —стандартизуется на→ Arm"
     },
     {
-      "id": "c26",
+      "id": "c29",
       "type": "sales",
       "path": [
         "china",
@@ -33809,7 +34505,7 @@
       "note": "Контур сбыта: Китай —шлюзует доступ к→ DeepSeek; DeepSeek —подтачивает→ NVIDIA; NVIDIA —ограничен режимом→ Китай"
     },
     {
-      "id": "c27",
+      "id": "c30",
       "type": "financing",
       "path": [
         "microsoft",
@@ -33825,7 +34521,23 @@
       "note": "Контур финансирования: Microsoft —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft"
     },
     {
-      "id": "c28",
+      "id": "c31",
+      "type": "sales",
+      "path": [
+        "marvell",
+        "nvidia",
+        "tsmc",
+        "marvell"
+      ],
+      "edges": [
+        "marvell__nvidia__threatens",
+        "nvidia__tsmc__co_designs",
+        "tsmc__marvell__manufactures"
+      ],
+      "note": "Контур сбыта: Marvell —подтачивает→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ Marvell"
+    },
+    {
+      "id": "c32",
       "type": "financing",
       "path": [
         "micron",
@@ -33841,7 +34553,7 @@
       "note": "Контур финансирования: Micron —конкурирует с→ SK Hynix; SK Hynix —поставляет→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron"
     },
     {
-      "id": "c29",
+      "id": "c33",
       "type": "financing",
       "path": [
         "nvidia",
@@ -33857,7 +34569,7 @@
       "note": "Контур финансирования: NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ NVIDIA"
     },
     {
-      "id": "c30",
+      "id": "c34",
       "type": "financing",
       "path": [
         "broadcom",
@@ -33873,7 +34585,7 @@
       "note": "Контур финансирования: Broadcom —поставляет→ HPE; HPE —стратегический партнёр→ NVIDIA; NVIDIA —конкурирует с→ Broadcom"
     },
     {
-      "id": "c31",
+      "id": "c35",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -33889,7 +34601,7 @@
       "note": "Контур замка: Broadcom —подтачивает→ NVIDIA; NVIDIA —поставляет→ Dell; Dell —развивается вслед за→ Broadcom"
     },
     {
-      "id": "c32",
+      "id": "c36",
       "type": "financing",
       "path": [
         "crusoe",
@@ -33905,7 +34617,7 @@
       "note": "Контур финансирования: Crusoe —делает возможным→ NVIDIA; NVIDIA —имеет место в совете→ NVIDIA Ventures (NVentures); NVIDIA Ventures (NVentures) —вкладывается в→ Crusoe"
     },
     {
-      "id": "c33",
+      "id": "c37",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -33921,7 +34633,7 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c34",
+      "id": "c38",
       "type": "lockin",
       "path": [
         "nvidia",
@@ -33937,7 +34649,7 @@
       "note": "Контур замка: NVIDIA —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA"
     },
     {
-      "id": "c35",
+      "id": "c39",
       "type": "sales",
       "path": [
         "ase",
@@ -33953,7 +34665,7 @@
       "note": "Контур сбыта: ASE Technology —упаковывает→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —конкурирует с→ ASE Technology"
     },
     {
-      "id": "c36",
+      "id": "c40",
       "type": "sales",
       "path": [
         "ase",
@@ -33969,7 +34681,7 @@
       "note": "Контур сбыта: ASE Technology —упаковывает→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —конкурирует с→ ASE Technology"
     },
     {
-      "id": "c37",
+      "id": "c41",
       "type": "financing",
       "path": [
         "nvidia",
@@ -33985,7 +34697,7 @@
       "note": "Контур финансирования: NVIDIA —стратегический партнёр→ SoftBank; SoftBank —стратегический партнёр→ Oracle; Oracle —покупает у→ NVIDIA"
     },
     {
-      "id": "c38",
+      "id": "c42",
       "type": "financing",
       "path": [
         "coreweave",
@@ -34001,7 +34713,7 @@
       "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ CoreWeave"
     },
     {
-      "id": "c39",
+      "id": "c43",
       "type": "financing",
       "path": [
         "micron",
@@ -34017,7 +34729,7 @@
       "note": "Контур финансирования: Micron —конкурирует с→ Samsung; Samsung —поставляет→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron"
     },
     {
-      "id": "c40",
+      "id": "c44",
       "type": "financing",
       "path": [
         "kioxia",
@@ -34033,7 +34745,7 @@
       "note": "Контур финансирования: Kioxia —поставляет→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron; Micron —конкурирует с→ Kioxia"
     },
     {
-      "id": "c41",
+      "id": "c45",
       "type": "financing",
       "path": [
         "micron",
@@ -34049,7 +34761,7 @@
       "note": "Контур финансирования: Micron —конкурирует с→ SanDisk; SanDisk —поставляет→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron"
     },
     {
-      "id": "c42",
+      "id": "c46",
       "type": "lockin",
       "path": [
         "cuda",
@@ -34067,7 +34779,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ NVIDIA; NVIDIA —делает возможным→ CUDA"
     },
     {
-      "id": "c43",
+      "id": "c47",
       "type": "lockin",
       "path": [
         "cuda",
@@ -34085,7 +34797,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c44",
+      "id": "c48",
       "type": "lockin",
       "path": [
         "cuda",
@@ -34103,7 +34815,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —стратегический партнёр→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c45",
+      "id": "c49",
       "type": "lockin",
       "path": [
         "cuda",
@@ -34121,7 +34833,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c46",
+      "id": "c50",
       "type": "sales",
       "path": [
         "broadcom",
@@ -34139,7 +34851,7 @@
       "note": "Контур сбыта: Broadcom —проектирует вместе с→ Google; Google —покупает у→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ Broadcom"
     },
     {
-      "id": "c47",
+      "id": "c51",
       "type": "lockin",
       "path": [
         "cuda",
@@ -34157,7 +34869,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —делает возможным→ CUDA"
     },
     {
-      "id": "c48",
+      "id": "c52",
       "type": "financing",
       "path": [
         "microsoft",
@@ -34175,7 +34887,7 @@
       "note": "Контур финансирования: Microsoft —вкладывается в→ OpenAI; OpenAI —покупает у→ Oracle; Oracle —покупает у→ NVIDIA; NVIDIA —поставляет→ Microsoft"
     },
     {
-      "id": "c49",
+      "id": "c53",
       "type": "financing",
       "path": [
         "arista",
@@ -34193,7 +34905,7 @@
       "note": "Контур финансирования: Arista Networks —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c50",
+      "id": "c54",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -34211,7 +34923,7 @@
       "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —делает возможным→ CUDA; CUDA —запирает платформы→ NVIDIA; NVIDIA —конкурирует с→ Broadcom"
     },
     {
-      "id": "c51",
+      "id": "c55",
       "type": "financing",
       "path": [
         "coreweave",
@@ -34229,7 +34941,7 @@
       "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —покупает у→ CoreWeave"
     },
     {
-      "id": "c52",
+      "id": "c56",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -34247,7 +34959,7 @@
       "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —имеет место в совете→ NVIDIA Ventures (NVentures); NVIDIA Ventures (NVentures) —вкладывается в→ Hugging Face"
     },
     {
-      "id": "c53",
+      "id": "c57",
       "type": "lockin",
       "path": [
         "amazon",
@@ -34265,7 +34977,7 @@
       "note": "Контур замка: Amazon —запирает платформы→ CUDA; CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
     },
     {
-      "id": "c54",
+      "id": "c58",
       "type": "lockin",
       "path": [
         "cuda",
@@ -34283,7 +34995,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —имеет место в совете→ NVIDIA Ventures (NVentures); NVIDIA Ventures (NVentures) —вкладывается в→ Hugging Face; Hugging Face —развивается вслед за→ CUDA"
     },
     {
-      "id": "c55",
+      "id": "c59",
       "type": "lockin",
       "path": [
         "cuda",
@@ -34301,7 +35013,43 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c56",
+      "id": "c60",
+      "type": "financing",
+      "path": [
+        "microsoft",
+        "nvidia",
+        "tsmc",
+        "openai",
+        "microsoft"
+      ],
+      "edges": [
+        "microsoft__nvidia__customer_of",
+        "nvidia__tsmc__co_designs",
+        "tsmc__openai__manufactures",
+        "openai__microsoft__strategic_partner"
+      ],
+      "note": "Контур финансирования: Microsoft —покупает у→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ OpenAI; OpenAI —стратегический партнёр→ Microsoft"
+    },
+    {
+      "id": "c61",
+      "type": "lockin",
+      "path": [
+        "amazon",
+        "cuda",
+        "nvidia",
+        "tsmc",
+        "amazon"
+      ],
+      "edges": [
+        "amazon__cuda__locks_in_platforms",
+        "cuda__nvidia__locks_in_platforms",
+        "nvidia__tsmc__co_designs",
+        "tsmc__amazon__manufactures"
+      ],
+      "note": "Контур замка: Amazon —запирает платформы→ CUDA; CUDA —запирает платформы→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ Amazon"
+    },
+    {
+      "id": "c62",
       "type": "lockin",
       "path": [
         "arista",
@@ -34319,7 +35067,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA; CUDA —запирает платформы→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c57",
+      "id": "c63",
       "type": "financing",
       "path": [
         "broadcom",
@@ -34337,7 +35085,7 @@
       "note": "Контур финансирования: Broadcom —подтачивает→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ Broadcom"
     },
     {
-      "id": "c58",
+      "id": "c64",
       "type": "lockin",
       "path": [
         "cuda",
@@ -34355,7 +35103,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c59",
+      "id": "c65",
       "type": "financing",
       "path": [
         "microsoft",
@@ -34373,7 +35121,25 @@
       "note": "Контур финансирования: Microsoft —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —стратегический партнёр→ Microsoft"
     },
     {
-      "id": "c60",
+      "id": "c66",
+      "type": "financing",
+      "path": [
+        "amazon",
+        "anthropic",
+        "nvidia",
+        "tsmc",
+        "amazon"
+      ],
+      "edges": [
+        "amazon__anthropic__invests_in",
+        "anthropic__nvidia__customer_of",
+        "nvidia__tsmc__co_designs",
+        "tsmc__amazon__manufactures"
+      ],
+      "note": "Контур финансирования: Amazon —вкладывается в→ Anthropic; Anthropic —покупает у→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ Amazon"
+    },
+    {
+      "id": "c67",
       "type": "sales",
       "path": [
         "astera-labs",
@@ -34391,7 +35157,25 @@
       "note": "Контур сбыта: Astera Labs —заточен под→ NVIDIA; NVIDIA —конкурирует с→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —производит для→ Astera Labs"
     },
     {
-      "id": "c61",
+      "id": "c68",
+      "type": "lockin",
+      "path": [
+        "cuda",
+        "nvidia",
+        "tsmc",
+        "microsoft",
+        "cuda"
+      ],
+      "edges": [
+        "cuda__nvidia__locks_in_platforms",
+        "nvidia__tsmc__co_designs",
+        "tsmc__microsoft__manufactures",
+        "microsoft__cuda__locks_in_platforms"
+      ],
+      "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ Microsoft; Microsoft —запирает платформы→ CUDA"
+    },
+    {
+      "id": "c69",
       "type": "financing",
       "path": [
         "amazon",
@@ -34409,7 +35193,7 @@
       "note": "Контур финансирования: Amazon —вкладывается в→ Anthropic; Anthropic —покупает у→ Google; Google —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
     },
     {
-      "id": "c62",
+      "id": "c70",
       "type": "sales",
       "path": [
         "arista",
@@ -34427,7 +35211,7 @@
       "note": "Контур сбыта: Arista Networks —поставляет→ Microsoft; Microsoft —покупает у→ CoreWeave; CoreWeave —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c63",
+      "id": "c71",
       "type": "financing",
       "path": [
         "astera-labs",
@@ -34445,7 +35229,25 @@
       "note": "Контур финансирования: Astera Labs —заточен под→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ Astera Labs"
     },
     {
-      "id": "c64",
+      "id": "c72",
+      "type": "sales",
+      "path": [
+        "broadcom",
+        "tsmc",
+        "openai",
+        "nvidia",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__tsmc__customer_of",
+        "tsmc__openai__manufactures",
+        "openai__nvidia__customer_of",
+        "nvidia__broadcom__competes_with"
+      ],
+      "note": "Контур сбыта: Broadcom —покупает у→ TSMC; TSMC —производит для→ OpenAI; OpenAI —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Broadcom"
+    },
+    {
+      "id": "c73",
       "type": "lockin",
       "path": [
         "cuda",
@@ -34463,7 +35265,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c65",
+      "id": "c74",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -34481,7 +35283,7 @@
       "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ NVIDIA; NVIDIA —страхуется через→ Hugging Face"
     },
     {
-      "id": "c66",
+      "id": "c75",
       "type": "financing",
       "path": [
         "microsoft",
@@ -34499,7 +35301,25 @@
       "note": "Контур финансирования: Microsoft —вкладывается в→ OpenAI; OpenAI —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft"
     },
     {
-      "id": "c67",
+      "id": "c76",
+      "type": "sales",
+      "path": [
+        "amazon",
+        "nvidia",
+        "broadcom",
+        "tsmc",
+        "amazon"
+      ],
+      "edges": [
+        "amazon__nvidia__customer_of",
+        "nvidia__broadcom__competes_with",
+        "broadcom__tsmc__customer_of",
+        "tsmc__amazon__manufactures"
+      ],
+      "note": "Контур сбыта: Amazon —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —производит для→ Amazon"
+    },
+    {
+      "id": "c77",
       "type": "lockin",
       "path": [
         "arista",
@@ -34517,7 +35337,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Meta; Meta —запирает платформы→ CUDA; CUDA —запирает платформы→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c68",
+      "id": "c78",
       "type": "financing",
       "path": [
         "broadcom",
@@ -34535,7 +35355,25 @@
       "note": "Контур финансирования: Broadcom —поставляет→ HPE; HPE —стратегический партнёр→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ Broadcom"
     },
     {
-      "id": "c69",
+      "id": "c79",
+      "type": "sales",
+      "path": [
+        "coreweave",
+        "nvidia",
+        "tsmc",
+        "microsoft",
+        "coreweave"
+      ],
+      "edges": [
+        "coreweave__nvidia__customer_of",
+        "nvidia__tsmc__co_designs",
+        "tsmc__microsoft__manufactures",
+        "microsoft__coreweave__customer_of"
+      ],
+      "note": "Контур сбыта: CoreWeave —покупает у→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ Microsoft; Microsoft —покупает у→ CoreWeave"
+    },
+    {
+      "id": "c80",
       "type": "lockin",
       "path": [
         "cuda",
@@ -34553,7 +35391,61 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —запирает платформы→ CUDA"
     },
     {
-      "id": "c70",
+      "id": "c81",
+      "type": "financing",
+      "path": [
+        "nvidia",
+        "synopsys",
+        "tsmc",
+        "openai",
+        "nvidia"
+      ],
+      "edges": [
+        "nvidia__synopsys__invests_in",
+        "synopsys__tsmc__optimizes_for",
+        "tsmc__openai__manufactures",
+        "openai__nvidia__customer_of"
+      ],
+      "note": "Контур финансирования: NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ OpenAI; OpenAI —покупает у→ NVIDIA"
+    },
+    {
+      "id": "c82",
+      "type": "sales",
+      "path": [
+        "nvidia",
+        "tsmc",
+        "openai",
+        "oracle",
+        "nvidia"
+      ],
+      "edges": [
+        "nvidia__tsmc__co_designs",
+        "tsmc__openai__manufactures",
+        "openai__oracle__customer_of",
+        "oracle__nvidia__customer_of"
+      ],
+      "note": "Контур сбыта: NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ OpenAI; OpenAI —покупает у→ Oracle; Oracle —покупает у→ NVIDIA"
+    },
+    {
+      "id": "c83",
+      "type": "financing",
+      "path": [
+        "amazon",
+        "nvidia",
+        "synopsys",
+        "tsmc",
+        "amazon"
+      ],
+      "edges": [
+        "amazon__nvidia__customer_of",
+        "nvidia__synopsys__invests_in",
+        "synopsys__tsmc__optimizes_for",
+        "tsmc__amazon__manufactures"
+      ],
+      "note": "Контур финансирования: Amazon —покупает у→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ Amazon"
+    },
+    {
+      "id": "c84",
       "type": "financing",
       "path": [
         "arm",
@@ -34571,7 +35463,7 @@
       "note": "Контур финансирования: Arm —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
     },
     {
-      "id": "c71",
+      "id": "c85",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -34589,7 +35481,7 @@
       "note": "Контур замка: Broadcom —подтачивает→ NVIDIA; NVIDIA —стандартизуется на→ Kubernetes; Kubernetes —развивается вслед за→ Google; Google —покупает у→ Broadcom"
     },
     {
-      "id": "c72",
+      "id": "c86",
       "type": "sales",
       "path": [
         "broadcom",
@@ -34607,7 +35499,25 @@
       "note": "Контур сбыта: Broadcom —покупает у→ TSMC; TSMC —производит для→ Credo Technology; Credo Technology —заточен под→ NVIDIA; NVIDIA —конкурирует с→ Broadcom"
     },
     {
-      "id": "c73",
+      "id": "c87",
+      "type": "sales",
+      "path": [
+        "broadcom",
+        "tsmc",
+        "microsoft",
+        "nvidia",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__tsmc__customer_of",
+        "tsmc__microsoft__manufactures",
+        "microsoft__nvidia__customer_of",
+        "nvidia__broadcom__competes_with"
+      ],
+      "note": "Контур сбыта: Broadcom —покупает у→ TSMC; TSMC —производит для→ Microsoft; Microsoft —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Broadcom"
+    },
+    {
+      "id": "c88",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -34625,7 +35535,7 @@
       "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —производит для→ NVIDIA; NVIDIA —поставляет→ Dell; Dell —развивается вслед за→ Broadcom"
     },
     {
-      "id": "c74",
+      "id": "c89",
       "type": "lockin",
       "path": [
         "china",
@@ -34643,7 +35553,7 @@
       "note": "Контур замка: Китай —шлюзует доступ к→ DeepSeek; DeepSeek —может вытеснить→ CUDA; CUDA —запирает платформы→ NVIDIA; NVIDIA —ограничен режимом→ Китай"
     },
     {
-      "id": "c75",
+      "id": "c90",
       "type": "lockin",
       "path": [
         "cuda",
@@ -34661,7 +35571,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —развивается вслед за→ CUDA"
     },
     {
-      "id": "c76",
+      "id": "c91",
       "type": "lockin",
       "path": [
         "cuda",
@@ -34679,7 +35589,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c77",
+      "id": "c92",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -34697,7 +35607,7 @@
       "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c78",
+      "id": "c93",
       "type": "financing",
       "path": [
         "amazon",
@@ -34715,7 +35625,25 @@
       "note": "Контур финансирования: Amazon —вкладывается в→ Anthropic; Anthropic —стратегический партнёр→ Broadcom; Broadcom —подтачивает→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
     },
     {
-      "id": "c79",
+      "id": "c94",
+      "type": "financing",
+      "path": [
+        "amazon",
+        "anthropic",
+        "broadcom",
+        "tsmc",
+        "amazon"
+      ],
+      "edges": [
+        "amazon__anthropic__invests_in",
+        "anthropic__broadcom__strategic_partner",
+        "broadcom__tsmc__customer_of",
+        "tsmc__amazon__manufactures"
+      ],
+      "note": "Контур финансирования: Amazon —вкладывается в→ Anthropic; Anthropic —стратегический партнёр→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —производит для→ Amazon"
+    },
+    {
+      "id": "c95",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -34733,7 +35661,7 @@
       "note": "Контур замка: Broadcom —проектирует вместе с→ Google; Google —покупает у→ NVIDIA; NVIDIA —поставляет→ Dell; Dell —развивается вслед за→ Broadcom"
     },
     {
-      "id": "c80",
+      "id": "c96",
       "type": "financing",
       "path": [
         "credo",
@@ -34751,7 +35679,7 @@
       "note": "Контур финансирования: Credo Technology —заточен под→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ Credo Technology"
     },
     {
-      "id": "c81",
+      "id": "c97",
       "type": "lockin",
       "path": [
         "cuda",
@@ -34769,7 +35697,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face; Hugging Face —развивается вслед за→ CUDA"
     },
     {
-      "id": "c82",
+      "id": "c98",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -34787,7 +35715,25 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c83",
+      "id": "c99",
+      "type": "financing",
+      "path": [
+        "microsoft",
+        "nvidia",
+        "synopsys",
+        "tsmc",
+        "microsoft"
+      ],
+      "edges": [
+        "microsoft__nvidia__customer_of",
+        "nvidia__synopsys__invests_in",
+        "synopsys__tsmc__optimizes_for",
+        "tsmc__microsoft__manufactures"
+      ],
+      "note": "Контур финансирования: Microsoft —покупает у→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ Microsoft"
+    },
+    {
+      "id": "c100",
       "type": "lockin",
       "path": [
         "microsoft",
@@ -34805,7 +35751,7 @@
       "note": "Контур замка: Microsoft —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA; NVIDIA —поставляет→ Microsoft"
     },
     {
-      "id": "c84",
+      "id": "c101",
       "type": "lockin",
       "path": [
         "arm",
@@ -34823,7 +35769,25 @@
       "note": "Контур замка: Arm —поставляет→ NVIDIA; NVIDIA —конкурирует с→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —стандартизуется на→ Arm"
     },
     {
-      "id": "c85",
+      "id": "c102",
+      "type": "sales",
+      "path": [
+        "coreweave",
+        "nvidia",
+        "tsmc",
+        "openai",
+        "coreweave"
+      ],
+      "edges": [
+        "coreweave__nvidia__customer_of",
+        "nvidia__tsmc__co_designs",
+        "tsmc__openai__manufactures",
+        "openai__coreweave__customer_of"
+      ],
+      "note": "Контур сбыта: CoreWeave —покупает у→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ OpenAI; OpenAI —покупает у→ CoreWeave"
+    },
+    {
+      "id": "c103",
       "type": "financing",
       "path": [
         "coreweave",
@@ -34841,7 +35805,7 @@
       "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft; Microsoft —покупает у→ CoreWeave"
     },
     {
-      "id": "c86",
+      "id": "c104",
       "type": "lockin",
       "path": [
         "cuda",
@@ -34859,7 +35823,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c87",
+      "id": "c105",
       "type": "lockin",
       "path": [
         "amazon",
@@ -34877,7 +35841,7 @@
       "note": "Контур замка: Amazon —запирает платформы→ CUDA; CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
     },
     {
-      "id": "c88",
+      "id": "c106",
       "type": "lockin",
       "path": [
         "arm",
@@ -34895,7 +35859,7 @@
       "note": "Контур замка: Arm —поставляет→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —стандартизуется на→ Arm"
     },
     {
-      "id": "c89",
+      "id": "c107",
       "type": "financing",
       "path": [
         "broadcom",
@@ -34913,7 +35877,7 @@
       "note": "Контур финансирования: Broadcom —поставляет→ HPE; HPE —стратегический партнёр→ NVIDIA; NVIDIA —конкурирует с→ Google; Google —покупает у→ Broadcom"
     },
     {
-      "id": "c90",
+      "id": "c108",
       "type": "financing",
       "path": [
         "broadcom",
@@ -34931,7 +35895,7 @@
       "note": "Контур финансирования: Broadcom —подтачивает→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Broadcom"
     },
     {
-      "id": "c91",
+      "id": "c109",
       "type": "financing",
       "path": [
         "coreweave",
@@ -34949,7 +35913,7 @@
       "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —покупает у→ CoreWeave"
     },
     {
-      "id": "c92",
+      "id": "c110",
       "type": "financing",
       "path": [
         "nvidia",
@@ -34967,7 +35931,7 @@
       "note": "Контур финансирования: NVIDIA —стратегический партнёр→ SoftBank; SoftBank —стратегический партнёр→ Oracle; Oracle —вкладывается в→ OpenAI; OpenAI —покупает у→ NVIDIA"
     },
     {
-      "id": "c93",
+      "id": "c111",
       "type": "sales",
       "path": [
         "ase",
@@ -34985,7 +35949,25 @@
       "note": "Контур сбыта: ASE Technology —упаковывает→ Broadcom; Broadcom —подтачивает→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —конкурирует с→ ASE Technology"
     },
     {
-      "id": "c94",
+      "id": "c112",
+      "type": "sales",
+      "path": [
+        "broadcom",
+        "tsmc",
+        "marvell",
+        "nvidia",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__tsmc__customer_of",
+        "tsmc__marvell__manufactures",
+        "marvell__nvidia__threatens",
+        "nvidia__broadcom__competes_with"
+      ],
+      "note": "Контур сбыта: Broadcom —покупает у→ TSMC; TSMC —производит для→ Marvell; Marvell —подтачивает→ NVIDIA; NVIDIA —конкурирует с→ Broadcom"
+    },
+    {
+      "id": "c113",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -35003,7 +35985,7 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —стандартизуется на→ Hugging Face"
     },
     {
-      "id": "c95",
+      "id": "c114",
       "type": "lockin",
       "path": [
         "arista",
@@ -35021,7 +36003,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Meta; Meta —делает возможным→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c96",
+      "id": "c115",
       "type": "financing",
       "path": [
         "astera-labs",
@@ -35039,7 +36021,25 @@
       "note": "Контур финансирования: Astera Labs —заточен под→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Astera Labs"
     },
     {
-      "id": "c97",
+      "id": "c116",
+      "type": "financing",
+      "path": [
+        "marvell",
+        "nvidia",
+        "synopsys",
+        "tsmc",
+        "marvell"
+      ],
+      "edges": [
+        "marvell__nvidia__threatens",
+        "nvidia__synopsys__invests_in",
+        "synopsys__tsmc__optimizes_for",
+        "tsmc__marvell__manufactures"
+      ],
+      "note": "Контур финансирования: Marvell —подтачивает→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ Marvell"
+    },
+    {
+      "id": "c117",
       "type": "financing",
       "path": [
         "micron",
@@ -35057,7 +36057,7 @@
       "note": "Контур финансирования: Micron —конкурирует с→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron"
     },
     {
-      "id": "c98",
+      "id": "c118",
       "type": "lockin",
       "path": [
         "china",
@@ -35075,7 +36075,43 @@
       "note": "Контур замка: Китай —шлюзует доступ к→ DeepSeek; DeepSeek —делает возможным→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —ограничен режимом→ Китай"
     },
     {
-      "id": "c99",
+      "id": "c119",
+      "type": "financing",
+      "path": [
+        "nvidia",
+        "samsung",
+        "tsmc",
+        "openai",
+        "nvidia"
+      ],
+      "edges": [
+        "nvidia__samsung__diversifies_supply",
+        "samsung__tsmc__competes_with",
+        "tsmc__openai__manufactures",
+        "openai__nvidia__customer_of"
+      ],
+      "note": "Контур финансирования: NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ OpenAI; OpenAI —покупает у→ NVIDIA"
+    },
+    {
+      "id": "c120",
+      "type": "financing",
+      "path": [
+        "amazon",
+        "nvidia",
+        "samsung",
+        "tsmc",
+        "amazon"
+      ],
+      "edges": [
+        "amazon__nvidia__customer_of",
+        "nvidia__samsung__diversifies_supply",
+        "samsung__tsmc__competes_with",
+        "tsmc__amazon__manufactures"
+      ],
+      "note": "Контур финансирования: Amazon —покупает у→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Amazon"
+    },
+    {
+      "id": "c121",
       "type": "sales",
       "path": [
         "arista",
@@ -35093,7 +36129,7 @@
       "note": "Контур сбыта: Arista Networks —поставляет→ Meta; Meta —покупает у→ CoreWeave; CoreWeave —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c100",
+      "id": "c122",
       "type": "lockin",
       "path": [
         "nvidia",
@@ -35111,7 +36147,7 @@
       "note": "Контур замка: NVIDIA —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —конкурирует с→ TensorRT; TensorRT —запирает платформы→ NVIDIA"
     },
     {
-      "id": "c101",
+      "id": "c123",
       "type": "sales",
       "path": [
         "amkor",
@@ -35129,7 +36165,7 @@
       "note": "Контур сбыта: Amkor Technology —упаковывает→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —конкурирует с→ ASE Technology; ASE Technology —конкурирует с→ Amkor Technology"
     },
     {
-      "id": "c102",
+      "id": "c124",
       "type": "lockin",
       "path": [
         "arm",
@@ -35147,7 +36183,7 @@
       "note": "Контур замка: Arm —стандартизуется на→ Kubernetes; Kubernetes —развивается вслед за→ Google; Google —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
     },
     {
-      "id": "c103",
+      "id": "c125",
       "type": "financing",
       "path": [
         "arm",
@@ -35165,7 +36201,7 @@
       "note": "Контур финансирования: Arm —стратегический партнёр→ SoftBank; SoftBank —стратегический партнёр→ Oracle; Oracle —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
     },
     {
-      "id": "c104",
+      "id": "c126",
       "type": "sales",
       "path": [
         "ase",
@@ -35183,7 +36219,7 @@
       "note": "Контур сбыта: ASE Technology —упаковывает→ Astera Labs; Astera Labs —заточен под→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —конкурирует с→ ASE Technology"
     },
     {
-      "id": "c105",
+      "id": "c127",
       "type": "financing",
       "path": [
         "ase",
@@ -35201,7 +36237,7 @@
       "note": "Контур финансирования: ASE Technology —упаковывает→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —конкурирует с→ ASE Technology"
     },
     {
-      "id": "c106",
+      "id": "c128",
       "type": "financing",
       "path": [
         "credo",
@@ -35219,7 +36255,25 @@
       "note": "Контур финансирования: Credo Technology —заточен под→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Credo Technology"
     },
     {
-      "id": "c107",
+      "id": "c129",
+      "type": "financing",
+      "path": [
+        "microsoft",
+        "nvidia",
+        "samsung",
+        "tsmc",
+        "microsoft"
+      ],
+      "edges": [
+        "microsoft__nvidia__customer_of",
+        "nvidia__samsung__diversifies_supply",
+        "samsung__tsmc__competes_with",
+        "tsmc__microsoft__manufactures"
+      ],
+      "note": "Контур финансирования: Microsoft —покупает у→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Microsoft"
+    },
+    {
+      "id": "c130",
       "type": "sales",
       "path": [
         "amkor",
@@ -35237,7 +36291,7 @@
       "note": "Контур сбыта: Amkor Technology —упаковывает→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —конкурирует с→ ASE Technology; ASE Technology —конкурирует с→ Amkor Technology"
     },
     {
-      "id": "c108",
+      "id": "c131",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -35255,7 +36309,25 @@
       "note": "Контур замка: Broadcom —поставляет→ HPE; HPE —стратегический партнёр→ NVIDIA; NVIDIA —поставляет→ Dell; Dell —развивается вслед за→ Broadcom"
     },
     {
-      "id": "c109",
+      "id": "c132",
+      "type": "lockin",
+      "path": [
+        "huggingface",
+        "nvidia",
+        "tsmc",
+        "openai",
+        "huggingface"
+      ],
+      "edges": [
+        "huggingface__nvidia__validates_demand",
+        "nvidia__tsmc__co_designs",
+        "tsmc__openai__manufactures",
+        "openai__huggingface__competes_with"
+      ],
+      "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
+    },
+    {
+      "id": "c133",
       "type": "financing",
       "path": [
         "micron",
@@ -35273,7 +36345,25 @@
       "note": "Контур финансирования: Micron —конкурирует с→ SanDisk; SanDisk —конкурирует с→ SK Hynix; SK Hynix —поставляет→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron"
     },
     {
-      "id": "c110",
+      "id": "c134",
+      "type": "lockin",
+      "path": [
+        "nvidia",
+        "tsmc",
+        "openai",
+        "vllm",
+        "nvidia"
+      ],
+      "edges": [
+        "nvidia__tsmc__co_designs",
+        "tsmc__openai__manufactures",
+        "openai__vllm__enables",
+        "vllm__nvidia__validates_demand"
+      ],
+      "note": "Контур замка: NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA"
+    },
+    {
+      "id": "c135",
       "type": "lockin",
       "path": [
         "arm",
@@ -35291,7 +36381,7 @@
       "note": "Контур замка: Arm —поставляет→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —стандартизуется на→ Arm"
     },
     {
-      "id": "c111",
+      "id": "c136",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -35309,7 +36399,7 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c112",
+      "id": "c137",
       "type": "lockin",
       "path": [
         "nvidia",
@@ -35327,7 +36417,7 @@
       "note": "Контур замка: NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA"
     },
     {
-      "id": "c113",
+      "id": "c138",
       "type": "sales",
       "path": [
         "ase",
@@ -35345,7 +36435,25 @@
       "note": "Контур сбыта: ASE Technology —упаковывает→ Credo Technology; Credo Technology —заточен под→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —конкурирует с→ ASE Technology"
     },
     {
-      "id": "c114",
+      "id": "c139",
+      "type": "financing",
+      "path": [
+        "marvell",
+        "nvidia",
+        "samsung",
+        "tsmc",
+        "marvell"
+      ],
+      "edges": [
+        "marvell__nvidia__threatens",
+        "nvidia__samsung__diversifies_supply",
+        "samsung__tsmc__competes_with",
+        "tsmc__marvell__manufactures"
+      ],
+      "note": "Контур финансирования: Marvell —подтачивает→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Marvell"
+    },
+    {
+      "id": "c140",
       "type": "financing",
       "path": [
         "ase",
@@ -35363,7 +36471,7 @@
       "note": "Контур финансирования: ASE Technology —упаковывает→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —конкурирует с→ ASE Technology"
     },
     {
-      "id": "c115",
+      "id": "c141",
       "type": "financing",
       "path": [
         "kioxia",
@@ -35381,7 +36489,7 @@
       "note": "Контур финансирования: Kioxia —поставляет→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron; Micron —конкурирует с→ SanDisk; SanDisk —стратегический партнёр→ Kioxia"
     },
     {
-      "id": "c116",
+      "id": "c142",
       "type": "financing",
       "path": [
         "micron",
@@ -35399,7 +36507,7 @@
       "note": "Контур финансирования: Micron —конкурирует с→ SanDisk; SanDisk —конкурирует с→ Samsung; Samsung —поставляет→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron"
     },
     {
-      "id": "c117",
+      "id": "c143",
       "type": "lockin",
       "path": [
         "cuda",
@@ -35419,7 +36527,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —стратегический партнёр→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c118",
+      "id": "c144",
       "type": "lockin",
       "path": [
         "cuda",
@@ -35439,7 +36547,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c119",
+      "id": "c145",
       "type": "lockin",
       "path": [
         "cuda",
@@ -35459,7 +36567,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —имеет место в совете→ NVIDIA Ventures (NVentures); NVIDIA Ventures (NVentures) —вкладывается в→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —развивается вслед за→ CUDA"
     },
     {
-      "id": "c120",
+      "id": "c146",
       "type": "lockin",
       "path": [
         "cuda",
@@ -35479,7 +36587,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c121",
+      "id": "c147",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -35499,7 +36607,7 @@
       "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —делает возможным→ CUDA; CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Broadcom"
     },
     {
-      "id": "c122",
+      "id": "c148",
       "type": "lockin",
       "path": [
         "cuda",
@@ -35519,7 +36627,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ NVIDIA; NVIDIA —делает возможным→ CUDA"
     },
     {
-      "id": "c123",
+      "id": "c149",
       "type": "lockin",
       "path": [
         "cuda",
@@ -35539,7 +36647,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c124",
+      "id": "c150",
       "type": "lockin",
       "path": [
         "cuda",
@@ -35559,7 +36667,27 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c125",
+      "id": "c151",
+      "type": "lockin",
+      "path": [
+        "amazon",
+        "cuda",
+        "pytorch",
+        "nvidia",
+        "tsmc",
+        "amazon"
+      ],
+      "edges": [
+        "amazon__cuda__locks_in_platforms",
+        "cuda__pytorch__locks_in_developers",
+        "pytorch__nvidia__validates_demand",
+        "nvidia__tsmc__co_designs",
+        "tsmc__amazon__manufactures"
+      ],
+      "note": "Контур замка: Amazon —запирает платформы→ CUDA; CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ Amazon"
+    },
+    {
+      "id": "c152",
       "type": "lockin",
       "path": [
         "arista",
@@ -35579,7 +36707,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA; CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c126",
+      "id": "c153",
       "type": "financing",
       "path": [
         "broadcom",
@@ -35599,7 +36727,7 @@
       "note": "Контур финансирования: Broadcom —проектирует вместе с→ Google; Google —покупает у→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ Broadcom"
     },
     {
-      "id": "c127",
+      "id": "c154",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -35619,7 +36747,7 @@
       "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —делает возможным→ CUDA; CUDA —запирает платформы→ NVIDIA; NVIDIA —конкурирует с→ Google; Google —покупает у→ Broadcom"
     },
     {
-      "id": "c128",
+      "id": "c155",
       "type": "lockin",
       "path": [
         "cuda",
@@ -35639,7 +36767,27 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c129",
+      "id": "c156",
+      "type": "lockin",
+      "path": [
+        "cuda",
+        "nvidia",
+        "tsmc",
+        "openai",
+        "microsoft",
+        "cuda"
+      ],
+      "edges": [
+        "cuda__nvidia__locks_in_platforms",
+        "nvidia__tsmc__co_designs",
+        "tsmc__openai__manufactures",
+        "openai__microsoft__strategic_partner",
+        "microsoft__cuda__locks_in_platforms"
+      ],
+      "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ OpenAI; OpenAI —стратегический партнёр→ Microsoft; Microsoft —запирает платформы→ CUDA"
+    },
+    {
+      "id": "c157",
       "type": "lockin",
       "path": [
         "cuda",
@@ -35659,7 +36807,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —стратегический партнёр→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c130",
+      "id": "c158",
       "type": "lockin",
       "path": [
         "cuda",
@@ -35679,7 +36827,27 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —стратегический партнёр→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c131",
+      "id": "c159",
+      "type": "lockin",
+      "path": [
+        "cuda",
+        "pytorch",
+        "nvidia",
+        "tsmc",
+        "microsoft",
+        "cuda"
+      ],
+      "edges": [
+        "cuda__pytorch__locks_in_developers",
+        "pytorch__nvidia__validates_demand",
+        "nvidia__tsmc__co_designs",
+        "tsmc__microsoft__manufactures",
+        "microsoft__cuda__locks_in_platforms"
+      ],
+      "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ Microsoft; Microsoft —запирает платформы→ CUDA"
+    },
+    {
+      "id": "c160",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -35699,7 +36867,7 @@
       "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ NVIDIA; NVIDIA —имеет место в совете→ NVIDIA Ventures (NVentures); NVIDIA Ventures (NVentures) —вкладывается в→ Hugging Face"
     },
     {
-      "id": "c132",
+      "id": "c161",
       "type": "lockin",
       "path": [
         "amazon",
@@ -35719,7 +36887,7 @@
       "note": "Контур замка: Amazon —запирает платформы→ CUDA; CUDA —запирает разработчиков→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
     },
     {
-      "id": "c133",
+      "id": "c162",
       "type": "lockin",
       "path": [
         "arm",
@@ -35739,7 +36907,7 @@
       "note": "Контур замка: Arm —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —покупает у→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —стандартизуется на→ Arm"
     },
     {
-      "id": "c134",
+      "id": "c163",
       "type": "lockin",
       "path": [
         "coreweave",
@@ -35759,7 +36927,47 @@
       "note": "Контур замка: CoreWeave —покупает у→ NVIDIA; NVIDIA —делает возможным→ CUDA; CUDA —запирает разработчиков→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ CoreWeave"
     },
     {
-      "id": "c135",
+      "id": "c164",
+      "type": "financing",
+      "path": [
+        "coreweave",
+        "nvidia",
+        "tsmc",
+        "openai",
+        "microsoft",
+        "coreweave"
+      ],
+      "edges": [
+        "coreweave__nvidia__customer_of",
+        "nvidia__tsmc__co_designs",
+        "tsmc__openai__manufactures",
+        "openai__microsoft__strategic_partner",
+        "microsoft__coreweave__customer_of"
+      ],
+      "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ OpenAI; OpenAI —стратегический партнёр→ Microsoft; Microsoft —покупает у→ CoreWeave"
+    },
+    {
+      "id": "c165",
+      "type": "financing",
+      "path": [
+        "amazon",
+        "anthropic",
+        "google",
+        "nvidia",
+        "tsmc",
+        "amazon"
+      ],
+      "edges": [
+        "amazon__anthropic__invests_in",
+        "anthropic__google__customer_of",
+        "google__nvidia__customer_of",
+        "nvidia__tsmc__co_designs",
+        "tsmc__amazon__manufactures"
+      ],
+      "note": "Контур финансирования: Amazon —вкладывается в→ Anthropic; Anthropic —покупает у→ Google; Google —покупает у→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ Amazon"
+    },
+    {
+      "id": "c166",
       "type": "lockin",
       "path": [
         "arista",
@@ -35779,7 +36987,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Meta; Meta —запирает платформы→ CUDA; CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c136",
+      "id": "c167",
       "type": "financing",
       "path": [
         "arista",
@@ -35799,7 +37007,7 @@
       "note": "Контур финансирования: Arista Networks —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —покупает у→ Oracle; Oracle —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c137",
+      "id": "c168",
       "type": "sales",
       "path": [
         "astera-labs",
@@ -35819,7 +37027,7 @@
       "note": "Контур сбыта: Astera Labs —заточен под→ NVIDIA; NVIDIA —конкурирует с→ Google; Google —покупает у→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —производит для→ Astera Labs"
     },
     {
-      "id": "c138",
+      "id": "c169",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -35839,7 +37047,27 @@
       "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —производит для→ NVIDIA; NVIDIA —стандартизуется на→ Kubernetes; Kubernetes —развивается вслед за→ Google; Google —покупает у→ Broadcom"
     },
     {
-      "id": "c139",
+      "id": "c170",
+      "type": "financing",
+      "path": [
+        "broadcom",
+        "tsmc",
+        "openai",
+        "microsoft",
+        "nvidia",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__tsmc__customer_of",
+        "tsmc__openai__manufactures",
+        "openai__microsoft__strategic_partner",
+        "microsoft__nvidia__customer_of",
+        "nvidia__broadcom__competes_with"
+      ],
+      "note": "Контур финансирования: Broadcom —покупает у→ TSMC; TSMC —производит для→ OpenAI; OpenAI —стратегический партнёр→ Microsoft; Microsoft —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Broadcom"
+    },
+    {
+      "id": "c171",
       "type": "financing",
       "path": [
         "coreweave",
@@ -35859,7 +37087,7 @@
       "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —стратегический партнёр→ Microsoft; Microsoft —покупает у→ CoreWeave"
     },
     {
-      "id": "c140",
+      "id": "c172",
       "type": "lockin",
       "path": [
         "cuda",
@@ -35879,7 +37107,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —развивается вслед за→ CUDA"
     },
     {
-      "id": "c141",
+      "id": "c173",
       "type": "lockin",
       "path": [
         "cuda",
@@ -35899,7 +37127,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —развивается вслед за→ CUDA"
     },
     {
-      "id": "c142",
+      "id": "c174",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -35919,27 +37147,47 @@
       "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c143",
-      "type": "financing",
+      "id": "c175",
+      "type": "lockin",
       "path": [
         "amazon",
-        "anthropic",
+        "cuda",
+        "nvidia",
         "broadcom",
         "tsmc",
-        "nvidia",
         "amazon"
       ],
       "edges": [
-        "amazon__anthropic__invests_in",
-        "anthropic__broadcom__strategic_partner",
+        "amazon__cuda__locks_in_platforms",
+        "cuda__nvidia__locks_in_platforms",
+        "nvidia__broadcom__competes_with",
         "broadcom__tsmc__customer_of",
-        "tsmc__nvidia__manufactures",
-        "nvidia__amazon__competes_with"
+        "tsmc__amazon__manufactures"
       ],
-      "note": "Контур финансирования: Amazon —вкладывается в→ Anthropic; Anthropic —стратегический партнёр→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —производит для→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
+      "note": "Контур замка: Amazon —запирает платформы→ CUDA; CUDA —запирает платформы→ NVIDIA; NVIDIA —конкурирует с→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —производит для→ Amazon"
     },
     {
-      "id": "c144",
+      "id": "c176",
+      "type": "sales",
+      "path": [
+        "broadcom",
+        "tsmc",
+        "openai",
+        "nvidia",
+        "google",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__tsmc__customer_of",
+        "tsmc__openai__manufactures",
+        "openai__nvidia__customer_of",
+        "nvidia__google__competes_with",
+        "google__broadcom__customer_of"
+      ],
+      "note": "Контур сбыта: Broadcom —покупает у→ TSMC; TSMC —производит для→ OpenAI; OpenAI —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Google; Google —покупает у→ Broadcom"
+    },
+    {
+      "id": "c177",
       "type": "lockin",
       "path": [
         "china",
@@ -35959,7 +37207,7 @@
       "note": "Контур замка: Китай —шлюзует доступ к→ DeepSeek; DeepSeek —может вытеснить→ CUDA; CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —ограничен режимом→ Китай"
     },
     {
-      "id": "c145",
+      "id": "c178",
       "type": "lockin",
       "path": [
         "cuda",
@@ -35979,7 +37227,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —развивается вслед за→ CUDA"
     },
     {
-      "id": "c146",
+      "id": "c179",
       "type": "lockin",
       "path": [
         "cuda",
@@ -35999,7 +37247,67 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c147",
+      "id": "c180",
+      "type": "financing",
+      "path": [
+        "microsoft",
+        "nvidia",
+        "synopsys",
+        "tsmc",
+        "openai",
+        "microsoft"
+      ],
+      "edges": [
+        "microsoft__nvidia__customer_of",
+        "nvidia__synopsys__invests_in",
+        "synopsys__tsmc__optimizes_for",
+        "tsmc__openai__manufactures",
+        "openai__microsoft__strategic_partner"
+      ],
+      "note": "Контур финансирования: Microsoft —покупает у→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ OpenAI; OpenAI —стратегический партнёр→ Microsoft"
+    },
+    {
+      "id": "c181",
+      "type": "financing",
+      "path": [
+        "microsoft",
+        "openai",
+        "oracle",
+        "nvidia",
+        "tsmc",
+        "microsoft"
+      ],
+      "edges": [
+        "microsoft__openai__invests_in",
+        "openai__oracle__customer_of",
+        "oracle__nvidia__customer_of",
+        "nvidia__tsmc__co_designs",
+        "tsmc__microsoft__manufactures"
+      ],
+      "note": "Контур финансирования: Microsoft —вкладывается в→ OpenAI; OpenAI —покупает у→ Oracle; Oracle —покупает у→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ Microsoft"
+    },
+    {
+      "id": "c182",
+      "type": "sales",
+      "path": [
+        "amazon",
+        "nvidia",
+        "google",
+        "broadcom",
+        "tsmc",
+        "amazon"
+      ],
+      "edges": [
+        "amazon__nvidia__customer_of",
+        "nvidia__google__competes_with",
+        "google__broadcom__customer_of",
+        "broadcom__tsmc__customer_of",
+        "tsmc__amazon__manufactures"
+      ],
+      "note": "Контур сбыта: Amazon —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Google; Google —покупает у→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —производит для→ Amazon"
+    },
+    {
+      "id": "c183",
       "type": "financing",
       "path": [
         "amazon",
@@ -36019,7 +37327,27 @@
       "note": "Контур финансирования: Amazon —вкладывается в→ Anthropic; Anthropic —стратегический партнёр→ Broadcom; Broadcom —проектирует вместе с→ Google; Google —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
     },
     {
-      "id": "c148",
+      "id": "c184",
+      "type": "financing",
+      "path": [
+        "amazon",
+        "anthropic",
+        "google",
+        "broadcom",
+        "tsmc",
+        "amazon"
+      ],
+      "edges": [
+        "amazon__anthropic__invests_in",
+        "anthropic__google__customer_of",
+        "google__broadcom__customer_of",
+        "broadcom__tsmc__customer_of",
+        "tsmc__amazon__manufactures"
+      ],
+      "note": "Контур финансирования: Amazon —вкладывается в→ Anthropic; Anthropic —покупает у→ Google; Google —покупает у→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —производит для→ Amazon"
+    },
+    {
+      "id": "c185",
       "type": "lockin",
       "path": [
         "amazon",
@@ -36039,7 +37367,27 @@
       "note": "Контур замка: Amazon —запирает платформы→ CUDA; CUDA —запирает разработчиков→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
     },
     {
-      "id": "c149",
+      "id": "c186",
+      "type": "lockin",
+      "path": [
+        "amazon",
+        "cuda",
+        "nvidia",
+        "synopsys",
+        "tsmc",
+        "amazon"
+      ],
+      "edges": [
+        "amazon__cuda__locks_in_platforms",
+        "cuda__nvidia__locks_in_platforms",
+        "nvidia__synopsys__invests_in",
+        "synopsys__tsmc__optimizes_for",
+        "tsmc__amazon__manufactures"
+      ],
+      "note": "Контур замка: Amazon —запирает платформы→ CUDA; CUDA —запирает платформы→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ Amazon"
+    },
+    {
+      "id": "c187",
       "type": "financing",
       "path": [
         "arm",
@@ -36059,7 +37407,67 @@
       "note": "Контур финансирования: Arm —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —стратегический партнёр→ Microsoft; Microsoft —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
     },
     {
-      "id": "c150",
+      "id": "c188",
+      "type": "lockin",
+      "path": [
+        "broadcom",
+        "tsmc",
+        "microsoft",
+        "cuda",
+        "nvidia",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__tsmc__customer_of",
+        "tsmc__microsoft__manufactures",
+        "microsoft__cuda__locks_in_platforms",
+        "cuda__nvidia__locks_in_platforms",
+        "nvidia__broadcom__competes_with"
+      ],
+      "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —производит для→ Microsoft; Microsoft —запирает платформы→ CUDA; CUDA —запирает платформы→ NVIDIA; NVIDIA —конкурирует с→ Broadcom"
+    },
+    {
+      "id": "c189",
+      "type": "financing",
+      "path": [
+        "amazon",
+        "anthropic",
+        "broadcom",
+        "nvidia",
+        "tsmc",
+        "amazon"
+      ],
+      "edges": [
+        "amazon__anthropic__invests_in",
+        "anthropic__broadcom__strategic_partner",
+        "broadcom__nvidia__threatens",
+        "nvidia__tsmc__co_designs",
+        "tsmc__amazon__manufactures"
+      ],
+      "note": "Контур финансирования: Amazon —вкладывается в→ Anthropic; Anthropic —стратегический партнёр→ Broadcom; Broadcom —подтачивает→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ Amazon"
+    },
+    {
+      "id": "c190",
+      "type": "financing",
+      "path": [
+        "amazon",
+        "anthropic",
+        "nvidia",
+        "synopsys",
+        "tsmc",
+        "amazon"
+      ],
+      "edges": [
+        "amazon__anthropic__invests_in",
+        "anthropic__nvidia__customer_of",
+        "nvidia__synopsys__invests_in",
+        "synopsys__tsmc__optimizes_for",
+        "tsmc__amazon__manufactures"
+      ],
+      "note": "Контур финансирования: Amazon —вкладывается в→ Anthropic; Anthropic —покупает у→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ Amazon"
+    },
+    {
+      "id": "c191",
       "type": "financing",
       "path": [
         "arista",
@@ -36079,7 +37487,7 @@
       "note": "Контур финансирования: Arista Networks —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —покупает у→ CoreWeave; CoreWeave —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c151",
+      "id": "c192",
       "type": "sales",
       "path": [
         "broadcom",
@@ -36099,7 +37507,7 @@
       "note": "Контур сбыта: Broadcom —покупает у→ TSMC; TSMC —производит для→ Credo Technology; Credo Technology —заточен под→ NVIDIA; NVIDIA —конкурирует с→ Google; Google —покупает у→ Broadcom"
     },
     {
-      "id": "c152",
+      "id": "c193",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -36119,7 +37527,7 @@
       "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —делает возможным→ CUDA; CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Broadcom"
     },
     {
-      "id": "c153",
+      "id": "c194",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -36139,7 +37547,47 @@
       "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —делает возможным→ CUDA; CUDA —запирает платформы→ NVIDIA; NVIDIA —поставляет→ Dell; Dell —развивается вслед за→ Broadcom"
     },
     {
-      "id": "c154",
+      "id": "c195",
+      "type": "sales",
+      "path": [
+        "broadcom",
+        "tsmc",
+        "microsoft",
+        "nvidia",
+        "google",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__tsmc__customer_of",
+        "tsmc__microsoft__manufactures",
+        "microsoft__nvidia__customer_of",
+        "nvidia__google__competes_with",
+        "google__broadcom__customer_of"
+      ],
+      "note": "Контур сбыта: Broadcom —покупает у→ TSMC; TSMC —производит для→ Microsoft; Microsoft —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Google; Google —покупает у→ Broadcom"
+    },
+    {
+      "id": "c196",
+      "type": "lockin",
+      "path": [
+        "cuda",
+        "nvidia",
+        "synopsys",
+        "tsmc",
+        "microsoft",
+        "cuda"
+      ],
+      "edges": [
+        "cuda__nvidia__locks_in_platforms",
+        "nvidia__synopsys__invests_in",
+        "synopsys__tsmc__optimizes_for",
+        "tsmc__microsoft__manufactures",
+        "microsoft__cuda__locks_in_platforms"
+      ],
+      "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ Microsoft; Microsoft —запирает платформы→ CUDA"
+    },
+    {
+      "id": "c197",
       "type": "lockin",
       "path": [
         "cuda",
@@ -36159,7 +37607,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c155",
+      "id": "c198",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -36179,7 +37627,7 @@
       "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —стандартизуется на→ Hugging Face"
     },
     {
-      "id": "c156",
+      "id": "c199",
       "type": "lockin",
       "path": [
         "arista",
@@ -36199,7 +37647,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Meta; Meta —делает возможным→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c157",
+      "id": "c200",
       "type": "financing",
       "path": [
         "broadcom",
@@ -36219,7 +37667,47 @@
       "note": "Контур финансирования: Broadcom —проектирует вместе с→ Google; Google —покупает у→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Broadcom"
     },
     {
-      "id": "c158",
+      "id": "c201",
+      "type": "sales",
+      "path": [
+        "broadcom",
+        "tsmc",
+        "microsoft",
+        "coreweave",
+        "nvidia",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__tsmc__customer_of",
+        "tsmc__microsoft__manufactures",
+        "microsoft__coreweave__customer_of",
+        "coreweave__nvidia__customer_of",
+        "nvidia__broadcom__competes_with"
+      ],
+      "note": "Контур сбыта: Broadcom —покупает у→ TSMC; TSMC —производит для→ Microsoft; Microsoft —покупает у→ CoreWeave; CoreWeave —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Broadcom"
+    },
+    {
+      "id": "c202",
+      "type": "sales",
+      "path": [
+        "broadcom",
+        "tsmc",
+        "openai",
+        "oracle",
+        "nvidia",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__tsmc__customer_of",
+        "tsmc__openai__manufactures",
+        "openai__oracle__customer_of",
+        "oracle__nvidia__customer_of",
+        "nvidia__broadcom__competes_with"
+      ],
+      "note": "Контур сбыта: Broadcom —покупает у→ TSMC; TSMC —производит для→ OpenAI; OpenAI —покупает у→ Oracle; Oracle —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Broadcom"
+    },
+    {
+      "id": "c203",
       "type": "lockin",
       "path": [
         "cuda",
@@ -36239,7 +37727,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c159",
+      "id": "c204",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -36259,7 +37747,7 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —стандартизуется на→ Hugging Face"
     },
     {
-      "id": "c160",
+      "id": "c205",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -36279,7 +37767,7 @@
       "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c161",
+      "id": "c206",
       "type": "financing",
       "path": [
         "microsoft",
@@ -36299,7 +37787,27 @@
       "note": "Контур финансирования: Microsoft —вкладывается в→ OpenAI; OpenAI —покупает у→ Oracle; Oracle —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft"
     },
     {
-      "id": "c162",
+      "id": "c207",
+      "type": "lockin",
+      "path": [
+        "amazon",
+        "cuda",
+        "huggingface",
+        "nvidia",
+        "tsmc",
+        "amazon"
+      ],
+      "edges": [
+        "amazon__cuda__locks_in_platforms",
+        "cuda__huggingface__locks_in_developers",
+        "huggingface__nvidia__validates_demand",
+        "nvidia__tsmc__co_designs",
+        "tsmc__amazon__manufactures"
+      ],
+      "note": "Контур замка: Amazon —запирает платформы→ CUDA; CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ Amazon"
+    },
+    {
+      "id": "c208",
       "type": "lockin",
       "path": [
         "arista",
@@ -36319,7 +37827,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA; CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c163",
+      "id": "c209",
       "type": "lockin",
       "path": [
         "arm",
@@ -36339,7 +37847,7 @@
       "note": "Контур замка: Arm —поставляет→ NVIDIA; NVIDIA —конкурирует с→ Google; Google —покупает у→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —стандартизуется на→ Arm"
     },
     {
-      "id": "c164",
+      "id": "c210",
       "type": "sales",
       "path": [
         "ase",
@@ -36359,7 +37867,7 @@
       "note": "Контур сбыта: ASE Technology —упаковывает→ Broadcom; Broadcom —проектирует вместе с→ Google; Google —покупает у→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —конкурирует с→ ASE Technology"
     },
     {
-      "id": "c165",
+      "id": "c211",
       "type": "financing",
       "path": [
         "broadcom",
@@ -36379,7 +37887,7 @@
       "note": "Контур финансирования: Broadcom —поставляет→ HPE; HPE —стратегический партнёр→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ Broadcom"
     },
     {
-      "id": "c166",
+      "id": "c212",
       "type": "lockin",
       "path": [
         "china",
@@ -36399,7 +37907,27 @@
       "note": "Контур замка: Китай —шлюзует доступ к→ DeepSeek; DeepSeek —делает возможным→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —ограничен режимом→ Китай"
     },
     {
-      "id": "c167",
+      "id": "c213",
+      "type": "financing",
+      "path": [
+        "coreweave",
+        "nvidia",
+        "synopsys",
+        "tsmc",
+        "microsoft",
+        "coreweave"
+      ],
+      "edges": [
+        "coreweave__nvidia__customer_of",
+        "nvidia__synopsys__invests_in",
+        "synopsys__tsmc__optimizes_for",
+        "tsmc__microsoft__manufactures",
+        "microsoft__coreweave__customer_of"
+      ],
+      "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ Microsoft; Microsoft —покупает у→ CoreWeave"
+    },
+    {
+      "id": "c214",
       "type": "financing",
       "path": [
         "microsoft",
@@ -36419,7 +37947,27 @@
       "note": "Контур финансирования: Microsoft —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —стратегический партнёр→ Oracle; Oracle —вкладывается в→ OpenAI; OpenAI —стратегический партнёр→ Microsoft"
     },
     {
-      "id": "c168",
+      "id": "c215",
+      "type": "financing",
+      "path": [
+        "nvidia",
+        "synopsys",
+        "tsmc",
+        "openai",
+        "oracle",
+        "nvidia"
+      ],
+      "edges": [
+        "nvidia__synopsys__invests_in",
+        "synopsys__tsmc__optimizes_for",
+        "tsmc__openai__manufactures",
+        "openai__oracle__customer_of",
+        "oracle__nvidia__customer_of"
+      ],
+      "note": "Контур финансирования: NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ OpenAI; OpenAI —покупает у→ Oracle; Oracle —покупает у→ NVIDIA"
+    },
+    {
+      "id": "c216",
       "type": "lockin",
       "path": [
         "astera-labs",
@@ -36439,7 +37987,27 @@
       "note": "Контур замка: Astera Labs —заточен под→ NVIDIA; NVIDIA —поставляет→ Dell; Dell —развивается вслед за→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —производит для→ Astera Labs"
     },
     {
-      "id": "c169",
+      "id": "c217",
+      "type": "lockin",
+      "path": [
+        "cuda",
+        "huggingface",
+        "nvidia",
+        "tsmc",
+        "microsoft",
+        "cuda"
+      ],
+      "edges": [
+        "cuda__huggingface__locks_in_developers",
+        "huggingface__nvidia__validates_demand",
+        "nvidia__tsmc__co_designs",
+        "tsmc__microsoft__manufactures",
+        "microsoft__cuda__locks_in_platforms"
+      ],
+      "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ Microsoft; Microsoft —запирает платформы→ CUDA"
+    },
+    {
+      "id": "c218",
       "type": "lockin",
       "path": [
         "arm",
@@ -36459,7 +38027,7 @@
       "note": "Контур замка: Arm —стандартизуется на→ Kubernetes; Kubernetes —развивается вслед за→ Google; Google —покупает у→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —стандартизуется на→ Arm"
     },
     {
-      "id": "c170",
+      "id": "c219",
       "type": "lockin",
       "path": [
         "arm",
@@ -36479,7 +38047,67 @@
       "note": "Контур замка: Arm —стратегический партнёр→ SoftBank; SoftBank —стратегический партнёр→ Oracle; Oracle —покупает у→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —стандартизуется на→ Arm"
     },
     {
-      "id": "c171",
+      "id": "c220",
+      "type": "sales",
+      "path": [
+        "broadcom",
+        "tsmc",
+        "marvell",
+        "nvidia",
+        "google",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__tsmc__customer_of",
+        "tsmc__marvell__manufactures",
+        "marvell__nvidia__threatens",
+        "nvidia__google__competes_with",
+        "google__broadcom__customer_of"
+      ],
+      "note": "Контур сбыта: Broadcom —покупает у→ TSMC; TSMC —производит для→ Marvell; Marvell —подтачивает→ NVIDIA; NVIDIA —конкурирует с→ Google; Google —покупает у→ Broadcom"
+    },
+    {
+      "id": "c221",
+      "type": "sales",
+      "path": [
+        "broadcom",
+        "tsmc",
+        "openai",
+        "coreweave",
+        "nvidia",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__tsmc__customer_of",
+        "tsmc__openai__manufactures",
+        "openai__coreweave__customer_of",
+        "coreweave__nvidia__customer_of",
+        "nvidia__broadcom__competes_with"
+      ],
+      "note": "Контур сбыта: Broadcom —покупает у→ TSMC; TSMC —производит для→ OpenAI; OpenAI —покупает у→ CoreWeave; CoreWeave —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Broadcom"
+    },
+    {
+      "id": "c222",
+      "type": "lockin",
+      "path": [
+        "broadcom",
+        "tsmc",
+        "openai",
+        "nvidia",
+        "dell",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__tsmc__customer_of",
+        "tsmc__openai__manufactures",
+        "openai__nvidia__customer_of",
+        "nvidia__dell__supplies",
+        "dell__broadcom__path_dependent_on"
+      ],
+      "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —производит для→ OpenAI; OpenAI —покупает у→ NVIDIA; NVIDIA —поставляет→ Dell; Dell —развивается вслед за→ Broadcom"
+    },
+    {
+      "id": "c223",
       "type": "financing",
       "path": [
         "coreweave",
@@ -36499,7 +38127,7 @@
       "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —покупает у→ CoreWeave"
     },
     {
-      "id": "c172",
+      "id": "c224",
       "type": "lockin",
       "path": [
         "microsoft",
@@ -36519,7 +38147,27 @@
       "note": "Контур замка: Microsoft —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —конкурирует с→ TensorRT; TensorRT —запирает платформы→ NVIDIA; NVIDIA —поставляет→ Microsoft"
     },
     {
-      "id": "c173",
+      "id": "c225",
+      "type": "lockin",
+      "path": [
+        "amazon",
+        "nvidia",
+        "dell",
+        "broadcom",
+        "tsmc",
+        "amazon"
+      ],
+      "edges": [
+        "amazon__nvidia__customer_of",
+        "nvidia__dell__supplies",
+        "dell__broadcom__path_dependent_on",
+        "broadcom__tsmc__customer_of",
+        "tsmc__amazon__manufactures"
+      ],
+      "note": "Контур замка: Amazon —покупает у→ NVIDIA; NVIDIA —поставляет→ Dell; Dell —развивается вслед за→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —производит для→ Amazon"
+    },
+    {
+      "id": "c226",
       "type": "lockin",
       "path": [
         "arista",
@@ -36539,7 +38187,27 @@
       "note": "Контур замка: Arista Networks —поставляет→ Meta; Meta —запирает платформы→ CUDA; CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c174",
+      "id": "c227",
+      "type": "financing",
+      "path": [
+        "coreweave",
+        "nvidia",
+        "synopsys",
+        "tsmc",
+        "openai",
+        "coreweave"
+      ],
+      "edges": [
+        "coreweave__nvidia__customer_of",
+        "nvidia__synopsys__invests_in",
+        "synopsys__tsmc__optimizes_for",
+        "tsmc__openai__manufactures",
+        "openai__coreweave__customer_of"
+      ],
+      "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ OpenAI; OpenAI —покупает у→ CoreWeave"
+    },
+    {
+      "id": "c228",
       "type": "lockin",
       "path": [
         "cuda",
@@ -36559,7 +38227,67 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron; Micron —конкурирует с→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c175",
+      "id": "c229",
+      "type": "lockin",
+      "path": [
+        "cuda",
+        "nvidia",
+        "tsmc",
+        "openai",
+        "vllm",
+        "cuda"
+      ],
+      "edges": [
+        "cuda__nvidia__locks_in_platforms",
+        "nvidia__tsmc__co_designs",
+        "tsmc__openai__manufactures",
+        "openai__vllm__enables",
+        "vllm__cuda__path_dependent_on"
+      ],
+      "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —развивается вслед за→ CUDA"
+    },
+    {
+      "id": "c230",
+      "type": "lockin",
+      "path": [
+        "huggingface",
+        "pytorch",
+        "nvidia",
+        "tsmc",
+        "openai",
+        "huggingface"
+      ],
+      "edges": [
+        "huggingface__pytorch__standardizes_on",
+        "pytorch__nvidia__validates_demand",
+        "nvidia__tsmc__co_designs",
+        "tsmc__openai__manufactures",
+        "openai__huggingface__competes_with"
+      ],
+      "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
+    },
+    {
+      "id": "c231",
+      "type": "financing",
+      "path": [
+        "microsoft",
+        "nvidia",
+        "samsung",
+        "tsmc",
+        "openai",
+        "microsoft"
+      ],
+      "edges": [
+        "microsoft__nvidia__customer_of",
+        "nvidia__samsung__diversifies_supply",
+        "samsung__tsmc__competes_with",
+        "tsmc__openai__manufactures",
+        "openai__microsoft__strategic_partner"
+      ],
+      "note": "Контур финансирования: Microsoft —покупает у→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ OpenAI; OpenAI —стратегический партнёр→ Microsoft"
+    },
+    {
+      "id": "c232",
       "type": "lockin",
       "path": [
         "nvidia",
@@ -36579,7 +38307,27 @@
       "note": "Контур замка: NVIDIA —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —конкурирует с→ TensorRT; TensorRT —собирает→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA"
     },
     {
-      "id": "c176",
+      "id": "c233",
+      "type": "lockin",
+      "path": [
+        "amazon",
+        "cuda",
+        "nvidia",
+        "samsung",
+        "tsmc",
+        "amazon"
+      ],
+      "edges": [
+        "amazon__cuda__locks_in_platforms",
+        "cuda__nvidia__locks_in_platforms",
+        "nvidia__samsung__diversifies_supply",
+        "samsung__tsmc__competes_with",
+        "tsmc__amazon__manufactures"
+      ],
+      "note": "Контур замка: Amazon —запирает платформы→ CUDA; CUDA —запирает платформы→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Amazon"
+    },
+    {
+      "id": "c234",
       "type": "lockin",
       "path": [
         "arm",
@@ -36599,7 +38347,7 @@
       "note": "Контур замка: Arm —стандартизуется на→ Kubernetes; Kubernetes —развивается вслед за→ Google; Google —покупает у→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —стандартизуется на→ Arm"
     },
     {
-      "id": "c177",
+      "id": "c235",
       "type": "financing",
       "path": [
         "arm",
@@ -36619,7 +38367,7 @@
       "note": "Контур финансирования: Arm —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —покупает у→ CoreWeave; CoreWeave —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
     },
     {
-      "id": "c178",
+      "id": "c236",
       "type": "financing",
       "path": [
         "arm",
@@ -36639,7 +38387,7 @@
       "note": "Контур финансирования: Arm —стратегический партнёр→ SoftBank; SoftBank —стратегический партнёр→ Oracle; Oracle —вкладывается в→ OpenAI; OpenAI —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
     },
     {
-      "id": "c179",
+      "id": "c237",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -36659,7 +38407,7 @@
       "note": "Контур замка: Broadcom —поставляет→ HPE; HPE —стратегический партнёр→ NVIDIA; NVIDIA —стандартизуется на→ Kubernetes; Kubernetes —развивается вслед за→ Google; Google —покупает у→ Broadcom"
     },
     {
-      "id": "c180",
+      "id": "c238",
       "type": "financing",
       "path": [
         "broadcom",
@@ -36679,7 +38427,7 @@
       "note": "Контур финансирования: Broadcom —подтачивает→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron; Micron —конкурирует с→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Broadcom"
     },
     {
-      "id": "c181",
+      "id": "c239",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -36699,7 +38447,27 @@
       "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —производит для→ Credo Technology; Credo Technology —заточен под→ NVIDIA; NVIDIA —поставляет→ Dell; Dell —развивается вслед за→ Broadcom"
     },
     {
-      "id": "c182",
+      "id": "c240",
+      "type": "lockin",
+      "path": [
+        "broadcom",
+        "tsmc",
+        "microsoft",
+        "nvidia",
+        "dell",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__tsmc__customer_of",
+        "tsmc__microsoft__manufactures",
+        "microsoft__nvidia__customer_of",
+        "nvidia__dell__supplies",
+        "dell__broadcom__path_dependent_on"
+      ],
+      "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —производит для→ Microsoft; Microsoft —покупает у→ NVIDIA; NVIDIA —поставляет→ Dell; Dell —развивается вслед за→ Broadcom"
+    },
+    {
+      "id": "c241",
       "type": "lockin",
       "path": [
         "china",
@@ -36719,7 +38487,7 @@
       "note": "Контур замка: Китай —шлюзует доступ к→ DeepSeek; DeepSeek —может вытеснить→ CUDA; CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —ограничен режимом→ Китай"
     },
     {
-      "id": "c183",
+      "id": "c242",
       "type": "lockin",
       "path": [
         "coreweave",
@@ -36739,7 +38507,7 @@
       "note": "Контур замка: CoreWeave —покупает у→ NVIDIA; NVIDIA —страхуется через→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ CoreWeave"
     },
     {
-      "id": "c184",
+      "id": "c243",
       "type": "lockin",
       "path": [
         "cuda",
@@ -36759,7 +38527,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —развивается вслед за→ CUDA"
     },
     {
-      "id": "c185",
+      "id": "c244",
       "type": "lockin",
       "path": [
         "cuda",
@@ -36779,7 +38547,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c186",
+      "id": "c245",
       "type": "lockin",
       "path": [
         "cuda",
@@ -36799,7 +38567,27 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —развивается вслед за→ CUDA"
     },
     {
-      "id": "c187",
+      "id": "c246",
+      "type": "lockin",
+      "path": [
+        "cuda",
+        "nvidia",
+        "tsmc",
+        "openai",
+        "huggingface",
+        "cuda"
+      ],
+      "edges": [
+        "cuda__nvidia__locks_in_platforms",
+        "nvidia__tsmc__co_designs",
+        "tsmc__openai__manufactures",
+        "openai__huggingface__competes_with",
+        "huggingface__cuda__path_dependent_on"
+      ],
+      "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ OpenAI; OpenAI —конкурирует с→ Hugging Face; Hugging Face —развивается вслед за→ CUDA"
+    },
+    {
+      "id": "c247",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -36819,7 +38607,7 @@
       "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c188",
+      "id": "c248",
       "type": "financing",
       "path": [
         "amazon",
@@ -36839,7 +38627,27 @@
       "note": "Контур финансирования: Amazon —вкладывается в→ Anthropic; Anthropic —стратегический партнёр→ Broadcom; Broadcom —поставляет→ HPE; HPE —стратегический партнёр→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
     },
     {
-      "id": "c189",
+      "id": "c249",
+      "type": "financing",
+      "path": [
+        "amazon",
+        "anthropic",
+        "nvidia",
+        "samsung",
+        "tsmc",
+        "amazon"
+      ],
+      "edges": [
+        "amazon__anthropic__invests_in",
+        "anthropic__nvidia__customer_of",
+        "nvidia__samsung__diversifies_supply",
+        "samsung__tsmc__competes_with",
+        "tsmc__amazon__manufactures"
+      ],
+      "note": "Контур финансирования: Amazon —вкладывается в→ Anthropic; Anthropic —покупает у→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Amazon"
+    },
+    {
+      "id": "c250",
       "type": "sales",
       "path": [
         "amkor",
@@ -36859,7 +38667,7 @@
       "note": "Контур сбыта: Amkor Technology —упаковывает→ Broadcom; Broadcom —подтачивает→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —конкурирует с→ ASE Technology; ASE Technology —конкурирует с→ Amkor Technology"
     },
     {
-      "id": "c190",
+      "id": "c251",
       "type": "lockin",
       "path": [
         "arista",
@@ -36879,7 +38687,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c191",
+      "id": "c252",
       "type": "lockin",
       "path": [
         "arista",
@@ -36899,7 +38707,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c192",
+      "id": "c253",
       "type": "financing",
       "path": [
         "ase",
@@ -36919,7 +38727,27 @@
       "note": "Контур финансирования: ASE Technology —упаковывает→ Broadcom; Broadcom —подтачивает→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —конкурирует с→ ASE Technology"
     },
     {
-      "id": "c193",
+      "id": "c254",
+      "type": "lockin",
+      "path": [
+        "cuda",
+        "nvidia",
+        "samsung",
+        "tsmc",
+        "microsoft",
+        "cuda"
+      ],
+      "edges": [
+        "cuda__nvidia__locks_in_platforms",
+        "nvidia__samsung__diversifies_supply",
+        "samsung__tsmc__competes_with",
+        "tsmc__microsoft__manufactures",
+        "microsoft__cuda__locks_in_platforms"
+      ],
+      "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Microsoft; Microsoft —запирает платформы→ CUDA"
+    },
+    {
+      "id": "c255",
       "type": "lockin",
       "path": [
         "cuda",
@@ -36939,7 +38767,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face; Hugging Face —развивается вслед за→ CUDA"
     },
     {
-      "id": "c194",
+      "id": "c256",
       "type": "lockin",
       "path": [
         "arm",
@@ -36959,7 +38787,7 @@
       "note": "Контур замка: Arm —поставляет→ NVIDIA; NVIDIA —поставляет→ Dell; Dell —развивается вслед за→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —стандартизуется на→ Arm"
     },
     {
-      "id": "c195",
+      "id": "c257",
       "type": "financing",
       "path": [
         "astera-labs",
@@ -36979,7 +38807,7 @@
       "note": "Контур финансирования: Astera Labs —заточен под→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron; Micron —конкурирует с→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Astera Labs"
     },
     {
-      "id": "c196",
+      "id": "c258",
       "type": "lockin",
       "path": [
         "cuda",
@@ -36999,7 +38827,47 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c197",
+      "id": "c259",
+      "type": "lockin",
+      "path": [
+        "huggingface",
+        "nvidia",
+        "tsmc",
+        "microsoft",
+        "openai",
+        "huggingface"
+      ],
+      "edges": [
+        "huggingface__nvidia__validates_demand",
+        "nvidia__tsmc__co_designs",
+        "tsmc__microsoft__manufactures",
+        "microsoft__openai__invests_in",
+        "openai__huggingface__competes_with"
+      ],
+      "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
+    },
+    {
+      "id": "c260",
+      "type": "lockin",
+      "path": [
+        "microsoft",
+        "openai",
+        "vllm",
+        "nvidia",
+        "tsmc",
+        "microsoft"
+      ],
+      "edges": [
+        "microsoft__openai__invests_in",
+        "openai__vllm__enables",
+        "vllm__nvidia__validates_demand",
+        "nvidia__tsmc__co_designs",
+        "tsmc__microsoft__manufactures"
+      ],
+      "note": "Контур замка: Microsoft —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ Microsoft"
+    },
+    {
+      "id": "c261",
       "type": "lockin",
       "path": [
         "arm",
@@ -37019,7 +38887,7 @@
       "note": "Контур замка: Arm —стандартизуется на→ Kubernetes; Kubernetes —развивается вслед за→ Google; Google —покупает у→ Broadcom; Broadcom —подтачивает→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
     },
     {
-      "id": "c198",
+      "id": "c262",
       "type": "financing",
       "path": [
         "broadcom",
@@ -37039,7 +38907,27 @@
       "note": "Контур финансирования: Broadcom —поставляет→ HPE; HPE —стратегический партнёр→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Broadcom"
     },
     {
-      "id": "c199",
+      "id": "c263",
+      "type": "financing",
+      "path": [
+        "coreweave",
+        "nvidia",
+        "samsung",
+        "tsmc",
+        "microsoft",
+        "coreweave"
+      ],
+      "edges": [
+        "coreweave__nvidia__customer_of",
+        "nvidia__samsung__diversifies_supply",
+        "samsung__tsmc__competes_with",
+        "tsmc__microsoft__manufactures",
+        "microsoft__coreweave__customer_of"
+      ],
+      "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Microsoft; Microsoft —покупает у→ CoreWeave"
+    },
+    {
+      "id": "c264",
       "type": "financing",
       "path": [
         "coreweave",
@@ -37059,7 +38947,87 @@
       "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —стратегический партнёр→ Oracle; Oracle —вкладывается в→ OpenAI; OpenAI —покупает у→ CoreWeave"
     },
     {
-      "id": "c200",
+      "id": "c265",
+      "type": "lockin",
+      "path": [
+        "huggingface",
+        "nvidia",
+        "tsmc",
+        "openai",
+        "vllm",
+        "huggingface"
+      ],
+      "edges": [
+        "huggingface__nvidia__validates_demand",
+        "nvidia__tsmc__co_designs",
+        "tsmc__openai__manufactures",
+        "openai__vllm__enables",
+        "vllm__huggingface__standardizes_on"
+      ],
+      "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —стандартизуется на→ Hugging Face"
+    },
+    {
+      "id": "c266",
+      "type": "financing",
+      "path": [
+        "micron",
+        "samsung",
+        "tsmc",
+        "openai",
+        "nvidia",
+        "micron"
+      ],
+      "edges": [
+        "micron__samsung__competes_with",
+        "samsung__tsmc__competes_with",
+        "tsmc__openai__manufactures",
+        "openai__nvidia__customer_of",
+        "nvidia__micron__diversifies_supply"
+      ],
+      "note": "Контур финансирования: Micron —конкурирует с→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ OpenAI; OpenAI —покупает у→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron"
+    },
+    {
+      "id": "c267",
+      "type": "financing",
+      "path": [
+        "nvidia",
+        "samsung",
+        "tsmc",
+        "openai",
+        "oracle",
+        "nvidia"
+      ],
+      "edges": [
+        "nvidia__samsung__diversifies_supply",
+        "samsung__tsmc__competes_with",
+        "tsmc__openai__manufactures",
+        "openai__oracle__customer_of",
+        "oracle__nvidia__customer_of"
+      ],
+      "note": "Контур финансирования: NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ OpenAI; OpenAI —покупает у→ Oracle; Oracle —покупает у→ NVIDIA"
+    },
+    {
+      "id": "c268",
+      "type": "financing",
+      "path": [
+        "amazon",
+        "nvidia",
+        "micron",
+        "samsung",
+        "tsmc",
+        "amazon"
+      ],
+      "edges": [
+        "amazon__nvidia__customer_of",
+        "nvidia__micron__diversifies_supply",
+        "micron__samsung__competes_with",
+        "samsung__tsmc__competes_with",
+        "tsmc__amazon__manufactures"
+      ],
+      "note": "Контур финансирования: Amazon —покупает у→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron; Micron —конкурирует с→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Amazon"
+    },
+    {
+      "id": "c269",
       "type": "sales",
       "path": [
         "amkor",
@@ -37079,7 +39047,7 @@
       "note": "Контур сбыта: Amkor Technology —упаковывает→ Astera Labs; Astera Labs —заточен под→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —конкурирует с→ ASE Technology; ASE Technology —конкурирует с→ Amkor Technology"
     },
     {
-      "id": "c201",
+      "id": "c270",
       "type": "sales",
       "path": [
         "ase",
@@ -37099,7 +39067,7 @@
       "note": "Контур сбыта: ASE Technology —упаковывает→ Astera Labs; Astera Labs —заточен под→ NVIDIA; NVIDIA —конкурирует с→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —конкурирует с→ ASE Technology"
     },
     {
-      "id": "c202",
+      "id": "c271",
       "type": "financing",
       "path": [
         "ase",
@@ -37119,7 +39087,27 @@
       "note": "Контур финансирования: ASE Technology —упаковывает→ Broadcom; Broadcom —поставляет→ HPE; HPE —стратегический партнёр→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —конкурирует с→ ASE Technology"
     },
     {
-      "id": "c203",
+      "id": "c272",
+      "type": "lockin",
+      "path": [
+        "broadcom",
+        "tsmc",
+        "marvell",
+        "nvidia",
+        "dell",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__tsmc__customer_of",
+        "tsmc__marvell__manufactures",
+        "marvell__nvidia__threatens",
+        "nvidia__dell__supplies",
+        "dell__broadcom__path_dependent_on"
+      ],
+      "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —производит для→ Marvell; Marvell —подтачивает→ NVIDIA; NVIDIA —поставляет→ Dell; Dell —развивается вслед за→ Broadcom"
+    },
+    {
+      "id": "c273",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -37139,7 +39127,7 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —конкурирует с→ TensorRT; TensorRT —собирает→ Hugging Face"
     },
     {
-      "id": "c204",
+      "id": "c274",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -37159,7 +39147,7 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —стандартизуется на→ Hugging Face"
     },
     {
-      "id": "c205",
+      "id": "c275",
       "type": "financing",
       "path": [
         "ase",
@@ -37179,7 +39167,47 @@
       "note": "Контур финансирования: ASE Technology —упаковывает→ Astera Labs; Astera Labs —заточен под→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —конкурирует с→ ASE Technology"
     },
     {
-      "id": "c206",
+      "id": "c276",
+      "type": "lockin",
+      "path": [
+        "broadcom",
+        "tsmc",
+        "openai",
+        "huggingface",
+        "nvidia",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__tsmc__customer_of",
+        "tsmc__openai__manufactures",
+        "openai__huggingface__competes_with",
+        "huggingface__nvidia__validates_demand",
+        "nvidia__broadcom__competes_with"
+      ],
+      "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —производит для→ OpenAI; OpenAI —конкурирует с→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Broadcom"
+    },
+    {
+      "id": "c277",
+      "type": "lockin",
+      "path": [
+        "broadcom",
+        "tsmc",
+        "openai",
+        "vllm",
+        "nvidia",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__tsmc__customer_of",
+        "tsmc__openai__manufactures",
+        "openai__vllm__enables",
+        "vllm__nvidia__validates_demand",
+        "nvidia__broadcom__competes_with"
+      ],
+      "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —производит для→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Broadcom"
+    },
+    {
+      "id": "c278",
       "type": "financing",
       "path": [
         "credo",
@@ -37199,7 +39227,7 @@
       "note": "Контур финансирования: Credo Technology —заточен под→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron; Micron —конкурирует с→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Credo Technology"
     },
     {
-      "id": "c207",
+      "id": "c279",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -37219,7 +39247,27 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c208",
+      "id": "c280",
+      "type": "financing",
+      "path": [
+        "micron",
+        "samsung",
+        "tsmc",
+        "microsoft",
+        "nvidia",
+        "micron"
+      ],
+      "edges": [
+        "micron__samsung__competes_with",
+        "samsung__tsmc__competes_with",
+        "tsmc__microsoft__manufactures",
+        "microsoft__nvidia__customer_of",
+        "nvidia__micron__diversifies_supply"
+      ],
+      "note": "Контур финансирования: Micron —конкурирует с→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Microsoft; Microsoft —покупает у→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron"
+    },
+    {
+      "id": "c281",
       "type": "lockin",
       "path": [
         "microsoft",
@@ -37239,7 +39287,7 @@
       "note": "Контур замка: Microsoft —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft"
     },
     {
-      "id": "c209",
+      "id": "c282",
       "type": "financing",
       "path": [
         "amkor",
@@ -37259,7 +39307,47 @@
       "note": "Контур финансирования: Amkor Technology —упаковывает→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —конкурирует с→ ASE Technology; ASE Technology —конкурирует с→ Amkor Technology"
     },
     {
-      "id": "c210",
+      "id": "c283",
+      "type": "financing",
+      "path": [
+        "coreweave",
+        "nvidia",
+        "samsung",
+        "tsmc",
+        "openai",
+        "coreweave"
+      ],
+      "edges": [
+        "coreweave__nvidia__customer_of",
+        "nvidia__samsung__diversifies_supply",
+        "samsung__tsmc__competes_with",
+        "tsmc__openai__manufactures",
+        "openai__coreweave__customer_of"
+      ],
+      "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ OpenAI; OpenAI —покупает у→ CoreWeave"
+    },
+    {
+      "id": "c284",
+      "type": "lockin",
+      "path": [
+        "huggingface",
+        "nvidia",
+        "synopsys",
+        "tsmc",
+        "openai",
+        "huggingface"
+      ],
+      "edges": [
+        "huggingface__nvidia__validates_demand",
+        "nvidia__synopsys__invests_in",
+        "synopsys__tsmc__optimizes_for",
+        "tsmc__openai__manufactures",
+        "openai__huggingface__competes_with"
+      ],
+      "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
+    },
+    {
+      "id": "c285",
       "type": "financing",
       "path": [
         "micron",
@@ -37279,7 +39367,47 @@
       "note": "Контур финансирования: Micron —конкурирует с→ SanDisk; SanDisk —конкурирует с→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron"
     },
     {
-      "id": "c211",
+      "id": "c286",
+      "type": "lockin",
+      "path": [
+        "nvidia",
+        "synopsys",
+        "tsmc",
+        "openai",
+        "vllm",
+        "nvidia"
+      ],
+      "edges": [
+        "nvidia__synopsys__invests_in",
+        "synopsys__tsmc__optimizes_for",
+        "tsmc__openai__manufactures",
+        "openai__vllm__enables",
+        "vllm__nvidia__validates_demand"
+      ],
+      "note": "Контур замка: NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA"
+    },
+    {
+      "id": "c287",
+      "type": "lockin",
+      "path": [
+        "nvidia",
+        "tsmc",
+        "openai",
+        "vllm",
+        "tensorrt",
+        "nvidia"
+      ],
+      "edges": [
+        "nvidia__tsmc__co_designs",
+        "tsmc__openai__manufactures",
+        "openai__vllm__enables",
+        "vllm__tensorrt__competes_with",
+        "tensorrt__nvidia__locks_in_platforms"
+      ],
+      "note": "Контур замка: NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —конкурирует с→ TensorRT; TensorRT —запирает платформы→ NVIDIA"
+    },
+    {
+      "id": "c288",
       "type": "lockin",
       "path": [
         "arm",
@@ -37299,7 +39427,7 @@
       "note": "Контур замка: Arm —поставляет→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron; Micron —конкурирует с→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —стандартизуется на→ Arm"
     },
     {
-      "id": "c212",
+      "id": "c289",
       "type": "lockin",
       "path": [
         "arm",
@@ -37319,7 +39447,7 @@
       "note": "Контур замка: Arm —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
     },
     {
-      "id": "c213",
+      "id": "c290",
       "type": "lockin",
       "path": [
         "arm",
@@ -37339,7 +39467,7 @@
       "note": "Контур замка: Arm —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
     },
     {
-      "id": "c214",
+      "id": "c291",
       "type": "lockin",
       "path": [
         "ase",
@@ -37359,7 +39487,7 @@
       "note": "Контур замка: ASE Technology —упаковывает→ NVIDIA; NVIDIA —поставляет→ Dell; Dell —развивается вслед за→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —конкурирует с→ ASE Technology"
     },
     {
-      "id": "c215",
+      "id": "c292",
       "type": "lockin",
       "path": [
         "nvidia",
@@ -37379,7 +39507,7 @@
       "note": "Контур замка: NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —конкурирует с→ TensorRT; TensorRT —запирает платформы→ NVIDIA"
     },
     {
-      "id": "c216",
+      "id": "c293",
       "type": "sales",
       "path": [
         "amkor",
@@ -37399,7 +39527,7 @@
       "note": "Контур сбыта: Amkor Technology —упаковывает→ Credo Technology; Credo Technology —заточен под→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —конкурирует с→ ASE Technology; ASE Technology —конкурирует с→ Amkor Technology"
     },
     {
-      "id": "c217",
+      "id": "c294",
       "type": "financing",
       "path": [
         "ase",
@@ -37419,7 +39547,7 @@
       "note": "Контур финансирования: ASE Technology —упаковывает→ Broadcom; Broadcom —подтачивает→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —конкурирует с→ ASE Technology"
     },
     {
-      "id": "c218",
+      "id": "c295",
       "type": "sales",
       "path": [
         "ase",
@@ -37439,7 +39567,7 @@
       "note": "Контур сбыта: ASE Technology —упаковывает→ Credo Technology; Credo Technology —заточен под→ NVIDIA; NVIDIA —конкурирует с→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —конкурирует с→ ASE Technology"
     },
     {
-      "id": "c219",
+      "id": "c296",
       "type": "financing",
       "path": [
         "ase",
@@ -37459,7 +39587,27 @@
       "note": "Контур финансирования: ASE Technology —упаковывает→ Credo Technology; Credo Technology —заточен под→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —конкурирует с→ ASE Technology"
     },
     {
-      "id": "c220",
+      "id": "c297",
+      "type": "financing",
+      "path": [
+        "marvell",
+        "nvidia",
+        "micron",
+        "samsung",
+        "tsmc",
+        "marvell"
+      ],
+      "edges": [
+        "marvell__nvidia__threatens",
+        "nvidia__micron__diversifies_supply",
+        "micron__samsung__competes_with",
+        "samsung__tsmc__competes_with",
+        "tsmc__marvell__manufactures"
+      ],
+      "note": "Контур финансирования: Marvell —подтачивает→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron; Micron —конкурирует с→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Marvell"
+    },
+    {
+      "id": "c298",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -37479,7 +39627,7 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —стратегический партнёр→ Oracle; Oracle —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c221",
+      "id": "c299",
       "type": "lockin",
       "path": [
         "nvidia",
@@ -37499,7 +39647,7 @@
       "note": "Контур замка: NVIDIA —стратегический партнёр→ SoftBank; SoftBank —стратегический партнёр→ Oracle; Oracle —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA"
     },
     {
-      "id": "c222",
+      "id": "c300",
       "type": "financing",
       "path": [
         "ase",
@@ -37519,7 +39667,7 @@
       "note": "Контур финансирования: ASE Technology —упаковывает→ Astera Labs; Astera Labs —заточен под→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —конкурирует с→ ASE Technology"
     },
     {
-      "id": "c223",
+      "id": "c301",
       "type": "financing",
       "path": [
         "ase",
@@ -37539,7 +39687,7 @@
       "note": "Контур финансирования: ASE Technology —упаковывает→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron; Micron —конкурирует с→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —конкурирует с→ ASE Technology"
     },
     {
-      "id": "c224",
+      "id": "c302",
       "type": "financing",
       "path": [
         "amkor",
@@ -37559,7 +39707,47 @@
       "note": "Контур финансирования: Amkor Technology —упаковывает→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —конкурирует с→ ASE Technology; ASE Technology —конкурирует с→ Amkor Technology"
     },
     {
-      "id": "c225",
+      "id": "c303",
+      "type": "lockin",
+      "path": [
+        "huggingface",
+        "nvidia",
+        "samsung",
+        "tsmc",
+        "openai",
+        "huggingface"
+      ],
+      "edges": [
+        "huggingface__nvidia__validates_demand",
+        "nvidia__samsung__diversifies_supply",
+        "samsung__tsmc__competes_with",
+        "tsmc__openai__manufactures",
+        "openai__huggingface__competes_with"
+      ],
+      "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
+    },
+    {
+      "id": "c304",
+      "type": "lockin",
+      "path": [
+        "nvidia",
+        "samsung",
+        "tsmc",
+        "openai",
+        "vllm",
+        "nvidia"
+      ],
+      "edges": [
+        "nvidia__samsung__diversifies_supply",
+        "samsung__tsmc__competes_with",
+        "tsmc__openai__manufactures",
+        "openai__vllm__enables",
+        "vllm__nvidia__validates_demand"
+      ],
+      "note": "Контур замка: NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA"
+    },
+    {
+      "id": "c305",
       "type": "financing",
       "path": [
         "ase",

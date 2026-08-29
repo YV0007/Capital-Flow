@@ -41,13 +41,7 @@ def _not_found(con, row, reason: str, month: str):
     """Отрицательный ответ переезжает в nvnet_not_found — таблицу, которая для него
     и заведена. До Фазы 4 её писал только агент вручную; список пар, которые СТОИТ
     проверить, не составлял никто, поэтому в ней лежало пять строк за всю историю."""
-    pid = f"gap:{row['key']}"
-    con.execute("""INSERT OR REPLACE INTO nvnet_not_found
-                     (pair_id, entity_a, entity_b, expected, reason)
-                   VALUES (?,?,?,?,?)""",
-                (pid, row["subject_id"],
-                 row["counterparty"] or f"[{row['cp_class']}]",
-                 row["expected"], reason))
+    nveco_gaps.record_not_found(con, row, reason)
 
 
 def show(con, only_open: bool) -> int:

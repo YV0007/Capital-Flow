@@ -203,10 +203,16 @@ def record(con, month: str, tasks) -> dict:
     for t in tasks:
         k = _key(t["kind"], t["subject_id"], t["counterparty"], t["expected"])
         seen.add(k)
-        prev = con.execute("SELECT status FROM nveco_gap WHERE key=?", (k,)).fetchone()
+        prev = con.execute("SELECT status, last_seen FROM nveco_gap WHERE key=?",
+                           (k,)).fetchone()
         if prev:
-            con.execute("UPDATE nveco_gap SET last_seen=?, times=times+1, why=?, "
-                        "quote=?, quote_url=? WHERE key=?",
+            # Счётчик меряет МЕСЯЦЫ, а не прогоны. Повторный прогон того же месяца —
+            # это пересборка, а не ещё один раз, когда задание проигнорировали;
+            # инкремент на каждый прогон превращал бы отладку в просрочку.
+            same_month = prev["last_seen"] == month
+            con.execute(f"UPDATE nveco_gap SET last_seen=?, "
+                        f"times=times{'' if same_month else '+1'}, why=?, "
+                        f"quote=?, quote_url=? WHERE key=?",
                         (month, t["why"], t["quote"], t["quote_url"], k))
             repeat += 1
         else:
@@ -257,6 +263,25 @@ def for_entities(con, ids) -> dict:
             "своя цитата": r["quote"], "источник": r["quote_url"],
             "правило": r["rule_id"], "висит прогонов": r["times"]})
     return out
+
+
+def record_not_found(con, row, reason: str) -> None:
+    """Отрицательный ответ — в nvnet_not_found, таблицу, которая для него заведена.
+
+    Таблица объявлена в db/schema_nvnet.sql, а его применяет не всякое соединение:
+    у сюит своя база на одной nveco-половине. Создаём при необходимости — иначе
+    ответ «искали и не нашли» терялся бы ровно там, где его проверяют.
+    """
+    con.execute("""CREATE TABLE IF NOT EXISTS nvnet_not_found (
+                     pair_id TEXT PRIMARY KEY, entity_a TEXT NOT NULL,
+                     entity_b TEXT NOT NULL, expected TEXT, reason TEXT NOT NULL,
+                     checked_at TEXT NOT NULL DEFAULT (datetime('now')))""")
+    con.execute("""INSERT OR REPLACE INTO nvnet_not_found
+                     (pair_id, entity_a, entity_b, expected, reason)
+                   VALUES (?,?,?,?,?)""",
+                (f"gap:{row['key']}", row["subject_id"],
+                 row["counterparty"] or f"[{row['cp_class']}]",
+                 row["expected"], reason))
 
 
 def decide(con, key: str, status: str, reason: str, month: str) -> bool:

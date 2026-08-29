@@ -43,6 +43,13 @@ sectors:
   - { key: chip_ip,           label: "Лицензии на схемы",           label_en: "Chip IP licences",      layer: L2 }
   - { key: foundry,           label: "Фабрики",           label_en: "Foundries",                layer: L3 }
   - { key: packaging,         label: "Упаковка кристаллов",         label_en: "Die packaging",    layer: L3 }
+  # Заведён Фазой 4 охотой за пропущенными связями. До него проектировщик без
+  # собственной фабрики класть было некуда, и AMD стоит сектором `foundry` — то
+  # есть помечена фабрикой, не имея ни одной. Правило `fab_needs_equipment`
+  # немедленно выпустило по ней задание «у фабрики нет поставщика станков»:
+  # ошибка в разметке превратилась в ложную работу для агента. Сектор AMD не
+  # переставляю — строка принадлежит слоевому агенту, и это его правка.
+  - { key: fabless_silicon,   label: "Проектировщики кремния",   label_en: "Fabless silicon",  layer: L3 }
   - { key: hbm,               label: "Память HBM",               label_en: "HBM memory",             layer: L4 }
   - { key: dram,              label: "Оперативная память",              label_en: "DRAM",     layer: L4 }
   - { key: storage,           label: "Хранение",           label_en: "Storage",               layer: L4 }

@@ -26,13 +26,12 @@ OPS = ROOT / "OPERATIONS.md"
 
 # Payloads the doc makes claims about: dashboard file -> what §6 says about it.
 #
-# `contract` is what the DELIVERED file must carry. A staged rollout — the engine
-# already emits the next contract while the dashboard still reads the previous —
-# is a normal state, not drift, and §6 states both numbers. Only the delivered one
-# is checked here, because only it describes the file this script can open.
+# `contract` is what the DELIVERED file must carry — the one this script can open.
+# The engine may run ahead of it between deliveries; that is content drift, not
+# contract drift, and it is not this check's business.
 PAYLOADS = {
     "capitalMap.json": {"contract": None, "cadence": "Weekly"},
-    "aiEcosystemNetwork.json": {"contract": "ai-ecosystem-network/3", "cadence": "Monthly"},
+    "aiEcosystemNetwork.json": {"contract": "ai-ecosystem-network/4", "cadence": "Monthly"},
     "fundTracker.json": {"contract": "fund-tracker/1", "cadence": "Per filing"},
     "nvidiaEcosystem.json": {"contract": "nvidia-ecosystem/2", "cadence": "Frozen"},
 }

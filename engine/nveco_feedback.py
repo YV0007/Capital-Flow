@@ -110,8 +110,8 @@ def record_rejections(con, month: str, rejected: dict) -> dict:
             kind, sid, sname = subject_of(fname, blob)
             k = _key(agent, fname, sid or sname or blob[:80], r.get("reason") or "")
             seen.add(k)
-            prev = con.execute("SELECT times, status FROM nveco_rejection WHERE key=?",
-                               (k,)).fetchone()
+            prev = con.execute("SELECT times, status, last_seen FROM nveco_rejection "
+                               "WHERE key=?", (k,)).fetchone()
             if prev:
                 # Отказ, который уже решали, но пришёл снова, — это НЕ повтор решения:
                 # агент прислал ту же строку, ничего не исправив. Строка снова
@@ -123,14 +123,18 @@ def record_rejections(con, month: str, rejected: dict) -> dict:
                 # и каждым прогоном доказывает, что путь отказа жив. Переоткрывать
                 # такую строку значило бы требовать чинить работающую проверку.
                 # Повторы считаются и у неё — решение видно, а не спрятано.
+                # Счётчик меряет МЕСЯЦЫ, а не прогоны: пересборка того же месяца
+                # не является ещё одним разом, когда отказ проигнорировали.
+                inc = "" if prev["last_seen"] == month else "+1"
                 if prev["status"] == "dismissed":
-                    con.execute("""UPDATE nveco_rejection SET last_seen=?, times=times+1,
-                                     row=?, agent=?, file=? WHERE key=?""",
+                    con.execute(f"""UPDATE nveco_rejection SET last_seen=?,
+                                      times=times{inc}, row=?, agent=?, file=?
+                                    WHERE key=?""",
                                 (month, blob, agent, fname, k))
                 else:
-                    con.execute("""UPDATE nveco_rejection SET last_seen=?, times=times+1,
-                                     status='open', row=?, agent=?, file=?
-                                   WHERE key=?""",
+                    con.execute(f"""UPDATE nveco_rejection SET last_seen=?,
+                                      times=times{inc}, status='open', row=?, agent=?,
+                                      file=? WHERE key=?""",
                                 (month, blob, agent, fname, k))
                 repeat += 1
             else:

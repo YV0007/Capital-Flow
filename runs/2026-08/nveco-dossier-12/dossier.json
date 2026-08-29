@@ -1,0 +1,582 @@
+[
+ {
+  "id": "apple",
+  "as_of": "2026-08-29",
+  "profile": {
+   "id": "apple",
+   "name": "Apple",
+   "aliases": "Apple Inc.",
+   "type": "company",
+   "role": "producer",
+   "sector": "fabless_silicon",
+   "primary_layer": "L3",
+   "layers": "L3",
+   "phase": "mature",
+   "ticker": "NASDAQ: AAPL",
+   "public_private": "public",
+   "geo": "US",
+   "founded": "1976",
+   "domain": "apple.com",
+   "one_liner": {
+    "ru": "Проектировщик кремния без единой фабрики: давний крупнейший заказчик передовых узлов.",
+    "en": "A silicon designer with no fab of its own: the long-standing top customer of leading nodes."
+   },
+   "why_irreplaceable": {
+    "ru": "На карте важен не как продавец устройств, а как узел, который забирает большую часть первой партии самого передового процесса. Кто получил эту ёмкость, тот определил, что физически можно выпустить в этом году.",
+    "en": "It matters here not as a device seller but as the node that takes most of the first batch of the most advanced process. Whoever gets that capacity decides what can physically be built this year."
+   },
+   "what_breaks_it": {
+    "ru": "Переход на собственное производство или на второй передовой узел, которого пока нет.",
+    "en": "A move to in-house manufacturing or to a second leading node, which does not yet exist."
+   },
+   "geo_risk": "high",
+   "geo_risk_note": {
+    "ru": "Ёмкость передового узла сосредоточена на одной территории.",
+    "en": "Leading-node capacity is concentrated on one territory."
+   }
+  },
+  "description": {
+   "ru": "Apple проектирует, производит и продаёт смартфоны, персональные компьютеры, планшеты, носимые устройства и сопутствующие услуги. Собственных фабрик у неё нет: кремний она проектирует, а выпускает по контракту. На этой карте она стоит не как продавец устройств, а как заказчик, чей объём определяет доступность передового процесса для всех остальных: по сообщению Commercial Times, она забрала большую часть начальной ёмкости 2nm. Совокупная выручка компании за три последних года составила $ 416,161, $ 391,035 и $ 383,285 миллиона. Именно её присутствие делает очередь на передовой узел очередью, а не прайс-листом.",
+   "en": "Apple designs, manufactures and markets smartphones, personal computers, tablets, wearables and related services. It owns no fabs: it designs the silicon and has it built under contract. On this map it stands not as a device seller but as the customer whose volume decides how much leading-edge process is left for everyone else: per Commercial Times it took most of the initial 2nm capacity. Its total net sales for the last three years were $ 416,161, $ 391,035 and $ 383,285 million. Its presence is what makes the queue for a leading node a queue rather than a price list."
+  },
+  "profile_sources": [
+   {
+    "type": "sec_filing",
+    "title": "Apple 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+    "published": "2025-10-31",
+    "quote": "The Company designs, manufactures and markets smartphones, personal computers, tablets, wearables and accessories"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Apple 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+    "published": "2025-10-31",
+    "quote": "Total net sales $ 416,161 $ 391,035 $ 383,285"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Apple 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+    "published": "2025-10-31",
+    "quote": "representing a majority of the Company's total net sales, and the Company believes"
+   },
+   {
+    "type": "press",
+    "title": "TrendForce: TSMC 2nm customer surge",
+    "url": "https://www.trendforce.com/news/2025/09/22/news-tsmc-2nm-customer-surge-15-clients-reportedly-secured-10-in-hpc/",
+    "published": "2025-09-22",
+    "quote": "Apple, TSMC's long-standing top customer, is reportedly set to take nearly half",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "press",
+    "title": "TrendForce: Apple takes most of TSMC's 2nm capacity",
+    "url": "https://www.trendforce.com/news/2025/10/28/news-apple-reportedly-takes-most-of-tsmcs-2nm-capacity-for-a20-series-in-foldable-iphone-and-iphone-18/",
+    "published": "2025-10-28",
+    "quote": "Commercial Times notes that Apple has already secured most of TSMC's initial 2nm capacity"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 72,
+    "why": {
+     "ru": "Давний крупнейший заказчик передового узла; таких заказчиков единицы",
+     "en": "The long-standing top customer of the leading node; such customers number a handful"
+    }
+   },
+   "lock_in_depth": {
+    "value": 78,
+    "why": {
+     "ru": "Кремний проектируется под конкретный процесс конкретной фабрики",
+     "en": "The silicon is designed against one process at one fab"
+    }
+   },
+   "time_to_replace": {
+    "value": 80,
+    "why": {
+     "ru": "Второй площадки того же класса не существует, а своей фабрики у компании нет",
+     "en": "No second site of that class exists, and the company has no fab of its own"
+    }
+   },
+   "concentration": {
+    "value": 74,
+    "why": {
+     "ru": "Забирает почти половину начальной ёмкости передового узла",
+     "en": "It takes nearly half of the leading node's initial capacity"
+    }
+   }
+  },
+  "edges": [
+   {
+    "direction": "upstream",
+    "strength": 70,
+    "lock_in_depth": 60,
+    "substitutability": 30,
+    "is_reversible": false,
+    "risk_level": "high",
+    "risk_type": "geopolitical",
+    "risk_timeline": "2-5y",
+    "stance": "confirms",
+    "type": "manufactures",
+    "source": "tsmc",
+    "target": "apple",
+    "note": {
+     "ru": "Давний крупнейший заказчик фабрики: по сообщению Commercial Times, забрал большую часть начальной ёмкости 2nm.",
+     "en": "The fab's long-standing top customer: per Commercial Times it secured most of the initial 2nm capacity."
+    },
+    "risk_mitigation": {
+     "ru": "Передовые узлы делает одна территория, и альтернативной площадки того же класса нет.",
+     "en": "The leading nodes are made on one territory, and no alternative site of that class exists."
+    },
+    "sources": [
+     {
+      "type": "press",
+      "title": "TrendForce: TSMC 2nm customer surge",
+      "url": "https://www.trendforce.com/news/2025/09/22/news-tsmc-2nm-customer-surge-15-clients-reportedly-secured-10-in-hpc/",
+      "published": "2025-09-22",
+      "quote": "Apple, TSMC's long-standing top customer, is reportedly set to take nearly half"
+     },
+     {
+      "type": "press",
+      "title": "TrendForce: Apple takes most of TSMC's 2nm capacity",
+      "url": "https://www.trendforce.com/news/2025/10/28/news-apple-reportedly-takes-most-of-tsmcs-2nm-capacity-for-a20-series-in-foldable-iphone-and-iphone-18/",
+      "published": "2025-10-28",
+      "quote": "Commercial Times notes that Apple has already secured most of TSMC's initial 2nm capacity"
+     }
+    ]
+   }
+  ],
+  "candidates": [
+   {
+    "name": "MediaTek",
+    "why": "названа среди шести компаний, участвующих в раннем производстве на 2nm; проектировщиков кремния такого объёма на карте нет",
+    "url": "https://www.trendforce.com/news/2025/09/22/news-tsmc-2nm-customer-surge-15-clients-reportedly-secured-10-in-hpc/",
+    "quote": "2nm production: Apple, AMD, Qualcomm, MediaTek, Broadcom, and Intel."
+   }
+  ],
+  "gaps": "В 10-K Apple слова TSMC нет: связь подтверждена вторичными источниками, называющими обе стороны."
+ },
+ {
+  "id": "qualcomm",
+  "as_of": "2026-08-29",
+  "profile": {
+   "id": "qualcomm",
+   "name": "Qualcomm",
+   "aliases": "QUALCOMM Incorporated",
+   "type": "company",
+   "role": "producer",
+   "sector": "fabless_silicon",
+   "primary_layer": "L3",
+   "layers": "L3",
+   "phase": "mature",
+   "ticker": "NASDAQ: QCOM",
+   "public_private": "public",
+   "geo": "US",
+   "founded": "1985",
+   "domain": "qualcomm.com",
+   "one_liner": {
+    "ru": "Проектировщик кремния, называющий своих фабрик поимённо — редкость на этой карте.",
+    "en": "A silicon designer that names its foundries — a rarity on this map."
+   },
+   "why_irreplaceable": {
+    "ru": "Держит связь между мобильным кремнием и передовым узлом и в отличие от большинства заказчиков называет своих поставщиков ёмкости в собственной отчётности.",
+    "en": "Holds the link between mobile silicon and the leading node and, unlike most customers, names its capacity suppliers in its own filing."
+   },
+   "what_breaks_it": {
+    "ru": "Потеря доступа к передовому узлу или переход заказчиков на собственный кремний.",
+    "en": "Losing access to the leading node, or customers moving to silicon of their own."
+   },
+   "geo_risk": "high",
+   "geo_risk_note": {
+    "ru": "Основная ёмкость сосредоточена на одной территории.",
+    "en": "The bulk of capacity sits on one territory."
+   }
+  },
+  "description": {
+   "ru": "Qualcomm проектирует кремний для мобильных устройств и лицензирует патенты, работая тремя отчётными сегментами. Своих фабрик у компании нет, и в отличие от большинства заказчиков она называет поставщиков ёмкости прямо: TSMC, Samsung Electronics и Global Foundries. Отдельной строкой компания сообщает, что вкладывается в разработку продуктов для дата-центров, то есть заходит на территорию этой карты не только мобильным кремнием. Выручка от услуг и лицензирования системного софта у неё составляет менее 5 % совокупной. На карте узел важен вдвойне: как заказчик передового узла и как редкий пример того, что заказчик МОЖЕТ назвать свою фабрику.",
+   "en": "Qualcomm designs silicon for mobile devices and licenses patents, operating three reportable segments. It has no fabs, and unlike most customers it names its capacity suppliers outright: TSMC, Samsung Electronics and Global Foundries. Separately it states that it is investing in data centre products, so it enters this map with more than mobile silicon. Revenue from services and system software licensing is each less than 5 % of the total. The node matters twice over: as a leading-node customer, and as a rare demonstration that a customer CAN name its fab."
+  },
+  "profile_sources": [
+   {
+    "type": "sec_filing",
+    "title": "Qualcomm 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/804328/000080432825000085/qcom-20250928.htm",
+    "published": "2025-11-05",
+    "quote": "circuits include Taiwan Semiconductor Manufacturing Company (TSMC), Samsung Electronics and Global Foundries.",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "sec_filing",
+    "title": "Qualcomm 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/804328/000080432825000085/qcom-20250928.htm",
+    "published": "2025-11-05",
+    "quote": "We are organized on the basis of products and services and have three reportable segments."
+   },
+   {
+    "type": "sec_filing",
+    "title": "Qualcomm 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/804328/000080432825000085/qcom-20250928.htm",
+    "published": "2025-11-05",
+    "quote": "We are also investing in research and development of data center products."
+   },
+   {
+    "type": "sec_filing",
+    "title": "Qualcomm 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/804328/000080432825000085/qcom-20250928.htm",
+    "published": "2025-11-05",
+    "quote": "Revenues from providing services and licensing system software were each less than 5 %"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 58,
+    "why": {
+     "ru": "Мобильный кремний проектируют несколько компаний сопоставимого масштаба",
+     "en": "Mobile silicon is designed by several companies of comparable scale"
+    }
+   },
+   "lock_in_depth": {
+    "value": 62,
+    "why": {
+     "ru": "Проекты привязаны к процессу фабрики, но поставщиков ёмкости названо трое",
+     "en": "Designs are tied to a fab process, yet three capacity suppliers are named"
+    }
+   },
+   "time_to_replace": {
+    "value": 55,
+    "why": {
+     "ru": "Три названных поставщика ёмкости дают запас, которого нет у заказчиков с одним",
+     "en": "Three named capacity suppliers give slack that single-source customers lack"
+    }
+   },
+   "concentration": {
+    "value": 52,
+    "why": {
+     "ru": "Поставщиков ёмкости названо трое, а не один",
+     "en": "Three capacity suppliers are named, not one"
+    }
+   }
+  },
+  "edges": [
+   {
+    "direction": "upstream",
+    "strength": 65,
+    "lock_in_depth": 60,
+    "substitutability": 45,
+    "is_reversible": false,
+    "risk_level": "medium",
+    "risk_type": "geopolitical",
+    "risk_timeline": "2-5y",
+    "stance": "confirms",
+    "type": "manufactures",
+    "source": "tsmc",
+    "target": "qualcomm",
+    "note": {
+     "ru": "Названа Qualcomm первой среди поставщиков ёмкости для её интегральных схем.",
+     "en": "Named by Qualcomm first among the capacity suppliers for its integrated circuits."
+    },
+    "risk_mitigation": {
+     "ru": "Рядом названы ещё две фабрики, поэтому источник ёмкости не единственный",
+     "en": "Two more fabs are named alongside, so the capacity source is not the only one"
+    },
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "Qualcomm 10-K FY2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/804328/000080432825000085/qcom-20250928.htm",
+      "published": "2025-11-05",
+      "quote": "circuits include Taiwan Semiconductor Manufacturing Company (TSMC), Samsung Electronics and Global Foundries."
+     }
+    ]
+   },
+   {
+    "direction": "upstream",
+    "strength": 50,
+    "lock_in_depth": 40,
+    "substitutability": 60,
+    "is_reversible": false,
+    "risk_level": "medium",
+    "risk_type": "market",
+    "risk_timeline": "2-5y",
+    "stance": "confirms",
+    "type": "manufactures",
+    "source": "samsung",
+    "target": "qualcomm",
+    "note": {
+     "ru": "Названа Qualcomm вторым поставщиком ёмкости наравне с первым.",
+     "en": "Named by Qualcomm as a second capacity supplier alongside the first."
+    },
+    "risk_mitigation": {
+     "ru": "Три названных поставщика ёмкости позволяют переносить заказ между ними",
+     "en": "Three named capacity suppliers let an order move between them"
+    },
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "Qualcomm 10-K FY2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/804328/000080432825000085/qcom-20250928.htm",
+      "published": "2025-11-05",
+      "quote": "circuits include Taiwan Semiconductor Manufacturing Company (TSMC), Samsung Electronics and Global Foundries."
+     }
+    ]
+   }
+  ],
+  "candidates": [
+   {
+    "name": "GlobalFoundries",
+    "why": "названа Qualcomm третьим поставщиком ёмкости; фабрик зрелых узлов на карте нет",
+    "url": "https://www.sec.gov/Archives/edgar/data/804328/000080432825000085/qcom-20250928.htm",
+    "quote": "circuits include Taiwan Semiconductor Manufacturing Company (TSMC), Samsung Electronics and Global Foundries."
+   }
+  ],
+  "gaps": "Заказчиков поимённо Qualcomm не называет; концентрация спроса раскрыта только по сегментам."
+ },
+ {
+  "id": "tsmc",
+  "as_of": "2026-08-29",
+  "mode": "hunt",
+  "gap_answers": [
+   {
+    "key": "8bd3deca7338e141",
+    "status": "found",
+    "why": "Безымянный «крупнейший заказчик» из отчётности раскрыт вторичными источниками, называющими обе стороны: Apple, Qualcomm, Amazon, Microsoft, Marvell и OpenAI заведены отдельными связями этим же проходом."
+   },
+   {
+    "key": "224286d8a3f0ea48",
+    "status": "found",
+    "why": "«Оборудование доступно у ограниченного числа поставщиков» — эти поставщики на карте уже названы поимённо: ASML, Applied Materials, Lam Research, KLA, Tokyo Electron. Раскрытие безымянное, но пробела за ним нет."
+   }
+  ],
+  "edges": [
+   {
+    "direction": "upstream",
+    "strength": 65,
+    "lock_in_depth": 55,
+    "substitutability": 35,
+    "is_reversible": false,
+    "risk_level": "high",
+    "risk_type": "geopolitical",
+    "risk_timeline": "2-5y",
+    "stance": "confirms",
+    "type": "manufactures",
+    "source": "tsmc",
+    "target": "amazon",
+    "note": {
+     "ru": "Собственные ускорители облака Trainium и Inferentia выпускает эта фабрика.",
+     "en": "The cloud's own Trainium and Inferentia accelerators are made by this fab."
+    },
+    "risk_mitigation": {
+     "ru": "Передовые узлы делает одна территория, и альтернативной площадки того же класса нет.",
+     "en": "The leading nodes are made on one territory, and no alternative site of that class exists."
+    },
+    "sources": [
+     {
+      "type": "press",
+      "title": "TrendForce: Microsoft eyes Maia 300, seeks TSMC capacity",
+      "url": "https://www.trendforce.com/news/2026/08/11/news-microsoft-eyes-maia-300-launch-in-sep-reportedly-seeks-300k-tsmc-capacity-as-google-aws-race-ahead/",
+      "published": "2026-08-11",
+      "quote": "AWS's Trainium and Inferentia chips are both manufactured by TSMC, Next Apple reports."
+     }
+    ]
+   },
+   {
+    "direction": "upstream",
+    "strength": 55,
+    "lock_in_depth": 45,
+    "substitutability": 45,
+    "is_reversible": false,
+    "risk_level": "medium",
+    "risk_type": "geopolitical",
+    "risk_timeline": "2-5y",
+    "stance": "confirms",
+    "type": "manufactures",
+    "source": "tsmc",
+    "target": "microsoft",
+    "note": {
+     "ru": "Собственный ускоритель Maia выпускается здесь же; переговоры об ёмкости идут отдельно.",
+     "en": "The in-house Maia accelerator is built here, with capacity talks running separately."
+    },
+    "risk_mitigation": {
+     "ru": "Передовые узлы делает одна территория, и альтернативной площадки того же класса нет.",
+     "en": "The leading nodes are made on one territory, and no alternative site of that class exists."
+    },
+    "sources": [
+     {
+      "type": "press",
+      "title": "TrendForce: Microsoft eyes Maia 300, seeks TSMC capacity",
+      "url": "https://www.trendforce.com/news/2026/08/11/news-microsoft-eyes-maia-300-launch-in-sep-reportedly-seeks-300k-tsmc-capacity-as-google-aws-race-ahead/",
+      "published": "2026-08-11",
+      "quote": "Microsoft is also stepping up its in-house AI chip push, with TSMC poised to benefit."
+     },
+     {
+      "type": "press",
+      "title": "TrendForce: Microsoft eyes Maia 300, seeks TSMC capacity",
+      "url": "https://www.trendforce.com/news/2026/08/11/news-microsoft-eyes-maia-300-launch-in-sep-reportedly-seeks-300k-tsmc-capacity-as-google-aws-race-ahead/",
+      "published": "2026-08-11",
+      "quote": "Microsoft could unveil its next-generation Maia 300 as early as September and is in talks"
+     }
+    ]
+   },
+   {
+    "direction": "upstream",
+    "strength": 70,
+    "lock_in_depth": 65,
+    "substitutability": 30,
+    "is_reversible": false,
+    "risk_level": "high",
+    "risk_type": "geopolitical",
+    "risk_timeline": "2-5y",
+    "stance": "confirms",
+    "type": "manufactures",
+    "source": "tsmc",
+    "target": "marvell",
+    "note": {
+     "ru": "Партнёрство протянуто через три поколения процесса подряд и объявлено самой компанией.",
+     "en": "The partnership runs across three straight process generations and is announced by the company itself."
+    },
+    "risk_mitigation": {
+     "ru": "Передовые узлы делает одна территория, и альтернативной площадки того же класса нет.",
+     "en": "The leading nodes are made on one territory, and no alternative site of that class exists."
+    },
+    "sources": [
+     {
+      "type": "company_pr",
+      "title": "Marvell: industry's first 2nm platform",
+      "url": "https://www.marvell.com/company/newsroom/marvell-announces-industry-first-2nm-platform-for-accelerated-infrastructure-silicon.html",
+      "published": "2026-08-29",
+      "quote": "Marvell extends its longstanding partnership with TSMC to 2nm manufacturing."
+     },
+     {
+      "type": "company_pr",
+      "title": "Marvell: industry's first 2nm platform",
+      "url": "https://www.marvell.com/company/newsroom/marvell-announces-industry-first-2nm-platform-for-accelerated-infrastructure-silicon.html",
+      "published": "2026-08-29",
+      "quote": "Our partnership with TSMC on our 5nm, 3nm and now 2nm platforms has been instrumental"
+     }
+    ]
+   },
+   {
+    "direction": "upstream",
+    "strength": 60,
+    "lock_in_depth": 50,
+    "substitutability": 40,
+    "is_reversible": false,
+    "risk_level": "high",
+    "risk_type": "geopolitical",
+    "risk_timeline": "2-5y",
+    "stance": "confirms",
+    "type": "manufactures",
+    "source": "tsmc",
+    "target": "openai",
+    "note": {
+     "ru": "Первый собственный чип лаборатории готовится к серийному выпуску здесь же.",
+     "en": "The laboratory's first custom chip is being prepared for mass production here."
+    },
+    "risk_mitigation": {
+     "ru": "Передовые узлы делает одна территория, и альтернативной площадки того же класса нет.",
+     "en": "The leading nodes are made on one territory, and no alternative site of that class exists."
+    },
+    "sources": [
+     {
+      "type": "press",
+      "title": "TrendForce: TSMC 2nm customer surge",
+      "url": "https://www.trendforce.com/news/2025/09/22/news-tsmc-2nm-customer-surge-15-clients-reportedly-secured-10-in-hpc/",
+      "published": "2025-09-22",
+      "quote": "OpenAI is preparing to mass produce its first custom chip using TSMC's 3nm technology"
+     }
+    ]
+   }
+  ],
+  "candidates": [
+   {
+    "name": "Alchip",
+    "why": "названа среди подрядчиков проектирования, получивших заказы вместе с фабрикой; слоя ASIC-подрядчиков на карте нет",
+    "url": "https://www.trendforce.com/news/2025/09/22/news-tsmc-2nm-customer-surge-15-clients-reportedly-secured-10-in-hpc/",
+    "quote": "Amazon Unveils New AWS-Designed Chips, Boosting Orders for TSMC and ALCHIP"
+   }
+  ]
+ },
+ {
+  "id": "amazon",
+  "as_of": "2026-08-29",
+  "mode": "hunt",
+  "gap_answers": [
+   {
+    "key": "f751f35702cc3df7",
+    "status": "found",
+    "why": "Фабрика найдена и связь заведена. Отдельно стоит записать, ПОЧЕМУ её не было: в 10-K Amazon слов TSMC, foundry, Trainium и Graviton ноль вхождений на 312 тысяч знаков, поэтому досье, работающее от собственных документов узла, найти её не могло в принципе."
+   }
+  ],
+  "edges": []
+ },
+ {
+  "id": "microsoft",
+  "as_of": "2026-08-29",
+  "mode": "hunt",
+  "gap_answers": [
+   {
+    "key": "bbf808a93bea02cf",
+    "status": "found",
+    "why": "Связь заведена по сообщению, называющему обе стороны: собственный ускоритель Maia выпускается на этой фабрике."
+   }
+  ],
+  "edges": []
+ },
+ {
+  "id": "marvell",
+  "as_of": "2026-08-29",
+  "mode": "hunt",
+  "gap_answers": [
+   {
+    "key": "2b2648339010872f",
+    "status": "found",
+    "why": "Связь заведена по собственному пресс-релизу компании. В её же 10-K фабрика не названа — там сказано «third-party foundries located in Taiwan», без имени; именно этот оборот и выпустил задание."
+   }
+  ],
+  "edges": []
+ },
+ {
+  "id": "arista",
+  "as_of": "2026-08-29",
+  "mode": "hunt",
+  "gap_answers": [
+   {
+    "key": "3bb11e1d50b765a2",
+    "status": "not_found",
+    "why": "Кремний коммутаторов компания в основном не проектирует, а покупает готовым у Broadcom — то есть отношение с фабрикой принадлежит поставщику микросхем, а не ей. Документа, называющего фабрику и эту компанию вместе, за проход не нашлось. Правило сработало верно, ответ отрицательный."
+   }
+  ],
+  "edges": []
+ },
+ {
+  "id": "cisco",
+  "as_of": "2026-08-29",
+  "mode": "hunt",
+  "gap_answers": [
+   {
+    "key": "98fe16a60139ac5a",
+    "status": "not_found",
+    "why": "Тот же случай, что у Arista: сетевой кремний закупается готовым, и связь с фабрикой принадлежит его поставщику. Названного обеими сторонами документа не нашлось."
+   }
+  ],
+  "edges": []
+ },
+ {
+  "id": "foxconn",
+  "as_of": "2026-08-29",
+  "mode": "hunt",
+  "gap_answers": [
+   {
+    "key": "8c61572bc7baf301",
+    "status": "dismissed",
+    "why": "Находка о ПРАВИЛЕ, а не о карте. Отношение со сборщиком стоек уже стоит на карте ребром foxconn -> nvidia типа integrates, а правило требовало типа supplies. Ожидать один конкретный тип там, где таксономия допускает несколько, — это ошибка правила: rack_needs_accelerator должно принимать любой из integrates/supplies/delivers_to."
+   }
+  ],
+  "edges": []
+ }
+]

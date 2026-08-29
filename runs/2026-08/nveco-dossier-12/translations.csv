@@ -1,0 +1,31 @@
+kind,id,field,lang,text
+entity,apple,why_irreplaceability,en,The long-standing top customer of the leading node; such customers number a handful
+entity,apple,why_lock_in,en,The silicon is designed against one process at one fab
+entity,apple,why_time,en,"No second site of that class exists, and the company has no fab of its own"
+entity,apple,why_concentration,en,It takes nearly half of the leading node's initial capacity
+entity,apple,one_liner,en,A silicon designer with no fab of its own: the long-standing top customer of leading nodes.
+entity,apple,why_irreplaceable,en,It matters here not as a device seller but as the node that takes most of the first batch of the most advanced process. Whoever gets that capacity decides what can physically be built this year.
+entity,apple,what_breaks_it,en,"A move to in-house manufacturing or to a second leading node, which does not yet exist."
+entity,apple,risk_note,en,Leading-node capacity is concentrated on one territory.
+edge,tsmc__apple__manufactures,risk_mitigation,en,"The leading nodes are made on one territory, and no alternative site of that class exists."
+edge,tsmc__apple__manufactures,note,en,The fab's long-standing top customer: per Commercial Times it secured most of the initial 2nm capacity.
+entity,qualcomm,why_irreplaceability,en,Mobile silicon is designed by several companies of comparable scale
+entity,qualcomm,why_lock_in,en,"Designs are tied to a fab process, yet three capacity suppliers are named"
+entity,qualcomm,why_time,en,Three named capacity suppliers give slack that single-source customers lack
+entity,qualcomm,why_concentration,en,"Three capacity suppliers are named, not one"
+entity,qualcomm,one_liner,en,A silicon designer that names its foundries — a rarity on this map.
+entity,qualcomm,why_irreplaceable,en,"Holds the link between mobile silicon and the leading node and, unlike most customers, names its capacity suppliers in its own filing."
+entity,qualcomm,what_breaks_it,en,"Losing access to the leading node, or customers moving to silicon of their own."
+entity,qualcomm,risk_note,en,The bulk of capacity sits on one territory.
+edge,tsmc__qualcomm__manufactures,risk_mitigation,en,"Two more fabs are named alongside, so the capacity source is not the only one"
+edge,tsmc__qualcomm__manufactures,note,en,Named by Qualcomm first among the capacity suppliers for its integrated circuits.
+edge,samsung__qualcomm__manufactures,risk_mitigation,en,Three named capacity suppliers let an order move between them
+edge,samsung__qualcomm__manufactures,note,en,Named by Qualcomm as a second capacity supplier alongside the first.
+edge,tsmc__amazon__manufactures,risk_mitigation,en,"The leading nodes are made on one territory, and no alternative site of that class exists."
+edge,tsmc__amazon__manufactures,note,en,The cloud's own Trainium and Inferentia accelerators are made by this fab.
+edge,tsmc__microsoft__manufactures,risk_mitigation,en,"The leading nodes are made on one territory, and no alternative site of that class exists."
+edge,tsmc__microsoft__manufactures,note,en,"The in-house Maia accelerator is built here, with capacity talks running separately."
+edge,tsmc__marvell__manufactures,risk_mitigation,en,"The leading nodes are made on one territory, and no alternative site of that class exists."
+edge,tsmc__marvell__manufactures,note,en,The partnership runs across three straight process generations and is announced by the company itself.
+edge,tsmc__openai__manufactures,risk_mitigation,en,"The leading nodes are made on one territory, and no alternative site of that class exists."
+edge,tsmc__openai__manufactures,note,en,The laboratory's first custom chip is being prepared for mass production here.

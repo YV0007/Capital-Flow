@@ -31,7 +31,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from engine import db, nveco, nveco_feedback  # noqa: E402
+from engine import db, nveco, nveco_feedback, nveco_gaps  # noqa: E402
 
 FACTORS = list(nveco.FACTORS)
 WHY = {"irreplaceability": "why_irreplaceability", "lock_in_depth": "why_lock_in",
@@ -90,7 +90,7 @@ def split_one(path: Path, month: str) -> dict:
         raise SystemExit(f"{path}: dossier.json — массив объектов, по одному на сущность")
     out = {"entities": [], "factors": [], "edges": [], "sources": [],
            "descriptions": [], "i18n": [], "candidates": [], "errors": [],
-           "covered": [], "counters": 0, "confirms": 0}
+           "covered": [], "gap_answers": [], "counters": 0, "confirms": 0}
 
     for d in data:
         eid = (d.get("id") or "").strip()
@@ -98,6 +98,28 @@ def split_one(path: Path, month: str) -> dict:
         if not eid:
             out["errors"].append(f"{path.name}: объект без id")
             continue
+        # РЕЖИМ ОХОТЫ. Досье изучает узел целиком и обязано принести профиль; охота
+        # отвечает на задание «найди связь, которой нет», и профиля не касается.
+        # Требовать с неё три источника профиля значило бы делать охоту такой же
+        # дорогой, как полное досье, — и тем самым не давать её запускать.
+        hunt = (d.get("mode") or "").strip() == "hunt"
+
+        # --- ответы на задания охоты
+        for a in d.get("gap_answers") or []:
+            k, st = (a.get("key") or "").strip(), (a.get("status") or "").strip()
+            why = (a.get("why") or "").strip()
+            if st not in ("found", "not_found", "dismissed") or not why or not k:
+                out["errors"].append(f"{where}: ответ охоты требует key, why и status "
+                                     f"из found/not_found/dismissed")
+                continue
+            out["gap_answers"].append({"key": k, "status": st, "why": why})
+
+        if hunt:
+            # Ни описания, ни факторов, ни профиля — только связи и ответы охоты.
+            for f in ("description", "factors", "profile_sources", "profile"):
+                if d.get(f):
+                    out["errors"].append(f"{where}: режим hunt не пишет {f} — "
+                                         f"для профиля есть обычное досье")
 
         # --- описание
         ru, en = _bi(d.get("description"), where, out["errors"], "description")
@@ -107,7 +129,7 @@ def split_one(path: Path, month: str) -> dict:
 
         # --- факторы
         fs = d.get("factors") or {}
-        missing = [f for f in FACTORS if f not in fs]
+        missing = [] if hunt else [f for f in FACTORS if f not in fs]
         if missing:
             out["errors"].append(f"{where}: нет факторов {', '.join(missing)} — "
                                  f"досье даёт все четыре")
@@ -123,16 +145,21 @@ def split_one(path: Path, month: str) -> dict:
             out["i18n"].append({"kind": "entity", "id": eid,
                                 "field": I18N_FACTOR_FIELD[f], "lang": "en",
                                 "text": wen})
-        out["factors"].append(row)
+        # Пустая строка факторов — это НЕ «оценок нет», это перезапись рубрики
+        # пустотой. Охота оценок не касается и строки не пишет.
+        if not hunt:
+            out["factors"].append(row)
 
         # --- источники профиля
         psrc = d.get("profile_sources") or []
         rows = [r for r in (_source_row(s, "entity", eid, where, out["errors"])
                             for s in psrc) if r]
         out["sources"] += rows
-        if len(rows) < 3:
+        if hunt:
+            pass
+        elif len(rows) < 3:
             out["errors"].append(f"{where}: {len(rows)} источников профиля, нужно ≥3")
-        if nveco.has_own_publisher(eid) and not any(
+        if not hunt and nveco.has_own_publisher(eid) and not any(
                 nveco.is_self_source(r["url"], eid) for r in rows):
             out["errors"].append(
                 f"{where}: ни один источник профиля не издан самой сущностью — "
@@ -146,13 +173,20 @@ def split_one(path: Path, month: str) -> dict:
             erow.update({k: v for k, v in prof.items() if k in ENTITY_COLS
                          and not isinstance(v, dict)})
             erow["id"] = eid
+            # Имя поля в CSV и имя того же поля в складе переводов совпадают не
+            # везде: колонка `geo_risk_note` кладётся в склад под `risk_note` —
+            # так её читает bilingualise на обеих половинах карты. Пока никто не
+            # заводил НОВЫЙ узел блоком profile, расхождение было незаметно:
+            # у существующих узлов перевод уже лежал под правильным именем.
+            I18N_NAME = {"geo_risk_note": "risk_note"}
             for field in ("one_liner", "why_irreplaceable", "what_breaks_it",
                           "geo_risk_note"):
                 if field in prof:
                     r_, e_ = _bi(prof[field], where, out["errors"], f"profile.{field}")
                     if r_:
                         erow[field] = r_
-                        out["i18n"].append({"kind": "entity", "id": eid, "field": field,
+                        out["i18n"].append({"kind": "entity", "id": eid,
+                                            "field": I18N_NAME.get(field, field),
                                             "lang": "en", "text": e_})
             out["entities"].append(erow)
 
@@ -213,13 +247,18 @@ def split_one(path: Path, month: str) -> dict:
         # из неё пережило валидацию. Узел, чьё досье не нашло ничего, покрыт: его
         # смотрели, и это ровно то, что нужно знать членству, чтобы отличить
         # «нечего предъявить» от «до него не дошла очередь».
-        my_srcs = [r for r in rows if r["owner_key"] == eid]
-        out["covered"].append({
-            "entity_id": eid, "batch": path.parent.name,
-            "sources": len(my_srcs),
-            "self_srcs": sum(1 for r in my_srcs
-                             if nveco.is_self_source(r["url"], eid)),
-            "edges": len(d.get("edges") or [])})
+        # Охота узел НЕ покрывает: она нашла связь, а не изучила профиль, и
+        # записать её как отработанное досье значило бы снять с узла проверки
+        # членства, которых он не проходил. Кандидатов она при этом называть
+        # вправе — первая версия обрывала объект целиком и потеряла Alchip.
+        my_srcs = [] if hunt else [r for r in rows if r["owner_key"] == eid]
+        if not hunt:
+            out["covered"].append({
+                "entity_id": eid, "batch": path.parent.name,
+                "sources": len(my_srcs),
+                "self_srcs": sum(1 for r in my_srcs
+                                 if nveco.is_self_source(r["url"], eid)),
+                "edges": len(d.get("edges") or [])})
 
         # --- кандидаты
         for c in d.get("candidates") or []:
@@ -248,7 +287,7 @@ def run(month: str, only: str = None, check: bool = False) -> dict:
     dirs = sorted(p for p in base.iterdir()
                   if p.is_dir() and p.name.startswith("nveco-dossier")
                   and (only is None or p.name == only)) if base.is_dir() else []
-    stats, all_candidates, errors, covered = [], [], [], []
+    stats, all_candidates, errors, covered, gap_answers = [], [], [], [], []
     for d in dirs:
         f = d / "dossier.json"
         if not f.exists():
@@ -276,6 +315,7 @@ def run(month: str, only: str = None, check: bool = False) -> dict:
                    prev + o["descriptions"])
         all_candidates += o["candidates"]
         covered += o["covered"]
+        gap_answers += o["gap_answers"]
         stats.append({"dir": d.name, "factors": len(o["factors"]),
                       "edges": len(o["edges"]), "sources": len(o["sources"]),
                       "descriptions": len(o["descriptions"]),
@@ -297,6 +337,18 @@ def run(month: str, only: str = None, check: bool = False) -> dict:
         queued["on_map"] = nveco_feedback.mark_on_map(con, month)
         con.commit()
         con.close()
+    if gap_answers and not check:
+        con = nveco.connect()
+        for a in gap_answers:
+            row = con.execute("SELECT * FROM nveco_gap WHERE key=?", (a["key"],)).fetchone()
+            if not row:
+                errors.append(f"ответ охоты на несуществующее задание: {a['key']}")
+                continue
+            if a["status"] == "not_found":
+                nveco_gaps.record_not_found(con, row, a["why"])
+            nveco_gaps.decide(con, a["key"], a["status"], a["why"], month)
+        con.commit()
+        con.close()
     if covered and not check:
         con = nveco.connect()
         tiers = {r["entity_id"]: r["rota_tier"] for r in
@@ -316,7 +368,8 @@ def run(month: str, only: str = None, check: bool = False) -> dict:
         con.commit()
         con.close()
     return {"batches": stats, "errors": errors, "candidates": len(all_candidates),
-            "queue": queued, "covered": len(covered)}
+            "queue": queued, "covered": len(covered),
+            "gap_answers": len(gap_answers)}
 
 
 if __name__ == "__main__":
@@ -333,7 +386,7 @@ if __name__ == "__main__":
     for e in out["errors"]:
         print("  ОШИБКА", e)
     print(f"кандидатов всего: {out['candidates']}; досье отработано у "
-          f"{out.get('covered', 0)} узлов")
+          f"{out.get('covered', 0)} узлов; ответов охоты {out.get('gap_answers', 0)}")
     q = out.get("queue") or {}
     if q:
         print(f"очередь в базе: новых {q.get('new', 0)}, повторно названо "
