@@ -1,0 +1,1057 @@
+{
+  "month": "2026-08",
+  "batch": 6,
+  "queue": "one-doc",
+  "как читать": "1) ПИШЕТЕ ВНУТРИ ПАКЕТА: всё, что утверждаете, лежит либо в вашем реестре фактов, либо здесь. Ничего из общей эрудиции. 2) `one_document: true` значит, что нынешний текст написан вокруг ОДНОГО документа — это и есть причина, по которой связь в очереди. 3) `neighbourhood` показывает, что уже сказано у соседей: не повторяйте и не противоречьте. 4) `facts.csv` пишется ДО текста. Число, которого нет в реестре, движок из текста не пропустит. 5) Тир, статус и стороны вы не пишете — их ставит движок.",
+  "выход": "facts.csv, details.csv, notes.csv в этом каталоге; правила и формат — agents/eco-prose.md",
+  "словарь карты": {
+    "предмет карты": {
+      "ru": "Инфраструктура ИИ: всё, без чего современная модель не может быть обучена, развёрнута, запитана, произведена или разрешена к продаже.",
+      "en": "AI infrastructure: everything without which a modern model cannot be trained, served, powered, manufactured or legally sold."
+    },
+    "типы связей": {
+      "manufactures": "Производство",
+      "supplies": "Поставка",
+      "packages": "Упаковка кристаллов",
+      "integrates": "Сборка систем",
+      "delivers_to": "Логистика",
+      "enables": "Даёт возможность",
+      "co_designs": "Совместная разработка",
+      "optimizes_for": "Заточка под платформу",
+      "invests_in": "Инвестиция",
+      "funded_by": "Финансирование",
+      "board_seat": "Место в совете",
+      "strategic_partner": "Стратегическое партнёрство",
+      "hedges_against": "Хедж",
+      "diversifies_supply": "Второй источник",
+      "customer_of": "Закупка",
+      "validates_demand": "Доказательство спроса",
+      "proves_roi": "Доказательство окупаемости",
+      "proves_use_case": "Референсное применение",
+      "locks_in_developers": "Замок на разработчиках",
+      "locks_in_platforms": "Замок на платформах",
+      "path_dependent_on": "Зависимость траектории",
+      "standardizes_on": "Отраслевой стандарт",
+      "sets_benchmark": "Планка",
+      "defines_category": "Определение категории",
+      "controls_access_to": "Контроль доступа",
+      "subject_to_restriction": "Под ограничением",
+      "export_controlled_by": "Экспортный контроль",
+      "geopolitically_dependent": "Геополитическая зависимость",
+      "competes_with": "Конкуренция",
+      "threatens": "Угроза позиции",
+      "could_disrupt": "Потенциальное вытеснение",
+      "is_alternative_to": "Путь-замена",
+      "enables_interop": "Совместимость"
+    },
+    "хребты": null,
+    "слои": {
+      "L0": {
+        "ru": "ГЕОПОЛИТИКА",
+        "en": "GEOPOLITICS"
+      },
+      "L1": {
+        "ru": "СЫРЬЁ И СТАНКИ",
+        "en": "INPUTS & TOOLS"
+      },
+      "L2": {
+        "ru": "ПРОЕКТИРОВАНИЕ",
+        "en": "CHIP DESIGN"
+      },
+      "L3": {
+        "ru": "ФАБРИКИ",
+        "en": "FABS"
+      },
+      "L4": {
+        "ru": "ПАМЯТЬ",
+        "en": "MEMORY"
+      },
+      "L5": {
+        "ru": "СИСТЕМЫ",
+        "en": "SYSTEMS"
+      },
+      "L6": {
+        "ru": "ЭНЕРГИЯ",
+        "en": "POWER"
+      },
+      "L7": {
+        "ru": "ОХЛАЖДЕНИЕ",
+        "en": "COOLING"
+      },
+      "L8": {
+        "ru": "СВЯЗЬ",
+        "en": "NETWORKING"
+      },
+      "L9": {
+        "ru": "ИНФРАСТРУКТУРА",
+        "en": "INFRASTRUCTURE"
+      },
+      "L10": {
+        "ru": "СОФТ ДЛЯ GPU",
+        "en": "GPU SOFTWARE"
+      },
+      "L11": {
+        "ru": "ИНФЕРЕНС",
+        "en": "INFERENCE"
+      },
+      "L12": {
+        "ru": "ЛАБОРАТОРИИ",
+        "en": "FRONTIER LABS"
+      },
+      "L13": {
+        "ru": "ПРИЛОЖЕНИЯ",
+        "en": "APPLICATIONS"
+      },
+      "L14": {
+        "ru": "КАПИТАЛ",
+        "en": "CAPITAL"
+      },
+      "L15": {
+        "ru": "РЕГУЛИРОВАНИЕ",
+        "en": "REGULATION"
+      }
+    }
+  },
+  "объекты": [
+    {
+      "kind": "edge",
+      "id": "softbank__openai__invests_in",
+      "type": "invests_in",
+      "spine": "capital",
+      "direction": "downstream",
+      "status": "confirmed",
+      "sidedness": "single",
+      "claimedBy": [
+        "openai"
+      ],
+      "strength": 80,
+      "risk": {
+        "level": "medium",
+        "type": "market",
+        "timeline": "2-5y",
+        "mitigation": null
+      },
+      "techNode": null,
+      "formed": "2025",
+      "note_now": "Держатель капитала и финансово ответственный партнёр стройки вычислений.",
+      "detail_now": "Инвестор здесь несёт финансовую ответственность за стройку, а лаборатория — операционную: роли разделены в самом объявлении проекта, где перечислены участники капитала. Это отличает связь от обычного венчурного вложения: деньги идут не в компанию, а в инфраструктуру под её спрос. Для карты это показывает, что финансирование вычислений отделилось от финансирования самих лабораторий.",
+      "evidence": [
+        {
+          "tier": 2,
+          "url": "https://openai.com/index/announcing-the-stargate-project/",
+          "quote": "The initial equity funders in Stargate are SoftBank, OpenAI, Oracle, and MGX.",
+          "self": "openai"
+        },
+        {
+          "tier": 2,
+          "url": "https://openai.com/index/announcing-the-stargate-project/",
+          "quote": "Arm, Microsoft, NVIDIA, Oracle, and OpenAI are the key initial technology partners.",
+          "self": "openai"
+        }
+      ],
+      "counterEvidence": [],
+      "facts_now": [],
+      "one_document": true,
+      "ends": {
+        "softbank": {
+          "id": "softbank",
+          "name": "SoftBank",
+          "type": "company",
+          "role": "capital",
+          "sector": "strategic_capital",
+          "layers": [
+            "L14"
+          ],
+          "criticality": 50,
+          "criticalityFactors": {
+            "irreplaceability": 50,
+            "lockInDepth": 58,
+            "timeToReplace": 45,
+            "concentration": 40
+          },
+          "criticalityWhy": {
+            "irreplaceability": "Деньги в этот слой приходят и от суверенных фондов, и от рынков долга",
+            "lockInDepth": "Через владение Arm задевает и архитектуру процессоров, и стройку площадок",
+            "timeToReplace": "Замена источника капитала — вопрос ставки, а не технологии",
+            "concentration": "Капитал фрагментирован: рейтинг BBB+ говорит о цене денег, а не об исключительности"
+          },
+          "oneLiner": "Японский холдинг, взявший на себя финансовую ответственность за крупнейшую стройку вычислений.",
+          "description_now": "SoftBank Group — инвестиционный холдинг, который финансирует стройку ИИ-инфраструктуры заёмными деньгами. Свежий выпуск гибридных облигаций на JPY 418.0 млрд размещался в основном среди частных инвесторов под 4.97% годовых на первые пять лет. Средства такого выпуска идут на досрочный выкуп предыдущих бумаг, то есть долг рефинансируется, а не гасится. Кредитный рейтинг выпуска японское агентство поставило на уровне BBB+. Отчётность Arm называет группу и клиентом, и стороной коммерческих договорённостей, от которых зависит часть её ближней выручки.",
+          "revenueUsdB": null,
+          "geo": "JP",
+          "ticker": "TSE: 9984",
+          "founded": "1981",
+          "sourcing": {
+            "total": 6,
+            "selfSourced": 4,
+            "byTier": {
+              "1": 4,
+              "2": 2
+            }
+          },
+          "sources": [
+            {
+              "tier": 1,
+              "url": "https://group.softbank/en/news/press/20260410",
+              "quote": "Total amount of issue JPY 418.0 billion",
+              "self": "softbank"
+            },
+            {
+              "tier": 1,
+              "url": "https://group.softbank/en/news/press/20260410",
+              "quote": "Fixed rate for 5 years from the issue date: 4.97% per annum",
+              "self": "softbank"
+            },
+            {
+              "tier": 1,
+              "url": "https://group.softbank/en/news/press/20260410",
+              "quote": "Use of proceeds Allocated to the early redemption of hybrid notes issued in Japan",
+              "self": "softbank"
+            },
+            {
+              "tier": 1,
+              "url": "https://group.softbank/en/news/press/20260525",
+              "quote": "Preliminary credit rating BBB+ (Japan Credit Rating Agency, Ltd.)",
+              "self": "softbank"
+            },
+            {
+              "tier": 2,
+              "url": "https://openai.com/index/announcing-the-stargate-project/",
+              "quote": "The initial equity funders in Stargate are SoftBank, OpenAI, Oracle, and MGX.",
+              "self": null
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+              "quote": "our top five customers (including Arm China and SoftBank Group) collectively accounted for approximately 57%",
+              "self": null
+            }
+          ],
+          "facts_now": [],
+          "neighbourhood": [
+            "arm__softbank__strategic_partner [strategic_partner, high_confidence/single] Часть ближней выручки Arm зависит от коммерческих договорённостей с SoftBank Group.",
+            "mgx__softbank__strategic_partner [strategic_partner, confirmed/single] Суверенный и частный капитал в одном консорциуме стройки.",
+            "nvidia__softbank__strategic_partner [strategic_partner, confirmed/single] NVIDIA назван ключевым технологическим партнёром стройки, которую финансирует холдинг.",
+            "softbank__openai__invests_in [invests_in, confirmed/single] Держатель капитала и финансово ответственный партнёр стройки вычислений.",
+            "softbank__oracle__strategic_partner [strategic_partner, confirmed/single] Два из четырёх держателей капитала одной стройки."
+          ]
+        },
+        "openai": {
+          "id": "openai",
+          "name": "OpenAI",
+          "type": "company",
+          "role": "demand",
+          "sector": "frontier_lab",
+          "layers": [
+            "L12"
+          ],
+          "criticality": 70,
+          "criticalityFactors": {
+            "irreplaceability": 76,
+            "lockInDepth": 72,
+            "timeToReplace": 65,
+            "concentration": 62
+          },
+          "criticalityWhy": {
+            "irreplaceability": "Модели сопоставимого класса выпускают ещё несколько лабораторий",
+            "lockInDepth": "Держит приложения через интерфейс и продукты партнёров, но не железо",
+            "timeToReplace": "Смена поставщика модели в приложении занимает месяцы, а не годы",
+            "concentration": "Спрос обеспечен контрактами вроде $11.9 млрд с CoreWeave, но рынок моделей делится"
+          },
+          "oneLiner": "Лаборатория, которая обучает передовые модели и заказывает вычисления гигаваттами.",
+          "description_now": "OpenAI разрабатывает модели и продаёт доступ к ним подпиской и через программный интерфейс. Собственная карточка системы описывает GPT-5 как единое целое из быстрой модели, модели для сложных задач и маршрутизатора между ними. Разработчикам компания даёт прямой доступ к модели рассуждения и её уменьшенным версиям. Вычисления она арендует: по договору с CoreWeave обязательство доходит до $11.9 млрд до октября 2030 года. Microsoft называет себя крупным инвестором OpenAI и получателем доли её выручки, а партнёрство между ними идёт с 2019 года.",
+          "revenueUsdB": 13.0,
+          "geo": "US",
+          "ticker": null,
+          "founded": "2015",
+          "sourcing": {
+            "total": 12,
+            "selfSourced": 8,
+            "byTier": {
+              "1": 8,
+              "2": 4
+            }
+          },
+          "sources": [
+            {
+              "tier": 1,
+              "url": "https://cdn.openai.com/gpt-5-system-card.pdf",
+              "quote": "GPT-5 is a unified system with a smart and fast model that answers most questions",
+              "self": "openai"
+            },
+            {
+              "tier": 1,
+              "url": "https://cdn.openai.com/gpt-5-system-card.pdf",
+              "quote": "In the API, we provide direct access to the thinking model, its mini version",
+              "self": "openai"
+            },
+            {
+              "tier": 1,
+              "url": "https://github.com/openai/openai-python",
+              "quote": "The OpenAI Python library provides convenient access to the OpenAI REST API",
+              "self": "openai"
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "the U.S. government, or USG, announced export restrictions and export licensing requirements targeting",
+              "self": null
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+              "quote": "Microsoft is a major investor in OpenAI and will continue to receive revenue-sharing payments.",
+              "self": null
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+              "quote": "OpenAI has committed to pay us up to approximately $11.9 billion through October 2030",
+              "self": null
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+              "quote": "We have a long-term strategic partnership with OpenAI which was originally established in 2019",
+              "self": null
+            },
+            {
+              "tier": 1,
+              "url": "https://openai.com/index/accelerating-the-next-phase-ai/",
+              "quote": "more than 900 million weekly active users, and over 50 million subscribers",
+              "self": "openai"
+            },
+            {
+              "tier": 1,
+              "url": "https://openai.com/index/accelerating-the-next-phase-ai/",
+              "quote": "Our APIs now process more than 15 billion tokens per minute.",
+              "self": "openai"
+            },
+            {
+              "tier": 1,
+              "url": "https://openai.com/index/1-million-businesses-putting-ai-to-work/",
+              "quote": "we now have more than 7 million total ChatGPT for Work seats",
+              "self": "openai"
+            },
+            {
+              "tier": 1,
+              "url": "https://openai.com/index/announcing-the-stargate-project/",
+              "quote": "intends to invest $500 billion over the next four years building new AI infrastructure",
+              "self": "openai"
+            },
+            {
+              "tier": 1,
+              "url": "https://openai.com/index/openai-nvidia-systems-partnership/",
+              "quote": "NVIDIA intends to invest up to $100 billion in OpenAI progressively as each gigawatt",
+              "self": "openai"
+            }
+          ],
+          "facts_now": [],
+          "neighbourhood": [
+            "eu-ai-act__openai__subject_to_restriction [subject_to_restriction, signal/single] Требования к моделям ложатся прежде всего на лаборатории и на прикладной слой.",
+            "mgx__openai__invests_in [invests_in, confirmed/single] Суверенный капитал Абу-Даби среди четырёх первоначальных держателей капитала стройки.",
+            "microsoft__openai__invests_in [invests_in, confirmed/single] Крупнейший инвестор лаборатории с правами на её интеллектуальную собственность и долей выручки.",
+            "nvidia__openai__co_designs [co_designs, bilateral/bilateral] Совместная работа над системами и оптимизациями: лаборатория пишет ядра, NVIDIA подгоняет платформу.",
+            "nvidia__openai__hedges_against [hedges_against, confirmed/single] Вложение в собственного крупнейшего покупателя — страховка от его перехода на альтернативное железо.",
+            "nvidia__openai__invests_in [invests_in, confirmed/single] До 100 млрд долларов, разблокируемых по мере ввода каждого гигаватта — вложение в собственного крупнейшего покупателя.",
+            "openai__coreweave__customer_of [customer_of, confirmed/single] Лаборатория обязалась заплатить независимому облаку до 6,5 млрд долларов к 2031 году.",
+            "openai__huggingface__competes_with [competes_with, confirmed/single] Закрытые модели по подписке против открытых весов в общем хабе.",
+            "openai__microsoft__enables [enables, confirmed/single] Модели лаборатории встроены в продукты гиперскейлера — это его прикладной слой.",
+            "openai__microsoft__strategic_partner [strategic_partner, confirmed/single] Гиперскейлер — крупнейший инвестор лаборатории и держатель прав на её интеллектуальную собственность.",
+            "openai__microsoft__validates_demand [validates_demand, confirmed/single] Спрос лаборатории доказал, что облачные мощности под ИИ окупаются — и запустил стройку у всех.",
+            "openai__nvidia__customer_of [customer_of, bilateral/bilateral] Лаборатория закупает системы гигаваттами: это деньги, а не доказательство. Доказательство идёт отдельным ребром.",
+            "openai__nvidia__path_dependent_on [path_dependent_on, bilateral/bilateral] Стек лаборатории оптимизирован под платформу NVIDIA на нескольких уровнях: развитие идёт вслед за ней.",
+            "openai__nvidia__validates_demand [validates_demand, confirmed/single] Своим существованием доказала отрасли, что ускорители необходимы: под неё строят площадки на десять гигаватт.",
+            "openai__oracle__customer_of [customer_of, bilateral/bilateral] Соглашение на 4,5 гигаватта дополнительных мощностей: контракт определяет профиль роста облака.",
+            "openai__oracle__validates_demand [validates_demand, confirmed/single] Контракт на гигаватты доказал, что стройка облачных мощностей под одну лабораторию окупается.",
+            "openai__vllm__enables [enables, confirmed/single] vLLM повторяет API OpenAI",
+            "oracle__openai__invests_in [invests_in, confirmed/single] Облако одновременно инвестор стройки и её подрядчик — это и делает контур замкнутым.",
+            "sequoia__openai__invests_in [invests_in, confirmed/single] Венчурный капитал в лаборатории: деньги заменимы деньгами, ценность в доступе к сделке.",
+            "softbank__openai__invests_in [invests_in, confirmed/single] Держатель капитала и финансово ответственный партнёр стройки вычислений.",
+            "thrive__openai__invests_in [invests_in, confirmed/single] Поздние раунды на миллиарды — узкий сегмент, но инвесторов в нём несколько.",
+            "triton__openai__funded_by [funded_by, confirmed/single] Компилятор создан лабораторией — крупнейшим покупателем ускорителей.",
+            "tsmc__openai__manufactures [manufactures, signal/single] Первый собственный чип лаборатории готовится к серийному выпуску здесь же.",
+            "vllm__openai__enables_interop [enables_interop, high_confidence/single] vLLM повторяет программный интерфейс OpenAI, и благодаря этому чужие стеки говорят на одном языке."
+          ]
+        }
+      },
+      "что обязан ответить текст": "Инвестиция"
+    },
+    {
+      "kind": "edge",
+      "id": "vllm__anthropic__enables_interop",
+      "type": "enables_interop",
+      "spine": "physical",
+      "direction": "bidirectional",
+      "status": "high_confidence",
+      "sidedness": "single",
+      "claimedBy": [
+        "vllm"
+      ],
+      "strength": 50,
+      "risk": {
+        "level": "low",
+        "type": "technical",
+        "timeline": "1-2y",
+        "mitigation": null
+      },
+      "techNode": null,
+      "formed": "2025",
+      "note_now": "vLLM поддерживает и интерфейс Anthropic: стандарт складывается поверх обеих лабораторий.",
+      "detail_now": "Та же библиотека запуска реализует и интерфейс второй лаборатории, то есть переносимость приложений становится двусторонней: код, написанный под одну закрытую модель, работает и с другой, и с открытой. Каждый такой поддержанный интерфейс снижает стоимость смены поставщика модели почти до нуля. Для карты это механизм, которым открытая часть стека постепенно превращает модели в товар без различий.",
+      "evidence": [
+        {
+          "tier": 1,
+          "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+          "quote": "OpenAI-compatible API server, plus Anthropic Messages API and gRPC support -",
+          "self": "vllm"
+        }
+      ],
+      "counterEvidence": [],
+      "facts_now": [],
+      "one_document": true,
+      "ends": {
+        "vllm": {
+          "id": "vllm",
+          "name": "vLLM",
+          "type": "technology",
+          "role": "platform",
+          "sector": "inference_engine",
+          "layers": [
+            "L11"
+          ],
+          "criticality": 54,
+          "criticalityFactors": {
+            "irreplaceability": 58,
+            "lockInDepth": 55,
+            "timeToReplace": 45,
+            "concentration": 62
+          },
+          "criticalityWhy": {
+            "irreplaceability": "Ту же работу делают несколько открытых серверов вывода",
+            "lockInDepth": "Стоит между моделью и железом и заменяется без правки самой модели",
+            "timeToReplace": "Переключение на другой сервер вывода занимает недели",
+            "concentration": "Больше 2000 участников в одном проекте — сопоставимого сообщества у соседей нет"
+          },
+          "oneLiner": "Открытая система запуска обученных моделей — быстро и дёшево.",
+          "description_now": "vLLM — открытая библиотека для вывода и обслуживания больших языковых моделей. Собственный README описывает её как быструю и простую в использовании и называет опорой экономию памяти под ключи и значения внимания. Денег проект не берёт: он живёт вкладом сообщества, в котором README насчитывает более 2000 участников из университетов и компаний. Поддержаны ускорители нескольких производителей сразу, поэтому библиотека работает как переходник между моделью и железом. Модели она берёт напрямую из склада Hugging Face, что делает её продолжением того же пути, а не отдельным миром.",
+          "revenueUsdB": null,
+          "geo": "US",
+          "ticker": null,
+          "founded": "2023",
+          "sourcing": {
+            "total": 7,
+            "selfSourced": 6,
+            "byTier": {
+              "1": 6,
+              "2": 1
+            }
+          },
+          "sources": [
+            {
+              "tier": 1,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "Support for NVIDIA GPUs, AMD GPUs, Intel GPUs, and x86/ARM/PowerPC CPUs.",
+              "self": "vllm"
+            },
+            {
+              "tier": 1,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "vLLM is a fast and easy-to-use library for LLM inference and serving.",
+              "self": "vllm"
+            },
+            {
+              "tier": 1,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "a diverse community of many dozens of academic institutions and companies from over 2000 contributors",
+              "self": "vllm"
+            },
+            {
+              "tier": 1,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "Efficient management of attention key and value memory with",
+              "self": "vllm"
+            },
+            {
+              "tier": 1,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "Seamless integration with popular Hugging Face models",
+              "self": "vllm"
+            },
+            {
+              "tier": 2,
+              "url": "https://raw.githubusercontent.com/pytorch/pytorch/main/README.md",
+              "quote": "PyTorch is a Python package that provides two high-level features",
+              "self": null
+            },
+            {
+              "tier": 1,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "vLLM is a fast and easy-to-use library for LLM inference and serving",
+              "self": "vllm"
+            }
+          ],
+          "facts_now": [],
+          "neighbourhood": [
+            "google-cloud__vllm__integrates [integrates, high_confidence/single] Назван на странице тензорных процессоров как способ быстрого вывода на них.",
+            "nim__vllm__competes_with [competes_with, confirmed/single] Платный сервер инференса NVIDIA против бесплатного vLLM — на одном и том же железе.",
+            "nim__vllm__integrates [integrates, high_confidence/single] Серверы вывода внутри контейнеров построены на сторонних проектах, и vLLM назван среди них.",
+            "openai__vllm__enables [enables, confirmed/single] vLLM повторяет API OpenAI",
+            "sglang__vllm__competes_with [competes_with, confirmed/single] SGLang — вторая открытая система запуска моделей: слой конкурентный, а не запертый.",
+            "vllm__anthropic__enables_interop [enables_interop, high_confidence/single] vLLM поддерживает и интерфейс Anthropic: стандарт складывается поверх обеих лабораторий.",
+            "vllm__cuda__path_dependent_on [path_dependent_on, confirmed/single] Самые быстрые режимы vLLM написаны под CUDA — на другом железе они просто отключаются.",
+            "vllm__huggingface__standardizes_on [standardizes_on, bilateral/bilateral] vLLM запускает модели, опубликованные в общем хабе, и берёт их описания оттуда.",
+            "vllm__nvidia__validates_demand [validates_demand, confirmed/single] vLLM называет ускорители NVIDIA первыми в списке поддержки.",
+            "vllm__openai__enables_interop [enables_interop, high_confidence/single] vLLM повторяет программный интерфейс OpenAI, и благодаря этому чужие стеки говорят на одном языке.",
+            "vllm__tensorrt__competes_with [competes_with, confirmed/single] vLLM против TensorRT: открытый запуск моделей против оптимизатора NVIDIA."
+          ]
+        },
+        "anthropic": {
+          "id": "anthropic",
+          "name": "Anthropic",
+          "type": "company",
+          "role": "demand",
+          "sector": "frontier_lab",
+          "layers": [
+            "L12"
+          ],
+          "criticality": 66,
+          "criticalityFactors": {
+            "irreplaceability": 70,
+            "lockInDepth": 68,
+            "timeToReplace": 62,
+            "concentration": 60
+          },
+          "criticalityWhy": {
+            "irreplaceability": "Модели сопоставимого класса выпускают ещё несколько лабораторий",
+            "lockInDepth": "Держит прикладной слой через интерфейс, ниже железа не спускается",
+            "timeToReplace": "Приложение переключается на другую модель за месяцы",
+            "concentration": "Скорость выручки $47 млрд и больше 300,000 клиентов при нескольких сопоставимых лабораториях"
+          },
+          "oneLiner": "Лаборатория передовых моделей после OpenAI; её главный инфраструктурный партнёр — Amazon.",
+          "description_now": "Anthropic разрабатывает модели Claude и продаёт доступ к ним компаниям и разработчикам. По собственному сообщению, годовая скорость выручки перешла $47 млрд, а обслуживает компания больше 300,000 корпоративных клиентов. Последний раунд Series H принёс ей $65 млрд. Обучение и работу моделей компания раскладывает на три вида железа — AWS Trainium, тензорные процессоры Google и ускорители NVIDIA, — а Amazon называет своим основным облаком и партнёром по обучению. Отдельным соглашением с Google и Broadcom законтрактованы мощности в несколько гигаватт.",
+          "revenueUsdB": 5.0,
+          "geo": "US",
+          "ticker": null,
+          "founded": "2021",
+          "sourcing": {
+            "total": 9,
+            "selfSourced": 7,
+            "byTier": {
+              "1": 7,
+              "2": 2
+            }
+          },
+          "sources": [
+            {
+              "tier": 1,
+              "url": "https://www.anthropic.com/news/series-h",
+              "quote": "our run-rate revenue crossed $47 billion earlier this month",
+              "self": "anthropic"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.anthropic.com/news/series-h",
+              "quote": "Anthropic has raised $65 billion in Series H funding led by Altimeter Capital, Dragoneer, Greenoaks",
+              "self": "anthropic"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
+              "quote": "Anthropic now serves more than 300,000 business customers",
+              "self": "anthropic"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+              "quote": "run Claude on a range of AI hardware—AWS Trainium, Google TPUs, and NVIDIA GPUs",
+              "self": "anthropic"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+              "quote": "Amazon remains our primary cloud provider and training partner",
+              "self": "anthropic"
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+              "quote": "investments in convertible notes from Anthropic, PBC (“Anthropic”), including $2.7 billion we",
+              "self": null
+            },
+            {
+              "tier": 1,
+              "url": "https://www.anthropic.com/news/series-h",
+              "quote": "Anthropic has raised $65 billion in Series H funding led by Altimeter Capital",
+              "self": "anthropic"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.anthropic.com/news/series-h",
+              "quote": "valuing the company at $965 billion post-money",
+              "self": "anthropic"
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+              "quote": "investments in convertible notes from Anthropic, PBC (“Anthropic”), including $2.7 billion we invested in 2025",
+              "self": null
+            }
+          ],
+          "facts_now": [],
+          "neighbourhood": [
+            "amazon__anthropic__invests_in [invests_in, bilateral/bilateral] Конвертируемые займы, часть которых превращена в неголосующие акции: облако финансирует собственного клиента.",
+            "amazon__anthropic__supplies [supplies, confirmed/single] Облако продаёт лаборатории до пяти гигаватт мощности на собственных ускорителях — рядом с уже учтёнными вложениями.",
+            "anthropic__amazon__strategic_partner [strategic_partner, bilateral/bilateral] Облако вложило миллиарды в лабораторию и стало её основным инфраструктурным партнёром.",
+            "anthropic__broadcom__strategic_partner [strategic_partner, high_confidence/single] Соглашение с Google и Broadcom на несколько гигаватт мощностей нового поколения.",
+            "anthropic__google-cloud__customer_of [customer_of, confirmed/single] Обратная сторона той же сделки: для облака это один из крупнейших контрактов на мощность.",
+            "anthropic__google__customer_of [customer_of, high_confidence/single] Anthropic арендует у Google до миллиона тензорных процессоров; сделка объявлена ею самой.",
+            "anthropic__nvidia__customer_of [customer_of, bilateral/bilateral] Вторая лаборатория закупает вычисления — спрос не сосредоточен в одной компании.",
+            "anthropic__nvidia__validates_demand [validates_demand, confirmed/single] Второе доказательство спроса: если бы покупатель был один, вся стройка висела бы на нём.",
+            "blackstone__anthropic__invests_in [invests_in, signal/single] Владелец площадок дата-центров вошёл в капитал лаборатории, которая эти площадки загружает.",
+            "brookfield__anthropic__invests_in [invests_in, bilateral/bilateral] Инфраструктурный капитал вошёл в капитал лаборатории — редкий случай, когда владелец энергии финансирует её потребителя.",
+            "google-cloud__anthropic__supplies [supplies, confirmed/single] Лаборатория выбрала это облако как поставщика мощности и расширила закупку до миллиона ускорителей.",
+            "google__anthropic__supplies [supplies, confirmed/single] Google продаёт лаборатории мощность на собственных ускорителях — до миллиона чипов и пять гигаватт по последним соглашениям.",
+            "lightspeed__anthropic__invests_in [invests_in, confirmed/single] Венчурный капитал во второй лаборатории.",
+            "vllm__anthropic__enables_interop [enables_interop, high_confidence/single] vLLM поддерживает и интерфейс Anthropic: стандарт складывается поверх обеих лабораторий."
+          ]
+        }
+      },
+      "что обязан ответить текст": "Совместимость"
+    },
+    {
+      "kind": "edge",
+      "id": "softbank__oracle__strategic_partner",
+      "type": "strategic_partner",
+      "spine": "capital",
+      "direction": "bidirectional",
+      "status": "confirmed",
+      "sidedness": "single",
+      "claimedBy": [],
+      "strength": 60,
+      "risk": {
+        "level": "medium",
+        "type": "market",
+        "timeline": "2-5y",
+        "mitigation": null
+      },
+      "techNode": null,
+      "formed": "2025",
+      "note_now": "Два из четырёх держателей капитала одной стройки.",
+      "detail_now": "Два из четырёх держателей капитала одной стройки, и это связь между инвесторами, а не между продавцом и покупателем. Значение в том, что она объясняет устойчивость проекта: капитал распределён между сторонами с разными мотивами — финансовым, облачным и суверенным. Ни одна из них в одиночку не может ни остановить стройку, ни довести её до конца.",
+      "evidence": [
+        {
+          "tier": 2,
+          "url": "https://openai.com/index/announcing-the-stargate-project/",
+          "quote": "The initial equity funders in Stargate are SoftBank, OpenAI, Oracle, and MGX.",
+          "self": null
+        },
+        {
+          "tier": 2,
+          "url": "https://openai.com/index/announcing-the-stargate-project/",
+          "quote": "Arm, Microsoft, NVIDIA, Oracle, and OpenAI are the key initial technology partners.",
+          "self": null
+        }
+      ],
+      "counterEvidence": [],
+      "facts_now": [],
+      "one_document": true,
+      "ends": {
+        "softbank": {
+          "id": "softbank",
+          "name": "SoftBank",
+          "type": "company",
+          "role": "capital",
+          "sector": "strategic_capital",
+          "layers": [
+            "L14"
+          ],
+          "criticality": 50,
+          "criticalityFactors": {
+            "irreplaceability": 50,
+            "lockInDepth": 58,
+            "timeToReplace": 45,
+            "concentration": 40
+          },
+          "criticalityWhy": {
+            "irreplaceability": "Деньги в этот слой приходят и от суверенных фондов, и от рынков долга",
+            "lockInDepth": "Через владение Arm задевает и архитектуру процессоров, и стройку площадок",
+            "timeToReplace": "Замена источника капитала — вопрос ставки, а не технологии",
+            "concentration": "Капитал фрагментирован: рейтинг BBB+ говорит о цене денег, а не об исключительности"
+          },
+          "oneLiner": "Японский холдинг, взявший на себя финансовую ответственность за крупнейшую стройку вычислений.",
+          "description_now": "SoftBank Group — инвестиционный холдинг, который финансирует стройку ИИ-инфраструктуры заёмными деньгами. Свежий выпуск гибридных облигаций на JPY 418.0 млрд размещался в основном среди частных инвесторов под 4.97% годовых на первые пять лет. Средства такого выпуска идут на досрочный выкуп предыдущих бумаг, то есть долг рефинансируется, а не гасится. Кредитный рейтинг выпуска японское агентство поставило на уровне BBB+. Отчётность Arm называет группу и клиентом, и стороной коммерческих договорённостей, от которых зависит часть её ближней выручки.",
+          "revenueUsdB": null,
+          "geo": "JP",
+          "ticker": "TSE: 9984",
+          "founded": "1981",
+          "sourcing": {
+            "total": 6,
+            "selfSourced": 4,
+            "byTier": {
+              "1": 4,
+              "2": 2
+            }
+          },
+          "sources": [
+            {
+              "tier": 1,
+              "url": "https://group.softbank/en/news/press/20260410",
+              "quote": "Total amount of issue JPY 418.0 billion",
+              "self": "softbank"
+            },
+            {
+              "tier": 1,
+              "url": "https://group.softbank/en/news/press/20260410",
+              "quote": "Fixed rate for 5 years from the issue date: 4.97% per annum",
+              "self": "softbank"
+            },
+            {
+              "tier": 1,
+              "url": "https://group.softbank/en/news/press/20260410",
+              "quote": "Use of proceeds Allocated to the early redemption of hybrid notes issued in Japan",
+              "self": "softbank"
+            },
+            {
+              "tier": 1,
+              "url": "https://group.softbank/en/news/press/20260525",
+              "quote": "Preliminary credit rating BBB+ (Japan Credit Rating Agency, Ltd.)",
+              "self": "softbank"
+            },
+            {
+              "tier": 2,
+              "url": "https://openai.com/index/announcing-the-stargate-project/",
+              "quote": "The initial equity funders in Stargate are SoftBank, OpenAI, Oracle, and MGX.",
+              "self": null
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+              "quote": "our top five customers (including Arm China and SoftBank Group) collectively accounted for approximately 57%",
+              "self": null
+            }
+          ],
+          "facts_now": [],
+          "neighbourhood": [
+            "arm__softbank__strategic_partner [strategic_partner, high_confidence/single] Часть ближней выручки Arm зависит от коммерческих договорённостей с SoftBank Group.",
+            "mgx__softbank__strategic_partner [strategic_partner, confirmed/single] Суверенный и частный капитал в одном консорциуме стройки.",
+            "nvidia__softbank__strategic_partner [strategic_partner, confirmed/single] NVIDIA назван ключевым технологическим партнёром стройки, которую финансирует холдинг.",
+            "softbank__openai__invests_in [invests_in, confirmed/single] Держатель капитала и финансово ответственный партнёр стройки вычислений.",
+            "softbank__oracle__strategic_partner [strategic_partner, confirmed/single] Два из четырёх держателей капитала одной стройки."
+          ]
+        },
+        "oracle": {
+          "id": "oracle",
+          "name": "Oracle",
+          "type": "company",
+          "role": "operator",
+          "sector": "hyperscaler",
+          "layers": [
+            "L9"
+          ],
+          "criticality": 59,
+          "criticalityFactors": {
+            "irreplaceability": 58,
+            "lockInDepth": 62,
+            "timeToReplace": 58,
+            "concentration": 55
+          },
+          "criticalityWhy": {
+            "irreplaceability": "Мощность под аренду продают ещё три облака и независимые операторы",
+            "lockInDepth": "Держит базы и прикладной софт, но не среду разработки под ускорители",
+            "timeToReplace": "Площадку под аренду строят два-три года, но заказчик уходит быстрее",
+            "concentration": "Законтрактовано $638 млрд, но такие же контракты подписывают конкурирующие облака"
+          },
+          "oneLiner": "Облако, которое строит площадки под контракты лабораторий на гигаватты мощности.",
+          "description_now": "Oracle продаёт базы данных, прикладной софт и облачную инфраструктуру, а в ИИ зарабатывает арендой вычислений под долгие контракты. Портфель законтрактованной, но не признанной выручки вырос до $638 млрд против $138 млрд годом ранее — рост компания сама объясняет крупными облачными договорами. Вычислительные услуги её облака идут от виртуальных машин и предложений на графических процессорах до серверов без гипервизора. Одним из таких контрактов CoreWeave называет обязательство OpenAI, что показывает, за какие сроки и суммы идёт конкуренция за площадки. Прикладной софт и базы остаются источником текущей выручки, пока площадки строятся.",
+          "revenueUsdB": 57.4,
+          "geo": "US",
+          "ticker": "NYSE: ORCL",
+          "founded": "1977",
+          "sourcing": {
+            "total": 5,
+            "selfSourced": 3,
+            "byTier": {
+              "1": 3,
+              "2": 2
+            }
+          },
+          "sources": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+              "quote": "Remaining performance obligations were $638 billion and $138 billion as of May 31, 2026",
+              "self": "oracle"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+              "quote": "OCI compute services range from virtual machines and graphics processing unit (GPU)-based offerings",
+              "self": "oracle"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+              "quote": "Oracle cloud offerings include Oracle Cloud Applications (OCA) and Oracle Cloud Infrastructure (OCI",
+              "self": "oracle"
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+              "self": null
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+              "quote": "OpenAI has committed to pay us up to approximately $11.9 billion through October 2030",
+              "self": null
+            }
+          ],
+          "facts_now": [],
+          "neighbourhood": [
+            "bloom-energy__oracle__supplies [supplies, confirmed/single] Топливные элементы дают питание прямо на площадке, не дожидаясь подключения к сети.",
+            "digital-realty__oracle__supplies [supplies, confirmed/single] Площадки под облачные мощности.",
+            "openai__oracle__customer_of [customer_of, bilateral/bilateral] Соглашение на 4,5 гигаватта дополнительных мощностей: контракт определяет профиль роста облака.",
+            "openai__oracle__validates_demand [validates_demand, confirmed/single] Контракт на гигаватты доказал, что стройка облачных мощностей под одну лабораторию окупается.",
+            "oracle__nvidia__customer_of [customer_of, confirmed/single] Облако, строящее площадки под контракты лабораторий, закупает ускорители гигаваттами.",
+            "oracle__openai__invests_in [invests_in, confirmed/single] Облако одновременно инвестор стройки и её подрядчик — это и делает контур замкнутым.",
+            "sglang__oracle__delivers_to [delivers_to, high_confidence/single] Названа среди облаков, принявших каркас в работу.",
+            "softbank__oracle__strategic_partner [strategic_partner, confirmed/single] Два из четырёх держателей капитала одной стройки."
+          ]
+        }
+      },
+      "что обязан ответить текст": "Стратегическое партнёрство"
+    },
+    {
+      "kind": "edge",
+      "id": "sglang__vllm__competes_with",
+      "type": "competes_with",
+      "spine": "rivalry",
+      "direction": "lateral",
+      "status": "confirmed",
+      "sidedness": "single",
+      "claimedBy": [
+        "vllm"
+      ],
+      "strength": 45,
+      "risk": {
+        "level": "low",
+        "type": "substitution",
+        "timeline": "1-2y",
+        "mitigation": null
+      },
+      "techNode": null,
+      "formed": "2024",
+      "note_now": "SGLang — вторая открытая система запуска моделей: слой конкурентный, а не запертый.",
+      "detail_now": "Вторая открытая система запуска моделей, и её существование делает слой конкурентным, а не захваченным: обе свободно лицензированы и работают на нескольких платформах. Конкуренция здесь ускоряет обе — приёмы перенимаются за недели, потому что код открыт. Для карты это единственный слой, где скорость улучшения не зависит от планов одного поставщика.",
+      "evidence": [
+        {
+          "tier": 2,
+          "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+          "quote": "vLLM is a fast and easy-to-use library for LLM inference and serving.",
+          "self": "vllm"
+        },
+        {
+          "tier": 2,
+          "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+          "quote": "Support for NVIDIA GPUs, AMD GPUs, Intel GPUs, and x86/ARM/PowerPC CPUs.",
+          "self": "vllm"
+        }
+      ],
+      "counterEvidence": [],
+      "facts_now": [],
+      "one_document": true,
+      "ends": {
+        "sglang": {
+          "id": "sglang",
+          "name": "SGLang",
+          "type": "technology",
+          "role": "platform",
+          "sector": "inference_engine",
+          "layers": [
+            "L11"
+          ],
+          "criticality": 52,
+          "criticalityFactors": {
+            "irreplaceability": 60,
+            "lockInDepth": 45,
+            "timeToReplace": 48,
+            "concentration": 55
+          },
+          "criticalityWhy": {
+            "irreplaceability": "Каркас обслуживания моделей открытый, и рядом на карте стоят проекты того же назначения",
+            "lockInDepth": "Работает на ускорителях двух вендоров, процессорах и тензорных процессорах сразу",
+            "timeToReplace": "Развёрнут широко и даёт триллионы токенов в сутки, но заменяется другим каркасом того же слоя",
+            "concentration": "Принят и лабораториями, и производителями ускорителей, и облаками одновременно"
+          },
+          "oneLiner": "Вторая открытая система запуска моделей, конкурирует с vLLM по скорости.",
+          "description_now": "SGLang — открытый каркас обслуживания больших языковых и мультимодальных моделей, рассчитанный на низкую задержку и высокую пропускную способность. Проект пишет о собственном масштабе прямо: развёрнут широко и генерирует триллионы токенов в продакшене ежедневно. Список тех, кто его принял, включает xAI, NVIDIA, AMD, Intel, Oracle Cloud, Google Cloud, Microsoft Azure, AWS и Nebius. Работает он на ускорителях NVIDIA и AMD, процессорах Intel Xeon, тензорных процессорах Google и Ascend NPU. На карте это узел, из-за которого обслуживание моделей перестало быть привязано к одному вендору.",
+          "revenueUsdB": null,
+          "geo": "US",
+          "ticker": null,
+          "founded": "2024",
+          "sourcing": {
+            "total": 7,
+            "selfSourced": 6,
+            "byTier": {
+              "1": 6,
+              "2": 1
+            }
+          },
+          "sources": [
+            {
+              "tier": 1,
+              "url": "https://github.com/sgl-project/sglang",
+              "quote": "SGLang is a high-performance serving framework for large language models and multimodal models.",
+              "self": "sglang"
+            },
+            {
+              "tier": 1,
+              "url": "https://github.com/sgl-project/sglang",
+              "quote": "SGLang has been deployed at large scale, generating trillions of tokens in production each day.",
+              "self": "sglang"
+            },
+            {
+              "tier": 1,
+              "url": "https://github.com/sgl-project/sglang",
+              "quote": "adopted by a wide range of leading enterprises and institutions, including xAI, NVIDIA",
+              "self": "sglang"
+            },
+            {
+              "tier": 1,
+              "url": "https://github.com/sgl-project/sglang",
+              "quote": "AMD, Intel, LinkedIn, Cursor, Oracle Cloud, Google Cloud, Microsoft Azure, AWS, Atlas Cloud, Voltage Park",
+              "self": "sglang"
+            },
+            {
+              "tier": 1,
+              "url": "https://github.com/sgl-project/sglang",
+              "quote": "Runs on NVIDIA GPUs (GB200/B300/H100/A100/Spark/5090), AMD GPUs (MI355/MI300), Intel Xeon CPUs",
+              "self": "sglang"
+            },
+            {
+              "tier": 1,
+              "url": "https://github.com/sgl-project/sglang",
+              "quote": "Voltage Park, Nebius, DataCrunch, Novita, RunPod, InnoMatrix, Modal, MIT, UCLA",
+              "self": "sglang"
+            },
+            {
+              "tier": 2,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "vLLM is a fast and easy-to-use library for LLM inference and serving.",
+              "self": null
+            }
+          ],
+          "facts_now": [],
+          "neighbourhood": [
+            "nim__sglang__integrates [integrates, high_confidence/single] Назван среди серверов вывода, на которых построены контейнеры.",
+            "sglang__amd__optimizes_for [optimizes_for, high_confidence/single] Ускорители AMD поддержаны наравне с ускорителями другого вендора.",
+            "sglang__intel__optimizes_for [optimizes_for, high_confidence/single] Процессоры Intel Xeon названы среди поддержанного оборудования.",
+            "sglang__nebius__delivers_to [delivers_to, high_confidence/single] Названа среди облачных площадок, принявших каркас в работу.",
+            "sglang__nvidia__optimizes_for [optimizes_for, confirmed/single] Работает на ускорителях вендора и назван среди принятых им проектов.",
+            "sglang__oracle__delivers_to [delivers_to, high_confidence/single] Названа среди облаков, принявших каркас в работу.",
+            "sglang__vllm__competes_with [competes_with, confirmed/single] SGLang — вторая открытая система запуска моделей: слой конкурентный, а не запертый.",
+            "sglang__xai__delivers_to [delivers_to, high_confidence/single] Названа первой в списке тех, кто принял каркас в работу."
+          ]
+        },
+        "vllm": {
+          "id": "vllm",
+          "name": "vLLM",
+          "type": "technology",
+          "role": "platform",
+          "sector": "inference_engine",
+          "layers": [
+            "L11"
+          ],
+          "criticality": 54,
+          "criticalityFactors": {
+            "irreplaceability": 58,
+            "lockInDepth": 55,
+            "timeToReplace": 45,
+            "concentration": 62
+          },
+          "criticalityWhy": {
+            "irreplaceability": "Ту же работу делают несколько открытых серверов вывода",
+            "lockInDepth": "Стоит между моделью и железом и заменяется без правки самой модели",
+            "timeToReplace": "Переключение на другой сервер вывода занимает недели",
+            "concentration": "Больше 2000 участников в одном проекте — сопоставимого сообщества у соседей нет"
+          },
+          "oneLiner": "Открытая система запуска обученных моделей — быстро и дёшево.",
+          "description_now": "vLLM — открытая библиотека для вывода и обслуживания больших языковых моделей. Собственный README описывает её как быструю и простую в использовании и называет опорой экономию памяти под ключи и значения внимания. Денег проект не берёт: он живёт вкладом сообщества, в котором README насчитывает более 2000 участников из университетов и компаний. Поддержаны ускорители нескольких производителей сразу, поэтому библиотека работает как переходник между моделью и железом. Модели она берёт напрямую из склада Hugging Face, что делает её продолжением того же пути, а не отдельным миром.",
+          "revenueUsdB": null,
+          "geo": "US",
+          "ticker": null,
+          "founded": "2023",
+          "sourcing": {
+            "total": 7,
+            "selfSourced": 6,
+            "byTier": {
+              "1": 6,
+              "2": 1
+            }
+          },
+          "sources": [
+            {
+              "tier": 1,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "Support for NVIDIA GPUs, AMD GPUs, Intel GPUs, and x86/ARM/PowerPC CPUs.",
+              "self": "vllm"
+            },
+            {
+              "tier": 1,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "vLLM is a fast and easy-to-use library for LLM inference and serving.",
+              "self": "vllm"
+            },
+            {
+              "tier": 1,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "a diverse community of many dozens of academic institutions and companies from over 2000 contributors",
+              "self": "vllm"
+            },
+            {
+              "tier": 1,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "Efficient management of attention key and value memory with",
+              "self": "vllm"
+            },
+            {
+              "tier": 1,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "Seamless integration with popular Hugging Face models",
+              "self": "vllm"
+            },
+            {
+              "tier": 2,
+              "url": "https://raw.githubusercontent.com/pytorch/pytorch/main/README.md",
+              "quote": "PyTorch is a Python package that provides two high-level features",
+              "self": null
+            },
+            {
+              "tier": 1,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "vLLM is a fast and easy-to-use library for LLM inference and serving",
+              "self": "vllm"
+            }
+          ],
+          "facts_now": [],
+          "neighbourhood": [
+            "google-cloud__vllm__integrates [integrates, high_confidence/single] Назван на странице тензорных процессоров как способ быстрого вывода на них.",
+            "nim__vllm__competes_with [competes_with, confirmed/single] Платный сервер инференса NVIDIA против бесплатного vLLM — на одном и том же железе.",
+            "nim__vllm__integrates [integrates, high_confidence/single] Серверы вывода внутри контейнеров построены на сторонних проектах, и vLLM назван среди них.",
+            "openai__vllm__enables [enables, confirmed/single] vLLM повторяет API OpenAI",
+            "sglang__vllm__competes_with [competes_with, confirmed/single] SGLang — вторая открытая система запуска моделей: слой конкурентный, а не запертый.",
+            "vllm__anthropic__enables_interop [enables_interop, high_confidence/single] vLLM поддерживает и интерфейс Anthropic: стандарт складывается поверх обеих лабораторий.",
+            "vllm__cuda__path_dependent_on [path_dependent_on, confirmed/single] Самые быстрые режимы vLLM написаны под CUDA — на другом железе они просто отключаются.",
+            "vllm__huggingface__standardizes_on [standardizes_on, bilateral/bilateral] vLLM запускает модели, опубликованные в общем хабе, и берёт их описания оттуда.",
+            "vllm__nvidia__validates_demand [validates_demand, confirmed/single] vLLM называет ускорители NVIDIA первыми в списке поддержки.",
+            "vllm__openai__enables_interop [enables_interop, high_confidence/single] vLLM повторяет программный интерфейс OpenAI, и благодаря этому чужие стеки говорят на одном языке.",
+            "vllm__tensorrt__competes_with [competes_with, confirmed/single] vLLM против TensorRT: открытый запуск моделей против оптимизатора NVIDIA."
+          ]
+        }
+      },
+      "что обязан ответить текст": "Конкуренция"
+    }
+  ]
+}

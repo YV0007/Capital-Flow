@@ -1,0 +1,2204 @@
+{
+  "month": "2026-08",
+  "batch": 5,
+  "queue": "one-doc",
+  "как читать": "1) ПИШЕТЕ ВНУТРИ ПАКЕТА: всё, что утверждаете, лежит либо в вашем реестре фактов, либо здесь. Ничего из общей эрудиции. 2) `one_document: true` значит, что нынешний текст написан вокруг ОДНОГО документа — это и есть причина, по которой связь в очереди. 3) `neighbourhood` показывает, что уже сказано у соседей: не повторяйте и не противоречьте. 4) `facts.csv` пишется ДО текста. Число, которого нет в реестре, движок из текста не пропустит. 5) Тир, статус и стороны вы не пишете — их ставит движок.",
+  "выход": "facts.csv, details.csv, notes.csv в этом каталоге; правила и формат — agents/eco-prose.md",
+  "словарь карты": {
+    "предмет карты": {
+      "ru": "Инфраструктура ИИ: всё, без чего современная модель не может быть обучена, развёрнута, запитана, произведена или разрешена к продаже.",
+      "en": "AI infrastructure: everything without which a modern model cannot be trained, served, powered, manufactured or legally sold."
+    },
+    "типы связей": {
+      "manufactures": "Производство",
+      "supplies": "Поставка",
+      "packages": "Упаковка кристаллов",
+      "integrates": "Сборка систем",
+      "delivers_to": "Логистика",
+      "enables": "Даёт возможность",
+      "co_designs": "Совместная разработка",
+      "optimizes_for": "Заточка под платформу",
+      "invests_in": "Инвестиция",
+      "funded_by": "Финансирование",
+      "board_seat": "Место в совете",
+      "strategic_partner": "Стратегическое партнёрство",
+      "hedges_against": "Хедж",
+      "diversifies_supply": "Второй источник",
+      "customer_of": "Закупка",
+      "validates_demand": "Доказательство спроса",
+      "proves_roi": "Доказательство окупаемости",
+      "proves_use_case": "Референсное применение",
+      "locks_in_developers": "Замок на разработчиках",
+      "locks_in_platforms": "Замок на платформах",
+      "path_dependent_on": "Зависимость траектории",
+      "standardizes_on": "Отраслевой стандарт",
+      "sets_benchmark": "Планка",
+      "defines_category": "Определение категории",
+      "controls_access_to": "Контроль доступа",
+      "subject_to_restriction": "Под ограничением",
+      "export_controlled_by": "Экспортный контроль",
+      "geopolitically_dependent": "Геополитическая зависимость",
+      "competes_with": "Конкуренция",
+      "threatens": "Угроза позиции",
+      "could_disrupt": "Потенциальное вытеснение",
+      "is_alternative_to": "Путь-замена",
+      "enables_interop": "Совместимость"
+    },
+    "хребты": null,
+    "слои": {
+      "L0": {
+        "ru": "ГЕОПОЛИТИКА",
+        "en": "GEOPOLITICS"
+      },
+      "L1": {
+        "ru": "СЫРЬЁ И СТАНКИ",
+        "en": "INPUTS & TOOLS"
+      },
+      "L2": {
+        "ru": "ПРОЕКТИРОВАНИЕ",
+        "en": "CHIP DESIGN"
+      },
+      "L3": {
+        "ru": "ФАБРИКИ",
+        "en": "FABS"
+      },
+      "L4": {
+        "ru": "ПАМЯТЬ",
+        "en": "MEMORY"
+      },
+      "L5": {
+        "ru": "СИСТЕМЫ",
+        "en": "SYSTEMS"
+      },
+      "L6": {
+        "ru": "ЭНЕРГИЯ",
+        "en": "POWER"
+      },
+      "L7": {
+        "ru": "ОХЛАЖДЕНИЕ",
+        "en": "COOLING"
+      },
+      "L8": {
+        "ru": "СВЯЗЬ",
+        "en": "NETWORKING"
+      },
+      "L9": {
+        "ru": "ИНФРАСТРУКТУРА",
+        "en": "INFRASTRUCTURE"
+      },
+      "L10": {
+        "ru": "СОФТ ДЛЯ GPU",
+        "en": "GPU SOFTWARE"
+      },
+      "L11": {
+        "ru": "ИНФЕРЕНС",
+        "en": "INFERENCE"
+      },
+      "L12": {
+        "ru": "ЛАБОРАТОРИИ",
+        "en": "FRONTIER LABS"
+      },
+      "L13": {
+        "ru": "ПРИЛОЖЕНИЯ",
+        "en": "APPLICATIONS"
+      },
+      "L14": {
+        "ru": "КАПИТАЛ",
+        "en": "CAPITAL"
+      },
+      "L15": {
+        "ru": "РЕГУЛИРОВАНИЕ",
+        "en": "REGULATION"
+      }
+    }
+  },
+  "объекты": [
+    {
+      "kind": "edge",
+      "id": "google-cloud__microsoft__competes_with",
+      "type": "competes_with",
+      "spine": "rivalry",
+      "direction": "lateral",
+      "status": "signal",
+      "sidedness": "single",
+      "claimedBy": [],
+      "strength": 70,
+      "risk": {
+        "level": "medium",
+        "type": "market",
+        "timeline": "1-2y",
+        "mitigation": null
+      },
+      "techNode": null,
+      "formed": "2010",
+      "note_now": "Третье облако-гигант конкурирует с первыми двумя за одни и те же контракты лабораторий.",
+      "detail_now": "Третье облако конкурирует с первым за одних и тех же арендаторов, но заходит с другой стороны: не через партнёрство с лабораторией, а через собственный ускоритель, которого у соперника нет. Разница определяет и предложение: одному есть что противопоставить по цене за обучение, другому — по совместимости с уже написанным кодом. Арендатор выбирает между дешевле и привычнее, и на этом выборе стоит вся конкуренция этого слоя.",
+      "evidence": [
+        {
+          "tier": 2,
+          "url": "https://www.anthropic.com/news/series-h",
+          "quote": "We signed agreements with Amazon for up to five gigawatts of new capacity,",
+          "self": null
+        }
+      ],
+      "counterEvidence": [],
+      "facts_now": [],
+      "one_document": true,
+      "ends": {
+        "google-cloud": {
+          "id": "google-cloud",
+          "name": "Google Cloud",
+          "type": "company",
+          "role": "operator",
+          "sector": "hyperscaler",
+          "layers": [
+            "L9"
+          ],
+          "criticality": 65,
+          "criticalityFactors": {
+            "irreplaceability": 60,
+            "lockInDepth": 70,
+            "timeToReplace": 65,
+            "concentration": null
+          },
+          "criticalityWhy": {
+            "irreplaceability": "Облаков несколько, но вертикаль есть только здесь",
+            "lockInDepth": "Задевает чипы, облака, софт и модели",
+            "timeToReplace": "Воспроизвести вертикаль — больше трёх лет",
+            "concentration": null
+          },
+          "oneLiner": "Облако Google: единственное, где передовую лабораторию можно обучать на чипах самого владельца.",
+          "description_now": "Google Cloud продаёт вычисления на собственных тензорных процессорах, а не только на покупных ускорителях. Свою архитектуру облако описывает как AI Hypercomputer, на которой эти процессоры и работают. Стек заявлен открытым сверху: поддержаны PyTorch и JAX, а для быстрого вывода — vLLM. Развёртывания предлагается вести кластерами через собственный управляемый оркестратор облака. Отсюда положение узла на карте: это единственное облако, где лаборатория может обучаться на кремнии самого владельца площадки.",
+          "revenueUsdB": null,
+          "geo": "US",
+          "ticker": null,
+          "founded": "2008",
+          "sourcing": {
+            "total": 7,
+            "selfSourced": 4,
+            "byTier": {
+              "1": 4,
+              "2": 3
+            }
+          },
+          "sources": [
+            {
+              "tier": 1,
+              "url": "https://cloud.google.com/tpu",
+              "quote": "TPUs are powered by Google Cloud's AI Hypercomputer, a groundbreaking architecture that brings",
+              "self": "google-cloud"
+            },
+            {
+              "tier": 1,
+              "url": "https://cloud.google.com/tpu",
+              "quote": "high performance support for PyTorch and JAX, and support the vLLM engine for fast inference",
+              "self": "google-cloud"
+            },
+            {
+              "tier": 1,
+              "url": "https://cloud.google.com/tpu",
+              "quote": "Manage and scale these deployments reliably across global clusters with Google Kubernetes Engine (GKE).",
+              "self": "google-cloud"
+            },
+            {
+              "tier": 1,
+              "url": "https://cloud.google.com/tpu",
+              "quote": "custom-designed with open software to power the entire AI lifecycle—from frontier training and large-scale inference",
+              "self": "google-cloud"
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+              "quote": "Google Cloud revenues increased $15.5 billion from 2024 to 2025",
+              "self": null
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+              "quote": "we had $242.8 billion of remaining performance obligations",
+              "self": null
+            },
+            {
+              "tier": 2,
+              "url": "https://www.anthropic.com/news/anthropic-partners-with-google-cloud",
+              "quote": "an AI safety and research company, has selected Google Cloud",
+              "self": null
+            }
+          ],
+          "facts_now": [],
+          "neighbourhood": [
+            "anthropic__google-cloud__customer_of [customer_of, confirmed/single] Обратная сторона той же сделки: для облака это один из крупнейших контрактов на мощность.",
+            "google-cloud__amazon__competes_with [competes_with, confirmed/single] Оба облака продают одной и той же лаборатории мощность на собственных ускорителях.",
+            "google-cloud__anthropic__supplies [supplies, confirmed/single] Лаборатория выбрала это облако как поставщика мощности и расширила закупку до миллиона ускорителей.",
+            "google-cloud__google-deepmind__enables [enables, signal/single] Лаборатория внутри той же корпорации обучается на мощностях этого облака и его чипах.",
+            "google-cloud__google__funded_by [funded_by, signal/single] Облако — подразделение материнской компании: его чипы, его лаборатория, его деньги.",
+            "google-cloud__jax__integrates [integrates, high_confidence/single] Поддержан наравне с PyTorch на тензорных процессорах площадки.",
+            "google-cloud__kubernetes__standardizes_on [standardizes_on, high_confidence/single] Кластерами развёртываний площадка управляет через собственный управляемый оркестратор.",
+            "google-cloud__microsoft__competes_with [competes_with, signal/single] Третье облако-гигант конкурирует с первыми двумя за одни и те же контракты лабораторий.",
+            "google-cloud__pytorch__integrates [integrates, high_confidence/single] Тензорные процессоры облака поддерживают его наравне с JAX как способ обучения на своей площадке.",
+            "google-cloud__vllm__integrates [integrates, high_confidence/single] Назван на странице тензорных процессоров как способ быстрого вывода на них."
+          ]
+        },
+        "microsoft": {
+          "id": "microsoft",
+          "name": "Microsoft",
+          "type": "company",
+          "role": "demand",
+          "sector": "hyperscaler",
+          "layers": [
+            "L9",
+            "L12"
+          ],
+          "criticality": 73,
+          "criticalityFactors": {
+            "irreplaceability": 74,
+            "lockInDepth": 78,
+            "timeToReplace": 70,
+            "concentration": 68
+          },
+          "criticalityWhy": {
+            "irreplaceability": "Мощности сопоставимого масштаба есть у двух других облаков",
+            "lockInDepth": "Держит подписки, облако и рабочие места разработчиков одновременно",
+            "timeToReplace": "Перенос нагрузки в другое облако считается кварталами, а не годами",
+            "concentration": "Облако выросло на 27% до $214.4 млрд, но рядом работают два сопоставимых оператора"
+          },
+          "oneLiner": "Гиперскейлер, крупнейший инвестор ведущей лаборатории и одновременно разработчик своих чипов.",
+          "description_now": "Microsoft продаёт облако и подписки, а на ИИ зарабатывает арендой вычислений и моделями внутри своих продуктов. Выручка Microsoft Cloud выросла на 27% и достигла $214.4 млрд, Azure и прочие облачные сервисы прибавили 41%. Кластеры компания собирает на чужом железе: она сама сообщила о первом крупном промышленном кластере более чем из 4,600 систем NVIDIA GB300 NVL72. Дата-центры упираются в разрешённую под застройку землю, предсказуемую энергию и поставки серверов вместе с графическими процессорами. С OpenAI действует долгосрочное партнёрство, начатое в 2019 году, и Microsoft получает от него долю выручки.",
+          "revenueUsdB": 281.7,
+          "geo": "US",
+          "ticker": "NASDAQ: MSFT",
+          "founded": "1975",
+          "sourcing": {
+            "total": 7,
+            "selfSourced": 6,
+            "byTier": {
+              "1": 6,
+              "2": 1
+            }
+          },
+          "sources": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+              "quote": "Microsoft Cloud revenue increased 27% to $214.4 billion.",
+              "self": "microsoft"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+              "quote": "Azure and other cloud services revenue increased 41%.",
+              "self": "microsoft"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+              "quote": "We have a long-term strategic partnership with OpenAI which was originally established in 2019",
+              "self": "microsoft"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+              "quote": "Our datacenters depend on the availability of permitted and buildable land, predictable energy",
+              "self": "microsoft"
+            },
+            {
+              "tier": 1,
+              "url": "https://azure.microsoft.com/en-us/blog/microsoft-azure-delivers-the-first-large-scale-cluster-with-nvidia-gb300-nvl72-for-openai-workloads/",
+              "quote": "Microsoft delivers the first at-scale production cluster with more than 4,600 NVIDIA GB300 NVL72",
+              "self": "microsoft"
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+              "quote": "Two of our customers accounted for more than 10% of our sales",
+              "self": null
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+              "quote": "Azure and other cloud services revenue grew 41%",
+              "self": "microsoft"
+            }
+          ],
+          "facts_now": [],
+          "neighbourhood": [
+            "arista__microsoft__supplies [supplies, confirmed/single] Коммутаторы для кластеров Microsoft: каждый из двух крупнейших клиентов Arista даёт больше 10% её продаж.",
+            "brookfield__microsoft__supplies [supplies, confirmed/single] Инфраструктурный владелец поставляет энергию площадкам облака-гиганта.",
+            "cisco__microsoft__competes_with [competes_with, high_confidence/single] Названа в собственном списке конкурентов Cisco.",
+            "constellation__microsoft__supplies [supplies, confirmed/single] Двадцатилетний контракт на поставку атомной энергии под спрос дата-центров: перезапуск остановленного энергоблока.",
+            "eaton__microsoft__supplies [supplies, confirmed/single] Оборудование питания на площадках: щиты, шины, защита. Очередь на поставку измеряется годами.",
+            "equinix__microsoft__supplies [supplies, confirmed/single] Площадки и подключения для облака-гиганта.",
+            "ge-vernova__microsoft__supplies [supplies, confirmed/single] Газовые турбины для площадок: самый быстрый способ дать много энергии, но очередь на годы.",
+            "google-cloud__microsoft__competes_with [competes_with, signal/single] Третье облако-гигант конкурирует с первыми двумя за одни и те же контракты лабораторий.",
+            "microsoft__blackrock__funded_by [funded_by, confirmed/single] Инфраструктурный капитал финансирует площадки и энергию под облачные мощности.",
+            "microsoft__coreweave__customer_of [customer_of, confirmed/single] Для независимого облака это 67% выручки: зависимость односторонняя и критическая.",
+            "microsoft__cuda__locks_in_platforms [locks_in_platforms, confirmed/single] Облако завязано на среду программирования сразу на нескольких уровнях и уйти целиком не может.",
+            "microsoft__nebius__customer_of [customer_of, confirmed/single] Гиперскейлер арендует выделенные кластеры у независимого облака — спрос превышает собственные мощности.",
+            "microsoft__nvidia__customer_of [customer_of, bilateral/bilateral] NVIDIA раскрывает концентрацию без имён: один прямой клиент дал 22% выручки за 2026 финансовый год, второй — 14%.",
+            "microsoft__nvidia__threatens [threatens, confirmed/single] Собственный ускоритель гиперскейлера назван среди конкурентов в отчётности NVIDIA.",
+            "microsoft__openai__invests_in [invests_in, confirmed/single] Крупнейший инвестор лаборатории с правами на её интеллектуальную собственность и долей выручки.",
+            "nvent__microsoft__supplies [supplies, confirmed/single] Охлаждение и шкафы на площадках облака-гиганта.",
+            "nvidia__microsoft__competes_with [competes_with, confirmed/single] Третье облако с собственным ускорителем, названное среди конкурентов в отчётности NVIDIA.",
+            "nvidia__microsoft__supplies [supplies, bilateral/bilateral] Все крупные облака закупают инфраструктуру NVIDIA — это и есть основа его выручки.",
+            "openai__microsoft__enables [enables, confirmed/single] Модели лаборатории встроены в продукты гиперскейлера — это его прикладной слой.",
+            "openai__microsoft__strategic_partner [strategic_partner, confirmed/single] Гиперскейлер — крупнейший инвестор лаборатории и держатель прав на её интеллектуальную собственность.",
+            "openai__microsoft__validates_demand [validates_demand, confirmed/single] Спрос лаборатории доказал, что облачные мощности под ИИ окупаются — и запустил стройку у всех.",
+            "schneider__microsoft__supplies [supplies, confirmed/single] Второй поставщик оборудования питания площадок.",
+            "servicenow__microsoft__strategic_partner [strategic_partner, high_confidence/single] Корпоративная платформа работает поверх нескольких облаков одновременно.",
+            "snowflake__microsoft__competes_with [competes_with, high_confidence/single] Названа Snowflake среди крупных публичных облаков, конкурирующих на всех её рынках.",
+            "tsmc__microsoft__manufactures [manufactures, signal/single] Собственный ускоритель Maia выпускается здесь же; переговоры об ёмкости идут отдельно.",
+            "vertiv__microsoft__supplies [supplies, confirmed/single] Питание и охлаждение на площадках облака-гиганта."
+          ]
+        }
+      },
+      "что обязан ответить текст": "Конкуренция"
+    },
+    {
+      "kind": "edge",
+      "id": "amazon__anthropic__supplies",
+      "type": "supplies",
+      "spine": "physical",
+      "direction": "downstream",
+      "status": "confirmed",
+      "sidedness": "single",
+      "claimedBy": [
+        "anthropic"
+      ],
+      "strength": 85,
+      "risk": {
+        "level": "medium",
+        "type": "market",
+        "timeline": "2-5y",
+        "mitigation": {
+          "ru": "Лаборатория держит три платформы чипов сразу.",
+          "en": "The lab runs three silicon platforms at once."
+        }
+      },
+      "techNode": null,
+      "formed": "2023",
+      "note_now": "Облако продаёт лаборатории до пяти гигаватт мощности на собственных ускорителях — рядом с уже учтёнными вложениями.",
+      "detail_now": "Соглашение — до пяти гигаватт новой мощности, заключено одновременно с раундом финансирования лаборатории. Второй поставщик подписал столько же на своих ускорителях, и это осознанная политика лаборатории: три платформы чипов вместо одной. Для облака контракт означает загрузку собственного кремния внешним заказчиком.",
+      "evidence": [
+        {
+          "tier": 2,
+          "url": "https://www.anthropic.com/news/series-h",
+          "quote": "We signed agreements with Amazon for up to five gigawatts of new capacity,",
+          "self": "anthropic"
+        },
+        {
+          "tier": 2,
+          "url": "https://www.anthropic.com/news/series-h",
+          "quote": "with Google and Broadcom for five gigawatts of next-generation TPU capacity, and",
+          "self": "anthropic"
+        },
+        {
+          "tier": 2,
+          "url": "https://www.anthropic.com/news/series-h",
+          "quote": "We signed agreements with Amazon for up to five gigawatts of new capacity,",
+          "self": "anthropic"
+        }
+      ],
+      "counterEvidence": [],
+      "facts_now": [],
+      "one_document": true,
+      "ends": {
+        "amazon": {
+          "id": "amazon",
+          "name": "Amazon",
+          "type": "company",
+          "role": "demand",
+          "sector": "hyperscaler",
+          "layers": [
+            "L9",
+            "L12"
+          ],
+          "criticality": 71,
+          "criticalityFactors": {
+            "irreplaceability": 72,
+            "lockInDepth": 74,
+            "timeToReplace": 68,
+            "concentration": 66
+          },
+          "criticalityWhy": {
+            "irreplaceability": "Мощности того же масштаба есть ещё у двух облаков",
+            "lockInDepth": "Держит хранение, сеть и сервисы данных, на которых стоит прикладной слой",
+            "timeToReplace": "Переезд данных и сервисов в другое облако считается кварталами",
+            "concentration": "Продажи AWS выросли на 20%, но рядом работают два сопоставимых облака"
+          },
+          "oneLiner": "Крупнейшее облако AWS и разработчик собственных ускорителей Trainium; вложился в Anthropic.",
+          "description_now": "Amazon держит розницу и облако AWS, и в инфраструктуре ИИ значим именно второй бизнес. AWS продаёт по требованию вычисления, хранение, базы и машинное обучение, а его продажи выросли на 20% за год. Деньги в модели компания вкладывает напрямую: в конвертируемые обязательства Anthropic ушло $2.7 млрд только за 2025 год. Расходы на инфраструктуру она относит к общей технологической базе, которая обслуживает и её собственные задачи, и внешних клиентов. Такое устройство делает её одновременно покупателем ускорителей и их конкурентом со своим кремнием.",
+          "revenueUsdB": 638.0,
+          "geo": "US",
+          "ticker": "NASDAQ: AMZN",
+          "founded": "1994",
+          "sourcing": {
+            "total": 5,
+            "selfSourced": 4,
+            "byTier": {
+              "1": 4,
+              "2": 1
+            }
+          },
+          "sources": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+              "quote": "AWS sales increased 20% in 2025, compared to the prior year.",
+              "self": "amazon"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+              "quote": "AWS, which offers a broad set of on-demand technology services, including compute, storage, database",
+              "self": "amazon"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+              "quote": "investments in convertible notes from Anthropic, PBC (“Anthropic”), including $2.7 billion we invested in 2025",
+              "self": "amazon"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+              "quote": "we leverage a shared infrastructure that supports both our internal technology requirements and external sales",
+              "self": "amazon"
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+              "self": null
+            }
+          ],
+          "facts_now": [],
+          "neighbourhood": [
+            "amazon__anthropic__invests_in [invests_in, bilateral/bilateral] Конвертируемые займы, часть которых превращена в неголосующие акции: облако финансирует собственного клиента.",
+            "amazon__anthropic__supplies [supplies, confirmed/single] Облако продаёт лаборатории до пяти гигаватт мощности на собственных ускорителях — рядом с уже учтёнными вложениями.",
+            "amazon__cuda__locks_in_platforms [locks_in_platforms, confirmed/single] Клиенты AWS требуют совместимости с CUDA",
+            "amazon__nvidia__customer_of [customer_of, bilateral/bilateral] Второе облако-гигант в числе крупнейших покупателей.",
+            "amazon__nvidia__threatens [threatens, confirmed/single] Собственные ускорители облака закрывают часть обучения и инференса.",
+            "anthropic__amazon__strategic_partner [strategic_partner, bilateral/bilateral] Облако вложило миллиарды в лабораторию и стало её основным инфраструктурным партнёром.",
+            "brookfield__amazon__supplies [supplies, bilateral/bilateral] Инфраструктурный владелец продаёт облаку мощность ветра и солнца по долгосрочным контрактам.",
+            "cisco__amazon__competes_with [competes_with, high_confidence/single] Названа в собственном списке конкурентов Cisco.",
+            "fabrinet__amazon__integrates [integrates, confirmed/single] Названа Fabrinet среди четырёх заказчиков, каждый из которых дал свыше десятой доли её выручки за год.",
+            "google-cloud__amazon__competes_with [competes_with, confirmed/single] Оба облака продают одной и той же лаборатории мощность на собственных ускорителях.",
+            "nvidia__amazon__competes_with [competes_with, confirmed/single] Второе облако в том же положении: крупнейший покупатель и производитель альтернативы.",
+            "snowflake__amazon__competes_with [competes_with, high_confidence/single] Названа Snowflake среди крупных публичных облаков, конкурирующих на всех её рынках.",
+            "tsmc__amazon__manufactures [manufactures, signal/single] Собственные ускорители облака Trainium и Inferentia выпускает эта фабрика."
+          ]
+        },
+        "anthropic": {
+          "id": "anthropic",
+          "name": "Anthropic",
+          "type": "company",
+          "role": "demand",
+          "sector": "frontier_lab",
+          "layers": [
+            "L12"
+          ],
+          "criticality": 66,
+          "criticalityFactors": {
+            "irreplaceability": 70,
+            "lockInDepth": 68,
+            "timeToReplace": 62,
+            "concentration": 60
+          },
+          "criticalityWhy": {
+            "irreplaceability": "Модели сопоставимого класса выпускают ещё несколько лабораторий",
+            "lockInDepth": "Держит прикладной слой через интерфейс, ниже железа не спускается",
+            "timeToReplace": "Приложение переключается на другую модель за месяцы",
+            "concentration": "Скорость выручки $47 млрд и больше 300,000 клиентов при нескольких сопоставимых лабораториях"
+          },
+          "oneLiner": "Лаборатория передовых моделей после OpenAI; её главный инфраструктурный партнёр — Amazon.",
+          "description_now": "Anthropic разрабатывает модели Claude и продаёт доступ к ним компаниям и разработчикам. По собственному сообщению, годовая скорость выручки перешла $47 млрд, а обслуживает компания больше 300,000 корпоративных клиентов. Последний раунд Series H принёс ей $65 млрд. Обучение и работу моделей компания раскладывает на три вида железа — AWS Trainium, тензорные процессоры Google и ускорители NVIDIA, — а Amazon называет своим основным облаком и партнёром по обучению. Отдельным соглашением с Google и Broadcom законтрактованы мощности в несколько гигаватт.",
+          "revenueUsdB": 5.0,
+          "geo": "US",
+          "ticker": null,
+          "founded": "2021",
+          "sourcing": {
+            "total": 9,
+            "selfSourced": 7,
+            "byTier": {
+              "1": 7,
+              "2": 2
+            }
+          },
+          "sources": [
+            {
+              "tier": 1,
+              "url": "https://www.anthropic.com/news/series-h",
+              "quote": "our run-rate revenue crossed $47 billion earlier this month",
+              "self": "anthropic"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.anthropic.com/news/series-h",
+              "quote": "Anthropic has raised $65 billion in Series H funding led by Altimeter Capital, Dragoneer, Greenoaks",
+              "self": "anthropic"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
+              "quote": "Anthropic now serves more than 300,000 business customers",
+              "self": "anthropic"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+              "quote": "run Claude on a range of AI hardware—AWS Trainium, Google TPUs, and NVIDIA GPUs",
+              "self": "anthropic"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+              "quote": "Amazon remains our primary cloud provider and training partner",
+              "self": "anthropic"
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+              "quote": "investments in convertible notes from Anthropic, PBC (“Anthropic”), including $2.7 billion we",
+              "self": null
+            },
+            {
+              "tier": 1,
+              "url": "https://www.anthropic.com/news/series-h",
+              "quote": "Anthropic has raised $65 billion in Series H funding led by Altimeter Capital",
+              "self": "anthropic"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.anthropic.com/news/series-h",
+              "quote": "valuing the company at $965 billion post-money",
+              "self": "anthropic"
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+              "quote": "investments in convertible notes from Anthropic, PBC (“Anthropic”), including $2.7 billion we invested in 2025",
+              "self": null
+            }
+          ],
+          "facts_now": [],
+          "neighbourhood": [
+            "amazon__anthropic__invests_in [invests_in, bilateral/bilateral] Конвертируемые займы, часть которых превращена в неголосующие акции: облако финансирует собственного клиента.",
+            "amazon__anthropic__supplies [supplies, confirmed/single] Облако продаёт лаборатории до пяти гигаватт мощности на собственных ускорителях — рядом с уже учтёнными вложениями.",
+            "anthropic__amazon__strategic_partner [strategic_partner, bilateral/bilateral] Облако вложило миллиарды в лабораторию и стало её основным инфраструктурным партнёром.",
+            "anthropic__broadcom__strategic_partner [strategic_partner, high_confidence/single] Соглашение с Google и Broadcom на несколько гигаватт мощностей нового поколения.",
+            "anthropic__google-cloud__customer_of [customer_of, confirmed/single] Обратная сторона той же сделки: для облака это один из крупнейших контрактов на мощность.",
+            "anthropic__google__customer_of [customer_of, high_confidence/single] Anthropic арендует у Google до миллиона тензорных процессоров; сделка объявлена ею самой.",
+            "anthropic__nvidia__customer_of [customer_of, bilateral/bilateral] Вторая лаборатория закупает вычисления — спрос не сосредоточен в одной компании.",
+            "anthropic__nvidia__validates_demand [validates_demand, confirmed/single] Второе доказательство спроса: если бы покупатель был один, вся стройка висела бы на нём.",
+            "blackstone__anthropic__invests_in [invests_in, signal/single] Владелец площадок дата-центров вошёл в капитал лаборатории, которая эти площадки загружает.",
+            "brookfield__anthropic__invests_in [invests_in, bilateral/bilateral] Инфраструктурный капитал вошёл в капитал лаборатории — редкий случай, когда владелец энергии финансирует её потребителя.",
+            "google-cloud__anthropic__supplies [supplies, confirmed/single] Лаборатория выбрала это облако как поставщика мощности и расширила закупку до миллиона ускорителей.",
+            "google__anthropic__supplies [supplies, confirmed/single] Google продаёт лаборатории мощность на собственных ускорителях — до миллиона чипов и пять гигаватт по последним соглашениям.",
+            "lightspeed__anthropic__invests_in [invests_in, confirmed/single] Венчурный капитал во второй лаборатории.",
+            "vllm__anthropic__enables_interop [enables_interop, high_confidence/single] vLLM поддерживает и интерфейс Anthropic: стандарт складывается поверх обеих лабораторий."
+          ]
+        }
+      },
+      "что обязан ответить текст": "Поставка"
+    },
+    {
+      "kind": "edge",
+      "id": "google-cloud__amazon__competes_with",
+      "type": "competes_with",
+      "spine": "rivalry",
+      "direction": "lateral",
+      "status": "confirmed",
+      "sidedness": "single",
+      "claimedBy": [],
+      "strength": 70,
+      "risk": {
+        "level": "medium",
+        "type": "market",
+        "timeline": "1-2y",
+        "mitigation": null
+      },
+      "techNode": null,
+      "formed": "2010",
+      "note_now": "Оба облака продают одной и той же лаборатории мощность на собственных ускорителях.",
+      "detail_now": "Конкурируют не витрины, а обязательства по мощности: обе стороны подписали с одной и той же лабораторией соглашения на гигаватты, и обе строят под них площадки. Заказчик при этом не выбирает одно облако, а держит оба — переговорная сила достаётся тому, кто арендует, а не тому, кто сдаёт. Для карты это объясняет, почему конкуренция облаков не снижает цену аренды: дефицит на стороне предложения.",
+      "evidence": [
+        {
+          "tier": 2,
+          "url": "https://www.anthropic.com/news/series-h",
+          "quote": "We signed agreements with Amazon for up to five gigawatts of new capacity,",
+          "self": null
+        },
+        {
+          "tier": 2,
+          "url": "https://www.anthropic.com/news/series-h",
+          "quote": "with Google and Broadcom for five gigawatts of next-generation TPU capacity, and",
+          "self": null
+        }
+      ],
+      "counterEvidence": [],
+      "facts_now": [],
+      "one_document": true,
+      "ends": {
+        "google-cloud": {
+          "id": "google-cloud",
+          "name": "Google Cloud",
+          "type": "company",
+          "role": "operator",
+          "sector": "hyperscaler",
+          "layers": [
+            "L9"
+          ],
+          "criticality": 65,
+          "criticalityFactors": {
+            "irreplaceability": 60,
+            "lockInDepth": 70,
+            "timeToReplace": 65,
+            "concentration": null
+          },
+          "criticalityWhy": {
+            "irreplaceability": "Облаков несколько, но вертикаль есть только здесь",
+            "lockInDepth": "Задевает чипы, облака, софт и модели",
+            "timeToReplace": "Воспроизвести вертикаль — больше трёх лет",
+            "concentration": null
+          },
+          "oneLiner": "Облако Google: единственное, где передовую лабораторию можно обучать на чипах самого владельца.",
+          "description_now": "Google Cloud продаёт вычисления на собственных тензорных процессорах, а не только на покупных ускорителях. Свою архитектуру облако описывает как AI Hypercomputer, на которой эти процессоры и работают. Стек заявлен открытым сверху: поддержаны PyTorch и JAX, а для быстрого вывода — vLLM. Развёртывания предлагается вести кластерами через собственный управляемый оркестратор облака. Отсюда положение узла на карте: это единственное облако, где лаборатория может обучаться на кремнии самого владельца площадки.",
+          "revenueUsdB": null,
+          "geo": "US",
+          "ticker": null,
+          "founded": "2008",
+          "sourcing": {
+            "total": 7,
+            "selfSourced": 4,
+            "byTier": {
+              "1": 4,
+              "2": 3
+            }
+          },
+          "sources": [
+            {
+              "tier": 1,
+              "url": "https://cloud.google.com/tpu",
+              "quote": "TPUs are powered by Google Cloud's AI Hypercomputer, a groundbreaking architecture that brings",
+              "self": "google-cloud"
+            },
+            {
+              "tier": 1,
+              "url": "https://cloud.google.com/tpu",
+              "quote": "high performance support for PyTorch and JAX, and support the vLLM engine for fast inference",
+              "self": "google-cloud"
+            },
+            {
+              "tier": 1,
+              "url": "https://cloud.google.com/tpu",
+              "quote": "Manage and scale these deployments reliably across global clusters with Google Kubernetes Engine (GKE).",
+              "self": "google-cloud"
+            },
+            {
+              "tier": 1,
+              "url": "https://cloud.google.com/tpu",
+              "quote": "custom-designed with open software to power the entire AI lifecycle—from frontier training and large-scale inference",
+              "self": "google-cloud"
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+              "quote": "Google Cloud revenues increased $15.5 billion from 2024 to 2025",
+              "self": null
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+              "quote": "we had $242.8 billion of remaining performance obligations",
+              "self": null
+            },
+            {
+              "tier": 2,
+              "url": "https://www.anthropic.com/news/anthropic-partners-with-google-cloud",
+              "quote": "an AI safety and research company, has selected Google Cloud",
+              "self": null
+            }
+          ],
+          "facts_now": [],
+          "neighbourhood": [
+            "anthropic__google-cloud__customer_of [customer_of, confirmed/single] Обратная сторона той же сделки: для облака это один из крупнейших контрактов на мощность.",
+            "google-cloud__amazon__competes_with [competes_with, confirmed/single] Оба облака продают одной и той же лаборатории мощность на собственных ускорителях.",
+            "google-cloud__anthropic__supplies [supplies, confirmed/single] Лаборатория выбрала это облако как поставщика мощности и расширила закупку до миллиона ускорителей.",
+            "google-cloud__google-deepmind__enables [enables, signal/single] Лаборатория внутри той же корпорации обучается на мощностях этого облака и его чипах.",
+            "google-cloud__google__funded_by [funded_by, signal/single] Облако — подразделение материнской компании: его чипы, его лаборатория, его деньги.",
+            "google-cloud__jax__integrates [integrates, high_confidence/single] Поддержан наравне с PyTorch на тензорных процессорах площадки.",
+            "google-cloud__kubernetes__standardizes_on [standardizes_on, high_confidence/single] Кластерами развёртываний площадка управляет через собственный управляемый оркестратор.",
+            "google-cloud__microsoft__competes_with [competes_with, signal/single] Третье облако-гигант конкурирует с первыми двумя за одни и те же контракты лабораторий.",
+            "google-cloud__pytorch__integrates [integrates, high_confidence/single] Тензорные процессоры облака поддерживают его наравне с JAX как способ обучения на своей площадке.",
+            "google-cloud__vllm__integrates [integrates, high_confidence/single] Назван на странице тензорных процессоров как способ быстрого вывода на них."
+          ]
+        },
+        "amazon": {
+          "id": "amazon",
+          "name": "Amazon",
+          "type": "company",
+          "role": "demand",
+          "sector": "hyperscaler",
+          "layers": [
+            "L9",
+            "L12"
+          ],
+          "criticality": 71,
+          "criticalityFactors": {
+            "irreplaceability": 72,
+            "lockInDepth": 74,
+            "timeToReplace": 68,
+            "concentration": 66
+          },
+          "criticalityWhy": {
+            "irreplaceability": "Мощности того же масштаба есть ещё у двух облаков",
+            "lockInDepth": "Держит хранение, сеть и сервисы данных, на которых стоит прикладной слой",
+            "timeToReplace": "Переезд данных и сервисов в другое облако считается кварталами",
+            "concentration": "Продажи AWS выросли на 20%, но рядом работают два сопоставимых облака"
+          },
+          "oneLiner": "Крупнейшее облако AWS и разработчик собственных ускорителей Trainium; вложился в Anthropic.",
+          "description_now": "Amazon держит розницу и облако AWS, и в инфраструктуре ИИ значим именно второй бизнес. AWS продаёт по требованию вычисления, хранение, базы и машинное обучение, а его продажи выросли на 20% за год. Деньги в модели компания вкладывает напрямую: в конвертируемые обязательства Anthropic ушло $2.7 млрд только за 2025 год. Расходы на инфраструктуру она относит к общей технологической базе, которая обслуживает и её собственные задачи, и внешних клиентов. Такое устройство делает её одновременно покупателем ускорителей и их конкурентом со своим кремнием.",
+          "revenueUsdB": 638.0,
+          "geo": "US",
+          "ticker": "NASDAQ: AMZN",
+          "founded": "1994",
+          "sourcing": {
+            "total": 5,
+            "selfSourced": 4,
+            "byTier": {
+              "1": 4,
+              "2": 1
+            }
+          },
+          "sources": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+              "quote": "AWS sales increased 20% in 2025, compared to the prior year.",
+              "self": "amazon"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+              "quote": "AWS, which offers a broad set of on-demand technology services, including compute, storage, database",
+              "self": "amazon"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+              "quote": "investments in convertible notes from Anthropic, PBC (“Anthropic”), including $2.7 billion we invested in 2025",
+              "self": "amazon"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+              "quote": "we leverage a shared infrastructure that supports both our internal technology requirements and external sales",
+              "self": "amazon"
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+              "self": null
+            }
+          ],
+          "facts_now": [],
+          "neighbourhood": [
+            "amazon__anthropic__invests_in [invests_in, bilateral/bilateral] Конвертируемые займы, часть которых превращена в неголосующие акции: облако финансирует собственного клиента.",
+            "amazon__anthropic__supplies [supplies, confirmed/single] Облако продаёт лаборатории до пяти гигаватт мощности на собственных ускорителях — рядом с уже учтёнными вложениями.",
+            "amazon__cuda__locks_in_platforms [locks_in_platforms, confirmed/single] Клиенты AWS требуют совместимости с CUDA",
+            "amazon__nvidia__customer_of [customer_of, bilateral/bilateral] Второе облако-гигант в числе крупнейших покупателей.",
+            "amazon__nvidia__threatens [threatens, confirmed/single] Собственные ускорители облака закрывают часть обучения и инференса.",
+            "anthropic__amazon__strategic_partner [strategic_partner, bilateral/bilateral] Облако вложило миллиарды в лабораторию и стало её основным инфраструктурным партнёром.",
+            "brookfield__amazon__supplies [supplies, bilateral/bilateral] Инфраструктурный владелец продаёт облаку мощность ветра и солнца по долгосрочным контрактам.",
+            "cisco__amazon__competes_with [competes_with, high_confidence/single] Названа в собственном списке конкурентов Cisco.",
+            "fabrinet__amazon__integrates [integrates, confirmed/single] Названа Fabrinet среди четырёх заказчиков, каждый из которых дал свыше десятой доли её выручки за год.",
+            "google-cloud__amazon__competes_with [competes_with, confirmed/single] Оба облака продают одной и той же лаборатории мощность на собственных ускорителях.",
+            "nvidia__amazon__competes_with [competes_with, confirmed/single] Второе облако в том же положении: крупнейший покупатель и производитель альтернативы.",
+            "snowflake__amazon__competes_with [competes_with, high_confidence/single] Названа Snowflake среди крупных публичных облаков, конкурирующих на всех её рынках.",
+            "tsmc__amazon__manufactures [manufactures, signal/single] Собственные ускорители облака Trainium и Inferentia выпускает эта фабрика."
+          ]
+        }
+      },
+      "что обязан ответить текст": "Конкуренция"
+    },
+    {
+      "kind": "edge",
+      "id": "anthropic__google-cloud__customer_of",
+      "type": "customer_of",
+      "spine": "capital",
+      "direction": "upstream",
+      "status": "confirmed",
+      "sidedness": "single",
+      "claimedBy": [
+        "anthropic"
+      ],
+      "strength": 80,
+      "risk": {
+        "level": "medium",
+        "type": "market",
+        "timeline": "2-5y",
+        "mitigation": null
+      },
+      "techNode": null,
+      "formed": "2023",
+      "note_now": "Обратная сторона той же сделки: для облака это один из крупнейших контрактов на мощность.",
+      "detail_now": "Контракт назван в чипах и в мощности: расширение использования технологий облака включает до одного миллиона TPU, и ожидается, что заметно больше гигаватта будет введено в 2026 году. Это редкий случай, когда арендатор публично называет марку ускорителя — обычно арендуется «вычисление», а не конкретный кремний. Связь важна тем, что превращает альтернативный ускоритель из внутреннего проекта продавца в товар с внешним покупателем.",
+      "evidence": [
+        {
+          "tier": 1,
+          "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
+          "quote": "including up to one million TPUs, dramatically increasing our compute resources",
+          "self": "anthropic"
+        },
+        {
+          "tier": 1,
+          "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
+          "quote": "expected to bring well over a gigawatt of capacity online in 2026",
+          "self": "anthropic"
+        },
+        {
+          "tier": 1,
+          "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
+          "quote": "we plan to expand our use of Google Cloud technologies, including up to one",
+          "self": "anthropic"
+        }
+      ],
+      "counterEvidence": [],
+      "facts_now": [],
+      "one_document": true,
+      "ends": {
+        "anthropic": {
+          "id": "anthropic",
+          "name": "Anthropic",
+          "type": "company",
+          "role": "demand",
+          "sector": "frontier_lab",
+          "layers": [
+            "L12"
+          ],
+          "criticality": 66,
+          "criticalityFactors": {
+            "irreplaceability": 70,
+            "lockInDepth": 68,
+            "timeToReplace": 62,
+            "concentration": 60
+          },
+          "criticalityWhy": {
+            "irreplaceability": "Модели сопоставимого класса выпускают ещё несколько лабораторий",
+            "lockInDepth": "Держит прикладной слой через интерфейс, ниже железа не спускается",
+            "timeToReplace": "Приложение переключается на другую модель за месяцы",
+            "concentration": "Скорость выручки $47 млрд и больше 300,000 клиентов при нескольких сопоставимых лабораториях"
+          },
+          "oneLiner": "Лаборатория передовых моделей после OpenAI; её главный инфраструктурный партнёр — Amazon.",
+          "description_now": "Anthropic разрабатывает модели Claude и продаёт доступ к ним компаниям и разработчикам. По собственному сообщению, годовая скорость выручки перешла $47 млрд, а обслуживает компания больше 300,000 корпоративных клиентов. Последний раунд Series H принёс ей $65 млрд. Обучение и работу моделей компания раскладывает на три вида железа — AWS Trainium, тензорные процессоры Google и ускорители NVIDIA, — а Amazon называет своим основным облаком и партнёром по обучению. Отдельным соглашением с Google и Broadcom законтрактованы мощности в несколько гигаватт.",
+          "revenueUsdB": 5.0,
+          "geo": "US",
+          "ticker": null,
+          "founded": "2021",
+          "sourcing": {
+            "total": 9,
+            "selfSourced": 7,
+            "byTier": {
+              "1": 7,
+              "2": 2
+            }
+          },
+          "sources": [
+            {
+              "tier": 1,
+              "url": "https://www.anthropic.com/news/series-h",
+              "quote": "our run-rate revenue crossed $47 billion earlier this month",
+              "self": "anthropic"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.anthropic.com/news/series-h",
+              "quote": "Anthropic has raised $65 billion in Series H funding led by Altimeter Capital, Dragoneer, Greenoaks",
+              "self": "anthropic"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
+              "quote": "Anthropic now serves more than 300,000 business customers",
+              "self": "anthropic"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+              "quote": "run Claude on a range of AI hardware—AWS Trainium, Google TPUs, and NVIDIA GPUs",
+              "self": "anthropic"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+              "quote": "Amazon remains our primary cloud provider and training partner",
+              "self": "anthropic"
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+              "quote": "investments in convertible notes from Anthropic, PBC (“Anthropic”), including $2.7 billion we",
+              "self": null
+            },
+            {
+              "tier": 1,
+              "url": "https://www.anthropic.com/news/series-h",
+              "quote": "Anthropic has raised $65 billion in Series H funding led by Altimeter Capital",
+              "self": "anthropic"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.anthropic.com/news/series-h",
+              "quote": "valuing the company at $965 billion post-money",
+              "self": "anthropic"
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+              "quote": "investments in convertible notes from Anthropic, PBC (“Anthropic”), including $2.7 billion we invested in 2025",
+              "self": null
+            }
+          ],
+          "facts_now": [],
+          "neighbourhood": [
+            "amazon__anthropic__invests_in [invests_in, bilateral/bilateral] Конвертируемые займы, часть которых превращена в неголосующие акции: облако финансирует собственного клиента.",
+            "amazon__anthropic__supplies [supplies, confirmed/single] Облако продаёт лаборатории до пяти гигаватт мощности на собственных ускорителях — рядом с уже учтёнными вложениями.",
+            "anthropic__amazon__strategic_partner [strategic_partner, bilateral/bilateral] Облако вложило миллиарды в лабораторию и стало её основным инфраструктурным партнёром.",
+            "anthropic__broadcom__strategic_partner [strategic_partner, high_confidence/single] Соглашение с Google и Broadcom на несколько гигаватт мощностей нового поколения.",
+            "anthropic__google-cloud__customer_of [customer_of, confirmed/single] Обратная сторона той же сделки: для облака это один из крупнейших контрактов на мощность.",
+            "anthropic__google__customer_of [customer_of, high_confidence/single] Anthropic арендует у Google до миллиона тензорных процессоров; сделка объявлена ею самой.",
+            "anthropic__nvidia__customer_of [customer_of, bilateral/bilateral] Вторая лаборатория закупает вычисления — спрос не сосредоточен в одной компании.",
+            "anthropic__nvidia__validates_demand [validates_demand, confirmed/single] Второе доказательство спроса: если бы покупатель был один, вся стройка висела бы на нём.",
+            "blackstone__anthropic__invests_in [invests_in, signal/single] Владелец площадок дата-центров вошёл в капитал лаборатории, которая эти площадки загружает.",
+            "brookfield__anthropic__invests_in [invests_in, bilateral/bilateral] Инфраструктурный капитал вошёл в капитал лаборатории — редкий случай, когда владелец энергии финансирует её потребителя.",
+            "google-cloud__anthropic__supplies [supplies, confirmed/single] Лаборатория выбрала это облако как поставщика мощности и расширила закупку до миллиона ускорителей.",
+            "google__anthropic__supplies [supplies, confirmed/single] Google продаёт лаборатории мощность на собственных ускорителях — до миллиона чипов и пять гигаватт по последним соглашениям.",
+            "lightspeed__anthropic__invests_in [invests_in, confirmed/single] Венчурный капитал во второй лаборатории.",
+            "vllm__anthropic__enables_interop [enables_interop, high_confidence/single] vLLM поддерживает и интерфейс Anthropic: стандарт складывается поверх обеих лабораторий."
+          ]
+        },
+        "google-cloud": {
+          "id": "google-cloud",
+          "name": "Google Cloud",
+          "type": "company",
+          "role": "operator",
+          "sector": "hyperscaler",
+          "layers": [
+            "L9"
+          ],
+          "criticality": 65,
+          "criticalityFactors": {
+            "irreplaceability": 60,
+            "lockInDepth": 70,
+            "timeToReplace": 65,
+            "concentration": null
+          },
+          "criticalityWhy": {
+            "irreplaceability": "Облаков несколько, но вертикаль есть только здесь",
+            "lockInDepth": "Задевает чипы, облака, софт и модели",
+            "timeToReplace": "Воспроизвести вертикаль — больше трёх лет",
+            "concentration": null
+          },
+          "oneLiner": "Облако Google: единственное, где передовую лабораторию можно обучать на чипах самого владельца.",
+          "description_now": "Google Cloud продаёт вычисления на собственных тензорных процессорах, а не только на покупных ускорителях. Свою архитектуру облако описывает как AI Hypercomputer, на которой эти процессоры и работают. Стек заявлен открытым сверху: поддержаны PyTorch и JAX, а для быстрого вывода — vLLM. Развёртывания предлагается вести кластерами через собственный управляемый оркестратор облака. Отсюда положение узла на карте: это единственное облако, где лаборатория может обучаться на кремнии самого владельца площадки.",
+          "revenueUsdB": null,
+          "geo": "US",
+          "ticker": null,
+          "founded": "2008",
+          "sourcing": {
+            "total": 7,
+            "selfSourced": 4,
+            "byTier": {
+              "1": 4,
+              "2": 3
+            }
+          },
+          "sources": [
+            {
+              "tier": 1,
+              "url": "https://cloud.google.com/tpu",
+              "quote": "TPUs are powered by Google Cloud's AI Hypercomputer, a groundbreaking architecture that brings",
+              "self": "google-cloud"
+            },
+            {
+              "tier": 1,
+              "url": "https://cloud.google.com/tpu",
+              "quote": "high performance support for PyTorch and JAX, and support the vLLM engine for fast inference",
+              "self": "google-cloud"
+            },
+            {
+              "tier": 1,
+              "url": "https://cloud.google.com/tpu",
+              "quote": "Manage and scale these deployments reliably across global clusters with Google Kubernetes Engine (GKE).",
+              "self": "google-cloud"
+            },
+            {
+              "tier": 1,
+              "url": "https://cloud.google.com/tpu",
+              "quote": "custom-designed with open software to power the entire AI lifecycle—from frontier training and large-scale inference",
+              "self": "google-cloud"
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+              "quote": "Google Cloud revenues increased $15.5 billion from 2024 to 2025",
+              "self": null
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+              "quote": "we had $242.8 billion of remaining performance obligations",
+              "self": null
+            },
+            {
+              "tier": 2,
+              "url": "https://www.anthropic.com/news/anthropic-partners-with-google-cloud",
+              "quote": "an AI safety and research company, has selected Google Cloud",
+              "self": null
+            }
+          ],
+          "facts_now": [],
+          "neighbourhood": [
+            "anthropic__google-cloud__customer_of [customer_of, confirmed/single] Обратная сторона той же сделки: для облака это один из крупнейших контрактов на мощность.",
+            "google-cloud__amazon__competes_with [competes_with, confirmed/single] Оба облака продают одной и той же лаборатории мощность на собственных ускорителях.",
+            "google-cloud__anthropic__supplies [supplies, confirmed/single] Лаборатория выбрала это облако как поставщика мощности и расширила закупку до миллиона ускорителей.",
+            "google-cloud__google-deepmind__enables [enables, signal/single] Лаборатория внутри той же корпорации обучается на мощностях этого облака и его чипах.",
+            "google-cloud__google__funded_by [funded_by, signal/single] Облако — подразделение материнской компании: его чипы, его лаборатория, его деньги.",
+            "google-cloud__jax__integrates [integrates, high_confidence/single] Поддержан наравне с PyTorch на тензорных процессорах площадки.",
+            "google-cloud__kubernetes__standardizes_on [standardizes_on, high_confidence/single] Кластерами развёртываний площадка управляет через собственный управляемый оркестратор.",
+            "google-cloud__microsoft__competes_with [competes_with, signal/single] Третье облако-гигант конкурирует с первыми двумя за одни и те же контракты лабораторий.",
+            "google-cloud__pytorch__integrates [integrates, high_confidence/single] Тензорные процессоры облака поддерживают его наравне с JAX как способ обучения на своей площадке.",
+            "google-cloud__vllm__integrates [integrates, high_confidence/single] Назван на странице тензорных процессоров как способ быстрого вывода на них."
+          ]
+        }
+      },
+      "что обязан ответить текст": "Закупка"
+    },
+    {
+      "kind": "edge",
+      "id": "microsoft__coreweave__customer_of",
+      "type": "customer_of",
+      "spine": "capital",
+      "direction": "upstream",
+      "status": "confirmed",
+      "sidedness": "single",
+      "claimedBy": [
+        "coreweave"
+      ],
+      "strength": 95,
+      "risk": {
+        "level": "high",
+        "type": "market",
+        "timeline": "immediate",
+        "mitigation": {
+          "ru": "Второй крупный заказчик и выход на биржу снижают зависимость.",
+          "en": "A second large customer and the listing reduce the dependence."
+        }
+      },
+      "techNode": null,
+      "formed": "2022",
+      "note_now": "Для независимого облака это 67% выручки: зависимость односторонняя и критическая.",
+      "detail_now": "Один заказчик даёт 67% выручки облака за последний отчётный год; годом раньше на двух крупнейших приходилось 77%, ещё годом раньше на трёх — 73%. Концентрация снижается, но остаётся той величиной, при которой уход одного клиента ставит вопрос о существовании бизнеса. Зависимость односторонняя: для гиперскейлера это одна из нескольких внешних площадок.",
+      "evidence": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+          "quote": "approximately 67% of our revenue from our top customer, Microsoft,",
+          "self": "coreweave"
+        },
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+          "quote": "all of the GPUs used in our infrastructure today are NVIDIA GPUs.",
+          "self": "coreweave"
+        },
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+          "quote": "Other significant customers include Microsoft and Meta.",
+          "self": "coreweave"
+        },
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+          "quote": "We recognized an aggregate of approximately 67% of our revenue from our top customer,",
+          "self": "coreweave"
+        },
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+          "quote": "approximately 77% of our revenue from our top two customers for the year ended",
+          "self": "coreweave"
+        },
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+          "quote": "approximately 73% of our revenue for the year ended December 31, 2023, from",
+          "self": "coreweave"
+        }
+      ],
+      "counterEvidence": [],
+      "facts_now": [],
+      "one_document": true,
+      "ends": {
+        "microsoft": {
+          "id": "microsoft",
+          "name": "Microsoft",
+          "type": "company",
+          "role": "demand",
+          "sector": "hyperscaler",
+          "layers": [
+            "L9",
+            "L12"
+          ],
+          "criticality": 73,
+          "criticalityFactors": {
+            "irreplaceability": 74,
+            "lockInDepth": 78,
+            "timeToReplace": 70,
+            "concentration": 68
+          },
+          "criticalityWhy": {
+            "irreplaceability": "Мощности сопоставимого масштаба есть у двух других облаков",
+            "lockInDepth": "Держит подписки, облако и рабочие места разработчиков одновременно",
+            "timeToReplace": "Перенос нагрузки в другое облако считается кварталами, а не годами",
+            "concentration": "Облако выросло на 27% до $214.4 млрд, но рядом работают два сопоставимых оператора"
+          },
+          "oneLiner": "Гиперскейлер, крупнейший инвестор ведущей лаборатории и одновременно разработчик своих чипов.",
+          "description_now": "Microsoft продаёт облако и подписки, а на ИИ зарабатывает арендой вычислений и моделями внутри своих продуктов. Выручка Microsoft Cloud выросла на 27% и достигла $214.4 млрд, Azure и прочие облачные сервисы прибавили 41%. Кластеры компания собирает на чужом железе: она сама сообщила о первом крупном промышленном кластере более чем из 4,600 систем NVIDIA GB300 NVL72. Дата-центры упираются в разрешённую под застройку землю, предсказуемую энергию и поставки серверов вместе с графическими процессорами. С OpenAI действует долгосрочное партнёрство, начатое в 2019 году, и Microsoft получает от него долю выручки.",
+          "revenueUsdB": 281.7,
+          "geo": "US",
+          "ticker": "NASDAQ: MSFT",
+          "founded": "1975",
+          "sourcing": {
+            "total": 7,
+            "selfSourced": 6,
+            "byTier": {
+              "1": 6,
+              "2": 1
+            }
+          },
+          "sources": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+              "quote": "Microsoft Cloud revenue increased 27% to $214.4 billion.",
+              "self": "microsoft"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+              "quote": "Azure and other cloud services revenue increased 41%.",
+              "self": "microsoft"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+              "quote": "We have a long-term strategic partnership with OpenAI which was originally established in 2019",
+              "self": "microsoft"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+              "quote": "Our datacenters depend on the availability of permitted and buildable land, predictable energy",
+              "self": "microsoft"
+            },
+            {
+              "tier": 1,
+              "url": "https://azure.microsoft.com/en-us/blog/microsoft-azure-delivers-the-first-large-scale-cluster-with-nvidia-gb300-nvl72-for-openai-workloads/",
+              "quote": "Microsoft delivers the first at-scale production cluster with more than 4,600 NVIDIA GB300 NVL72",
+              "self": "microsoft"
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+              "quote": "Two of our customers accounted for more than 10% of our sales",
+              "self": null
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+              "quote": "Azure and other cloud services revenue grew 41%",
+              "self": "microsoft"
+            }
+          ],
+          "facts_now": [],
+          "neighbourhood": [
+            "arista__microsoft__supplies [supplies, confirmed/single] Коммутаторы для кластеров Microsoft: каждый из двух крупнейших клиентов Arista даёт больше 10% её продаж.",
+            "brookfield__microsoft__supplies [supplies, confirmed/single] Инфраструктурный владелец поставляет энергию площадкам облака-гиганта.",
+            "cisco__microsoft__competes_with [competes_with, high_confidence/single] Названа в собственном списке конкурентов Cisco.",
+            "constellation__microsoft__supplies [supplies, confirmed/single] Двадцатилетний контракт на поставку атомной энергии под спрос дата-центров: перезапуск остановленного энергоблока.",
+            "eaton__microsoft__supplies [supplies, confirmed/single] Оборудование питания на площадках: щиты, шины, защита. Очередь на поставку измеряется годами.",
+            "equinix__microsoft__supplies [supplies, confirmed/single] Площадки и подключения для облака-гиганта.",
+            "ge-vernova__microsoft__supplies [supplies, confirmed/single] Газовые турбины для площадок: самый быстрый способ дать много энергии, но очередь на годы.",
+            "google-cloud__microsoft__competes_with [competes_with, signal/single] Третье облако-гигант конкурирует с первыми двумя за одни и те же контракты лабораторий.",
+            "microsoft__blackrock__funded_by [funded_by, confirmed/single] Инфраструктурный капитал финансирует площадки и энергию под облачные мощности.",
+            "microsoft__coreweave__customer_of [customer_of, confirmed/single] Для независимого облака это 67% выручки: зависимость односторонняя и критическая.",
+            "microsoft__cuda__locks_in_platforms [locks_in_platforms, confirmed/single] Облако завязано на среду программирования сразу на нескольких уровнях и уйти целиком не может.",
+            "microsoft__nebius__customer_of [customer_of, confirmed/single] Гиперскейлер арендует выделенные кластеры у независимого облака — спрос превышает собственные мощности.",
+            "microsoft__nvidia__customer_of [customer_of, bilateral/bilateral] NVIDIA раскрывает концентрацию без имён: один прямой клиент дал 22% выручки за 2026 финансовый год, второй — 14%.",
+            "microsoft__nvidia__threatens [threatens, confirmed/single] Собственный ускоритель гиперскейлера назван среди конкурентов в отчётности NVIDIA.",
+            "microsoft__openai__invests_in [invests_in, confirmed/single] Крупнейший инвестор лаборатории с правами на её интеллектуальную собственность и долей выручки.",
+            "nvent__microsoft__supplies [supplies, confirmed/single] Охлаждение и шкафы на площадках облака-гиганта.",
+            "nvidia__microsoft__competes_with [competes_with, confirmed/single] Третье облако с собственным ускорителем, названное среди конкурентов в отчётности NVIDIA.",
+            "nvidia__microsoft__supplies [supplies, bilateral/bilateral] Все крупные облака закупают инфраструктуру NVIDIA — это и есть основа его выручки.",
+            "openai__microsoft__enables [enables, confirmed/single] Модели лаборатории встроены в продукты гиперскейлера — это его прикладной слой.",
+            "openai__microsoft__strategic_partner [strategic_partner, confirmed/single] Гиперскейлер — крупнейший инвестор лаборатории и держатель прав на её интеллектуальную собственность.",
+            "openai__microsoft__validates_demand [validates_demand, confirmed/single] Спрос лаборатории доказал, что облачные мощности под ИИ окупаются — и запустил стройку у всех.",
+            "schneider__microsoft__supplies [supplies, confirmed/single] Второй поставщик оборудования питания площадок.",
+            "servicenow__microsoft__strategic_partner [strategic_partner, high_confidence/single] Корпоративная платформа работает поверх нескольких облаков одновременно.",
+            "snowflake__microsoft__competes_with [competes_with, high_confidence/single] Названа Snowflake среди крупных публичных облаков, конкурирующих на всех её рынках.",
+            "tsmc__microsoft__manufactures [manufactures, signal/single] Собственный ускоритель Maia выпускается здесь же; переговоры об ёмкости идут отдельно.",
+            "vertiv__microsoft__supplies [supplies, confirmed/single] Питание и охлаждение на площадках облака-гиганта."
+          ]
+        },
+        "coreweave": {
+          "id": "coreweave",
+          "name": "CoreWeave",
+          "type": "company",
+          "role": "operator",
+          "sector": "neocloud",
+          "layers": [
+            "L9"
+          ],
+          "criticality": 53,
+          "criticalityFactors": {
+            "irreplaceability": 52,
+            "lockInDepth": 55,
+            "timeToReplace": 58,
+            "concentration": 45
+          },
+          "criticalityWhy": {
+            "irreplaceability": "Ту же аренду ускорителей продают гиперскейлеры и десяток независимых площадок",
+            "lockInDepth": "Держит нагрузку контрактом и обвязкой, но не средой разработки",
+            "timeToReplace": "Площадку с питанием строят годами, но арендатор уходит по концу контракта",
+            "concentration": "43 площадки и 850 МВт против гигаваттных программ гиперскейлеров"
+          },
+          "oneLiner": "Независимое облако, которое сдаёт кластеры ускорителей в аренду лабораториям.",
+          "description_now": "CoreWeave сдаёт в аренду вычисления на ускорителях и продаёт вместе с ними свою программную обвязку. Выручка составила $5.1 млрд против $1.9 млрд и $229 млн в предыдущие годы, а законтрактованных обязательств на конец года набралось $60.7 млрд. Физически это 43 площадки и больше 850 МВт активной мощности при законтрактованных примерно 3.1 ГВт. Заказчики немногочисленны и крупны: OpenAI обязалась платить до $11.9 млрд до октября 2030 года, а среди прочих названы Microsoft и Meta. Всё железо ускорителей приходит со стороны, поэтому доступ к очереди поставок для компании важнее собственной разработки.",
+          "revenueUsdB": 5.0,
+          "geo": "US",
+          "ticker": "NASDAQ: CRWV",
+          "founded": "2017",
+          "sourcing": {
+            "total": 8,
+            "selfSourced": 8,
+            "byTier": {
+              "1": 8
+            }
+          },
+          "sources": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+              "quote": "all of the GPUs used in our infrastructure today are NVIDIA GPUs.",
+              "self": "coreweave"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+              "quote": "Our revenue was $5.1 billion, $1.9 billion, and $229 million",
+              "self": "coreweave"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+              "quote": "As of December 31, 2025, we had $60.7 billion of remaining performance obligations",
+              "self": "coreweave"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+              "quote": "we operated 43 data centers with over 850 MW of active power",
+              "self": "coreweave"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+              "quote": "our total contracted power capacity was approximately 3.1 GW",
+              "self": "coreweave"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+              "quote": "OpenAI has committed to pay us up to approximately $11.9 billion through October 2030",
+              "self": "coreweave"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+              "quote": "Other significant customers include Microsoft and Meta.",
+              "self": "coreweave"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+              "quote": "Our revenue was $5.1 billion, $1.9 billion, and $229 million for the years ended",
+              "self": "coreweave"
+            }
+          ],
+          "facts_now": [],
+          "neighbourhood": [
+            "coreweave__nvidia__customer_of [customer_of, confirmed/single] Независимое облако закупает ускорители на миллиарды и перепродаёт их как аренду.",
+            "coreweave__nvidia__proves_roi [proves_roi, confirmed/single] Публичное независимое облако доказало, что на аренде ускорителей строится настоящий бизнес.",
+            "equinix__coreweave__supplies [supplies, bilateral/bilateral] Нейтральные площадки под кластеры независимого облака.",
+            "meta__coreweave__customer_of [customer_of, signal/single] CoreWeave называет Meta среди своих значимых заказчиков наравне с Microsoft.",
+            "microsoft__coreweave__customer_of [customer_of, confirmed/single] Для независимого облака это 67% выручки: зависимость односторонняя и критическая.",
+            "nvidia__coreweave__hedges_against [hedges_against, confirmed/single] Вложения в независимое облако снижают риск того, что гиперскейлеры замкнут на себя весь рынок аренды ускорителей.",
+            "nvidia__coreweave__supplies [supplies, confirmed/single] ВСЕ ускорители в инфраструктуре этого облака — от NVIDIA, и это прописано в контрактах с его клиентами.",
+            "openai__coreweave__customer_of [customer_of, confirmed/single] Лаборатория обязалась заплатить независимому облаку до 6,5 млрд долларов к 2031 году.",
+            "vertiv__coreweave__supplies [supplies, bilateral/bilateral] Питание и охлаждение на площадках независимого облака."
+          ]
+        }
+      },
+      "что обязан ответить текст": "Закупка"
+    },
+    {
+      "kind": "edge",
+      "id": "openai__vllm__enables",
+      "type": "enables",
+      "spine": "physical",
+      "direction": "downstream",
+      "status": "confirmed",
+      "sidedness": "single",
+      "claimedBy": [
+        "vllm"
+      ],
+      "strength": 50,
+      "risk": {
+        "level": "low",
+        "type": "technical",
+        "timeline": "1-2y",
+        "mitigation": null
+      },
+      "techNode": null,
+      "formed": "2023",
+      "note_now": "vLLM повторяет API OpenAI",
+      "detail_now": "Лаборатория ничего не поставляет библиотеке запуска — она задала интерфейс, который эта библиотека реализует. Из-за этого закрытая модель и открытая становятся взаимозаменяемыми на уровне приложения, и выбор между ними превращается в вопрос цены за токен. Для карты связь показывает редкий случай, когда лидер стандартизирует рынок против собственного интереса — просто потому, что интерфейс оказался удобным.",
+      "evidence": [
+        {
+          "tier": 2,
+          "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+          "quote": "vLLM is a fast and easy-to-use library for LLM inference and serving.",
+          "self": "vllm"
+        },
+        {
+          "tier": 2,
+          "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+          "quote": "Support for NVIDIA GPUs, AMD GPUs, Intel GPUs, and x86/ARM/PowerPC CPUs.",
+          "self": "vllm"
+        }
+      ],
+      "counterEvidence": [],
+      "facts_now": [],
+      "one_document": true,
+      "ends": {
+        "openai": {
+          "id": "openai",
+          "name": "OpenAI",
+          "type": "company",
+          "role": "demand",
+          "sector": "frontier_lab",
+          "layers": [
+            "L12"
+          ],
+          "criticality": 70,
+          "criticalityFactors": {
+            "irreplaceability": 76,
+            "lockInDepth": 72,
+            "timeToReplace": 65,
+            "concentration": 62
+          },
+          "criticalityWhy": {
+            "irreplaceability": "Модели сопоставимого класса выпускают ещё несколько лабораторий",
+            "lockInDepth": "Держит приложения через интерфейс и продукты партнёров, но не железо",
+            "timeToReplace": "Смена поставщика модели в приложении занимает месяцы, а не годы",
+            "concentration": "Спрос обеспечен контрактами вроде $11.9 млрд с CoreWeave, но рынок моделей делится"
+          },
+          "oneLiner": "Лаборатория, которая обучает передовые модели и заказывает вычисления гигаваттами.",
+          "description_now": "OpenAI разрабатывает модели и продаёт доступ к ним подпиской и через программный интерфейс. Собственная карточка системы описывает GPT-5 как единое целое из быстрой модели, модели для сложных задач и маршрутизатора между ними. Разработчикам компания даёт прямой доступ к модели рассуждения и её уменьшенным версиям. Вычисления она арендует: по договору с CoreWeave обязательство доходит до $11.9 млрд до октября 2030 года. Microsoft называет себя крупным инвестором OpenAI и получателем доли её выручки, а партнёрство между ними идёт с 2019 года.",
+          "revenueUsdB": 13.0,
+          "geo": "US",
+          "ticker": null,
+          "founded": "2015",
+          "sourcing": {
+            "total": 12,
+            "selfSourced": 8,
+            "byTier": {
+              "1": 8,
+              "2": 4
+            }
+          },
+          "sources": [
+            {
+              "tier": 1,
+              "url": "https://cdn.openai.com/gpt-5-system-card.pdf",
+              "quote": "GPT-5 is a unified system with a smart and fast model that answers most questions",
+              "self": "openai"
+            },
+            {
+              "tier": 1,
+              "url": "https://cdn.openai.com/gpt-5-system-card.pdf",
+              "quote": "In the API, we provide direct access to the thinking model, its mini version",
+              "self": "openai"
+            },
+            {
+              "tier": 1,
+              "url": "https://github.com/openai/openai-python",
+              "quote": "The OpenAI Python library provides convenient access to the OpenAI REST API",
+              "self": "openai"
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "the U.S. government, or USG, announced export restrictions and export licensing requirements targeting",
+              "self": null
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+              "quote": "Microsoft is a major investor in OpenAI and will continue to receive revenue-sharing payments.",
+              "self": null
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+              "quote": "OpenAI has committed to pay us up to approximately $11.9 billion through October 2030",
+              "self": null
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+              "quote": "We have a long-term strategic partnership with OpenAI which was originally established in 2019",
+              "self": null
+            },
+            {
+              "tier": 1,
+              "url": "https://openai.com/index/accelerating-the-next-phase-ai/",
+              "quote": "more than 900 million weekly active users, and over 50 million subscribers",
+              "self": "openai"
+            },
+            {
+              "tier": 1,
+              "url": "https://openai.com/index/accelerating-the-next-phase-ai/",
+              "quote": "Our APIs now process more than 15 billion tokens per minute.",
+              "self": "openai"
+            },
+            {
+              "tier": 1,
+              "url": "https://openai.com/index/1-million-businesses-putting-ai-to-work/",
+              "quote": "we now have more than 7 million total ChatGPT for Work seats",
+              "self": "openai"
+            },
+            {
+              "tier": 1,
+              "url": "https://openai.com/index/announcing-the-stargate-project/",
+              "quote": "intends to invest $500 billion over the next four years building new AI infrastructure",
+              "self": "openai"
+            },
+            {
+              "tier": 1,
+              "url": "https://openai.com/index/openai-nvidia-systems-partnership/",
+              "quote": "NVIDIA intends to invest up to $100 billion in OpenAI progressively as each gigawatt",
+              "self": "openai"
+            }
+          ],
+          "facts_now": [],
+          "neighbourhood": [
+            "eu-ai-act__openai__subject_to_restriction [subject_to_restriction, signal/single] Требования к моделям ложатся прежде всего на лаборатории и на прикладной слой.",
+            "mgx__openai__invests_in [invests_in, confirmed/single] Суверенный капитал Абу-Даби среди четырёх первоначальных держателей капитала стройки.",
+            "microsoft__openai__invests_in [invests_in, confirmed/single] Крупнейший инвестор лаборатории с правами на её интеллектуальную собственность и долей выручки.",
+            "nvidia__openai__co_designs [co_designs, bilateral/bilateral] Совместная работа над системами и оптимизациями: лаборатория пишет ядра, NVIDIA подгоняет платформу.",
+            "nvidia__openai__hedges_against [hedges_against, confirmed/single] Вложение в собственного крупнейшего покупателя — страховка от его перехода на альтернативное железо.",
+            "nvidia__openai__invests_in [invests_in, confirmed/single] До 100 млрд долларов, разблокируемых по мере ввода каждого гигаватта — вложение в собственного крупнейшего покупателя.",
+            "openai__coreweave__customer_of [customer_of, confirmed/single] Лаборатория обязалась заплатить независимому облаку до 6,5 млрд долларов к 2031 году.",
+            "openai__huggingface__competes_with [competes_with, confirmed/single] Закрытые модели по подписке против открытых весов в общем хабе.",
+            "openai__microsoft__enables [enables, confirmed/single] Модели лаборатории встроены в продукты гиперскейлера — это его прикладной слой.",
+            "openai__microsoft__strategic_partner [strategic_partner, confirmed/single] Гиперскейлер — крупнейший инвестор лаборатории и держатель прав на её интеллектуальную собственность.",
+            "openai__microsoft__validates_demand [validates_demand, confirmed/single] Спрос лаборатории доказал, что облачные мощности под ИИ окупаются — и запустил стройку у всех.",
+            "openai__nvidia__customer_of [customer_of, bilateral/bilateral] Лаборатория закупает системы гигаваттами: это деньги, а не доказательство. Доказательство идёт отдельным ребром.",
+            "openai__nvidia__path_dependent_on [path_dependent_on, bilateral/bilateral] Стек лаборатории оптимизирован под платформу NVIDIA на нескольких уровнях: развитие идёт вслед за ней.",
+            "openai__nvidia__validates_demand [validates_demand, confirmed/single] Своим существованием доказала отрасли, что ускорители необходимы: под неё строят площадки на десять гигаватт.",
+            "openai__oracle__customer_of [customer_of, bilateral/bilateral] Соглашение на 4,5 гигаватта дополнительных мощностей: контракт определяет профиль роста облака.",
+            "openai__oracle__validates_demand [validates_demand, confirmed/single] Контракт на гигаватты доказал, что стройка облачных мощностей под одну лабораторию окупается.",
+            "openai__vllm__enables [enables, confirmed/single] vLLM повторяет API OpenAI",
+            "oracle__openai__invests_in [invests_in, confirmed/single] Облако одновременно инвестор стройки и её подрядчик — это и делает контур замкнутым.",
+            "sequoia__openai__invests_in [invests_in, confirmed/single] Венчурный капитал в лаборатории: деньги заменимы деньгами, ценность в доступе к сделке.",
+            "softbank__openai__invests_in [invests_in, confirmed/single] Держатель капитала и финансово ответственный партнёр стройки вычислений.",
+            "thrive__openai__invests_in [invests_in, confirmed/single] Поздние раунды на миллиарды — узкий сегмент, но инвесторов в нём несколько.",
+            "triton__openai__funded_by [funded_by, confirmed/single] Компилятор создан лабораторией — крупнейшим покупателем ускорителей.",
+            "tsmc__openai__manufactures [manufactures, signal/single] Первый собственный чип лаборатории готовится к серийному выпуску здесь же.",
+            "vllm__openai__enables_interop [enables_interop, high_confidence/single] vLLM повторяет программный интерфейс OpenAI, и благодаря этому чужие стеки говорят на одном языке."
+          ]
+        },
+        "vllm": {
+          "id": "vllm",
+          "name": "vLLM",
+          "type": "technology",
+          "role": "platform",
+          "sector": "inference_engine",
+          "layers": [
+            "L11"
+          ],
+          "criticality": 54,
+          "criticalityFactors": {
+            "irreplaceability": 58,
+            "lockInDepth": 55,
+            "timeToReplace": 45,
+            "concentration": 62
+          },
+          "criticalityWhy": {
+            "irreplaceability": "Ту же работу делают несколько открытых серверов вывода",
+            "lockInDepth": "Стоит между моделью и железом и заменяется без правки самой модели",
+            "timeToReplace": "Переключение на другой сервер вывода занимает недели",
+            "concentration": "Больше 2000 участников в одном проекте — сопоставимого сообщества у соседей нет"
+          },
+          "oneLiner": "Открытая система запуска обученных моделей — быстро и дёшево.",
+          "description_now": "vLLM — открытая библиотека для вывода и обслуживания больших языковых моделей. Собственный README описывает её как быструю и простую в использовании и называет опорой экономию памяти под ключи и значения внимания. Денег проект не берёт: он живёт вкладом сообщества, в котором README насчитывает более 2000 участников из университетов и компаний. Поддержаны ускорители нескольких производителей сразу, поэтому библиотека работает как переходник между моделью и железом. Модели она берёт напрямую из склада Hugging Face, что делает её продолжением того же пути, а не отдельным миром.",
+          "revenueUsdB": null,
+          "geo": "US",
+          "ticker": null,
+          "founded": "2023",
+          "sourcing": {
+            "total": 7,
+            "selfSourced": 6,
+            "byTier": {
+              "1": 6,
+              "2": 1
+            }
+          },
+          "sources": [
+            {
+              "tier": 1,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "Support for NVIDIA GPUs, AMD GPUs, Intel GPUs, and x86/ARM/PowerPC CPUs.",
+              "self": "vllm"
+            },
+            {
+              "tier": 1,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "vLLM is a fast and easy-to-use library for LLM inference and serving.",
+              "self": "vllm"
+            },
+            {
+              "tier": 1,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "a diverse community of many dozens of academic institutions and companies from over 2000 contributors",
+              "self": "vllm"
+            },
+            {
+              "tier": 1,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "Efficient management of attention key and value memory with",
+              "self": "vllm"
+            },
+            {
+              "tier": 1,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "Seamless integration with popular Hugging Face models",
+              "self": "vllm"
+            },
+            {
+              "tier": 2,
+              "url": "https://raw.githubusercontent.com/pytorch/pytorch/main/README.md",
+              "quote": "PyTorch is a Python package that provides two high-level features",
+              "self": null
+            },
+            {
+              "tier": 1,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "vLLM is a fast and easy-to-use library for LLM inference and serving",
+              "self": "vllm"
+            }
+          ],
+          "facts_now": [],
+          "neighbourhood": [
+            "google-cloud__vllm__integrates [integrates, high_confidence/single] Назван на странице тензорных процессоров как способ быстрого вывода на них.",
+            "nim__vllm__competes_with [competes_with, confirmed/single] Платный сервер инференса NVIDIA против бесплатного vLLM — на одном и том же железе.",
+            "nim__vllm__integrates [integrates, high_confidence/single] Серверы вывода внутри контейнеров построены на сторонних проектах, и vLLM назван среди них.",
+            "openai__vllm__enables [enables, confirmed/single] vLLM повторяет API OpenAI",
+            "sglang__vllm__competes_with [competes_with, confirmed/single] SGLang — вторая открытая система запуска моделей: слой конкурентный, а не запертый.",
+            "vllm__anthropic__enables_interop [enables_interop, high_confidence/single] vLLM поддерживает и интерфейс Anthropic: стандарт складывается поверх обеих лабораторий.",
+            "vllm__cuda__path_dependent_on [path_dependent_on, confirmed/single] Самые быстрые режимы vLLM написаны под CUDA — на другом железе они просто отключаются.",
+            "vllm__huggingface__standardizes_on [standardizes_on, bilateral/bilateral] vLLM запускает модели, опубликованные в общем хабе, и берёт их описания оттуда.",
+            "vllm__nvidia__validates_demand [validates_demand, confirmed/single] vLLM называет ускорители NVIDIA первыми в списке поддержки.",
+            "vllm__openai__enables_interop [enables_interop, high_confidence/single] vLLM повторяет программный интерфейс OpenAI, и благодаря этому чужие стеки говорят на одном языке.",
+            "vllm__tensorrt__competes_with [competes_with, confirmed/single] vLLM против TensorRT: открытый запуск моделей против оптимизатора NVIDIA."
+          ]
+        }
+      },
+      "что обязан ответить текст": "Даёт возможность"
+    },
+    {
+      "kind": "edge",
+      "id": "vllm__openai__enables_interop",
+      "type": "enables_interop",
+      "spine": "physical",
+      "direction": "bidirectional",
+      "status": "high_confidence",
+      "sidedness": "single",
+      "claimedBy": [
+        "vllm"
+      ],
+      "strength": 60,
+      "risk": {
+        "level": "low",
+        "type": "technical",
+        "timeline": "1-2y",
+        "mitigation": null
+      },
+      "techNode": null,
+      "formed": "2023",
+      "note_now": "vLLM повторяет программный интерфейс OpenAI, и благодаря этому чужие стеки говорят на одном языке.",
+      "detail_now": "Библиотека запуска повторяет программный интерфейс лаборатории: приложение, написанное под её API, работает с открытой моделью без правок кода. Это превращает закрытый интерфейс в де-факто стандарт и одновременно обесценивает его как замок — уйти можно, ничего не переписывая. Для карты связь показывает механизм, которым открытая часть стека отбирает клиентов у закрытой, не конкурируя с ней по качеству модели.",
+      "evidence": [
+        {
+          "tier": 1,
+          "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+          "quote": "OpenAI-compatible API server, plus Anthropic Messages API and gRPC support -",
+          "self": "vllm"
+        }
+      ],
+      "counterEvidence": [],
+      "facts_now": [],
+      "one_document": true,
+      "ends": {
+        "vllm": {
+          "id": "vllm",
+          "name": "vLLM",
+          "type": "technology",
+          "role": "platform",
+          "sector": "inference_engine",
+          "layers": [
+            "L11"
+          ],
+          "criticality": 54,
+          "criticalityFactors": {
+            "irreplaceability": 58,
+            "lockInDepth": 55,
+            "timeToReplace": 45,
+            "concentration": 62
+          },
+          "criticalityWhy": {
+            "irreplaceability": "Ту же работу делают несколько открытых серверов вывода",
+            "lockInDepth": "Стоит между моделью и железом и заменяется без правки самой модели",
+            "timeToReplace": "Переключение на другой сервер вывода занимает недели",
+            "concentration": "Больше 2000 участников в одном проекте — сопоставимого сообщества у соседей нет"
+          },
+          "oneLiner": "Открытая система запуска обученных моделей — быстро и дёшево.",
+          "description_now": "vLLM — открытая библиотека для вывода и обслуживания больших языковых моделей. Собственный README описывает её как быструю и простую в использовании и называет опорой экономию памяти под ключи и значения внимания. Денег проект не берёт: он живёт вкладом сообщества, в котором README насчитывает более 2000 участников из университетов и компаний. Поддержаны ускорители нескольких производителей сразу, поэтому библиотека работает как переходник между моделью и железом. Модели она берёт напрямую из склада Hugging Face, что делает её продолжением того же пути, а не отдельным миром.",
+          "revenueUsdB": null,
+          "geo": "US",
+          "ticker": null,
+          "founded": "2023",
+          "sourcing": {
+            "total": 7,
+            "selfSourced": 6,
+            "byTier": {
+              "1": 6,
+              "2": 1
+            }
+          },
+          "sources": [
+            {
+              "tier": 1,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "Support for NVIDIA GPUs, AMD GPUs, Intel GPUs, and x86/ARM/PowerPC CPUs.",
+              "self": "vllm"
+            },
+            {
+              "tier": 1,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "vLLM is a fast and easy-to-use library for LLM inference and serving.",
+              "self": "vllm"
+            },
+            {
+              "tier": 1,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "a diverse community of many dozens of academic institutions and companies from over 2000 contributors",
+              "self": "vllm"
+            },
+            {
+              "tier": 1,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "Efficient management of attention key and value memory with",
+              "self": "vllm"
+            },
+            {
+              "tier": 1,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "Seamless integration with popular Hugging Face models",
+              "self": "vllm"
+            },
+            {
+              "tier": 2,
+              "url": "https://raw.githubusercontent.com/pytorch/pytorch/main/README.md",
+              "quote": "PyTorch is a Python package that provides two high-level features",
+              "self": null
+            },
+            {
+              "tier": 1,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "vLLM is a fast and easy-to-use library for LLM inference and serving",
+              "self": "vllm"
+            }
+          ],
+          "facts_now": [],
+          "neighbourhood": [
+            "google-cloud__vllm__integrates [integrates, high_confidence/single] Назван на странице тензорных процессоров как способ быстрого вывода на них.",
+            "nim__vllm__competes_with [competes_with, confirmed/single] Платный сервер инференса NVIDIA против бесплатного vLLM — на одном и том же железе.",
+            "nim__vllm__integrates [integrates, high_confidence/single] Серверы вывода внутри контейнеров построены на сторонних проектах, и vLLM назван среди них.",
+            "openai__vllm__enables [enables, confirmed/single] vLLM повторяет API OpenAI",
+            "sglang__vllm__competes_with [competes_with, confirmed/single] SGLang — вторая открытая система запуска моделей: слой конкурентный, а не запертый.",
+            "vllm__anthropic__enables_interop [enables_interop, high_confidence/single] vLLM поддерживает и интерфейс Anthropic: стандарт складывается поверх обеих лабораторий.",
+            "vllm__cuda__path_dependent_on [path_dependent_on, confirmed/single] Самые быстрые режимы vLLM написаны под CUDA — на другом железе они просто отключаются.",
+            "vllm__huggingface__standardizes_on [standardizes_on, bilateral/bilateral] vLLM запускает модели, опубликованные в общем хабе, и берёт их описания оттуда.",
+            "vllm__nvidia__validates_demand [validates_demand, confirmed/single] vLLM называет ускорители NVIDIA первыми в списке поддержки.",
+            "vllm__openai__enables_interop [enables_interop, high_confidence/single] vLLM повторяет программный интерфейс OpenAI, и благодаря этому чужие стеки говорят на одном языке.",
+            "vllm__tensorrt__competes_with [competes_with, confirmed/single] vLLM против TensorRT: открытый запуск моделей против оптимизатора NVIDIA."
+          ]
+        },
+        "openai": {
+          "id": "openai",
+          "name": "OpenAI",
+          "type": "company",
+          "role": "demand",
+          "sector": "frontier_lab",
+          "layers": [
+            "L12"
+          ],
+          "criticality": 70,
+          "criticalityFactors": {
+            "irreplaceability": 76,
+            "lockInDepth": 72,
+            "timeToReplace": 65,
+            "concentration": 62
+          },
+          "criticalityWhy": {
+            "irreplaceability": "Модели сопоставимого класса выпускают ещё несколько лабораторий",
+            "lockInDepth": "Держит приложения через интерфейс и продукты партнёров, но не железо",
+            "timeToReplace": "Смена поставщика модели в приложении занимает месяцы, а не годы",
+            "concentration": "Спрос обеспечен контрактами вроде $11.9 млрд с CoreWeave, но рынок моделей делится"
+          },
+          "oneLiner": "Лаборатория, которая обучает передовые модели и заказывает вычисления гигаваттами.",
+          "description_now": "OpenAI разрабатывает модели и продаёт доступ к ним подпиской и через программный интерфейс. Собственная карточка системы описывает GPT-5 как единое целое из быстрой модели, модели для сложных задач и маршрутизатора между ними. Разработчикам компания даёт прямой доступ к модели рассуждения и её уменьшенным версиям. Вычисления она арендует: по договору с CoreWeave обязательство доходит до $11.9 млрд до октября 2030 года. Microsoft называет себя крупным инвестором OpenAI и получателем доли её выручки, а партнёрство между ними идёт с 2019 года.",
+          "revenueUsdB": 13.0,
+          "geo": "US",
+          "ticker": null,
+          "founded": "2015",
+          "sourcing": {
+            "total": 12,
+            "selfSourced": 8,
+            "byTier": {
+              "1": 8,
+              "2": 4
+            }
+          },
+          "sources": [
+            {
+              "tier": 1,
+              "url": "https://cdn.openai.com/gpt-5-system-card.pdf",
+              "quote": "GPT-5 is a unified system with a smart and fast model that answers most questions",
+              "self": "openai"
+            },
+            {
+              "tier": 1,
+              "url": "https://cdn.openai.com/gpt-5-system-card.pdf",
+              "quote": "In the API, we provide direct access to the thinking model, its mini version",
+              "self": "openai"
+            },
+            {
+              "tier": 1,
+              "url": "https://github.com/openai/openai-python",
+              "quote": "The OpenAI Python library provides convenient access to the OpenAI REST API",
+              "self": "openai"
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "the U.S. government, or USG, announced export restrictions and export licensing requirements targeting",
+              "self": null
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+              "quote": "Microsoft is a major investor in OpenAI and will continue to receive revenue-sharing payments.",
+              "self": null
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+              "quote": "OpenAI has committed to pay us up to approximately $11.9 billion through October 2030",
+              "self": null
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+              "quote": "We have a long-term strategic partnership with OpenAI which was originally established in 2019",
+              "self": null
+            },
+            {
+              "tier": 1,
+              "url": "https://openai.com/index/accelerating-the-next-phase-ai/",
+              "quote": "more than 900 million weekly active users, and over 50 million subscribers",
+              "self": "openai"
+            },
+            {
+              "tier": 1,
+              "url": "https://openai.com/index/accelerating-the-next-phase-ai/",
+              "quote": "Our APIs now process more than 15 billion tokens per minute.",
+              "self": "openai"
+            },
+            {
+              "tier": 1,
+              "url": "https://openai.com/index/1-million-businesses-putting-ai-to-work/",
+              "quote": "we now have more than 7 million total ChatGPT for Work seats",
+              "self": "openai"
+            },
+            {
+              "tier": 1,
+              "url": "https://openai.com/index/announcing-the-stargate-project/",
+              "quote": "intends to invest $500 billion over the next four years building new AI infrastructure",
+              "self": "openai"
+            },
+            {
+              "tier": 1,
+              "url": "https://openai.com/index/openai-nvidia-systems-partnership/",
+              "quote": "NVIDIA intends to invest up to $100 billion in OpenAI progressively as each gigawatt",
+              "self": "openai"
+            }
+          ],
+          "facts_now": [],
+          "neighbourhood": [
+            "eu-ai-act__openai__subject_to_restriction [subject_to_restriction, signal/single] Требования к моделям ложатся прежде всего на лаборатории и на прикладной слой.",
+            "mgx__openai__invests_in [invests_in, confirmed/single] Суверенный капитал Абу-Даби среди четырёх первоначальных держателей капитала стройки.",
+            "microsoft__openai__invests_in [invests_in, confirmed/single] Крупнейший инвестор лаборатории с правами на её интеллектуальную собственность и долей выручки.",
+            "nvidia__openai__co_designs [co_designs, bilateral/bilateral] Совместная работа над системами и оптимизациями: лаборатория пишет ядра, NVIDIA подгоняет платформу.",
+            "nvidia__openai__hedges_against [hedges_against, confirmed/single] Вложение в собственного крупнейшего покупателя — страховка от его перехода на альтернативное железо.",
+            "nvidia__openai__invests_in [invests_in, confirmed/single] До 100 млрд долларов, разблокируемых по мере ввода каждого гигаватта — вложение в собственного крупнейшего покупателя.",
+            "openai__coreweave__customer_of [customer_of, confirmed/single] Лаборатория обязалась заплатить независимому облаку до 6,5 млрд долларов к 2031 году.",
+            "openai__huggingface__competes_with [competes_with, confirmed/single] Закрытые модели по подписке против открытых весов в общем хабе.",
+            "openai__microsoft__enables [enables, confirmed/single] Модели лаборатории встроены в продукты гиперскейлера — это его прикладной слой.",
+            "openai__microsoft__strategic_partner [strategic_partner, confirmed/single] Гиперскейлер — крупнейший инвестор лаборатории и держатель прав на её интеллектуальную собственность.",
+            "openai__microsoft__validates_demand [validates_demand, confirmed/single] Спрос лаборатории доказал, что облачные мощности под ИИ окупаются — и запустил стройку у всех.",
+            "openai__nvidia__customer_of [customer_of, bilateral/bilateral] Лаборатория закупает системы гигаваттами: это деньги, а не доказательство. Доказательство идёт отдельным ребром.",
+            "openai__nvidia__path_dependent_on [path_dependent_on, bilateral/bilateral] Стек лаборатории оптимизирован под платформу NVIDIA на нескольких уровнях: развитие идёт вслед за ней.",
+            "openai__nvidia__validates_demand [validates_demand, confirmed/single] Своим существованием доказала отрасли, что ускорители необходимы: под неё строят площадки на десять гигаватт.",
+            "openai__oracle__customer_of [customer_of, bilateral/bilateral] Соглашение на 4,5 гигаватта дополнительных мощностей: контракт определяет профиль роста облака.",
+            "openai__oracle__validates_demand [validates_demand, confirmed/single] Контракт на гигаватты доказал, что стройка облачных мощностей под одну лабораторию окупается.",
+            "openai__vllm__enables [enables, confirmed/single] vLLM повторяет API OpenAI",
+            "oracle__openai__invests_in [invests_in, confirmed/single] Облако одновременно инвестор стройки и её подрядчик — это и делает контур замкнутым.",
+            "sequoia__openai__invests_in [invests_in, confirmed/single] Венчурный капитал в лаборатории: деньги заменимы деньгами, ценность в доступе к сделке.",
+            "softbank__openai__invests_in [invests_in, confirmed/single] Держатель капитала и финансово ответственный партнёр стройки вычислений.",
+            "thrive__openai__invests_in [invests_in, confirmed/single] Поздние раунды на миллиарды — узкий сегмент, но инвесторов в нём несколько.",
+            "triton__openai__funded_by [funded_by, confirmed/single] Компилятор создан лабораторией — крупнейшим покупателем ускорителей.",
+            "tsmc__openai__manufactures [manufactures, signal/single] Первый собственный чип лаборатории готовится к серийному выпуску здесь же.",
+            "vllm__openai__enables_interop [enables_interop, high_confidence/single] vLLM повторяет программный интерфейс OpenAI, и благодаря этому чужие стеки говорят на одном языке."
+          ]
+        }
+      },
+      "что обязан ответить текст": "Совместимость"
+    },
+    {
+      "kind": "edge",
+      "id": "openai__coreweave__customer_of",
+      "type": "customer_of",
+      "spine": "capital",
+      "direction": "upstream",
+      "status": "confirmed",
+      "sidedness": "single",
+      "claimedBy": [
+        "coreweave"
+      ],
+      "strength": 75,
+      "risk": {
+        "level": "medium",
+        "type": "market",
+        "timeline": "2-5y",
+        "mitigation": {
+          "ru": "Контракт до 2031 года фиксирует объём.",
+          "en": "A contract to 2031 fixes the volume."
+        }
+      },
+      "techNode": null,
+      "formed": "2025",
+      "note_now": "Лаборатория обязалась заплатить независимому облаку до 6,5 млрд долларов к 2031 году.",
+      "detail_now": "Рамочное соглашение мая 2025 года и последующий заказ обязывают лабораторию заплатить до 6,5 млрд долларов к 31 мая 2031 года. Для облака это второй NVIDIA контракт после гиперскейлера и единственный, который заметно снижает концентрацию на одном заказчике. Срок в шесть лет означает, что мощность резервируется заранее, а не покупается по мере надобности.",
+      "evidence": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+          "quote": "OpenAI has committed to pay us up to approximately $6.5 billion through May",
+          "self": "coreweave"
+        },
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+          "quote": "all of the GPUs used in our infrastructure today are NVIDIA GPUs.",
+          "self": "coreweave"
+        },
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+          "quote": "OpenAI has committed to pay us up to approximately $11.9 billion through October 2030",
+          "self": "coreweave"
+        },
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+          "quote": "committed to pay us up to approximately $6.5 billion through May 31, 2031",
+          "self": "coreweave"
+        },
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+          "quote": "In May 2025, we entered into a master services agreement with OpenAI OpCo, LLC",
+          "self": "coreweave"
+        }
+      ],
+      "counterEvidence": [],
+      "facts_now": [],
+      "one_document": true,
+      "ends": {
+        "openai": {
+          "id": "openai",
+          "name": "OpenAI",
+          "type": "company",
+          "role": "demand",
+          "sector": "frontier_lab",
+          "layers": [
+            "L12"
+          ],
+          "criticality": 70,
+          "criticalityFactors": {
+            "irreplaceability": 76,
+            "lockInDepth": 72,
+            "timeToReplace": 65,
+            "concentration": 62
+          },
+          "criticalityWhy": {
+            "irreplaceability": "Модели сопоставимого класса выпускают ещё несколько лабораторий",
+            "lockInDepth": "Держит приложения через интерфейс и продукты партнёров, но не железо",
+            "timeToReplace": "Смена поставщика модели в приложении занимает месяцы, а не годы",
+            "concentration": "Спрос обеспечен контрактами вроде $11.9 млрд с CoreWeave, но рынок моделей делится"
+          },
+          "oneLiner": "Лаборатория, которая обучает передовые модели и заказывает вычисления гигаваттами.",
+          "description_now": "OpenAI разрабатывает модели и продаёт доступ к ним подпиской и через программный интерфейс. Собственная карточка системы описывает GPT-5 как единое целое из быстрой модели, модели для сложных задач и маршрутизатора между ними. Разработчикам компания даёт прямой доступ к модели рассуждения и её уменьшенным версиям. Вычисления она арендует: по договору с CoreWeave обязательство доходит до $11.9 млрд до октября 2030 года. Microsoft называет себя крупным инвестором OpenAI и получателем доли её выручки, а партнёрство между ними идёт с 2019 года.",
+          "revenueUsdB": 13.0,
+          "geo": "US",
+          "ticker": null,
+          "founded": "2015",
+          "sourcing": {
+            "total": 12,
+            "selfSourced": 8,
+            "byTier": {
+              "1": 8,
+              "2": 4
+            }
+          },
+          "sources": [
+            {
+              "tier": 1,
+              "url": "https://cdn.openai.com/gpt-5-system-card.pdf",
+              "quote": "GPT-5 is a unified system with a smart and fast model that answers most questions",
+              "self": "openai"
+            },
+            {
+              "tier": 1,
+              "url": "https://cdn.openai.com/gpt-5-system-card.pdf",
+              "quote": "In the API, we provide direct access to the thinking model, its mini version",
+              "self": "openai"
+            },
+            {
+              "tier": 1,
+              "url": "https://github.com/openai/openai-python",
+              "quote": "The OpenAI Python library provides convenient access to the OpenAI REST API",
+              "self": "openai"
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "the U.S. government, or USG, announced export restrictions and export licensing requirements targeting",
+              "self": null
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+              "quote": "Microsoft is a major investor in OpenAI and will continue to receive revenue-sharing payments.",
+              "self": null
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+              "quote": "OpenAI has committed to pay us up to approximately $11.9 billion through October 2030",
+              "self": null
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+              "quote": "We have a long-term strategic partnership with OpenAI which was originally established in 2019",
+              "self": null
+            },
+            {
+              "tier": 1,
+              "url": "https://openai.com/index/accelerating-the-next-phase-ai/",
+              "quote": "more than 900 million weekly active users, and over 50 million subscribers",
+              "self": "openai"
+            },
+            {
+              "tier": 1,
+              "url": "https://openai.com/index/accelerating-the-next-phase-ai/",
+              "quote": "Our APIs now process more than 15 billion tokens per minute.",
+              "self": "openai"
+            },
+            {
+              "tier": 1,
+              "url": "https://openai.com/index/1-million-businesses-putting-ai-to-work/",
+              "quote": "we now have more than 7 million total ChatGPT for Work seats",
+              "self": "openai"
+            },
+            {
+              "tier": 1,
+              "url": "https://openai.com/index/announcing-the-stargate-project/",
+              "quote": "intends to invest $500 billion over the next four years building new AI infrastructure",
+              "self": "openai"
+            },
+            {
+              "tier": 1,
+              "url": "https://openai.com/index/openai-nvidia-systems-partnership/",
+              "quote": "NVIDIA intends to invest up to $100 billion in OpenAI progressively as each gigawatt",
+              "self": "openai"
+            }
+          ],
+          "facts_now": [],
+          "neighbourhood": [
+            "eu-ai-act__openai__subject_to_restriction [subject_to_restriction, signal/single] Требования к моделям ложатся прежде всего на лаборатории и на прикладной слой.",
+            "mgx__openai__invests_in [invests_in, confirmed/single] Суверенный капитал Абу-Даби среди четырёх первоначальных держателей капитала стройки.",
+            "microsoft__openai__invests_in [invests_in, confirmed/single] Крупнейший инвестор лаборатории с правами на её интеллектуальную собственность и долей выручки.",
+            "nvidia__openai__co_designs [co_designs, bilateral/bilateral] Совместная работа над системами и оптимизациями: лаборатория пишет ядра, NVIDIA подгоняет платформу.",
+            "nvidia__openai__hedges_against [hedges_against, confirmed/single] Вложение в собственного крупнейшего покупателя — страховка от его перехода на альтернативное железо.",
+            "nvidia__openai__invests_in [invests_in, confirmed/single] До 100 млрд долларов, разблокируемых по мере ввода каждого гигаватта — вложение в собственного крупнейшего покупателя.",
+            "openai__coreweave__customer_of [customer_of, confirmed/single] Лаборатория обязалась заплатить независимому облаку до 6,5 млрд долларов к 2031 году.",
+            "openai__huggingface__competes_with [competes_with, confirmed/single] Закрытые модели по подписке против открытых весов в общем хабе.",
+            "openai__microsoft__enables [enables, confirmed/single] Модели лаборатории встроены в продукты гиперскейлера — это его прикладной слой.",
+            "openai__microsoft__strategic_partner [strategic_partner, confirmed/single] Гиперскейлер — крупнейший инвестор лаборатории и держатель прав на её интеллектуальную собственность.",
+            "openai__microsoft__validates_demand [validates_demand, confirmed/single] Спрос лаборатории доказал, что облачные мощности под ИИ окупаются — и запустил стройку у всех.",
+            "openai__nvidia__customer_of [customer_of, bilateral/bilateral] Лаборатория закупает системы гигаваттами: это деньги, а не доказательство. Доказательство идёт отдельным ребром.",
+            "openai__nvidia__path_dependent_on [path_dependent_on, bilateral/bilateral] Стек лаборатории оптимизирован под платформу NVIDIA на нескольких уровнях: развитие идёт вслед за ней.",
+            "openai__nvidia__validates_demand [validates_demand, confirmed/single] Своим существованием доказала отрасли, что ускорители необходимы: под неё строят площадки на десять гигаватт.",
+            "openai__oracle__customer_of [customer_of, bilateral/bilateral] Соглашение на 4,5 гигаватта дополнительных мощностей: контракт определяет профиль роста облака.",
+            "openai__oracle__validates_demand [validates_demand, confirmed/single] Контракт на гигаватты доказал, что стройка облачных мощностей под одну лабораторию окупается.",
+            "openai__vllm__enables [enables, confirmed/single] vLLM повторяет API OpenAI",
+            "oracle__openai__invests_in [invests_in, confirmed/single] Облако одновременно инвестор стройки и её подрядчик — это и делает контур замкнутым.",
+            "sequoia__openai__invests_in [invests_in, confirmed/single] Венчурный капитал в лаборатории: деньги заменимы деньгами, ценность в доступе к сделке.",
+            "softbank__openai__invests_in [invests_in, confirmed/single] Держатель капитала и финансово ответственный партнёр стройки вычислений.",
+            "thrive__openai__invests_in [invests_in, confirmed/single] Поздние раунды на миллиарды — узкий сегмент, но инвесторов в нём несколько.",
+            "triton__openai__funded_by [funded_by, confirmed/single] Компилятор создан лабораторией — крупнейшим покупателем ускорителей.",
+            "tsmc__openai__manufactures [manufactures, signal/single] Первый собственный чип лаборатории готовится к серийному выпуску здесь же.",
+            "vllm__openai__enables_interop [enables_interop, high_confidence/single] vLLM повторяет программный интерфейс OpenAI, и благодаря этому чужие стеки говорят на одном языке."
+          ]
+        },
+        "coreweave": {
+          "id": "coreweave",
+          "name": "CoreWeave",
+          "type": "company",
+          "role": "operator",
+          "sector": "neocloud",
+          "layers": [
+            "L9"
+          ],
+          "criticality": 53,
+          "criticalityFactors": {
+            "irreplaceability": 52,
+            "lockInDepth": 55,
+            "timeToReplace": 58,
+            "concentration": 45
+          },
+          "criticalityWhy": {
+            "irreplaceability": "Ту же аренду ускорителей продают гиперскейлеры и десяток независимых площадок",
+            "lockInDepth": "Держит нагрузку контрактом и обвязкой, но не средой разработки",
+            "timeToReplace": "Площадку с питанием строят годами, но арендатор уходит по концу контракта",
+            "concentration": "43 площадки и 850 МВт против гигаваттных программ гиперскейлеров"
+          },
+          "oneLiner": "Независимое облако, которое сдаёт кластеры ускорителей в аренду лабораториям.",
+          "description_now": "CoreWeave сдаёт в аренду вычисления на ускорителях и продаёт вместе с ними свою программную обвязку. Выручка составила $5.1 млрд против $1.9 млрд и $229 млн в предыдущие годы, а законтрактованных обязательств на конец года набралось $60.7 млрд. Физически это 43 площадки и больше 850 МВт активной мощности при законтрактованных примерно 3.1 ГВт. Заказчики немногочисленны и крупны: OpenAI обязалась платить до $11.9 млрд до октября 2030 года, а среди прочих названы Microsoft и Meta. Всё железо ускорителей приходит со стороны, поэтому доступ к очереди поставок для компании важнее собственной разработки.",
+          "revenueUsdB": 5.0,
+          "geo": "US",
+          "ticker": "NASDAQ: CRWV",
+          "founded": "2017",
+          "sourcing": {
+            "total": 8,
+            "selfSourced": 8,
+            "byTier": {
+              "1": 8
+            }
+          },
+          "sources": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+              "quote": "all of the GPUs used in our infrastructure today are NVIDIA GPUs.",
+              "self": "coreweave"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+              "quote": "Our revenue was $5.1 billion, $1.9 billion, and $229 million",
+              "self": "coreweave"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+              "quote": "As of December 31, 2025, we had $60.7 billion of remaining performance obligations",
+              "self": "coreweave"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+              "quote": "we operated 43 data centers with over 850 MW of active power",
+              "self": "coreweave"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+              "quote": "our total contracted power capacity was approximately 3.1 GW",
+              "self": "coreweave"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+              "quote": "OpenAI has committed to pay us up to approximately $11.9 billion through October 2030",
+              "self": "coreweave"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+              "quote": "Other significant customers include Microsoft and Meta.",
+              "self": "coreweave"
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+              "quote": "Our revenue was $5.1 billion, $1.9 billion, and $229 million for the years ended",
+              "self": "coreweave"
+            }
+          ],
+          "facts_now": [],
+          "neighbourhood": [
+            "coreweave__nvidia__customer_of [customer_of, confirmed/single] Независимое облако закупает ускорители на миллиарды и перепродаёт их как аренду.",
+            "coreweave__nvidia__proves_roi [proves_roi, confirmed/single] Публичное независимое облако доказало, что на аренде ускорителей строится настоящий бизнес.",
+            "equinix__coreweave__supplies [supplies, bilateral/bilateral] Нейтральные площадки под кластеры независимого облака.",
+            "meta__coreweave__customer_of [customer_of, signal/single] CoreWeave называет Meta среди своих значимых заказчиков наравне с Microsoft.",
+            "microsoft__coreweave__customer_of [customer_of, confirmed/single] Для независимого облака это 67% выручки: зависимость односторонняя и критическая.",
+            "nvidia__coreweave__hedges_against [hedges_against, confirmed/single] Вложения в независимое облако снижают риск того, что гиперскейлеры замкнут на себя весь рынок аренды ускорителей.",
+            "nvidia__coreweave__supplies [supplies, confirmed/single] ВСЕ ускорители в инфраструктуре этого облака — от NVIDIA, и это прописано в контрактах с его клиентами.",
+            "openai__coreweave__customer_of [customer_of, confirmed/single] Лаборатория обязалась заплатить независимому облаку до 6,5 млрд долларов к 2031 году.",
+            "vertiv__coreweave__supplies [supplies, bilateral/bilateral] Питание и охлаждение на площадках независимого облака."
+          ]
+        }
+      },
+      "что обязан ответить текст": "Закупка"
+    }
+  ]
+}

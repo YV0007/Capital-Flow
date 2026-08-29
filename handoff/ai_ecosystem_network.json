@@ -33513,8 +33513,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Проектировщик заказных ускорителей покупает у той же фабрики, что и NVIDIA: обе зависят от TSMC.",
-        "en": "The designer of custom accelerators buys from the same foundry as NVIDIA: both depend on TSMC."
+        "ru": "Broadcom берёт у TSMC печать пластин, а сборку раздаёт четверым: TSMC, ASE, Foxconn, Amkor. У TSMC на десять крупнейших клиентов приходится 78% выручки.",
+        "en": "Broadcom buys wafer printing from TSMC and spreads assembly across four: TSMC, ASE, Foxconn, Amkor. TSMC's top ten customers are 78% of its revenue."
       },
       "sidedness": "single",
       "claimedBy": [
@@ -33550,9 +33550,71 @@
       ],
       "counterEvidence": [],
       "detail": {
-        "ru": "Разработчик заказных ускорителей своих заводов не имеет: большая часть его пластин выпускается внешними фабриками, и в списке названа та же, что печатает ускорители его конкурента. Отсюда следствие, которое карта делает видимым: альтернатива в архитектуре не создаёт альтернативы в производстве. Обе дороги приводят в одну очередь.",
-        "en": "The custom-accelerator designer owns no plants: most of its wafers come from external foundries, and the list names the same one that prints its competitor's accelerators. Hence the consequence this map makes visible: an alternative in architecture creates no alternative in manufacturing. Both roads lead into the same queue."
-      }
+        "ru": "Broadcom покупает у TSMC переднюю часть производства — печать пластин, — а не готовый чип: собственные линии он держит только под свои же особые процессы. Сборку и тестирование он тоже отдаёт наружу и называет там четверых сразу: TSMC, ASE, Foxconn и Amkor, поэтому потеря одного подрядчика не останавливает выпуск. Обратной зависимости в тех же масштабах нет: у TSMC на крупнейшего заказчика приходится 19% выручки, а на десять крупнейших — 78%, и Broadcom в этом списке не назван поимённо. Отношения держатся не договором об эксклюзивности, а тем, что чип проектируется под конкретный процесс конкретной фабрики и переносится на другую годами.",
+        "en": "Broadcom buys the front end of manufacturing from TSMC — the wafers — rather than a finished chip: its own lines run only its proprietary processes. Assembly and test are outsourced too, and there it names four at once: TSMC, ASE, Foxconn and Amkor, so losing one contractor does not stop output. The dependence does not mirror at the same scale: TSMC's largest customer is 19% of its revenue and the top ten are 78%, and Broadcom is not named among them. What holds the relationship is not an exclusivity clause but the fact that a chip is designed for one fab's process and takes years to move."
+      },
+      "facts": [
+        {
+          "label": {
+            "ru": "Что отдано внешним фабрикам",
+            "en": "What is outsourced to external foundries"
+          },
+          "value": "front-end",
+          "unit": "none",
+          "asOf": "2025-FY",
+          "about": "broadcom",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+          "sourceType": "sec_filing",
+          "tier": 1,
+          "retrieved": "2026-08-30",
+          "verbatim": "front-end wafer manufacturing operations is outsourced to external foundries, including Taiwan Semiconductor"
+        },
+        {
+          "label": {
+            "ru": "Подрядчики сборки и теста",
+            "en": "Assembly and test contractors"
+          },
+          "value": "TSMC, ASE, Foxconn, Amkor",
+          "unit": "none",
+          "asOf": "2025-FY",
+          "about": "broadcom",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+          "sourceType": "sec_filing",
+          "tier": 1,
+          "retrieved": "2026-08-30",
+          "verbatim": "including TSMC, Advanced Semiconductor Engineering, Inc., Foxconn Technology Group, Amkor Technology, Inc."
+        },
+        {
+          "label": {
+            "ru": "Доля крупнейшего заказчика TSMC",
+            "en": "TSMC largest customer share"
+          },
+          "value": "19",
+          "unit": "pct",
+          "asOf": "2025",
+          "about": "tsmc",
+          "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+          "sourceType": "sec_filing",
+          "tier": 2,
+          "retrieved": "2026-08-30",
+          "verbatim": "Our largest customer in 2023, 2024 and 2025 accounted for 25%, 22% and 19%"
+        },
+        {
+          "label": {
+            "ru": "Десять крупнейших заказчиков TSMC",
+            "en": "TSMC top ten customers"
+          },
+          "value": "78",
+          "unit": "pct",
+          "asOf": "2025",
+          "about": "tsmc",
+          "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+          "sourceType": "sec_filing",
+          "tier": 2,
+          "retrieved": "2026-08-30",
+          "verbatim": "ten largest customers in 2023, 2024 and 2025 accounted for approximately, 70%, 76% and 78%"
+        }
+      ]
     },
     {
       "id": "brookfield__amazon__supplies",
@@ -42938,8 +43000,8 @@
       "strengthened": "2024",
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Открытие собственного протокола связи чужим ускорителям — ответ на угрозу заказных чипов.",
-        "en": "Opening its own interconnect to other accelerators is the answer to the threat from custom silicon."
+        "ru": "NVIDIA дважды называет Broadcom конкурентом — по серверным SoC и по сети. Заказные ускорители дали Broadcom $10.8 млрд за квартал.",
+        "en": "NVIDIA names Broadcom a competitor twice — in server SoCs and in networking. Custom accelerators brought Broadcom $10.8 billion in a quarter."
       },
       "sidedness": "single",
       "claimedBy": [
@@ -42975,9 +43037,86 @@
       ],
       "counterEvidence": [],
       "detail": {
-        "ru": "Соперничество ведётся не ценой, а границей системы: одна сторона продаёт стойку целиком, другая помогает заказчику собрать свою. Открытие NVLink Fusion для чужих ускорителей и заказных ASIC — признание, что закрытая стойка перестала быть выигрышной стратегией по всем нагрузкам сразу. Для карты это первый случай, когда держатель платформы уступает часть закрытости добровольно.",
-        "en": "The rivalry is fought over the system boundary rather than on price: one side sells the whole rack, the other helps the customer assemble its own. Opening NVLink Fusion to third-party accelerators and custom ASICs is an admission that a closed rack stopped being the winning strategy across every workload. For the map it is the first case of a platform holder giving up part of its closedness voluntarily."
-      }
+        "ru": "NVIDIA называет Broadcom конкурентом дважды и в разных местах своего же отчёта: среди поставщиков SoC для серверов и среди производителей сетевых продуктов — коммутаторов, сетевых адаптеров и оптики. Соперничество идёт не за одну и ту же микросхему: Broadcom продаёт облакам не готовый ускоритель, а проектирование ускорителя под их собственную задачу, и это выручка $10.8 млрд за квартал против $215.9 млрд у NVIDIA за год. Опасность не в размере, а в направлении: каждый заказной чип занимает место, которое иначе занял бы покупной. NVIDIA отвечает не только ценой — она открыла NVLink Fusion, шину, через которую чужой ускоритель можно поставить рядом со своим. Это признание того, что заказные чипы никуда не денутся, и попытка оставить их внутри собственной платформы.",
+        "en": "NVIDIA names Broadcom a competitor twice in different parts of its own filing: among suppliers of server SoCs and among makers of networking products — switches, network adapters and optics. The rivalry is not over the same chip: Broadcom sells clouds not a finished accelerator but the design of one for their own workload, and that is $10.8 billion in a quarter against NVIDIA's $215.9 billion in a year. The threat is not size but direction: every custom chip takes a socket that would otherwise hold a bought one. NVIDIA's answer is not only price — it opened NVLink Fusion, a fabric through which someone else's accelerator can sit next to its own. That is an admission that custom silicon is not going away, and an attempt to keep it inside its own platform."
+      },
+      "facts": [
+        {
+          "label": {
+            "ru": "Где NVIDIA называет Broadcom конкурентом",
+            "en": "Where NVIDIA names Broadcom a competitor"
+          },
+          "value": "SoC, networking",
+          "unit": "none",
+          "asOf": "2026-FY",
+          "about": "nvidia",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "sourceType": "sec_filing",
+          "tier": 1,
+          "retrieved": "2026-08-30",
+          "verbatim": "such as Ambarella, Inc., AMD, Broadcom, Intel, Qualcomm Incorporated, Renesas Electronics Corporation"
+        },
+        {
+          "label": {
+            "ru": "Сетевые продукты в списке конкуренции",
+            "en": "Networking products in the competition list"
+          },
+          "value": "switches, adapters, optics",
+          "unit": "none",
+          "asOf": "2026-FY",
+          "about": "nvidia",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "sourceType": "sec_filing",
+          "tier": 1,
+          "retrieved": "2026-08-30",
+          "verbatim": "networking products consisting of switches, network adapters (including DPUs), and cable solutions"
+        },
+        {
+          "label": {
+            "ru": "Чем NVIDIA отвечает заказным ускорителям",
+            "en": "NVIDIA's answer to custom accelerators"
+          },
+          "value": "NVLink Fusion",
+          "unit": "none",
+          "asOf": "2026-FY",
+          "about": "nvidia",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "sourceType": "sec_filing",
+          "tier": 1,
+          "retrieved": "2026-08-30",
+          "verbatim": "we introduced NVIDIA NVLink Fusion to enable hyperscalers and custom ASIC designers to integrate custom"
+        },
+        {
+          "label": {
+            "ru": "Выручка ИИ-полупроводников Broadcom за квартал",
+            "en": "Broadcom quarterly AI revenue"
+          },
+          "value": "10.8",
+          "unit": "usd_b",
+          "asOf": "2026-Q2",
+          "about": "broadcom",
+          "url": "https://www.sec.gov/Archives/edgar/data/0001730168/000173016826000051/avgo-05032026x8kxex99.htm",
+          "sourceType": "company_pr",
+          "tier": 2,
+          "retrieved": "2026-08-30",
+          "verbatim": "Q2 semiconductor revenue from AI of $10.8 billion grew 143% year-over-year"
+        },
+        {
+          "label": {
+            "ru": "Выручка NVIDIA за год",
+            "en": "NVIDIA annual revenue"
+          },
+          "value": "215.9",
+          "unit": "usd_b",
+          "asOf": "2026-FY",
+          "about": "nvidia",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "sourceType": "sec_filing",
+          "tier": 1,
+          "retrieved": "2026-08-30",
+          "verbatim": "Revenue for fiscal year 2026 was $215.9 billion, up 65% from a year ago."
+        }
+      ]
     },
     {
       "id": "nvidia__cadence__co_designs",
@@ -45015,8 +45154,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "Второй производитель чипов держится именно как страховка от концентрации на одной территории.",
-        "en": "The second chip manufacturer is kept precisely as insurance against concentration on one territory."
+        "ru": "NVIDIA называет своими фабриками TSMC и Samsung, а память берёт у трёх поставщиков; долей заказа не раскрывает ни одна сторона.",
+        "en": "NVIDIA names TSMC and Samsung as its foundries and buys memory from three suppliers; neither side discloses how the order splits."
       },
       "sidedness": "single",
       "claimedBy": [
@@ -45052,9 +45191,71 @@
       ],
       "counterEvidence": [],
       "detail": {
-        "ru": "Второй производитель чипов держится именно как страховка: покупатель называет фабрики, которыми пользуется, и эта компания стоит в списке рядом с основной. Реальный объём при этом несопоставим — ценность в том, что маршрут разработан и поддерживается, а не в том, что по нему идёт поставка. Такая страховка стоит денег постоянно и окупается один раз, если вообще окупается.",
-        "en": "The second chipmaker is kept precisely as insurance: the buyer names the foundries it uses, and this company sits in the list beside the main one. Actual volume is not comparable — the value lies in the route being developed and maintained, not in shipments running down it. Insurance like this costs money continuously and pays off once, if at all."
-      }
+        "ru": "Второй источник у NVIDIA заявлен ею самой: в отчёте перечислены две фабрики — TSMC и Samsung, — и это единственное, что о разделении заказа известно из первых рук. Ни объёма, ни доли, ни списка продуктов ни одна сторона не публикует, поэтому считать Samsung равной альтернативой оснований нет. Страховка идёт и по памяти: её NVIDIA покупает у трёх поставщиков сразу — SK hynix, Micron и Samsung. Здесь у Samsung позиция крепче, чем в печати пластин: она объявила серийный выпуск HBM4 и отгрузку коммерческих партий, заявив скорость 11.7 гигабит в секунду. Смысл связи для карты именно в этом — она показывает, где у NVIDIA есть запасной поставщик, а где его нет.",
+        "en": "The second source is claimed by NVIDIA itself: its filing lists two foundries — TSMC and Samsung — and that is all that is known first-hand about how the order is split. Neither volume nor share nor a product list is published by either side, so treating Samsung as an equal alternative has no basis. The hedge runs through memory as well: NVIDIA buys it from three suppliers at once — SK hynix, Micron and Samsung. There Samsung stands firmer than in wafer printing: it announced volume production of HBM4 and shipments of commercial parts at a stated 11.7 gigabits per second. That is what this link is for on the map — it shows where NVIDIA has a spare supplier and where it has none."
+      },
+      "facts": [
+        {
+          "label": {
+            "ru": "Кого NVIDIA называет своими фабриками",
+            "en": "Foundries NVIDIA names"
+          },
+          "value": "TSMC, Samsung",
+          "unit": "none",
+          "asOf": "2026-FY",
+          "about": "nvidia",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "sourceType": "sec_filing",
+          "tier": 1,
+          "retrieved": "2026-08-30",
+          "verbatim": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung"
+        },
+        {
+          "label": {
+            "ru": "У кого NVIDIA покупает память",
+            "en": "Where NVIDIA buys memory"
+          },
+          "value": "SK hynix, Micron, Samsung",
+          "unit": "none",
+          "asOf": "2026-FY",
+          "about": "nvidia",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "sourceType": "sec_filing",
+          "tier": 1,
+          "retrieved": "2026-08-30",
+          "verbatim": "We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung."
+        },
+        {
+          "label": {
+            "ru": "Скорость памяти HBM4 у Samsung",
+            "en": "Samsung HBM4 transfer speed"
+          },
+          "value": "11.7",
+          "unit": "gbps",
+          "asOf": "2026-01",
+          "about": "samsung",
+          "url": "https://semiconductor.samsung.com/news-events/news/samsung-ships-industry-first-commercial-hbm4-with-ultimate-performance-for-ai-computing/",
+          "sourceType": "company_pr",
+          "tier": 2,
+          "retrieved": "2026-08-30",
+          "verbatim": "HBM4 delivers a consistent processing speed of 11.7 gigabits-per-second (Gbps), exceeding the industry standard"
+        },
+        {
+          "label": {
+            "ru": "Состояние выпуска HBM4",
+            "en": "HBM4 production status"
+          },
+          "value": "mass production",
+          "unit": "none",
+          "asOf": "2026-01",
+          "about": "samsung",
+          "url": "https://semiconductor.samsung.com/news-events/news/samsung-ships-industry-first-commercial-hbm4-with-ultimate-performance-for-ai-computing/",
+          "sourceType": "company_pr",
+          "tier": 2,
+          "retrieved": "2026-08-30",
+          "verbatim": "begun mass production of its industry-leading HBM4 and has shipped commercial products to customers"
+        }
+      ]
     },
     {
       "id": "nvidia__softbank__strategic_partner",
@@ -50845,8 +51046,8 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "TSMC печатает заказные ускорители Broadcom на той же линии, что и чипы NVIDIA.",
-        "en": "TSMC prints Broadcom's custom accelerators on the same line as NVIDIA's chips."
+        "ru": "Свои ускорители Broadcom печатает на TSMC: передовых фабрик у него нет, а работа расписана на $164.6 млрд обязательств.",
+        "en": "Broadcom prints its accelerators at TSMC: it owns no leading-edge fabs, and $164.6 billion of obligations are already booked."
       },
       "sidedness": "single",
       "claimedBy": [
@@ -50908,9 +51109,131 @@
       ],
       "counterEvidence": [],
       "detail": {
-        "ru": "Проектировщик заказных ускорителей отдаёт большую часть производства пластин внешним фабрикам, и та же TSMC печатает ускорители его главного конкурента. Концентрация спроса у самого проектировщика высокая: один заказчик дал 32%, 28% и 21% выручки за три года, пять крупнейших — около 40%. Обе стороны конкуренции зависят от одной фабрики.",
-        "en": "The custom-accelerator designer outsources most wafer manufacturing, and the same foundry makes its main rival's accelerators too. The designer's own demand is concentrated: one customer accounted for 32%, 28% and 21% of revenue over three years, and the top five for about 40%. Both sides of the rivalry depend on the same foundry."
-      }
+        "ru": "Broadcom проектирует заказные ускорители XPU и сетевой кремний, но пластины под них печатает не сам: собственных передовых фабрик у него нет, и производство отдано внешним фабрикам, среди которых он называет TSMC. Размер заказа виден в отчётности покупателя: выручка ИИ-полупроводников за квартал — $10.8 млрд при росте 143% за год, а на следующий квартал Broadcom обещает $16.0 млрд. Работа расписана вперёд: законтрактованные обязательства достигли $164.6 млрд, и около 30% из них компания рассчитывает признать выручкой в ближайший год. Дальше поставки Broadcom пошёл в финансирование спроса — по июньскому соглашению он подстраховывает лизинг стоек с этими ускорителями на сумму до $29 млрд. Со стороны TSMC заказ ложится в передовые узлы, давшие ей 74% выручки от пластин; ни одна из сторон не раскрывает, сколько именно пластин под него идёт.",
+        "en": "Broadcom designs custom XPU accelerators and networking silicon, but does not print the wafers itself: it owns no leading-edge fabs and outsources manufacturing to external foundries, TSMC among those it names. The size of the order shows up in the buyer's own filings: AI semiconductor revenue was $10.8 billion for the quarter, up 143% year over year, and Broadcom guides to $16.0 billion for the next one. The work is booked far ahead: remaining performance obligations reached $164.6 billion, of which about 30% is expected to become revenue within a year. Broadcom went past supply into financing demand — a June agreement backstops leases on racks built around these accelerators for up to $29 billion. On the TSMC side the order lands in the advanced nodes that brought it 74% of wafer revenue; neither side discloses how many wafers it actually takes."
+      },
+      "facts": [
+        {
+          "label": {
+            "ru": "Производство пластин отдано внешним фабрикам",
+            "en": "Wafer manufacturing outsourced to external foundries"
+          },
+          "value": "TSMC",
+          "unit": "none",
+          "asOf": "2025-FY",
+          "about": "broadcom",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+          "sourceType": "sec_filing",
+          "tier": 2,
+          "retrieved": "2026-08-30",
+          "verbatim": "front-end wafer manufacturing operations is outsourced to external foundries, including Taiwan Semiconductor"
+        },
+        {
+          "label": {
+            "ru": "Выручка ИИ-полупроводников за квартал",
+            "en": "Quarterly AI semiconductor revenue"
+          },
+          "value": "10.8",
+          "unit": "usd_b",
+          "asOf": "2026-Q2",
+          "about": "broadcom",
+          "url": "https://www.sec.gov/Archives/edgar/data/0001730168/000173016826000051/avgo-05032026x8kxex99.htm",
+          "sourceType": "company_pr",
+          "tier": 2,
+          "retrieved": "2026-08-30",
+          "verbatim": "Q2 semiconductor revenue from AI of $10.8 billion grew 143% year-over-year"
+        },
+        {
+          "label": {
+            "ru": "Прогноз выручки ИИ на следующий квартал",
+            "en": "AI revenue guidance for next quarter"
+          },
+          "value": "16.0",
+          "unit": "usd_b",
+          "asOf": "2026-Q3",
+          "about": "broadcom",
+          "url": "https://www.sec.gov/Archives/edgar/data/0001730168/000173016826000051/avgo-05032026x8kxex99.htm",
+          "sourceType": "company_pr",
+          "tier": 2,
+          "retrieved": "2026-08-30",
+          "verbatim": "we expect semiconductor revenue from AI to grow over 200 percent year-over-year to $16.0 billion"
+        },
+        {
+          "label": {
+            "ru": "Законтрактованные обязательства",
+            "en": "Remaining performance obligations"
+          },
+          "value": "164.6",
+          "unit": "usd_b",
+          "asOf": "2026-05-03",
+          "about": "broadcom",
+          "url": "https://www.sec.gov/Archives/edgar/data/0001730168/000173016826000054/avgo-20260503.htm",
+          "sourceType": "sec_filing",
+          "tier": 2,
+          "retrieved": "2026-08-30",
+          "verbatim": "obligations under these contracts as of May 3, 2026 were approximately $164.6 billion"
+        },
+        {
+          "label": {
+            "ru": "Доля портфеля к признанию за год",
+            "en": "Share of backlog booked within a year"
+          },
+          "value": "30",
+          "unit": "pct",
+          "asOf": "2026-05-03",
+          "about": "broadcom",
+          "url": "https://www.sec.gov/Archives/edgar/data/0001730168/000173016826000054/avgo-20260503.htm",
+          "sourceType": "sec_filing",
+          "tier": 2,
+          "retrieved": "2026-08-30",
+          "verbatim": "approximately 30% of this amount to be recognized as revenue over the next 12 months"
+        },
+        {
+          "label": {
+            "ru": "Гарантия по лизингу стоек с этими ускорителями",
+            "en": "Backstop on AI-rack leases"
+          },
+          "value": "29",
+          "unit": "usd_b",
+          "asOf": "2026-06-08",
+          "about": "broadcom",
+          "url": "https://www.sec.gov/Archives/edgar/data/0001730168/000173016826000054/avgo-20260503.htm",
+          "sourceType": "sec_filing",
+          "tier": 2,
+          "retrieved": "2026-08-30",
+          "verbatim": "with a maximum exposure of $29 billion"
+        },
+        {
+          "label": {
+            "ru": "Доля крупнейшего покупателя в выручке",
+            "en": "Largest customer share of revenue"
+          },
+          "value": "32",
+          "unit": "pct",
+          "asOf": "2025-FY",
+          "about": "broadcom",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+          "sourceType": "sec_filing",
+          "tier": 2,
+          "retrieved": "2026-08-30",
+          "verbatim": "one customer accounted for 32%, 28% and 21% of our net revenue"
+        },
+        {
+          "label": {
+            "ru": "Передовые узлы в выручке от пластин",
+            "en": "Advanced nodes as share of wafer revenue"
+          },
+          "value": "74",
+          "unit": "pct",
+          "asOf": "2025",
+          "about": "tsmc",
+          "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+          "sourceType": "sec_filing",
+          "tier": 1,
+          "retrieved": "2026-08-30",
+          "verbatim": "Advanced technologies (7-nanometer and below) accounted for 74% of total wafer revenue"
+        }
+      ]
     },
     {
       "id": "tsmc__credo__manufactures",
@@ -51403,8 +51726,8 @@
       "strengthened": "2023",
       "lastConfirmed": "2026-08",
       "note": {
-        "ru": "NVIDIA упаковывает кристаллы по технологии CoWoS — она соединяет вычислительный кристалл с памятью HBM в одном корпусе.",
-        "en": "NVIDIA packages its dies with CoWoS — the technology that joins the compute die to HBM memory in one package."
+        "ru": "Кристалл и память NVIDIA сажает на общую подложку по технологии CoWoS; у TSMC это отдельный бизнес, печать пластин даёт ей 86% выручки.",
+        "en": "NVIDIA mounts die and memory on one substrate via CoWoS; for TSMC that is a separate business, with wafer fabrication at 86% of revenue."
       },
       "sidedness": "single",
       "claimedBy": [
@@ -51427,9 +51750,71 @@
       ],
       "counterEvidence": [],
       "detail": {
-        "ru": "Упаковка здесь — не логистика, а часть конструкции изделия: вычислительный кристалл и стеки памяти HBM соединяются на одной подложке, и покупатель прямо называет использованную технологию CoWoS. Мощность этой линии — отдельный предел, не совпадающий с мощностью литографии: пластина может быть готова, а собрать её не на чем. Поэтому в карте это отдельная связь с той же фабрикой, а не часть производства — очередь на упаковку и очередь на пластины расходятся во времени.",
-        "en": "Packaging here is part of the product's construction, not logistics: the compute die and the HBM memory stacks are joined on a single substrate, and the buyer names the technology it uses — CoWoS. Capacity on that line is a limit of its own, separate from lithography capacity: the wafer can be ready with nothing to assemble it on. That is why this is a separate edge to the same foundry rather than part of manufacturing — the packaging queue and the wafer queue move at different speeds."
-      }
+        "ru": "Упаковка здесь — не коробка, а отдельный производственный шаг: кристалл ускорителя и стопки памяти сажают на общую кремниевую подложку, и без этого шага чип не собирается. NVIDIA называет технологию прямо — CoWoS, — но не раскрывает ни объёмов, ни цены. Для TSMC это отдельный от печати пластин бизнес: она продаёт его под маркой 3DFabric и расширяет мощности отдельной стройкой, Fab 24. Масштаб пока несопоставим с печатью: на саму печать пластин у TSMC приходится 86% выручки, а упаковка, маски и тестирование делят остаток. Именно поэтому очередь на упаковку способна ограничить поставки ускорителей даже тогда, когда пластины уже готовы.",
+        "en": "Packaging here is not a box but a separate manufacturing step: the accelerator die and the memory stacks are mounted on one silicon substrate, and without that step the chip does not exist. NVIDIA names the technology outright — CoWoS — but discloses neither volumes nor price. For TSMC this is a business apart from printing wafers: it sells it as 3DFabric and adds capacity in a building of its own, Fab 24. The scale is not comparable yet: wafer fabrication is 86% of TSMC's revenue, while packaging, masks and testing share what is left. That is why a queue for packaging can cap accelerator shipments even when the wafers are already done."
+      },
+      "facts": [
+        {
+          "label": {
+            "ru": "Технология упаковки, которую использует NVIDIA",
+            "en": "Packaging technology NVIDIA uses"
+          },
+          "value": "CoWoS",
+          "unit": "none",
+          "asOf": "2026-FY",
+          "about": "nvidia",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "sourceType": "sec_filing",
+          "tier": 2,
+          "retrieved": "2026-08-30",
+          "verbatim": "We utilize CoWoS technology for semiconductor packaging."
+        },
+        {
+          "label": {
+            "ru": "Что TSMC продаёт помимо пластин",
+            "en": "What TSMC sells beyond wafers"
+          },
+          "value": "3DFabric",
+          "unit": "none",
+          "asOf": "2025",
+          "about": "tsmc",
+          "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+          "sourceType": "sec_filing",
+          "tier": 1,
+          "retrieved": "2026-08-30",
+          "verbatim": "We also offer design, mask making, TSMC 3DFabric advanced silicon stacking and packaging services"
+        },
+        {
+          "label": {
+            "ru": "Куда идут вложения в мощности упаковки",
+            "en": "Where packaging capacity is being added"
+          },
+          "value": "Fab 24",
+          "unit": "none",
+          "asOf": "2026",
+          "about": "tsmc",
+          "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+          "sourceType": "sec_filing",
+          "tier": 1,
+          "retrieved": "2026-08-30",
+          "verbatim": "expanding capacity for specialty technologies and advanced packaging, including building/facility expansion for Fab 24"
+        },
+        {
+          "label": {
+            "ru": "Доля упаковки и тестирования в выручке TSMC",
+            "en": "Packaging and testing in TSMC revenue"
+          },
+          "value": "86",
+          "unit": "pct",
+          "asOf": "2025",
+          "about": "tsmc",
+          "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+          "sourceType": "sec_filing",
+          "tier": 1,
+          "retrieved": "2026-08-30",
+          "verbatim": "wafer fabrication, which accounted for approximately 86% of our net revenue in 2025"
+        }
+      ]
     },
     {
       "id": "tsmc__openai__manufactures",
