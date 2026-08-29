@@ -16,7 +16,8 @@ import re
 import sys
 from datetime import date
 
-from . import db, i18n, nveco, nvnet, nvnet_centrality, nvnet_spof, nvnet_subgraphs
+from . import (db, i18n, nveco, nveco_facts, nvnet, nvnet_centrality,
+               nvnet_spof, nvnet_subgraphs)
 
 OUT_JSON = db.HANDOFF_DIR / "ai_ecosystem_network.json"
 OUT_MD = db.HANDOFF_DIR / "AI-ECOSYSTEM-NETWORK-CHANGELOG.md"
@@ -450,12 +451,15 @@ def _check_detail(payload: dict) -> list:
                 if a and b and a == b:
                     errs.append(f"связь {x['id']}: detail.{lang} дословно повторяет "
                                 f"note — такое поле не пишется, а опускается")
-        quoted = _numbers(" ".join(ev.get("quote", "") for ev in x.get("evidence", [])))
+        quoted, how = nveco_facts.backing(x, "edge")
         for lang in ("ru", "en"):
             unbacked = _unbacked(d.get(lang) or "", quoted)
             if unbacked:
-                errs.append(f"связь {x['id']}: числа в detail.{lang} не встречаются "
-                            f"ни в одной цитате: {', '.join(unbacked[:6])}")
+                errs.append(f"связь {x['id']}: числа в detail.{lang} "
+                            + (f"не лежат в реестре фактов этой связи: "
+                               if how == "facts" else
+                               f"не встречаются ни в одной цитате: ")
+                            + ", ".join(unbacked[:6]))
     return errs
 
 
@@ -541,13 +545,15 @@ def _check_description(payload: dict) -> list:
                 if s.strip() and s.strip() in text:
                     errs.append(f"сущность {e['id']}: description.{lang} дословно "
                                 f"повторяет {other} — описание добавляет, а не пересказывает")
-        quoted = _numbers(" ".join(s.get("quote", "") for s in e.get("sources", [])))
+        quoted, how = nveco_facts.backing(e, "entity")
         for lang in ("ru", "en"):
             unbacked = _unbacked(d.get(lang) or "", quoted)
             if unbacked:
-                errs.append(f"сущность {e['id']}: числа в description.{lang} не "
-                            f"встречаются ни в одной цитате этой сущности: "
-                            f"{', '.join(unbacked[:6])}")
+                errs.append(f"сущность {e['id']}: числа в description.{lang} "
+                            + ("не лежат в реестре фактов этой сущности: "
+                               if how == "facts" else
+                               "не встречаются ни в одной цитате этой сущности: ")
+                            + ", ".join(unbacked[:6]))
     return errs
 
 
@@ -617,21 +623,25 @@ def _unsourced_numbers(payload: dict) -> list:
         note = x.get("note")
         if not isinstance(note, dict):
             continue
-        quoted = _numbers(" ".join(ev.get("quote", "") for ev in x.get("evidence", [])))
+        quoted, how = nveco_facts.backing(x, "edge")
         for lang in ("ru", "en"):
-            bad = sorted(_numbers(note.get(lang) or "") - quoted)
+            bad = _unbacked(note.get(lang) or "", quoted)
             if bad:
-                errs.append(f"связь {x['id']}: числа в note.{lang} не встречаются "
-                            f"ни в одной цитате: {', '.join(bad[:6])}")
+                errs.append(f"связь {x['id']}: числа в note.{lang} "
+                            + ("не лежат в реестре фактов: " if how == "facts"
+                               else "не встречаются ни в одной цитате: ")
+                            + ", ".join(bad[:6]))
     for e in payload["entities"]:
-        quoted = _numbers(" ".join(s.get("quote", "") for s in e.get("sources", [])))
+        quoted, how = nveco_facts.backing(e, "entity")
         ol = e.get("oneLiner")
         if isinstance(ol, dict):
             for lang in ("ru", "en"):
-                bad = sorted(_numbers(ol.get(lang) or "") - quoted)
+                bad = _unbacked(ol.get(lang) or "", quoted)
                 if bad:
-                    errs.append(f"сущность {e['id']}: числа в oneLiner.{lang} не "
-                                f"встречаются ни в одной цитате: {', '.join(bad[:6])}")
+                    errs.append(f"сущность {e['id']}: числа в oneLiner.{lang} "
+                                + ("не лежат в реестре фактов: " if how == "facts"
+                                   else "не встречаются ни в одной цитате: ")
+                                + ", ".join(bad[:6]))
         # ОБОСНОВАНИЯ ФАКТОРОВ — тоже проза, и цифра в них тоже обязана быть из
         # цитаты. Правило распространено сюда Фазой 1 ради `concentration`: доля
         # функции без источника — ровно та выдумка, которую четвёртый фактор мог бы
@@ -644,9 +654,82 @@ def _unsourced_numbers(payload: dict) -> list:
                 bad = _unbacked(v.get(lang) or "", quoted)
                 if bad:
                     errs.append(f"сущность {e['id']}: числа в criticalityWhy.{f}.{lang} "
-                                f"не встречаются ни в одной цитате этой сущности: "
-                                f"{', '.join(bad[:6])}")
+                                + ("не лежат в реестре фактов этой сущности: "
+                                   if how == "facts" else
+                                   "не встречаются ни в одной цитате этой сущности: ")
+                                + ", ".join(bad[:6]))
     return errs
+
+
+def _check_facts(payload: dict) -> list:
+    """Правила самого реестра. Жёсткие — то, что видно офлайн и не прощается.
+
+    Числовой факт без фрагмента и факт, чья величина в собственном фрагменте не
+    встречается, роняют выпуск. Это не педантизм формы: расписка, выписанная не на ту
+    сумму, хуже отсутствия расписки — она создаёт видимость проверки там, где никто
+    ничего не проверял.
+    """
+    errs = []
+    ids = {e["id"] for e in payload["entities"]}
+    for kind, seq, name in (("edge", payload["edges"], "связь"),
+                            ("entity", payload["entities"], "сущность")):
+        for obj in seq:
+            facts = obj.get("facts")
+            if facts is None:
+                continue
+            if not isinstance(facts, list):
+                errs.append(f"{name} {obj['id']}: facts не массив")
+                continue
+            for f in facts:
+                lab = (f.get("label") or {})
+                if not isinstance(lab, dict) or not lab.get("ru") or not lab.get("en"):
+                    errs.append(f"{name} {obj['id']}: у факта нет двуязычной подписи")
+                    continue
+                where = f"{name} {obj['id']}, факт «{lab['ru'][:40]}»: "
+                row = {"owner_kind": kind, "owner_key": obj["id"],
+                       "label_ru": lab["ru"], "label_en": lab["en"],
+                       "value": f.get("value"), "unit": f.get("unit"),
+                       "as_of": f.get("asOf"), "about": f.get("about"),
+                       "url": f.get("url"), "source_type": f.get("sourceType"),
+                       "retrieved": f.get("retrieved"), "verbatim": f.get("verbatim")}
+                errs += nveco_facts.validate_fact(row, ids, where)
+                if kind == "edge" and f.get("about") and \
+                        f["about"] not in (obj["source"], obj["target"]):
+                    errs.append(f"{where}about '{f['about']}' — величина связи должна "
+                                f"быть об одном из её концов")
+    return errs
+
+
+def prose_debt(payload: dict) -> dict:
+    """Кто ещё держит числа прозы на цитатах, а не на реестре.
+
+    Не ошибка — долг. Правило подкрепления включается ПО ОБЪЕКТУ, и объект без
+    реестра работает по-старому; но молча это оставлять нельзя, иначе переход
+    остановится на первой же сотне и никто этого не заметит.
+    """
+    rewritten, debt, one_doc = [], [], []
+    for kind, seq, fields in (
+            ("edge", payload["edges"], ("note", "detail")),
+            ("entity", payload["entities"], ("oneLiner", "description"))):
+        for obj in seq:
+            texts = []
+            for f in fields:
+                v = obj.get(f)
+                if isinstance(v, dict):
+                    texts += [v.get("ru") or "", v.get("en") or ""]
+            if kind == "entity":
+                for v in (obj.get("criticalityWhy") or {}).values():
+                    if isinstance(v, dict):
+                        texts += [v.get("ru") or "", v.get("en") or ""]
+            has_numbers = any(_numbers(t) for t in texts)
+            if obj.get("facts"):
+                rewritten.append(obj["id"])
+                if nveco_facts.one_document(obj["facts"]):
+                    one_doc.append(obj["id"])
+            elif has_numbers:
+                debt.append(obj["id"])
+    return {"rewritten": sorted(rewritten), "debt": sorted(debt),
+            "oneDocument": sorted(one_doc)}
 
 
 # ── валидатор ────────────────────────────────────────────────────────────────
@@ -851,6 +934,7 @@ def validate(payload: dict) -> list:
 
     errs += _check_detail(payload)
     errs += _check_description(payload)
+    errs += _check_facts(payload)
 
     # PageRank — доля важности, и сумма долей обязана равняться единице. Расхождение
     # означает, что мера посчитана на другом множестве узлов или обрезана после
@@ -1229,6 +1313,7 @@ def run(month: str, net: dict) -> dict:
             "coreRule": payload["meta"]["coreRule"],
             "coreTop": core_top,
             "membership": payload["meta"]["membership"],
+            "prose": prose_debt(payload),
             "descriptions": description_coverage(payload)}
 
 

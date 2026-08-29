@@ -88,7 +88,7 @@ Putting the USA between "memory" and "systems" would be a lie about the nature o
 the relationship — Commerce supplies nobody, it decides who may sell to whom.
 Hence the separate `control` plane.
 
-**38 sectors** sit under the layers (`foundry`, `hbm`, `neocloud`,
+**39 sectors** sit under the layers (`foundry`, `hbm`, `neocloud`,
 `export_authority`, …). They are the map's own taxonomy — nothing points at an
 external classification.
 
@@ -389,6 +389,47 @@ python tools/queue_review.py --rejections    # open rejections with their keys
 python tools/feedback_check.py               # exit 1 while anything is unconsumed
 ```
 
+### The hunt — what the map does not have
+
+Rejections answer "what did we refuse". The candidate queue answers "which **node**
+are we missing". Neither could answer the third question, and until it was asked the
+map had a hole with a name on it: TSMC, the largest foundry in the world, had six
+customers, and every one of them was found because *the customer* named TSMC in its
+own filing. Not one was found from TSMC's side.
+
+Three reasons, none of them about research quality:
+
+1. **Edge discovery was a side effect of reading a node.** An edge A–B appeared only
+   if a dossier for A happened to meet B's name in A's documents. There was no list
+   of pairs that probably exist, and no record of a pair looked for and not found.
+2. **For a whole class of relationships the name is on neither side.** Measured, not
+   assumed: TSMC writes "Our largest customer … accounted for" with no name; Marvell
+   writes "third-party foundries located in Taiwan" with no name; Amazon's 10-K
+   contains the words TSMC, foundry, Trainium and Graviton **zero** times in 312,000
+   characters. All three describe the relationship. None names the counterparty.
+3. **The candidate queue only catches missing nodes.** Amazon and Marvell are both on
+   the map, so their missing TSMC link could never be a candidate.
+
+`engine/nveco_gaps.py` generates hunt tasks from what the corpus already holds:
+
+| generator | the reason |
+|---|---|
+| `disclosed_unnamed` | the node's own quote discloses a counterparty without naming it. Sixty such quotes were already in the corpus across forty-nine objects, and nothing read them: the map had said it was incomplete sixty times. |
+| `expected_edge` | the taxonomy says a node of this kind does not work without a counterparty of that kind, and it has none of that class. The rule names **classes**, never companies, so it cannot pre-decide the answer. |
+
+Tasks ride into the dossier pack as `to_hunt` — the only section that tells the agent
+what the map does **not** have. For that work any tier is allowed: a named
+counterparty from a press report beats an unnamed one from a filing.
+
+A task closes two ways, and both are answers: `found` (the edge is entered, with a
+quote) or `not_found` (we looked, we did not find, the reason goes to
+`nvnet_not_found` and the pair is not re-asked for six months). `dismissed` is the
+third, and it is a finding about the **rule**, not the map. Silence is not a fourth —
+`tools/feedback_check.py` fails the run while a task has hung past its threshold.
+
+The counters on rejections and hunt tasks measure **months, not runs**: rebuilding the
+same month is not another occasion on which the task was ignored.
+
 ### Ageing and retirement
 
 An entity unconfirmed for **6 months** is flagged `stale`. Stale means *shown and
@@ -422,11 +463,11 @@ Contract **`ai-ecosystem-network/4`**, release `v4.0-2026-08`.
 
 | | current |
 |---|---|
-| entities | 108 |
-| edges | 314 |
+| entities | 110 |
+| edges | 321 |
 | cycles | 225 (lockin 124, financing 73, sales 28) |
 | tech nodes | 10 |
-| layers / sectors | 16 / 38 |
+| layers / sectors | 16 / 39 |
 | edge types | 33 on 5 spines |
 | core | 30, computed |
 | subgraphs | 12 |
@@ -436,7 +477,7 @@ Contract **`ai-ecosystem-network/4`**, release `v4.0-2026-08`.
 | sidedness | single 244 · bilateral 70 · disputed 0 |
 | profile source tiers | 1: 445 · 2: 111 · 3: 3 · 4: 2 |
 | median sources per profile | 5 |
-| profiles with no citation of their own | 10 of 108 |
+| profiles with no citation of their own | 10 of 110 |
 
 **Per entity:** id, name, type, role, sector, layers, criticality plus the four
 factors plus a reason for each, `criticalityBasis`, `integration` (score and its
@@ -463,8 +504,8 @@ their document: a translated quote is not a quote.
 covers `description`, `oneLiner`, `note`, `detail` and all four factor
 justifications. A number the reader cannot check is worse than no number.
 
-**Validators refuse to write a broken file.** Four suites, 113 cases:
-`nveco_corrupt_test` 42, `nvnet_nosource_test` 53, `nveco_retire_test` 15,
+**Validators refuse to write a broken file.** Four suites, 119 cases:
+`nveco_corrupt_test` 42, `nvnet_nosource_test` 53, `nveco_retire_test` 21,
 `nvnet_retire_test` 3.
 
 ---
@@ -499,9 +540,22 @@ there are 244.
 explainer is written by a separate pass (`agents/nvnet-detail`), which runs on its
 own cadence.
 
-**NVIDIA's connectivity is 24.5% and is still partly an artefact.** Removing it
-costs 1,392 pairs of entities their path. The map grew outward from it, so its
-degree is 122 against a network average of 5.81. The figure fell from 37.0% as
+**The map still has no way to see a node nobody named.** The hunt closes the gap
+for *edges* between nodes already present, and the candidate queue closes it for
+nodes named by someone present. A layer that no node on the map has ever mentioned
+remains invisible: there is nothing to detect it with. §12 of the build log calls
+this out at length.
+
+**Two taxonomy defects the hunt exposed on its first run.** There was no sector for
+a fabless silicon designer, which is why AMD carries `foundry` while owning no fab —
+and why the `fab_needs_equipment` rule immediately issued it a task to find its
+equipment supplier. `fabless_silicon` now exists; AMD's own row is the layer agent's
+to correct. And `rack_needs_accelerator` expects `supplies` where the taxonomy also
+allows `integrates`, which produced one false task against Foxconn.
+
+**NVIDIA's connectivity is 22.5% and is still partly an artefact.** Removing it
+costs 1,325 pairs of entities their path. The map grew outward from it, so its
+degree is 122 against a network average of 5.84. The figure fell from 37.0% as
 edges that touch neither end of it arrived; it will keep falling for the same
 reason, and only for that reason.
 
@@ -526,12 +580,13 @@ for the same reason.
 | Layer briefs | `agents/nveco-*.md` |
 | Seed engine | `engine/nveco*.py` |
 | Feedback ledger and queue | `engine/nveco_feedback.py` |
+| Hunt for missing edges | `engine/nveco_gaps.py`, `config/nveco_gaps.yaml` |
 | Network engine | `engine/nvnet*.py` |
 | Bilingual store | `engine/i18n.py` |
 | Schemas | `db/schema_nveco.sql`, `db/schema_nvnet.sql` |
 | Orchestrators | `run_nvidia.py`, `run_network.py` |
 | Dossier batches | `tools/make_dossier_batches.py`, `tools/dossier_split.py` |
-| Queue and feedback | `tools/queue_review.py`, `tools/feedback_check.py` |
+| Queue, hunt and feedback | `tools/queue_review.py`, `tools/gap_review.py`, `tools/feedback_check.py` |
 | Corruption tests | `tools/nveco_corrupt_test.py`, `tools/nvnet_nosource_test.py` |
 | Retirement tests | `tools/nveco_retire_test.py`, `tools/nvnet_retire_test.py` |
 | Build logs | `handoff/AI-ECOSYSTEM-V4-BUILD-LOG.md` and its predecessors |
@@ -554,8 +609,9 @@ python run_network.py 2026-09 --deliver        # network + ship to dashboard
 # offline (skip URL re-verification):
 python run_nvidia.py 2026-09 --offline
 
-# feedback and the queue
+# feedback: the queue, the hunt, the gate
 python tools/queue_review.py
+python tools/gap_review.py --open
 python tools/feedback_check.py
 
 # the suites

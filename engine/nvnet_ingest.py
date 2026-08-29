@@ -19,6 +19,7 @@ import sys
 from datetime import date
 
 from . import db, nveco, nvnet
+from . import nveco_facts
 from .ingest import is_search_url
 from .nveco_ingest import (_owned_by, _retiring_agents, _validate_entity,
                            _validate_factors, _validate_source, WHY_COLUMNS)
@@ -287,6 +288,7 @@ def build(month: str) -> dict:
     # выборочно и обновляется чаще самой связи: держать его рядом дешевле, чем
     # перегенерировать семя ради одного абзаца.
     detail_rows = 0
+    facts_seen = []
     for adir in agent_dirs:
         f = adir / "details.csv"
         if not f.exists():
@@ -344,6 +346,51 @@ def build(month: str) -> dict:
             entities[eid]["description"] = ru
             entities[eid]["_description_en"] = en
             desc_rows += 1
+    # ── РЕЕСТР ФАКТОВ: facts.csv ──────────────────────────────────────────────
+    # Величины, на которые опирается проза, приезжают ОТДЕЛЬНО от неё — и это главное
+    # в правке /5. Пока число жило внутри цитаты, текст был обёрткой вокруг того, что
+    # нашлось; теперь текст пишется свободно, а каждая величина лежит распиской рядом.
+    #
+    # Дом двуязычной подписи — этот CSV, как у detail и description. В базу едет
+    # проверяемая часть (величина, ссылка, фрагмент): она нужна `nveco_verify`, чтобы
+    # помнить, когда величину последний раз искали на странице.
+    fact_rows, fact_bad = 0, 0
+    for adir in agent_dirs:
+        f = adir / "facts.csv"
+        if not f.exists():
+            continue
+        per_file[(adir.name, "facts.csv")] = 0
+        for line, row in _read(f):
+            per_file[(adir.name, "facts.csv")] += 1
+            kind = (row.get("owner_kind") or "").strip()
+            key = (row.get("owner_key") or "").strip()
+            errs = nveco_facts.validate_fact(row, set(entities), "")
+            if kind == "entity" and key not in entities:
+                errs.append(f"факт для неизвестной сущности '{key}'")
+            if kind == "edge" and key not in edges:
+                errs.append(f"факт для неизвестной связи '{key}'")
+            if errs:
+                fact_bad += 1
+                rejects.append({"file": f"{adir.name}/facts.csv", "line": line,
+                                "reason": "; ".join(errs), "row": str(row)[:300]})
+                continue
+            owner = entities[key] if kind == "entity" else edges[key]
+            # Тир величины считается относительно ПРЕДМЕТА — по тому же реестру
+            # издателей, что и у источника. Досье и проза не назначают его сами.
+            subject = key if kind == "entity" else owner["source"]
+            cp = None if kind == "entity" else owner["target"]
+            tier = nveco.source_tier(row.get("url"), subject, cp)[0] or 6
+            fact = nveco_facts.to_payload(row, tier)
+            have = {(x["url"], x["label"]["ru"]) for x in owner.get("facts") or []}
+            if (fact["url"], fact["label"]["ru"]) in have:
+                problems.append(f"{adir.name}/facts.csv:{line} величина "
+                                f"«{fact['label']['ru']}» по этой ссылке уже заявлена "
+                                f"— строка пропущена")
+                continue
+            owner.setdefault("facts", []).append(fact)
+            facts_seen.append((kind, key, fact))
+            fact_rows += 1
+
     # ── ПЕРЕПИСАННАЯ ПРОЗА: notes.csv и oneliners.csv ─────────────────────────
     # Тот же путь, что у detail, и по той же причине: 262 связи и 107 сущностей
     # приходят из замороженного семени v2, а проза переписывается чаще, чем
@@ -567,6 +614,7 @@ def build(month: str) -> dict:
             "newEntities": new_ent, "newEdges": new_edge, "newSources": new_src,
             "details": detail_rows, "descriptions": desc_rows,
             "notes": note_rows, "oneLiners": liner_rows,
+            "facts": fact_rows, "factsRejected": fact_bad, "factRows": facts_seen,
             "problems": problems, "rejects": rejects, "dropped": dropped}
 
 
@@ -634,6 +682,41 @@ def _retire(con, month, net) -> dict:
 
     return {"entities": stale_ents, "edges": stale_edges, "pairs": stale_pairs,
             "held": held, "broken": sorted(set(broken + broken_e))}
+
+
+def persist_facts(month: str, net: dict) -> int:
+    """Сложить проверяемую часть реестра в базу.
+
+    Двуязычная подпись сюда НЕ едет: её дом — CSV прогона, как у detail и
+    description. База хранит то, чего CSV не умеет, — память о том, когда величину
+    последний раз искали на странице и нашлась ли она там. Строка, исчезнувшая из
+    CSV, исчезает и отсюда: реестр авторитетен за свой месяц, как и всё остальное.
+    """
+    con = db.connect()
+    con.executescript((db.ROOT / "db" / "schema_nveco.sql").read_text())
+    rows = net.get("factRows") or []
+    keep = {(k, key, f["url"], f["label"]["ru"]) for k, key, f in rows}
+    for r in con.execute("SELECT owner_kind, owner_id, url, label FROM nveco_fact"):
+        if (r["owner_kind"], r["owner_id"], r["url"], r["label"]) not in keep:
+            con.execute("DELETE FROM nveco_fact WHERE owner_kind=? AND owner_id=? "
+                        "AND url=? AND label=?",
+                        (r["owner_kind"], r["owner_id"], r["url"], r["label"]))
+    for kind, key, f in rows:
+        con.execute(
+            """INSERT INTO nveco_fact (owner_kind, owner_id, label, value, unit, as_of,
+                 about, url, source_type, tier, retrieved, verbatim, run_month)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)
+               ON CONFLICT(owner_kind, owner_id, label, url) DO UPDATE SET
+                 value=excluded.value, unit=excluded.unit, as_of=excluded.as_of,
+                 about=excluded.about, source_type=excluded.source_type,
+                 tier=excluded.tier, retrieved=excluded.retrieved,
+                 verbatim=excluded.verbatim, run_month=excluded.run_month""",
+            (kind, key, f["label"]["ru"], f["value"], f["unit"], f["asOf"], f["about"],
+             f["url"], f["sourceType"], f["tier"], f["retrieved"], f["verbatim"], month))
+    con.commit()
+    n = con.execute("SELECT COUNT(*) c FROM nveco_fact").fetchone()["c"]
+    con.close()
+    return n
 
 
 def persist(month: str, net: dict) -> dict:

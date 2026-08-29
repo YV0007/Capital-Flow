@@ -124,6 +124,11 @@ def main(month: str, do_deliver: bool = False,
     else:
         print(f"[verify]  {v['checked']} ссылок: {v['alive']} живых, {v['dead']} мёртвых, "
               f"{v['blocked']} заблокировано/пейволл")
+    if v.get("facts_checked"):
+        print(f"[величины] проверено на страницах {v['facts_checked']}, найдено "
+              f"{v['facts_found']}; расхождений {len(v['facts_missing'])}")
+        for m in v["facts_missing"][:10]:
+            print("          НЕ НАЙДЕНО", m)
     for u in v["dead_urls"][:10]:
         print("          МЁРТВАЯ", u)
 

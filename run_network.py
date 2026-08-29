@@ -31,7 +31,9 @@ def main(month: str, do_deliver: bool = False, offline: bool = False) -> int:
     print(f"[ingest]  {len(net['entities'])} сущностей, {len(net['edges'])} связей "
           f"(семя {len(net['seed']['entities'])}/{len(net['seed']['edges'])}, "
           f"достройка +{net['newEntities']}/+{net['newEdges']})")
-    print(f"          прочитано описаний сущностей: {net['descriptions']}")
+    print(f"          прочитано описаний сущностей: {net['descriptions']}; "
+          f"величин в реестре: {net['facts']}"
+          + (f", отклонено {net['factsRejected']}" if net["factsRejected"] else ""))
     for p in net["problems"][:15]:
         print("          ", p)
     if net["rejects"]:
@@ -42,7 +44,9 @@ def main(month: str, do_deliver: bool = False, offline: bool = False) -> int:
         print(f"          вне сети: {', '.join(net['dropped'][:8])}")
 
     if not offline:
+        n_facts = nvnet_ingest.persist_facts(month, net)
         r = nvnet_ingest.persist(month, net)
+        print(f"[реестр]  в базе {n_facts} величин — ведомость для проверки значений")
         print("[persist] достройка записана в nvnet_* (семя не дублируется)")
         if r["entities"] or r["edges"] or r["pairs"]:
             print(f"          снято с карты: {len(r['entities'])} сущностей, "
@@ -100,6 +104,13 @@ def main(month: str, do_deliver: bool = False, offline: bool = False) -> int:
               f"{len(s['edgeIds'])} связей{mark}")
     for note in n.get("subgraphNotes", []):
         print("           ", note)
+    pr = h["prose"]
+    print(f"[реестр]  величины лежат у {len(pr['rewritten'])} объектов; "
+          f"числа на цитатах, а не в реестре, ещё у {len(pr['debt'])} — это долг")
+    if pr["oneDocument"]:
+        print(f"          все расписки одного документа у {len(pr['oneDocument'])}: "
+              + ", ".join(pr["oneDocument"][:6]))
+
     dc = h["descriptions"]
     print(f"[описания] description есть у {dc['have']} из {dc['total']} сущностей; "
           f"пивотов {dc['pivots_have']}/{dc['pivots']}")

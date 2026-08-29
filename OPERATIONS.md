@@ -238,6 +238,14 @@ an entity only after rotation has worked its dossier; until then it carries
 failure of a node is not evidence against an edge that has its own citation and its
 own owner (`membership.on_fail` in `config/nveco_scope.yaml`).
 
+**The map hunts for what it does not have.** Rejections answer "what did we refuse";
+the candidate queue answers "which node are we missing"; the hunt (`nveco_gap`,
+`config/nveco_gaps.yaml`) answers the third question — **which edge are we missing
+between two nodes that are both already here.** Its reasons come from the corpus: a
+node's own quote disclosing a counterparty without naming it, or a taxonomy rule
+promising an edge the node has with nobody. A task closes as `found` or as
+`not_found` with a reason that goes to `nvnet_not_found`; silence is not a third way.
+
 **Feedback is consumed, not accumulated.** Rejections live in `nveco_rejection`
 until fixed or explicitly decided; a rejection about an entity becomes a
 candidate-queue row; the queue is worked through in full, every row accepted or
@@ -429,7 +437,7 @@ dashboard.
 | Monthly | Ecosystem map — core tier (top 30) dossiers, ~40 nodes in batches of 8 | `tools/make_dossier_batches.py --tier=due`, then `run_nvidia.py` + `run_network.py` |
 | Quarterly | Ecosystem map — mid tier dossiers | same, `--tier=due` picks them up by cadence |
 | On trigger | Ecosystem map — tail: an edge touched the node, or 6 months without confirmation | same |
-| Every ecosystem run | Candidate queue and rejection ledger worked through in full | `tools/queue_review.py`, gate `tools/feedback_check.py` |
+| Every ecosystem run | Candidate queue, rejection ledger and hunt tasks worked through in full | `tools/queue_review.py`, `tools/gap_review.py`, gate `tools/feedback_check.py` |
 | Monthly (planned) | Fund portfolios | `run_holdings.py`, 20th or later |
 | Per filing | Fund Tracker — poll EDGAR submissions, ingest on new accession | `run_funds.py` |
 | After each new map | Logo pipeline for new entities | `npm run logos` |
@@ -509,4 +517,13 @@ boundary or rule. Newest last. Never edit a past entry.
   gate (`tools/feedback_check.py`) after the old file-based loop was found dead.
   §4b and §9 rewritten; §6 now states the emitted and the delivered contract
   separately, because the engine is on `/4` and the dashboard is still on `/3`.
+- **2026-08-29** — Ecosystem map, campaign v4 phase 4. Added the hunt for missing
+  edges after TSMC was found with six customers, every one of them discovered from
+  the customer's side. Two generators, both fed by the corpus: a node's own quote
+  disclosing an unnamed counterparty, and a taxonomy rule promising an edge the node
+  has with nobody. Answers are `found` / `not_found` (which now finally populates
+  `nvnet_not_found`) / `dismissed`; `tools/feedback_check.py` gates on them. Rejection
+  and hunt counters now measure months rather than runs. Taxonomy gained a 39th
+  sector, `fabless_silicon`. Payload gained `nameEn`, filled for the 11 entities whose
+  name is genuinely translatable.
 
