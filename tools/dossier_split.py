@@ -31,7 +31,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from engine import db, nveco  # noqa: E402
+from engine import db, nveco, nveco_feedback  # noqa: E402
 
 FACTORS = list(nveco.FACTORS)
 WHY = {"irreplaceability": "why_irreplaceability", "lock_in_depth": "why_lock_in",
@@ -268,13 +268,23 @@ def run(month: str, only: str = None, check: bool = False) -> dict:
                       "confirms": o["confirms"], "counters": o["counters"],
                       "candidates": len(o["candidates"]),
                       "errors": len(o["errors"])})
+    queued = {}
     if all_candidates and not check:
         q = base / "_queue"
         q.mkdir(parents=True, exist_ok=True)
         _write(q / "candidates.csv",
                ["named_by", "name", "why", "url", "quote", "month", "batch"],
                all_candidates)
-    return {"batches": stats, "errors": errors, "candidates": len(all_candidates)}
+        # CSV перезаписывается каждым прогоном, поэтому нерешённый кандидат исчезал
+        # бы вместе с месяцем, который его назвал. Очередь живёт в базе; CSV остаётся
+        # человеку. Разбор очереди — tools/queue_review.py.
+        con = nveco.connect()
+        queued = nveco_feedback.record_candidates(con, month, all_candidates)
+        queued["on_map"] = nveco_feedback.mark_on_map(con, month)
+        con.commit()
+        con.close()
+    return {"batches": stats, "errors": errors, "candidates": len(all_candidates),
+            "queue": queued}
 
 
 if __name__ == "__main__":
@@ -291,4 +301,10 @@ if __name__ == "__main__":
     for e in out["errors"]:
         print("  ОШИБКА", e)
     print(f"кандидатов всего: {out['candidates']}")
+    q = out.get("queue") or {}
+    if q:
+        print(f"очередь в базе: новых {q.get('new', 0)}, повторно названо "
+              f"{q.get('repeated', 0)}, уже на карте {len(q.get('on_map') or [])}")
+        for name, eid in (q.get("on_map") or []):
+            print(f"  уже на карте: {name} -> {eid}")
     sys.exit(1 if out["errors"] else 0)

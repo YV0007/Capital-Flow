@@ -29,7 +29,7 @@ config/aliases.yaml и грузит в nveco_*.
 import csv
 import sys
 
-from . import db, nveco
+from . import db, nveco, nveco_feedback
 from .ingest import is_search_url
 
 ENTITY_COLUMNS = ["id", "name", "aliases", "type", "role", "sector", "primary_layer",
@@ -892,6 +892,15 @@ def ingest_month(month: str, scope_id: str = None) -> dict:
     memb = membership_report(ents, edges, srcs, prev_status)
     memb["path"] = write_membership_report(month, memb)
 
+    # --- обратная связь: отказы и очередь переезжают в реестр, который переживает
+    # прогон. CSV ниже остаётся человеку; машина с этого момента читает базу.
+    # Почему так — целиком в докстроке engine/nveco_feedback.py: файл жил один
+    # прогон, путь в брифе не совпадал с путём записи, а отказ по СУЩНОСТИ доставить
+    # было нечем, потому что пакет собирается обходом сущностей базы.
+    fb_stats = nveco_feedback.record_rejections(con, month, rejected)
+    fb_stats["queued"] = nveco_feedback.enqueue_rejected_entities(con, month)
+    fb_stats["on_map"] = nveco_feedback.mark_on_map(con, month)
+
     con.commit()
     con.close()
 
@@ -918,6 +927,7 @@ def ingest_month(month: str, scope_id: str = None) -> dict:
             "held_entities": held_ents,
             "broken_agents": sorted(set(broken_edges + broken_ents)),
             "membership": memb,
+            "feedback": fb_stats,
             "warnings": warnings,
             "rejects_dir": str(rej_dir) if rejected else None}
 

@@ -858,6 +858,17 @@ _WHY = {
 }
 
 
+def _cl_has_changes(cl: dict) -> bool:
+    """Несёт ли чейнджлог хоть одну содержательную строку.
+
+    `baseline` считается изменением: первый выпуск — тоже событие. Служебные ключи
+    (`month`, `version`, `rerun`) не считаются.
+    """
+    if cl.get("baseline"):
+        return True
+    return any(cl.get(k) for k in nvnet.CHANGE_CATEGORIES)
+
+
 def _changelog(prev, cur, net):
     cl = {k: [] for k in nvnet.CHANGE_CATEGORIES}
     cl["month"] = cur["asOf"]
@@ -1096,6 +1107,16 @@ def run(month: str, net: dict) -> dict:
         return {"ok": False, "errors": errors, "path": str(OUT_JSON)}
     persist_integration(month, payload)
     cl = _changelog(prev, payload, net)
+    # ПОВТОРНЫЙ ПРОГОН — НЕ НОВЫЙ ВЫПУСК. Базой чейнджлога служит ранее записанный
+    # payload, поэтому прогон, ничего не изменивший, честно даёт пустой diff — и этим
+    # СТИРАЕТ запись о том, что несёт выпуск. Один прогон «чтобы пересобрать после
+    # правки скрипта» — и файл сообщает «изменений нет» там, где на деле уехали
+    # четыре связи. Пустой diff при той же версии оставляет прежний чейнджлог.
+    if prev and prev.get("version") == payload["version"] and not _cl_has_changes(cl) \
+            and _cl_has_changes(prev.get("changelog") or {}):
+        cl = prev["changelog"]
+        cl["rerun"] = ("прогон не изменил ни одной строки; чейнджлог выпуска "
+                       "сохранён от предыдущего прогона того же месяца")
     payload["changelog"] = cl
     OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
     OUT_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n")

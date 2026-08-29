@@ -28,7 +28,7 @@ sys.path.insert(0, str(ROOT))
 TMP = Path(tempfile.mkdtemp(prefix="nveco-retire-"))
 os.environ["CAPITAL_DB"] = str(TMP / "test.db")
 
-from engine import db, nveco, nveco_ingest              # noqa: E402
+from engine import db, nveco, nveco_feedback, nveco_ingest   # noqa: E402
 
 db.RUNS_DIR = TMP / "runs"
 MONTH = "2026-08"
@@ -293,6 +293,139 @@ def _(log):
     log("должник по членству помечен и оставлен; молчание агента не снимает ничего")
 
 
+# ── ОБРАТНАЯ СВЯЗЬ ───────────────────────────────────────────────────────────
+# Отдельная группа случаев, заведённая Фазой 2. Проверяется не то, что отказ ЗАПИСАН
+# — это работало и раньше, — а то, что он ДОСТАВЛЕН и не может потеряться молча.
+#
+# Повод известен поимённо. `Carl Zeiss SMT` отвергался каждым прогоном, причина
+# писалась в файл, файл лежал в репозитории закоммиченным, и ни одна проверка не была
+# обязана его открыть. Механика без проверки потребления выглядит живой ровно до дня,
+# когда кто-нибудь пересчитает данные руками.
+
+OFFSCOPE = ["ghost", "Ghost Corp", "company", "producer", "gpu", "L99", "вне слоёв"]
+
+
+def _with_ghost(agent="nveco-silicon"):
+    """Месяц, в котором один агент прислал сущность с несуществующим слоем.
+
+    Такая строка отвергается загрузкой и на карту не попадает — то есть попадает
+    ровно в тот класс отказов, который прежняя механика доставить не могла.
+    """
+    _month({"nveco-silicon": SILICON, "nveco-capital": CAPITAL})
+    base = db.RUNS_DIR / MONTH / agent
+    rows = [ENTITIES[i] for i in ("nvidia", "tsmc", "asml")] + [OFFSCOPE]
+    _write(base / "entities.csv", ENTITY_COLS, rows)
+
+
+@check("отказ по сущности переживает прогон и встаёт в очередь кандидатов")
+def _(log):
+    _with_ghost()
+    s = nveco_ingest.ingest_month(MONTH)
+    assert s["rejected"] >= 1, s["rejected"]
+    con = nveco.connect()
+    rej = [dict(r) for r in con.execute(
+        "SELECT * FROM nveco_rejection WHERE subject_kind='entity'")]
+    cand = [dict(r) for r in con.execute("SELECT * FROM nveco_candidate")]
+    con.close()
+    assert len(rej) == 1, rej
+    assert rej[0]["subject_name"] == "Ghost Corp", rej[0]
+    log(f"отказ записан: {rej[0]['reason'][:60]}")
+    # ГЛАВНОЕ. Отклонённой сущности в базе нет, и пакет узла ей собрать нельзя.
+    # Единственный канал, у которого есть потребитель, — очередь кандидатов.
+    assert [c["name"] for c in cand] == ["Ghost Corp"], cand
+    assert cand[0]["origin"] == "rejection", cand[0]
+    assert rej[0]["status"] == "queued", rej[0]
+    log("отклонённая сущность доставлена в очередь кандидатов, а не в файл")
+
+
+@check("отказ, присланный второй раз без изменений, считается повтором")
+def _(log):
+    _with_ghost()
+    nveco_ingest.ingest_month(MONTH)
+    _with_ghost()
+    nveco_ingest.ingest_month(MONTH)
+    con = nveco.connect()
+    r = con.execute("SELECT * FROM nveco_rejection WHERE subject_kind='entity'").fetchone()
+    con.close()
+    assert r["times"] == 2, dict(r)
+    assert r["first_seen"] == MONTH and r["last_seen"] == MONTH
+    log("счётчик повторов 2 — строка не подменена новой записью")
+
+
+@check("отказ, который перестал приходить, снимается сам и без решения")
+def _(log):
+    _with_ghost()
+    nveco_ingest.ingest_month(MONTH)
+    _month({"nveco-silicon": SILICON, "nveco-capital": CAPITAL})   # призрака больше нет
+    nveco_ingest.ingest_month(MONTH)
+    con = nveco.connect()
+    r = con.execute("SELECT * FROM nveco_rejection WHERE subject_kind='entity'").fetchone()
+    con.close()
+    # 'queued' не переоткрывается и не «снимается исправлением»: предмет уже передан
+    # очереди, и её решение — единственное, которое его закрывает.
+    assert r["status"] == "queued", dict(r)
+    log("строка, переданная очереди, остаётся за очередью")
+
+
+@check("dismissed не переоткрывается повторной присылкой, open — переоткрывается")
+def _(log):
+    _with_ghost()
+    nveco_ingest.ingest_month(MONTH)
+    con = nveco.connect()
+    key = con.execute("SELECT key FROM nveco_rejection WHERE subject_kind='edge' "
+                      "OR subject_kind='entity' LIMIT 1").fetchone()["key"]
+    nveco_feedback.decide_rejection(con, key, "dismissed", "так и должно быть", MONTH)
+    con.commit()
+    con.close()
+    _with_ghost()
+    nveco_ingest.ingest_month(MONTH)
+    con = nveco.connect()
+    r = con.execute("SELECT * FROM nveco_rejection WHERE key=?", (key,)).fetchone()
+    con.close()
+    assert r["status"] == "dismissed", dict(r)
+    assert r["times"] == 2, dict(r)
+    log("решение 'обязано отвергаться всегда' держится, повторы всё равно считаются")
+
+
+@check("кандидат, оказавшийся на карте, получает решение, а не молчание")
+def _(log):
+    _month({"nveco-silicon": SILICON, "nveco-capital": CAPITAL})
+    nveco_ingest.ingest_month(MONTH)
+    con = nveco.connect()
+    nveco_feedback.record_candidates(con, MONTH, [
+        {"name": "TSMC", "named_by": "nvidia", "why": "названа в отчётности"},
+        {"name": "Celestica", "named_by": "nvidia", "why": "названа сборщиком"}])
+    hit = nveco_feedback.mark_on_map(con, MONTH)
+    con.commit()
+    rows = {r["name"]: dict(r) for r in con.execute("SELECT * FROM nveco_candidate")}
+    audit = nveco_feedback.audit(con)
+    con.close()
+    assert [h[1] for h in hit] == ["tsmc"], hit
+    assert rows["TSMC"]["status"] == "on_map" and rows["TSMC"]["decision"], rows["TSMC"]
+    assert rows["Celestica"]["status"] == "open", rows["Celestica"]
+    # Нерешённый кандидат обязан РОНЯТЬ проверку, а не тихо лежать в очереди.
+    assert not audit["ok"], audit
+    assert [c["name"] for c in audit["open_candidates"]] == ["Celestica"], audit
+    log("на карте — решение с id; не на карте — открытая строка, роняющая проверку")
+
+
+@check("пакетчик отдаёт отказ, чей предмет на карту не попал")
+def _(log):
+    # Структурная дыра, в которой просидел Carl Zeiss SMT: пакет собирается обходом
+    # сущностей базы, отклонённой сущности в базе нет, значит её отказ не мог попасть
+    # ни в один пакет — ни тогда, ни потом.
+    _with_ghost()
+    nveco_ingest.ingest_month(MONTH)
+    con = nveco.connect()
+    off = nveco_feedback.offmap_rejections(con)
+    inpack = nveco_feedback.rejections_for(con, {"nvidia", "tsmc", "asml"})
+    con.close()
+    names = {o["name"] or o["id"] for o in off}
+    assert "Ghost Corp" in names, off
+    assert not any("Ghost" in str(v) for v in inpack.values()), inpack
+    log(f"вне карты и потому вне пакета узла: {', '.join(sorted(n for n in names if n))}")
+
+
 def main():
     fails = 0
     for name, fn in CHECKS:
@@ -306,7 +439,7 @@ def main():
             fails += 1
     shutil.rmtree(TMP, ignore_errors=True)
     print(f"\n{'PASS' if not fails else 'FAIL'}: {len(CHECKS) - fails}/{len(CHECKS)} "
-          f"проверок снятия с карты")
+          f"проверок снятия с карты и обратной связи")
     return 1 if fails else 0
 
 

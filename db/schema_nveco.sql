@@ -238,3 +238,60 @@ CREATE TABLE IF NOT EXISTS nveco_run (
     created_at TEXT NOT NULL DEFAULT (datetime('now')),
     UNIQUE (month, scope_id, agent)
 );
+
+-- ── ОБРАТНАЯ СВЯЗЬ ПО ОТКАЗАМ ────────────────────────────────────────────────
+-- Отказ, лежащий в CSV, — это не обратная связь, а запись в архиве. Фаза 0 доказала
+-- это на Carl Zeiss SMT: правило шагов выбрасывало его каждый прогон, писало причину
+-- в runs/<месяц>/_rejected/nveco-silicon.csv, файл лежал в репозитории закоммиченным
+-- и не был прочитан ни разу. Механика писала — не читал никто.
+--
+-- Три причины, по которым файл не мог сработать, и что тут против каждой:
+--   1. Файл жил ровно один прогон: ingest чистит каталог перед записью нового.
+--      Здесь — строка живёт, пока её не сняли, и помнит, сколько прогонов подряд
+--      повторялась (`times`).
+--   2. Отказ ПО СУЩНОСТИ невозможно было доставить: пакетчик собирает пакет по
+--      сущностям базы, а отклонённой сущности в базе по определению нет.
+--      Здесь — `subject_id`/`subject_name` стоят отдельными колонками, и пакетчик
+--      отдаёт такие отказы вне пакета, списком «отклонено, на карту не попало».
+--   3. Никто не проверял, что отказ прочитан. Здесь — `status` и `decided_month`:
+--      строка обязана быть либо снята исправлением, либо решена явно.
+CREATE TABLE IF NOT EXISTS nveco_rejection (
+    key           TEXT PRIMARY KEY,        -- agent|file|subject|reason, без номера строки
+    agent         TEXT NOT NULL,
+    file          TEXT NOT NULL,           -- entities.csv | edges.csv | sources.csv
+    reason        TEXT NOT NULL,
+    row           TEXT NOT NULL,           -- отклонённая строка как её видел ingest
+    subject_kind  TEXT NOT NULL CHECK (subject_kind IN ('entity','edge','source','?')),
+    subject_id    TEXT,                    -- id сущности/связи, если он в строке был
+    subject_name  TEXT,                    -- имя: отклонённая сущность в базу не попала
+    first_seen    TEXT NOT NULL,           -- месяц первого отказа
+    last_seen     TEXT NOT NULL,           -- месяц последнего
+    times         INTEGER NOT NULL DEFAULT 1,
+    status        TEXT NOT NULL DEFAULT 'open'
+                  CHECK (status IN ('open','resolved','admitted','dismissed','queued')),
+    decision      TEXT,                    -- чем решено, если решено
+    decided_month TEXT
+);
+
+-- Очередь кандидатов. Живёт в базе, а не только в runs/<месяц>/_queue/candidates.csv:
+-- CSV перезаписывается каждым прогоном dossier_split, и нерешённый кандидат исчезал бы
+-- вместе с месяцем, который его назвал. Каждая строка обязана получить решение с
+-- причиной — это критерий приёмки Фазы 2, и проверяет его tools/feedback_check.py.
+CREATE TABLE IF NOT EXISTS nveco_candidate (
+    key           TEXT PRIMARY KEY,        -- нормализованное имя кандидата
+    name          TEXT NOT NULL,
+    named_by      TEXT NOT NULL,           -- id узла, чьё досье его назвало
+    why           TEXT,
+    url           TEXT,
+    quote         TEXT,
+    first_seen    TEXT NOT NULL,
+    last_seen     TEXT NOT NULL,
+    times         INTEGER NOT NULL DEFAULT 1,
+    origin        TEXT NOT NULL DEFAULT 'dossier'
+                  CHECK (origin IN ('dossier','rejection')),
+    status        TEXT NOT NULL DEFAULT 'open'
+                  CHECK (status IN ('open','accepted','rejected','on_map')),
+    decision      TEXT,                    -- ПРИЧИНА. Молча не решается ничего.
+    decided_month TEXT,
+    entity_id     TEXT                     -- id на карте, если принят или уже стоит
+);

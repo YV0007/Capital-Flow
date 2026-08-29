@@ -77,7 +77,19 @@ def main(month: str, do_deliver: bool = False,
     for w in s["warnings"][:20]:
         print("          ", w)
     if s["rejects_dir"]:
-        print(f"          отказы -> {s['rejects_dir']} (вернутся агентам в следующем месяце)")
+        print(f"          отказы -> {s['rejects_dir']} (копия для человека)")
+    fb = s.get("feedback") or {}
+    if fb:
+        print(f"[отказы]  реестр: новых {fb.get('new', 0)}, повторно прислано "
+              f"{fb.get('repeated', 0)}, снято исправлением {fb.get('resolved', 0)}, "
+              f"открыто {fb.get('open', 0)}")
+        for name in fb.get("queued") or []:
+            print(f"          отклонённая сущность '{name}' поставлена в очередь "
+                  f"кандидатов — отказ по сущности иначе не доставить")
+        for name, eid in fb.get("on_map") or []:
+            print(f"          кандидат '{name}' уже на карте как '{eid}'")
+        print("          разбор: tools/queue_review.py · проверка: "
+              "tools/feedback_check.py")
     m = s["membership"]
     print(f"[членство] прошли бы три проверки {m['passed']} из "
           f"{m['passed'] + m['failed']}; проверки "

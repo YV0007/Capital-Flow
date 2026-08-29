@@ -14,8 +14,13 @@ watchlist; здесь — ОДИН УЗЕЛ, сделанный как след�
   2. **ЧТО СВЕРЯТЬ** — связи со статусом `single`, где ВТОРОЙ конец молчит. Это самая
      дешёвая работа пакета: подтверждение с другой стороны поднимает связь до
      `bilateral`, и искать для этого новую связь не нужно.
-  3. **ЧТО ОТКЛОНИЛИ В ПРОШЛЫЙ РАЗ** — строки из `runs/<месяц>/_rejected/` про этот
-     узел, с причиной. Они вернулись не просто так.
+  3. **ЧТО ОТКЛОНИЛИ В ПРОШЛЫЙ РАЗ** — строки РЕЕСТРА отказов (`nveco_rejection`) про
+     этот узел, с причиной и с числом прогонов, сколько отказ уже повторялся. Плюс,
+     ОТДЕЛЬНЫМ списком в каждом пакете, — отказы, чей предмет на карту не попал
+     вовсе. Второй список Фаза 2 завела потому, что первого не хватало: пакет
+     собирается обходом сущностей базы, а отклонённой сущности в базе нет по
+     определению, и её отказ не мог попасть ни в один пакет. Ровно в этой щели
+     просидел `Carl Zeiss SMT`.
   4. **ЧЕГО НЕ ХВАТАЕТ ПО ЧЛЕНСТВУ** — какие из трёх проверок узел сегодня не проходит
      (`runs/<месяц>/_membership/report.csv`). Это прямое задание: «нужен ещё один
      собственный источник» лучше, чем «исследуй получше».
@@ -36,7 +41,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from engine import db, nveco  # noqa: E402
+from engine import db, nveco, nveco_feedback  # noqa: E402
 
 BATCH_SIZE = 8
 DOSSIER_DIR = "nveco-dossier-{:02d}"
@@ -67,21 +72,17 @@ def _membership(month: str) -> dict:
     return out
 
 
-def _rejected(month: str) -> dict:
-    """Отказы прошлого прогона, разложенные по узлам, которых они касаются."""
-    out = {}
-    rej = db.RUNS_DIR / month / "_rejected"
-    if not rej.is_dir():
-        return out
-    for path in sorted(rej.glob("*.csv")):
-        with path.open(newline="", encoding="utf-8") as f:
-            for row in csv.DictReader(f):
-                blob = f"{row.get('row', '')}"
-                for token in blob.replace(";", " ").replace("=", " ").split():
-                    out.setdefault(token.strip(), []).append(
-                        {"file": f"{path.stem}/{row.get('file')}",
-                         "reason": row.get("reason"), "row": blob[:200]})
-    return out
+def _rejected(con, ids) -> dict:
+    """Отказы, привязанные к узлам пакета, — из РЕЕСТРА, а не из CSV месяца.
+
+    Прежняя версия читала `runs/<месяц>/_rejected/*.csv` и раскладывала строки по
+    пробельным токенам. Она не работала по двум причинам сразу: файл живёт один
+    прогон (ingest чистит каталог перед записью), а разложение по токенам всё равно
+    ничего не давало отклонённой СУЩНОСТИ — её нет в базе, значит нет и пакета, в
+    который строку можно положить. Реестр помнит отказ, пока он не решён, и держит
+    предмет отказа отдельной колонкой.
+    """
+    return nveco_feedback.rejections_for(con, ids)
 
 
 def _entity_pack(con, eid: str, memb: dict, rejects: dict, tier: dict) -> dict:
@@ -151,7 +152,6 @@ def run(month: str, tier: str = "core", size: int = BATCH_SIZE, ids=None) -> dic
     con = nveco.connect()
     tiers = _tiers(con)
     memb = _membership(month)
-    rejects = _rejected(month)
 
     if ids:
         chosen = [i for i in ids if con.execute(
@@ -167,11 +167,16 @@ def run(month: str, tier: str = "core", size: int = BATCH_SIZE, ids=None) -> dic
         raise SystemExit(f"нечего исследовать: ярус '{tier}' пуст. Прогоните "
                          f"run_network.py — ярус пишется его стадией handoff.")
 
+    rejects = _rejected(con, set(chosen))
     packs = []
     for eid in chosen:
         p = _entity_pack(con, eid, memb, rejects, tiers.get(eid, {}))
         if p:
             packs.append(p)
+    # Отказы, чей предмет на карту не попал, кладутся В КАЖДЫЙ пакет отдельным
+    # списком. Это единственный класс отказов, который прежняя механика доставить не
+    # могла в принципе, и именно в нём сидел Carl Zeiss SMT.
+    offmap = nveco_feedback.offmap_rejections(con)
     con.close()
 
     written = []
@@ -195,12 +200,13 @@ def run(month: str, tier: str = "core", size: int = BATCH_SIZE, ids=None) -> dic
                 "не присылайте их такими же. "
                 "Тир источника, integration, core и sidedness вы НЕ пишете."),
             "выход": "dossier.json рядом с этим файлом; формат — agents/eco-dossier.md",
+            "отклонено_и_на_карту_не_попало": offmap,
             "entities": batch,
         }, ensure_ascii=False, indent=2) + "\n")
         written.append({"dir": str(d), "n": len(batch),
                         "ids": [b["id"] for b in batch]})
     return {"batches": written, "entities": len(packs), "missing": missing,
-            "tier": tier}
+            "tier": tier, "offmap_rejections": len(offmap)}
 
 
 if __name__ == "__main__":
@@ -220,3 +226,6 @@ if __name__ == "__main__":
         print(f"  {b['dir']}  {b['n']}: {', '.join(b['ids'])}")
     if out["missing"]:
         print(f"  нет на карте: {', '.join(out['missing'])}")
+    if out["offmap_rejections"]:
+        print(f"  нерешённых отказов, чей предмет вне карты: "
+              f"{out['offmap_rejections']} — лежат в каждом пакете")
