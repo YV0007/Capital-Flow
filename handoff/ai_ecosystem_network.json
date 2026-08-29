@@ -45,16 +45,196 @@
     "coreRule": "top-30 by integration",
     "coreCount": 30,
     "membership": {
-      "admitted": 58,
+      "admitted": 74,
       "retired": 0,
-      "queued": 50,
-      "enforced": false,
+      "retiredNodes": [],
+      "held": 34,
+      "heldNodes": [
+        {
+          "id": "a16z",
+          "failed": "min_confirmed_edges",
+          "heldBy": "a16z__databricks__invests_in"
+        },
+        {
+          "id": "applied-materials",
+          "failed": "min_confirmed_edges",
+          "heldBy": "applied-materials__tsmc__supplies|applied-materials__samsung__supplies"
+        },
+        {
+          "id": "blackrock",
+          "failed": "min_confirmed_edges",
+          "heldBy": "microsoft__blackrock__funded_by"
+        },
+        {
+          "id": "blackstone",
+          "failed": "min_confirmed_edges",
+          "heldBy": "blackstone__digital-realty__invests_in"
+        },
+        {
+          "id": "bloom-energy",
+          "failed": "min_confirmed_edges",
+          "heldBy": "bloom-energy__oracle__supplies"
+        },
+        {
+          "id": "boyd",
+          "failed": "min_confirmed_edges",
+          "heldBy": "boyd__nvidia__supplies"
+        },
+        {
+          "id": "chips-act",
+          "failed": "min_confirmed_edges",
+          "heldBy": "chips-act__intel__controls_access_to|usa__chips-act__standardizes_on"
+        },
+        {
+          "id": "constellation",
+          "failed": "min_confirmed_edges",
+          "heldBy": "constellation__microsoft__supplies|brookfield__constellation__competes_with"
+        },
+        {
+          "id": "delta-electronics",
+          "failed": "min_confirmed_edges",
+          "heldBy": "delta-electronics__nvidia__optimizes_for"
+        },
+        {
+          "id": "eu-ai-act",
+          "failed": "min_confirmed_edges",
+          "heldBy": "eu-ai-act__openai__subject_to_restriction|eu__eu-ai-act__standardizes_on"
+        },
+        {
+          "id": "ge-vernova",
+          "failed": "min_confirmed_edges",
+          "heldBy": "ge-vernova__crusoe__supplies|ge-vernova__microsoft__supplies"
+        },
+        {
+          "id": "google-cloud",
+          "failed": "min_confirmed_edges",
+          "heldBy": "google-cloud__pytorch__integrates|google-cloud__jax__integrates|google-cloud__vllm__integrates|google-cloud__kubernetes__standardizes_on"
+        },
+        {
+          "id": "hpe",
+          "failed": "min_confirmed_edges",
+          "heldBy": "cisco__hpe__competes_with|hpe__nvidia__strategic_partner|intel__hpe__supplies|amd__hpe__supplies|broadcom__hpe__supplies"
+        },
+        {
+          "id": "kioxia",
+          "failed": "min_confirmed_edges",
+          "heldBy": "micron__kioxia__competes_with|sandisk__kioxia__strategic_partner|kioxia__nvidia__supplies"
+        },
+        {
+          "id": "kla",
+          "failed": "min_confirmed_edges",
+          "heldBy": "kla__tsmc__supplies"
+        },
+        {
+          "id": "lightspeed",
+          "failed": "min_confirmed_edges",
+          "heldBy": "lightspeed__anthropic__invests_in"
+        },
+        {
+          "id": "lite-on",
+          "failed": "min_confirmed_edges",
+          "heldBy": "lite-on__supermicro__supplies"
+        },
+        {
+          "id": "marvell",
+          "failed": "min_confirmed_edges",
+          "heldBy": "marvell__nvidia__threatens"
+        },
+        {
+          "id": "mistral",
+          "failed": "min_confirmed_edges",
+          "heldBy": "asml__mistral__customer_of|snowflake__mistral__customer_of|cisco__mistral__customer_of|mistral__nvidia__customer_of"
+        },
+        {
+          "id": "oklo",
+          "failed": "min_confirmed_edges",
+          "heldBy": "oklo__vertiv__strategic_partner|oklo__equinix__strategic_partner"
+        },
+        {
+          "id": "quanta",
+          "failed": "min_confirmed_edges",
+          "heldBy": "quanta__nvidia__integrates"
+        },
+        {
+          "id": "recursion",
+          "failed": "min_confirmed_edges",
+          "heldBy": "recursion__nvidia__proves_use_case"
+        },
+        {
+          "id": "salesforce",
+          "failed": "min_confirmed_edges",
+          "heldBy": "salesforce__nvidia__proves_roi"
+        },
+        {
+          "id": "schrodinger",
+          "failed": "min_confirmed_edges",
+          "heldBy": "schrodinger__nvidia__proves_use_case"
+        },
+        {
+          "id": "sequoia",
+          "failed": "min_confirmed_edges",
+          "heldBy": "sequoia__openai__invests_in"
+        },
+        {
+          "id": "servicenow",
+          "failed": "min_confirmed_edges",
+          "heldBy": "servicenow__nvidia__proves_roi|servicenow__microsoft__strategic_partner"
+        },
+        {
+          "id": "siemens",
+          "failed": "min_confirmed_edges",
+          "heldBy": "siemens__nvidia__proves_use_case"
+        },
+        {
+          "id": "siemens-eda",
+          "failed": "min_confirmed_edges",
+          "heldBy": "siemens-eda__cadence__competes_with|siemens-eda__synopsys__competes_with|siemens-eda__nvidia__enables"
+        },
+        {
+          "id": "siemens-energy",
+          "failed": "min_confirmed_edges",
+          "heldBy": "siemens-energy__equinix__supplies"
+        },
+        {
+          "id": "singapore",
+          "failed": "min_confirmed_edges",
+          "heldBy": "singapore__nvidia__controls_access_to"
+        },
+        {
+          "id": "snowflake",
+          "failed": "min_confirmed_edges",
+          "heldBy": "snowflake__amazon__competes_with|snowflake__microsoft__competes_with|snowflake__mistral__customer_of|snowflake__nvidia__proves_roi"
+        },
+        {
+          "id": "thrive",
+          "failed": "min_confirmed_edges",
+          "heldBy": "thrive__openai__invests_in"
+        },
+        {
+          "id": "tokyo-electron",
+          "failed": "min_confirmed_edges",
+          "heldBy": "tokyo-electron__tsmc__supplies"
+        },
+        {
+          "id": "wistron",
+          "failed": "min_confirmed_edges",
+          "heldBy": "wistron__nvidia__integrates"
+        }
+      ],
+      "queued": 34,
+      "enforced": true,
+      "onFail": "retire_unheld",
+      "coverageGated": [
+        "min_self_sources",
+        "min_sources"
+      ],
+      "pendingDossier": 31,
       "covered": 108,
       "uncovered": [],
       "checks": {
         "in_scope": 0,
-        "min_sources": 31,
-        "min_self_sources": 11,
+        "min_sources": 0,
+        "min_self_sources": 0,
         "min_confirmed_edges": 34
       }
     },
@@ -6289,6 +6469,10 @@
         "ru": "Andreessen Horowitz — венчурная фирма, названная именами двух своих основателей. Под управлением у неё более $100B+ в нескольких фондах. Вкладывается она от посевной стадии до стадии роста и перечисляет свои направления сама: ИИ, био и здравоохранение, потребительский сектор, крипто, корпоративный софт, финтех, игры и инфраструктура. Собственную модель фирма описывает как платформенную — с командой операторов, помогающих основателям в маркетинге, найме, юридических и политических вопросах. На карте узел стоит в слое капитала, который финансирует спрос на вычисления.",
         "en": "Andreessen Horowitz is a venture firm named after its two founders. It has over $100B+ under management across multiple funds. It invests from seed to growth stage and lists its own sectors: AI, bio and healthcare, consumer, crypto, enterprise, fintech, games and infrastructure. The firm describes its own model as a platform one — with a team of operators helping founders on marketing, talent, legal and policy. On the map the node sits in the capital layer that funds demand for compute."
       },
+      "pendingDossier": false,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
@@ -6489,6 +6673,8 @@
         "ru": "Amazon держит розницу и облако AWS, и в инфраструктуре ИИ значим именно второй бизнес. AWS продаёт по требованию вычисления, хранение, базы и машинное обучение, а его продажи выросли на 20% за год. Деньги в модели компания вкладывает напрямую: в конвертируемые обязательства Anthropic ушло $2.7 млрд только за 2025 год. Расходы на инфраструктуру она относит к общей технологической базе, которая обслуживает и её собственные задачи, и внешних клиентов. Такое устройство делает её одновременно покупателем ускорителей и их конкурентом со своим кремнием.",
         "en": "Amazon runs retail and the AWS cloud, and in AI infrastructure it is the second business that matters. AWS sells on-demand compute, storage, databases and machine learning, and its sales grew 20% over the year. The company puts money into models directly: $2.7 billion went into Anthropic convertible notes in 2025 alone. Infrastructure costs are booked against a shared technology base that serves both its own needs and external customers. That arrangement makes it a buyer of accelerators and a competitor to them with its own silicon at the same time."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 8,
         "betweenness": 0.006635,
@@ -6650,6 +6836,8 @@
         "ru": "Продаёт серверные процессоры EPYC и ускорители Instinct — прямую альтернативу тому, что стоит в центре этой карты. Зарабатывает маржой на железе, а софтовый слой отдаёт открытым: ROCm бесплатен, потому что продаётся не он, а чип под ним. В карте стоит рядом с NVIDIA и как соперник, и как сосед по очереди на фабрику — пластины оба заказывают в одном месте. Выручка дата-центрового сегмента — $16,6 млрд с ростом 32%, операционная прибыль сегмента — $3,6 млрд в 2025 году. Разрыв с NVIDIA не в кристалле, а в софте: код, написанный под чужую среду, не переносится бесплатно.",
         "en": "Sells EPYC server processors and Instinct accelerators — the direct alternative to what sits at the centre of this map. It earns hardware margin and gives the software layer away: ROCm is free because what is sold is the chip underneath it. On the map it stands beside NVIDIA both as a rival and as a neighbour in the same queue at the foundry, since both order wafers in the same place. Data Center net revenue was $16.6 billion, up 32%, and the segment's operating income was $3.6 billion in 2025. The gap with NVIDIA is not in the die but in the software: code written against another environment does not port for free."
       },
+      "pendingDossier": true,
+      "membershipFailing": [],
       "centrality": {
         "degree": 7,
         "betweenness": 0.002678,
@@ -6856,6 +7044,8 @@
         "ru": "Amkor корпусирует и тестирует чужие чипы после того, как пластина сошла с фабрики. Заказчиками компания называет большинство крупнейших полупроводниковых компаний мира, и концентрацию раскрывает прямо: десятка крупнейших дала 72% выручки за 2025 год. Двое из них названы поимённо — прямые продажи Apple и Qualcomm дали 29.8% и 11.1% выручки. Компания продаёт готовый цикл: проектирование корпуса, бампинг, зондирование, утоньшение, корпусирование, прожиг и финальный тест. На вычисления, включая дата-центры и инфраструктуру, приходится 20 % её продаж.",
         "en": "Amkor packages and tests other companies' chips once the wafer has left the fab. It names most of the world's largest semiconductor companies as its customers and discloses concentration plainly: the ten largest gave 72% of net sales in 2025. Two of them are named — direct sales to Apple and Qualcomm were 29.8% and 11.1% of net sales. The company sells a whole cycle: package design, wafer bump, probe, back-grind, packaging, burn-in and final test. Computing, including data centre and infrastructure, accounts for 20 % of its sales."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 5,
         "betweenness": 0.000132,
@@ -7100,6 +7290,8 @@
         "ru": "Anthropic разрабатывает модели Claude и продаёт доступ к ним компаниям и разработчикам. По собственному сообщению, годовая скорость выручки перешла $47 млрд, а обслуживает компания больше 300,000 корпоративных клиентов. Последний раунд Series H принёс ей $65 млрд. Обучение и работу моделей компания раскладывает на три вида железа — AWS Trainium, тензорные процессоры Google и ускорители NVIDIA, — а Amazon называет своим основным облаком и партнёром по обучению. Отдельным соглашением с Google и Broadcom законтрактованы мощности в несколько гигаватт.",
         "en": "Anthropic builds the Claude models and sells access to them to companies and developers. By its own announcement, run-rate revenue crossed $47 billion and it serves more than 300,000 business customers. Its latest Series H round brought it $65 billion. Training and serving are spread across three kinds of hardware — AWS Trainium, Google TPUs and NVIDIA GPUs — while Amazon is named its primary cloud provider and training partner. A separate agreement with Google and Broadcom contracts multiple gigawatts of capacity."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 9,
         "betweenness": 0.034967,
@@ -7261,6 +7453,10 @@
         "ru": "Продаёт оборудование для обработки пластины: нанесение слоёв, травление, модификация поверхности — всё, кроме печати рисунка. Деньги приходят продажей установок и последующим обслуживанием парка, а спрос определяется инвестиционным циклом нескольких заказчиков: в 2025 финансовом году два клиента дали примерно 19% и 15% выручки. Около 89% выручки приходит из-за пределов США, что делает компанию чувствительной к экспортным правилам собственной страны. В карте она стоит на слой ниже фабрики: без её установок передовой техпроцесс физически не реализуется.",
         "en": "Sells wafer-processing equipment: deposition, etch, surface modification — everything except printing the pattern. The money is tool sales and subsequent servicing of the installed base, and demand follows a few customers' investment cycles: in fiscal 2025 two clients accounted for roughly 19% and 15% of revenue. About 89% of revenue comes from outside the United States, which makes the company sensitive to its own country's export rules. On the map it sits a layer beneath the fab: without its tools a leading-edge process cannot physically exist."
       },
+      "pendingDossier": true,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
@@ -7452,6 +7648,8 @@
         "ru": "Arista делает коммутаторы и маршрутизаторы для дата-центров и продаёт их вместе со своей операционной системой. Заработок сильно сконцентрирован: два клиента дали больше 10% продаж, а именно 26% и 16% выручки за год. Та же пара держится в верхушке не первый год — доли по одному из них шли 16%, 15% и 21%. Почти вся выручка от продуктов идёт от одного семейства коммутаторов, что компания отмечает как собственный риск. В кластерах ускорителей она конкурирует с фирменными сетями производителя ускорителей, которые продаются в составе готового решения.",
         "en": "Arista builds switches and routers for data centres and sells them together with its own operating system. Its earnings are heavily concentrated: two customers made up more than 10% of sales, at 26% and 16% of revenue for the year. The same pair has stayed at the top for years — one of them ran at 16%, 15% and 21%. Nearly all product revenue comes from a single switch family, which the company flags as a risk of its own. In accelerator clusters it competes with the vendor's own fabrics, which are sold as part of a complete solution."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 4,
         "betweenness": 0.000342,
@@ -7712,6 +7910,8 @@
         "ru": "Arm продаёт лицензии на архитектуру процессоров и получает отчисления с каждого выпущенного чипа. Заработок сильно сконцентрирован: на пять крупнейших клиентов пришлось около 57% выручки, а на самого крупного, Arm China, — около 16%. Часть ближней выручки прямо зависит от коммерческих договорённостей с SoftBank Group, что компания называет отдельным риском. Крупнейший рынок по выручке — процессоры для смартфонов, а самый быстрорастущий — дата-центры. Клиент может лицензировать саму архитектуру и построить свой процессор, и это компания тоже называет риском для своей линейки.",
         "en": "Arm licenses processor architecture and collects a royalty on every chip shipped. Its earnings are heavily concentrated: the top five customers accounted for about 57% of revenue and the largest, Arm China, for about 16%. Part of near-term revenue depends directly on commercial arrangements with SoftBank Group, which the company names as a separate risk. Its largest market by revenue is smartphone processors, while the fastest growing one is the data centre. A customer may license the architecture itself and build its own processor, which the company also names as a risk to its product line."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 5,
         "betweenness": 0.002145,
@@ -7918,6 +8118,8 @@
         "ru": "ASE Technology корпусирует и тестирует полупроводники и параллельно ведёт контрактную сборку электроники. Свой рынок компания описывает как высококонкурентный — и добавляет, что часть контрактных производителей кремния сама вложилась в передовое корпусирование и отняла часть заказчиков. Экспортные продажи составили NT$511,422.0 million. Концентрацию она раскрывает по задолженности: на десятку крупнейших заказчиков пришлось 47 % и 50 % торговой дебиторской задолженности на конец 2024 и 2025 годов. На карте узел стоит рядом с Amkor: вторая площадка того же передела.",
         "en": "ASE Technology packages and tests semiconductors and runs contract electronics assembly alongside. It describes its own market as highly competitive — and adds that some foundry players have themselves invested in advanced packaging and taken some customers. Export sales were NT$511,422.0 million. It discloses concentration through receivables: the ten largest customers accounted for 47 % and 50 % of trade receivables at the end of 2024 and 2025. On the map the node stands beside Amkor: the second site of the same step."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 6,
         "betweenness": 0.000454,
@@ -8107,6 +8309,8 @@
         "ru": "Продаёт литографические сканеры — станки, печатающие рисунок схемы на кремниевой пластине; установка EUV занимает площадь цеха и стоит как небольшой завод. Деньги приходят дважды: сначала продажей системы, потом обслуживанием и апгрейдами уже поставленного парка, и вторая часть повторяется годами. В этой карте компания стоит ниже фабрики: без её станков передовые нормы не выпускаются, а значит не выпускаются и ускорители. Это единственный в мире производитель EUV-систем; выручка прибавила €4,4 млрд, или 15,6%, а на текущий год компания ждёт от €34 млрд до €39 млрд. Продажи самых сложных станков ограничены голландскими экспортными лицензиями, поэтому география поставок определяется разрешениями, а не спросом.",
         "en": "Sells lithography scanners — the machines that print the circuit pattern onto a silicon wafer; an EUV system fills a shop floor and costs as much as a small factory. The money arrives twice: first from the system sale, then from servicing and upgrading the installed base, and the second stream repeats for years. On this map the company sits below the fab: without its machines there are no leading-edge nodes, and therefore no accelerators. It is the world's only maker of EUV systems; net sales rose €4.4 billion, or 15.6%, and for the current year it expects between €34 billion and €39 billion. Sales of the most advanced machines run on Dutch export licences, so the geography of shipments is set by permits rather than by demand."
       },
+      "pendingDossier": true,
+      "membershipFailing": [],
       "centrality": {
         "degree": 4,
         "betweenness": 0.01955,
@@ -8268,6 +8472,8 @@
         "ru": "Продаёт микросхемы связности внутри сервера: то, что соединяет ускорители, память и процессоры между собой без потери полосы. Деньги — продажа кремния, спроектированного под конкретную платформу, и это объясняет крайнюю концентрацию: один конечный заказчик даёт более 70% выручки, три крупнейших — около 86%. В карте компания показывает, как выглядит зависимость без страховки: своих заводов нет, все чипы делает одна фабрика, а спрос определяется циклом одного поколения систем. Ставка окупается ровно до следующей смены поколения.",
         "en": "Sells connectivity chips inside the server: the parts joining accelerators, memory and processors without losing bandwidth. The money is silicon designed for one platform, which explains the extreme concentration: a single end customer is more than 70% of revenue and the top three about 86%. On the map it shows what dependence without insurance looks like: no plants of its own, every chip from one foundry, and demand set by one system generation's cycle. The bet pays exactly until the next generation change."
       },
+      "pendingDossier": true,
+      "membershipFailing": [],
       "centrality": {
         "degree": 4,
         "betweenness": 0.000322,
@@ -8488,6 +8694,8 @@
         "ru": "BIS — бюро Министерства торговли США, которое выдаёт и отзывает разрешения на вывоз технологий. Его собственный релиз от 7 октября 2022 года ввёл разом лицензирование передовых вычислительных чипов, оборудования для производства полупроводников и целей их применения. Тем же документом требование лицензии распространили на двадцать восемь компаний из списка Entity List, находящихся в КНР. Бюро не покупает и не продаёт — оно решает, кому можно продавать, и потому стоит выше рынка. Отчётность NVIDIA описывает эти решения как ограничения, объявленные правительством и меняющие условия продаж.",
         "en": "BIS is the Commerce Department bureau that grants and withdraws permission to export technology. Its own release of October 7, 2022 introduced licensing for advanced computing chips, semiconductor manufacturing items and the end uses of both at once. The same document extended licence requirements to twenty-eight companies on the Entity List located in the PRC. The bureau neither buys nor sells — it decides who may be sold to, which places it above the market. NVIDIA's filing describes those decisions as government-announced restrictions that change the terms of sale."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
@@ -8682,6 +8890,10 @@
         "ru": "BlackRock — управляющий активами, чью роль на карте определяет не размер портфеля, а то, что он вкладывает в саму инфраструктуру. Собственную позицию компания описывает как фидуциарную по отношению к клиентам. Она входит в число крупнейших управляющих пенсионными активами в мире. Выручка от технологических услуг и подписок составила $2.0 billion с ростом на 24% год к году; выручка от инвестиционного консультирования и администрирования — $19.2 billion в 2025 году. На карте узел стоит в слое капитала, финансирующего площадки и энергетику, а не модели.",
         "en": "BlackRock is an asset manager whose place on the map is set not by portfolio size but by the fact that it invests in the infrastructure itself. The company describes its own position as fiduciary to its clients. It is among the world's largest managers of pension plan assets. Technology services and subscription revenue was $2.0 billion, up 24% year-over-year; investment advisory and administration revenue was $19.2 billion in 2025. On the map the node sits in the capital layer that funds sites and power rather than models."
       },
+      "pendingDossier": false,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
@@ -8887,6 +9099,10 @@
         "ru": "Blackstone описывает себя как крупнейшего в мире управляющего альтернативными активами с более чем $1.3 trillion под управлением. На карте она стоит в слое капитала, который строит площадки: её фонд недвижимости прямо называет вложения в дата-центры среди своих значимых направлений. Реализованные доходы от результата составили $1.7 billion за 2025 год. Компания сама отмечает риск устаревания проектов дата-центров, требующего перестройки, — то есть держит эту экспозицию осознанно. Денег в модели она не даёт, но решает, где встанет мощность.",
         "en": "Blackstone describes itself as the world's largest alternative asset manager with more than $1.3 trillion under management. On the map it sits in the capital layer that builds the sites: its real estate fund names data centre investments among its significant directions. Realized Performance Revenues were $1.7 billion for 2025. The company itself flags the risk of data centre designs becoming less competitive and needing redevelopment — it holds that exposure knowingly. It does not fund models, but it decides where capacity gets built."
       },
+      "pendingDossier": false,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 2,
         "betweenness": 0.000294,
@@ -9022,6 +9238,10 @@
         "ru": "Продаёт топливные элементы, которые ставятся прямо на площадке и дают питание, не дожидаясь подключения к сети. Деньги — продажа установок и долгосрочные соглашения на обслуживание и поставку энергии на объекте. В карте компания предлагает обход главного ограничения слоя: очередь на присоединение измеряется годами, а установка на месте разворачивается быстрее. Цена обхода — стоимость киловатта выше сетевой, поэтому решение выбирают там, где простой дороже переплаты.",
         "en": "Sells fuel cells installed on the site itself, delivering power without waiting for a grid connection. The money is equipment sales plus long-term agreements for service and on-site energy supply. On the map the company offers a way around the layer's main constraint: the interconnection queue is measured in years, while on-site plant deploys faster. The price of the detour is a higher cost per kilowatt, so it is chosen where idle time costs more than the premium."
       },
+      "pendingDossier": true,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
@@ -9157,6 +9377,10 @@
         "ru": "Продаёт теплоотводящие пластины и контуры, снимающие тепло непосредственно с кристалла — последний сантиметр охлаждения, который не заменяется ни залом, ни кондиционером. Деньги приходят с объёма, компонент недорогой, и потому в анализе рисков его обычно пропускают. В карте он показателен именно этим: цена и критичность здесь расходятся сильнее, чем где-либо ещё. Отсутствие такой пластины останавливает сборку так же надёжно, как отсутствие памяти.",
         "en": "Sells cold plates and loops that take heat straight off the die — the last centimetre of cooling, replaceable by neither hall nor chiller. The money comes from volume, the component is inexpensive, and risk analysis usually skips it for that reason. On the map it is instructive precisely because of that: price and criticality diverge here more than anywhere else. A missing cold plate halts assembly as surely as missing memory does."
       },
+      "pendingDossier": true,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
@@ -9379,6 +9603,8 @@
         "ru": "Broadcom делает микросхемы для сетей и проектирует заказные ускорители под конкретного покупателя. Собственная отчётность относит к решениям для ИИ заказные ускорители XPU, коммутаторы и маршрутизаторы на Ethernet, сетевые карты и оптику. Заработок концентрирован: на одного покупателя пришлось 32% выручки против 28% и 21% в предыдущие годы. Своих фабрик под передовые узлы нет — большая часть производства пластин отдана внешним фабрикам, включая TSMC. Сборка и тестирование тоже вынесены: названы TSMC, ASE, Foxconn и Amkor.",
         "en": "Broadcom builds networking silicon and designs custom accelerators for a named buyer. Its own filing counts custom XPU accelerators, Ethernet switching and routing silicon, network cards and optics as its AI solutions. Its earnings are concentrated: one customer accounted for 32% of revenue against 28% and 21% in the prior years. It owns no leading-edge fabs — most wafer manufacturing is outsourced to external foundries, TSMC among them. Assembly and test are outsourced too, with TSMC, ASE, Foxconn and Amkor named."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 10,
         "betweenness": 0.007722,
@@ -9560,6 +9786,8 @@
         "ru": "Управляет чужими деньгами, вложенными в физическую инфраструктуру: электростанции, сети, площадки под дата-центры. Зарабатывает комиссией с размера фонда и долей в прибыли — доход растёт от объёма привлечённого капитала, а не от выработки киловатт. В этой карте это источник денег для самого дорогого слоя: без такого капитала площадка и подстанция не появляются, сколько бы ускорителей ни было закуплено. Капитал под комиссией достиг $672 млрд, прибавив 19% за год; комиссионная прибыль выросла на 20%, до $808 млн за квартал. Партнёрство по быстро разворачиваемой генерации для ИИ расширено с $5 млрд до $25 млрд — деньги идут именно в электричество, которого не хватает.",
         "en": "Manages other people's money invested in physical infrastructure: power plants, grids and data-centre sites. It earns a fee on the size of the fund plus a share of the profit, so income grows with capital raised rather than with kilowatts generated. On this map it is the source of money for the most expensive layer: without such capital the site and the substation never appear, however many accelerators have been bought. Fee-bearing capital reached $672 billion, up 19% year-over-year, and fee-related earnings rose 20% to $808 million for the quarter. Its partnership on rapidly deployable generation for AI was expanded from $5 billion to $25 billion — the money is going into the electricity that is short."
       },
+      "pendingDossier": true,
+      "membershipFailing": [],
       "centrality": {
         "degree": 5,
         "betweenness": 0.002582,
@@ -9708,6 +9936,8 @@
         "ru": "Продаёт то же, что и сосед по слою: инструменты проектирования микросхем и лицензируемые блоки, плюс софт для расчёта тепла и электромагнитных полей. Деньги — лицензия на срок и роялти; клиент платит ежегодно, потому что инструмент обязан поспевать за новыми нормами фабрики. В этой карте это второй из двух поставщиков, без которых проект чипа не существует: дублирование здесь не рыночная деталь, а единственная страховка отрасли. Выручка за год, закончившийся 31 декабря 2025 года, — $5,297 млрд. Совместная с NVIDIA платформа ускоряет симуляцию на его же чипах, и поставщик инструментов сам становится его покупателем.",
         "en": "Sells what its neighbour in the same layer sells: chip design tools and licensable blocks, plus software for thermal and electromagnetic analysis. The money is a term licence plus royalties; the customer pays every year because the tool must keep pace with the fab's new nodes. On this map it is the second of the only two suppliers without which a chip design does not exist: the duplication here is not a market detail but the industry's single insurance policy. Revenue for the year ended December 31, 2025 was $5.297 billion. A platform co-developed with NVIDIA speeds simulation up on NVIDIA's own chips, so the tool vendor becomes its customer too."
       },
+      "pendingDossier": true,
+      "membershipFailing": [],
       "centrality": {
         "degree": 3,
         "betweenness": 0.0,
@@ -9885,6 +10115,8 @@
         "ru": "CFIUS — межведомственный комитет, которому поручено рассматривать сделки с иностранными инвестициями в американские компании и отдельные сделки иностранных лиц с недвижимостью в США. Смысл рассмотрения записан в его же мандате: определить, как сделка влияет на национальную безопасность страны. Председательствует в комитете министерство финансов США, а обслуживает его работу Office of Investment Security. Собственного издателя у комитета нет — его решения выходят документами председательствующего ведомства, и правило собственной цитаты для него снимается этим фактом. На карте он стоит выше рынка: не покупает и не продаёт, а решает, состоится ли покупка.",
         "en": "CFIUS is an interagency committee charged with reviewing transactions involving foreign investment into United States businesses and certain foreign-person real estate transactions in the United States. The point of the review is written into its own mandate: to determine the effect of such transactions on the national security of the country. The U.S. Treasury chairs the committee and the Office of Investment Security carries its work. The committee has no publisher of its own — its decisions appear as documents of the chairing department, and the self-citation rule is waived for it by that fact. On the map it stands above the market: it neither buys nor sells, it decides whether a purchase happens."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 2,
         "betweenness": 0.004391,
@@ -10078,6 +10310,8 @@
         "ru": "Китай на этой карте — не только рынок, закрытый чужими экспортными правилами, но и юрисдикция, которая держит собственный экспортный шлюз. Министерство коммерции и таможня с одобрения Госсовета ввели контроль над вывозом редкоземельных позиций, и вывозящий обязан получать лицензию. Государство настаивает, что это не запрет: «China's export controls are not export bans», а «Licenses will be granted for eligible applications». Заявленная причина — национальная безопасность и международные обязательства. Для стека это второй шлюз навстречу американскому: материалы, без которых не делают магниты и оптику, проходят через разрешение той же природы, что и чипы.",
         "en": "On this map China is not only a market closed by someone else's export rules, but a jurisdiction holding an export gate of its own. The commerce ministry and customs, with State Council approval, placed rare-earth items under export control, and the exporter must obtain a licence. The state insists this is not a ban: \"China's export controls are not export bans\", and \"Licenses will be granted for eligible applications\". The stated reason is national security and international obligations. For the stack this is a second gate facing the American one: the materials magnets and optics cannot be made without pass through a permission of the same kind as chips."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
@@ -10211,6 +10445,10 @@
         "ru": "Это инструмент, который меняет структуру деньгами, а не запретом: условия субсидии определяют, где и как строится новая фабрика. Рычаг медленный — от закона до первой пластины проходят годы, — но устойчивый, потому что не отменяется сменой настроения рынка. В карте закон объясняет, почему единственная американская попытка второй передовой фабрики держится на государственной программе, а не на заказах. Получатель субсидии становится зависимым от её условий сильнее, чем от собственных клиентов.",
         "en": "An instrument that changes structure with money rather than prohibition: the subsidy's terms determine where and how a new fab is built. The lever is slow — years pass from statute to first wafer — but durable, because it does not lapse with market sentiment. On the map the act explains why the sole American attempt at a second leading-edge fab rests on a state programme rather than on orders. A subsidy recipient becomes more dependent on its terms than on its own customers."
       },
+      "pendingDossier": true,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 2,
         "betweenness": 8.8e-05,
@@ -10442,6 +10680,8 @@
         "ru": "Cisco — производитель сетевой инфраструктуры, который в своей отчётности прямо относит себя к слою обучения и вывода ИИ: «We provide network infrastructure to power AI training and inference workloads». Компания продаёт не только коробки, но и обслуживание в течение жизненного цикла продукта. Выручка программной части за 2025 финансовый год составила $22.3 billion с ростом на 21%. Ни один заказчик не дал 10% выручки ни в одном из трёх последних годов — концентрации спроса у узла нет. Список конкурентов компания приводит сама, и в нём стоят Arista, Broadcom, Dell, HPE, Microsoft и NVIDIA.",
         "en": "Cisco makes network infrastructure and in its own filing places itself squarely in the AI training and inference layer: \"We provide network infrastructure to power AI training and inference workloads\". The company sells not only boxes but lifecycle services around them. Software revenue for fiscal 2025 was $22.3 billion, up 21%. No single customer accounted for 10% or more of revenue in any of the last three years — the node carries no demand concentration. The competitor list is the company's own, and it names Arista, Broadcom, Dell, HPE, Microsoft and NVIDIA."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 9,
         "betweenness": 0.004733,
@@ -10592,6 +10832,8 @@
         "ru": "Продаёт оптические компоненты и модули: лазеры, приёмники, трансиверы, которыми соединяют стойки на расстояниях, где электрический сигнал не проходит. Деньги — продажа компонентов производителям оборудования и напрямую операторам; двое заказчиков дают более 10% выручки каждый в 2026 финансовом году. В карте компания важна тем, что обслуживает и закрытый протокол платформы, и открытые стандарты — то есть спрос приходит с обеих сторон конкуренции в сетевом слое. Оптика при этом остаётся общим ограничением: её мощность конечна независимо от того, чей протокол победит.",
         "en": "Sells optical components and modules: lasers, receivers, transceivers used to link racks across distances an electrical signal cannot cross. The money is component sales to equipment makers and directly to operators; two customers each account for more than 10% of revenue in fiscal 2026. On the map it matters because it serves both the platform's closed protocol and the open standards — demand arrives from both sides of the networking fight. Optics stays the shared constraint: its capacity is finite whichever protocol wins."
       },
+      "pendingDossier": true,
+      "membershipFailing": [],
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
@@ -10727,6 +10969,10 @@
         "ru": "Продаёт электроэнергию по долгосрочным договорам, в том числе безуглеродную с атомных станций. Деньги — плата за поставленную энергию по контракту, заключённому на годы вперёд, что для площадки важнее цены за киловатт. В карте компания представляет сторону предложения энергии, где дефицит на стороне продавца: конкуренция за право продать слабая, и она проявляется в условиях, а не в цене. Контракт с площадкой здесь заключается раньше, чем закупаются ускорители.",
         "en": "Sells electricity under long-term agreements, including carbon-free power from nuclear plants. The money is payment for delivered energy under a contract signed years ahead, which matters to a site more than the price per kilowatt. On the map the company represents the supply side of energy, where the scarcity sits with the seller: competition for the right to sell is weak and shows up in terms rather than price. A site contract here is signed before accelerators are ordered."
       },
+      "pendingDossier": true,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
@@ -10957,6 +11203,8 @@
         "ru": "CoreWeave сдаёт в аренду вычисления на ускорителях и продаёт вместе с ними свою программную обвязку. Выручка составила $5.1 млрд против $1.9 млрд и $229 млн в предыдущие годы, а законтрактованных обязательств на конец года набралось $60.7 млрд. Физически это 43 площадки и больше 850 МВт активной мощности при законтрактованных примерно 3.1 ГВт. Заказчики немногочисленны и крупны: OpenAI обязалась платить до $11.9 млрд до октября 2030 года, а среди прочих названы Microsoft и Meta. Всё железо ускорителей приходит со стороны, поэтому доступ к очереди поставок для компании важнее собственной разработки.",
         "en": "CoreWeave rents out accelerator compute and sells its own software layer along with it. Revenue was $5.1 billion against $1.9 billion and $229 million in prior years, while contracted obligations reached $60.7 billion at year end. Physically that is 43 sites and over 850 MW of active power against roughly 3.1 GW contracted. Its customers are few and large: OpenAI committed to pay up to $11.9 billion through October 2030, and Microsoft and Meta are named among the rest. All accelerator hardware comes from outside, so a place in the supply queue matters more to it than its own design work."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 6,
         "betweenness": 0.002003,
@@ -11119,6 +11367,8 @@
         "ru": "Продаёт активные кабели и микросхемы для них — соединения между стойками, где обычная медь уже не тянет полосу, а оптика дороже. Деньги — продажа кремния и готовых сборок под конкретные конфигурации кластера. Концентрация того же порядка, что у соседей по слою: десять крупнейших заказчиков дают около 90% выручки, из них двое — по 10% и более каждый. В карте компания занимает узкую нишу между стойкой и залом, и её существование объясняется тем, что кластер перестал помещаться в одну стойку.",
         "en": "Sells active cables and the chips inside them — links between racks where ordinary copper no longer carries the bandwidth and optics costs more. The money is silicon and finished assemblies for specific cluster configurations. Concentration is of the same order as its neighbours': the ten largest customers are about 90% of revenue, two of them at 10% or more each. On the map it occupies a narrow niche between rack and hall, and it exists because a cluster stopped fitting into one rack."
       },
+      "pendingDossier": true,
+      "membershipFailing": [],
       "centrality": {
         "degree": 4,
         "betweenness": 0.000322,
@@ -11318,6 +11568,8 @@
         "ru": "Crusoe строит дата-центры под ускорители и сдаёт вычисления в аренду вместе со своими сервисами. Собственная страница описывает площадки числами: 13.6M квадратных футов зданий, 4.9 гигаватта мощности и кампусы на 3,000 акров. Охлаждение заявлено как прямой отвод тепла от кристалла, что и позволяет ставить плотные стойки. В перечне доступного железа названы ускорители NVIDIA нескольких поколений и AMD, то есть площадка не привязана к одному поставщику. Заработок идёт с аренды и с сервисов дообучения и вывода поверх неё.",
         "en": "Crusoe builds data centres for accelerators and rents out compute together with its own services. Its own page describes the sites in numbers: 13.6M square feet of buildings, 4.9 gigawatts of power and campuses across 3,000 acres. Cooling is stated as direct liquid-to-chip, which is what allows dense racks to be installed. Its hardware list names several NVIDIA generations and AMD parts, so the venue is not tied to a single supplier. Money comes from the rental and from fine-tuning and inference services layered on top."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 4,
         "betweenness": 0.009196,
@@ -11563,6 +11815,8 @@
         "ru": "CUDA — программная платформа NVIDIA для расчётов на её ускорителях; сама компания называет её основанием таких вычислений. В комплект входят ускоренные библиотеки, отладчик, компилятор C++ и библиотека времени исполнения, то есть весь путь от кода до запуска. Отдельной цены у платформы нет: она едет вместе с ускорителями и удерживает написанный под неё код. Отчётность NVIDIA описывает её как основу стека, работающую на всех её ускорителях, и называет свыше 7.5 млн разработчиков, которые ей пользуются. Выпуск 13.2 расширил модель программирования на архитектуру Ampere.",
         "en": "CUDA is NVIDIA's software platform for computing on its accelerators; the company itself calls it the foundation of such computing. The kit holds accelerated libraries, a debugger, a C++ compiler and a runtime library, that is the whole path from code to execution. The platform has no separate price: it travels with the accelerators and holds the code written for it. NVIDIA's own filing describes it as the base of the stack running on all of its GPUs and counts over 7.5 million developers using it. Release 13.2 extended the programming model to the Ampere architecture."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 12,
         "betweenness": 0.019529,
@@ -11755,6 +12009,8 @@
         "ru": "Databricks продаёт платформу, в которой данные компании и модели живут в одном месте. Собственная страница описывает её как единое основание для данных и управления ими вместе с моделями, настроенными под конкретную организацию. Продаётся это как облачный сервис поверх чужих площадок: платформа доступна на AWS, Azure и GCP. Отсюда её место на карте: она не покупает ускорители сама, а перепродаёт работу поверх арендованных. Заработок идёт с потребления вычислений и с подписки на управление данными.",
         "en": "Databricks sells a platform where a company's data and its models live in one place. Its own page describes it as a unified foundation for all data and governance, combined with models tuned to that organisation. It is sold as a cloud service on top of other people's venues: the platform runs on AWS, Azure and GCP. Hence its place on the map: it does not buy accelerators itself but resells work on rented ones. Money comes from compute consumption and from subscriptions to data governance."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 3,
         "betweenness": 0.018692,
@@ -11976,6 +12232,8 @@
         "ru": "DeepSeek — китайская лаборатория, которая выкладывает свои модели с открытыми весами. Собственный репозиторий описывает DeepSeek-V3 как модель со смесью экспертов на 671B параметров, из которых на каждый токен активируются 37B. Такая конструкция удешевляет и обучение, и работу модели — именно на этом строится её заявка. Денег за веса лаборатория не берёт, зарабатывая на платном интерфейсе и продуктах вокруг. Для карты она важна как доказательство того, что передовая модель собирается не только в американском стеке.",
         "en": "DeepSeek is a Chinese lab that publishes its models with open weights. Its own repository describes DeepSeek-V3 as a Mixture-of-Experts model with 671B total parameters, of which 37B are activated per token. That construction makes both training and serving cheaper, and the claim rests on it. The lab charges nothing for the weights, earning instead on a paid interface and the products around it. For the map it matters as proof that a frontier model is assembled outside the American stack as well."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 4,
         "betweenness": 0.00022,
@@ -12181,6 +12439,8 @@
         "ru": "Dell Technologies собирает и продаёт инфраструктуру от края сети до ядра и облака, разделяя бизнес на два сегмента: Infrastructure Solutions Group и Client Solutions Group. Компания сама описывает себя как разработчика, производителя и поставщика в одном лице: «We design, develop, manufacture, market, sell, and support». Продажи за пределами США дали примерно 45% консолидированной выручки за 2026 финансовый год. Около 40% выручки идёт не напрямую, а через прочие каналы продаж. На карте узел стоит там, где ускорители превращаются в стойку, которую можно поставить заказчику.",
         "en": "Dell Technologies builds and sells infrastructure from the edge to the core and the cloud, split into two segments: Infrastructure Solutions Group and Client Solutions Group. The company describes itself as designer, maker and supplier in one: \"We design, develop, manufacture, market, sell, and support\". Sales outside the United States were approximately 45% of consolidated net revenue for Fiscal 2026. About 40% of net revenue comes not directly but through other sales channels. On the map the node sits where accelerators turn into a rack a customer can take delivery of."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 3,
         "betweenness": 0.0,
@@ -12321,6 +12581,10 @@
         "ru": "Продаёт преобразователи и модули питания, которые раздают электричество внутри стойки. Деньги — продажа компонентов производителям систем, объём зависит от количества стоек, а не от их стоимости. В карте компания важна тем, что её изделия приходится проектировать под конкретное поколение ускорителей: плотность мощности выросла настолько, что прежние решения физически не подходят. Это превратило стандартный компонент в предмет совместной разработки с производителем систем.",
         "en": "Sells converters and power modules distributing electricity inside the rack. The money is component sales to system builders, with volume driven by rack count rather than rack value. On the map the company matters because its parts have to be designed for a specific accelerator generation: power density has risen enough that earlier solutions physically do not fit. That turned a standard component into an item of joint development with the system maker."
       },
+      "pendingDossier": true,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
@@ -12551,6 +12815,8 @@
         "ru": "Digital Realty владеет дата-центрами и сдаёт в них место, питание и подключения. Портфель — 310 объектов, из которых 118 в США и 113 в Европе, общей площадью около 57.6 млн квадратных футов. Заполненность портфеля на конец года составила примерно 84.7%, и это прямая мера того, сколько ещё можно сдать без стройки. Земля и площадки под стройкой рассчитаны более чем на 3,500 мегаватт дополнительной мощности. Компания работает как фонд недвижимости, поэтому её ограничение — не спрос, а темп ввода питания.",
         "en": "Digital Realty owns data centres and rents out space, power and connections inside them. The portfolio holds 310 sites, 118 of them in the United States and 113 in Europe, totalling about 57.6 million rentable square feet. Occupancy stood at roughly 84.7% at year end, a direct measure of how much can still be let without building. Land and sites under construction are sized for more than 3,500 megawatts of additional capacity. It operates as a real estate trust, so its constraint is not demand but the pace at which power is delivered."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 4,
         "betweenness": 0.01406,
@@ -12700,6 +12966,8 @@
         "ru": "Продаёт электротехнику для распределения энергии: щиты, шины, аппараты защиты, системы управления питанием. Деньги — продажа оборудования проектам и обслуживание, спрос идёт волнами вместе со стройкой. При выручке $27,4 млрд в 2025 году компания обслуживает заказчиков в 180 странах, то есть спрос дата-центров конкурирует внутри неё с промышленным и коммунальным. Для карты это ключевая деталь: очередь на электрооборудование определяется не рынком ИИ, а общей загрузкой электротехнического производства.",
         "en": "Sells electrical equipment for power distribution: switchgear, busways, protection devices, power management systems. The money is equipment sales into projects plus service, and demand arrives in waves with construction. With revenues of $27.4 billion in 2025 the company serves customers in 180 countries, so data-centre demand competes inside it with industrial and utility demand. That is the key detail for the map: the queue for electrical equipment is set by total electrical manufacturing load, not by the AI market."
       },
+      "pendingDossier": true,
+      "membershipFailing": [],
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
@@ -12930,6 +13198,8 @@
         "ru": "Equinix сдаёт места в своих дата-центрах, питание и точки обмена трафиком, оставаясь нейтральной к операторам. Заработок распределён: клиентов больше 10,500, и ни один не даёт 10% или больше выручки. Устойчивость продаётся вместе с местом — компания отчиталась о доступности выше 99.9999% за год. Подключение к сети площадки зависит от третьих сторон: она сама называет это риском для своей работы. Плотные стойки под ускорители упираются в питание, и она прямо пишет, что старые площадки не всегда получается заполнить целиком.",
         "en": "Equinix rents space in its data centres, power and traffic exchange points, staying neutral towards operators. Its earnings are spread out: it has over 10,500 customers and none of them makes up 10% or more of revenue. Resilience is sold together with the space — it reported uptime above 99.9999% across the year. Connectivity into its sites depends on third parties, which it names as a risk to its own operations. Dense accelerator racks run into power limits, and it writes plainly that older sites cannot always be filled completely."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 6,
         "betweenness": 0.034085,
@@ -13123,6 +13393,8 @@
         "ru": "Европейский союз стоит на карте как юрисдикция, которая пишет правила допуска моделей на рынок. Свой подход он описывает прямо: правила построены по риску и адресованы разработчикам и тем, кто модели внедряет. Системы, признанные явной угрозой безопасности, средствам к существованию и правам людей, запрещены. Применения, способные создать серьёзный риск для здоровья, безопасности или основных прав, отнесены к высокорисковым. При этом сам регулятор признаёт, что подавляющее большинство используемых в союзе систем попадает в категорию минимального риска.",
         "en": "The European Union stands on the map as the jurisdiction that writes the rules of market access for models. It describes its approach plainly: the rules are risk-based and addressed to developers and deployers. Systems considered a clear threat to the safety, livelihoods and rights of people are banned. Uses that can pose serious risks to health, safety or fundamental rights are classified as high-risk. At the same time the regulator itself acknowledges that the vast majority of systems used in the union fall into the minimal risk category."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 2,
         "betweenness": 0.006697,
@@ -13315,6 +13587,10 @@
         "ru": "Регламент об ИИ — это Regulation (EU) 2024/1689 Европейского парламента и Совета от 13 июня 2024 года. Его собственный текст называет цель: улучшить работу внутреннего рынка, установив единые гармонизированные правила. Тем же документом внесены изменения в целый ряд действующих регламентов и директив союза. Способ регулирования записан прямо: запретить неприемлемые практики, установить требования к высокорисковым системам и обязанности их операторов. Отсюда положение узла на карте: он не орган и не компания, а текст, по которому и орган, и компания обязаны действовать.",
         "en": "The AI Act is Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024. Its own text states the purpose: to improve the functioning of the internal market by laying down uniform harmonised rules. The same document amends a series of existing union regulations and directives. The method of regulation is written plainly: prohibit unacceptable practices, set requirements for high-risk systems and obligations for their operators. Hence the node's place on the map: it is neither a body nor a company but the text both a body and a company must act by."
       },
+      "pendingDossier": false,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 2,
         "betweenness": 0.000309,
@@ -13520,6 +13796,8 @@
         "ru": "Fabrinet собирает сложную оптику и электронику по контракту и описывает свою роль как единственного внешнего производителя для тех изделий, которые делает. Концентрацию заказчиков компания раскрывает поимённо: за 2026 финансовый год Cisco, NVIDIA, Nokia и Amazon дали 19.9%, 16.3%, 10.7% и 10.5% выручки. Годом раньше расклад был другим — NVIDIA и Cisco дали 27.6% и 18.2%. Компания называет себя лидером в производстве для рынка оптической связи. На карте узел стоит там, где оптический трансивер превращается в изделие, которое ставят в стойку.",
         "en": "Fabrinet builds complex optics and electronics under contract and describes its role as the sole outsourced manufacturer for the products it makes. It discloses customer concentration by name: for fiscal year 2026 Cisco, NVIDIA, Nokia and Amazon gave 19.9%, 16.3%, 10.7% and 10.5% of revenues. A year earlier the split was different — NVIDIA and Cisco gave 27.6% and 18.2%. The company calls itself a leader in manufacturing for the optical communications market. On the map the node sits where an optical transceiver becomes a part that goes into a rack."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 4,
         "betweenness": 0.000231,
@@ -13754,6 +14032,8 @@
         "ru": "Hon Hai, известная как Foxconn, основана на Тайване в 1974 году и называет себя крупнейшим в мире производителем электроники. Выручка группы за полный год достигла NT$8.1 trillion — рекорд. В том же году выручка от облачных и сетевых продуктов впервые превысила выручку от бытовой электроники и стала крупнейшей товарной категорией квартала. Себя в этом сегменте компания описывает прямо: «the world's largest AI server provider». На карте узел стоит там, где ускоритель, память и питание собираются в стойку, которую увозят на площадку.",
         "en": "Hon Hai, known as Foxconn, was established in Taiwan in 1974 and calls itself the world's largest electronics manufacturer. The group's full year revenue reached NT$8.1 trillion, a record high. In the same year revenue from cloud and networking products passed that of smart consumer electronics for the first time and became the largest product category of the quarter. In that segment the company describes itself plainly: \"the world's largest AI server provider\". On the map the node sits where accelerator, memory and power are assembled into the rack that ships to site."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
@@ -13972,6 +14252,10 @@
         "ru": "GE Vernova поставляет оборудование и обслуживание для электроэнергетики, и её собственная отчётность даёт цифру, ради которой узел стоит на карте: «Our installed base generates approximately 25% of the world's electricity». Спрос на её продукцию она прямо связывает с дата-центрами и гиперскейлерами. Портфель невыполненных обязательств на 31 декабря 2025 года составил примерно $94.4 billion. Для дата-центров компания предлагает газовые турбины в диапазоне от 25 MW до 3 GW. Одна из установок такого рода уже питает дата-центр Crusoe.",
         "en": "GE Vernova supplies equipment and services to the electric power industry, and its own filing carries the number the node is on the map for: \"Our installed base generates approximately 25% of the world's electricity\". It ties demand for its offerings directly to data centres and hyperscalers. Remaining performance obligations as of 31 December 2025 were approximately $94.4 billion. For data centres the company offers gas turbines from 25 MW to 3 GW. One such unit already powers a Crusoe data centre."
       },
+      "pendingDossier": false,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 2,
         "betweenness": 0.00022,
@@ -14192,6 +14476,8 @@
         "ru": "Google продаёт рекламу, подписки и облако, а в инфраструктуре ИИ выступает сразу покупателем и производителем. Выручка облака выросла на $15.5 млрд с 2024 по 2025 год. Клиентам предлагается выбор ускорителей: чужие графические процессоры и собственные тензорные процессоры, включая седьмое поколение Ironwood. Собственный чип не отменяет закупок — компания сама называет отраслевые мощности по ускорителям конкурентными и быстро меняющимися. Anthropic публично договорилась о расширении использования этого облака вплоть до миллиона тензорных процессоров.",
         "en": "Google sells advertising, subscriptions and cloud, and in AI infrastructure acts as buyer and producer at once. Cloud revenues increased $15.5 billion from 2024 to 2025. Customers are offered a choice of accelerators: third-party GPUs and its own Tensor Processing Units, including the seventh generation Ironwood. Its own chip does not remove purchases — the company itself calls industry supply capacity for accelerators competitive and rapidly evolving. Anthropic publicly agreed to expand its use of this cloud up to one million TPUs."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 8,
         "betweenness": 0.011831,
@@ -14407,6 +14693,10 @@
         "ru": "Google Cloud продаёт вычисления на собственных тензорных процессорах, а не только на покупных ускорителях. Свою архитектуру облако описывает как AI Hypercomputer, на которой эти процессоры и работают. Стек заявлен открытым сверху: поддержаны PyTorch и JAX, а для быстрого вывода — vLLM. Развёртывания предлагается вести кластерами через собственный управляемый оркестратор облака. Отсюда положение узла на карте: это единственное облако, где лаборатория может обучаться на кремнии самого владельца площадки.",
         "en": "Google Cloud sells compute on its own tensor processors, not only on bought-in accelerators. It describes the architecture those processors run on as the AI Hypercomputer. The stack is stated open at the top: PyTorch and JAX are supported, and vLLM for fast inference. Deployments are offered as clusters through the cloud's own managed orchestrator. Hence the node's place on the map: it is the only cloud where a laboratory can train on the silicon of the site's own owner."
       },
+      "pendingDossier": false,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 9,
         "betweenness": 0.006127,
@@ -14600,6 +14890,8 @@
         "ru": "Google DeepMind — исследовательское подразделение, которое делает модели Gemini и смежные системы. Собственная страница формулирует задачу коротко: строить искусственный интеллект ответственно и на пользу человечеству. Линейка разложена по назначению: модели для сложных задач, для больших объёмов и для работы агентов. Отдельной выручки у подразделения нет — его работа продаётся через облако и продукты материнской компании. Для карты это узел, который создаёт спрос на собственные тензорные процессоры Google, а не покупает чужие ускорители на рынке.",
         "en": "Google DeepMind is the research arm that builds the Gemini models and adjacent systems. Its own page puts the task briefly: to build AI responsibly to benefit humanity. The line-up is split by purpose: models for complex tasks, for high-volume work and for running agents. The unit has no revenue of its own — its work is sold through the parent's cloud and products. For the map it is the node that creates demand for Google's own Tensor Processing Units rather than buying accelerators on the market."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 3,
         "betweenness": 0.001016,
@@ -14831,6 +15123,10 @@
         "ru": "HPE продаёт серверы, сети и услуги и после покупки Juniper Networks прямо пишет, что приоритетом стало снижение долга. Про свою зависимость компания говорит резче, чем это обычно делают: Intel и AMD по процессорам x86, Broadcom по стандартным микросхемам и NVIDIA по графическим процессорам названы единственными источниками поставки для всего рынка сразу. Собственный ответ на это — совместная инженерия: HPE строит готовые системы, разработанные вместе с NVIDIA. Продажи за пределами США составили около 61% выручки за 2025 финансовый год. Ни один заказчик не дал более 10% дебиторской задолженности.",
         "en": "HPE sells servers, networking and services, and after buying Juniper Networks says plainly that de-leveraging is the priority. About its own dependence the company speaks more bluntly than is usual: Intel and AMD for x86 processors, Broadcom for standard parts and NVIDIA for graphics processors are named single-source suppliers for the entire market at once. Its own answer is joint engineering: HPE builds turn-key systems co-engineered with NVIDIA. Sales outside the United States were about 61% of net revenue in fiscal year 2025. No single customer accounted for more than 10% of receivables."
       },
+      "pendingDossier": false,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 5,
         "betweenness": 0.000476,
@@ -15050,6 +15346,8 @@
         "ru": "Hugging Face держит склад моделей и наборов данных и библиотеку, через которую их запускают. Своя документация говорит, что на складе лежит больше 1M+ контрольных точек моделей Transformers. Библиотека даёт и обучение, и вывод на готовых моделях, поэтому она стоит между исследованием и продуктом. Деньги приходят от платных тарифов, корпоративных планов и размещённого вывода, а не от самих моделей. Собственный README называет определение модели опорной точкой между фреймворками: если оно поддержано, модель работает у всех.",
         "en": "Hugging Face runs a store of models and datasets and the library through which they are used. Its own documentation says the store holds more than 1M+ Transformers model checkpoints. The library covers both training and inference on pretrained models, so it sits between research and product. Money comes from paid tiers, enterprise plans and hosted inference rather than from the models themselves. Its own README calls the model definition the pivot across frameworks: once it is supported, the model works everywhere."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 10,
         "betweenness": 0.005229,
@@ -15295,6 +15593,8 @@
         "ru": "Intel проектирует и сама производит процессоры, а с недавних пор продаёт производство и на сторону. Собственная отчётность прямо называет фабричные услуги внешним клиентам отдельным направлением. Технологический козырь — процесс Intel 18A, где впервые в серийном производстве соединены транзисторы с круговым затвором и подача питания с обратной стороны пластины. Компания пишет, что в США она единственная ведёт и передовую логическую разработку, и соответствующее производство. Отдельным риском названо и участие правительства США, которое приобрело значительную долю в её капитале.",
         "en": "Intel designs and manufactures processors itself, and lately sells manufacturing to others as well. Its own filing names third-party foundry services to external customers as a separate line of business. Its technical card is the Intel 18A process, the first in high-volume manufacturing to combine gate-all-around transistors with backside power delivery. The company writes that in the United States it is the only one running both leading-edge logic research and the matching manufacturing. It also names as a risk the participation of the government, which acquired a significant equity interest in it."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 6,
         "betweenness": 0.011994,
@@ -15527,6 +15827,8 @@
         "ru": "Япония на карте — юрисдикция, которая заново покупает себе передовое производство. Правительственный портал описывает исходную точку без прикрас: страна занимала более половины мирового полупроводникового рынка в 1980-е, но с тех пор лидируют другие, и самое передовое, что производится в Японии сейчас, — это 40-nm. Ответ — Rapidus Corporation, основанная в 2022 году, с объявленной государственной поддержкой в 330 billion yen и 7.3 billion yen от крупных японских компаний. Цель заявлена как серийный выпуск 2-nanometer, которого пока нет нигде. Пилотная линия планировалась на апрель 2025 года, серийный выпуск — на 2027 год.",
         "en": "On this map Japan is a jurisdiction buying itself leading-edge manufacturing back. The government portal describes the starting point without flattery: the country held more than half of the global semiconductor market in the 1980s, others have led since, and the most advanced generation produced in Japan now is the 40-nm chip. The answer is Rapidus Corporation, founded in 2022, with announced government support of 330 billion yen and 7.3 billion yen from major Japanese companies. The stated goal is mass production of 2-nanometer chips, which has yet to be realized anywhere. A pilot line was planned for April 2025 and mass production for 2027."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
@@ -15678,6 +15980,8 @@
         "ru": "Вторая библиотека обучения: те же массивы, что в NumPy, плюс преобразования функций — производная, компиляция и распараллеливание на множество устройств. Денег не приносит, это открытый код; развивает её команда внутри владельца собственного ускорителя, и в этом смысл её существования. В этой карте она нужна как второй путь: на ней обучаются модели, которым нужен не тот чип, что стоит в центре карты. Снизу у неё компилятор XLA, который раскладывает вычисление на TPU, а не только на графические ускорители. На ней написана меньшая часть исследований, но именно она делает альтернативный ускоритель пригодным для передового обучения.",
         "en": "The second training library: the same arrays as NumPy plus function transformations — differentiation, compilation and parallelisation across many devices. It earns nothing and is open source, developed by a team inside the owner of a rival accelerator, which is the point of its existence. On this map it matters as a second path: models that need a chip other than the one at the centre of the map are trained on it. Underneath sits the XLA compiler, which maps the computation onto TPUs rather than only onto GPUs. A minority of research is written in it, but it is what makes the alternative accelerator usable for frontier training."
       },
+      "pendingDossier": true,
+      "membershipFailing": [],
       "centrality": {
         "degree": 4,
         "betweenness": 0.000176,
@@ -15870,6 +16174,10 @@
         "ru": "Kioxia поставляет флеш-память и твердотельные накопители и относит себя к крупнейшим производителям памяти NAND. Происхождение технологии компания записывает за собой прямо: в 1987 году она изобрела первую в мире память NAND, не требующую источника питания. Сегодняшняя её линейка строится на трёхмерной памяти BiCS FLASH, дающей большую ёмкость. На карте узел стоит в слое хранения, а не памяти для обучения: он даёт ёмкость под данные, а не полосу под ускоритель. Производство он ведёт совместно с Sandisk через предприятие Flash Ventures.",
         "en": "Kioxia supplies flash memory and solid state drives and places itself among the largest NAND manufacturers. It records the origin of the technology plainly: in 1987 it invented the world's first NAND flash memory that requires no power source. Its present line rests on three-dimensional BiCS FLASH memory delivering greater capacity. On the map the node sits in the storage layer rather than the training-memory one: it gives capacity for data, not bandwidth for an accelerator. It manufactures jointly with Sandisk through the Flash Ventures venture."
       },
+      "pendingDossier": false,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 3,
         "betweenness": 0.0,
@@ -16032,6 +16340,10 @@
         "ru": "Продаёт контроль процесса: установки, которые ищут дефекты на пластине и говорят, годится ли партия. Деньги приходят продажей оборудования и обслуживанием, причём сервис даёт около 23% выручки за 2026 финансовый год и растёт вместе с установленным парком, а не с новыми заказами. Международные продажи — примерно 87% выручки. В карте компания стоит рядом с литографией и решает вопрос, который деньгами не закрывается: на передовом узле без измерения выход годных падает до уровня, при котором производство теряет смысл.",
         "en": "Sells process control: tools that find defects on the wafer and say whether a lot is usable. The money is equipment sales plus service, and service is roughly 23% of revenue in fiscal 2026, growing with the installed base rather than with new orders. International sales are about 87% of revenue. On the map it stands beside lithography and answers a question money cannot: on a leading-edge node, without measurement, yield falls to where manufacturing stops making sense."
       },
+      "pendingDossier": true,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
@@ -16240,6 +16552,8 @@
         "ru": "Kubernetes — открытая система, автоматизирующая развёртывание, масштабирование и управление контейнерными приложениями. Проект открыт Google в 2014 году и с тех пор живёт под Cloud Native Computing Foundation, где имеет статус graduated. Своё происхождение проект описывает прямо: он опирается на полтора десятилетия опыта Google по запуску нагрузок в продакшене. Для карты это уровень, на котором стандартизуется всё остальное: обучающие и инференс-стеки едут поверх него, а не рядом. Собственной выручки у узла нет — он не компания, а стандарт с управляющим комитетом.",
         "en": "Kubernetes is an open source system that automates deployment, scaling and management of containerized applications. Google open sourced the project in 2014 and it has lived under the Cloud Native Computing Foundation since, with graduated status. The project states its own origin plainly: it builds on a decade and a half of Google experience running production workloads. For the map it is the layer everything else standardizes on: training and inference stacks ride on top of it rather than beside it. The node has no revenue of its own — it is not a company but a standard with a steering committee."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 5,
         "betweenness": 0.001766,
@@ -16401,6 +16715,8 @@
         "ru": "Продаёт установки травления и осаждения — те шаги, где формируется трёхмерная структура ячейки памяти и транзистора. Деньги приходят дважды: продажей установки и потом обслуживанием парка, причём вторая часть растёт независимо от цикла закупок — она прибавила $1,40 млрд, или 20,2%, за 2026 финансовый год. Концентрация видна в дебиторской задолженности: пять заказчиков дают примерно 20%, 16%, 15% и 11%. В карте компания стоит под памятью и под логикой одновременно, поэтому событие у неё задевает обе половины производства.",
         "en": "Sells etch and deposition systems — the steps where the three-dimensional structure of a memory cell and a transistor is formed. The money arrives twice: from the tool and then from servicing the installed base, and the second stream grows independently of the purchasing cycle — it added $1.40 billion, or 20.2%, in fiscal 2026. Concentration shows in receivables: five customers account for roughly 20%, 16%, 15% and 11%. On the map it sits beneath memory and logic at once, so an event here touches both halves of manufacturing."
       },
+      "pendingDossier": true,
+      "membershipFailing": [],
       "centrality": {
         "degree": 4,
         "betweenness": 0.001173,
@@ -16594,6 +16910,8 @@
         "ru": "Lambda — компания, основанная инженерами машинного обучения в 2012 году и с тех пор занимающаяся только вычислениями для ИИ. Свою продукцию она описывает не как аренду карт, а как модульные фабрики ИИ: питание, жидкостное охлаждение и высокоскоростные соединения. Масштаб она формулирует сама: от одного ускорителя до сотен тысяч. Продуктовые линейки — суперкластеры, кластеры в один клик и отдельные инстансы. На карте узел стоит между производителем ускорителей и лабораторией, которой нужна мощность без собственного дата-центра.",
         "en": "Lambda is a company founded by ML engineers in 2012 and has done nothing but AI compute since. It describes its product not as card rental but as modular AI factories: power, liquid cooling and high-bandwidth interconnects. It states its own scale: from one GPU to hundreds of thousands. The product lines are superclusters, one-click clusters and instances. On the map the node sits between the accelerator maker and the laboratory that needs capacity without a data centre of its own."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
@@ -16786,6 +17104,10 @@
         "ru": "Lightspeed Venture Partners вкладывается в компании от посевной стадии до серии F и дальше. Свою позицию фирма описывает как высокую убеждённость: она стоит за своими компаниями от начала и до поздних раундов. Более двадцати лет она была первым инвестором и ранним вкладчиком в компании, которые сама называет одними из самых инновационных в мире. Отбор она формулирует независимым от географии — по существу возможности, а не по месту жительства основателя. На карте узел стоит в слое капитала рядом с другими фондами, финансирующими спрос на вычисления.",
         "en": "Lightspeed Venture Partners invests in companies from seed to Series F and beyond. It describes its own stance as high conviction: it stands behind its companies from the start through late rounds. For over twenty years it has been the first investor and an early backer of companies it calls some of the most innovative in the world. It frames selection as independent of geography — on the merits of the opportunity rather than where the founder lives. On the map the node sits in the capital layer beside other funds financing demand for compute."
       },
+      "pendingDossier": false,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
@@ -16921,6 +17243,10 @@
         "ru": "Продаёт блоки питания для серверов — компонент, который в этой карте выделяется своей обыкновенностью: поставщиков много, спецификации стандартны, замена не требует перепроектирования. Деньги приходят с объёма при тонкой марже. В карте эта связь держится как контрпример: она показывает, как выглядит нормальный конкурентный рынок рядом со всеми остальными слоями, где выбора почти нет. Риск здесь ценовой, а не структурный, и именно поэтому о нём никто не пишет.",
         "en": "Sells server power supplies — a component that stands out on this map for being ordinary: many suppliers, standard specifications, replacement without redesign. The money comes from volume at a thin margin. On the map the edge is kept as a counterexample: it shows what a normal competitive market looks like beside every other layer, where there is barely a choice. The risk here is price, not structure, which is why nobody writes about it."
       },
+      "pendingDossier": true,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
@@ -17087,6 +17413,10 @@
         "ru": "Продаёт микросхемы для передачи и хранения данных и, как сосед по слою, проектирует заказные чипы для облаков. Деньги — продажа кремния плюс инженерные контракты; концентрация крайняя, десять крупнейших заказчиков дают 82% выручки за 2026 финансовый год. Около 77% продаж отгружается заказчикам с операциями в Азии, что отражает географию производства и сборки, а не спроса. В карте компания существует как второй независимый проектировщик заказных ускорителей: наличие двух делает путь «сделать свой чип» доступным облакам без собственной команды.",
         "en": "Sells chips for moving and storing data and, like its neighbour on this layer, designs custom silicon for clouds. The money is silicon sales plus engineering contracts; concentration is extreme, with the ten largest customers at 82% of revenue in fiscal 2026. About 77% of sales ship to customers with operations in Asia, which reflects the geography of manufacturing and assembly rather than of demand. On the map it exists as the second independent designer of custom accelerators: two of them make the «build your own chip» route available to clouds without a silicon team."
       },
+      "pendingDossier": true,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
@@ -17314,6 +17644,8 @@
         "ru": "Meta зарабатывает рекламой в своих приложениях и тратит эти деньги на вычисления и исследования. Собственная отчётность прямо говорит, что почти вся выручка идёт от продажи рекламных мест. Расходы сегмента приложений составили $96.29 млрд, и в них входят дата-центры и техническая инфраструктура. Дата-центры компания строит сама, но существенную часть технической базы всё равно берёт у третьих сторон. Модели Llama она выпускает открыто, что даёт ей влияние на слой моделей без продажи самих моделей.",
         "en": "Meta earns from advertising in its own apps and spends that money on compute and research. Its own filing says plainly that substantially all revenue comes from selling advertising placements. Family of Apps investments were $96.29 billion and include data centres and technical infrastructure. It designs and builds its own data centres, yet a substantial portion of its technical infrastructure still comes from third parties. It releases the Llama models openly, which gives it influence over the model layer without selling models at all."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 6,
         "betweenness": 0.0006,
@@ -17449,6 +17781,8 @@
         "ru": "Суверенный инвестор, входящий в стройку вычислений напрямую, минуя венчурный слой. Деньги здесь длинные и без требования к быстрому возврату, а мотив финансовый идёт рядом с политическим: участие в инфраструктуре означает и доступ к ней. В карте это тот тип капитала, который делает возможной стройку со сроком окупаемости длиннее горизонта обычного фонда. Обратная сторона — именно такие вложения проходят проверку иностранного участия, и срок рассмотрения становится частью графика проекта.",
         "en": "A sovereign investor entering the compute buildout directly, skipping the venture layer. The money is long and carries no fast-return requirement, and the financial motive sits beside a political one: participating in infrastructure also means access to it. On the map it is the kind of capital that makes possible a build whose payback exceeds an ordinary fund's horizon. The flip side is that investments like these go through foreign-participation review, and the review clock becomes part of the project schedule."
       },
+      "pendingDossier": true,
+      "membershipFailing": [],
       "centrality": {
         "degree": 3,
         "betweenness": 0.000411,
@@ -17668,6 +18002,8 @@
         "ru": "Micron — американский производитель памяти и накопителей: DRAM, HBM, NAND. Его собственная отчётность за 2025 год показывает рост выручки на 49% к 2024 году и концентрацию, о которой карта раньше не знала: на одного заказчика пришлось 17 % общей выручки. Восемьдесят процентов выручки того же года пришло с отгрузок за пределы США. В 2025 году компания отгрузила образцы HBM4 36GB 12-high нескольким ключевым заказчикам. Конкурентов она называет сама и поимённо: Samsung, SK hynix, Kioxia, Sandisk и две китайские компании.",
         "en": "Micron is an American maker of memory and storage: DRAM, HBM, NAND. Its own filing for 2025 shows revenue up 49% against 2024 and a concentration the map did not know about: one customer accounted for 17 % of total revenue. Eighty percent of that year's revenue came from shipments outside the United States. In 2025 the company delivered HBM4 36GB 12-high samples to several key customers. It names its competitors itself and by name: Samsung, SK hynix, Kioxia, Sandisk and two Chinese companies."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 6,
         "betweenness": 0.00364,
@@ -17892,6 +18228,8 @@
         "ru": "Microsoft продаёт облако и подписки, а на ИИ зарабатывает арендой вычислений и моделями внутри своих продуктов. Выручка Microsoft Cloud выросла на 27% и достигла $214.4 млрд, Azure и прочие облачные сервисы прибавили 41%. Кластеры компания собирает на чужом железе: она сама сообщила о первом крупном промышленном кластере более чем из 4,600 систем NVIDIA GB300 NVL72. Дата-центры упираются в разрешённую под застройку землю, предсказуемую энергию и поставки серверов вместе с графическими процессорами. С OpenAI действует долгосрочное партнёрство, начатое в 2019 году, и Microsoft получает от него долю выручки.",
         "en": "Microsoft sells cloud and subscriptions, and earns on AI by renting compute and by putting models inside its own products. Microsoft Cloud revenue grew 27% to $214.4 billion, and Azure and other cloud services added 41%. It builds clusters on someone else's hardware: it said itself it had delivered a first at-scale production cluster of more than 4,600 NVIDIA GB300 NVL72 systems. Its datacentres depend on permitted and buildable land, predictable energy and deliveries of servers together with graphics processing units. A long-term partnership with OpenAI, established in 2019, brings it revenue-sharing payments."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 19,
         "betweenness": 0.089303,
@@ -18084,6 +18422,10 @@
         "ru": "Mistral AI — европейская лаборатория, основанная в апреле 2023 года, чья заявленная цель — держать передовой ИИ открытым. Модели она выпускает линейками: Mistral OCR, Mistral Medium, Mistral Small, Voxtral. Финансирование шло последовательными раундами — от посевного до серии C. Заказчиков компания называет поимённо, и среди них есть узлы этой карты: ASML, Snowflake и Cisco. Отдельно она строит собственную вычислительную инфраструктуру для обучения и вывода в Европе.",
         "en": "Mistral AI is a European laboratory founded in April 2023 whose stated aim is to keep frontier AI open. It ships models in families: Mistral OCR, Mistral Medium, Mistral Small, Voxtral. Funding ran in successive rounds, from a seed to a Series C. It names its customers, and among them are nodes of this map: ASML, Snowflake and Cisco. Separately it builds its own compute infrastructure for training and inference in Europe."
       },
+      "pendingDossier": false,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 4,
         "betweenness": 0.013578,
@@ -18289,6 +18631,8 @@
         "ru": "MLCommons — организация, измеряющая ИИ-системы: она ведёт наборы тестов и публикует результаты. Своё основание она формулирует как утверждение о самой отрасли: доверенный, безопасный и эффективный ИИ требует более совершенных систем измерения и подотчётности. Организацию поддерживают более 125 участников и аффилированных лиц — стартапы, компании, академия и некоммерческие организации. Она держит 10 наборов тестов и накопила 89.7 k + результатов производительности MLPerf. Отдельная ветка работы — риск и надёжность ИИ, а также данные и исследования.",
         "en": "MLCommons is the organization that measures AI systems: it maintains benchmark suites and publishes results. It frames its own founding as a claim about the industry: trusted, safe and efficient AI requires better systems for measurement and accountability. It is supported by over 125 members and affiliates — startups, companies, academics and non-profits. It maintains 10 benchmark suites and has accumulated 89.7 k + MLPerf performance results. A separate strand of work covers AI risk and reliability, and data and research."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
@@ -18495,6 +18839,8 @@
         "ru": "NCCL — библиотека коллективных обменов для многокарточных и многоузловых конфигураций, оптимизированная под ускорители и сеть одного вендора. Она даёт примитивы all-gather, all-reduce, broadcast, reduce, reduce-scatter и точка-точка. Маршруты подобраны под высокую полосу и низкую задержку по PCIe, NVLink и другим быстрым соединениям внутри узла, а между узлами — по сети того же вендора. Топология определяется автоматически: PCIe, NVLink, NVSwitch, InfiniBand, RoCE. Библиотека совместима с любой моделью распараллеливания по картам — однопоточной, многопоточной и многопроцессной.",
         "en": "NCCL is a collective communication library for multi-GPU and multi-node setups, tuned to one vendor's accelerators and networking. It provides all-gather, all-reduce, broadcast, reduce, reduce-scatter and point-to-point primitives. The routines are tuned for high bandwidth and low latency over PCIe, NVLink and other fast interconnects within a node, and across nodes over the same vendor's networking. Topology is detected automatically: PCIe, NVLink, NVSwitch, InfiniBand, RoCE. The library is compatible with any multi-GPU parallelization model — single-threaded, multi-threaded and multi-process."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
@@ -18657,6 +19003,8 @@
         "ru": "Продаёт то же, что и предыдущий арендодатель, но из Европы и на площадках, которые строит сама. Деньги — аренда вычислений по контрактам, где мощность бронируется заранее. Выручка за 2025 год выросла на 479%, до $529,8 млн, прибавив $438,3 млн: масштаб пока в разы меньше американских независимых облаков, темп сопоставим. В карте компания важна не размером, а юрисдикцией — она даёт лабораториям и компаниям вариант аренды, не выходящий за пределы европейского регулирования. Зависимость от одного поставщика чипов заявлена в её собственной отчётности как фактор риска.",
         "en": "Sells what the previous landlord sells, but from Europe and on sites it builds itself. The money is rented compute under contracts where capacity is booked in advance. Revenue grew 479% in 2025 to $529.8 million, adding $438.3 million: the scale is still a multiple below the American independents, the pace is comparable. On this map it matters for jurisdiction rather than size — it gives labs and companies a rental option that stays inside European regulation. Dependence on a single chip supplier is stated in its own filing as a risk factor."
       },
+      "pendingDossier": true,
+      "membershipFailing": [],
       "centrality": {
         "degree": 3,
         "betweenness": 0.000456,
@@ -18876,6 +19224,8 @@
         "ru": "Нидерланды — юрисдикция, откуда вывозят станки для печати самых сложных чипов, и государство, решающее, кому их можно вывезти. Национальная мера экспортного контроля покрывает узкий набор технологий производственного цикла и с 1 апреля 2025 года расширена. Под требование разрешения попало и измерительное оборудование: «specific measuring and inspection equipment that can be used in the production of advanced semiconductors». Мера применяется к вывозу из страны во все назначения за пределами ЕС и запретом не является — заявку рассматривают отдельно. Отсюда роль юрисдикции: она не производит чипы, она держит разрешение на вывоз того, без чего их не печатают.",
         "en": "The Netherlands is the jurisdiction the machines that print the hardest chips are exported from, and the state that decides who may receive them. Its national export control measure covers a narrow set of technologies in the production cycle and was widened on 1 April 2025. The authorisation requirement now also reaches metrology: \"specific measuring and inspection equipment that can be used in the production of advanced semiconductors\". The measure applies to exports from the Netherlands to all destinations outside the EU and is not a ban — each application is assessed on its own. Hence the role: the country makes no chips, it holds the permission to export what they cannot be printed without."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
@@ -19071,6 +19421,8 @@
         "ru": "NIM — набор контейнеров, в которых модель уезжает к заказчику вместе со своим слоем вывода. Микросервисы выставляют промышленные интерфейсы и подгоняют задержку и пропускную способность под каждую пару «модель — ускоритель». Внутри стоят не собственные серверы вывода, а чужие: TensorRT, TensorRT-LLM, vLLM и SGLang. Развернуть их можно где угодно, где есть ускорители одного вендора — от рабочей станции до облака. Отсюда роль узла: он превращает открытые серверы вывода в товар, продаваемый с гарантией.",
         "en": "NIM is a set of containers in which a model travels to the customer together with its serving layer. The microservices expose industry-standard APIs and tune latency and throughput for each model-accelerator pair. Inside sit not proprietary inference servers but other people's: TensorRT, TensorRT-LLM, vLLM and SGLang. They can be deployed anywhere one vendor's accelerators are — from a workstation to the cloud. Hence the node's role: it turns open inference servers into a product sold with a warranty."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 4,
         "betweenness": 5.9e-05,
@@ -19232,6 +19584,8 @@
         "ru": "Продаёт шкафы, системы жидкостного охлаждения и защиту соединений — то, во что физически ставится стойка. Деньги приходят проектной поставкой, и объём будущих поставок виден отдельной строкой: портфель заказов на конец 2025 года — $2,3 млрд. Концентрация умеренная, на крупнейшего заказчика приходится около 11% продаж, то есть компания не зависит от одной стройки. В карте она стоит рядом с поставщиками питания и решает ту же задачу с другой стороны: воздух перестал справляться с плотностью, и охлаждение переехало внутрь конструкции.",
         "en": "Sells enclosures, liquid cooling systems and connection protection — the physical thing a rack is installed into. The money comes from project supply, and future volume is reported on its own line: backlog at the end of 2025 was $2.3 billion. Concentration is moderate, with the largest customer at about 11% of sales, so the company does not depend on one build. On the map it stands beside the power suppliers and solves the same problem from the other side: air stopped coping with density, and cooling moved inside the design."
       },
+      "pendingDossier": true,
+      "membershipFailing": [],
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
@@ -19426,6 +19780,8 @@
         "ru": "NVentures — венчурное плечо NVIDIA, вкладывающее деньги в компании вокруг её же стека. Собственная страница описывает работу коротко: инвестировать в тех, кто решает сложные задачи, и строить долгие партнёрства с командами. Отдельной выручки у подразделения нет — оно тратит деньги материнской компании и возвращает их долями в портфельных компаниях. Практический смысл для карты в том, что деньги идут туда, где потом покупают ускорители. Стороннее наблюдение в отчётности Arista описывает это как значительные вложения в новые облачные компании.",
         "en": "NVentures is NVIDIA's venture arm, putting money into companies around its own stack. Its own page describes the work briefly: invest in those solving complex problems and build long partnerships with teams. The unit has no revenue of its own — it spends the parent's money and gets it back as stakes in portfolio companies. Its practical meaning for the map is that money goes where accelerators are later bought. An outside observation in Arista's filing describes this as significant investments in new cloud companies."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 3,
         "betweenness": 0.000143,
@@ -19684,6 +20040,8 @@
         "ru": "NVIDIA продаёт ускорители и целые стойки для обучения и работы моделей, а вместе с ними — свою программную среду. Выручка за 2026 финансовый год составила $215.9 млрд и выросла на 65%, выручка сегмента дата-центров прибавила 68%. Собственных заводов у компании нет: пластины делают внешние фабрики, среди которых она называет TSMC и Samsung, а память закупает у SK Hynix, Micron и Samsung. Деньги приходят от облаков, лабораторий и корпораций, которые берут системы целиком, а не отдельные чипы. Под средой CUDA пишут больше 7.5 млн разработчиков, и это делает переход на чужие ускорители дорогим.",
         "en": "NVIDIA sells accelerators and whole racks for training and serving models, and ships its own software environment with them. Revenue for fiscal year 2026 was $215.9 billion, up 65%, while Data Center revenue rose 68%. The company owns no fabs: wafers come from outside foundries, among which it names TSMC and Samsung, and memory is bought from SK Hynix, Micron and Samsung. Money comes from clouds, labs and enterprises that buy complete systems rather than single chips. More than 7.5 million developers write for CUDA, which is what makes a move to someone else's accelerators expensive."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 77,
         "betweenness": 0.799017,
@@ -19889,6 +20247,10 @@
         "ru": "Oklo разрабатывает установки деления на быстрых нейтронах, которые называет powerhouses, и продаёт не оборудование, а электричество и тепло. Технологию компания возводит к реактору Experimental Breeder Reactor-II, на котором она была продемонстрирована. Отдельно она коммерциализирует переработку отработавшего ядерного топлива в топливо для собственных установок и чужих. Свой рынок компания описывает честно и невыгодно для себя: развивающийся, без единого действующего коммерческого проекта. На карте узел стоит в слое, где мощность для дата-центров ещё только строится.",
         "en": "Oklo develops fast fission power plants it calls powerhouses and sells electricity and heat rather than equipment. It traces the technology to the Experimental Breeder Reactor-II, on which it was demonstrated. Separately it is commercializing the recycling of used nuclear fuel into fuel for its own powerhouses and those of others. It describes its own market plainly and unflatteringly: emerging, with no commercial project operating. On the map the node sits in the layer where power for data centres is still being built."
       },
+      "pendingDossier": false,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 2,
         "betweenness": 8.8e-05,
@@ -20174,6 +20536,8 @@
         "ru": "OpenAI разрабатывает модели и продаёт доступ к ним подпиской и через программный интерфейс. Собственная карточка системы описывает GPT-5 как единое целое из быстрой модели, модели для сложных задач и маршрутизатора между ними. Разработчикам компания даёт прямой доступ к модели рассуждения и её уменьшенным версиям. Вычисления она арендует: по договору с CoreWeave обязательство доходит до $11.9 млрд до октября 2030 года. Microsoft называет себя крупным инвестором OpenAI и получателем доли её выручки, а партнёрство между ними идёт с 2019 года.",
         "en": "OpenAI builds models and sells access to them by subscription and through an API. Its own system card describes GPT-5 as a single system of a fast model, a deeper reasoning model and a router between them. Developers are given direct access to the thinking model and its smaller versions. Compute is rented: under a contract with CoreWeave the commitment runs up to $11.9 billion through October 2030. Microsoft calls itself a major investor in OpenAI and a recipient of revenue-sharing payments, and the partnership dates to 2019."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 12,
         "betweenness": 0.060444,
@@ -20366,6 +20730,8 @@
         "ru": "Oracle продаёт базы данных, прикладной софт и облачную инфраструктуру, а в ИИ зарабатывает арендой вычислений под долгие контракты. Портфель законтрактованной, но не признанной выручки вырос до $638 млрд против $138 млрд годом ранее — рост компания сама объясняет крупными облачными договорами. Вычислительные услуги её облака идут от виртуальных машин и предложений на графических процессорах до серверов без гипервизора. Одним из таких контрактов CoreWeave называет обязательство OpenAI, что показывает, за какие сроки и суммы идёт конкуренция за площадки. Прикладной софт и базы остаются источником текущей выручки, пока площадки строятся.",
         "en": "Oracle sells databases, application software and cloud infrastructure, and in AI it earns by renting compute under long contracts. Contracted but unrecognised revenue grew to $638 billion against $138 billion a year earlier, which the company itself attributes to large cloud contracts. Its cloud compute services run from virtual machines and GPU-based offerings to bare metal servers. CoreWeave names an OpenAI commitment as one such contract, which shows the terms and sums on which venues now compete. Software and databases remain the source of current revenue while the venues are being built."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 6,
         "betweenness": 0.020021,
@@ -20573,6 +20939,8 @@
         "ru": "PyTorch — библиотека, в которой описывают и обучают нейронные сети. Собственный README называет две её опоры: тензорные вычисления с ускорением на графических процессорах и автоматическое дифференцирование на ленте операций. Денег она не берёт: это открытый проект, живущий на вкладе компаний, которым нужен общий слой под своим железом. Сборка с поддержкой CUDA описана в её же инструкции как отдельный выбор, то есть привязка к ускорителям идёт через отдельный слой, а не вшита. Вокруг библиотеки собран набор смежных проектов, включая vLLM, DeepSpeed и Ray.",
         "en": "PyTorch is the library in which neural networks are described and trained. Its own README names two pillars: tensor computation with GPU acceleration and a tape-based autograd system. It takes no money: this is an open project living on contributions from companies that need a shared layer under their own hardware. Building with CUDA support is described in its own instructions as a separate choice, so the tie to accelerators runs through a separate layer rather than being wired in. A set of adjacent projects has gathered around the library, among them vLLM, DeepSpeed and Ray."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 9,
         "betweenness": 0.006741,
@@ -20708,6 +21076,10 @@
         "ru": "Третий тайваньский подрядчик сборки в карте: собирает серверные системы под конкретные платформы ускорителей. Деньги — та же плата за сборку с тонкой маржой, компенсируемой объёмом. Наличие трёх подрядчиков в карте — не избыточность, а необходимость: сборка идёт партиями, и одна линия не покрывает пиковый спрос. В карте это показывает, что физический предел распределён по нескольким площадкам, а не сосредоточен в одной точке.",
         "en": "The third Taiwanese assembly contractor on the map: it builds server systems for specific accelerator platforms. The money is the same thin-margin assembly fee compensated by volume. Three contractors on the map is not redundancy but necessity: assembly runs in batches, and one line does not cover peak demand. On the map it shows the physical limit distributed across several sites rather than concentrated in one point."
       },
+      "pendingDossier": true,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
@@ -20903,6 +21275,8 @@
         "ru": "Ray — открытый каркас для распределённого запуска машинного обучения и обычного кода на Python. Он покрывает весь конвейер — от загрузки данных до обслуживания модели — через высокоуровневые интерфейсы, которые стыкуются с распространёнными фреймворками. Ядро даёт базовые примитивы для распределённых приложений и собственных платформ поверх них. Кластер Ray разворачивают на AWS, GCP, Azure или Kubernetes. Отсюда его роль на карте: он не заменяет оркестратор, а живёт поверх него.",
         "en": "Ray is an open source framework for running machine learning and ordinary Python code in a distributed way. It covers the whole pipeline — from data ingest to model serving — through high-level APIs that plug into common ecosystem frameworks. Its core provides foundational primitives for distributed applications and for custom platforms built on top. A Ray cluster is deployed on AWS, GCP, Azure or Kubernetes. Hence its place on the map: it does not replace the orchestrator, it lives on top of one."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
@@ -21051,6 +21425,10 @@
         "ru": "Продаёт не лекарство, а вероятность его найти: платформа ставит миллионы клеточных экспериментов и учит модели предсказывать, какая молекула стоит синтеза. Деньги приходят не с продаж препаратов, а от партнёрств с фармкомпаниями. По одному из соглашений компания может получить до $1,5 млрд последовательными выплатами плюс роялти. В карте это доказательство применимости за пределами ИТ: вычисления здесь заменяют не людей, а лабораторные опыты, и сравниваются с их стоимостью, а не с ценой другого сервера.",
         "en": "Sells not a drug but the probability of finding one: the platform runs millions of cell experiments and trains models to predict which molecule is worth synthesising. The money comes not from drug sales but from pharma partnerships. Under one agreement the company is eligible for up to $1.5 billion in success-based payments plus royalties. On the map it is proof of applicability beyond IT: here compute replaces bench experiments rather than people, and is compared against their cost rather than another server's price."
       },
+      "pendingDossier": true,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
@@ -21243,6 +21621,10 @@
         "ru": "Salesforce продаёт корпоративные приложения по подписке — напрямую и через партнёров. Выручка за 2026 финансовый год составила $41.5 billion с ростом на десять процентов год к году. Ни один заказчик не дал десяти процентов ни выручки, ни дебиторской задолженности. Ядром своего предложения компания называет Data 360 — слой данных, дающий агентам контекст. На карте узел стоит на стороне спроса: он показывает, что модели покупают не только лаборатории.",
         "en": "Salesforce sells enterprise applications on subscription, directly and through partners. Revenue for fiscal 2026 was $41.5 billion, an increase of ten percent year-over-year. No single customer reached ten percent of either revenue or receivables. The company names Data 360 as the core of its offering — the data layer that gives agents their context. On the map the node sits on the demand side: it shows that models are bought by more than laboratories."
       },
+      "pendingDossier": false,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
@@ -21454,6 +21836,8 @@
         "ru": "Samsung — одновременно производитель памяти и фабрика по чужим заказам, и такое сочетание в одной компании редкость. По собственному сообщению, она начала серийный выпуск HBM4 и отгрузила коммерческие партии заказчикам. Скорость передачи заявлена как 11.7 гигабит в секунду, а сама память собрана на 1c DRAM и логической подложке 4nm. Через 12-слойную укладку объём одной сборки начинается с 24 гигабайт. Для NVIDIA компания одновременно поставщик памяти и вторая фабрика, что и делает её узлом сразу двух слоёв карты.",
         "en": "Samsung is a memory maker and a contract fab at once, a combination rare inside one company. By its own announcement it has begun mass production of HBM4 and shipped commercial parts to customers. Transfer speed is stated at 11.7 gigabits per second, and the stack is built on 1c DRAM with a 4nm logic base die. Through 12-layer stacking one part starts at 24 gigabytes. For NVIDIA it is both a memory supplier and a second foundry, which is what puts it in two layers of the map at once."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 7,
         "betweenness": 0.021265,
@@ -21685,6 +22069,8 @@
         "ru": "Sandisk — вертикально интегрированный производитель флеш-памяти: своя схемотехника, своё производство спереди и сзади, своя системная инженерия. Выручка за год, закончившийся 3 июля 2026 года, составила $20,248 million. Производство он ведёт не сам: «We depend on Flash Ventures for the development and manufacture of flash-based memory» — совместное предприятие с Kioxia. Соглашения этого предприятия прямо запрещают обеим сторонам работать с третьими лицами по флеш-памяти. Ни один заказчик не дал более 10% выручки, а десятка крупнейших дала 44 %.",
         "en": "Sandisk is a vertically integrated maker of flash memory: its own circuit design, its own front- and back-end manufacturing, its own systems engineering. Revenue for the year ended 3 July 2026 was $20,248 million. It does not manufacture alone: \"We depend on Flash Ventures for the development and manufacture of flash-based memory\" — a joint venture with Kioxia. The venture's agreements bar both sides from working with third parties on flash memory. No customer accounted for more than 10% of revenue, while the top ten accounted for 44 %."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 5,
         "betweenness": 0.000281,
@@ -21878,6 +22264,8 @@
         "ru": "Schneider Electric описывает себя как мирового лидера энергетических технологий, работающего электрификацией, автоматизацией и цифровизацией. Дата-центры она называет среди объектов, которые её технологии позволяют вести как открытые связанные системы — наравне со зданиями, заводами, инфраструктурой и сетями. На карте узел стоит в слое питания и распределения: он даёт стойке электричество и управление им. Собственная страница профиля закрыта для машинного обхода стандартным запросом, и цитаты взяты с неё же обходом с браузерным заголовком. Отсюда роль узла: он не строит площадку и не считает на ней, он делает так, чтобы мощность дошла до шкафа.",
         "en": "Schneider Electric describes itself as a global energy technology leader working through electrification, automation and digitalization. It names data centres among the objects its technologies let run as open interconnected systems — alongside buildings, factories, infrastructure and grids. On the map the node sits in the power and distribution layer: it brings electricity to the rack and the control of it. Its own profile page refuses a plain machine request, and the quotes were taken from it with a browser header. Hence the node's role: it neither builds the site nor computes on it, it makes the power reach the cabinet."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 2,
         "betweenness": 0.000547,
@@ -22083,6 +22471,10 @@
         "ru": "Schrödinger продаёт вычислительный софт для поиска молекул и параллельно ведёт собственные программы разработки лекарств. Компания называет себя ведущим поставщиком вычислительных решений для фармацевтической разработки. В 2025 году её софт покупали все двадцать крупнейших фармацевтических компаний. Решения покрывают все стадии — от поиска молекулы до её оптимизации, и применяются не только в фармацевтике, но и в аэрокосмосе, энергетике, полупроводниках и дисплеях. На карте узел стоит на стороне спроса: он показывает, для чего покупают вычисления вне ИИ-лабораторий.",
         "en": "Schrödinger sells computational software for molecule discovery and runs its own drug discovery programs alongside. The company calls itself the leading provider of computational solutions for pharmaceutical development. In 2025 all of the top twenty pharmaceutical companies bought its software. The solutions span every stage from discovery to optimization and are used beyond pharma — in aerospace, energy, semiconductors and displays. On the map the node sits on the demand side: it shows what compute is bought for outside AI laboratories."
       },
+      "pendingDossier": false,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
@@ -22218,6 +22610,10 @@
         "ru": "Венчурный фонд, участвующий в раундах лабораторий и инфраструктурных компаний. Модель та же — комиссия за управление и доля в прибыли, — но размер современных раундов таков, что фонд редко бывает единственным инвестором. В карте это важно: капитал такого типа заменим, и переговорной силы у него меньше, чем у инфраструктурных денег, которые финансируют физические объекты. Ценность участия здесь репутационная и информационная, а не определяющая.",
         "en": "A venture fund participating in labs' and infrastructure companies' rounds. The model is the same — management fee plus carry — but the size of current rounds means the fund is rarely the only investor. That matters on the map: capital of this type is replaceable and carries less leverage than infrastructure money financing physical assets. The value of participating here is reputational and informational rather than decisive."
       },
+      "pendingDossier": true,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
@@ -22366,6 +22762,10 @@
         "ru": "Продаёт компаниям единую систему рабочих процессов: заявки в ИТ, кадровые операции, обслуживание клиентов — в одном контуре. Деньги приходят подпиской за рабочее место с многолетними договорами, и 78% выручки даёт собственный отдел продаж, а не партнёры. В карте компания стоит на стороне спроса: она закупает вычисления у облаков и встраивает модели в процессы, за которые заказчики уже платят. Именно поэтому её спрос устойчивее лабораторного — он не требует отдельного обоснования бюджета.",
         "en": "Sells companies a single system for workflows: IT tickets, HR operations, customer service — in one loop. The money is a per-seat subscription on multi-year contracts, and 78% of revenue comes through its own sales organisation rather than partners. On the map it sits on the demand side: it buys compute from clouds and embeds models into processes customers already pay for. Which is why its demand is steadier than a lab's — it needs no separate budget justification."
       },
+      "pendingDossier": true,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
@@ -22585,6 +22985,8 @@
         "ru": "SGLang — открытый каркас обслуживания больших языковых и мультимодальных моделей, рассчитанный на низкую задержку и высокую пропускную способность. Проект пишет о собственном масштабе прямо: развёрнут широко и генерирует триллионы токенов в продакшене ежедневно. Список тех, кто его принял, включает xAI, NVIDIA, AMD, Intel, Oracle Cloud, Google Cloud, Microsoft Azure, AWS и Nebius. Работает он на ускорителях NVIDIA и AMD, процессорах Intel Xeon, тензорных процессорах Google и Ascend NPU. На карте это узел, из-за которого обслуживание моделей перестало быть привязано к одному вендору.",
         "en": "SGLang is an open serving framework for large language and multimodal models, aimed at low latency and high throughput. The project writes about its own scale plainly: deployed at large scale and generating trillions of tokens in production each day. Its list of adopters includes xAI, NVIDIA, AMD, Intel, Oracle Cloud, Google Cloud, Microsoft Azure, AWS and Nebius. It runs on NVIDIA and AMD accelerators, Intel Xeon CPUs, Google TPUs and Ascend NPUs. On the map this is the node that stopped model serving from being tied to one vendor."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 8,
         "betweenness": 0.002625,
@@ -22764,6 +23166,8 @@
         "ru": "Shin-Etsu Chemical работает с 16 сентября 1926 года, её капитал составляет 119,419 million yen, в консолидированном периметре 27,342 сотрудника. Основную продукцию компания перечисляет сама, и первым в списке электронных материалов стоит полупроводниковый кремний — то есть пластины, с которых начинается любой чип. Рядом в том же списке идут редкоземельные магниты и материалы для герметизации полупроводников. На карте узел стоит в самом низу стека: без пластины не начинается ни один маршрут. Именно поэтому его молчание было заметнее прочих — профиль стоял на чужой строке.",
         "en": "Shin-Etsu Chemical has operated since 16 September 1926, its capital is 119,419 million yen and its consolidated headcount is 27,342. It lists its main products itself, and first among electronics materials stands semiconductor silicon — the wafers every chip begins on. Beside them in the same list are rare earth magnets and semiconductor encapsulating materials. On the map the node sits at the very bottom of the stack: no route starts without a wafer. That is why its silence was more conspicuous than others — the profile stood on someone else's line."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
@@ -22956,6 +23360,10 @@
         "ru": "Siemens описывает себя как технологическую компанию, чьи разработки перестраивают отрасли, составляющие опору экономик: промышленность, инфраструктуру и транспорт. Промышленный ИИ она называет прямо своим предметом — им она повышает эффективность заводов. Компания работает на всех обитаемых континентах. В 2025 финансовом году она вложила 438 million € в обучение и подготовку сотрудников и 47.9 million € в общественные проекты. На карте узел стоит на стороне спроса: он показывает, куда ускоренные вычисления уходят за пределами дата-центров.",
         "en": "Siemens describes itself as a technology company whose work rebuilds the industries that form the backbone of economies: industry, infrastructure and transportation. It names industrial AI as its own subject — the thing it raises factory efficiency with. The company operates across every inhabited continent. In fiscal 2025 it invested 438 million € in employee education and training and 47.9 million € in community projects. On the map the node sits on the demand side: it shows where accelerated computing goes outside data centres."
       },
+      "pendingDossier": false,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
@@ -23136,6 +23544,10 @@
         "ru": "Siemens EDA делает инструменты для проектирования, верификации и подготовки к производству интегральных схем. Свою роль компания формулирует так: её инструменты позволяют заказчикам проектировать схемы, на которых держится цифровизация по всему миру. На карте это третий из трёх поставщиков средств проектирования рядом с Cadence и Synopsys — без них чип не доходит до фабрики. Собственного домена у подразделения фактически не осталось: адрес eda.sw.siemens.com теперь перенаправляет на корпоративный сайт, и продуктовые страницы живут по путям внутри него. Отсюда роль узла: он держит ту часть маршрута, где замысел превращается в набор масок.",
         "en": "Siemens EDA makes tools for the design, verification and manufacturing preparation of integrated circuits. The company frames its own role thus: its tools let customers design the circuits digitalization worldwide rests on. On the map it is the third of three design-tool suppliers alongside Cadence and Synopsys — without them a chip never reaches the fab. The unit has effectively lost its own domain: eda.sw.siemens.com now redirects to the corporate site and the product pages live on paths inside it. Hence the node's role: it holds the stretch of the route where an intent becomes a set of masks."
       },
+      "pendingDossier": false,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 3,
         "betweenness": 0.0,
@@ -23341,6 +23753,10 @@
         "ru": "Siemens Energy покрывает весь энергетический ландшафт — от традиционной генерации до возобновляемой, от сетевых технологий до накопителей и электрификации промышленных процессов. Цифра, ради которой узел стоит на карте, названа ею самой: 1 /6 of global electricity generation is based on our technology. В компании работает более 100,000 человек, она присутствует в 90 странах и вкладывает более € 1bn в исследования и разработку. На карте узел стоит в слое, где мощность подводят к площадке, а не считают на ней.",
         "en": "Siemens Energy covers the whole energy landscape — from conventional to renewable generation, from grid technology to storage and the electrification of industrial processes. The figure the node is on the map for is its own: 1 /6 of global electricity generation is based on our technology. It has more than 100,000 employees, is present in 90 countries and invests more than € 1bn in research and development. On the map the node sits in the layer that brings power to the site rather than computing on it."
       },
+      "pendingDossier": false,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
@@ -23533,6 +23949,10 @@
         "ru": "Сингапур на этой карте — юрисдикция, которая покупает себе место в стеке деньгами и правилами. Собственный документ министерства цифрового развития называет обязательство: свыше S$1 billion на государственные исследования ИИ и подготовку кадров с 2025 по 2030 год. Доступность вычислений государство расширяет отдельным механизмом — второй заявочной кампанией по дата-центрам, схемой стратегической цифровой инфраструктуры и суперкомпьютером национального центра. То есть узел не производит ни чипов, ни моделей: он строит площадку и правила, на которых их можно ставить. На карте он стоит рядом с другими юрисдикциями как точка допуска, а не как производитель.",
         "en": "On this map Singapore is a jurisdiction that buys its place in the stack with money and rules. Its own digital ministry document states the commitment: over S$1 billion for public AI research and talent development from 2025 to 2030. The state widens compute availability through a separate mechanism — a second data centre call-for-application, a strategic digital infrastructure scheme and the national supercomputing centre's machine. The node makes neither chips nor models: it builds the site and the rules they can be placed under. On the map it stands beside other jurisdictions as a point of access, not as a producer."
       },
+      "pendingDossier": false,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
@@ -23741,6 +24161,8 @@
         "ru": "SK hynix делает память, и её ключевой продукт для карты — память высокой пропускной способности рядом с ускорителем. По собственному проспекту, в этом сегменте компания заняла первое место по выручке с долей 56.4% в первом квартале 2026 года, а в DRAM в целом — второе место с 29.1%. Рынок памяти концентрирован: сама компания пишет, что DRAM сосредоточен у трёх игроков. Заказчики тоже немногочисленны: на крупнейшего пришлось 23.9% выручки за 2025 год. В июне 2026 года объявлено технологическое партнёрство с NVIDIA, включающее поставки памяти.",
         "en": "SK hynix makes memory, and its key product for this map is the high-bandwidth memory that sits beside the accelerator. By its own prospectus it ranked first in that segment by revenue with a 56.4% share in the first quarter of 2026, and second in DRAM overall with 29.1%. The memory market is concentrated: the company writes itself that DRAM sits with three players. Customers are few as well: the largest accounted for 23.9% of revenue in 2025. In June 2026 it announced a technology partnership with NVIDIA that includes the supply of memory."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 5,
         "betweenness": 0.011279,
@@ -23946,6 +24368,10 @@
         "ru": "Snowflake продаёт платформу данных, построенную поверх чужой публичной облачной инфраструктуры, и сама называет её основой своего AI Data Cloud. На 31 января 2026 года у неё было 13,328 заказчиков против 10,996 годом раньше. Крупнейшие корпоративные клиенты дали примерно 43% выручки за тот же год. Договоры на ёмкость дали около 97% выручки — это подписка, а не разовые продажи. Конкурентами компания называет три крупнейших публичных облака, на которых сама и работает.",
         "en": "Snowflake sells a data platform built on someone else's public cloud infrastructure and calls it the foundation of its AI Data Cloud. As of 31 January 2026 it had 13,328 customers against 10,996 a year earlier. The largest corporate customers gave approximately 43% of revenue for the same year. Capacity arrangements produced about 97% of revenue — subscription, not one-off sales. The competitors it names are the three largest public clouds, the very ones it runs on."
       },
+      "pendingDossier": false,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 4,
         "betweenness": 0.001049,
@@ -24152,6 +24578,8 @@
         "ru": "SoftBank Group — инвестиционный холдинг, который финансирует стройку ИИ-инфраструктуры заёмными деньгами. Свежий выпуск гибридных облигаций на JPY 418.0 млрд размещался в основном среди частных инвесторов под 4.97% годовых на первые пять лет. Средства такого выпуска идут на досрочный выкуп предыдущих бумаг, то есть долг рефинансируется, а не гасится. Кредитный рейтинг выпуска японское агентство поставило на уровне BBB+. Отчётность Arm называет группу и клиентом, и стороной коммерческих договорённостей, от которых зависит часть её ближней выручки.",
         "en": "SoftBank Group is an investment holding that funds the build-out of AI infrastructure with borrowed money. A recent hybrid note issue of JPY 418.0 billion was offered mainly to individual investors at 4.97% for the first five years. Proceeds of such an issue go to the early redemption of earlier notes, so the debt is refinanced rather than repaid. The Japanese agency rated the issue BBB+. Arm's filing names the group both as a customer and as the counterparty to commercial arrangements on which part of its near-term revenue depends."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 5,
         "betweenness": 0.005795,
@@ -24346,6 +24774,8 @@
         "ru": "Южная Корея — юрисдикция двух из трёх мировых производителей быстрой памяти для ускорителей. По счёту собственного министерства торговли полупроводники выросли на 43.9 percent до $141.9 billion за 2024 год. Годовой экспорт страны достиг исторического максимума в том же году. Министерство прямо называет, чем именно рос экспорт чипов: «DDR5s and HBMs led the overall growth». Отдельно государство добивает цепочку деньгами извне: заявлено $0.9 billion вложений семи глобальных компаний, среди которых производители полупроводникового оборудования.",
         "en": "South Korea is the jurisdiction of two of the world's three makers of the fast memory accelerators need. By the count of its own trade ministry, semiconductors grew 43.9 percent to $141.9 billion over 2024. The country's annual exports reached an all-time high the same year. The ministry names exactly what drove chip exports: \"DDR5s and HBMs led the overall growth\". Separately the state tops the chain up with outside money: $0.9 billion of pledged investment by seven global companies, among them makers of semiconductor equipment."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 2,
         "betweenness": 6e-05,
@@ -24495,6 +24925,8 @@
         "ru": "Продаёт серверы и стойки, собранные под конкретные ускорители, и делает это быстрее крупных производителей за счёт модульной конструкции. Деньги — маржа на сборке, невысокая в процентах и заметная в объёме, поэтому бизнес чувствителен к доступности чипов. Продажи за пределы США составили 40,6% выручки. В карте компания стоит между поставщиком ускорителей и площадкой: именно здесь чипы, память и питание превращаются в изделие, которое можно поставить в зал.",
         "en": "Sells servers and racks built around specific accelerators, and does it faster than the large manufacturers thanks to a modular design. The money is assembly margin — thin in percent, visible in volume — which makes the business sensitive to chip availability. Sales outside the United States were 40.6% of revenue. On the map it stands between the accelerator supplier and the site: this is where chips, memory and power become a product that can be installed in a hall."
       },
+      "pendingDossier": true,
+      "membershipFailing": [],
       "centrality": {
         "degree": 2,
         "betweenness": 0.018692,
@@ -24656,6 +25088,8 @@
         "ru": "Продаёт две вещи сразу: инструменты, в которых кристалл рисуют и проверяют перед запуском в производство, и готовые блоки — контроллеры памяти, интерфейсы, — которые заказчик вставляет в свой чип, не разрабатывая их сам. Деньги приходят лицензией на срок и роялти с проданных блоков; выручка почти целиком повторяющаяся, потому что без обновлений инструмент отстаёт от техпроцесса. В этой карте это слой прямо над фабрикой: инструмент должен быть сертифицирован под конкретную норму, иначе проект не пойдёт в производство. Выручка за финансовый год, закончившийся 31 октября 2025 года, — $7 054,2 млн; купленный симуляционный бизнес даёт около 11% консолидированной выручки и 21% активов. Расчёт физики рядом с проектированием — ставка на то, что чип и система, в которую он ставится, будут считаться вместе.",
         "en": "Sells two things at once: the tools a die is drawn and verified in before it goes to manufacturing, and ready-made blocks — memory controllers, interfaces — that a customer drops into its own chip instead of designing them. The money is a term licence plus royalties on the blocks sold; revenue is almost entirely recurring, because without updates the tool falls behind the process node. On this map it is the layer directly above the fab: the tool must be certified for a specific node or the design never reaches manufacturing. Revenue for the fiscal year ended October 31, 2025 was $7,054.2 million, and the acquired simulation business accounts for roughly 11% of consolidated revenue and 21% of assets. Putting physics simulation next to chip design is a bet that the chip and the system it goes into will be computed together."
       },
+      "pendingDossier": true,
+      "membershipFailing": [],
       "centrality": {
         "degree": 4,
         "betweenness": 0.001481,
@@ -24887,6 +25321,8 @@
         "ru": "Тайвань — юрисдикция, чьё правительство считает полупроводники опорой своей высокотехнологичной промышленности. По собственному счёту государственного портала для инвесторов остров стоит первым в мире и по контрактному производству, и по корпусированию с тестированием. Цепочка полупроводниковой промышленности оценена там в NT$3.22 trillion, или US$108.8 billion. Одиннадцать лет подряд остров остаётся крупнейшим в мире потребителем полупроводниковых материалов. Отсюда его роль на карте: не поставщик и не покупатель, а место, где физически стоят фабрики, от которых зависит остальной стек.",
         "en": "Taiwan is a jurisdiction whose government treats semiconductors as the backbone of its high-tech industry. By the count of its own state investment portal the island ranks first in the world in both foundry and packaging with testing. Its semiconductor industry chain is valued there at NT$3.22 trillion, or US$108.8 billion. For eleven consecutive years the island has been the world's largest consumer of semiconductor materials. Hence its place on the map: neither supplier nor buyer, but the ground the fabs stand on, and the rest of the stack depends on them."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 3,
         "betweenness": 0.000741,
@@ -25093,6 +25529,8 @@
         "ru": "TensorRT — набор инструментов для вывода: компиляторы, среды исполнения и оптимизации модели под низкую задержку и высокую пропускную способность. Оптимизация идёт квантованием, слиянием слоёв и тензоров и подбором ядер. Интеграция с чужими стеками заявлена прямо: TensorRT встраивается в PyTorch и Hugging Face, давая 6X ускорение вывода одной строкой. Модели из других фреймворков заходят через разборщик ONNX. Отдельная ветка TensorRT-LLM заявляет до 8X прироста производительности на больших языковых моделях.",
         "en": "TensorRT is a set of tools for inference: compilers, runtimes and model optimizations for low latency and high throughput. Optimization runs through quantization, layer and tensor fusion and kernel tuning. Integration with other stacks is stated plainly: TensorRT plugs into PyTorch and Hugging Face for 6X faster inference in one line. Models from other frameworks arrive through an ONNX parser. A separate TensorRT-LLM branch claims up to 8X more performance on large language models."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 5,
         "betweenness": 0.000212,
@@ -25228,6 +25666,10 @@
         "ru": "Фонд поздних стадий: заходит в компании, которым нужен объём, а не первый чек. Зарабатывает тем же способом, что и соседи по слою, но конкурирует за место в раунде, а не за находку. В карте это показывает устройство финансирования лабораторий: раунды на миллиарды собираются из нескольких инвесторов, и ни один не является обязательным. Дефицитен здесь не капитал, а мощность, которую на него можно купить.",
         "en": "A late-stage fund: it enters companies that need size rather than a first cheque. It earns the same way as its neighbours but competes for a place in the round rather than for the find. On the map that reveals how labs are financed: billion-dollar rounds are assembled from several investors and none of them is indispensable. What is scarce here is not capital but the capacity it can buy."
       },
+      "pendingDossier": true,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
@@ -25434,6 +25876,10 @@
         "ru": "Tokyo Electron делает оборудование для производства полупроводников и работает с 11 ноября 1963 года. Выручка за 2026 финансовый год составила ¥2,443.5 Billion, в компании 20,812 человек в консолидированном периметре. Оборудование покрывает четыре ключевых процесса — осаждение, нанесение и проявление, травление и очистку. Собственная страница описывает происхождение прямо: компания начиналась с ввоза американского оборудования в Японию и осталась в разработке, когда конкуренты из неё уходили. На карте узел стоит выше фабрик: без его установок пластина не проходит свой маршрут.",
         "en": "Tokyo Electron makes semiconductor production equipment and has operated since 11 November 1963. Net sales for fiscal 2026 were ¥2,443.5 Billion and the consolidated headcount is 20,812. Its equipment covers four key processes — deposition, coater and developer, etching and cleaning. Its own page describes the origin plainly: the company began by bringing American production equipment into Japan and stayed in research when competitors were pulling out. On the map the node sits above the fabs: without its tools a wafer does not complete its route."
       },
+      "pendingDossier": false,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
@@ -25641,6 +26087,8 @@
         "ru": "Triton — язык и компилятор для написания примитивов глубокого обучения. Цель проекта записана в его же репозитории и прямо противопоставлена закрытому стеку: дать открытую среду, где код пишется быстрее, чем на CUDA, и гибче, чем на других предметных языках. Поддерживаются ускорители двух вендоров сразу — NVIDIA от восьмого поколения вычислительных возможностей и AMD на ROCm; работа над процессорами идёт. Платформа одна — Linux. На карте это узел, из-за которого замок вокруг одного набора инструментов перестаёт быть абсолютным.",
         "en": "Triton is a language and compiler for writing deep-learning primitives. The project's aim is written in its own repository and set directly against the closed stack: to give an open environment where code is written faster than in CUDA and more flexibly than in other domain-specific languages. Accelerators of two vendors are supported at once — NVIDIA from the eighth compute-capability generation and AMD on ROCm; work on CPUs is under way. There is one platform, Linux. On the map this is the node that keeps the lock around one toolset from being absolute."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 4,
         "betweenness": 0.000605,
@@ -25902,6 +26350,8 @@
         "ru": "TSMC делает чужие чипы на заказ и собственных не продаёт. Передовые техпроцессы 7 нм и тоньше дали 74% выручки от пластин против 69% годом ранее, а по 2-нанометровой технологии производство началось в 2025 году. Зарабатывает компания платой за пластину, поэтому загрузка передовых фабрик определяет и выручку, и маржу. Заказчики сконцентрированы: на крупнейшего пришлось 19% выручки, на десять крупнейших — 78%. Само производство упирается в оборудование, доступное от ограниченного числа поставщиков.",
         "en": "TSMC manufactures other companies' chips to order and sells none of its own. Advanced nodes of 7 nm and below brought 74% of wafer revenue against 69% a year earlier, and 2-nanometer production started in 2025. It earns a price per wafer, so utilisation of the advanced fabs sets both revenue and margin. Its customers are concentrated: the largest accounted for 19% of revenue and the ten largest for 78%. Manufacturing itself rests on equipment available from a limited number of suppliers."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 21,
         "betweenness": 0.136659,
@@ -26108,6 +26558,8 @@
         "ru": "США выступают на этой карте регулятором и владельцем доступа: они решают, кому можно продавать передовые ускорители и на каких условиях строить питание. Свежий указ объявляет чрезвычайное положение вокруг магистральной энергосистемы и прямо связывает это с ростом дата-центров и искусственного интеллекта. В том же документе сказано, что такой рост увеличил зависимость страны от обильного и надёжного электричества. Второй рычаг — экспортные ограничения: отчётность NVIDIA описывает их как решения правительства, меняющие условия продаж. Оба рычага работают решением, а не сделкой, поэтому узел стоит выше рынка, а не внутри него.",
         "en": "On this map the United States acts as regulator and gatekeeper: it decides who may be sold leading-edge accelerators and on what terms power may be built. A recent executive order declares an emergency around the bulk-power system and ties it directly to the growth of data centres and artificial intelligence. The same document says that this growth has increased the nation's dependence on abundant, reliable electricity. The second lever is export restrictions: NVIDIA's filing describes them as government decisions that change the terms of sale. Both levers work by decision rather than by deal, which places this node above the market rather than inside it."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 4,
         "betweenness": 0.007743,
@@ -26318,6 +26770,8 @@
         "ru": "Vertiv делает питание и охлаждение для дата-центров и продаёт их вместе с обслуживанием. Продажи составили $10,229.9 млн, из которых 62% пришлось на Америку. Заказы вперёд видны отдельно: портфель оценён в $15.0 млрд, и он показывает, на сколько кварталов расписаны мощности. В линейке — управление питанием переменного и постоянного тока, воздушное и жидкостное охлаждение, шинопроводы и стойки, то есть весь обвес вокруг вычислений. Под новые поколения ускорителей компания проектирует решения заранее, вместе с их производителем.",
         "en": "Vertiv builds power and cooling for data centres and sells them together with service. Sales were $10,229.9 million, of which 62% was transacted in the Americas. Forward orders are shown separately: the backlog is put at $15.0 billion, and it says how many quarters of capacity are already spoken for. The range covers AC and DC power management, air and liquid cooling, busbars and racks — the whole rig around the computing itself. For new accelerator generations it designs solutions in advance, together with their maker."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 4,
         "betweenness": 0.009081,
@@ -26539,6 +26993,8 @@
         "ru": "vLLM — открытая библиотека для вывода и обслуживания больших языковых моделей. Собственный README описывает её как быструю и простую в использовании и называет опорой экономию памяти под ключи и значения внимания. Денег проект не берёт: он живёт вкладом сообщества, в котором README насчитывает более 2000 участников из университетов и компаний. Поддержаны ускорители нескольких производителей сразу, поэтому библиотека работает как переходник между моделью и железом. Модели она берёт напрямую из склада Hugging Face, что делает её продолжением того же пути, а не отдельным миром.",
         "en": "vLLM is an open library for inference and serving of large language models. Its own README calls it fast and easy to use and names memory-efficient handling of attention keys and values as its core. The project takes no money: it lives on community contributions, and the README counts over 2000 contributors from universities and companies. Accelerators from several vendors are supported at once, so the library works as an adapter between a model and the hardware. It pulls models straight from the Hugging Face hub, which makes it a continuation of that path rather than a separate world."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 9,
         "betweenness": 0.006062,
@@ -26674,6 +27130,10 @@
         "ru": "Ещё один контрактный производитель, названный в отчётности разработчика ускорителей среди независимых субподрядчиков. Продаёт сборку и тестирование готовых систем, зарабатывает на объёме, а не на технологии. В карте его присутствие подтверждает картину: между кремнием и залом стоит не одна компания, а несколько взаимозаменяемых, и именно поэтому этот слой не является ограничением поодиночке. Ограничением он становится в сумме, когда растут все заказы сразу.",
         "en": "Another contract manufacturer, named among independent subcontractors in the accelerator designer's filings. It sells assembly and test of finished systems and earns on volume rather than technology. On the map its presence confirms the picture: between silicon and hall stands not one company but several interchangeable ones, which is why this layer is no constraint individually. It becomes one in aggregate, when every order grows at once."
       },
+      "pendingDossier": true,
+      "membershipFailing": [
+        "min_confirmed_edges"
+      ],
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
@@ -26849,6 +27309,8 @@
         "ru": "Продаёт подписку на Grok и доступ к нему через API, а распространение получает из социальной сети, внутри которой модель уже встроена. Деньги — подписка за место и плата за токены; отдельная статья — продажа доступа к собственному кластеру. В этой карте это лаборатория, которая построила себе вычисления сама, вместо того чтобы арендовать их у гиперскейлера. Кластер Colossus — 200 000 ускорителей H100 в одной сети, вторая половина добавлена за 92 дня; аудитория приложений — около 600 млн человек в месяц. Собственная площадка и собственная генерация снимают очередь за мощностями, но переносят на компанию весь капитальный риск.",
         "en": "Sells a Grok subscription and API access, and gets its distribution from the social network the model is already embedded in. The money is a seat subscription plus per-token billing, with a separate line for selling access to its own cluster. On this map it is the lab that built its compute itself instead of renting it from a hyperscaler. The Colossus cluster holds 200,000 H100 accelerators on one fabric, the second half added in 92 days, and the apps reach roughly 600 million people a month. Owning the site and the generation removes the queue for capacity, but moves the entire capital risk onto the company."
       },
+      "pendingDossier": true,
+      "membershipFailing": [],
       "centrality": {
         "degree": 2,
         "betweenness": 0.0,
@@ -27107,6 +27569,8 @@
         "ru": "ZEISS SMT — полупроводниковое подразделение группы ZEISS, делающее оптику для литографии, фотомасок и фабрик. Его собственная страница называет выручку 5.055 миллиарда евро за 2024/2025 финансовый год и 9,349 сотрудников в пересчёте на полную занятость. Оптику для машин EUV подразделение поставляет исключительно: своими словами — «exclusively supplies the optics for these machines». Система освещения EUV собрана из 15,000 деталей и весит 1.5 тонны. Следующее поколение печатает с числовой апертурой 0.55 против 0.33 у нынешнего EUV, и разрабатывалось оно вместе с ASML и 1,200 партнёрами сети.",
         "en": "ZEISS SMT is the semiconductor segment of the ZEISS group, making optics for lithography, photomasks and wafer fabs. Its own page states revenue of 5.055 billion euro for fiscal year 2024/2025 and 9,349 colleagues on a full-time-equivalent basis. It supplies the optics for EUV machines exclusively, in its own words: \"exclusively supplies the optics for these machines\". The EUV illumination system is assembled from 15,000 individual parts and weighs 1.5 tons. The next generation prints at a numerical aperture of 0.55 against 0.33 for today's EUV, and was developed together with ASML and 1,200 network partners."
       },
+      "pendingDossier": false,
+      "membershipFailing": [],
       "centrality": {
         "degree": 1,
         "betweenness": 0.0,
@@ -50768,10 +51232,101 @@
     "removedNodes": [],
     "relationshipsAdded": [
       {
+        "id": "amd__hpe__supplies",
+        "why": {
+          "ru": "Названа HPE поставщиком процессоров x86 наравне с Intel.",
+          "en": "Named by HPE as an x86 processor supplier alongside Intel."
+        }
+      },
+      {
         "id": "ase__amkor__competes_with",
         "why": {
           "ru": "Оба закрывают один передел — корпусирование и тестирование — на рынке, который ASE называет высококонкурентным.",
           "en": "Both cover the same step — packaging and testing — in a market ASE calls highly competitive."
+        }
+      },
+      {
+        "id": "asml__mistral__customer_of",
+        "why": {
+          "ru": "Названа лабораторией первой в собственном списке заказчиков.",
+          "en": "Named first by the laboratory in its own customer list."
+        }
+      },
+      {
+        "id": "broadcom__hpe__supplies",
+        "why": {
+          "ru": "Названа HPE поставщиком стандартных микросхем и единственным источником для рынка целиком.",
+          "en": "Named by HPE as a supplier of standard parts and a single source for the entire market."
+        }
+      },
+      {
+        "id": "cisco__amazon__competes_with",
+        "why": {
+          "ru": "Названа в собственном списке конкурентов Cisco.",
+          "en": "Named in Cisco's own competitor list."
+        }
+      },
+      {
+        "id": "cisco__broadcom__competes_with",
+        "why": {
+          "ru": "Названа в собственном списке конкурентов Cisco по части продуктов и услуг.",
+          "en": "Named in Cisco's own list of competitors for some of its products and services."
+        }
+      },
+      {
+        "id": "cisco__dell__competes_with",
+        "why": {
+          "ru": "Названа в собственном списке конкурентов Cisco.",
+          "en": "Named in Cisco's own competitor list."
+        }
+      },
+      {
+        "id": "cisco__hpe__competes_with",
+        "why": {
+          "ru": "Названа в собственном списке конкурентов Cisco.",
+          "en": "Named in Cisco's own competitor list."
+        }
+      },
+      {
+        "id": "cisco__microsoft__competes_with",
+        "why": {
+          "ru": "Названа в собственном списке конкурентов Cisco.",
+          "en": "Named in Cisco's own competitor list."
+        }
+      },
+      {
+        "id": "cisco__mistral__customer_of",
+        "why": {
+          "ru": "Названа лабораторией в собственном списке заказчиков.",
+          "en": "Named by the laboratory in its own customer list."
+        }
+      },
+      {
+        "id": "cisco__nvidia__competes_with",
+        "why": {
+          "ru": "Названа в собственном списке конкурентов Cisco по части продуктов и услуг.",
+          "en": "Named in Cisco's own list of competitors for some of its products and services."
+        }
+      },
+      {
+        "id": "dell__broadcom__path_dependent_on",
+        "why": {
+          "ru": "После покупки VMware компанией Broadcom условия выхода на рынок изменились, и это затронуло коммерческие отношения Dell.",
+          "en": "After Broadcom acquired VMware the go-to-market terms changed, and that touched Dell's commercial relationship."
+        }
+      },
+      {
+        "id": "fabrinet__amazon__integrates",
+        "why": {
+          "ru": "Названа Fabrinet среди четырёх заказчиков, каждый из которых дал свыше десятой доли её выручки за год.",
+          "en": "Named by Fabrinet among four customers, each of which gave over a tenth of its revenues in the year."
+        }
+      },
+      {
+        "id": "ge-vernova__crusoe__supplies",
+        "why": {
+          "ru": "Газовая турбина LM2500XPRESS питает дата-центр Crusoe как быстрый резервный источник.",
+          "en": "An LM2500XPRESS gas turbine powers a Crusoe data centre as fast backup energy."
         }
       },
       {
@@ -50803,32 +51358,539 @@
         }
       },
       {
+        "id": "hpe__nvidia__strategic_partner",
+        "why": {
+          "ru": "Не перепродажа: готовые системы разработаны совместно и объединяют аппаратуру и софт обеих сторон.",
+          "en": "Not resale: the turn-key systems are co-engineered and combine hardware and software of both sides."
+        }
+      },
+      {
+        "id": "intel__hpe__supplies",
+        "why": {
+          "ru": "Названа HPE поставщиком процессоров x86 и одновременно единственным источником для рынка целиком.",
+          "en": "Named by HPE as an x86 processor supplier and at once a single source for the entire market."
+        }
+      },
+      {
+        "id": "kubernetes__google__path_dependent_on",
+        "why": {
+          "ru": "Проект открыт Google в 2014 году и наследует полтора десятилетия его опыта запуска нагрузок в продакшене.",
+          "en": "Google open sourced the project in 2014 and it inherits a decade and a half of that company's production experience."
+        }
+      },
+      {
+        "id": "micron__kioxia__competes_with",
+        "why": {
+          "ru": "Названа в отчётности Micron среди конкурентов на рынках памяти и накопителей.",
+          "en": "Named in Micron's filing among competitors in the memory and storage markets."
+        }
+      },
+      {
+        "id": "micron__samsung__competes_with",
+        "why": {
+          "ru": "Названа в собственной отчётности Micron первой в списке конкурентов по памяти и накопителям.",
+          "en": "Named first in Micron's own filing among competitors in memory and storage."
+        }
+      },
+      {
+        "id": "micron__sandisk__competes_with",
+        "why": {
+          "ru": "Названа в отчётности Micron среди конкурентов на рынках памяти и накопителей.",
+          "en": "Named in Micron's filing among competitors in the memory and storage markets."
+        }
+      },
+      {
+        "id": "nim__sglang__integrates",
+        "why": {
+          "ru": "Назван среди серверов вывода, на которых построены контейнеры.",
+          "en": "Named among the inference servers the containers are built on."
+        }
+      },
+      {
+        "id": "nim__tensorrt__integrates",
+        "why": {
+          "ru": "Назван первым среди серверов вывода, на которых построены контейнеры.",
+          "en": "Named first among the inference servers the containers are built on."
+        }
+      },
+      {
+        "id": "nim__vllm__integrates",
+        "why": {
+          "ru": "Серверы вывода внутри контейнеров построены на сторонних проектах, и vLLM назван среди них.",
+          "en": "The inference servers inside the containers are built on third-party projects, and vLLM is named among them."
+        }
+      },
+      {
+        "id": "sandisk__kioxia__strategic_partner",
+        "why": {
+          "ru": "Совместное предприятие Flash Ventures: пока оно работает, обе стороны не вправе выпускать флеш-память с третьими лицами.",
+          "en": "The Flash Ventures joint venture: while it operates, neither side may make flash memory with third parties."
+        }
+      },
+      {
+        "id": "sandisk__samsung__competes_with",
+        "why": {
+          "ru": "Названа Sandisk среди вертикально интегрированных конкурентов по флеш-памяти.",
+          "en": "Named by Sandisk among vertically integrated competitors in flash memory."
+        }
+      },
+      {
+        "id": "sandisk__sk-hynix__competes_with",
+        "why": {
+          "ru": "Названа Sandisk среди вертикально интегрированных конкурентов по флеш-памяти.",
+          "en": "Named by Sandisk among vertically integrated competitors in flash memory."
+        }
+      },
+      {
+        "id": "sglang__amd__optimizes_for",
+        "why": {
+          "ru": "Ускорители AMD поддержаны наравне с ускорителями другого вендора.",
+          "en": "AMD accelerators are supported alongside the other vendor's."
+        }
+      },
+      {
+        "id": "sglang__intel__optimizes_for",
+        "why": {
+          "ru": "Процессоры Intel Xeon названы среди поддержанного оборудования.",
+          "en": "Intel Xeon CPUs are named among the supported hardware."
+        }
+      },
+      {
+        "id": "sglang__nebius__delivers_to",
+        "why": {
+          "ru": "Названа среди облачных площадок, принявших каркас в работу.",
+          "en": "Named among the cloud providers that adopted the framework."
+        }
+      },
+      {
+        "id": "sglang__nvidia__optimizes_for",
+        "why": {
+          "ru": "Работает на ускорителях вендора и назван среди принятых им проектов.",
+          "en": "Runs on the vendor's accelerators and is named among the projects it adopted."
+        }
+      },
+      {
+        "id": "sglang__oracle__delivers_to",
+        "why": {
+          "ru": "Названа среди облаков, принявших каркас в работу.",
+          "en": "Named among the clouds that adopted the framework."
+        }
+      },
+      {
+        "id": "sglang__xai__delivers_to",
+        "why": {
+          "ru": "Названа первой в списке тех, кто принял каркас в работу.",
+          "en": "Named first in the list of those who adopted the framework."
+        }
+      },
+      {
+        "id": "siemens-eda__cadence__competes_with",
+        "why": {
+          "ru": "Оба закрывают проектирование, верификацию и подготовку к производству интегральных схем.",
+          "en": "Both cover design, verification and manufacturing preparation of integrated circuits."
+        }
+      },
+      {
+        "id": "siemens-eda__synopsys__competes_with",
+        "why": {
+          "ru": "Оба закрывают проектирование, верификацию и подготовку к производству интегральных схем.",
+          "en": "Both cover design, verification and manufacturing preparation of integrated circuits."
+        }
+      },
+      {
+        "id": "snowflake__amazon__competes_with",
+        "why": {
+          "ru": "Названа Snowflake среди крупных публичных облаков, конкурирующих на всех её рынках.",
+          "en": "Named by Snowflake among large public clouds that compete across all its markets."
+        }
+      },
+      {
+        "id": "snowflake__microsoft__competes_with",
+        "why": {
+          "ru": "Названа Snowflake среди крупных публичных облаков, конкурирующих на всех её рынках.",
+          "en": "Named by Snowflake among large public clouds that compete across all its markets."
+        }
+      },
+      {
+        "id": "snowflake__mistral__customer_of",
+        "why": {
+          "ru": "Названа лабораторией в собственном списке заказчиков.",
+          "en": "Named by the laboratory in its own customer list."
+        }
+      },
+      {
+        "id": "tensorrt__huggingface__integrates",
+        "why": {
+          "ru": "Встраивается напрямую наравне с PyTorch, давая 6X ускорение вывода одной строкой.",
+          "en": "Plugs in directly alongside PyTorch, giving 6X faster inference with a single line."
+        }
+      },
+      {
+        "id": "tensorrt__pytorch__integrates",
+        "why": {
+          "ru": "Встраивается напрямую и даёт 6X ускорение вывода одной строкой кода.",
+          "en": "Plugs in directly and gives 6X faster inference with a single line of code."
+        }
+      },
+      {
+        "id": "triton__amd__optimizes_for",
+        "why": {
+          "ru": "Ускорители AMD на ROCm поддерживаются наравне с ускорителями другого вендора.",
+          "en": "AMD accelerators on ROCm are supported alongside the other vendor's."
+        }
+      },
+      {
+        "id": "triton__nvidia__optimizes_for",
+        "why": {
+          "ru": "Ускорители NVIDIA от восьмого поколения вычислительных возможностей поддерживаются наравне с чужими.",
+          "en": "NVIDIA accelerators from compute capability 8.0 are supported alongside others."
+        }
+      },
+      {
         "id": "tsmc__ase__competes_with",
         "why": {
           "ru": "Контрактные производители кремния сами вложились в передовое корпусирование и получили часть заказчиков.",
           "en": "Foundry players have themselves invested in advanced packaging and gained some customers."
         }
+      },
+      {
+        "id": "zeiss-smt__asml__strategic_partner",
+        "why": {
+          "ru": "Не только поставка: следующее поколение с апертурой 0.55 разрабатывалось совместно, и ZEISS называет ASML своим стратегическим партнёром.",
+          "en": "Not only supply: the next generation at a numerical aperture of 0.55 was developed jointly, and ZEISS calls ASML its strategic partner."
+        }
       }
     ],
     "relationshipsRemoved": [],
-    "relationshipsUpdated": [],
+    "relationshipsUpdated": [
+      {
+        "id": "cisco__arista__competes_with",
+        "field": "status",
+        "from": "confirmed",
+        "to": "bilateral"
+      },
+      {
+        "id": "cisco__arista__competes_with",
+        "field": "confirmedSources",
+        "from": 2,
+        "to": 3
+      },
+      {
+        "id": "eu__eu-ai-act__standardizes_on",
+        "field": "status",
+        "from": "signal",
+        "to": "confirmed"
+      },
+      {
+        "id": "eu__eu-ai-act__standardizes_on",
+        "field": "confirmedSources",
+        "from": 1,
+        "to": 2
+      },
+      {
+        "id": "fabrinet__cisco__integrates",
+        "field": "confirmedSources",
+        "from": 2,
+        "to": 3
+      },
+      {
+        "id": "fabrinet__nvidia__integrates",
+        "field": "confirmedSources",
+        "from": 4,
+        "to": 5
+      },
+      {
+        "id": "foxconn__nvidia__integrates",
+        "field": "status",
+        "from": "confirmed",
+        "to": "bilateral"
+      },
+      {
+        "id": "foxconn__nvidia__integrates",
+        "field": "confirmedSources",
+        "from": 2,
+        "to": 3
+      },
+      {
+        "id": "micron__sk-hynix__competes_with",
+        "field": "confirmedSources",
+        "from": 2,
+        "to": 3
+      },
+      {
+        "id": "netherlands__asml__export_controlled_by",
+        "field": "status",
+        "from": "confirmed",
+        "to": "bilateral"
+      },
+      {
+        "id": "netherlands__asml__export_controlled_by",
+        "field": "confirmedSources",
+        "from": 2,
+        "to": 3
+      },
+      {
+        "id": "nvidia__hpe__supplies",
+        "field": "status",
+        "from": "confirmed",
+        "to": "bilateral"
+      },
+      {
+        "id": "nvidia__hpe__supplies",
+        "field": "confirmedSources",
+        "from": 2,
+        "to": 3
+      },
+      {
+        "id": "ray__kubernetes__standardizes_on",
+        "field": "confirmedSources",
+        "from": 2,
+        "to": 3
+      },
+      {
+        "id": "triton__cuda__could_disrupt",
+        "field": "confirmedSources",
+        "from": 2,
+        "to": 3
+      },
+      {
+        "id": "zeiss-smt__asml__supplies",
+        "field": "status",
+        "from": "signal",
+        "to": "bilateral"
+      },
+      {
+        "id": "zeiss-smt__asml__supplies",
+        "field": "confirmedSources",
+        "from": 1,
+        "to": 2
+      }
+    ],
     "criticalityShifts": [
+      {
+        "id": "amkor",
+        "from": 50,
+        "to": 64
+      },
+      {
+        "id": "china",
+        "from": 66,
+        "to": 78
+      },
+      {
+        "id": "cisco",
+        "from": 43,
+        "to": 51
+      },
+      {
+        "id": "eu",
+        "from": 45,
+        "to": 77
+      },
+      {
+        "id": "eu-ai-act",
+        "from": 41,
+        "to": 80
+      },
+      {
+        "id": "fabrinet",
+        "from": 38,
+        "to": 65
+      },
+      {
+        "id": "foxconn",
+        "from": 50,
+        "to": 70
+      },
+      {
+        "id": "ge-vernova",
+        "from": 66,
+        "to": 74
+      },
+      {
+        "id": "hpe",
+        "from": 40,
+        "to": 49
+      },
+      {
+        "id": "japan",
+        "from": 63,
+        "to": 71
+      },
       {
         "id": "kioxia",
         "from": 32,
         "to": 62
       },
       {
+        "id": "lambda",
+        "from": 35,
+        "to": 44
+      },
+      {
+        "id": "mlcommons",
+        "from": 50,
+        "to": 58
+      },
+      {
+        "id": "nccl",
+        "from": 70,
+        "to": 79
+      },
+      {
+        "id": "nim",
+        "from": 47,
+        "to": 59
+      },
+      {
+        "id": "oklo",
+        "from": 32,
+        "to": 43
+      },
+      {
+        "id": "salesforce",
+        "from": 41,
+        "to": 49
+      },
+      {
+        "id": "sandisk",
+        "from": 30,
+        "to": 59
+      },
+      {
+        "id": "schneider",
+        "from": 55,
+        "to": 62
+      },
+      {
+        "id": "schrodinger",
+        "from": 35,
+        "to": 50
+      },
+      {
+        "id": "sglang",
+        "from": 41,
+        "to": 52
+      },
+      {
         "id": "shin-etsu",
         "from": 63,
         "to": 85
+      },
+      {
+        "id": "siemens",
+        "from": 43,
+        "to": 58
+      },
+      {
+        "id": "siemens-eda",
+        "from": 48,
+        "to": 77
+      },
+      {
+        "id": "siemens-energy",
+        "from": 61,
+        "to": 77
+      },
+      {
+        "id": "singapore",
+        "from": 38,
+        "to": 49
+      },
+      {
+        "id": "snowflake",
+        "from": 46,
+        "to": 52
+      },
+      {
+        "id": "south-korea",
+        "from": 75,
+        "to": 81
+      },
+      {
+        "id": "tensorrt",
+        "from": 60,
+        "to": 70
+      },
+      {
+        "id": "tokyo-electron",
+        "from": 63,
+        "to": 82
+      },
+      {
+        "id": "zeiss-smt",
+        "from": 88,
+        "to": 95
       }
     ],
     "phaseChanges": [],
     "riskEscalations": [],
-    "newSources": [],
+    "newSources": [
+      {
+        "id": "cisco__arista__competes_with",
+        "count": 3
+      },
+      {
+        "id": "eu__eu-ai-act__standardizes_on",
+        "count": 2
+      },
+      {
+        "id": "fabrinet__cisco__integrates",
+        "count": 3
+      },
+      {
+        "id": "fabrinet__nvidia__integrates",
+        "count": 5
+      },
+      {
+        "id": "foxconn__nvidia__integrates",
+        "count": 3
+      },
+      {
+        "id": "micron__sk-hynix__competes_with",
+        "count": 3
+      },
+      {
+        "id": "netherlands__asml__export_controlled_by",
+        "count": 3
+      },
+      {
+        "id": "nvidia__hpe__supplies",
+        "count": 3
+      },
+      {
+        "id": "ray__kubernetes__standardizes_on",
+        "count": 3
+      },
+      {
+        "id": "triton__cuda__could_disrupt",
+        "count": 3
+      },
+      {
+        "id": "zeiss-smt__asml__supplies",
+        "count": 2
+      }
+    ],
     "layerChanges": [],
     "coreChanges": [
+      {
+        "id": "amd",
+        "move": "in",
+        "integration": 11,
+        "why": {
+          "ru": "поднялся в верхние по интеграции",
+          "en": "rose into the top by integration"
+        }
+      },
+      {
+        "id": "cisco",
+        "move": "in",
+        "integration": 11,
+        "why": {
+          "ru": "поднялся в верхние по интеграции",
+          "en": "rose into the top by integration"
+        }
+      },
       {
         "id": "google-cloud",
         "move": "in",
@@ -50839,9 +51901,117 @@
         }
       },
       {
+        "id": "kioxia",
+        "move": "in",
+        "integration": 11,
+        "why": {
+          "ru": "поднялся в верхние по интеграции",
+          "en": "rose into the top by integration"
+        }
+      },
+      {
+        "id": "kubernetes",
+        "move": "in",
+        "integration": 12,
+        "why": {
+          "ru": "поднялся в верхние по интеграции",
+          "en": "rose into the top by integration"
+        }
+      },
+      {
+        "id": "micron",
+        "move": "in",
+        "integration": 11,
+        "why": {
+          "ru": "поднялся в верхние по интеграции",
+          "en": "rose into the top by integration"
+        }
+      },
+      {
+        "id": "sandisk",
+        "move": "in",
+        "integration": 13,
+        "why": {
+          "ru": "поднялся в верхние по интеграции",
+          "en": "rose into the top by integration"
+        }
+      },
+      {
+        "id": "sglang",
+        "move": "in",
+        "integration": 12,
+        "why": {
+          "ru": "поднялся в верхние по интеграции",
+          "en": "rose into the top by integration"
+        }
+      },
+      {
+        "id": "arista",
+        "move": "out",
+        "integration": 8,
+        "why": {
+          "ru": "опустился ниже порога ядра",
+          "en": "fell below the core threshold"
+        }
+      },
+      {
         "id": "crusoe",
         "move": "out",
         "integration": 10,
+        "why": {
+          "ru": "опустился ниже порога ядра",
+          "en": "fell below the core threshold"
+        }
+      },
+      {
+        "id": "databricks",
+        "move": "out",
+        "integration": 9,
+        "why": {
+          "ru": "опустился ниже порога ядра",
+          "en": "fell below the core threshold"
+        }
+      },
+      {
+        "id": "deepseek",
+        "move": "out",
+        "integration": 10,
+        "why": {
+          "ru": "опустился ниже порога ядра",
+          "en": "fell below the core threshold"
+        }
+      },
+      {
+        "id": "digital-realty",
+        "move": "out",
+        "integration": 10,
+        "why": {
+          "ru": "опустился ниже порога ядра",
+          "en": "fell below the core threshold"
+        }
+      },
+      {
+        "id": "google-deepmind",
+        "move": "out",
+        "integration": 9,
+        "why": {
+          "ru": "опустился ниже порога ядра",
+          "en": "fell below the core threshold"
+        }
+      },
+      {
+        "id": "nventures",
+        "move": "out",
+        "integration": 10,
+        "why": {
+          "ru": "опустился ниже порога ядра",
+          "en": "fell below the core threshold"
+        }
+      },
+      {
+        "id": "usa",
+        "move": "out",
+        "integration": 9,
         "why": {
           "ru": "опустился ниже порога ядра",
           "en": "fell below the core threshold"

@@ -91,13 +91,27 @@ def main(month: str, do_deliver: bool = False,
         print("          разбор: tools/queue_review.py · проверка: "
               "tools/feedback_check.py")
     m = s["membership"]
-    print(f"[членство] прошли бы три проверки {m['passed']} из "
+    print(f"[членство] проходят применимые проверки {m['passed']} из "
           f"{m['passed'] + m['failed']}; проверки "
-          f"{'ВКЛЮЧЕНЫ' if m['enforced'] else 'выключены (Фаза 0) — никто не отклонён'}")
+          f"{'ВКЛЮЧЕНЫ (' + m['on_fail'] + ')' if m['enforced'] else 'выключены'}")
+    print(f"          досье отработано у {m['covered']}; ещё не покрыто "
+          f"{len(m['pending'])} — к ним {', '.join(m['coverage_gated'])} не применяются")
     for k, v in m["fails"].items():
         if v:
             print(f"          не проходят {k}: {len(v)}")
+    if m.get("retired"):
+        print(f"          СНЯТО ЧЛЕНСТВОМ: {len(m['retired'])}")
+        for r in m["retired"][:20]:
+            print(f"           снят {r['id']} — {r['failed']}")
+    if m.get("held"):
+        print(f"          удержаны ребром (не сняты, помечены): {len(m['held'])}")
+        for r in m["held"][:8]:
+            print(f"           {r['id']} — {r['failed']}, держит {r['held_by'].split('|')[0]}")
+        if len(m["held"]) > 8:
+            print(f"           …и ещё {len(m['held']) - 8}")
     print(f"          отчёт -> {m['path']}")
+    if m.get("retired_path"):
+        print(f"          ретирование -> {m['retired_path']}")
 
     v = nveco_verify.run(month, offline=offline, limit=verify_limit)
     if offline:

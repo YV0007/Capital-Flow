@@ -26,41 +26,60 @@ class ContractError(AssertionError):
     pass
 
 
-def _membership_meta(month: str, entities) -> dict:
-    """Сколько узлов карта впустила, сняла и держит в очереди.
+# Проверки, применимые только к узлу с отработанным досье. Держатся здесь списком,
+# потому что валидатор обязан уметь поймать нарушение гейта, не читая конфиг заново.
+GATED_CHECKS = {"min_sources", "min_self_sources"}
 
-    Читает отчёт, который написал nveco_ingest: считать проверки второй раз здесь
+
+def _membership_meta(month: str, entities) -> dict:
+    """Сколько узлов карта впустила, сняла, удержала и держит в очереди.
+
+    Читает отчёты, которые написал nveco_ingest: считать проверки второй раз здесь
     значило бы завести вторую их реализацию, а расхождение двух копий одного правила
     страшнее, чем чтение файла.
 
-    В ФАЗЕ 0 `retired` — ноль по построению: проверки членства выключены
-    (membership.enforce), и никого они не снимают. Поле не спрятано и не подменено
-    прочерком именно поэтому: ноль здесь — это утверждение «правило есть, но пока
-    молчит», и оно должно быть видно, а не выводиться из отсутствия поля.
+    Фаза 3 включила правило, и поля перестали быть нулями по построению:
+      admitted — проходят ВСЕ применимые к ним проверки;
+      retired  — сняты членством с причиной (файл _membership/retired.csv);
+      held     — не проходят, но удержаны ребром с цитатой: остались и помечены;
+      queued   — стоят на карте и своего досье пока не предъявили.
+
+    Разница между `retired` и `held` — это и есть решение Фазы 3 о том, чем карта
+    дорожит больше: провал членства узла не является свидетельством против ребра,
+    у которого своя цитата и свой владелец. См. config/nveco_scope.yaml, on_fail.
     """
-    path = db.RUNS_DIR / month / "_membership" / "report.csv"
-    enforced = bool(nveco.membership_cfg().get("enforce", False))
+    base = db.RUNS_DIR / month / "_membership"
+    path = base / "report.csv"
+    cfg = nveco.membership_cfg()
+    enforced = bool(cfg.get("enforce", False))
     if not path.exists():
-        return {"admitted": 0, "retired": 0, "queued": 0, "enforced": enforced,
-                "note": "отчёт членства за этот месяц не найден"}
+        return {"admitted": 0, "retired": 0, "held": 0, "queued": 0,
+                "enforced": enforced, "note": "отчёт членства за этот месяц не найден"}
     rows = list(csv.DictReader(path.open(encoding="utf-8")))
     on_map = {e["id"] for e in entities}
     rows = [r for r in rows if r["id"] in on_map]
     passing = [r for r in rows if r["passes"] == "1"]
-    # Отчёт пишет nveco_ingest, и он не видит сущностей, заведённых ДОСТРОЙКОЙ: их
-    # CSV лежат в другом каталоге прогона и грузятся позже. Разрыв не заглаживается
-    # молча — он выносится числом, иначе `queued` читался бы как «весь остаток
-    # карты», будучи на самом деле остатком её первой половины.
+    retired, held = [], []
+    rp = base / "retired.csv"
+    if rp.exists():
+        for r in csv.DictReader(rp.open(encoding="utf-8")):
+            (retired if r["outcome"] == "retired" else held).append(
+                {"id": r["id"], "failed": r["failed"], "heldBy": r.get("held_by") or None})
+    # Отчёт пишет nveco_ingest; сущность, заведённая ДОСТРОЙКОЙ, в него не попадает.
+    # Разрыв не заглаживается молча — он выносится числом.
     uncovered = sorted(on_map - {r["id"] for r in rows})
     return {
-        # Впущено — те, кто прошёл бы все три проверки, будь они включены.
         "admitted": len(passing),
-        # Снято по членству. Пока правило выключено — ноль, и это факт, а не пробел.
-        "retired": 0,
-        # Очередь: стоят на карте, но своего досье пока не предъявили. Это и есть
-        # размер долга, который закрывают Фазы 1–2.
+        "retired": len(retired),
+        "retiredNodes": retired,
+        "held": len(held),
+        "heldNodes": held,
         "queued": len(rows) - len(passing),
         "enforced": enforced,
+        "onFail": cfg.get("on_fail", "retire_unheld"),
+        "coverageGated": sorted(cfg.get("coverage_gated")
+                                or ("min_sources", "min_self_sources")),
+        "pendingDossier": sum(1 for r in rows if r.get("pending_dossier") == "1"),
         "covered": len(rows),
         "uncovered": uncovered,
         "checks": {k: sum(1 for r in rows if r[k] == "0")
@@ -626,6 +645,21 @@ def validate(payload: dict) -> list:
     errs = []
     errs += _prose_style_errors(payload)
     errs += _unsourced_numbers(payload)
+    m = payload.get("meta", {}).get("membership") or {}
+    for k in ("admitted", "retired", "held", "queued", "enforced"):
+        if k not in m:
+            errs.append(f"meta.membership: нет поля {k}")
+    if m.get("held") != len(m.get("heldNodes") or []):
+        errs.append("meta.membership: held не сходится с heldNodes")
+    if m.get("retired") != len(m.get("retiredNodes") or []):
+        errs.append("meta.membership: retired не сходится с retiredNodes")
+    # Снятый узел не может остаться в entities[]: «снят» и «на карте» — это
+    # взаимоисключающие утверждения, и выпуск, который делает оба, неверен.
+    on_map = {e["id"] for e in payload["entities"]}
+    ghosts = [r["id"] for r in (m.get("retiredNodes") or []) if r["id"] in on_map]
+    if ghosts:
+        errs.append(f"meta.membership: снятые членством остались в entities[]: "
+                    f"{', '.join(ghosts[:6])}")
     # Половина перевода — это ровно тот отказ, который мы убираем. Поэтому
     # пустая сторона роняет выпуск, а не уезжает в дашборд «на потом».
     errs += i18n.check(payload, bilingual_paths(payload))
@@ -694,6 +728,17 @@ def validate(payload: dict) -> list:
             errs.append(f"сущность {e['id']}: нет sourcing.selfSourced")
         if "domains" not in e or not isinstance(e["domains"], list):
             errs.append(f"сущность {e['id']}: нет списка domains")
+        # ЧЛЕНСТВО ВИДНО НА УЗЛЕ, А НЕ ТОЛЬКО В meta. Иначе «узел не проходит
+        # проверку, но оставлен» превращается в невидимое исключение: на карте он
+        # выглядит как все остальные.
+        if not isinstance(e.get("pendingDossier"), bool):
+            errs.append(f"сущность {e['id']}: нет булева pendingDossier")
+        mf = e.get("membershipFailing")
+        if not isinstance(mf, list):
+            errs.append(f"сущность {e['id']}: membershipFailing должен быть списком")
+        elif e.get("pendingDossier") and (set(mf) & GATED_CHECKS):
+            errs.append(f"сущность {e['id']}: непокрытая досье сущность помечена "
+                        f"провалом гейтированной проверки — гейт по покрытию нарушен")
         c = e.get("centrality") or {}
         if not isinstance(c.get("degree"), int) or c["degree"] < 0:
             errs.append(f"сущность {e['id']}: centrality.degree не целое")

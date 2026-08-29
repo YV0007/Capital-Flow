@@ -213,6 +213,10 @@ def _edge(eid, a, b):
 
 
 MEMBERSHIP_CASES = []
+# Гейт по покрытию: к узлу без отработанного досье min_sources и min_self_sources
+# НЕ ПРИМЕНЯЮТСЯ. Это правка спеки по итогам Фазы 0, и цена ошибки в ней —
+# ретирование большинства карты за то, что до неё не дошла очередь ротации.
+NOT_COVERED = set()
 
 
 def mcase(name, expect_fail):
@@ -252,6 +256,39 @@ def _():
     return (_ent("asml"),
             {"a": _edge("a", "asml", "nvidia"), "b": _edge("b", "asml", "tsmc")},
             [_src("asml", ASML_10K)])
+
+
+@mcase("непокрытая досье сущность с одним источником: проверка НЕ ПРИМЕНЯЕТСЯ", None)
+def _():
+    # Тот же вход, что у случая «сущность с одним источником», но досье по узлу ещё
+    # не отрабатывалось. Провалом это не считается: узел не исследован, а не пуст.
+    return (_ent("asml"),
+            {"a": _edge("a", "asml", "nvidia"), "b": _edge("b", "asml", "tsmc")},
+            [_src("asml", ASML_10K)], NOT_COVERED)
+
+
+@mcase("непокрытая сущность, описанная только чужой отчётностью: НЕ ПРИМЕНЯЕТСЯ", None)
+def _():
+    return (_ent("asml"),
+            {"a": _edge("a", "asml", "nvidia"), "b": _edge("b", "asml", "tsmc")},
+            [_src("asml", NVIDIA_10K + "#1"), _src("asml", NVIDIA_10K + "#2"),
+             _src("asml", NVIDIA_10K + "#3")], NOT_COVERED)
+
+
+@mcase("гейт не снимает min_confirmed_edges с непокрытой сущности",
+       "min_confirmed_edges")
+def _():
+    # Связность от исследования не зависит так, как число источников: гейт её не
+    # трогает, и непокрытый узел с одной связью проверку всё равно не проходит.
+    return (_ent("asml"), {"a": _edge("a", "asml", "nvidia")},
+            [_src("asml", ASML_10K)], NOT_COVERED)
+
+
+@mcase("гейт не снимает in_scope с непокрытой сущности", "in_scope")
+def _():
+    return (_ent("asml", layers=("L99",)),
+            {"a": _edge("a", "asml", "nvidia"), "b": _edge("b", "asml", "tsmc")},
+            [_src("asml", ASML_10K)], NOT_COVERED)
 
 
 @mcase("сущность вне слоёв охвата", "in_scope")
@@ -311,13 +348,17 @@ def run_reconcile() -> int:
 def run_membership() -> int:
     failures = 0
     for name, expect, build in MEMBERSHIP_CASES:
-        ents, edges, srcs = build()
+        out = build()
+        ents, edges, srcs = out[:3]
+        # Четвёртый элемент — множество ПОКРЫТЫХ досье. По умолчанию узел считается
+        # покрытым: иначе гейт снял бы с него две проверки, и случай проверял бы не
+        # то, ради чего написан. Случаи гейта передают пустое множество явно.
+        covered = out[3] if len(out) > 3 else set(ents)
         # statuses=None: в игрушечном входе статусов ещё нет, и правило считает по
         # связям вообще — ровно так же, как на первом прогоне месяца.
-        rep = nveco_ingest.membership_report(ents, edges, srcs, None)
+        rep = nveco_ingest.membership_report(ents, edges, srcs, None, covered)
         row = rep["rows"][0]
-        failed = [k for k in ("in_scope", "min_sources", "min_self_sources",
-                              "min_confirmed_edges") if row[k] == 0]
+        failed = [k for k in row["failed"].split("|") if k]
         if expect is None:
             ok = not failed
             what = "проходит" if ok else f"НЕ проходит: {', '.join(failed)}"

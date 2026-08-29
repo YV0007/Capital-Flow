@@ -319,6 +319,39 @@ def main(month):
         def _(d):
             d["edges"][0]["evidence"][0]["quote"] = " ".join(["слово"] * 40)
 
+        # ── ЧЛЕНСТВО ПО ПОКРЫТИЮ (Фаза 3) ────────────────────────────────────
+        # Правило легко объявить и трудно удержать: достаточно один раз забыть
+        # гейт, и карта начнёт снимать узлы за то, что до них не дошла ротация.
+        # Эти пять случаев держат его формой выдачи, а не обещанием.
+
+        @case("узел без pendingDossier")
+        def _(d):
+            d["entities"][0].pop("pendingDossier", None)
+
+        @case("membershipFailing не список")
+        def _(d):
+            d["entities"][0]["membershipFailing"] = "min_sources"
+
+        @case("непокрытый узел помечен провалом гейтированной проверки")
+        def _(d):
+            e = d["entities"][0]
+            e["pendingDossier"] = True
+            e["membershipFailing"] = ["min_sources"]
+
+        @case("meta.membership без held")
+        def _(d):
+            d["meta"]["membership"].pop("held", None)
+
+        @case("held не сходится со списком heldNodes")
+        def _(d):
+            d["meta"]["membership"]["held"] = 999
+
+        @case("снятый членством остался в entities[]")
+        def _(d):
+            d["meta"]["membership"]["retiredNodes"] = [
+                {"id": d["entities"][0]["id"], "failed": "min_confirmed_edges"}]
+            d["meta"]["membership"]["retired"] = 1
+
         failures = 0
         for name, corrupt in cases:
             d = copy.deepcopy(payload)

@@ -28,6 +28,29 @@ CAMEL = {"concentration": "concentration",
          "time_to_replace": "timeToReplace"}
 
 
+
+def _membership_state(month: str):
+    """(покрытые досье, {id: [непройденные применимые проверки]}) за этот месяц.
+
+    Покрытие берётся из базы, непрохождение — из отчёта, который написал
+    nveco_ingest. Пересчитывать правило здесь второй раз нельзя: расхождение двух
+    копий одного правила страшнее, чем чтение файла.
+    """
+    covered, failing = set(), {}
+    con = nveco.connect()
+    if con.execute("SELECT name FROM sqlite_master WHERE type='table' AND "
+                   "name='nveco_dossier_run'").fetchone():
+        covered = {r["entity_id"] for r in
+                   con.execute("SELECT DISTINCT entity_id FROM nveco_dossier_run")}
+    con.close()
+    path = db.RUNS_DIR / month / "_membership" / "report.csv"
+    if path.exists():
+        for r in csv.DictReader(path.open(encoding="utf-8")):
+            bad = [x for x in (r.get("failed") or "").split("|") if x]
+            if bad:
+                failing[r["id"]] = bad
+    return covered, failing
+
 def _read(path):
     with path.open(newline="", encoding="utf-8") as f:
         for i, row in enumerate(csv.DictReader(f), start=2):
@@ -184,6 +207,7 @@ def build(month: str) -> dict:
                 "domains": nveco.entity_domains(clean["id"]),
                 "cik": nveco.entity_cik(clean["id"]),
                 "sourcing": {"total": 0, "selfSourced": 0, "byTier": {}},
+                "pendingDossier": True, "membershipFailing": [],
                 "criticalityBasis": {"factorsUsed": 0, "factors": [],
                                      "renormalized": False},
             }
@@ -514,6 +538,18 @@ def build(month: str) -> dict:
             "selfSourced": sum(1 for x in srcs
                                if nveco.is_self_source(x.get("url"), eid)),
             "byTier": {k: by_tier[k] for k in sorted(by_tier)}}
+
+    # ── ЧЛЕНСТВО НА КАЖДОМ УЗЛЕ: покрыт ли он досье и что не проходит ─────────
+    # Два поля, и оба нужны, чтобы читатель карты не путал две разные вещи:
+    #   pendingDossier      — до узла ещё не дошла ротация. К нему поэтому НЕ
+    #                         применяются min_sources и min_self_sources.
+    #   membershipFailing   — узел посмотрели, и он не прошёл применимую проверку.
+    #                         Он остался на карте, потому что его держит ребро с
+    #                         цитатой, — и это видно, а не спрятано.
+    covered, failing = _membership_state(month)
+    for eid, e in entities.items():
+        e["pendingDossier"] = eid not in covered
+        e["membershipFailing"] = failing.get(eid, [])
 
     # ── членство держат три проверки охвата, а не расстояние до центра ────────
     # Раньше здесь стоял обход графа от 27 назначенных пивотов, и всё, до чего от них

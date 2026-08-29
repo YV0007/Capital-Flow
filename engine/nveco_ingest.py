@@ -380,15 +380,30 @@ def _read(path):
 # всегда — молча не проходит ничего.
 
 
-def membership_report(ents, edges, srcs, statuses=None) -> dict:
-    """Кто прошёл бы три проверки, а кто нет. Ничего не отклоняет.
+def membership_report(ents, edges, srcs, statuses=None, covered=None) -> dict:
+    """Кто проходит применимые к нему проверки, а кто нет.
 
     statuses — {edge_id: status} с прошлого прогона, если он есть: подтверждённость
     связи считает nveco_score ПОСЛЕ загрузки, и на первом прогоне её ещё нет. Когда
     статусов нет, третья проверка считается по числу связей вообще, и это записано
     в самом отчёте, чтобы цифру нельзя было принять за подтверждённые.
+
+    covered — id сущностей, чьё досье уже отработано (`nveco_dossier_run`).
+
+    ГЕЙТ ПО ПОКРЫТИЮ. `min_sources` и `min_self_sources` применяются к сущности
+    ТОЛЬКО если её досье отработано. Причина — измерение Фазы 0: обе проверки не
+    проходили почти все, и не потому, что узлам нечего предъявить, а потому, что до
+    них не дошла очередь ротации. Наказывать за отсутствие ИССЛЕДОВАНИЯ вместо
+    отсутствия оснований — это не строгость, а подмена. Непокрытая сущность несёт
+    `pending_dossier` и по этим двум проверкам считается не «провалившей», а
+    НЕПРИМЕНИМОЙ: в отчёте у неё стоит -1, чтобы ноль нельзя было прочитать как отказ.
+
+    `in_scope` и `min_confirmed_edges` действуют на всех сразу: они не спрашивают,
+    исследовали узел или нет.
     """
+    covered = set(covered or ())
     cfg = nveco.membership_cfg()
+    gated = set(cfg.get("coverage_gated") or ("min_sources", "min_self_sources"))
     scope_layers = set(nveco.scope_layers())
     min_src = int(cfg.get("min_sources", 0))
     min_self = int(cfg.get("min_self_sources", 0))
@@ -409,6 +424,7 @@ def membership_report(ents, edges, srcs, statuses=None) -> dict:
 
     rows, fails = [], {"in_scope": [], "min_sources": [], "min_self_sources": [],
                        "min_confirmed_edges": []}
+    pending = []
     for eid, e in sorted(ents.items()):
         mine = by_ent.get(eid, [])
         layers = set(e.get("layers") or [])
@@ -417,25 +433,36 @@ def membership_report(ents, edges, srcs, statuses=None) -> dict:
         # самим этим фактом: у закона нет пресс-службы. Исключения в коде нет —
         # есть пустой список доменов в реестре, и он читается как факт о мире.
         needs_self = nveco.has_own_publisher(eid)
+        is_covered = eid in covered
+        if not is_covered:
+            pending.append(eid)
         checks = {
             "in_scope": bool(layers & scope_layers),
             "min_sources": len(mine) >= min_src,
             "min_self_sources": (self_n >= min_self) if needs_self else True,
             "min_confirmed_edges": deg.get(eid, 0) >= min_edges,
         }
-        for k, ok in checks.items():
-            if not ok:
-                fails[k].append(eid)
+        applies = {k: (is_covered or k not in gated) for k in checks}
+        failed = [k for k, ok in checks.items() if not ok and applies[k]]
+        for k in failed:
+            fails[k].append(eid)
         rows.append({"id": eid, "name": e["name"], "sources": len(mine),
                      "self_sources": self_n, "own_publisher": int(needs_self),
                      "edges": deg.get(eid, 0),
-                     **{k: int(v) for k, v in checks.items()},
-                     "passes": int(all(checks.values()))})
-    return {"rows": rows, "fails": fails,
+                     "pending_dossier": int(not is_covered),
+                     # -1 = проверка к узлу НЕ ПРИМЕНЯЕТСЯ (досье ещё не отработано).
+                     # Ноль здесь читался бы как отказ, а это не отказ.
+                     **{k: (int(checks[k]) if applies[k] else -1) for k in checks},
+                     "failed": "|".join(failed),
+                     "passes": int(not failed)})
+    return {"rows": rows, "fails": fails, "pending": pending,
             "passed": sum(r["passes"] for r in rows),
             "failed": sum(1 for r in rows if not r["passes"]),
             "edge_basis": "confirmed" if statuses is not None else "all_edges",
-            "enforced": bool(cfg.get("enforce", False))}
+            "coverage_gated": sorted(gated),
+            "covered": len(covered & set(ents)),
+            "enforced": bool(cfg.get("enforce", False)),
+            "on_fail": cfg.get("on_fail", "retire_unheld")}
 
 
 def write_membership_report(month: str, report: dict) -> str:
@@ -443,12 +470,32 @@ def write_membership_report(month: str, report: dict) -> str:
     out.mkdir(parents=True, exist_ok=True)
     path = out / "report.csv"
     cols = ["id", "name", "sources", "self_sources", "own_publisher", "edges",
-            "in_scope", "min_sources", "min_self_sources", "min_confirmed_edges",
-            "passes"]
+            "pending_dossier", "in_scope", "min_sources", "min_self_sources",
+            "min_confirmed_edges", "failed", "passes"]
     with path.open("w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=cols)
         w.writeheader()
         w.writerows(sorted(report["rows"], key=lambda r: (r["passes"], r["id"])))
+    return str(path)
+
+
+def write_retired_report(month: str, report: dict) -> str:
+    """Кто снят членством и кто удержан ребром — поимённо, в одном файле.
+
+    Файл пишется ВСЕГДА, даже пустым: «никого не сняли» — это утверждение, и оно
+    должно быть видно так же, как список имён.
+    """
+    out = db.RUNS_DIR / month / "_membership"
+    out.mkdir(parents=True, exist_ok=True)
+    path = out / "retired.csv"
+    cols = ["outcome", "id", "name", "failed", "held_by"]
+    with path.open("w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore")
+        w.writeheader()
+        for r in report.get("retired") or []:
+            w.writerow({"outcome": "retired", **r})
+        for r in report.get("held") or []:
+            w.writerow({"outcome": "held", **r})
     return str(path)
 
 
@@ -750,6 +797,72 @@ def ingest_month(month: str, scope_id: str = None) -> dict:
             if (s["owner_kind"] == "entity" and s["owner_key"] in ents)
             or (s["owner_kind"] == "edge" and s["owner_key"] in edges)]
 
+    # --- ЧЛЕНСТВО, ВКЛЮЧЕНИЕ (Фаза 3)
+    #
+    # Отчёт считается ДО записи, потому что включённое правило обязано снимать строку
+    # раньше, чем она попадёт в базу, а не вычищать её потом.
+    #
+    # Два исхода, и оба ИМЕНУЮТСЯ:
+    #
+    #   retired  — узел снят: не проходит применимую проверку И его не держит ни одно
+    #              ребро. Причина пишется отказом, отказ уходит в реестр и оттуда в
+    #              очередь кандидатов — то есть узел не исчезает, он возвращается на
+    #              рассмотрение.
+    #   held     — узел не проходит проверку, но на него ссылается ребро с цитатой.
+    #              Остаётся на карте, помечен, назван в отчёте.
+    #
+    # Почему второй исход существует. Провал членства узла X — это НЕ свидетельство
+    # против ребра X-Y: у ребра своя цитата и свой владелец. Снести узел значит
+    # молча удалить чужое утверждение, у которого источник есть, по причине, к этому
+    # утверждению не относящейся. Правило Фазы 0 («сущность, удерживаемая ребром, не
+    # каскадится прочь») здесь ровно это и защищает. Строгий режим доступен:
+    # membership.on_fail: retire_all в config/nveco_scope.yaml.
+    covered = {r["entity_id"] for r in
+               con.execute("SELECT DISTINCT entity_id FROM nveco_dossier_run")} \
+        if con.execute("SELECT name FROM sqlite_master WHERE type='table' AND "
+                       "name='nveco_dossier_run'").fetchone() else set()
+    for key in edges:
+        edges[key].setdefault("id", key)
+    memb = membership_report(ents, edges, srcs, prev_status, covered)
+    memb["retired"], memb["held"] = [], []
+    if memb["enforced"]:
+        held_by = {}
+        for key, e in edges.items():
+            held_by.setdefault(e["source"], []).append(key)
+            held_by.setdefault(e["target"], []).append(key)
+        strict = memb["on_fail"] == "retire_all"
+        for row in [r for r in memb["rows"] if not r["passes"]]:
+            eid, why = row["id"], row["failed"]
+            holders = held_by.get(eid, [])
+            item = {"id": eid, "name": row["name"], "failed": why,
+                    "held_by": "|".join(holders[:5])}
+            if holders and not strict:
+                memb["held"].append(item)
+                continue
+            memb["retired"].append(item)
+            e = ents.pop(eid, None)
+            facts.pop(eid, None)
+            reject(((e or {}).get("_agent")) or "?", "entities.csv", 0,
+                   f"членство: не проходит {why.replace('|', ', ')}",
+                   {"id": eid, "name": row["name"]})
+        if memb["retired"]:
+            # Пересчёт по выжившим строкам: снятие узла убирает и рёбра, которые на
+            # него ссылались, поэтому отчёт обязан описывать карту ПОСЛЕ снятия.
+            # Списки retired/held переносятся руками: они про событие прогона, а не
+            # про состояние карты, и новый отчёт их не знает.
+            was_retired, was_held = memb["retired"], memb["held"]
+            for key in list(edges):
+                e = edges[key]
+                if e["source"] not in ents or e["target"] not in ents:
+                    edges.pop(key)
+            srcs = [s for s in srcs
+                    if (s["owner_kind"] == "entity" and s["owner_key"] in ents)
+                    or (s["owner_kind"] == "edge" and s["owner_key"] in edges)]
+            memb = membership_report(ents, edges, srcs, prev_status, covered)
+            memb["retired"], memb["held"] = was_retired, was_held
+    memb["path"] = write_membership_report(month, memb)
+    memb["retired_path"] = write_retired_report(month, memb)
+
     # --- запись
     for eid, e in ents.items():
         prev = con.execute("SELECT first_seen FROM nveco_entity WHERE id=?", (eid,)).fetchone()
@@ -886,12 +999,6 @@ def ingest_month(month: str, scope_id: str = None) -> dict:
                  rows_in=excluded.rows_in, rows_kept=excluded.rows_kept,
                  rejected=excluded.rejected""",
             (month, scope_id, agent, st["rows_in"], st["rows_kept"], st["rejected"]))
-    # --- членство: считается по ВЫЖИВШИМ строкам и отчитывается всегда
-    for key in edges:
-        edges[key].setdefault("id", key)
-    memb = membership_report(ents, edges, srcs, prev_status)
-    memb["path"] = write_membership_report(month, memb)
-
     # --- обратная связь: отказы и очередь переезжают в реестр, который переживает
     # прогон. CSV ниже остаётся человеку; машина с этого момента читает базу.
     # Почему так — целиком в докстроке engine/nveco_feedback.py: файл жил один

@@ -1,109 +1,109 @@
-id,name,sources,self_sources,own_publisher,edges,in_scope,min_sources,min_self_sources,min_confirmed_edges,passes
-a16z,Andreessen Horowitz,5,4,1,1,1,1,1,0,0
-amd,AMD,1,1,1,3,1,0,1,1,0
-applied-materials,Applied Materials,1,1,1,1,1,0,1,0,0
-asml,ASML,1,1,1,4,1,0,1,1,0
-astera-labs,Astera Labs,1,1,1,3,1,0,1,1,0
-blackrock,BlackRock,5,4,1,1,1,1,1,0,0
-blackstone,Blackstone,6,5,1,1,1,1,1,0,0
-bloom-energy,Bloom Energy,1,1,1,1,1,0,1,0,0
-boyd,Boyd Corporation,1,0,1,1,1,0,0,0,0
-brookfield,Brookfield,1,0,1,2,1,0,0,1,0
-cadence,Cadence,1,1,1,2,1,0,1,1,0
-chips-act,CHIPS Act,1,0,0,1,1,0,1,0,0
-coherent,Coherent,1,1,1,2,1,0,1,1,0
-constellation,Constellation Energy,1,1,1,1,1,0,1,0,0
-credo,Credo Technology,1,1,1,3,1,0,1,1,0
-delta-electronics,Delta Electronics,1,0,1,1,1,0,0,0,0
-eaton,Eaton,1,1,1,2,1,0,1,1,0
-eu-ai-act,Регламент ЕС об ИИ,5,4,1,1,1,1,1,0,0
-ge-vernova,GE Vernova,6,5,1,1,1,1,1,0,0
-google-cloud,Google Cloud,4,4,1,0,1,1,1,0,0
-hpe,HPE,8,7,1,1,1,1,1,0,0
-jax,JAX,1,0,1,3,1,0,0,1,0
-kioxia,Kioxia,5,4,1,1,1,1,1,0,0
-kla,KLA,1,1,1,1,1,0,1,0,0
-lam-research,Lam Research,1,1,1,4,1,0,1,1,0
-lightspeed,Lightspeed Venture Partners,5,4,1,1,1,1,1,0,0
-lite-on,LiteOn Technology,1,0,1,1,1,0,0,0,0
-marvell,Marvell,1,1,1,1,1,0,1,0,0
-mgx,MGX,1,0,1,3,1,0,0,1,0
-mistral,Mistral AI,5,4,1,1,1,1,1,0,0
-nebius,Nebius,1,1,1,3,1,0,1,1,0
-nvent,nVent,1,1,1,2,1,0,1,1,0
-oklo,Oklo,6,5,1,0,1,1,1,0,0
-quanta,Quanta Computer,1,0,1,1,1,0,0,0,0
-recursion,Recursion Pharmaceuticals,1,1,1,1,1,0,1,0,0
-salesforce,Salesforce,5,4,1,1,1,1,1,0,0
-schrodinger,Schrödinger,6,5,1,1,1,1,1,0,0
-sequoia,Sequoia Capital,1,0,1,1,1,0,0,0,0
-servicenow,ServiceNow,1,1,1,1,1,0,1,0,0
-siemens,Siemens,5,4,1,1,1,1,1,0,0
-siemens-eda,Siemens EDA,4,3,1,1,1,1,1,0,0
-siemens-energy,Siemens Energy,6,5,1,1,1,1,1,0,0
-singapore,Сингапур,5,4,1,1,1,1,1,0,0
-snowflake,Snowflake,6,5,1,1,1,1,1,0,0
-supermicro,Supermicro,1,1,1,3,1,0,1,1,0
-synopsys,Synopsys,1,1,1,3,1,0,1,1,0
-thrive,Thrive Capital,1,0,1,1,1,0,0,0,0
-tokyo-electron,Tokyo Electron,6,5,1,0,1,1,1,0,0
-wistron,Wistron,1,0,1,1,1,0,0,0,0
-xai,xAI,1,0,1,2,1,0,0,1,0
-amazon,Amazon,5,4,1,7,1,1,1,1,1
-amkor,Amkor Technology,6,5,1,4,1,1,1,1,1
-anthropic,Anthropic,6,5,1,5,1,1,1,1,1
-arista,Arista Networks,6,6,1,5,1,1,1,1,1
-arm,Arm,6,4,1,6,1,1,1,1,1
-ase,ASE Technology,6,5,1,4,1,1,1,1,1
-bis,Bureau of Industry and Security,5,3,1,2,1,1,1,1,1
-broadcom,Broadcom,5,5,1,9,1,1,1,1,1
-cfius,CFIUS,4,0,0,2,1,1,1,1,1
-china,Китай,5,4,1,3,1,1,1,1,1
-cisco,Cisco,8,7,1,2,1,1,1,1,1
-coreweave,CoreWeave,7,7,1,7,1,1,1,1,1
-crusoe,Crusoe,5,3,1,5,1,1,1,1,1
-cuda,CUDA,6,3,1,17,1,1,1,1,1
-databricks,Databricks,5,3,1,3,1,1,1,1,1
-deepseek,DeepSeek,5,3,1,4,1,1,1,1,1
-dell,Dell,6,5,1,2,1,1,1,1,1
-digital-realty,Digital Realty,6,6,1,4,1,1,1,1,1
-equinix,Equinix,6,6,1,5,1,1,1,1,1
-eu,Европейский союз,5,4,1,2,1,1,1,1,1
-fabrinet,Fabrinet,6,5,1,4,1,1,1,1,1
-foxconn,Foxconn,8,7,1,2,1,1,1,1,1
-google,Google,6,4,1,8,1,1,1,1,1
-google-deepmind,Google DeepMind,5,3,1,2,1,1,1,1,1
-huggingface,Hugging Face,5,5,1,12,1,1,1,1,1
-intel,Intel,6,5,1,3,1,1,1,1,1
-japan,Япония,8,7,1,2,1,1,1,1,1
-kubernetes,Kubernetes,6,5,1,4,1,1,1,1,1
-lambda,Lambda Labs,5,4,1,2,1,1,1,1,1
-meta,Meta,6,4,1,6,1,1,1,1,1
-micron,Micron,7,6,1,5,1,1,1,1,1
-microsoft,Microsoft,6,5,1,20,1,1,1,1,1
-mlcommons,MLCommons,6,5,1,2,1,1,1,1,1
-nccl,NCCL,6,5,1,2,1,1,1,1,1
-netherlands,Нидерланды,6,5,1,2,1,1,1,1,1
-nim,NVIDIA NIM,5,4,1,2,1,1,1,1,1
-nventures,NVIDIA Ventures (NVentures),5,3,1,5,1,1,1,1,1
-nvidia,NVIDIA,6,6,1,114,1,1,1,1,1
-openai,OpenAI,7,3,1,21,1,1,1,1,1
-oracle,Oracle,5,3,1,7,1,1,1,1,1
-pytorch,PyTorch,6,5,1,8,1,1,1,1,1
-ray,Ray / Anyscale,5,4,1,2,1,1,1,1,1
-samsung,Samsung,6,4,1,5,1,1,1,1,1
-sandisk,SanDisk,8,7,1,2,1,1,1,1,1
-schneider,Schneider Electric,5,4,1,2,1,1,1,1,1
-sglang,SGLang,7,6,1,2,1,1,1,1,1
-shin-etsu,Shin-Etsu Chemical,4,3,1,2,1,1,1,1,1
-sk-hynix,SK Hynix,6,5,1,4,1,1,1,1,1
-softbank,SoftBank,6,4,1,4,1,1,1,1,1
-south-korea,Южная Корея,5,4,1,2,1,1,1,1,1
-taiwan,Тайвань,5,4,1,2,1,1,1,1,1
-tensorrt,TensorRT,6,5,1,2,1,1,1,1,1
-triton,OpenAI Triton,6,5,1,2,1,1,1,1,1
-tsmc,TSMC,6,6,1,18,1,1,1,1,1
-usa,США,5,3,1,2,1,1,1,1,1
-vertiv,Vertiv,5,5,1,4,1,1,1,1,1
-vllm,vLLM,6,5,1,7,1,1,1,1,1
-zeiss-smt,Carl Zeiss SMT,10,9,1,2,1,1,1,1,1
+id,name,sources,self_sources,own_publisher,edges,pending_dossier,in_scope,min_sources,min_self_sources,min_confirmed_edges,failed,passes
+a16z,Andreessen Horowitz,5,4,1,1,0,1,1,1,0,min_confirmed_edges,0
+applied-materials,Applied Materials,1,1,1,1,1,1,-1,-1,0,min_confirmed_edges,0
+blackrock,BlackRock,5,4,1,1,0,1,1,1,0,min_confirmed_edges,0
+blackstone,Blackstone,6,5,1,1,0,1,1,1,0,min_confirmed_edges,0
+bloom-energy,Bloom Energy,1,1,1,1,1,1,-1,-1,0,min_confirmed_edges,0
+boyd,Boyd Corporation,1,0,1,1,1,1,-1,-1,0,min_confirmed_edges,0
+chips-act,CHIPS Act,1,0,0,1,1,1,-1,-1,0,min_confirmed_edges,0
+constellation,Constellation Energy,1,1,1,1,1,1,-1,-1,0,min_confirmed_edges,0
+delta-electronics,Delta Electronics,1,0,1,1,1,1,-1,-1,0,min_confirmed_edges,0
+eu-ai-act,Регламент ЕС об ИИ,5,4,1,1,0,1,1,1,0,min_confirmed_edges,0
+ge-vernova,GE Vernova,6,5,1,1,0,1,1,1,0,min_confirmed_edges,0
+google-cloud,Google Cloud,4,4,1,0,0,1,1,1,0,min_confirmed_edges,0
+hpe,HPE,8,7,1,1,0,1,1,1,0,min_confirmed_edges,0
+kioxia,Kioxia,5,4,1,1,0,1,1,1,0,min_confirmed_edges,0
+kla,KLA,1,1,1,1,1,1,-1,-1,0,min_confirmed_edges,0
+lightspeed,Lightspeed Venture Partners,5,4,1,1,0,1,1,1,0,min_confirmed_edges,0
+lite-on,LiteOn Technology,1,0,1,1,1,1,-1,-1,0,min_confirmed_edges,0
+marvell,Marvell,1,1,1,1,1,1,-1,-1,0,min_confirmed_edges,0
+mistral,Mistral AI,5,4,1,1,0,1,1,1,0,min_confirmed_edges,0
+oklo,Oklo,6,5,1,0,0,1,1,1,0,min_confirmed_edges,0
+quanta,Quanta Computer,1,0,1,1,1,1,-1,-1,0,min_confirmed_edges,0
+recursion,Recursion Pharmaceuticals,1,1,1,1,1,1,-1,-1,0,min_confirmed_edges,0
+salesforce,Salesforce,5,4,1,1,0,1,1,1,0,min_confirmed_edges,0
+schrodinger,Schrödinger,6,5,1,1,0,1,1,1,0,min_confirmed_edges,0
+sequoia,Sequoia Capital,1,0,1,1,1,1,-1,-1,0,min_confirmed_edges,0
+servicenow,ServiceNow,1,1,1,1,1,1,-1,-1,0,min_confirmed_edges,0
+siemens,Siemens,5,4,1,1,0,1,1,1,0,min_confirmed_edges,0
+siemens-eda,Siemens EDA,4,3,1,1,0,1,1,1,0,min_confirmed_edges,0
+siemens-energy,Siemens Energy,6,5,1,1,0,1,1,1,0,min_confirmed_edges,0
+singapore,Сингапур,5,4,1,1,0,1,1,1,0,min_confirmed_edges,0
+snowflake,Snowflake,6,5,1,1,0,1,1,1,0,min_confirmed_edges,0
+thrive,Thrive Capital,1,0,1,1,1,1,-1,-1,0,min_confirmed_edges,0
+tokyo-electron,Tokyo Electron,6,5,1,0,0,1,1,1,0,min_confirmed_edges,0
+wistron,Wistron,1,0,1,1,1,1,-1,-1,0,min_confirmed_edges,0
+amazon,Amazon,5,4,1,7,0,1,1,1,1,,1
+amd,AMD,1,1,1,3,1,1,-1,-1,1,,1
+amkor,Amkor Technology,6,5,1,4,0,1,1,1,1,,1
+anthropic,Anthropic,6,5,1,5,0,1,1,1,1,,1
+arista,Arista Networks,6,6,1,5,0,1,1,1,1,,1
+arm,Arm,6,4,1,6,0,1,1,1,1,,1
+ase,ASE Technology,6,5,1,4,0,1,1,1,1,,1
+asml,ASML,1,1,1,4,1,1,-1,-1,1,,1
+astera-labs,Astera Labs,1,1,1,3,1,1,-1,-1,1,,1
+bis,Bureau of Industry and Security,5,3,1,2,0,1,1,1,1,,1
+broadcom,Broadcom,5,5,1,9,0,1,1,1,1,,1
+brookfield,Brookfield,1,0,1,2,1,1,-1,-1,1,,1
+cadence,Cadence,1,1,1,2,1,1,-1,-1,1,,1
+cfius,CFIUS,4,0,0,2,0,1,1,1,1,,1
+china,Китай,5,4,1,3,0,1,1,1,1,,1
+cisco,Cisco,8,7,1,2,0,1,1,1,1,,1
+coherent,Coherent,1,1,1,2,1,1,-1,-1,1,,1
+coreweave,CoreWeave,7,7,1,7,0,1,1,1,1,,1
+credo,Credo Technology,1,1,1,3,1,1,-1,-1,1,,1
+crusoe,Crusoe,5,3,1,5,0,1,1,1,1,,1
+cuda,CUDA,6,3,1,17,0,1,1,1,1,,1
+databricks,Databricks,5,3,1,3,0,1,1,1,1,,1
+deepseek,DeepSeek,5,3,1,4,0,1,1,1,1,,1
+dell,Dell,6,5,1,2,0,1,1,1,1,,1
+digital-realty,Digital Realty,6,6,1,4,0,1,1,1,1,,1
+eaton,Eaton,1,1,1,2,1,1,-1,-1,1,,1
+equinix,Equinix,6,6,1,5,0,1,1,1,1,,1
+eu,Европейский союз,5,4,1,2,0,1,1,1,1,,1
+fabrinet,Fabrinet,6,5,1,4,0,1,1,1,1,,1
+foxconn,Foxconn,8,7,1,2,0,1,1,1,1,,1
+google,Google,6,4,1,8,0,1,1,1,1,,1
+google-deepmind,Google DeepMind,5,3,1,2,0,1,1,1,1,,1
+huggingface,Hugging Face,5,5,1,12,0,1,1,1,1,,1
+intel,Intel,6,5,1,3,0,1,1,1,1,,1
+japan,Япония,8,7,1,2,0,1,1,1,1,,1
+jax,JAX,1,0,1,3,1,1,-1,-1,1,,1
+kubernetes,Kubernetes,6,5,1,4,0,1,1,1,1,,1
+lam-research,Lam Research,1,1,1,4,1,1,-1,-1,1,,1
+lambda,Lambda Labs,5,4,1,2,0,1,1,1,1,,1
+meta,Meta,6,4,1,6,0,1,1,1,1,,1
+mgx,MGX,1,0,1,3,1,1,-1,-1,1,,1
+micron,Micron,7,6,1,5,0,1,1,1,1,,1
+microsoft,Microsoft,6,5,1,20,0,1,1,1,1,,1
+mlcommons,MLCommons,6,5,1,2,0,1,1,1,1,,1
+nccl,NCCL,6,5,1,2,0,1,1,1,1,,1
+nebius,Nebius,1,1,1,3,1,1,-1,-1,1,,1
+netherlands,Нидерланды,6,5,1,2,0,1,1,1,1,,1
+nim,NVIDIA NIM,5,4,1,2,0,1,1,1,1,,1
+nvent,nVent,1,1,1,2,1,1,-1,-1,1,,1
+nventures,NVIDIA Ventures (NVentures),5,3,1,5,0,1,1,1,1,,1
+nvidia,NVIDIA,6,6,1,114,0,1,1,1,1,,1
+openai,OpenAI,7,3,1,21,0,1,1,1,1,,1
+oracle,Oracle,5,3,1,7,0,1,1,1,1,,1
+pytorch,PyTorch,6,5,1,8,0,1,1,1,1,,1
+ray,Ray / Anyscale,5,4,1,2,0,1,1,1,1,,1
+samsung,Samsung,6,4,1,5,0,1,1,1,1,,1
+sandisk,SanDisk,8,7,1,2,0,1,1,1,1,,1
+schneider,Schneider Electric,5,4,1,2,0,1,1,1,1,,1
+sglang,SGLang,7,6,1,2,0,1,1,1,1,,1
+shin-etsu,Shin-Etsu Chemical,4,3,1,2,0,1,1,1,1,,1
+sk-hynix,SK Hynix,6,5,1,4,0,1,1,1,1,,1
+softbank,SoftBank,6,4,1,4,0,1,1,1,1,,1
+south-korea,Южная Корея,5,4,1,2,0,1,1,1,1,,1
+supermicro,Supermicro,1,1,1,3,1,1,-1,-1,1,,1
+synopsys,Synopsys,1,1,1,3,1,1,-1,-1,1,,1
+taiwan,Тайвань,5,4,1,2,0,1,1,1,1,,1
+tensorrt,TensorRT,6,5,1,2,0,1,1,1,1,,1
+triton,OpenAI Triton,6,5,1,2,0,1,1,1,1,,1
+tsmc,TSMC,6,6,1,18,0,1,1,1,1,,1
+usa,США,5,3,1,2,0,1,1,1,1,,1
+vertiv,Vertiv,5,5,1,4,0,1,1,1,1,,1
+vllm,vLLM,6,5,1,7,0,1,1,1,1,,1
+xai,xAI,1,0,1,2,1,1,-1,-1,1,,1
+zeiss-smt,Carl Zeiss SMT,10,9,1,2,0,1,1,1,1,,1

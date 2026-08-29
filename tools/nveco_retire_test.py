@@ -258,39 +258,85 @@ def _(log):
 
 @check("ретирование по членству отличимо от ретирования по молчанию агента")
 def _(log):
-    # ДВА РАЗНЫХ СОБЫТИЯ, которые обязаны выглядеть по-разному в отчёте.
+    # ТРИ РАЗНЫХ СОБЫТИЯ, которые обязаны выглядеть по-разному.
     #
-    #   молчание агента — «мы про этот узел в этом месяце ничего не говорили».
-    #                     Строка остаётся, retired_entities пуст.
-    #   отказ по членству — «мы про него говорили, и предъявить ему нечего».
-    #                     Строка отчёта членства помечена passes=0 с названным
-    #                     провалившимся правилом.
-    #
-    # Пока правило выключено (Фаза 0), второе не снимает никого — но СЧИТАЕТСЯ уже
-    # сейчас, и различить два случая по выдаче ingest'а должно быть можно. Иначе
-    # Фаза 3, включая правило, не сможет доказать, что снесла именно должников.
+    #   молчание агента     — «мы про этот узел в этом месяце ничего не говорили».
+    #                         Строка остаётся, retired_entities пуст.
+    #   гейт по покрытию    — «мы про него говорили, но досье по нему не отрабатывали».
+    #                         Проверки на источники к нему НЕ ПРИМЕНЯЮТСЯ, и провалом
+    #                         это не считается.
+    #   отказ по членству   — «досье отработано, и предъявить нечего». Строка отчёта
+    #                         помечена провалом с названной проверкой.
     _month({"nveco-silicon": SILICON, "nveco-capital": CAPITAL})
     s = nveco_ingest.ingest_month(MONTH)
     memb = {r["id"]: r for r in s["membership"]["rows"]}
 
-    # asml описана одним источником и держит одну связь: по членству она должница.
-    assert memb["asml"]["passes"] == 0, memb["asml"]
-    assert memb["asml"]["min_sources"] == 0, "долг по числу источников не замечен"
-    # но с карты её никто не снял: правило выключено, а молчания агента не было
-    assert "asml" not in s["retired_entities"], s["retired_entities"]
+    # asml описана одним источником, но её досье не отрабатывалось: гейт снимает
+    # с неё проверку на число источников, и долгом это не является.
+    assert memb["asml"]["pending_dossier"] == 1, memb["asml"]
+    assert memb["asml"]["min_sources"] == -1, memb["asml"]
+    assert "min_sources" not in memb["asml"]["failed"], memb["asml"]
+    log("непокрытая досье сущность не судится по числу источников")
+
+    # Отмечаем досье отработанным — и та же самая строка становится долгом.
+    con = nveco.connect()
+    con.execute("INSERT OR REPLACE INTO nveco_dossier_run "
+                "(entity_id, month, batch, tier, sources, self_srcs, edges) "
+                "VALUES ('asml', ?, 'test', 'core', 1, 0, 1)", (MONTH,))
+    con.commit()
+    con.close()
+    s2 = nveco_ingest.ingest_month(MONTH)
+    memb2 = {r["id"]: r for r in s2["membership"]["rows"]}
+    assert memb2["asml"]["pending_dossier"] == 0, memb2["asml"]
+    assert "min_sources" in memb2["asml"]["failed"], memb2["asml"]
+    log("та же строка после отработанного досье становится провалом min_sources")
+
+    # Но с карты её не сняли: её держит ребро с цитатой, и провал членства узла не
+    # является свидетельством против чужого утверждения о связи.
+    con = nveco.connect()
+    ents = _ids(con, "nveco_entity")
+    con.close()
+    assert "asml" in ents, "узел, удерживаемый ребром, снят членством"
+    held = {h["id"] for h in s2["membership"]["held"]}
+    assert "asml" in held, s2["membership"]["held"]
+    assert not s2["membership"]["retired"], s2["membership"]["retired"]
+    assert "asml" not in s2["retired_entities"], s2["retired_entities"]
+    log("удержана ребром: названа в held, но не в retired и не снята с карты")
 
     # Теперь молчание: nveco-silicon не сдаёт файл вовсе.
     _month({"nveco-capital": CAPITAL},
            entities_by_agent={"nveco-capital": ["meta", "pytorch"]}, factors=False)
-    s2 = nveco_ingest.ingest_month(MONTH)
+    s3 = nveco_ingest.ingest_month(MONTH)
     con = nveco.connect()
     ents = _ids(con, "nveco_entity")
     con.close()
     assert "asml" in ents, "молчание агента сняло сущность с карты"
-    assert not s2["retired_entities"], s2["retired_entities"]
+    assert not s3["retired_entities"], s3["retired_entities"]
     # И в отчёте членства её теперь просто нет — про неё в этом месяце не говорили.
-    assert "asml" not in {r["id"] for r in s2["membership"]["rows"]}
-    log("должник по членству помечен и оставлен; молчание агента не снимает ничего")
+    assert "asml" not in {r["id"] for r in s3["membership"]["rows"]}
+    log("молчание агента не снимает ничего и в отчёт членства не попадает")
+
+
+@check("узел без единой связи снимается членством, и отказ уходит в очередь")
+def _(log):
+    # Единственный случай, когда retire_unheld действительно снимает: держать узел
+    # нечем. Отказ обязан уйти в реестр и оттуда в очередь кандидатов — узел не
+    # исчезает, он возвращается на рассмотрение.
+    _month({"nveco-silicon": SILICON, "nveco-capital": CAPITAL})
+    base = db.RUNS_DIR / MONTH / "nveco-silicon"
+    rows = [ENTITIES[i] for i in ("nvidia", "tsmc", "asml")] + [
+        ["lonely", "Lonely Corp", "company", "producer", "gpu", "L10", "ни с кем"]]
+    _write(base / "entities.csv", ENTITY_COLS, rows)
+    s = nveco_ingest.ingest_month(MONTH)
+    retired = {r["id"] for r in s["membership"]["retired"]}
+    assert "lonely" in retired, s["membership"]["retired"]
+    con = nveco.connect()
+    assert "lonely" not in _ids(con, "nveco_entity")
+    cand = {r["name"]: dict(r) for r in con.execute("SELECT * FROM nveco_candidate")}
+    con.close()
+    assert "Lonely Corp" in cand, cand
+    assert cand["Lonely Corp"]["origin"] == "rejection", cand["Lonely Corp"]
+    log("снят членством, назван в retired, вернулся в очередь кандидатов")
 
 
 # ── ОБРАТНАЯ СВЯЗЬ ───────────────────────────────────────────────────────────
