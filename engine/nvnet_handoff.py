@@ -596,15 +596,28 @@ def _unsourced_numbers(payload: dict) -> list:
                 errs.append(f"связь {x['id']}: числа в note.{lang} не встречаются "
                             f"ни в одной цитате: {', '.join(bad[:6])}")
     for e in payload["entities"]:
-        ol = e.get("oneLiner")
-        if not isinstance(ol, dict):
-            continue
         quoted = _numbers(" ".join(s.get("quote", "") for s in e.get("sources", [])))
-        for lang in ("ru", "en"):
-            bad = sorted(_numbers(ol.get(lang) or "") - quoted)
-            if bad:
-                errs.append(f"сущность {e['id']}: числа в oneLiner.{lang} не "
-                            f"встречаются ни в одной цитате: {', '.join(bad[:6])}")
+        ol = e.get("oneLiner")
+        if isinstance(ol, dict):
+            for lang in ("ru", "en"):
+                bad = sorted(_numbers(ol.get(lang) or "") - quoted)
+                if bad:
+                    errs.append(f"сущность {e['id']}: числа в oneLiner.{lang} не "
+                                f"встречаются ни в одной цитате: {', '.join(bad[:6])}")
+        # ОБОСНОВАНИЯ ФАКТОРОВ — тоже проза, и цифра в них тоже обязана быть из
+        # цитаты. Правило распространено сюда Фазой 1 ради `concentration`: доля
+        # функции без источника — ровно та выдумка, которую четвёртый фактор мог бы
+        # протащить в каждую оценку карты с весом 0.15. Раз уж проверка есть, она
+        # применяется ко всем четырём обоснованиям, а не к одному избранному.
+        for f, v in (e.get("criticalityWhy") or {}).items():
+            if not isinstance(v, dict):
+                continue
+            for lang in ("ru", "en"):
+                bad = _unbacked(v.get(lang) or "", quoted)
+                if bad:
+                    errs.append(f"сущность {e['id']}: числа в criticalityWhy.{f}.{lang} "
+                                f"не встречаются ни в одной цитате этой сущности: "
+                                f"{', '.join(bad[:6])}")
     return errs
 
 
@@ -656,6 +669,17 @@ def validate(payload: dict) -> list:
                         f"а обязан быть его зеркалом весь выпуск /4")
         if "hops" in e:
             errs.append(f"сущность {e['id']}: поле hops снято контрактом /4")
+        basis = e.get("criticalityBasis")
+        if not isinstance(basis, dict) or "factorsUsed" not in basis:
+            errs.append(f"сущность {e['id']}: нет блока criticalityBasis — "
+                        f"потребитель не может отличить оценку по четырём факторам "
+                        f"от оценки по трём")
+        else:
+            used = [k for k, v in (e.get("criticalityFactors") or {}).items()
+                    if v is not None]
+            if basis.get("factorsUsed") != len(used):
+                errs.append(f"сущность {e['id']}: criticalityBasis.factorsUsed "
+                            f"{basis.get('factorsUsed')} при {len(used)} факторах")
         ig = e.get("integration") or {}
         if not isinstance(ig.get("score"), int) or not 0 <= ig["score"] <= 100:
             errs.append(f"сущность {e['id']}: integration.score вне 0..100")
@@ -916,6 +940,19 @@ def _changelog(prev, cur, net):
     return cl
 
 
+def _ru(v):
+    """Русская сторона двуязычного поля для человекочитаемого чейнджлога.
+
+    Проза выдачи с v4 везде пара {ru, en}, а чейнджлог читает человек и по-русски.
+    Без этой развёртки в файл попадал сам словарь: `{'ru': …, 'en': …}` посреди
+    предложения. Ошибкой контракта это не было — файл-спутник валидатор не проверяет,
+    — но читать его стало нельзя, и это заметно только глазами.
+    """
+    if isinstance(v, dict):
+        return v.get("ru") or v.get("en") or ""
+    return v if v is not None else ""
+
+
 def _changelog_md(cur, cl, net) -> str:
     n = cur["network"]
     L = [f"# СЕТЬ ИИ-ИНФРАСТРУКТУРЫ — {cur['version']}", "",
@@ -947,22 +984,22 @@ def _changelog_md(cur, cl, net) -> str:
               "| сущность | degree | betweenness | pagerank | пивот |",
               "|---|---|---|---|---|"]
         top = sorted(cur["entities"], key=lambda e: -e["centrality"][key])[:10]
-        L += [f"| {e['name']} | {e['centrality']['degree']} | "
+        L += [f"| {_ru(e['name'])} | {e['centrality']['degree']} | "
               f"{e['centrality']['betweenness']} | {e['centrality']['pagerank']} | "
               f"{'да' if e['pivotal'] else '—'} |" for e in top]
         L += [""]
 
     if n["singlePointsOfFailure"]:
         L += ["## Точки отказа", ""]
-        L += [f"- **{s['name']}** ({s['layer']}, betweenness {s['betweenness']}) — {s['reason']}"
-              for s in n["singlePointsOfFailure"]]
+        L += [f"- **{_ru(s['name'])}** ({s['layer']}, betweenness {s['betweenness']}) "
+              f"— {_ru(s['reason'])}" for s in n["singlePointsOfFailure"]]
         L += [""]
 
     L += ["## Подграфы", ""]
     for s in n["subgraphs"]:
         mark = " — **ВЫРОЖДЕН**" if s.get("degenerate") else ""
-        L += [f"- **{s['label']}**{mark}: {len(s['nodeIds'])} узлов, "
-              f"{len(s['edgeIds'])} внутренних связей. {s['description']}."]
+        L += [f"- **{_ru(s['label'])}**{mark}: {len(s['nodeIds'])} узлов, "
+              f"{len(s['edgeIds'])} внутренних связей. {_ru(s['description'])}."]
     for note in n.get("subgraphNotes", []):
         L += [f"  - {note}"]
     L += [""]
@@ -990,15 +1027,60 @@ def _changelog_md(cur, cl, net) -> str:
                 f"- `{c['id']}` — интеграция {c['integration']}" for c in ins[:40]] + [""]
         if outs:
             L += ["**Вышли.**", ""] + [
-                f"- `{c['id']}` — интеграция {c['integration']}, {c['why']['ru']}"
+                f"- `{c['id']}` — интеграция {c['integration']}, {_ru(c['why'])}"
                 for c in outs[:40]] + [""]
 
     added = cl.get("relationshipsAdded") or []
     if added:
         L += [f"## Добавленные связи ({len(added)})", ""]
-        L += [f"- `{r['id']}` — {r.get('why') or ''}" for r in added[:25]]
+        L += [f"- `{r['id']}` — {_ru(r.get('why'))}" for r in added[:25]]
         L += [""]
     return "\n".join(L)
+
+
+# Ярус ротации. Считается от `integration`, потому что вопрос ротации — «насколько
+# глубоко узел вшит в карту», а не «насколько он важен сам по себе». Ядро — верхние N,
+# средний ярус — следующая треть, хвост — остальное. Пороги живут здесь, а не в
+# конфиге, ровно до Фазы 2: она решает, считать ли ярус по максимуму из двух осей, и
+# тогда правило переезжает в YAML вместе с этим решением.
+MID_TIER_SHARE = 0.33
+
+
+def rotation_tier(rank: int, total: int, core_n: int) -> str:
+    if rank < core_n:
+        return "core"
+    return "mid" if rank < core_n + round((total - core_n) * MID_TIER_SHARE) else "tail"
+
+
+def persist_integration(month: str, payload: dict) -> int:
+    """Сложить `integration` и ярус в базу.
+
+    Мера считается при сборке выдачи, а нужна ДО неё — пакетчику досье, чтобы знать,
+    кого исследовать в этом месяце. Файл для этого читать нельзя: он выпускается в
+    конце прогона, и пакетчик, читающий его, работал бы по позапрошлой карте.
+    """
+    con = nveco.connect()
+    con.execute("""CREATE TABLE IF NOT EXISTS nvnet_integration (
+                     entity_id TEXT PRIMARY KEY, run_month TEXT, score INTEGER,
+                     degree INTEGER, betweenness REAL, pagerank REAL,
+                     layers_spanned INTEGER, edge_types INTEGER, cycles INTEGER,
+                     rank INTEGER, core INTEGER, rota_tier TEXT)""")
+    ents = sorted(payload["entities"], key=lambda e: (-e["integration"]["score"],
+                                                      -e["integration"]["degree"], e["id"]))
+    core_n = nveco.core_n()
+    con.execute("DELETE FROM nvnet_integration")
+    for rank, e in enumerate(ents):
+        ig = e["integration"]
+        con.execute("""INSERT INTO nvnet_integration (entity_id, run_month, score, degree,
+                         betweenness, pagerank, layers_spanned, edge_types, cycles,
+                         rank, core, rota_tier) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)""",
+                    (e["id"], month, ig["score"], ig["degree"], ig["betweenness"],
+                     ig["pagerank"], ig["layersSpanned"], ig["edgeTypes"], ig["cycles"],
+                     rank + 1, 1 if e.get("core") else 0,
+                     rotation_tier(rank, len(ents), core_n)))
+    con.commit()
+    con.close()
+    return len(ents)
 
 
 def run(month: str, net: dict) -> dict:
@@ -1012,6 +1094,7 @@ def run(month: str, net: dict) -> dict:
     errors = validate(payload)
     if errors:
         return {"ok": False, "errors": errors, "path": str(OUT_JSON)}
+    persist_integration(month, payload)
     cl = _changelog(prev, payload, net)
     payload["changelog"] = cl
     OUT_JSON.parent.mkdir(parents=True, exist_ok=True)

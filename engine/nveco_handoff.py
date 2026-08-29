@@ -33,6 +33,14 @@ class ContractError(AssertionError):
     """Нарушение железного правила. Файл не пишется."""
 
 
+def _basis(factors: dict) -> dict:
+    """Из скольких факторов собрана критичность и перенормированы ли веса."""
+    used = [k for k in nveco.FACTORS if factors.get(k) is not None]
+    return {"factorsUsed": len(used),
+            "factors": [k for k in used],
+            "renormalized": bool(used) and len(used) < len(nveco.FACTORS)}
+
+
 def _sourcing(sources, entity_id: str) -> dict:
     """Прозрачность профиля: всего, из них собственных, и разбивка по тирам.
 
@@ -142,6 +150,12 @@ def build(month: str, scope_id: str = None) -> dict:
             "criticality": e["criticality"],
             "criticalityFactors": {CAMEL[k]: f.get(k) for k in nveco.FACTORS},
             "criticalityWhy": {CAMEL[k]: w.get(k) for k in nveco.FACTORS},
+            # НА ЧЁМ СТОИТ ОЦЕНКА. Пока досье дошли не до всех, у одних узлов
+            # критичность посчитана по четырём факторам, у других — по трём с
+            # перенормировкой весов. Числа в обоих случаях лежат в одной колонке и
+            # выглядят одинаково, но сравнивать их напрямую нельзя. Поле говорит
+            # об этом прямо, вместо того чтобы предоставлять потребителю догадываться.
+            "criticalityBasis": _basis(f),
             "gravity": gravity.get(e["id"], {"reach": 0, "layers": 0, "edgeTypes": 0,
                                              "cycles": 0, "score": 0, "signals": {}}),
             # Пусто, если домен не проверен: дашборд не рисует ссылку вовсе.
@@ -312,6 +326,18 @@ def validate(payload: dict) -> list:
         if not ({l["layer"] for l in e["layers"]} & scope_layers):
             errs.append(f"правило 4: сущность {e['id']} не работает ни в одном слое "
                         f"охвата — она не про этот предмет")
+        # criticalityBasis — на скольких факторах стоит оценка. Поле обязано СХОДИТЬСЯ
+        # с самими факторами: иначе потребитель, читающий «четыре фактора», сравнил бы
+        # четырёхфакторную оценку с трёхфакторной, не увидев разницы.
+        basis = e.get("criticalityBasis") or {}
+        used = [k for k in ("irreplaceability", "lockInDepth", "timeToReplace",
+                            "concentration") if f.get(k) is not None]
+        if basis.get("factorsUsed") != len(used):
+            errs.append(f"сущность {e['id']}: criticalityBasis.factorsUsed "
+                        f"{basis.get('factorsUsed')} при {len(used)} заполненных факторах")
+        if bool(basis.get("renormalized")) != (bool(used) and len(used) < 4):
+            errs.append(f"сущность {e['id']}: criticalityBasis.renormalized "
+                        f"не соответствует набору факторов")
         # sourcing — вычисленное поле, а не украшение: по нему видно долг профиля
         sg = e.get("sourcing") or {}
         if sg.get("total") != len(e.get("sources") or []):
