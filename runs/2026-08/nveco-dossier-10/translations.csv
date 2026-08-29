@@ -1,0 +1,37 @@
+kind,id,field,lang,text
+entity,siemens,why_irreplaceability,en,"Industrial automation is a market of several comparable suppliers, not one"
+entity,siemens,why_lock_in,en,Equipment and software are installed in a plant for decades and are intertwined
+entity,siemens,why_time,en,"Replacing an industrial stack happens along with rebuilding production, not separately"
+entity,siemens,why_concentration,en,"Industrial AI is claimed as its own subject, yet the market is shared with comparable suppliers"
+entity,siemens-energy,why_irreplaceability,en,1 /6 of global electricity generation is based on its technology
+entity,siemens-energy,why_lock_in,en,Generating and grid equipment is installed for decades and serviced by its maker
+entity,siemens-energy,why_time,en,"Presence in 90 countries and a fleet of that scale take decades, not years, to reproduce"
+entity,siemens-energy,why_concentration,en,One sixth of global electricity generation rests on one company's technology
+entity,siemens-eda,why_irreplaceability,en,"Three tool suppliers cover the circuit design route, and this is one of them"
+entity,siemens-eda,why_lock_in,en,The tools are qualified together with the fab route rather than picked per task
+entity,siemens-eda,why_time,en,Moving to another design toolset means requalifying the whole route
+entity,siemens-eda,why_concentration,en,"Design, verification and manufacturing prep are covered by one supplier out of three"
+edge,siemens-eda__cadence__competes_with,risk_mitigation,en,Fabs qualify routes from several tool suppliers at once
+edge,siemens-eda__cadence__competes_with,note,en,"Both cover design, verification and manufacturing preparation of integrated circuits."
+edge,siemens-eda__synopsys__competes_with,risk_mitigation,en,Fabs qualify routes from several tool suppliers at once
+edge,siemens-eda__synopsys__competes_with,note,en,"Both cover design, verification and manufacturing preparation of integrated circuits."
+entity,schneider,why_irreplaceability,en,Power and distribution in a data centre are covered by several comparable suppliers
+entity,schneider,why_lock_in,en,The equipment goes into the cabinet together with its control and changes with the site
+entity,schneider,why_time,en,Replacing a power supplier happens inside a site construction cycle
+entity,schneider,why_concentration,en,"Claims to be a global energy technology leader, yet shares the market with comparable suppliers"
+entity,eu,why_irreplaceability,en,Market access for a model in the union is granted by one legislator and cannot be bypassed
+entity,eu,why_lock_in,en,The rules address both developers and deployers of models
+entity,eu,why_time,en,"The regime rests on a regulation rather than a decision, and is undone the same way"
+entity,eu,why_concentration,en,A single risk-based rulebook for the whole union: there is no alternative route to market
+entity,eu-ai-act,why_irreplaceability,en,A single harmonised text for the whole internal market of the union
+entity,eu-ai-act,why_lock_in,en,The same document amends existing union regulations and directives
+entity,eu-ai-act,why_time,en,Adopted by parliament and council on 13 June 2024 and undone by the same procedure
+entity,eu-ai-act,why_concentration,en,"The purpose is written as a single legal framework for the internal market, not one of several"
+entity,singapore,why_irreplaceability,en,A site and rules of this kind are offered by several jurisdictions at once
+entity,singapore,why_lock_in,en,Compute access widens through calls for application rather than by locking a customer in
+entity,singapore,why_time,en,"The commitment runs from 2025 to 2030 — a programme, not irreversible infrastructure"
+entity,singapore,why_concentration,en,Over S$1 billion for research and talent is notable but grants no share of a function
+entity,japan,why_irreplaceability,en,The country holds wafer materials and equipment; leading-edge manufacturing it does not
+entity,japan,why_lock_in,en,Support of 330 billion yen goes into one national project rather than the market at large
+entity,japan,why_time,en,A pilot line was planned for April 2025 and mass production for 2027
+entity,japan,why_concentration,en,"The most advanced generation produced in the country now is 40-nm, against a 2-nanometer goal"

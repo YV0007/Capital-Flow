@@ -45,9 +45,9 @@
     "coreRule": "top-30 by integration",
     "coreCount": 30,
     "membership": {
-      "admitted": 53,
+      "admitted": 56,
       "retired": 0,
-      "queued": 54,
+      "queued": 51,
       "enforced": false,
       "covered": 107,
       "uncovered": [
@@ -55,9 +55,9 @@
       ],
       "checks": {
         "in_scope": 0,
-        "min_sources": 44,
-        "min_self_sources": 24,
-        "min_confirmed_edges": 34
+        "min_sources": 36,
+        "min_self_sources": 16,
+        "min_confirmed_edges": 33
       }
     },
     "deprecated": {
@@ -66,7 +66,7 @@
   },
   "totals": {
     "entities": 108,
-    "edges": 306,
+    "edges": 308,
     "layers": 16,
     "cycles": 199,
     "techNodes": 10
@@ -484,7 +484,7 @@
       "band": null,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1343,
+        "hhi": 0.1285,
         "top": [
           "taiwan",
           "usa",
@@ -530,7 +530,7 @@
       "band": 1,
       "concentration": {
         "level": "oligopoly",
-        "hhi": 0.2607,
+        "hhi": 0.2503,
         "top": [
           "arm",
           "cadence",
@@ -622,11 +622,11 @@
       "band": 3,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1052,
+        "hhi": 0.1068,
         "top": [
+          "siemens-energy",
           "ge-vernova",
-          "constellation",
-          "siemens-energy"
+          "constellation"
         ]
       }
     },
@@ -783,11 +783,11 @@
       "band": 5,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1444,
+        "hhi": 0.1446,
         "top": [
+          "siemens",
           "databricks",
-          "snowflake",
-          "schrodinger"
+          "snowflake"
         ]
       }
     },
@@ -829,11 +829,11 @@
       "band": null,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.2162,
+        "hhi": 0.2088,
         "top": [
           "bis",
-          "cfius",
-          "mlcommons"
+          "eu-ai-act",
+          "cfius"
         ]
       }
     }
@@ -8925,11 +8925,11 @@
         "renormalized": true
       },
       "gravity": {
-        "reach": 1,
-        "layers": 3,
-        "edgeTypes": 2,
+        "reach": 2,
+        "layers": 4,
+        "edgeTypes": 3,
         "cycles": 0,
-        "score": 8,
+        "score": 12,
         "signals": {}
       },
       "domain": null,
@@ -9008,13 +9008,13 @@
         "en": "Sells what its neighbour in the same layer sells: chip design tools and licensable blocks, plus software for thermal and electromagnetic analysis. The money is a term licence plus royalties; the customer pays every year because the tool must keep pace with the fab's new nodes. On this map it is the second of the only two suppliers without which a chip design does not exist: the duplication here is not a market detail but the industry's single insurance policy. Revenue for the year ended December 31, 2025 was $5.297 billion. A platform co-developed with NVIDIA speeds simulation up on NVIDIA's own chips, so the tool vendor becomes its customer too."
       },
       "centrality": {
-        "degree": 2,
+        "degree": 3,
         "betweenness": 0.0,
         "pagerank": 0.006565
       },
       "integration": {
         "score": 7,
-        "degree": 2,
+        "degree": 3,
         "betweenness": 0.0,
         "pagerank": 0.006565,
         "layersSpanned": 4,
@@ -12260,40 +12260,44 @@
         {
           "layer": "L0",
           "primary": true,
-          "criticality": 45
+          "criticality": 77
         }
       ],
       "primaryLayer": "L0",
-      "criticality": 45,
+      "criticality": 77,
       "criticalityFactors": {
-        "irreplaceability": 45,
-        "lockInDepth": 40,
-        "timeToReplace": 50,
-        "concentration": null
+        "irreplaceability": 78,
+        "lockInDepth": 70,
+        "timeToReplace": 80,
+        "concentration": 82
       },
       "criticalityWhy": {
         "irreplaceability": {
-          "ru": "Рынков сопоставимого размера несколько",
-          "en": "There are several markets of comparable size"
+          "ru": "Допуск модели на рынок союза выдаёт один законодатель, обойти его нечем",
+          "en": "Market access for a model in the union is granted by one legislator and cannot be bypassed"
         },
         "lockInDepth": {
-          "ru": "Задевает продажи, не производство",
-          "en": "Reaches sales, not manufacturing"
+          "ru": "Правила адресованы и разработчикам, и тем, кто модели внедряет",
+          "en": "The rules address both developers and deployers of models"
         },
         "timeToReplace": {
-          "ru": "Адаптация продукта под регулирование — около года",
-          "en": "Adapting the product to the rules — about a year"
+          "ru": "Режим построен регламентом, а не решением, и отменяется тем же порядком",
+          "en": "The regime rests on a regulation rather than a decision, and is undone the same way"
         },
-        "concentration": null
+        "concentration": {
+          "ru": "Единый набор правил по риску на весь союз: альтернативного допуска нет",
+          "en": "A single risk-based rulebook for the whole union: there is no alternative route to market"
+        }
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
         "reach": 2,
@@ -12341,6 +12345,58 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "testimony",
+          "title": "European Commission — regulatory framework for AI",
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "The AI Act sets out a risk-based rules for AI developers and deployers",
+          "confidence": 0.975,
+          "self": "eu",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "testimony",
+          "title": "European Commission — regulatory framework for AI",
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "AI systems considered a clear threat to the safety, livelihoods and rights of people",
+          "confidence": 0.975,
+          "self": "eu",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "testimony",
+          "title": "European Commission — regulatory framework for AI",
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "AI use cases that can pose serious risks to health, safety or fundamental rights",
+          "confidence": 0.975,
+          "self": "eu",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "testimony",
+          "title": "European Commission — regulatory framework for AI",
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "The vast majority of AI systems currently used in the EU fall into this category.",
+          "confidence": 0.975,
+          "self": "eu",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "NVIDIA 10-K FY2026",
@@ -12355,15 +12411,16 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 5,
+        "selfSourced": 4,
         "byTier": {
+          "1": 4,
           "2": 1
         }
       },
       "description": {
-        "ru": "Блок управляет не производством, а выходом на рынок: требования адресованы тому, что предлагается пользователям, и доказывать соответствие обязан разработчик. Рычаг медленнее экспортного шлюза и мягче — здесь можно продать, соблюдя правила, а не оказаться перед запретом. Издержки при этом не зависят от выручки в регионе, поэтому давление сильнее на мелких участников, чем на крупных. В карте это единственный регулятор, действующий на прикладной слой, а не на производственный или экспортный.",
-        "en": "The bloc governs market entry rather than production: the requirements address what is offered to users, and the developer must demonstrate compliance. The lever is slower than an export gate and softer — here you may sell by following the rules rather than face a prohibition. The costs do not scale with regional revenue, so the pressure falls harder on small participants than on large ones. On the map it is the only regulator acting on the application layer rather than the manufacturing or export one."
+        "ru": "Европейский союз стоит на карте как юрисдикция, которая пишет правила допуска моделей на рынок. Свой подход он описывает прямо: правила построены по риску и адресованы разработчикам и тем, кто модели внедряет. Системы, признанные явной угрозой безопасности, средствам к существованию и правам людей, запрещены. Применения, способные создать серьёзный риск для здоровья, безопасности или основных прав, отнесены к высокорисковым. При этом сам регулятор признаёт, что подавляющее большинство используемых в союзе систем попадает в категорию минимального риска.",
+        "en": "The European Union stands on the map as the jurisdiction that writes the rules of market access for models. It describes its approach plainly: the rules are risk-based and addressed to developers and deployers. Systems considered a clear threat to the safety, livelihoods and rights of people are banned. Uses that can pose serious risks to health, safety or fundamental rights are classified as high-risk. At the same time the regulator itself acknowledges that the vast majority of systems used in the union fall into the minimal risk category."
       },
       "centrality": {
         "degree": 2,
@@ -12395,40 +12452,44 @@
         {
           "layer": "L15",
           "primary": true,
-          "criticality": 41
+          "criticality": 80
         }
       ],
       "primaryLayer": "L15",
-      "criticality": 41,
+      "criticality": 80,
       "criticalityFactors": {
-        "irreplaceability": 40,
-        "lockInDepth": 35,
-        "timeToReplace": 50,
-        "concentration": null
+        "irreplaceability": 80,
+        "lockInDepth": 74,
+        "timeToReplace": 84,
+        "concentration": 86
       },
       "criticalityWhy": {
         "irreplaceability": {
-          "ru": "Регуляторных режимов несколько",
-          "en": "There are several regulatory regimes"
+          "ru": "Единый гармонизированный текст на весь внутренний рынок союза",
+          "en": "A single harmonised text for the whole internal market of the union"
         },
         "lockInDepth": {
-          "ru": "Задевает приложения и модели",
-          "en": "Reaches applications and models"
+          "ru": "Тем же документом изменены действующие регламенты и директивы союза",
+          "en": "The same document amends existing union regulations and directives"
         },
         "timeToReplace": {
-          "ru": "Внедрение требований — год-два",
-          "en": "Implementing the requirements — one to two years"
+          "ru": "Принят парламентом и советом 13 июня 2024 года и отменяется тем же порядком",
+          "en": "Adopted by parliament and council on 13 June 2024 and undone by the same procedure"
         },
-        "concentration": null
+        "concentration": {
+          "ru": "Цель записана как единый правовой каркас для внутреннего рынка, а не как один из",
+          "en": "The purpose is written as a single legal framework for the internal market, not one of several"
+        }
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
         "reach": 2,
@@ -12476,6 +12537,58 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "testimony",
+          "title": "Regulation (EU) 2024/1689 — AI Act",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202401689",
+          "published": "2024-06-13",
+          "fetched": null,
+          "alive": true,
+          "quote": "Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024",
+          "confidence": 0.975,
+          "self": "eu-ai-act",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "testimony",
+          "title": "Regulation (EU) 2024/1689 — AI Act",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202401689",
+          "published": "2024-06-13",
+          "fetched": null,
+          "alive": true,
+          "quote": "laying down harmonised rules on artificial intelligence and amending Regulations",
+          "confidence": 0.975,
+          "self": "eu-ai-act",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "testimony",
+          "title": "Regulation (EU) 2024/1689 — AI Act",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202401689",
+          "published": "2024-06-13",
+          "fetched": null,
+          "alive": true,
+          "quote": "The purpose of this Regulation is to improve the functioning of the internal market",
+          "confidence": 0.975,
+          "self": "eu-ai-act",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "testimony",
+          "title": "Regulation (EU) 2024/1689 — AI Act",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202401689",
+          "published": "2024-06-13",
+          "fetched": null,
+          "alive": true,
+          "quote": "it is therefore necessary to prohibit certain unacceptable AI practices, to lay down requirements",
+          "confidence": 0.975,
+          "self": "eu-ai-act",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "NVIDIA 10-K FY2026",
@@ -12490,15 +12603,16 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 5,
+        "selfSourced": 4,
         "byTier": {
+          "1": 4,
           "2": 1
         }
       },
       "description": {
-        "ru": "Регламент задаёт правила выпуска моделей на рынок: классификация по риску, требования к документации, прозрачности и оценке. Издержки соблюдения ложатся на того, кто выпускает модель, и не зависят от того, сколько он продал в регионе. В карте это первый регулятор, который адресуется не железу и не экспорту, а самому продукту прикладного слоя. Практическое следствие — барьер входа: крупная лаборатория распределяет издержки на объём, небольшая несёт их целиком.",
-        "en": "The regulation sets the rules for placing models on the market: risk classification, documentation, transparency and evaluation requirements. Compliance costs fall on whoever releases the model and do not scale with how much was sold in the region. On the map it is the first regulator addressing neither hardware nor export but the application-layer product itself. The practical consequence is a barrier to entry: a large lab spreads the cost over volume, a small one bears it whole."
+        "ru": "Регламент об ИИ — это Regulation (EU) 2024/1689 Европейского парламента и Совета от 13 июня 2024 года. Его собственный текст называет цель: улучшить работу внутреннего рынка, установив единые гармонизированные правила. Тем же документом внесены изменения в целый ряд действующих регламентов и директив союза. Способ регулирования записан прямо: запретить неприемлемые практики, установить требования к высокорисковым системам и обязанности их операторов. Отсюда положение узла на карте: он не орган и не компания, а текст, по которому и орган, и компания обязаны действовать.",
+        "en": "The AI Act is Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024. Its own text states the purpose: to improve the functioning of the internal market by laying down uniform harmonised rules. The same document amends a series of existing union regulations and directives. The method of regulation is written plainly: prohibit unacceptable practices, set requirements for high-risk systems and obligations for their operators. Hence the node's place on the map: it is neither a body nor a company but the text both a body and a company must act by."
       },
       "centrality": {
         "degree": 2,
@@ -14456,40 +14570,44 @@
         {
           "layer": "L0",
           "primary": true,
-          "criticality": 63
+          "criticality": 71
         }
       ],
       "primaryLayer": "L0",
-      "criticality": 63,
+      "criticality": 71,
       "criticalityFactors": {
-        "irreplaceability": 65,
-        "lockInDepth": 55,
-        "timeToReplace": 70,
-        "concentration": null
+        "irreplaceability": 76,
+        "lockInDepth": 68,
+        "timeToReplace": 74,
+        "concentration": 62
       },
       "criticalityWhy": {
         "irreplaceability": {
-          "ru": "Поставщиков материалов немного и они здесь",
-          "en": "There are few materials suppliers, and they are here"
+          "ru": "Материалы и оборудование для производства пластин страна держит, передовое производство — нет",
+          "en": "The country holds wafer materials and equipment; leading-edge manufacturing it does not"
         },
         "lockInDepth": {
-          "ru": "Задевает сырьё и фабрики",
-          "en": "Reaches raw inputs and fabs"
+          "ru": "Поддержка в 330 billion yen идёт в один национальный проект, а не в рынок вообще",
+          "en": "Support of 330 billion yen goes into one national project rather than the market at large"
         },
         "timeToReplace": {
-          "ru": "Переквалификация материалов — два-три года",
-          "en": "Requalifying materials — two to three years"
+          "ru": "Пилотная линия планировалась на апрель 2025 года, серийный выпуск — на 2027 год",
+          "en": "A pilot line was planned for April 2025 and mass production for 2027"
         },
-        "concentration": null
+        "concentration": {
+          "ru": "Самое передовое производство в стране сейчас — 40-nm, при цели 2-nanometer",
+          "en": "The most advanced generation produced in the country now is 40-nm, against a 2-nanometer goal"
+        }
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
         "reach": 2,
@@ -14538,6 +14656,97 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "testimony",
+          "title": "JapanGov — Japan's pursuit of a game-changing technology for semiconductors",
+          "url": "https://www.japan.go.jp/kizuna/2024/03/technology_for_semiconductors.html",
+          "published": "2024-03-01",
+          "fetched": null,
+          "alive": true,
+          "quote": "Japan occupied more than half of the global semiconductor market in the 1980s",
+          "confidence": 0.975,
+          "self": "japan",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "testimony",
+          "title": "JapanGov — Japan's pursuit of a game-changing technology for semiconductors",
+          "url": "https://www.japan.go.jp/kizuna/2024/03/technology_for_semiconductors.html",
+          "published": "2024-03-01",
+          "fetched": null,
+          "alive": true,
+          "quote": "The most advanced generation produced in Japan now is the 40-nm chip.",
+          "confidence": 0.975,
+          "self": "japan",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "testimony",
+          "title": "JapanGov — Japan's pursuit of a game-changing technology for semiconductors",
+          "url": "https://www.japan.go.jp/kizuna/2024/03/technology_for_semiconductors.html",
+          "published": "2024-03-01",
+          "fetched": null,
+          "alive": true,
+          "quote": "The Japanese government has announced support totaling 330 billion yen so far.",
+          "confidence": 0.975,
+          "self": "japan",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "testimony",
+          "title": "JapanGov — Japan's pursuit of a game-changing technology for semiconductors",
+          "url": "https://www.japan.go.jp/kizuna/2024/03/technology_for_semiconductors.html",
+          "published": "2024-03-01",
+          "fetched": null,
+          "alive": true,
+          "quote": "have invested a total of 7.3 billion yen in this massive public-private partnership",
+          "confidence": 0.975,
+          "self": "japan",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "testimony",
+          "title": "JapanGov — Japan's pursuit of a game-changing technology for semiconductors",
+          "url": "https://www.japan.go.jp/kizuna/2024/03/technology_for_semiconductors.html",
+          "published": "2024-03-01",
+          "fetched": null,
+          "alive": true,
+          "quote": "Rapidus Corporation was founded in 2022 to work on a project at the heart",
+          "confidence": 0.975,
+          "self": "japan",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "testimony",
+          "title": "JapanGov — Japan's pursuit of a game-changing technology for semiconductors",
+          "url": "https://www.japan.go.jp/kizuna/2024/03/technology_for_semiconductors.html",
+          "published": "2024-03-01",
+          "fetched": null,
+          "alive": true,
+          "quote": "Rapidus aims to develop a system for mass producing leading-edge 2-nanometer (nm) chips",
+          "confidence": 0.975,
+          "self": "japan",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "testimony",
+          "title": "JapanGov — Japan's pursuit of a game-changing technology for semiconductors",
+          "url": "https://www.japan.go.jp/kizuna/2024/03/technology_for_semiconductors.html",
+          "published": "2024-03-01",
+          "fetched": null,
+          "alive": true,
+          "quote": "a pilot production line in April of 2025, and to begin mass production in 2027",
+          "confidence": 0.975,
+          "self": "japan",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "TSMC 20-F 2025",
@@ -14552,15 +14761,16 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 8,
+        "selfSourced": 7,
         "byTier": {
+          "1": 7,
           "2": 1
         }
       },
       "description": {
-        "ru": "Управляет не готовыми чипами, а входами в их производство: пластинами, светочувствительными материалами и частью оборудования обработки. Рычаг здесь быстрее любого другого на карте — материалы расходуются непрерывно, запас на площадке измеряется неделями, и экспортные меры уже применялись как политический инструмент. Юрисдикция при этом сама зависит от заказчиков: спрос сосредоточен у нескольких фабрик за рубежом. В карте она стоит в самом низу, где стоимость входа мала, а последствия остановки максимальны.",
-        "en": "Governs not finished chips but the inputs to making them: wafers, photoresists and part of the processing equipment. The lever here is faster than any other on the map — materials are consumed continuously, on-site stock is measured in weeks, and export measures have already been used politically. The jurisdiction is itself dependent on its customers: demand is concentrated in a few fabs abroad. On the map it sits at the very bottom, where the cost of the input is small and the consequence of a stoppage is greatest."
+        "ru": "Япония на карте — юрисдикция, которая заново покупает себе передовое производство. Правительственный портал описывает исходную точку без прикрас: страна занимала более половины мирового полупроводникового рынка в 1980-е, но с тех пор лидируют другие, и самое передовое, что производится в Японии сейчас, — это 40-nm. Ответ — Rapidus Corporation, основанная в 2022 году, с объявленной государственной поддержкой в 330 billion yen и 7.3 billion yen от крупных японских компаний. Цель заявлена как серийный выпуск 2-nanometer, которого пока нет нигде. Пилотная линия планировалась на апрель 2025 года, серийный выпуск — на 2027 год.",
+        "en": "On this map Japan is a jurisdiction buying itself leading-edge manufacturing back. The government portal describes the starting point without flattery: the country held more than half of the global semiconductor market in the 1980s, others have led since, and the most advanced generation produced in Japan now is the 40-nm chip. The answer is Rapidus Corporation, founded in 2022, with announced government support of 330 billion yen and 7.3 billion yen from major Japanese companies. The stated goal is mass production of 2-nanometer chips, which has yet to be realized anywhere. A pilot line was planned for April 2025 and mass production for 2027."
       },
       "centrality": {
         "degree": 2,
@@ -16591,13 +16801,13 @@
       },
       "centrality": {
         "degree": 6,
-        "betweenness": 0.003677,
+        "betweenness": 0.003668,
         "pagerank": 0.006565
       },
       "integration": {
         "score": 11,
         "degree": 6,
-        "betweenness": 0.003677,
+        "betweenness": 0.003668,
         "pagerank": 0.006565,
         "layersSpanned": 6,
         "edgeTypes": 3,
@@ -17007,13 +17217,13 @@
       },
       "centrality": {
         "degree": 4,
-        "betweenness": 0.013719,
+        "betweenness": 0.013661,
         "pagerank": 0.009406
       },
       "integration": {
         "score": 9,
         "degree": 4,
-        "betweenness": 0.013719,
+        "betweenness": 0.013661,
         "pagerank": 0.009406,
         "layersSpanned": 6,
         "edgeTypes": 1,
@@ -18607,13 +18817,13 @@
       },
       "centrality": {
         "degree": 77,
-        "betweenness": 0.805143,
+        "betweenness": 0.80405,
         "pagerank": 0.137889
       },
       "integration": {
         "score": 100,
         "degree": 77,
-        "betweenness": 0.805143,
+        "betweenness": 0.80405,
         "pagerank": 0.137889,
         "layersSpanned": 15,
         "edgeTypes": 29,
@@ -20377,13 +20587,13 @@
       },
       "centrality": {
         "degree": 7,
-        "betweenness": 0.021346,
+        "betweenness": 0.021308,
         "pagerank": 0.006565
       },
       "integration": {
         "score": 13,
         "degree": 7,
-        "betweenness": 0.021346,
+        "betweenness": 0.021308,
         "pagerank": 0.006565,
         "layersSpanned": 7,
         "edgeTypes": 4,
@@ -20636,40 +20846,44 @@
         {
           "layer": "L6",
           "primary": true,
-          "criticality": 55
+          "criticality": 62
         }
       ],
       "primaryLayer": "L6",
-      "criticality": 55,
+      "criticality": 62,
       "criticalityFactors": {
-        "irreplaceability": 55,
-        "lockInDepth": 50,
-        "timeToReplace": 60,
-        "concentration": null
+        "irreplaceability": 66,
+        "lockInDepth": 64,
+        "timeToReplace": 58,
+        "concentration": 60
       },
       "criticalityWhy": {
         "irreplaceability": {
-          "ru": "Поставщиков питания несколько",
-          "en": "There are several power suppliers"
+          "ru": "Питание и распределение в дата-центре закрывают несколько сопоставимых поставщиков",
+          "en": "Power and distribution in a data centre are covered by several comparable suppliers"
         },
         "lockInDepth": {
-          "ru": "Задевает энергию и площадки",
-          "en": "Reaches power and sites"
+          "ru": "Оборудование ставится в шкаф вместе с управлением им и меняется вместе с площадкой",
+          "en": "The equipment goes into the cabinet together with its control and changes with the site"
         },
         "timeToReplace": {
-          "ru": "Очередь на оборудование — два года",
-          "en": "The queue for equipment — two years"
+          "ru": "Замена поставщика питания идёт в пределах цикла строительства площадки",
+          "en": "Replacing a power supplier happens inside a site construction cycle"
         },
-        "concentration": null
+        "concentration": {
+          "ru": "Заявляет себя мировым лидером энергетических технологий, но рынок делит с сопоставимыми",
+          "en": "Claims to be a global energy technology leader, yet shares the market with comparable suppliers"
+        }
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
         "reach": 2,
@@ -20718,6 +20932,58 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Schneider Electric — Company profile",
+          "url": "https://www.se.com/ww/en/about-us/company-profile/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Schneider Electric is a global energy technology leader, driving efficiency and sustainability by electrifying",
+          "confidence": 0.975,
+          "self": "schneider",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Schneider Electric — Company profile",
+          "url": "https://www.se.com/ww/en/about-us/company-profile/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Our technologies enable buildings, data centers, factories, infrastructure, and grids to operate",
+          "confidence": 0.975,
+          "self": "schneider",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Schneider Electric — Company profile",
+          "url": "https://www.se.com/ww/en/about-us/company-profile/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "automating, and digitalizing industries, businesses, and homes",
+          "confidence": 0.975,
+          "self": "schneider",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Schneider Electric — Company profile",
+          "url": "https://www.se.com/ww/en/about-us/company-profile/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "as open, interconnected ecosystems, enhancing performance, resilience, and sustainability",
+          "confidence": 0.975,
+          "self": "schneider",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "Eaton 10-K 2025",
@@ -20732,15 +20998,16 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 5,
+        "selfSourced": 4,
         "byTier": {
+          "1": 4,
           "2": 1
         }
       },
       "description": {
-        "ru": "Продаёт оборудование распределения энергии и системы управления питанием для площадок: щиты, шины, источники бесперебойного питания, охлаждение. Деньги — проектная поставка плюс обслуживание, спрос идёт волнами вместе со стройкой. В карте компания стоит рядом со вторым таким же поставщиком, и наличие двух — единственная форма страховки на этом слое. Дефицита это не снимает: оборудование делается для дата-центров, сетей и промышленности сразу, и очередь общая с другими отраслями.",
-        "en": "Sells power distribution equipment and power management systems for sites: switchgear, busways, uninterruptible supplies, cooling. The money is project supply plus service, and demand arrives in waves with construction. On the map it stands beside a second supplier of the same kind, and having two is the only form of insurance on this layer. That does not remove the shortage: the equipment is made for data centres, utilities and industry at once, and the queue is shared with other sectors."
+        "ru": "Schneider Electric описывает себя как мирового лидера энергетических технологий, работающего электрификацией, автоматизацией и цифровизацией. Дата-центры она называет среди объектов, которые её технологии позволяют вести как открытые связанные системы — наравне со зданиями, заводами, инфраструктурой и сетями. На карте узел стоит в слое питания и распределения: он даёт стойке электричество и управление им. Собственная страница профиля закрыта для машинного обхода стандартным запросом, и цитаты взяты с неё же обходом с браузерным заголовком. Отсюда роль узла: он не строит площадку и не считает на ней, он делает так, чтобы мощность дошла до шкафа.",
+        "en": "Schneider Electric describes itself as a global energy technology leader working through electrification, automation and digitalization. It names data centres among the objects its technologies let run as open interconnected systems — alongside buildings, factories, infrastructure and grids. On the map the node sits in the power and distribution layer: it brings electricity to the rack and the control of it. Its own profile page refuses a plain machine request, and the quotes were taken from it with a browser header. Hence the node's role: it neither builds the site nor computes on it, it makes the power reach the cabinet."
       },
       "centrality": {
         "degree": 2,
@@ -21614,40 +21881,44 @@
         {
           "layer": "L13",
           "primary": true,
-          "criticality": 43
+          "criticality": 58
         }
       ],
       "primaryLayer": "L13",
-      "criticality": 43,
+      "criticality": 58,
       "criticalityFactors": {
-        "irreplaceability": 40,
-        "lockInDepth": 40,
-        "timeToReplace": 50,
-        "concentration": null
+        "irreplaceability": 58,
+        "lockInDepth": 62,
+        "timeToReplace": 60,
+        "concentration": 50
       },
       "criticalityWhy": {
         "irreplaceability": {
-          "ru": "Промышленных применений несколько",
-          "en": "There are several industrial applications"
+          "ru": "Промышленная автоматизация — рынок нескольких сопоставимых поставщиков, а не одного",
+          "en": "Industrial automation is a market of several comparable suppliers, not one"
         },
         "lockInDepth": {
-          "ru": "Задевает только приложения",
-          "en": "Reaches applications only"
+          "ru": "Оборудование и софт ставятся на заводе на десятилетия и переплетены между собой",
+          "en": "Equipment and software are installed in a plant for decades and are intertwined"
         },
         "timeToReplace": {
-          "ru": "Заместить — год-два",
-          "en": "Replacement — one to two years"
+          "ru": "Замена промышленного стека идёт вместе с перестройкой производства, а не отдельно",
+          "en": "Replacing an industrial stack happens along with rebuilding production, not separately"
         },
-        "concentration": null
+        "concentration": {
+          "ru": "Промышленный ИИ заявлен как собственный предмет, но рынок делится с сопоставимыми поставщиками",
+          "en": "Industrial AI is claimed as its own subject, yet the market is shared with comparable suppliers"
+        }
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
         "reach": 1,
@@ -21695,6 +21966,58 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Siemens — About us",
+          "url": "https://www.siemens.com/global/en/company/about.html",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Siemens technology empowers customers to transform the industries that form the backbone of economies",
+          "confidence": 0.975,
+          "self": "siemens",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Siemens — About us",
+          "url": "https://www.siemens.com/global/en/company/about.html",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Our technology accelerates customer transformations with industrial AI, boosting efficiency in factories",
+          "confidence": 0.975,
+          "self": "siemens",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Siemens — About us",
+          "url": "https://www.siemens.com/global/en/company/about.html",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "438 million € invested in employee education and training",
+          "confidence": 0.975,
+          "self": "siemens",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Siemens — About us",
+          "url": "https://www.siemens.com/global/en/company/about.html",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "47.9 million € total community investment in fiscal 2025",
+          "confidence": 0.975,
+          "self": "siemens",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "NVIDIA 10-K FY2026",
@@ -21709,15 +22032,16 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 5,
+        "selfSourced": 4,
         "byTier": {
+          "1": 4,
           "2": 1
         }
       },
       "description": {
-        "ru": "Продаёт промышленную автоматизацию и софт для проектирования: системы управления производством, цифровые модели изделий и заводов. Деньги — продажа оборудования и лицензии на софт с обслуживанием, циклы закупки измеряются годами. В карте компания представляет применение моделей там, где результат проверяется физикой: расчёт либо совпадает с испытанием, либо нет. Такой спрос растёт медленно и не разворачивается — заводы не меняют инструмент проектирования по настроению рынка.",
-        "en": "Sells industrial automation and design software: manufacturing control systems, digital models of products and plants. The money is equipment sales and software licences with service, on procurement cycles measured in years. On the map it represents applying models where the result is checked by physics: a simulation either matches the test or it does not. Demand like that grows slowly and does not reverse — plants do not change design tools with market sentiment."
+        "ru": "Siemens описывает себя как технологическую компанию, чьи разработки перестраивают отрасли, составляющие опору экономик: промышленность, инфраструктуру и транспорт. Промышленный ИИ она называет прямо своим предметом — им она повышает эффективность заводов. Компания работает на всех обитаемых континентах. В 2025 финансовом году она вложила 438 million € в обучение и подготовку сотрудников и 47.9 million € в общественные проекты. На карте узел стоит на стороне спроса: он показывает, куда ускоренные вычисления уходят за пределами дата-центров.",
+        "en": "Siemens describes itself as a technology company whose work rebuilds the industries that form the backbone of economies: industry, infrastructure and transportation. It names industrial AI as its own subject — the thing it raises factory efficiency with. The company operates across every inhabited continent. In fiscal 2025 it invested 438 million € in employee education and training and 47.9 million € in community projects. On the map the node sits on the demand side: it shows where accelerated computing goes outside data centres."
       },
       "centrality": {
         "degree": 1,
@@ -21750,47 +22074,51 @@
         {
           "layer": "L2",
           "primary": true,
-          "criticality": 48
+          "criticality": 77
         }
       ],
       "primaryLayer": "L2",
-      "criticality": 48,
+      "criticality": 77,
       "criticalityFactors": {
-        "irreplaceability": 50,
-        "lockInDepth": 45,
-        "timeToReplace": 50,
-        "concentration": null
+        "irreplaceability": 80,
+        "lockInDepth": 78,
+        "timeToReplace": 76,
+        "concentration": 72
       },
       "criticalityWhy": {
         "irreplaceability": {
-          "ru": "Альтернативы ясны, преимущество в отдельных нишах",
-          "en": "The alternatives are clear; the advantage sits in particular niches"
+          "ru": "Маршрут проектирования схемы закрывают три поставщика инструментов, и это один из них",
+          "en": "Three tool suppliers cover the circuit design route, and this is one of them"
         },
         "lockInDepth": {
-          "ru": "Задевает проектирование",
-          "en": "Reaches chip design"
+          "ru": "Инструменты квалифицируются вместе с маршрутом фабрики, а не выбираются под задачу",
+          "en": "The tools are qualified together with the fab route rather than picked per task"
         },
         "timeToReplace": {
-          "ru": "Замена в нише — год-два",
-          "en": "Replacement within the niche — one to two years"
+          "ru": "Переход на другой набор средств проектирования означает переквалификацию всего маршрута",
+          "en": "Moving to another design toolset means requalifying the whole route"
         },
-        "concentration": null
+        "concentration": {
+          "ru": "Проектирование, верификация и подготовка к производству закрываются одним поставщиком из трёх",
+          "en": "Design, verification and manufacturing prep are covered by one supplier out of three"
+        }
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
-        "reach": 1,
-        "layers": 3,
-        "edgeTypes": 1,
+        "reach": 3,
+        "layers": 4,
+        "edgeTypes": 2,
         "cycles": 0,
-        "score": 7,
+        "score": 13,
         "signals": {}
       },
       "domain": null,
@@ -21831,6 +22159,45 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "Siemens EDA — IC Tool Portfolio",
+          "url": "https://eda.sw.siemens.com/en-US/ic/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Siemens EDA is a leader in IC design, verification, and manufacturing.",
+          "confidence": 0.975,
+          "self": "siemens-eda",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "Siemens EDA — IC Tool Portfolio",
+          "url": "https://eda.sw.siemens.com/en-US/ic/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Our tools enable customers to design the innovative ICs that drive digitalization worldwide",
+          "confidence": 0.975,
+          "self": "siemens-eda",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "Siemens EDA — IC Tool Portfolio",
+          "url": "https://eda.sw.siemens.com/en-US/ic/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "IC design, verification & manufacturing",
+          "confidence": 0.975,
+          "self": "siemens-eda",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "Synopsys 10-K FY2025",
@@ -21845,28 +22212,29 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 4,
+        "selfSourced": 3,
         "byTier": {
+          "1": 3,
           "2": 1
         }
       },
       "description": {
-        "ru": "Продаёт третий по величине набор инструментов проектирования микросхем: верификация, тестопригодность, физический анализ. Деньги — лицензии на срок, как у двух более крупных соседей по слою. В карте компания показывает, что дуополия наверху не абсолютна: на отдельных этапах маршрута выбор существует, и заказчики держат её инструменты рядом с основными. Полноценной третьей альтернативой она при этом не становится — сертификация полного маршрута под передовые нормы стоит дороже, чем окупает нишевый спрос.",
-        "en": "Sells the third-largest set of chip design tools: verification, testability, physical analysis. The money is term licences, as with the two larger neighbours on this layer. On the map it shows the duopoly above is not absolute: at individual stages of the flow a choice exists, and customers keep its tools beside the main ones. It does not become a full third alternative, though — certifying a complete flow for leading-edge nodes costs more than niche demand repays."
+        "ru": "Siemens EDA делает инструменты для проектирования, верификации и подготовки к производству интегральных схем. Свою роль компания формулирует так: её инструменты позволяют заказчикам проектировать схемы, на которых держится цифровизация по всему миру. На карте это третий из трёх поставщиков средств проектирования рядом с Cadence и Synopsys — без них чип не доходит до фабрики. Собственного домена у подразделения фактически не осталось: адрес eda.sw.siemens.com теперь перенаправляет на корпоративный сайт, и продуктовые страницы живут по путям внутри него. Отсюда роль узла: он держит ту часть маршрута, где замысел превращается в набор масок.",
+        "en": "Siemens EDA makes tools for the design, verification and manufacturing preparation of integrated circuits. The company frames its own role thus: its tools let customers design the circuits digitalization worldwide rests on. On the map it is the third of three design-tool suppliers alongside Cadence and Synopsys — without them a chip never reaches the fab. The unit has effectively lost its own domain: eda.sw.siemens.com now redirects to the corporate site and the product pages live on paths inside it. Hence the node's role: it holds the stretch of the route where an intent becomes a set of masks."
       },
       "centrality": {
-        "degree": 1,
+        "degree": 3,
         "betweenness": 0.0,
         "pagerank": 0.006565
       },
       "integration": {
-        "score": 5,
-        "degree": 1,
+        "score": 7,
+        "degree": 3,
         "betweenness": 0.0,
         "pagerank": 0.006565,
         "layersSpanned": 4,
-        "edgeTypes": 1,
+        "edgeTypes": 2,
         "cycles": 0
       },
       "core": false,
@@ -21885,40 +22253,44 @@
         {
           "layer": "L6",
           "primary": true,
-          "criticality": 61
+          "criticality": 77
         }
       ],
       "primaryLayer": "L6",
-      "criticality": 61,
+      "criticality": 77,
       "criticalityFactors": {
-        "irreplaceability": 65,
-        "lockInDepth": 50,
-        "timeToReplace": 70,
-        "concentration": null
+        "irreplaceability": 76,
+        "lockInDepth": 74,
+        "timeToReplace": 82,
+        "concentration": 75
       },
       "criticalityWhy": {
         "irreplaceability": {
-          "ru": "Производителей больших турбин три",
-          "en": "Three makers build large turbines"
+          "ru": "На её технологии основана 1 /6 мировой генерации электроэнергии",
+          "en": "1 /6 of global electricity generation is based on its technology"
         },
         "lockInDepth": {
-          "ru": "Задевает энергию",
-          "en": "Reaches power"
+          "ru": "Генерирующее и сетевое оборудование ставится на десятилетия и обслуживается изготовителем",
+          "en": "Generating and grid equipment is installed for decades and serviced by its maker"
         },
         "timeToReplace": {
-          "ru": "Очередь на оборудование — три года",
-          "en": "The queue for equipment — three years"
+          "ru": "Присутствие в 90 странах и парк такого масштаба воспроизводятся не годами, а десятилетиями",
+          "en": "Presence in 90 countries and a fleet of that scale take decades, not years, to reproduce"
         },
-        "concentration": null
+        "concentration": {
+          "ru": "Одна шестая мировой генерации электроэнергии основана на технологии одной компании",
+          "en": "One sixth of global electricity generation rests on one company's technology"
+        }
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
         "reach": 1,
@@ -21966,6 +22338,71 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Siemens Energy — About",
+          "url": "https://www.siemens-energy.com/global/en/home/company/about.html",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "1 /6 of global electricity generation is based on our technology",
+          "confidence": 0.975,
+          "self": "siemens-energy",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Siemens Energy — About",
+          "url": "https://www.siemens-energy.com/global/en/home/company/about.html",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "From conventional to renewable power, from grid technology to storage to electrifying complex industrial processes.",
+          "confidence": 0.975,
+          "self": "siemens-energy",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Siemens Energy — About",
+          "url": "https://www.siemens-energy.com/global/en/home/company/about.html",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "> 100,000 employees work as a team to energize society",
+          "confidence": 0.975,
+          "self": "siemens-energy",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Siemens Energy — About",
+          "url": "https://www.siemens-energy.com/global/en/home/company/about.html",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Located in 90 countries, Siemens Energy operates across the whole energy landscape.",
+          "confidence": 0.975,
+          "self": "siemens-energy",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "company_pr",
+          "title": "Siemens Energy — About",
+          "url": "https://www.siemens-energy.com/global/en/home/company/about.html",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "> 1 bn euro we invest more than € 1bn in research and development.",
+          "confidence": 0.975,
+          "self": "siemens-energy",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "NVIDIA 10-K FY2026",
@@ -21980,15 +22417,16 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 6,
+        "selfSourced": 5,
         "byTier": {
+          "1": 5,
           "2": 1
         }
       },
       "description": {
-        "ru": "Второй крупный производитель турбин и оборудования для сетей в карте. Деньги те же: продажа оборудования проектами плюс обслуживание, а спрос дата-центров конкурирует с общим спросом энергетики. Наличие двух таких поставщиков не снимает дефицита — производственные мощности этой отрасли расширяются медленнее, чем растёт заказ. В карте это объясняет, почему сроки ввода площадок не сокращаются пропорционально вложенным деньгам.",
-        "en": "The second large maker of turbines and grid equipment on the map. The money is the same: project equipment sales plus service, with data-centre demand competing against general power-sector demand. Having two such suppliers does not remove the shortage — this industry's manufacturing capacity expands more slowly than orders grow. On the map it explains why site schedules do not shorten in proportion to money spent."
+        "ru": "Siemens Energy покрывает весь энергетический ландшафт — от традиционной генерации до возобновляемой, от сетевых технологий до накопителей и электрификации промышленных процессов. Цифра, ради которой узел стоит на карте, названа ею самой: 1 /6 of global electricity generation is based on our technology. В компании работает более 100,000 человек, она присутствует в 90 странах и вкладывает более € 1bn в исследования и разработку. На карте узел стоит в слое, где мощность подводят к площадке, а не считают на ней.",
+        "en": "Siemens Energy covers the whole energy landscape — from conventional to renewable generation, from grid technology to storage and the electrification of industrial processes. The figure the node is on the map for is its own: 1 /6 of global electricity generation is based on our technology. It has more than 100,000 employees, is present in 90 countries and invests more than € 1bn in research and development. On the map the node sits in the layer that brings power to the site rather than computing on it."
       },
       "centrality": {
         "degree": 1,
@@ -22020,40 +22458,44 @@
         {
           "layer": "L0",
           "primary": true,
-          "criticality": 38
+          "criticality": 49
         }
       ],
       "primaryLayer": "L0",
-      "criticality": 38,
+      "criticality": 49,
       "criticalityFactors": {
-        "irreplaceability": 40,
-        "lockInDepth": 35,
-        "timeToReplace": 40,
-        "concentration": null
+        "irreplaceability": 52,
+        "lockInDepth": 50,
+        "timeToReplace": 48,
+        "concentration": 40
       },
       "criticalityWhy": {
         "irreplaceability": {
-          "ru": "Логистических узлов несколько",
-          "en": "There are several logistics hubs"
+          "ru": "Площадку и правила такого рода предлагают несколько юрисдикций сразу",
+          "en": "A site and rules of this kind are offered by several jurisdictions at once"
         },
         "lockInDepth": {
-          "ru": "Задевает продажи",
-          "en": "Reaches sales"
+          "ru": "Доступ к вычислениям расширяется заявочными кампаниями, а не запиранием заказчика",
+          "en": "Compute access widens through calls for application rather than by locking a customer in"
         },
         "timeToReplace": {
-          "ru": "Перестроить логистику — до года",
-          "en": "Rebuilding the logistics — under a year"
+          "ru": "Обязательство рассчитано с 2025 по 2030 год — это программа, а не необратимая инфраструктура",
+          "en": "The commitment runs from 2025 to 2030 — a programme, not irreversible infrastructure"
         },
-        "concentration": null
+        "concentration": {
+          "ru": "Свыше S$1 billion на исследования и кадры — заметно, но доли функции это не даёт",
+          "en": "Over S$1 billion for research and talent is notable but grants no share of a function"
+        }
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
         "reach": 1,
@@ -22101,6 +22543,58 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "testimony",
+          "title": "MDDI — update to Singapore's National AI Strategy",
+          "url": "https://www.mddi.gov.sg/newsroom/update-to-singapore-s-national-ai-strategy--refreshed-priorities-to-harness-ai-for-the-public-good-factsheet/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "over S$1 billion to public AI research and talent development from 2025 to 2030",
+          "confidence": 0.975,
+          "self": "singapore",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "testimony",
+          "title": "MDDI — update to Singapore's National AI Strategy",
+          "url": "https://www.mddi.gov.sg/newsroom/update-to-singapore-s-national-ai-strategy--refreshed-priorities-to-harness-ai-for-the-public-good-factsheet/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Expand compute availability with the second Data Centre – Call-for-Application, Strategic Digital Infrastructure Scheme",
+          "confidence": 0.975,
+          "self": "singapore",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "testimony",
+          "title": "MDDI — update to Singapore's National AI Strategy",
+          "url": "https://www.mddi.gov.sg/newsroom/update-to-singapore-s-national-ai-strategy--refreshed-priorities-to-harness-ai-for-the-public-good-factsheet/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "local research capacity through the National Supercomputing Centre (NSCC) Singapore's ASPIRE 2B supercomputer",
+          "confidence": 0.975,
+          "self": "singapore",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "testimony",
+          "title": "MDDI — update to Singapore's National AI Strategy",
+          "url": "https://www.mddi.gov.sg/newsroom/update-to-singapore-s-national-ai-strategy--refreshed-priorities-to-harness-ai-for-the-public-good-factsheet/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "We committed over S$1 billion to public AI research and talent development",
+          "confidence": 0.975,
+          "self": "singapore",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "NVIDIA 10-K FY2026",
@@ -22115,15 +22609,16 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 5,
+        "selfSourced": 4,
         "byTier": {
+          "1": 4,
           "2": 1
         }
       },
       "description": {
-        "ru": "Значение этого узла не в собственном спросе, а в том, что через него проходит перепродажа: логистический и финансовый хаб, где проверяют, не уходит ли товар в обход лицензионного режима. Рычаг принадлежит не самой юрисдикции, а тем, кто ведёт списки: ограничения действуют по цепочке владения, а не по границе. В карте узел показывает, что экспортный контроль — это не линия на карте, а сеть проверок у посредников. Именно поэтому обход обнаруживается с задержкой и всегда постфактум.",
-        "en": "This node matters not for its own demand but because resale passes through it: a logistics and financial hub where shipments are checked for routing around the licensing regime. The lever belongs not to the jurisdiction itself but to whoever maintains the lists: restrictions follow the chain of ownership, not the border. On the map the node shows export control to be a network of checks at intermediaries rather than a line on a map. Which is why circumvention surfaces late, and always after the fact."
+        "ru": "Сингапур на этой карте — юрисдикция, которая покупает себе место в стеке деньгами и правилами. Собственный документ министерства цифрового развития называет обязательство: свыше S$1 billion на государственные исследования ИИ и подготовку кадров с 2025 по 2030 год. Доступность вычислений государство расширяет отдельным механизмом — второй заявочной кампанией по дата-центрам, схемой стратегической цифровой инфраструктуры и суперкомпьютером национального центра. То есть узел не производит ни чипов, ни моделей: он строит площадку и правила, на которых их можно ставить. На карте он стоит рядом с другими юрисдикциями как точка допуска, а не как производитель.",
+        "en": "On this map Singapore is a jurisdiction that buys its place in the stack with money and rules. Its own digital ministry document states the commitment: over S$1 billion for public AI research and talent development from 2025 to 2030. The state widens compute availability through a separate mechanism — a second data centre call-for-application, a strategic digital infrastructure scheme and the national supercomputing centre's machine. The node makes neither chips nor models: it builds the site and the rules they can be placed under. On the map it stands beside other jurisdictions as a point of access, not as a producer."
       },
       "centrality": {
         "degree": 1,
@@ -22335,13 +22830,13 @@
       },
       "centrality": {
         "degree": 5,
-        "betweenness": 0.011342,
+        "betweenness": 0.011333,
         "pagerank": 0.006565
       },
       "integration": {
         "score": 10,
         "degree": 5,
-        "betweenness": 0.011342,
+        "betweenness": 0.011333,
         "pagerank": 0.006565,
         "layersSpanned": 6,
         "edgeTypes": 3,
@@ -23153,11 +23648,11 @@
         "renormalized": true
       },
       "gravity": {
-        "reach": 2,
-        "layers": 4,
-        "edgeTypes": 3,
+        "reach": 3,
+        "layers": 5,
+        "edgeTypes": 4,
         "cycles": 10,
-        "score": 22,
+        "score": 26,
         "signals": {}
       },
       "domain": null,
@@ -23249,14 +23744,14 @@
         "en": "Sells two things at once: the tools a die is drawn and verified in before it goes to manufacturing, and ready-made blocks — memory controllers, interfaces — that a customer drops into its own chip instead of designing them. The money is a term licence plus royalties on the blocks sold; revenue is almost entirely recurring, because without updates the tool falls behind the process node. On this map it is the layer directly above the fab: the tool must be certified for a specific node or the design never reaches manufacturing. Revenue for the fiscal year ended October 31, 2025 was $7,054.2 million, and the acquired simulation business accounts for roughly 11% of consolidated revenue and 21% of assets. Putting physics simulation next to chip design is a bet that the chip and the system it goes into will be computed together."
       },
       "centrality": {
-        "degree": 3,
-        "betweenness": 0.000741,
+        "degree": 4,
+        "betweenness": 0.001481,
         "pagerank": 0.006565
       },
       "integration": {
         "score": 9,
-        "degree": 3,
-        "betweenness": 0.000741,
+        "degree": 4,
+        "betweenness": 0.001481,
         "pagerank": 0.006565,
         "layersSpanned": 5,
         "edgeTypes": 4,
@@ -24496,13 +24991,13 @@
       },
       "centrality": {
         "degree": 20,
-        "betweenness": 0.135598,
+        "betweenness": 0.135713,
         "pagerank": 0.021295
       },
       "integration": {
         "score": 30,
         "degree": 20,
-        "betweenness": 0.135598,
+        "betweenness": 0.135713,
         "pagerank": 0.021295,
         "layersSpanned": 10,
         "edgeTypes": 11,
@@ -32632,10 +33127,10 @@
       "lockInDepth": 30,
       "substitutability": 50,
       "isReversible": true,
-      "status": "signal",
-      "confidence": 0.875,
+      "status": "confirmed",
+      "confidence": 0.955,
       "sourceTier": 2,
-      "confirmedSources": 1,
+      "confirmedSources": 2,
       "risk": {
         "level": "low",
         "type": "regulatory",
@@ -32651,7 +33146,9 @@
         "en": "The regulation is the instrument through which the bloc sets the rules for the AI market."
       },
       "sidedness": "single",
-      "claimedBy": [],
+      "claimedBy": [
+        "eu-ai-act"
+      ],
       "evidence": [
         {
           "tier": 2,
@@ -32664,6 +33161,19 @@
           "quote": "the U.S. government, or USG, announced export restrictions and export licensing requirements targeting",
           "confidence": 0.925,
           "self": null,
+          "counter": false
+        },
+        {
+          "tier": 2,
+          "type": "testimony",
+          "title": "Regulation (EU) 2024/1689 — AI Act",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202401689",
+          "published": "2024-06-13",
+          "fetched": null,
+          "alive": true,
+          "quote": "Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024",
+          "confidence": 0.925,
+          "self": "eu-ai-act",
           "counter": false
         }
       ],
@@ -44173,6 +44683,59 @@
       }
     },
     {
+      "id": "siemens-eda__cadence__competes_with",
+      "source": "siemens-eda",
+      "target": "cadence",
+      "type": "competes_with",
+      "spine": "rivalry",
+      "direction": "lateral",
+      "strength": 70,
+      "lockInDepth": 40,
+      "substitutability": 45,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "medium",
+        "type": "market",
+        "timeline": "2-5y",
+        "mitigation": {
+          "ru": "Фабрики квалифицируют маршруты сразу нескольких поставщиков инструментов",
+          "en": "Fabs qualify routes from several tool suppliers at once"
+        }
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": {
+        "ru": "Оба закрывают проектирование, верификацию и подготовку к производству интегральных схем.",
+        "en": "Both cover design, verification and manufacturing preparation of integrated circuits."
+      },
+      "sidedness": "single",
+      "claimedBy": [
+        "siemens-eda"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "Siemens EDA — IC Tool Portfolio",
+          "url": "https://eda.sw.siemens.com/en-US/ic/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Siemens EDA is a leader in IC design, verification, and manufacturing.",
+          "confidence": 0.975,
+          "self": "siemens-eda",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
       "id": "siemens-eda__nvidia__enables",
       "source": "siemens-eda",
       "target": "nvidia",
@@ -44239,6 +44802,59 @@
         "ru": "Третий набор инструментов проектирования закрывает верификацию, но не заменяет основной маршрут: заказчик держит его рядом, а не вместо. Такое распределение показывает, что дуополия сверху не абсолютна — на отдельных этапах выбор есть. Полноценной третьей альтернативы при этом не возникает: сертификация под передовые нормы стоит дороже, чем окупает нишевый спрос.",
         "en": "A third design toolset covers verification without replacing the main flow: the customer keeps it alongside rather than instead. That split shows the duopoly above is not absolute — at individual stages a choice exists. A full third alternative still does not emerge: certification for leading-edge nodes costs more than niche demand repays."
       }
+    },
+    {
+      "id": "siemens-eda__synopsys__competes_with",
+      "source": "siemens-eda",
+      "target": "synopsys",
+      "type": "competes_with",
+      "spine": "rivalry",
+      "direction": "lateral",
+      "strength": 70,
+      "lockInDepth": 40,
+      "substitutability": 45,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "medium",
+        "type": "market",
+        "timeline": "2-5y",
+        "mitigation": {
+          "ru": "Фабрики квалифицируют маршруты сразу нескольких поставщиков инструментов",
+          "en": "Fabs qualify routes from several tool suppliers at once"
+        }
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": {
+        "ru": "Оба закрывают проектирование, верификацию и подготовку к производству интегральных схем.",
+        "en": "Both cover design, verification and manufacturing preparation of integrated circuits."
+      },
+      "sidedness": "single",
+      "claimedBy": [
+        "siemens-eda"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "Siemens EDA — IC Tool Portfolio",
+          "url": "https://eda.sw.siemens.com/en-US/ic/",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Siemens EDA is a leader in IC design, verification, and manufacturing.",
+          "confidence": 0.975,
+          "self": "siemens-eda",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
     },
     {
       "id": "siemens-energy__equinix__supplies",
@@ -47889,29 +48505,29 @@
   "network": {
     "id": "ai-infrastructure-complete",
     "totalNodes": 108,
-    "totalEdges": 306,
+    "totalEdges": 308,
     "pivotalNodes": 30,
     "secondaryNodes": 78,
-    "density": 0.0421,
-    "averageDegree": 4.5,
-    "clusteringCoefficient": 0.4979,
+    "density": 0.0424,
+    "averageDegree": 4.54,
+    "clusteringCoefficient": 0.5038,
     "singlePointsOfFailure": [
       {
         "id": "nvidia",
         "name": "NVIDIA",
         "layer": "L10",
-        "betweenness": 0.805143,
-        "pairsLost": 1484,
+        "betweenness": 0.80405,
+        "pairsLost": 1392,
         "reason": {
-          "ru": "убрать — и 1484 пар сущностей (26.2% связных пар) теряют путь друг к другу; сеть распадается на 15 частей",
-          "en": "remove it and 1484 pairs of entities (26.2% of connected pairs) lose their path to each other; the network breaks into 15 components"
+          "ru": "убрать — и 1392 пар сущностей (24.5% связных пар) теряют путь друг к другу; сеть распадается на 14 частей",
+          "en": "remove it and 1392 pairs of entities (24.5% of connected pairs) lose their path to each other; the network breaks into 14 components"
         }
       },
       {
         "id": "tsmc",
         "name": "TSMC",
         "layer": "L3",
-        "betweenness": 0.135598,
+        "betweenness": 0.135713,
         "pairsLost": 417,
         "reason": {
           "ru": "убрать — и 417 пар сущностей (7.4% связных пар) теряют путь друг к другу; сеть распадается на 4 части",
@@ -47955,11 +48571,11 @@
         "id": "samsung",
         "name": "Samsung",
         "layer": "L4",
-        "betweenness": 0.021346,
+        "betweenness": 0.021308,
         "pairsLost": 0,
         "reason": {
-          "ru": "через узел проходит больше путей, чем через любого другого в слое L4 (betweenness 0.021346), но обходные маршруты сохраняются — связность сети он не держит",
-          "en": "more paths run through this node than through any other in layer L4 (betweenness 0.021346), but detours survive — it does not hold the network together"
+          "ru": "через узел проходит больше путей, чем через любого другого в слое L4 (betweenness 0.021308), но обходные маршруты сохраняются — связность сети он не держит",
+          "en": "more paths run through this node than through any other in layer L4 (betweenness 0.021308), but detours survive — it does not hold the network together"
         }
       },
       {
@@ -48189,6 +48805,8 @@
           "netherlands__asml__export_controlled_by",
           "netherlands__tsmc__controls_access_to",
           "shin-etsu__tsmc__supplies",
+          "siemens-eda__cadence__competes_with",
+          "siemens-eda__synopsys__competes_with",
           "synopsys__tsmc__optimizes_for",
           "taiwan__tsmc__geopolitically_dependent",
           "taiwan__usa__geopolitically_dependent",
@@ -48902,7 +49520,7 @@
       }
     ],
     "subgraphNotes": [
-      "infrastructure-backbone: без внутренних связей — a16z, amkor, ase, blackrock, blackstone, bloom-energy, china, eaton, ge-vernova, lightspeed, nventures, oklo, schneider, sequoia, siemens-eda, siemens-energy, singapore, south-korea, thrive"
+      "infrastructure-backbone: без внутренних связей — a16z, amkor, ase, blackrock, blackstone, bloom-energy, china, eaton, ge-vernova, lightspeed, nventures, oklo, schneider, sequoia, siemens-energy, singapore, south-korea, thrive"
     ]
   },
   "changelog": {
@@ -48910,182 +49528,87 @@
     "removedNodes": [],
     "relationshipsAdded": [
       {
-        "id": "asml__mistral__customer_of",
+        "id": "siemens-eda__cadence__competes_with",
         "why": {
-          "ru": "Названа лабораторией первой в собственном списке заказчиков.",
-          "en": "Named first by the laboratory in its own customer list."
+          "ru": "Оба закрывают проектирование, верификацию и подготовку к производству интегральных схем.",
+          "en": "Both cover design, verification and manufacturing preparation of integrated circuits."
         }
       },
       {
-        "id": "cisco__mistral__customer_of",
+        "id": "siemens-eda__synopsys__competes_with",
         "why": {
-          "ru": "Названа лабораторией в собственном списке заказчиков.",
-          "en": "Named by the laboratory in its own customer list."
-        }
-      },
-      {
-        "id": "sglang__amd__optimizes_for",
-        "why": {
-          "ru": "Ускорители AMD поддержаны наравне с ускорителями другого вендора.",
-          "en": "AMD accelerators are supported alongside the other vendor's."
-        }
-      },
-      {
-        "id": "sglang__intel__optimizes_for",
-        "why": {
-          "ru": "Процессоры Intel Xeon названы среди поддержанного оборудования.",
-          "en": "Intel Xeon CPUs are named among the supported hardware."
-        }
-      },
-      {
-        "id": "sglang__nebius__delivers_to",
-        "why": {
-          "ru": "Названа среди облачных площадок, принявших каркас в работу.",
-          "en": "Named among the cloud providers that adopted the framework."
-        }
-      },
-      {
-        "id": "sglang__nvidia__optimizes_for",
-        "why": {
-          "ru": "Работает на ускорителях вендора и назван среди принятых им проектов.",
-          "en": "Runs on the vendor's accelerators and is named among the projects it adopted."
-        }
-      },
-      {
-        "id": "sglang__oracle__delivers_to",
-        "why": {
-          "ru": "Названа среди облаков, принявших каркас в работу.",
-          "en": "Named among the clouds that adopted the framework."
-        }
-      },
-      {
-        "id": "sglang__xai__delivers_to",
-        "why": {
-          "ru": "Названа первой в списке тех, кто принял каркас в работу.",
-          "en": "Named first in the list of those who adopted the framework."
-        }
-      },
-      {
-        "id": "snowflake__mistral__customer_of",
-        "why": {
-          "ru": "Названа лабораторией в собственном списке заказчиков.",
-          "en": "Named by the laboratory in its own customer list."
-        }
-      },
-      {
-        "id": "triton__amd__optimizes_for",
-        "why": {
-          "ru": "Ускорители AMD на ROCm поддерживаются наравне с ускорителями другого вендора.",
-          "en": "AMD accelerators on ROCm are supported alongside the other vendor's."
-        }
-      },
-      {
-        "id": "triton__nvidia__optimizes_for",
-        "why": {
-          "ru": "Ускорители NVIDIA от восьмого поколения вычислительных возможностей поддерживаются наравне с чужими.",
-          "en": "NVIDIA accelerators from compute capability 8.0 are supported alongside others."
+          "ru": "Оба закрывают проектирование, верификацию и подготовку к производству интегральных схем.",
+          "en": "Both cover design, verification and manufacturing preparation of integrated circuits."
         }
       }
     ],
     "relationshipsRemoved": [],
     "relationshipsUpdated": [
       {
-        "id": "foxconn__nvidia__integrates",
+        "id": "eu__eu-ai-act__standardizes_on",
         "field": "status",
-        "from": "confirmed",
-        "to": "bilateral"
+        "from": "signal",
+        "to": "confirmed"
       },
       {
-        "id": "foxconn__nvidia__integrates",
+        "id": "eu__eu-ai-act__standardizes_on",
         "field": "confirmedSources",
-        "from": 2,
-        "to": 3
-      },
-      {
-        "id": "triton__cuda__could_disrupt",
-        "field": "confirmedSources",
-        "from": 2,
-        "to": 3
+        "from": 1,
+        "to": 2
       }
     ],
     "criticalityShifts": [
       {
-        "id": "foxconn",
-        "from": 50,
-        "to": 70
+        "id": "eu",
+        "from": 45,
+        "to": 77
       },
       {
-        "id": "lambda",
-        "from": 35,
-        "to": 44
+        "id": "eu-ai-act",
+        "from": 41,
+        "to": 80
       },
       {
-        "id": "mlcommons",
-        "from": 50,
+        "id": "japan",
+        "from": 63,
+        "to": 71
+      },
+      {
+        "id": "schneider",
+        "from": 55,
+        "to": 62
+      },
+      {
+        "id": "siemens",
+        "from": 43,
         "to": 58
       },
       {
-        "id": "sglang",
-        "from": 41,
-        "to": 52
+        "id": "siemens-eda",
+        "from": 48,
+        "to": 77
       },
       {
-        "id": "tokyo-electron",
-        "from": 63,
-        "to": 82
+        "id": "siemens-energy",
+        "from": 61,
+        "to": 77
+      },
+      {
+        "id": "singapore",
+        "from": 38,
+        "to": 49
       }
     ],
     "phaseChanges": [],
     "riskEscalations": [],
     "newSources": [
       {
-        "id": "foxconn__nvidia__integrates",
-        "count": 3
-      },
-      {
-        "id": "triton__cuda__could_disrupt",
-        "count": 3
+        "id": "eu__eu-ai-act__standardizes_on",
+        "count": 2
       }
     ],
     "layerChanges": [],
-    "coreChanges": [
-      {
-        "id": "amd",
-        "move": "in",
-        "integration": 11,
-        "why": {
-          "ru": "поднялся в верхние по интеграции",
-          "en": "rose into the top by integration"
-        }
-      },
-      {
-        "id": "sglang",
-        "move": "in",
-        "integration": 12,
-        "why": {
-          "ru": "поднялся в верхние по интеграции",
-          "en": "rose into the top by integration"
-        }
-      },
-      {
-        "id": "deepseek",
-        "move": "out",
-        "integration": 10,
-        "why": {
-          "ru": "опустился ниже порога ядра",
-          "en": "fell below the core threshold"
-        }
-      },
-      {
-        "id": "digital-realty",
-        "move": "out",
-        "integration": 10,
-        "why": {
-          "ru": "опустился ниже порога ядра",
-          "en": "fell below the core threshold"
-        }
-      }
-    ],
+    "coreChanges": [],
     "month": "2026-08",
     "version": "v4.0-2026-08"
   }

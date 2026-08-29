@@ -17,11 +17,9 @@ constellation,Constellation Energy,1,1,1,1,1,0,1,0,0
 credo,Credo Technology,1,1,1,3,1,0,1,1,0
 delta-electronics,Delta Electronics,1,0,1,1,1,0,0,0,0
 eaton,Eaton,1,1,1,2,1,0,1,1,0
-eu,Европейский союз,1,0,1,1,1,0,0,0,0
-eu-ai-act,Регламент ЕС об ИИ,1,0,1,0,1,0,0,0,0
+eu-ai-act,Регламент ЕС об ИИ,5,4,1,1,1,1,1,0,0
 ge-vernova,GE Vernova,6,5,1,1,1,1,1,0,0
 hpe,HPE,8,7,1,1,1,1,1,0,0
-japan,Япония,1,0,1,2,1,0,0,1,0
 jax,JAX,1,0,1,3,1,0,0,1,0
 kioxia,Kioxia,1,0,1,1,1,0,0,0,0
 kla,KLA,1,1,1,1,1,0,1,0,0
@@ -37,15 +35,14 @@ oklo,Oklo,6,5,1,0,1,1,1,0,0
 quanta,Quanta Computer,1,0,1,1,1,0,0,0,0
 recursion,Recursion Pharmaceuticals,1,1,1,1,1,0,1,0,0
 salesforce,Salesforce,5,4,1,1,1,1,1,0,0
-schneider,Schneider Electric,1,0,1,2,1,0,0,1,0
 schrodinger,Schrödinger,6,5,1,1,1,1,1,0,0
 sequoia,Sequoia Capital,1,0,1,1,1,0,0,0,0
 servicenow,ServiceNow,1,1,1,1,1,0,1,0,0
 shin-etsu,Shin-Etsu Chemical,1,0,1,2,1,0,0,1,0
-siemens,Siemens,1,0,1,1,1,0,0,0,0
-siemens-eda,Siemens EDA,1,0,1,1,1,0,0,0,0
-siemens-energy,Siemens Energy,1,0,1,1,1,0,0,0,0
-singapore,Сингапур,1,0,1,1,1,0,0,0,0
+siemens,Siemens,5,4,1,1,1,1,1,0,0
+siemens-eda,Siemens EDA,4,3,1,1,1,1,1,0,0
+siemens-energy,Siemens Energy,6,5,1,1,1,1,1,0,0
+singapore,Сингапур,5,4,1,1,1,1,1,0,0
 snowflake,Snowflake,6,5,1,1,1,1,1,0,0
 supermicro,Supermicro,1,1,1,3,1,0,1,1,0
 synopsys,Synopsys,1,1,1,3,1,0,1,1,0
@@ -71,12 +68,14 @@ deepseek,DeepSeek,5,3,1,4,1,1,1,1,1
 dell,Dell,6,5,1,2,1,1,1,1,1
 digital-realty,Digital Realty,6,6,1,4,1,1,1,1,1
 equinix,Equinix,6,6,1,5,1,1,1,1,1
+eu,Европейский союз,5,4,1,2,1,1,1,1,1
 fabrinet,Fabrinet,6,5,1,4,1,1,1,1,1
 foxconn,Foxconn,8,7,1,2,1,1,1,1,1
 google,Google,6,4,1,8,1,1,1,1,1
 google-deepmind,Google DeepMind,5,3,1,2,1,1,1,1,1
 huggingface,Hugging Face,5,5,1,12,1,1,1,1,1
 intel,Intel,6,5,1,3,1,1,1,1,1
+japan,Япония,8,7,1,2,1,1,1,1,1
 kubernetes,Kubernetes,6,5,1,4,1,1,1,1,1
 lambda,Lambda Labs,5,4,1,2,1,1,1,1,1
 meta,Meta,6,4,1,6,1,1,1,1,1
@@ -94,6 +93,7 @@ pytorch,PyTorch,6,5,1,8,1,1,1,1,1
 ray,Ray / Anyscale,5,4,1,2,1,1,1,1,1
 samsung,Samsung,6,4,1,5,1,1,1,1,1
 sandisk,SanDisk,8,7,1,2,1,1,1,1,1
+schneider,Schneider Electric,5,4,1,2,1,1,1,1,1
 sglang,SGLang,7,6,1,2,1,1,1,1,1
 sk-hynix,SK Hynix,6,5,1,4,1,1,1,1,1
 softbank,SoftBank,6,4,1,4,1,1,1,1,1

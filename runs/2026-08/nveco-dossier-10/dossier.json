@@ -1,0 +1,705 @@
+[
+ {
+  "id": "siemens",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Siemens описывает себя как технологическую компанию, чьи разработки перестраивают отрасли, составляющие опору экономик: промышленность, инфраструктуру и транспорт. Промышленный ИИ она называет прямо своим предметом — им она повышает эффективность заводов. Компания работает на всех обитаемых континентах. В 2025 финансовом году она вложила 438 million € в обучение и подготовку сотрудников и 47.9 million € в общественные проекты. На карте узел стоит на стороне спроса: он показывает, куда ускоренные вычисления уходят за пределами дата-центров.",
+   "en": "Siemens describes itself as a technology company whose work rebuilds the industries that form the backbone of economies: industry, infrastructure and transportation. It names industrial AI as its own subject — the thing it raises factory efficiency with. The company operates across every inhabited continent. In fiscal 2025 it invested 438 million € in employee education and training and 47.9 million € in community projects. On the map the node sits on the demand side: it shows where accelerated computing goes outside data centres."
+  },
+  "profile_sources": [
+   {
+    "type": "company_pr",
+    "title": "Siemens — About us",
+    "url": "https://www.siemens.com/global/en/company/about.html",
+    "published": "2026-08-29",
+    "quote": "Siemens technology empowers customers to transform the industries that form the backbone of economies"
+   },
+   {
+    "type": "company_pr",
+    "title": "Siemens — About us",
+    "url": "https://www.siemens.com/global/en/company/about.html",
+    "published": "2026-08-29",
+    "quote": "Our technology accelerates customer transformations with industrial AI, boosting efficiency in factories",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "company_pr",
+    "title": "Siemens — About us",
+    "url": "https://www.siemens.com/global/en/company/about.html",
+    "published": "2026-08-29",
+    "quote": "438 million € invested in employee education and training"
+   },
+   {
+    "type": "company_pr",
+    "title": "Siemens — About us",
+    "url": "https://www.siemens.com/global/en/company/about.html",
+    "published": "2026-08-29",
+    "quote": "47.9 million € total community investment in fiscal 2025"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 58,
+    "why": {
+     "ru": "Промышленная автоматизация — рынок нескольких сопоставимых поставщиков, а не одного",
+     "en": "Industrial automation is a market of several comparable suppliers, not one"
+    }
+   },
+   "lock_in_depth": {
+    "value": 62,
+    "why": {
+     "ru": "Оборудование и софт ставятся на заводе на десятилетия и переплетены между собой",
+     "en": "Equipment and software are installed in a plant for decades and are intertwined"
+    }
+   },
+   "time_to_replace": {
+    "value": 60,
+    "why": {
+     "ru": "Замена промышленного стека идёт вместе с перестройкой производства, а не отдельно",
+     "en": "Replacing an industrial stack happens along with rebuilding production, not separately"
+    }
+   },
+   "concentration": {
+    "value": 50,
+    "why": {
+     "ru": "Промышленный ИИ заявлен как собственный предмет, но рынок делится с сопоставимыми поставщиками",
+     "en": "Industrial AI is claimed as its own subject, yet the market is shared with comparable suppliers"
+    }
+   }
+  },
+  "edges": [],
+  "candidates": [],
+  "gaps": "NVIDIA на странице «о компании» не названа: связь siemens -> nvidia подтверждена только со стороны поставщика."
+ },
+ {
+  "id": "siemens-energy",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Siemens Energy покрывает весь энергетический ландшафт — от традиционной генерации до возобновляемой, от сетевых технологий до накопителей и электрификации промышленных процессов. Цифра, ради которой узел стоит на карте, названа ею самой: 1 /6 of global electricity generation is based on our technology. В компании работает более 100,000 человек, она присутствует в 90 странах и вкладывает более € 1bn в исследования и разработку. На карте узел стоит в слое, где мощность подводят к площадке, а не считают на ней.",
+   "en": "Siemens Energy covers the whole energy landscape — from conventional to renewable generation, from grid technology to storage and the electrification of industrial processes. The figure the node is on the map for is its own: 1 /6 of global electricity generation is based on our technology. It has more than 100,000 employees, is present in 90 countries and invests more than € 1bn in research and development. On the map the node sits in the layer that brings power to the site rather than computing on it."
+  },
+  "profile_sources": [
+   {
+    "type": "company_pr",
+    "title": "Siemens Energy — About",
+    "url": "https://www.siemens-energy.com/global/en/home/company/about.html",
+    "published": "2026-08-29",
+    "quote": "1 /6 of global electricity generation is based on our technology",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "company_pr",
+    "title": "Siemens Energy — About",
+    "url": "https://www.siemens-energy.com/global/en/home/company/about.html",
+    "published": "2026-08-29",
+    "quote": "From conventional to renewable power, from grid technology to storage to electrifying complex industrial processes."
+   },
+   {
+    "type": "company_pr",
+    "title": "Siemens Energy — About",
+    "url": "https://www.siemens-energy.com/global/en/home/company/about.html",
+    "published": "2026-08-29",
+    "quote": "> 100,000 employees work as a team to energize society"
+   },
+   {
+    "type": "company_pr",
+    "title": "Siemens Energy — About",
+    "url": "https://www.siemens-energy.com/global/en/home/company/about.html",
+    "published": "2026-08-29",
+    "quote": "Located in 90 countries, Siemens Energy operates across the whole energy landscape."
+   },
+   {
+    "type": "company_pr",
+    "title": "Siemens Energy — About",
+    "url": "https://www.siemens-energy.com/global/en/home/company/about.html",
+    "published": "2026-08-29",
+    "quote": "> 1 bn euro we invest more than € 1bn in research and development."
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 76,
+    "why": {
+     "ru": "На её технологии основана 1 /6 мировой генерации электроэнергии",
+     "en": "1 /6 of global electricity generation is based on its technology"
+    }
+   },
+   "lock_in_depth": {
+    "value": 74,
+    "why": {
+     "ru": "Генерирующее и сетевое оборудование ставится на десятилетия и обслуживается изготовителем",
+     "en": "Generating and grid equipment is installed for decades and serviced by its maker"
+    }
+   },
+   "time_to_replace": {
+    "value": 82,
+    "why": {
+     "ru": "Присутствие в 90 странах и парк такого масштаба воспроизводятся не годами, а десятилетиями",
+     "en": "Presence in 90 countries and a fleet of that scale take decades, not years, to reproduce"
+    }
+   },
+   "concentration": {
+    "value": 75,
+    "why": {
+     "ru": "Одна шестая мировой генерации электроэнергии основана на технологии одной компании",
+     "en": "One sixth of global electricity generation rests on one company's technology"
+    }
+   }
+  },
+  "edges": [],
+  "candidates": [],
+  "gaps": "Equinix на странице «о компании» не назван: связь подтверждена только со стороны площадки."
+ },
+ {
+  "id": "siemens-eda",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Siemens EDA делает инструменты для проектирования, верификации и подготовки к производству интегральных схем. Свою роль компания формулирует так: её инструменты позволяют заказчикам проектировать схемы, на которых держится цифровизация по всему миру. На карте это третий из трёх поставщиков средств проектирования рядом с Cadence и Synopsys — без них чип не доходит до фабрики. Собственного домена у подразделения фактически не осталось: адрес eda.sw.siemens.com теперь перенаправляет на корпоративный сайт, и продуктовые страницы живут по путям внутри него. Отсюда роль узла: он держит ту часть маршрута, где замысел превращается в набор масок.",
+   "en": "Siemens EDA makes tools for the design, verification and manufacturing preparation of integrated circuits. The company frames its own role thus: its tools let customers design the circuits digitalization worldwide rests on. On the map it is the third of three design-tool suppliers alongside Cadence and Synopsys — without them a chip never reaches the fab. The unit has effectively lost its own domain: eda.sw.siemens.com now redirects to the corporate site and the product pages live on paths inside it. Hence the node's role: it holds the stretch of the route where an intent becomes a set of masks."
+  },
+  "profile_sources": [
+   {
+    "type": "product_doc",
+    "title": "Siemens EDA — IC Tool Portfolio",
+    "url": "https://eda.sw.siemens.com/en-US/ic/",
+    "published": "2026-08-29",
+    "quote": "Siemens EDA is a leader in IC design, verification, and manufacturing.",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "product_doc",
+    "title": "Siemens EDA — IC Tool Portfolio",
+    "url": "https://eda.sw.siemens.com/en-US/ic/",
+    "published": "2026-08-29",
+    "quote": "Our tools enable customers to design the innovative ICs that drive digitalization worldwide"
+   },
+   {
+    "type": "product_doc",
+    "title": "Siemens EDA — IC Tool Portfolio",
+    "url": "https://eda.sw.siemens.com/en-US/ic/",
+    "published": "2026-08-29",
+    "quote": "IC design, verification & manufacturing"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 80,
+    "why": {
+     "ru": "Маршрут проектирования схемы закрывают три поставщика инструментов, и это один из них",
+     "en": "Three tool suppliers cover the circuit design route, and this is one of them"
+    }
+   },
+   "lock_in_depth": {
+    "value": 78,
+    "why": {
+     "ru": "Инструменты квалифицируются вместе с маршрутом фабрики, а не выбираются под задачу",
+     "en": "The tools are qualified together with the fab route rather than picked per task"
+    }
+   },
+   "time_to_replace": {
+    "value": 76,
+    "why": {
+     "ru": "Переход на другой набор средств проектирования означает переквалификацию всего маршрута",
+     "en": "Moving to another design toolset means requalifying the whole route"
+    }
+   },
+   "concentration": {
+    "value": 72,
+    "why": {
+     "ru": "Проектирование, верификация и подготовка к производству закрываются одним поставщиком из трёх",
+     "en": "Design, verification and manufacturing prep are covered by one supplier out of three"
+    }
+   }
+  },
+  "edges": [
+   {
+    "direction": "lateral",
+    "strength": 70,
+    "lock_in_depth": 40,
+    "substitutability": 45,
+    "is_reversible": true,
+    "risk_level": "medium",
+    "risk_type": "market",
+    "risk_timeline": "2-5y",
+    "stance": "confirms",
+    "source": "siemens-eda",
+    "target": "cadence",
+    "type": "competes_with",
+    "note": {
+     "ru": "Оба закрывают проектирование, верификацию и подготовку к производству интегральных схем.",
+     "en": "Both cover design, verification and manufacturing preparation of integrated circuits."
+    },
+    "risk_mitigation": {
+     "ru": "Фабрики квалифицируют маршруты сразу нескольких поставщиков инструментов",
+     "en": "Fabs qualify routes from several tool suppliers at once"
+    },
+    "sources": [
+     {
+      "type": "product_doc",
+      "title": "Siemens EDA — IC Tool Portfolio",
+      "url": "https://eda.sw.siemens.com/en-US/ic/",
+      "published": "2026-08-29",
+      "quote": "Siemens EDA is a leader in IC design, verification, and manufacturing."
+     }
+    ]
+   },
+   {
+    "direction": "lateral",
+    "strength": 70,
+    "lock_in_depth": 40,
+    "substitutability": 45,
+    "is_reversible": true,
+    "risk_level": "medium",
+    "risk_type": "market",
+    "risk_timeline": "2-5y",
+    "stance": "confirms",
+    "source": "siemens-eda",
+    "target": "synopsys",
+    "type": "competes_with",
+    "note": {
+     "ru": "Оба закрывают проектирование, верификацию и подготовку к производству интегральных схем.",
+     "en": "Both cover design, verification and manufacturing preparation of integrated circuits."
+    },
+    "risk_mitigation": {
+     "ru": "Фабрики квалифицируют маршруты сразу нескольких поставщиков инструментов",
+     "en": "Fabs qualify routes from several tool suppliers at once"
+    },
+    "sources": [
+     {
+      "type": "product_doc",
+      "title": "Siemens EDA — IC Tool Portfolio",
+      "url": "https://eda.sw.siemens.com/en-US/ic/",
+      "published": "2026-08-29",
+      "quote": "Siemens EDA is a leader in IC design, verification, and manufacturing."
+     }
+    ]
+   }
+  ],
+  "candidates": [],
+  "gaps": "Собственный адрес подразделения eda.sw.siemens.com отдаёт перенаправление на корпоративный сайт; цитаты взяты с продуктового пути внутри того же домена. Реестр издателей это отмечает."
+ },
+ {
+  "id": "schneider",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Schneider Electric описывает себя как мирового лидера энергетических технологий, работающего электрификацией, автоматизацией и цифровизацией. Дата-центры она называет среди объектов, которые её технологии позволяют вести как открытые связанные системы — наравне со зданиями, заводами, инфраструктурой и сетями. На карте узел стоит в слое питания и распределения: он даёт стойке электричество и управление им. Собственная страница профиля закрыта для машинного обхода стандартным запросом, и цитаты взяты с неё же обходом с браузерным заголовком. Отсюда роль узла: он не строит площадку и не считает на ней, он делает так, чтобы мощность дошла до шкафа.",
+   "en": "Schneider Electric describes itself as a global energy technology leader working through electrification, automation and digitalization. It names data centres among the objects its technologies let run as open interconnected systems — alongside buildings, factories, infrastructure and grids. On the map the node sits in the power and distribution layer: it brings electricity to the rack and the control of it. Its own profile page refuses a plain machine request, and the quotes were taken from it with a browser header. Hence the node's role: it neither builds the site nor computes on it, it makes the power reach the cabinet."
+  },
+  "profile_sources": [
+   {
+    "type": "company_pr",
+    "title": "Schneider Electric — Company profile",
+    "url": "https://www.se.com/ww/en/about-us/company-profile/",
+    "published": "2026-08-29",
+    "quote": "Schneider Electric is a global energy technology leader, driving efficiency and sustainability by electrifying",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "company_pr",
+    "title": "Schneider Electric — Company profile",
+    "url": "https://www.se.com/ww/en/about-us/company-profile/",
+    "published": "2026-08-29",
+    "quote": "Our technologies enable buildings, data centers, factories, infrastructure, and grids to operate"
+   },
+   {
+    "type": "company_pr",
+    "title": "Schneider Electric — Company profile",
+    "url": "https://www.se.com/ww/en/about-us/company-profile/",
+    "published": "2026-08-29",
+    "quote": "automating, and digitalizing industries, businesses, and homes"
+   },
+   {
+    "type": "company_pr",
+    "title": "Schneider Electric — Company profile",
+    "url": "https://www.se.com/ww/en/about-us/company-profile/",
+    "published": "2026-08-29",
+    "quote": "as open, interconnected ecosystems, enhancing performance, resilience, and sustainability"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 66,
+    "why": {
+     "ru": "Питание и распределение в дата-центре закрывают несколько сопоставимых поставщиков",
+     "en": "Power and distribution in a data centre are covered by several comparable suppliers"
+    }
+   },
+   "lock_in_depth": {
+    "value": 64,
+    "why": {
+     "ru": "Оборудование ставится в шкаф вместе с управлением им и меняется вместе с площадкой",
+     "en": "The equipment goes into the cabinet together with its control and changes with the site"
+    }
+   },
+   "time_to_replace": {
+    "value": 58,
+    "why": {
+     "ru": "Замена поставщика питания идёт в пределах цикла строительства площадки",
+     "en": "Replacing a power supplier happens inside a site construction cycle"
+    }
+   },
+   "concentration": {
+    "value": 60,
+    "why": {
+     "ru": "Заявляет себя мировым лидером энергетических технологий, но рынок делит с сопоставимыми",
+     "en": "Claims to be a global energy technology leader, yet shares the market with comparable suppliers"
+    }
+   }
+  },
+  "edges": [],
+  "candidates": [],
+  "gaps": "Ни Microsoft, ни Digital Realty на странице профиля не названы: обе связи подтверждены со стороны заказчика."
+ },
+ {
+  "id": "eu",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Европейский союз стоит на карте как юрисдикция, которая пишет правила допуска моделей на рынок. Свой подход он описывает прямо: правила построены по риску и адресованы разработчикам и тем, кто модели внедряет. Системы, признанные явной угрозой безопасности, средствам к существованию и правам людей, запрещены. Применения, способные создать серьёзный риск для здоровья, безопасности или основных прав, отнесены к высокорисковым. При этом сам регулятор признаёт, что подавляющее большинство используемых в союзе систем попадает в категорию минимального риска.",
+   "en": "The European Union stands on the map as the jurisdiction that writes the rules of market access for models. It describes its approach plainly: the rules are risk-based and addressed to developers and deployers. Systems considered a clear threat to the safety, livelihoods and rights of people are banned. Uses that can pose serious risks to health, safety or fundamental rights are classified as high-risk. At the same time the regulator itself acknowledges that the vast majority of systems used in the union fall into the minimal risk category."
+  },
+  "profile_sources": [
+   {
+    "type": "testimony",
+    "title": "European Commission — regulatory framework for AI",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    "published": "2026-08-29",
+    "quote": "The AI Act sets out a risk-based rules for AI developers and deployers",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "testimony",
+    "title": "European Commission — regulatory framework for AI",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    "published": "2026-08-29",
+    "quote": "AI systems considered a clear threat to the safety, livelihoods and rights of people"
+   },
+   {
+    "type": "testimony",
+    "title": "European Commission — regulatory framework for AI",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    "published": "2026-08-29",
+    "quote": "AI use cases that can pose serious risks to health, safety or fundamental rights"
+   },
+   {
+    "type": "testimony",
+    "title": "European Commission — regulatory framework for AI",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    "published": "2026-08-29",
+    "quote": "The vast majority of AI systems currently used in the EU fall into this category."
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 78,
+    "why": {
+     "ru": "Допуск модели на рынок союза выдаёт один законодатель, обойти его нечем",
+     "en": "Market access for a model in the union is granted by one legislator and cannot be bypassed"
+    }
+   },
+   "lock_in_depth": {
+    "value": 70,
+    "why": {
+     "ru": "Правила адресованы и разработчикам, и тем, кто модели внедряет",
+     "en": "The rules address both developers and deployers of models"
+    }
+   },
+   "time_to_replace": {
+    "value": 80,
+    "why": {
+     "ru": "Режим построен регламентом, а не решением, и отменяется тем же порядком",
+     "en": "The regime rests on a regulation rather than a decision, and is undone the same way"
+    }
+   },
+   "concentration": {
+    "value": 82,
+    "why": {
+     "ru": "Единый набор правил по риску на весь союз: альтернативного допуска нет",
+     "en": "A single risk-based rulebook for the whole union: there is no alternative route to market"
+    }
+   }
+  },
+  "edges": [],
+  "candidates": [],
+  "gaps": "Страница написана через классы применений, а не имена компаний, поэтому связь eu -> nvidia ей не подтверждается."
+ },
+ {
+  "id": "eu-ai-act",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Регламент об ИИ — это Regulation (EU) 2024/1689 Европейского парламента и Совета от 13 июня 2024 года. Его собственный текст называет цель: улучшить работу внутреннего рынка, установив единые гармонизированные правила. Тем же документом внесены изменения в целый ряд действующих регламентов и директив союза. Способ регулирования записан прямо: запретить неприемлемые практики, установить требования к высокорисковым системам и обязанности их операторов. Отсюда положение узла на карте: он не орган и не компания, а текст, по которому и орган, и компания обязаны действовать.",
+   "en": "The AI Act is Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024. Its own text states the purpose: to improve the functioning of the internal market by laying down uniform harmonised rules. The same document amends a series of existing union regulations and directives. The method of regulation is written plainly: prohibit unacceptable practices, set requirements for high-risk systems and obligations for their operators. Hence the node's place on the map: it is neither a body nor a company but the text both a body and a company must act by."
+  },
+  "profile_sources": [
+   {
+    "type": "testimony",
+    "title": "Regulation (EU) 2024/1689 — AI Act",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202401689",
+    "published": "2024-06-13",
+    "quote": "Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024"
+   },
+   {
+    "type": "testimony",
+    "title": "Regulation (EU) 2024/1689 — AI Act",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202401689",
+    "published": "2024-06-13",
+    "quote": "laying down harmonised rules on artificial intelligence and amending Regulations"
+   },
+   {
+    "type": "testimony",
+    "title": "Regulation (EU) 2024/1689 — AI Act",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202401689",
+    "published": "2024-06-13",
+    "quote": "The purpose of this Regulation is to improve the functioning of the internal market",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "testimony",
+    "title": "Regulation (EU) 2024/1689 — AI Act",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202401689",
+    "published": "2024-06-13",
+    "quote": "it is therefore necessary to prohibit certain unacceptable AI practices, to lay down requirements"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 80,
+    "why": {
+     "ru": "Единый гармонизированный текст на весь внутренний рынок союза",
+     "en": "A single harmonised text for the whole internal market of the union"
+    }
+   },
+   "lock_in_depth": {
+    "value": 74,
+    "why": {
+     "ru": "Тем же документом изменены действующие регламенты и директивы союза",
+     "en": "The same document amends existing union regulations and directives"
+    }
+   },
+   "time_to_replace": {
+    "value": 84,
+    "why": {
+     "ru": "Принят парламентом и советом 13 июня 2024 года и отменяется тем же порядком",
+     "en": "Adopted by parliament and council on 13 June 2024 and undone by the same procedure"
+    }
+   },
+   "concentration": {
+    "value": 86,
+    "why": {
+     "ru": "Цель записана как единый правовой каркас для внутреннего рынка, а не как один из",
+     "en": "The purpose is written as a single legal framework for the internal market, not one of several"
+    }
+   }
+  },
+  "edges": [
+   {
+    "id": "eu__eu-ai-act__standardizes_on",
+    "stance": "confirms",
+    "sources": [
+     {
+      "type": "testimony",
+      "title": "Regulation (EU) 2024/1689 — AI Act",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202401689",
+      "published": "2024-06-13",
+      "quote": "Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024"
+     }
+    ]
+   }
+  ],
+  "candidates": [],
+  "gaps": "Текст регламента не называет ни одной компании, поэтому связь с OpenAI им не подтверждается."
+ },
+ {
+  "id": "singapore",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Сингапур на этой карте — юрисдикция, которая покупает себе место в стеке деньгами и правилами. Собственный документ министерства цифрового развития называет обязательство: свыше S$1 billion на государственные исследования ИИ и подготовку кадров с 2025 по 2030 год. Доступность вычислений государство расширяет отдельным механизмом — второй заявочной кампанией по дата-центрам, схемой стратегической цифровой инфраструктуры и суперкомпьютером национального центра. То есть узел не производит ни чипов, ни моделей: он строит площадку и правила, на которых их можно ставить. На карте он стоит рядом с другими юрисдикциями как точка допуска, а не как производитель.",
+   "en": "On this map Singapore is a jurisdiction that buys its place in the stack with money and rules. Its own digital ministry document states the commitment: over S$1 billion for public AI research and talent development from 2025 to 2030. The state widens compute availability through a separate mechanism — a second data centre call-for-application, a strategic digital infrastructure scheme and the national supercomputing centre's machine. The node makes neither chips nor models: it builds the site and the rules they can be placed under. On the map it stands beside other jurisdictions as a point of access, not as a producer."
+  },
+  "profile_sources": [
+   {
+    "type": "testimony",
+    "title": "MDDI — update to Singapore's National AI Strategy",
+    "url": "https://www.mddi.gov.sg/newsroom/update-to-singapore-s-national-ai-strategy--refreshed-priorities-to-harness-ai-for-the-public-good-factsheet/",
+    "published": "2026-08-29",
+    "quote": "over S$1 billion to public AI research and talent development from 2025 to 2030",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "testimony",
+    "title": "MDDI — update to Singapore's National AI Strategy",
+    "url": "https://www.mddi.gov.sg/newsroom/update-to-singapore-s-national-ai-strategy--refreshed-priorities-to-harness-ai-for-the-public-good-factsheet/",
+    "published": "2026-08-29",
+    "quote": "Expand compute availability with the second Data Centre – Call-for-Application, Strategic Digital Infrastructure Scheme"
+   },
+   {
+    "type": "testimony",
+    "title": "MDDI — update to Singapore's National AI Strategy",
+    "url": "https://www.mddi.gov.sg/newsroom/update-to-singapore-s-national-ai-strategy--refreshed-priorities-to-harness-ai-for-the-public-good-factsheet/",
+    "published": "2026-08-29",
+    "quote": "local research capacity through the National Supercomputing Centre (NSCC) Singapore's ASPIRE 2B supercomputer"
+   },
+   {
+    "type": "testimony",
+    "title": "MDDI — update to Singapore's National AI Strategy",
+    "url": "https://www.mddi.gov.sg/newsroom/update-to-singapore-s-national-ai-strategy--refreshed-priorities-to-harness-ai-for-the-public-good-factsheet/",
+    "published": "2026-08-29",
+    "quote": "We committed over S$1 billion to public AI research and talent development"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 52,
+    "why": {
+     "ru": "Площадку и правила такого рода предлагают несколько юрисдикций сразу",
+     "en": "A site and rules of this kind are offered by several jurisdictions at once"
+    }
+   },
+   "lock_in_depth": {
+    "value": 50,
+    "why": {
+     "ru": "Доступ к вычислениям расширяется заявочными кампаниями, а не запиранием заказчика",
+     "en": "Compute access widens through calls for application rather than by locking a customer in"
+    }
+   },
+   "time_to_replace": {
+    "value": 48,
+    "why": {
+     "ru": "Обязательство рассчитано с 2025 по 2030 год — это программа, а не необратимая инфраструктура",
+     "en": "The commitment runs from 2025 to 2030 — a programme, not irreversible infrastructure"
+    }
+   },
+   "concentration": {
+    "value": 40,
+    "why": {
+     "ru": "Свыше S$1 billion на исследования и кадры — заметно, но доли функции это не даёт",
+     "en": "Over S$1 billion for research and talent is notable but grants no share of a function"
+    }
+   }
+  },
+  "edges": [],
+  "candidates": [],
+  "gaps": "NVIDIA в документах министерства не названа: связь singapore -> nvidia подтверждена только со стороны поставщика."
+ },
+ {
+  "id": "japan",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Япония на карте — юрисдикция, которая заново покупает себе передовое производство. Правительственный портал описывает исходную точку без прикрас: страна занимала более половины мирового полупроводникового рынка в 1980-е, но с тех пор лидируют другие, и самое передовое, что производится в Японии сейчас, — это 40-nm. Ответ — Rapidus Corporation, основанная в 2022 году, с объявленной государственной поддержкой в 330 billion yen и 7.3 billion yen от крупных японских компаний. Цель заявлена как серийный выпуск 2-nanometer, которого пока нет нигде. Пилотная линия планировалась на апрель 2025 года, серийный выпуск — на 2027 год.",
+   "en": "On this map Japan is a jurisdiction buying itself leading-edge manufacturing back. The government portal describes the starting point without flattery: the country held more than half of the global semiconductor market in the 1980s, others have led since, and the most advanced generation produced in Japan now is the 40-nm chip. The answer is Rapidus Corporation, founded in 2022, with announced government support of 330 billion yen and 7.3 billion yen from major Japanese companies. The stated goal is mass production of 2-nanometer chips, which has yet to be realized anywhere. A pilot line was planned for April 2025 and mass production for 2027."
+  },
+  "profile_sources": [
+   {
+    "type": "testimony",
+    "title": "JapanGov — Japan's pursuit of a game-changing technology for semiconductors",
+    "url": "https://www.japan.go.jp/kizuna/2024/03/technology_for_semiconductors.html",
+    "published": "2024-03-01",
+    "quote": "Japan occupied more than half of the global semiconductor market in the 1980s"
+   },
+   {
+    "type": "testimony",
+    "title": "JapanGov — Japan's pursuit of a game-changing technology for semiconductors",
+    "url": "https://www.japan.go.jp/kizuna/2024/03/technology_for_semiconductors.html",
+    "published": "2024-03-01",
+    "quote": "The most advanced generation produced in Japan now is the 40-nm chip.",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "testimony",
+    "title": "JapanGov — Japan's pursuit of a game-changing technology for semiconductors",
+    "url": "https://www.japan.go.jp/kizuna/2024/03/technology_for_semiconductors.html",
+    "published": "2024-03-01",
+    "quote": "The Japanese government has announced support totaling 330 billion yen so far."
+   },
+   {
+    "type": "testimony",
+    "title": "JapanGov — Japan's pursuit of a game-changing technology for semiconductors",
+    "url": "https://www.japan.go.jp/kizuna/2024/03/technology_for_semiconductors.html",
+    "published": "2024-03-01",
+    "quote": "have invested a total of 7.3 billion yen in this massive public-private partnership"
+   },
+   {
+    "type": "testimony",
+    "title": "JapanGov — Japan's pursuit of a game-changing technology for semiconductors",
+    "url": "https://www.japan.go.jp/kizuna/2024/03/technology_for_semiconductors.html",
+    "published": "2024-03-01",
+    "quote": "Rapidus Corporation was founded in 2022 to work on a project at the heart"
+   },
+   {
+    "type": "testimony",
+    "title": "JapanGov — Japan's pursuit of a game-changing technology for semiconductors",
+    "url": "https://www.japan.go.jp/kizuna/2024/03/technology_for_semiconductors.html",
+    "published": "2024-03-01",
+    "quote": "Rapidus aims to develop a system for mass producing leading-edge 2-nanometer (nm) chips"
+   },
+   {
+    "type": "testimony",
+    "title": "JapanGov — Japan's pursuit of a game-changing technology for semiconductors",
+    "url": "https://www.japan.go.jp/kizuna/2024/03/technology_for_semiconductors.html",
+    "published": "2024-03-01",
+    "quote": "a pilot production line in April of 2025, and to begin mass production in 2027"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 76,
+    "why": {
+     "ru": "Материалы и оборудование для производства пластин страна держит, передовое производство — нет",
+     "en": "The country holds wafer materials and equipment; leading-edge manufacturing it does not"
+    }
+   },
+   "lock_in_depth": {
+    "value": 68,
+    "why": {
+     "ru": "Поддержка в 330 billion yen идёт в один национальный проект, а не в рынок вообще",
+     "en": "Support of 330 billion yen goes into one national project rather than the market at large"
+    }
+   },
+   "time_to_replace": {
+    "value": 74,
+    "why": {
+     "ru": "Пилотная линия планировалась на апрель 2025 года, серийный выпуск — на 2027 год",
+     "en": "A pilot line was planned for April 2025 and mass production for 2027"
+    }
+   },
+   "concentration": {
+    "value": 62,
+    "why": {
+     "ru": "Самое передовое производство в стране сейчас — 40-nm, при цели 2-nanometer",
+     "en": "The most advanced generation produced in the country now is 40-nm, against a 2-nanometer goal"
+    }
+   }
+  },
+  "edges": [],
+  "candidates": [
+   {
+    "name": "Rapidus",
+    "why": "названа правительственным порталом Японии ядром национальной полупроводниковой стратегии; на карте отсутствует",
+    "url": "https://www.japan.go.jp/kizuna/2024/03/technology_for_semiconductors.html",
+    "quote": "Rapidus Corporation was founded in 2022 to work on a project at the heart"
+   },
+   {
+    "name": "imec",
+    "why": "названа правительственным порталом партнёром Rapidus по литографии EUV; исследовательского центра такого рода на карте нет",
+    "url": "https://www.japan.go.jp/kizuna/2024/03/technology_for_semiconductors.html",
+    "quote": "with imec in Belgium for \"extreme ultraviolet (EUV) lithography systems\" support"
+   }
+  ],
+  "gaps": "Ни TSMC, ни Shin-Etsu на этой странице не названы: обе связи подтверждены только со стороны компаний."
+ }
+]
