@@ -13,7 +13,8 @@ Usage:
     8 агентов (Claude Code, пишут CSV в runs/<YYYY-MM>/nveco-*/)
       -> nveco_ingest   валидация против конфигов, резолвинг, охват и членство
       -> nveco_verify   переобход КАЖДОЙ ссылки, alive/fetched
-      -> nveco_score    пересчёт тиров, рубрика, хребет, статус, стороны, гравитация
+      -> nveco_reconcile сверка двух сторон: чей документ, сколько концов, споры
+      -> nveco_score    рубрика, хребет, статус, гравитация
       -> nveco_cycles   контуры 3–5, sales / financing / lockin
       -> nveco_handoff  handoff/nvidia_ecosystem.json + чейнджлог, с валидатором на выходе
 
@@ -29,7 +30,8 @@ import shutil
 import sys
 from pathlib import Path
 
-from engine import nveco, nveco_cycles, nveco_handoff, nveco_ingest, nveco_score, nveco_verify
+from engine import (nveco, nveco_cycles, nveco_handoff, nveco_ingest, nveco_reconcile,
+                    nveco_score, nveco_verify)
 
 AGENTS = ["nveco-geo", "nveco-silicon", "nveco-systems", "nveco-power",
           "nveco-software", "nveco-models", "nveco-capital", "nveco-strategic"]
@@ -94,11 +96,18 @@ def main(month: str, do_deliver: bool = False,
     for u in v["dead_urls"][:10]:
         print("          МЁРТВАЯ", u)
 
+    rc = nveco_reconcile.run(month)
+    print(f"[сверка]  тир пересчитан относительно предмета: {rc['retiered']} "
+          f"источников; стороны {rc['sidedness_mix']}")
+    print(f"          профилей с собственной цитатой: {rc['self_sourced_profiles']} "
+          f"из {rc['profiles']}")
+    for d in rc["disputes"]:
+        print(f"          СПОР {d['edge']}: утверждают {', '.join(d['claimed_by']) or '—'}, "
+              f"опровергают {', '.join(d['counter_by']) or '—'}")
+
     sc = nveco_score.run(month)
     print(f"[score]   {sc['entities']} сущностей; статусы связей {sc['status_mix']}; "
           f"обрезано {sc['clamped']}; блёкнет {sc['stale']}")
-    print(f"          тир пересчитан относительно предмета: изменено {sc['retiered']} "
-          f"источников; стороны {sc['sidedness_mix']}")
     print("          топ критичности: " +
           ", ".join(f"{k}={c}" for k, c in sc["top"]))
     for line in sc["log"][:12]:

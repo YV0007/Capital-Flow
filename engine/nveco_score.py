@@ -9,10 +9,8 @@
                  + 0.15·concentration (веса заморожены контрактом; при отсутствующем
                  concentration три остальных ПЕРЕНОРМИРУЮТСЯ — см. nveco.criticality)
   spine        — из типа связи, по config/nveco_edges.yaml
-  tier         — ЗАНОВО по config/entity_domains.yaml, относительно концов связи,
-                 а не относительно одной компании
   status       — по правилу подтверждения из тиров ЖИВЫХ источников
-  sidedness    — сколько концов подтвердило связь СВОИМИ документами
+                 (тир и стороны приходят готовыми из nveco_reconcile)
   confidence   — из тира лучшего живого источника
   gravity      — структурно по графу: охват, слои, типы связей, контуры
   concentration— HHI по критичности внутри слоя
@@ -121,35 +119,22 @@ def run(month: str, scope_id: str = None) -> dict:
                          "FROM nveco_source WHERE owner_kind='edge'"):
         srcs.setdefault(r["owner_id"], []).append(dict(r))
 
-    # ── ТИР СЧИТАЕТСЯ ЗАНОВО, а не берётся из базы ───────────────────────────
-    # Число, лежащее в nveco_source.tier, написал агент по шкале, которой больше нет.
-    # Пересчёт идёт по реестру издателей относительно КОНЦОВ ЭТОЙ СВЯЗИ: первый конец —
-    # предмет, второй — контрагент. Часть тиров при этом падает, и это правильный
-    # результат: «тир 1, потому что nvidia.com» перестаёт быть тиром 1 везде, где
-    # предмет — не NVIDIA.
-    retiered = 0
+    # ── ТИР И СТОРОНЫ ПРИХОДЯТ ИЗ СВЕРКИ ─────────────────────────────────────
+    # `nveco_reconcile` уже пересчитал тир каждого источника относительно концов связи
+    # и записал `sidedness` с `claimed_by`. Здесь они ЧИТАЮТСЯ, а не выводятся заново:
+    # два места, независимо отвечающих на вопрос «чьё это слово», однажды ответят
+    # по-разному, и карта разойдётся сама с собой.
     clamped = 0
     for e in con.execute("SELECT * FROM nveco_edge").fetchall():
         spine = nveco.spine_of(e["type"])
         rows = srcs.get(e["id"], [])
-        for r in rows:
-            t, _ = nveco.source_tier(r["url"], e["source_id"], e["target_id"])
-            r["new_tier"] = t or 6
-            if r["new_tier"] != r["tier"]:
-                retiered += 1
-                con.execute("UPDATE nveco_source SET tier=?, confidence=? WHERE id=?",
-                            (r["new_tier"], nveco.tier_confidence(r["new_tier"]), r["id"]))
         live = [r for r in rows if r["alive"]]  # мёртвый источник не подтверждает
-        tiers = [r["new_tier"] for r in live if not r["counter"]]
-        # `claimed_by` — концы, ИЗДАВШИЕ собственную цитату под эту связь. Это и есть
-        # вход `bilateral`: два разных издателя, и притом именно те два, кого связь
-        # касается. Контрцитата в claimed_by не идёт — она утверждает обратное.
-        claimed = {r["self_of"] for r in live if r["self_of"] and not r["counter"]}
-        disputed = any(r["counter"] for r in live)
+        tiers = [r["tier"] for r in live if not r["counter"]]
+        claimed = {x for x in (e["claimed_by"] or "").split("|") if x}
+        sidedness = e["sidedness"] or "single"
+        disputed = sidedness == "disputed"
         status, conf = _status_and_confidence(tiers, claimed, disputed)
-        sidedness = ("disputed" if disputed else
-                     "bilateral" if len(claimed) >= 2 else "single")
-        best_tier = min(tiers) if tiers else (min((r["new_tier"] for r in rows),
+        best_tier = min(tiers) if tiers else (min((r["tier"] for r in rows),
                                                   default=6))
 
         strength, risk_level, why = e["strength"], e["risk_level"], None
@@ -171,18 +156,6 @@ def run(month: str, scope_id: str = None) -> dict:
                  sidedness=?, claimed_by=? WHERE id=?""",
             (spine, status, conf, best_tier, len(tiers), strength, risk_level, why,
              sidedness, "|".join(sorted(claimed)) or None, e["id"]))
-    # Источники ПРОФИЛЯ: предмет — сама сущность, второго конца нет.
-    for r in con.execute("SELECT id, owner_id, url, tier FROM nveco_source "
-                         "WHERE owner_kind='entity'").fetchall():
-        t, _ = nveco.source_tier(r["url"], r["owner_id"])
-        t = t or 6
-        if t != r["tier"]:
-            retiered += 1
-            con.execute("UPDATE nveco_source SET tier=?, confidence=? WHERE id=?",
-                        (t, nveco.tier_confidence(t), r["id"]))
-        con.execute("UPDATE nveco_source SET self_of=? WHERE id=?",
-                    (r["owner_id"] if nveco.is_self_source(r["url"], r["owner_id"])
-                     else None, r["id"]))
     con.commit()
 
     # ── гравитация ───────────────────────────────────────────────────────────
@@ -280,7 +253,7 @@ def run(month: str, scope_id: str = None) -> dict:
 
     out = {
         "entities": len(entities), "clamped": clamped, "stale": stale,
-        "scope": scope_id, "retiered": retiered,
+        "scope": scope_id,
         "sidedness_mix": {s: con.execute(
             "SELECT COUNT(*) c FROM nveco_edge WHERE sidedness=?", (s,)).fetchone()["c"]
             for s in nveco.SIDEDNESS},

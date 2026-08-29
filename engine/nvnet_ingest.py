@@ -184,6 +184,8 @@ def build(month: str) -> dict:
                 "domains": nveco.entity_domains(clean["id"]),
                 "cik": nveco.entity_cik(clean["id"]),
                 "sourcing": {"total": 0, "selfSourced": 0, "byTier": {}},
+                "criticalityBasis": {"factorsUsed": 0, "factors": [],
+                                     "renormalized": False},
             }
             owners["entity"][clean["id"]] = adir.name
             new_ent += 1
@@ -250,7 +252,8 @@ def build(month: str) -> dict:
                     "tier": clean["tier"], "type": clean["type"], "title": clean["title"],
                     "url": clean["url"], "published": clean["published"],
                     "fetched": today, "alive": True, "quote": clean["quote"],
-                    "confidence": clean["confidence"]})
+                    "confidence": clean["confidence"],
+                    "counter": bool(clean.get("counter"))})
                 new_src += 1
 
     # ── detail: развёрнутый разбор связи, отдельным файлом ────────────────────
@@ -384,6 +387,18 @@ def build(month: str) -> dict:
     # ── прикрепление источников и статусов к новым строкам ────────────────────
     for (kind, key), rows in src_by_owner.items():
         if kind == "edge" and key in edges:
+            # Контрцитата не смешивается с прямой: она утверждает обратное, и
+            # засчитать её в подтверждение значило бы схлопнуть спор в согласие.
+            против = [r for r in rows if r.get("counter")]
+            if против:
+                have_c = {(e["url"], e["quote"])
+                          for e in edges[key].get("counterEvidence") or []}
+                edges[key]["counterEvidence"] = (
+                    list(edges[key].get("counterEvidence") or [])
+                    + [r for r in против if (r["url"], r["quote"]) not in have_c])
+                rows = [r for r in rows if not r.get("counter")]
+                if not rows:
+                    continue
             # СЛИЯНИЕ, а не перезапись. Источник, добавленный к семенной связи ради
             # цифр в `detail`, не должен стирать доказательства, на которых эта связь
             # вообще стоит. Дедуп по (url, цитата): один и тот же абзац, поданный
@@ -433,6 +448,10 @@ def build(month: str) -> dict:
                                                for k in nveco.FACTORS}
         entities[eid]["criticalityWhy"] = {CAMEL[k]: (fs[k][1] if k in fs else None)
                                            for k in nveco.FACTORS}
+        used = [k for k in nveco.FACTORS if vals.get(k) is not None]
+        entities[eid]["criticalityBasis"] = {
+            "factorsUsed": len(used), "factors": used,
+            "renormalized": bool(used) and len(used) < len(nveco.FACTORS)}
         for l in entities[eid]["layers"]:
             l["criticality"] = c if l["primary"] else round((c or 0) * 0.5)
 
