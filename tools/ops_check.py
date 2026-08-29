@@ -25,12 +25,26 @@ DASH = Path("/Users/macbook/Desktop/BASE/Code/ab-investment")
 OPS = ROOT / "OPERATIONS.md"
 
 # Payloads the doc makes claims about: dashboard file -> what §6 says about it.
+#
+# `contract` is what the DELIVERED file must carry. A staged rollout — the engine
+# already emits the next contract while the dashboard still reads the previous —
+# is a normal state, not drift, and §6 states both numbers. Only the delivered one
+# is checked here, because only it describes the file this script can open.
 PAYLOADS = {
     "capitalMap.json": {"contract": None, "cadence": "Weekly"},
-    "aiEcosystemNetwork.json": {"contract": "ai-ecosystem-network/2", "cadence": "Monthly"},
+    "aiEcosystemNetwork.json": {"contract": "ai-ecosystem-network/3", "cadence": "Monthly"},
     "fundTracker.json": {"contract": "fund-tracker/1", "cadence": "Per filing"},
     "nvidiaEcosystem.json": {"contract": "nvidia-ecosystem/2", "cadence": "Frozen"},
 }
+
+
+def _plain(v):
+    """Contract as a string. Some payloads carry prose fields as {ru, en} pairs and
+    `schema` got caught by that in the fund half — comparing a dict to a string
+    reported drift that was a shape, not a change."""
+    if isinstance(v, dict):
+        return v.get("en") or v.get("ru")
+    return v
 
 # Commits touching these paths almost always change something §6-§9 documents.
 WATCHED = [
@@ -68,7 +82,7 @@ def check_payloads(ops_text):
         except Exception as e:
             out.append(f"{name}: unreadable ({e})")
             continue
-        got = d.get("schema")
+        got = _plain(d.get("schema"))
         want = claim["contract"]
         if want and got != want:
             out.append(f"{name}: doc says contract {want!r}, file says {got!r}")

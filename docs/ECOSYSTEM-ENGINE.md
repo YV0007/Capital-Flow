@@ -1,31 +1,57 @@
 # Ecosystem engine — how it works
 
-One file, everything. Covers what the map is, what it looks for, where the data
-comes from, how it is scored, how it updates, and what ships.
+One file, everything: what the map is, what it looks for, where the data comes
+from, how it is scored, how it rotates, and what ships.
 
-Two pipelines stacked. **v2** builds the anchor map around NVIDIA
-(`run_nvidia.py`). **v3** builds the network on top of it from 27 equal pivots
-(`run_network.py`). v3 reads v2's output as a seed and never rewrites it.
+Two pipelines stacked. **`run_nvidia.py`** builds the seed map — entities, edges,
+citations, rubric, cycles. **`run_network.py`** builds the network on top of it —
+centrality, integration, subgraphs, points of failure — and ships the payload. The
+network reads the seed's output and never rewrites it.
+
+The module prefixes `nveco_` / `nvnet_` and the script name `run_nvidia.py` are
+**historical**. The map had a centre once; it does not any more. Renaming 18 tables
+and 13 modules mid-migration is pure risk for no gain, so the names stay and this
+paragraph explains them. See §12.
 
 ---
 
 ## 1. The approach
 
-**The question the map answers:** who cannot be replaced in AI infrastructure,
-and what breaks if they disappear.
+**The question the map answers:** who holds a function the AI stack cannot run
+without, how deeply they are wired into it, and what breaks if that node
+disappears.
 
-Not "who supplies whom". Three design choices follow from that:
+Not "who supplies whom". Four design choices follow:
 
 | choice | why |
 |---|---|
-| Relationships are typed by **mechanism**, not by direction of goods | A supply, a lock-in and an export gate are different kinds of power. One arrow colour would lie. |
+| Relationships are typed by **mechanism**, not direction of goods | A supply, a lock-in and an export gate are different kinds of power. One arrow colour would lie. |
 | Every edge needs a **verbatim quote** | Without it the map is opinion. See §4. |
 | The engine computes scores, agents supply **facts** | An agent that could set its own criticality would set it high. |
+| Importance is **two measures, not one** | "Holds a function nothing replaces" and "is wired into everything" are different claims. Merging them hides the interesting nodes. See §5. |
 
-**Inclusion rule:** an entity must be within **2 hops** of a pivot. One hop is a
-direct relationship; two is a relationship with someone who has one. Three hops
-is "the global semiconductor industry", not one company's orbit. The ingest
-rejects anything further, with a reason — it never drops silently.
+**Membership** — three checks, none of which names a company:
+
+1. `in_scope` — works in at least one of the 16 layers. The subject *is* the
+   layers; they are the boundary.
+2. `min_sources: 3` and `min_self_sources: 1` — the entity has a dossier of its
+   own, at least one document of which it published itself.
+3. `min_confirmed_edges: 2` — at least two confirmed links to entities on the map.
+
+Thresholds live in `config/nveco_scope.yaml`, not in Python: moving the boundary of
+the map is a decision and must be visible in a config diff.
+
+**Checks 2 and 3 are gated by coverage.** `min_sources` and `min_self_sources`
+apply to an entity **only after its dossier has been worked** — that is, after
+rotation has reached it (a row in `nveco_dossier_run`). An entity rotation has not
+reached yet carries `pendingDossier`, is shown, is marked, and is not retired.
+Punishing a node for the absence of *research* rather than the absence of *grounds*
+is not strictness, it is a substitution of subject. `in_scope` and
+`min_confirmed_edges` apply to everyone at once.
+
+What fails an applicable check is retired **with a reason, never silently**, and the
+rejection goes into the ledger and from there into the candidate queue — the node
+does not vanish, it comes back up for review. See §7.
 
 ---
 
@@ -58,48 +84,73 @@ L14 Capital          who owns and funds it
 L15 Regulation       rules, subsidies, standards
 ```
 
-Putting the USA between "memory" and "systems" would be a lie about the nature
-of the relationship — Commerce supplies NVIDIA nothing, it decides who NVIDIA
-may sell to. Hence the separate `control` plane.
+Putting the USA between "memory" and "systems" would be a lie about the nature of
+the relationship — Commerce supplies nobody, it decides who may sell to whom.
+Hence the separate `control` plane.
 
 **38 sectors** sit under the layers (`foundry`, `hbm`, `neocloud`,
 `export_authority`, …). They are the map's own taxonomy — nothing points at an
 external classification.
 
 **10 tech nodes** are technologies, not companies: EUV, N3, CoWoS, HBM, NVLink,
-InfiniBand, Spectrum-X, Arm ISA, PCIe. They ride on an edge as a label
-explaining *why* a dependency is unbreakable.
+InfiniBand, Spectrum-X, Arm ISA, PCIe. They ride on an edge as a label explaining
+*why* a dependency is unbreakable.
 
 ---
 
-## 3. The agents
+## 3. Who does the research
 
-Eight Claude Code subagents. Seven cover layers, one synthesises. They are the
-only non-deterministic part of the system and they run **before** any Python.
+Two kinds of agent, and the difference between them is the unit of work.
 
-| agent | layers | target size |
-|---|---|---|
-| `nveco-geo` | L0, L15 | 10–14 entities |
-| `nveco-silicon` | L1–L4 | 18–24 |
-| `nveco-systems` | L5, L8, L9 | 16–22 |
-| `nveco-power` | L6, L7 | 10–14 |
-| `nveco-software` | L10, L11 | 12–16 |
-| `nveco-models` | L12, L13 | 14–18 |
-| `nveco-capital` | L14 | 10–14 |
-| `nveco-strategic` | — | cross-cutting, runs **last** |
+### The dossier — one node, done properly
 
-Each reads `agents/nveco-CONTEXT.md`, then its own brief, then its slice of
-`config/nveco_watchlist.yaml` (a seeded list of names per agent — 13 to 29 each
-for the seven layer agents, 136 in total; `nveco-strategic` gets no name list
-at all, only a written mandate — it works from the other seven agents' output).
-The watchlist is a starting point, not a limit.
+`agents/eco-dossier.md`. The unit is **one node**, not a sweep of a layer. First
+and second class nodes do not exist: a core entity and a tail entity get the same
+treatment. The one hard requirement a layer sweep does not have:
 
-`nveco-strategic` is different: it runs after the other seven, reads their
-output, and **finds no new entities**. It only writes edges that no single-layer
-agent could see — a cloud that buys from NVIDIA, co-designs with it, and builds
-a replacement chip is three real edges that only a cross-cutting pass finds. If
-it needs a missing entity it writes it up as a gap for next month rather than
-inventing it.
+> **≥ 1 source published by the entity itself.** A company described only by
+> someone else's filing does not have a dossier — it has a mention.
+
+A dossier answers, from the node's own documents: what it is and how it earns
+(`description`, 4–7 sentences, `{ru,en}`); what it depends on and what depends on
+it (edges plus a verbatim quote on each); who could replace it and in how long
+(`irreplaceability`, `timeToReplace`); what share of its own function it holds
+(`concentration`, quote mandatory); and everything it names that is not on the map
+yet (`candidates`).
+
+If an entity has no publisher of its own — a statute has no press office — the
+rule is waived by the **fact of an empty `domains` list** in
+`config/entity_domains.yaml`, not by an exception in code.
+
+Batches are assembled by `tools/make_dossier_batches.py`. Each pack carries: what
+we already know (profile, edges from both ends, every source marked with *whose
+word it is*); what to reconcile (edges only one end has ever claimed — the cheapest
+work in the pack); what membership is missing; and what the ingest rejected.
+
+### The layer sweep — what a dossier cannot see
+
+Eight `agents/nveco-*.md` briefs. Their mandate is narrowed to the one thing a
+per-node dossier cannot produce: **entities not on the map yet, inside their
+layer.**
+
+| agent | layers |
+|---|---|
+| `nveco-geo` | L0, L15 |
+| `nveco-silicon` | L1–L4 |
+| `nveco-systems` | L5, L8, L9 |
+| `nveco-power` | L6, L7 |
+| `nveco-software` | L10, L11 |
+| `nveco-models` | L12, L13 |
+| `nveco-capital` | L14 |
+| `nveco-strategic` | — reconciliation pass, runs last |
+
+`nveco-strategic` reads the output of `nveco_reconcile`, works through `disputed`
+edges, and looks for cross-layer links neither end claimed. It enters no new
+entities.
+
+**Who wins when both write the same row.** A dossier overrides a layer sweep; a
+sweep never overrides a dossier; between equals the first wins. Divergences do not
+go quiet — they land in the run's warnings by name.
 
 **Output per agent** — four CSVs into `runs/<YYYY-MM>/<agent>/`:
 
@@ -110,70 +161,105 @@ factors.csv    the four criticality inputs, with a reason for each
 sources.csv    citations, keyed to an entity or edge id
 ```
 
+A dossier writes `dossier.json` instead, and `tools/dossier_split.py` lays it out
+into exactly those CSVs. The splitter is deliberately dumb: it lays out, checks the
+shape, names the error, and **guesses nothing**.
+
 ---
 
-## 4. Sources and the confirmation rule
+## 4. Sources: the tier is relative to the subject
 
-**Six tiers.** Tier is a property of the domain, not the agent's opinion —
-`config/sources.yaml` maps domain → tier and the engine checks the claim.
+**Six tiers, and the point of origin is the entity itself.**
 
 | tier | what |
 |---|---|
-| 1 | NVIDIA's own: 10-K/10-Q, earnings calls, PRs, whitepapers, patents |
-| 2 | The counterparty's own: their PRs about NVIDIA, their calls, product docs |
-| 3 | Principals speaking directly: GTC, Davos, Congressional testimony, verified interviews |
-| 4 | Research and data: papers, leaderboards, analyst reports, Crunchbase |
-| 5 | Secondary press: Bloomberg, Reuters, WSJ, The Information |
-| 6 | Tertiary: podcasts without principals, social, forums, blogs |
+| 1 | **the subject's own** official statement: its filings, its calls, its PRs, its product docs |
+| 2 | **the other end of the edge**, or any other entity on the map, speaking about it |
+| 3 | principals speaking directly: conferences, testimony, verified interviews |
+| 4 | research and data: papers, leaderboards, analyst reports |
+| 5 | secondary press |
+| 6 | tertiary and signals |
+
+The tier is computed, never authored. `nveco.source_tier(url, subject_id,
+counterparty_id)` resolves it through `config/entity_domains.yaml` — a registry of
+`id → {domains, cik}`. A host matches with its subdomains; a `host/path` entry
+matches more narrowly and wins over a bare host, which is why
+`developer.nvidia.com/cuda` is CUDA and `nvidia.com` is NVIDIA. A CIK in an EDGAR
+path is `self` as well, even though `sec.gov` belongs to everyone.
 
 **The iron rule: no quote, no edge.** Every edge carries 1–3 sources, each with a
 verbatim quote of **≤15 words**, not reassembled from fragments, not translated.
-A deliberate corruption test proves the pipeline rejects a sourceless edge
-(`tools/nvnet_nosource_test.py`, 12/12 corruption types caught).
 
 **The engine sets the status, not the agent:**
 
 | evidence | status |
 |---|---|
+| a SELF quote from **both** ends | `bilateral` — the top of the ladder |
 | 2 sources of tier 1–2, or 1×tier 1 + 1×tier 3 | `confirmed` |
 | 1×tier 1, or 2 of tier 2–3 | `high_confidence` |
 | anything else | `signal` |
+| one end asserts, the other **denies** | `disputed` — ships with **both** quotes |
 
-**Clamp:** an edge with no tier 1–3 source anywhere has its strength capped at
-80 and is demoted to `signal`. Current mix: 228 confirmed, 9 high_confidence,
-25 signal.
+`bilateral` is strictly stronger than "two tier-1–2 sources": the old bar could be
+cleared by one company naming itself twice. `bilateral` requires two *different*
+publishers, and specifically the two the edge is about.
 
-**Link verification** re-fetches every URL each run and records `alive` /
-`fetched`. A dead link is reported, not hidden.
+`disputed` is never resolved by the engine and never has a side removed. Two
+companies describing their own relationship differently is a finding, not a data
+error.
+
+**`sidedness`** rides alongside `status` on every edge: `bilateral`, `single` (the
+other end is silent — a mark, not a defect), or `disputed`.
+
+**Link verification** re-fetches every URL each run and records `alive` / `fetched`.
+A dead link is reported, not hidden.
 
 ---
 
-## 5. What it is looking for
+## 5. Two measures of importance
 
-Per entity, the agent must answer four questions with a number **and a reason**:
+### `criticality` — authored, from the node's own dossier
 
 | factor | weight | the question |
 |---|---|---|
-| `irreplaceability` | 0.30 | how many others could do this |
+| `irreplaceability` | 0.30 | can the **ecosystem** do without it |
 | `lockInDepth` | 0.30 | how far up the stack the dependency reaches |
 | `timeToReplace` | 0.25 | how long a replacement takes |
-| `strategicControl` | 0.15 | what leverage the anchor has over it |
+| `concentration` | 0.15 | what share of **its own function** it holds |
+
+`concentration` is not "market share" in general — it is the share of the work the
+node is on the map for. ASML holds EUV lithography, not "the equipment market".
+The number must rest on a quote; a share without a source does not ship, exactly
+like every other figure.
+
+An entity whose `concentration` has not been researched yet is scored on **three
+factors renormalised**, never on a zero — a zero would be the assertion "this node
+holds none of its function", which is a fabricated figure with a weight of 0.15 in
+every score on the map. Which basis was used is stated per entity in
+`criticalityBasis`, and the validator drops the release if the promised factor
+count and the filled factors disagree.
+
+### `integration` — computed, from the graph. The map's primary rank
 
 ```
-criticality = 0.30·irreplaceability + 0.30·lockInDepth
-            + 0.25·timeToReplace   + 0.15·strategicControl
+integration = 0.30·degree + 0.25·betweenness + 0.15·pagerank
+            + 0.15·layersSpanned + 0.10·edgeTypes + 0.05·cycles
 ```
 
-Weights are frozen by contract. ASML scores 95 on irreplaceability because there
-is one EUV maker on earth; a16z scores 31 because several venture funds of that
-class exist.
+Each term normalised against the maximum in the current graph. Weights live in
+`config/nvnet_edges.yaml`. `gravity` is kept as it was and untouched;
+`integration` stands beside it.
 
-**Gravity** is a separate, computed measure of how far an entity's influence
-spreads — it is never authored:
+**The two axes are orthogonal, and the interesting nodes are where they diverge.**
+High criticality with low integration is a hidden chokepoint — Carl Zeiss SMT
+ranks 8th by criticality and last of 108 by integration, because it holds the
+optics of every EUV tool on earth and the map has found it exactly one
+counterparty. Low criticality with high integration is a hub. Neither is visible
+while there is one measure.
 
-```
-gravity = 0.45·reach + 0.25·layers + 0.20·edgeTypes + 0.10·cycles
-```
+**`core` is an output, not an input**: the top 30 by `integration.score`, ties
+broken by degree then by id. There is no hand-maintained list anywhere. Entering
+and leaving the core is its own changelog category.
 
 **33 edge types on 5 spines** — the taxonomy of power:
 
@@ -185,36 +271,35 @@ gravity = 0.45·reach + 0.25·layers + 0.20·edgeTypes + 0.10·cycles
 | `control` | who gates access | `controls_access_to`, `export_controlled_by` |
 | `rivalry` | who takes a bite | `competes_with`, `threatens`, `could_disrupt` |
 
-Text length is contract too: one-liner ≤110 chars, whyIrreplaceable ≤280,
-note ≤200. Long text breaks the panel.
-
 ---
 
 ## 6. The pipeline
 
-Agents run first and outside the scripts. Everything after is deterministic
-Python over what they wrote — **the same CSVs always produce the same map**.
+Agents run first and outside the scripts. Everything after is deterministic Python
+over what they wrote — **the same CSVs always produce the same map**.
 
-### v2 — the anchor map
-
-```
-runs/<month>/nveco-*/            8 agents × 4 CSVs
-  → nveco_ingest    validate against configs, resolve ids, 2-hop rule,
-                    reject with a reason into _rejected/
-  → nveco_verify    re-fetch every URL, alive / fetched
-  → nveco_score     rubric, spine, status, gravity, concentration, clamps
-  → nveco_cycles    loops of length 3–5, typed sales / financing / lockin
-  → nveco_score     second pass — gravity counts cycles, so it runs twice
-  → nveco_handoff   handoff/nvidia_ecosystem.json + changelog, validated
-```
-
-### v3 — the network
+### Seed
 
 ```
-handoff/nvidia_ecosystem.json    seed: 106 entities, 243 edges
-  + runs/<month>/nvnet-*/        extension: pivot↔pivot edges
-  → nvnet_ingest      pivotal flag, hops from nearest pivot
-  → nvnet_centrality  degree, betweenness (Brandes), PageRank
+runs/<month>/nveco-*/            layer sweeps × 4 CSVs
+runs/<month>/nveco-dossier-NN/   dossier.json → tools/dossier_split.py → the same CSVs
+  → nveco_ingest     validate against configs, resolve ids, scope and membership,
+                     reject with a reason into _rejected/ and into the ledger
+  → nveco_verify     re-fetch every URL, alive / fetched
+  → nveco_reconcile  tier relative to the subject, sides of each edge, disputes
+  → nveco_score      rubric, spine, status, gravity, clamps
+  → nveco_cycles     loops of length 3–5, typed sales / financing / lockin
+  → nveco_score      second pass — gravity counts cycles, so it runs twice
+  → nveco_handoff    handoff/nvidia_ecosystem.json + changelog, validated
+```
+
+### Network
+
+```
+handoff/nvidia_ecosystem.json    the seed
+  + runs/<month>/nvnet-*/        extension: edges and prose
+  → nvnet_ingest      merge, sourcing, pendingDossier, membershipFailing
+  → nvnet_centrality  degree, betweenness (Brandes), PageRank, integration, core
   → nvnet_subgraphs   12 subgraphs BY RULE — degeneracy is not hidden
   → nvnet_spof        single points of failure, proved by deletion
   → i18n              load translations, ru + en
@@ -224,14 +309,14 @@ handoff/nvidia_ecosystem.json    seed: 106 entities, 243 edges
 **Three centrality measures, two graphs.** Degree and betweenness run on the
 *undirected* graph — a path breaks regardless of which way the arrow points.
 PageRank runs on a *directed dependence* graph, because "who do the important
-depend on" is an inherently directional question. Computing it undirected gave a
-0.9988 correlation with degree — an expensive synonym. Directed, it is 0.9341,
-and it surfaces Taiwan at rank 2 with a degree of only 3.
+depend on" is an inherently directional question. Undirected it correlated 0.9988
+with degree — an expensive synonym. The direction of dependence per edge type is
+declared in `config/nvnet_edges.yaml` and can be argued with without reading
+Python.
 
 **Single points of failure are proved, not asserted.** Candidates are the top
-decile of betweenness *within their own layer*; each is then deleted from the
-graph and the engine counts how many pairs of the remaining entities lose their
-path. Removing NVIDIA breaks 2,078 pairs and splits the network into 22 pieces.
+decile of betweenness within their own layer; each is then deleted and the engine
+counts how many pairs of the remaining entities lose their path.
 
 **Subgraphs come from rules over the data**, never a hand-picked list. A rule may
 return a degenerate group — that is a research result, not a bug, and it ships
@@ -239,26 +324,93 @@ labelled rather than padded.
 
 ---
 
-## 7. How it updates
+## 7. Rotation and feedback
 
-**Cadence:** monthly, triggered by agents producing fresh CSVs. Nothing is on a
-timer. A month where only 2 of 8 agents ran is a legal run.
+### Who gets researched, and when
 
-**Per row on ingest:**
+The tier is stored in `nvnet_integration` and written by every network run.
+Cadences and thresholds are in `config/nveco_scope.yaml`, block `rotation`.
 
-| situation | result |
+| tier | cadence |
 |---|---|
-| new id | inserted, `first_seen` = this month |
-| existing id | fields updated, `last_confirmed` = this month |
-| id gone from the CSV | ⚠ **nothing happens — see §9** |
+| core (top 30) | every month |
+| mid (next third) | quarterly |
+| tail | on trigger: an edge touching the node was confirmed after its last dossier, or 6 months without confirmation |
 
-**Ageing:** an entity unconfirmed for **6 months** is flagged `stale`. Stale
-means *shown and marked*, not removed — being old is not the same as being
-wrong.
+Budget ≈40 dossiers a month in batches of 8. What does not fit is **printed**:
+silent truncation reads as "we covered everything" when forty of a hundred were
+covered.
 
-**Changelog** is computed by diffing the new payload against the previous one,
-across 10 categories: new/removed nodes, relationships added/removed/updated,
-criticality shifts, phase changes, risk escalations, new sources, layer changes.
+**The tier is taken from the better of two ranks — integration or criticality —
+not from integration alone.** By integration ASML is 52nd and Carl Zeiss SMT is
+108th of 108; by criticality they are 6th and 8th. A tier from integration alone
+would research least often precisely the nodes the map knows least about — and a
+node's low integration is in large part a measure of *our own ignorance*: ASML has
+three edges on the map not because it has three, but because nobody looked. Which
+axis placed a node in its tier is recorded in `nvnet_integration.rota_basis`.
+
+`core` in the payload stays purely integration-based, because the contract defines
+it that way and the dashboard ranks by it. Rotation tier and core membership are
+two different questions; merging them would repeat the mistake of a single concept
+doing three jobs.
+
+```bash
+python tools/make_dossier_batches.py 2026-09 --tier=due
+```
+
+### Rejections and the queue — and why they used to be dead
+
+A rejection sitting in a CSV is not feedback, it is an archive entry. This was
+proved on `Carl Zeiss SMT`: the step rule threw it out every run, wrote the reason
+to `runs/<month>/_rejected/nveco-silicon.csv`, the file sat committed in the
+repository — and was never read. The write worked. **Delivery** did not.
+
+Five reasons it could not work, and what stands against each now:
+
+| it was | it is |
+|---|---|
+| the rejection lived exactly one run — ingest wipes the directory before writing the new set | it lives in `nveco_rejection` until it is fixed or explicitly decided, and remembers how many runs it has repeated |
+| the brief sent the agent to `runs/<previous month>/`, ingest wrote to `runs/<current>/` | one path: the database. The CSV stays for a human |
+| the eight layer agents had no batcher at all — "returns to the agent" meant "the agent will go and open a file" | a rejection **about an entity** becomes a candidate-queue row, which does have a consumer |
+| a rejection about an entity could not be delivered: packs are built by walking the entities in the database, and a rejected entity is by definition not in it | `subject_id` / `subject_name` are columns, and the batcher puts such rejections in **every** pack as a separate "rejected, never reached the map" list |
+| nothing ever checked that a rejection was read | `tools/feedback_check.py` fails the run when a row has hung for more than one run |
+
+The rule that follows, worth holding in mind: **silence about a rejection is not a
+decision.** A row either stops arriving (it was fixed) or gets a `decision` with a
+reason. There is no third state.
+
+The candidate queue is the same loop's other half. A dossier names everything it
+does not see in its pack; whatever is not on the map becomes a queue row. It is
+worked through **in full**: every row is accepted or rejected **with a reason**.
+
+```bash
+python tools/queue_review.py                 # state of the queue
+python tools/queue_review.py --rejections    # open rejections with their keys
+python tools/feedback_check.py               # exit 1 while anything is unconsumed
+```
+
+### Ageing and retirement
+
+An entity unconfirmed for **6 months** is flagged `stale`. Stale means *shown and
+marked*, not removed — being old is not the same as being wrong.
+
+Retirement has two paths and they must not be confused:
+
+* **Agent silence.** The ingest is authoritative for the month it ingests: a row
+  that disappears from a CSV is deleted along with its sources, translations and
+  place in any cycle. Scoped by `owner_agent`, because a month in which two of
+  eight agents ran is a legal run. A missing file means the agent did not work; an
+  empty file means it claims nothing and its rows go; a file where *every* row was
+  rejected is an output accident and retires nothing — it goes to warnings.
+* **Membership.** An entity failing an applicable check is retired with a named
+  reason. `on_fail: retire_unheld` (the default) removes it only when no edge holds
+  it: a membership failure of node X is not evidence against edge X–Y, which has a
+  citation and an owner of its own. A held node stays, is marked
+  `membershipFailing`, and is **named** in `runs/<month>/_membership/retired.csv`.
+  `on_fail: retire_all` is the strict alternative and is one config value away.
+
+Both paths are covered by `tools/nveco_retire_test.py`, including the case that
+proves they are distinguishable from each other.
 
 ---
 
@@ -266,131 +418,96 @@ criticality shifts, phase changes, risk escalations, new sources, layer changes.
 
 `handoff/ai_ecosystem_network.json` → `ab-investment/src/data/aiEcosystemNetwork.json`
 
-Contract **`ai-ecosystem-network/3`**, release `v3.0-2026-08`.
+Contract **`ai-ecosystem-network/4`**, release `v4.0-2026-08`.
 
 | | current |
 |---|---|
-| entities | 107 |
-| edges | 262 |
-| cycles | 146 |
+| entities | 108 |
+| edges | 314 |
+| cycles | 225 (lockin 124, financing 73, sales 28) |
 | tech nodes | 10 |
 | layers / sectors | 16 / 38 |
-| pivots | 27 (hardware 7, labs 6, software 5, infra 4, enablers 3, policy 2) |
-| subgraphs | 12, none degenerate |
-| single points of failure | 10 |
-| density / avg degree / clustering | 0.0358 / 3.79 / 0.5066 |
+| edge types | 33 on 5 spines |
+| core | 30, computed |
+| subgraphs | 12 |
+| single points of failure | 9 |
+| density / avg degree / clustering | 0.0434 / 4.65 / 0.5165 |
+| edge status | confirmed 176 · bilateral 70 · high_confidence 43 · signal 25 · disputed 0 |
+| sidedness | single 244 · bilateral 70 · disputed 0 |
+| profile source tiers | 1: 445 · 2: 111 · 3: 3 · 4: 2 |
+| median sources per profile | 5 |
+| profiles with no citation of their own | 10 of 108 |
 
-**Per entity:** id, name, type, role, sector, layers, criticality + the four
-factors + a reason for each, gravity, oneLiner, description, whyIrreplaceable,
-whatBreaksIt, phase, risk, ticker, geo, revenue, techNodes, hops, firstSeen,
-lastConfirmed, stale, sources, pivotal, centrality (degree / betweenness / pagerank).
-
-**`description` — what the node is and how it earns.** Added in `/3`. Four to
-seven sentences answering, in order: what it sells, where the money comes from,
-what it consumes and supplies *on this map*, its scale in figures, and what
-changed recently. It is not a longer `oneLiner` (that stays a ≤110-character lead
-for tooltips) and it does not restate `whyIrreplaceable`, `whatBreaksIt` or the
-chips beside it. Optional by design — an incomplete month ships rather than
-failing — but strict when present: see the rules in §9.
+**Per entity:** id, name, type, role, sector, layers, criticality plus the four
+factors plus a reason for each, `criticalityBasis`, `integration` (score and its
+six terms), `sourcing` (total, selfSourced, byTier), `domains`, `cik`, `core`,
+`pivotal` (a mirror of `core`, deprecated, removed in `/5`), `pendingDossier`,
+`membershipFailing`, gravity, oneLiner, description, whyIrreplaceable,
+whatBreaksIt, phase, risk, ticker, geo, revenue, techNodes, firstSeen,
+lastConfirmed, stale, sources, centrality.
 
 **Per edge:** id, source, target, type, spine, direction, strength, lockInDepth,
-substitutability, isReversible, status, confidence, sourceTier, risk, techNode,
-formed, note, evidence.
+substitutability, isReversible, status, `sidedness`, `claimedBy`,
+`counterEvidence`, confidence, sourceTier, risk, techNode, formed, note, detail,
+evidence.
 
-**Bilingual.** Every prose field is `{"ru": …, "en": …}` — 1,515 fields, both
-sides always non-empty or the payload refuses to write. Source quotes stay
-unwrapped in the language of their document: a translated quote is not a quote.
+**`meta`** carries the map's own subject (`scope`), the core rule, and
+`membership`: admitted / retired / held / queued, which checks are coverage-gated,
+what `on_fail` is set to, and the named lists behind `retired` and `held`.
 
-**Validators refuse to write a broken file.** Two corruption suites prove it:
-`nveco_corrupt_test` 13/13, `nvnet_nosource_test` 23/23. Two retirement suites
-prove the ingest deletes what left the CSVs: `nveco_retire_test` 7/7,
-`nvnet_retire_test` 3/3.
+**Bilingual.** Every prose field is `{"ru": …, "en": …}`, both sides non-empty or
+the payload refuses to write. Source quotes stay unwrapped in the language of
+their document: a translated quote is not a quote.
+
+**Every figure in prose comes from a quote attached to that object.** The rule
+covers `description`, `oneLiner`, `note`, `detail` and all four factor
+justifications. A number the reader cannot check is worse than no number.
+
+**Validators refuse to write a broken file.** Four suites, 113 cases:
+`nveco_corrupt_test` 42, `nvnet_nosource_test` 53, `nveco_retire_test` 15,
+`nvnet_retire_test` 3.
 
 ---
 
 ## 9. Known gaps
 
-Honest list. None of these are hidden in the payload.
+Honest list. None of it is hidden in the payload.
 
-**Retirement is per-agent, not per-month.** *(Was a gap; fixed.)* The ingest is
-now authoritative for the month it ingests: a row that disappears from a CSV is
-deleted along with its sources, its translations and its place in any cycle. It
-had to be, because edge ids are derived from their ends
-(`source__target__type`), so a direction fix *renames* rather than edits — the
-v1.2 normalisation left both versions active, 250 edges instead of 243, cleaned
-by hand.
+**10 of 108 profiles have no citation of their own.** Two of them —
+`cfius`, `chips-act` — never can: they have no publisher, and the SELF rule is
+waived for them by that fact. The other eight (`boyd`, `delta-electronics`,
+`lite-on`, `mgx`, `quanta`, `sequoia`, `thrive`, `wistron`) are a delivery
+problem, not a research one: their own sites answer a machine request with 403 or
+a bot-check redirect. They are due in the next rotation with a different fetch
+route.
 
-The delete is scoped by `owner_agent`, not by month, because a month where two of
-eight agents ran is a legal run and the other six's silence retracts nothing.
-A file that is absent means the agent did not work; a file that is present but
-empty means the agent claims nothing and its rows go; a file where *every* row
-was rejected is an output accident, not a retraction, and retires nothing — it is
-reported in the run's warnings instead. Rows with no `owner_agent` (written
-before the column existed) are never retired, and an entity still referenced by
-a silent agent's edge is held on the map rather than cascaded away. Same rule in
-`nvnet_ingest.persist` for the extension tables. Proven by
-`tools/nveco_retire_test.py` (7 cases) and `tools/nvnet_retire_test.py` (3).
+**34 of 108 nodes do not pass `min_confirmed_edges`.** All are held by an edge and
+marked. Half of them are simply nodes rotation has not reached, whose edge count
+is low because nobody looked. This is a finding about the check, and it is written
+down rather than tuned away: a rule that measures how well-connected a node is *on
+the map* also measures how much of the map has been built.
 
-**Node descriptions cover 27 of 107.** *(Was 0 of 107; the 27 pivots are done.)*
-`entities[].description` now carries a researched 4–7 sentence profile of every
-pivot in both languages. The other 80 nodes have none, and the panel keeps its
-placeholder for them. The order for the next run is fixed: by criticality
-downward, which is also the order people click in.
+**`disputed` is 0 across 314 edges.** The machinery is complete and covered by
+tests end to end — the `counter` column in `sources.csv`, `stance: counters` in a
+dossier, the transfer into `counterEvidence` on both halves of the map. In 77
+dossiers not one case turned up where a party's own documents denied what is
+written about it. That is expected: companies do not publish denials of
+relationships, they stay silent about them — and silence is `single`, of which
+there are 244.
 
-Three rules make the field safe to read as data, all enforced by
-`nvnet_handoff._check_description`, all of which will refuse the release rather
-than ship a soft version:
+**52 of 314 edges have no `detail`.** These are the edges this campaign added; the
+explainer is written by a separate pass (`agents/nvnet-detail`), which runs on its
+own cadence.
 
-* **Every number must appear in a quote attached to that entity.** A figure the
-  reader cannot check is worse than no figure, so an unquoted number fails the
-  contract. This is the same rule `edges[].detail` already lived under, and it is
-  why the 27 descriptions brought 58 new source rows with them: the quote comes
-  with the number or the number does not ship.
-* **Both languages or neither.** A Russian-only description fails `i18n:check` on
-  the dashboard side, so it fails here first.
-* **No sentence that stays true under another company.** A short list of pure
-  filler ("market leader", "key player", "одна из ведущих") is refused outright.
-  The list cannot catch every empty sentence, but it catches the ones that get
-  written when the research came up short — which is exactly when they appear.
+**NVIDIA's connectivity is 24.5% and is still partly an artefact.** Removing it
+costs 1,392 pairs of entities their path. The map grew outward from it, so its
+degree is 122 against a network average of 5.81. The figure fell from 37.0% as
+edges that touch neither end of it arrived; it will keep falling for the same
+reason, and only for that reason.
 
-Two limits worth naming. The sentence counter treats "a period followed by a
-space" as a boundary, so abbreviations like "U.S." would miscount and are simply
-not written. And the filler list is a proxy for a judgement call, not a
-replacement for it.
-
-**Edge explainers cover 114 of 262.** *(Was 20 of 262.)* `edges[].detail` answers
-how a link actually works — what is bought, on what terms, and what the link
-unlocks further down the chain. Every pivot-to-pivot edge now has one: **104 of
-104**, in both languages, under the same rule as `description` — a figure that is
-not in a quote attached to that edge fails the contract.
-
-The rule this was written against, after the dashboard showed link text that read
-as filler: *a link describes the link, not the node.* «Молодая лаборатория
-собрала один из крупнейших кластеров» is about xAI; what belongs on the edge is
-that Colossus 1 holds over 220,000 accelerators, went up in 4 months against a
-24-month estimate, and that the buyer now resells that capacity to a rival lab —
-so the purchase turned its buyer into a landlord. The remaining 148 edges are
-non-pivot pairs, in criticality order.
-
-**Two revenue chips are a year stale.** Found while writing the descriptions,
-not fixed here: `nvidia.revenueUsdB` is 130.5 and `meta.revenueUsdB` is 164.5,
-which are FY2025 figures, while the FY2026 filings the map already cites say
-$215.9 billion and $200.97 billion. The descriptions route around this — they
-quote segment growth and capex rather than the total — but the chips themselves
-come from the frozen v2 seed and need a v2 re-run to correct.
-
-**NVIDIA's 37% connectivity is partly an artefact.** The map grew outward from
-NVIDIA, so it has degree 74 against a network average of 3.79. It is genuinely
-central, but 37% is an upper bound.
-
-**37 of 107 nodes are dangling** in the dependence graph — they depend on nobody
-*in this dataset*, because their own dependencies were never collected. Their
-PageRank is inflated for the same reason.
-
-**Carl Zeiss SMT is missing.** The sole optics supplier for EUV tools, rejected
-by v2's single-anchor 3-hop rule. Under v3's pivot rule it would be one hop from
-ASML — but the network is built from the seed, and it never entered the seed.
-Fixing it needs a v2 re-run, not a network change.
+**Nodes dangling in the dependence graph** depend on nobody *in this dataset*,
+because their own dependencies were never collected. Their PageRank is inflated
+for the same reason.
 
 ---
 
@@ -398,40 +515,81 @@ Fixing it needs a v2 re-run, not a network change.
 
 | | |
 |---|---|
+| Map scope, membership, rotation | `config/nveco_scope.yaml` |
+| Publisher registry (domains, CIK) | `config/entity_domains.yaml` |
 | Layer / sector taxonomy | `config/nveco_layers.yaml` |
 | Edge taxonomy (31 types) | `config/nveco_edges.yaml` |
-| Network extension (2 types, PageRank map) | `config/nvnet_edges.yaml` |
-| Pivot registry, hops, release number | `config/nvnet_pivots.yaml` |
+| Network extension (2 types, PageRank map, integration weights) | `config/nvnet_edges.yaml` |
 | Watchlist per agent | `config/nveco_watchlist.yaml` |
-| Domain → tier | `config/sources.yaml` |
-| Agent briefs | `agents/nveco-*.md` |
-| v2 engine | `engine/nveco*.py` |
-| v3 engine | `engine/nvnet*.py` |
+| Publisher-type tiers | `config/sources.yaml` |
+| Dossier brief | `agents/eco-dossier.md` |
+| Layer briefs | `agents/nveco-*.md` |
+| Seed engine | `engine/nveco*.py` |
+| Feedback ledger and queue | `engine/nveco_feedback.py` |
+| Network engine | `engine/nvnet*.py` |
 | Bilingual store | `engine/i18n.py` |
 | Schemas | `db/schema_nveco.sql`, `db/schema_nvnet.sql` |
 | Orchestrators | `run_nvidia.py`, `run_network.py` |
+| Dossier batches | `tools/make_dossier_batches.py`, `tools/dossier_split.py` |
+| Queue and feedback | `tools/queue_review.py`, `tools/feedback_check.py` |
 | Corruption tests | `tools/nveco_corrupt_test.py`, `tools/nvnet_nosource_test.py` |
 | Retirement tests | `tools/nveco_retire_test.py`, `tools/nvnet_retire_test.py` |
-| Node descriptions (research) | `runs/<month>/nvnet-descriptions/`, brief in `agents/nvnet-descriptions.md` |
-| Build logs | `handoff/NVIDIA-ECOSYSTEM-BUILD-LOG.md`, `handoff/AI-ECOSYSTEM-NETWORK-BUILD-LOG.md` |
+| Build logs | `handoff/AI-ECOSYSTEM-V4-BUILD-LOG.md` and its predecessors |
 
 ---
 
 ## 11. Running it
 
 ```bash
-# 1. agents write CSVs into runs/<YYYY-MM>/nveco-*/  (Claude Code, not a script)
-# 2. deterministic half:
-python run_nvidia.py 2026-08              # anchor map
-python run_network.py 2026-08 --deliver   # network + ship to dashboard
+# 1. what rotation orders this month
+python tools/make_dossier_batches.py 2026-09 --tier=due
+
+# 2. the eco-dossier agent writes dossier.json into each batch directory
+python tools/dossier_split.py 2026-09          # → the pipeline's CSVs
+
+# 3. the deterministic half
+python run_nvidia.py 2026-09                   # seed
+python run_network.py 2026-09 --deliver        # network + ship to dashboard
 
 # offline (skip URL re-verification):
-python run_nvidia.py 2026-08 --offline
+python run_nvidia.py 2026-09 --offline
 
-# corruption suites:
-python tools/nveco_corrupt_test.py
-python tools/nvnet_nosource_test.py
+# feedback and the queue
+python tools/queue_review.py
+python tools/feedback_check.py
+
+# the suites
+python tools/nveco_corrupt_test.py && python tools/nvnet_nosource_test.py 2026-09
+python tools/nveco_retire_test.py && python tools/nvnet_retire_test.py
 ```
 
 Both orchestrators return exit code 1 and write **nothing** if the contract
 validator fails. A missing file is better than a wrong one.
+
+---
+
+## 12. Historical section: the anchor
+
+Until `/4` the map had a centre, and one concept — the **anchor** — did three
+different jobs at once:
+
+1. **Membership** — who is on the map at all (the "two hops from NVIDIA" rule).
+2. **Evidence** — whose word counts for what (tier 1 = NVIDIA said it).
+3. **Importance** — how big a node is (`strategicControl` = NVIDIA's leverage over it).
+
+While those three were fused, removing the anchor meant removing the map. The v4
+campaign split them into three independent mechanisms, none of which needs a
+centre: three coverage checks; a tier relative to the **subject**; and two
+measures of importance, `concentration` and `integration`.
+
+What that cost, measured rather than assumed: 41 of 107 entities had **every**
+source published by NVIDIA, 75 had no voice of their own at all, the median
+sources per profile was exactly one, and `strategicControl` was dropped rather
+than converted — leverage over a node and the share of a function it holds do not
+translate into each other, and pouring the old number into the new name would have
+been two lies at once.
+
+The prefixes `nveco_` / `nvnet_`, the script name `run_nvidia.py`, and the root
+`pivots` field survive from that period. They are names, not behaviour. The
+behavioural remains — `anchor_cfg`, `load_anchors`, `domain_tier`, `hops_limit`,
+`hops_from_pivots`, `pivot_ids`, the `hops` column — were deleted.

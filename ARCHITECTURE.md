@@ -66,12 +66,12 @@ is shared — NVIDIA has to be one NVIDIA on every map, and that is what `config
 
 The third — the **Fund Tracker** (`run_funds.py`, tables `fund_*`) — is shaped unlike the
 other two. Weekly is discovery-shaped (agents hunt leads → dated `events`); monthly is
-dependency-shaped (an anchor and its orbit). Section 3 is **registry-shaped**: a closed,
+dependency-shaped (a stack and what holds it up). Section 3 is **registry-shaped**: a closed,
 curated list of 14 managers whose *positions, stakes and deltas* are held as a standing
 book. It has no research agents at all — every row traces to a mandated filing or an
 official register download. See its own section below.
 
-| | Weekly — **Потоки** | Monthly — **Экосистема NVIDIA** |
+| | Weekly — **Потоки** | Monthly — **Экосистема ИИ-инфраструктуры** |
 |---|---|---|
 | Question | Where did money go this week | Who holds a function the stack cannot run without, how deeply they are wired in, what breaks without them |
 | Unit | A dated capital-allocation **event** | An undated standing **dependency** |
@@ -79,24 +79,29 @@ official register download. See its own section below.
 | Node size | Capital | **Criticality** (4-factor rubric, 0–100 each) |
 | Centre | none | **none** — membership is scope + own dossier + confirmed edges |
 | Tables | `events`, `allocators`, … | `nveco_*` (schema in `db/schema_nveco.sql`) |
-| Agents | 6 by allocator class (`agents/*.md`) | 8 by stack layer (`agents/nveco-*.md`) |
-| Orchestrator | `run_week.py` | `run_nvidia.py` |
-| Handoff | `handoff/capital_map.json` | `handoff/nvidia_ecosystem.json` |
+| Agents | 6 by allocator class (`agents/*.md`) | per-node dossiers (`agents/eco-dossier.md`) + 8 layer sweeps (`agents/nveco-*.md`) |
+| Orchestrator | `run_week.py` | `run_nvidia.py` + `run_network.py` (names historical) |
+| Handoff | `handoff/capital_map.json` | `handoff/nvidia_ecosystem.json` → `handoff/ai_ecosystem_network.json` |
 
 Shared: entity resolution, the source registry, the `runs/<period>/<agent>/` pattern, the
 handoff pattern. Separate: tables, agents, rules, schedule. On the dashboard they are two
 unconnected maps sharing only the shell.
 
-## Monthly pipeline (NVIDIA ecosystem map, v2)
+## Monthly pipeline (AI-infrastructure map)
 ```
-8 agents (agents/nveco-*.md) -> runs/<YYYY-MM>/nveco-*/{entities,factors,edges,sources}.csv
-  -> engine/nveco_ingest.py   validate against the frozen configs, resolve ids, 2-hop rule
-                              (rejects -> runs/<month>/_rejected/<agent>.csv)
-  -> engine/nveco_verify.py   re-fetch EVERY link; a dead one costs the edge a confirmation
-  -> engine/nveco_score.py    rubric, spine from type, status from tiers, gravity, HHI, clamps
-  -> engine/nveco_cycles.py   closed loops 3–5 long: sales / financing / lockin
-  -> engine/nveco_score.py    again — gravity counts the cycles an entity stands on
-  -> engine/nveco_handoff.py  handoff/nvidia_ecosystem.json + ECOSYSTEM-V2-CHANGELOG.md
+tools/make_dossier_batches.py --tier=due   ROTATION picks the month's nodes
+eco-dossier agent -> runs/<YYYY-MM>/nveco-dossier-NN/dossier.json
+  -> tools/dossier_split.py   lay out into the pipeline's CSVs, guess nothing
+8 layer sweeps    -> runs/<YYYY-MM>/nveco-*/{entities,factors,edges,sources}.csv
+  -> engine/nveco_ingest.py     validate against the configs, resolve ids, scope + MEMBERSHIP
+                                (rejects -> _rejected/ AND the nveco_rejection ledger)
+  -> engine/nveco_verify.py     re-fetch EVERY link; a dead one costs the edge a confirmation
+  -> engine/nveco_reconcile.py  tier relative to the SUBJECT, sides of each edge, disputes
+  -> engine/nveco_score.py      rubric, spine from type, status from tiers, gravity, clamps
+  -> engine/nveco_cycles.py     closed loops 3–5 long: sales / financing / lockin
+  -> engine/nveco_score.py      again — gravity counts the cycles an entity stands on
+  -> engine/nveco_handoff.py    handoff/nvidia_ecosystem.json + changelog
+  -> run_network.py             centrality, integration, core, subgraphs, SPOF, payload
 ```
 Prove the validator still bites with `python tools/nveco_corrupt_test.py`, and that the
 ingest retires what left the CSVs with `python tools/nveco_retire_test.py`.
@@ -110,6 +115,28 @@ the map. Rejection is written to `runs/<month>/_rejected/` with a reason, never 
 Until contract /4 the border was "no further than 2 hops from NVIDIA". That rule did two
 jobs badly at once: it admitted anything NVIDIA happened to name in its own filings, and
 it kept out Carl Zeiss SMT — sole supplier of EUV optics, three hops away.
+
+**Membership is gated by coverage.** The two source checks apply to an entity only after
+rotation has worked its dossier; until then it carries `pendingDossier`, is shown, is
+marked and is not retired. Checking a node for ">=3 sources" before the queue has reached
+it would punish the absence of RESEARCH rather than the absence of grounds. `in_scope` and
+`min_confirmed_edges` apply to everyone. What fails an applicable check is retired with a
+named reason — and only when no edge holds it, because a membership failure of a node is
+not evidence against an edge that carries its own citation and its own owner.
+
+**Research rotates on a schedule, not on attention.** Core (top 30) monthly, mid tier
+quarterly, tail on trigger — an edge confirmed after the node's last dossier, or six months
+without confirmation. The tier is taken from the BETTER of two ranks, integration or
+criticality: by integration alone the map would research least often exactly the nodes it
+knows least about, and a low integration score is in large part a measure of our own
+ignorance.
+
+**Feedback is consumed, not accumulated.** Rejections live in `nveco_rejection` until fixed
+or explicitly decided; a rejection about an entity becomes a candidate-queue row; the queue
+is worked through in full with a reason on every row. `tools/feedback_check.py` exits 1
+while anything is unconsumed. It exists because the file-based version of this loop was
+found dead: `Carl Zeiss SMT` sat rejected in a committed CSV that no step was obliged to
+open.
 
 **Rank is computed, not assigned.** `entities[].integration` (degree, betweenness,
 pagerank, layers spanned, edge types, cycles — weights in `config/nvnet_edges.yaml`) is

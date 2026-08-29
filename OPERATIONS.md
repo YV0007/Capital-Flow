@@ -193,53 +193,81 @@ dashboard does not compile, nothing is pushed.
 | `stealth_accumulation` | ≥3 stakes into one target within 90d |
 | `beneficiary_concentration` | ≥3 private flows map to one public ticker |
 
-### 4b. Monthly — Экосистема (`run_network.py`)
+### 4b. Monthly — Экосистема (`run_nvidia.py` + `run_network.py`)
 
-Answers a structural question, not a dated one: who is irreplaceable, who is
-locked in, who gates whom, what hedges what.
+Answers a structural question, not a dated one: who holds a function the stack
+cannot run without, how deeply they are wired in, and what breaks if they go.
 
 ```
-8 agents by stack layer     geo · silicon · systems · power ·
-(agents/nveco-*.md)         software · models · capital · strategic (runs LAST)
-   → runs/<YYYY-MM>/nveco-*/{entities,factors,edges,sources}.csv
-   → nveco_ingest.py   validate against FROZEN configs, resolve ids, 2-hop rule
-                       (rejects → runs/<month>/_rejected/ — fed back next run)
-   → nveco_verify.py   re-fetch EVERY link
-   → nveco_score.py    4-factor rubric, spine, status, gravity, HHI
-   → nveco_cycles.py   closed loops 3–5 long: sales / financing / lockin
-   → nveco_score.py    again — gravity counts the cycles an entity stands on
-   → nveco_handoff.py  handoff/ai_ecosystem_network.json + changelog
+ROTATION decides who is researched this month
+  tools/make_dossier_batches.py <month> --tier=due
+      core (top 30)  monthly · mid  quarterly · tail  on trigger or 6 months stale
+      ~40 dossiers in batches of 8; what does not fit the budget is PRINTED
+
+eco-dossier agent (agents/eco-dossier.md)  one node, done properly
+   → runs/<month>/nveco-dossier-NN/dossier.json
+   → tools/dossier_split.py  → {entities,factors,edges,sources,translations}.csv
+
+8 layer agents (agents/nveco-*.md)  narrowed mandate: find what is NOT on the map
+   → runs/<month>/nveco-*/{entities,factors,edges,sources}.csv
+
+   → nveco_ingest.py     validate against configs, resolve ids, scope + MEMBERSHIP
+                         (rejects → _rejected/ AND the nveco_rejection ledger)
+   → nveco_verify.py     re-fetch EVERY link
+   → nveco_reconcile.py  tier relative to the SUBJECT, sides of each edge, disputes
+   → nveco_score.py      4-factor rubric, spine, status, gravity
+   → nveco_cycles.py     closed loops 3–5 long: sales / financing / lockin
+   → nveco_score.py      again — gravity counts the cycles an entity stands on
+   → nveco_handoff.py    handoff/nvidia_ecosystem.json + changelog
+   → run_network.py      centrality, integration, core, subgraphs, SPOF, payload
 ```
 
 **The map has no centre — since contract /4.** It has a subject: the 16 layers. An
 entity is admitted by three checks that name no company (in scope · own dossier ·
-confirmed edges), and the core is the top 30 by computed `integration`, recomputed every
-run. What follows described the rule that was replaced:
+confirmed edges), and the core is the top 30 by computed `integration`, recomputed
+every run. The rule that was replaced — "no further than 2 hops from the anchor" —
+did two jobs badly at once: it admitted whatever NVIDIA happened to name in its own
+filings, and it kept out Carl Zeiss SMT, sole supplier of EUV optics, three hops
+away. See `docs/ECOSYSTEM-ENGINE.md` §12 and `handoff/AI-ECOSYSTEM-V4-BUILD-LOG.md`.
 
-> An entity more than **2 hops** from the anchor is rejected at ingest with a
-> reason. That is the line between "NVIDIA's orbit" and "the world semiconductor
-> industry". A second anchor costs one config entry and one run; nothing else in
-> the engine is anchor-aware.
+**Membership is gated by coverage.** `min_sources` and `min_self_sources` apply to
+an entity only after rotation has worked its dossier; until then it carries
+`pendingDossier`, is shown, is marked and is not retired. `in_scope` and
+`min_confirmed_edges` apply to everyone. What fails an applicable check is retired
+**with a named reason** — and only if no edge holds it, because a membership
+failure of a node is not evidence against an edge that has its own citation and its
+own owner (`membership.on_fail` in `config/nveco_scope.yaml`).
 
-It did two jobs badly at once: it admitted whatever NVIDIA happened to name in its
-own filings, and it kept out Carl Zeiss SMT — sole supplier of EUV optics, three
-hops away. See `handoff/AI-ECOSYSTEM-V4-BUILD-LOG.md`.
+**Feedback is consumed, not accumulated.** Rejections live in `nveco_rejection`
+until fixed or explicitly decided; a rejection about an entity becomes a
+candidate-queue row; the queue is worked through in full, every row accepted or
+rejected with a reason. `python tools/feedback_check.py` exits 1 while anything is
+unconsumed. This exists because it once did not: `Carl Zeiss SMT` sat rejected in a
+committed CSV that no step was obliged to open.
 
 **Five spines, not two:** `physical` · `capital` · `moat` · `control` · `rivalry`.
 A moat and a gate are not kinds of supply and not kinds of money — they are
 separate mechanics of power. The spine is **derived from the edge type**; neither
 the agent nor the dashboard computes it.
 
-**Criticality** is a 4-factor rubric with frozen weights, computed by the engine:
-irreplaceability 0.30 · lock-in depth 0.30 · time-to-replace 0.25 · concentration
-control 0.15. The engine also ships one line of reasoning per factor
-(`criticalityWhy`) — a bare "95" nobody can argue with is the opposite of useful.
+**Two measures of importance, deliberately not merged.** `criticality` is authored
+from the node's own dossier — irreplaceability 0.30 · lock-in depth 0.30 ·
+time-to-replace 0.25 · **concentration** 0.15, weights frozen by contract, with one
+line of reasoning per factor. `integration` is computed from the graph and is the
+map's primary rank. Nodes where the two diverge are the interesting ones: high
+criticality with low integration is a hidden chokepoint, the reverse is a hub.
 
-**Taxonomy is frozen and single-sourced.** 16 layers, 31 edge types → 5 spines,
-6 roles, tiers and statuses live in `config/nveco_*.yaml`, and on the dashboard in
-`nvidiaEcosystem.js`, re-exported by the network adapter and never re-typed.
-Layers are variable-length; nothing is hard-coded. **That is the acceptance
-test** — drop in a new payload and the map changes with no code edit.
+**Source tier is relative to the subject, not to a company.** Tier 1 is the
+entity's own word about itself, tier 2 the other end of the edge. The registry is
+`config/entity_domains.yaml` (`id → {domains, cik}`); the engine computes the tier
+and the agent may not set it. `bilateral` — a SELF quote from both ends — is the
+new top of the status ladder.
+
+**Taxonomy is frozen and single-sourced.** 16 layers, 33 edge types → 5 spines,
+6 roles, tiers and statuses live in `config/nveco_*.yaml` / `config/nvnet_*.yaml`,
+and on the dashboard in `nvidiaEcosystem.js`, re-exported by the network adapter
+and never re-typed. Layers are variable-length; nothing is hard-coded. **That is
+the acceptance test** — drop in a new payload and the map changes with no code edit.
 
 ### 4c. Registry — Фонды (`run_funds.py`)
 
@@ -315,13 +343,21 @@ Intelligence Platform, not a news aggregator.
 | Feature | File in dashboard | Contract | Ultimate source | Cadence |
 |---|---|---|---|---|
 | Capital Flow map | `src/data/capitalMap.json` | — | Agent research over the tier ladder | Weekly |
-| Ecosystem map | `src/data/aiEcosystemNetwork.json` | `ai-ecosystem-network/4` | 8 `nveco_*` agents, subject-relative tiers | Monthly |
+| Ecosystem map | `src/data/aiEcosystemNetwork.json` | emits `ai-ecosystem-network/4`, delivered `/3` | dossiers per node + 8 `nveco_*` layer agents, subject-relative tiers | Monthly |
 | Fund Tracker | `src/data/fundTracker.json` | `fund-tracker/1` | SEC EDGAR 13F-HR / 13D / 13G, FCA/EU short registers | Per filing |
 | NVIDIA ecosystem (reserve) | `src/data/nvidiaEcosystem.json` | `nvidia-ecosystem/2` | v2 pilot; **also the frozen taxonomy source** | Frozen |
 | Fund portfolios (private book) | `capitalMap.json` → `nodes[].holdings[]` | `agents/holdings-profiler.md` | Fund portfolio pages, Form D, ADV, press releases | **Monthly (planned)** |
 
 > `fundTracker.json` currently carries `fixture: true` — a shape-accurate
 > stand-in, not delivered data. **Do not cite its numbers.**
+
+> The ecosystem map is **mid-rollout**: the engine emits `ai-ecosystem-network/4`,
+> the dashboard still carries `/3`. `/4` removes `hops` and `strategicControl` and
+> adds `integration`, `sourcing`, `concentration`, `sidedness`, `pendingDossier` and
+> `meta.membership`. Delivery is the dashboard session's pass, not the engine's, and
+> until it lands the two contract numbers legitimately differ. `tools/ops_check.py`
+> knows the difference between "emitted" and "delivered" and only reports drift when
+> the *delivered* number stops matching this row.
 
 ### Dashboard-owned (no engine upstream)
 
@@ -416,7 +452,10 @@ dashboard.
 | Weekly | Capital Flow map — agents, ingest, signals, handoff, deploy | Cloud routine + `run.sh` |
 | Weekly | Holdings news + prices; deal reads; RU gap check | Skills, Mon 08:00 UTC |
 | Weekly | **This file** — reconcile against reality (§11) | Scheduled ops pass |
-| Monthly | Ecosystem map | `run_network.py` |
+| Monthly | Ecosystem map — core tier (top 30) dossiers, ~40 nodes in batches of 8 | `tools/make_dossier_batches.py --tier=due`, then `run_nvidia.py` + `run_network.py` |
+| Quarterly | Ecosystem map — mid tier dossiers | same, `--tier=due` picks them up by cadence |
+| On trigger | Ecosystem map — tail: an edge touched the node, or 6 months without confirmation | same |
+| Every ecosystem run | Candidate queue and rejection ledger worked through in full | `tools/queue_review.py`, gate `tools/feedback_check.py` |
 | Monthly (planned) | Fund portfolios | `run_holdings.py`, 20th or later |
 | Per filing | Fund Tracker — poll EDGAR submissions, ingest on new accession | `run_funds.py` |
 | After each new map | Logo pipeline for new entities | `npm run logos` |
@@ -434,6 +473,9 @@ dashboard.
 | i18n incomplete | ~1,400 untranslated string sites across ~68 files; ecosystem map, funds, holdings, YC tracker, DC roadmap largely Russian-only | Dashboard |
 | Holdings news is Russian-only | `news[].title/text` are data, not UI — needs translated fields or a translation step | Both |
 | Ecosystem cycle-lens camera | Lit circuit can land off-screen on lens open; «Восстановить вид» fixes it | Dashboard |
+| Ecosystem: 10 of 108 profiles have no citation of their own | 2 have no publisher at all (`cfius`, `chips-act`) and never can; 8 are behind bot protection on their own sites | Engine |
+| Ecosystem: 34 of 108 nodes fail `min_confirmed_edges` | All held by an edge and marked, none retired. Half are simply nodes rotation has not reached | Engine |
+| Ecosystem: `disputed` is 0 across 314 edges | Machinery complete and tested; 77 dossiers found no case of a party denying what is written about it | Engine |
 
 ---
 
@@ -482,3 +524,15 @@ boundary or rule. Newest last. Never edit a past entry.
   pipelines with their real stages, the signal-rule table, the goals table, and
   the two source ladders and why they differ. Added §11 and a weekly reconcile
   pass backed by `tools/ops_check.py`.
+- **2026-08-29** — Ecosystem map, campaign v4 phases 2–3. Rotation now decides who
+  is researched: core monthly, mid quarterly, tail on trigger, tier taken from the
+  better of two ranks (integration or criticality) so that hidden chokepoints stop
+  being researched least often. Membership checks are **on**, gated by coverage —
+  `min_sources` / `min_self_sources` apply only after a node's dossier has been
+  worked. Retirement of a node that an edge still holds is refused by default
+  (`membership.on_fail: retire_unheld`) and the held node is marked and named.
+  Rejections and the candidate queue moved into the database with a consumption
+  gate (`tools/feedback_check.py`) after the old file-based loop was found dead.
+  §4b and §9 rewritten; §6 now states the emitted and the delivered contract
+  separately, because the engine is on `/4` and the dashboard is still on `/3`.
+
