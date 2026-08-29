@@ -1060,7 +1060,7 @@ def _changelog_md(cur, cl, net) -> str:
         L += [f"  - {note}"]
     L += [""]
 
-    L += ["## Изменения по десяти категориям блюпринта", "",
+    L += [f"## Изменения по {len(nvnet.CHANGE_CATEGORIES)} категориям", "",
           "| категория | записей |", "|---|---|"]
     RU = {"newNodes": "новые узлы", "removedNodes": "удалённые узлы",
           "relationshipsAdded": "связи +", "relationshipsRemoved": "связи −",

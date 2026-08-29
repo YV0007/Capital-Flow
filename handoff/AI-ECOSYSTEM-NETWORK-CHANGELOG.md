@@ -69,7 +69,7 @@
 - **Память и HBM**: 8 узлов, 18 внутренних связей. Триополия быстрой памяти: кто её делает, на каких станках и кого она кормит.
   - infrastructure-backbone: без внутренних связей — a16z, blackrock, blackstone, bloom-energy, china, eaton, ge-vernova, lightspeed, nventures, oklo, schneider, sequoia, siemens-energy, singapore, south-korea, thrive
 
-## Изменения по десяти категориям блюпринта
+## Изменения по 11 категориям
 
 | категория | записей |
 |---|---|
