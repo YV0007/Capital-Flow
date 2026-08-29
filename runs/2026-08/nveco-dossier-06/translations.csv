@@ -1,0 +1,43 @@
+kind,id,field,lang,text
+entity,zeiss-smt,why_irreplaceability,en,By its own words it exclusively supplies the optics for these machines
+entity,zeiss-smt,why_lock_in,en,"The illumination system is 15,000 individual parts weighing 1.5 tons — such an assembly is not ported"
+entity,zeiss-smt,why_time,en,"The move to a numerical aperture of 0.55 from 0.33 took ASML and 1,200 network partners"
+entity,zeiss-smt,why_concentration,en,It exclusively supplies the optics for EUV machines
+edge,zeiss-smt__asml__strategic_partner,risk_mitigation,en,"Joint development of the next optics generation runs with 1,200 network partners, not just the two"
+edge,zeiss-smt__asml__strategic_partner,note,en,"Not only supply: the next generation at a numerical aperture of 0.55 was developed jointly, and ZEISS calls ASML its strategic partner."
+entity,taiwan,why_irreplaceability,en,First in the world at once in foundry and in packaging with testing
+entity,taiwan,why_lock_in,en,The island's industry chain is valued by its own government at NT$3.22 trillion
+entity,taiwan,why_time,en,The world's largest consumer of semiconductor materials for eleven straight years; such a base does not move
+entity,taiwan,why_concentration,en,"By its own count, first in the world in the foundry industry"
+entity,netherlands,why_irreplaceability,en,Permission to export the machines is granted by this jurisdiction and cannot be bypassed
+entity,netherlands,why_lock_in,en,The measure reaches both the machines and the metrology of the same cycle
+entity,netherlands,why_time,en,The regime is not winding down but widening: the latest extension from 1 April 2025
+entity,netherlands,why_concentration,en,The measure covers exports to all destinations outside the EU without exception
+entity,south-korea,why_irreplaceability,en,The ministry itself names DDR5 and HBM as what drove the country's chip exports
+entity,south-korea,why_lock_in,en,Semiconductors delivered $141.9 billion of exports in a single year
+entity,south-korea,why_time,en,Growth of 43.9 percent in a year rests on a manufacturing base built over decades
+entity,south-korea,why_concentration,en,"The country's chip exports grew on DDR5 and HBM, by its own ministry's count"
+entity,china,why_irreplaceability,en,The licence to export rare-earth items is granted by this jurisdiction's competent authority
+entity,china,why_lock_in,en,"The control is placed on items, not companies: changing counterparty does not bypass it"
+entity,china,why_time,en,The regime holds and widens rather than winds down: the control is declared a standing mechanism
+entity,china,why_concentration,en,One State Council authority grants the export licence; there is no alternative gate
+entity,kubernetes,why_irreplaceability,en,The common layer other stacks standardize on; graduated status in the CNCF
+entity,kubernetes,why_lock_in,en,"A portable platform by design: the lock is operator habit, not format"
+entity,kubernetes,why_time,en,Behind it stands a decade and a half of Google experience that a replacement would have to redo
+entity,kubernetes,why_concentration,en,The only orchestration project with graduated status in the foundation its neighbours live in
+edge,kubernetes__google__path_dependent_on,risk_mitigation,en,"The project sits with a foundation and has its own steering committee, so origin grants no control"
+edge,kubernetes__google__path_dependent_on,note,en,Google open sourced the project in 2014 and it inherits a decade and a half of that company's production experience.
+entity,micron,why_irreplaceability,en,"The company names five competitors itself — the function is shared, not held by one"
+entity,micron,why_lock_in,en,Memory is qualified against the customer platform: HBM4 36GB 12-high samples go to key customers in advance
+entity,micron,why_time,en,Revenue grew 49% in a year; capacity of that scale takes years to build
+entity,micron,why_concentration,en,One customer accounted for 17 % of revenue against five named competitors
+edge,micron__samsung__competes_with,risk_mitigation,en,Customers keep several qualified memory suppliers at once
+edge,micron__samsung__competes_with,note,en,Named first in Micron's own filing among competitors in memory and storage.
+edge,micron__kioxia__competes_with,risk_mitigation,en,"The rivalry runs in NAND, where several qualified makers exist"
+edge,micron__kioxia__competes_with,note,en,Named in Micron's filing among competitors in the memory and storage markets.
+edge,micron__sandisk__competes_with,risk_mitigation,en,"The rivalry runs in NAND, where several qualified makers exist"
+edge,micron__sandisk__competes_with,note,en,Named in Micron's filing among competitors in the memory and storage markets.
+entity,cfius,why_irreplaceability,en,One interagency committee is authorized to review foreign investment into United States businesses
+entity,cfius,why_lock_in,en,It reaches both company transactions and certain real estate transactions
+entity,cfius,why_time,en,The mandate is statutory and carried by a standing Treasury office
+entity,cfius,why_concentration,en,There is no alternative body for the same review: the committee is one

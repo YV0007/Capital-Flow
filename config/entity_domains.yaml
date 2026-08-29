@@ -36,7 +36,7 @@ entities:
   applied-materials:  { domains: [appliedmaterials.com],                      cik: "0000006951", from: sources }
   arista:             { domains: [arista.com],                                cik: "0001596532", from: sources }
   arm:                { domains: [arm.com],                                   cik: "0001973239", from: sources }
-  ase:                { domains: [aseglobal.com],                             from: known }
+  ase:                { domains: [aseglobal.com],                             cik: "0001122411", from: sources }
   asml:               { domains: [asml.com],                                  cik: "0000937966", from: sources }
   astera-labs:        { domains: [asteralabs.com],                            cik: "0001736297", from: sources }
   # Домен исправлен Фазой 1: bis.doc.gov больше не отдаёт страницы, пресс-релизы
@@ -56,7 +56,7 @@ entities:
   # Закон не издаёт сам себя. Текст публикует Конгресс, и congress.gov — домен
   # законодателя, а не этой сущности.
   chips-act:          { domains: [],                                          from: none }
-  cisco:              { domains: [cisco.com],                                 from: known }
+  cisco:              { domains: [cisco.com],                                 cik: "0000858877", from: sources }
   coherent:           { domains: [coherent.com, ii-vi.com],                   cik: "0000820318", from: sources }
   constellation:      { domains: [constellationenergy.com],                   from: sources }
   coreweave:          { domains: [coreweave.com],                             cik: "0001769628", from: sources }
@@ -65,7 +65,7 @@ entities:
   cuda:               { domains: [developer.nvidia.com/cuda, docs.nvidia.com/cuda], from: sources }
   databricks:         { domains: [databricks.com],                            from: sources }
   deepseek:           { domains: [deepseek.com, github.com/deepseek-ai/, raw.githubusercontent.com/deepseek-ai/], from: sources }
-  dell:               { domains: [dell.com],                                  from: known }
+  dell:               { domains: [dell.com],                                  cik: "0001571996", from: sources }
   delta-electronics:  { domains: [deltaww.com],                               from: known }
   digital-realty:     { domains: [digitalrealty.com],                         cik: "0001297996", from: sources }
   eaton:              { domains: [eaton.com],                                 cik: "0001551182", from: sources }
@@ -74,18 +74,18 @@ entities:
   eu-ai-act:          { domains: [eur-lex.europa.eu],                         from: known }
   fabrinet:           { domains: [fabrinet.com],                              cik: "0001408710", from: sources }
   foxconn:            { domains: [foxconn.com, honhai.com],                   from: known }
-  ge-vernova:         { domains: [gevernova.com],                             from: known }
+  ge-vernova:         { domains: [gevernova.com],                             cik: "0001996810", from: sources }
   google:             { domains: [google.com, abc.xyz, blog.google, about.google], cik: "0001652044", from: sources }
   google-cloud:       { domains: [cloud.google.com],                          from: known }
   google-deepmind:    { domains: [deepmind.google, deepmind.com],             from: sources }
-  hpe:                { domains: [hpe.com],                                   from: known }
+  hpe:                { domains: [hpe.com],                                   cik: "0001645590", from: sources }
   huggingface:        { domains: [huggingface.co, github.com/huggingface/, raw.githubusercontent.com/huggingface/], from: sources }
   intel:              { domains: [intel.com],                                 cik: "0000050863", from: sources }
   japan:              { domains: [japan.go.jp, meti.go.jp],                   from: known }
   jax:                { domains: [docs.jax.dev, github.com/jax-ml/, raw.githubusercontent.com/jax-ml/], from: sources }
   kioxia:             { domains: [kioxia.com],                                from: known }
   kla:                { domains: [kla.com],                                   cik: "0000319201", from: sources }
-  kubernetes:         { domains: [kubernetes.io, github.com/kubernetes/],     from: known }
+  kubernetes:         { domains: [kubernetes.io, github.com/kubernetes/, raw.githubusercontent.com/kubernetes/],     from: known }
   lam-research:       { domains: [lamresearch.com],                           cik: "0000707549", from: sources }
   lambda:             { domains: [lambdalabs.com, lambda.ai],                 from: known }
   lightspeed:         { domains: [lsvp.com],                                  from: known }
@@ -93,7 +93,7 @@ entities:
   marvell:            { domains: [marvell.com],                               cik: "0001835632", from: sources }
   meta:               { domains: [meta.com, about.fb.com, ai.meta.com, engineering.fb.com], cik: "0001326801", from: sources }
   mgx:                { domains: [mgx.ae],                                    from: known }
-  micron:             { domains: [micron.com],                                from: known }
+  micron:             { domains: [micron.com],                                cik: "0000723125", from: sources }
   microsoft:          { domains: [microsoft.com],                             cik: "0000789019", from: sources }
   mistral:            { domains: [mistral.ai],                                from: known }
   mlcommons:          { domains: [mlcommons.org],                             from: known }
@@ -113,11 +113,11 @@ entities:
   quanta:             { domains: [quantatw.com],                              from: known }
   ray:                { domains: [ray.io, anyscale.com, github.com/ray-project/], from: known }
   recursion:          { domains: [recursion.com],                             cik: "0001601830", from: sources }
-  salesforce:         { domains: [salesforce.com],                            from: known }
+  salesforce:         { domains: [salesforce.com],                            cik: "0001108524", from: sources }
   samsung:            { domains: [samsung.com],                               from: sources }
-  sandisk:            { domains: [sandisk.com],                               from: known }
+  sandisk:            { domains: [sandisk.com],                               cik: "0002023554", from: sources }
   schneider:          { domains: [se.com, schneider-electric.com],            from: known }
-  schrodinger:        { domains: [schrodinger.com],                           from: known }
+  schrodinger:        { domains: [schrodinger.com],                           cik: "0001490978", from: sources }
   sequoia:            { domains: [sequoiacap.com],                            from: known }
   servicenow:         { domains: [servicenow.com],                            cik: "0001373715", from: sources }
   sglang:             { domains: [github.com/sgl-project/, raw.githubusercontent.com/sgl-project/], from: known }
@@ -127,9 +127,9 @@ entities:
   siemens-energy:     { domains: [siemens-energy.com],                        from: known }
   singapore:          { domains: [gov.sg],                                    from: known }
   sk-hynix:           { domains: [skhynix.com],                               cik: "0002120882", from: sources }
-  snowflake:          { domains: [snowflake.com],                             from: known }
+  snowflake:          { domains: [snowflake.com],                             cik: "0001640147", from: sources }
   softbank:           { domains: [group.softbank],                            cik: "0001065521", from: external_ids }
-  south-korea:        { domains: [korea.kr],                                  from: known }
+  south-korea:        { domains: [korea.kr, motie.go.kr],                                  from: known }
   supermicro:         { domains: [supermicro.com],                            cik: "0001375365", from: sources }
   synopsys:           { domains: [synopsys.com],                              cik: "0000883241", from: sources }
   taiwan:             { domains: [gov.tw],                                    from: known }

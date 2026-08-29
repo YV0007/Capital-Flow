@@ -1,0 +1,897 @@
+[
+ {
+  "id": "zeiss-smt",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "ZEISS SMT — полупроводниковое подразделение группы ZEISS, делающее оптику для литографии, фотомасок и фабрик. Его собственная страница называет выручку 5.055 миллиарда евро за 2024/2025 финансовый год и 9,349 сотрудников в пересчёте на полную занятость. Оптику для машин EUV подразделение поставляет исключительно: своими словами — «exclusively supplies the optics for these machines». Система освещения EUV собрана из 15,000 деталей и весит 1.5 тонны. Следующее поколение печатает с числовой апертурой 0.55 против 0.33 у нынешнего EUV, и разрабатывалось оно вместе с ASML и 1,200 партнёрами сети.",
+   "en": "ZEISS SMT is the semiconductor segment of the ZEISS group, making optics for lithography, photomasks and wafer fabs. Its own page states revenue of 5.055 billion euro for fiscal year 2024/2025 and 9,349 colleagues on a full-time-equivalent basis. It supplies the optics for EUV machines exclusively, in its own words: \"exclusively supplies the optics for these machines\". The EUV illumination system is assembled from 15,000 individual parts and weighs 1.5 tons. The next generation prints at a numerical aperture of 0.55 against 0.33 for today's EUV, and was developed together with ASML and 1,200 network partners."
+  },
+  "profile_sources": [
+   {
+    "type": "product_doc",
+    "title": "ZEISS SMT — Semiconductor Manufacturing Technology",
+    "url": "https://www.zeiss.com/semiconductor-manufacturing-technology/home.html",
+    "published": "2026-08-29",
+    "quote": "Our solutions for lithography optics, photomasks and wafer fabs enable chip manufacturers around the world."
+   },
+   {
+    "type": "company_pr",
+    "title": "ZEISS SMT — About us",
+    "url": "https://www.zeiss.com/semiconductor-manufacturing-technology/about-us.html",
+    "published": "2026-08-29",
+    "quote": "9,349 Colleagues (based on full-time equivalent) work on pioneering innovations for the semiconductor industry"
+   },
+   {
+    "type": "company_pr",
+    "title": "ZEISS SMT — About us",
+    "url": "https://www.zeiss.com/semiconductor-manufacturing-technology/about-us.html",
+    "published": "2026-08-29",
+    "quote": "5.055 Billion € revenue of ZEISS Semiconductor Manufacturing Technology in the fiscal year 2024/2025"
+   },
+   {
+    "type": "product_doc",
+    "title": "High-NA-EUV Lithography: the next EUV generation",
+    "url": "https://www.zeiss.com/semiconductor-manufacturing-technology/inspiring-technology/high-na-euv-lithography.html",
+    "published": "2026-08-29",
+    "quote": "As a strategic partner, ZEISS SMT exclusively supplies the optics for these machines.",
+    "backs": [
+     "concentration",
+     "irreplaceability"
+    ]
+   },
+   {
+    "type": "product_doc",
+    "title": "High-NA-EUV Lithography: the next EUV generation",
+    "url": "https://www.zeiss.com/semiconductor-manufacturing-technology/inspiring-technology/high-na-euv-lithography.html",
+    "published": "2026-08-29",
+    "quote": "Established EUV lithography works with a numerical aperture of 0.33."
+   },
+   {
+    "type": "product_doc",
+    "title": "High-NA-EUV Lithography: the next EUV generation",
+    "url": "https://www.zeiss.com/semiconductor-manufacturing-technology/inspiring-technology/high-na-euv-lithography.html",
+    "published": "2026-08-29",
+    "quote": "With High-NA-EUV lithography, the NA is 0.55."
+   },
+   {
+    "type": "company_pr",
+    "title": "30 years of EUV lithography optics at ZEISS SMT",
+    "url": "https://www.zeiss.com/semiconductor-manufacturing-technology/news-and-events/smt-press-releases/2025/euv-30-years.html",
+    "published": "2025-09-01",
+    "quote": "The ZEISS EUV illumination system consists of 15,000 individual parts and weighs 1.5 tons."
+   },
+   {
+    "type": "company_pr",
+    "title": "High-NA-EUV lithography: new technology for global microchip production",
+    "url": "https://www.zeiss.com/semiconductor-manufacturing-technology/news-and-events/smt-press-releases/2024/high-na-euv-lithography.html",
+    "published": "2024-01-01",
+    "quote": "Together with its strategic partner ASML, the Dutch manufacturer of lithography systems"
+   },
+   {
+    "type": "company_pr",
+    "title": "High-NA-EUV lithography: new technology for global microchip production",
+    "url": "https://www.zeiss.com/semiconductor-manufacturing-technology/news-and-events/smt-press-releases/2024/high-na-euv-lithography.html",
+    "published": "2024-01-01",
+    "quote": "the work of around 1,200 network partners"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 96,
+    "why": {
+     "ru": "Оптику для этих машин подразделение по собственным словам поставляет исключительно",
+     "en": "By its own words it exclusively supplies the optics for these machines"
+    }
+   },
+   "lock_in_depth": {
+    "value": 92,
+    "why": {
+     "ru": "Система освещения собрана из 15,000 деталей и весит 1.5 тонны — такую сборку не переносят",
+     "en": "The illumination system is 15,000 individual parts weighing 1.5 tons — such an assembly is not ported"
+    }
+   },
+   "time_to_replace": {
+    "value": 95,
+    "why": {
+     "ru": "Переход на апертуру 0.55 с 0.33 делали вместе с ASML и 1,200 партнёрами сети",
+     "en": "The move to a numerical aperture of 0.55 from 0.33 took ASML and 1,200 network partners"
+    }
+   },
+   "concentration": {
+    "value": 98,
+    "why": {
+     "ru": "Оптику для машин EUV поставляет исключительно оно одно",
+     "en": "It exclusively supplies the optics for EUV machines"
+    }
+   }
+  },
+  "edges": [
+   {
+    "id": "zeiss-smt__asml__supplies",
+    "stance": "confirms",
+    "sources": [
+     {
+      "type": "product_doc",
+      "title": "High-NA-EUV Lithography: the next EUV generation",
+      "url": "https://www.zeiss.com/semiconductor-manufacturing-technology/inspiring-technology/high-na-euv-lithography.html",
+      "published": "2026-08-29",
+      "quote": "As a strategic partner, ZEISS SMT exclusively supplies the optics for these machines."
+     }
+    ]
+   },
+   {
+    "source": "zeiss-smt",
+    "target": "asml",
+    "type": "strategic_partner",
+    "direction": "lateral",
+    "strength": 90,
+    "lock_in_depth": 90,
+    "substitutability": 5,
+    "is_reversible": false,
+    "risk_level": "high",
+    "risk_type": "technical",
+    "risk_timeline": "5y+",
+    "risk_mitigation": {
+     "ru": "Совместная разработка следующего поколения оптики идёт с 1,200 партнёрами сети, а не вдвоём",
+     "en": "Joint development of the next optics generation runs with 1,200 network partners, not just the two"
+    },
+    "note": {
+     "ru": "Не только поставка: следующее поколение с апертурой 0.55 разрабатывалось совместно, и ZEISS называет ASML своим стратегическим партнёром.",
+     "en": "Not only supply: the next generation at a numerical aperture of 0.55 was developed jointly, and ZEISS calls ASML its strategic partner."
+    },
+    "stance": "confirms",
+    "sources": [
+     {
+      "type": "company_pr",
+      "title": "High-NA-EUV lithography: new technology for global microchip production",
+      "url": "https://www.zeiss.com/semiconductor-manufacturing-technology/news-and-events/smt-press-releases/2024/high-na-euv-lithography.html",
+      "published": "2024-01-01",
+      "quote": "Together with its strategic partner ASML, the Dutch manufacturer of lithography systems"
+     },
+     {
+      "type": "product_doc",
+      "title": "High-NA-EUV Lithography: the next EUV generation",
+      "url": "https://www.zeiss.com/semiconductor-manufacturing-technology/inspiring-technology/high-na-euv-lithography.html",
+      "published": "2026-08-29",
+      "quote": "Established EUV lithography works with a numerical aperture of 0.33."
+     },
+     {
+      "type": "product_doc",
+      "title": "High-NA-EUV Lithography: the next EUV generation",
+      "url": "https://www.zeiss.com/semiconductor-manufacturing-technology/inspiring-technology/high-na-euv-lithography.html",
+      "published": "2026-08-29",
+      "quote": "With High-NA-EUV lithography, the NA is 0.55."
+     }
+    ]
+   }
+  ],
+  "candidates": [
+   {
+    "name": "TRUMPF",
+    "why": "названа ZEISS среди тех, с кем получена немецкая премия за EUV-литографию; лазерный источник EUV на карте не представлен",
+    "url": "https://www.zeiss.com/semiconductor-manufacturing-technology/about-us.html",
+    "quote": "ZEISS, TRUMPF and the Fraunhofer Institute (IOF) receive the German Future Prize"
+   }
+  ],
+  "gaps": "Ни один заказчик метрологии масок не назван поимённо: релиз AIMS EUV 3.0 говорит «Serving all leading semiconductor manufacturers» без имён. Поэтому у узла на карте остаётся один контрагент — ASML, и обе его связи ведут к нему же."
+ },
+ {
+  "id": "taiwan",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Тайвань — юрисдикция, чьё правительство считает полупроводники опорой своей высокотехнологичной промышленности. По собственному счёту государственного портала для инвесторов остров стоит первым в мире и по контрактному производству, и по корпусированию с тестированием. Цепочка полупроводниковой промышленности оценена там в NT$3.22 trillion, или US$108.8 billion. Одиннадцать лет подряд остров остаётся крупнейшим в мире потребителем полупроводниковых материалов. Отсюда его роль на карте: не поставщик и не покупатель, а место, где физически стоят фабрики, от которых зависит остальной стек.",
+   "en": "Taiwan is a jurisdiction whose government treats semiconductors as the backbone of its high-tech industry. By the count of its own state investment portal the island ranks first in the world in both foundry and packaging with testing. Its semiconductor industry chain is valued there at NT$3.22 trillion, or US$108.8 billion. For eleven consecutive years the island has been the world's largest consumer of semiconductor materials. Hence its place on the map: neither supplier nor buyer, but the ground the fabs stand on, and the rest of the stack depends on them."
+  },
+  "profile_sources": [
+   {
+    "type": "database",
+    "title": "Invest Taiwan — Semiconductor industry",
+    "url": "https://investtaiwan.nat.gov.tw/showIndInfo?guid=1&lang=eng",
+    "published": "2026-08-29",
+    "quote": "ranked first in the world in both the foundry and packaging & testing industries",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "database",
+    "title": "Invest Taiwan — Semiconductor industry",
+    "url": "https://investtaiwan.nat.gov.tw/showIndInfo?guid=1&lang=eng",
+    "published": "2026-08-29",
+    "quote": "In 2020, the Taiwan semiconductors industry chain was worth NT$3.22 trillion (US$108.8 billion)"
+   },
+   {
+    "type": "database",
+    "title": "Invest Taiwan — Semiconductor industry",
+    "url": "https://investtaiwan.nat.gov.tw/showIndInfo?guid=1&lang=eng",
+    "published": "2026-08-29",
+    "quote": "Taiwan has been the largest consumer of semiconductor materials in the world for 11"
+   },
+   {
+    "type": "testimony",
+    "title": "Executive Yuan: Government aims to boost semiconductor competitiveness",
+    "url": "https://english.ey.gov.tw/Page/61BF20C3E89B856/c4fb9f94-1c3a-4fbc-af70-066b3b1108e6",
+    "published": "2026-08-29",
+    "quote": "The semiconductor industry is the backbone and driving force of Taiwan's high-tech industries."
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 93,
+    "why": {
+     "ru": "Первое место в мире сразу и по контрактному производству, и по корпусированию с тестированием",
+     "en": "First in the world at once in foundry and in packaging with testing"
+    }
+   },
+   "lock_in_depth": {
+    "value": 90,
+    "why": {
+     "ru": "Цепочка промышленности острова оценена его правительством в NT$3.22 trillion",
+     "en": "The island's industry chain is valued by its own government at NT$3.22 trillion"
+    }
+   },
+   "time_to_replace": {
+    "value": 95,
+    "why": {
+     "ru": "Одиннадцать лет подряд крупнейший в мире потребитель полупроводниковых материалов — такую базу не переносят",
+     "en": "The world's largest consumer of semiconductor materials for eleven straight years; such a base does not move"
+    }
+   },
+   "concentration": {
+    "value": 90,
+    "why": {
+     "ru": "По собственному счёту — первое место в мире по контрактному производству",
+     "en": "By its own count, first in the world in the foundry industry"
+    }
+   }
+  },
+  "edges": [],
+  "candidates": [],
+  "gaps": "Свежей доли острова в передовых узлах в государственных документах не нашлось: портал Invest Taiwan даёт цепочку 2020 года. Долю в 92% передовых мощностей называют вторичные источники, и без первичной цитаты она не поехала."
+ },
+ {
+  "id": "netherlands",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Нидерланды — юрисдикция, откуда вывозят станки для печати самых сложных чипов, и государство, решающее, кому их можно вывезти. Национальная мера экспортного контроля покрывает узкий набор технологий производственного цикла и с 1 апреля 2025 года расширена. Под требование разрешения попало и измерительное оборудование: «specific measuring and inspection equipment that can be used in the production of advanced semiconductors». Мера применяется к вывозу из страны во все назначения за пределами ЕС и запретом не является — заявку рассматривают отдельно. Отсюда роль юрисдикции: она не производит чипы, она держит разрешение на вывоз того, без чего их не печатают.",
+   "en": "The Netherlands is the jurisdiction the machines that print the hardest chips are exported from, and the state that decides who may receive them. Its national export control measure covers a narrow set of technologies in the production cycle and was widened on 1 April 2025. The authorisation requirement now also reaches metrology: \"specific measuring and inspection equipment that can be used in the production of advanced semiconductors\". The measure applies to exports from the Netherlands to all destinations outside the EU and is not a ban — each application is assessed on its own. Hence the role: the country makes no chips, it holds the permission to export what they cannot be printed without."
+  },
+  "profile_sources": [
+   {
+    "type": "testimony",
+    "title": "Klever: export controls on advanced semiconductor manufacturing equipment to be tightened",
+    "url": "https://www.government.nl/latest/news/2025/01/15/klever-export-controls-on-advanced-semiconductor-manufacturing-equipment-to-be-tightened",
+    "published": "2025-01-15",
+    "quote": "On 1 April 2025 the Netherlands will modify its national export control measure"
+   },
+   {
+    "type": "testimony",
+    "title": "Klever: export controls on advanced semiconductor manufacturing equipment to be tightened",
+    "url": "https://www.government.nl/latest/news/2025/01/15/klever-export-controls-on-advanced-semiconductor-manufacturing-equipment-to-be-tightened",
+    "published": "2025-01-15",
+    "quote": "specific measuring and inspection equipment that can be used in the production of advanced semiconductors"
+   },
+   {
+    "type": "testimony",
+    "title": "Klever: export controls on advanced semiconductor manufacturing equipment to be tightened",
+    "url": "https://www.government.nl/latest/news/2025/01/15/klever-export-controls-on-advanced-semiconductor-manufacturing-equipment-to-be-tightened",
+    "published": "2025-01-15",
+    "quote": "The national measure applies to exports from the Netherlands to all destinations outside the EU",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "testimony",
+    "title": "The Netherlands expands export control measure for advanced semiconductor manufacturing equipment",
+    "url": "https://www.government.nl/latest/news/2024/09/06/the-netherlands-expands-export-control-measure-advanced-semiconductor-manufacturing-equipment",
+    "published": "2024-09-06",
+    "quote": "the export of these technologies will now also require an export authorisation"
+   },
+   {
+    "type": "testimony",
+    "title": "Export controls on strategic goods and services",
+    "url": "https://www.government.nl/themes/economy/export-controls-of-strategic-goods",
+    "published": "2026-08-29",
+    "quote": "Companies that trade in such goods must therefore comply with strict rules."
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 88,
+    "why": {
+     "ru": "Разрешение на вывоз станков выдаёт эта юрисдикция, и обойти его нечем",
+     "en": "Permission to export the machines is granted by this jurisdiction and cannot be bypassed"
+    }
+   },
+   "lock_in_depth": {
+    "value": 84,
+    "why": {
+     "ru": "Мера достаёт и до станков, и до измерительного оборудования того же цикла",
+     "en": "The measure reaches both the machines and the metrology of the same cycle"
+    }
+   },
+   "time_to_replace": {
+    "value": 86,
+    "why": {
+     "ru": "Режим не сворачивается, а расширяется: очередное расширение с 1 апреля 2025 года",
+     "en": "The regime is not winding down but widening: the latest extension from 1 April 2025"
+    }
+   },
+   "concentration": {
+    "value": 86,
+    "why": {
+     "ru": "Мера покрывает вывоз во все назначения за пределами ЕС без исключений",
+     "en": "The measure covers exports to all destinations outside the EU without exception"
+    }
+   }
+  },
+  "edges": [
+   {
+    "id": "netherlands__asml__export_controlled_by",
+    "stance": "confirms",
+    "sources": [
+     {
+      "type": "testimony",
+      "title": "Klever: export controls on advanced semiconductor manufacturing equipment to be tightened",
+      "url": "https://www.government.nl/latest/news/2025/01/15/klever-export-controls-on-advanced-semiconductor-manufacturing-equipment-to-be-tightened",
+      "published": "2025-01-15",
+      "quote": "very specific technologies in the production cycle of semiconductors, such as lithography equipment"
+     }
+    ]
+   }
+  ],
+  "candidates": [],
+  "gaps": "Ни один документ правительства не называет ASML поимённо — мера написана через классы оборудования, а не имена компаний."
+ },
+ {
+  "id": "south-korea",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Южная Корея — юрисдикция двух из трёх мировых производителей быстрой памяти для ускорителей. По счёту собственного министерства торговли полупроводники выросли на 43.9 percent до $141.9 billion за 2024 год. Годовой экспорт страны достиг исторического максимума в том же году. Министерство прямо называет, чем именно рос экспорт чипов: «DDR5s and HBMs led the overall growth». Отдельно государство добивает цепочку деньгами извне: заявлено $0.9 billion вложений семи глобальных компаний, среди которых производители полупроводникового оборудования.",
+   "en": "South Korea is the jurisdiction of two of the world's three makers of the fast memory accelerators need. By the count of its own trade ministry, semiconductors grew 43.9 percent to $141.9 billion over 2024. The country's annual exports reached an all-time high the same year. The ministry names exactly what drove chip exports: \"DDR5s and HBMs led the overall growth\". Separately the state tops the chain up with outside money: $0.9 billion of pledged investment by seven global companies, among them makers of semiconductor equipment."
+  },
+  "profile_sources": [
+   {
+    "type": "testimony",
+    "title": "MOTIE: Korea's annual exports reach new highs in 2024",
+    "url": "https://english.motie.go.kr/eng/article/EATCLdfa319ada/2185/view",
+    "published": "2025-01-02",
+    "quote": "Semiconductors soared 43.9 percent to $141.9 billion, maintaining their upward trajectory for the",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "testimony",
+    "title": "MOTIE: Korea's annual exports reach new highs in 2024",
+    "url": "https://english.motie.go.kr/eng/article/EATCLdfa319ada/2185/view",
+    "published": "2025-01-02",
+    "quote": "Korea's annual exports for the year of 2024 amounted to an all-time high"
+   },
+   {
+    "type": "testimony",
+    "title": "MOTIE: Korea's annual exports reach new highs in 2024",
+    "url": "https://english.motie.go.kr/eng/article/EATCLdfa319ada/2185/view",
+    "published": "2025-01-02",
+    "quote": "DDR5s and HBMs led the overall growth and chip exports continued their upward climb"
+   },
+   {
+    "type": "testimony",
+    "title": "MOTIE: Invest Korea Summit 2024",
+    "url": "https://english.motie.go.kr/eng/article/EATCLdfa319ada/2112/view",
+    "published": "2024-11-01",
+    "quote": "a $0.9 billion worth of investments by seven global companies specializing in semiconductor equipment"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 82,
+    "why": {
+     "ru": "Министерство само называет DDR5 и HBM тем, чем рос экспорт чипов страны",
+     "en": "The ministry itself names DDR5 and HBM as what drove the country's chip exports"
+    }
+   },
+   "lock_in_depth": {
+    "value": 78,
+    "why": {
+     "ru": "Полупроводники дали $141.9 billion экспорта за один год",
+     "en": "Semiconductors delivered $141.9 billion of exports in a single year"
+    }
+   },
+   "time_to_replace": {
+    "value": 84,
+    "why": {
+     "ru": "Рост на 43.9 percent за год идёт на производственной базе, которую строят десятилетиями",
+     "en": "Growth of 43.9 percent in a year rests on a manufacturing base built over decades"
+    }
+   },
+   "concentration": {
+    "value": 80,
+    "why": {
+     "ru": "Экспорт чипов страны рос именно на DDR5 и HBM — по счёту её собственного министерства",
+     "en": "The country's chip exports grew on DDR5 and HBM, by its own ministry's count"
+    }
+   }
+  },
+  "edges": [],
+  "candidates": [],
+  "gaps": "Ни Samsung, ни SK hynix министерство поимённо не называет: экспортная статистика написана по товарным группам."
+ },
+ {
+  "id": "china",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Китай на этой карте — не только рынок, закрытый чужими экспортными правилами, но и юрисдикция, которая держит собственный экспортный шлюз. Министерство коммерции и таможня с одобрения Госсовета ввели контроль над вывозом редкоземельных позиций, и вывозящий обязан получать лицензию. Государство настаивает, что это не запрет: «China's export controls are not export bans», а «Licenses will be granted for eligible applications». Заявленная причина — национальная безопасность и международные обязательства. Для стека это второй шлюз навстречу американскому: материалы, без которых не делают магниты и оптику, проходят через разрешение той же природы, что и чипы.",
+   "en": "On this map China is not only a market closed by someone else's export rules, but a jurisdiction holding an export gate of its own. The commerce ministry and customs, with State Council approval, placed rare-earth items under export control, and the exporter must obtain a licence. The state insists this is not a ban: \"China's export controls are not export bans\", and \"Licenses will be granted for eligible applications\". The stated reason is national security and international obligations. For the stack this is a second gate facing the American one: the materials magnets and optics cannot be made without pass through a permission of the same kind as chips."
+  },
+  "profile_sources": [
+   {
+    "type": "testimony",
+    "title": "MOFCOM Spokesperson's Remarks on China's Recent Economic and Trade Policies",
+    "url": "https://english.www.gov.cn/news/202510/13/content_WS68ecc859c6d00ca5f9a06bc8.html",
+    "published": "2025-10-13",
+    "quote": "China's export controls are not export bans"
+   },
+   {
+    "type": "testimony",
+    "title": "MOFCOM Spokesperson's Remarks on China's Recent Economic and Trade Policies",
+    "url": "https://english.www.gov.cn/news/202510/13/content_WS68ecc859c6d00ca5f9a06bc8.html",
+    "published": "2025-10-13",
+    "quote": "Licenses will be granted for eligible applications"
+   },
+   {
+    "type": "testimony",
+    "title": "Announcement No.18 of 2025 — export control on medium and heavy rare earth items",
+    "url": "https://english.mofcom.gov.cn/Policies/AnnouncementsOrders/art/2025/art_0dd87cbee7b045bf93fabe6ab2faceee.html",
+    "published": "2025-04-04",
+    "quote": "The exporter shall apply for the license from the competent commercial authority",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "testimony",
+    "title": "Announcement No.18 of 2025 — export control on medium and heavy rare earth items",
+    "url": "https://english.mofcom.gov.cn/Policies/AnnouncementsOrders/art/2025/art_0dd87cbee7b045bf93fabe6ab2faceee.html",
+    "published": "2025-04-04",
+    "quote": "safeguard national security and interests and fulfill international obligations"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 80,
+    "why": {
+     "ru": "Лицензию на вывоз редкоземельных позиций выдаёт компетентный орган этой юрисдикции",
+     "en": "The licence to export rare-earth items is granted by this jurisdiction's competent authority"
+    }
+   },
+   "lock_in_depth": {
+    "value": 72,
+    "why": {
+     "ru": "Контроль наложен на позиции, а не на компании: обойти его сменой контрагента нельзя",
+     "en": "The control is placed on items, not companies: changing counterparty does not bypass it"
+    }
+   },
+   "time_to_replace": {
+    "value": 78,
+    "why": {
+     "ru": "Режим держится и расширяется, а не сворачивается: контроль объявлен постоянным механизмом",
+     "en": "The regime holds and widens rather than winds down: the control is declared a standing mechanism"
+    }
+   },
+   "concentration": {
+    "value": 84,
+    "why": {
+     "ru": "Разрешение на вывоз выдаёт один орган Госсовета, альтернативного шлюза нет",
+     "en": "One State Council authority grants the export licence; there is no alternative gate"
+    }
+   }
+  },
+  "edges": [],
+  "candidates": [],
+  "gaps": "Экспортные объявления написаны через позиции, а не через компании, поэтому подтвердить ими связи с DeepSeek или NVIDIA нечем. Документов о полупроводниковом импортозамещении на английском у gov.cn не нашлось."
+ },
+ {
+  "id": "kubernetes",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Kubernetes — открытая система, автоматизирующая развёртывание, масштабирование и управление контейнерными приложениями. Проект открыт Google в 2014 году и с тех пор живёт под Cloud Native Computing Foundation, где имеет статус graduated. Своё происхождение проект описывает прямо: он опирается на полтора десятилетия опыта Google по запуску нагрузок в продакшене. Для карты это уровень, на котором стандартизуется всё остальное: обучающие и инференс-стеки едут поверх него, а не рядом. Собственной выручки у узла нет — он не компания, а стандарт с управляющим комитетом.",
+   "en": "Kubernetes is an open source system that automates deployment, scaling and management of containerized applications. Google open sourced the project in 2014 and it has lived under the Cloud Native Computing Foundation since, with graduated status. The project states its own origin plainly: it builds on a decade and a half of Google experience running production workloads. For the map it is the layer everything else standardizes on: training and inference stacks ride on top of it rather than beside it. The node has no revenue of its own — it is not a company but a standard with a steering committee."
+  },
+  "profile_sources": [
+   {
+    "type": "product_doc",
+    "title": "Kubernetes — home",
+    "url": "https://kubernetes.io/",
+    "published": "2026-08-29",
+    "quote": "Kubernetes, also known as K8s, is an open source system for automating deployment"
+   },
+   {
+    "type": "product_doc",
+    "title": "Kubernetes — home",
+    "url": "https://kubernetes.io/",
+    "published": "2026-08-29",
+    "quote": "We are a CNCF graduated project",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "product_doc",
+    "title": "Kubernetes — Overview",
+    "url": "https://kubernetes.io/docs/concepts/overview/",
+    "published": "2026-08-29",
+    "quote": "Google open sourced the Kubernetes project in 2014."
+   },
+   {
+    "type": "product_doc",
+    "title": "Kubernetes — Overview",
+    "url": "https://kubernetes.io/docs/concepts/overview/",
+    "published": "2026-08-29",
+    "quote": "Kubernetes is a portable, extensible, open source platform for managing containerized workloads and services"
+   },
+   {
+    "type": "product_doc",
+    "title": "kubernetes/kubernetes — README",
+    "url": "https://github.com/kubernetes/kubernetes",
+    "published": "2026-08-29",
+    "quote": "Kubernetes is hosted by the Cloud Native Computing Foundation (CNCF)."
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 80,
+    "why": {
+     "ru": "Общий слой, на котором стандартизуются чужие стеки; статус graduated в CNCF",
+     "en": "The common layer other stacks standardize on; graduated status in the CNCF"
+    }
+   },
+   "lock_in_depth": {
+    "value": 74,
+    "why": {
+     "ru": "Переносимая по замыслу платформа: замок держится привычкой операторов, а не форматом",
+     "en": "A portable platform by design: the lock is operator habit, not format"
+    }
+   },
+   "time_to_replace": {
+    "value": 76,
+    "why": {
+     "ru": "За проектом полтора десятилетия опыта Google, повторить который заново придётся целиком",
+     "en": "Behind it stands a decade and a half of Google experience that a replacement would have to redo"
+    }
+   },
+   "concentration": {
+    "value": 82,
+    "why": {
+     "ru": "Единственный проект оркестрации со статусом graduated в фонде, где живут смежные",
+     "en": "The only orchestration project with graduated status in the foundation its neighbours live in"
+    }
+   }
+  },
+  "edges": [
+   {
+    "source": "kubernetes",
+    "target": "google",
+    "type": "path_dependent_on",
+    "direction": "upstream",
+    "strength": 70,
+    "lock_in_depth": 40,
+    "substitutability": 60,
+    "is_reversible": true,
+    "risk_level": "low",
+    "risk_type": "technical",
+    "risk_timeline": "5y+",
+    "risk_mitigation": {
+     "ru": "Проект передан фонду и имеет собственный управляющий комитет, поэтому происхождение не даёт контроля",
+     "en": "The project sits with a foundation and has its own steering committee, so origin grants no control"
+    },
+    "note": {
+     "ru": "Проект открыт Google в 2014 году и наследует полтора десятилетия его опыта запуска нагрузок в продакшене.",
+     "en": "Google open sourced the project in 2014 and it inherits a decade and a half of that company's production experience."
+    },
+    "stance": "confirms",
+    "sources": [
+     {
+      "type": "product_doc",
+      "title": "Kubernetes — Overview",
+      "url": "https://kubernetes.io/docs/concepts/overview/",
+      "published": "2026-08-29",
+      "quote": "Google open sourced the Kubernetes project in 2014."
+     },
+     {
+      "type": "product_doc",
+      "title": "kubernetes/kubernetes — README",
+      "url": "https://github.com/kubernetes/kubernetes",
+      "published": "2026-08-29",
+      "quote": "Kubernetes builds upon a decade and a half of experience at Google"
+     }
+    ]
+   }
+  ],
+  "candidates": [
+   {
+    "name": "Cloud Native Computing Foundation",
+    "why": "проект живёт под этим фондом и носит его статус graduated; фонда на карте нет",
+    "url": "https://github.com/kubernetes/kubernetes",
+    "quote": "Kubernetes is hosted by the Cloud Native Computing Foundation (CNCF)."
+   }
+  ],
+  "gaps": "Доли Kubernetes среди систем оркестрации не публикует ни проект, ни фонд; цифра опёрта на статус graduated."
+ },
+ {
+  "id": "micron",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Micron — американский производитель памяти и накопителей: DRAM, HBM, NAND. Его собственная отчётность за 2025 год показывает рост выручки на 49% к 2024 году и концентрацию, о которой карта раньше не знала: на одного заказчика пришлось 17 % общей выручки. Восемьдесят процентов выручки того же года пришло с отгрузок за пределы США. В 2025 году компания отгрузила образцы HBM4 36GB 12-high нескольким ключевым заказчикам. Конкурентов она называет сама и поимённо: Samsung, SK hynix, Kioxia, Sandisk и две китайские компании.",
+   "en": "Micron is an American maker of memory and storage: DRAM, HBM, NAND. Its own filing for 2025 shows revenue up 49% against 2024 and a concentration the map did not know about: one customer accounted for 17 % of total revenue. Eighty percent of that year's revenue came from shipments outside the United States. In 2025 the company delivered HBM4 36GB 12-high samples to several key customers. It names its competitors itself and by name: Samsung, SK hynix, Kioxia, Sandisk and two Chinese companies."
+  },
+  "profile_sources": [
+   {
+    "type": "sec_filing",
+    "title": "Micron 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+    "published": "2025-10-03",
+    "quote": "Revenue from one customer was 17 % (primarily included in the CMBU segment) of total",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "sec_filing",
+    "title": "Micron 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+    "published": "2025-10-03",
+    "quote": "Total revenue for 2025 increased 49% as compared to 2024 primarily due to increases"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Micron 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+    "published": "2025-10-03",
+    "quote": "In 2025, we delivered samples of HBM4 36GB 12-high to multiple key customers"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Micron 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+    "published": "2025-10-03",
+    "quote": "approximately 80% of our revenue in 2025 was from products shipped to customer locations"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Micron 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+    "published": "2025-10-03",
+    "quote": "including Samsung Electronics Co., Ltd.; SK hynix Inc.; Kioxia Holdings Corporation; Sandisk Corporation"
+   },
+   {
+    "type": "company_pr",
+    "title": "Micron — Our Company",
+    "url": "https://www.micron.com/about/our-company",
+    "published": "2026-08-29",
+    "quote": "We are a world leader in innovative memory solutions that transform how the world uses"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 70,
+    "why": {
+     "ru": "Компания сама называет пятерых конкурентов по имени — функция разделена, а не занята одним",
+     "en": "The company names five competitors itself — the function is shared, not held by one"
+    }
+   },
+   "lock_in_depth": {
+    "value": 66,
+    "why": {
+     "ru": "Память квалифицируют под платформу заказчика: образцы HBM4 36GB 12-high идут ключевым заказчикам заранее",
+     "en": "Memory is qualified against the customer platform: HBM4 36GB 12-high samples go to key customers in advance"
+    }
+   },
+   "time_to_replace": {
+    "value": 72,
+    "why": {
+     "ru": "Выручка выросла на 49% за год — мощности такого масштаба строят годами",
+     "en": "Revenue grew 49% in a year; capacity of that scale takes years to build"
+    }
+   },
+   "concentration": {
+    "value": 68,
+    "why": {
+     "ru": "На одного заказчика пришлось 17 % выручки при пяти названных конкурентах",
+     "en": "One customer accounted for 17 % of revenue against five named competitors"
+    }
+   }
+  },
+  "edges": [
+   {
+    "id": "micron__sk-hynix__competes_with",
+    "stance": "confirms",
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "Micron 10-K FY2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+      "published": "2025-10-03",
+      "quote": "including Samsung Electronics Co., Ltd.; SK hynix Inc.; Kioxia Holdings Corporation; Sandisk Corporation"
+     }
+    ]
+   },
+   {
+    "source": "micron",
+    "target": "samsung",
+    "type": "competes_with",
+    "direction": "lateral",
+    "strength": 70,
+    "lock_in_depth": 20,
+    "substitutability": 70,
+    "is_reversible": true,
+    "risk_level": "medium",
+    "risk_type": "market",
+    "risk_timeline": "1-2y",
+    "risk_mitigation": {
+     "ru": "Заказчики держат несколько квалифицированных поставщиков памяти сразу",
+     "en": "Customers keep several qualified memory suppliers at once"
+    },
+    "note": {
+     "ru": "Названа в собственной отчётности Micron первой в списке конкурентов по памяти и накопителям.",
+     "en": "Named first in Micron's own filing among competitors in memory and storage."
+    },
+    "stance": "confirms",
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "Micron 10-K FY2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+      "published": "2025-10-03",
+      "quote": "including Samsung Electronics Co., Ltd.; SK hynix Inc.; Kioxia Holdings Corporation; Sandisk Corporation"
+     }
+    ]
+   },
+   {
+    "source": "micron",
+    "target": "kioxia",
+    "type": "competes_with",
+    "direction": "lateral",
+    "strength": 55,
+    "lock_in_depth": 15,
+    "substitutability": 75,
+    "is_reversible": true,
+    "risk_level": "low",
+    "risk_type": "market",
+    "risk_timeline": "1-2y",
+    "risk_mitigation": {
+     "ru": "Конкуренция идёт в NAND, где квалифицированных производителей несколько",
+     "en": "The rivalry runs in NAND, where several qualified makers exist"
+    },
+    "note": {
+     "ru": "Названа в отчётности Micron среди конкурентов на рынках памяти и накопителей.",
+     "en": "Named in Micron's filing among competitors in the memory and storage markets."
+    },
+    "stance": "confirms",
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "Micron 10-K FY2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+      "published": "2025-10-03",
+      "quote": "including Samsung Electronics Co., Ltd.; SK hynix Inc.; Kioxia Holdings Corporation; Sandisk Corporation"
+     }
+    ]
+   },
+   {
+    "source": "micron",
+    "target": "sandisk",
+    "type": "competes_with",
+    "direction": "lateral",
+    "strength": 55,
+    "lock_in_depth": 15,
+    "substitutability": 75,
+    "is_reversible": true,
+    "risk_level": "low",
+    "risk_type": "market",
+    "risk_timeline": "1-2y",
+    "risk_mitigation": {
+     "ru": "Конкуренция идёт в NAND, где квалифицированных производителей несколько",
+     "en": "The rivalry runs in NAND, where several qualified makers exist"
+    },
+    "note": {
+     "ru": "Названа в отчётности Micron среди конкурентов на рынках памяти и накопителей.",
+     "en": "Named in Micron's filing among competitors in the memory and storage markets."
+    },
+    "stance": "confirms",
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "Micron 10-K FY2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+      "published": "2025-10-03",
+      "quote": "including Samsung Electronics Co., Ltd.; SK hynix Inc.; Kioxia Holdings Corporation; Sandisk Corporation"
+     }
+    ]
+   }
+  ],
+  "candidates": [
+   {
+    "name": "ChangXin Memory Technologies",
+    "why": "названа Micron конкурентом на рынке памяти; китайских производителей DRAM на карте нет",
+    "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+    "quote": "ChangXin Memory Technologies, Inc. (“CXMT”); and Yangtze Memory Technologies Co."
+   },
+   {
+    "name": "Yangtze Memory Technologies",
+    "why": "названа Micron конкурентом на рынке накопителей; китайских производителей NAND на карте нет",
+    "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/mu-20250828.htm",
+    "quote": "ChangXin Memory Technologies, Inc. (“CXMT”); and Yangtze Memory Technologies Co."
+   }
+  ],
+  "gaps": "Заказчик, давший 17 % выручки, в отчётности не назван — правило раскрытия этого не требует."
+ },
+ {
+  "id": "cfius",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "CFIUS — межведомственный комитет, которому поручено рассматривать сделки с иностранными инвестициями в американские компании и отдельные сделки иностранных лиц с недвижимостью в США. Смысл рассмотрения записан в его же мандате: определить, как сделка влияет на национальную безопасность страны. Председательствует в комитете министерство финансов США, а обслуживает его работу Office of Investment Security. Собственного издателя у комитета нет — его решения выходят документами председательствующего ведомства, и правило собственной цитаты для него снимается этим фактом. На карте он стоит выше рынка: не покупает и не продаёт, а решает, состоится ли покупка.",
+   "en": "CFIUS is an interagency committee charged with reviewing transactions involving foreign investment into United States businesses and certain foreign-person real estate transactions in the United States. The point of the review is written into its own mandate: to determine the effect of such transactions on the national security of the country. The U.S. Treasury chairs the committee and the Office of Investment Security carries its work. The committee has no publisher of its own — its decisions appear as documents of the chairing department, and the self-citation rule is waived for it by that fact. On the map it stands above the market: it neither buys nor sells, it decides whether a purchase happens."
+  },
+  "profile_sources": [
+   {
+    "type": "testimony",
+    "title": "U.S. Treasury — Committee on Foreign Investment in the United States",
+    "url": "https://home.treasury.gov/policy-issues/international/the-committee-on-foreign-investment-in-the-united-states-cfius",
+    "published": "2026-08-29",
+    "quote": "an interagency committee authorized to review certain transactions involving foreign investment into United States businesses",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "testimony",
+    "title": "U.S. Treasury — Committee on Foreign Investment in the United States",
+    "url": "https://home.treasury.gov/policy-issues/international/the-committee-on-foreign-investment-in-the-united-states-cfius",
+    "published": "2026-08-29",
+    "quote": "in order to determine the effect of such transactions on the national security of"
+   },
+   {
+    "type": "testimony",
+    "title": "U.S. Treasury — Committee on Foreign Investment in the United States",
+    "url": "https://home.treasury.gov/policy-issues/international/the-committee-on-foreign-investment-in-the-united-states-cfius",
+    "published": "2026-08-29",
+    "quote": "The Office of Investment Security fulfills the U.S. Department of the Treasury's role as chair"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 78,
+    "why": {
+     "ru": "Один межведомственный комитет уполномочен рассматривать иностранные вложения в американские компании",
+     "en": "One interagency committee is authorized to review foreign investment into United States businesses"
+    }
+   },
+   "lock_in_depth": {
+    "value": 70,
+    "why": {
+     "ru": "Достаёт и до сделок с компаниями, и до отдельных сделок с недвижимостью",
+     "en": "It reaches both company transactions and certain real estate transactions"
+    }
+   },
+   "time_to_replace": {
+    "value": 82,
+    "why": {
+     "ru": "Мандат записан законом и обслуживается постоянным подразделением министерства финансов",
+     "en": "The mandate is statutory and carried by a standing Treasury office"
+    }
+   },
+   "concentration": {
+    "value": 85,
+    "why": {
+     "ru": "Альтернативного органа для той же проверки нет: комитет один",
+     "en": "There is no alternative body for the same review: the committee is one"
+    }
+   }
+  },
+  "edges": [],
+  "candidates": [],
+  "gaps": "Своего издателя у комитета нет: страницы выходят на домене министерства финансов. Годовые отчёты Конгрессу с числом рассмотренных сделок лежат приложениями PDF, цитату из них этот проход не брал."
+ }
+]

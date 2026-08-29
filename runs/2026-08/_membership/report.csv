@@ -4,7 +4,7 @@ amd,AMD,1,1,1,3,1,0,1,1,0
 amkor,Amkor Technology,1,0,1,4,1,0,0,1,0
 applied-materials,Applied Materials,1,1,1,1,1,0,1,0,0
 ase,ASE Technology,1,0,1,4,1,0,0,1,0
-asml,ASML,1,1,1,2,1,0,1,1,0
+asml,ASML,1,1,1,4,1,0,1,1,0
 astera-labs,Astera Labs,1,1,1,3,1,0,1,1,0
 blackrock,BlackRock,1,0,1,1,1,0,0,0,0
 blackstone,Blackstone,1,0,1,1,1,0,0,0,0
@@ -12,8 +12,6 @@ bloom-energy,Bloom Energy,1,1,1,1,1,0,1,0,0
 boyd,Boyd Corporation,1,0,1,1,1,0,0,0,0
 brookfield,Brookfield,1,0,1,2,1,0,0,1,0
 cadence,Cadence,1,1,1,2,1,0,1,1,0
-cfius,CFIUS,1,0,0,2,1,0,1,1,0
-china,Китай,1,0,1,3,1,0,0,1,0
 chips-act,CHIPS Act,1,0,0,1,1,0,1,0,0
 cisco,Cisco,1,0,1,2,1,0,0,1,0
 coherent,Coherent,1,1,1,2,1,0,1,1,0
@@ -32,19 +30,16 @@ japan,Япония,1,0,1,2,1,0,0,1,0
 jax,JAX,1,0,1,3,1,0,0,1,0
 kioxia,Kioxia,1,0,1,0,1,0,0,0,0
 kla,KLA,1,1,1,1,1,0,1,0,0
-kubernetes,Kubernetes,1,0,1,3,1,0,0,1,0
 lam-research,Lam Research,1,1,1,4,1,0,1,1,0
 lambda,Lambda Labs,1,0,1,2,1,0,0,1,0
 lightspeed,Lightspeed Venture Partners,1,0,1,1,1,0,0,0,0
 lite-on,LiteOn Technology,1,0,1,1,1,0,0,0,0
 marvell,Marvell,1,1,1,1,1,0,1,0,0
 mgx,MGX,1,0,1,3,1,0,0,1,0
-micron,Micron,1,0,1,4,1,0,0,1,0
 mistral,Mistral AI,1,0,1,1,1,0,0,0,0
 mlcommons,MLCommons,1,0,1,2,1,0,0,1,0
 nccl,NCCL,1,0,1,2,1,0,0,1,0
 nebius,Nebius,1,1,1,3,1,0,1,1,0
-netherlands,Нидерланды,1,0,1,2,1,0,0,1,0
 nim,NVIDIA NIM,1,0,1,2,1,0,0,1,0
 nvent,nVent,1,1,1,2,1,0,1,1,0
 oklo,Oklo,1,0,1,0,1,0,0,0,0
@@ -64,23 +59,22 @@ siemens-eda,Siemens EDA,1,0,1,1,1,0,0,0,0
 siemens-energy,Siemens Energy,1,0,1,1,1,0,0,0,0
 singapore,Сингапур,1,0,1,1,1,0,0,0,0
 snowflake,Snowflake,1,0,1,1,1,0,0,0,0
-south-korea,Южная Корея,1,0,1,2,1,0,0,1,0
 supermicro,Supermicro,1,1,1,3,1,0,1,1,0
 synopsys,Synopsys,1,1,1,3,1,0,1,1,0
-taiwan,Тайвань,1,0,1,2,1,0,0,1,0
 tensorrt,TensorRT,1,0,1,2,1,0,0,1,0
 thrive,Thrive Capital,1,0,1,1,1,0,0,0,0
 tokyo-electron,Tokyo Electron,1,0,1,0,1,0,0,0,0
 triton,OpenAI Triton,1,0,1,2,1,0,0,1,0
 wistron,Wistron,1,0,1,1,1,0,0,0,0
 xai,xAI,1,0,1,2,1,0,0,1,0
-zeiss-smt,Carl Zeiss SMT,1,0,1,0,1,0,0,0,0
 amazon,Amazon,5,4,1,6,1,1,1,1,1
 anthropic,Anthropic,6,5,1,5,1,1,1,1,1
 arista,Arista Networks,6,6,1,5,1,1,1,1,1
 arm,Arm,6,4,1,6,1,1,1,1,1
 bis,Bureau of Industry and Security,5,3,1,2,1,1,1,1,1
 broadcom,Broadcom,5,5,1,9,1,1,1,1,1
+cfius,CFIUS,4,0,0,2,1,1,1,1,1
+china,Китай,5,4,1,3,1,1,1,1,1
 coreweave,CoreWeave,7,7,1,7,1,1,1,1,1
 crusoe,Crusoe,5,3,1,5,1,1,1,1,1
 cuda,CUDA,6,3,1,17,1,1,1,1,1
@@ -88,12 +82,15 @@ databricks,Databricks,5,3,1,3,1,1,1,1,1
 deepseek,DeepSeek,5,3,1,4,1,1,1,1,1
 digital-realty,Digital Realty,6,6,1,4,1,1,1,1,1
 equinix,Equinix,6,6,1,5,1,1,1,1,1
-google,Google,6,4,1,7,1,1,1,1,1
+google,Google,6,4,1,8,1,1,1,1,1
 google-deepmind,Google DeepMind,5,3,1,2,1,1,1,1,1
 huggingface,Hugging Face,5,5,1,12,1,1,1,1,1
 intel,Intel,6,5,1,3,1,1,1,1,1
+kubernetes,Kubernetes,6,5,1,4,1,1,1,1,1
 meta,Meta,6,4,1,6,1,1,1,1,1
+micron,Micron,7,6,1,4,1,1,1,1,1
 microsoft,Microsoft,6,5,1,20,1,1,1,1,1
+netherlands,Нидерланды,6,5,1,2,1,1,1,1,1
 nventures,NVIDIA Ventures (NVentures),5,3,1,5,1,1,1,1,1
 nvidia,NVIDIA,6,6,1,113,1,1,1,1,1
 openai,OpenAI,7,3,1,21,1,1,1,1,1
@@ -102,7 +99,10 @@ pytorch,PyTorch,6,5,1,8,1,1,1,1,1
 samsung,Samsung,6,4,1,5,1,1,1,1,1
 sk-hynix,SK Hynix,6,5,1,4,1,1,1,1,1
 softbank,SoftBank,6,4,1,4,1,1,1,1,1
+south-korea,Южная Корея,5,4,1,2,1,1,1,1,1
+taiwan,Тайвань,5,4,1,2,1,1,1,1,1
 tsmc,TSMC,6,6,1,18,1,1,1,1,1
 usa,США,5,3,1,2,1,1,1,1,1
 vertiv,Vertiv,5,5,1,4,1,1,1,1,1
 vllm,vLLM,6,5,1,7,1,1,1,1,1
+zeiss-smt,Carl Zeiss SMT,10,9,1,2,1,1,1,1,1
