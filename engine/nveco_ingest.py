@@ -45,7 +45,17 @@ EDGE_COLUMNS = ["source", "target", "type", "direction", "strength", "lock_in_de
                 "risk_timeline", "risk_mitigation", "tech_node", "formed",
                 "strengthened", "note"]
 SOURCE_COLUMNS = ["owner_kind", "owner_key", "tier", "type", "title", "url",
-                  "published", "quote", "confidence"]
+                  "published", "quote", "confidence", "counter"]
+
+# Каталоги досье. Досье — исследование узла целиком и по его собственным документам;
+# слоевой обход — упоминание узла со стороны. Когда оба заявляют одну сущность,
+# профиль пишет досье: иначе строка, собранная из чужой отчётности, продолжала бы
+# перекрывать строку, собранную из документов самой сущности.
+DOSSIER_PREFIX = "nveco-dossier"
+
+
+def is_dossier(agent: str) -> bool:
+    return (agent or "").startswith(DOSSIER_PREFIX)
 
 WHY_COLUMNS = {"irreplaceability": "why_irreplaceability", "lock_in_depth": "why_lock_in",
                "time_to_replace": "why_time", "concentration": "why_concentration"}
@@ -272,7 +282,10 @@ def _validate_source(row):
     if not key:
         errors.append("нет owner_key")
 
-    tier, err = _int(row.get("tier"), 1, 6)
+    # Тир НЕ обязателен: его ставит движок по реестру издателей относительно предмета.
+    # Пустая клетка — это правильное поведение агента, а не пропуск. Заполненная
+    # проверяется на диапазон и сверяется с реестром ниже: врать в ней тоже нельзя.
+    tier, err = (None, None) if not _s(row, "tier") else _int(row.get("tier"), 1, 6)
     if err:
         errors.append(f"tier: {err}")
     stype = _s(row, "type").lower()
@@ -299,12 +312,23 @@ def _validate_source(row):
     # сущности это она сама, для источника связи — её первый конец. Второй конец
     # подставит nveco_score, когда связь уже собрана, и там тир пересчитывается
     # начисто. Здесь только предупреждение — расхождение не повод терять цитату.
+    subject = key if kind == "entity" else (key.split("__")[0] if key else None)
     if url and tier:
-        subject = key if kind == "entity" else (key.split("__")[0] if key else None)
         expect, _ = nveco.source_tier(url, subject)
         if expect and expect != tier:
             warnings.append(f"тир {tier} заявлен там, где по реестру издателей "
                             f"относительно '{subject}' тир {expect}")
+    if url and not tier:
+        tier = nveco.source_tier(url, subject)[0] or 6
+
+    # `counter` — цитата ПРОТИВОПОЛОЖНОЙ стороны: второй конец связи в своих
+    # документах утверждает обратное. Она не отменяет прямую цитату и не удаляется
+    # сверкой; связь получает `disputed` и везёт ОБЕ. У профиля второго конца нет,
+    # поэтому опровергать там нечего.
+    counter = _bool(row.get("counter"), False)
+    if counter and kind != "edge":
+        errors.append("counter ставится только на источник связи: у профиля нет "
+                      "второй стороны, которой можно противоречить")
 
     conf = None
     if _s(row, "confidence"):
@@ -323,7 +347,7 @@ def _validate_source(row):
     return {"owner_kind": kind, "owner_key": key, "tier": tier, "type": stype,
             "title": _s(row, "title") or None, "url": url,
             "published": _s(row, "published") or None, "quote": quote,
-            "confidence": conf}, [], warnings
+            "confidence": conf, "counter": counter}, [], warnings
 
 
 # ── проход по файлам ─────────────────────────────────────────────────────────
@@ -558,6 +582,7 @@ def ingest_month(month: str, scope_id: str = None) -> dict:
     per_file = {}
     warnings = []
     ents, facts, edges, srcs = {}, {}, {}, []
+    fact_owner = {}      # entity_id -> агент, чья рубрика принята
 
     def reject(agent, fname, line, reason, row):
         rejected.setdefault(agent, []).append(
@@ -582,15 +607,28 @@ def ingest_month(month: str, scope_id: str = None) -> dict:
                 reject(agent, "entities.csv", line, "; ".join(errs), row)
                 continue
             if clean["id"] in ents:
-                warnings.append(f"{agent}/entities.csv:{line} сущность '{clean['id']}' "
-                                f"уже заявлена другим агентом — объединена")
+                prev_agent = ents[clean["id"]].get("_agent")
+                # Досье побеждает упоминание: строка, собранная по собственным
+                # документам узла, перекрывает строку, собранную о нём со стороны.
+                # Между двумя досье и между двумя обходами побеждает первый — иначе
+                # порядок каталогов молча решал бы, чей профиль на карте.
+                wins = is_dossier(agent) and not is_dossier(prev_agent)
+                warnings.append(
+                    f"{agent}/entities.csv:{line} сущность '{clean['id']}' уже заявлена "
+                    f"агентом {prev_agent} — "
+                    + ("профиль перезаписан досье" if wins else "объединена"))
                 for k, v in clean.items():
                     if k == "layers":
                         for l in v:
                             if l not in ents[clean["id"]]["layers"]:
                                 ents[clean["id"]]["layers"].append(l)
-                    elif not ents[clean["id"]].get(k) and v:
+                    elif v and (wins or not ents[clean["id"]].get(k)):
                         ents[clean["id"]][k] = v
+                if not wins and is_dossier(prev_agent):
+                    # Владение остаётся за досье: снимать профиль с карты вправе тот,
+                    # кто его исследовал, а не тот, кто упомянул.
+                    per_agent[agent]["rows_kept"] += 1
+                    continue
             else:
                 ents[clean["id"]] = clean
             per_agent[agent]["rows_kept"] += 1
@@ -612,7 +650,21 @@ def ingest_month(month: str, scope_id: str = None) -> dict:
                 reject(agent, "factors.csv", line,
                        f"факторы для незаявленной сущности '{clean['entity_id']}'", row)
                 continue
+            # Оценку пишет тот, кто узел ИССЛЕДОВАЛ. Досье перекрывает слоевой обход,
+            # обход досье — нет; между равными побеждает первый. Без этого правила
+            # порядок каталогов решал бы, чья рубрика поедет в файл: каталоги
+            # читаются по алфавиту, и `nveco-silicon` затирал бы `nveco-dossier-02`
+            # ровно потому, что стоит в алфавите ниже.
+            prev = fact_owner.get(clean["entity_id"])
+            if prev and not (is_dossier(agent) and not is_dossier(prev)):
+                if prev != agent:
+                    warnings.append(f"{agent}/factors.csv:{line} факторы "
+                                    f"'{clean['entity_id']}' уже даны агентом {prev} — "
+                                    f"оставлены его")
+                per_agent[agent]["rows_kept"] += 1
+                continue
             facts[clean["entity_id"]] = clean["factors"]
+            fact_owner[clean["entity_id"]] = agent
             per_agent[agent]["rows_kept"] += 1
 
     # --- рёбра
@@ -782,12 +834,15 @@ def ingest_month(month: str, scope_id: str = None) -> dict:
         self_of = next((x for x in ends if nveco.is_self_source(s["url"], x)), None)
         con.execute(
             """INSERT OR IGNORE INTO nveco_source (owner_kind,owner_id,tier,type,title,
-                 url,published,quote,confidence,self_of) VALUES (?,?,?,?,?,?,?,?,?,?)""",
+                 url,published,quote,confidence,self_of,counter)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?)""",
             (s["owner_kind"], s["owner_key"], s["tier"], s["type"], s["title"],
-             s["url"], s["published"], s["quote"], s["confidence"], self_of))
-        con.execute("UPDATE nveco_source SET self_of=? WHERE owner_kind=? AND "
+             s["url"], s["published"], s["quote"], s["confidence"], self_of,
+             1 if s.get("counter") else 0))
+        con.execute("UPDATE nveco_source SET self_of=?, counter=? WHERE owner_kind=? AND "
                     "owner_id=? AND url=? AND quote=?",
-                    (self_of, s["owner_kind"], s["owner_key"], s["url"], s["quote"]))
+                    (self_of, 1 if s.get("counter") else 0,
+                     s["owner_kind"], s["owner_key"], s["url"], s["quote"]))
 
     # Тех-узлы — из конфига, а не из выдачи агента: это словарь, а не находка.
     for t in nveco.load_layers().get("tech_nodes", []) or []:
