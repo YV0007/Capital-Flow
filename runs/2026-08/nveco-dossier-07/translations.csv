@@ -1,0 +1,67 @@
+kind,id,field,lang,text
+entity,cisco,why_irreplaceability,en,The company itself lists a dozen and a half competitors across its markets
+entity,cisco,why_lock_in,en,The lock rests on lifecycle services rather than on a data format
+entity,cisco,why_time,en,"Network boxes change on a fleet refresh cycle, not by rewriting the stack"
+entity,cisco,why_concentration,en,"No customer reached 10% of revenue over three years, and a dozen and a half competitors are named"
+edge,cisco__broadcom__competes_with,risk_mitigation,en,"The rivalry covers part of the line, not the whole portfolio"
+edge,cisco__broadcom__competes_with,note,en,Named in Cisco's own list of competitors for some of its products and services.
+edge,cisco__dell__competes_with,risk_mitigation,en,Both sides sell into the same data centre at once
+edge,cisco__dell__competes_with,note,en,Named in Cisco's own competitor list.
+edge,cisco__hpe__competes_with,risk_mitigation,en,Both sides sell into the same data centre at once
+edge,cisco__hpe__competes_with,note,en,Named in Cisco's own competitor list.
+edge,cisco__microsoft__competes_with,risk_mitigation,en,Overlap covers part of the line only: cooperation and rivalry run side by side
+edge,cisco__microsoft__competes_with,note,en,Named in Cisco's own competitor list.
+edge,cisco__nvidia__competes_with,risk_mitigation,en,"The rivalry runs in the data-centre network fabric, not in accelerators"
+edge,cisco__nvidia__competes_with,note,en,Named in Cisco's own list of competitors for some of its products and services.
+edge,cisco__amazon__competes_with,risk_mitigation,en,The rivalry is limited to some products and services
+edge,cisco__amazon__competes_with,note,en,Named in Cisco's own competitor list.
+entity,dell,why_irreplaceability,en,Rack integration is work several qualified providers do in every market
+entity,dell,why_lock_in,en,"The lock is the channel: about 40% of revenue moves through intermediaries, not direct"
+entity,dell,why_time,en,"Changing integrator happens inside a procurement cycle, not a stack rebuild"
+entity,dell,why_concentration,en,Sales are spread geographically: approximately 45% of revenue outside the United States
+edge,dell__broadcom__path_dependent_on,risk_mitigation,en,Dell sells its own virtualisation stack alongside the third-party one
+edge,dell__broadcom__path_dependent_on,note,en,"After Broadcom acquired VMware the go-to-market terms changed, and that touched Dell's commercial relationship."
+entity,hpe,why_irreplaceability,en,"The company itself writes that supplier disruption would hit the whole market, not it alone"
+entity,hpe,why_lock_in,en,Turn-key systems co-engineered with NVIDIA tie its stack to another more deeply than resale would
+entity,hpe,why_time,en,Replacing the integrator happens inside a server procurement cycle
+entity,hpe,why_concentration,en,No customer exceeds 10% of receivables and sales are spread: about 61% outside the United States
+edge,hpe__nvidia__strategic_partner,risk_mitigation,en,HPE keeps its own networking and compute portfolio alongside
+edge,hpe__nvidia__strategic_partner,note,en,Not resale: the turn-key systems are co-engineered and combine hardware and software of both sides.
+edge,intel__hpe__supplies,risk_mitigation,en,HPE names AMD as the second source for the same processors
+edge,intel__hpe__supplies,note,en,Named by HPE as an x86 processor supplier and at once a single source for the entire market.
+edge,amd__hpe__supplies,risk_mitigation,en,HPE has a second source for the same processors
+edge,amd__hpe__supplies,note,en,Named by HPE as an x86 processor supplier alongside Intel.
+edge,broadcom__hpe__supplies,risk_mitigation,en,"A disruption would hit the whole market rather than one buyer, as HPE itself writes"
+edge,broadcom__hpe__supplies,note,en,Named by HPE as a supplier of standard parts and a single source for the entire market.
+entity,sandisk,why_irreplaceability,en,The company itself names four vertically integrated competitors in its market
+entity,sandisk,why_lock_in,en,The joint venture agreements bar both sides from working with third parties on flash memory
+entity,sandisk,why_time,en,The company has no manufacturing of its own: it depends on the joint venture to develop and make
+entity,sandisk,why_concentration,en,The top ten customers gave 44 % of revenue against four named competitors
+edge,sandisk__kioxia__strategic_partner,risk_mitigation,en,The restriction is mutual and binds both sides equally
+edge,sandisk__kioxia__strategic_partner,note,en,"The Flash Ventures joint venture: while it operates, neither side may make flash memory with third parties."
+edge,sandisk__samsung__competes_with,risk_mitigation,en,Customers keep several qualified suppliers at once
+edge,sandisk__samsung__competes_with,note,en,Named by Sandisk among vertically integrated competitors in flash memory.
+edge,sandisk__sk-hynix__competes_with,risk_mitigation,en,Customers keep several qualified suppliers at once
+edge,sandisk__sk-hynix__competes_with,note,en,Named by Sandisk among vertically integrated competitors in flash memory.
+entity,snowflake,why_irreplaceability,en,The named competitors are the three largest public clouds at once
+entity,snowflake,why_lock_in,en,"Capacity arrangements produced about 97% of revenue: the relationship is subscription, not one-off"
+entity,snowflake,why_time,en,"Moving a data warehouse is months of work, not years: the platform sits on a common cloud architecture"
+entity,snowflake,why_concentration,en,"13,328 customers, with their largest group giving approximately 43% of revenue"
+edge,snowflake__amazon__competes_with,risk_mitigation,en,The platform runs across several public clouds at once
+edge,snowflake__amazon__competes_with,note,en,Named by Snowflake among large public clouds that compete across all its markets.
+edge,snowflake__microsoft__competes_with,risk_mitigation,en,The platform runs across several public clouds at once
+edge,snowflake__microsoft__competes_with,note,en,Named by Snowflake among large public clouds that compete across all its markets.
+entity,salesforce,why_irreplaceability,en,The company itself describes enterprise applications as a market with low barriers to entry
+entity,salesforce,why_lock_in,en,Subscription to data and applications at once: the data layer gives agents context inside the same platform
+entity,salesforce,why_time,en,Moving enterprise data and processes takes years but is not a technical barrier
+entity,salesforce,why_concentration,en,No single customer reached ten percent of revenue
+entity,ge-vernova,why_irreplaceability,en,The company's installed base generates approximately 25% of the world's electricity
+entity,ge-vernova,why_lock_in,en,Servicing the installed base runs for decades and yields obligations of about $94.4 billion
+entity,ge-vernova,why_time,en,Generating equipment is installed for decades: from 25 MW to 3 GW per site
+entity,ge-vernova,why_concentration,en,Approximately 25% of the world's electricity comes off one company's installed base
+edge,ge-vernova__crusoe__supplies,risk_mitigation,en,The site keeps the turbine as backup rather than as its only source
+edge,ge-vernova__crusoe__supplies,note,en,An LM2500XPRESS gas turbine powers a Crusoe data centre as fast backup energy.
+entity,blackstone,why_irreplaceability,en,"The largest alternative asset manager by its own count, but not the only source of capital"
+entity,blackstone,why_lock_in,en,Site investments are long but replaceable: dozens of managers bring capital into this layer
+entity,blackstone,why_time,en,"Replacing a source of capital happens inside a fundraising cycle, not a construction one"
+entity,blackstone,why_concentration,en,"More than $1.3 trillion under management — largest by its own count, but the market is not held by one"

@@ -1,0 +1,1281 @@
+[
+ {
+  "id": "cisco",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Cisco — производитель сетевой инфраструктуры, который в своей отчётности прямо относит себя к слою обучения и вывода ИИ: «We provide network infrastructure to power AI training and inference workloads». Компания продаёт не только коробки, но и обслуживание в течение жизненного цикла продукта. Выручка программной части за 2025 финансовый год составила $22.3 billion с ростом на 21%. Ни один заказчик не дал 10% выручки ни в одном из трёх последних годов — концентрации спроса у узла нет. Список конкурентов компания приводит сама, и в нём стоят Arista, Broadcom, Dell, HPE, Microsoft и NVIDIA.",
+   "en": "Cisco makes network infrastructure and in its own filing places itself squarely in the AI training and inference layer: \"We provide network infrastructure to power AI training and inference workloads\". The company sells not only boxes but lifecycle services around them. Software revenue for fiscal 2025 was $22.3 billion, up 21%. No single customer accounted for 10% or more of revenue in any of the last three years — the node carries no demand concentration. The competitor list is the company's own, and it names Arista, Broadcom, Dell, HPE, Microsoft and NVIDIA."
+  },
+  "profile_sources": [
+   {
+    "type": "sec_filing",
+    "title": "Cisco 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+    "published": "2025-09-03",
+    "quote": "We provide network infrastructure to power AI training and inference workloads for both webscale providers"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Cisco 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+    "published": "2025-09-03",
+    "quote": "In fiscal 2025, total software revenue was $22.3 billion, an increase of 21%"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Cisco 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+    "published": "2025-09-03",
+    "quote": "No single customer accounted for 10% or more of revenue in fiscal 2025"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Cisco 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+    "published": "2025-09-03",
+    "quote": "include: Amazon Web Services LLC; Arista Networks, Inc.; Broadcom Inc.; Ciena Corporation; CrowdStrike Holdings, Inc.;"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Cisco 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+    "published": "2025-09-03",
+    "quote": "Datadog Inc.; Dell Technologies Inc.; Dynatrace Inc.; Fortinet, Inc.; Hewlett-Packard Enterprise Company;"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Cisco 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+    "published": "2025-09-03",
+    "quote": "Ltd.; Microsoft Corporation; New Relic, Inc.; Nokia Corporation; Nvidia Corporation; Palo Alto Networks, Inc.;"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Cisco 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+    "published": "2025-09-03",
+    "quote": "We are reinventing data center operations for our customers by simplifying the configuration, monitoring"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 52,
+    "why": {
+     "ru": "Компания сама перечисляет полтора десятка конкурентов по своим рынкам",
+     "en": "The company itself lists a dozen and a half competitors across its markets"
+    }
+   },
+   "lock_in_depth": {
+    "value": 55,
+    "why": {
+     "ru": "Замок держится обслуживанием в течение жизненного цикла, а не форматом данных",
+     "en": "The lock rests on lifecycle services rather than on a data format"
+    }
+   },
+   "time_to_replace": {
+    "value": 48,
+    "why": {
+     "ru": "Сетевые коробки меняют по циклу обновления парка, а не переписыванием стека",
+     "en": "Network boxes change on a fleet refresh cycle, not by rewriting the stack"
+    }
+   },
+   "concentration": {
+    "value": 45,
+    "why": {
+     "ru": "Ни один заказчик не дал 10% выручки за три года, конкурентов названо полтора десятка",
+     "en": "No customer reached 10% of revenue over three years, and a dozen and a half competitors are named"
+    }
+   }
+  },
+  "edges": [
+   {
+    "id": "cisco__arista__competes_with",
+    "stance": "confirms",
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "Cisco 10-K FY2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+      "published": "2025-09-03",
+      "quote": "include: Amazon Web Services LLC; Arista Networks, Inc.; Broadcom Inc.; Ciena Corporation; CrowdStrike Holdings, Inc.;"
+     }
+    ]
+   },
+   {
+    "direction": "lateral",
+    "strength": 65,
+    "lock_in_depth": 30,
+    "substitutability": 60,
+    "is_reversible": true,
+    "risk_level": "medium",
+    "risk_type": "market",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "cisco",
+    "target": "broadcom",
+    "type": "competes_with",
+    "note": {
+     "ru": "Названа в собственном списке конкурентов Cisco по части продуктов и услуг.",
+     "en": "Named in Cisco's own list of competitors for some of its products and services."
+    },
+    "risk_mitigation": {
+     "ru": "Соперничество идёт на части линейки, а не по всему портфелю",
+     "en": "The rivalry covers part of the line, not the whole portfolio"
+    },
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "Cisco 10-K FY2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+      "published": "2025-09-03",
+      "quote": "include: Amazon Web Services LLC; Arista Networks, Inc.; Broadcom Inc.; Ciena Corporation; CrowdStrike Holdings, Inc.;"
+     }
+    ]
+   },
+   {
+    "direction": "lateral",
+    "strength": 55,
+    "lock_in_depth": 30,
+    "substitutability": 60,
+    "is_reversible": true,
+    "risk_level": "medium",
+    "risk_type": "market",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "cisco",
+    "target": "dell",
+    "type": "competes_with",
+    "note": {
+     "ru": "Названа в собственном списке конкурентов Cisco.",
+     "en": "Named in Cisco's own competitor list."
+    },
+    "risk_mitigation": {
+     "ru": "Обе стороны одновременно продают в один и тот же дата-центр",
+     "en": "Both sides sell into the same data centre at once"
+    },
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "Cisco 10-K FY2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+      "published": "2025-09-03",
+      "quote": "Datadog Inc.; Dell Technologies Inc.; Dynatrace Inc.; Fortinet, Inc.; Hewlett-Packard Enterprise Company;"
+     }
+    ]
+   },
+   {
+    "direction": "lateral",
+    "strength": 55,
+    "lock_in_depth": 30,
+    "substitutability": 60,
+    "is_reversible": true,
+    "risk_level": "medium",
+    "risk_type": "market",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "cisco",
+    "target": "hpe",
+    "type": "competes_with",
+    "note": {
+     "ru": "Названа в собственном списке конкурентов Cisco.",
+     "en": "Named in Cisco's own competitor list."
+    },
+    "risk_mitigation": {
+     "ru": "Обе стороны одновременно продают в один и тот же дата-центр",
+     "en": "Both sides sell into the same data centre at once"
+    },
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "Cisco 10-K FY2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+      "published": "2025-09-03",
+      "quote": "Datadog Inc.; Dell Technologies Inc.; Dynatrace Inc.; Fortinet, Inc.; Hewlett-Packard Enterprise Company;"
+     }
+    ]
+   },
+   {
+    "direction": "lateral",
+    "strength": 45,
+    "lock_in_depth": 30,
+    "substitutability": 60,
+    "is_reversible": true,
+    "risk_level": "medium",
+    "risk_type": "market",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "cisco",
+    "target": "microsoft",
+    "type": "competes_with",
+    "note": {
+     "ru": "Названа в собственном списке конкурентов Cisco.",
+     "en": "Named in Cisco's own competitor list."
+    },
+    "risk_mitigation": {
+     "ru": "Пересечение только на части линейки: совместная работа и соперничество идут рядом",
+     "en": "Overlap covers part of the line only: cooperation and rivalry run side by side"
+    },
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "Cisco 10-K FY2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+      "published": "2025-09-03",
+      "quote": "Ltd.; Microsoft Corporation; New Relic, Inc.; Nokia Corporation; Nvidia Corporation; Palo Alto Networks, Inc.;"
+     }
+    ]
+   },
+   {
+    "direction": "lateral",
+    "strength": 60,
+    "lock_in_depth": 30,
+    "substitutability": 60,
+    "is_reversible": true,
+    "risk_level": "medium",
+    "risk_type": "market",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "cisco",
+    "target": "nvidia",
+    "type": "competes_with",
+    "note": {
+     "ru": "Названа в собственном списке конкурентов Cisco по части продуктов и услуг.",
+     "en": "Named in Cisco's own list of competitors for some of its products and services."
+    },
+    "risk_mitigation": {
+     "ru": "Соперничество идёт в сетевой фабрике дата-центра, а не в ускорителях",
+     "en": "The rivalry runs in the data-centre network fabric, not in accelerators"
+    },
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "Cisco 10-K FY2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+      "published": "2025-09-03",
+      "quote": "Ltd.; Microsoft Corporation; New Relic, Inc.; Nokia Corporation; Nvidia Corporation; Palo Alto Networks, Inc.;"
+     }
+    ]
+   },
+   {
+    "direction": "lateral",
+    "strength": 45,
+    "lock_in_depth": 30,
+    "substitutability": 60,
+    "is_reversible": true,
+    "risk_level": "medium",
+    "risk_type": "market",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "cisco",
+    "target": "amazon",
+    "type": "competes_with",
+    "note": {
+     "ru": "Названа в собственном списке конкурентов Cisco.",
+     "en": "Named in Cisco's own competitor list."
+    },
+    "risk_mitigation": {
+     "ru": "Соперничество ограничено частью продуктов и услуг",
+     "en": "The rivalry is limited to some products and services"
+    },
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "Cisco 10-K FY2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+      "published": "2025-09-03",
+      "quote": "include: Amazon Web Services LLC; Arista Networks, Inc.; Broadcom Inc.; Ciena Corporation; CrowdStrike Holdings, Inc.;"
+     }
+    ]
+   }
+  ],
+  "candidates": [
+   {
+    "name": "Ciena",
+    "why": "названа Cisco конкурентом; оптического транспорта на карте нет",
+    "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+    "quote": "include: Amazon Web Services LLC; Arista Networks, Inc.; Broadcom Inc.; Ciena Corporation; CrowdStrike Holdings, Inc.;"
+   },
+   {
+    "name": "Nokia",
+    "why": "названа Cisco конкурентом; телеком-оборудования на карте нет",
+    "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+    "quote": "Ltd.; Microsoft Corporation; New Relic, Inc.; Nokia Corporation; Nvidia Corporation; Palo Alto Networks, Inc.;"
+   }
+  ],
+  "gaps": "Cisco не называет ни одного заказчика поимённо: раскрытия не требуется, ни один не дал 10% выручки."
+ },
+ {
+  "id": "dell",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Dell Technologies собирает и продаёт инфраструктуру от края сети до ядра и облака, разделяя бизнес на два сегмента: Infrastructure Solutions Group и Client Solutions Group. Компания сама описывает себя как разработчика, производителя и поставщика в одном лице: «We design, develop, manufacture, market, sell, and support». Продажи за пределами США дали примерно 45% консолидированной выручки за 2026 финансовый год. Около 40% выручки идёт не напрямую, а через прочие каналы продаж. На карте узел стоит там, где ускорители превращаются в стойку, которую можно поставить заказчику.",
+   "en": "Dell Technologies builds and sells infrastructure from the edge to the core and the cloud, split into two segments: Infrastructure Solutions Group and Client Solutions Group. The company describes itself as designer, maker and supplier in one: \"We design, develop, manufacture, market, sell, and support\". Sales outside the United States were approximately 45% of consolidated net revenue for Fiscal 2026. About 40% of net revenue comes not directly but through other sales channels. On the map the node sits where accelerators turn into a rack a customer can take delivery of."
+  },
+  "profile_sources": [
+   {
+    "type": "sec_filing",
+    "title": "Dell Technologies 10-K FY2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm",
+    "published": "2026-03-16",
+    "quote": "We design, develop, manufacture, market, sell, and support a wide range of comprehensive and integrated"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Dell Technologies 10-K FY2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm",
+    "published": "2026-03-16",
+    "quote": "Sales outside the United States accounted for approximately 45% of our consolidated net revenue"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Dell Technologies 10-K FY2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm",
+    "published": "2026-03-16",
+    "quote": "During Fiscal 2026, our other sales channels generated approximately 40% of our net revenue."
+   },
+   {
+    "type": "sec_filing",
+    "title": "Dell Technologies 10-K FY2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm",
+    "published": "2026-03-16",
+    "quote": "We are organized into two business units which are also our reportable segments: Infrastructure Solutions"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Dell Technologies 10-K FY2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm",
+    "published": "2026-03-16",
+    "quote": "On November 22, 2023, VMware was acquired by Broadcom Inc. (“Broadcom”), and subsequently announced changes"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 50,
+    "why": {
+     "ru": "Сборка стоек — работа с несколькими квалифицированными исполнителями на каждом рынке",
+     "en": "Rack integration is work several qualified providers do in every market"
+    }
+   },
+   "lock_in_depth": {
+    "value": 52,
+    "why": {
+     "ru": "Замок держится каналом: около 40% выручки идёт через посредников, а не напрямую",
+     "en": "The lock is the channel: about 40% of revenue moves through intermediaries, not direct"
+    }
+   },
+   "time_to_replace": {
+    "value": 45,
+    "why": {
+     "ru": "Смена интегратора идёт в пределах цикла закупки, а не перестройки стека",
+     "en": "Changing integrator happens inside a procurement cycle, not a stack rebuild"
+    }
+   },
+   "concentration": {
+    "value": 42,
+    "why": {
+     "ru": "Продажи разложены географически: примерно 45% выручки вне США",
+     "en": "Sales are spread geographically: approximately 45% of revenue outside the United States"
+    }
+   }
+  },
+  "edges": [
+   {
+    "direction": "upstream",
+    "strength": 55,
+    "lock_in_depth": 50,
+    "substitutability": 45,
+    "is_reversible": true,
+    "risk_level": "medium",
+    "risk_type": "market",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "dell",
+    "target": "broadcom",
+    "type": "path_dependent_on",
+    "note": {
+     "ru": "После покупки VMware компанией Broadcom условия выхода на рынок изменились, и это затронуло коммерческие отношения Dell.",
+     "en": "After Broadcom acquired VMware the go-to-market terms changed, and that touched Dell's commercial relationship."
+    },
+    "risk_mitigation": {
+     "ru": "Dell продаёт и собственный стек виртуализации рядом с чужим",
+     "en": "Dell sells its own virtualisation stack alongside the third-party one"
+    },
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "Dell Technologies 10-K FY2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm",
+      "published": "2026-03-16",
+      "quote": "On November 22, 2023, VMware was acquired by Broadcom Inc. (“Broadcom”), and subsequently announced changes"
+     }
+    ]
+   }
+  ],
+  "candidates": [
+   {
+    "name": "VMware",
+    "why": "названа Dell как продукт, чьи условия выхода на рынок изменились после покупки Broadcom; слоя виртуализации на карте нет",
+    "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm",
+    "quote": "On November 22, 2023, VMware was acquired by Broadcom Inc. (“Broadcom”), and subsequently announced changes"
+   }
+  ],
+  "gaps": "Отчётность Dell не называет NVIDIA ни разу, поэтому связь nvidia -> dell подтверждена только со стороны поставщика."
+ },
+ {
+  "id": "hpe",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "HPE продаёт серверы, сети и услуги и после покупки Juniper Networks прямо пишет, что приоритетом стало снижение долга. Про свою зависимость компания говорит резче, чем это обычно делают: Intel и AMD по процессорам x86, Broadcom по стандартным микросхемам и NVIDIA по графическим процессорам названы единственными источниками поставки для всего рынка сразу. Собственный ответ на это — совместная инженерия: HPE строит готовые системы, разработанные вместе с NVIDIA. Продажи за пределами США составили около 61% выручки за 2025 финансовый год. Ни один заказчик не дал более 10% дебиторской задолженности.",
+   "en": "HPE sells servers, networking and services, and after buying Juniper Networks says plainly that de-leveraging is the priority. About its own dependence the company speaks more bluntly than is usual: Intel and AMD for x86 processors, Broadcom for standard parts and NVIDIA for graphics processors are named single-source suppliers for the entire market at once. Its own answer is joint engineering: HPE builds turn-key systems co-engineered with NVIDIA. Sales outside the United States were about 61% of net revenue in fiscal year 2025. No single customer accounted for more than 10% of receivables."
+  },
+  "profile_sources": [
+   {
+    "type": "sec_filing",
+    "title": "HPE 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+    "published": "2025-12-18",
+    "quote": "or NVIDIA for Graphics Processing Units) are also the single-source suppliers for the entire market"
+   },
+   {
+    "type": "sec_filing",
+    "title": "HPE 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+    "published": "2025-12-18",
+    "quote": "Intel and AMD as suppliers of certain x86 processors Broadcom and others for industry"
+   },
+   {
+    "type": "sec_filing",
+    "title": "HPE 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+    "published": "2025-12-18",
+    "quote": "turn-key integrated systems co-engineered with Nvidia that integrate HPE AI hardware and software technologies"
+   },
+   {
+    "type": "sec_filing",
+    "title": "HPE 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+    "published": "2025-12-18",
+    "quote": "Sales outside the United States constituted approximately 61% of our net revenue"
+   },
+   {
+    "type": "sec_filing",
+    "title": "HPE 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+    "published": "2025-12-18",
+    "quote": "no single customer accounted for more than 10% of the Company's financing receivables"
+   },
+   {
+    "type": "sec_filing",
+    "title": "HPE 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+    "published": "2025-12-18",
+    "quote": "al debt balance due to the acquisition of Juniper Networks, we are prioritizing de-leveraging"
+   },
+   {
+    "type": "sec_filing",
+    "title": "HPE 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+    "published": "2025-12-18",
+    "quote": "Fiscal 2025 compared with fiscal 2024 Corporate Investments and Other net revenue decreased"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 48,
+    "why": {
+     "ru": "Компания сама пишет, что перебои у её поставщиков ударили бы по рынку целиком, а не по ней одной",
+     "en": "The company itself writes that supplier disruption would hit the whole market, not it alone"
+    }
+   },
+   "lock_in_depth": {
+    "value": 58,
+    "why": {
+     "ru": "Совместно разработанные с NVIDIA готовые системы связывают её стек с чужим глубже обычной перепродажи",
+     "en": "Turn-key systems co-engineered with NVIDIA tie its stack to another more deeply than resale would"
+    }
+   },
+   "time_to_replace": {
+    "value": 45,
+    "why": {
+     "ru": "Замена интегратора идёт в пределах цикла закупки серверов",
+     "en": "Replacing the integrator happens inside a server procurement cycle"
+    }
+   },
+   "concentration": {
+    "value": 40,
+    "why": {
+     "ru": "Ни один заказчик не даёт свыше 10% задолженности, продажи разложены: около 61% вне США",
+     "en": "No customer exceeds 10% of receivables and sales are spread: about 61% outside the United States"
+    }
+   }
+  },
+  "edges": [
+   {
+    "id": "nvidia__hpe__supplies",
+    "stance": "confirms",
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "HPE 10-K FY2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+      "published": "2025-12-18",
+      "quote": "or NVIDIA for Graphics Processing Units) are also the single-source suppliers for the entire market"
+     }
+    ]
+   },
+   {
+    "direction": "bidirectional",
+    "strength": 70,
+    "lock_in_depth": 60,
+    "substitutability": 40,
+    "is_reversible": true,
+    "risk_level": "medium",
+    "risk_type": "technical",
+    "risk_timeline": "2-5y",
+    "stance": "confirms",
+    "source": "hpe",
+    "target": "nvidia",
+    "type": "strategic_partner",
+    "note": {
+     "ru": "Не перепродажа: готовые системы разработаны совместно и объединяют аппаратуру и софт обеих сторон.",
+     "en": "Not resale: the turn-key systems are co-engineered and combine hardware and software of both sides."
+    },
+    "risk_mitigation": {
+     "ru": "HPE держит рядом собственный портфель сетей и вычислений",
+     "en": "HPE keeps its own networking and compute portfolio alongside"
+    },
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "HPE 10-K FY2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+      "published": "2025-12-18",
+      "quote": "turn-key integrated systems co-engineered with Nvidia that integrate HPE AI hardware and software technologies"
+     }
+    ]
+   },
+   {
+    "direction": "upstream",
+    "strength": 65,
+    "lock_in_depth": 55,
+    "substitutability": 45,
+    "is_reversible": true,
+    "risk_level": "medium",
+    "risk_type": "substitution",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "intel",
+    "target": "hpe",
+    "type": "supplies",
+    "note": {
+     "ru": "Названа HPE поставщиком процессоров x86 и одновременно единственным источником для рынка целиком.",
+     "en": "Named by HPE as an x86 processor supplier and at once a single source for the entire market."
+    },
+    "risk_mitigation": {
+     "ru": "Вторым источником по тем же процессорам HPE называет AMD",
+     "en": "HPE names AMD as the second source for the same processors"
+    },
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "HPE 10-K FY2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+      "published": "2025-12-18",
+      "quote": "Intel and AMD as suppliers of certain x86 processors Broadcom and others for industry"
+     }
+    ]
+   },
+   {
+    "direction": "upstream",
+    "strength": 60,
+    "lock_in_depth": 50,
+    "substitutability": 50,
+    "is_reversible": true,
+    "risk_level": "medium",
+    "risk_type": "substitution",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "amd",
+    "target": "hpe",
+    "type": "supplies",
+    "note": {
+     "ru": "Названа HPE поставщиком процессоров x86 наравне с Intel.",
+     "en": "Named by HPE as an x86 processor supplier alongside Intel."
+    },
+    "risk_mitigation": {
+     "ru": "По тем же процессорам у HPE есть второй источник",
+     "en": "HPE has a second source for the same processors"
+    },
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "HPE 10-K FY2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+      "published": "2025-12-18",
+      "quote": "Intel and AMD as suppliers of certain x86 processors Broadcom and others for industry"
+     }
+    ]
+   },
+   {
+    "direction": "upstream",
+    "strength": 60,
+    "lock_in_depth": 60,
+    "substitutability": 35,
+    "is_reversible": true,
+    "risk_level": "high",
+    "risk_type": "substitution",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "broadcom",
+    "target": "hpe",
+    "type": "supplies",
+    "note": {
+     "ru": "Названа HPE поставщиком стандартных микросхем и единственным источником для рынка целиком.",
+     "en": "Named by HPE as a supplier of standard parts and a single source for the entire market."
+    },
+    "risk_mitigation": {
+     "ru": "Перебой ударил бы по рынку целиком, а не по одному покупателю — так пишет сама HPE",
+     "en": "A disruption would hit the whole market rather than one buyer, as HPE itself writes"
+    },
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "HPE 10-K FY2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+      "published": "2025-12-18",
+      "quote": "Intel and AMD as suppliers of certain x86 processors Broadcom and others for industry"
+     }
+    ]
+   }
+  ],
+  "candidates": [
+   {
+    "name": "Juniper Networks",
+    "why": "куплена HPE, и долг под покупку определяет её финансовый приоритет; на карте отсутствует",
+    "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+    "quote": "al debt balance due to the acquisition of Juniper Networks, we are prioritizing de-leveraging"
+   }
+  ],
+  "gaps": "Заказчиков HPE не называет: ни один не даёт свыше 10% задолженности."
+ },
+ {
+  "id": "sandisk",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Sandisk — вертикально интегрированный производитель флеш-памяти: своя схемотехника, своё производство спереди и сзади, своя системная инженерия. Выручка за год, закончившийся 3 июля 2026 года, составила $20,248 million. Производство он ведёт не сам: «We depend on Flash Ventures for the development and manufacture of flash-based memory» — совместное предприятие с Kioxia. Соглашения этого предприятия прямо запрещают обеим сторонам работать с третьими лицами по флеш-памяти. Ни один заказчик не дал более 10% выручки, а десятка крупнейших дала 44 %.",
+   "en": "Sandisk is a vertically integrated maker of flash memory: its own circuit design, its own front- and back-end manufacturing, its own systems engineering. Revenue for the year ended 3 July 2026 was $20,248 million. It does not manufacture alone: \"We depend on Flash Ventures for the development and manufacture of flash-based memory\" — a joint venture with Kioxia. The venture's agreements bar both sides from working with third parties on flash memory. No customer accounted for more than 10% of revenue, while the top ten accounted for 44 %."
+  },
+  "profile_sources": [
+   {
+    "type": "sec_filing",
+    "title": "Sandisk 10-K FY2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+    "published": "2026-08-17",
+    "quote": "We are a vertically integrated solutions provider with ownership of chip-level design and IP"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Sandisk 10-K FY2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+    "published": "2026-08-17",
+    "quote": "The Company recorded revenue, net, of $20,248 million for the year ended July 3, 2026."
+   },
+   {
+    "type": "sec_filing",
+    "title": "Sandisk 10-K FY2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+    "published": "2026-08-17",
+    "quote": "We depend on Flash Ventures for the development and manufacture of flash-based memory."
+   },
+   {
+    "type": "sec_filing",
+    "title": "Sandisk 10-K FY2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+    "published": "2026-08-17",
+    "quote": "we and Kioxia are restricted from working with third parties to manufacture flash-based memory"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Sandisk 10-K FY2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+    "published": "2026-08-17",
+    "quote": "For 2026, 2025 and 2024, no customer accounted for more than 10%"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Sandisk 10-K FY2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+    "published": "2026-08-17",
+    "quote": "the Company's top 10 customers accounted for 44 %, 40 % and 41 %"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Sandisk 10-K FY2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+    "published": "2026-08-17",
+    "quote": "We compete with vertically-integrated suppliers such as Kioxia, Micron Technology, Inc., Samsung Electronics Co.,"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 50,
+    "why": {
+     "ru": "Компания сама называет четверых вертикально интегрированных конкурентов по своему рынку",
+     "en": "The company itself names four vertically integrated competitors in its market"
+    }
+   },
+   "lock_in_depth": {
+    "value": 70,
+    "why": {
+     "ru": "Соглашения совместного предприятия запрещают обеим сторонам работать с третьими лицами по флеш-памяти",
+     "en": "The joint venture agreements bar both sides from working with third parties on flash memory"
+    }
+   },
+   "time_to_replace": {
+    "value": 62,
+    "why": {
+     "ru": "Производства у компании своего нет: она зависит от совместного предприятия по разработке и выпуску",
+     "en": "The company has no manufacturing of its own: it depends on the joint venture to develop and make"
+    }
+   },
+   "concentration": {
+    "value": 52,
+    "why": {
+     "ru": "Десятка крупнейших заказчиков дала 44 % выручки при четырёх названных конкурентах",
+     "en": "The top ten customers gave 44 % of revenue against four named competitors"
+    }
+   }
+  },
+  "edges": [
+   {
+    "id": "micron__sandisk__competes_with",
+    "stance": "confirms",
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "Sandisk 10-K FY2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+      "published": "2026-08-17",
+      "quote": "We compete with vertically-integrated suppliers such as Kioxia, Micron Technology, Inc., Samsung Electronics Co.,"
+     }
+    ]
+   },
+   {
+    "direction": "bidirectional",
+    "strength": 90,
+    "lock_in_depth": 90,
+    "substitutability": 10,
+    "is_reversible": false,
+    "risk_level": "high",
+    "risk_type": "substitution",
+    "risk_timeline": "5y+",
+    "stance": "confirms",
+    "source": "sandisk",
+    "target": "kioxia",
+    "type": "strategic_partner",
+    "note": {
+     "ru": "Совместное предприятие Flash Ventures: пока оно работает, обе стороны не вправе выпускать флеш-память с третьими лицами.",
+     "en": "The Flash Ventures joint venture: while it operates, neither side may make flash memory with third parties."
+    },
+    "risk_mitigation": {
+     "ru": "Ограничение взаимно и связывает обе стороны одинаково",
+     "en": "The restriction is mutual and binds both sides equally"
+    },
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "Sandisk 10-K FY2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+      "published": "2026-08-17",
+      "quote": "We depend on Flash Ventures for the development and manufacture of flash-based memory."
+     },
+     {
+      "type": "sec_filing",
+      "title": "Sandisk 10-K FY2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+      "published": "2026-08-17",
+      "quote": "we and Kioxia are restricted from working with third parties to manufacture flash-based memory"
+     }
+    ]
+   },
+   {
+    "direction": "lateral",
+    "strength": 60,
+    "lock_in_depth": 30,
+    "substitutability": 60,
+    "is_reversible": true,
+    "risk_level": "medium",
+    "risk_type": "market",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "sandisk",
+    "target": "samsung",
+    "type": "competes_with",
+    "note": {
+     "ru": "Названа Sandisk среди вертикально интегрированных конкурентов по флеш-памяти.",
+     "en": "Named by Sandisk among vertically integrated competitors in flash memory."
+    },
+    "risk_mitigation": {
+     "ru": "Заказчики держат несколько квалифицированных поставщиков сразу",
+     "en": "Customers keep several qualified suppliers at once"
+    },
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "Sandisk 10-K FY2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+      "published": "2026-08-17",
+      "quote": "We compete with vertically-integrated suppliers such as Kioxia, Micron Technology, Inc., Samsung Electronics Co.,"
+     }
+    ]
+   },
+   {
+    "direction": "lateral",
+    "strength": 55,
+    "lock_in_depth": 30,
+    "substitutability": 60,
+    "is_reversible": true,
+    "risk_level": "medium",
+    "risk_type": "market",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "sandisk",
+    "target": "sk-hynix",
+    "type": "competes_with",
+    "note": {
+     "ru": "Названа Sandisk среди вертикально интегрированных конкурентов по флеш-памяти.",
+     "en": "Named by Sandisk among vertically integrated competitors in flash memory."
+    },
+    "risk_mitigation": {
+     "ru": "Заказчики держат несколько квалифицированных поставщиков сразу",
+     "en": "Customers keep several qualified suppliers at once"
+    },
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "Sandisk 10-K FY2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+      "published": "2026-08-17",
+      "quote": "We compete with vertically-integrated suppliers such as Kioxia, Micron Technology, Inc., Samsung Electronics Co.,"
+     }
+    ]
+   }
+  ],
+  "candidates": [
+   {
+    "name": "Yangtze Memory Technologies",
+    "why": "названа Sandisk конкурентом по флеш-памяти; китайских производителей NAND на карте нет",
+    "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+    "quote": "SK Hynix, Inc., Yangtze Memory Technologies Co., Ltd. and numerous smaller companies"
+   }
+  ],
+  "gaps": "Отчётность не называет NVIDIA, поэтому связь sandisk -> nvidia подтверждена только со стороны покупателя."
+ },
+ {
+  "id": "snowflake",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Snowflake продаёт платформу данных, построенную поверх чужой публичной облачной инфраструктуры, и сама называет её основой своего AI Data Cloud. На 31 января 2026 года у неё было 13,328 заказчиков против 10,996 годом раньше. Крупнейшие корпоративные клиенты дали примерно 43% выручки за тот же год. Договоры на ёмкость дали около 97% выручки — это подписка, а не разовые продажи. Конкурентами компания называет три крупнейших публичных облака, на которых сама и работает.",
+   "en": "Snowflake sells a data platform built on someone else's public cloud infrastructure and calls it the foundation of its AI Data Cloud. As of 31 January 2026 it had 13,328 customers against 10,996 a year earlier. The largest corporate customers gave approximately 43% of revenue for the same year. Capacity arrangements produced about 97% of revenue — subscription, not one-off sales. The competitors it names are the three largest public clouds, the very ones it runs on."
+  },
+  "profile_sources": [
+   {
+    "type": "sec_filing",
+    "title": "Snowflake 10-K FY2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000008/snow-20260131.htm",
+    "published": "2026-03-20",
+    "quote": "Our platform is built on a cloud-native architecture that leverages the massive scalability and performance"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Snowflake 10-K FY2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000008/snow-20260131.htm",
+    "published": "2026-03-20",
+    "quote": "As of January 31, 2026, we had 13,328 total customers, increasing from 10,996 customers"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Snowflake 10-K FY2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000008/snow-20260131.htm",
+    "published": "2026-03-20",
+    "quote": "those customers contributed approximately 43% of our revenue for the fiscal year ended"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Snowflake 10-K FY2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000008/snow-20260131.htm",
+    "published": "2026-03-20",
+    "quote": "which represented approximately 97% of our revenue for each of the fiscal years"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Snowflake 10-K FY2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000008/snow-20260131.htm",
+    "published": "2026-03-20",
+    "quote": "including Amazon Web Services (AWS), Microsoft Azure (Azure), and Google Cloud Platform (GCP);"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 48,
+    "why": {
+     "ru": "Конкурентами названы три крупнейших публичных облака сразу",
+     "en": "The named competitors are the three largest public clouds at once"
+    }
+   },
+   "lock_in_depth": {
+    "value": 62,
+    "why": {
+     "ru": "Договоры на ёмкость дали около 97% выручки: отношения подписочные, а не разовые",
+     "en": "Capacity arrangements produced about 97% of revenue: the relationship is subscription, not one-off"
+    }
+   },
+   "time_to_replace": {
+    "value": 50,
+    "why": {
+     "ru": "Переезд склада данных — работа месяцев, а не лет: платформа построена на общей облачной архитектуре",
+     "en": "Moving a data warehouse is months of work, not years: the platform sits on a common cloud architecture"
+    }
+   },
+   "concentration": {
+    "value": 44,
+    "why": {
+     "ru": "13,328 заказчиков, и крупнейшая их группа даёт примерно 43% выручки",
+     "en": "13,328 customers, with their largest group giving approximately 43% of revenue"
+    }
+   }
+  },
+  "edges": [
+   {
+    "direction": "lateral",
+    "strength": 60,
+    "lock_in_depth": 30,
+    "substitutability": 60,
+    "is_reversible": true,
+    "risk_level": "medium",
+    "risk_type": "market",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "snowflake",
+    "target": "amazon",
+    "type": "competes_with",
+    "note": {
+     "ru": "Названа Snowflake среди крупных публичных облаков, конкурирующих на всех её рынках.",
+     "en": "Named by Snowflake among large public clouds that compete across all its markets."
+    },
+    "risk_mitigation": {
+     "ru": "Платформа работает поверх нескольких публичных облаков сразу",
+     "en": "The platform runs across several public clouds at once"
+    },
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "Snowflake 10-K FY2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000008/snow-20260131.htm",
+      "published": "2026-03-20",
+      "quote": "including Amazon Web Services (AWS), Microsoft Azure (Azure), and Google Cloud Platform (GCP);"
+     }
+    ]
+   },
+   {
+    "direction": "lateral",
+    "strength": 60,
+    "lock_in_depth": 30,
+    "substitutability": 60,
+    "is_reversible": true,
+    "risk_level": "medium",
+    "risk_type": "market",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "snowflake",
+    "target": "microsoft",
+    "type": "competes_with",
+    "note": {
+     "ru": "Названа Snowflake среди крупных публичных облаков, конкурирующих на всех её рынках.",
+     "en": "Named by Snowflake among large public clouds that compete across all its markets."
+    },
+    "risk_mitigation": {
+     "ru": "Платформа работает поверх нескольких публичных облаков сразу",
+     "en": "The platform runs across several public clouds at once"
+    },
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "Snowflake 10-K FY2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000008/snow-20260131.htm",
+      "published": "2026-03-20",
+      "quote": "including Amazon Web Services (AWS), Microsoft Azure (Azure), and Google Cloud Platform (GCP);"
+     }
+    ]
+   }
+  ],
+  "candidates": [],
+  "gaps": "NVIDIA в отчётности Snowflake не названа, поэтому связь snowflake -> nvidia остаётся односторонней. Связь с Google Cloud не заведена: узел google-cloud приходит достройкой сети и в entities.csv месячного конвейера не заявлен, а ребро можно завести только между заявленными сущностями."
+ },
+ {
+  "id": "salesforce",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Salesforce продаёт корпоративные приложения по подписке — напрямую и через партнёров. Выручка за 2026 финансовый год составила $41.5 billion с ростом на десять процентов год к году. Ни один заказчик не дал десяти процентов ни выручки, ни дебиторской задолженности. Ядром своего предложения компания называет Data 360 — слой данных, дающий агентам контекст. На карте узел стоит на стороне спроса: он показывает, что модели покупают не только лаборатории.",
+   "en": "Salesforce sells enterprise applications on subscription, directly and through partners. Revenue for fiscal 2026 was $41.5 billion, an increase of ten percent year-over-year. No single customer reached ten percent of either revenue or receivables. The company names Data 360 as the core of its offering — the data layer that gives agents their context. On the map the node sits on the demand side: it shows that models are bought by more than laboratories."
+  },
+  "profile_sources": [
+   {
+    "type": "sec_filing",
+    "title": "Salesforce 10-K FY2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm",
+    "published": "2026-03-02",
+    "quote": "We sell to businesses worldwide, primarily on a subscription basis, through our direct sales efforts"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Salesforce 10-K FY2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm",
+    "published": "2026-03-02",
+    "quote": "For fiscal 2026, revenue was $41.5 billion , an increase of ten percent year-over-year."
+   },
+   {
+    "type": "sec_filing",
+    "title": "Salesforce 10-K FY2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm",
+    "published": "2026-03-02",
+    "quote": "No single customer accounted for ten percent or more of total revenue during fiscal 2026"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Salesforce 10-K FY2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm",
+    "published": "2026-03-02",
+    "quote": "Data 360 is Salesforce's hyperscale, trusted data engine that gives AI agents their context"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 45,
+    "why": {
+     "ru": "Рынок корпоративных приложений компания сама описывает как рынок с низкими барьерами входа",
+     "en": "The company itself describes enterprise applications as a market with low barriers to entry"
+    }
+   },
+   "lock_in_depth": {
+    "value": 58,
+    "why": {
+     "ru": "Подписка на данные и приложения сразу: слой данных даёт агентам контекст внутри той же платформы",
+     "en": "Subscription to data and applications at once: the data layer gives agents context inside the same platform"
+    }
+   },
+   "time_to_replace": {
+    "value": 50,
+    "why": {
+     "ru": "Перенос корпоративных данных и процессов идёт годами, но техническим препятствием не является",
+     "en": "Moving enterprise data and processes takes years but is not a technical barrier"
+    }
+   },
+   "concentration": {
+    "value": 40,
+    "why": {
+     "ru": "Ни один заказчик не дал десяти процентов выручки",
+     "en": "No single customer reached ten percent of revenue"
+    }
+   }
+  },
+  "edges": [],
+  "candidates": [],
+  "gaps": "Список конкурентов написан категориями, а не именами, и связей из него не выводится. NVIDIA в отчётности не названа."
+ },
+ {
+  "id": "ge-vernova",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "GE Vernova поставляет оборудование и обслуживание для электроэнергетики, и её собственная отчётность даёт цифру, ради которой узел стоит на карте: «Our installed base generates approximately 25% of the world's electricity». Спрос на её продукцию она прямо связывает с дата-центрами и гиперскейлерами. Портфель невыполненных обязательств на 31 декабря 2025 года составил примерно $94.4 billion. Для дата-центров компания предлагает газовые турбины в диапазоне от 25 MW до 3 GW. Одна из установок такого рода уже питает дата-центр Crusoe.",
+   "en": "GE Vernova supplies equipment and services to the electric power industry, and its own filing carries the number the node is on the map for: \"Our installed base generates approximately 25% of the world's electricity\". It ties demand for its offerings directly to data centres and hyperscalers. Remaining performance obligations as of 31 December 2025 were approximately $94.4 billion. For data centres the company offers gas turbines from 25 MW to 3 GW. One such unit already powers a Crusoe data centre."
+  },
+  "profile_sources": [
+   {
+    "type": "sec_filing",
+    "title": "GE Vernova 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000015/gev-20251231.htm",
+    "published": "2026-01-29",
+    "quote": "Our installed base generates approximately 25% of the world's electricity."
+   },
+   {
+    "type": "sec_filing",
+    "title": "GE Vernova 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000015/gev-20251231.htm",
+    "published": "2026-01-29",
+    "quote": "grid stability needs, and rising electricity demand from hyperscalers and data centers"
+   },
+   {
+    "type": "sec_filing",
+    "title": "GE Vernova 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000015/gev-20251231.htm",
+    "published": "2026-01-29",
+    "quote": "As of December 31, 2025 , our fundamentals remained strong with approximately $94.4 billion"
+   },
+   {
+    "type": "product_doc",
+    "title": "GE Vernova — Gas power for data centers",
+    "url": "https://www.gevernova.com/gas-power/industries/data-centers",
+    "published": "2026-08-29",
+    "quote": "your data center needs 25 MW of power or 3 GW"
+   },
+   {
+    "type": "product_doc",
+    "title": "GE Vernova — Gas power for data centers",
+    "url": "https://www.gevernova.com/gas-power/industries/data-centers",
+    "published": "2026-08-29",
+    "quote": "GE Vernova's LM2500XPRESS gas turbine powers Crusoe's AI data center with fast, efficient backup energy."
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 72,
+    "why": {
+     "ru": "Установленный парк компании даёт примерно 25% мировой электроэнергии",
+     "en": "The company's installed base generates approximately 25% of the world's electricity"
+    }
+   },
+   "lock_in_depth": {
+    "value": 70,
+    "why": {
+     "ru": "Обслуживание установленного парка идёт десятилетиями и даёт портфель обязательств около $94.4 billion",
+     "en": "Servicing the installed base runs for decades and yields obligations of about $94.4 billion"
+    }
+   },
+   "time_to_replace": {
+    "value": 80,
+    "why": {
+     "ru": "Генерирующее оборудование ставят на десятилетия: диапазон от 25 MW до 3 GW под площадку",
+     "en": "Generating equipment is installed for decades: from 25 MW to 3 GW per site"
+    }
+   },
+   "concentration": {
+    "value": 74,
+    "why": {
+     "ru": "Примерно 25% мировой электроэнергии идёт с установленного парка одной компании",
+     "en": "Approximately 25% of the world's electricity comes off one company's installed base"
+    }
+   }
+  },
+  "edges": [
+   {
+    "direction": "upstream",
+    "strength": 60,
+    "lock_in_depth": 55,
+    "substitutability": 45,
+    "is_reversible": true,
+    "risk_level": "medium",
+    "risk_type": "substitution",
+    "risk_timeline": "2-5y",
+    "stance": "confirms",
+    "source": "ge-vernova",
+    "target": "crusoe",
+    "type": "supplies",
+    "note": {
+     "ru": "Газовая турбина LM2500XPRESS питает дата-центр Crusoe как быстрый резервный источник.",
+     "en": "An LM2500XPRESS gas turbine powers a Crusoe data centre as fast backup energy."
+    },
+    "risk_mitigation": {
+     "ru": "Площадка держит турбину как резерв, а не как единственный источник",
+     "en": "The site keeps the turbine as backup rather than as its only source"
+    },
+    "sources": [
+     {
+      "type": "product_doc",
+      "title": "GE Vernova — Gas power for data centers",
+      "url": "https://www.gevernova.com/gas-power/industries/data-centers",
+      "published": "2026-08-29",
+      "quote": "GE Vernova's LM2500XPRESS gas turbine powers Crusoe's AI data center with fast, efficient backup energy."
+     }
+    ]
+   }
+  ],
+  "candidates": [
+   {
+    "name": "Chevron",
+    "why": "названа GE Vernova партнёром по поставке мощности для дата-центров ИИ; на карте отсутствует",
+    "url": "https://www.gevernova.com/gas-power/industries/data-centers",
+    "quote": "Chevron and GE Vernova team up to deliver 4GW of power by 2027"
+   }
+  ],
+  "gaps": "Связь ge-vernova -> microsoft отчётностью не подтверждается: Microsoft в ней не названа."
+ },
+ {
+  "id": "blackstone",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Blackstone описывает себя как крупнейшего в мире управляющего альтернативными активами с более чем $1.3 trillion под управлением. На карте она стоит в слое капитала, который строит площадки: её фонд недвижимости прямо называет вложения в дата-центры среди своих значимых направлений. Реализованные доходы от результата составили $1.7 billion за 2025 год. Компания сама отмечает риск устаревания проектов дата-центров, требующего перестройки, — то есть держит эту экспозицию осознанно. Денег в модели она не даёт, но решает, где встанет мощность.",
+   "en": "Blackstone describes itself as the world's largest alternative asset manager with more than $1.3 trillion under management. On the map it sits in the capital layer that builds the sites: its real estate fund names data centre investments among its significant directions. Realized Performance Revenues were $1.7 billion for 2025. The company itself flags the risk of data centre designs becoming less competitive and needing redevelopment — it holds that exposure knowingly. It does not fund models, but it decides where capacity gets built."
+  },
+  "profile_sources": [
+   {
+    "type": "sec_filing",
+    "title": "Blackstone 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm",
+    "published": "2026-02-27",
+    "quote": "Blackstone is the world's largest alternative asset manager."
+   },
+   {
+    "type": "sec_filing",
+    "title": "Blackstone 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm",
+    "published": "2026-02-27",
+    "quote": "Our more than $1.3 trillion in Total Assets Under Manag"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Blackstone 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm",
+    "published": "2026-02-27",
+    "quote": "BREP has made significant investments in logistics, data centers, rental housing, hospitality, office and retail"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Blackstone 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm",
+    "published": "2026-02-27",
+    "quote": "Realized Performance Revenues were $1.7 billion for the year ended December 31, 2025"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Blackstone 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm",
+    "published": "2026-02-27",
+    "quote": "technological changes that render existing data center designs less competitive or require significant redevelopment"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 55,
+    "why": {
+     "ru": "Крупнейший управляющий альтернативными активами по собственному счёту, но не единственный источник капитала",
+     "en": "The largest alternative asset manager by its own count, but not the only source of capital"
+    }
+   },
+   "lock_in_depth": {
+    "value": 48,
+    "why": {
+     "ru": "Вложения в площадки долгие, но заменимые: капитал в этот слой несут десятки управляющих",
+     "en": "Site investments are long but replaceable: dozens of managers bring capital into this layer"
+    }
+   },
+   "time_to_replace": {
+    "value": 45,
+    "why": {
+     "ru": "Замена источника капитала идёт в пределах цикла привлечения, а не строительства",
+     "en": "Replacing a source of capital happens inside a fundraising cycle, not a construction one"
+    }
+   },
+   "concentration": {
+    "value": 58,
+    "why": {
+     "ru": "Более $1.3 trillion под управлением — крупнейший по собственному счёту, но рынок не занят одним",
+     "en": "More than $1.3 trillion under management — largest by its own count, but the market is not held by one"
+    }
+   }
+  },
+  "edges": [],
+  "candidates": [],
+  "gaps": "Ни Digital Realty, ни QTS, ни Anthropic в отчётности не названы, поэтому обе связи узла подтверждены только со стороны контрагента. Пресс-релизы blackstone.com отдают 403 на машинный обход, и цитаты из них взять не удалось."
+ }
+]

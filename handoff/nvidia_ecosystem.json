@@ -28,9 +28,9 @@
   },
   "totals": {
     "entities": 107,
-    "edges": 253,
+    "edges": 270,
     "layers": 16,
-    "cycles": 178,
+    "cycles": 197,
     "techNodes": 10
   },
   "layers": [
@@ -121,7 +121,7 @@
       "band": 2,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.2313,
+        "hhi": 0.2164,
         "top": [
           "sk-hynix",
           "samsung",
@@ -140,11 +140,11 @@
       "band": 3,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1556,
+        "hhi": 0.155,
         "top": [
           "nvidia",
           "foxconn",
-          "dell"
+          "hpe"
         ]
       }
     },
@@ -159,7 +159,7 @@
       "band": 3,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1084,
+        "hhi": 0.1066,
         "top": [
           "ge-vernova",
           "constellation",
@@ -197,7 +197,7 @@
       "band": 4,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1181,
+        "hhi": 0.1175,
         "top": [
           "nvidia",
           "broadcom",
@@ -273,7 +273,7 @@
       "band": 5,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1078,
+        "hhi": 0.1063,
         "top": [
           "openai",
           "anthropic",
@@ -292,11 +292,11 @@
       "band": 5,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1456,
+        "hhi": 0.1459,
         "top": [
           "databricks",
-          "servicenow",
-          "snowflake"
+          "snowflake",
+          "salesforce"
         ]
       }
     },
@@ -311,7 +311,7 @@
       "band": null,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1073,
+        "hhi": 0.1074,
         "top": [
           "blackstone",
           "softbank",
@@ -684,7 +684,7 @@
         {
           "layer": "L12",
           "primary": false,
-          "criticality": 36
+          "criticality": 43
         }
       ],
       "primaryLayer": "L9",
@@ -712,11 +712,11 @@
         "renormalized": false
       },
       "gravity": {
-        "reach": 3,
-        "layers": 4,
+        "reach": 5,
+        "layers": 5,
         "edgeTypes": 6,
-        "cycles": 10,
-        "score": 26,
+        "cycles": 11,
+        "score": 31,
         "signals": {}
       },
       "domain": "aboutamazon.com",
@@ -860,11 +860,11 @@
         "renormalized": true
       },
       "gravity": {
-        "reach": 3,
+        "reach": 4,
         "layers": 4,
-        "edgeTypes": 3,
+        "edgeTypes": 4,
         "cycles": 0,
-        "score": 14,
+        "score": 16,
         "signals": {}
       },
       "domain": null,
@@ -1053,7 +1053,7 @@
         "reach": 5,
         "layers": 7,
         "edgeTypes": 4,
-        "cycles": 5,
+        "cycles": 6,
         "score": 33,
         "signals": {}
       },
@@ -1456,7 +1456,7 @@
         "reach": 4,
         "layers": 6,
         "edgeTypes": 5,
-        "cycles": 19,
+        "cycles": 20,
         "score": 30,
         "signals": {}
       },
@@ -1809,7 +1809,7 @@
         "reach": 4,
         "layers": 4,
         "edgeTypes": 3,
-        "cycles": 6,
+        "cycles": 7,
         "score": 25,
         "signals": {}
       },
@@ -2119,31 +2119,32 @@
         {
           "layer": "L14",
           "primary": true,
-          "criticality": 50
+          "criticality": 51
         }
       ],
       "primaryLayer": "L14",
-      "criticality": 50,
+      "criticality": 51,
       "criticalityFactors": {
-        "irreplaceability": 45,
-        "lockInDepth": 50,
-        "timeToReplace": 55,
-        "concentration": null
+        "irreplaceability": 55,
+        "lockInDepth": 48,
+        "timeToReplace": 45,
+        "concentration": 58
       },
       "criticalityWhy": {
-        "irreplaceability": "Владельцев платформ площадок несколько",
-        "lockInDepth": "Задевает площадки и энергию",
-        "timeToReplace": "Заместить владельца площадок — два года",
-        "concentration": null
+        "irreplaceability": "Крупнейший управляющий альтернативными активами по собственному счёту, но не единственный источник капитала",
+        "lockInDepth": "Вложения в площадки долгие, но заменимые: капитал в этот слой несут десятки управляющих",
+        "timeToReplace": "Замена источника капитала идёт в пределах цикла привлечения, а не строительства",
+        "concentration": "Более $1.3 trillion под управлением — крупнейший по собственному счёту, но рынок не занят одним"
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
         "reach": 1,
@@ -2179,6 +2180,71 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Blackstone 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm",
+          "published": "2026-02-27",
+          "fetched": null,
+          "alive": true,
+          "quote": "Blackstone is the world's largest alternative asset manager.",
+          "confidence": 0.975,
+          "self": "blackstone",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Blackstone 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm",
+          "published": "2026-02-27",
+          "fetched": null,
+          "alive": true,
+          "quote": "Our more than $1.3 trillion in Total Assets Under Manag",
+          "confidence": 0.975,
+          "self": "blackstone",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Blackstone 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm",
+          "published": "2026-02-27",
+          "fetched": null,
+          "alive": true,
+          "quote": "BREP has made significant investments in logistics, data centers, rental housing, hospitality, office and retail",
+          "confidence": 0.975,
+          "self": "blackstone",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Blackstone 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm",
+          "published": "2026-02-27",
+          "fetched": null,
+          "alive": true,
+          "quote": "Realized Performance Revenues were $1.7 billion for the year ended December 31, 2025",
+          "confidence": 0.975,
+          "self": "blackstone",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Blackstone 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm",
+          "published": "2026-02-27",
+          "fetched": null,
+          "alive": true,
+          "quote": "technological changes that render existing data center designs less competitive or require significant redevelopment",
+          "confidence": 0.975,
+          "self": "blackstone",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "Digital Realty 10-K 2025",
@@ -2193,9 +2259,10 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 6,
+        "selfSourced": 5,
         "byTier": {
+          "1": 5,
           "2": 1
         }
       }
@@ -2434,11 +2501,11 @@
         "renormalized": false
       },
       "gravity": {
-        "reach": 7,
+        "reach": 10,
         "layers": 6,
-        "edgeTypes": 8,
-        "cycles": 25,
-        "score": 37,
+        "edgeTypes": 10,
+        "cycles": 40,
+        "score": 44,
         "signals": {}
       },
       "domain": null,
@@ -3121,38 +3188,39 @@
         {
           "layer": "L8",
           "primary": true,
-          "criticality": 43
+          "criticality": 51
         }
       ],
       "primaryLayer": "L8",
-      "criticality": 43,
+      "criticality": 51,
       "criticalityFactors": {
-        "irreplaceability": 45,
-        "lockInDepth": 40,
-        "timeToReplace": 45,
-        "concentration": null
+        "irreplaceability": 52,
+        "lockInDepth": 55,
+        "timeToReplace": 48,
+        "concentration": 45
       },
       "criticalityWhy": {
-        "irreplaceability": "Сетевых поставщиков несколько",
-        "lockInDepth": "Задевает только сеть",
-        "timeToReplace": "Замена в пределах года",
-        "concentration": null
+        "irreplaceability": "Компания сама перечисляет полтора десятка конкурентов по своим рынкам",
+        "lockInDepth": "Замок держится обслуживанием в течение жизненного цикла, а не форматом данных",
+        "timeToReplace": "Сетевые коробки меняют по циклу обновления парка, а не переписыванием стека",
+        "concentration": "Ни один заказчик не дал 10% выручки за три года, конкурентов названо полтора десятка"
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
-        "reach": 2,
-        "layers": 1,
+        "reach": 8,
+        "layers": 6,
         "edgeTypes": 2,
         "cycles": 0,
-        "score": 6,
+        "score": 25,
         "signals": {}
       },
       "domain": null,
@@ -3181,6 +3249,97 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Cisco 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+          "published": "2025-09-03",
+          "fetched": null,
+          "alive": true,
+          "quote": "We provide network infrastructure to power AI training and inference workloads for both webscale providers",
+          "confidence": 0.975,
+          "self": "cisco",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Cisco 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+          "published": "2025-09-03",
+          "fetched": null,
+          "alive": true,
+          "quote": "In fiscal 2025, total software revenue was $22.3 billion, an increase of 21%",
+          "confidence": 0.975,
+          "self": "cisco",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Cisco 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+          "published": "2025-09-03",
+          "fetched": null,
+          "alive": true,
+          "quote": "No single customer accounted for 10% or more of revenue in fiscal 2025",
+          "confidence": 0.975,
+          "self": "cisco",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Cisco 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+          "published": "2025-09-03",
+          "fetched": null,
+          "alive": true,
+          "quote": "include: Amazon Web Services LLC; Arista Networks, Inc.; Broadcom Inc.; Ciena Corporation; CrowdStrike Holdings, Inc.;",
+          "confidence": 0.975,
+          "self": "cisco",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Cisco 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+          "published": "2025-09-03",
+          "fetched": null,
+          "alive": true,
+          "quote": "Datadog Inc.; Dell Technologies Inc.; Dynatrace Inc.; Fortinet, Inc.; Hewlett-Packard Enterprise Company;",
+          "confidence": 0.975,
+          "self": "cisco",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Cisco 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+          "published": "2025-09-03",
+          "fetched": null,
+          "alive": true,
+          "quote": "Ltd.; Microsoft Corporation; New Relic, Inc.; Nokia Corporation; Nvidia Corporation; Palo Alto Networks, Inc.;",
+          "confidence": 0.975,
+          "self": "cisco",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Cisco 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+          "published": "2025-09-03",
+          "fetched": null,
+          "alive": true,
+          "quote": "We are reinventing data center operations for our customers by simplifying the configuration, monitoring",
+          "confidence": 0.975,
+          "self": "cisco",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "Fabrinet 10-K FY2025",
@@ -3195,9 +3354,10 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 8,
+        "selfSourced": 7,
         "byTier": {
+          "1": 7,
           "2": 1
         }
       }
@@ -3609,7 +3769,7 @@
         "reach": 4,
         "layers": 4,
         "edgeTypes": 3,
-        "cycles": 6,
+        "cycles": 7,
         "score": 25,
         "signals": {}
       },
@@ -3674,7 +3834,7 @@
         {
           "layer": "L6",
           "primary": false,
-          "criticality": 15
+          "criticality": 26
         },
         {
           "layer": "L9",
@@ -3707,11 +3867,11 @@
         "renormalized": false
       },
       "gravity": {
-        "reach": 3,
+        "reach": 4,
         "layers": 5,
         "edgeTypes": 4,
         "cycles": 1,
-        "score": 18,
+        "score": 20,
         "signals": {}
       },
       "domain": null,
@@ -3859,7 +4019,7 @@
         "reach": 12,
         "layers": 7,
         "edgeTypes": 7,
-        "cycles": 61,
+        "cycles": 62,
         "score": 47,
         "signals": {}
       },
@@ -4288,38 +4448,39 @@
         {
           "layer": "L5",
           "primary": true,
-          "criticality": 45
+          "criticality": 48
         }
       ],
       "primaryLayer": "L5",
-      "criticality": 45,
+      "criticality": 48,
       "criticalityFactors": {
-        "irreplaceability": 45,
-        "lockInDepth": 45,
+        "irreplaceability": 50,
+        "lockInDepth": 52,
         "timeToReplace": 45,
-        "concentration": null
+        "concentration": 42
       },
       "criticalityWhy": {
-        "irreplaceability": "Производителей корпоративных серверов несколько",
-        "lockInDepth": "Задевает сборку и продажи",
-        "timeToReplace": "Построить канал продаж — два-три года",
-        "concentration": null
+        "irreplaceability": "Сборка стоек — работа с несколькими квалифицированными исполнителями на каждом рынке",
+        "lockInDepth": "Замок держится каналом: около 40% выручки идёт через посредников, а не напрямую",
+        "timeToReplace": "Смена интегратора идёт в пределах цикла закупки, а не перестройки стека",
+        "concentration": "Продажи разложены географически: примерно 45% выручки вне США"
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
-        "reach": 1,
-        "layers": 3,
-        "edgeTypes": 2,
-        "cycles": 0,
-        "score": 8,
+        "reach": 3,
+        "layers": 4,
+        "edgeTypes": 4,
+        "cycles": 8,
+        "score": 24,
         "signals": {}
       },
       "domain": null,
@@ -4348,6 +4509,71 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Dell Technologies 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm",
+          "published": "2026-03-16",
+          "fetched": null,
+          "alive": true,
+          "quote": "We design, develop, manufacture, market, sell, and support a wide range of comprehensive and integrated",
+          "confidence": 0.975,
+          "self": "dell",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Dell Technologies 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm",
+          "published": "2026-03-16",
+          "fetched": null,
+          "alive": true,
+          "quote": "Sales outside the United States accounted for approximately 45% of our consolidated net revenue",
+          "confidence": 0.975,
+          "self": "dell",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Dell Technologies 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm",
+          "published": "2026-03-16",
+          "fetched": null,
+          "alive": true,
+          "quote": "During Fiscal 2026, our other sales channels generated approximately 40% of our net revenue.",
+          "confidence": 0.975,
+          "self": "dell",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Dell Technologies 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm",
+          "published": "2026-03-16",
+          "fetched": null,
+          "alive": true,
+          "quote": "We are organized into two business units which are also our reportable segments: Infrastructure Solutions",
+          "confidence": 0.975,
+          "self": "dell",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Dell Technologies 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm",
+          "published": "2026-03-16",
+          "fetched": null,
+          "alive": true,
+          "quote": "On November 22, 2023, VMware was acquired by Broadcom Inc. (“Broadcom”), and subsequently announced changes",
+          "confidence": 0.975,
+          "self": "dell",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "NVIDIA 10-K FY2026",
@@ -4362,9 +4588,10 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 6,
+        "selfSourced": 5,
         "byTier": {
+          "1": 5,
           "2": 1
         }
       }
@@ -5276,38 +5503,39 @@
         {
           "layer": "L6",
           "primary": true,
-          "criticality": 66
+          "criticality": 74
         }
       ],
       "primaryLayer": "L6",
-      "criticality": 66,
+      "criticality": 74,
       "criticalityFactors": {
-        "irreplaceability": 70,
-        "lockInDepth": 55,
-        "timeToReplace": 75,
-        "concentration": null
+        "irreplaceability": 72,
+        "lockInDepth": 70,
+        "timeToReplace": 80,
+        "concentration": 74
       },
       "criticalityWhy": {
-        "irreplaceability": "Производителей больших турбин три",
-        "lockInDepth": "Задевает энергию и площадки",
-        "timeToReplace": "Очередь на турбину — три-пять лет",
-        "concentration": null
+        "irreplaceability": "Установленный парк компании даёт примерно 25% мировой электроэнергии",
+        "lockInDepth": "Обслуживание установленного парка идёт десятилетиями и даёт портфель обязательств около $94.4 billion",
+        "timeToReplace": "Генерирующее оборудование ставят на десятилетия: диапазон от 25 MW до 3 GW под площадку",
+        "concentration": "Примерно 25% мировой электроэнергии идёт с установленного парка одной компании"
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
-        "reach": 1,
-        "layers": 2,
+        "reach": 2,
+        "layers": 3,
         "edgeTypes": 1,
         "cycles": 0,
-        "score": 6,
+        "score": 9,
         "signals": {}
       },
       "domain": null,
@@ -5336,6 +5564,84 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "GE Vernova 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000015/gev-20251231.htm",
+          "published": "2026-01-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Our installed base generates approximately 25% of the world's electricity.",
+          "confidence": 0.975,
+          "self": "ge-vernova",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "GE Vernova 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000015/gev-20251231.htm",
+          "published": "2026-01-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "grid stability needs, and rising electricity demand from hyperscalers and data centers",
+          "confidence": 0.975,
+          "self": "ge-vernova",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "GE Vernova 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000015/gev-20251231.htm",
+          "published": "2026-01-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "our fundamentals remained strong with approximately $94.4 billion in remaining performance obligations",
+          "confidence": 0.975,
+          "self": "ge-vernova",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "GE Vernova — Gas power for data centers",
+          "url": "https://www.gevernova.com/gas-power/industries/data-centers",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "your data center needs 25 MW of power or 3 GW",
+          "confidence": 0.975,
+          "self": "ge-vernova",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "GE Vernova — Gas power for data centers",
+          "url": "https://www.gevernova.com/gas-power/industries/data-centers",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "GE Vernova's LM2500XPRESS gas turbine powers Crusoe's AI data center with fast, efficient backup energy.",
+          "confidence": 0.975,
+          "self": "ge-vernova",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "GE Vernova 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000015/gev-20251231.htm",
+          "published": "2026-01-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "As of December 31, 2025 , our fundamentals remained strong with approximately $94.4 billion",
+          "confidence": 0.975,
+          "self": "ge-vernova",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "NVIDIA 10-K FY2026",
@@ -5350,9 +5656,10 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 7,
+        "selfSourced": 6,
         "byTier": {
+          "1": 6,
           "2": 1
         }
       }
@@ -5413,7 +5720,7 @@
         "reach": 6,
         "layers": 6,
         "edgeTypes": 6,
-        "cycles": 17,
+        "cycles": 20,
         "score": 34,
         "signals": {}
       },
@@ -5695,38 +6002,39 @@
         {
           "layer": "L5",
           "primary": true,
-          "criticality": 40
+          "criticality": 49
         }
       ],
       "primaryLayer": "L5",
-      "criticality": 40,
+      "criticality": 49,
       "criticalityFactors": {
-        "irreplaceability": 40,
-        "lockInDepth": 40,
-        "timeToReplace": 40,
-        "concentration": null
+        "irreplaceability": 48,
+        "lockInDepth": 58,
+        "timeToReplace": 45,
+        "concentration": 40
       },
       "criticalityWhy": {
-        "irreplaceability": "Производителей корпоративных серверов несколько",
-        "lockInDepth": "Задевает сборку и продажи",
-        "timeToReplace": "Замена в пределах года",
-        "concentration": null
+        "irreplaceability": "Компания сама пишет, что перебои у её поставщиков ударили бы по рынку целиком, а не по ней одной",
+        "lockInDepth": "Совместно разработанные с NVIDIA готовые системы связывают её стек с чужим глубже обычной перепродажи",
+        "timeToReplace": "Замена интегратора идёт в пределах цикла закупки серверов",
+        "concentration": "Ни один заказчик не даёт свыше 10% задолженности, продажи разложены: около 61% вне США"
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
-        "reach": 1,
-        "layers": 3,
-        "edgeTypes": 1,
-        "cycles": 0,
-        "score": 7,
+        "reach": 5,
+        "layers": 4,
+        "edgeTypes": 3,
+        "cycles": 8,
+        "score": 27,
         "signals": {}
       },
       "domain": null,
@@ -5755,6 +6063,97 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "HPE 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+          "published": "2025-12-18",
+          "fetched": null,
+          "alive": true,
+          "quote": "or NVIDIA for Graphics Processing Units) are also the single-source suppliers for the entire market",
+          "confidence": 0.975,
+          "self": "hpe",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "HPE 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+          "published": "2025-12-18",
+          "fetched": null,
+          "alive": true,
+          "quote": "Intel and AMD as suppliers of certain x86 processors Broadcom and others for industry",
+          "confidence": 0.975,
+          "self": "hpe",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "HPE 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+          "published": "2025-12-18",
+          "fetched": null,
+          "alive": true,
+          "quote": "turn-key integrated systems co-engineered with Nvidia that integrate HPE AI hardware and software technologies",
+          "confidence": 0.975,
+          "self": "hpe",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "HPE 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+          "published": "2025-12-18",
+          "fetched": null,
+          "alive": true,
+          "quote": "Sales outside the United States constituted approximately 61% of our net revenue",
+          "confidence": 0.975,
+          "self": "hpe",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "HPE 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+          "published": "2025-12-18",
+          "fetched": null,
+          "alive": true,
+          "quote": "no single customer accounted for more than 10% of the Company's financing receivables",
+          "confidence": 0.975,
+          "self": "hpe",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "HPE 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+          "published": "2025-12-18",
+          "fetched": null,
+          "alive": true,
+          "quote": "al debt balance due to the acquisition of Juniper Networks, we are prioritizing de-leveraging",
+          "confidence": 0.975,
+          "self": "hpe",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "HPE 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+          "published": "2025-12-18",
+          "fetched": null,
+          "alive": true,
+          "quote": "Fiscal 2025 compared with fiscal 2024 Corporate Investments and Other net revenue decreased",
+          "confidence": 0.975,
+          "self": "hpe",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "NVIDIA 10-K FY2026",
@@ -5769,9 +6168,10 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 8,
+        "selfSourced": 7,
         "byTier": {
+          "1": 7,
           "2": 1
         }
       }
@@ -5967,11 +6367,11 @@
         "renormalized": false
       },
       "gravity": {
-        "reach": 3,
+        "reach": 4,
         "layers": 5,
-        "edgeTypes": 3,
+        "edgeTypes": 4,
         "cycles": 0,
-        "score": 15,
+        "score": 18,
         "signals": {}
       },
       "domain": null,
@@ -6318,11 +6718,11 @@
         "renormalized": true
       },
       "gravity": {
-        "reach": 2,
+        "reach": 3,
         "layers": 4,
-        "edgeTypes": 2,
-        "cycles": 1,
-        "score": 13,
+        "edgeTypes": 3,
+        "cycles": 2,
+        "score": 18,
         "signals": {}
       },
       "domain": null,
@@ -6512,7 +6912,7 @@
         "reach": 4,
         "layers": 8,
         "edgeTypes": 2,
-        "cycles": 7,
+        "cycles": 8,
         "score": 31,
         "signals": {}
       },
@@ -7416,7 +7816,7 @@
         "reach": 6,
         "layers": 6,
         "edgeTypes": 3,
-        "cycles": 10,
+        "cycles": 14,
         "score": 32,
         "signals": {}
       },
@@ -7565,7 +7965,7 @@
         {
           "layer": "L12",
           "primary": false,
-          "criticality": 27
+          "criticality": 30
         }
       ],
       "primaryLayer": "L9",
@@ -7593,11 +7993,11 @@
         "renormalized": false
       },
       "gravity": {
-        "reach": 16,
+        "reach": 18,
         "layers": 9,
         "edgeTypes": 10,
         "cycles": 43,
-        "score": 59,
+        "score": 63,
         "signals": {}
       },
       "domain": "microsoft.com",
@@ -8608,12 +9008,12 @@
         {
           "layer": "L5",
           "primary": false,
-          "criticality": 79
+          "criticality": 81
         },
         {
           "layer": "L8",
           "primary": false,
-          "criticality": 81
+          "criticality": 83
         },
         {
           "layer": "L10",
@@ -8646,10 +9046,10 @@
         "renormalized": false
       },
       "gravity": {
-        "reach": 74,
+        "reach": 75,
         "layers": 15,
         "edgeTypes": 29,
-        "cycles": 173,
+        "cycles": 192,
         "score": 97,
         "signals": {}
       },
@@ -9648,31 +10048,32 @@
         {
           "layer": "L13",
           "primary": true,
-          "criticality": 41
+          "criticality": 49
         }
       ],
       "primaryLayer": "L13",
-      "criticality": 41,
+      "criticality": 49,
       "criticalityFactors": {
-        "irreplaceability": 40,
-        "lockInDepth": 40,
-        "timeToReplace": 45,
-        "concentration": null
+        "irreplaceability": 45,
+        "lockInDepth": 58,
+        "timeToReplace": 50,
+        "concentration": 40
       },
       "criticalityWhy": {
-        "irreplaceability": "Корпоративных платформ несколько",
-        "lockInDepth": "Задевает приложения",
-        "timeToReplace": "Заместить — год-два",
-        "concentration": null
+        "irreplaceability": "Рынок корпоративных приложений компания сама описывает как рынок с низкими барьерами входа",
+        "lockInDepth": "Подписка на данные и приложения сразу: слой данных даёт агентам контекст внутри той же платформы",
+        "timeToReplace": "Перенос корпоративных данных и процессов идёт годами, но техническим препятствием не является",
+        "concentration": "Ни один заказчик не дал десяти процентов выручки"
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
         "reach": 1,
@@ -9708,6 +10109,58 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Salesforce 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm",
+          "published": "2026-03-02",
+          "fetched": null,
+          "alive": true,
+          "quote": "We sell to businesses worldwide, primarily on a subscription basis, through our direct sales efforts",
+          "confidence": 0.975,
+          "self": "salesforce",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Salesforce 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm",
+          "published": "2026-03-02",
+          "fetched": null,
+          "alive": true,
+          "quote": "For fiscal 2026, revenue was $41.5 billion , an increase of ten percent year-over-year.",
+          "confidence": 0.975,
+          "self": "salesforce",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Salesforce 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm",
+          "published": "2026-03-02",
+          "fetched": null,
+          "alive": true,
+          "quote": "No single customer accounted for ten percent or more of total revenue during fiscal 2026",
+          "confidence": 0.975,
+          "self": "salesforce",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Salesforce 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm",
+          "published": "2026-03-02",
+          "fetched": null,
+          "alive": true,
+          "quote": "Data 360 is Salesforce's hyperscale, trusted data engine that gives AI agents their context",
+          "confidence": 0.975,
+          "self": "salesforce",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "NVIDIA 10-K FY2026",
@@ -9722,9 +10175,10 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 5,
+        "selfSourced": 4,
         "byTier": {
+          "1": 4,
           "2": 1
         }
       }
@@ -9776,11 +10230,11 @@
         "renormalized": false
       },
       "gravity": {
-        "reach": 6,
+        "reach": 7,
         "layers": 7,
         "edgeTypes": 4,
-        "cycles": 16,
-        "score": 34,
+        "cycles": 19,
+        "score": 36,
         "signals": {}
       },
       "domain": null,
@@ -9909,38 +10363,39 @@
         {
           "layer": "L4",
           "primary": true,
-          "criticality": 30
+          "criticality": 59
         }
       ],
       "primaryLayer": "L4",
-      "criticality": 30,
+      "criticality": 59,
       "criticalityFactors": {
-        "irreplaceability": 30,
-        "lockInDepth": 30,
-        "timeToReplace": 30,
-        "concentration": null
+        "irreplaceability": 50,
+        "lockInDepth": 70,
+        "timeToReplace": 62,
+        "concentration": 52
       },
       "criticalityWhy": {
-        "irreplaceability": "Поставщиков флеш-памяти несколько",
-        "lockInDepth": "Задевает только хранение",
-        "timeToReplace": "Смена поставщика — месяцы",
-        "concentration": null
+        "irreplaceability": "Компания сама называет четверых вертикально интегрированных конкурентов по своему рынку",
+        "lockInDepth": "Соглашения совместного предприятия запрещают обеим сторонам работать с третьими лицами по флеш-памяти",
+        "timeToReplace": "Производства у компании своего нет: она зависит от совместного предприятия по разработке и выпуску",
+        "concentration": "Десятка крупнейших заказчиков дала 44 % выручки при четырёх названных конкурентах"
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
-        "reach": 2,
-        "layers": 4,
-        "edgeTypes": 2,
-        "cycles": 1,
-        "score": 13,
+        "reach": 5,
+        "layers": 5,
+        "edgeTypes": 3,
+        "cycles": 5,
+        "score": 29,
         "signals": {}
       },
       "domain": null,
@@ -9969,6 +10424,97 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Sandisk 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+          "published": "2026-08-17",
+          "fetched": null,
+          "alive": true,
+          "quote": "We are a vertically integrated solutions provider with ownership of chip-level design and IP",
+          "confidence": 0.975,
+          "self": "sandisk",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Sandisk 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+          "published": "2026-08-17",
+          "fetched": null,
+          "alive": true,
+          "quote": "The Company recorded revenue, net, of $20,248 million for the year ended July 3, 2026.",
+          "confidence": 0.975,
+          "self": "sandisk",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Sandisk 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+          "published": "2026-08-17",
+          "fetched": null,
+          "alive": true,
+          "quote": "We depend on Flash Ventures for the development and manufacture of flash-based memory.",
+          "confidence": 0.975,
+          "self": "sandisk",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Sandisk 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+          "published": "2026-08-17",
+          "fetched": null,
+          "alive": true,
+          "quote": "we and Kioxia are restricted from working with third parties to manufacture flash-based memory",
+          "confidence": 0.975,
+          "self": "sandisk",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Sandisk 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+          "published": "2026-08-17",
+          "fetched": null,
+          "alive": true,
+          "quote": "For 2026, 2025 and 2024, no customer accounted for more than 10%",
+          "confidence": 0.975,
+          "self": "sandisk",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Sandisk 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+          "published": "2026-08-17",
+          "fetched": null,
+          "alive": true,
+          "quote": "the Company's top 10 customers accounted for 44 %, 40 % and 41 %",
+          "confidence": 0.975,
+          "self": "sandisk",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Sandisk 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+          "published": "2026-08-17",
+          "fetched": null,
+          "alive": true,
+          "quote": "We compete with vertically-integrated suppliers such as Kioxia, Micron Technology, Inc., Samsung Electronics Co.,",
+          "confidence": 0.975,
+          "self": "sandisk",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "NVIDIA 10-K FY2026",
@@ -9983,9 +10529,10 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 8,
+        "selfSourced": 7,
         "byTier": {
+          "1": 7,
           "2": 1
         }
       }
@@ -10975,11 +11522,11 @@
         "renormalized": false
       },
       "gravity": {
-        "reach": 4,
+        "reach": 5,
         "layers": 6,
         "edgeTypes": 3,
-        "cycles": 1,
-        "score": 21,
+        "cycles": 2,
+        "score": 24,
         "signals": {}
       },
       "domain": null,
@@ -11110,38 +11657,39 @@
         {
           "layer": "L13",
           "primary": true,
-          "criticality": 46
+          "criticality": 52
         }
       ],
       "primaryLayer": "L13",
-      "criticality": 46,
+      "criticality": 52,
       "criticalityFactors": {
-        "irreplaceability": 45,
-        "lockInDepth": 45,
+        "irreplaceability": 48,
+        "lockInDepth": 62,
         "timeToReplace": 50,
-        "concentration": null
+        "concentration": 44
       },
       "criticalityWhy": {
-        "irreplaceability": "Хранилищ данных несколько",
-        "lockInDepth": "Задевает данные и приложения",
-        "timeToReplace": "Заместить — год-два",
-        "concentration": null
+        "irreplaceability": "Конкурентами названы три крупнейших публичных облака сразу",
+        "lockInDepth": "Договоры на ёмкость дали около 97% выручки: отношения подписочные, а не разовые",
+        "timeToReplace": "Переезд склада данных — работа месяцев, а не лет: платформа построена на общей облачной архитектуре",
+        "concentration": "13,328 заказчиков, и крупнейшая их группа даёт примерно 43% выручки"
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
-        "reach": 1,
-        "layers": 3,
-        "edgeTypes": 1,
+        "reach": 3,
+        "layers": 5,
+        "edgeTypes": 2,
         "cycles": 0,
-        "score": 7,
+        "score": 15,
         "signals": {}
       },
       "domain": null,
@@ -11170,6 +11718,71 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Snowflake 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000008/snow-20260131.htm",
+          "published": "2026-03-20",
+          "fetched": null,
+          "alive": true,
+          "quote": "Our platform is built on a cloud-native architecture that leverages the massive scalability and performance",
+          "confidence": 0.975,
+          "self": "snowflake",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Snowflake 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000008/snow-20260131.htm",
+          "published": "2026-03-20",
+          "fetched": null,
+          "alive": true,
+          "quote": "As of January 31, 2026, we had 13,328 total customers, increasing from 10,996 customers",
+          "confidence": 0.975,
+          "self": "snowflake",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Snowflake 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000008/snow-20260131.htm",
+          "published": "2026-03-20",
+          "fetched": null,
+          "alive": true,
+          "quote": "those customers contributed approximately 43% of our revenue for the fiscal year ended",
+          "confidence": 0.975,
+          "self": "snowflake",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Snowflake 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000008/snow-20260131.htm",
+          "published": "2026-03-20",
+          "fetched": null,
+          "alive": true,
+          "quote": "which represented approximately 97% of our revenue for each of the fiscal years",
+          "confidence": 0.975,
+          "self": "snowflake",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Snowflake 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000008/snow-20260131.htm",
+          "published": "2026-03-20",
+          "fetched": null,
+          "alive": true,
+          "quote": "including Amazon Web Services (AWS), Microsoft Azure (Azure), and Google Cloud Platform (GCP);",
+          "confidence": 0.975,
+          "self": "snowflake",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "NVIDIA 10-K FY2026",
@@ -11184,9 +11797,10 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 6,
+        "selfSourced": 5,
         "byTier": {
+          "1": 5,
           "2": 1
         }
       }
@@ -11641,7 +12255,7 @@
         "reach": 2,
         "layers": 4,
         "edgeTypes": 3,
-        "cycles": 9,
+        "cycles": 10,
         "score": 22,
         "signals": {}
       },
@@ -12265,7 +12879,7 @@
         "reach": 19,
         "layers": 8,
         "edgeTypes": 11,
-        "cycles": 50,
+        "cycles": 59,
         "score": 64,
         "signals": {}
       },
@@ -13724,6 +14338,53 @@
           "quote": "We utilize Taiwan Semiconductor Manufacturing Company Limited (TSMC) for the production of wafers",
           "confidence": 0.975,
           "self": "amd",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "amd__hpe__supplies",
+      "source": "amd",
+      "target": "hpe",
+      "type": "supplies",
+      "spine": "physical",
+      "direction": "upstream",
+      "strength": 60,
+      "lockInDepth": 50,
+      "substitutability": 50,
+      "isReversible": true,
+      "status": "signal",
+      "confidence": 0.875,
+      "sourceTier": 2,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "medium",
+        "type": "substitution",
+        "timeline": "1-2y",
+        "mitigation": "По тем же процессорам у HPE есть второй источник"
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Названа HPE поставщиком процессоров x86 наравне с Intel.",
+      "sidedness": "single",
+      "claimedBy": [
+        "hpe"
+      ],
+      "evidence": [
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "HPE 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+          "published": "2025-12-18",
+          "fetched": null,
+          "alive": true,
+          "quote": "Intel and AMD as suppliers of certain x86 processors Broadcom and others for industry",
+          "confidence": 0.925,
+          "self": "hpe",
           "counter": false
         }
       ],
@@ -15640,6 +16301,53 @@
       "counterEvidence": []
     },
     {
+      "id": "broadcom__hpe__supplies",
+      "source": "broadcom",
+      "target": "hpe",
+      "type": "supplies",
+      "spine": "physical",
+      "direction": "upstream",
+      "strength": 60,
+      "lockInDepth": 60,
+      "substitutability": 35,
+      "isReversible": true,
+      "status": "signal",
+      "confidence": 0.875,
+      "sourceTier": 2,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "high",
+        "type": "substitution",
+        "timeline": "1-2y",
+        "mitigation": "Перебой ударил бы по рынку целиком, а не по одному покупателю — так пишет сама HPE"
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Названа HPE поставщиком стандартных микросхем и единственным источником для рынка целиком.",
+      "sidedness": "single",
+      "claimedBy": [
+        "hpe"
+      ],
+      "evidence": [
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "HPE 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+          "published": "2025-12-18",
+          "fetched": null,
+          "alive": true,
+          "quote": "Intel and AMD as suppliers of certain x86 processors Broadcom and others for industry",
+          "confidence": 0.925,
+          "self": "hpe",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
       "id": "broadcom__nvidia__threatens",
       "source": "broadcom",
       "target": "nvidia",
@@ -16293,6 +17001,53 @@
       "counterEvidence": []
     },
     {
+      "id": "cisco__amazon__competes_with",
+      "source": "cisco",
+      "target": "amazon",
+      "type": "competes_with",
+      "spine": "rivalry",
+      "direction": "lateral",
+      "strength": 45,
+      "lockInDepth": 30,
+      "substitutability": 60,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "medium",
+        "type": "market",
+        "timeline": "1-2y",
+        "mitigation": "Соперничество ограничено частью продуктов и услуг"
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Названа в собственном списке конкурентов Cisco.",
+      "sidedness": "single",
+      "claimedBy": [
+        "cisco"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Cisco 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+          "published": "2025-09-03",
+          "fetched": null,
+          "alive": true,
+          "quote": "include: Amazon Web Services LLC; Arista Networks, Inc.; Broadcom Inc.; Ciena Corporation; CrowdStrike Holdings, Inc.;",
+          "confidence": 0.975,
+          "self": "cisco",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
       "id": "cisco__arista__competes_with",
       "source": "cisco",
       "target": "arista",
@@ -16303,10 +17058,10 @@
       "lockInDepth": 40,
       "substitutability": 40,
       "isReversible": true,
-      "status": "confirmed",
-      "confidence": 0.955,
-      "sourceTier": 2,
-      "confirmedSources": 2,
+      "status": "bilateral",
+      "confidence": 0.99,
+      "sourceTier": 1,
+      "confirmedSources": 3,
       "risk": {
         "level": "low",
         "type": "market",
@@ -16318,11 +17073,25 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": "Исторический лидер сетевого оборудования против специализированного поставщика для кластеров.",
-      "sidedness": "single",
+      "sidedness": "bilateral",
       "claimedBy": [
-        "arista"
+        "arista",
+        "cisco"
       ],
       "evidence": [
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Cisco 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+          "published": "2025-09-03",
+          "fetched": null,
+          "alive": true,
+          "quote": "include: Amazon Web Services LLC; Arista Networks, Inc.; Broadcom Inc.; Ciena Corporation; CrowdStrike Holdings, Inc.;",
+          "confidence": 0.975,
+          "self": "cisco",
+          "counter": false
+        },
         {
           "tier": 2,
           "type": "sec_filing",
@@ -16347,6 +17116,241 @@
           "quote": "Two of our customers accounted for more than 10% of our sales",
           "confidence": 0.925,
           "self": "arista",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "cisco__broadcom__competes_with",
+      "source": "cisco",
+      "target": "broadcom",
+      "type": "competes_with",
+      "spine": "rivalry",
+      "direction": "lateral",
+      "strength": 65,
+      "lockInDepth": 30,
+      "substitutability": 60,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "medium",
+        "type": "market",
+        "timeline": "1-2y",
+        "mitigation": "Соперничество идёт на части линейки, а не по всему портфелю"
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Названа в собственном списке конкурентов Cisco по части продуктов и услуг.",
+      "sidedness": "single",
+      "claimedBy": [
+        "cisco"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Cisco 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+          "published": "2025-09-03",
+          "fetched": null,
+          "alive": true,
+          "quote": "include: Amazon Web Services LLC; Arista Networks, Inc.; Broadcom Inc.; Ciena Corporation; CrowdStrike Holdings, Inc.;",
+          "confidence": 0.975,
+          "self": "cisco",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "cisco__dell__competes_with",
+      "source": "cisco",
+      "target": "dell",
+      "type": "competes_with",
+      "spine": "rivalry",
+      "direction": "lateral",
+      "strength": 55,
+      "lockInDepth": 30,
+      "substitutability": 60,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "medium",
+        "type": "market",
+        "timeline": "1-2y",
+        "mitigation": "Обе стороны одновременно продают в один и тот же дата-центр"
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Названа в собственном списке конкурентов Cisco.",
+      "sidedness": "single",
+      "claimedBy": [
+        "cisco"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Cisco 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+          "published": "2025-09-03",
+          "fetched": null,
+          "alive": true,
+          "quote": "Datadog Inc.; Dell Technologies Inc.; Dynatrace Inc.; Fortinet, Inc.; Hewlett-Packard Enterprise Company;",
+          "confidence": 0.975,
+          "self": "cisco",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "cisco__hpe__competes_with",
+      "source": "cisco",
+      "target": "hpe",
+      "type": "competes_with",
+      "spine": "rivalry",
+      "direction": "lateral",
+      "strength": 55,
+      "lockInDepth": 30,
+      "substitutability": 60,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "medium",
+        "type": "market",
+        "timeline": "1-2y",
+        "mitigation": "Обе стороны одновременно продают в один и тот же дата-центр"
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Названа в собственном списке конкурентов Cisco.",
+      "sidedness": "single",
+      "claimedBy": [
+        "cisco"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Cisco 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+          "published": "2025-09-03",
+          "fetched": null,
+          "alive": true,
+          "quote": "Datadog Inc.; Dell Technologies Inc.; Dynatrace Inc.; Fortinet, Inc.; Hewlett-Packard Enterprise Company;",
+          "confidence": 0.975,
+          "self": "cisco",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "cisco__microsoft__competes_with",
+      "source": "cisco",
+      "target": "microsoft",
+      "type": "competes_with",
+      "spine": "rivalry",
+      "direction": "lateral",
+      "strength": 45,
+      "lockInDepth": 30,
+      "substitutability": 60,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "medium",
+        "type": "market",
+        "timeline": "1-2y",
+        "mitigation": "Пересечение только на части линейки: совместная работа и соперничество идут рядом"
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Названа в собственном списке конкурентов Cisco.",
+      "sidedness": "single",
+      "claimedBy": [
+        "cisco"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Cisco 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+          "published": "2025-09-03",
+          "fetched": null,
+          "alive": true,
+          "quote": "Ltd.; Microsoft Corporation; New Relic, Inc.; Nokia Corporation; Nvidia Corporation; Palo Alto Networks, Inc.;",
+          "confidence": 0.975,
+          "self": "cisco",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "cisco__nvidia__competes_with",
+      "source": "cisco",
+      "target": "nvidia",
+      "type": "competes_with",
+      "spine": "rivalry",
+      "direction": "lateral",
+      "strength": 60,
+      "lockInDepth": 30,
+      "substitutability": 60,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "medium",
+        "type": "market",
+        "timeline": "1-2y",
+        "mitigation": "Соперничество идёт в сетевой фабрике дата-центра, а не в ускорителях"
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Названа в собственном списке конкурентов Cisco по части продуктов и услуг.",
+      "sidedness": "single",
+      "claimedBy": [
+        "cisco"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Cisco 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/csco-20250726.htm",
+          "published": "2025-09-03",
+          "fetched": null,
+          "alive": true,
+          "quote": "Ltd.; Microsoft Corporation; New Relic, Inc.; Nokia Corporation; Nvidia Corporation; Palo Alto Networks, Inc.;",
+          "confidence": 0.975,
+          "self": "cisco",
           "counter": false
         }
       ],
@@ -17261,6 +18265,53 @@
           "quote": "such as Alibaba Group, Alphabet Inc., Amazon, Inc., or Amazon, Baidu, Inc., Huawei, and",
           "confidence": 0.925,
           "self": "nvidia",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "dell__broadcom__path_dependent_on",
+      "source": "dell",
+      "target": "broadcom",
+      "type": "path_dependent_on",
+      "spine": "moat",
+      "direction": "upstream",
+      "strength": 55,
+      "lockInDepth": 50,
+      "substitutability": 45,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "medium",
+        "type": "market",
+        "timeline": "1-2y",
+        "mitigation": "Dell продаёт и собственный стек виртуализации рядом с чужим"
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "После покупки VMware компанией Broadcom условия выхода на рынок изменились, и это затронуло коммерческие отношения Dell.",
+      "sidedness": "single",
+      "claimedBy": [
+        "dell"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Dell Technologies 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm",
+          "published": "2026-03-16",
+          "fetched": null,
+          "alive": true,
+          "quote": "On November 22, 2023, VMware was acquired by Broadcom Inc. (“Broadcom”), and subsequently announced changes",
+          "confidence": 0.975,
+          "self": "dell",
           "counter": false
         }
       ],
@@ -18263,6 +19314,53 @@
       "counterEvidence": []
     },
     {
+      "id": "ge-vernova__crusoe__supplies",
+      "source": "ge-vernova",
+      "target": "crusoe",
+      "type": "supplies",
+      "spine": "physical",
+      "direction": "upstream",
+      "strength": 60,
+      "lockInDepth": 55,
+      "substitutability": 45,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "medium",
+        "type": "substitution",
+        "timeline": "2-5y",
+        "mitigation": "Площадка держит турбину как резерв, а не как единственный источник"
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Газовая турбина LM2500XPRESS питает дата-центр Crusoe как быстрый резервный источник.",
+      "sidedness": "single",
+      "claimedBy": [
+        "ge-vernova"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "GE Vernova — Gas power for data centers",
+          "url": "https://www.gevernova.com/gas-power/industries/data-centers",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "GE Vernova's LM2500XPRESS gas turbine powers Crusoe's AI data center with fast, efficient backup energy.",
+          "confidence": 0.975,
+          "self": "ge-vernova",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
       "id": "ge-vernova__microsoft__supplies",
       "source": "ge-vernova",
       "target": "microsoft",
@@ -18637,6 +19735,53 @@
       "counterEvidence": []
     },
     {
+      "id": "hpe__nvidia__strategic_partner",
+      "source": "hpe",
+      "target": "nvidia",
+      "type": "strategic_partner",
+      "spine": "capital",
+      "direction": "bidirectional",
+      "strength": 70,
+      "lockInDepth": 60,
+      "substitutability": 40,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "medium",
+        "type": "technical",
+        "timeline": "2-5y",
+        "mitigation": "HPE держит рядом собственный портфель сетей и вычислений"
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Не перепродажа: готовые системы разработаны совместно и объединяют аппаратуру и софт обеих сторон.",
+      "sidedness": "single",
+      "claimedBy": [
+        "hpe"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "HPE 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+          "published": "2025-12-18",
+          "fetched": null,
+          "alive": true,
+          "quote": "turn-key integrated systems co-engineered with Nvidia that integrate HPE AI hardware and software technologies",
+          "confidence": 0.975,
+          "self": "hpe",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
       "id": "huggingface__cuda__path_dependent_on",
       "source": "huggingface",
       "target": "cuda",
@@ -18825,6 +19970,53 @@
           "quote": "If you want to compile with CUDA support, [select a supported version",
           "confidence": 0.925,
           "self": "pytorch",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "intel__hpe__supplies",
+      "source": "intel",
+      "target": "hpe",
+      "type": "supplies",
+      "spine": "physical",
+      "direction": "upstream",
+      "strength": 65,
+      "lockInDepth": 55,
+      "substitutability": 45,
+      "isReversible": true,
+      "status": "signal",
+      "confidence": 0.875,
+      "sourceTier": 2,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "medium",
+        "type": "substitution",
+        "timeline": "1-2y",
+        "mitigation": "Вторым источником по тем же процессорам HPE называет AMD"
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Названа HPE поставщиком процессоров x86 и одновременно единственным источником для рынка целиком.",
+      "sidedness": "single",
+      "claimedBy": [
+        "hpe"
+      ],
+      "evidence": [
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "HPE 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+          "published": "2025-12-18",
+          "fetched": null,
+          "alive": true,
+          "quote": "Intel and AMD as suppliers of certain x86 processors Broadcom and others for industry",
+          "confidence": 0.925,
+          "self": "hpe",
           "counter": false
         }
       ],
@@ -20421,10 +21613,10 @@
       "lockInDepth": 15,
       "substitutability": 75,
       "isReversible": true,
-      "status": "high_confidence",
-      "confidence": 0.975,
+      "status": "bilateral",
+      "confidence": 0.99,
       "sourceTier": 1,
-      "confirmedSources": 1,
+      "confirmedSources": 2,
       "risk": {
         "level": "low",
         "type": "market",
@@ -20436,9 +21628,10 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": "Названа в отчётности Micron среди конкурентов на рынках памяти и накопителей.",
-      "sidedness": "single",
+      "sidedness": "bilateral",
       "claimedBy": [
-        "micron"
+        "micron",
+        "sandisk"
       ],
       "evidence": [
         {
@@ -20452,6 +21645,19 @@
           "quote": "including Samsung Electronics Co., Ltd.; SK hynix Inc.; Kioxia Holdings Corporation; Sandisk Corporation",
           "confidence": 0.975,
           "self": "micron",
+          "counter": false
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "Sandisk 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+          "published": "2026-08-17",
+          "fetched": null,
+          "alive": true,
+          "quote": "We compete with vertically-integrated suppliers such as Kioxia, Micron Technology, Inc., Samsung Electronics Co.,",
+          "confidence": 0.925,
+          "self": "sandisk",
           "counter": false
         }
       ],
@@ -22773,10 +23979,10 @@
       "lockInDepth": 45,
       "substitutability": 35,
       "isReversible": true,
-      "status": "confirmed",
+      "status": "bilateral",
       "confidence": 0.99,
       "sourceTier": 1,
-      "confirmedSources": 2,
+      "confirmedSources": 3,
       "risk": {
         "level": "low",
         "type": "market",
@@ -22788,8 +23994,9 @@
       "strengthened": null,
       "lastConfirmed": "2026-08",
       "note": "Второй корпоративный производитель серверов в канале продаж.",
-      "sidedness": "single",
+      "sidedness": "bilateral",
       "claimedBy": [
+        "hpe",
         "nvidia"
       ],
       "evidence": [
@@ -22817,6 +24024,19 @@
           "quote": "We work closely with NVIDIA, Intel and AMD, among others, to develop products",
           "confidence": 0.925,
           "self": null,
+          "counter": false
+        },
+        {
+          "tier": 2,
+          "type": "sec_filing",
+          "title": "HPE 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1645590/000164559025000130/hpe-20251031.htm",
+          "published": "2025-12-18",
+          "fetched": null,
+          "alive": true,
+          "quote": "or NVIDIA for Graphics Processing Units) are also the single-source suppliers for the entire market",
+          "confidence": 0.925,
+          "self": "hpe",
           "counter": false
         }
       ],
@@ -25700,6 +26920,66 @@
       "counterEvidence": []
     },
     {
+      "id": "sandisk__kioxia__strategic_partner",
+      "source": "sandisk",
+      "target": "kioxia",
+      "type": "strategic_partner",
+      "spine": "capital",
+      "direction": "bidirectional",
+      "strength": 90,
+      "lockInDepth": 90,
+      "substitutability": 10,
+      "isReversible": false,
+      "status": "confirmed",
+      "confidence": 0.99,
+      "sourceTier": 1,
+      "confirmedSources": 2,
+      "risk": {
+        "level": "high",
+        "type": "substitution",
+        "timeline": "5y+",
+        "mitigation": "Ограничение взаимно и связывает обе стороны одинаково"
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Совместное предприятие Flash Ventures: пока оно работает, обе стороны не вправе выпускать флеш-память с третьими лицами.",
+      "sidedness": "single",
+      "claimedBy": [
+        "sandisk"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Sandisk 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+          "published": "2026-08-17",
+          "fetched": null,
+          "alive": true,
+          "quote": "We depend on Flash Ventures for the development and manufacture of flash-based memory.",
+          "confidence": 0.975,
+          "self": "sandisk",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Sandisk 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+          "published": "2026-08-17",
+          "fetched": null,
+          "alive": true,
+          "quote": "we and Kioxia are restricted from working with third parties to manufacture flash-based memory",
+          "confidence": 0.975,
+          "self": "sandisk",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
       "id": "sandisk__nvidia__supplies",
       "source": "sandisk",
       "target": "nvidia",
@@ -25741,6 +27021,100 @@
           "quote": "We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung.",
           "confidence": 0.925,
           "self": "nvidia",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "sandisk__samsung__competes_with",
+      "source": "sandisk",
+      "target": "samsung",
+      "type": "competes_with",
+      "spine": "rivalry",
+      "direction": "lateral",
+      "strength": 60,
+      "lockInDepth": 30,
+      "substitutability": 60,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "medium",
+        "type": "market",
+        "timeline": "1-2y",
+        "mitigation": "Заказчики держат несколько квалифицированных поставщиков сразу"
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Названа Sandisk среди вертикально интегрированных конкурентов по флеш-памяти.",
+      "sidedness": "single",
+      "claimedBy": [
+        "sandisk"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Sandisk 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+          "published": "2026-08-17",
+          "fetched": null,
+          "alive": true,
+          "quote": "We compete with vertically-integrated suppliers such as Kioxia, Micron Technology, Inc., Samsung Electronics Co.,",
+          "confidence": 0.975,
+          "self": "sandisk",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "sandisk__sk-hynix__competes_with",
+      "source": "sandisk",
+      "target": "sk-hynix",
+      "type": "competes_with",
+      "spine": "rivalry",
+      "direction": "lateral",
+      "strength": 55,
+      "lockInDepth": 30,
+      "substitutability": 60,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "medium",
+        "type": "market",
+        "timeline": "1-2y",
+        "mitigation": "Заказчики держат несколько квалифицированных поставщиков сразу"
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Названа Sandisk среди вертикально интегрированных конкурентов по флеш-памяти.",
+      "sidedness": "single",
+      "claimedBy": [
+        "sandisk"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Sandisk 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+          "published": "2026-08-17",
+          "fetched": null,
+          "alive": true,
+          "quote": "We compete with vertically-integrated suppliers such as Kioxia, Micron Technology, Inc., Samsung Electronics Co.,",
+          "confidence": 0.975,
+          "self": "sandisk",
           "counter": false
         }
       ],
@@ -26519,6 +27893,100 @@
           "quote": "We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung.",
           "confidence": 0.925,
           "self": "nvidia",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "snowflake__amazon__competes_with",
+      "source": "snowflake",
+      "target": "amazon",
+      "type": "competes_with",
+      "spine": "rivalry",
+      "direction": "lateral",
+      "strength": 60,
+      "lockInDepth": 30,
+      "substitutability": 60,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "medium",
+        "type": "market",
+        "timeline": "1-2y",
+        "mitigation": "Платформа работает поверх нескольких публичных облаков сразу"
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Названа Snowflake среди крупных публичных облаков, конкурирующих на всех её рынках.",
+      "sidedness": "single",
+      "claimedBy": [
+        "snowflake"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Snowflake 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000008/snow-20260131.htm",
+          "published": "2026-03-20",
+          "fetched": null,
+          "alive": true,
+          "quote": "including Amazon Web Services (AWS), Microsoft Azure (Azure), and Google Cloud Platform (GCP);",
+          "confidence": 0.975,
+          "self": "snowflake",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "snowflake__microsoft__competes_with",
+      "source": "snowflake",
+      "target": "microsoft",
+      "type": "competes_with",
+      "spine": "rivalry",
+      "direction": "lateral",
+      "strength": 60,
+      "lockInDepth": 30,
+      "substitutability": 60,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "medium",
+        "type": "market",
+        "timeline": "1-2y",
+        "mitigation": "Платформа работает поверх нескольких публичных облаков сразу"
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Названа Snowflake среди крупных публичных облаков, конкурирующих на всех её рынках.",
+      "sidedness": "single",
+      "claimedBy": [
+        "snowflake"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Snowflake 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000008/snow-20260131.htm",
+          "published": "2026-03-20",
+          "fetched": null,
+          "alive": true,
+          "quote": "including Amazon Web Services (AWS), Microsoft Azure (Azure), and Google Cloud Platform (GCP);",
+          "confidence": 0.975,
+          "self": "snowflake",
           "counter": false
         }
       ],
@@ -29184,6 +30652,38 @@
       "id": "c30",
       "type": "financing",
       "path": [
+        "broadcom",
+        "hpe",
+        "nvidia",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__hpe__supplies",
+        "hpe__nvidia__strategic_partner",
+        "nvidia__broadcom__competes_with"
+      ],
+      "note": "Контур финансирования: Broadcom —поставляет→ HPE; HPE —стратегический партнёр→ NVIDIA; NVIDIA —конкурирует с→ Broadcom"
+    },
+    {
+      "id": "c31",
+      "type": "lockin",
+      "path": [
+        "broadcom",
+        "nvidia",
+        "dell",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__nvidia__threatens",
+        "nvidia__dell__supplies",
+        "dell__broadcom__path_dependent_on"
+      ],
+      "note": "Контур замка: Broadcom —подтачивает→ NVIDIA; NVIDIA —поставляет→ Dell; Dell —развивается вслед за→ Broadcom"
+    },
+    {
+      "id": "c32",
+      "type": "financing",
+      "path": [
         "crusoe",
         "nvidia",
         "nventures",
@@ -29197,7 +30697,7 @@
       "note": "Контур финансирования: Crusoe —делает возможным→ NVIDIA; NVIDIA —имеет место в совете→ NVIDIA Ventures (NVentures); NVIDIA Ventures (NVentures) —вкладывается в→ Crusoe"
     },
     {
-      "id": "c31",
+      "id": "c33",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -29213,7 +30713,7 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c32",
+      "id": "c34",
       "type": "lockin",
       "path": [
         "nvidia",
@@ -29229,7 +30729,7 @@
       "note": "Контур замка: NVIDIA —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA"
     },
     {
-      "id": "c33",
+      "id": "c35",
       "type": "financing",
       "path": [
         "nvidia",
@@ -29245,7 +30745,7 @@
       "note": "Контур финансирования: NVIDIA —стратегический партнёр→ SoftBank; SoftBank —стратегический партнёр→ Oracle; Oracle —покупает у→ NVIDIA"
     },
     {
-      "id": "c34",
+      "id": "c36",
       "type": "financing",
       "path": [
         "coreweave",
@@ -29261,7 +30761,7 @@
       "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ CoreWeave"
     },
     {
-      "id": "c35",
+      "id": "c37",
       "type": "financing",
       "path": [
         "micron",
@@ -29277,7 +30777,7 @@
       "note": "Контур финансирования: Micron —конкурирует с→ Samsung; Samsung —поставляет→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron"
     },
     {
-      "id": "c36",
+      "id": "c38",
       "type": "financing",
       "path": [
         "kioxia",
@@ -29293,7 +30793,7 @@
       "note": "Контур финансирования: Kioxia —поставляет→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron; Micron —конкурирует с→ Kioxia"
     },
     {
-      "id": "c37",
+      "id": "c39",
       "type": "financing",
       "path": [
         "micron",
@@ -29309,7 +30809,7 @@
       "note": "Контур финансирования: Micron —конкурирует с→ SanDisk; SanDisk —поставляет→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron"
     },
     {
-      "id": "c38",
+      "id": "c40",
       "type": "lockin",
       "path": [
         "cuda",
@@ -29327,7 +30827,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ NVIDIA; NVIDIA —делает возможным→ CUDA"
     },
     {
-      "id": "c39",
+      "id": "c41",
       "type": "lockin",
       "path": [
         "cuda",
@@ -29345,7 +30845,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c40",
+      "id": "c42",
       "type": "lockin",
       "path": [
         "cuda",
@@ -29363,7 +30863,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —стратегический партнёр→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c41",
+      "id": "c43",
       "type": "lockin",
       "path": [
         "cuda",
@@ -29381,7 +30881,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c42",
+      "id": "c44",
       "type": "sales",
       "path": [
         "broadcom",
@@ -29399,7 +30899,7 @@
       "note": "Контур сбыта: Broadcom —проектирует вместе с→ Google; Google —покупает у→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ Broadcom"
     },
     {
-      "id": "c43",
+      "id": "c45",
       "type": "lockin",
       "path": [
         "cuda",
@@ -29417,7 +30917,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —делает возможным→ CUDA"
     },
     {
-      "id": "c44",
+      "id": "c46",
       "type": "financing",
       "path": [
         "microsoft",
@@ -29435,7 +30935,7 @@
       "note": "Контур финансирования: Microsoft —вкладывается в→ OpenAI; OpenAI —покупает у→ Oracle; Oracle —покупает у→ NVIDIA; NVIDIA —поставляет→ Microsoft"
     },
     {
-      "id": "c45",
+      "id": "c47",
       "type": "financing",
       "path": [
         "arista",
@@ -29453,7 +30953,7 @@
       "note": "Контур финансирования: Arista Networks —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c46",
+      "id": "c48",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -29471,7 +30971,7 @@
       "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —делает возможным→ CUDA; CUDA —запирает платформы→ NVIDIA; NVIDIA —конкурирует с→ Broadcom"
     },
     {
-      "id": "c47",
+      "id": "c49",
       "type": "financing",
       "path": [
         "coreweave",
@@ -29489,7 +30989,7 @@
       "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —покупает у→ CoreWeave"
     },
     {
-      "id": "c48",
+      "id": "c50",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -29507,7 +31007,7 @@
       "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —имеет место в совете→ NVIDIA Ventures (NVentures); NVIDIA Ventures (NVentures) —вкладывается в→ Hugging Face"
     },
     {
-      "id": "c49",
+      "id": "c51",
       "type": "lockin",
       "path": [
         "amazon",
@@ -29525,7 +31025,7 @@
       "note": "Контур замка: Amazon —запирает платформы→ CUDA; CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
     },
     {
-      "id": "c50",
+      "id": "c52",
       "type": "lockin",
       "path": [
         "cuda",
@@ -29543,7 +31043,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —имеет место в совете→ NVIDIA Ventures (NVentures); NVIDIA Ventures (NVentures) —вкладывается в→ Hugging Face; Hugging Face —развивается вслед за→ CUDA"
     },
     {
-      "id": "c51",
+      "id": "c53",
       "type": "lockin",
       "path": [
         "cuda",
@@ -29561,7 +31061,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c52",
+      "id": "c54",
       "type": "lockin",
       "path": [
         "arista",
@@ -29579,7 +31079,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA; CUDA —запирает платформы→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c53",
+      "id": "c55",
       "type": "financing",
       "path": [
         "broadcom",
@@ -29597,7 +31097,7 @@
       "note": "Контур финансирования: Broadcom —подтачивает→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ Broadcom"
     },
     {
-      "id": "c54",
+      "id": "c56",
       "type": "lockin",
       "path": [
         "cuda",
@@ -29615,7 +31115,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c55",
+      "id": "c57",
       "type": "financing",
       "path": [
         "microsoft",
@@ -29633,7 +31133,7 @@
       "note": "Контур финансирования: Microsoft —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —стратегический партнёр→ Microsoft"
     },
     {
-      "id": "c56",
+      "id": "c58",
       "type": "sales",
       "path": [
         "astera-labs",
@@ -29651,7 +31151,7 @@
       "note": "Контур сбыта: Astera Labs —заточен под→ NVIDIA; NVIDIA —конкурирует с→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —производит для→ Astera Labs"
     },
     {
-      "id": "c57",
+      "id": "c59",
       "type": "financing",
       "path": [
         "amazon",
@@ -29669,7 +31169,7 @@
       "note": "Контур финансирования: Amazon —вкладывается в→ Anthropic; Anthropic —покупает у→ Google; Google —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
     },
     {
-      "id": "c58",
+      "id": "c60",
       "type": "sales",
       "path": [
         "arista",
@@ -29687,7 +31187,7 @@
       "note": "Контур сбыта: Arista Networks —поставляет→ Microsoft; Microsoft —покупает у→ CoreWeave; CoreWeave —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c59",
+      "id": "c61",
       "type": "financing",
       "path": [
         "astera-labs",
@@ -29705,7 +31205,7 @@
       "note": "Контур финансирования: Astera Labs —заточен под→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ Astera Labs"
     },
     {
-      "id": "c60",
+      "id": "c62",
       "type": "lockin",
       "path": [
         "cuda",
@@ -29723,7 +31223,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c61",
+      "id": "c63",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -29741,7 +31241,7 @@
       "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ NVIDIA; NVIDIA —страхуется через→ Hugging Face"
     },
     {
-      "id": "c62",
+      "id": "c64",
       "type": "financing",
       "path": [
         "microsoft",
@@ -29759,7 +31259,7 @@
       "note": "Контур финансирования: Microsoft —вкладывается в→ OpenAI; OpenAI —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft"
     },
     {
-      "id": "c63",
+      "id": "c65",
       "type": "lockin",
       "path": [
         "arista",
@@ -29777,7 +31277,25 @@
       "note": "Контур замка: Arista Networks —поставляет→ Meta; Meta —запирает платформы→ CUDA; CUDA —запирает платформы→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c64",
+      "id": "c66",
+      "type": "financing",
+      "path": [
+        "broadcom",
+        "hpe",
+        "nvidia",
+        "tsmc",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__hpe__supplies",
+        "hpe__nvidia__strategic_partner",
+        "nvidia__tsmc__co_designs",
+        "tsmc__broadcom__manufactures"
+      ],
+      "note": "Контур финансирования: Broadcom —поставляет→ HPE; HPE —стратегический партнёр→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —производит для→ Broadcom"
+    },
+    {
+      "id": "c67",
       "type": "lockin",
       "path": [
         "cuda",
@@ -29795,7 +31313,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —запирает платформы→ CUDA"
     },
     {
-      "id": "c65",
+      "id": "c68",
       "type": "financing",
       "path": [
         "arm",
@@ -29813,7 +31331,7 @@
       "note": "Контур финансирования: Arm —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
     },
     {
-      "id": "c66",
+      "id": "c69",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -29831,7 +31349,7 @@
       "note": "Контур замка: Broadcom —подтачивает→ NVIDIA; NVIDIA —стандартизуется на→ Kubernetes; Kubernetes —развивается вслед за→ Google; Google —покупает у→ Broadcom"
     },
     {
-      "id": "c67",
+      "id": "c70",
       "type": "sales",
       "path": [
         "broadcom",
@@ -29849,7 +31367,25 @@
       "note": "Контур сбыта: Broadcom —покупает у→ TSMC; TSMC —производит для→ Credo Technology; Credo Technology —заточен под→ NVIDIA; NVIDIA —конкурирует с→ Broadcom"
     },
     {
-      "id": "c68",
+      "id": "c71",
+      "type": "lockin",
+      "path": [
+        "broadcom",
+        "tsmc",
+        "nvidia",
+        "dell",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__tsmc__customer_of",
+        "tsmc__nvidia__manufactures",
+        "nvidia__dell__supplies",
+        "dell__broadcom__path_dependent_on"
+      ],
+      "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —производит для→ NVIDIA; NVIDIA —поставляет→ Dell; Dell —развивается вслед за→ Broadcom"
+    },
+    {
+      "id": "c72",
       "type": "lockin",
       "path": [
         "china",
@@ -29867,7 +31403,7 @@
       "note": "Контур замка: Китай —шлюзует доступ к→ DeepSeek; DeepSeek —может вытеснить→ CUDA; CUDA —запирает платформы→ NVIDIA; NVIDIA —ограничен режимом→ Китай"
     },
     {
-      "id": "c69",
+      "id": "c73",
       "type": "lockin",
       "path": [
         "cuda",
@@ -29885,7 +31421,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —развивается вслед за→ CUDA"
     },
     {
-      "id": "c70",
+      "id": "c74",
       "type": "lockin",
       "path": [
         "cuda",
@@ -29903,7 +31439,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c71",
+      "id": "c75",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -29921,7 +31457,7 @@
       "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c72",
+      "id": "c76",
       "type": "financing",
       "path": [
         "amazon",
@@ -29939,7 +31475,25 @@
       "note": "Контур финансирования: Amazon —вкладывается в→ Anthropic; Anthropic —стратегический партнёр→ Broadcom; Broadcom —подтачивает→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
     },
     {
-      "id": "c73",
+      "id": "c77",
+      "type": "lockin",
+      "path": [
+        "broadcom",
+        "google",
+        "nvidia",
+        "dell",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__google__co_designs",
+        "google__nvidia__customer_of",
+        "nvidia__dell__supplies",
+        "dell__broadcom__path_dependent_on"
+      ],
+      "note": "Контур замка: Broadcom —проектирует вместе с→ Google; Google —покупает у→ NVIDIA; NVIDIA —поставляет→ Dell; Dell —развивается вслед за→ Broadcom"
+    },
+    {
+      "id": "c78",
       "type": "financing",
       "path": [
         "credo",
@@ -29957,7 +31511,7 @@
       "note": "Контур финансирования: Credo Technology —заточен под→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ Credo Technology"
     },
     {
-      "id": "c74",
+      "id": "c79",
       "type": "lockin",
       "path": [
         "cuda",
@@ -29975,7 +31529,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face; Hugging Face —развивается вслед за→ CUDA"
     },
     {
-      "id": "c75",
+      "id": "c80",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -29993,7 +31547,7 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c76",
+      "id": "c81",
       "type": "lockin",
       "path": [
         "microsoft",
@@ -30011,7 +31565,7 @@
       "note": "Контур замка: Microsoft —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA; NVIDIA —поставляет→ Microsoft"
     },
     {
-      "id": "c77",
+      "id": "c82",
       "type": "lockin",
       "path": [
         "arm",
@@ -30029,7 +31583,7 @@
       "note": "Контур замка: Arm —поставляет→ NVIDIA; NVIDIA —конкурирует с→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —стандартизуется на→ Arm"
     },
     {
-      "id": "c78",
+      "id": "c83",
       "type": "financing",
       "path": [
         "coreweave",
@@ -30047,7 +31601,7 @@
       "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft; Microsoft —покупает у→ CoreWeave"
     },
     {
-      "id": "c79",
+      "id": "c84",
       "type": "lockin",
       "path": [
         "cuda",
@@ -30065,7 +31619,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c80",
+      "id": "c85",
       "type": "lockin",
       "path": [
         "amazon",
@@ -30083,7 +31637,7 @@
       "note": "Контур замка: Amazon —запирает платформы→ CUDA; CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
     },
     {
-      "id": "c81",
+      "id": "c86",
       "type": "lockin",
       "path": [
         "arm",
@@ -30101,7 +31655,25 @@
       "note": "Контур замка: Arm —поставляет→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —стандартизуется на→ Arm"
     },
     {
-      "id": "c82",
+      "id": "c87",
+      "type": "financing",
+      "path": [
+        "broadcom",
+        "hpe",
+        "nvidia",
+        "google",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__hpe__supplies",
+        "hpe__nvidia__strategic_partner",
+        "nvidia__google__competes_with",
+        "google__broadcom__customer_of"
+      ],
+      "note": "Контур финансирования: Broadcom —поставляет→ HPE; HPE —стратегический партнёр→ NVIDIA; NVIDIA —конкурирует с→ Google; Google —покупает у→ Broadcom"
+    },
+    {
+      "id": "c88",
       "type": "financing",
       "path": [
         "broadcom",
@@ -30119,7 +31691,7 @@
       "note": "Контур финансирования: Broadcom —подтачивает→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Broadcom"
     },
     {
-      "id": "c83",
+      "id": "c89",
       "type": "financing",
       "path": [
         "coreweave",
@@ -30137,7 +31709,7 @@
       "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —покупает у→ CoreWeave"
     },
     {
-      "id": "c84",
+      "id": "c90",
       "type": "financing",
       "path": [
         "nvidia",
@@ -30155,7 +31727,7 @@
       "note": "Контур финансирования: NVIDIA —стратегический партнёр→ SoftBank; SoftBank —стратегический партнёр→ Oracle; Oracle —вкладывается в→ OpenAI; OpenAI —покупает у→ NVIDIA"
     },
     {
-      "id": "c85",
+      "id": "c91",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -30173,7 +31745,7 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —стандартизуется на→ Hugging Face"
     },
     {
-      "id": "c86",
+      "id": "c92",
       "type": "lockin",
       "path": [
         "arista",
@@ -30191,7 +31763,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Meta; Meta —делает возможным→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c87",
+      "id": "c93",
       "type": "financing",
       "path": [
         "astera-labs",
@@ -30209,7 +31781,7 @@
       "note": "Контур финансирования: Astera Labs —заточен под→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Astera Labs"
     },
     {
-      "id": "c88",
+      "id": "c94",
       "type": "financing",
       "path": [
         "micron",
@@ -30227,7 +31799,7 @@
       "note": "Контур финансирования: Micron —конкурирует с→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron"
     },
     {
-      "id": "c89",
+      "id": "c95",
       "type": "lockin",
       "path": [
         "china",
@@ -30245,7 +31817,7 @@
       "note": "Контур замка: Китай —шлюзует доступ к→ DeepSeek; DeepSeek —делает возможным→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —ограничен режимом→ Китай"
     },
     {
-      "id": "c90",
+      "id": "c96",
       "type": "sales",
       "path": [
         "arista",
@@ -30263,7 +31835,7 @@
       "note": "Контур сбыта: Arista Networks —поставляет→ Meta; Meta —покупает у→ CoreWeave; CoreWeave —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c91",
+      "id": "c97",
       "type": "lockin",
       "path": [
         "nvidia",
@@ -30281,7 +31853,7 @@
       "note": "Контур замка: NVIDIA —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —конкурирует с→ TensorRT; TensorRT —запирает платформы→ NVIDIA"
     },
     {
-      "id": "c92",
+      "id": "c98",
       "type": "lockin",
       "path": [
         "arm",
@@ -30299,7 +31871,7 @@
       "note": "Контур замка: Arm —стандартизуется на→ Kubernetes; Kubernetes —развивается вслед за→ Google; Google —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
     },
     {
-      "id": "c93",
+      "id": "c99",
       "type": "financing",
       "path": [
         "arm",
@@ -30317,7 +31889,7 @@
       "note": "Контур финансирования: Arm —стратегический партнёр→ SoftBank; SoftBank —стратегический партнёр→ Oracle; Oracle —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
     },
     {
-      "id": "c94",
+      "id": "c100",
       "type": "financing",
       "path": [
         "credo",
@@ -30335,7 +31907,43 @@
       "note": "Контур финансирования: Credo Technology —заточен под→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Credo Technology"
     },
     {
-      "id": "c95",
+      "id": "c101",
+      "type": "lockin",
+      "path": [
+        "broadcom",
+        "hpe",
+        "nvidia",
+        "dell",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__hpe__supplies",
+        "hpe__nvidia__strategic_partner",
+        "nvidia__dell__supplies",
+        "dell__broadcom__path_dependent_on"
+      ],
+      "note": "Контур замка: Broadcom —поставляет→ HPE; HPE —стратегический партнёр→ NVIDIA; NVIDIA —поставляет→ Dell; Dell —развивается вслед за→ Broadcom"
+    },
+    {
+      "id": "c102",
+      "type": "financing",
+      "path": [
+        "micron",
+        "sandisk",
+        "sk-hynix",
+        "nvidia",
+        "micron"
+      ],
+      "edges": [
+        "micron__sandisk__competes_with",
+        "sandisk__sk-hynix__competes_with",
+        "sk-hynix__nvidia__supplies",
+        "nvidia__micron__diversifies_supply"
+      ],
+      "note": "Контур финансирования: Micron —конкурирует с→ SanDisk; SanDisk —конкурирует с→ SK Hynix; SK Hynix —поставляет→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron"
+    },
+    {
+      "id": "c103",
       "type": "lockin",
       "path": [
         "arm",
@@ -30353,7 +31961,7 @@
       "note": "Контур замка: Arm —поставляет→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —стандартизуется на→ Arm"
     },
     {
-      "id": "c96",
+      "id": "c104",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -30371,7 +31979,7 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c97",
+      "id": "c105",
       "type": "lockin",
       "path": [
         "nvidia",
@@ -30389,7 +31997,43 @@
       "note": "Контур замка: NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA"
     },
     {
-      "id": "c98",
+      "id": "c106",
+      "type": "financing",
+      "path": [
+        "kioxia",
+        "nvidia",
+        "micron",
+        "sandisk",
+        "kioxia"
+      ],
+      "edges": [
+        "kioxia__nvidia__supplies",
+        "nvidia__micron__diversifies_supply",
+        "micron__sandisk__competes_with",
+        "sandisk__kioxia__strategic_partner"
+      ],
+      "note": "Контур финансирования: Kioxia —поставляет→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron; Micron —конкурирует с→ SanDisk; SanDisk —стратегический партнёр→ Kioxia"
+    },
+    {
+      "id": "c107",
+      "type": "financing",
+      "path": [
+        "micron",
+        "sandisk",
+        "samsung",
+        "nvidia",
+        "micron"
+      ],
+      "edges": [
+        "micron__sandisk__competes_with",
+        "sandisk__samsung__competes_with",
+        "samsung__nvidia__supplies",
+        "nvidia__micron__diversifies_supply"
+      ],
+      "note": "Контур финансирования: Micron —конкурирует с→ SanDisk; SanDisk —конкурирует с→ Samsung; Samsung —поставляет→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron"
+    },
+    {
+      "id": "c108",
       "type": "lockin",
       "path": [
         "cuda",
@@ -30409,7 +32053,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —стратегический партнёр→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c99",
+      "id": "c109",
       "type": "lockin",
       "path": [
         "cuda",
@@ -30429,7 +32073,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c100",
+      "id": "c110",
       "type": "lockin",
       "path": [
         "cuda",
@@ -30449,7 +32093,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —имеет место в совете→ NVIDIA Ventures (NVentures); NVIDIA Ventures (NVentures) —вкладывается в→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —развивается вслед за→ CUDA"
     },
     {
-      "id": "c101",
+      "id": "c111",
       "type": "lockin",
       "path": [
         "cuda",
@@ -30469,7 +32113,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c102",
+      "id": "c112",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -30489,7 +32133,7 @@
       "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —делает возможным→ CUDA; CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Broadcom"
     },
     {
-      "id": "c103",
+      "id": "c113",
       "type": "lockin",
       "path": [
         "cuda",
@@ -30509,7 +32153,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ NVIDIA; NVIDIA —делает возможным→ CUDA"
     },
     {
-      "id": "c104",
+      "id": "c114",
       "type": "lockin",
       "path": [
         "cuda",
@@ -30529,7 +32173,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c105",
+      "id": "c115",
       "type": "lockin",
       "path": [
         "cuda",
@@ -30549,7 +32193,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c106",
+      "id": "c116",
       "type": "lockin",
       "path": [
         "arista",
@@ -30569,7 +32213,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA; CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c107",
+      "id": "c117",
       "type": "financing",
       "path": [
         "broadcom",
@@ -30589,7 +32233,7 @@
       "note": "Контур финансирования: Broadcom —проектирует вместе с→ Google; Google —покупает у→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ Broadcom"
     },
     {
-      "id": "c108",
+      "id": "c118",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -30609,7 +32253,7 @@
       "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —делает возможным→ CUDA; CUDA —запирает платформы→ NVIDIA; NVIDIA —конкурирует с→ Google; Google —покупает у→ Broadcom"
     },
     {
-      "id": "c109",
+      "id": "c119",
       "type": "lockin",
       "path": [
         "cuda",
@@ -30629,7 +32273,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c110",
+      "id": "c120",
       "type": "lockin",
       "path": [
         "cuda",
@@ -30649,7 +32293,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —стратегический партнёр→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c111",
+      "id": "c121",
       "type": "lockin",
       "path": [
         "cuda",
@@ -30669,7 +32313,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —стратегический партнёр→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c112",
+      "id": "c122",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -30689,7 +32333,7 @@
       "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ NVIDIA; NVIDIA —имеет место в совете→ NVIDIA Ventures (NVentures); NVIDIA Ventures (NVentures) —вкладывается в→ Hugging Face"
     },
     {
-      "id": "c113",
+      "id": "c123",
       "type": "lockin",
       "path": [
         "amazon",
@@ -30709,7 +32353,7 @@
       "note": "Контур замка: Amazon —запирает платформы→ CUDA; CUDA —запирает разработчиков→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
     },
     {
-      "id": "c114",
+      "id": "c124",
       "type": "lockin",
       "path": [
         "arm",
@@ -30729,7 +32373,7 @@
       "note": "Контур замка: Arm —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —покупает у→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —стандартизуется на→ Arm"
     },
     {
-      "id": "c115",
+      "id": "c125",
       "type": "lockin",
       "path": [
         "coreweave",
@@ -30749,7 +32393,7 @@
       "note": "Контур замка: CoreWeave —покупает у→ NVIDIA; NVIDIA —делает возможным→ CUDA; CUDA —запирает разработчиков→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ CoreWeave"
     },
     {
-      "id": "c116",
+      "id": "c126",
       "type": "lockin",
       "path": [
         "arista",
@@ -30769,7 +32413,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Meta; Meta —запирает платформы→ CUDA; CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c117",
+      "id": "c127",
       "type": "financing",
       "path": [
         "arista",
@@ -30789,7 +32433,7 @@
       "note": "Контур финансирования: Arista Networks —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —покупает у→ Oracle; Oracle —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c118",
+      "id": "c128",
       "type": "sales",
       "path": [
         "astera-labs",
@@ -30809,7 +32453,7 @@
       "note": "Контур сбыта: Astera Labs —заточен под→ NVIDIA; NVIDIA —конкурирует с→ Google; Google —покупает у→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —производит для→ Astera Labs"
     },
     {
-      "id": "c119",
+      "id": "c129",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -30829,7 +32473,7 @@
       "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —производит для→ NVIDIA; NVIDIA —стандартизуется на→ Kubernetes; Kubernetes —развивается вслед за→ Google; Google —покупает у→ Broadcom"
     },
     {
-      "id": "c120",
+      "id": "c130",
       "type": "financing",
       "path": [
         "coreweave",
@@ -30849,7 +32493,7 @@
       "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —стратегический партнёр→ Microsoft; Microsoft —покупает у→ CoreWeave"
     },
     {
-      "id": "c121",
+      "id": "c131",
       "type": "lockin",
       "path": [
         "cuda",
@@ -30869,7 +32513,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —развивается вслед за→ CUDA"
     },
     {
-      "id": "c122",
+      "id": "c132",
       "type": "lockin",
       "path": [
         "cuda",
@@ -30889,7 +32533,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —развивается вслед за→ CUDA"
     },
     {
-      "id": "c123",
+      "id": "c133",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -30909,7 +32553,7 @@
       "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c124",
+      "id": "c134",
       "type": "financing",
       "path": [
         "amazon",
@@ -30929,7 +32573,7 @@
       "note": "Контур финансирования: Amazon —вкладывается в→ Anthropic; Anthropic —стратегический партнёр→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —производит для→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
     },
     {
-      "id": "c125",
+      "id": "c135",
       "type": "lockin",
       "path": [
         "china",
@@ -30949,7 +32593,7 @@
       "note": "Контур замка: Китай —шлюзует доступ к→ DeepSeek; DeepSeek —может вытеснить→ CUDA; CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —ограничен режимом→ Китай"
     },
     {
-      "id": "c126",
+      "id": "c136",
       "type": "lockin",
       "path": [
         "cuda",
@@ -30969,7 +32613,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —развивается вслед за→ CUDA"
     },
     {
-      "id": "c127",
+      "id": "c137",
       "type": "lockin",
       "path": [
         "cuda",
@@ -30989,7 +32633,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c128",
+      "id": "c138",
       "type": "financing",
       "path": [
         "amazon",
@@ -31009,7 +32653,7 @@
       "note": "Контур финансирования: Amazon —вкладывается в→ Anthropic; Anthropic —стратегический партнёр→ Broadcom; Broadcom —проектирует вместе с→ Google; Google —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
     },
     {
-      "id": "c129",
+      "id": "c139",
       "type": "lockin",
       "path": [
         "amazon",
@@ -31029,7 +32673,7 @@
       "note": "Контур замка: Amazon —запирает платформы→ CUDA; CUDA —запирает разработчиков→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
     },
     {
-      "id": "c130",
+      "id": "c140",
       "type": "financing",
       "path": [
         "arm",
@@ -31049,7 +32693,7 @@
       "note": "Контур финансирования: Arm —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —стратегический партнёр→ Microsoft; Microsoft —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
     },
     {
-      "id": "c131",
+      "id": "c141",
       "type": "financing",
       "path": [
         "arista",
@@ -31069,7 +32713,7 @@
       "note": "Контур финансирования: Arista Networks —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —покупает у→ CoreWeave; CoreWeave —покупает у→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c132",
+      "id": "c142",
       "type": "sales",
       "path": [
         "broadcom",
@@ -31089,7 +32733,7 @@
       "note": "Контур сбыта: Broadcom —покупает у→ TSMC; TSMC —производит для→ Credo Technology; Credo Technology —заточен под→ NVIDIA; NVIDIA —конкурирует с→ Google; Google —покупает у→ Broadcom"
     },
     {
-      "id": "c133",
+      "id": "c143",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -31109,7 +32753,27 @@
       "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —делает возможным→ CUDA; CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Broadcom"
     },
     {
-      "id": "c134",
+      "id": "c144",
+      "type": "lockin",
+      "path": [
+        "broadcom",
+        "tsmc",
+        "cuda",
+        "nvidia",
+        "dell",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__tsmc__customer_of",
+        "tsmc__cuda__enables",
+        "cuda__nvidia__locks_in_platforms",
+        "nvidia__dell__supplies",
+        "dell__broadcom__path_dependent_on"
+      ],
+      "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —делает возможным→ CUDA; CUDA —запирает платформы→ NVIDIA; NVIDIA —поставляет→ Dell; Dell —развивается вслед за→ Broadcom"
+    },
+    {
+      "id": "c145",
       "type": "lockin",
       "path": [
         "cuda",
@@ -31129,7 +32793,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c135",
+      "id": "c146",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -31149,7 +32813,7 @@
       "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —стандартизуется на→ Hugging Face"
     },
     {
-      "id": "c136",
+      "id": "c147",
       "type": "lockin",
       "path": [
         "arista",
@@ -31169,7 +32833,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Meta; Meta —делает возможным→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c137",
+      "id": "c148",
       "type": "financing",
       "path": [
         "broadcom",
@@ -31189,7 +32853,7 @@
       "note": "Контур финансирования: Broadcom —проектирует вместе с→ Google; Google —покупает у→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Broadcom"
     },
     {
-      "id": "c138",
+      "id": "c149",
       "type": "lockin",
       "path": [
         "cuda",
@@ -31209,7 +32873,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c139",
+      "id": "c150",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -31229,7 +32893,7 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —стандартизуется на→ Hugging Face"
     },
     {
-      "id": "c140",
+      "id": "c151",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -31249,7 +32913,7 @@
       "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c141",
+      "id": "c152",
       "type": "financing",
       "path": [
         "microsoft",
@@ -31269,7 +32933,7 @@
       "note": "Контур финансирования: Microsoft —вкладывается в→ OpenAI; OpenAI —покупает у→ Oracle; Oracle —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft"
     },
     {
-      "id": "c142",
+      "id": "c153",
       "type": "lockin",
       "path": [
         "arista",
@@ -31289,7 +32953,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA; CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c143",
+      "id": "c154",
       "type": "lockin",
       "path": [
         "arm",
@@ -31309,7 +32973,27 @@
       "note": "Контур замка: Arm —поставляет→ NVIDIA; NVIDIA —конкурирует с→ Google; Google —покупает у→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —стандартизуется на→ Arm"
     },
     {
-      "id": "c144",
+      "id": "c155",
+      "type": "financing",
+      "path": [
+        "broadcom",
+        "hpe",
+        "nvidia",
+        "synopsys",
+        "tsmc",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__hpe__supplies",
+        "hpe__nvidia__strategic_partner",
+        "nvidia__synopsys__invests_in",
+        "synopsys__tsmc__optimizes_for",
+        "tsmc__broadcom__manufactures"
+      ],
+      "note": "Контур финансирования: Broadcom —поставляет→ HPE; HPE —стратегический партнёр→ NVIDIA; NVIDIA —вкладывается в→ Synopsys; Synopsys —заточен под→ TSMC; TSMC —производит для→ Broadcom"
+    },
+    {
+      "id": "c156",
       "type": "lockin",
       "path": [
         "china",
@@ -31329,7 +33013,7 @@
       "note": "Контур замка: Китай —шлюзует доступ к→ DeepSeek; DeepSeek —делает возможным→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —ограничен режимом→ Китай"
     },
     {
-      "id": "c145",
+      "id": "c157",
       "type": "financing",
       "path": [
         "microsoft",
@@ -31349,7 +33033,27 @@
       "note": "Контур финансирования: Microsoft —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —стратегический партнёр→ Oracle; Oracle —вкладывается в→ OpenAI; OpenAI —стратегический партнёр→ Microsoft"
     },
     {
-      "id": "c146",
+      "id": "c158",
+      "type": "lockin",
+      "path": [
+        "astera-labs",
+        "nvidia",
+        "dell",
+        "broadcom",
+        "tsmc",
+        "astera-labs"
+      ],
+      "edges": [
+        "astera-labs__nvidia__optimizes_for",
+        "nvidia__dell__supplies",
+        "dell__broadcom__path_dependent_on",
+        "broadcom__tsmc__customer_of",
+        "tsmc__astera-labs__manufactures"
+      ],
+      "note": "Контур замка: Astera Labs —заточен под→ NVIDIA; NVIDIA —поставляет→ Dell; Dell —развивается вслед за→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —производит для→ Astera Labs"
+    },
+    {
+      "id": "c159",
       "type": "lockin",
       "path": [
         "arm",
@@ -31369,7 +33073,7 @@
       "note": "Контур замка: Arm —стандартизуется на→ Kubernetes; Kubernetes —развивается вслед за→ Google; Google —покупает у→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —стандартизуется на→ Arm"
     },
     {
-      "id": "c147",
+      "id": "c160",
       "type": "lockin",
       "path": [
         "arm",
@@ -31389,7 +33093,7 @@
       "note": "Контур замка: Arm —стратегический партнёр→ SoftBank; SoftBank —стратегический партнёр→ Oracle; Oracle —покупает у→ NVIDIA; NVIDIA —проектирует вместе с→ TSMC; TSMC —стандартизуется на→ Arm"
     },
     {
-      "id": "c148",
+      "id": "c161",
       "type": "financing",
       "path": [
         "coreweave",
@@ -31409,7 +33113,7 @@
       "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —покупает у→ CoreWeave"
     },
     {
-      "id": "c149",
+      "id": "c162",
       "type": "lockin",
       "path": [
         "microsoft",
@@ -31429,7 +33133,7 @@
       "note": "Контур замка: Microsoft —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —конкурирует с→ TensorRT; TensorRT —запирает платформы→ NVIDIA; NVIDIA —поставляет→ Microsoft"
     },
     {
-      "id": "c150",
+      "id": "c163",
       "type": "lockin",
       "path": [
         "arista",
@@ -31449,7 +33153,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Meta; Meta —запирает платформы→ CUDA; CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c151",
+      "id": "c164",
       "type": "lockin",
       "path": [
         "cuda",
@@ -31469,7 +33173,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron; Micron —конкурирует с→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c152",
+      "id": "c165",
       "type": "lockin",
       "path": [
         "arm",
@@ -31489,7 +33193,7 @@
       "note": "Контур замка: Arm —стандартизуется на→ Kubernetes; Kubernetes —развивается вслед за→ Google; Google —покупает у→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —стандартизуется на→ Arm"
     },
     {
-      "id": "c153",
+      "id": "c166",
       "type": "financing",
       "path": [
         "arm",
@@ -31509,7 +33213,7 @@
       "note": "Контур финансирования: Arm —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —покупает у→ CoreWeave; CoreWeave —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
     },
     {
-      "id": "c154",
+      "id": "c167",
       "type": "financing",
       "path": [
         "arm",
@@ -31529,7 +33233,27 @@
       "note": "Контур финансирования: Arm —стратегический партнёр→ SoftBank; SoftBank —стратегический партнёр→ Oracle; Oracle —вкладывается в→ OpenAI; OpenAI —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
     },
     {
-      "id": "c155",
+      "id": "c168",
+      "type": "lockin",
+      "path": [
+        "broadcom",
+        "hpe",
+        "nvidia",
+        "kubernetes",
+        "google",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__hpe__supplies",
+        "hpe__nvidia__strategic_partner",
+        "nvidia__kubernetes__standardizes_on",
+        "kubernetes__google__path_dependent_on",
+        "google__broadcom__customer_of"
+      ],
+      "note": "Контур замка: Broadcom —поставляет→ HPE; HPE —стратегический партнёр→ NVIDIA; NVIDIA —стандартизуется на→ Kubernetes; Kubernetes —развивается вслед за→ Google; Google —покупает у→ Broadcom"
+    },
+    {
+      "id": "c169",
       "type": "financing",
       "path": [
         "broadcom",
@@ -31549,7 +33273,27 @@
       "note": "Контур финансирования: Broadcom —подтачивает→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron; Micron —конкурирует с→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Broadcom"
     },
     {
-      "id": "c156",
+      "id": "c170",
+      "type": "lockin",
+      "path": [
+        "broadcom",
+        "tsmc",
+        "credo",
+        "nvidia",
+        "dell",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__tsmc__customer_of",
+        "tsmc__credo__manufactures",
+        "credo__nvidia__optimizes_for",
+        "nvidia__dell__supplies",
+        "dell__broadcom__path_dependent_on"
+      ],
+      "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —производит для→ Credo Technology; Credo Technology —заточен под→ NVIDIA; NVIDIA —поставляет→ Dell; Dell —развивается вслед за→ Broadcom"
+    },
+    {
+      "id": "c171",
       "type": "lockin",
       "path": [
         "china",
@@ -31569,7 +33313,7 @@
       "note": "Контур замка: Китай —шлюзует доступ к→ DeepSeek; DeepSeek —может вытеснить→ CUDA; CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —ограничен режимом→ Китай"
     },
     {
-      "id": "c157",
+      "id": "c172",
       "type": "lockin",
       "path": [
         "coreweave",
@@ -31589,7 +33333,7 @@
       "note": "Контур замка: CoreWeave —покупает у→ NVIDIA; NVIDIA —страхуется через→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ CoreWeave"
     },
     {
-      "id": "c158",
+      "id": "c173",
       "type": "lockin",
       "path": [
         "cuda",
@@ -31609,7 +33353,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —развивается вслед за→ CUDA"
     },
     {
-      "id": "c159",
+      "id": "c174",
       "type": "lockin",
       "path": [
         "cuda",
@@ -31629,7 +33373,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c160",
+      "id": "c175",
       "type": "lockin",
       "path": [
         "cuda",
@@ -31649,7 +33393,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —развивается вслед за→ CUDA"
     },
     {
-      "id": "c161",
+      "id": "c176",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -31669,7 +33413,27 @@
       "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c162",
+      "id": "c177",
+      "type": "financing",
+      "path": [
+        "amazon",
+        "anthropic",
+        "broadcom",
+        "hpe",
+        "nvidia",
+        "amazon"
+      ],
+      "edges": [
+        "amazon__anthropic__invests_in",
+        "anthropic__broadcom__strategic_partner",
+        "broadcom__hpe__supplies",
+        "hpe__nvidia__strategic_partner",
+        "nvidia__amazon__competes_with"
+      ],
+      "note": "Контур финансирования: Amazon —вкладывается в→ Anthropic; Anthropic —стратегический партнёр→ Broadcom; Broadcom —поставляет→ HPE; HPE —стратегический партнёр→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
+    },
+    {
+      "id": "c178",
       "type": "lockin",
       "path": [
         "arista",
@@ -31689,7 +33453,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c163",
+      "id": "c179",
       "type": "lockin",
       "path": [
         "arista",
@@ -31709,7 +33473,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c164",
+      "id": "c180",
       "type": "lockin",
       "path": [
         "cuda",
@@ -31729,7 +33493,27 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face; Hugging Face —развивается вслед за→ CUDA"
     },
     {
-      "id": "c165",
+      "id": "c181",
+      "type": "lockin",
+      "path": [
+        "arm",
+        "nvidia",
+        "dell",
+        "broadcom",
+        "tsmc",
+        "arm"
+      ],
+      "edges": [
+        "arm__nvidia__supplies",
+        "nvidia__dell__supplies",
+        "dell__broadcom__path_dependent_on",
+        "broadcom__tsmc__customer_of",
+        "tsmc__arm__standardizes_on"
+      ],
+      "note": "Контур замка: Arm —поставляет→ NVIDIA; NVIDIA —поставляет→ Dell; Dell —развивается вслед за→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —стандартизуется на→ Arm"
+    },
+    {
+      "id": "c182",
       "type": "financing",
       "path": [
         "astera-labs",
@@ -31749,7 +33533,7 @@
       "note": "Контур финансирования: Astera Labs —заточен под→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron; Micron —конкурирует с→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Astera Labs"
     },
     {
-      "id": "c166",
+      "id": "c183",
       "type": "lockin",
       "path": [
         "cuda",
@@ -31769,7 +33553,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c167",
+      "id": "c184",
       "type": "lockin",
       "path": [
         "arm",
@@ -31789,7 +33573,27 @@
       "note": "Контур замка: Arm —стандартизуется на→ Kubernetes; Kubernetes —развивается вслед за→ Google; Google —покупает у→ Broadcom; Broadcom —подтачивает→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
     },
     {
-      "id": "c168",
+      "id": "c185",
+      "type": "financing",
+      "path": [
+        "broadcom",
+        "hpe",
+        "nvidia",
+        "samsung",
+        "tsmc",
+        "broadcom"
+      ],
+      "edges": [
+        "broadcom__hpe__supplies",
+        "hpe__nvidia__strategic_partner",
+        "nvidia__samsung__diversifies_supply",
+        "samsung__tsmc__competes_with",
+        "tsmc__broadcom__manufactures"
+      ],
+      "note": "Контур финансирования: Broadcom —поставляет→ HPE; HPE —стратегический партнёр→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Broadcom"
+    },
+    {
+      "id": "c186",
       "type": "financing",
       "path": [
         "coreweave",
@@ -31809,7 +33613,7 @@
       "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —стратегический партнёр→ Oracle; Oracle —вкладывается в→ OpenAI; OpenAI —покупает у→ CoreWeave"
     },
     {
-      "id": "c169",
+      "id": "c187",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -31829,7 +33633,7 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —стандартизуется на→ Hugging Face"
     },
     {
-      "id": "c170",
+      "id": "c188",
       "type": "financing",
       "path": [
         "credo",
@@ -31849,7 +33653,7 @@
       "note": "Контур финансирования: Credo Technology —заточен под→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron; Micron —конкурирует с→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Credo Technology"
     },
     {
-      "id": "c171",
+      "id": "c189",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -31869,7 +33673,7 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c172",
+      "id": "c190",
       "type": "lockin",
       "path": [
         "microsoft",
@@ -31889,7 +33693,27 @@
       "note": "Контур замка: Microsoft —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft"
     },
     {
-      "id": "c173",
+      "id": "c191",
+      "type": "financing",
+      "path": [
+        "micron",
+        "sandisk",
+        "samsung",
+        "tsmc",
+        "nvidia",
+        "micron"
+      ],
+      "edges": [
+        "micron__sandisk__competes_with",
+        "sandisk__samsung__competes_with",
+        "samsung__tsmc__competes_with",
+        "tsmc__nvidia__manufactures",
+        "nvidia__micron__diversifies_supply"
+      ],
+      "note": "Контур финансирования: Micron —конкурирует с→ SanDisk; SanDisk —конкурирует с→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron"
+    },
+    {
+      "id": "c192",
       "type": "lockin",
       "path": [
         "arm",
@@ -31909,7 +33733,7 @@
       "note": "Контур замка: Arm —поставляет→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron; Micron —конкурирует с→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —стандартизуется на→ Arm"
     },
     {
-      "id": "c174",
+      "id": "c193",
       "type": "lockin",
       "path": [
         "arm",
@@ -31929,7 +33753,7 @@
       "note": "Контур замка: Arm —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
     },
     {
-      "id": "c175",
+      "id": "c194",
       "type": "lockin",
       "path": [
         "arm",
@@ -31949,7 +33773,7 @@
       "note": "Контур замка: Arm —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
     },
     {
-      "id": "c176",
+      "id": "c195",
       "type": "lockin",
       "path": [
         "nvidia",
@@ -31969,7 +33793,7 @@
       "note": "Контур замка: NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —конкурирует с→ TensorRT; TensorRT —запирает платформы→ NVIDIA"
     },
     {
-      "id": "c177",
+      "id": "c196",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -31989,7 +33813,7 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —стратегический партнёр→ Oracle; Oracle —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c178",
+      "id": "c197",
       "type": "lockin",
       "path": [
         "nvidia",
@@ -32011,7 +33835,33 @@
   ],
   "changelog": {
     "month": "2026-08",
-    "added": [],
+    "added": [
+      {
+        "kind": "edge",
+        "id": "amd__hpe__supplies",
+        "why": "Названа HPE поставщиком процессоров x86 наравне с Intel."
+      },
+      {
+        "kind": "edge",
+        "id": "broadcom__hpe__supplies",
+        "why": "Названа HPE поставщиком стандартных микросхем и единственным источником для рынка целиком."
+      },
+      {
+        "kind": "edge",
+        "id": "ge-vernova__crusoe__supplies",
+        "why": "Газовая турбина LM2500XPRESS питает дата-центр Crusoe как быстрый резервный источник."
+      },
+      {
+        "kind": "edge",
+        "id": "intel__hpe__supplies",
+        "why": "Названа HPE поставщиком процессоров x86 и одновременно единственным источником для рынка целиком."
+      },
+      {
+        "kind": "edge",
+        "id": "sandisk__kioxia__strategic_partner",
+        "why": "Совместное предприятие Flash Ventures: пока оно работает, обе стороны не вправе выпускать флеш-память с третьими лицами."
+      }
+    ],
     "removed": [],
     "changed": []
   }
