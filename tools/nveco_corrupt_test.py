@@ -162,6 +162,18 @@ def _(d):
     d["totals"]["entities"] += 1
 
 
+@case("нет блока criticalityBasis", "основание оценки")
+def _(d):
+    d["entities"][0].pop("criticalityBasis", None)
+
+
+@case("criticalityBasis обещает четыре фактора при трёх", "основание оценки")
+def _(d):
+    e = next(x for x in d["entities"]
+             if x["criticalityFactors"].get("concentration") is None)
+    e["criticalityBasis"] = {"factorsUsed": 4, "factors": [], "renormalized": False}
+
+
 @case("контур ссылается на несуществующую связь", "cycles")
 def _(d):
     if d["cycles"]:
@@ -261,6 +273,41 @@ def _():
              _src("chips-act", NVIDIA_10K + "#3")])
 
 
+# ── СВЕРКА ДВУХ СТОРОН ───────────────────────────────────────────────────────
+# Стадия `nveco_reconcile` отвечает на один вопрос: сколько КОНЦОВ стоит за связью.
+# Проверяется само правило, а не то, что вышло в этом месяце: правило обязано
+# держаться на входах, которых в данных пока нет (спор, например, не встречается ни
+# разу — и именно поэтому его нельзя оставить непроверенным).
+
+RECONCILE_CASES = []
+
+
+def rcase(name, tiers, claimed, disputed, expect_status, expect_side):
+    RECONCILE_CASES.append((name, tiers, claimed, disputed, expect_status, expect_side))
+
+
+rcase("обе стороны цитируют себя сами", [1, 1], {"a", "b"}, False, "bilateral", "bilateral")
+rcase("один издатель, названный дважды", [1, 1], {"a"}, False, "confirmed", "single")
+rcase("второй конец молчит", [1], set(), False, "high_confidence", "single")
+rcase("контрцитата при двух подтверждениях", [1, 1], {"a", "b"}, True, "disputed", "disputed")
+rcase("контрцитата при одном источнике", [2], {"a"}, True, "disputed", "disputed")
+rcase("ни одной цитаты сторон", [5, 5], set(), False, "signal", "single")
+
+
+def run_reconcile() -> int:
+    from engine.nveco_score import _status_and_confidence
+    failures = 0
+    for name, tiers, claimed, disputed, exp_st, exp_side in RECONCILE_CASES:
+        status, _ = _status_and_confidence(tiers, claimed, disputed)
+        side = ("disputed" if disputed else
+                "bilateral" if len(claimed) >= 2 else "single")
+        ok = status == exp_st and side == exp_side
+        print(f"  {'ok  ' if ok else 'FAIL'} [сверка] {name}: {status}/{side}"
+              + ("" if ok else f" — ожидалось {exp_st}/{exp_side}"))
+        failures += 0 if ok else 1
+    return failures
+
+
 def run_membership() -> int:
     failures = 0
     for name, expect, build in MEMBERSHIP_CASES:
@@ -311,12 +358,14 @@ def main():
             failures += 1
 
     print()
-    mfail = run_membership()
-    failures += mfail
+    failures += run_reconcile()
+    print()
+    failures += run_membership()
 
-    total = len(CASES) + len(MEMBERSHIP_CASES)
+    total = len(CASES) + len(MEMBERSHIP_CASES) + len(RECONCILE_CASES)
     print(f"\n{'PASS' if not failures else 'FAIL'}: {total - failures}/{total} "
           f"проверок пройдено ({len(CASES)} видов порчи, "
+          f"{len(RECONCILE_CASES)} случаев сверки, "
           f"{len(MEMBERSHIP_CASES)} случаев членства)")
     return 1 if failures else 0
 

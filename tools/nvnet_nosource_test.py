@@ -170,6 +170,36 @@ def main(month):
         def _(d):
             _edge_with_evidence(d)["sidedness"] = "как-то-так"
 
+        # ── ЦИФРА ИЗ ЦИТАТЫ, ТЕПЕРЬ И В ОБОСНОВАНИЯХ ─────────────────────────
+        # Правило «каждая цифра в прозе — из цитаты» распространено Фазой 1 на
+        # обоснования факторов. Повод — четвёртый фактор: доля функции без
+        # источника попала бы в каждую оценку карты с весом 0.15.
+
+        @case("обоснование concentration с цифрой ниоткуда")
+        def _(d):
+            e = next(x for x in d["entities"] if isinstance(
+                (x.get("criticalityWhy") or {}).get("concentration"), dict))
+            e["criticalityWhy"]["concentration"] = {
+                "ru": "Держит 93.7% своей функции",
+                "en": "Holds 93.7% of its function"}
+
+        @case("обоснование irreplaceability с цифрой ниоткуда")
+        def _(d):
+            e = next(x for x in d["entities"] if isinstance(
+                (x.get("criticalityWhy") or {}).get("irreplaceability"), dict))
+            e["criticalityWhy"]["irreplaceability"] = {
+                "ru": "Замену строят 47 лет", "en": "A replacement takes 47 years"}
+
+        @case("нет блока criticalityBasis")
+        def _(d):
+            d["entities"][0].pop("criticalityBasis", None)
+
+        @case("criticalityBasis обещает больше факторов, чем заполнено")
+        def _(d):
+            e = d["entities"][0]
+            e["criticalityBasis"] = {"factorsUsed": 9, "factors": [],
+                                     "renormalized": False}
+
         @case("betweenness-заглушка вне 0..1")
         def _(d):
             d["entities"][0]["centrality"]["betweenness"] = 42
