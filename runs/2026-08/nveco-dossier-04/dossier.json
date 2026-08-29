@@ -1,0 +1,502 @@
+[
+  {
+    "id": "arista",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "Arista делает коммутаторы и маршрутизаторы для дата-центров и продаёт их вместе со своей операционной системой. Заработок сильно сконцентрирован: два клиента дали больше 10% продаж, а именно 26% и 16% выручки за год. Та же пара держится в верхушке не первый год — доли по одному из них шли 16%, 15% и 21%. Почти вся выручка от продуктов идёт от одного семейства коммутаторов, что компания отмечает как собственный риск. В кластерах ускорителей она конкурирует с фирменными сетями производителя ускорителей, которые продаются в составе готового решения.",
+      "en": "Arista builds switches and routers for data centres and sells them together with its own operating system. Its earnings are heavily concentrated: two customers made up more than 10% of sales, at 26% and 16% of revenue for the year. The same pair has stayed at the top for years — one of them ran at 16%, 15% and 21%. Nearly all product revenue comes from a single switch family, which the company flags as a risk of its own. In accelerator clusters it competes with the vendor's own fabrics, which are sold as part of a complete solution."
+    },
+    "profile_sources": [
+      {
+        "type": "sec_filing",
+        "title": "Arista 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+        "published": "2026-02-13",
+        "quote": "Two of our customers accounted for more than 10% of our sales",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "Arista 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+        "published": "2026-02-13",
+        "quote": "Sales to these two customers represented 26% and 16% of our total revenue"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Arista 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+        "published": "2026-02-13",
+        "quote": "sales to one end customer represented 16%, 15%, and 21% of our total revenue"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Arista 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+        "published": "2026-02-13",
+        "quote": "we will continue to derive substantially all of our product revenue from sales of our"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Arista 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+        "published": "2026-02-13",
+        "quote": "Both IB and NVLink are often sold as part of a vertical solution"
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 72,
+        "why": {
+          "ru": "Сеть кластера проектируется целиком, и вендор меняется вместе с ней",
+          "en": "A cluster network is designed as a whole, and the vendor changes with it"
+        }
+      },
+      "lock_in_depth": {
+        "value": 66,
+        "why": {
+          "ru": "Держит сеть и её операционную систему, но не вычисления",
+          "en": "Holds the network and its operating system, but not the compute"
+        }
+      },
+      "time_to_replace": {
+        "value": 68,
+        "why": {
+          "ru": "Переделка сети кластера и переобучение эксплуатации — два-три года",
+          "en": "Rebuilding a cluster network and retraining operations takes two to three years"
+        }
+      },
+      "concentration": {
+        "value": 62,
+        "why": {
+          "ru": "Два клиента дают 26% и 16% выручки; рядом продаются фирменные сети ускорителей",
+          "en": "Two customers give 26% and 16% of revenue, with vendor fabrics sold alongside"
+        }
+      }
+    },
+    "edges": [],
+    "candidates": [],
+    "gaps": "Имена двух крупнейших клиентов в 10-K не раскрыты; связи с ними стоят на документах их стороны."
+  },
+  {
+    "id": "intel",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "Intel проектирует и сама производит процессоры, а с недавних пор продаёт производство и на сторону. Собственная отчётность прямо называет фабричные услуги внешним клиентам отдельным направлением. Технологический козырь — процесс Intel 18A, где впервые в серийном производстве соединены транзисторы с круговым затвором и подача питания с обратной стороны пластины. Компания пишет, что в США она единственная ведёт и передовую логическую разработку, и соответствующее производство. Отдельным риском названо и участие правительства США, которое приобрело значительную долю в её капитале.",
+      "en": "Intel designs and manufactures processors itself, and lately sells manufacturing to others as well. Its own filing names third-party foundry services to external customers as a separate line of business. Its technical card is the Intel 18A process, the first in high-volume manufacturing to combine gate-all-around transistors with backside power delivery. The company writes that in the United States it is the only one running both leading-edge logic research and the matching manufacturing. It also names as a risk the participation of the government, which acquired a significant equity interest in it."
+    },
+    "profile_sources": [
+      {
+        "type": "sec_filing",
+        "title": "Intel 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+        "published": "2026-01-23",
+        "quote": "we offer third-party foundry services to external customers"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Intel 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+        "published": "2026-01-23",
+        "quote": "Intel 18A introduces two industry firsts in high-volume semiconductor manufacturing: gate-all-around transistors (RibbonFET)"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Intel 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+        "published": "2026-01-23",
+        "quote": "where we are the only company conducting both leading-edge semiconductor logic R&D",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "Intel 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+        "published": "2026-01-23",
+        "quote": "the U.S. government’s acquisition of significant equity interests in us"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Intel 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+        "published": "2026-01-23",
+        "quote": "In 2025, we released our initial Intel Core Ultra Series 3 processors"
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 70,
+        "why": {
+          "ru": "Единственная передовая логическая фабрика на американской земле",
+          "en": "The only leading-edge logic fab on American soil"
+        }
+      },
+      "lock_in_depth": {
+        "value": 60,
+        "why": {
+          "ru": "Держит серверные процессоры, но не среду разработки под ускорители",
+          "en": "Holds server processors, but not the accelerator software layer"
+        }
+      },
+      "time_to_replace": {
+        "value": 85,
+        "why": {
+          "ru": "Построить сопоставимое производство — это больше пяти лет и миллиарды",
+          "en": "Building comparable manufacturing takes more than five years and billions"
+        }
+      },
+      "concentration": {
+        "value": 66,
+        "why": {
+          "ru": "Единственная в стране ведёт передовую логическую разработку и её производство",
+          "en": "The only one in the country running leading-edge logic R&D and its manufacturing"
+        }
+      }
+    },
+    "edges": [
+      {
+        "id": "chips-act__intel__controls_access_to",
+        "stance": "confirms",
+        "sources": [
+          {
+            "type": "sec_filing",
+            "title": "Intel 10-K 2025",
+            "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+            "published": "2026-01-23",
+            "quote": "alternative financing arrangements and pursuit of government grants"
+          }
+        ]
+      }
+    ],
+    "candidates": [],
+    "gaps": "Доля внешних заказчиков фабрики в выручке не раскрыта, поэтому вес этого направления оценить нечем."
+  },
+  {
+    "id": "usa",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "США выступают на этой карте регулятором и владельцем доступа: они решают, кому можно продавать передовые ускорители и на каких условиях строить питание. Свежий указ объявляет чрезвычайное положение вокруг магистральной энергосистемы и прямо связывает это с ростом дата-центров и искусственного интеллекта. В том же документе сказано, что такой рост увеличил зависимость страны от обильного и надёжного электричества. Второй рычаг — экспортные ограничения: отчётность NVIDIA описывает их как решения правительства, меняющие условия продаж. Оба рычага работают решением, а не сделкой, поэтому узел стоит выше рынка, а не внутри него.",
+      "en": "On this map the United States acts as regulator and gatekeeper: it decides who may be sold leading-edge accelerators and on what terms power may be built. A recent executive order declares an emergency around the bulk-power system and ties it directly to the growth of data centres and artificial intelligence. The same document says that this growth has increased the nation's dependence on abundant, reliable electricity. The second lever is export restrictions: NVIDIA's filing describes them as government decisions that change the terms of sale. Both levers work by decision rather than by deal, which places this node above the market rather than inside it."
+    },
+    "profile_sources": [
+      {
+        "type": "testimony",
+        "title": "Executive Order 14420",
+        "url": "https://www.whitehouse.gov/presidential-actions/2026/08/declaring-a-national-emergency-to-secure-the-united-states-bulk-power-system/",
+        "published": "2026-08-26",
+        "quote": "The rapid growth of advanced manufacturing, data centers, artificial intelligence, and defense production"
+      },
+      {
+        "type": "testimony",
+        "title": "Executive Order 14420",
+        "url": "https://www.whitehouse.gov/presidential-actions/2026/08/declaring-a-national-emergency-to-secure-the-united-states-bulk-power-system/",
+        "published": "2026-08-26",
+        "quote": "increased the Nation’s dependence on abundant, reliable electricity",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "testimony",
+        "title": "Executive Order 14420",
+        "url": "https://www.whitehouse.gov/presidential-actions/2026/08/declaring-a-national-emergency-to-secure-the-united-states-bulk-power-system/",
+        "published": "2026-08-26",
+        "quote": "Certain foreign actors are increasingly creating and exploiting vulnerabilities in the United States bulk-power system"
+      },
+      {
+        "type": "sec_filing",
+        "title": "NVIDIA 10-K FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+        "published": "2026-02-25",
+        "quote": "the U.S. government, or USG, announced export restrictions and export"
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 95,
+        "why": {
+          "ru": "Юрисдикцию, под которой стоит передовой стек, обойти нечем",
+          "en": "There is no way around the jurisdiction the leading-edge stack stands under"
+        }
+      },
+      "lock_in_depth": {
+        "value": 90,
+        "why": {
+          "ru": "Достаёт до кремния, оборудования, моделей и питания одновременно",
+          "en": "Reaches silicon, equipment, models and power at the same time"
+        }
+      },
+      "time_to_replace": {
+        "value": 95,
+        "why": {
+          "ru": "Перенос стека под другую юрисдикцию — это десятилетие, а не проект",
+          "en": "Moving the stack under another jurisdiction is a decade, not a project"
+        }
+      },
+      "concentration": {
+        "value": 82,
+        "why": {
+          "ru": "Один указ связывает энергосистему с ростом дата-центров и решает условия доступа",
+          "en": "A single order ties the power system to data centre growth and sets access terms"
+        }
+      }
+    },
+    "edges": [
+      {
+        "id": "usa__nvidia__controls_access_to",
+        "stance": "confirms",
+        "sources": [
+          {
+            "type": "sec_filing",
+            "title": "NVIDIA 10-K FY2026",
+            "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+            "published": "2026-02-25",
+            "quote": "the U.S. government, or USG, announced export restrictions and export"
+          }
+        ]
+      }
+    ],
+    "candidates": [],
+    "gaps": "Экспортные правила лежат на сайте Минторга, а не Белого дома: для этого рычага собственный документ узла в досье не попал."
+  },
+  {
+    "id": "crusoe",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "Crusoe строит дата-центры под ускорители и сдаёт вычисления в аренду вместе со своими сервисами. Собственная страница описывает площадки числами: 13.6M квадратных футов зданий, 4.9 гигаватта мощности и кампусы на 3,000 акров. Охлаждение заявлено как прямой отвод тепла от кристалла, что и позволяет ставить плотные стойки. В перечне доступного железа названы ускорители NVIDIA нескольких поколений и AMD, то есть площадка не привязана к одному поставщику. Заработок идёт с аренды и с сервисов дообучения и вывода поверх неё.",
+      "en": "Crusoe builds data centres for accelerators and rents out compute together with its own services. Its own page describes the sites in numbers: 13.6M square feet of buildings, 4.9 gigawatts of power and campuses across 3,000 acres. Cooling is stated as direct liquid-to-chip, which is what allows dense racks to be installed. Its hardware list names several NVIDIA generations and AMD parts, so the venue is not tied to a single supplier. Money comes from the rental and from fine-tuning and inference services layered on top."
+    },
+    "profile_sources": [
+      {
+        "type": "company_pr",
+        "title": "Crusoe data centers",
+        "url": "https://www.crusoe.ai/data-centers",
+        "published": "2026-08-01",
+        "quote": "Data center footprint Buildings 13.6M SQ FT Power 4.9 Gigawatts Campus 3,000 Acres",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "company_pr",
+        "title": "Crusoe data centers",
+        "url": "https://www.crusoe.ai/data-centers",
+        "published": "2026-08-01",
+        "quote": "We use advanced cooling tech, including direct liquid-to-chip, to keep GPUs running at peak efficiency"
+      },
+      {
+        "type": "company_pr",
+        "title": "Crusoe cloud",
+        "url": "https://www.crusoe.ai/",
+        "published": "2026-08-01",
+        "quote": "GPUs NVIDIA GB200 NVIDIA B200 NVIDIA H200 NVIDIA H100 AMD MI300X AMD MI355X"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Arista 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+        "published": "2026-02-13",
+        "quote": "Nvidia has made significant investments in several AI Neoclouds"
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 50,
+        "why": {
+          "ru": "Площадки под аренду строят и гиперскейлеры, и другие независимые операторы",
+          "en": "Rentable venues are built by hyperscalers and other independent operators alike"
+        }
+      },
+      "lock_in_depth": {
+        "value": 50,
+        "why": {
+          "ru": "Держит нагрузку контрактом и сервисами, но не средой разработки",
+          "en": "Holds the workload by contract and services, not by a development environment"
+        }
+      },
+      "time_to_replace": {
+        "value": 60,
+        "why": {
+          "ru": "Своя площадка с питанием строится годами, аренда переносится быстрее",
+          "en": "An own powered site takes years; a rental moves faster than that"
+        }
+      },
+      "concentration": {
+        "value": 42,
+        "why": {
+          "ru": "4.9 гигаватта заявленной мощности против гигаваттных программ облаков",
+          "en": "4.9 gigawatts of stated capacity against the gigawatt programmes of the clouds"
+        }
+      }
+    },
+    "edges": [
+      {
+        "id": "nvidia__crusoe__supplies",
+        "stance": "confirms",
+        "sources": [
+          {
+            "type": "company_pr",
+            "title": "Crusoe cloud",
+            "url": "https://www.crusoe.ai/",
+            "published": "2026-08-01",
+            "quote": "GPUs NVIDIA GB200 NVIDIA B200 NVIDIA H200 NVIDIA H100 AMD MI300X AMD MI355X"
+          }
+        ]
+      }
+    ],
+    "candidates": [],
+    "gaps": "Выручки и контрактов компания не публикует: досье описывает мощность и железо, но не деньги."
+  },
+  {
+    "id": "databricks",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "Databricks продаёт платформу, в которой данные компании и модели живут в одном месте. Собственная страница описывает её как единое основание для данных и управления ими вместе с моделями, настроенными под конкретную организацию. Продаётся это как облачный сервис поверх чужих площадок: платформа доступна на AWS, Azure и GCP. Отсюда её место на карте: она не покупает ускорители сама, а перепродаёт работу поверх арендованных. Заработок идёт с потребления вычислений и с подписки на управление данными.",
+      "en": "Databricks sells a platform where a company's data and its models live in one place. Its own page describes it as a unified foundation for all data and governance, combined with models tuned to that organisation. It is sold as a cloud service on top of other people's venues: the platform runs on AWS, Azure and GCP. Hence its place on the map: it does not buy accelerators itself but resells work on rented ones. Money comes from compute consumption and from subscriptions to data governance."
+    },
+    "profile_sources": [
+      {
+        "type": "company_pr",
+        "title": "About Databricks",
+        "url": "https://www.databricks.com/company/about-us",
+        "published": "2026-08-01",
+        "quote": "Databricks is the data and AI company"
+      },
+      {
+        "type": "company_pr",
+        "title": "About Databricks",
+        "url": "https://www.databricks.com/company/about-us",
+        "published": "2026-08-01",
+        "quote": "the Data + AI Platform provides a unified foundation for all data and governance"
+      },
+      {
+        "type": "company_pr",
+        "title": "About Databricks",
+        "url": "https://www.databricks.com/company/about-us",
+        "published": "2026-08-01",
+        "quote": "Cloud Providers Databricks on AWS, Azure and GCP",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "NVIDIA 10-K FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+        "published": "2026-02-25",
+        "quote": "All major cloud service providers, or CSPs, AI model makers,"
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 55,
+        "why": {
+          "ru": "Тот же слой данных и обучения продают облака и несколько независимых платформ",
+          "en": "The same data and training layer is sold by clouds and several independent platforms"
+        }
+      },
+      "lock_in_depth": {
+        "value": 60,
+        "why": {
+          "ru": "Держит данные и права доступа к ним, а это переносится тяжелее кода",
+          "en": "Holds the data and the access rights to it, which move harder than code"
+        }
+      },
+      "time_to_replace": {
+        "value": 55,
+        "why": {
+          "ru": "Переезд склада данных и прав занимает кварталы",
+          "en": "Moving a data store and its permissions takes quarters"
+        }
+      },
+      "concentration": {
+        "value": 50,
+        "why": {
+          "ru": "Платформа работает поверх трёх чужих облаков и конкурирует с их же сервисами",
+          "en": "The platform runs on three other clouds and competes with their own services"
+        }
+      }
+    },
+    "edges": [],
+    "candidates": [],
+    "gaps": "Компания частная и цифр не раскрывает: в досье нет ни выручки, ни числа клиентов из её собственных документов."
+  },
+  {
+    "id": "google-deepmind",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "Google DeepMind — исследовательское подразделение, которое делает модели Gemini и смежные системы. Собственная страница формулирует задачу коротко: строить искусственный интеллект ответственно и на пользу человечеству. Линейка разложена по назначению: модели для сложных задач, для больших объёмов и для работы агентов. Отдельной выручки у подразделения нет — его работа продаётся через облако и продукты материнской компании. Для карты это узел, который создаёт спрос на собственные тензорные процессоры Google, а не покупает чужие ускорители на рынке.",
+      "en": "Google DeepMind is the research arm that builds the Gemini models and adjacent systems. Its own page puts the task briefly: to build AI responsibly to benefit humanity. The line-up is split by purpose: models for complex tasks, for high-volume work and for running agents. The unit has no revenue of its own — its work is sold through the parent's cloud and products. For the map it is the node that creates demand for Google's own Tensor Processing Units rather than buying accelerators on the market."
+    },
+    "profile_sources": [
+      {
+        "type": "company_pr",
+        "title": "About Google DeepMind",
+        "url": "https://deepmind.google/about/",
+        "published": "2026-08-01",
+        "quote": "Our mission is to build AI responsibly to benefit humanity"
+      },
+      {
+        "type": "product_doc",
+        "title": "Gemini models",
+        "url": "https://deepmind.google/models/gemini/",
+        "published": "2026-08-01",
+        "quote": "Introducing our latest series of models combining frontier intelligence with action."
+      },
+      {
+        "type": "product_doc",
+        "title": "Gemini models",
+        "url": "https://deepmind.google/models/gemini/",
+        "published": "2026-08-01",
+        "quote": "Best for tackling complex agentic tasks at scale",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "Alphabet 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+        "published": "2026-02-05",
+        "quote": "our own custom-built Tensor Processing Units (TPUs), such as Ironwood, our seventh-generation TPU"
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 72,
+        "why": {
+          "ru": "Лабораторий такого класса в мире считаные единицы",
+          "en": "Labs of this class number only a handful worldwide"
+        }
+      },
+      "lock_in_depth": {
+        "value": 62,
+        "why": {
+          "ru": "Держит модели и через них продукты родителя, но не железо",
+          "en": "Holds the models and through them the parent's products, but not hardware"
+        }
+      },
+      "time_to_replace": {
+        "value": 70,
+        "why": {
+          "ru": "Собрать сопоставимую исследовательскую команду — это годы",
+          "en": "Assembling a comparable research team takes years"
+        }
+      },
+      "concentration": {
+        "value": 58,
+        "why": {
+          "ru": "Модели верхнего класса выпускают несколько лабораторий, включая соседей по карте",
+          "en": "Top-class models come from several labs, neighbours on this map among them"
+        }
+      }
+    },
+    "edges": [],
+    "candidates": [],
+    "gaps": "Подразделение не публикует ни расходов, ни объёмов вычислений: финансовая сторона профиля осталась за родителем."
+  }
+]

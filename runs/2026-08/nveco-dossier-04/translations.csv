@@ -1,0 +1,25 @@
+kind,id,field,lang,text
+entity,arista,why_irreplaceability,en,"A cluster network is designed as a whole, and the vendor changes with it"
+entity,arista,why_lock_in,en,"Holds the network and its operating system, but not the compute"
+entity,arista,why_time,en,Rebuilding a cluster network and retraining operations takes two to three years
+entity,arista,why_concentration,en,"Two customers give 26% and 16% of revenue, with vendor fabrics sold alongside"
+entity,intel,why_irreplaceability,en,The only leading-edge logic fab on American soil
+entity,intel,why_lock_in,en,"Holds server processors, but not the accelerator software layer"
+entity,intel,why_time,en,Building comparable manufacturing takes more than five years and billions
+entity,intel,why_concentration,en,The only one in the country running leading-edge logic R&D and its manufacturing
+entity,usa,why_irreplaceability,en,There is no way around the jurisdiction the leading-edge stack stands under
+entity,usa,why_lock_in,en,"Reaches silicon, equipment, models and power at the same time"
+entity,usa,why_time,en,"Moving the stack under another jurisdiction is a decade, not a project"
+entity,usa,why_concentration,en,A single order ties the power system to data centre growth and sets access terms
+entity,crusoe,why_irreplaceability,en,Rentable venues are built by hyperscalers and other independent operators alike
+entity,crusoe,why_lock_in,en,"Holds the workload by contract and services, not by a development environment"
+entity,crusoe,why_time,en,An own powered site takes years; a rental moves faster than that
+entity,crusoe,why_concentration,en,4.9 gigawatts of stated capacity against the gigawatt programmes of the clouds
+entity,databricks,why_irreplaceability,en,The same data and training layer is sold by clouds and several independent platforms
+entity,databricks,why_lock_in,en,"Holds the data and the access rights to it, which move harder than code"
+entity,databricks,why_time,en,Moving a data store and its permissions takes quarters
+entity,databricks,why_concentration,en,The platform runs on three other clouds and competes with their own services
+entity,google-deepmind,why_irreplaceability,en,Labs of this class number only a handful worldwide
+entity,google-deepmind,why_lock_in,en,"Holds the models and through them the parent's products, but not hardware"
+entity,google-deepmind,why_time,en,Assembling a comparable research team takes years
+entity,google-deepmind,why_concentration,en,"Top-class models come from several labs, neighbours on this map among them"

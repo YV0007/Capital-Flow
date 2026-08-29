@@ -1,0 +1,856 @@
+[
+  {
+    "id": "nvidia",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "NVIDIA продаёт ускорители и целые стойки для обучения и работы моделей, а вместе с ними — свою программную среду. Выручка за 2026 финансовый год составила $215.9 млрд и выросла на 65%, выручка сегмента дата-центров прибавила 68%. Собственных заводов у компании нет: пластины делают внешние фабрики, среди которых она называет TSMC и Samsung, а память закупает у SK Hynix, Micron и Samsung. Деньги приходят от облаков, лабораторий и корпораций, которые берут системы целиком, а не отдельные чипы. Под средой CUDA пишут больше 7.5 млн разработчиков, и это делает переход на чужие ускорители дорогим.",
+      "en": "NVIDIA sells accelerators and whole racks for training and serving models, and ships its own software environment with them. Revenue for fiscal year 2026 was $215.9 billion, up 65%, while Data Center revenue rose 68%. The company owns no fabs: wafers come from outside foundries, among which it names TSMC and Samsung, and memory is bought from SK Hynix, Micron and Samsung. Money comes from clouds, labs and enterprises that buy complete systems rather than single chips. More than 7.5 million developers write for CUDA, which is what makes a move to someone else's accelerators expensive."
+    },
+    "profile_sources": [
+      {
+        "type": "sec_filing",
+        "title": "NVIDIA 10-K FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+        "published": "2026-02-25",
+        "quote": "Revenue for fiscal year 2026 was $215.9 billion, up 65% from a year ago."
+      },
+      {
+        "type": "sec_filing",
+        "title": "NVIDIA 10-K FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+        "published": "2026-02-25",
+        "quote": "Data Center revenue for fiscal year 2026 was up 68% from a year ago.",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "NVIDIA 10-K FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+        "published": "2026-02-25",
+        "quote": "There are over 7.5 million developers worldwide using CUDA and our other software tools",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "NVIDIA 10-K FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+        "published": "2026-02-25",
+        "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC"
+      },
+      {
+        "type": "sec_filing",
+        "title": "NVIDIA 10-K FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+        "published": "2026-02-25",
+        "quote": "We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung."
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 95,
+        "why": {
+          "ru": "Заменить можно только вместе с программной средой, под которую написан чужой код",
+          "en": "Replacing it means replacing the software environment other people's code is written for"
+        }
+      },
+      "lock_in_depth": {
+        "value": 90,
+        "why": {
+          "ru": "Задевает облака, лаборатории, сети и системы сборки одновременно",
+          "en": "Reaches clouds, labs, networking and system builders at the same time"
+        }
+      },
+      "time_to_replace": {
+        "value": 90,
+        "why": {
+          "ru": "Своя связка чипа, сети и среды строится годами, а не кварталами",
+          "en": "A matching chip, network and software stack takes years, not quarters"
+        }
+      },
+      "concentration": {
+        "value": 92,
+        "why": {
+          "ru": "Выручка дата-центров за год выросла на 68%; под CUDA пишут свыше 7.5 млн разработчиков",
+          "en": "Data Center revenue rose 68% in a year; over 7.5 million developers write for CUDA"
+        }
+      }
+    },
+    "edges": [
+      {
+        "id": "microsoft__openai__invests_in",
+        "stance": "confirms",
+        "sources": [
+          {
+            "type": "sec_filing",
+            "title": "Microsoft 10-K FY2026",
+            "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "published": "2026-07-29",
+            "quote": "Microsoft is a major investor in OpenAI and will continue to receive revenue-sharing payments."
+          }
+        ]
+      }
+    ],
+    "candidates": [
+      {
+        "name": "Micron",
+        "why": "названа NVIDIA поставщиком памяти наравне с SK Hynix и Samsung",
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+        "quote": "We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung."
+      }
+    ],
+    "gaps": "10-K не называет ни одного покупателя поимённо: доля отдельных облаков в выручке не подтверждается её собственными документами."
+  },
+  {
+    "id": "tsmc",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "TSMC делает чужие чипы на заказ и собственных не продаёт. Передовые техпроцессы 7 нм и тоньше дали 74% выручки от пластин против 69% годом ранее, а по 2-нанометровой технологии производство началось в 2025 году. Зарабатывает компания платой за пластину, поэтому загрузка передовых фабрик определяет и выручку, и маржу. Заказчики сконцентрированы: на крупнейшего пришлось 19% выручки, на десять крупнейших — 78%. Само производство упирается в оборудование, доступное от ограниченного числа поставщиков.",
+      "en": "TSMC manufactures other companies' chips to order and sells none of its own. Advanced nodes of 7 nm and below brought 74% of wafer revenue against 69% a year earlier, and 2-nanometer production started in 2025. It earns a price per wafer, so utilisation of the advanced fabs sets both revenue and margin. Its customers are concentrated: the largest accounted for 19% of revenue and the ten largest for 78%. Manufacturing itself rests on equipment available from a limited number of suppliers."
+    },
+    "profile_sources": [
+      {
+        "type": "sec_filing",
+        "title": "TSMC 20-F 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+        "published": "2026-04-16",
+        "quote": "Advanced technologies (7-nanometer and below) accounted for 74% of total wafer revenue, up from 69%",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "TSMC 20-F 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+        "published": "2026-04-16",
+        "quote": "Our 2-nanometer technology entered volume production in 2025.",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "TSMC 20-F 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+        "published": "2026-04-16",
+        "quote": "Our largest customer in 2023, 2024 and 2025 accounted for 25%, 22% and 19%"
+      },
+      {
+        "type": "sec_filing",
+        "title": "TSMC 20-F 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+        "published": "2026-04-16",
+        "quote": "ten largest customers in 2023, 2024 and 2025 accounted for approximately, 70%, 76% and 78%"
+      },
+      {
+        "type": "sec_filing",
+        "title": "TSMC 20-F 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+        "published": "2026-04-16",
+        "quote": "Some of the equipment is available from a limited number of suppliers"
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 93,
+        "why": {
+          "ru": "Передовой кремний экосистеме больше негде взять в нужном объёме",
+          "en": "There is nowhere else to get leading-edge silicon at this volume"
+        }
+      },
+      "lock_in_depth": {
+        "value": 88,
+        "why": {
+          "ru": "Правила процесса вшиты в топологию чипа заказчика и переносятся годами",
+          "en": "Process rules are baked into a customer's layout and take years to port"
+        }
+      },
+      "time_to_replace": {
+        "value": 92,
+        "why": {
+          "ru": "Фабрика передового узла строится и выводится на выход дольше пяти лет",
+          "en": "A leading-edge fab takes more than five years to build and to yield"
+        }
+      },
+      "concentration": {
+        "value": 90,
+        "why": {
+          "ru": "На процессы 7 нм и тоньше приходится 74% выручки от пластин; 2 нм уже в серии",
+          "en": "Nodes of 7 nm and below are 74% of wafer revenue; 2 nm is already in volume"
+        }
+      }
+    },
+    "edges": [],
+    "candidates": [],
+    "gaps": "Отчёт не называет заказчиков поимённо, поэтому связь с NVIDIA подтверждается её стороной, а не TSMC."
+  },
+  {
+    "id": "microsoft",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "Microsoft продаёт облако и подписки, а на ИИ зарабатывает арендой вычислений и моделями внутри своих продуктов. Выручка Microsoft Cloud выросла на 27% и достигла $214.4 млрд, Azure и прочие облачные сервисы прибавили 41%. Кластеры компания собирает на чужом железе: она сама сообщила о первом крупном промышленном кластере более чем из 4,600 систем NVIDIA GB300 NVL72. Дата-центры упираются в разрешённую под застройку землю, предсказуемую энергию и поставки серверов вместе с графическими процессорами. С OpenAI действует долгосрочное партнёрство, начатое в 2019 году, и Microsoft получает от него долю выручки.",
+      "en": "Microsoft sells cloud and subscriptions, and earns on AI by renting compute and by putting models inside its own products. Microsoft Cloud revenue grew 27% to $214.4 billion, and Azure and other cloud services added 41%. It builds clusters on someone else's hardware: it said itself it had delivered a first at-scale production cluster of more than 4,600 NVIDIA GB300 NVL72 systems. Its datacentres depend on permitted and buildable land, predictable energy and deliveries of servers together with graphics processing units. A long-term partnership with OpenAI, established in 2019, brings it revenue-sharing payments."
+    },
+    "profile_sources": [
+      {
+        "type": "sec_filing",
+        "title": "Microsoft 10-K FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+        "published": "2026-07-29",
+        "quote": "Microsoft Cloud revenue increased 27% to $214.4 billion.",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "Microsoft 10-K FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+        "published": "2026-07-29",
+        "quote": "Azure and other cloud services revenue increased 41%.",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "Microsoft 10-K FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+        "published": "2026-07-29",
+        "quote": "We have a long-term strategic partnership with OpenAI which was originally established in 2019"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Microsoft 10-K FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+        "published": "2026-07-29",
+        "quote": "Our datacenters depend on the availability of permitted and buildable land, predictable energy"
+      },
+      {
+        "type": "company_pr",
+        "title": "Azure blog: first at-scale GB300 NVL72 cluster",
+        "url": "https://azure.microsoft.com/en-us/blog/microsoft-azure-delivers-the-first-large-scale-cluster-with-nvidia-gb300-nvl72-for-openai-workloads/",
+        "published": "2025-10-09",
+        "quote": "Microsoft delivers the first at-scale production cluster with more than 4,600 NVIDIA GB300 NVL72"
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 74,
+        "why": {
+          "ru": "Мощности сопоставимого масштаба есть у двух других облаков",
+          "en": "Two other clouds run capacity of a comparable scale"
+        }
+      },
+      "lock_in_depth": {
+        "value": 78,
+        "why": {
+          "ru": "Держит подписки, облако и рабочие места разработчиков одновременно",
+          "en": "Holds subscriptions, cloud and developer workplaces at the same time"
+        }
+      },
+      "time_to_replace": {
+        "value": 70,
+        "why": {
+          "ru": "Перенос нагрузки в другое облако считается кварталами, а не годами",
+          "en": "Moving a workload to another cloud is counted in quarters, not years"
+        }
+      },
+      "concentration": {
+        "value": 68,
+        "why": {
+          "ru": "Облако выросло на 27% до $214.4 млрд, но рядом работают два сопоставимых оператора",
+          "en": "Cloud grew 27% to $214.4 billion, yet two comparable operators run alongside"
+        }
+      }
+    },
+    "edges": [
+      {
+        "id": "microsoft__nvidia__customer_of",
+        "stance": "confirms",
+        "sources": [
+          {
+            "type": "company_pr",
+            "title": "Azure blog: first at-scale GB300 NVL72 cluster",
+            "url": "https://azure.microsoft.com/en-us/blog/microsoft-azure-delivers-the-first-large-scale-cluster-with-nvidia-gb300-nvl72-for-openai-workloads/",
+            "published": "2025-10-09",
+            "quote": "Microsoft delivers the first at-scale production cluster with more than 4,600 NVIDIA GB300 NVL72"
+          }
+        ]
+      },
+      {
+        "id": "microsoft__coreweave__customer_of",
+        "stance": "confirms",
+        "sources": [
+          {
+            "type": "sec_filing",
+            "title": "CoreWeave 10-K 2025",
+            "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+            "published": "2026-03-02",
+            "quote": "Other significant customers include Microsoft and Meta."
+          }
+        ]
+      }
+    ],
+    "candidates": [],
+    "gaps": "В 10-K не названы ни NVIDIA, ни один поставщик оборудования: связи с ними подтверждаются блогом и документами контрагентов."
+  },
+  {
+    "id": "openai",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "OpenAI разрабатывает модели и продаёт доступ к ним подпиской и через программный интерфейс. Собственная карточка системы описывает GPT-5 как единое целое из быстрой модели, модели для сложных задач и маршрутизатора между ними. Разработчикам компания даёт прямой доступ к модели рассуждения и её уменьшенным версиям. Вычисления она арендует: по договору с CoreWeave обязательство доходит до $11.9 млрд до октября 2030 года. Microsoft называет себя крупным инвестором OpenAI и получателем доли её выручки, а партнёрство между ними идёт с 2019 года.",
+      "en": "OpenAI builds models and sells access to them by subscription and through an API. Its own system card describes GPT-5 as a single system of a fast model, a deeper reasoning model and a router between them. Developers are given direct access to the thinking model and its smaller versions. Compute is rented: under a contract with CoreWeave the commitment runs up to $11.9 billion through October 2030. Microsoft calls itself a major investor in OpenAI and a recipient of revenue-sharing payments, and the partnership dates to 2019."
+    },
+    "profile_sources": [
+      {
+        "type": "white_paper",
+        "title": "GPT-5 System Card",
+        "url": "https://cdn.openai.com/gpt-5-system-card.pdf",
+        "published": "2025-08-13",
+        "quote": "GPT-5 is a unified system with a smart and fast model that answers most questions"
+      },
+      {
+        "type": "white_paper",
+        "title": "GPT-5 System Card",
+        "url": "https://cdn.openai.com/gpt-5-system-card.pdf",
+        "published": "2025-08-13",
+        "quote": "In the API, we provide direct access to the thinking model, its mini version"
+      },
+      {
+        "type": "product_doc",
+        "title": "openai-python library",
+        "url": "https://github.com/openai/openai-python",
+        "published": "2026-08-01",
+        "quote": "The OpenAI Python library provides convenient access to the OpenAI REST API"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Microsoft 10-K FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+        "published": "2026-07-29",
+        "quote": "Microsoft is a major investor in OpenAI and will continue to receive revenue-sharing payments."
+      },
+      {
+        "type": "sec_filing",
+        "title": "CoreWeave 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+        "published": "2026-03-02",
+        "quote": "OpenAI has committed to pay us up to approximately $11.9 billion through October 2030",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "Microsoft 10-K FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+        "published": "2026-07-29",
+        "quote": "We have a long-term strategic partnership with OpenAI which was originally established in 2019"
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 76,
+        "why": {
+          "ru": "Модели сопоставимого класса выпускают ещё несколько лабораторий",
+          "en": "Several other labs ship models of a comparable class"
+        }
+      },
+      "lock_in_depth": {
+        "value": 72,
+        "why": {
+          "ru": "Держит приложения через интерфейс и продукты партнёров, но не железо",
+          "en": "Holds applications through its API and partner products, but not hardware"
+        }
+      },
+      "time_to_replace": {
+        "value": 65,
+        "why": {
+          "ru": "Смена поставщика модели в приложении занимает месяцы, а не годы",
+          "en": "Swapping a model provider inside an application takes months, not years"
+        }
+      },
+      "concentration": {
+        "value": 62,
+        "why": {
+          "ru": "Спрос обеспечен контрактами вроде $11.9 млрд с CoreWeave, но рынок моделей делится",
+          "en": "Demand is locked by contracts such as $11.9 billion with CoreWeave, yet the model market is split"
+        }
+      }
+    },
+    "edges": [
+      {
+        "id": "openai__coreweave__customer_of",
+        "stance": "confirms",
+        "sources": [
+          {
+            "type": "sec_filing",
+            "title": "CoreWeave 10-K 2025",
+            "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+            "published": "2026-03-02",
+            "quote": "OpenAI has committed to pay us up to approximately $11.9 billion through October 2030"
+          }
+        ]
+      }
+    ],
+    "candidates": [],
+    "gaps": "Собственный сайт компании закрыт для машинного обхода (403), поэтому её финансовые заявления в досье не попали."
+  },
+  {
+    "id": "cuda",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "CUDA — программная платформа NVIDIA для расчётов на её ускорителях; сама компания называет её основанием таких вычислений. В комплект входят ускоренные библиотеки, отладчик, компилятор C++ и библиотека времени исполнения, то есть весь путь от кода до запуска. Отдельной цены у платформы нет: она едет вместе с ускорителями и удерживает написанный под неё код. Отчётность NVIDIA описывает её как основу стека, работающую на всех её ускорителях, и называет свыше 7.5 млн разработчиков, которые ей пользуются. Выпуск 13.2 расширил модель программирования на архитектуру Ampere.",
+      "en": "CUDA is NVIDIA's software platform for computing on its accelerators; the company itself calls it the foundation of such computing. The kit holds accelerated libraries, a debugger, a C++ compiler and a runtime library, that is the whole path from code to execution. The platform has no separate price: it travels with the accelerators and holds the code written for it. NVIDIA's own filing describes it as the base of the stack running on all of its GPUs and counts over 7.5 million developers using it. Release 13.2 extended the programming model to the Ampere architecture."
+    },
+    "profile_sources": [
+      {
+        "type": "product_doc",
+        "title": "NVIDIA CUDA Zone",
+        "url": "https://developer.nvidia.com/cuda-zone",
+        "published": "2026-08-01",
+        "quote": "CUDA is NVIDIA’s platform for accelerated computing and the foundation for GPU computing."
+      },
+      {
+        "type": "product_doc",
+        "title": "NVIDIA CUDA Toolkit",
+        "url": "https://developer.nvidia.com/cuda-toolkit",
+        "published": "2026-08-01",
+        "quote": "includes GPU-accelerated libraries, debugging and optimization tools, a C++ compiler, and a runtime library"
+      },
+      {
+        "type": "product_doc",
+        "title": "NVIDIA CUDA Toolkit",
+        "url": "https://developer.nvidia.com/cuda-toolkit",
+        "published": "2026-08-01",
+        "quote": "CUDA 13.2 enhances GPU kernel development by extending CUDA Tile support to Ampere"
+      },
+      {
+        "type": "sec_filing",
+        "title": "NVIDIA 10-K FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+        "published": "2026-02-25",
+        "quote": "the foundational NVIDIA CUDA development platform that runs on all NVIDIA GPUs"
+      },
+      {
+        "type": "sec_filing",
+        "title": "NVIDIA 10-K FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+        "published": "2026-02-25",
+        "quote": "There are over 7.5 million developers worldwide using CUDA and our other software tools",
+        "backs": [
+          "concentration"
+        ]
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 95,
+        "why": {
+          "ru": "Написанный под неё код на чужих ускорителях не запускается без переписывания",
+          "en": "Code written for it does not run on other accelerators without a rewrite"
+        }
+      },
+      "lock_in_depth": {
+        "value": 92,
+        "why": {
+          "ru": "Ниже неё железо, выше — фреймворки, серверы вывода и прикладной код",
+          "en": "Hardware sits below it, frameworks, serving stacks and application code above"
+        }
+      },
+      "time_to_replace": {
+        "value": 88,
+        "why": {
+          "ru": "Перенос библиотек и ядер на другую платформу считается годами",
+          "en": "Porting libraries and kernels to another platform is counted in years"
+        }
+      },
+      "concentration": {
+        "value": 95,
+        "why": {
+          "ru": "Свыше 7.5 млн разработчиков используют её как основу вычислений на ускорителях",
+          "en": "Over 7.5 million developers use it as the base for accelerator computing"
+        }
+      }
+    },
+    "edges": [
+      {
+        "id": "cuda__nvidia__defines_category",
+        "stance": "confirms",
+        "sources": [
+          {
+            "type": "product_doc",
+            "title": "NVIDIA CUDA Zone",
+            "url": "https://developer.nvidia.com/cuda-zone",
+            "published": "2026-08-01",
+            "quote": "CUDA is NVIDIA’s platform for accelerated computing and the foundation for GPU computing."
+          }
+        ]
+      },
+      {
+        "id": "nvidia__cuda__enables",
+        "stance": "confirms",
+        "sources": [
+          {
+            "type": "product_doc",
+            "title": "NVIDIA CUDA Toolkit",
+            "url": "https://developer.nvidia.com/cuda-toolkit",
+            "published": "2026-08-01",
+            "quote": "The NVIDIA® CUDA® Toolkit provides the development environment for creating high-performance, GPU-accelerated applications."
+          }
+        ]
+      }
+    ],
+    "candidates": [],
+    "gaps": "Числа по доле рынка у платформы нет ни в одном её документе: доля описана числом разработчиков."
+  },
+  {
+    "id": "huggingface",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "Hugging Face держит склад моделей и наборов данных и библиотеку, через которую их запускают. Своя документация говорит, что на складе лежит больше 1M+ контрольных точек моделей Transformers. Библиотека даёт и обучение, и вывод на готовых моделях, поэтому она стоит между исследованием и продуктом. Деньги приходят от платных тарифов, корпоративных планов и размещённого вывода, а не от самих моделей. Собственный README называет определение модели опорной точкой между фреймворками: если оно поддержано, модель работает у всех.",
+      "en": "Hugging Face runs a store of models and datasets and the library through which they are used. Its own documentation says the store holds more than 1M+ Transformers model checkpoints. The library covers both training and inference on pretrained models, so it sits between research and product. Money comes from paid tiers, enterprise plans and hosted inference rather than from the models themselves. Its own README calls the model definition the pivot across frameworks: once it is supported, the model works everywhere."
+    },
+    "profile_sources": [
+      {
+        "type": "product_doc",
+        "title": "Transformers documentation",
+        "url": "https://huggingface.co/docs/transformers/en/index",
+        "published": "2026-08-01",
+        "quote": "There are over 1M+ Transformers model checkpoints on the Hugging Face Hub you can use.",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "product_doc",
+        "title": "Transformers documentation",
+        "url": "https://huggingface.co/docs/transformers/en/index",
+        "published": "2026-08-01",
+        "quote": "Transformers provides everything you need for inference or training with state-of-the-art pretrained models."
+      },
+      {
+        "type": "product_doc",
+        "title": "Transformers documentation",
+        "url": "https://huggingface.co/docs/transformers/en/index",
+        "published": "2026-08-01",
+        "quote": "We pledge to help support new state-of-the-art models and democratize their usage"
+      },
+      {
+        "type": "product_doc",
+        "title": "Hugging Face Hub documentation",
+        "url": "https://huggingface.co/docs/hub/en/index",
+        "published": "2026-08-01",
+        "quote": "Hugging Face Hub documentation"
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 70,
+        "why": {
+          "ru": "Модель можно раздать и мимо склада, но тогда её труднее найти",
+          "en": "A model can be shipped without the hub, but it becomes harder to find"
+        }
+      },
+      "lock_in_depth": {
+        "value": 72,
+        "why": {
+          "ru": "Через библиотеку проходят и обучение, и вывод, и раздача весов",
+          "en": "Training, inference and weight distribution all pass through the library"
+        }
+      },
+      "time_to_replace": {
+        "value": 55,
+        "why": {
+          "ru": "Зеркало склада и своя раздача поднимаются за месяцы",
+          "en": "A mirror of the hub and private distribution stand up in months"
+        }
+      },
+      "concentration": {
+        "value": 78,
+        "why": {
+          "ru": "На складе лежит больше 1M+ контрольных точек моделей — сопоставимых по охвату площадок нет",
+          "en": "The hub holds more than 1M+ model checkpoints, with no comparable venue by coverage"
+        }
+      }
+    },
+    "edges": [],
+    "candidates": [],
+    "gaps": "Ни цен, ни выручки в документации нет; коммерческая часть профиля осталась без собственного источника."
+  },
+  {
+    "id": "anthropic",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "Anthropic разрабатывает модели Claude и продаёт доступ к ним компаниям и разработчикам. По собственному сообщению, годовая скорость выручки перешла $47 млрд, а обслуживает компания больше 300,000 корпоративных клиентов. Последний раунд Series H принёс ей $65 млрд. Обучение и работу моделей компания раскладывает на три вида железа — AWS Trainium, тензорные процессоры Google и ускорители NVIDIA, — а Amazon называет своим основным облаком и партнёром по обучению. Отдельным соглашением с Google и Broadcom законтрактованы мощности в несколько гигаватт.",
+      "en": "Anthropic builds the Claude models and sells access to them to companies and developers. By its own announcement, run-rate revenue crossed $47 billion and it serves more than 300,000 business customers. Its latest Series H round brought it $65 billion. Training and serving are spread across three kinds of hardware — AWS Trainium, Google TPUs and NVIDIA GPUs — while Amazon is named its primary cloud provider and training partner. A separate agreement with Google and Broadcom contracts multiple gigawatts of capacity."
+    },
+    "profile_sources": [
+      {
+        "type": "company_pr",
+        "title": "Anthropic: Series H",
+        "url": "https://www.anthropic.com/news/series-h",
+        "published": "2026-05-28",
+        "quote": "our run-rate revenue crossed $47 billion earlier this month",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "company_pr",
+        "title": "Anthropic: Series H",
+        "url": "https://www.anthropic.com/news/series-h",
+        "published": "2026-05-28",
+        "quote": "Anthropic has raised $65 billion in Series H funding led by Altimeter Capital, Dragoneer, Greenoaks"
+      },
+      {
+        "type": "company_pr",
+        "title": "Anthropic: expanding use of Google Cloud TPUs",
+        "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
+        "published": "2025-10-23",
+        "quote": "Anthropic now serves more than 300,000 business customers",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "company_pr",
+        "title": "Anthropic and Broadcom: multi-gigawatt compute",
+        "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+        "published": "2026-04-06",
+        "quote": "run Claude on a range of AI hardware—AWS Trainium, Google TPUs, and NVIDIA GPUs"
+      },
+      {
+        "type": "company_pr",
+        "title": "Anthropic and Broadcom: multi-gigawatt compute",
+        "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+        "published": "2026-04-06",
+        "quote": "Amazon remains our primary cloud provider and training partner"
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 70,
+        "why": {
+          "ru": "Модели сопоставимого класса выпускают ещё несколько лабораторий",
+          "en": "Several other labs ship models of a comparable class"
+        }
+      },
+      "lock_in_depth": {
+        "value": 68,
+        "why": {
+          "ru": "Держит прикладной слой через интерфейс, ниже железа не спускается",
+          "en": "Holds the application layer through its API and goes no lower than that"
+        }
+      },
+      "time_to_replace": {
+        "value": 62,
+        "why": {
+          "ru": "Приложение переключается на другую модель за месяцы",
+          "en": "An application switches to another model within months"
+        }
+      },
+      "concentration": {
+        "value": 60,
+        "why": {
+          "ru": "Скорость выручки $47 млрд и больше 300,000 клиентов при нескольких сопоставимых лабораториях",
+          "en": "Run-rate revenue of $47 billion and over 300,000 customers, with several comparable labs"
+        }
+      }
+    },
+    "edges": [
+      {
+        "id": "anthropic__amazon__strategic_partner",
+        "stance": "confirms",
+        "sources": [
+          {
+            "type": "company_pr",
+            "title": "Anthropic and Broadcom: multi-gigawatt compute",
+            "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+            "published": "2026-04-06",
+            "quote": "Amazon remains our primary cloud provider and training partner"
+          }
+        ]
+      },
+      {
+        "id": "anthropic__nvidia__customer_of",
+        "stance": "confirms",
+        "sources": [
+          {
+            "type": "company_pr",
+            "title": "Anthropic and Broadcom: multi-gigawatt compute",
+            "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+            "published": "2026-04-06",
+            "quote": "run Claude on a range of AI hardware—AWS Trainium, Google TPUs, and NVIDIA GPUs"
+          }
+        ]
+      },
+      {
+        "source": "anthropic",
+        "target": "google",
+        "type": "customer_of",
+        "direction": "upstream",
+        "strength": 75,
+        "lock_in_depth": 55,
+        "substitutability": 45,
+        "is_reversible": true,
+        "risk_level": "medium",
+        "risk_type": "substitution",
+        "risk_timeline": "2-5y",
+        "risk_mitigation": {
+          "ru": "Три вида железа сразу: Trainium, тензорные процессоры Google и ускорители NVIDIA.",
+          "en": "Three kinds of hardware at once: Trainium, Google TPUs and NVIDIA accelerators."
+        },
+        "note": {
+          "ru": "Anthropic арендует у Google до миллиона тензорных процессоров; сделка объявлена ею самой.",
+          "en": "Anthropic rents up to one million TPUs from Google, a deal it announced itself."
+        },
+        "stance": "confirms",
+        "sources": [
+          {
+            "type": "company_pr",
+            "title": "Anthropic: expanding use of Google Cloud TPUs",
+            "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
+            "published": "2025-10-23",
+            "quote": "expand our use of Google Cloud technologies, including up to one million TPUs"
+          }
+        ]
+      },
+      {
+        "source": "anthropic",
+        "target": "broadcom",
+        "type": "strategic_partner",
+        "direction": "bidirectional",
+        "strength": 65,
+        "lock_in_depth": 50,
+        "substitutability": 50,
+        "is_reversible": true,
+        "risk_level": "medium",
+        "risk_type": "technical",
+        "risk_timeline": "2-5y",
+        "risk_mitigation": {
+          "ru": "Заказ идёт вместе с Google, а не напрямую в одну пару.",
+          "en": "The order runs together with Google rather than as a single pair."
+        },
+        "note": {
+          "ru": "Соглашение с Google и Broadcom на несколько гигаватт мощностей нового поколения.",
+          "en": "An agreement with Google and Broadcom for multiple gigawatts of next-generation capacity."
+        },
+        "stance": "confirms",
+        "sources": [
+          {
+            "type": "company_pr",
+            "title": "Anthropic and Broadcom: multi-gigawatt compute",
+            "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+            "published": "2026-04-06",
+            "quote": "We have signed a new agreement with Google and Broadcom for multiple gigawatts"
+          }
+        ]
+      }
+    ],
+    "candidates": [
+      {
+        "name": "Altimeter Capital",
+        "why": "ведущий инвестор раунда Series H, на карте капитала нет",
+        "url": "https://www.anthropic.com/news/series-h",
+        "quote": "Anthropic has raised $65 billion in Series H funding led by Altimeter Capital, Dragoneer, Greenoaks"
+      },
+      {
+        "name": "Greenoaks",
+        "why": "соведущий раунда Series H, на карте капитала нет",
+        "url": "https://www.anthropic.com/news/series-h",
+        "quote": "Anthropic has raised $65 billion in Series H funding led by Altimeter Capital, Dragoneer, Greenoaks"
+      }
+    ],
+    "gaps": "Разбивки выручки по продуктам компания не публикует; доля функции оценена по числу клиентов и скорости выручки."
+  },
+  {
+    "id": "google",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "Google продаёт рекламу, подписки и облако, а в инфраструктуре ИИ выступает сразу покупателем и производителем. Выручка облака выросла на $15.5 млрд с 2024 по 2025 год. Клиентам предлагается выбор ускорителей: чужие графические процессоры и собственные тензорные процессоры, включая седьмое поколение Ironwood. Собственный чип не отменяет закупок — компания сама называет отраслевые мощности по ускорителям конкурентными и быстро меняющимися. Anthropic публично договорилась о расширении использования этого облака вплоть до миллиона тензорных процессоров.",
+      "en": "Google sells advertising, subscriptions and cloud, and in AI infrastructure acts as buyer and producer at once. Cloud revenues increased $15.5 billion from 2024 to 2025. Customers are offered a choice of accelerators: third-party GPUs and its own Tensor Processing Units, including the seventh generation Ironwood. Its own chip does not remove purchases — the company itself calls industry supply capacity for accelerators competitive and rapidly evolving. Anthropic publicly agreed to expand its use of this cloud up to one million TPUs."
+    },
+    "profile_sources": [
+      {
+        "type": "sec_filing",
+        "title": "Alphabet 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+        "published": "2026-02-05",
+        "quote": "Google Cloud revenues increased $15.5 billion from 2024 to 2025",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "Alphabet 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+        "published": "2026-02-05",
+        "quote": "our own custom-built Tensor Processing Units (TPUs), such as Ironwood, our seventh-generation TPU"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Alphabet 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+        "published": "2026-02-05",
+        "quote": "industry supply capacity for AI accelerators, including GPUs as well as our custom-built TPUs",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "Alphabet 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+        "published": "2026-02-05",
+        "quote": "our customers a range of AI accelerator options, including specialized Graphics Processing Units"
+      },
+      {
+        "type": "company_pr",
+        "title": "Anthropic: expanding use of Google Cloud TPUs",
+        "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services",
+        "published": "2025-10-23",
+        "quote": "expand our use of Google Cloud technologies, including up to one million TPUs"
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 78,
+        "why": {
+          "ru": "Единственная альтернатива, где свой ускоритель и своё облако в одних руках",
+          "en": "The only alternative where an own accelerator and an own cloud sit in one pair of hands"
+        }
+      },
+      "lock_in_depth": {
+        "value": 76,
+        "why": {
+          "ru": "Держит модели, облако и собственный ускоритель одновременно",
+          "en": "Holds models, cloud and its own accelerator at the same time"
+        }
+      },
+      "time_to_replace": {
+        "value": 72,
+        "why": {
+          "ru": "Свой ускоритель и среду под него строят годами, а не кварталами",
+          "en": "An own accelerator and its software take years, not quarters, to build"
+        }
+      },
+      "concentration": {
+        "value": 66,
+        "why": {
+          "ru": "Облако прибавило $15.5 млрд, но мощности по ускорителям компания сама называет конкурентными",
+          "en": "Cloud added $15.5 billion, yet it calls accelerator supply capacity competitive itself"
+        }
+      }
+    },
+    "edges": [],
+    "candidates": [],
+    "gaps": "Alphabet не раскрывает ни объёма выпуска тензорных процессоров, ни доли облака в ускорителях."
+  }
+]

@@ -1,0 +1,744 @@
+[
+  {
+    "id": "pytorch",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "PyTorch — библиотека, в которой описывают и обучают нейронные сети. Собственный README называет две её опоры: тензорные вычисления с ускорением на графических процессорах и автоматическое дифференцирование на ленте операций. Денег она не берёт: это открытый проект, живущий на вкладе компаний, которым нужен общий слой под своим железом. Сборка с поддержкой CUDA описана в её же инструкции как отдельный выбор, то есть привязка к ускорителям идёт через отдельный слой, а не вшита. Вокруг библиотеки собран набор смежных проектов, включая vLLM, DeepSpeed и Ray.",
+      "en": "PyTorch is the library in which neural networks are described and trained. Its own README names two pillars: tensor computation with GPU acceleration and a tape-based autograd system. It takes no money: this is an open project living on contributions from companies that need a shared layer under their own hardware. Building with CUDA support is described in its own instructions as a separate choice, so the tie to accelerators runs through a separate layer rather than being wired in. A set of adjacent projects has gathered around the library, among them vLLM, DeepSpeed and Ray."
+    },
+    "profile_sources": [
+      {
+        "type": "product_doc",
+        "title": "PyTorch README",
+        "url": "https://raw.githubusercontent.com/pytorch/pytorch/main/README.md",
+        "published": "2026-08-01",
+        "quote": "PyTorch is a Python package that provides two high-level features"
+      },
+      {
+        "type": "product_doc",
+        "title": "PyTorch README",
+        "url": "https://raw.githubusercontent.com/pytorch/pytorch/main/README.md",
+        "published": "2026-08-01",
+        "quote": "Tensor computation (like NumPy) with strong GPU acceleration"
+      },
+      {
+        "type": "product_doc",
+        "title": "PyTorch README",
+        "url": "https://raw.githubusercontent.com/pytorch/pytorch/main/README.md",
+        "published": "2026-08-01",
+        "quote": "Deep neural networks built on a tape-based autograd system"
+      },
+      {
+        "type": "product_doc",
+        "title": "pytorch.org",
+        "url": "https://pytorch.org/",
+        "published": "2026-08-01",
+        "quote": "Projects PyTorch Executorch vLLM DeepSpeed Ray Helion Safetensors",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "product_doc",
+        "title": "Transformers documentation",
+        "url": "https://huggingface.co/docs/transformers/en/index",
+        "published": "2026-08-01",
+        "quote": "Transformers provides everything you need for inference or training with state-of-the-art pretrained models."
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 86,
+        "why": {
+          "ru": "На ней написана большая часть исследовательского кода, и переписывать его некому",
+          "en": "Most research code is written in it, and there is nobody to rewrite it"
+        }
+      },
+      "lock_in_depth": {
+        "value": 84,
+        "why": {
+          "ru": "Под ней ускорители, над ней библиотеки моделей и серверы вывода",
+          "en": "Accelerators sit below it, model libraries and serving stacks above"
+        }
+      },
+      "time_to_replace": {
+        "value": 80,
+        "why": {
+          "ru": "Перенос обучения на другой фреймворк — это переписывание моделей, а не настройка",
+          "en": "Moving training to another framework means rewriting models, not reconfiguring"
+        }
+      },
+      "concentration": {
+        "value": 82,
+        "why": {
+          "ru": "Вокруг неё собраны смежные проекты — vLLM, DeepSpeed, Ray — а не вокруг конкурента",
+          "en": "Adjacent projects — vLLM, DeepSpeed, Ray — gather around it rather than a rival"
+        }
+      }
+    },
+    "edges": [],
+    "candidates": [
+      {
+        "name": "DeepSpeed",
+        "why": "проект того же набора, что vLLM и Ray, на карте отсутствует",
+        "url": "https://pytorch.org/",
+        "quote": "Projects PyTorch Executorch vLLM DeepSpeed Ray Helion Safetensors"
+      }
+    ],
+    "gaps": "Доли фреймворков ни один собственный документ не называет: оценка опирается на состав смежных проектов."
+  },
+  {
+    "id": "oracle",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "Oracle продаёт базы данных, прикладной софт и облачную инфраструктуру, а в ИИ зарабатывает арендой вычислений под долгие контракты. Портфель законтрактованной, но не признанной выручки вырос до $638 млрд против $138 млрд годом ранее — рост компания сама объясняет крупными облачными договорами. Вычислительные услуги её облака идут от виртуальных машин и предложений на графических процессорах до серверов без гипервизора. Одним из таких контрактов CoreWeave называет обязательство OpenAI, что показывает, за какие сроки и суммы идёт конкуренция за площадки. Прикладной софт и базы остаются источником текущей выручки, пока площадки строятся.",
+      "en": "Oracle sells databases, application software and cloud infrastructure, and in AI it earns by renting compute under long contracts. Contracted but unrecognised revenue grew to $638 billion against $138 billion a year earlier, which the company itself attributes to large cloud contracts. Its cloud compute services run from virtual machines and GPU-based offerings to bare metal servers. CoreWeave names an OpenAI commitment as one such contract, which shows the terms and sums on which venues now compete. Software and databases remain the source of current revenue while the venues are being built."
+    },
+    "profile_sources": [
+      {
+        "type": "sec_filing",
+        "title": "Oracle 10-K FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+        "published": "2026-06-22",
+        "quote": "Remaining performance obligations were $638 billion and $138 billion as of May 31, 2026",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "Oracle 10-K FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+        "published": "2026-06-22",
+        "quote": "OCI compute services range from virtual machines and graphics processing unit (GPU)-based offerings"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Oracle 10-K FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+        "published": "2026-06-22",
+        "quote": "Oracle cloud offerings include Oracle Cloud Applications (OCA) and Oracle Cloud Infrastructure (OCI"
+      },
+      {
+        "type": "sec_filing",
+        "title": "CoreWeave 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+        "published": "2026-03-02",
+        "quote": "OpenAI has committed to pay us up to approximately $11.9 billion through October 2030"
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 58,
+        "why": {
+          "ru": "Мощность под аренду продают ещё три облака и независимые операторы",
+          "en": "Three other clouds and independent operators sell the same rentable capacity"
+        }
+      },
+      "lock_in_depth": {
+        "value": 62,
+        "why": {
+          "ru": "Держит базы и прикладной софт, но не среду разработки под ускорители",
+          "en": "Holds databases and applications, but not the accelerator software layer"
+        }
+      },
+      "time_to_replace": {
+        "value": 58,
+        "why": {
+          "ru": "Площадку под аренду строят два-три года, но заказчик уходит быстрее",
+          "en": "A rentable site takes two to three years, yet a customer can leave sooner"
+        }
+      },
+      "concentration": {
+        "value": 55,
+        "why": {
+          "ru": "Законтрактовано $638 млрд, но такие же контракты подписывают конкурирующие облака",
+          "en": "$638 billion is contracted, yet competing clouds sign the same kind of contracts"
+        }
+      }
+    },
+    "edges": [
+      {
+        "id": "openai__oracle__customer_of",
+        "stance": "confirms",
+        "sources": [
+          {
+            "type": "sec_filing",
+            "title": "Oracle 10-K FY2026",
+            "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+            "published": "2026-06-22",
+            "quote": "attributable to certain significant cloud contracts that were entered into during the period"
+          }
+        ]
+      }
+    ],
+    "candidates": [],
+    "gaps": "10-K не называет заказчиков поимённо: связь с лабораториями подтверждается их документами и документами соседних площадок."
+  },
+  {
+    "id": "vllm",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "vLLM — открытая библиотека для вывода и обслуживания больших языковых моделей. Собственный README описывает её как быструю и простую в использовании и называет опорой экономию памяти под ключи и значения внимания. Денег проект не берёт: он живёт вкладом сообщества, в котором README насчитывает более 2000 участников из университетов и компаний. Поддержаны ускорители нескольких производителей сразу, поэтому библиотека работает как переходник между моделью и железом. Модели она берёт напрямую из склада Hugging Face, что делает её продолжением того же пути, а не отдельным миром.",
+      "en": "vLLM is an open library for inference and serving of large language models. Its own README calls it fast and easy to use and names memory-efficient handling of attention keys and values as its core. The project takes no money: it lives on community contributions, and the README counts over 2000 contributors from universities and companies. Accelerators from several vendors are supported at once, so the library works as an adapter between a model and the hardware. It pulls models straight from the Hugging Face hub, which makes it a continuation of that path rather than a separate world."
+    },
+    "profile_sources": [
+      {
+        "type": "product_doc",
+        "title": "vLLM README",
+        "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+        "published": "2026-08-01",
+        "quote": "vLLM is a fast and easy-to-use library for LLM inference and serving."
+      },
+      {
+        "type": "product_doc",
+        "title": "vLLM README",
+        "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+        "published": "2026-08-01",
+        "quote": "a diverse community of many dozens of academic institutions and companies from over 2000 contributors",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "product_doc",
+        "title": "vLLM README",
+        "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+        "published": "2026-08-01",
+        "quote": "Efficient management of attention key and value memory with"
+      },
+      {
+        "type": "product_doc",
+        "title": "vLLM README",
+        "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+        "published": "2026-08-01",
+        "quote": "Seamless integration with popular Hugging Face models"
+      },
+      {
+        "type": "product_doc",
+        "title": "PyTorch README",
+        "url": "https://raw.githubusercontent.com/pytorch/pytorch/main/README.md",
+        "published": "2026-08-01",
+        "quote": "PyTorch is a Python package that provides two high-level features"
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 58,
+        "why": {
+          "ru": "Ту же работу делают несколько открытых серверов вывода",
+          "en": "Several other open serving stacks do the same job"
+        }
+      },
+      "lock_in_depth": {
+        "value": 55,
+        "why": {
+          "ru": "Стоит между моделью и железом и заменяется без правки самой модели",
+          "en": "Sits between model and hardware and can be swapped without touching the model"
+        }
+      },
+      "time_to_replace": {
+        "value": 45,
+        "why": {
+          "ru": "Переключение на другой сервер вывода занимает недели",
+          "en": "Switching to another serving stack takes weeks"
+        }
+      },
+      "concentration": {
+        "value": 62,
+        "why": {
+          "ru": "Больше 2000 участников в одном проекте — сопоставимого сообщества у соседей нет",
+          "en": "Over 2000 contributors in one project, with no neighbour of comparable community"
+        }
+      }
+    },
+    "edges": [],
+    "candidates": [],
+    "gaps": "Долей установок проект не публикует; оценка опирается на число участников и охват поддерживаемого железа."
+  },
+  {
+    "id": "broadcom",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "Broadcom делает микросхемы для сетей и проектирует заказные ускорители под конкретного покупателя. Собственная отчётность относит к решениям для ИИ заказные ускорители XPU, коммутаторы и маршрутизаторы на Ethernet, сетевые карты и оптику. Заработок концентрирован: на одного покупателя пришлось 32% выручки против 28% и 21% в предыдущие годы. Своих фабрик под передовые узлы нет — большая часть производства пластин отдана внешним фабрикам, включая TSMC. Сборка и тестирование тоже вынесены: названы TSMC, ASE, Foxconn и Amkor.",
+      "en": "Broadcom builds networking silicon and designs custom accelerators for a named buyer. Its own filing counts custom XPU accelerators, Ethernet switching and routing silicon, network cards and optics as its AI solutions. Its earnings are concentrated: one customer accounted for 32% of revenue against 28% and 21% in the prior years. It owns no leading-edge fabs — most wafer manufacturing is outsourced to external foundries, TSMC among them. Assembly and test are outsourced too, with TSMC, ASE, Foxconn and Amkor named."
+    },
+    "profile_sources": [
+      {
+        "type": "sec_filing",
+        "title": "Broadcom 10-K FY2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+        "published": "2025-12-18",
+        "quote": "one customer accounted for 32%, 28% and 21% of our net revenue",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "Broadcom 10-K FY2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+        "published": "2025-12-18",
+        "quote": "Our AI semiconductor solutions include custom accelerators or XPUs, Ethernet switching and routing silicon"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Broadcom 10-K FY2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+        "published": "2025-12-18",
+        "quote": "front-end wafer manufacturing operations is outsourced to external foundries, including Taiwan Semiconductor Manufacturing Company Limited"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Broadcom 10-K FY2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+        "published": "2025-12-18",
+        "quote": "including TSMC, Advanced Semiconductor Engineering, Inc., Foxconn Technology Group, Amkor Technology, Inc."
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 80,
+        "why": {
+          "ru": "Заказной ускоритель под чужую задачу проектируют считаные команды",
+          "en": "Only a handful of teams design a custom accelerator for someone else's workload"
+        }
+      },
+      "lock_in_depth": {
+        "value": 76,
+        "why": {
+          "ru": "Держит и сеть дата-центра, и кремний облачных ускорителей",
+          "en": "Holds both the datacentre network and the silicon of cloud accelerators"
+        }
+      },
+      "time_to_replace": {
+        "value": 78,
+        "why": {
+          "ru": "Заказной чип от задания до серии — три-четыре года",
+          "en": "A custom chip runs three to four years from brief to volume"
+        }
+      },
+      "concentration": {
+        "value": 80,
+        "why": {
+          "ru": "На одного покупателя пришлось 32% выручки — заказных ускорителей делают немногие",
+          "en": "One customer was 32% of revenue; few vendors design custom accelerators at all"
+        }
+      }
+    },
+    "edges": [
+      {
+        "source": "ase",
+        "target": "broadcom",
+        "type": "packages",
+        "direction": "upstream",
+        "strength": 60,
+        "lock_in_depth": 45,
+        "substitutability": 50,
+        "is_reversible": true,
+        "risk_level": "medium",
+        "risk_type": "substitution",
+        "risk_timeline": "2-5y",
+        "risk_mitigation": {
+          "ru": "Рядом названы ещё три сборщика, поэтому потеря одного не останавливает выпуск.",
+          "en": "Three more assemblers are named alongside, so losing one does not stop output."
+        },
+        "note": {
+          "ru": "Broadcom называет ASE среди сборщиков, которым отдано большинство операций сборки и теста.",
+          "en": "Broadcom names ASE among the contract manufacturers handling most of its assembly and test."
+        },
+        "stance": "confirms",
+        "sources": [
+          {
+            "type": "sec_filing",
+            "title": "Broadcom 10-K FY2025",
+            "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+            "published": "2025-12-18",
+            "quote": "including TSMC, Advanced Semiconductor Engineering, Inc., Foxconn Technology Group, Amkor Technology, Inc."
+          }
+        ]
+      },
+      {
+        "source": "amkor",
+        "target": "broadcom",
+        "type": "packages",
+        "direction": "upstream",
+        "strength": 55,
+        "lock_in_depth": 40,
+        "substitutability": 55,
+        "is_reversible": true,
+        "risk_level": "medium",
+        "risk_type": "substitution",
+        "risk_timeline": "2-5y",
+        "risk_mitigation": {
+          "ru": "Сборка распределена между четырьмя названными подрядчиками.",
+          "en": "Assembly is spread across four named contractors."
+        },
+        "note": {
+          "ru": "Amkor назван в отчётности Broadcom среди подрядчиков сборки и тестирования.",
+          "en": "Amkor is named in Broadcom's filing among its assembly and test contractors."
+        },
+        "stance": "confirms",
+        "sources": [
+          {
+            "type": "sec_filing",
+            "title": "Broadcom 10-K FY2025",
+            "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+            "published": "2025-12-18",
+            "quote": "including TSMC, Advanced Semiconductor Engineering, Inc., Foxconn Technology Group, Amkor Technology, Inc."
+          }
+        ]
+      }
+    ],
+    "candidates": [
+      {
+        "name": "Siliconware Precision Industries",
+        "why": "назван подрядчиком сборки в отчётности Broadcom",
+        "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+        "quote": "Amkor Technology, Inc. and Siliconware Precision Industries Co.,"
+      }
+    ],
+    "gaps": "Имя крупнейшего покупателя в отчётности не раскрыто, поэтому связь с ним подтверждается его стороной."
+  },
+  {
+    "id": "equinix",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "Equinix сдаёт места в своих дата-центрах, питание и точки обмена трафиком, оставаясь нейтральной к операторам. Заработок распределён: клиентов больше 10,500, и ни один не даёт 10% или больше выручки. Устойчивость продаётся вместе с местом — компания отчиталась о доступности выше 99.9999% за год. Подключение к сети площадки зависит от третьих сторон: она сама называет это риском для своей работы. Плотные стойки под ускорители упираются в питание, и она прямо пишет, что старые площадки не всегда получается заполнить целиком.",
+      "en": "Equinix rents space in its data centres, power and traffic exchange points, staying neutral towards operators. Its earnings are spread out: it has over 10,500 customers and none of them makes up 10% or more of revenue. Resilience is sold together with the space — it reported uptime above 99.9999% across the year. Connectivity into its sites depends on third parties, which it names as a risk to its own operations. Dense accelerator racks run into power limits, and it writes plainly that older sites cannot always be filled completely."
+    },
+    "profile_sources": [
+      {
+        "type": "sec_filing",
+        "title": "Equinix 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000032/eqix-20251231.htm",
+        "published": "2026-02-11",
+        "quote": "As of December 31, 2025, we had over 10,500 customers worldwide.",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "Equinix 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000032/eqix-20251231.htm",
+        "published": "2026-02-11",
+        "quote": "No one customer made up 10% or more of our total business revenues",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "Equinix 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000032/eqix-20251231.htm",
+        "published": "2026-02-11",
+        "quote": "we delivered 99.9999%+ operational uptime across our global data centers"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Equinix 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000032/eqix-20251231.htm",
+        "published": "2026-02-11",
+        "quote": "We depend on a number of third parties to provide internet connectivity"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Equinix 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000032/eqix-20251231.htm",
+        "published": "2026-02-11",
+        "quote": "The use of high-power density equipment may limit our ability to fully utilize the space"
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 62,
+        "why": {
+          "ru": "Нейтральные площадки строят и другие операторы, но не с той же плотностью подключений",
+          "en": "Other operators build neutral venues, though not with the same density of connections"
+        }
+      },
+      "lock_in_depth": {
+        "value": 66,
+        "why": {
+          "ru": "Съезд означает переезд стоек и разрыв сложившихся подключений",
+          "en": "Leaving means moving racks and cutting the connections already established"
+        }
+      },
+      "time_to_replace": {
+        "value": 60,
+        "why": {
+          "ru": "Площадка с питанием и вводами строится годами, а не кварталами",
+          "en": "A site with power and network entries takes years, not quarters, to build"
+        }
+      },
+      "concentration": {
+        "value": 58,
+        "why": {
+          "ru": "Больше 10,500 клиентов и ни одного с долей 10% — рынок площадок конкурентный",
+          "en": "Over 10,500 customers and none above 10%: the venue market is competitive"
+        }
+      }
+    },
+    "edges": [],
+    "candidates": [],
+    "gaps": "Число подключений между клиентами в отчётности не раскрыто, а именно оно отличает площадку от склада стоек."
+  },
+  {
+    "id": "amazon",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "Amazon держит розницу и облако AWS, и в инфраструктуре ИИ значим именно второй бизнес. AWS продаёт по требованию вычисления, хранение, базы и машинное обучение, а его продажи выросли на 20% за год. Деньги в модели компания вкладывает напрямую: в конвертируемые обязательства Anthropic ушло $2.7 млрд только за 2025 год. Расходы на инфраструктуру она относит к общей технологической базе, которая обслуживает и её собственные задачи, и внешних клиентов. Такое устройство делает её одновременно покупателем ускорителей и их конкурентом со своим кремнием.",
+      "en": "Amazon runs retail and the AWS cloud, and in AI infrastructure it is the second business that matters. AWS sells on-demand compute, storage, databases and machine learning, and its sales grew 20% over the year. The company puts money into models directly: $2.7 billion went into Anthropic convertible notes in 2025 alone. Infrastructure costs are booked against a shared technology base that serves both its own needs and external customers. That arrangement makes it a buyer of accelerators and a competitor to them with its own silicon at the same time."
+    },
+    "profile_sources": [
+      {
+        "type": "sec_filing",
+        "title": "Amazon 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+        "published": "2026-02-06",
+        "quote": "AWS sales increased 20% in 2025, compared to the prior year.",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "Amazon 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+        "published": "2026-02-06",
+        "quote": "AWS, which offers a broad set of on-demand technology services, including compute, storage, database"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Amazon 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+        "published": "2026-02-06",
+        "quote": "investments in convertible notes from Anthropic, PBC (“Anthropic”), including $2.7 billion we invested in 2025"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Amazon 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+        "published": "2026-02-06",
+        "quote": "we leverage a shared infrastructure that supports both our internal technology requirements and external sales"
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 72,
+        "why": {
+          "ru": "Мощности того же масштаба есть ещё у двух облаков",
+          "en": "Two other clouds hold capacity of the same scale"
+        }
+      },
+      "lock_in_depth": {
+        "value": 74,
+        "why": {
+          "ru": "Держит хранение, сеть и сервисы данных, на которых стоит прикладной слой",
+          "en": "Holds storage, networking and data services the application layer stands on"
+        }
+      },
+      "time_to_replace": {
+        "value": 68,
+        "why": {
+          "ru": "Переезд данных и сервисов в другое облако считается кварталами",
+          "en": "Moving data and services to another cloud is counted in quarters"
+        }
+      },
+      "concentration": {
+        "value": 66,
+        "why": {
+          "ru": "Продажи AWS выросли на 20%, но рядом работают два сопоставимых облака",
+          "en": "AWS sales grew 20%, yet two comparable clouds work alongside"
+        }
+      }
+    },
+    "edges": [
+      {
+        "id": "amazon__anthropic__invests_in",
+        "stance": "confirms",
+        "sources": [
+          {
+            "type": "sec_filing",
+            "title": "Amazon 10-K 2025",
+            "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+            "published": "2026-02-06",
+            "quote": "investments in convertible notes from Anthropic, PBC (“Anthropic”), including $2.7 billion we invested in 2025"
+          }
+        ]
+      }
+    ],
+    "candidates": [],
+    "gaps": "Собственные ускорители в 10-K не названы ни разу, поэтому связь с ними в досье не подтверждена её собственным словом."
+  },
+  {
+    "id": "samsung",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "Samsung — одновременно производитель памяти и фабрика по чужим заказам, и такое сочетание в одной компании редкость. По собственному сообщению, она начала серийный выпуск HBM4 и отгрузила коммерческие партии заказчикам. Скорость передачи заявлена как 11.7 гигабит в секунду, а сама память собрана на 1c DRAM и логической подложке 4nm. Через 12-слойную укладку объём одной сборки начинается с 24 гигабайт. Для NVIDIA компания одновременно поставщик памяти и вторая фабрика, что и делает её узлом сразу двух слоёв карты.",
+      "en": "Samsung is a memory maker and a contract fab at once, a combination rare inside one company. By its own announcement it has begun mass production of HBM4 and shipped commercial parts to customers. Transfer speed is stated at 11.7 gigabits per second, and the stack is built on 1c DRAM with a 4nm logic base die. Through 12-layer stacking one part starts at 24 gigabytes. For NVIDIA it is both a memory supplier and a second foundry, which is what puts it in two layers of the map at once."
+    },
+    "profile_sources": [
+      {
+        "type": "company_pr",
+        "title": "Samsung ships commercial HBM4",
+        "url": "https://semiconductor.samsung.com/news-events/news/samsung-ships-industry-first-commercial-hbm4-with-ultimate-performance-for-ai-computing/",
+        "published": "2026-01-15",
+        "quote": "begun mass production of its industry-leading HBM4 and has shipped commercial products to customers"
+      },
+      {
+        "type": "company_pr",
+        "title": "Samsung ships commercial HBM4",
+        "url": "https://semiconductor.samsung.com/news-events/news/samsung-ships-industry-first-commercial-hbm4-with-ultimate-performance-for-ai-computing/",
+        "published": "2026-01-15",
+        "quote": "HBM4 delivers a consistent processing speed of 11.7 gigabits-per-second (Gbps), exceeding the industry standard"
+      },
+      {
+        "type": "company_pr",
+        "title": "Samsung ships commercial HBM4",
+        "url": "https://semiconductor.samsung.com/news-events/news/samsung-ships-industry-first-commercial-hbm4-with-ultimate-performance-for-ai-computing/",
+        "published": "2026-01-15",
+        "quote": "adopted the most advanced nodes like the 1c DRAM and 4nm logic process for HBM4"
+      },
+      {
+        "type": "company_pr",
+        "title": "Samsung ships commercial HBM4",
+        "url": "https://semiconductor.samsung.com/news-events/news/samsung-ships-industry-first-commercial-hbm4-with-ultimate-performance-for-ai-computing/",
+        "published": "2026-01-15",
+        "quote": "Through 12-layer stacking technology, Samsung offers HBM4 in capacities ranging from 24 gigabytes",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "NVIDIA 10-K FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+        "published": "2026-02-25",
+        "quote": "foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung Electronics"
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 80,
+        "why": {
+          "ru": "Память высокой плотности делают три компании, и одна из них — она",
+          "en": "High-bandwidth memory comes from three companies, and it is one of them"
+        }
+      },
+      "lock_in_depth": {
+        "value": 72,
+        "why": {
+          "ru": "Задевает и память ускорителя, и производство самого кристалла",
+          "en": "Reaches both the accelerator's memory and the manufacturing of the die"
+        }
+      },
+      "time_to_replace": {
+        "value": 82,
+        "why": {
+          "ru": "Квалификация нового поставщика памяти под ускоритель занимает годы",
+          "en": "Qualifying a new memory supplier for an accelerator takes years"
+        }
+      },
+      "concentration": {
+        "value": 78,
+        "why": {
+          "ru": "Серийный HBM4 на 12 слоёв выпускают считаные производители памяти",
+          "en": "Volume HBM4 at 12 layers comes from only a few memory makers"
+        }
+      }
+    },
+    "edges": [
+      {
+        "id": "samsung__nvidia__supplies",
+        "stance": "confirms",
+        "sources": [
+          {
+            "type": "company_pr",
+            "title": "Samsung ships commercial HBM4",
+            "url": "https://semiconductor.samsung.com/news-events/news/samsung-ships-industry-first-commercial-hbm4-with-ultimate-performance-for-ai-computing/",
+            "published": "2026-01-15",
+            "quote": "begun mass production of its industry-leading HBM4 and has shipped commercial products to customers"
+          }
+        ]
+      }
+    ],
+    "candidates": [],
+    "gaps": "Имена покупателей памяти в пресс-релизе не названы: связь с NVIDIA держится на её отчётности и на факте выпуска."
+  },
+  {
+    "id": "vertiv",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "Vertiv делает питание и охлаждение для дата-центров и продаёт их вместе с обслуживанием. Продажи составили $10,229.9 млн, из которых 62% пришлось на Америку. Заказы вперёд видны отдельно: портфель оценён в $15.0 млрд, и он показывает, на сколько кварталов расписаны мощности. В линейке — управление питанием переменного и постоянного тока, воздушное и жидкостное охлаждение, шинопроводы и стойки, то есть весь обвес вокруг вычислений. Под новые поколения ускорителей компания проектирует решения заранее, вместе с их производителем.",
+      "en": "Vertiv builds power and cooling for data centres and sells them together with service. Sales were $10,229.9 million, of which 62% was transacted in the Americas. Forward orders are shown separately: the backlog is put at $15.0 billion, and it says how many quarters of capacity are already spoken for. The range covers AC and DC power management, air and liquid cooling, busbars and racks — the whole rig around the computing itself. For new accelerator generations it designs solutions in advance, together with their maker."
+    },
+    "profile_sources": [
+      {
+        "type": "sec_filing",
+        "title": "Vertiv 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1674101/000167410126000008/vrt-20251231.htm",
+        "published": "2026-02-13",
+        "quote": "Vertiv’s net sales was $10,229.9, of which 62% was transacted in the Americas"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Vertiv 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1674101/000167410126000008/vrt-20251231.htm",
+        "published": "2026-02-13",
+        "quote": "Vertiv’s estimated combined order backlog was $15.0 billion",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "Vertiv 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1674101/000167410126000008/vrt-20251231.htm",
+        "published": "2026-02-13",
+        "quote": "air cooled and liquid cooled thermal management products, integrated modular solutions, racks, single phase UPS"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Vertiv 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1674101/000167410126000008/vrt-20251231.htm",
+        "published": "2026-02-13",
+        "quote": "we pioneer and deliver end-to-end power and cooling technologies to help our customers stay resilient"
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 68,
+        "why": {
+          "ru": "Питание и охлаждение продают ещё несколько производителей того же класса",
+          "en": "Power and cooling come from several other makers of the same class"
+        }
+      },
+      "lock_in_depth": {
+        "value": 64,
+        "why": {
+          "ru": "Стоит под стойкой: смена поставщика тянет за собой переделку зала",
+          "en": "Sits under the rack: changing supplier drags the hall's redesign with it"
+        }
+      },
+      "time_to_replace": {
+        "value": 62,
+        "why": {
+          "ru": "Квалификация нового теплового решения под стойку занимает год-два",
+          "en": "Qualifying a new thermal solution for a rack takes a year or two"
+        }
+      },
+      "concentration": {
+        "value": 60,
+        "why": {
+          "ru": "Портфель заказов $15.0 млрд при нескольких сопоставимых производителях обвеса",
+          "en": "A $15.0 billion backlog against several comparable makers of the same rig"
+        }
+      }
+    },
+    "edges": [],
+    "candidates": [],
+    "gaps": "Долю в поставках охлаждения под ускорители компания не раскрывает; оценка опирается на портфель заказов."
+  }
+]

@@ -1,0 +1,754 @@
+[
+  {
+    "id": "coreweave",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "CoreWeave сдаёт в аренду вычисления на ускорителях и продаёт вместе с ними свою программную обвязку. Выручка составила $5.1 млрд против $1.9 млрд и $229 млн в предыдущие годы, а законтрактованных обязательств на конец года набралось $60.7 млрд. Физически это 43 площадки и больше 850 МВт активной мощности при законтрактованных примерно 3.1 ГВт. Заказчики немногочисленны и крупны: OpenAI обязалась платить до $11.9 млрд до октября 2030 года, а среди прочих названы Microsoft и Meta. Всё железо ускорителей приходит со стороны, поэтому доступ к очереди поставок для компании важнее собственной разработки.",
+      "en": "CoreWeave rents out accelerator compute and sells its own software layer along with it. Revenue was $5.1 billion against $1.9 billion and $229 million in prior years, while contracted obligations reached $60.7 billion at year end. Physically that is 43 sites and over 850 MW of active power against roughly 3.1 GW contracted. Its customers are few and large: OpenAI committed to pay up to $11.9 billion through October 2030, and Microsoft and Meta are named among the rest. All accelerator hardware comes from outside, so a place in the supply queue matters more to it than its own design work."
+    },
+    "profile_sources": [
+      {
+        "type": "sec_filing",
+        "title": "CoreWeave 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+        "published": "2026-03-02",
+        "quote": "Our revenue was $5.1 billion, $1.9 billion, and $229 million"
+      },
+      {
+        "type": "sec_filing",
+        "title": "CoreWeave 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+        "published": "2026-03-02",
+        "quote": "As of December 31, 2025, we had $60.7 billion of remaining performance obligations"
+      },
+      {
+        "type": "sec_filing",
+        "title": "CoreWeave 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+        "published": "2026-03-02",
+        "quote": "we operated 43 data centers with over 850 MW of active power",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "CoreWeave 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+        "published": "2026-03-02",
+        "quote": "our total contracted power capacity was approximately 3.1 GW",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "CoreWeave 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+        "published": "2026-03-02",
+        "quote": "OpenAI has committed to pay us up to approximately $11.9 billion through October 2030"
+      },
+      {
+        "type": "sec_filing",
+        "title": "CoreWeave 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+        "published": "2026-03-02",
+        "quote": "Other significant customers include Microsoft and Meta."
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 52,
+        "why": {
+          "ru": "Ту же аренду ускорителей продают гиперскейлеры и десяток независимых площадок",
+          "en": "The same accelerator rental is sold by hyperscalers and a dozen independent venues"
+        }
+      },
+      "lock_in_depth": {
+        "value": 55,
+        "why": {
+          "ru": "Держит нагрузку контрактом и обвязкой, но не средой разработки",
+          "en": "Holds the workload by contract and tooling, not by a development environment"
+        }
+      },
+      "time_to_replace": {
+        "value": 58,
+        "why": {
+          "ru": "Площадку с питанием строят годами, но арендатор уходит по концу контракта",
+          "en": "A powered site takes years to build, yet a tenant leaves when the contract ends"
+        }
+      },
+      "concentration": {
+        "value": 45,
+        "why": {
+          "ru": "43 площадки и 850 МВт против гигаваттных программ гиперскейлеров",
+          "en": "43 sites and 850 MW against the gigawatt programmes of the hyperscalers"
+        }
+      }
+    },
+    "edges": [
+      {
+        "id": "coreweave__nvidia__customer_of",
+        "stance": "confirms",
+        "sources": [
+          {
+            "type": "sec_filing",
+            "title": "CoreWeave 10-K 2025",
+            "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+            "published": "2026-03-02",
+            "quote": "deploy the industry's most advanced hardware and architectures first—including NVIDIA GB200 and GB300 NVL72"
+          }
+        ]
+      },
+      {
+        "source": "meta",
+        "target": "coreweave",
+        "type": "customer_of",
+        "direction": "upstream",
+        "strength": 55,
+        "lock_in_depth": 35,
+        "substitutability": 60,
+        "is_reversible": true,
+        "risk_level": "medium",
+        "risk_type": "market",
+        "risk_timeline": "2-5y",
+        "risk_mitigation": {
+          "ru": "Своя площадка строится параллельно арендованной.",
+          "en": "An own site is built in parallel with the rented one."
+        },
+        "note": {
+          "ru": "CoreWeave называет Meta среди своих значимых заказчиков наравне с Microsoft.",
+          "en": "CoreWeave names Meta among its significant customers alongside Microsoft."
+        },
+        "stance": "confirms",
+        "sources": [
+          {
+            "type": "sec_filing",
+            "title": "CoreWeave 10-K 2025",
+            "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+            "published": "2026-03-02",
+            "quote": "Other significant customers include Microsoft and Meta."
+          }
+        ]
+      }
+    ],
+    "candidates": [
+      {
+        "name": "Weights & Biases",
+        "why": "куплена CoreWeave, слой инструментов обучения на карте не представлен",
+        "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+        "quote": "our acquisitions of Weights & Biases, Inc., OpenPipe Inc., Marimo Inc."
+      }
+    ],
+    "gaps": "Доля отдельных заказчиков в выручке раскрыта не полностью: названы имена, но не проценты."
+  },
+  {
+    "id": "meta",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "Meta зарабатывает рекламой в своих приложениях и тратит эти деньги на вычисления и исследования. Собственная отчётность прямо говорит, что почти вся выручка идёт от продажи рекламных мест. Расходы сегмента приложений составили $96.29 млрд, и в них входят дата-центры и техническая инфраструктура. Дата-центры компания строит сама, но существенную часть технической базы всё равно берёт у третьих сторон. Модели Llama она выпускает открыто, что даёт ей влияние на слой моделей без продажи самих моделей.",
+      "en": "Meta earns from advertising in its own apps and spends that money on compute and research. Its own filing says plainly that substantially all revenue comes from selling advertising placements. Family of Apps investments were $96.29 billion and include data centres and technical infrastructure. It designs and builds its own data centres, yet a substantial portion of its technical infrastructure still comes from third parties. It releases the Llama models openly, which gives it influence over the model layer without selling models at all."
+    },
+    "profile_sources": [
+      {
+        "type": "sec_filing",
+        "title": "Meta 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+        "published": "2026-01-29",
+        "quote": "we generate substantially all of our revenue from selling advertising placements"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Meta 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+        "published": "2026-01-29",
+        "quote": "Our FoA investments were $96.29 billion in 2025 and include expenses relating to headcount"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Meta 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+        "published": "2026-01-29",
+        "quote": "We have designed and built our own data centers and key portions"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Meta 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+        "published": "2026-01-29",
+        "quote": "including releasing our Llama foundation models as well as other models and tools",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "CoreWeave 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+        "published": "2026-03-02",
+        "quote": "Other significant customers include Microsoft and Meta."
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 68,
+        "why": {
+          "ru": "Открытые веса выпускает не она одна, но её выпуски задают планку",
+          "en": "It is not the only one releasing open weights, but its releases set the bar"
+        }
+      },
+      "lock_in_depth": {
+        "value": 66,
+        "why": {
+          "ru": "Держит прикладной слой и через открытые модели — часть чужих стеков",
+          "en": "Holds the application layer and, through open models, part of other stacks"
+        }
+      },
+      "time_to_replace": {
+        "value": 60,
+        "why": {
+          "ru": "Открытую модель заменяют другой открытой за месяцы",
+          "en": "An open model is replaced by another open model within months"
+        }
+      },
+      "concentration": {
+        "value": 58,
+        "why": {
+          "ru": "Llama выпускается открыто, но рядом идут другие открытые семейства моделей",
+          "en": "Llama ships openly, yet other open model families run alongside it"
+        }
+      }
+    },
+    "edges": [],
+    "candidates": [],
+    "gaps": "Ни один поставщик оборудования в 10-K не назван, поэтому связи с сетями и ускорителями держатся на их стороне."
+  },
+  {
+    "id": "arm",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "Arm продаёт лицензии на архитектуру процессоров и получает отчисления с каждого выпущенного чипа. Заработок сильно сконцентрирован: на пять крупнейших клиентов пришлось около 57% выручки, а на самого крупного, Arm China, — около 16%. Часть ближней выручки прямо зависит от коммерческих договорённостей с SoftBank Group, что компания называет отдельным риском. Крупнейший рынок по выручке — процессоры для смартфонов, а самый быстрорастущий — дата-центры. Клиент может лицензировать саму архитектуру и построить свой процессор, и это компания тоже называет риском для своей линейки.",
+      "en": "Arm licenses processor architecture and collects a royalty on every chip shipped. Its earnings are heavily concentrated: the top five customers accounted for about 57% of revenue and the largest, Arm China, for about 16%. Part of near-term revenue depends directly on commercial arrangements with SoftBank Group, which the company names as a separate risk. Its largest market by revenue is smartphone processors, while the fastest growing one is the data centre. A customer may license the architecture itself and build its own processor, which the company also names as a risk to its product line."
+    },
+    "profile_sources": [
+      {
+        "type": "sec_filing",
+        "title": "Arm 20-F FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+        "published": "2026-05-26",
+        "quote": "our top five customers (including Arm China and SoftBank Group) collectively accounted for approximately 57%",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "Arm 20-F FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+        "published": "2026-05-26",
+        "quote": "our largest customer individually, Arm China, accounted for approximately 16%, 17% and 21%"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Arm 20-F FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+        "published": "2026-05-26",
+        "quote": "A portion of our near-term revenue is dependent on commercial arrangements with SoftBank Group"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Arm 20-F FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+        "published": "2026-05-26",
+        "quote": "Customers may decide to license our architecture and develop their own processors"
+      },
+      {
+        "type": "sec_filing",
+        "title": "NVIDIA 10-K FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+        "published": "2026-02-25",
+        "quote": "suppliers of Arm-based CPUs and companies that incorporate h"
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 88,
+        "why": {
+          "ru": "Архитектура вшита в компиляторы и операционные системы всей мобильной отрасли",
+          "en": "The architecture is wired into compilers and operating systems across mobile"
+        }
+      },
+      "lock_in_depth": {
+        "value": 82,
+        "why": {
+          "ru": "Задевает процессоры телефонов, серверов и управляющие ядра ускорителей",
+          "en": "Reaches phone processors, servers and the control cores of accelerators"
+        }
+      },
+      "time_to_replace": {
+        "value": 85,
+        "why": {
+          "ru": "Смена архитектуры — это пересборка всей цепочки инструментов",
+          "en": "Changing architecture means rebuilding the entire toolchain"
+        }
+      },
+      "concentration": {
+        "value": 84,
+        "why": {
+          "ru": "Пять клиентов дают около 57% выручки; альтернативная архитектура одна и моложе",
+          "en": "Five customers give about 57% of revenue; the alternative architecture is single and younger"
+        }
+      }
+    },
+    "edges": [
+      {
+        "source": "arm",
+        "target": "softbank",
+        "type": "strategic_partner",
+        "direction": "bidirectional",
+        "strength": 70,
+        "lock_in_depth": 60,
+        "substitutability": 40,
+        "is_reversible": false,
+        "risk_level": "medium",
+        "risk_type": "market",
+        "risk_timeline": "2-5y",
+        "risk_mitigation": {
+          "ru": "Клиентская база шире одной группы, но зависимость названа в отчётности.",
+          "en": "The customer base is wider than one group, yet the filing names the dependence."
+        },
+        "note": {
+          "ru": "Часть ближней выручки Arm зависит от коммерческих договорённостей с SoftBank Group.",
+          "en": "Part of Arm's near-term revenue depends on commercial arrangements with SoftBank Group."
+        },
+        "stance": "confirms",
+        "sources": [
+          {
+            "type": "sec_filing",
+            "title": "Arm 20-F FY2026",
+            "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+            "published": "2026-05-26",
+            "quote": "A portion of our near-term revenue is dependent on commercial arrangements with SoftBank Group"
+          }
+        ]
+      }
+    ],
+    "candidates": [
+      {
+        "name": "Arm China",
+        "why": "крупнейший клиент Arm, отдельное юридическое лицо, на карте отсутствует",
+        "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+        "quote": "our largest customer individually, Arm China, accounted for approximately 16%, 17% and 21%"
+      }
+    ],
+    "gaps": "Числа отгрузок чипов на архитектуре в этом документе не нашлось; доля оценена по концентрации выручки."
+  },
+  {
+    "id": "softbank",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "SoftBank Group — инвестиционный холдинг, который финансирует стройку ИИ-инфраструктуры заёмными деньгами. Свежий выпуск гибридных облигаций на JPY 418.0 млрд размещался в основном среди частных инвесторов под 4.97% годовых на первые пять лет. Средства такого выпуска идут на досрочный выкуп предыдущих бумаг, то есть долг рефинансируется, а не гасится. Кредитный рейтинг выпуска японское агентство поставило на уровне BBB+. Отчётность Arm называет группу и клиентом, и стороной коммерческих договорённостей, от которых зависит часть её ближней выручки.",
+      "en": "SoftBank Group is an investment holding that funds the build-out of AI infrastructure with borrowed money. A recent hybrid note issue of JPY 418.0 billion was offered mainly to individual investors at 4.97% for the first five years. Proceeds of such an issue go to the early redemption of earlier notes, so the debt is refinanced rather than repaid. The Japanese agency rated the issue BBB+. Arm's filing names the group both as a customer and as the counterparty to commercial arrangements on which part of its near-term revenue depends."
+    },
+    "profile_sources": [
+      {
+        "type": "company_pr",
+        "title": "SoftBank Group hybrid notes",
+        "url": "https://group.softbank/en/news/press/20260410",
+        "published": "2026-04-10",
+        "quote": "Total amount of issue JPY 418.0 billion"
+      },
+      {
+        "type": "company_pr",
+        "title": "SoftBank Group hybrid notes",
+        "url": "https://group.softbank/en/news/press/20260410",
+        "published": "2026-04-10",
+        "quote": "Fixed rate for 5 years from the issue date: 4.97% per annum"
+      },
+      {
+        "type": "company_pr",
+        "title": "SoftBank Group hybrid notes",
+        "url": "https://group.softbank/en/news/press/20260410",
+        "published": "2026-04-10",
+        "quote": "Use of proceeds Allocated to the early redemption of hybrid notes issued in Japan"
+      },
+      {
+        "type": "company_pr",
+        "title": "SoftBank Group hybrid notes",
+        "url": "https://group.softbank/en/news/press/20260525",
+        "published": "2026-05-25",
+        "quote": "Preliminary credit rating BBB+ (Japan Credit Rating Agency, Ltd.)",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "Arm 20-F FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+        "published": "2026-05-26",
+        "quote": "our top five customers (including Arm China and SoftBank Group) collectively accounted for approximately 57%"
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 50,
+        "why": {
+          "ru": "Деньги в этот слой приходят и от суверенных фондов, и от рынков долга",
+          "en": "Money reaches this layer from sovereign funds and debt markets alike"
+        }
+      },
+      "lock_in_depth": {
+        "value": 58,
+        "why": {
+          "ru": "Через владение Arm задевает и архитектуру процессоров, и стройку площадок",
+          "en": "Through owning Arm it reaches both processor architecture and site construction"
+        }
+      },
+      "time_to_replace": {
+        "value": 45,
+        "why": {
+          "ru": "Замена источника капитала — вопрос ставки, а не технологии",
+          "en": "Replacing a source of capital is a question of rate, not technology"
+        }
+      },
+      "concentration": {
+        "value": 40,
+        "why": {
+          "ru": "Капитал фрагментирован: рейтинг BBB+ говорит о цене денег, а не об исключительности",
+          "en": "Capital is fragmented: a BBB+ rating speaks to the price of money, not to exclusivity"
+        }
+      }
+    },
+    "edges": [],
+    "candidates": [],
+    "gaps": "Собственных раскрытий по вложениям в ИИ-мощности в найденных релизах нет: они посвящены долгу."
+  },
+  {
+    "id": "nventures",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "NVentures — венчурное плечо NVIDIA, вкладывающее деньги в компании вокруг её же стека. Собственная страница описывает работу коротко: инвестировать в тех, кто решает сложные задачи, и строить долгие партнёрства с командами. Отдельной выручки у подразделения нет — оно тратит деньги материнской компании и возвращает их долями в портфельных компаниях. Практический смысл для карты в том, что деньги идут туда, где потом покупают ускорители. Стороннее наблюдение в отчётности Arista описывает это как значительные вложения в новые облачные компании.",
+      "en": "NVentures is NVIDIA's venture arm, putting money into companies around its own stack. Its own page describes the work briefly: invest in those solving complex problems and build long partnerships with teams. The unit has no revenue of its own — it spends the parent's money and gets it back as stakes in portfolio companies. Its practical meaning for the map is that money goes where accelerators are later bought. An outside observation in Arista's filing describes this as significant investments in new cloud companies."
+    },
+    "profile_sources": [
+      {
+        "type": "company_pr",
+        "title": "NVentures — NVIDIA's venture capital arm",
+        "url": "https://www.nvidia.com/en-us/startups/nventures/",
+        "published": "2026-08-01",
+        "quote": "We invest in technology visionaries solving complex problems."
+      },
+      {
+        "type": "company_pr",
+        "title": "NVentures — NVIDIA's venture capital arm",
+        "url": "https://www.nvidia.com/en-us/startups/nventures/",
+        "published": "2026-08-01",
+        "quote": "we build long-term partnerships with generational teams to accelerate their journey"
+      },
+      {
+        "type": "company_pr",
+        "title": "NVentures — NVIDIA's venture capital arm",
+        "url": "https://www.nvidia.com/en-us/startups/nventures/",
+        "published": "2026-08-01",
+        "quote": "NVIDIA’s Venture Capital Arm NVentures",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "Arista 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+        "published": "2026-02-13",
+        "quote": "Nvidia has made significant investments in several AI Neoclouds"
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 45,
+        "why": {
+          "ru": "Деньги в этот слой несут десятки фондов, исключительности у плеча нет",
+          "en": "Dozens of funds carry money into this layer; the arm holds no exclusivity"
+        }
+      },
+      "lock_in_depth": {
+        "value": 52,
+        "why": {
+          "ru": "Вложение обычно идёт вместе с доступом к очереди поставок",
+          "en": "An investment usually travels together with access to the supply queue"
+        }
+      },
+      "time_to_replace": {
+        "value": 35,
+        "why": {
+          "ru": "Другой инвестор находится за месяцы, если нужны только деньги",
+          "en": "Another investor is found within months if only money is needed"
+        }
+      },
+      "concentration": {
+        "value": 38,
+        "why": {
+          "ru": "Венчурное плечо одной компании среди множества фондов того же слоя",
+          "en": "One company's venture arm among many funds of the same layer"
+        }
+      }
+    },
+    "edges": [],
+    "candidates": [],
+    "gaps": "Портфель на сайте перечислен без сумм и дат, поэтому отдельные вложения в досье не поехали."
+  },
+  {
+    "id": "deepseek",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "DeepSeek — китайская лаборатория, которая выкладывает свои модели с открытыми весами. Собственный репозиторий описывает DeepSeek-V3 как модель со смесью экспертов на 671B параметров, из которых на каждый токен активируются 37B. Такая конструкция удешевляет и обучение, и работу модели — именно на этом строится её заявка. Денег за веса лаборатория не берёт, зарабатывая на платном интерфейсе и продуктах вокруг. Для карты она важна как доказательство того, что передовая модель собирается не только в американском стеке.",
+      "en": "DeepSeek is a Chinese lab that publishes its models with open weights. Its own repository describes DeepSeek-V3 as a Mixture-of-Experts model with 671B total parameters, of which 37B are activated per token. That construction makes both training and serving cheaper, and the claim rests on it. The lab charges nothing for the weights, earning instead on a paid interface and the products around it. For the map it matters as proof that a frontier model is assembled outside the American stack as well."
+    },
+    "profile_sources": [
+      {
+        "type": "product_doc",
+        "title": "DeepSeek-V3 repository",
+        "url": "https://github.com/deepseek-ai/DeepSeek-V3",
+        "published": "2026-08-01",
+        "quote": "We present DeepSeek-V3, a strong Mixture-of-Experts (MoE) language model with 671B total parameters",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "product_doc",
+        "title": "DeepSeek-V3 repository",
+        "url": "https://github.com/deepseek-ai/DeepSeek-V3",
+        "published": "2026-08-01",
+        "quote": "To achieve efficient inference and cost-effective training, DeepSeek-V3 adopts Multi-head Latent Attention (MLA)"
+      },
+      {
+        "type": "product_doc",
+        "title": "DeepSeek-V3 repository",
+        "url": "https://github.com/deepseek-ai/DeepSeek-V3",
+        "published": "2026-08-01",
+        "quote": "671B total parameters with 37B activated for each token"
+      },
+      {
+        "type": "sec_filing",
+        "title": "NVIDIA 10-K FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+        "published": "2026-02-25",
+        "quote": "the U.S. government, or USG, announced export restrictions and export"
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 55,
+        "why": {
+          "ru": "Открытые веса такого класса выпускает не одна лаборатория",
+          "en": "Open weights of this class come from more than one lab"
+        }
+      },
+      "lock_in_depth": {
+        "value": 48,
+        "why": {
+          "ru": "Веса скачиваются и запускаются на чужом железе без её участия",
+          "en": "The weights are downloaded and run on someone else's hardware without it"
+        }
+      },
+      "time_to_replace": {
+        "value": 40,
+        "why": {
+          "ru": "Пользователь переключается на другую открытую модель за недели",
+          "en": "A user switches to another open model within weeks"
+        }
+      },
+      "concentration": {
+        "value": 45,
+        "why": {
+          "ru": "Модель на 671B параметров заметна, но открытых семейств такого класса несколько",
+          "en": "A 671B-parameter model stands out, yet several open families of this class exist"
+        }
+      }
+    },
+    "edges": [],
+    "candidates": [],
+    "gaps": "Ни выручки, ни данных о железе лаборатория не публикует: связь с ускорителями держится на чужих документах."
+  },
+  {
+    "id": "digital-realty",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "Digital Realty владеет дата-центрами и сдаёт в них место, питание и подключения. Портфель — 310 объектов, из которых 118 в США и 113 в Европе, общей площадью около 57.6 млн квадратных футов. Заполненность портфеля на конец года составила примерно 84.7%, и это прямая мера того, сколько ещё можно сдать без стройки. Земля и площадки под стройкой рассчитаны более чем на 3,500 мегаватт дополнительной мощности. Компания работает как фонд недвижимости, поэтому её ограничение — не спрос, а темп ввода питания.",
+      "en": "Digital Realty owns data centres and rents out space, power and connections inside them. The portfolio holds 310 sites, 118 of them in the United States and 113 in Europe, totalling about 57.6 million rentable square feet. Occupancy stood at roughly 84.7% at year end, a direct measure of how much can still be let without building. Land and sites under construction are sized for more than 3,500 megawatts of additional capacity. It operates as a real estate trust, so its constraint is not demand but the pace at which power is delivered."
+    },
+    "profile_sources": [
+      {
+        "type": "sec_filing",
+        "title": "Digital Realty 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
+        "published": "2026-02-13",
+        "quote": "our portfolio included 310 data centers (including 89 data centers held as investments"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Digital Realty 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
+        "published": "2026-02-13",
+        "quote": "contained a total of approximately 57.6 million rentable square feet"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Digital Realty 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
+        "published": "2026-02-13",
+        "quote": "including the 89 data centers held as investments in unconsolidated entities, was approximately 84.7% leased"
+      },
+      {
+        "type": "sec_filing",
+        "title": "Digital Realty 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
+        "published": "2026-02-13",
+        "quote": "could accommodate over 3,500 megawatts of additional data center capacity",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "Digital Realty 10-K 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
+        "published": "2026-02-13",
+        "quote": "of which 118 are located in the United States, 113 are located in Europe"
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 60,
+        "why": {
+          "ru": "Помещение с питанием строят и другие фонды, но не в тех же точках",
+          "en": "Powered space is built by other trusts too, though not in the same spots"
+        }
+      },
+      "lock_in_depth": {
+        "value": 60,
+        "why": {
+          "ru": "Съезд означает перенос стоек и разрыв подключений к соседям",
+          "en": "Leaving means moving racks and breaking connections to neighbours"
+        }
+      },
+      "time_to_replace": {
+        "value": 66,
+        "why": {
+          "ru": "Разрешение, питание и стройка площадки — это годы, а не кварталы",
+          "en": "Permits, power and construction of a site are years, not quarters"
+        }
+      },
+      "concentration": {
+        "value": 55,
+        "why": {
+          "ru": "Запас под стройку больше 3,500 мегаватт, но такие же портфели есть у соседей",
+          "en": "Over 3,500 megawatts sit in the pipeline, yet neighbours hold similar portfolios"
+        }
+      }
+    },
+    "edges": [],
+    "candidates": [],
+    "gaps": "Имена арендаторов и доля ИИ-нагрузки в портфеле не раскрыты."
+  },
+  {
+    "id": "sk-hynix",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "SK hynix делает память, и её ключевой продукт для карты — память высокой пропускной способности рядом с ускорителем. По собственному проспекту, в этом сегменте компания заняла первое место по выручке с долей 56.4% в первом квартале 2026 года, а в DRAM в целом — второе место с 29.1%. Рынок памяти концентрирован: сама компания пишет, что DRAM сосредоточен у трёх игроков. Заказчики тоже немногочисленны: на крупнейшего пришлось 23.9% выручки за 2025 год. В июне 2026 года объявлено технологическое партнёрство с NVIDIA, включающее поставки памяти.",
+      "en": "SK hynix makes memory, and its key product for this map is the high-bandwidth memory that sits beside the accelerator. By its own prospectus it ranked first in that segment by revenue with a 56.4% share in the first quarter of 2026, and second in DRAM overall with 29.1%. The memory market is concentrated: the company writes itself that DRAM sits with three players. Customers are few as well: the largest accounted for 23.9% of revenue in 2025. In June 2026 it announced a technology partnership with NVIDIA that includes the supply of memory."
+    },
+    "profile_sources": [
+      {
+        "type": "sec_filing",
+        "title": "SK hynix prospectus (424B4)",
+        "url": "https://www.sec.gov/Archives/edgar/data/0002120882/000119312526299963/d32785d424b4.htm",
+        "published": "2026-08-14",
+        "quote": "ranked first globally based on revenue with a market share of 56.4%",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "SK hynix prospectus (424B4)",
+        "url": "https://www.sec.gov/Archives/edgar/data/0002120882/000119312526299963/d32785d424b4.htm",
+        "published": "2026-08-14",
+        "quote": "ranked second globally based on revenue with a market share of 29.1%"
+      },
+      {
+        "type": "sec_filing",
+        "title": "SK hynix prospectus (424B4)",
+        "url": "https://www.sec.gov/Archives/edgar/data/0002120882/000119312526299963/d32785d424b4.htm",
+        "published": "2026-08-14",
+        "quote": "The overall DRAM market is largely concentrated among three players",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "SK hynix prospectus (424B4)",
+        "url": "https://www.sec.gov/Archives/edgar/data/0002120882/000119312526299963/d32785d424b4.htm",
+        "published": "2026-08-14",
+        "quote": "our largest customer represented 23.9% of our total revenue in 2025"
+      },
+      {
+        "type": "sec_filing",
+        "title": "SK hynix prospectus (424B4)",
+        "url": "https://www.sec.gov/Archives/edgar/data/0002120882/000119312526299963/d32785d424b4.htm",
+        "published": "2026-08-14",
+        "quote": "In June 2026, we announced a technology partnership with NVIDIA Corporation (“NVIDIA”)"
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 88,
+        "why": {
+          "ru": "Память высокой пропускной способности в нужном объёме делают три компании",
+          "en": "High-bandwidth memory at the needed volume comes from three companies"
+        }
+      },
+      "lock_in_depth": {
+        "value": 80,
+        "why": {
+          "ru": "Стоит внутри сборки ускорителя и меняется только с новой квалификацией",
+          "en": "It sits inside the accelerator package and changes only through requalification"
+        }
+      },
+      "time_to_replace": {
+        "value": 85,
+        "why": {
+          "ru": "Освоение памяти такого класса занимает годы даже у действующего производителя",
+          "en": "Mastering memory of this class takes years even for an existing maker"
+        }
+      },
+      "concentration": {
+        "value": 90,
+        "why": {
+          "ru": "Доля 56.4% в сегменте и рынок DRAM, сосредоточенный у трёх игроков",
+          "en": "A 56.4% segment share and a DRAM market concentrated among three players"
+        }
+      }
+    },
+    "edges": [
+      {
+        "id": "sk-hynix__nvidia__supplies",
+        "stance": "confirms",
+        "sources": [
+          {
+            "type": "sec_filing",
+            "title": "SK hynix prospectus (424B4)",
+            "url": "https://www.sec.gov/Archives/edgar/data/0002120882/000119312526299963/d32785d424b4.htm",
+            "published": "2026-08-14",
+            "quote": "In June 2026, we announced a technology partnership with NVIDIA Corporation (“NVIDIA”)"
+          }
+        ]
+      }
+    ],
+    "candidates": [],
+    "gaps": "Имя крупнейшего заказчика в проспекте не раскрыто, хотя его доля названа."
+  }
+]

@@ -1,0 +1,37 @@
+kind,id,field,lang,text
+entity,pytorch,why_irreplaceability,en,"Most research code is written in it, and there is nobody to rewrite it"
+entity,pytorch,why_lock_in,en,"Accelerators sit below it, model libraries and serving stacks above"
+entity,pytorch,why_time,en,"Moving training to another framework means rewriting models, not reconfiguring"
+entity,pytorch,why_concentration,en,"Adjacent projects — vLLM, DeepSpeed, Ray — gather around it rather than a rival"
+entity,oracle,why_irreplaceability,en,Three other clouds and independent operators sell the same rentable capacity
+entity,oracle,why_lock_in,en,"Holds databases and applications, but not the accelerator software layer"
+entity,oracle,why_time,en,"A rentable site takes two to three years, yet a customer can leave sooner"
+entity,oracle,why_concentration,en,"$638 billion is contracted, yet competing clouds sign the same kind of contracts"
+entity,vllm,why_irreplaceability,en,Several other open serving stacks do the same job
+entity,vllm,why_lock_in,en,Sits between model and hardware and can be swapped without touching the model
+entity,vllm,why_time,en,Switching to another serving stack takes weeks
+entity,vllm,why_concentration,en,"Over 2000 contributors in one project, with no neighbour of comparable community"
+entity,broadcom,why_irreplaceability,en,Only a handful of teams design a custom accelerator for someone else's workload
+entity,broadcom,why_lock_in,en,Holds both the datacentre network and the silicon of cloud accelerators
+entity,broadcom,why_time,en,A custom chip runs three to four years from brief to volume
+entity,broadcom,why_concentration,en,One customer was 32% of revenue; few vendors design custom accelerators at all
+edge,ase__broadcom__packages,risk_mitigation,en,"Three more assemblers are named alongside, so losing one does not stop output."
+edge,ase__broadcom__packages,note,en,Broadcom names ASE among the contract manufacturers handling most of its assembly and test.
+edge,amkor__broadcom__packages,risk_mitigation,en,Assembly is spread across four named contractors.
+edge,amkor__broadcom__packages,note,en,Amkor is named in Broadcom's filing among its assembly and test contractors.
+entity,equinix,why_irreplaceability,en,"Other operators build neutral venues, though not with the same density of connections"
+entity,equinix,why_lock_in,en,Leaving means moving racks and cutting the connections already established
+entity,equinix,why_time,en,"A site with power and network entries takes years, not quarters, to build"
+entity,equinix,why_concentration,en,"Over 10,500 customers and none above 10%: the venue market is competitive"
+entity,amazon,why_irreplaceability,en,Two other clouds hold capacity of the same scale
+entity,amazon,why_lock_in,en,"Holds storage, networking and data services the application layer stands on"
+entity,amazon,why_time,en,Moving data and services to another cloud is counted in quarters
+entity,amazon,why_concentration,en,"AWS sales grew 20%, yet two comparable clouds work alongside"
+entity,samsung,why_irreplaceability,en,"High-bandwidth memory comes from three companies, and it is one of them"
+entity,samsung,why_lock_in,en,Reaches both the accelerator's memory and the manufacturing of the die
+entity,samsung,why_time,en,Qualifying a new memory supplier for an accelerator takes years
+entity,samsung,why_concentration,en,Volume HBM4 at 12 layers comes from only a few memory makers
+entity,vertiv,why_irreplaceability,en,Power and cooling come from several other makers of the same class
+entity,vertiv,why_lock_in,en,Sits under the rack: changing supplier drags the hall's redesign with it
+entity,vertiv,why_time,en,Qualifying a new thermal solution for a rack takes a year or two
+entity,vertiv,why_concentration,en,A $15.0 billion backlog against several comparable makers of the same rig

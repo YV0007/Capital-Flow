@@ -1,0 +1,1140 @@
+{
+  "month": "2026-08",
+  "batch": 4,
+  "tier": "core",
+  "size": 6,
+  "как читать": "1) ЧТО УЖЕ ЗНАЕМ — sources_now показывает, ЧЬИМ словом стоит профиль: self=null значит, что о сущности говорит кто-то другой. Такой профиль исследуется с нуля, а не дополняется. 2) ЧТО СВЕРЯТЬ — to_reconcile: связи, которые второй конец не подтверждал. Цитата из документов ЭТОГО узла поднимает их до bilateral, и это самая дешёвая работа пакета. 3) ЧЕГО НЕ ХВАТАЕТ — membership.fails: какие проверки узел сегодня не проходит. 4) ОТКАЗЫ — rejected_last_time: движок отверг эти строки с причиной, не присылайте их такими же. Тир источника, integration, core и sidedness вы НЕ пишете.",
+  "выход": "dossier.json рядом с этим файлом; формат — agents/eco-dossier.md",
+  "entities": [
+    {
+      "id": "arista",
+      "name": "Arista Networks",
+      "type": "company",
+      "role": "producer",
+      "layers": [
+        "L8"
+      ],
+      "primary_layer": "L8",
+      "domains": [
+        "arista.com"
+      ],
+      "cik": "0001596532",
+      "own_publisher": true,
+      "integration": 9,
+      "rank": 25,
+      "rotation_tier": "core",
+      "core": true,
+      "profile_now": {
+        "one_liner": "Коммутаторы для дата-центров: связывают тысячи ускорителей в один кластер.",
+        "why_irreplaceable": "Сеть под кластеры ускорителей проектируется целиком, вместе с операционной системой и эксплуатацией. Сменить вендора — это переделать сеть и переучить людей.",
+        "what_breaks_it": "Облака переходят на собственные коммутаторы или на решения NVIDIA.",
+        "phase": "mature",
+        "ticker": "NYSE: ANET",
+        "geo": "US",
+        "revenue_usd_b": 7.0
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 75,
+          "why": "Замены есть, но заточка под кластеры отличается"
+        },
+        "lock_in_depth": {
+          "value": 65,
+          "why": "Задевает сеть и системы"
+        },
+        "time_to_replace": {
+          "value": 70,
+          "why": "Переделать сеть кластера — два-три года"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 1,
+          "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+          "quote": "Both IB and NVLink are often sold as part of a vertical solution",
+          "published": "2026-02-13",
+          "self": "arista",
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "1",
+          "edges": "5"
+        },
+        "fails": [
+          "min_sources"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "arista__meta__supplies",
+          "source": "arista",
+          "target": "meta",
+          "type": "supplies",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "meta",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "arista"
+          ],
+          "note": "Второй крупный заказчик коммутаторов по раскрытой концентрации.",
+          "evidence": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+              "quote": "Two of our customers accounted for more than 10% of our sales",
+              "self": "arista",
+              "counter": false
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+              "quote": "Both IB and NVLink are often sold as part of a vertical solution",
+              "self": "arista",
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "arista__microsoft__supplies",
+          "source": "arista",
+          "target": "microsoft",
+          "type": "supplies",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "microsoft",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "arista"
+          ],
+          "note": "Коммутаторы для кластеров Microsoft: каждый из двух крупнейших клиентов Arista даёт больше 10% её продаж.",
+          "evidence": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+              "quote": "Two of our customers accounted for more than 10% of our sales",
+              "self": "arista",
+              "counter": false
+            },
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+              "quote": "Both IB and NVLink are often sold as part of a vertical solution",
+              "self": "arista",
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "arista__nvidia__competes_with",
+          "source": "arista",
+          "target": "nvidia",
+          "type": "competes_with",
+          "direction": "lateral",
+          "role": "вниз по стеку",
+          "counterparty": "nvidia",
+          "status": "bilateral",
+          "sidedness": "bilateral",
+          "claimed_by": [
+            "arista",
+            "nvidia"
+          ],
+          "note": "Сети кластеров: собственный протокол NVIDIA продаётся комплектом с ускорителями, что вытесняет независимого поставщика.",
+          "evidence": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+              "quote": "Both IB and NVLink are often sold as part of a vertical solution",
+              "self": "arista",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "Our networking offerings include NVLink interconnects and switches, end-to-end platforms for InfiniBand and",
+              "self": "nvidia",
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "cisco__arista__competes_with",
+          "source": "cisco",
+          "target": "arista",
+          "type": "competes_with",
+          "direction": "lateral",
+          "role": "вверх по стеку",
+          "counterparty": "cisco",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "arista"
+          ],
+          "note": "Исторический лидер сетевого оборудования против специализированного поставщика для кластеров.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+              "quote": "Both IB and NVLink are often sold as part of a vertical solution",
+              "self": "arista",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+              "quote": "Two of our customers accounted for more than 10% of our sales",
+              "self": "arista",
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "nvidia__arista__competes_with",
+          "source": "nvidia",
+          "target": "arista",
+          "type": "competes_with",
+          "direction": "lateral",
+          "role": "вверх по стеку",
+          "counterparty": "nvidia",
+          "status": "bilateral",
+          "sidedness": "bilateral",
+          "claimed_by": [
+            "arista",
+            "nvidia"
+          ],
+          "note": "Собственная сетевая платформа NVIDIA конкурирует с независимыми коммутаторами в кластерах.",
+          "evidence": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "Our networking offerings include NVLink interconnects and switches, end-to-end platforms for InfiniBand and",
+              "self": "nvidia",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+              "quote": "Both IB and NVLink are often sold as part of a vertical solution",
+              "self": "arista",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+              "quote": "Nvidia has made significant investments in several AI Neoclouds.",
+              "self": "arista",
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [],
+      "rejected_last_time": []
+    },
+    {
+      "id": "intel",
+      "name": "Intel",
+      "type": "company",
+      "role": "producer",
+      "layers": [
+        "L3"
+      ],
+      "primary_layer": "L3",
+      "domains": [
+        "intel.com"
+      ],
+      "cik": "0000050863",
+      "own_publisher": true,
+      "integration": 9,
+      "rank": 26,
+      "rotation_tier": "core",
+      "core": true,
+      "profile_now": {
+        "one_liner": "Американская фабрика и разработчик процессоров; пытается стать третьим контрактным производителем.",
+        "why_irreplaceable": "Единственная альтернатива передовому производству, расположенная в США. Пока не догнала по объёму и по выходу годных, но геополитически ценна именно поэтому.",
+        "what_breaks_it": "Отказ от контрактного производства или отставание ещё на поколение.",
+        "phase": "at_risk",
+        "ticker": "NASDAQ: INTC",
+        "geo": "US",
+        "revenue_usd_b": 53.0
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 55,
+          "why": "Альтернатива есть, преимущество лидера в инерции"
+        },
+        "lock_in_depth": {
+          "value": 50,
+          "why": "Задевает фабрики и чипы"
+        },
+        "time_to_replace": {
+          "value": 75,
+          "why": "Догнать по передовому узлу — три-пять лет"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "quote": "the U.S. government, or USG, announced export restrictions and export licensing requirements targeting",
+          "published": "2026-02-25",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "2"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "chips-act__intel__controls_access_to",
+          "source": "chips-act",
+          "target": "intel",
+          "type": "controls_access_to",
+          "direction": "downstream",
+          "role": "вверх по стеку",
+          "counterparty": "chips-act",
+          "status": "signal",
+          "sidedness": "single",
+          "claimed_by": [],
+          "note": "Субсидии меняют экономику строительства фабрик в США и потому усиливают внутреннего производителя.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "the U.S. government, or USG, announced export restrictions and export licensing requirements targeting",
+              "self": null,
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "intel__nvidia__diversifies_supply",
+          "source": "intel",
+          "target": "nvidia",
+          "type": "diversifies_supply",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "nvidia",
+          "status": "bilateral",
+          "sidedness": "bilateral",
+          "claimed_by": [
+            "intel",
+            "nvidia"
+          ],
+          "note": "Единственная передовая фабрика в США: ценна геополитически, пока не по объёму.",
+          "evidence": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+              "quote": "Intel Foundry",
+              "self": "intel",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC,",
+              "self": "nvidia",
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "intel__tsmc__competes_with",
+          "source": "intel",
+          "target": "tsmc",
+          "type": "competes_with",
+          "direction": "lateral",
+          "role": "вниз по стеку",
+          "counterparty": "tsmc",
+          "status": "bilateral",
+          "sidedness": "bilateral",
+          "claimed_by": [
+            "intel",
+            "tsmc"
+          ],
+          "note": "Пытается стать третьим контрактным производителем передовых чипов.",
+          "evidence": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+              "quote": "Intel Foundry",
+              "self": "intel",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+              "quote": "Our largest customer in 2023 , 2024 and 2025 accounted for",
+              "self": "tsmc",
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "chips-act__intel__controls_access_to",
+          "counterparty": "chips-act",
+          "type": "controls_access_to",
+          "нужна цитата": "документ intel, где названа связь с chips-act"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "usa",
+      "name": "США",
+      "type": "geopolitical",
+      "role": "state",
+      "layers": [
+        "L0"
+      ],
+      "primary_layer": "L0",
+      "domains": [
+        "whitehouse.gov",
+        "usa.gov"
+      ],
+      "cik": null,
+      "own_publisher": true,
+      "integration": 9,
+      "rank": 27,
+      "rotation_tier": "core",
+      "core": true,
+      "profile_now": {
+        "one_liner": "Домашняя юрисдикция NVIDIA и главный шлюз: решает, кому NVIDIA имеет право продавать.",
+        "why_irreplaceable": "Из-под американского права цепочку не вывести: правила тянутся за технологией в любую страну, где её применяют.",
+        "what_breaks_it": "Полная отмена экспортного режима — сценарий, которого сейчас не видно.",
+        "phase": "mature",
+        "ticker": null,
+        "geo": "US",
+        "revenue_usd_b": null
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 95,
+          "why": "Вывести цепочку из-под юрисдикции нельзя"
+        },
+        "lock_in_depth": {
+          "value": 95,
+          "why": "Решение задевает чипы, системы, облака и модели сразу"
+        },
+        "time_to_replace": {
+          "value": 95,
+          "why": "Построить цепочку вне американского права — больше семи лет"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "quote": "the U.S. government, or USG, announced export restrictions and export licensing requirements targeting",
+          "published": "2026-02-25",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "2"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "usa__bis__controls_access_to",
+          "source": "usa",
+          "target": "bis",
+          "type": "controls_access_to",
+          "direction": "downstream",
+          "role": "вниз по стеку",
+          "counterparty": "bis",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [],
+          "note": "Ведомство и есть механизм, которым юрисдикция шлюзует экспорт.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "do business without an export license with entities on the U.S. Department of Commerce’s U.S.",
+              "self": null,
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "the U.S. government, or USG, announced export restrictions and export licensing requirements targeting",
+              "self": null,
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "usa__chips-act__standardizes_on",
+          "source": "usa",
+          "target": "chips-act",
+          "type": "standardizes_on",
+          "direction": "downstream",
+          "role": "вниз по стеку",
+          "counterparty": "chips-act",
+          "status": "signal",
+          "sidedness": "single",
+          "claimed_by": [],
+          "note": "Закон — инструмент, которым юрисдикция возвращает производство внутрь страны.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "do business without an export license with entities on the U.S. Department of Commerce’s U.S.",
+              "self": null,
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "usa__nvidia__controls_access_to",
+          "source": "usa",
+          "target": "nvidia",
+          "type": "controls_access_to",
+          "direction": "downstream",
+          "role": "вниз по стеку",
+          "counterparty": "nvidia",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "nvidia"
+          ],
+          "note": "Экспортные правила решают, кому NVIDIA имеет право продавать. Решение принимается за сутки и действует немедленно.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "the U.S. government, or USG, announced export restrictions and export licensing requirements targeting",
+              "self": "nvidia",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "do business without an export license with entities on the U.S. Department of Commerce’s U.S.",
+              "self": "nvidia",
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "usa__bis__controls_access_to",
+          "counterparty": "bis",
+          "type": "controls_access_to",
+          "нужна цитата": "документ usa, где названа связь с bis"
+        },
+        {
+          "edge": "usa__chips-act__standardizes_on",
+          "counterparty": "chips-act",
+          "type": "standardizes_on",
+          "нужна цитата": "документ usa, где названа связь с chips-act"
+        },
+        {
+          "edge": "usa__nvidia__controls_access_to",
+          "counterparty": "nvidia",
+          "type": "controls_access_to",
+          "нужна цитата": "документ usa, где названа связь с nvidia"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "crusoe",
+      "name": "Crusoe",
+      "type": "company",
+      "role": "operator",
+      "layers": [
+        "L9",
+        "L6"
+      ],
+      "primary_layer": "L9",
+      "domains": [
+        "crusoe.ai",
+        "crusoeenergy.com"
+      ],
+      "cik": null,
+      "own_publisher": true,
+      "integration": 9,
+      "rank": 28,
+      "rotation_tier": "core",
+      "core": true,
+      "profile_now": {
+        "one_liner": "Строит дата-центры прямо у источников энергии и сдаёт вычисления в аренду.",
+        "why_irreplaceable": "Соединяет два дефицита сразу: энергию и вычисления. Именно поэтому строит площадки там, где сеть не справляется.",
+        "what_breaks_it": "Потеря доступа к дешёвой энергии на площадках.",
+        "phase": "scaling",
+        "ticker": null,
+        "geo": "US",
+        "revenue_usd_b": 0.8
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 45,
+          "why": "Подход воспроизводим, но занят немногими"
+        },
+        "lock_in_depth": {
+          "value": 45,
+          "why": "Задевает энергию и облака"
+        },
+        "time_to_replace": {
+          "value": 50,
+          "why": "Построить площадку у источника — год-два"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+          "quote": "Nvidia has made significant investments in several AI Neoclouds.",
+          "published": "2026-02-13",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "5"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "brookfield__crusoe__invests_in",
+          "source": "brookfield",
+          "target": "crusoe",
+          "type": "invests_in",
+          "direction": "downstream",
+          "role": "вверх по стеку",
+          "counterparty": "brookfield",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [],
+          "note": "Инфраструктурный капитал в облаке, строящем площадки у источников энергии.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "including sufficient energy for powering data centers using our products,",
+              "self": null,
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+              "quote": "Nvidia has made significant investments in several AI Neoclouds.",
+              "self": null,
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "crusoe__nvidia__enables",
+          "source": "crusoe",
+          "target": "nvidia",
+          "type": "enables",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "nvidia",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "nvidia"
+          ],
+          "note": "Строит площадки прямо у источников энергии, снимая главное ограничение стройки.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "including sufficient energy for powering data centers using our products,",
+              "self": "nvidia",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+              "quote": "Nvidia has made significant investments in several AI Neoclouds.",
+              "self": null,
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "nventures__crusoe__invests_in",
+          "source": "nventures",
+          "target": "crusoe",
+          "type": "invests_in",
+          "direction": "downstream",
+          "role": "вверх по стеку",
+          "counterparty": "nventures",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [],
+          "note": "NVentures вкладывается в Crusoe — облако",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+              "quote": "Nvidia has made significant investments in several AI Neoclouds.",
+              "self": null,
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "including sufficient energy for powering data centers using our products,",
+              "self": null,
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "nvidia__crusoe__hedges_against",
+          "source": "nvidia",
+          "target": "crusoe",
+          "type": "hedges_against",
+          "direction": "downstream",
+          "role": "вверх по стеку",
+          "counterparty": "nvidia",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "nvidia"
+          ],
+          "note": "Вложение в облако, строящее у источников энергии: снимает ограничение, которое иначе упрётся в спрос.",
+          "evidence": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "including sufficient energy for powering data centers using our products,",
+              "self": "nvidia",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+              "quote": "Nvidia has made significant investments in several AI Neoclouds.",
+              "self": null,
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "nvidia__crusoe__supplies",
+          "source": "nvidia",
+          "target": "crusoe",
+          "type": "supplies",
+          "direction": "downstream",
+          "role": "вверх по стеку",
+          "counterparty": "nvidia",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "nvidia"
+          ],
+          "note": "Облако, строящее площадки у источников энергии, работает на ускорителях NVIDIA.",
+          "evidence": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+              "self": "nvidia",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+              "quote": "Nvidia has made significant investments in several AI Neoclouds.",
+              "self": null,
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "brookfield__crusoe__invests_in",
+          "counterparty": "brookfield",
+          "type": "invests_in",
+          "нужна цитата": "документ crusoe, где названа связь с brookfield"
+        },
+        {
+          "edge": "crusoe__nvidia__enables",
+          "counterparty": "nvidia",
+          "type": "enables",
+          "нужна цитата": "документ crusoe, где названа связь с nvidia"
+        },
+        {
+          "edge": "nventures__crusoe__invests_in",
+          "counterparty": "nventures",
+          "type": "invests_in",
+          "нужна цитата": "документ crusoe, где названа связь с nventures"
+        },
+        {
+          "edge": "nvidia__crusoe__hedges_against",
+          "counterparty": "nvidia",
+          "type": "hedges_against",
+          "нужна цитата": "документ crusoe, где названа связь с nvidia"
+        },
+        {
+          "edge": "nvidia__crusoe__supplies",
+          "counterparty": "nvidia",
+          "type": "supplies",
+          "нужна цитата": "документ crusoe, где названа связь с nvidia"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "databricks",
+      "name": "Databricks",
+      "type": "company",
+      "role": "operator",
+      "layers": [
+        "L13"
+      ],
+      "primary_layer": "L13",
+      "domains": [
+        "databricks.com"
+      ],
+      "cik": null,
+      "own_publisher": true,
+      "integration": 9,
+      "rank": 29,
+      "rotation_tier": "core",
+      "core": true,
+      "profile_now": {
+        "one_liner": "Платформа, на которой компании готовят данные и обучают модели под свои задачи.",
+        "why_irreplaceable": "Доказывает, что на вычислениях зарабатывают не только лаборатории: корпоративные заказчики окупают их на собственных данных.",
+        "what_breaks_it": "Гиперскейлеры встраивают ту же функциональность в свои облака.",
+        "phase": "scaling",
+        "ticker": null,
+        "geo": "US",
+        "revenue_usd_b": 3.0
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 55,
+          "why": "Платформ данных несколько"
+        },
+        "lock_in_depth": {
+          "value": 55,
+          "why": "Задевает данные, инференс и приложения"
+        },
+        "time_to_replace": {
+          "value": 55,
+          "why": "Заместить — два года"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+          "published": "2026-02-25",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "3"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "a16z__databricks__invests_in",
+          "source": "a16z",
+          "target": "databricks",
+          "type": "invests_in",
+          "direction": "downstream",
+          "role": "вверх по стеку",
+          "counterparty": "a16z",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [],
+          "note": "Венчурный капитал в платформе данных прикладного слоя.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+              "self": null,
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://raw.githubusercontent.com/huggingface/transformers/main/README.md",
+              "quote": "is the pivot across frameworks: if a model definition is supported, it will",
+              "self": null,
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "databricks__huggingface__standardizes_on",
+          "source": "databricks",
+          "target": "huggingface",
+          "type": "standardizes_on",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "huggingface",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "huggingface"
+          ],
+          "note": "Корпоративная платформа берёт модели из общего хаба, а не обучает их с нуля.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://raw.githubusercontent.com/huggingface/transformers/main/README.md",
+              "quote": "is the pivot across frameworks: if a model definition is supported, it will",
+              "self": "huggingface",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "Support for NVIDIA GPUs, AMD GPUs, Intel GPUs, and x86/ARM/PowerPC CPUs.",
+              "self": null,
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "databricks__nvidia__proves_roi",
+          "source": "databricks",
+          "target": "nvidia",
+          "type": "proves_roi",
+          "direction": "downstream",
+          "role": "вниз по стеку",
+          "counterparty": "nvidia",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "nvidia"
+          ],
+          "note": "Показывает, что корпоративные заказчики окупают вычисления на собственных данных, а не только лаборатории.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+              "self": "nvidia",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://raw.githubusercontent.com/huggingface/transformers/main/README.md",
+              "quote": "is the pivot across frameworks: if a model definition is supported, it will",
+              "self": null,
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "a16z__databricks__invests_in",
+          "counterparty": "a16z",
+          "type": "invests_in",
+          "нужна цитата": "документ databricks, где названа связь с a16z"
+        },
+        {
+          "edge": "databricks__huggingface__standardizes_on",
+          "counterparty": "huggingface",
+          "type": "standardizes_on",
+          "нужна цитата": "документ databricks, где названа связь с huggingface"
+        },
+        {
+          "edge": "databricks__nvidia__proves_roi",
+          "counterparty": "nvidia",
+          "type": "proves_roi",
+          "нужна цитата": "документ databricks, где названа связь с nvidia"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "google-deepmind",
+      "name": "Google DeepMind",
+      "type": "research_org",
+      "role": "demand",
+      "layers": [
+        "L12"
+      ],
+      "primary_layer": "L12",
+      "domains": [
+        "deepmind.google",
+        "deepmind.com"
+      ],
+      "cik": null,
+      "own_publisher": true,
+      "integration": 9,
+      "rank": 30,
+      "rotation_tier": "core",
+      "core": true,
+      "profile_now": {
+        "one_liner": "Исследовательская лаборатория внутри крупного облака, обучает модели на собственных чипах.",
+        "why_irreplaceable": "Единственная передовая лаборатория, которая может обучать на собственном железе владельца. Это делает её и клиентом, и доказательством альтернативы.",
+        "what_breaks_it": "Полный переход на собственные чипы, обнуляющий закупки.",
+        "phase": "mature",
+        "ticker": null,
+        "geo": "GB",
+        "revenue_usd_b": null
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 55,
+          "why": "Лабораторий несколько"
+        },
+        "lock_in_depth": {
+          "value": 60,
+          "why": "Задевает чипы, модели и облака"
+        },
+        "time_to_replace": {
+          "value": 65,
+          "why": "Занять её место — два-три года"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+          "quote": "our own custom-built Tensor Processing Units (TPUs), such as Ironwood, our seventh-generation TPU.",
+          "published": "2026-02-04",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "2"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "google-deepmind__google__funded_by",
+          "source": "google-deepmind",
+          "target": "google",
+          "type": "funded_by",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "google",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "google"
+          ],
+          "note": "Лаборатория внутри облака: обучается на собственных чипах владельца.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+              "quote": "our own custom-built Tensor Processing Units (TPUs), such as Ironwood, our seventh-generation TPU.",
+              "self": "google",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "such as Alibaba Group, Alphabet Inc., Amazon, Inc., or Amazon, Baidu, Inc., Huawei, and",
+              "self": null,
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "google-deepmind__nvidia__threatens",
+          "source": "google-deepmind",
+          "target": "nvidia",
+          "type": "threatens",
+          "direction": "downstream",
+          "role": "вниз по стеку",
+          "counterparty": "nvidia",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "nvidia"
+          ],
+          "note": "Единственная передовая лаборатория, обучающая на чипах собственного владельца, — живое доказательство альтернативы.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+              "quote": "our own custom-built Tensor Processing Units (TPUs), such as Ironwood, our seventh-generation TPU.",
+              "self": null,
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "such as Alibaba Group, Alphabet Inc., Amazon, Inc., or Amazon, Baidu, Inc., Huawei, and",
+              "self": "nvidia",
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "google-deepmind__google__funded_by",
+          "counterparty": "google",
+          "type": "funded_by",
+          "нужна цитата": "документ google-deepmind, где названа связь с google"
+        },
+        {
+          "edge": "google-deepmind__nvidia__threatens",
+          "counterparty": "nvidia",
+          "type": "threatens",
+          "нужна цитата": "документ google-deepmind, где названа связь с nvidia"
+        }
+      ],
+      "rejected_last_time": []
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+kind,id,field,lang,text
+entity,coreweave,why_irreplaceability,en,The same accelerator rental is sold by hyperscalers and a dozen independent venues
+entity,coreweave,why_lock_in,en,"Holds the workload by contract and tooling, not by a development environment"
+entity,coreweave,why_time,en,"A powered site takes years to build, yet a tenant leaves when the contract ends"
+entity,coreweave,why_concentration,en,43 sites and 850 MW against the gigawatt programmes of the hyperscalers
+edge,meta__coreweave__customer_of,risk_mitigation,en,An own site is built in parallel with the rented one.
+edge,meta__coreweave__customer_of,note,en,CoreWeave names Meta among its significant customers alongside Microsoft.
+entity,meta,why_irreplaceability,en,"It is not the only one releasing open weights, but its releases set the bar"
+entity,meta,why_lock_in,en,"Holds the application layer and, through open models, part of other stacks"
+entity,meta,why_time,en,An open model is replaced by another open model within months
+entity,meta,why_concentration,en,"Llama ships openly, yet other open model families run alongside it"
+entity,arm,why_irreplaceability,en,The architecture is wired into compilers and operating systems across mobile
+entity,arm,why_lock_in,en,"Reaches phone processors, servers and the control cores of accelerators"
+entity,arm,why_time,en,Changing architecture means rebuilding the entire toolchain
+entity,arm,why_concentration,en,Five customers give about 57% of revenue; the alternative architecture is single and younger
+edge,arm__softbank__strategic_partner,risk_mitigation,en,"The customer base is wider than one group, yet the filing names the dependence."
+edge,arm__softbank__strategic_partner,note,en,Part of Arm's near-term revenue depends on commercial arrangements with SoftBank Group.
+entity,softbank,why_irreplaceability,en,Money reaches this layer from sovereign funds and debt markets alike
+entity,softbank,why_lock_in,en,Through owning Arm it reaches both processor architecture and site construction
+entity,softbank,why_time,en,"Replacing a source of capital is a question of rate, not technology"
+entity,softbank,why_concentration,en,"Capital is fragmented: a BBB+ rating speaks to the price of money, not to exclusivity"
+entity,nventures,why_irreplaceability,en,Dozens of funds carry money into this layer; the arm holds no exclusivity
+entity,nventures,why_lock_in,en,An investment usually travels together with access to the supply queue
+entity,nventures,why_time,en,Another investor is found within months if only money is needed
+entity,nventures,why_concentration,en,One company's venture arm among many funds of the same layer
+entity,deepseek,why_irreplaceability,en,Open weights of this class come from more than one lab
+entity,deepseek,why_lock_in,en,The weights are downloaded and run on someone else's hardware without it
+entity,deepseek,why_time,en,A user switches to another open model within weeks
+entity,deepseek,why_concentration,en,"A 671B-parameter model stands out, yet several open families of this class exist"
+entity,digital-realty,why_irreplaceability,en,"Powered space is built by other trusts too, though not in the same spots"
+entity,digital-realty,why_lock_in,en,Leaving means moving racks and breaking connections to neighbours
+entity,digital-realty,why_time,en,"Permits, power and construction of a site are years, not quarters"
+entity,digital-realty,why_concentration,en,"Over 3,500 megawatts sit in the pipeline, yet neighbours hold similar portfolios"
+entity,sk-hynix,why_irreplaceability,en,High-bandwidth memory at the needed volume comes from three companies
+entity,sk-hynix,why_lock_in,en,It sits inside the accelerator package and changes only through requalification
+entity,sk-hynix,why_time,en,Mastering memory of this class takes years even for an existing maker
+entity,sk-hynix,why_concentration,en,A 56.4% segment share and a DRAM market concentrated among three players

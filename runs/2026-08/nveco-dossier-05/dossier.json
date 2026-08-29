@@ -1,0 +1,76 @@
+[
+  {
+    "id": "bis",
+    "as_of": "2026-08-29",
+    "description": {
+      "ru": "BIS — бюро Министерства торговли США, которое выдаёт и отзывает разрешения на вывоз технологий. Его собственный релиз от 7 октября 2022 года ввёл разом лицензирование передовых вычислительных чипов, оборудования для производства полупроводников и целей их применения. Тем же документом требование лицензии распространили на двадцать восемь компаний из списка Entity List, находящихся в КНР. Бюро не покупает и не продаёт — оно решает, кому можно продавать, и потому стоит выше рынка. Отчётность NVIDIA описывает эти решения как ограничения, объявленные правительством и меняющие условия продаж.",
+      "en": "BIS is the Commerce Department bureau that grants and withdraws permission to export technology. Its own release of October 7, 2022 introduced licensing for advanced computing chips, semiconductor manufacturing items and the end uses of both at once. The same document extended licence requirements to twenty-eight companies on the Entity List located in the PRC. The bureau neither buys nor sells — it decides who may be sold to, which places it above the market. NVIDIA's filing describes those decisions as government-announced restrictions that change the terms of sale."
+    },
+    "profile_sources": [
+      {
+        "type": "testimony",
+        "title": "BIS: new export controls on advanced computing",
+        "url": "https://www.bis.gov/press-release/commerce-implements-new-export-controls-advanced-computing-semiconductor-manufacturing-items-peoples",
+        "published": "2022-10-07",
+        "quote": "FOR IMMEDIATE RELEASE | October 7, 2022 | Media Contact"
+      },
+      {
+        "type": "testimony",
+        "title": "BIS: new export controls on advanced computing",
+        "url": "https://www.bis.gov/press-release/commerce-implements-new-export-controls-advanced-computing-semiconductor-manufacturing-items-peoples",
+        "published": "2022-10-07",
+        "quote": "the rule imposes new controls on certain semiconductor manufacturing items"
+      },
+      {
+        "type": "testimony",
+        "title": "BIS: new export controls on advanced computing",
+        "url": "https://www.bis.gov/press-release/commerce-implements-new-export-controls-advanced-computing-semiconductor-manufacturing-items-peoples",
+        "published": "2022-10-07",
+        "quote": "Expands the scope of foreign-produced items subject to license requirements to twenty-eight existing entities",
+        "backs": [
+          "concentration"
+        ]
+      },
+      {
+        "type": "sec_filing",
+        "title": "NVIDIA 10-K FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+        "published": "2026-02-25",
+        "quote": "the U.S. government, or USG, announced export restrictions and export"
+      }
+    ],
+    "factors": {
+      "irreplaceability": {
+        "value": 92,
+        "why": {
+          "ru": "Разрешение на вывоз выдаёт одно бюро, обойти его нечем",
+          "en": "Permission to export is granted by one bureau, and there is no way around it"
+        }
+      },
+      "lock_in_depth": {
+        "value": 85,
+        "why": {
+          "ru": "Достаёт до чипов, оборудования и до применения того и другого",
+          "en": "Reaches chips, equipment and the end uses of both"
+        }
+      },
+      "time_to_replace": {
+        "value": 90,
+        "why": {
+          "ru": "Режим стоит с релиза от 7 октября 2022 года и не сворачивается",
+          "en": "The regime has stood since the release of October 7, 2022 and is not winding down"
+        }
+      },
+      "concentration": {
+        "value": 88,
+        "why": {
+          "ru": "Одним документом лицензия распространена на двадцать восемь компаний списка",
+          "en": "A single document extended licensing to twenty-eight companies on the list"
+        }
+      }
+    },
+    "edges": [],
+    "candidates": [],
+    "gaps": "Пакет собран не по ротации, а по находке валидатора: у bis в обосновании стояло число без цитаты."
+  }
+]

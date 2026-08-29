@@ -1,0 +1,37 @@
+kind,id,field,lang,text
+entity,nvidia,why_irreplaceability,en,Replacing it means replacing the software environment other people's code is written for
+entity,nvidia,why_lock_in,en,"Reaches clouds, labs, networking and system builders at the same time"
+entity,nvidia,why_time,en,"A matching chip, network and software stack takes years, not quarters"
+entity,nvidia,why_concentration,en,Data Center revenue rose 68% in a year; over 7.5 million developers write for CUDA
+entity,tsmc,why_irreplaceability,en,There is nowhere else to get leading-edge silicon at this volume
+entity,tsmc,why_lock_in,en,Process rules are baked into a customer's layout and take years to port
+entity,tsmc,why_time,en,A leading-edge fab takes more than five years to build and to yield
+entity,tsmc,why_concentration,en,Nodes of 7 nm and below are 74% of wafer revenue; 2 nm is already in volume
+entity,microsoft,why_irreplaceability,en,Two other clouds run capacity of a comparable scale
+entity,microsoft,why_lock_in,en,"Holds subscriptions, cloud and developer workplaces at the same time"
+entity,microsoft,why_time,en,"Moving a workload to another cloud is counted in quarters, not years"
+entity,microsoft,why_concentration,en,"Cloud grew 27% to $214.4 billion, yet two comparable operators run alongside"
+entity,openai,why_irreplaceability,en,Several other labs ship models of a comparable class
+entity,openai,why_lock_in,en,"Holds applications through its API and partner products, but not hardware"
+entity,openai,why_time,en,"Swapping a model provider inside an application takes months, not years"
+entity,openai,why_concentration,en,"Demand is locked by contracts such as $11.9 billion with CoreWeave, yet the model market is split"
+entity,cuda,why_irreplaceability,en,Code written for it does not run on other accelerators without a rewrite
+entity,cuda,why_lock_in,en,"Hardware sits below it, frameworks, serving stacks and application code above"
+entity,cuda,why_time,en,Porting libraries and kernels to another platform is counted in years
+entity,cuda,why_concentration,en,Over 7.5 million developers use it as the base for accelerator computing
+entity,huggingface,why_irreplaceability,en,"A model can be shipped without the hub, but it becomes harder to find"
+entity,huggingface,why_lock_in,en,"Training, inference and weight distribution all pass through the library"
+entity,huggingface,why_time,en,A mirror of the hub and private distribution stand up in months
+entity,huggingface,why_concentration,en,"The hub holds more than 1M+ model checkpoints, with no comparable venue by coverage"
+entity,anthropic,why_irreplaceability,en,Several other labs ship models of a comparable class
+entity,anthropic,why_lock_in,en,Holds the application layer through its API and goes no lower than that
+entity,anthropic,why_time,en,An application switches to another model within months
+entity,anthropic,why_concentration,en,"Run-rate revenue of $47 billion and over 300,000 customers, with several comparable labs"
+edge,anthropic__google__customer_of,risk_mitigation,en,"Three kinds of hardware at once: Trainium, Google TPUs and NVIDIA accelerators."
+edge,anthropic__google__customer_of,note,en,"Anthropic rents up to one million TPUs from Google, a deal it announced itself."
+edge,anthropic__broadcom__strategic_partner,risk_mitigation,en,The order runs together with Google rather than as a single pair.
+edge,anthropic__broadcom__strategic_partner,note,en,An agreement with Google and Broadcom for multiple gigawatts of next-generation capacity.
+entity,google,why_irreplaceability,en,The only alternative where an own accelerator and an own cloud sit in one pair of hands
+entity,google,why_lock_in,en,"Holds models, cloud and its own accelerator at the same time"
+entity,google,why_time,en,"An own accelerator and its software take years, not quarters, to build"
+entity,google,why_concentration,en,"Cloud added $15.5 billion, yet it calls accelerator supply capacity competitive itself"
