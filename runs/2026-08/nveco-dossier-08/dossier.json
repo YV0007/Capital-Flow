@@ -1,0 +1,895 @@
+[
+ {
+  "id": "amkor",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Amkor корпусирует и тестирует чужие чипы после того, как пластина сошла с фабрики. Заказчиками компания называет большинство крупнейших полупроводниковых компаний мира, и концентрацию раскрывает прямо: десятка крупнейших дала 72% выручки за 2025 год. Двое из них названы поимённо — прямые продажи Apple и Qualcomm дали 29.8% и 11.1% выручки. Компания продаёт готовый цикл: проектирование корпуса, бампинг, зондирование, утоньшение, корпусирование, прожиг и финальный тест. На вычисления, включая дата-центры и инфраструктуру, приходится 20 % её продаж.",
+   "en": "Amkor packages and tests other companies' chips once the wafer has left the fab. It names most of the world's largest semiconductor companies as its customers and discloses concentration plainly: the ten largest gave 72% of net sales in 2025. Two of them are named — direct sales to Apple and Qualcomm were 29.8% and 11.1% of net sales. The company sells a whole cycle: package design, wafer bump, probe, back-grind, packaging, burn-in and final test. Computing, including data centre and infrastructure, accounts for 20 % of its sales."
+  },
+  "profile_sources": [
+   {
+    "type": "sec_filing",
+    "title": "Amkor 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000014/amkr-20251231.htm",
+    "published": "2026-02-20",
+    "quote": "Our customers include most of the world's largest semiconductor companies."
+   },
+   {
+    "type": "sec_filing",
+    "title": "Amkor 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000014/amkr-20251231.htm",
+    "published": "2026-02-20",
+    "quote": "Our ten largest customers accounted for 72% of our net sales in 2025.",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "sec_filing",
+    "title": "Amkor 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000014/amkr-20251231.htm",
+    "published": "2026-02-20",
+    "quote": "Direct sales to Apple and Qualcomm accounted for 29.8% and 11.1% of our net sales"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Amkor 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000014/amkr-20251231.htm",
+    "published": "2026-02-20",
+    "quote": "We provide turnkey solutions that include package design, wafer bump, wafer probe, wafer back-grind"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Amkor 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000014/amkr-20251231.htm",
+    "published": "2026-02-20",
+    "quote": "Computing (data center, infrastructure, PC/laptop, storage) 20 % 19 % 16 %"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 62,
+    "why": {
+     "ru": "Корпусирование заказывают у нескольких подрядчиков сразу; исключительным поставщиком компания себя не называет",
+     "en": "Packaging is ordered from several contractors at once; the company does not call itself an exclusive supplier"
+    }
+   },
+   "lock_in_depth": {
+    "value": 68,
+    "why": {
+     "ru": "Продаётся не операция, а весь цикл от проектирования корпуса до финального теста",
+     "en": "What is sold is not one step but the whole cycle from package design to final test"
+    }
+   },
+   "time_to_replace": {
+    "value": 64,
+    "why": {
+     "ru": "Перевод корпуса к другому подрядчику требует переквалификации всей линии",
+     "en": "Moving a package to another contractor requires requalifying the whole line"
+    }
+   },
+   "concentration": {
+    "value": 58,
+    "why": {
+     "ru": "Десятка крупнейших заказчиков дала 72% выручки, из них двое — 29.8% и 11.1%",
+     "en": "The ten largest customers gave 72% of sales, two of them 29.8% and 11.1%"
+    }
+   }
+  },
+  "edges": [],
+  "candidates": [
+   {
+    "name": "Apple",
+    "why": "названа Amkor прямым заказчиком с 29.8% выручки; на карте отсутствует",
+    "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000014/amkr-20251231.htm",
+    "quote": "Direct sales to Apple and Qualcomm accounted for 29.8% and 11.1% of our net sales"
+   },
+   {
+    "name": "Qualcomm",
+    "why": "названа Amkor прямым заказчиком с 11.1% выручки; на карте отсутствует",
+    "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000014/amkr-20251231.htm",
+    "quote": "Direct sales to Apple and Qualcomm accounted for 29.8% and 11.1% of our net sales"
+   }
+  ],
+  "gaps": "Broadcom, Astera Labs и Credo в отчётности Amkor не названы: их связи подтверждены только со стороны заказчика."
+ },
+ {
+  "id": "fabrinet",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Fabrinet собирает сложную оптику и электронику по контракту и описывает свою роль как единственного внешнего производителя для тех изделий, которые делает. Концентрацию заказчиков компания раскрывает поимённо: за 2026 финансовый год Cisco, NVIDIA, Nokia и Amazon дали 19.9%, 16.3%, 10.7% и 10.5% выручки. Годом раньше расклад был другим — NVIDIA и Cisco дали 27.6% и 18.2%. Компания называет себя лидером в производстве для рынка оптической связи. На карте узел стоит там, где оптический трансивер превращается в изделие, которое ставят в стойку.",
+   "en": "Fabrinet builds complex optics and electronics under contract and describes its role as the sole outsourced manufacturer for the products it makes. It discloses customer concentration by name: for fiscal year 2026 Cisco, NVIDIA, Nokia and Amazon gave 19.9%, 16.3%, 10.7% and 10.5% of revenues. A year earlier the split was different — NVIDIA and Cisco gave 27.6% and 18.2%. The company calls itself a leader in manufacturing for the optical communications market. On the map the node sits where an optical transceiver becomes a part that goes into a rack."
+  },
+  "profile_sources": [
+   {
+    "type": "sec_filing",
+    "title": "Fabrinet 10-K FY2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+    "published": "2026-08-18",
+    "quote": "we are the sole outsourced manufacturing partner used by our customers for the products"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Fabrinet 10-K FY2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+    "published": "2026-08-18",
+    "quote": "During fiscal year 2026, Cisco Systems, Inc., NVIDIA Corporation, Nokia Corporation and Amazon.com, Inc.",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "sec_filing",
+    "title": "Fabrinet 10-K FY2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+    "published": "2026-08-18",
+    "quote": "contributed 19.9%, 16.3%, 10.7% and 10.5%, respectively, of our revenues.",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "sec_filing",
+    "title": "Fabrinet 10-K FY2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+    "published": "2026-08-18",
+    "quote": "During fiscal year 2025, NVIDIA Corporation and Cisco Systems, Inc. contributed 27.6% and 18.2%"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Fabrinet 10-K FY2026",
+    "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+    "published": "2026-08-18",
+    "quote": "we are a global leader in providing these services to the optical communications"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 66,
+    "why": {
+     "ru": "Для тех изделий, которые она делает, компания названа единственным внешним производителем",
+     "en": "For the products it makes the company is named the sole outsourced manufacturer"
+    }
+   },
+   "lock_in_depth": {
+    "value": 70,
+    "why": {
+     "ru": "Заказчик отдаёт целиком производство изделия, а не отдельную операцию",
+     "en": "The customer hands over the whole product build rather than one operation"
+    }
+   },
+   "time_to_replace": {
+    "value": 60,
+    "why": {
+     "ru": "Перенос сборки оптики требует переквалификации процесса у нового подрядчика",
+     "en": "Moving optics assembly requires requalifying the process at a new contractor"
+    }
+   },
+   "concentration": {
+    "value": 64,
+    "why": {
+     "ru": "Четверо заказчиков дали 19.9%, 16.3%, 10.7% и 10.5% выручки за год",
+     "en": "Four customers gave 19.9%, 16.3%, 10.7% and 10.5% of revenues in a year"
+    }
+   }
+  },
+  "edges": [
+   {
+    "id": "fabrinet__cisco__integrates",
+    "stance": "confirms",
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "Fabrinet 10-K FY2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+      "published": "2026-08-18",
+      "quote": "During fiscal year 2026, Cisco Systems, Inc., NVIDIA Corporation, Nokia Corporation and Amazon.com, Inc."
+     }
+    ]
+   },
+   {
+    "id": "fabrinet__nvidia__integrates",
+    "stance": "confirms",
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "Fabrinet 10-K FY2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+      "published": "2026-08-18",
+      "quote": "During fiscal year 2026, Cisco Systems, Inc., NVIDIA Corporation, Nokia Corporation and Amazon.com, Inc."
+     }
+    ]
+   },
+   {
+    "direction": "downstream",
+    "strength": 55,
+    "lock_in_depth": 45,
+    "substitutability": 50,
+    "is_reversible": true,
+    "risk_level": "medium",
+    "risk_type": "market",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "fabrinet",
+    "target": "amazon",
+    "type": "integrates",
+    "note": {
+     "ru": "Названа Fabrinet среди четырёх заказчиков, каждый из которых дал свыше десятой доли её выручки за год.",
+     "en": "Named by Fabrinet among four customers, each of which gave over a tenth of its revenues in the year."
+    },
+    "risk_mitigation": {
+     "ru": "Концентрация разложена на четверых, а не на одного",
+     "en": "Concentration is spread over four customers rather than one"
+    },
+    "sources": [
+     {
+      "type": "sec_filing",
+      "title": "Fabrinet 10-K FY2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+      "published": "2026-08-18",
+      "quote": "During fiscal year 2026, Cisco Systems, Inc., NVIDIA Corporation, Nokia Corporation and Amazon.com, Inc."
+     },
+     {
+      "type": "sec_filing",
+      "title": "Fabrinet 10-K FY2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+      "published": "2026-08-18",
+      "quote": "contributed 19.9%, 16.3%, 10.7% and 10.5%, respectively, of our revenues."
+     }
+    ]
+   }
+  ],
+  "candidates": [],
+  "gaps": "Coherent в отчётности не назван поимённо, хотя связь с ним уже двусторонняя по документам обеих сторон."
+ },
+ {
+  "id": "oklo",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Oklo разрабатывает установки деления на быстрых нейтронах, которые называет powerhouses, и продаёт не оборудование, а электричество и тепло. Технологию компания возводит к реактору Experimental Breeder Reactor-II, на котором она была продемонстрирована. Отдельно она коммерциализирует переработку отработавшего ядерного топлива в топливо для собственных установок и чужих. Свой рынок компания описывает честно и невыгодно для себя: развивающийся, без единого действующего коммерческого проекта. На карте узел стоит в слое, где мощность для дата-центров ещё только строится.",
+   "en": "Oklo develops fast fission power plants it calls powerhouses and sells electricity and heat rather than equipment. It traces the technology to the Experimental Breeder Reactor-II, on which it was demonstrated. Separately it is commercializing the recycling of used nuclear fuel into fuel for its own powerhouses and those of others. It describes its own market plainly and unflatteringly: emerging, with no commercial project operating. On the map the node sits in the layer where power for data centres is still being built."
+  },
+  "profile_sources": [
+   {
+    "type": "sec_filing",
+    "title": "Oklo 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1849056/000162828026018698/oklo-20251231.htm",
+    "published": "2026-03-17",
+    "quote": "We are developing next-generation fast fission power plants called “powerhouses."
+   },
+   {
+    "type": "sec_filing",
+    "title": "Oklo 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1849056/000162828026018698/oklo-20251231.htm",
+    "published": "2026-03-17",
+    "quote": "Our business addresses this demand by producing electricity and heat from our Aurora powerhouses"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Oklo 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1849056/000162828026018698/oklo-20251231.htm",
+    "published": "2026-03-17",
+    "quote": "We are also commercializing nuclear fuel recycling technology that can convert used nuclear fuel"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Oklo 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1849056/000162828026018698/oklo-20251231.htm",
+    "published": "2026-03-17",
+    "quote": "The fast fission reactor technology we are commercializing was demonstrated by the Experimental Breeder Reactor-II"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Oklo 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1849056/000162828026018698/oklo-20251231.htm",
+    "published": "2026-03-17",
+    "quote": "Oklo is pursuing an emerging market with no commercial project op",
+    "backs": [
+     "concentration"
+    ]
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 40,
+    "why": {
+     "ru": "Рынок компания сама называет развивающимся и без единого действующего коммерческого проекта",
+     "en": "The company itself calls its market emerging with no commercial project operating"
+    }
+   },
+   "lock_in_depth": {
+    "value": 45,
+    "why": {
+     "ru": "Продаётся электричество по договору, а не оборудование, которое нельзя снять",
+     "en": "What is sold is contracted electricity, not equipment that cannot be removed"
+    }
+   },
+   "time_to_replace": {
+    "value": 55,
+    "why": {
+     "ru": "Заменить поставщика мощности проще, чем построить установку деления",
+     "en": "Replacing a power supplier is easier than building a fission plant"
+    }
+   },
+   "concentration": {
+    "value": 28,
+    "why": {
+     "ru": "Ни одного действующего коммерческого проекта — доли функции у узла пока нет",
+     "en": "No commercial project operating — the node holds no share of its function yet"
+    }
+   }
+  },
+  "edges": [],
+  "candidates": [],
+  "gaps": "Ни Equinix, ни Vertiv в отчётности Oklo не названы: обе связи подтверждены только со стороны контрагента."
+ },
+ {
+  "id": "schrodinger",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Schrödinger продаёт вычислительный софт для поиска молекул и параллельно ведёт собственные программы разработки лекарств. Компания называет себя ведущим поставщиком вычислительных решений для фармацевтической разработки. В 2025 году её софт покупали все двадцать крупнейших фармацевтических компаний. Решения покрывают все стадии — от поиска молекулы до её оптимизации, и применяются не только в фармацевтике, но и в аэрокосмосе, энергетике, полупроводниках и дисплеях. На карте узел стоит на стороне спроса: он показывает, для чего покупают вычисления вне ИИ-лабораторий.",
+   "en": "Schrödinger sells computational software for molecule discovery and runs its own drug discovery programs alongside. The company calls itself the leading provider of computational solutions for pharmaceutical development. In 2025 all of the top twenty pharmaceutical companies bought its software. The solutions span every stage from discovery to optimization and are used beyond pharma — in aerospace, energy, semiconductors and displays. On the map the node sits on the demand side: it shows what compute is bought for outside AI laboratories."
+  },
+  "profile_sources": [
+   {
+    "type": "sec_filing",
+    "title": "Schrodinger 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1490978/000149097826000010/sdgr-20251231.htm",
+    "published": "2026-02-25",
+    "quote": "We are the leading provider of computational software solutions for drug discovery"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Schrodinger 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1490978/000149097826000010/sdgr-20251231.htm",
+    "published": "2026-02-25",
+    "quote": "In 2025, all of the top 20 pharmaceutical companies, measured",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "sec_filing",
+    "title": "Schrodinger 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1490978/000149097826000010/sdgr-20251231.htm",
+    "published": "2026-02-25",
+    "quote": "We are transforming the way therapeutics and materials are discovered."
+   },
+   {
+    "type": "sec_filing",
+    "title": "Schrodinger 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1490978/000149097826000010/sdgr-20251231.htm",
+    "published": "2026-02-25",
+    "quote": "We offer our customers a variety of software solutions that accelerate all stages"
+   },
+   {
+    "type": "sec_filing",
+    "title": "Schrodinger 10-K FY2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/1490978/000149097826000010/sdgr-20251231.htm",
+    "published": "2026-02-25",
+    "quote": "aerospace, energy, semiconductors, electronic displays, and chemicals"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 50,
+    "why": {
+     "ru": "Софт для поиска молекул покупают все двадцать крупнейших фармацевтических компаний, но альтернативы существуют",
+     "en": "All twenty largest pharmaceutical companies buy molecule discovery software, but alternatives exist"
+    }
+   },
+   "lock_in_depth": {
+    "value": 52,
+    "why": {
+     "ru": "Лицензия на софт возобновляемая: невозобновление прямо названо риском в её же отчётности",
+     "en": "The software licence is renewable: non-renewal is named a risk in its own filing"
+    }
+   },
+   "time_to_replace": {
+    "value": 45,
+    "why": {
+     "ru": "Смена вычислительной платформы идёт в пределах цикла лицензии",
+     "en": "Changing computational platform happens inside a licence cycle"
+    }
+   },
+   "concentration": {
+    "value": 56,
+    "why": {
+     "ru": "Все двадцать крупнейших фармацевтических компаний были её заказчиками в 2025 году",
+     "en": "All twenty largest pharmaceutical companies were its customers in 2025"
+    }
+   }
+  },
+  "edges": [],
+  "candidates": [],
+  "gaps": "NVIDIA в отчётности не названа: связь schrodinger -> nvidia подтверждена только со стороны поставщика."
+ },
+ {
+  "id": "nccl",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "NCCL — библиотека коллективных обменов для многокарточных и многоузловых конфигураций, оптимизированная под ускорители и сеть одного вендора. Она даёт примитивы all-gather, all-reduce, broadcast, reduce, reduce-scatter и точка-точка. Маршруты подобраны под высокую полосу и низкую задержку по PCIe, NVLink и другим быстрым соединениям внутри узла, а между узлами — по сети того же вендора. Топология определяется автоматически: PCIe, NVLink, NVSwitch, InfiniBand, RoCE. Библиотека совместима с любой моделью распараллеливания по картам — однопоточной, многопоточной и многопроцессной.",
+   "en": "NCCL is a collective communication library for multi-GPU and multi-node setups, tuned to one vendor's accelerators and networking. It provides all-gather, all-reduce, broadcast, reduce, reduce-scatter and point-to-point primitives. The routines are tuned for high bandwidth and low latency over PCIe, NVLink and other fast interconnects within a node, and across nodes over the same vendor's networking. Topology is detected automatically: PCIe, NVLink, NVSwitch, InfiniBand, RoCE. The library is compatible with any multi-GPU parallelization model — single-threaded, multi-threaded and multi-process."
+  },
+  "profile_sources": [
+   {
+    "type": "product_doc",
+    "title": "NVIDIA NCCL",
+    "url": "https://developer.nvidia.com/nccl",
+    "published": "2026-08-29",
+    "quote": "The NVIDIA Collective Communication Library (NCCL) implements multi-GPU and multi-node communication primitives"
+   },
+   {
+    "type": "product_doc",
+    "title": "NVIDIA NCCL",
+    "url": "https://developer.nvidia.com/nccl",
+    "published": "2026-08-29",
+    "quote": "NCCL provides routines such as all-gather, all-reduce, broadcast, reduce, reduce-scatter, and point-to-point send and receive."
+   },
+   {
+    "type": "product_doc",
+    "title": "NVIDIA NCCL",
+    "url": "https://developer.nvidia.com/nccl",
+    "published": "2026-08-29",
+    "quote": "optimized to achieve high bandwidth and low latency over PCIe, NVIDIA NVLink™"
+   },
+   {
+    "type": "product_doc",
+    "title": "NVIDIA NCCL",
+    "url": "https://developer.nvidia.com/nccl",
+    "published": "2026-08-29",
+    "quote": "automatic topology detection across PCIe, NVLink™, NVSwitch™, InfiniBand, RoCE, and other networks",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "product_doc",
+    "title": "NVIDIA NCCL",
+    "url": "https://developer.nvidia.com/nccl",
+    "published": "2026-08-29",
+    "quote": "NCCL is compatible with any multi-GPU parallelization model, including single-threaded, multi-threaded"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 78,
+    "why": {
+     "ru": "Примитивы обмена подогнаны под ускорители и сеть одного вендора сразу",
+     "en": "The communication primitives are tuned to one vendor's accelerators and networking at once"
+    }
+   },
+   "lock_in_depth": {
+    "value": 82,
+    "why": {
+     "ru": "Топология определяется по NVLink и NVSwitch — соединениям, которых у других нет",
+     "en": "Topology is detected over NVLink and NVSwitch — interconnects others do not have"
+    }
+   },
+   "time_to_replace": {
+    "value": 72,
+    "why": {
+     "ru": "Совместимость с любой моделью распараллеливания делает замену задачей переписывания слоя обмена",
+     "en": "Compatibility with any parallelization model makes replacement a rewrite of the communication layer"
+    }
+   },
+   "concentration": {
+    "value": 85,
+    "why": {
+     "ru": "Автоматическое определение топологии покрывает NVLink и NVSwitch — фирменные соединения одного вендора",
+     "en": "Automatic topology detection covers NVLink and NVSwitch — one vendor's proprietary interconnects"
+    }
+   }
+  },
+  "edges": [],
+  "candidates": [],
+  "gaps": "Страница библиотеки не называет ни одного фреймворка поимённо, поэтому связь nccl -> pytorch остаётся односторонней."
+ },
+ {
+  "id": "nim",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "NIM — набор контейнеров, в которых модель уезжает к заказчику вместе со своим слоем вывода. Микросервисы выставляют промышленные интерфейсы и подгоняют задержку и пропускную способность под каждую пару «модель — ускоритель». Внутри стоят не собственные серверы вывода, а чужие: TensorRT, TensorRT-LLM, vLLM и SGLang. Развернуть их можно где угодно, где есть ускорители одного вендора — от рабочей станции до облака. Отсюда роль узла: он превращает открытые серверы вывода в товар, продаваемый с гарантией.",
+   "en": "NIM is a set of containers in which a model travels to the customer together with its serving layer. The microservices expose industry-standard APIs and tune latency and throughput for each model-accelerator pair. Inside sit not proprietary inference servers but other people's: TensorRT, TensorRT-LLM, vLLM and SGLang. They can be deployed anywhere one vendor's accelerators are — from a workstation to the cloud. Hence the node's role: it turns open inference servers into a product sold with a warranty."
+  },
+  "profile_sources": [
+   {
+    "type": "product_doc",
+    "title": "NVIDIA NIM",
+    "url": "https://developer.nvidia.com/nim",
+    "published": "2026-08-29",
+    "quote": "NVIDIA NIM™ provides containers to self-host GPU-accelerated inferencing microservices for pretrained and customized AI models"
+   },
+   {
+    "type": "product_doc",
+    "title": "NVIDIA NIM",
+    "url": "https://developer.nvidia.com/nim",
+    "published": "2026-08-29",
+    "quote": "NIM microservices expose industry-standard APIs for simple integration into AI applications, development frameworks, and workflows"
+   },
+   {
+    "type": "product_doc",
+    "title": "NVIDIA NIM",
+    "url": "https://developer.nvidia.com/nim",
+    "published": "2026-08-29",
+    "quote": "including TensorRT, TensorRT-LLM, vLLM, SGLang, and more, NIM is engineered to facilitate seamless AI inferencing",
+    "backs": [
+     "concentration"
+    ]
+   },
+   {
+    "type": "product_doc",
+    "title": "NVIDIA NIM",
+    "url": "https://developer.nvidia.com/nim",
+    "published": "2026-08-29",
+    "quote": "prebuilt microservices that can be deployed on NVIDIA GPUs anywhere—from RTX AI PCs"
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 58,
+    "why": {
+     "ru": "Внутри работают чужие открытые серверы вывода, а не собственный",
+     "en": "Inside run other people's open inference servers, not a proprietary one"
+    }
+   },
+   "lock_in_depth": {
+    "value": 74,
+    "why": {
+     "ru": "Развёртывание привязано к ускорителям одного вендора где угодно, но только его",
+     "en": "Deployment is tied to one vendor's accelerators anywhere, but only that vendor's"
+    }
+   },
+   "time_to_replace": {
+    "value": 48,
+    "why": {
+     "ru": "Открытые серверы вывода внутри доступны и без обёртки: замена — это отказ от упаковки, а не от технологии",
+     "en": "The open inference servers inside are available without the wrapper: replacement drops the packaging, not the technology"
+    }
+   },
+   "concentration": {
+    "value": 52,
+    "why": {
+     "ru": "Серверы вывода внутри — TensorRT, vLLM и SGLang — доступны и отдельно",
+     "en": "The inference servers inside — TensorRT, vLLM and SGLang — are available separately too"
+    }
+   }
+  },
+  "edges": [
+   {
+    "direction": "upstream",
+    "strength": 70,
+    "lock_in_depth": 40,
+    "substitutability": 55,
+    "is_reversible": true,
+    "risk_level": "low",
+    "risk_type": "technical",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "nim",
+    "target": "vllm",
+    "type": "integrates",
+    "note": {
+     "ru": "Серверы вывода внутри контейнеров построены на сторонних проектах, и vLLM назван среди них.",
+     "en": "The inference servers inside the containers are built on third-party projects, and vLLM is named among them."
+    },
+    "risk_mitigation": {
+     "ru": "Названо несколько серверов вывода сразу, поэтому ни один не является единственным",
+     "en": "Several inference servers are named at once, so none is the only one"
+    },
+    "sources": [
+     {
+      "type": "product_doc",
+      "title": "NVIDIA NIM",
+      "url": "https://developer.nvidia.com/nim",
+      "published": "2026-08-29",
+      "quote": "including TensorRT, TensorRT-LLM, vLLM, SGLang, and more, NIM is engineered to facilitate seamless AI inferencing"
+     }
+    ]
+   },
+   {
+    "direction": "upstream",
+    "strength": 60,
+    "lock_in_depth": 35,
+    "substitutability": 60,
+    "is_reversible": true,
+    "risk_level": "low",
+    "risk_type": "technical",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "nim",
+    "target": "sglang",
+    "type": "integrates",
+    "note": {
+     "ru": "Назван среди серверов вывода, на которых построены контейнеры.",
+     "en": "Named among the inference servers the containers are built on."
+    },
+    "risk_mitigation": {
+     "ru": "Названо несколько серверов вывода сразу, поэтому ни один не является единственным",
+     "en": "Several inference servers are named at once, so none is the only one"
+    },
+    "sources": [
+     {
+      "type": "product_doc",
+      "title": "NVIDIA NIM",
+      "url": "https://developer.nvidia.com/nim",
+      "published": "2026-08-29",
+      "quote": "including TensorRT, TensorRT-LLM, vLLM, SGLang, and more, NIM is engineered to facilitate seamless AI inferencing"
+     }
+    ]
+   },
+   {
+    "direction": "upstream",
+    "strength": 75,
+    "lock_in_depth": 60,
+    "substitutability": 40,
+    "is_reversible": true,
+    "risk_level": "low",
+    "risk_type": "technical",
+    "risk_timeline": "2-5y",
+    "stance": "confirms",
+    "source": "nim",
+    "target": "tensorrt",
+    "type": "integrates",
+    "note": {
+     "ru": "Назван первым среди серверов вывода, на которых построены контейнеры.",
+     "en": "Named first among the inference servers the containers are built on."
+    },
+    "risk_mitigation": {
+     "ru": "Рядом с ним названы открытые серверы вывода того же назначения",
+     "en": "Open inference servers of the same purpose are named alongside it"
+    },
+    "sources": [
+     {
+      "type": "product_doc",
+      "title": "NVIDIA NIM",
+      "url": "https://developer.nvidia.com/nim",
+      "published": "2026-08-29",
+      "quote": "including TensorRT, TensorRT-LLM, vLLM, SGLang, and more, NIM is engineered to facilitate seamless AI inferencing"
+     }
+    ]
+   }
+  ],
+  "candidates": [],
+  "gaps": "На карте уже стоит связь nim -> vllm типа competes_with, заведённая слоевым обходом. Собственная страница NIM говорит другое: vLLM — один из серверов вывода, на которых он построен. Опровержением это не является, поэтому заведена вторая связь типа integrates, а не поставлен спор: соперничество за развёртывание и встраивание сосуществуют."
+ },
+ {
+  "id": "tensorrt",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "TensorRT — набор инструментов для вывода: компиляторы, среды исполнения и оптимизации модели под низкую задержку и высокую пропускную способность. Оптимизация идёт квантованием, слиянием слоёв и тензоров и подбором ядер. Интеграция с чужими стеками заявлена прямо: TensorRT встраивается в PyTorch и Hugging Face, давая 6X ускорение вывода одной строкой. Модели из других фреймворков заходят через разборщик ONNX. Отдельная ветка TensorRT-LLM заявляет до 8X прироста производительности на больших языковых моделях.",
+   "en": "TensorRT is a set of tools for inference: compilers, runtimes and model optimizations for low latency and high throughput. Optimization runs through quantization, layer and tensor fusion and kernel tuning. Integration with other stacks is stated plainly: TensorRT plugs into PyTorch and Hugging Face for 6X faster inference in one line. Models from other frameworks arrive through an ONNX parser. A separate TensorRT-LLM branch claims up to 8X more performance on large language models."
+  },
+  "profile_sources": [
+   {
+    "type": "product_doc",
+    "title": "NVIDIA TensorRT",
+    "url": "https://developer.nvidia.com/tensorrt",
+    "published": "2026-08-29",
+    "quote": "NVIDIA® TensorRT™ is an ecosystem of tools for developers to achieve high-performance deep learning inference."
+   },
+   {
+    "type": "product_doc",
+    "title": "NVIDIA TensorRT",
+    "url": "https://developer.nvidia.com/tensorrt",
+    "published": "2026-08-29",
+    "quote": "TensorRT optimizes inference using quantization, layer and tensor fusion, and kernel tuning techniques."
+   },
+   {
+    "type": "product_doc",
+    "title": "NVIDIA TensorRT",
+    "url": "https://developer.nvidia.com/tensorrt",
+    "published": "2026-08-29",
+    "quote": "TensorRT integrates directly into PyTorch and Hugging Face to achieve 6X faster inference with"
+   },
+   {
+    "type": "product_doc",
+    "title": "NVIDIA TensorRT",
+    "url": "https://developer.nvidia.com/tensorrt",
+    "published": "2026-08-29",
+    "quote": "TensorRT provides an ONNX parser to import ONNX models from popular frameworks into TensorRT."
+   },
+   {
+    "type": "product_doc",
+    "title": "NVIDIA TensorRT",
+    "url": "https://developer.nvidia.com/tensorrt",
+    "published": "2026-08-29",
+    "quote": "TensorRT-LLM accelerates the latest large language models for generative AI, delivering up to 8X",
+    "backs": [
+     "concentration"
+    ]
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 66,
+    "why": {
+     "ru": "Компилятор вывода, встроенный в чужие фреймворки, но заменимый другими средствами того же назначения",
+     "en": "An inference compiler embedded in other frameworks, yet replaceable by other tools of the same purpose"
+    }
+   },
+   "lock_in_depth": {
+    "value": 78,
+    "why": {
+     "ru": "Оптимизация идёт подбором ядер под конкретный ускоритель, а не переносимым кодом",
+     "en": "Optimization runs by tuning kernels to a specific accelerator rather than portable code"
+    }
+   },
+   "time_to_replace": {
+    "value": 62,
+    "why": {
+     "ru": "Модели заходят через разборщик ONNX, поэтому выход из компилятора не требует переписывания модели",
+     "en": "Models arrive through an ONNX parser, so leaving the compiler does not require rewriting the model"
+    }
+   },
+   "concentration": {
+    "value": 72,
+    "why": {
+     "ru": "Ветка для языковых моделей заявляет до 8X прироста производительности на фирменных ускорителях",
+     "en": "The large language model branch claims up to 8X more performance on the vendor's own accelerators"
+    }
+   }
+  },
+  "edges": [
+   {
+    "direction": "bidirectional",
+    "strength": 70,
+    "lock_in_depth": 55,
+    "substitutability": 50,
+    "is_reversible": true,
+    "risk_level": "low",
+    "risk_type": "technical",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "tensorrt",
+    "target": "pytorch",
+    "type": "integrates",
+    "note": {
+     "ru": "Встраивается напрямую и даёт 6X ускорение вывода одной строкой кода.",
+     "en": "Plugs in directly and gives 6X faster inference with a single line of code."
+    },
+    "risk_mitigation": {
+     "ru": "Модели заходят и через разборщик ONNX, а не только через прямую интеграцию",
+     "en": "Models also arrive through an ONNX parser, not only through direct integration"
+    },
+    "sources": [
+     {
+      "type": "product_doc",
+      "title": "NVIDIA TensorRT",
+      "url": "https://developer.nvidia.com/tensorrt",
+      "published": "2026-08-29",
+      "quote": "TensorRT integrates directly into PyTorch and Hugging Face to achieve 6X faster inference with"
+     }
+    ]
+   },
+   {
+    "direction": "bidirectional",
+    "strength": 65,
+    "lock_in_depth": 50,
+    "substitutability": 55,
+    "is_reversible": true,
+    "risk_level": "low",
+    "risk_type": "technical",
+    "risk_timeline": "1-2y",
+    "stance": "confirms",
+    "source": "tensorrt",
+    "target": "huggingface",
+    "type": "integrates",
+    "note": {
+     "ru": "Встраивается напрямую наравне с PyTorch, давая 6X ускорение вывода одной строкой.",
+     "en": "Plugs in directly alongside PyTorch, giving 6X faster inference with a single line."
+    },
+    "risk_mitigation": {
+     "ru": "Модели заходят и через разборщик ONNX, а не только через прямую интеграцию",
+     "en": "Models also arrive through an ONNX parser, not only through direct integration"
+    },
+    "sources": [
+     {
+      "type": "product_doc",
+      "title": "NVIDIA TensorRT",
+      "url": "https://developer.nvidia.com/tensorrt",
+      "published": "2026-08-29",
+      "quote": "TensorRT integrates directly into PyTorch and Hugging Face to achieve 6X faster inference with"
+     }
+    ]
+   }
+  ],
+  "candidates": [
+   {
+    "name": "ONNX",
+    "why": "назван TensorRT форматом, через который модели заходят из других фреймворков; на карте формата обмена нет",
+    "url": "https://developer.nvidia.com/tensorrt",
+    "quote": "TensorRT provides an ONNX parser to import ONNX models from popular frameworks into TensorRT."
+   }
+  ],
+  "gaps": "Цифры ускорения заявлены самим вендором и независимой проверки в документе нет."
+ },
+ {
+  "id": "ray",
+  "as_of": "2026-08-29",
+  "description": {
+   "ru": "Ray — открытый каркас для распределённого запуска машинного обучения и обычного кода на Python. Он покрывает весь конвейер — от загрузки данных до обслуживания модели — через высокоуровневые интерфейсы, которые стыкуются с распространёнными фреймворками. Ядро даёт базовые примитивы для распределённых приложений и собственных платформ поверх них. Кластер Ray разворачивают на AWS, GCP, Azure или Kubernetes. Отсюда его роль на карте: он не заменяет оркестратор, а живёт поверх него.",
+   "en": "Ray is an open source framework for running machine learning and ordinary Python code in a distributed way. It covers the whole pipeline — from data ingest to model serving — through high-level APIs that plug into common ecosystem frameworks. Its core provides foundational primitives for distributed applications and for custom platforms built on top. A Ray cluster is deployed on AWS, GCP, Azure or Kubernetes. Hence its place on the map: it does not replace the orchestrator, it lives on top of one."
+  },
+  "profile_sources": [
+   {
+    "type": "product_doc",
+    "title": "Ray documentation",
+    "url": "https://docs.ray.io/en/latest/index.html",
+    "published": "2026-08-29",
+    "quote": "An open source framework to build and scale your ML and Python applications easily"
+   },
+   {
+    "type": "product_doc",
+    "title": "Ray documentation",
+    "url": "https://docs.ray.io/en/latest/index.html",
+    "published": "2026-08-29",
+    "quote": "Scale the entire ML pipeline from data ingest to model serving with high-level Python APIs"
+   },
+   {
+    "type": "product_doc",
+    "title": "Ray documentation",
+    "url": "https://docs.ray.io/en/latest/index.html",
+    "published": "2026-08-29",
+    "quote": "Scale generic Python code with simple, foundational primitives that enable a high degree of control"
+   },
+   {
+    "type": "product_doc",
+    "title": "Ray documentation",
+    "url": "https://docs.ray.io/en/latest/index.html",
+    "published": "2026-08-29",
+    "quote": "Deploy a Ray cluster on AWS, GCP, Azure, or Kubernetes to seamlessly scale workloads",
+    "backs": [
+     "concentration"
+    ]
+   }
+  ],
+  "factors": {
+   "irreplaceability": {
+    "value": 58,
+    "why": {
+     "ru": "Распределённый запуск на Python даёт не он один; каркас открытый и заменимый",
+     "en": "Distributed Python execution is not his alone; the framework is open and replaceable"
+    }
+   },
+   "lock_in_depth": {
+    "value": 56,
+    "why": {
+     "ru": "Интерфейсы высокого уровня стыкуются с распространёнными фреймворками, а не подменяют их",
+     "en": "The high-level APIs plug into common frameworks rather than replacing them"
+    }
+   },
+   "time_to_replace": {
+    "value": 50,
+    "why": {
+     "ru": "Кластер разворачивается на четырёх средах сразу, поэтому переезд не привязан к одной",
+     "en": "The cluster deploys on four environments at once, so a move is not tied to any one"
+    }
+   },
+   "concentration": {
+    "value": 50,
+    "why": {
+     "ru": "Развёртывание идёт на AWS, GCP, Azure или Kubernetes — ни одна среда не обязательна",
+     "en": "Deployment runs on AWS, GCP, Azure or Kubernetes — no single environment is required"
+    }
+   }
+  },
+  "edges": [
+   {
+    "id": "ray__kubernetes__standardizes_on",
+    "stance": "confirms",
+    "sources": [
+     {
+      "type": "product_doc",
+      "title": "Ray documentation",
+      "url": "https://docs.ray.io/en/latest/index.html",
+      "published": "2026-08-29",
+      "quote": "Deploy a Ray cluster on AWS, GCP, Azure, or Kubernetes to seamlessly scale workloads"
+     }
+    ]
+   }
+  ],
+  "candidates": [],
+  "gaps": "NVIDIA в документации Ray на этой странице не названа: связь ray -> nvidia остаётся односторонней."
+ }
+]

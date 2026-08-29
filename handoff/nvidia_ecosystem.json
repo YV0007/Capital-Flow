@@ -28,9 +28,9 @@
   },
   "totals": {
     "entities": 107,
-    "edges": 270,
+    "edges": 276,
     "layers": 16,
-    "cycles": 197,
+    "cycles": 199,
     "techNodes": 10
   },
   "layers": [
@@ -102,7 +102,7 @@
       "band": 2,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1297,
+        "hhi": 0.1286,
         "top": [
           "tsmc",
           "broadcom",
@@ -159,7 +159,7 @@
       "band": 3,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1066,
+        "hhi": 0.1052,
         "top": [
           "ge-vernova",
           "constellation",
@@ -197,7 +197,7 @@
       "band": 4,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1175,
+        "hhi": 0.1154,
         "top": [
           "nvidia",
           "broadcom",
@@ -235,7 +235,7 @@
       "band": 5,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1308,
+        "hhi": 0.1301,
         "top": [
           "cuda",
           "nvidia",
@@ -254,11 +254,11 @@
       "band": 5,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1752,
+        "hhi": 0.1732,
         "top": [
           "kubernetes",
           "huggingface",
-          "vllm"
+          "nim"
         ]
       }
     },
@@ -273,7 +273,7 @@
       "band": 5,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1063,
+        "hhi": 0.1072,
         "top": [
           "openai",
           "anthropic",
@@ -292,11 +292,11 @@
       "band": 5,
       "concentration": {
         "level": "competitive",
-        "hhi": 0.1459,
+        "hhi": 0.1444,
         "top": [
           "databricks",
           "snowflake",
-          "salesforce"
+          "schrodinger"
         ]
       }
     },
@@ -684,7 +684,7 @@
         {
           "layer": "L12",
           "primary": false,
-          "criticality": 43
+          "criticality": 36
         }
       ],
       "primaryLayer": "L9",
@@ -712,11 +712,11 @@
         "renormalized": false
       },
       "gravity": {
-        "reach": 5,
+        "reach": 6,
         "layers": 5,
-        "edgeTypes": 6,
+        "edgeTypes": 7,
         "cycles": 11,
-        "score": 31,
+        "score": 33,
         "signals": {}
       },
       "domain": "aboutamazon.com",
@@ -928,31 +928,32 @@
         {
           "layer": "L3",
           "primary": true,
-          "criticality": 50
+          "criticality": 64
         }
       ],
       "primaryLayer": "L3",
-      "criticality": 50,
+      "criticality": 64,
       "criticalityFactors": {
-        "irreplaceability": 50,
-        "lockInDepth": 45,
-        "timeToReplace": 55,
-        "concentration": null
+        "irreplaceability": 62,
+        "lockInDepth": 68,
+        "timeToReplace": 64,
+        "concentration": 58
       },
       "criticalityWhy": {
-        "irreplaceability": "Второй из двух-трёх подрядчиков",
-        "lockInDepth": "Задевает упаковку",
-        "timeToReplace": "Нарастить мощности — год-два",
-        "concentration": null
+        "irreplaceability": "Корпусирование заказывают у нескольких подрядчиков сразу; исключительным поставщиком компания себя не называет",
+        "lockInDepth": "Продаётся не операция, а весь цикл от проектирования корпуса до финального теста",
+        "timeToReplace": "Перевод корпуса к другому подрядчику требует переквалификации всей линии",
+        "concentration": "Десятка крупнейших заказчиков дала 72% выручки, из них двое — 29.8% и 11.1%"
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
         "reach": 4,
@@ -988,6 +989,71 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Amkor 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000014/amkr-20251231.htm",
+          "published": "2026-02-20",
+          "fetched": null,
+          "alive": true,
+          "quote": "Our customers include most of the world's largest semiconductor companies.",
+          "confidence": 0.975,
+          "self": "amkor",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Amkor 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000014/amkr-20251231.htm",
+          "published": "2026-02-20",
+          "fetched": null,
+          "alive": true,
+          "quote": "Our ten largest customers accounted for 72% of our net sales in 2025.",
+          "confidence": 0.975,
+          "self": "amkor",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Amkor 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000014/amkr-20251231.htm",
+          "published": "2026-02-20",
+          "fetched": null,
+          "alive": true,
+          "quote": "Direct sales to Apple and Qualcomm accounted for 29.8% and 11.1% of our net sales",
+          "confidence": 0.975,
+          "self": "amkor",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Amkor 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000014/amkr-20251231.htm",
+          "published": "2026-02-20",
+          "fetched": null,
+          "alive": true,
+          "quote": "We provide turnkey solutions that include package design, wafer bump, wafer probe, wafer back-grind",
+          "confidence": 0.975,
+          "self": "amkor",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Amkor 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000014/amkr-20251231.htm",
+          "published": "2026-02-20",
+          "fetched": null,
+          "alive": true,
+          "quote": "Computing (data center, infrastructure, PC/laptop, storage) 20 % 19 % 16 %",
+          "confidence": 0.975,
+          "self": "amkor",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "Broadcom 10-K FY2025",
@@ -1002,9 +1068,10 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 6,
+        "selfSourced": 5,
         "byTier": {
+          "1": 5,
           "2": 1
         }
       }
@@ -5312,38 +5379,39 @@
         {
           "layer": "L8",
           "primary": true,
-          "criticality": 38
+          "criticality": 65
         }
       ],
       "primaryLayer": "L8",
-      "criticality": 38,
+      "criticality": 65,
       "criticalityFactors": {
-        "irreplaceability": 40,
-        "lockInDepth": 35,
-        "timeToReplace": 40,
-        "concentration": null
+        "irreplaceability": 66,
+        "lockInDepth": 70,
+        "timeToReplace": 60,
+        "concentration": 64
       },
       "criticalityWhy": {
-        "irreplaceability": "Контрактных сборщиков оптики несколько",
-        "lockInDepth": "Задевает только сеть",
-        "timeToReplace": "Перевод сборки — до года",
-        "concentration": null
+        "irreplaceability": "Для тех изделий, которые она делает, компания названа единственным внешним производителем",
+        "lockInDepth": "Заказчик отдаёт целиком производство изделия, а не отдельную операцию",
+        "timeToReplace": "Перенос сборки оптики требует переквалификации процесса у нового подрядчика",
+        "concentration": "Четверо заказчиков дали 19.9%, 16.3%, 10.7% и 10.5% выручки за год"
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
-        "reach": 3,
-        "layers": 3,
+        "reach": 4,
+        "layers": 5,
         "edgeTypes": 1,
         "cycles": 0,
-        "score": 11,
+        "score": 16,
         "signals": {}
       },
       "domain": null,
@@ -5372,6 +5440,71 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Fabrinet 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+          "published": "2026-08-18",
+          "fetched": null,
+          "alive": true,
+          "quote": "we are the sole outsourced manufacturing partner used by our customers for the products",
+          "confidence": 0.975,
+          "self": "fabrinet",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Fabrinet 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+          "published": "2026-08-18",
+          "fetched": null,
+          "alive": true,
+          "quote": "During fiscal year 2026, Cisco Systems, Inc., NVIDIA Corporation, Nokia Corporation and Amazon.com, Inc.",
+          "confidence": 0.975,
+          "self": "fabrinet",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Fabrinet 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+          "published": "2026-08-18",
+          "fetched": null,
+          "alive": true,
+          "quote": "contributed 19.9%, 16.3%, 10.7% and 10.5%, respectively, of our revenues.",
+          "confidence": 0.975,
+          "self": "fabrinet",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Fabrinet 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+          "published": "2026-08-18",
+          "fetched": null,
+          "alive": true,
+          "quote": "During fiscal year 2025, NVIDIA Corporation and Cisco Systems, Inc. contributed 27.6% and 18.2%",
+          "confidence": 0.975,
+          "self": "fabrinet",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Fabrinet 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+          "published": "2026-08-18",
+          "fetched": null,
+          "alive": true,
+          "quote": "we are a global leader in providing these services to the optical communications",
+          "confidence": 0.975,
+          "self": "fabrinet",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "NVIDIA 10-K FY2026",
@@ -5386,9 +5519,10 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 6,
+        "selfSourced": 5,
         "byTier": {
+          "1": 5,
           "2": 1
         }
       }
@@ -6217,11 +6351,11 @@
         "renormalized": false
       },
       "gravity": {
-        "reach": 9,
+        "reach": 10,
         "layers": 7,
-        "edgeTypes": 8,
-        "cycles": 51,
-        "score": 42,
+        "edgeTypes": 9,
+        "cycles": 52,
+        "score": 45,
         "signals": {}
       },
       "domain": null,
@@ -8314,31 +8448,32 @@
         {
           "layer": "L10",
           "primary": true,
-          "criticality": 70
+          "criticality": 79
         }
       ],
       "primaryLayer": "L10",
-      "criticality": 70,
+      "criticality": 79,
       "criticalityFactors": {
-        "irreplaceability": 75,
-        "lockInDepth": 70,
-        "timeToReplace": 65,
-        "concentration": null
+        "irreplaceability": 78,
+        "lockInDepth": 82,
+        "timeToReplace": 72,
+        "concentration": 85
       },
       "criticalityWhy": {
-        "irreplaceability": "Переносимых альтернатив с такой зрелостью нет",
-        "lockInDepth": "Задевает софт, системы и обучение",
-        "timeToReplace": "Догнать по зрелости — два-три года",
-        "concentration": null
+        "irreplaceability": "Примитивы обмена подогнаны под ускорители и сеть одного вендора сразу",
+        "lockInDepth": "Топология определяется по NVLink и NVSwitch — соединениям, которых у других нет",
+        "timeToReplace": "Совместимость с любой моделью распараллеливания делает замену задачей переписывания слоя обмена",
+        "concentration": "Автоматическое определение топологии покрывает NVLink и NVSwitch — фирменные соединения одного вендора"
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
         "reach": 2,
@@ -8375,6 +8510,71 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "NVIDIA NCCL",
+          "url": "https://developer.nvidia.com/nccl",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "The NVIDIA Collective Communication Library (NCCL) implements multi-GPU and multi-node communication primitives",
+          "confidence": 0.975,
+          "self": "nccl",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "NVIDIA NCCL",
+          "url": "https://developer.nvidia.com/nccl",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "NCCL provides routines such as all-gather, all-reduce, broadcast, reduce, reduce-scatter, and point-to-point send and receive.",
+          "confidence": 0.975,
+          "self": "nccl",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "NVIDIA NCCL",
+          "url": "https://developer.nvidia.com/nccl",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "optimized to achieve high bandwidth and low latency over PCIe, NVIDIA NVLink™",
+          "confidence": 0.975,
+          "self": "nccl",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "NVIDIA NCCL",
+          "url": "https://developer.nvidia.com/nccl",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "automatic topology detection across PCIe, NVLink™, NVSwitch™, InfiniBand, RoCE, and other networks",
+          "confidence": 0.975,
+          "self": "nccl",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "NVIDIA NCCL",
+          "url": "https://developer.nvidia.com/nccl",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "NCCL is compatible with any multi-GPU parallelization model, including single-threaded, multi-threaded",
+          "confidence": 0.975,
+          "self": "nccl",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "NVIDIA 10-K FY2026",
@@ -8389,9 +8589,10 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 6,
+        "selfSourced": 5,
         "byTier": {
+          "1": 5,
           "2": 1
         }
       }
@@ -8667,38 +8868,39 @@
         {
           "layer": "L11",
           "primary": true,
-          "criticality": 47
+          "criticality": 59
         }
       ],
       "primaryLayer": "L11",
-      "criticality": 47,
+      "criticality": 59,
       "criticalityFactors": {
-        "irreplaceability": 45,
-        "lockInDepth": 50,
-        "timeToReplace": 45,
-        "concentration": null
+        "irreplaceability": 58,
+        "lockInDepth": 74,
+        "timeToReplace": 48,
+        "concentration": 52
       },
       "criticalityWhy": {
-        "irreplaceability": "Открытые системы запуска покрывают ту же задачу",
-        "lockInDepth": "Задевает инференс и приложения",
-        "timeToReplace": "Заместить открытыми системами запуска — год",
-        "concentration": null
+        "irreplaceability": "Внутри работают чужие открытые серверы вывода, а не собственный",
+        "lockInDepth": "Развёртывание привязано к ускорителям одного вендора где угодно, но только его",
+        "timeToReplace": "Открытые серверы вывода внутри доступны и без обёртки: замена — это отказ от упаковки, а не от технологии",
+        "concentration": "Серверы вывода внутри — TensorRT, vLLM и SGLang — доступны и отдельно"
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
-        "reach": 2,
+        "reach": 4,
         "layers": 4,
-        "edgeTypes": 2,
+        "edgeTypes": 3,
         "cycles": 0,
-        "score": 11,
+        "score": 15,
         "signals": {}
       },
       "domain": null,
@@ -8729,6 +8931,58 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "NVIDIA NIM",
+          "url": "https://developer.nvidia.com/nim",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "NVIDIA NIM™ provides containers to self-host GPU-accelerated inferencing microservices for pretrained and customized AI models",
+          "confidence": 0.975,
+          "self": "nim",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "NVIDIA NIM",
+          "url": "https://developer.nvidia.com/nim",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "NIM microservices expose industry-standard APIs for simple integration into AI applications, development frameworks, and workflows",
+          "confidence": 0.975,
+          "self": "nim",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "NVIDIA NIM",
+          "url": "https://developer.nvidia.com/nim",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "including TensorRT, TensorRT-LLM, vLLM, SGLang, and more, NIM is engineered to facilitate seamless AI inferencing",
+          "confidence": 0.975,
+          "self": "nim",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "NVIDIA NIM",
+          "url": "https://developer.nvidia.com/nim",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "prebuilt microservices that can be deployed on NVIDIA GPUs anywhere—from RTX AI PCs",
+          "confidence": 0.975,
+          "self": "nim",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "NVIDIA 10-K FY2026",
@@ -8743,9 +8997,10 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 5,
+        "selfSourced": 4,
         "byTier": {
+          "1": 4,
           "2": 1
         }
       }
@@ -9049,7 +9304,7 @@
         "reach": 75,
         "layers": 15,
         "edgeTypes": 29,
-        "cycles": 192,
+        "cycles": 194,
         "score": 97,
         "signals": {}
       },
@@ -9182,31 +9437,32 @@
         {
           "layer": "L6",
           "primary": true,
-          "criticality": 32
+          "criticality": 43
         }
       ],
       "primaryLayer": "L6",
-      "criticality": 32,
+      "criticality": 43,
       "criticalityFactors": {
-        "irreplaceability": 5,
-        "lockInDepth": 20,
-        "timeToReplace": 80,
-        "concentration": null
+        "irreplaceability": 40,
+        "lockInDepth": 45,
+        "timeToReplace": 55,
+        "concentration": 28
       },
       "criticalityWhy": {
-        "irreplaceability": "Построенных станций нет вовсе",
-        "lockInDepth": "Задевает только энергию",
-        "timeToReplace": "Атомная станция строится больше семи лет",
-        "concentration": null
+        "irreplaceability": "Рынок компания сама называет развивающимся и без единого действующего коммерческого проекта",
+        "lockInDepth": "Продаётся электричество по договору, а не оборудование, которое нельзя снять",
+        "timeToReplace": "Заменить поставщика мощности проще, чем построить установку деления",
+        "concentration": "Ни одного действующего коммерческого проекта — доли функции у узла пока нет"
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
         "reach": 2,
@@ -9242,6 +9498,71 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Oklo 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1849056/000162828026018698/oklo-20251231.htm",
+          "published": "2026-03-17",
+          "fetched": null,
+          "alive": true,
+          "quote": "We are developing next-generation fast fission power plants called “powerhouses.",
+          "confidence": 0.975,
+          "self": "oklo",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Oklo 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1849056/000162828026018698/oklo-20251231.htm",
+          "published": "2026-03-17",
+          "fetched": null,
+          "alive": true,
+          "quote": "Our business addresses this demand by producing electricity and heat from our Aurora powerhouses",
+          "confidence": 0.975,
+          "self": "oklo",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Oklo 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1849056/000162828026018698/oklo-20251231.htm",
+          "published": "2026-03-17",
+          "fetched": null,
+          "alive": true,
+          "quote": "We are also commercializing nuclear fuel recycling technology that can convert used nuclear fuel",
+          "confidence": 0.975,
+          "self": "oklo",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Oklo 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1849056/000162828026018698/oklo-20251231.htm",
+          "published": "2026-03-17",
+          "fetched": null,
+          "alive": true,
+          "quote": "The fast fission reactor technology we are commercializing was demonstrated by the Experimental Breeder Reactor-II",
+          "confidence": 0.975,
+          "self": "oklo",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Oklo 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1849056/000162828026018698/oklo-20251231.htm",
+          "published": "2026-03-17",
+          "fetched": null,
+          "alive": true,
+          "quote": "Oklo is pursuing an emerging market with no commercial project op",
+          "confidence": 0.975,
+          "self": "oklo",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "Vertiv 10-K 2025",
@@ -9256,9 +9577,10 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 6,
+        "selfSourced": 5,
         "byTier": {
+          "1": 5,
           "2": 1
         }
       }
@@ -9308,7 +9630,7 @@
         "reach": 12,
         "layers": 8,
         "edgeTypes": 11,
-        "cycles": 60,
+        "cycles": 62,
         "score": 51,
         "signals": {}
       },
@@ -9628,11 +9950,11 @@
         "renormalized": false
       },
       "gravity": {
-        "reach": 6,
+        "reach": 7,
         "layers": 5,
-        "edgeTypes": 7,
-        "cycles": 41,
-        "score": 33,
+        "edgeTypes": 8,
+        "cycles": 42,
+        "score": 36,
         "signals": {}
       },
       "domain": null,
@@ -9858,31 +10180,32 @@
         {
           "layer": "L11",
           "primary": true,
-          "criticality": 50
+          "criticality": 54
         }
       ],
       "primaryLayer": "L11",
-      "criticality": 50,
+      "criticality": 54,
       "criticalityFactors": {
-        "irreplaceability": 50,
-        "lockInDepth": 50,
+        "irreplaceability": 58,
+        "lockInDepth": 56,
         "timeToReplace": 50,
-        "concentration": null
+        "concentration": 50
       },
       "criticalityWhy": {
-        "irreplaceability": "Оркестраторов несколько",
-        "lockInDepth": "Задевает инференс и обучение",
-        "timeToReplace": "Замена — год",
-        "concentration": null
+        "irreplaceability": "Распределённый запуск на Python даёт не он один; каркас открытый и заменимый",
+        "lockInDepth": "Интерфейсы высокого уровня стыкуются с распространёнными фреймворками, а не подменяют их",
+        "timeToReplace": "Кластер разворачивается на четырёх средах сразу, поэтому переезд не привязан к одной",
+        "concentration": "Развёртывание идёт на AWS, GCP, Azure или Kubernetes — ни одна среда не обязательна"
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
         "reach": 2,
@@ -9920,6 +10243,58 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "Ray documentation",
+          "url": "https://docs.ray.io/en/latest/index.html",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "An open source framework to build and scale your ML and Python applications easily",
+          "confidence": 0.975,
+          "self": "ray",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "Ray documentation",
+          "url": "https://docs.ray.io/en/latest/index.html",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Scale the entire ML pipeline from data ingest to model serving with high-level Python APIs",
+          "confidence": 0.975,
+          "self": "ray",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "Ray documentation",
+          "url": "https://docs.ray.io/en/latest/index.html",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Scale generic Python code with simple, foundational primitives that enable a high degree of control",
+          "confidence": 0.975,
+          "self": "ray",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "Ray documentation",
+          "url": "https://docs.ray.io/en/latest/index.html",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Deploy a Ray cluster on AWS, GCP, Azure, or Kubernetes to seamlessly scale workloads",
+          "confidence": 0.975,
+          "self": "ray",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "NVIDIA 10-K FY2026",
@@ -9934,9 +10309,10 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 5,
+        "selfSourced": 4,
         "byTier": {
+          "1": 4,
           "2": 1
         }
       }
@@ -10645,31 +11021,32 @@
         {
           "layer": "L13",
           "primary": true,
-          "criticality": 35
+          "criticality": 50
         }
       ],
       "primaryLayer": "L13",
-      "criticality": 35,
+      "criticality": 50,
       "criticalityFactors": {
-        "irreplaceability": 35,
-        "lockInDepth": 30,
-        "timeToReplace": 40,
-        "concentration": null
+        "irreplaceability": 50,
+        "lockInDepth": 52,
+        "timeToReplace": 45,
+        "concentration": 56
       },
       "criticalityWhy": {
-        "irreplaceability": "Отраслевых применений несколько",
-        "lockInDepth": "Задевает только приложения",
-        "timeToReplace": "Заместить — год",
-        "concentration": null
+        "irreplaceability": "Софт для поиска молекул покупают все двадцать крупнейших фармацевтических компаний, но альтернативы существуют",
+        "lockInDepth": "Лицензия на софт возобновляемая: невозобновление прямо названо риском в её же отчётности",
+        "timeToReplace": "Смена вычислительной платформы идёт в пределах цикла лицензии",
+        "concentration": "Все двадцать крупнейших фармацевтических компаний были её заказчиками в 2025 году"
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
         "reach": 1,
@@ -10705,6 +11082,71 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Schrodinger 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1490978/000149097826000010/sdgr-20251231.htm",
+          "published": "2026-02-25",
+          "fetched": null,
+          "alive": true,
+          "quote": "We are the leading provider of computational software solutions for drug discovery",
+          "confidence": 0.975,
+          "self": "schrodinger",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Schrodinger 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1490978/000149097826000010/sdgr-20251231.htm",
+          "published": "2026-02-25",
+          "fetched": null,
+          "alive": true,
+          "quote": "In 2025, all of the top 20 pharmaceutical companies, measured",
+          "confidence": 0.975,
+          "self": "schrodinger",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Schrodinger 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1490978/000149097826000010/sdgr-20251231.htm",
+          "published": "2026-02-25",
+          "fetched": null,
+          "alive": true,
+          "quote": "We are transforming the way therapeutics and materials are discovered.",
+          "confidence": 0.975,
+          "self": "schrodinger",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Schrodinger 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1490978/000149097826000010/sdgr-20251231.htm",
+          "published": "2026-02-25",
+          "fetched": null,
+          "alive": true,
+          "quote": "We offer our customers a variety of software solutions that accelerate all stages",
+          "confidence": 0.975,
+          "self": "schrodinger",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Schrodinger 10-K FY2025",
+          "url": "https://www.sec.gov/Archives/edgar/data/1490978/000149097826000010/sdgr-20251231.htm",
+          "published": "2026-02-25",
+          "fetched": null,
+          "alive": true,
+          "quote": "aerospace, energy, semiconductors, electronic displays, and chemicals",
+          "confidence": 0.975,
+          "self": "schrodinger",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "NVIDIA 10-K FY2026",
@@ -10719,9 +11161,10 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 6,
+        "selfSourced": 5,
         "byTier": {
+          "1": 5,
           "2": 1
         }
       }
@@ -10954,11 +11397,11 @@
         "renormalized": true
       },
       "gravity": {
-        "reach": 1,
+        "reach": 2,
         "layers": 1,
-        "edgeTypes": 1,
+        "edgeTypes": 2,
         "cycles": 0,
-        "score": 4,
+        "score": 6,
         "signals": {}
       },
       "domain": null,
@@ -12467,38 +12910,39 @@
         {
           "layer": "L10",
           "primary": true,
-          "criticality": 60
+          "criticality": 70
         }
       ],
       "primaryLayer": "L10",
-      "criticality": 60,
+      "criticality": 70,
       "criticalityFactors": {
-        "irreplaceability": 65,
-        "lockInDepth": 60,
-        "timeToReplace": 55,
-        "concentration": null
+        "irreplaceability": 66,
+        "lockInDepth": 78,
+        "timeToReplace": 62,
+        "concentration": 72
       },
       "criticalityWhy": {
-        "irreplaceability": "Открытые оптимизаторы догоняют, но отстают",
-        "lockInDepth": "Задевает софт и инференс",
-        "timeToReplace": "Догнать по оптимизации — два года",
-        "concentration": null
+        "irreplaceability": "Компилятор вывода, встроенный в чужие фреймворки, но заменимый другими средствами того же назначения",
+        "lockInDepth": "Оптимизация идёт подбором ядер под конкретный ускоритель, а не переносимым кодом",
+        "timeToReplace": "Модели заходят через разборщик ONNX, поэтому выход из компилятора не требует переписывания модели",
+        "concentration": "Ветка для языковых моделей заявляет до 8X прироста производительности на фирменных ускорителях"
       },
       "criticalityBasis": {
-        "factorsUsed": 3,
+        "factorsUsed": 4,
         "factors": [
           "irreplaceability",
           "lock_in_depth",
-          "time_to_replace"
+          "time_to_replace",
+          "concentration"
         ],
-        "renormalized": true
+        "renormalized": false
       },
       "gravity": {
-        "reach": 2,
+        "reach": 5,
         "layers": 4,
-        "edgeTypes": 2,
-        "cycles": 3,
-        "score": 17,
+        "edgeTypes": 3,
+        "cycles": 5,
+        "score": 27,
         "signals": {}
       },
       "domain": null,
@@ -12528,6 +12972,71 @@
       "stale": false,
       "sources": [
         {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "NVIDIA TensorRT",
+          "url": "https://developer.nvidia.com/tensorrt",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "NVIDIA® TensorRT™ is an ecosystem of tools for developers to achieve high-performance deep learning inference.",
+          "confidence": 0.975,
+          "self": "tensorrt",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "NVIDIA TensorRT",
+          "url": "https://developer.nvidia.com/tensorrt",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "TensorRT optimizes inference using quantization, layer and tensor fusion, and kernel tuning techniques.",
+          "confidence": 0.975,
+          "self": "tensorrt",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "NVIDIA TensorRT",
+          "url": "https://developer.nvidia.com/tensorrt",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "TensorRT integrates directly into PyTorch and Hugging Face to achieve 6X faster inference with",
+          "confidence": 0.975,
+          "self": "tensorrt",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "NVIDIA TensorRT",
+          "url": "https://developer.nvidia.com/tensorrt",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "TensorRT provides an ONNX parser to import ONNX models from popular frameworks into TensorRT.",
+          "confidence": 0.975,
+          "self": "tensorrt",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "NVIDIA TensorRT",
+          "url": "https://developer.nvidia.com/tensorrt",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "TensorRT-LLM accelerates the latest large language models for generative AI, delivering up to 8X",
+          "confidence": 0.975,
+          "self": "tensorrt",
+          "counter": false
+        },
+        {
           "tier": 2,
           "type": "sec_filing",
           "title": "NVIDIA 10-K FY2026",
@@ -12542,9 +13051,10 @@
         }
       ],
       "sourcing": {
-        "total": 1,
-        "selfSourced": 0,
+        "total": 6,
+        "selfSourced": 5,
         "byTier": {
+          "1": 5,
           "2": 1
         }
       }
@@ -13344,8 +13854,8 @@
       "gravity": {
         "reach": 7,
         "layers": 5,
-        "edgeTypes": 5,
-        "cycles": 19,
+        "edgeTypes": 6,
+        "cycles": 21,
         "score": 34,
         "signals": {}
       },
@@ -19012,6 +19522,66 @@
       "counterEvidence": []
     },
     {
+      "id": "fabrinet__amazon__integrates",
+      "source": "fabrinet",
+      "target": "amazon",
+      "type": "integrates",
+      "spine": "physical",
+      "direction": "downstream",
+      "strength": 55,
+      "lockInDepth": 45,
+      "substitutability": 50,
+      "isReversible": true,
+      "status": "confirmed",
+      "confidence": 0.99,
+      "sourceTier": 1,
+      "confirmedSources": 2,
+      "risk": {
+        "level": "medium",
+        "type": "market",
+        "timeline": "1-2y",
+        "mitigation": "Концентрация разложена на четверых, а не на одного"
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Названа Fabrinet среди четырёх заказчиков, каждый из которых дал свыше десятой доли её выручки за год.",
+      "sidedness": "single",
+      "claimedBy": [
+        "fabrinet"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Fabrinet 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+          "published": "2026-08-18",
+          "fetched": null,
+          "alive": true,
+          "quote": "During fiscal year 2026, Cisco Systems, Inc., NVIDIA Corporation, Nokia Corporation and Amazon.com, Inc.",
+          "confidence": 0.975,
+          "self": "fabrinet",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Fabrinet 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+          "published": "2026-08-18",
+          "fetched": null,
+          "alive": true,
+          "quote": "contributed 19.9%, 16.3%, 10.7% and 10.5%, respectively, of our revenues.",
+          "confidence": 0.975,
+          "self": "fabrinet",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
       "id": "fabrinet__cisco__integrates",
       "source": "fabrinet",
       "target": "cisco",
@@ -19025,7 +19595,7 @@
       "status": "confirmed",
       "confidence": 0.99,
       "sourceTier": 1,
-      "confirmedSources": 2,
+      "confirmedSources": 3,
       "risk": {
         "level": "low",
         "type": "market",
@@ -19051,6 +19621,19 @@
           "fetched": "2026-08-29",
           "alive": true,
           "quote": "NVIDIA Corporation and Cisco Systems, Inc. contributed 27.6% and 18.2%, respectively, of our revenues.",
+          "confidence": 0.975,
+          "self": "fabrinet",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Fabrinet 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+          "published": "2026-08-18",
+          "fetched": null,
+          "alive": true,
+          "quote": "During fiscal year 2026, Cisco Systems, Inc., NVIDIA Corporation, Nokia Corporation and Amazon.com, Inc.",
           "confidence": 0.975,
           "self": "fabrinet",
           "counter": false
@@ -19146,7 +19729,7 @@
       "status": "bilateral",
       "confidence": 0.99,
       "sourceTier": 1,
-      "confirmedSources": 2,
+      "confirmedSources": 3,
       "risk": {
         "level": "low",
         "type": "market",
@@ -19173,6 +19756,19 @@
           "fetched": "2026-08-29",
           "alive": true,
           "quote": "NVIDIA Corporation and Cisco Systems, Inc. contributed 27.6% and 18.2%, respectively, of our revenues.",
+          "confidence": 0.975,
+          "self": "fabrinet",
+          "counter": false
+        },
+        {
+          "tier": 1,
+          "type": "sec_filing",
+          "title": "Fabrinet 10-K FY2026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+          "published": "2026-08-18",
+          "fetched": null,
+          "alive": true,
+          "quote": "During fiscal year 2026, Cisco Systems, Inc., NVIDIA Corporation, Nokia Corporation and Amazon.com, Inc.",
           "confidence": 0.975,
           "self": "fabrinet",
           "counter": false
@@ -22640,6 +23236,100 @@
       "counterEvidence": []
     },
     {
+      "id": "nim__sglang__integrates",
+      "source": "nim",
+      "target": "sglang",
+      "type": "integrates",
+      "spine": "physical",
+      "direction": "upstream",
+      "strength": 60,
+      "lockInDepth": 35,
+      "substitutability": 60,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "low",
+        "type": "technical",
+        "timeline": "1-2y",
+        "mitigation": "Названо несколько серверов вывода сразу, поэтому ни один не является единственным"
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Назван среди серверов вывода, на которых построены контейнеры.",
+      "sidedness": "single",
+      "claimedBy": [
+        "nim"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "NVIDIA NIM",
+          "url": "https://developer.nvidia.com/nim",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "including TensorRT, TensorRT-LLM, vLLM, SGLang, and more, NIM is engineered to facilitate seamless AI inferencing",
+          "confidence": 0.975,
+          "self": "nim",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "nim__tensorrt__integrates",
+      "source": "nim",
+      "target": "tensorrt",
+      "type": "integrates",
+      "spine": "physical",
+      "direction": "upstream",
+      "strength": 75,
+      "lockInDepth": 60,
+      "substitutability": 40,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "low",
+        "type": "technical",
+        "timeline": "2-5y",
+        "mitigation": "Рядом с ним названы открытые серверы вывода того же назначения"
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Назван первым среди серверов вывода, на которых построены контейнеры.",
+      "sidedness": "single",
+      "claimedBy": [
+        "nim"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "NVIDIA NIM",
+          "url": "https://developer.nvidia.com/nim",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "including TensorRT, TensorRT-LLM, vLLM, SGLang, and more, NIM is engineered to facilitate seamless AI inferencing",
+          "confidence": 0.975,
+          "self": "nim",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
       "id": "nim__vllm__competes_with",
       "source": "nim",
       "target": "vllm",
@@ -22694,6 +23384,53 @@
           "quote": "Support for NVIDIA GPUs, AMD GPUs, Intel GPUs, and x86/ARM/PowerPC CPUs.",
           "confidence": 0.925,
           "self": "vllm",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "nim__vllm__integrates",
+      "source": "nim",
+      "target": "vllm",
+      "type": "integrates",
+      "spine": "physical",
+      "direction": "upstream",
+      "strength": 70,
+      "lockInDepth": 40,
+      "substitutability": 55,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "low",
+        "type": "technical",
+        "timeline": "1-2y",
+        "mitigation": "Названо несколько серверов вывода сразу, поэтому ни один не является единственным"
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Серверы вывода внутри контейнеров построены на сторонних проектах, и vLLM назван среди них.",
+      "sidedness": "single",
+      "claimedBy": [
+        "nim"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "NVIDIA NIM",
+          "url": "https://developer.nvidia.com/nim",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "including TensorRT, TensorRT-LLM, vLLM, SGLang, and more, NIM is engineered to facilitate seamless AI inferencing",
+          "confidence": 0.975,
+          "self": "nim",
           "counter": false
         }
       ],
@@ -26558,9 +27295,9 @@
       "substitutability": 45,
       "isReversible": true,
       "status": "confirmed",
-      "confidence": 0.955,
-      "sourceTier": 2,
-      "confirmedSources": 2,
+      "confidence": 0.99,
+      "sourceTier": 1,
+      "confirmedSources": 3,
       "risk": {
         "level": "low",
         "type": "technical",
@@ -26573,8 +27310,23 @@
       "lastConfirmed": "2026-08",
       "note": "Оркестратор запускается поверх общего стандарта контейнеров.",
       "sidedness": "single",
-      "claimedBy": [],
+      "claimedBy": [
+        "ray"
+      ],
       "evidence": [
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "Ray documentation",
+          "url": "https://docs.ray.io/en/latest/index.html",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "Deploy a Ray cluster on AWS, GCP, Azure, or Kubernetes to seamlessly scale workloads",
+          "confidence": 0.975,
+          "self": "ray",
+          "counter": false
+        },
         {
           "tier": 2,
           "type": "sec_filing",
@@ -28590,6 +29342,53 @@
       "counterEvidence": []
     },
     {
+      "id": "tensorrt__huggingface__integrates",
+      "source": "tensorrt",
+      "target": "huggingface",
+      "type": "integrates",
+      "spine": "physical",
+      "direction": "bidirectional",
+      "strength": 65,
+      "lockInDepth": 50,
+      "substitutability": 55,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "low",
+        "type": "technical",
+        "timeline": "1-2y",
+        "mitigation": "Модели заходят и через разборщик ONNX, а не только через прямую интеграцию"
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Встраивается напрямую наравне с PyTorch, давая 6X ускорение вывода одной строкой.",
+      "sidedness": "single",
+      "claimedBy": [
+        "tensorrt"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "NVIDIA TensorRT",
+          "url": "https://developer.nvidia.com/tensorrt",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "TensorRT integrates directly into PyTorch and Hugging Face to achieve 6X faster inference with",
+          "confidence": 0.975,
+          "self": "tensorrt",
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
       "id": "tensorrt__nvidia__locks_in_platforms",
       "source": "tensorrt",
       "target": "nvidia",
@@ -28644,6 +29443,53 @@
           "quote": "If you want to compile with CUDA support, [select a supported version",
           "confidence": 0.925,
           "self": null,
+          "counter": false
+        }
+      ],
+      "counterEvidence": []
+    },
+    {
+      "id": "tensorrt__pytorch__integrates",
+      "source": "tensorrt",
+      "target": "pytorch",
+      "type": "integrates",
+      "spine": "physical",
+      "direction": "bidirectional",
+      "strength": 70,
+      "lockInDepth": 55,
+      "substitutability": 50,
+      "isReversible": true,
+      "status": "high_confidence",
+      "confidence": 0.975,
+      "sourceTier": 1,
+      "confirmedSources": 1,
+      "risk": {
+        "level": "low",
+        "type": "technical",
+        "timeline": "1-2y",
+        "mitigation": "Модели заходят и через разборщик ONNX, а не только через прямую интеграцию"
+      },
+      "techNode": null,
+      "formed": null,
+      "strengthened": null,
+      "lastConfirmed": "2026-08",
+      "note": "Встраивается напрямую и даёт 6X ускорение вывода одной строкой кода.",
+      "sidedness": "single",
+      "claimedBy": [
+        "tensorrt"
+      ],
+      "evidence": [
+        {
+          "tier": 1,
+          "type": "product_doc",
+          "title": "NVIDIA TensorRT",
+          "url": "https://developer.nvidia.com/tensorrt",
+          "published": "2026-08-29",
+          "fetched": null,
+          "alive": true,
+          "quote": "TensorRT integrates directly into PyTorch and Hugging Face to achieve 6X faster inference with",
+          "confidence": 0.975,
+          "self": "tensorrt",
           "counter": false
         }
       ],
@@ -33176,6 +34022,26 @@
       "id": "c165",
       "type": "lockin",
       "path": [
+        "nvidia",
+        "openai",
+        "vllm",
+        "tensorrt",
+        "pytorch",
+        "nvidia"
+      ],
+      "edges": [
+        "nvidia__openai__invests_in",
+        "openai__vllm__enables",
+        "vllm__tensorrt__competes_with",
+        "tensorrt__pytorch__integrates",
+        "pytorch__nvidia__validates_demand"
+      ],
+      "note": "Контур замка: NVIDIA —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —конкурирует с→ TensorRT; TensorRT —собирает→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA"
+    },
+    {
+      "id": "c166",
+      "type": "lockin",
+      "path": [
         "arm",
         "kubernetes",
         "google",
@@ -33193,7 +34059,7 @@
       "note": "Контур замка: Arm —стандартизуется на→ Kubernetes; Kubernetes —развивается вслед за→ Google; Google —покупает у→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —стандартизуется на→ Arm"
     },
     {
-      "id": "c166",
+      "id": "c167",
       "type": "financing",
       "path": [
         "arm",
@@ -33213,7 +34079,7 @@
       "note": "Контур финансирования: Arm —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —покупает у→ CoreWeave; CoreWeave —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
     },
     {
-      "id": "c167",
+      "id": "c168",
       "type": "financing",
       "path": [
         "arm",
@@ -33233,7 +34099,7 @@
       "note": "Контур финансирования: Arm —стратегический партнёр→ SoftBank; SoftBank —стратегический партнёр→ Oracle; Oracle —вкладывается в→ OpenAI; OpenAI —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
     },
     {
-      "id": "c168",
+      "id": "c169",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -33253,7 +34119,7 @@
       "note": "Контур замка: Broadcom —поставляет→ HPE; HPE —стратегический партнёр→ NVIDIA; NVIDIA —стандартизуется на→ Kubernetes; Kubernetes —развивается вслед за→ Google; Google —покупает у→ Broadcom"
     },
     {
-      "id": "c169",
+      "id": "c170",
       "type": "financing",
       "path": [
         "broadcom",
@@ -33273,7 +34139,7 @@
       "note": "Контур финансирования: Broadcom —подтачивает→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron; Micron —конкурирует с→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Broadcom"
     },
     {
-      "id": "c170",
+      "id": "c171",
       "type": "lockin",
       "path": [
         "broadcom",
@@ -33293,7 +34159,7 @@
       "note": "Контур замка: Broadcom —покупает у→ TSMC; TSMC —производит для→ Credo Technology; Credo Technology —заточен под→ NVIDIA; NVIDIA —поставляет→ Dell; Dell —развивается вслед за→ Broadcom"
     },
     {
-      "id": "c171",
+      "id": "c172",
       "type": "lockin",
       "path": [
         "china",
@@ -33313,7 +34179,7 @@
       "note": "Контур замка: Китай —шлюзует доступ к→ DeepSeek; DeepSeek —может вытеснить→ CUDA; CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —ограничен режимом→ Китай"
     },
     {
-      "id": "c172",
+      "id": "c173",
       "type": "lockin",
       "path": [
         "coreweave",
@@ -33333,7 +34199,7 @@
       "note": "Контур замка: CoreWeave —покупает у→ NVIDIA; NVIDIA —страхуется через→ Hugging Face; Hugging Face —стандартизуется на→ PyTorch; PyTorch —получает деньги от→ Meta; Meta —покупает у→ CoreWeave"
     },
     {
-      "id": "c173",
+      "id": "c174",
       "type": "lockin",
       "path": [
         "cuda",
@@ -33353,7 +34219,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —развивается вслед за→ CUDA"
     },
     {
-      "id": "c174",
+      "id": "c175",
       "type": "lockin",
       "path": [
         "cuda",
@@ -33373,7 +34239,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft; Microsoft —запирает платформы→ CUDA"
     },
     {
-      "id": "c175",
+      "id": "c176",
       "type": "lockin",
       "path": [
         "cuda",
@@ -33393,7 +34259,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —развивается вслед за→ CUDA"
     },
     {
-      "id": "c176",
+      "id": "c177",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -33413,7 +34279,7 @@
       "note": "Контур замка: Hugging Face —стандартизуется на→ PyTorch; PyTorch —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c177",
+      "id": "c178",
       "type": "financing",
       "path": [
         "amazon",
@@ -33433,7 +34299,7 @@
       "note": "Контур финансирования: Amazon —вкладывается в→ Anthropic; Anthropic —стратегический партнёр→ Broadcom; Broadcom —поставляет→ HPE; HPE —стратегический партнёр→ NVIDIA; NVIDIA —конкурирует с→ Amazon"
     },
     {
-      "id": "c178",
+      "id": "c179",
       "type": "lockin",
       "path": [
         "arista",
@@ -33453,7 +34319,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c179",
+      "id": "c180",
       "type": "lockin",
       "path": [
         "arista",
@@ -33473,7 +34339,7 @@
       "note": "Контур замка: Arista Networks —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA; NVIDIA —конкурирует с→ Arista Networks"
     },
     {
-      "id": "c180",
+      "id": "c181",
       "type": "lockin",
       "path": [
         "cuda",
@@ -33493,7 +34359,7 @@
       "note": "Контур замка: CUDA —запирает платформы→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face; Hugging Face —развивается вслед за→ CUDA"
     },
     {
-      "id": "c181",
+      "id": "c182",
       "type": "lockin",
       "path": [
         "arm",
@@ -33513,7 +34379,7 @@
       "note": "Контур замка: Arm —поставляет→ NVIDIA; NVIDIA —поставляет→ Dell; Dell —развивается вслед за→ Broadcom; Broadcom —покупает у→ TSMC; TSMC —стандартизуется на→ Arm"
     },
     {
-      "id": "c182",
+      "id": "c183",
       "type": "financing",
       "path": [
         "astera-labs",
@@ -33533,7 +34399,7 @@
       "note": "Контур финансирования: Astera Labs —заточен под→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron; Micron —конкурирует с→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Astera Labs"
     },
     {
-      "id": "c183",
+      "id": "c184",
       "type": "lockin",
       "path": [
         "cuda",
@@ -33553,7 +34419,7 @@
       "note": "Контур замка: CUDA —запирает разработчиков→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —делает возможным→ CUDA"
     },
     {
-      "id": "c184",
+      "id": "c185",
       "type": "lockin",
       "path": [
         "arm",
@@ -33573,7 +34439,7 @@
       "note": "Контур замка: Arm —стандартизуется на→ Kubernetes; Kubernetes —развивается вслед за→ Google; Google —покупает у→ Broadcom; Broadcom —подтачивает→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
     },
     {
-      "id": "c185",
+      "id": "c186",
       "type": "financing",
       "path": [
         "broadcom",
@@ -33593,7 +34459,7 @@
       "note": "Контур финансирования: Broadcom —поставляет→ HPE; HPE —стратегический партнёр→ NVIDIA; NVIDIA —держит как запасной вариант→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Broadcom"
     },
     {
-      "id": "c186",
+      "id": "c187",
       "type": "financing",
       "path": [
         "coreweave",
@@ -33613,7 +34479,27 @@
       "note": "Контур финансирования: CoreWeave —покупает у→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —стратегический партнёр→ Oracle; Oracle —вкладывается в→ OpenAI; OpenAI —покупает у→ CoreWeave"
     },
     {
-      "id": "c187",
+      "id": "c188",
+      "type": "lockin",
+      "path": [
+        "huggingface",
+        "nvidia",
+        "openai",
+        "vllm",
+        "tensorrt",
+        "huggingface"
+      ],
+      "edges": [
+        "huggingface__nvidia__validates_demand",
+        "nvidia__openai__invests_in",
+        "openai__vllm__enables",
+        "vllm__tensorrt__competes_with",
+        "tensorrt__huggingface__integrates"
+      ],
+      "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —конкурирует с→ TensorRT; TensorRT —собирает→ Hugging Face"
+    },
+    {
+      "id": "c189",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -33633,7 +34519,7 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —стандартизуется на→ Hugging Face"
     },
     {
-      "id": "c188",
+      "id": "c190",
       "type": "financing",
       "path": [
         "credo",
@@ -33653,7 +34539,7 @@
       "note": "Контур финансирования: Credo Technology —заточен под→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron; Micron —конкурирует с→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ Credo Technology"
     },
     {
-      "id": "c189",
+      "id": "c191",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -33673,7 +34559,7 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft; Microsoft —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c190",
+      "id": "c192",
       "type": "lockin",
       "path": [
         "microsoft",
@@ -33693,7 +34579,7 @@
       "note": "Контур замка: Microsoft —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ Vertiv; Vertiv —поставляет→ Microsoft"
     },
     {
-      "id": "c191",
+      "id": "c193",
       "type": "financing",
       "path": [
         "micron",
@@ -33713,7 +34599,7 @@
       "note": "Контур финансирования: Micron —конкурирует с→ SanDisk; SanDisk —конкурирует с→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —производит для→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron"
     },
     {
-      "id": "c192",
+      "id": "c194",
       "type": "lockin",
       "path": [
         "arm",
@@ -33733,7 +34619,7 @@
       "note": "Контур замка: Arm —поставляет→ NVIDIA; NVIDIA —держит как запасной вариант→ Micron; Micron —конкурирует с→ Samsung; Samsung —конкурирует с→ TSMC; TSMC —стандартизуется на→ Arm"
     },
     {
-      "id": "c193",
+      "id": "c195",
       "type": "lockin",
       "path": [
         "arm",
@@ -33753,7 +34639,7 @@
       "note": "Контур замка: Arm —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face; Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
     },
     {
-      "id": "c194",
+      "id": "c196",
       "type": "lockin",
       "path": [
         "arm",
@@ -33773,7 +34659,7 @@
       "note": "Контур замка: Arm —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ Arm"
     },
     {
-      "id": "c195",
+      "id": "c197",
       "type": "lockin",
       "path": [
         "nvidia",
@@ -33793,7 +34679,7 @@
       "note": "Контур замка: NVIDIA —стратегический партнёр→ SoftBank; SoftBank —вкладывается в→ OpenAI; OpenAI —делает возможным→ vLLM; vLLM —конкурирует с→ TensorRT; TensorRT —запирает платформы→ NVIDIA"
     },
     {
-      "id": "c196",
+      "id": "c198",
       "type": "lockin",
       "path": [
         "huggingface",
@@ -33813,7 +34699,7 @@
       "note": "Контур замка: Hugging Face —доказывает спрос на→ NVIDIA; NVIDIA —стратегический партнёр→ SoftBank; SoftBank —стратегический партнёр→ Oracle; Oracle —вкладывается в→ OpenAI; OpenAI —конкурирует с→ Hugging Face"
     },
     {
-      "id": "c197",
+      "id": "c199",
       "type": "lockin",
       "path": [
         "nvidia",
@@ -33835,33 +34721,7 @@
   ],
   "changelog": {
     "month": "2026-08",
-    "added": [
-      {
-        "kind": "edge",
-        "id": "amd__hpe__supplies",
-        "why": "Названа HPE поставщиком процессоров x86 наравне с Intel."
-      },
-      {
-        "kind": "edge",
-        "id": "broadcom__hpe__supplies",
-        "why": "Названа HPE поставщиком стандартных микросхем и единственным источником для рынка целиком."
-      },
-      {
-        "kind": "edge",
-        "id": "ge-vernova__crusoe__supplies",
-        "why": "Газовая турбина LM2500XPRESS питает дата-центр Crusoe как быстрый резервный источник."
-      },
-      {
-        "kind": "edge",
-        "id": "intel__hpe__supplies",
-        "why": "Названа HPE поставщиком процессоров x86 и одновременно единственным источником для рынка целиком."
-      },
-      {
-        "kind": "edge",
-        "id": "sandisk__kioxia__strategic_partner",
-        "why": "Совместное предприятие Flash Ventures: пока оно работает, обе стороны не вправе выпускать флеш-память с третьими лицами."
-      }
-    ],
+    "added": [],
     "removed": [],
     "changed": []
   }

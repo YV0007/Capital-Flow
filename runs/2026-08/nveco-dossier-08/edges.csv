@@ -1,0 +1,7 @@
+source,target,type,direction,strength,lock_in_depth,substitutability,is_reversible,risk_level,risk_type,risk_timeline,risk_mitigation,tech_node,formed,strengthened,note
+fabrinet,amazon,integrates,downstream,55,45,50,True,medium,market,1-2y,"Концентрация разложена на четверых, а не на одного",,,,"Названа Fabrinet среди четырёх заказчиков, каждый из которых дал свыше десятой доли её выручки за год."
+nim,vllm,integrates,upstream,70,40,55,True,low,technical,1-2y,"Названо несколько серверов вывода сразу, поэтому ни один не является единственным",,,,"Серверы вывода внутри контейнеров построены на сторонних проектах, и vLLM назван среди них."
+nim,sglang,integrates,upstream,60,35,60,True,low,technical,1-2y,"Названо несколько серверов вывода сразу, поэтому ни один не является единственным",,,,"Назван среди серверов вывода, на которых построены контейнеры."
+nim,tensorrt,integrates,upstream,75,60,40,True,low,technical,2-5y,Рядом с ним названы открытые серверы вывода того же назначения,,,,"Назван первым среди серверов вывода, на которых построены контейнеры."
+tensorrt,pytorch,integrates,bidirectional,70,55,50,True,low,technical,1-2y,"Модели заходят и через разборщик ONNX, а не только через прямую интеграцию",,,,Встраивается напрямую и даёт 6X ускорение вывода одной строкой кода.
+tensorrt,huggingface,integrates,bidirectional,65,50,55,True,low,technical,1-2y,"Модели заходят и через разборщик ONNX, а не только через прямую интеграцию",,,,"Встраивается напрямую наравне с PyTorch, давая 6X ускорение вывода одной строкой."

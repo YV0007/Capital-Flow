@@ -1,0 +1,1223 @@
+{
+  "month": "2026-08",
+  "batch": 8,
+  "tier": "core",
+  "size": 8,
+  "как читать": "1) ЧТО УЖЕ ЗНАЕМ — sources_now показывает, ЧЬИМ словом стоит профиль: self=null значит, что о сущности говорит кто-то другой. Такой профиль исследуется с нуля, а не дополняется. 2) ЧТО СВЕРЯТЬ — to_reconcile: связи, которые второй конец не подтверждал. Цитата из документов ЭТОГО узла поднимает их до bilateral, и это самая дешёвая работа пакета. 3) ЧЕГО НЕ ХВАТАЕТ — membership.fails: какие проверки узел сегодня не проходит. 4) ОТКАЗЫ — rejected_last_time: движок отверг эти строки с причиной, не присылайте их такими же. Тир источника, integration, core и sidedness вы НЕ пишете.",
+  "выход": "dossier.json рядом с этим файлом; формат — agents/eco-dossier.md",
+  "отклонено_и_на_карту_не_попало": [],
+  "entities": [
+    {
+      "id": "amkor",
+      "name": "Amkor Technology",
+      "type": "company",
+      "role": "producer",
+      "layers": [
+        "L3"
+      ],
+      "primary_layer": "L3",
+      "domains": [
+        "amkor.com"
+      ],
+      "cik": "0001047127",
+      "own_publisher": true,
+      "integration": 7,
+      "rank": 47,
+      "rotation_tier": "tail",
+      "core": false,
+      "rota_rank": 65,
+      "crit_rank": 67,
+      "rota_basis": "integration",
+      "profile_now": {
+        "one_liner": "Независимый подрядчик по упаковке и тестированию после ASE, с площадками в США.",
+        "why_irreplaceable": "Второй источник упаковки и единственный крупный американский. Один заказчик даёт почти треть его выручки, что делает зависимым скорее его.",
+        "what_breaks_it": "Потеря крупнейшего заказчика.",
+        "phase": "mature",
+        "ticker": "NASDAQ: AMKR",
+        "geo": "US",
+        "revenue_usd_b": 6.7
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 50,
+          "why": "Второй из двух-трёх подрядчиков"
+        },
+        "lock_in_depth": {
+          "value": 45,
+          "why": "Задевает упаковку"
+        },
+        "time_to_replace": {
+          "value": 55,
+          "why": "Нарастить мощности — год-два"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+          "quote": "including TSMC, Advanced Semiconductor Engineering, Inc., Foxconn Technology Group, Amkor Technology, Inc. and",
+          "published": "2025-12-18",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "4"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "amkor__astera-labs__packages",
+          "source": "amkor",
+          "target": "astera-labs",
+          "type": "packages",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "astera-labs",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "astera-labs"
+          ],
+          "note": "Второй подрядчик упаковки микросхем связности.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+              "quote": "We use Advanced Semiconductor Engineering and Amkor Technologies to assemble, package, and test",
+              "self": "astera-labs",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+              "quote": "We use a fabless manufacturing model and partner with TSMC to fabricate all",
+              "self": "astera-labs",
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "amkor__broadcom__packages",
+          "source": "amkor",
+          "target": "broadcom",
+          "type": "packages",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "broadcom",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "broadcom"
+          ],
+          "note": "Amkor назван в отчётности Broadcom среди подрядчиков сборки и тестирования.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+              "quote": "including TSMC, Advanced Semiconductor Engineering, Inc., Foxconn Technology Group, Amkor Technology, Inc. and",
+              "self": "broadcom",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+              "quote": "The majority of our front-end wafer manufacturing operations is outsourced to external foundries,",
+              "self": "broadcom",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+              "quote": "including TSMC, Advanced Semiconductor Engineering, Inc., Foxconn Technology Group, Amkor Technology, Inc.",
+              "self": "broadcom",
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "amkor__credo__packages",
+          "source": "amkor",
+          "target": "credo",
+          "type": "packages",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "credo",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "credo"
+          ],
+          "note": "Упаковка микросхем связности стоек.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm",
+              "quote": "including Amkor Technology Inc. (Amkor) and Advanced Semiconductor Engineering, Inc. (ASE) for packaging",
+              "self": "credo",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm",
+              "quote": "we exclusively used Taiwan Semiconductor Manufacturing Company Limited (TSMC) for semiconductor wafer production.",
+              "self": "credo",
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "amkor__nvidia__packages",
+          "source": "amkor",
+          "target": "nvidia",
+          "type": "packages",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "nvidia",
+          "status": "bilateral",
+          "sidedness": "bilateral",
+          "claimed_by": [
+            "amkor",
+            "nvidia"
+          ],
+          "note": "Второй независимый подрядчик упаковки, с площадками в США.",
+          "evidence": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000014/amkr-20251231.htm",
+              "quote": "one customer accounted for 29.8 %, 30.8 % and 27.7 % of total net",
+              "self": "amkor",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+              "quote": "including TSMC, Advanced Semiconductor Engineering, Inc., Foxconn Technology Group, Amkor Technology, Inc. and",
+              "self": null,
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "We utilize CoWoS technology for semiconductor packaging.",
+              "self": "nvidia",
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "amkor__astera-labs__packages",
+          "counterparty": "astera-labs",
+          "type": "packages",
+          "нужна цитата": "документ amkor, где названа связь с astera-labs"
+        },
+        {
+          "edge": "amkor__broadcom__packages",
+          "counterparty": "broadcom",
+          "type": "packages",
+          "нужна цитата": "документ amkor, где названа связь с broadcom"
+        },
+        {
+          "edge": "amkor__credo__packages",
+          "counterparty": "credo",
+          "type": "packages",
+          "нужна цитата": "документ amkor, где названа связь с credo"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "fabrinet",
+      "name": "Fabrinet",
+      "type": "company",
+      "role": "producer",
+      "layers": [
+        "L8"
+      ],
+      "primary_layer": "L8",
+      "domains": [
+        "fabrinet.com"
+      ],
+      "cik": "0001408710",
+      "own_publisher": true,
+      "integration": 6,
+      "rank": 59,
+      "rotation_tier": "tail",
+      "core": false,
+      "rota_rank": 75,
+      "crit_rank": 95,
+      "rota_basis": "integration",
+      "profile_now": {
+        "one_liner": "Контрактный производитель оптических сборок; на NVIDIA приходится больше четверти его выручки.",
+        "why_irreplaceable": "Собирает оптику и модули по чужим проектам. Зависимость односторонняя: на NVIDIA приходится больше четверти его выручки.",
+        "what_breaks_it": "Перевод сборки к другому подрядчику.",
+        "phase": "mature",
+        "ticker": "NYSE: FN",
+        "geo": "TH",
+        "revenue_usd_b": 3.4
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 40,
+          "why": "Контрактных сборщиков оптики несколько"
+        },
+        "lock_in_depth": {
+          "value": 35,
+          "why": "Задевает только сеть"
+        },
+        "time_to_replace": {
+          "value": 40,
+          "why": "Перевод сборки — до года"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "quote": "We engage with independent subcontractors and contract manufacturers such as Hon Hai",
+          "published": "2026-02-25",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "3"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "fabrinet__cisco__integrates",
+          "source": "fabrinet",
+          "target": "cisco",
+          "type": "integrates",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "cisco",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "fabrinet"
+          ],
+          "note": "Второй крупный заказчик контрактного сборщика оптики — 18,2% его выручки.",
+          "evidence": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871025000039/fn-20250627.htm",
+              "quote": "NVIDIA Corporation and Cisco Systems, Inc. contributed 27.6% and 18.2%, respectively, of our revenues.",
+              "self": "fabrinet",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm",
+              "quote": "Two of our customers accounted for more than 10% of our sales",
+              "self": null,
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "fabrinet__coherent__integrates",
+          "source": "fabrinet",
+          "target": "coherent",
+          "type": "integrates",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "coherent",
+          "status": "bilateral",
+          "sidedness": "bilateral",
+          "claimed_by": [
+            "coherent",
+            "fabrinet"
+          ],
+          "note": "Контрактная сборка оптических модулей для нескольких разработчиков.",
+          "evidence": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871025000039/fn-20250627.htm",
+              "quote": "NVIDIA Corporation and Cisco Systems, Inc. contributed 27.6% and 18.2%, respectively, of our revenues.",
+              "self": "fabrinet",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/820318/000082031826000020/iivi-20260630.htm",
+              "quote": "Coherent is a leading supplier of optical transceivers for AI datacenter and networking",
+              "self": "coherent",
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "fabrinet__nvidia__integrates",
+          "source": "fabrinet",
+          "target": "nvidia",
+          "type": "integrates",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "nvidia",
+          "status": "bilateral",
+          "sidedness": "bilateral",
+          "claimed_by": [
+            "fabrinet",
+            "nvidia"
+          ],
+          "note": "Собирает оптические модули и сборки; зависимость односторонняя — на NVIDIA приходится больше четверти его выручки.",
+          "evidence": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871025000039/fn-20250627.htm",
+              "quote": "NVIDIA Corporation and Cisco Systems, Inc. contributed 27.6% and 18.2%, respectively, of our revenues.",
+              "self": "fabrinet",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "We engage with independent subcontractors and contract manufacturers such as Hon Hai",
+              "self": "nvidia",
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [],
+      "rejected_last_time": []
+    },
+    {
+      "id": "oklo",
+      "name": "Oklo",
+      "type": "company",
+      "role": "producer",
+      "layers": [
+        "L6"
+      ],
+      "primary_layer": "L6",
+      "domains": [
+        "oklo.com"
+      ],
+      "cik": "0001849056",
+      "own_publisher": true,
+      "integration": 6,
+      "rank": 67,
+      "rotation_tier": "tail",
+      "core": false,
+      "rota_rank": 83,
+      "crit_rank": 106,
+      "rota_basis": "integration",
+      "profile_now": {
+        "one_liner": "Разработчик малых атомных реакторов; продаёт будущую энергию по долгим соглашениям.",
+        "why_irreplaceable": "Ни одного построенного реактора и ни одного обязывающего договора на поставку энергии. На карте это ставка, а не поставщик, и рубрика обязана это показать.",
+        "what_breaks_it": "Отказ регулятора в лицензировании конструкции.",
+        "phase": "emerging",
+        "ticker": "NYSE: OKLO",
+        "geo": "US",
+        "revenue_usd_b": 0.0
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 5,
+          "why": "Построенных станций нет вовсе"
+        },
+        "lock_in_depth": {
+          "value": 20,
+          "why": "Задевает только энергию"
+        },
+        "time_to_replace": {
+          "value": 80,
+          "why": "Атомная станция строится больше семи лет"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1674101/000167410126000008/vrt-20251231.htm",
+          "quote": "our collaboration with Oklo reflects exploration of alternative energy solutions",
+          "published": "2026-02-13",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "0"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources",
+          "min_confirmed_edges"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "oklo__equinix__strategic_partner",
+          "source": "oklo",
+          "target": "equinix",
+          "type": "strategic_partner",
+          "direction": "bidirectional",
+          "role": "вниз по стеку",
+          "counterparty": "equinix",
+          "status": "high_confidence",
+          "sidedness": "single",
+          "claimed_by": [
+            "oklo"
+          ],
+          "note": "Необязывающее письмо о намерениях по будущим поставкам энергии. Ниже порога отрисовки.",
+          "evidence": [
+            {
+              "tier": 1,
+              "url": "https://www.sec.gov/Archives/edgar/data/1849056/000162828026018698/oklo-20251231.htm",
+              "quote": "we signed a 12 gigawatt (GW) Master Power Agreement with Switch, Ltd.",
+              "self": "oklo",
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "oklo__vertiv__strategic_partner",
+          "source": "oklo",
+          "target": "vertiv",
+          "type": "strategic_partner",
+          "direction": "bidirectional",
+          "role": "вниз по стеку",
+          "counterparty": "vertiv",
+          "status": "signal",
+          "sidedness": "single",
+          "claimed_by": [
+            "vertiv"
+          ],
+          "note": "Изучение вариантов энергоснабжения площадок. Записано ниже порога отрисовки именно потому, что это ещё не поставка.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1674101/000167410126000008/vrt-20251231.htm",
+              "quote": "our collaboration with Oklo reflects exploration of alternative energy solutions",
+              "self": "vertiv",
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "oklo__vertiv__strategic_partner",
+          "counterparty": "vertiv",
+          "type": "strategic_partner",
+          "нужна цитата": "документ oklo, где названа связь с vertiv"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "schrodinger",
+      "name": "Schrödinger",
+      "type": "company",
+      "role": "operator",
+      "layers": [
+        "L13"
+      ],
+      "primary_layer": "L13",
+      "domains": [
+        "schrodinger.com"
+      ],
+      "cik": "0001490978",
+      "own_publisher": true,
+      "integration": 5,
+      "rank": 89,
+      "rotation_tier": "tail",
+      "core": false,
+      "rota_rank": 98,
+      "crit_rank": 101,
+      "rota_basis": "integration",
+      "profile_now": {
+        "one_liner": "Компания, моделирующая молекулы на вычислительных кластерах для разработки лекарств.",
+        "why_irreplaceable": "Ещё одно отраслевое применение с длинным циклом окупаемости. Массовость таких примеров важнее каждого по отдельности.",
+        "what_breaks_it": "Отсутствие клинических результатов.",
+        "phase": "scaling",
+        "ticker": "NASDAQ: SDGR",
+        "geo": "US",
+        "revenue_usd_b": 0.2
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 35,
+          "why": "Отраслевых применений несколько"
+        },
+        "lock_in_depth": {
+          "value": 30,
+          "why": "Задевает только приложения"
+        },
+        "time_to_replace": {
+          "value": 40,
+          "why": "Заместить — год"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+          "published": "2026-02-25",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "1"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources",
+          "min_confirmed_edges"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "schrodinger__nvidia__proves_use_case",
+          "source": "schrodinger",
+          "target": "nvidia",
+          "type": "proves_use_case",
+          "direction": "downstream",
+          "role": "вниз по стеку",
+          "counterparty": "nvidia",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "nvidia"
+          ],
+          "note": "Моделирование молекул на кластерах ускорителей для разработки лекарств.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+              "self": "nvidia",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1601830/000160183026000039/rxrx-20251231.htm",
+              "quote": "one of the largest supercomputers in biopharma, built in collaboration with NVIDIA.",
+              "self": null,
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "schrodinger__nvidia__proves_use_case",
+          "counterparty": "nvidia",
+          "type": "proves_use_case",
+          "нужна цитата": "документ schrodinger, где названа связь с nvidia"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "nccl",
+      "name": "NCCL",
+      "type": "technology",
+      "role": "platform",
+      "layers": [
+        "L10"
+      ],
+      "primary_layer": "L10",
+      "domains": [
+        "developer.nvidia.com/nccl",
+        "docs.nvidia.com/deeplearning/nccl"
+      ],
+      "cik": null,
+      "own_publisher": true,
+      "integration": 5,
+      "rank": 78,
+      "rotation_tier": "mid",
+      "core": false,
+      "rota_rank": 42,
+      "crit_rank": 28,
+      "rota_basis": "criticality",
+      "profile_now": {
+        "one_liner": "Библиотека обмена данными между ускорителями внутри кластера при обучении.",
+        "why_irreplaceable": "Обучение на тысячах ускорителей упирается в обмен данными. Эта библиотека — стандарт де-факто, и альтернативы под другое железо заметно слабее.",
+        "what_breaks_it": "Зрелая переносимая библиотека коллективных операций.",
+        "phase": "mature",
+        "ticker": null,
+        "geo": "US",
+        "revenue_usd_b": null
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 75,
+          "why": "Переносимых альтернатив с такой зрелостью нет"
+        },
+        "lock_in_depth": {
+          "value": 70,
+          "why": "Задевает софт, системы и обучение"
+        },
+        "time_to_replace": {
+          "value": 65,
+          "why": "Догнать по зрелости — два-три года"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "quote": "Our networking offerings include NVLink interconnects and switches, end-to-end platforms for InfiniBand and",
+          "published": "2026-02-25",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "2"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "nccl__nvidia__locks_in_platforms",
+          "source": "nccl",
+          "target": "nvidia",
+          "type": "locks_in_platforms",
+          "direction": "bidirectional",
+          "role": "вниз по стеку",
+          "counterparty": "nvidia",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "nvidia"
+          ],
+          "note": "Обучение на тысячах ускорителей упирается в обмен данными между ними; эта библиотека — стандарт де-факто.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "Our networking offerings include NVLink interconnects and switches, end-to-end platforms for InfiniBand and",
+              "self": "nvidia",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "the foundational NVIDIA CUDA development platform that runs on all NVIDIA GPUs,",
+              "self": "nvidia",
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "nccl__pytorch__enables",
+          "source": "nccl",
+          "target": "pytorch",
+          "type": "enables",
+          "direction": "downstream",
+          "role": "вниз по стеку",
+          "counterparty": "pytorch",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "pytorch"
+          ],
+          "note": "Распределённое обучение в библиотеке опирается на эту библиотеку обмена данными.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://raw.githubusercontent.com/pytorch/pytorch/main/README.md",
+              "quote": "Tensor computation (like NumPy) with strong GPU acceleration",
+              "self": "pytorch",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://raw.githubusercontent.com/pytorch/pytorch/main/README.md",
+              "quote": "If you want to compile with CUDA support, [select a supported version",
+              "self": "pytorch",
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "nccl__nvidia__locks_in_platforms",
+          "counterparty": "nvidia",
+          "type": "locks_in_platforms",
+          "нужна цитата": "документ nccl, где названа связь с nvidia"
+        },
+        {
+          "edge": "nccl__pytorch__enables",
+          "counterparty": "pytorch",
+          "type": "enables",
+          "нужна цитата": "документ nccl, где названа связь с pytorch"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "nim",
+      "name": "NVIDIA NIM",
+      "type": "technology",
+      "role": "platform",
+      "layers": [
+        "L11"
+      ],
+      "primary_layer": "L11",
+      "domains": [
+        "developer.nvidia.com/nim",
+        "docs.nvidia.com/nim",
+        "build.nvidia.com"
+      ],
+      "cik": null,
+      "own_publisher": true,
+      "integration": 6,
+      "rank": 66,
+      "rotation_tier": "tail",
+      "core": false,
+      "rota_rank": 82,
+      "crit_rank": 81,
+      "rota_basis": "integration",
+      "profile_now": {
+        "one_liner": "Готовые контейнеры NVIDIA для запуска моделей: продают инференс как сервис на своём железе.",
+        "why_irreplaceable": "Способ NVIDIA подняться из железа в слой запуска моделей. Работает только на его ускорителях и потому углубляет привязку.",
+        "what_breaks_it": "Открытые системы запуска моделей делают этот слой ненужным.",
+        "phase": "scaling",
+        "ticker": null,
+        "geo": "US",
+        "revenue_usd_b": null
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 45,
+          "why": "Открытые системы запуска покрывают ту же задачу"
+        },
+        "lock_in_depth": {
+          "value": 50,
+          "why": "Задевает инференс и приложения"
+        },
+        "time_to_replace": {
+          "value": 45,
+          "why": "Заместить открытыми системами запуска — год"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "quote": "the foundational NVIDIA CUDA development platform that runs on all NVIDIA GPUs,",
+          "published": "2026-02-25",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "2"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "nim__nvidia__locks_in_platforms",
+          "source": "nim",
+          "target": "nvidia",
+          "type": "locks_in_platforms",
+          "direction": "bidirectional",
+          "role": "вниз по стеку",
+          "counterparty": "nvidia",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "nvidia"
+          ],
+          "note": "Готовые контейнеры запуска моделей от самого NVIDIA: способ подняться из железа в слой инференса.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "the foundational NVIDIA CUDA development platform that runs on all NVIDIA GPUs,",
+              "self": "nvidia",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+              "self": "nvidia",
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "nim__vllm__competes_with",
+          "source": "nim",
+          "target": "vllm",
+          "type": "competes_with",
+          "direction": "lateral",
+          "role": "вниз по стеку",
+          "counterparty": "vllm",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "vllm"
+          ],
+          "note": "Платный сервер инференса NVIDIA против бесплатного vLLM — на одном и том же железе.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "vLLM is a fast and easy-to-use library for LLM inference and serving.",
+              "self": "vllm",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "Support for NVIDIA GPUs, AMD GPUs, Intel GPUs, and x86/ARM/PowerPC CPUs.",
+              "self": "vllm",
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "nim__nvidia__locks_in_platforms",
+          "counterparty": "nvidia",
+          "type": "locks_in_platforms",
+          "нужна цитата": "документ nim, где названа связь с nvidia"
+        },
+        {
+          "edge": "nim__vllm__competes_with",
+          "counterparty": "vllm",
+          "type": "competes_with",
+          "нужна цитата": "документ nim, где названа связь с vllm"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "tensorrt",
+      "name": "TensorRT",
+      "type": "technology",
+      "role": "platform",
+      "layers": [
+        "L10"
+      ],
+      "primary_layer": "L10",
+      "domains": [
+        "developer.nvidia.com/tensorrt",
+        "docs.nvidia.com/deeplearning/tensorrt"
+      ],
+      "cik": null,
+      "own_publisher": true,
+      "integration": 6,
+      "rank": 70,
+      "rotation_tier": "tail",
+      "core": false,
+      "rota_rank": 66,
+      "crit_rank": 47,
+      "rota_basis": "criticality",
+      "profile_now": {
+        "one_liner": "Оптимизатор моделей под ускорители NVIDIA: ускоряет запуск обученной модели.",
+        "why_irreplaceable": "Собственный инструмент NVIDIA, работает только на его железе. Поднимает стоимость ухода: перенос модели означает потерю этой оптимизации.",
+        "what_breaks_it": "Открытые оптимизаторы догоняют по скорости.",
+        "phase": "mature",
+        "ticker": null,
+        "geo": "US",
+        "revenue_usd_b": null
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 65,
+          "why": "Открытые оптимизаторы догоняют, но отстают"
+        },
+        "lock_in_depth": {
+          "value": 60,
+          "why": "Задевает софт и инференс"
+        },
+        "time_to_replace": {
+          "value": 55,
+          "why": "Догнать по оптимизации — два года"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "quote": "the foundational NVIDIA CUDA development platform that runs on all NVIDIA GPUs,",
+          "published": "2026-02-25",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "2"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "tensorrt__nvidia__locks_in_platforms",
+          "source": "tensorrt",
+          "target": "nvidia",
+          "type": "locks_in_platforms",
+          "direction": "bidirectional",
+          "role": "вниз по стеку",
+          "counterparty": "nvidia",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "nvidia"
+          ],
+          "note": "Оптимизатор запуска моделей работает только на его ускорителях: перенос модели означает потерю ускорения.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "the foundational NVIDIA CUDA development platform that runs on all NVIDIA GPUs,",
+              "self": "nvidia",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://raw.githubusercontent.com/pytorch/pytorch/main/README.md",
+              "quote": "If you want to compile with CUDA support, [select a supported version",
+              "self": null,
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "vllm__tensorrt__competes_with",
+          "source": "vllm",
+          "target": "tensorrt",
+          "type": "competes_with",
+          "direction": "lateral",
+          "role": "вверх по стеку",
+          "counterparty": "vllm",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "vllm"
+          ],
+          "note": "vLLM против TensorRT: открытый запуск моделей против оптимизатора NVIDIA.",
+          "evidence": [
+            {
+              "tier": 1,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "vLLM is a fast and easy-to-use library for LLM inference and serving.",
+              "self": "vllm",
+              "counter": false
+            },
+            {
+              "tier": 1,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "Support for NVIDIA GPUs, AMD GPUs, Intel GPUs, and x86/ARM/PowerPC CPUs.",
+              "self": "vllm",
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "tensorrt__nvidia__locks_in_platforms",
+          "counterparty": "nvidia",
+          "type": "locks_in_platforms",
+          "нужна цитата": "документ tensorrt, где названа связь с nvidia"
+        },
+        {
+          "edge": "vllm__tensorrt__competes_with",
+          "counterparty": "vllm",
+          "type": "competes_with",
+          "нужна цитата": "документ tensorrt, где названа связь с vllm"
+        }
+      ],
+      "rejected_last_time": []
+    },
+    {
+      "id": "ray",
+      "name": "Ray / Anyscale",
+      "type": "technology",
+      "role": "platform",
+      "layers": [
+        "L11"
+      ],
+      "primary_layer": "L11",
+      "domains": [
+        "ray.io",
+        "anyscale.com",
+        "github.com/ray-project/"
+      ],
+      "cik": null,
+      "own_publisher": true,
+      "integration": 6,
+      "rank": 68,
+      "rotation_tier": "tail",
+      "core": false,
+      "rota_rank": 84,
+      "crit_rank": 69,
+      "rota_basis": "integration",
+      "profile_now": {
+        "one_liner": "Оркестрация распределённых вычислений: раскладывает задачу по множеству машин.",
+        "why_irreplaceable": "Общий слой для распределённого обучения и инференса. Заменим оркестраторами общего назначения, но специализация под ИИ даёт преимущество.",
+        "what_breaks_it": "Вытеснение оркестраторами общего назначения.",
+        "phase": "scaling",
+        "ticker": null,
+        "geo": "US",
+        "revenue_usd_b": null
+      },
+      "factors_now": {
+        "irreplaceability": {
+          "value": 50,
+          "why": "Оркестраторов несколько"
+        },
+        "lock_in_depth": {
+          "value": 50,
+          "why": "Задевает инференс и обучение"
+        },
+        "time_to_replace": {
+          "value": 50,
+          "why": "Замена — год"
+        }
+      },
+      "sources_now": [
+        {
+          "tier": 2,
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+          "published": "2026-02-25",
+          "self": null,
+          "alive": true
+        }
+      ],
+      "membership": {
+        "counts": {
+          "sources": "1",
+          "self_sources": "0",
+          "edges": "2"
+        },
+        "fails": [
+          "min_sources",
+          "min_self_sources"
+        ]
+      },
+      "edges_now": [
+        {
+          "id": "ray__kubernetes__standardizes_on",
+          "source": "ray",
+          "target": "kubernetes",
+          "type": "standardizes_on",
+          "direction": "upstream",
+          "role": "вниз по стеку",
+          "counterparty": "kubernetes",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [],
+          "note": "Оркестратор запускается поверх общего стандарта контейнеров.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+              "self": null,
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "vLLM is a fast and easy-to-use library for LLM inference and serving.",
+              "self": null,
+              "counter": false
+            }
+          ]
+        },
+        {
+          "id": "ray__nvidia__optimizes_for",
+          "source": "ray",
+          "target": "nvidia",
+          "type": "optimizes_for",
+          "direction": "downstream",
+          "role": "вниз по стеку",
+          "counterparty": "nvidia",
+          "status": "confirmed",
+          "sidedness": "single",
+          "claimed_by": [
+            "nvidia"
+          ],
+          "note": "Оркестратор распределённых вычислений раскладывает обучение по кластерам ускорителей.",
+          "evidence": [
+            {
+              "tier": 2,
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "quote": "All major cloud service providers, or CSPs, AI model makers, and enterprises use our",
+              "self": "nvidia",
+              "counter": false
+            },
+            {
+              "tier": 2,
+              "url": "https://raw.githubusercontent.com/vllm-project/vllm/main/README.md",
+              "quote": "vLLM is a fast and easy-to-use library for LLM inference and serving.",
+              "self": null,
+              "counter": false
+            }
+          ]
+        }
+      ],
+      "to_reconcile": [
+        {
+          "edge": "ray__kubernetes__standardizes_on",
+          "counterparty": "kubernetes",
+          "type": "standardizes_on",
+          "нужна цитата": "документ ray, где названа связь с kubernetes"
+        },
+        {
+          "edge": "ray__nvidia__optimizes_for",
+          "counterparty": "nvidia",
+          "type": "optimizes_for",
+          "нужна цитата": "документ ray, где названа связь с nvidia"
+        }
+      ],
+      "rejected_last_time": []
+    }
+  ]
+}

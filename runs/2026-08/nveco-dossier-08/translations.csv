@@ -1,0 +1,45 @@
+kind,id,field,lang,text
+entity,amkor,why_irreplaceability,en,Packaging is ordered from several contractors at once; the company does not call itself an exclusive supplier
+entity,amkor,why_lock_in,en,What is sold is not one step but the whole cycle from package design to final test
+entity,amkor,why_time,en,Moving a package to another contractor requires requalifying the whole line
+entity,amkor,why_concentration,en,"The ten largest customers gave 72% of sales, two of them 29.8% and 11.1%"
+entity,fabrinet,why_irreplaceability,en,For the products it makes the company is named the sole outsourced manufacturer
+entity,fabrinet,why_lock_in,en,The customer hands over the whole product build rather than one operation
+entity,fabrinet,why_time,en,Moving optics assembly requires requalifying the process at a new contractor
+entity,fabrinet,why_concentration,en,"Four customers gave 19.9%, 16.3%, 10.7% and 10.5% of revenues in a year"
+edge,fabrinet__amazon__integrates,risk_mitigation,en,Concentration is spread over four customers rather than one
+edge,fabrinet__amazon__integrates,note,en,"Named by Fabrinet among four customers, each of which gave over a tenth of its revenues in the year."
+entity,oklo,why_irreplaceability,en,The company itself calls its market emerging with no commercial project operating
+entity,oklo,why_lock_in,en,"What is sold is contracted electricity, not equipment that cannot be removed"
+entity,oklo,why_time,en,Replacing a power supplier is easier than building a fission plant
+entity,oklo,why_concentration,en,No commercial project operating — the node holds no share of its function yet
+entity,schrodinger,why_irreplaceability,en,"All twenty largest pharmaceutical companies buy molecule discovery software, but alternatives exist"
+entity,schrodinger,why_lock_in,en,The software licence is renewable: non-renewal is named a risk in its own filing
+entity,schrodinger,why_time,en,Changing computational platform happens inside a licence cycle
+entity,schrodinger,why_concentration,en,All twenty largest pharmaceutical companies were its customers in 2025
+entity,nccl,why_irreplaceability,en,The communication primitives are tuned to one vendor's accelerators and networking at once
+entity,nccl,why_lock_in,en,Topology is detected over NVLink and NVSwitch — interconnects others do not have
+entity,nccl,why_time,en,Compatibility with any parallelization model makes replacement a rewrite of the communication layer
+entity,nccl,why_concentration,en,Automatic topology detection covers NVLink and NVSwitch — one vendor's proprietary interconnects
+entity,nim,why_irreplaceability,en,"Inside run other people's open inference servers, not a proprietary one"
+entity,nim,why_lock_in,en,"Deployment is tied to one vendor's accelerators anywhere, but only that vendor's"
+entity,nim,why_time,en,"The open inference servers inside are available without the wrapper: replacement drops the packaging, not the technology"
+entity,nim,why_concentration,en,"The inference servers inside — TensorRT, vLLM and SGLang — are available separately too"
+edge,nim__vllm__integrates,risk_mitigation,en,"Several inference servers are named at once, so none is the only one"
+edge,nim__vllm__integrates,note,en,"The inference servers inside the containers are built on third-party projects, and vLLM is named among them."
+edge,nim__sglang__integrates,risk_mitigation,en,"Several inference servers are named at once, so none is the only one"
+edge,nim__sglang__integrates,note,en,Named among the inference servers the containers are built on.
+edge,nim__tensorrt__integrates,risk_mitigation,en,Open inference servers of the same purpose are named alongside it
+edge,nim__tensorrt__integrates,note,en,Named first among the inference servers the containers are built on.
+entity,tensorrt,why_irreplaceability,en,"An inference compiler embedded in other frameworks, yet replaceable by other tools of the same purpose"
+entity,tensorrt,why_lock_in,en,Optimization runs by tuning kernels to a specific accelerator rather than portable code
+entity,tensorrt,why_time,en,"Models arrive through an ONNX parser, so leaving the compiler does not require rewriting the model"
+entity,tensorrt,why_concentration,en,The large language model branch claims up to 8X more performance on the vendor's own accelerators
+edge,tensorrt__pytorch__integrates,risk_mitigation,en,"Models also arrive through an ONNX parser, not only through direct integration"
+edge,tensorrt__pytorch__integrates,note,en,Plugs in directly and gives 6X faster inference with a single line of code.
+edge,tensorrt__huggingface__integrates,risk_mitigation,en,"Models also arrive through an ONNX parser, not only through direct integration"
+edge,tensorrt__huggingface__integrates,note,en,"Plugs in directly alongside PyTorch, giving 6X faster inference with a single line."
+entity,ray,why_irreplaceability,en,Distributed Python execution is not his alone; the framework is open and replaceable
+entity,ray,why_lock_in,en,The high-level APIs plug into common frameworks rather than replacing them
+entity,ray,why_time,en,"The cluster deploys on four environments at once, so a move is not tied to any one"
+entity,ray,why_concentration,en,"Deployment runs on AWS, GCP, Azure or Kubernetes — no single environment is required"
