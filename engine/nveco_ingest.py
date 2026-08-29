@@ -29,7 +29,7 @@ config/aliases.yaml и грузит в nveco_*.
 import csv
 import sys
 
-from . import db, nveco, nveco_feedback
+from . import db, nveco, nveco_feedback, nveco_gaps
 from .ingest import is_search_url
 
 ENTITY_COLUMNS = ["id", "name", "aliases", "type", "role", "sector", "primary_layer",
@@ -1007,6 +1007,10 @@ def ingest_month(month: str, scope_id: str = None) -> dict:
     fb_stats = nveco_feedback.record_rejections(con, month, rejected)
     fb_stats["queued"] = nveco_feedback.enqueue_rejected_entities(con, month)
     fb_stats["on_map"] = nveco_feedback.mark_on_map(con, month)
+    # --- охота за пропущенными связями. Считается ПОСЛЕ записи, по итоговой карте:
+    # повод «у этого узла нет ни одной фабрики» имеет смысл только относительно
+    # того, что в карте оказалось, а не того, что агенты прислали.
+    fb_stats["gaps"] = nveco_gaps.run(con, month)
 
     con.commit()
     con.close()

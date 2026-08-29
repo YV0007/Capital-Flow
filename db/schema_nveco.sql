@@ -317,3 +317,39 @@ CREATE TABLE IF NOT EXISTS nveco_dossier_run (
     created_at TEXT NOT NULL DEFAULT (datetime('now')),
     PRIMARY KEY (entity_id, month)
 );
+
+-- ── ОХОТА ЗА ПРОПУЩЕННЫМИ СВЯЗЯМИ ───────────────────────────────────────────
+-- Третий канал обратной связи, рядом с отказами и очередью кандидатов. Те двое
+-- отвечают на «что мы отвергли» и «какого УЗЛА у нас нет». Этот — на вопрос,
+-- который до Фазы 4 не задавал никто: КАКОГО РЕБРА у нас нет между узлами,
+-- которые оба уже на карте.
+--
+-- Повод берётся из корпуса, а не из головы: либо узел сам раскрыл контрагента,
+-- не назвав его («our largest customer accounted for»), либо таксономия говорит,
+-- что узел такого рода не работает без контрагента такого рода, а на карте у него
+-- такого нет. Правила — config/nveco_gaps.yaml.
+--
+-- Задание закрывается ровно двумя способами, и оба — ответ:
+--   found      — связь найдена и заведена, с цитатой;
+--   not_found  — искали и не нашли, с причиной. Отрицательный ответ пишется в
+--                nvnet_not_found и не переспрашивается раньше срока.
+-- Молчание третьим способом не является — его ловит tools/feedback_check.py.
+CREATE TABLE IF NOT EXISTS nveco_gap (
+    key          TEXT PRIMARY KEY,        -- kind|subject|counterparty|expected
+    kind         TEXT NOT NULL CHECK (kind IN ('disclosed_unnamed','expected_edge')),
+    subject_id   TEXT NOT NULL,
+    counterparty TEXT,                    -- пусто у задания уровня узла: имя и ищем
+    cp_class     TEXT,                    -- класс контрагента, если имя неизвестно
+    expected     TEXT NOT NULL,           -- ожидаемый тип связи
+    rule_id      TEXT,                    -- какое правило выпустило задание
+    why          TEXT NOT NULL,
+    quote        TEXT,                    -- собственная фраза узла, если повод в ней
+    quote_url    TEXT,
+    first_seen   TEXT NOT NULL,
+    last_seen    TEXT NOT NULL,
+    times        INTEGER NOT NULL DEFAULT 1,
+    status       TEXT NOT NULL DEFAULT 'open'
+                 CHECK (status IN ('open','found','not_found','dismissed')),
+    decision     TEXT,
+    decided_month TEXT
+);

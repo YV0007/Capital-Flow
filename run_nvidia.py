@@ -88,8 +88,13 @@ def main(month: str, do_deliver: bool = False,
                   f"кандидатов — отказ по сущности иначе не доставить")
         for name, eid in fb.get("on_map") or []:
             print(f"          кандидат '{name}' уже на карте как '{eid}'")
-        print("          разбор: tools/queue_review.py · проверка: "
-              "tools/feedback_check.py")
+        g = fb.get("gaps") or {}
+        if g:
+            print(f"[охота]   пропущенные связи: заданий {g.get('tasks', 0)}, новых "
+                  f"{g.get('new', 0)}, закрылось поводом {g.get('closed', 0)}, "
+                  f"открыто {g.get('open', 0)}")
+        print("          разбор: tools/queue_review.py · tools/gap_review.py · "
+              "проверка: tools/feedback_check.py")
     m = s["membership"]
     print(f"[членство] проходят применимые проверки {m['passed']} из "
           f"{m['passed'] + m['failed']}; проверки "

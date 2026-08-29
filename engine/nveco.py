@@ -100,6 +100,11 @@ def load_entity_domains() -> dict:
     return _load("entity_domains.yaml")
 
 
+def load_gaps() -> dict:
+    """Правила охоты за пропущенными связями. См. engine/nveco_gaps.py."""
+    return _load("nveco_gaps.yaml")
+
+
 def load_watchlist() -> dict:
     return _load("nveco_watchlist.yaml")
 

@@ -1,0 +1,155 @@
+# ОХОТА ЗА ПРОПУЩЕННЫМИ СВЯЗЯМИ. Что карта обязана искать, а не ждать.
+#
+# Зачем это существует. До Фазы 4 связь появлялась на карте ТОЛЬКО как побочный
+# эффект досье: агент читал документы узла A и, если натыкался на имя узла B,
+# заводил ребро. У этого способа два слепых пятна, и оба измерены:
+#
+#   1. Пара, у которой ни один конец не называет другого, невидима навсегда.
+#      TSMC про своих заказчиков пишет «Our largest customer in 2023, 2024 and 2025
+#      accounted for» — без имени. Marvell про своих поставщиков — «third-party
+#      foundries located in Taiwan», без имени. В 10-K Amazon слов TSMC, foundry,
+#      Trainium и Graviton нет ВООБЩЕ — ноль вхождений на 312 тысяч знаков.
+#      Все три стороны описывают отношение. Ни одна не называет контрагента.
+#
+#   2. Очередь кандидатов ловит только отсутствующие УЗЛЫ. Отсутствующее РЕБРО
+#      между двумя узлами, которые оба уже на карте, не ловит никто: кандидатом
+#      оно быть не может по определению.
+#
+# Результат обоих пятен виден невооружённым глазом: у TSMC, крупнейшей фабрики
+# мира, на карте шесть заказчиков, и все шесть найдены потому, что заказчик сам
+# назвал TSMC в своей отчётности. Ни один не найден со стороны TSMC.
+#
+# Здесь задаётся, ЧТО считать поводом для охоты. Оба механизма опираются на то,
+# что в корпусе уже лежит, и ничего не выдумывают.
+
+# ── 1. «ЗАЯВИЛ, НО НЕ НАЗВАЛ» ────────────────────────────────────────────────
+#
+# Самый сильный повод, потому что это не догадка, а СОБСТВЕННОЕ УТВЕРЖДЕНИЕ узла
+# о том, что у него есть контрагент, которого мы не знаем. Такие цитаты уже лежат
+# в корпусе — их шестьдесят на сорока девяти объектах, — и до Фазы 4 их не читал
+# никто. Карта шестьдесят раз сказала о себе, что она неполна.
+#
+# Ключ: фраза раскрывает ОТНОШЕНИЕ и не содержит имени второй стороны. Совпадение
+# даёт задание уровня узла («найди, кто эти заказчики»), а не пары, потому что имя
+# как раз и неизвестно — в этом весь смысл.
+disclosed_unnamed:
+  customer:
+    why:
+      ru: "узел раскрыл заказчика, не назвав его"
+      en: "the node disclosed a customer without naming it"
+    expect: customer_of      # кого искать: тех, кто покупает у этого узла
+    # Только ПОЛОЖИТЕЛЬНОЕ раскрытие: «такой-то заказчик дал столько-то». Фраза
+    # «no single customer accounted for 10% or more» — сигнал ПРОТИВОПОЛОЖНЫЙ: она
+    # говорит, что сосредоточенного заказчика нет, и охотиться там не за кем.
+    # Первая версия правила их не различала и выпустила четыре пустых задания.
+    patterns:
+      - "our largest customer"
+      - "(one|two|three|four|five|ten) customers? accounted for"
+      - "our (top )?(ten|10) (largest )?customers accounted for"
+      - "customers? (individually )?(accounted|represented) for (more than |approximately )?\\d"
+      - "a (small|limited) number of customers"
+    # Отрицание бьёт совпадение. «No single customer accounted for 10% or more»
+    # содержит оборот положительного раскрытия целиком, и без вето правило читает
+    # утверждение «сосредоточенного заказчика НЕТ» как «заказчик есть, найди его».
+    veto:
+      - "\\bno (single |one )?customers?\\b"
+      - "\\bnone of our customers\\b"
+  supplier:
+    why:
+      ru: "узел раскрыл поставщика, не назвав его"
+      en: "the node disclosed a supplier without naming it"
+    expect: supplies
+    # Тоже только там, где узел ПОЛУЧАЕТ. «We offer third-party foundry services to
+    # external customers» — это Intel, ПРОДАЮЩАЯ мощности, а не покупающая их;
+    # голый оборот «third-party foundr» ловил её и заводил охоту в другую сторону.
+    patterns:
+      - "(manufactured|produced|fabricated|outsourced) (by|to) (third-party |external |independent )?foundr"
+      - "we (use|utilize|rely on|engage) (third-party |external |independent )?foundr"
+      - "our (third-party |external |independent )?foundry partners"
+      - "foundries located in"
+      - "we (purchase|source|buy) .{0,40}from a limited number"
+      - "a limited number of (suppliers|vendors|sources)"
+      - "sole source suppliers?"
+      - "single-source suppliers?"
+      - "some of the equipment is available from a limited number"
+
+# Фразы, которые выглядят как раскрытие, но контрагента НАЗЫВАЮТ. Совпадение с
+# любой из них снимает повод: узел не молчит о партнёре, он его назвал.
+named_after_all:
+  - "such as Taiwan Semiconductor"
+  - "including Samsung"
+  - "such as Kioxia"
+
+# Заглавные слова, которые именем контрагента НЕ являются. Нужны потому, что имя в
+# цитате ищется по форме — заглавное слово не в начале фразы, — а не по словарю
+# компаний: словарь знал бы только тех, кто уже на карте, то есть ровно не тех,
+# кого мы ищем. Ложное срабатывание тут стоит агенту напрасной охоты, поэтому
+# список пополняется по мере находок, а не угадывается заранее.
+not_a_name:
+  # Значения в кавычках намеренно: без них YAML читает `no` как булево False,
+  # и стоп-список падает на первом же слове.
+  ["january", "february", "march", "april", "may", "june", "july", "august",
+   "september", "october", "november", "december", "q1", "q2", "q3", "q4", "fy",
+   "gaap", "ifrs", "sec", "u.s", "us", "usa", "china", "taiwan", "japan", "korea",
+   "europe", "asia", "america", "american", "the", "we", "our", "of", "in", "and",
+   "for", "no", "two", "three", "ten", "revenue", "revenues", "customer",
+   "customers", "company", "group", "inc", "ltd", "corp", "co", "plc", "nv", "sa",
+   "ag", "during", "as", "most", "some", "one", "total", "net", "sales"]
+
+# ── 2. ОЖИДАЕМОЕ РЕБРО ПО ТАКСОНОМИИ ─────────────────────────────────────────
+#
+# Второй повод — структурный. Не «этот узел связан с тем», а «узел ЭТОГО РОДА не
+# может работать без контрагента ТАКОГО РОДА, а на карте у него такого нет».
+# Правило называет классы, а не компании, и потому не предрешает ответ: кто именно
+# фабрика этого проектировщика — выясняет исследование.
+#
+# `when` выбирает подлежащее, `expect.from` / `expect.to` — класс контрагента.
+# Задание выпускается, только если ребра указанного типа у узла НЕТ НИ С КЕМ из
+# этого класса. Найденное «ни с кем» — само по себе находка о полноте карты.
+expected_edges:
+  # Секторы названы ПЕРЕЧИСЛЕНИЕМ, а не исключением. Первая версия правила брала
+  # «все производители L2/L3/L5/L8, кроме фабрик и корпусировщиков» и выпустила
+  # шестнадцать заданий, из которых половина бессмысленна: поставщики средств
+  # проектирования и сборщики стоек кремний не выпускают вовсе. Отрицательный
+  # селектор в таксономии из 38 секторов всегда шире, чем кажется автору.
+  - id: designer_needs_fab
+    when:   {layers: [L3, L8], roles: [producer, platform],
+             sectors: [interconnect, switching, gpu_platform]}
+    expect: {type: manufactures, direction: from, counterparty: {sectors: [foundry]}}
+    why:
+      ru: "проектирует кремний, которого сам не производит — значит, его делает какая-то фабрика"
+      en: "designs silicon it does not fabricate — so some fab makes it"
+
+  - id: hyperscaler_needs_fab
+    when:   {layers: [L9], roles: [demand]}
+    expect: {type: manufactures, direction: from, counterparty: {sectors: [foundry]}}
+    why:
+      ru: "гиперскейлер, выпускающий собственный ускоритель, покупает пластины у фабрики"
+      en: "a hyperscaler shipping its own accelerator buys wafers from a fab"
+
+  - id: fab_needs_equipment
+    when:   {layers: [L3], roles: [producer], sectors: [foundry]}
+    expect: {type: supplies, direction: from, counterparty: {sectors: [fab_equipment]}}
+    why:
+      ru: "фабрика не работает без станков — у неё обязан быть названный поставщик оборудования"
+      en: "a fab does not run without tools — it must have a named equipment supplier"
+
+  - id: rack_needs_accelerator
+    when:   {layers: [L5], roles: [producer], sectors: [server_odm, rack_integration]}
+    expect: {type: supplies, direction: from, counterparty: {layers: [L5, L10], roles: [platform]}}
+    why:
+      ru: "сборщик стоек ставит в них чужие ускорители — поставщик обязан быть назван"
+      en: "a rack integrator puts someone else's accelerators in — the supplier must be named"
+
+# ── ПОРОГИ ───────────────────────────────────────────────────────────────────
+limits:
+  # Сколько заданий охоты класть в один пакет досье. Пакет — это внимание агента,
+  # и залить его сотней гипотез значит не получить ни одной проверенной.
+  per_entity: 6
+  # Сколько прогонов задание вправе провисеть открытым, прежде чем это станет
+  # ошибкой конвейера. Та же логика, что у реестра отказов.
+  max_open_times: 2
+  # Пара, по которой уже записано `not_found` с причиной, не переспрашивается
+  # раньше этого срока: отрицательный ответ — это тоже ответ, и переспрашивать
+  # его каждый месяц значит не верить собственной записи.
+  recheck_not_found_months: 6
