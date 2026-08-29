@@ -40196,139 +40196,208 @@
         "id": "broadcom",
         "move": "in",
         "integration": 12,
-        "why": "поднялся в верхние по интеграции"
+        "why": {
+          "ru": "поднялся в верхние по интеграции",
+          "en": "rose into the top by integration"
+        }
       },
       {
         "id": "coreweave",
         "move": "in",
         "integration": 11,
-        "why": "поднялся в верхние по интеграции"
+        "why": {
+          "ru": "поднялся в верхние по интеграции",
+          "en": "rose into the top by integration"
+        }
       },
       {
         "id": "crusoe",
         "move": "in",
         "integration": 9,
-        "why": "поднялся в верхние по интеграции"
+        "why": {
+          "ru": "поднялся в верхние по интеграции",
+          "en": "rose into the top by integration"
+        }
       },
       {
         "id": "databricks",
         "move": "in",
         "integration": 9,
-        "why": "поднялся в верхние по интеграции"
+        "why": {
+          "ru": "поднялся в верхние по интеграции",
+          "en": "rose into the top by integration"
+        }
       },
       {
         "id": "digital-realty",
         "move": "in",
         "integration": 10,
-        "why": "поднялся в верхние по интеграции"
+        "why": {
+          "ru": "поднялся в верхние по интеграции",
+          "en": "rose into the top by integration"
+        }
       },
       {
         "id": "equinix",
         "move": "in",
         "integration": 12,
-        "why": "поднялся в верхние по интеграции"
+        "why": {
+          "ru": "поднялся в верхние по интеграции",
+          "en": "rose into the top by integration"
+        }
       },
       {
         "id": "nventures",
         "move": "in",
         "integration": 11,
-        "why": "поднялся в верхние по интеграции"
+        "why": {
+          "ru": "поднялся в верхние по интеграции",
+          "en": "rose into the top by integration"
+        }
       },
       {
         "id": "oracle",
         "move": "in",
         "integration": 13,
-        "why": "поднялся в верхние по интеграции"
+        "why": {
+          "ru": "поднялся в верхние по интеграции",
+          "en": "rose into the top by integration"
+        }
       },
       {
         "id": "samsung",
         "move": "in",
         "integration": 12,
-        "why": "поднялся в верхние по интеграции"
+        "why": {
+          "ru": "поднялся в верхние по интеграции",
+          "en": "rose into the top by integration"
+        }
       },
       {
         "id": "sk-hynix",
         "move": "in",
         "integration": 10,
-        "why": "поднялся в верхние по интеграции"
+        "why": {
+          "ru": "поднялся в верхние по интеграции",
+          "en": "rose into the top by integration"
+        }
       },
       {
         "id": "softbank",
         "move": "in",
         "integration": 11,
-        "why": "поднялся в верхние по интеграции"
+        "why": {
+          "ru": "поднялся в верхние по интеграции",
+          "en": "rose into the top by integration"
+        }
       },
       {
         "id": "usa",
         "move": "in",
         "integration": 9,
-        "why": "поднялся в верхние по интеграции"
+        "why": {
+          "ru": "поднялся в верхние по интеграции",
+          "en": "rose into the top by integration"
+        }
       },
       {
         "id": "vertiv",
         "move": "in",
         "integration": 12,
-        "why": "поднялся в верхние по интеграции"
+        "why": {
+          "ru": "поднялся в верхние по интеграции",
+          "en": "rose into the top by integration"
+        }
       },
       {
         "id": "amd",
         "move": "out",
         "integration": 8,
-        "why": "опустился ниже порога ядра"
+        "why": {
+          "ru": "опустился ниже порога ядра",
+          "en": "fell below the core threshold"
+        }
       },
       {
         "id": "asml",
         "move": "out",
         "integration": 6,
-        "why": "опустился ниже порога ядра"
+        "why": {
+          "ru": "опустился ниже порога ядра",
+          "en": "fell below the core threshold"
+        }
       },
       {
         "id": "bis",
         "move": "out",
         "integration": 7,
-        "why": "опустился ниже порога ядра"
+        "why": {
+          "ru": "опустился ниже порога ядра",
+          "en": "fell below the core threshold"
+        }
       },
       {
         "id": "brookfield",
         "move": "out",
         "integration": 8,
-        "why": "опустился ниже порога ядра"
+        "why": {
+          "ru": "опустился ниже порога ядра",
+          "en": "fell below the core threshold"
+        }
       },
       {
         "id": "cadence",
         "move": "out",
         "integration": 7,
-        "why": "опустился ниже порога ядра"
+        "why": {
+          "ru": "опустился ниже порога ядра",
+          "en": "fell below the core threshold"
+        }
       },
       {
         "id": "google-cloud",
         "move": "out",
         "integration": 7,
-        "why": "опустился ниже порога ядра"
+        "why": {
+          "ru": "опустился ниже порога ядра",
+          "en": "fell below the core threshold"
+        }
       },
       {
         "id": "jax",
         "move": "out",
         "integration": 7,
-        "why": "опустился ниже порога ядра"
+        "why": {
+          "ru": "опустился ниже порога ядра",
+          "en": "fell below the core threshold"
+        }
       },
       {
         "id": "synopsys",
         "move": "out",
         "integration": 9,
-        "why": "опустился ниже порога ядра"
+        "why": {
+          "ru": "опустился ниже порога ядра",
+          "en": "fell below the core threshold"
+        }
       },
       {
         "id": "taiwan",
         "move": "out",
         "integration": 8,
-        "why": "опустился ниже порога ядра"
+        "why": {
+          "ru": "опустился ниже порога ядра",
+          "en": "fell below the core threshold"
+        }
       },
       {
         "id": "xai",
         "move": "out",
         "integration": 5,
-        "why": "опустился ниже порога ядра"
+        "why": {
+          "ru": "опустился ниже порога ядра",
+          "en": "fell below the core threshold"
+        }
       }
     ],
     "month": "2026-08",

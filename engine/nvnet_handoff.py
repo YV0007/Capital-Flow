@@ -810,6 +810,30 @@ def validate(payload: dict) -> list:
 
 
 # ── чейнджлог по 10 категориям блюпринта ─────────────────────────────────────
+# Причины в чейнджлоге — ЭТО ПРОЗА ВЫДАЧИ, и правило двуязычия на неё
+# распространяется наравне со всем остальным. Голая русская строка здесь уезжает
+# английскому читателю по-русски, и аудит перевода на стороне дашборда роняет сборку —
+# правильно роняет. Поэтому ни одной голой строки: только пары.
+_WHY = {
+    "node_gone": {"ru": "больше не подтверждается",
+                  "en": "no longer confirmed"},
+    "edge_gone": {"ru": "связь больше не заявлена",
+                  "en": "the link is no longer claimed"},
+    "core_in": {"ru": "поднялся в верхние по интеграции",
+                "en": "rose into the top by integration"},
+    "core_out": {"ru": "опустился ниже порога ядра",
+                 "en": "fell below the core threshold"},
+    "core_off_map": {"ru": "ушёл с карты",
+                     "en": "left the map"},
+    "core_first": {"ru": "первый выпуск, где ядро вычислено, а не назначено",
+                   "en": "first release where the core is computed, not assigned"},
+    "baseline": {"ru": "первый выпуск сети: семя пилота плюс достройка связей; "
+                       "категории изменений заполнятся со следующего выпуска",
+                 "en": "first network release: the pilot seed plus the added links; "
+                       "the change categories fill in from the next release on"},
+}
+
+
 def _changelog(prev, cur, net):
     cl = {k: [] for k in nvnet.CHANGE_CATEGORIES}
     cl["month"] = cur["asOf"]
@@ -822,8 +846,7 @@ def _changelog(prev, cur, net):
             "seedEdges": len(net["seed"]["edges"]),
             "addedEntities": net["newEntities"],
             "addedEdges": net["newEdges"],
-            "note": "первый выпуск сети: семя пилота NVIDIA плюс достройка связей "
-                    "пивот↔пивот; категории изменений заполнятся со следующего выпуска",
+            "note": _WHY["baseline"],
         }
         cl["newNodes"] = [{"id": e["id"], "why": e.get("oneLiner")}
                           for e in cur["entities"] if e.get("firstSeen") == cur["asOf"]
@@ -836,7 +859,7 @@ def _changelog(prev, cur, net):
                             if x["id"] not in {y["id"] for y in net["seed"]["edges"]}]
         cl["coreChanges"] = [{"id": e["id"], "move": "in",
                               "integration": e["integration"]["score"],
-                              "why": "первый выпуск, где ядро вычислено"}
+                              "why": _WHY["core_first"]}
                              for e in cur["entities"] if e["core"]]
         return cl
 
@@ -845,11 +868,11 @@ def _changelog(prev, cur, net):
     pg = {x["id"]: x for x in prev.get("edges", [])}
     cg = {x["id"]: x for x in cur["edges"]}
     cl["newNodes"] = [{"id": i, "why": ce[i].get("oneLiner")} for i in sorted(set(ce) - set(pe))]
-    cl["removedNodes"] = [{"id": i, "why": "больше не подтверждается"}
+    cl["removedNodes"] = [{"id": i, "why": _WHY["node_gone"]}
                           for i in sorted(set(pe) - set(ce))]
     cl["relationshipsAdded"] = [{"id": i, "why": cg[i].get("note")}
                                 for i in sorted(set(cg) - set(pg))]
-    cl["relationshipsRemoved"] = [{"id": i, "why": "связь больше не заявлена"}
+    cl["relationshipsRemoved"] = [{"id": i, "why": _WHY["edge_gone"]}
                                   for i in sorted(set(pg) - set(cg))]
     for i in sorted(set(cg) & set(pg)):
         for f in ("strength", "status", "confirmedSources"):
@@ -874,10 +897,10 @@ def _changelog(prev, cur, net):
     pc, cc = _core_of(prev), _core_of(cur)
     cl["coreChanges"] = (
         [{"id": i, "move": "in", "integration": ce[i]["integration"]["score"],
-          "why": "поднялся в верхние по интеграции"} for i in sorted(cc - pc)]
+          "why": _WHY["core_in"]} for i in sorted(cc - pc)]
         + [{"id": i, "move": "out",
             "integration": (ce[i]["integration"]["score"] if i in ce else None),
-            "why": "опустился ниже порога ядра" if i in ce else "ушёл с карты"}
+            "why": _WHY["core_out"] if i in ce else _WHY["core_off_map"]}
            for i in sorted(pc - cc)])
 
     for i in sorted(set(ce) & set(pe)):
@@ -967,7 +990,7 @@ def _changelog_md(cur, cl, net) -> str:
                 f"- `{c['id']}` — интеграция {c['integration']}" for c in ins[:40]] + [""]
         if outs:
             L += ["**Вышли.**", ""] + [
-                f"- `{c['id']}` — интеграция {c['integration']}, {c['why']}"
+                f"- `{c['id']}` — интеграция {c['integration']}, {c['why']['ru']}"
                 for c in outs[:40]] + [""]
 
     added = cl.get("relationshipsAdded") or []
