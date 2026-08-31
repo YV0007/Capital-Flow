@@ -1,0 +1,146 @@
+[
+  {
+    "target": "SB Energy PORTS-Pike Technology Campus (Ohio)",
+    "description": "A planned 10-GW AI data-center campus in Pike County, Ohio, redeveloping the decommissioned Portsmouth Gaseous Diffusion Plant site. SB Energy will build, own and operate it under a 20-year lease to OpenAI; NVIDIA is providing credit support on land, power and shell buildout and investing $1.5B directly in SB Energy, securing an initial 4.25 IT-GW with an option on the remaining 3.75 IT-GW.",
+    "website": "https://sbenergy.com/nvidia-ai-compute-ports-pike-ohio/",
+    "read_more": {"label": "NVIDIA Newsroom", "url": "https://nvidianews.nvidia.com/news/nvidia-guarantees-sb-energy-s-ports-pike-technology-campus-in-ohio-to-exclusively-host-nvidia-ai-compute"},
+    "sources": [
+      "https://nvidianews.nvidia.com/news/nvidia-guarantees-sb-energy-s-ports-pike-technology-campus-in-ohio-to-exclusively-host-nvidia-ai-compute",
+      "https://sbenergy.com/nvidia-ai-compute-ports-pike-ohio/",
+      "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm",
+      "https://www.enr.com/articles/63525-nvidia-partners-with-sb-energy-on-10-gw-ai-data-center-complex-in-ohio"
+    ],
+    "as_of": "2026-08-31"
+  },
+  {
+    "target": "NAVER GAK Sejong AI Factory (South Korea)",
+    "description": "NAVER's hyperscale data-center campus in Sejong, South Korea (270MW facility, part of the GAK data-center brand), being expanded as a sovereign AI factory on the NVIDIA DSX platform — from 55MW to 200MW by 2028, with a 1GW long-term goal. Brookfield signed a nonbinding term sheet to fund up to $9B of the buildout, alongside a planned $1B NVIDIA investment in NAVER Corp.",
+    "website": "https://www.navercloudcorp.com/en/info/",
+    "read_more": {"label": "Brookfield Asset Management", "url": "https://bam.brookfield.com/press-releases/naver-nvidia-and-brookfield-expand-koreas-national-ai-factory-infrastructure"},
+    "sources": [
+      "https://bam.brookfield.com/press-releases/naver-nvidia-and-brookfield-expand-koreas-national-ai-factory-infrastructure",
+      "https://nvidianews.nvidia.com/news/naver-nvidia-and-brookfield-to-expand-koreas-national-ai-factory-infrastructure-buildout",
+      "https://www.datacenterdynamics.com/en/news/naver-launches-270mw-data-center-campus-in-sejong-south-korea/"
+    ],
+    "as_of": "2026-08-31"
+  },
+  {
+    "target": "IREN Limited",
+    "description": "Sydney-headquartered, Nasdaq-listed vertically integrated AI Cloud and data-center operator (formerly Iris Energy), running large-scale GPU compute and Bitcoin mining on renewable power across the US and Canada. Blue Owl-managed funds led a $2.4B compute-equipment financing (split between a term loan and senior secured notes) to fund IREN's purchase of NVIDIA Blackwell Ultra GPUs for its Mackenzie, BC campus.",
+    "website": "https://www.iren.com/",
+    "read_more": {"label": "Blue Owl Capital", "url": "https://www.blueowl.com/news/blue-owl-managed-funds-lead-24-billion-ai-factory-financing-iren"},
+    "sources": [
+      "https://www.blueowl.com/news/blue-owl-managed-funds-lead-24-billion-ai-factory-financing-iren",
+      "https://www.iren.com/",
+      "https://www.prnewswire.com/news-releases/blue-owl-managed-funds-lead-2-4-billion-ai-factory-financing-for-iren-302863057.html"
+    ],
+    "as_of": "2026-08-31"
+  },
+  {
+    "target": "Machine Age Fund",
+    "description": "Andreessen Horowitz's first dedicated hardware-infrastructure vehicle, a $1.1B fund announced August 2026 by Ben Horowitz, Martin Casado and Raghu Raghuram to back the physical layer of AI: chips, memory, networking, systems software, power, data centers and robotics.",
+    "website": "https://a16z.com/the-machine-age-fund/",
+    "read_more": {"label": "a16z", "url": "https://a16z.com/the-machine-age-fund/"},
+    "sources": [
+      "https://a16z.com/the-machine-age-fund/",
+      "https://dealroom.co/news/147561-a16z-raises-1-1b-for-machine-age-fund-to-build-ai-hardware/",
+      "https://thenextweb.com/news/a16z-machine-age-fund-1-1bn-hardware"
+    ],
+    "as_of": "2026-08-31"
+  },
+  {
+    "target": "Amazon",
+    "description": "Public e-commerce and cloud-computing giant (AWS). In this event, Amazon is a portfolio holding rather than a capital deployer: Thiel Macro LLC (Peter Thiel's fund) disclosed a resurfaced ~$418M eight-position 13F as of Q2 2026, with Amazon its largest position at ~$118M (28%), alongside a cluster of power-and-nuclear-utility stakes reflecting a bet on the energy bottleneck behind AI data-center buildout.",
+    "website": "https://www.amazon.com/",
+    "read_more": {"label": "The Motley Fool", "url": "https://www.fool.com/investing/2026/08/29/peter-thiel-s-fund-reported-zero-stocks-for-2-straight-quarters-its-usd419-million-comeback-put-72-into-energy-and-power/"},
+    "sources": [
+      "https://www.quiverquant.com/news/Peter+Thiel-Linked+Fund+Rebuilds+$400+Million+Portfolio+Around+Power",
+      "https://www.fool.com/investing/2026/08/29/peter-thiel-s-fund-reported-zero-stocks-for-2-straight-quarters-its-usd419-million-comeback-put-72-into-energy-and-power/",
+      "https://www.theglobeandmail.com/investing/markets/stocks/AEP/pressreleases/3866382/peter-thiel-linked-fund-rebuilds-400-million-portfolio-around-power-nuclear-and-amazon/"
+    ],
+    "as_of": "2026-08-31"
+  },
+  {
+    "target": "DOE Genesis Mission (SPARK)",
+    "description": "A US Department of Energy national initiative (launched via executive order, Nov 2025) mobilizing the 17 National Laboratories to embed AI into scientific discovery. Microsoft committed $60M to support it, including launching SPARK, a coordination hub/program office for Microsoft's Genesis Mission collaboration, with $40M of that as Azure compute and AI credits over three years.",
+    "website": "https://www.genesis.energy.gov/",
+    "read_more": {"label": "Microsoft (Official Blog)", "url": "https://blogs.microsoft.com/blog/2026/07/22/powering-americas-genesis-mission-microsofts-commitment-to-scientific-discovery/"},
+    "sources": [
+      "https://blogs.microsoft.com/blog/2026/07/22/powering-americas-genesis-mission-microsofts-commitment-to-scientific-discovery/",
+      "https://www.geekwire.com/2026/microsoft-commits-60m-to-genesis-mission-to-help-power-dept-of-energys-ai-for-science-push/",
+      "https://www.energy.gov/articles/energy-department-launches-genesis-mission-consortium-accelerate-ai-driven-scientific"
+    ],
+    "as_of": "2026-08-31"
+  },
+  {
+    "target": "American Electric Power",
+    "description": "Major US public utility (NYSE: AEP) serving roughly 5 million customers across 11 states. It is a new Q2 2026 holding (~$42.2M, ~10% of portfolio) in Thiel Macro LLC's resurfaced 13F, part of an eight-stock, ~72%-energy-weighted book built around the power bottleneck constraining AI data-center growth.",
+    "website": "https://www.aep.com/",
+    "read_more": {"label": "The Motley Fool", "url": "https://www.fool.com/investing/2026/08/29/peter-thiel-s-fund-reported-zero-stocks-for-2-straight-quarters-its-usd419-million-comeback-put-72-into-energy-and-power/"},
+    "sources": [
+      "https://www.quiverquant.com/news/Peter+Thiel-Linked+Fund+Rebuilds+$400+Million+Portfolio+Around+Power",
+      "https://www.fool.com/investing/2026/08/29/peter-thiel-s-fund-reported-zero-stocks-for-2-straight-quarters-its-usd419-million-comeback-put-72-into-energy-and-power/"
+    ],
+    "as_of": "2026-08-31"
+  },
+  {
+    "target": "FirstEnergy",
+    "description": "US public electric utility (NYSE: FE) headquartered in Akron, Ohio, serving customers across the Midwest and Mid-Atlantic. It is a new Q2 2026 holding (~$39.9M, ~9.5% of portfolio) in Thiel Macro LLC's resurfaced 13F, part of an eight-stock book concentrated in power and nuclear names tied to AI data-center electricity demand.",
+    "website": "https://www.firstenergycorp.com/",
+    "read_more": {"label": "The Motley Fool", "url": "https://www.fool.com/investing/2026/08/29/peter-thiel-s-fund-reported-zero-stocks-for-2-straight-quarters-its-usd419-million-comeback-put-72-into-energy-and-power/"},
+    "sources": [
+      "https://www.quiverquant.com/news/Peter+Thiel-Linked+Fund+Rebuilds+$400+Million+Portfolio+Around+Power",
+      "https://www.fool.com/investing/2026/08/29/peter-thiel-s-fund-reported-zero-stocks-for-2-straight-quarters-its-usd419-million-comeback-put-72-into-energy-and-power/"
+    ],
+    "as_of": "2026-08-31"
+  },
+  {
+    "target": "Preview",
+    "description": "Serbian AI-native video creation and production startup (formerly of Veed and Vizcom alumni Stefan Fejes and Veljko Tornjanski), combining a video timeline with an infinite-canvas workspace for professional creators. Sequoia Capital led its seed round (announced Aug 12, 2026 by Sonya Huang and James Flynn); the company has raised $12M to date and counts clients from Fortune 500 brands to Hollywood studios.",
+    "website": null,
+    "read_more": {"label": "Sequoia Capital", "url": "https://sequoiacap.com/article/partnering-with-preview-lights-inference-action/"},
+    "sources": [
+      "https://sequoiacap.com/article/partnering-with-preview-lights-inference-action/",
+      "https://dealroom.co/investors/sequoia-capital/",
+      "https://www.linkedin.com/in/tornjv/"
+    ],
+    "as_of": "2026-08-31"
+  },
+  {
+    "target": "SK Horizon",
+    "description": "A new AI data-center infrastructure company spun out of SK Telecom's SK Broadband subsidiary, tasked with building/operating ~318MW of AI data-center capacity in South Korea. KKR and an IMM Investment-Stonebridge consortium are investing a combined ~$2.23B (KRW 3.08tn) for 29% and 20% stakes respectively, with SK Telecom retaining 51% and management control.",
+    "website": null,
+    "read_more": {"label": "PR Newswire", "url": "https://www.prnewswire.com/news-releases/sk-telecom-launches-ai-data-center-infrastructure-company-sk-horizon-and-secures-investments-from-kkr-and-imm-302861694.html"},
+    "sources": [
+      "https://www.prnewswire.com/news-releases/sk-telecom-launches-ai-data-center-infrastructure-company-sk-horizon-and-secures-investments-from-kkr-and-imm-302861694.html",
+      "https://www.lightreading.com/data-centers/sk-telecom-creates-sk-horizon-in-2-2b-data-center-spin-off-deal",
+      "https://www.alternativeswatch.com/2026/08/27/kkr-sk-horizon-data-center-investment/"
+    ],
+    "as_of": "2026-08-31"
+  },
+  {
+    "target": "DuckLabs",
+    "description": "Amsterdam-based, founder/employee-owned company behind DuckDB, the open-source in-process SQL OLAP database, founded ~2021 and grown to 30+ people without taking VC funding. AWS agreed to acquire DuckLabs (announced Aug 26, 2026), keeping DuckDB free/MIT-licensed under the independent DuckDB Foundation while integrating DuckLabs' team into AWS analytics services (e.g. S3 Tables, SageMaker Lakehouse).",
+    "website": "https://ducklabs.com/",
+    "read_more": {"label": "AWS Big Data Blog", "url": "https://aws.amazon.com/blogs/big-data/aws-and-ducklabs-building-the-future-of-analytics-together/"},
+    "sources": [
+      "https://aws.amazon.com/blogs/big-data/aws-and-ducklabs-building-the-future-of-analytics-together/",
+      "https://www.aboutamazon.com/news/company-news/aws-ducklabs",
+      "https://ducklabs.com/about/",
+      "https://www.geekwire.com/2026/amazon-acquires-ducklabs-adding-the-team-behind-duckdb-amid-broader-shakeup-in-cloud-data/"
+    ],
+    "as_of": "2026-08-31"
+  },
+  {
+    "target": "Arrive Logistics",
+    "description": "Austin, Texas-based truckload freight brokerage (No. 26 on Transport Topics' Top 100 logistics list), operating 10 North American locations with 2,000+ employees and 10,000+ carriers. Mubadala Capital (the alternative-asset arm of Abu Dhabi sovereign wealth fund Mubadala) agreed to acquire a majority equity stake, becoming largest shareholder; deal terms undisclosed, expected to close Q4 2026.",
+    "website": "https://www.arrivelogistics.com/",
+    "read_more": {"label": "Arrive Logistics", "url": "https://www.arrivelogistics.com/announcement/"},
+    "sources": [
+      "https://www.arrivelogistics.com/announcement/",
+      "https://www.prnewswire.com/news-releases/mubadala-capital-to-acquire-majority-equity-interest-in-arrive-logistics-302861134.html",
+      "https://www.freightwaves.com/news/arrive-logistics-plans-1000-hires-after-mubadala-majority-investment"
+    ],
+    "as_of": "2026-08-31"
+  }
+]

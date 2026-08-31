@@ -1,0 +1,146 @@
+[
+  {
+    "target": "Hugging Face",
+    "description": "Open-source AI hub founded in 2016 where developers share and download models, used by more than 13 million developers. NVIDIA reportedly agreed to buy it for $12.9B in a deal first reported August 27, 2026, not yet signed or officially confirmed at the time; if it closes it would be NVIDIA's largest acquisition ever.",
+    "website": "https://huggingface.co",
+    "read_more": {"label": "CNBC", "url": "https://www.cnbc.com/2026/08/27/nvidia-hugging-face-acquisition.html"},
+    "sources": [
+      "https://www.cnbc.com/2026/08/27/nvidia-hugging-face-acquisition.html",
+      "https://techcrunch.com/2026/08/26/nvidia-closes-in-on-hugging-face-acquisition/",
+      "https://www.bloomberg.com/news/articles/2026-08-27/nvidia-discussed-buying-ai-startup-hugging-face-insider-says"
+    ],
+    "as_of": "2026-08-31"
+  },
+  {
+    "target": "DigitalBridge Group",
+    "description": "Publicly traded (NYSE: DBRG) global alternative asset manager focused on digital infrastructure — data centers, cell towers, fiber and edge. SoftBank Group agreed to acquire it for $4B ($16/share cash) on December 29, 2025, to scale next-generation AI infrastructure; deal expected to close in the second half of 2026.",
+    "website": "https://www.digitalbridge.com",
+    "read_more": {"label": "DigitalBridge / SoftBank press release", "url": "https://www.digitalbridge.com/news/2025-12-29-softbank-group-to-acquire-digitalbridge-for-4-billion-to-scale-next-gen-ai-infrastructure"},
+    "sources": [
+      "https://www.digitalbridge.com/news/2025-12-29-softbank-group-to-acquire-digitalbridge-for-4-billion-to-scale-next-gen-ai-infrastructure",
+      "https://group.softbank/en/news/press/20251229",
+      "https://builtin.com/articles/softbank-to-acquire-digitalbridge-for-4b-20251230"
+    ],
+    "as_of": "2026-08-31"
+  },
+  {
+    "target": "SB Energy",
+    "description": "SoftBank-backed developer, owner and operator of data-center power infrastructure. Building the PORTS-Pike Technology Campus in Pike County, Ohio, which OpenAI will lease for 20 years; NVIDIA is investing $1.5B and becomes exclusive AI-compute provider there, with capacity scaling toward 8 gigawatts. SB Energy/SoftBank also plan $4.2B in Ohio grid infrastructure.",
+    "website": "https://sbenergy.com",
+    "read_more": {"label": "NVIDIA Newsroom", "url": "https://nvidianews.nvidia.com/news/nvidia-guarantees-sb-energy-s-ports-pike-technology-campus-in-ohio-to-exclusively-host-nvidia-ai-compute"},
+    "sources": [
+      "https://nvidianews.nvidia.com/news/nvidia-guarantees-sb-energy-s-ports-pike-technology-campus-in-ohio-to-exclusively-host-nvidia-ai-compute",
+      "https://sbenergy.com/nvidia-ai-compute-ports-pike-ohio/",
+      "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000069/sbeoainvidia-portsrelease.htm",
+      "https://www.detroitnews.com/story/business/2026/08/17/chip-giant-nvidia-reaches-1-5-billion-deal-for-ai-computing-capacity/91335586007/"
+    ],
+    "as_of": "2026-08-31"
+  },
+  {
+    "target": "Brookfield Middle East Partners",
+    "description": "New Brookfield private-equity fund vehicle anchored by Saudi Arabia's Public Investment Fund, announced first close of roughly $2B on July 27-28, 2026. Targets buyouts and minority growth equity across GCC markets, with 50% of investments earmarked for Saudi Arabia; Brookfield itself is committing $500M alongside PIF and other institutional partners.",
+    "website": null,
+    "read_more": {"label": "PIF press release", "url": "https://www.pif.gov.sa/en/news-and-insights/press-releases/2026/brookfield-announces-approximately-2-billion-first-close-of-pif-anchored-middle-east-focused-fund/"},
+    "sources": [
+      "https://www.pif.gov.sa/en/news-and-insights/press-releases/2026/brookfield-announces-approximately-2-billion-first-close-of-pif-anchored-middle-east-focused-fund/",
+      "https://www.bloomberg.com/news/articles/2026-07-27/brookfield-raises-2-billion-for-middle-east-fund-backed-by-pif",
+      "https://www.arabnews.com/node/2652475/business-economy"
+    ],
+    "as_of": "2026-08-31"
+  },
+  {
+    "target": "Vista Energy",
+    "description": "Argentina-based independent oil and gas producer (NYSE/BMV: VIST), a top shale operator in the Vaca Muerta formation with growing production and acquisitions (e.g. Petronas' stake for $1.5B in 2025). Peter Thiel's Thiel Macro built a ~$75.9M position (18% of the fund's rebuilt 13F) in Q2 2026 as part of a power/energy-heavy portfolio shift.",
+    "website": "https://www.vistaenergy.com",
+    "read_more": {"label": "The Motley Fool", "url": "https://www.fool.com/investing/2026/08/29/peter-thiel-s-fund-reported-zero-stocks-for-2-straight-quarters-its-usd419-million-comeback-put-72-into-energy-and-power/"},
+    "sources": [
+      "https://www.fool.com/investing/2026/08/29/peter-thiel-s-fund-reported-zero-stocks-for-2-straight-quarters-its-usd419-million-comeback-put-72-into-energy-and-power/",
+      "https://finance.yahoo.com/energy/articles/peter-thiels-thiel-macro-buys-121220238.html",
+      "https://theenergyyear.com/news/vista-energy-acquires-key-vaca-muerta-stake-for-1-2-billion/"
+    ],
+    "as_of": "2026-08-31"
+  },
+  {
+    "target": "Vistra",
+    "description": "Fortune 500 integrated power generator and retail electricity provider (NYSE: VST) based in Irving, Texas, with ~44 GW of capacity including the second-largest competitive nuclear fleet in the US. Peter Thiel's Thiel Macro fund disclosed a ~$59.1M stake (14% of its rebuilt 13F portfolio) as of the June 30, 2026 quarter, filed August 14, 2026.",
+    "website": "https://vistracorp.com",
+    "read_more": {"label": "The Motley Fool", "url": "https://www.fool.com/investing/2026/08/29/peter-thiel-s-fund-reported-zero-stocks-for-2-straight-quarters-its-usd419-million-comeback-put-72-into-energy-and-power/"},
+    "sources": [
+      "https://www.fool.com/investing/2026/08/29/peter-thiel-s-fund-reported-zero-stocks-for-2-straight-quarters-its-usd419-million-comeback-put-72-into-energy-and-power/",
+      "https://hedgeco.net/news/08/2026/thiel-macro-rebuilds-an-eight-name-13f-around-power-and-amazon.html",
+      "https://vistracorp.com/about/"
+    ],
+    "as_of": "2026-08-31"
+  },
+  {
+    "target": "DTE Energy",
+    "description": "Detroit-based diversified energy holding company (NYSE: DTE) whose subsidiaries DTE Electric and DTE Gas serve about 2.3 million electric and 1.4 million natural-gas customers in southeast Michigan. Peter Thiel's Thiel Macro fund held a ~$40.3M stake (264,450 shares) as of Q2 2026, part of a power-focused 13F rebuild disclosed August 14, 2026.",
+    "website": "https://www.dteenergy.com",
+    "read_more": {"label": "The Motley Fool", "url": "https://www.fool.com/investing/2026/08/29/peter-thiel-s-fund-reported-zero-stocks-for-2-straight-quarters-its-usd419-million-comeback-put-72-into-energy-and-power/"},
+    "sources": [
+      "https://www.fool.com/investing/2026/08/29/peter-thiel-s-fund-reported-zero-stocks-for-2-straight-quarters-its-usd419-million-comeback-put-72-into-energy-and-power/",
+      "https://hedgeco.net/news/08/2026/thiel-macro-rebuilds-an-eight-name-13f-around-power-and-amazon.html",
+      "https://www.dteenergy.com/us/en/business/about-dte/about-dte/about-dte.html"
+    ],
+    "as_of": "2026-08-31"
+  },
+  {
+    "target": "CMS Energy",
+    "description": "Jackson, Michigan-based holding company (NYSE: CMS) for Consumers Energy, Michigan's largest electric and natural-gas utility serving about 6.8 million of the state's residents. Peter Thiel's Thiel Macro fund held a ~$39.6M stake (517,124 shares) as of Q2 2026, disclosed August 14, 2026 as part of a power/energy-heavy portfolio rebuild.",
+    "website": "https://www.cmsenergy.com",
+    "read_more": {"label": "The Motley Fool", "url": "https://www.fool.com/investing/2026/08/29/peter-thiel-s-fund-reported-zero-stocks-for-2-straight-quarters-its-usd419-million-comeback-put-72-into-energy-and-power/"},
+    "sources": [
+      "https://www.fool.com/investing/2026/08/29/peter-thiel-s-fund-reported-zero-stocks-for-2-straight-quarters-its-usd419-million-comeback-put-72-into-energy-and-power/",
+      "https://hedgeco.net/news/08/2026/thiel-macro-rebuilds-an-eight-name-13f-around-power-and-amazon.html",
+      "https://www.cmsenergy.com/about-cms-energy/consumers-energy/default.aspx"
+    ],
+    "as_of": "2026-08-31"
+  },
+  {
+    "target": "X-Energy",
+    "description": "Developer of small modular nuclear reactors and TRISO fuel, backed pre-IPO by Amazon, Ares Management, Citadel's Ken Griffin and Jane Street. Went public on Nasdaq (XE) in April 2026 via a $1.02B IPO, the largest nuclear public offering on record. Peter Thiel's Thiel Macro fund holds a small ~$3.7M stake (200,000 shares) disclosed in its August 14, 2026 13F.",
+    "website": "https://x-energy.com",
+    "read_more": {"label": "CNBC", "url": "https://www.cnbc.com/2026/04/24/nuclear-reactor-company-x-energy-begins-trading-as-ai-drives-interest-in-the-industry.html"},
+    "sources": [
+      "https://www.cnbc.com/2026/04/24/nuclear-reactor-company-x-energy-begins-trading-as-ai-drives-interest-in-the-industry.html",
+      "https://www.fool.com/investing/2026/08/29/peter-thiel-s-fund-reported-zero-stocks-for-2-straight-quarters-its-usd419-million-comeback-put-72-into-energy-and-power/",
+      "https://thenextweb.com/news/x-energy-ipo-billion-nuclear-ai-data-centres"
+    ],
+    "as_of": "2026-08-31"
+  },
+  {
+    "target": "PLUS ES",
+    "description": "Australian smart-metering platform, a ring-fenced business of the Ausgrid Group (owned by NSW Government, IFM Investors, AustralianSuper and APG) managing roughly 1.7-2 million electricity meters across Australia's National Electricity Market. A DigitalBridge-managed investment vehicle agreed to acquire it August 27, 2026; the price was not disclosed.",
+    "website": "https://www.pluses.com.au",
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-08-27/softbank-linked-digitalbridge-to-buy-australian-smart-meter-unit"},
+    "sources": [
+      "https://www.digitalbridge.com/news/2026-08-27-digitalbridge-to-acquire-plus-es-a-leading-australian-smart-metering-platform",
+      "https://www.bloomberg.com/news/articles/2026-08-27/softbank-linked-digitalbridge-to-buy-australian-smart-meter-unit",
+      "https://www.pluses.com.au/about-us/"
+    ],
+    "as_of": "2026-08-31"
+  },
+  {
+    "target": "Dili",
+    "description": "AI-native compliance and audit platform for construction and infrastructure, automating prevailing-wage tracking, apprenticeship monitoring and certified payroll (Davis-Bacon, IRA PWA rules) across roughly 700 projects. Raised $21.7M total, including a $15M Series A led by Khosla Ventures with participation from Y Combinator's Garry Tan, Allianz, Brick and Mortar Ventures and Rebel Fund, announced July 30, 2026.",
+    "website": "https://www.dili.com",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/07/30/dili-raises-15-million-to-bring-ai-compliance-to-the-infrastructure-boom/"},
+    "sources": [
+      "https://techcrunch.com/2026/07/30/dili-raises-15-million-to-bring-ai-compliance-to-the-infrastructure-boom/",
+      "https://www.globenewswire.com/news-release/2026/07/30/3336377/0/en/dili-raises-21-7m-from-khosla-ventures-to-bring-ai-powered-assurance-to-america-s-infrastructure-boom.html"
+    ],
+    "as_of": "2026-08-31"
+  },
+  {
+    "target": "1X Technologies",
+    "description": "Norwegian-American humanoid-robotics company (founded 2014 as Halodi Robotics, rebranded 1X in 2022) developing the NEO home robot, backed by OpenAI's Startup Fund and Tiger Global. SoftBank is in talks, reported August 27, 2026, to buy a majority stake at roughly a $6B valuation — down from 1X's $10B ask the prior fall; terms not yet finalized.",
+    "website": "https://www.1x.tech",
+    "read_more": {"label": "The Information", "url": "https://www.theinformation.com/articles/softbank-talks-buy-majority-stake-humanoid-maker-1x-6-billion-valuation"},
+    "sources": [
+      "https://www.theinformation.com/articles/softbank-talks-buy-majority-stake-humanoid-maker-1x-6-billion-valuation",
+      "https://techstartups.com/2026/08/27/softbank-in-talks-to-buy-a-majority-stake-in-humanoid-robot-startup-1x-at-6-billion-valuation/",
+      "https://en.wikipedia.org/wiki/1X_Technologies"
+    ],
+    "as_of": "2026-08-31"
+  }
+]

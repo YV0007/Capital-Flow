@@ -137,9 +137,17 @@
 | cyber_security | $180M | 3 | 3 |
 | biotech_ai | $0 | 2 | 2 |
 
-## Public beneficiaries mapped (8)
+## Public beneficiaries mapped (16)
 | Ticker | Company | From flow | Confidence |
 |---|---|---|:-:|
+| 9984.T | SoftBank Group | NVIDIA→SB Energy | high |
+| GEV | GE Vernova | NVIDIA→SB Energy | low |
+| 9984.T | SoftBank Group | NVIDIA→SB Energy PORTS-Pike Technology Campus (Ohio) | high |
+| BX | Blackstone | NVIDIA→Lancium | high |
+| SMCI | Super Micro Computer | Peter Thiel→Panthalassa | medium |
+| NVDA | NVIDIA | Blackstone→Firmus | high |
+| SKM | SK Telecom | KKR→SK Horizon | medium |
+| NVDA | NVIDIA | Blue Owl→IREN Limited | high |
 | 9984.T | SoftBank Group | NVIDIA→SB Energy | high |
 | GEV | GE Vernova | NVIDIA→SB Energy | low |
 | 9984.T | SoftBank Group | NVIDIA→SB Energy PORTS-Pike Technology Campus (Ohio) | high |

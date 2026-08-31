@@ -1,43 +1,17 @@
 # Audit report — 2026-W36 (2026-08-31)
 
-**Verdict: FAIL — delivery blocked**
-Checked 271 events, 115 track-record rows, 43 profiles, 165 target references, 351 holdings, 0 classified targets.
+**Verdict: PASS**
+Checked 271 events, 115 track-record rows, 43 profiles, 189 target references, 351 holdings, 0 classified targets.
 
-## Errors (21)
-- E6 Amazon: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 American Electric Power: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Arrive Logistics: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Brookfield Middle East Partners: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 CMS Energy: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 DOE Genesis Mission (SPARK): target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 DTE Energy: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 DigitalBridge Group: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Dili: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 DuckLabs: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 FirstEnergy: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 IREN Limited: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Machine Age Fund: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 NAVER GAK Sejong AI Factory (South Korea): target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 PLUS ES: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 SB Energy: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 SB Energy PORTS-Pike Technology Campus (Ohio): target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 SK Horizon: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Vista Energy: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Vistra: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 X-Energy: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
+## Errors (0)
+_none_
 
-## Warnings (46)
+## Warnings (40)
 - W3 Apollo: key allocator with events but no profile
 - W3 Elon Musk: key allocator with events but no profile
 - W3 Goldman Sachs: key allocator with events but no profile
 - W3 Max Levchin: key allocator with events but no profile
 - W3 Palmer Luckey: key allocator with events but no profile
-- W6 SB Energy PORTS-Pike Technology Campus (Ohio): $105.0B target with no reference
-- W6 NAVER GAK Sejong AI Factory (South Korea): $9.0B target with no reference
-- W6 DigitalBridge Group: $4.0B target with no reference
-- W6 IREN Limited: $2.4B target with no reference
-- W6 SB Energy: $1.5B target with no reference
-- W6 Machine Age Fund: $1.1B target with no reference
 - W7 MGX Fund I: $49.0B fund/firm with no holdings collected
 - W7 BlackRock: $44.9B fund/firm with no holdings collected
 - W7 KKR: $24.7B fund/firm with no holdings collected
