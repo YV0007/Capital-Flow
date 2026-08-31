@@ -1,0 +1,336 @@
+{
+  "week": "2026-W36",
+  "agent": "corporate",
+  "feedback_from_runs": [
+    "2026-W33",
+    "2026-W34",
+    "2026-W35"
+  ],
+  "how_to_use": "1) WHAT YOU ALREADY HAVE \u2014 search FORWARD from each entity's last_event_date; don't re-find old deals. Use the deterministic EDGAR path when cik is present (agents/CONTEXT.md \u2192 Tools) and run `engine.edgar exists` before writing a row. Aliases are the SAME entity \u2014 never file one as new. stale_candidates are existing rows needing a Tier-1 confirm, not new deals to re-file. 2) WHAT WORKED \u2014 check `check_first` sources before searching broadly. 3) WHAT YOU GOT WRONG \u2014 these are real rejects from recent runs; don't repeat them.",
+  "what_you_already_have": {
+    "entities": [
+      {
+        "allocator": "Alphabet",
+        "class": "corporate",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-12",
+        "events_on_file": 3,
+        "sectors_active": [
+          "ai-applications",
+          "ai-labs",
+          "nuclear"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "alphabet (google)",
+          "alphabet / google",
+          "google",
+          "google / alphabet"
+        ],
+        "cik": "0001652044",
+        "ticker": "GOOGL",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "Blacksmith",
+          "Discovery Loop",
+          "Proxima Fusion"
+        ]
+      },
+      {
+        "allocator": "Amazon",
+        "class": "corporate",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-07-31",
+        "events_on_file": 2,
+        "sectors_active": [
+          "ai-labs"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "amazon / aws",
+          "amazon web services",
+          "amazon.com",
+          "aws"
+        ],
+        "cik": "0001018724",
+        "ticker": "AMZN",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "Anthropic",
+          "OpenAI Group PBC"
+        ]
+      },
+      {
+        "allocator": "Anthropic",
+        "class": "corporate",
+        "tier": "watch",
+        "country": null,
+        "network": null,
+        "last_event_date": "2026-08-05",
+        "events_on_file": 1,
+        "sectors_active": [
+          "datacenters"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": null,
+        "ticker": null,
+        "edgar_path": "search",
+        "recent_targets": [
+          "TeraWulf Justified Data Campus (Kentucky)"
+        ]
+      },
+      {
+        "allocator": "Meta",
+        "class": "corporate",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-07-28",
+        "events_on_file": 4,
+        "sectors_active": [
+          "datacenters"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "facebook",
+          "meta / facebook",
+          "meta platforms"
+        ],
+        "cik": "0001326801",
+        "ticker": "META",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "BlackRock (El Paso Data Center JV)",
+          "Meta-BlackRock El Paso data center venture",
+          "Richland Parish / Hyperion data center (Louisiana)",
+          "Sturgeon County data center (Alberta, Canada)"
+        ]
+      },
+      {
+        "allocator": "Microsoft",
+        "class": "corporate",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-07-28",
+        "events_on_file": 3,
+        "sectors_active": [
+          "ai-applications",
+          "ai-labs",
+          "cybersecurity"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "microsoft corporation",
+          "msft"
+        ],
+        "cik": "0000789019",
+        "ticker": "MSFT",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "Mate Security",
+          "Mistral AI",
+          "Microsoft Frontier Company"
+        ]
+      },
+      {
+        "allocator": "NVIDIA",
+        "class": "corporate",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-20",
+        "events_on_file": 10,
+        "sectors_active": [
+          "ai-compute",
+          "ai-labs",
+          "datacenters",
+          "neocloud",
+          "networking",
+          "power-energy"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "nvda",
+          "nvidia corporation"
+        ],
+        "cik": "0001045810",
+        "ticker": "NVDA",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "Poolside",
+          "SpaceX",
+          "Point2 Technology",
+          "Lancium",
+          "Volta Infra Holdings",
+          "OpenAI southern Ohio 10GW data center"
+        ]
+      },
+      {
+        "allocator": "Oracle",
+        "class": "corporate",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": null,
+        "events_on_file": 0,
+        "sectors_active": [],
+        "known_vehicles": [],
+        "aliases": [
+          "oracle corporation"
+        ],
+        "cik": "0001341439",
+        "ticker": "ORCL",
+        "edgar_path": "deterministic",
+        "recent_targets": []
+      }
+    ],
+    "stale_candidates": [
+      {
+        "allocator": "NVIDIA",
+        "target": "OpenAI southern Ohio 10GW data center",
+        "event_type": "corporate_investment",
+        "disclosed_date": "2026-07-27",
+        "source_tier": 3,
+        "source_url": "https://www.forbes.com/sites/tylerroush/2026/07/27/nvidia-and-openai-discussing-500-billion-data-center-heres-what-we-know/",
+        "why_still_candidate": "CANDIDATE - talks only, NO signed agreement, so no capital is committed yet. Origin is a single Wall Street Journal scoop of 2026-07-27 citing 'people familiar'; Forbes, Reuters, Al Jazeera, PYMNTS and Jerusalem Post all trace back to that one WSJ report, so this counts as ONE source, not five (circ"
+      },
+      {
+        "allocator": "NVIDIA",
+        "target": "Lancium",
+        "event_type": "corporate_investment",
+        "disclosed_date": "2026-08-08",
+        "source_tier": 3,
+        "source_url": "https://www.investing.com/news/stock-market-news/nvidia-to-invest-up-to-3-billion-in-lancium-the-information-reports-4847578",
+        "why_still_candidate": "CANDIDATE - single origin, neither party has confirmed on the record. The Information broke this 2026-08-08 ('people familiar with the matter'); Reuters, Bloomberg-adjacent wires, Seeking Alpha, DCD-tier outlets and dozens of aggregators all cite that one Information scoop, so per the circular-repor"
+      }
+    ]
+  },
+  "what_worked": {
+    "check_first": [
+      "theinformation.com",
+      "dealroom.co",
+      "finance.yahoo.com",
+      "blog.google",
+      "find-and-update.company-information.service.gov.uk",
+      "fintech.global",
+      "forkast.news",
+      "investor.atmeta.com"
+    ],
+    "detail": [
+      {
+        "source": "theinformation.com",
+        "example_url": "https://www.theinformation.com/articles/nvidia-invest-3-billion-blackstone-backed-power-firm-behind-stargate",
+        "tier": 4,
+        "hits": 2,
+        "checks": 2
+      },
+      {
+        "source": "blog.google",
+        "example_url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
+        "tier": 1,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "dealroom.co",
+        "example_url": "https://dealroom.co/news/143272-googles-top-ai-minds-exit-to-build-discovery-loop-with-alphabets-backing/",
+        "tier": 3,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "dealroom.co",
+        "example_url": "https://dealroom.co/news/143983-nvidia-to-invest-up-to-3b-in-texas-power-developer-lancium/",
+        "tier": 2,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "finance.yahoo.com",
+        "example_url": "https://finance.yahoo.com/technology/ai/articles/nvidia-pay-poolside-6-billion-181448803.html",
+        "tier": 3,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "finance.yahoo.com",
+        "example_url": "https://finance.yahoo.com/technology/articles/nvidia-invest-3-billion-lancium-014211358.html",
+        "tier": 3,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "find-and-update.company-information.service.gov.uk",
+        "example_url": "https://find-and-update.company-information.service.gov.uk/company/08804411/filing-history",
+        "tier": 1,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "fintech.global",
+        "example_url": "https://fintech.global/2026/07/30/why-mate-securitys-context-play-just-raised-35m/",
+        "tier": 4,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "forkast.news",
+        "example_url": "https://forkast.news/nvidias-7-billion-poolside-deal-reveals-a-licensing-playbook-that-sidesteps-acquisition-scrutiny/",
+        "tier": 4,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "investor.atmeta.com",
+        "example_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-New-Strategic-Venture-with-BlackRock-to-Develop-Data-Center-in-El-Paso/default.aspx",
+        "tier": 1,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "marketbusinessnews.com",
+        "example_url": "https://marketbusinessnews.com/nvidia-reportedly-plans-up-to-3-billion-investment-in-lancium/450489/",
+        "tier": 3,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "pitchbook.com",
+        "example_url": "https://pitchbook.com/profiles/investor/49063-60",
+        "tier": 2,
+        "hits": 1,
+        "checks": 1
+      }
+    ]
+  },
+  "what_you_got_wrong": {
+    "this_class": [
+      {
+        "code": "W8",
+        "lesson": "a >=$1B investable target has no ai_posture tag.",
+        "occurrences": 6,
+        "examples": [
+          "Anthropic: $10.0B investable target with no ai_posture",
+          "Microsoft Frontier Company: $2.5B investable target with no ai_posture"
+        ]
+      }
+    ],
+    "all_classes": [
+      {
+        "code": "W8",
+        "lesson": "a >=$1B investable target has no ai_posture tag.",
+        "occurrences": 31,
+        "examples": [
+          "Electronic Arts: $33.6B investable target with no ai_posture",
+          "OpenAI Group PBC: $21.3B investable target with no ai_posture"
+        ]
+      }
+    ]
+  }
+}

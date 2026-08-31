@@ -1,0 +1,555 @@
+{
+  "week": "2026-W36",
+  "agent": "alt-managers",
+  "feedback_from_runs": [
+    "2026-W33",
+    "2026-W34",
+    "2026-W35"
+  ],
+  "how_to_use": "1) WHAT YOU ALREADY HAVE \u2014 search FORWARD from each entity's last_event_date; don't re-find old deals. Use the deterministic EDGAR path when cik is present (agents/CONTEXT.md \u2192 Tools) and run `engine.edgar exists` before writing a row. Aliases are the SAME entity \u2014 never file one as new. stale_candidates are existing rows needing a Tier-1 confirm, not new deals to re-file. 2) WHAT WORKED \u2014 check `check_first` sources before searching broadly. 3) WHAT YOU GOT WRONG \u2014 these are real rejects from recent runs; don't repeat them.",
+  "what_you_already_have": {
+    "entities": [
+      {
+        "allocator": "Apollo",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-11",
+        "events_on_file": 4,
+        "sectors_active": [
+          "ai-compute",
+          "datacenters",
+          "neocloud",
+          "private-credit"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": null,
+        "ticker": null,
+        "edgar_path": "search",
+        "recent_targets": [
+          "NVIDIA AI Infrastructure Financing Platform",
+          "NVIDIA AI Compute Infrastructure Financing Platform",
+          "AI Compute Infrastructure Financing Platform (NVIDIA-anchored)",
+          "Mexico private credit / infrastructure market"
+        ]
+      },
+      {
+        "allocator": "Azora",
+        "class": "alt_manager",
+        "tier": "watch",
+        "country": null,
+        "network": null,
+        "last_event_date": "2026-08-04",
+        "events_on_file": 1,
+        "sectors_active": [
+          "datacenters"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": null,
+        "ticker": null,
+        "edgar_path": "search",
+        "recent_targets": [
+          "Volta AI Infrastructure Program"
+        ]
+      },
+      {
+        "allocator": "BlackRock",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-11",
+        "events_on_file": 6,
+        "sectors_active": [
+          "ai-compute",
+          "datacenters",
+          "neocloud",
+          "power-energy"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "blackrock (gip)",
+          "blackrock / gip",
+          "blackrock/gip",
+          "gip",
+          "global infrastructure partners"
+        ],
+        "cik": "0002012383",
+        "ticker": "BLK",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "NVIDIA AI Infrastructure Financing Platform",
+          "NVIDIA AI Compute Infrastructure Financing Platform",
+          "AI Compute Infrastructure Financing Platform (NVIDIA-anchored)",
+          "Project Sopaipilla Holdings (Meta El Paso data center JV)",
+          "Aligned Data Centers",
+          "Summit Ridge Energy"
+        ]
+      },
+      {
+        "allocator": "Blackstone",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-13",
+        "events_on_file": 9,
+        "sectors_active": [
+          "ai-compute",
+          "ai-data",
+          "datacenters",
+          "neocloud",
+          "power-energy"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": "0001393818",
+        "ticker": "BX",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "Databricks",
+          "NVIDIA AI Infrastructure Financing Platform",
+          "NVIDIA AI Compute Infrastructure Financing Platform",
+          "AI Compute Infrastructure Financing Platform (NVIDIA-anchored)",
+          "Kuwait Oil Company Pipeline JV (Project Peregrine)",
+          "AirTrunk SYD3 (Western Sydney)"
+        ]
+      },
+      {
+        "allocator": "Blue Owl",
+        "class": "alt_manager",
+        "tier": "watch",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-07-30",
+        "events_on_file": 4,
+        "sectors_active": [
+          "datacenters",
+          "networking"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "blue owl capital"
+        ],
+        "cik": "0001823945",
+        "ticker": "OWL",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "Stack Infrastructure (Melbourne data center)",
+          "STACK Infrastructure Melbourne (third campus)",
+          "Meta Hyperion (Richland Parish, Louisiana)",
+          "Kirkwood Infrastructure Group"
+        ]
+      },
+      {
+        "allocator": "Brookfield",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "CA",
+        "network": null,
+        "last_event_date": "2026-08-14",
+        "events_on_file": 16,
+        "sectors_active": [
+          "ai-compute",
+          "datacenters",
+          "neocloud",
+          "power-energy",
+          "semiconductors"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "brookfield asset management",
+          "brookfield infrastructure"
+        ],
+        "cik": "0001937926",
+        "ticker": "BAM",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "Boralex",
+          "NVIDIA AI Infrastructure Financing Platform",
+          "NVIDIA AI Compute Infrastructure Financing Platform",
+          "AI Compute Infrastructure Financing Platform (NVIDIA-anchored)",
+          "Brookfield Infrastructure Fund VI (flagship)",
+          "France sovereign AI infrastructure framework"
+        ]
+      },
+      {
+        "allocator": "DigitalBridge",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-07-15",
+        "events_on_file": 2,
+        "sectors_active": [
+          "datacenters"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": "0001679688",
+        "ticker": "DBRG",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "DigitalBridge Credit II",
+          "Nippon Gateway Infrastructure (NGI)"
+        ]
+      },
+      {
+        "allocator": "Goldman Sachs",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-11",
+        "events_on_file": 3,
+        "sectors_active": [
+          "ai-compute",
+          "datacenters",
+          "neocloud"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": "0000886982",
+        "ticker": "GS",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "NVIDIA AI Infrastructure Financing Platform",
+          "NVIDIA AI Compute Infrastructure Financing Platform",
+          "AI Compute Infrastructure Financing Platform (NVIDIA-anchored)"
+        ]
+      },
+      {
+        "allocator": "KKR",
+        "class": "alt_manager",
+        "tier": "watch",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-11",
+        "events_on_file": 9,
+        "sectors_active": [
+          "ai-compute",
+          "datacenters",
+          "neocloud",
+          "power-energy"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "kohlberg kravis roberts"
+        ],
+        "cik": "0001404912",
+        "ticker": "KKR",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "NVIDIA AI Infrastructure Financing Platform",
+          "NVIDIA AI Compute Infrastructure Financing Platform",
+          "AI Compute Infrastructure Financing Platform (NVIDIA-anchored)",
+          "KKR Global Infrastructure Investors V",
+          "TotalEnergies European renewables portfolio (Germany/Spain/France/Poland)",
+          "Kuwait Oil Company Pipeline JV (Project Peregrine)"
+        ]
+      },
+      {
+        "allocator": "SoftBank",
+        "class": "alt_manager",
+        "tier": "key",
+        "country": "JP",
+        "network": null,
+        "last_event_date": "2026-08-17",
+        "events_on_file": 6,
+        "sectors_active": [
+          "ai-labs",
+          "neocloud",
+          "robotics"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "softbank group",
+          "softbank group corp",
+          "softbank vision fund"
+        ],
+        "cik": "0001065521",
+        "ticker": "SFTBF",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "Gravis Robotics",
+          "Gravis Robotics AG",
+          "ABB Robotics acquisition financing",
+          "ABB Robotics",
+          "SB Neo",
+          "OpenAI"
+        ]
+      }
+    ],
+    "stale_candidates": [
+      {
+        "allocator": "Blackstone",
+        "target": "Japan AI data centers (programme)",
+        "event_type": "project_finance",
+        "disclosed_date": "2026-06-30",
+        "source_tier": 3,
+        "source_url": "https://asia.nikkei.com/editor-s-picks/interview/blackstone-to-invest-30bn-in-japan-ai-data-centers-president",
+        "why_still_candidate": "CANDIDATE - STATED PLAN, NOT COMMITTED CAPITAL (amount_estimated=1). President/COO Jonathan Gray told Nikkei that Blackstone intends to invest ~$30bn in Japanese AI data centres over the next three to five years, exploring projects exceeding 1GW combined against >500MW already built. No vehicle clos"
+      },
+      {
+        "allocator": "Blue Owl",
+        "target": "Meta Hyperion (Richland Parish, Louisiana)",
+        "event_type": "follow_on",
+        "disclosed_date": "2026-07-13",
+        "source_tier": 3,
+        "source_url": "https://www.cnbc.com/2026/07/13/meta-louisiana-data-center-investment-reaches-50-billion-amid-ai-push.html",
+        "why_still_candidate": "CANDIDATE - a Meta SCOPE announcement, not a confirmed new Blue Owl capital commitment. Meta confirmed 2026-07-13 that Hyperion will scale from 2GW to 5GW across 3,200 acres, with total project investment rising from the original $27bn JV valuation (Oct 2025, Blue Owl 80% / Meta 20%) to 'more than $"
+      },
+      {
+        "allocator": "Apollo",
+        "target": "Mexico private credit / infrastructure market",
+        "event_type": "corporate_investment",
+        "disclosed_date": "2026-07-16",
+        "source_tier": 3,
+        "source_url": "https://www.bloomberg.com/news/articles/2026-07-16/apollo-bets-on-mexico-with-20-billion-target-for-private-credit",
+        "why_still_candidate": "Apollo is targeting up to $20B of private-credit deployment into Mexican infrastructure and corporate borrowers over time, offering faster execution / longer maturities than local commercial or development banks. Explicitly a target, not a committed fund or single transaction -- no finalized pipelin"
+      },
+      {
+        "allocator": "SoftBank",
+        "target": "ABB Robotics acquisition financing",
+        "event_type": "project_finance",
+        "disclosed_date": "2026-07-21",
+        "source_tier": 3,
+        "source_url": "https://group.softbank/en/news/press/20251008",
+        "why_still_candidate": "FILINGS SWEEP FOUND NOTHING FOR THE LOAN ITSELF - candidate stands, but see the paired verified row for the underlying acquisition. The 1.75bn is a four-bank syndicated term-loan package (dollar tranche increased by 200m to 800m; euro tranche cut to EUR 825m, ~940m equivalent; priced ~425bp over ben"
+      },
+      {
+        "allocator": "Blackstone",
+        "target": "AirTrunk SYD3 (Western Sydney)",
+        "event_type": "project_finance",
+        "disclosed_date": "2026-07-22",
+        "source_tier": 3,
+        "source_url": "https://www.bloomberg.com/news/articles/2026-07-22/blackstone-tying-up-3-billion-airtrunk-loan-as-data-center-debt-binge-woes-grow",
+        "why_still_candidate": "CANDIDATE - not closed and single-origin. Blackstone-owned AirTrunk is finalising the underwriting group for an A$4.3bn (~US$3.0bn, FX-converted hence amount_estimated=1) five-year syndicated loan to build SYD3, a 400+MW hyperscale campus in Western Sydney. Named underwriters: Credit Agricole, DBS, "
+      },
+      {
+        "allocator": "SoftBank",
+        "target": "Gravis Robotics AG",
+        "event_type": "acquisition",
+        "disclosed_date": "2026-07-24",
+        "source_tier": 3,
+        "source_url": "https://www.swissinfo.ch/eng/softbank-weighs-deal-for-robotics-startup-gravis/91794315",
+        "why_still_candidate": "CANDIDATE - EXPLORATORY, no final decision on size or structure. SoftBank is weighing an acquisition of Zurich-based Gravis Robotics AG (2022 ETH Zurich spinout, autonomous construction equipment) at a valuation reportedly >$500m (amount_estimated=1). Would be held in a NEW entity SoftBank is settin"
+      },
+      {
+        "allocator": "Blue Owl",
+        "target": "STACK Infrastructure Melbourne (third campus)",
+        "event_type": "project_finance",
+        "disclosed_date": "2026-07-30",
+        "source_tier": 3,
+        "source_url": "https://www.bloomberg.com/news/articles/2026-07-30/blue-owl-s-stack-seeks-5-9-billion-loan-extending-ai-debt-boom",
+        "why_still_candidate": "CANDIDATE - EARLY-STAGE TALKS, nothing committed. Blue Owl's STACK Infrastructure is seeking an A$8.5bn (~US$5.9bn, FX-converted hence amount_estimated=1) syndicated loan for its third Melbourne data centre; Bloomberg explicitly notes bank talks are early and terms may change. Would be one of the la"
+      },
+      {
+        "allocator": "Blue Owl",
+        "target": "Stack Infrastructure (Melbourne data center)",
+        "event_type": "project_finance",
+        "disclosed_date": "2026-07-30",
+        "source_tier": 3,
+        "source_url": "https://www.bloomberg.com/news/articles/2026-07-30/blue-owl-s-stack-seeks-5-9-billion-loan-extending-ai-debt-boom",
+        "why_still_candidate": "Blue Owl's data-center platform Stack Infrastructure is in early-stage talks with a bank syndicate for an A$8.5B (~US$5.9B) loan to fund its third Melbourne, Australia data center. Not yet closed ('talks... at an early stage, details may change'), and the actual lending capital would come from the b"
+      },
+      {
+        "allocator": "Apollo",
+        "target": "NVIDIA AI Compute Infrastructure Financing Platform",
+        "event_type": "fund_launch",
+        "disclosed_date": "2026-08-10",
+        "source_tier": 1,
+        "source_url": "https://www.apollo.com/insights-news/pressreleases/2026/08/nvidia-partners-with-apollo",
+        "why_still_candidate": "NVIDIA signed MOUs (announced 2026-08-10, official releases from NVIDIA and all six partners) with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to jointly establish independent AI-compute-infrastructure financing platforms targeting to mobilize >$500B of third-party capital 'over"
+      },
+      {
+        "allocator": "BlackRock",
+        "target": "NVIDIA AI Compute Infrastructure Financing Platform",
+        "event_type": "fund_launch",
+        "disclosed_date": "2026-08-10",
+        "source_tier": 1,
+        "source_url": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+        "why_still_candidate": "Same MOU as the Apollo row (see that row for full detail) -- BlackRock is one of six partners; no capital committed/deployed, no per-partner allocation disclosed. Filed as candidate per SCOPE (MOU, no money moved) despite Tier-1 official sourcing."
+      },
+      {
+        "allocator": "Blackstone",
+        "target": "NVIDIA AI Compute Infrastructure Financing Platform",
+        "event_type": "fund_launch",
+        "disclosed_date": "2026-08-10",
+        "source_tier": 1,
+        "source_url": "https://www.blackstone.com/news/press/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital/",
+        "why_still_candidate": "Same MOU as the Apollo row (see that row for full detail) -- Blackstone is one of six partners; no capital committed/deployed, no per-partner allocation disclosed. Filed as candidate per SCOPE (MOU, no money moved) despite Tier-1 official sourcing."
+      },
+      {
+        "allocator": "Brookfield",
+        "target": "NVIDIA AI Compute Infrastructure Financing Platform",
+        "event_type": "fund_launch",
+        "disclosed_date": "2026-08-10",
+        "source_tier": 1,
+        "source_url": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+        "why_still_candidate": "Same MOU as the Apollo row (see that row for full detail) -- Brookfield is one of six partners; no capital committed/deployed, no per-partner allocation disclosed. Filed as candidate per SCOPE (MOU, no money moved) despite Tier-1 official sourcing. Distinct from Brookfield's separate, already-commit"
+      },
+      {
+        "allocator": "Goldman Sachs",
+        "target": "NVIDIA AI Compute Infrastructure Financing Platform",
+        "event_type": "fund_launch",
+        "disclosed_date": "2026-08-10",
+        "source_tier": 1,
+        "source_url": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+        "why_still_candidate": "Same MOU as the Apollo row (see that row for full detail) -- Goldman Sachs is one of six partners; no capital committed/deployed, no per-partner allocation disclosed. Filed as candidate per SCOPE (MOU, no money moved) despite Tier-1 official sourcing."
+      },
+      {
+        "allocator": "KKR",
+        "target": "NVIDIA AI Compute Infrastructure Financing Platform",
+        "event_type": "fund_launch",
+        "disclosed_date": "2026-08-10",
+        "source_tier": 1,
+        "source_url": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+        "why_still_candidate": "Same MOU as the Apollo row (see that row for full detail) -- KKR is one of six partners; no capital committed/deployed, no per-partner allocation disclosed. Filed as candidate per SCOPE (MOU, no money moved) despite Tier-1 official sourcing."
+      }
+    ]
+  },
+  "what_worked": {
+    "check_first": [
+      "bam.brookfield.com",
+      "bep.brookfield.com",
+      "finance.yahoo.com",
+      "investor.nvidia.com",
+      "media.kkr.com",
+      "peinsights.substack.com",
+      "renewablesnow.com",
+      "siliconangle.com"
+    ],
+    "detail": [
+      {
+        "source": "bam.brookfield.com",
+        "example_url": "https://bam.brookfield.com/press-releases/brookfield-acquire-remaining-interest-oaktree",
+        "tier": 1,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "bam.brookfield.com",
+        "example_url": "https://bam.brookfield.com/press-releases/doe-site-western-kentucky-revitalized-data-center-campus-and-dedicated-energy",
+        "tier": 1,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "bep.brookfield.com",
+        "example_url": "https://bep.brookfield.com/press-releases/bepc/boralex-enters-definitive-agreement-be-acquired-brookfield-alongside-la-caisse",
+        "tier": 1,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "finance.yahoo.com",
+        "example_url": "https://finance.yahoo.com/markets/stocks/articles/blue-owl-capital-owl-ties-171150001.html",
+        "tier": 3,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "investor.nvidia.com",
+        "example_url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Partners-With-Apollo-BlackRock-Blackstone-Brookfield-Goldman-Sachs-and-KKR-to-Establish-AI-Compute-Infrastructure-Financing-Platforms-to-Mobilize-Over-500-Billion-of-Third-Party-Capital/default.aspx",
+        "tier": 1,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "media.kkr.com",
+        "example_url": "https://media.kkr.com/news-details?news_id=4231602b-5c20-4a0a-9e36-e797836bc1c7",
+        "tier": 1,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "peinsights.substack.com",
+        "example_url": "https://peinsights.substack.com/p/kkr-deploys-insurance-capital-into",
+        "tier": 4,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "renewablesnow.com",
+        "example_url": "https://renewablesnow.com/news/brookfield-la-caisse-deal-for-boralex-approved-set-to-close-on-aug-14-1299369/",
+        "tier": 3,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "siliconangle.com",
+        "example_url": "https://siliconangle.com/2026/08/17/gravis-robotics-gets-200m-funding-softbank-retrofit-excavators-self-driving-ai-systems/",
+        "tier": 3,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "totalenergies.com",
+        "example_url": "https://totalenergies.com/newsroom/renewables-in-europe-totalenergies-acquires-shells-renewables-business-and-sells-a-50-stake-in-a-portfolio-of-developed-assets-to-kkr/?lang=eng",
+        "tier": 1,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "blackstone.com",
+        "example_url": "https://www.blackstone.com/news/press/kuwait-oil-company-signs-us-16-0-billion-infrastructure-partnership-involving-its-crude-oil-pipeline-network-with-a-consortium-comprising-blackstone-brookfield-and-kkr/",
+        "tier": 1,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "bloomberg.com",
+        "example_url": "https://www.bloomberg.com/news/articles/2026-07-16/apollo-bets-on-mexico-with-20-billion-target-for-private-credit",
+        "tier": 3,
+        "hits": 1,
+        "checks": 1
+      }
+    ]
+  },
+  "what_you_got_wrong": {
+    "this_class": [
+      {
+        "code": "W7",
+        "lesson": "a >=$1B fund/firm has no holdings collected.",
+        "occurrences": 21,
+        "examples": [
+          "Brookfield: $153.9B fund/firm with no holdings collected",
+          "BlackRock: $44.9B fund/firm with no holdings collected"
+        ]
+      },
+      {
+        "code": "W3",
+        "lesson": "a key allocator with events has no profile yet (profiler coverage gap).",
+        "occurrences": 6,
+        "examples": [
+          "Apollo: key allocator with events but no profile",
+          "Goldman Sachs: key allocator with events but no profile"
+        ]
+      },
+      {
+        "code": "W9",
+        "lesson": "see audit_report.md",
+        "occurrences": 3,
+        "examples": [
+          "Apollo: 15 of 190 holdings shipped \u2014 under the 25 floor; renders as 'top 15 of 190'",
+          "Blackstone: 14 of 53 holdings shipped \u2014 under the 25 floor; renders as 'top 14 of 53'"
+        ]
+      }
+    ],
+    "all_classes": [
+      {
+        "code": "W8",
+        "lesson": "a >=$1B investable target has no ai_posture tag.",
+        "occurrences": 31,
+        "examples": [
+          "Electronic Arts: $33.6B investable target with no ai_posture",
+          "OpenAI Group PBC: $21.3B investable target with no ai_posture"
+        ]
+      }
+    ]
+  }
+}
