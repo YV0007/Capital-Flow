@@ -208,6 +208,10 @@ eco-dossier agent (agents/eco-dossier.md)  one node, done properly
    → runs/<month>/nveco-dossier-NN/dossier.json
    → tools/dossier_split.py  → {entities,factors,edges,sources,translations}.csv
 
+eco-prose agent (agents/eco-prose.md)  one edge or node, its text rewritten
+   tools/make_prose_batches.py <month> --queue=one-doc|core|all
+   → runs/<month>/nvnet-prose-NN/{facts,details,notes}.csv
+
 8 layer agents (agents/nveco-*.md)  narrowed mandate: find what is NOT on the map
    → runs/<month>/nveco-*/{entities,factors,edges,sources}.csv
 
@@ -252,6 +256,35 @@ candidate-queue row; the queue is worked through in full, every row accepted or
 rejected with a reason. `python tools/feedback_check.py` exits 1 while anything is
 unconsumed. This exists because it once did not: `Carl Zeiss SMT` sat rejected in a
 committed CSV that no step was obliged to open.
+
+**Prose is written from research, not around a quote.** Until 2026-08-29 the agent
+built sentences around whatever `evidence` happened to hold, so a read was exactly as
+deep as its quotes: **101 of 262 edges** stood on a single document, usually a
+boilerplate risk paragraph — and the quote's language moved into the text with it
+(«one customer») on a map that exists in order to name. The order is now **research →
+registry of quantities → free text**. Every figure is entered in `facts[]`
+(`engine/nveco_facts.py`: `value` · `unit` from a closed list · `as_of` · `about` ·
+url · `verbatim`); the quote sits a layer below the sentence as a receipt, and the
+engine checks each number against it. Three checks bite offline, without a single
+network call: a number in the prose that is in no fact, a numeric fact whose `value`
+does not occur in its own `verbatim` — a receipt written for a different sum — and
+Cyrillic in `value`. A quantity is a number, a date or a name from the source and is
+never translated; the bilingual side of a fact is `label`. Batches come from
+`tools/make_prose_batches.py`: both ends whole, the neighbourhood of each, and what
+the neighbours already say.
+
+**The backing rule is per object; the rest is counted debt.** An object that has
+`facts[]` has been researched again — its numbers are checked against the registry,
+falling back to `evidence` is refused, and a paraphrase in place of a name fails the
+release. An object without `facts[]` keeps the old `evidence` check and is printed by
+name in the run report. The alternative — demanding the registry from all 150 objects
+at once — would have meant not shipping the map until the last paragraph was
+rewritten, so the rule would never have been switched on at all.
+
+**A fresh pair beats the translation store.** Edge `detail` and entity `description`
+arrive as `{ru, en}` on one CSV row. The store used to win, so the first rewritten
+read would have shipped Russian prose about the new figures next to English about the
+old ones. Now the fresh pair wins, as it already did for `note` and `oneLiner`.
 
 **Five spines, not two:** `physical` · `capital` · `moat` · `control` · `rivalry`.
 A moat and a gate are not kinds of supply and not kinds of money — they are
@@ -438,6 +471,7 @@ dashboard.
 | Quarterly | Ecosystem map — mid tier dossiers | same, `--tier=due` picks them up by cadence |
 | On trigger | Ecosystem map — tail: an edge touched the node, or 6 months without confirmation | same |
 | Every ecosystem run | Candidate queue, rejection ledger and hunt tasks worked through in full | `tools/queue_review.py`, `tools/gap_review.py`, gate `tools/feedback_check.py` |
+| Every ecosystem run | Prose debt printed by name: numbers still on quotes, paraphrase instead of a name, reads standing on one document | `run_network.py` run report |
 | Monthly (planned) | Fund portfolios | `run_holdings.py`, 20th or later |
 | Per filing | Fund Tracker — poll EDGAR submissions, ingest on new accession | `run_funds.py` |
 | After each new map | Logo pipeline for new entities | `npm run logos` |
@@ -458,6 +492,11 @@ dashboard.
 | Ecosystem: 10 of 108 profiles have no citation of their own | 2 have no publisher at all (`cfius`, `chips-act`) and never can; 8 are behind bot protection on their own sites | Engine |
 | Ecosystem: 34 of 108 nodes fail `min_confirmed_edges` | All held by an edge and marked, none retired. Half are simply nodes rotation has not reached | Engine |
 | Ecosystem: `disputed` is 0 across 314 edges | Machinery complete and tested; 77 dossiers found no case of a party denying what is written about it | Engine |
+| Ecosystem: 150 objects' numbers rest on quotes, not the registry | They predate `facts[]`, so the backing rule cannot apply to them; counted by name in every run report until rewritten | Engine |
+| Ecosystem: 23 objects paraphrase instead of naming | «one customer», «its main rival» — the exact defect the inverted order exists to remove. Only objects with `facts[]` are gated on it | Engine |
+| Ecosystem: 39 of 44 core↔core reads stand on one document | Queue `nvnet-prose-01…06` is built; 5 rewritten so far, `tsmc → broadcom` among them | Engine |
+| Ecosystem: `facts[]` is not rendered | The registry ships in the payload and nothing shows it. Planned as a «по цифрам» block on the edge card and node panel, each quantity linked to its source | Dashboard |
+| Ecosystem: 8 jurisdiction monograms fail the build | The dashboard derives a monogram from the first letters of the displayed name; on the `/4` payload that name is Russian and `i18n_audit` fails. **Not a regression** — the payload committed before the prose pass fails identically. Belongs to the `/3` → `/4` dashboard pass | Dashboard |
 
 ---
 
@@ -526,4 +565,16 @@ boundary or rule. Newest last. Never edit a past entry.
   and hunt counters now measure months rather than runs. Taxonomy gained a 39th
   sector, `fabless_silicon`. Payload gained `nameEn`, filled for the 11 entities whose
   name is genuinely translatable.
+- **2026-09-01** — Ecosystem map, campaign v5 (prose). The order of work is inverted:
+  research → registry of quantities (`facts[]`, `engine/nveco_facts.py`) → free text,
+  with the quote a receipt under the sentence instead of the frame around it. New agent
+  `agents/eco-prose.md` and batcher `tools/make_prose_batches.py`; the default queue is
+  core edges whose read stands on one document. Backing is enforced **per object** — an
+  object with `facts[]` may not fall back to `evidence` and may not paraphrase instead
+  of naming, and everyone else is counted debt printed by name in the run report.
+  `value` is never translated: Cyrillic in it fails the release. A fresh `{ru, en}` pair
+  now beats the translation store for edge `detail` and entity `description`, which it
+  did not before — the first rewritten read would have shipped mismatched sides. The
+  contract **stays `/4`**: `facts[]` is additive, and `/5` is already promised to the
+  removal of `pivotal`, which the dashboard on `/3` still reads. §4b, §9 and §10 updated.
 
