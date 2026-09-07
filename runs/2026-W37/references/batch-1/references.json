@@ -1,0 +1,183 @@
+[
+  {
+    "target": "KKR Global Infrastructure Investors V",
+    "description": "KKR's fifth global infrastructure fund, closed August 2026 at $19.2B — the firm's largest infrastructure vehicle to date. Core+ strategy targeting critical infrastructure (power, digital, transport) mainly in North America and Western Europe; already deployed over $9B. Part of KKR's roughly $120B infrastructure platform.",
+    "website": "https://www.kkr.com",
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-08-03/kkr-raises-19-2-billion-for-biggest-ever-infrastructure-fund"},
+    "sources": [
+      "https://media.kkr.com/news-details?news_id=4231602b-5c20-4a0a-9e36-e797836bc1c7",
+      "https://www.bloomberg.com/news/articles/2026-08-03/kkr-raises-19-2-billion-for-biggest-ever-infrastructure-fund",
+      "https://www.datacenterdynamics.com/en/news/kkr-closes-global-infrastructure-investors-v-fund-with-192bn-to-spend-on-infrastructure/"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "Akita AI Data Center (Bitgrit/S2)",
+    "description": "Planned ~500MW, roughly $12.6B AI data center in Akita, northern Japan, developed by US AI startup Bitgrit and local firm S2, targeting early-2030s operation and powered by regional wind and water resources. UAE sovereign fund Mubadala is reportedly weighing an investment of up to about $6.3B in the project.",
+    "website": null,
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-08-06/uae-fund-weighs-6.3-billion-ai-data-center-investment-in-japan"},
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2026-08-06/uae-fund-weighs-6.3-billion-ai-data-center-investment-in-japan",
+      "https://www.datacenterdynamics.com/en/news/uaes-mubadala-considers-investing-in-500mw-bitgrit-s2-data-center-in-akita-japan/",
+      "https://www.japantimes.co.jp/business/2026/08/17/companies/akita-data-center/"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "MediaTek",
+    "description": "Taiwanese fabless semiconductor company, among the world's largest chip designers (smartphone SoCs, connectivity, edge-AI silicon). In late August 2026 it deepened its partnership with NVIDIA to build AI edge-to-cloud computing platforms, with Alphabet and NVIDIA named as capital partners in the roughly $3.5B deal.",
+    "website": "https://www.mediatek.com",
+    "read_more": {"label": "GlobeNewswire", "url": "https://www.globenewswire.com/news-release/2026/08/31/3353306/0/en/nvidia-and-mediatek-deepen-long-standing-partnership-to-build-ai-edge-to-cloud-computing-platforms.html"},
+    "sources": [
+      "https://www.globenewswire.com/news-release/2026/08/31/3353306/0/en/nvidia-and-mediatek-deepen-long-standing-partnership-to-build-ai-edge-to-cloud-computing-platforms.html",
+      "https://focustaiwan.tw/business/202609010010",
+      "https://www.mediatek.com/press-room/nvidia-and-mediatek-deepen-long-standing-partnership-to-build-ai-edge-to-cloud-computing-platforms"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "IREN Limited",
+    "description": "NASDAQ-listed (IREN) vertically integrated AI Cloud and data-center operator, evolved from Bitcoin miner Iris Energy, running NVIDIA-architecture GPU cloud infrastructure (including a $9.7B Microsoft agreement). In August 2026, Blue Owl-managed funds led a $2.4B equipment financing to fund NVIDIA Blackwell Ultra GPUs for its Mackenzie, British Columbia campus.",
+    "website": "https://iren.com",
+    "read_more": {"label": "PR Newswire", "url": "https://www.prnewswire.com/news-releases/blue-owl-managed-funds-lead-2-4-billion-ai-factory-financing-for-iren-302863057.html"},
+    "sources": [
+      "https://www.prnewswire.com/news-releases/blue-owl-managed-funds-lead-2-4-billion-ai-factory-financing-for-iren-302863057.html",
+      "https://www.blueowl.com/news/blue-owl-managed-funds-lead-24-billion-ai-factory-financing-iren",
+      "https://iren.com"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "SB Energy",
+    "description": "SoftBank-affiliated data-center and energy developer building and operating AI infrastructure sites, including the OpenAI-leased PORTS-Pike Technology Campus in Ohio. NVIDIA invested $1.5B in August 2026 (joining SoftBank and OpenAI), becoming the exclusive AI-compute provider for up to 8GW of planned capacity there.",
+    "website": "https://sbenergy.com",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/08/17/nvidia-investing-1-5b-in-softbank-data-center-developer-behind-openai-project/"},
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm",
+      "https://techcrunch.com/2026/08/17/nvidia-investing-1-5b-in-softbank-data-center-developer-behind-openai-project/",
+      "https://nvidianews.nvidia.com/news/nvidia-guarantees-sb-energy-s-ports-pike-technology-campus-in-ohio-to-exclusively-host-nvidia-ai-compute",
+      "https://sbenergy.com/nvidia-ai-compute-ports-pike-ohio/"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "Trilogy Metals Inc",
+    "description": "NYSE American-listed junior mining company developing the Upper Kobuk Mineral Projects (copper, cobalt, germanium, zinc) in the Ambler mining district of northwest Alaska. In August 2026 the U.S. Department of War announced a $35.6M strategic equity investment under the Defense Production Act to secure domestic critical-mineral supply.",
+    "website": "https://trilogymetals.com",
+    "read_more": {"label": "U.S. Department of War", "url": "https://www.war.gov/News/Releases/Release/Article/4585334/department-of-war-announces-356-million-strategic-equity-investment-in-trilogy/"},
+    "sources": [
+      "https://www.war.gov/News/Releases/Release/Article/4585334/department-of-war-announces-356-million-strategic-equity-investment-in-trilogy/",
+      "https://trilogymetals.com/news-and-media/news/trilogy-metals-provides-an-update-on-the-strategic-equity-investment-by-the-u-s-department-of-war/",
+      "https://www.gurufocus.com/news/8999843/trilogy-metals-tmq-secures-356m-strategic-investment-from-us-department-of-war"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "Thrive Holdings",
+    "description": "Spinout of Thrive Capital (an OpenAI investor) that acquires and \"rewires\" traditional service businesses with AI — an accounting arm (\"Current\") and an IT arm (\"Shield\"). Raised $2B in August 2026 at a $12B valuation from SoftBank, Altimeter, D1 Capital and others; OpenAI holds an equity stake in the company.",
+    "website": "https://www.thriveholdings.com",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/"},
+    "sources": [
+      "https://www.thriveholdings.com/thrive-holdings-fundraise",
+      "https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/",
+      "https://www.benzinga.com/markets/private-markets/26/07/60319836/softbank-altimeter-reportedly-back-thrive-holdings-2-billion-raise-for-ai-driven-acquisitions"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "PLUS ES",
+    "description": "Australian smart-metering and energy-infrastructure provider managing about 2 million meters on the National Electricity Market; a ring-fenced business of the Ausgrid Group (NSW Government, IFM Investors, AustralianSuper, APG). DigitalBridge agreed in August 2026 to acquire it from Ausgrid; the price was not disclosed.",
+    "website": "https://www.pluses.com.au",
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-08-27/softbank-linked-digitalbridge-to-buy-australian-smart-meter-unit"},
+    "sources": [
+      "https://www.digitalbridge.com/news/2026-08-27-digitalbridge-to-acquire-plus-es-a-leading-australian-smart-metering-platform",
+      "https://www.bloomberg.com/news/articles/2026-08-27/softbank-linked-digitalbridge-to-buy-australian-smart-meter-unit",
+      "https://www.pluses.com.au/about-us/"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "NVIDIA AI Compute Infrastructure Financing Platform",
+    "description": "Not a standalone company but a set of MOUs NVIDIA signed in August 2026 with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to establish dedicated financing platforms aimed at mobilizing over $500B of third-party capital for AI-compute infrastructure buildout across NVIDIA's customer ecosystem.",
+    "website": null,
+    "read_more": {"label": "NVIDIA Newsroom", "url": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital"},
+    "sources": [
+      "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Partners-With-Apollo-BlackRock-Blackstone-Brookfield-Goldman-Sachs-and-KKR-to-Establish-AI-Compute-Infrastructure-Financing-Platforms-to-Mobilize-Over-500-Billion-of-Third-Party-Capital/default.aspx",
+      "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+      "https://www.blackstone.com/news/press/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital/"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "Firmus Technologies",
+    "description": "Sydney-based AI-cloud and data-center infrastructure company building NVIDIA-based \"AI Factories\" across Australia (Project Southgate) and expanding into Asia-Pacific. Closed a fully subscribed $2B strategic equity round in August 2026 (Coatue, NVIDIA, Blackstone, Jane Street) at a post-money valuation above $10.5B, up from ~$5.5B in April.",
+    "website": "https://firmus.co",
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-08-07/ai-data-center-group-firmus-draws-2-billion-from-coatue-nvidia"},
+    "sources": [
+      "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+      "https://www.bloomberg.com/news/articles/2026-08-07/ai-data-center-group-firmus-draws-2-billion-from-coatue-nvidia",
+      "https://www.datacenterdynamics.com/en/news/aussie-ai-cloud-company-firmus-raises-2bn-via-equity-sale/"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "Discovery Loop",
+    "description": "AI-research startup founded in August 2026 by ex-Google chief scientist Jeff Dean with Sanjay Ghemawat, Oriol Vinyals and Quoc Le, aiming to automate the scientific method (proposing, running and evaluating experiments at scale). Structured as a public benefit corporation backed by Radical Ventures and Khosla Ventures, with Google as a founding investor and compute partner; reported to have raised about $1.0B.",
+    "website": null,
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/"},
+    "sources": [
+      "https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/",
+      "https://www.geekwire.com/2026/the-startup-idea-that-convinced-a-uw-computer-science-legend-to-leave-google-after-27-years/",
+      "https://www.unite.ai/jeff-dean-leaves-google-to-automate-the-scientific-method-with-discovery-loop/"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "CuspAI",
+    "description": "Cambridge, UK-based AI startup building a generative \"search engine for materials\" (its MIRA platform) to speed industrial materials discovery, including chipmaking materials, with NVIDIA, AMD and Meta among its partners. Raised a $450M Series B at a $2.6B valuation in July 2026, backed by Jeff Bezos' Bezos Expeditions and the UK's sovereign AI fund.",
+    "website": "https://cusp.ai",
+    "read_more": {"label": "CNBC", "url": "https://www.cnbc.com/2026/07/20/bezos-cuspai-new-chip-materials-nvidia.html"},
+    "sources": [
+      "https://www.cnbc.com/2026/07/20/bezos-cuspai-new-chip-materials-nvidia.html",
+      "https://www.fool.com/investing/2026/08/02/jeff-bezos-backed-a-26-billion-ai-startup-thats-pa/",
+      "https://cusp.ai/"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "Cloverleaf Infrastructure",
+    "description": "US data-center and digital-infrastructure developer founded in 2024 (raised $300M in its first year), applying NVIDIA's DSX platform to jointly plan site, power, cooling and compute for AI factories. NVIDIA made a minority investment as part of an August 2026 strategic partnership to accelerate infrastructure buildout for utility and enterprise customers.",
+    "website": "https://www.cloverleafinfra.com",
+    "read_more": {"label": "PR Newswire", "url": "https://www.prnewswire.com/news-releases/cloverleaf-infrastructure-forms-strategic-partnership-with-nvidia-to-accelerate-data-center-infrastructure-development-302857329.html"},
+    "sources": [
+      "https://www.prnewswire.com/news-releases/cloverleaf-infrastructure-forms-strategic-partnership-with-nvidia-to-accelerate-data-center-infrastructure-development-302857329.html",
+      "https://www.powermag.com/nvidia-cloverleaf-partnering-to-advance-data-center-development/",
+      "https://www.cloverleafinfra.com/newsroom/cloverleaf-infrastructure-forms-strategic-partnership-with-nvidia-to-accelerate-data-center-infrastructure-development"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "Blue Owl Data Center REIT (planned)",
+    "description": "A planned, not-yet-formed publicly traded REIT that alternative-asset manager Blue Owl Capital reportedly intends to seed with about $6.5B of its own data-center assets and take public via IPO, per a September 4, 2026 Bloomberg report citing people familiar with the matter. Details, structure and name were still under deliberation as of reporting.",
+    "website": null,
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-09-04/blue-owl-is-said-to-plan-public-company-for-data-center-roll-up"},
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2026-09-04/blue-owl-is-said-to-plan-public-company-for-data-center-roll-up",
+      "https://www.costar.com/article/417159639/blue-owl-to-move-3-29-billion-data-center-portfolio-to-new-reit",
+      "https://seekingalpha.com/news/4640384-blue-owl-plans-to-create-data-center-reit-take-it-public---report"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "1X Technologies",
+    "description": "Norwegian-American humanoid-robotics company (Palo Alto HQ, manufacturing in Norway and California), maker of the OpenAI-backed NEO home robot. SoftBank is reportedly in talks as of August 2026 to buy a majority stake at roughly a $6B valuation — below the ~$10B figure 1X had sought a year earlier — as part of SoftBank's broader robotics push.",
+    "website": "https://www.1x.tech",
+    "read_more": {"label": "The Information", "url": "https://www.theinformation.com/articles/softbank-talks-buy-majority-stake-humanoid-maker-1x-6-billion-valuation"},
+    "sources": [
+      "https://www.theinformation.com/articles/softbank-talks-buy-majority-stake-humanoid-maker-1x-6-billion-valuation",
+      "https://techstartups.com/2026/08/27/softbank-in-talks-to-buy-a-majority-stake-in-humanoid-robot-startup-1x-at-6-billion-valuation/",
+      "https://www.1x.tech/discover"
+    ],
+    "as_of": "2026-09-07"
+  }
+]

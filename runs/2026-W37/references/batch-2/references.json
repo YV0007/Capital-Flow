@@ -1,0 +1,168 @@
+[
+  {
+    "target": "Hugging Face",
+    "description": "Open-source AI platform — the de facto \"GitHub for AI\" — used by 18M+ developers to share over 3M models, 500,000 datasets and 1M apps; 200,000+ companies use it to discover and deploy AI. NVIDIA agreed to acquire it for $12.93B (~$11.9B to investors, up to $1B employee retention), with the platform pledged to stay hardware-neutral.",
+    "website": "https://huggingface.co",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/"},
+    "sources": [
+      "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/",
+      "https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/",
+      "https://www.cnbc.com/2026/09/03/nvidia-agrees-to-buy-hugging-face-for-almost-13-billion-ai-expansion.html"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "El Paso AI Data Center Venture (with Meta)",
+    "description": "A ~$14B joint venture between Meta and BlackRock-managed funds to build a 1GW AI data-center campus in El Paso, Texas, completing 2028. BlackRock holds 80% (funding roughly $4.9B cash plus $12.5B in debt financing); Meta contributes land/construction assets (~$2.3B), keeps 20%, and will be sole tenant under a long-term lease.",
+    "website": null,
+    "read_more": {"label": "Forbes", "url": "https://www.forbes.com/sites/maryroeloffs/2026/07/28/blackrock-will-own-80-of-metas-massive-new-ai-data-center-in-el-paso/"},
+    "sources": [
+      "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-New-Strategic-Venture-with-BlackRock-to-Develop-Data-Center-in-El-Paso/default.aspx",
+      "https://www.forbes.com/sites/maryroeloffs/2026/07/28/blackrock-will-own-80-of-metas-massive-new-ai-data-center-in-el-paso/",
+      "https://www.datacenterdynamics.com/en/news/meta-and-blackrock-team-up-for-data-center-in-el-paso-texas/"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "HUMAIN Data Center Fund",
+    "description": "A planned $2.5B investment fund from HUMAIN, the Saudi AI company backed by the Public Investment Fund (PIF), to finance domestic data-center buildout — initially 250MW built with Al Moammar Information Systems, potentially scaling to 1GW. To be managed by BSF Capital with a mixed debt/equity structure, pending Capital Market Authority approval.",
+    "website": "https://www.humain.com",
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-09-03/saudi-firm-humain-eyes-2-5-billion-fund-to-build-data-centers"},
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2026-09-03/saudi-firm-humain-eyes-2-5-billion-fund-to-build-data-centers",
+      "https://www.investing.com/news/stock-market-news/humain-plans-25-billion-fund-for-saudi-data-center-projects--bloomberg-93CH-4888112",
+      "https://aiweekly.co/alerts/humain-plans-initial-25b-fund-via-bsf-capital-to-finance-250mw-of-saudi-data"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "Andreessen Horowitz Growth Fund V",
+    "description": "a16z's fifth late-stage growth vehicle, launched in January 2026 at $6.75B and expanded to $8.5B by August 2026. Invests across enterprise/consumer AI, defense tech, robotics and infrastructure; over seven years the growth strategy has backed 100+ companies including Databricks, OpenAI and SpaceX.",
+    "website": "https://a16z.com",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/08/31/a16z-brings-growth-fund-to-8-5b-days-after-launching-new-1-1b-fund/"},
+    "sources": [
+      "https://techcrunch.com/2026/08/31/a16z-brings-growth-fund-to-8-5b-days-after-launching-new-1-1b-fund/",
+      "https://techfundingnews.com/a16z-expands-growth-fund-to-8-5b-after-backing-databricks-openai-spacex-and-others/"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "Machine Age Fund",
+    "description": "a16z's first fund dedicated entirely to the physical infrastructure of AI — chips, memory, networking, storage, power systems, data centers and robotics — closed at $1.1B on August 28, 2026. Co-managed by Raghu Raghuram and Martin Casado (ex-VMware), reflecting a16z's shift beyond pure software investing.",
+    "website": "https://a16z.com/the-machine-age-fund/",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/08/28/a16z-creates-a-1-1b-machine-age-fund-to-accelerate-the-physical-buildout-of-ai/"},
+    "sources": [
+      "https://a16z.com/the-machine-age-fund/",
+      "https://techcrunch.com/2026/08/28/a16z-creates-a-1-1b-machine-age-fund-to-accelerate-the-physical-buildout-of-ai/",
+      "https://dealroom.co/news/147561-a16z-raises-1-1b-for-machine-age-fund-to-build-ai-hardware/"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "Valar Atomics",
+    "description": "Startup building small modular nuclear microreactors, factory-built to power AI data centers; its Ward 250 reactor reached criticality and powered an Nvidia Blackwell chip in June 2026. Closed a $1B Series B led by Sequoia (Shaun Maguire, joining the board) at a $6B valuation — plus a separate $200M credit facility — tripling its valuation from months earlier.",
+    "website": "https://www.valaratomics.com",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/08/03/sequoias-shaun-maguire-leads-1b-round-for-nuclear-startup-valar-atomics/"},
+    "sources": [
+      "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia",
+      "https://techcrunch.com/2026/08/03/sequoias-shaun-maguire-leads-1b-round-for-nuclear-startup-valar-atomics/",
+      "https://www.canarymedia.com/articles/nuclear/microreactor-startup-valar-atomics-raises-1b"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "Prentis",
+    "description": "AI research lab founded by Ritankar Das with Reid Hoffman and Mark Pincus, building \"computer-use\" agent models that perceive screens and operate software to automate office workflows. Launched April 2026; as of July 2026 was in talks to raise $100M at a $1B valuation, with up to $50M already in customer contracts.",
+    "website": "https://www.prentis.ai",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/07/24/prentis-new-ai-lab-co-founded-by-reid-hoffman-mark-pincus-in-talks-to-raise-100m/"},
+    "sources": [
+      "https://techcrunch.com/2026/07/24/prentis-new-ai-lab-co-founded-by-reid-hoffman-mark-pincus-in-talks-to-raise-100m/",
+      "https://www.prentis.ai/"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "Neros Technologies",
+    "description": "US drone manufacturer building autonomous FPV strike drones (Archer AI) and a counter-UAS interceptor (Bandit) for the US Army and Marine Corps, targeting 1M drones/year by 2028. Raised $250M Series C at a $2.5B valuation (Aug 2026), co-led by Sequoia and the American Strategic Technology Fund, with Thiel Capital and Dylan Field participating.",
+    "website": "https://www.neros.tech",
+    "read_more": {"label": "PR Newswire", "url": "https://www.prnewswire.com/news-releases/neros-raises-250m-series-c-at-2-5b-valuation-to-scale-autonomous-and-interceptor-drone-programs-302848736.html"},
+    "sources": [
+      "https://www.neros.tech/articles/neros-raises-250m-series-c-at-2-5b-valuation-to-scale-autonomous-and-interceptor-drone-programs",
+      "https://www.prnewswire.com/news-releases/neros-raises-250m-series-c-at-2-5b-valuation-to-scale-autonomous-and-interceptor-drone-programs-302848736.html",
+      "https://pulse2.com/neros-raises-250-million-series-c-at-2-5-billion-valuation/"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "Mariana Minerals",
+    "description": "Houston-based, software-first critical-minerals company that develops, builds and operates mines and refineries via its MarianaOS platform (AI/ML-coordinated equipment, scheduling and production), with flagship projects Copper One (Utah) and Lithium One (Texas). Raised a $310M Series B (Aug 2026) led by Khosla Ventures with a16z, Breakthrough Energy, BHP Ventures and others, bringing total capital raised to ~$400M.",
+    "website": "https://marianaminerals.com",
+    "read_more": {"label": "Fortune", "url": "https://fortune.com/2026/08/03/power-ai-khosla-a16z-bet-startup-reinvent-mining-mariana-minerals/"},
+    "sources": [
+      "https://www.prnewswire.com/news-releases/mariana-minerals-raises-310-million-series-b-led-by-khosla-ventures-to-accelerate-critical-minerals-production-302840889.html",
+      "https://fortune.com/2026/08/03/power-ai-khosla-a16z-bet-startup-reinvent-mining-mariana-minerals/",
+      "https://marianaminerals.com/"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "Etched",
+    "description": "AI chip startup building server racks with transformer-specialized inference processors, manufactured with TSMC (first chips delivered June 2026, $1B in booked orders). Raised $700M Series D led by Jane Street at a $21B valuation (Aug 18, 2026) — roughly doubling its $10.3B valuation from a month prior — with Sequoia, a16z, Kleiner Perkins and Peter Thiel also participating.",
+    "website": "https://www.etched.com",
+    "read_more": {"label": "Data Center Dynamics", "url": "https://www.datacenterdynamics.com/en/news/inference-chip-startup-etched-raises-700m-doubles-valuation-to-21bn/"},
+    "sources": [
+      "https://www.unite.ai/etched-raises-700m-series-d-at-21b-valuation-to-ramp-inference-hardware-production/",
+      "https://www.datacenterdynamics.com/en/news/inference-chip-startup-etched-raises-700m-doubles-valuation-to-21bn/",
+      "https://siliconangle.com/2026/08/18/inference-chip-startup-etched-raises-another-700m-at-21b-valuation/"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "Databricks",
+    "description": "Enterprise data-and-AI (\"lakehouse\") platform company. Announced Aug 13, 2026 that it surpassed a $7B annualized revenue run-rate (+80% YoY) alongside a $5B strategic funding round at a $190B valuation, led by Coatue with Blackstone, MGX, T. Rowe Price and Sixth Street, plus existing backers a16z and Thrive Capital, funding Lakebase, Genie and Unity AI Gateway.",
+    "website": "https://www.databricks.com",
+    "read_more": {"label": "Databricks Newsroom", "url": "https://www.databricks.com/company/newsroom/press-releases/databricks-grows-80-yoy-surpasses-7b-revenue-run-rate-scales"},
+    "sources": [
+      "https://www.databricks.com/company/newsroom/press-releases/databricks-grows-80-yoy-surpasses-7b-revenue-run-rate-scales",
+      "https://www.cmswire.com/ai-platforms/databricks-hits-7b-run-rate/",
+      "https://finance.yahoo.com/technology/ai/articles/databricks-closes-5b-round-190b-152209939.html"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "Corma",
+    "description": "Tel Aviv/San Francisco-based AI lab founded 2025, billed as the first frontier foundation model built specifically for defensive cybersecurity, deployed at Fortune 100/500 clients to cut threat-response times. Raised a $60M seed round (Aug 10, 2026) led by Sequoia with Khosla Ventures and Coatue.",
+    "website": null,
+    "read_more": {"label": "Fortune", "url": "https://fortune.com/2026/08/10/exclusive-corma-raises-60-million-from-sequoia-for-ai-trained-to-defend-against-cyberattacks/"},
+    "sources": [
+      "https://www.newswire.com/news/corma-the-first-frontier-defensive-cybersecurity-ai-lab-raises-60m-as-ai",
+      "https://fortune.com/2026/08/10/exclusive-corma-raises-60-million-from-sequoia-for-ai-trained-to-defend-against-cyberattacks/",
+      "https://www.securityweek.com/corma-raises-60-million-for-defensive-cybersecurity-ai-model/"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "Cambridge Aerospace",
+    "description": "UK air-defense startup (founded late 2024, led by aerospace-engineering professor Steven Barrett) building low-cost counter-drone interceptors — Skyhammer (shipping, ~30km range) and Starhammer (due 2027) — to counter threats like Shahed-style drones. Raised a $300M Series C at a $3.4B valuation (Aug 10, 2026), led by DFJ Growth with Elad Gil & Co., Lux and Accel, more than doubling its $1.3B valuation from four months earlier.",
+    "website": null,
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-08-10/anduril-backers-give-defense-startup-cambridge-aerospace-3-4-billion-valuation"},
+    "sources": [
+      "https://tech.eu/2026/08/10/cambridge-aerospaces-valuation-leaps-to-34bn-as-raised-300m/",
+      "https://www.bloomberg.com/news/articles/2026-08-10/anduril-backers-give-defense-startup-cambridge-aerospace-3-4-billion-valuation",
+      "https://pulse2.com/cambridge-aerospace-raises-300-million-series-c-at-3-4-billion-valuation-led-by-dfj-growth/"
+    ],
+    "as_of": "2026-09-07"
+  },
+  {
+    "target": "AWS HUMAIN AI Zone",
+    "description": "A joint AWS–HUMAIN \"AI Zone\" data-center facility in Riyadh, Saudi Arabia, where AWS will supply up to 150,000 AI accelerators and up to 50MW of compute capacity (Trainium chips plus NVIDIA hardware) by 2028, part of Amazon's $5.3B+ Saudi investment pledge and paired with AWS's new Saudi cloud region launching December 2026.",
+    "website": "https://www.humain.com",
+    "read_more": {"label": "About Amazon", "url": "https://www.aboutamazon.com/news/company-news/amazon-aws-humain-ai-investment-in-saudi-arabia"},
+    "sources": [
+      "https://www.aboutamazon.com/news/company-news/amazon-aws-humain-ai-investment-in-saudi-arabia",
+      "https://ppc.land/aws-commits-5-3-billion-50mw-capacity-to-saudi-ai-zone-by-2028/",
+      "https://www.developingtelecoms.com/telecom-technology/data-centres-networks/20766-aws-expands-humain-ai-zone-plans-saudi-arabia-cloud-region-on-track.html"
+    ],
+    "as_of": "2026-09-07"
+  }
+]
