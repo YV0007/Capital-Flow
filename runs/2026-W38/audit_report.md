@@ -1,26 +1,17 @@
 # Audit report — 2026-W38 (2026-09-14)
 
-**Verdict: FAIL — delivery blocked**
-Checked 315 events, 115 track-record rows, 43 profiles, 199 target references, 351 holdings, 0 classified targets.
+**Verdict: PASS**
+Checked 316 events, 115 track-record rows, 43 profiles, 211 target references, 351 holdings, 0 classified targets.
 
-## Errors (9)
-- E6 AIR: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Cardinal Data Power: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Cognition: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Gimlet Labs: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Lightfield: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Midwest AI Data Center Acquisition Entity (Hunt Properties JV): target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 NavigateAI: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 NextEra Energy (Duane Arnold Energy Center): target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Rigetti Computing: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
+## Errors (0)
+_none_
 
-## Warnings (46)
+## Warnings (45)
 - W3 Apollo: key allocator with events but no profile
 - W3 Elon Musk: key allocator with events but no profile
 - W3 Goldman Sachs: key allocator with events but no profile
 - W3 Max Levchin: key allocator with events but no profile
 - W3 Palmer Luckey: key allocator with events but no profile
-- W6 NextEra Energy (Duane Arnold Energy Center): $1.9B target with no reference
 - W7 BlackRock: $49.8B fund/firm with no holdings collected
 - W7 MGX Fund I: $49.0B fund/firm with no holdings collected
 - W7 KKR: $24.7B fund/firm with no holdings collected
@@ -65,14 +56,14 @@ Checked 315 events, 115 track-record rows, 43 profiles, 199 target references, 3
 ## Stats
 ```json
 {
-  "events": 315,
+  "events": 316,
   "by_status": {
-    "candidate": 67,
+    "candidate": 68,
     "verified": 193,
     "verified_alpha": 55
   },
   "source_url_coverage": 1.0,
-  "estimated_amounts": 69,
+  "estimated_amounts": 70,
   "provisional_track_rows": 42
 }
 ```

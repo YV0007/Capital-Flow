@@ -113,7 +113,7 @@
 | cyber_security | $10M | 1 | 1 |
 | biotech_ai | $0 | 1 | 1 |
 
-## Public beneficiaries mapped (6)
+## Public beneficiaries mapped (12)
 | Ticker | Company | From flow | Confidence |
 |---|---|---|:-:|
 | ARM | Arm Holdings plc | Andreessen Horowitz→Gimlet Labs | medium |
@@ -122,20 +122,27 @@
 | GOOGL | Alphabet Inc. | US Government→NextEra Energy (Duane Arnold Energy Center) | medium |
 | GFS | GlobalFoundries Inc. | US Government→GlobalFoundries | high |
 | RGTI | Rigetti Computing Inc. | US Government→Rigetti Computing | high |
+| ARM | Arm Holdings plc | Andreessen Horowitz→Gimlet Labs | medium |
+| NVDA | NVIDIA Corporation | Andreessen Horowitz→Cognition | high |
+| NEE | NextEra Energy Inc. | US Government→NextEra Energy (Duane Arnold Energy Center) | high |
+| GOOGL | Alphabet Inc. | US Government→NextEra Energy (Duane Arnold Energy Center) | medium |
+| GFS | GlobalFoundries Inc. | US Government→GlobalFoundries | high |
+| RGTI | Rigetti Computing Inc. | US Government→Rigetti Computing | high |
 
-## Candidates to watch (4)
+## Candidates to watch (5)
 - NVIDIA → Thinking Machines Lab (ai-labs, minority_stake)
 - Saudi PIF → Humain Data Center Fund (datacenters, fund_launch)
+- Mubadala → Akita AI Data Center (Bitgrit / S2 Group, Japan) (datacenters, sovereign_investment)
 - Blackstone → Broadcom (AI chip / Anthropic compute financing) (semiconductors, project_finance)
 - Apollo → Broadcom (AI chip / Anthropic compute financing) (semiconductors, project_finance)
 
-## Coverage — 9/48 key & core allocators produced events
-_Silent this run (39) — verify these are genuinely quiet, not missed:_
+## Coverage — 10/48 key & core allocators produced events
+_Silent this run (38) — verify these are genuinely quiet, not missed:_
 
 - **alt_manager**: BlackRock, Brookfield, DigitalBridge, Goldman Sachs, SoftBank
 - **corporate**: Alphabet, Amazon, Meta, Microsoft, Oracle
 - **individual**: Alexandr Wang, Austin Russell, Daniel Gross, David Sacks, Delian Asparouhov, Dylan Field, Elon Musk, Joe Lonsdale, Keith Rabois, Laura Deming, Lucy Guo, Luke Nosek, Max Levchin, Nat Friedman, Palmer Luckey, Peter Thiel, Reid Hoffman, Roelof Botha, Trae Stephens, Eric Schmidt, Jeff Bezos, Marc Andreessen, Masayoshi Son, Sam Altman, Vinod Khosla
-- **sovereign**: MGX, Mubadala
+- **sovereign**: MGX
 - **vc**: Khosla Ventures, Thrive Capital
 
 ## Discovered allocators — promote to watchlist? (15)
