@@ -1,0 +1,13 @@
+alt-managers/verified_events.csv:2 WARN theme 'ai-infra-buildout' not canonical
+alt-managers/verified_events.csv:3 WARN theme 'power-grid-digitization' not canonical
+alt-managers/verified_events.csv:4 WARN theme 'ai-infra-buildout' not canonical
+alt-managers/candidate_events.csv:2 WARN theme 'ai-infra-buildout' not canonical
+alt-managers/candidate_events.csv:3 WARN theme 'ai-infra-buildout' not canonical
+alt-managers/candidate_events.csv:4 WARN theme 'ai-infra-buildout' not canonical
+alt-managers/candidate_events.csv:5 WARN theme 'ai-infra-buildout' not canonical
+alt-managers/candidate_events.csv:6 WARN theme 'ai-infra-buildout' not canonical
+alt-managers/candidate_events.csv:7 WARN theme 'ai-infra-buildout' not canonical
+alt-managers/candidate_events.csv:8 WARN theme 'ai-infra-buildout' not canonical
+alt-managers/candidate_events.csv:9 WARN theme 'ai-infra-buildout' not canonical
+sovereigns/candidate_events.csv:3 WARN sector 'project' not in canonical taxonomy
+sovereigns/candidate_events.csv:3 SKIP bad event_type 'AI data center construction (500MW)'; bad source_tier 'candidate'; bad status '1'; bad target_type 'Japan)'; bad amount_usd 'sovereign_investment'
