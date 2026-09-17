@@ -75,7 +75,7 @@ guarantee that.
 | Question | Where did money go this week | Who is structurally irreplaceable, who is locked in, who gates whom | What do the ~14 funds we respect hold right now | Interpretation, and the sections with no engine |
 | Unit | A dated **event** | An undated standing **dependency** | A **position / stake / delta** | A read, a news item, a price |
 | Universe | Discovery-shaped — agents hunt leads | Scope-shaped — 16 layers plus three membership checks | **Closed and curated**, never auto-extended | Fixed list |
-| Agents | 6, by allocator class | 8, by stack layer | **none** — fully deterministic | 2 skills |
+| Agents | 6, by allocator class | 8, by stack layer | **none** — fully deterministic | 3 skills |
 | Orchestrator | `run_week.py` | `run_network.py` (v3) · `run_nvidia.py` (v2) | `run_funds.py` | npm scripts + skills |
 | Tables | `events`, `allocators`, … | `nveco_*` | `fund_*` | — |
 | Handoff | `handoff/capital_map.json` | `handoff/ai_ecosystem_network.json` | `handoff/fund_tracker.json` | — |
@@ -397,6 +397,33 @@ Intelligence Platform, not a news aggregator.
 > the same contract. That is content drift, not contract drift, and
 > `tools/ops_check.py` deliberately does not flag it.
 
+### Dashboard-owned
+
+No engine stands behind these. The dashboard researches, computes or writes them
+itself, and the same tier ladder and no-fabrication mandate apply.
+
+| Feature | File in dashboard | Owner | Ultimate source | Cadence |
+|---|---|---|---|---|
+| Holdings news | `src/data/holdings-v2/*.json` → `news[]` | skill `holdings-news-refresh` | Web research, fetched sources only | Weekly |
+| Holdings prices | same → `priceChart` | `scripts/refresh_prices.mjs` | Yahoo Finance, 1-year weekly closes | Weekly |
+| Deal reads | `src/data/flowNotes.json` | skill `capital-flow-reads` | The delivered `capitalMap.json` **only** — never the web | Weekly, after delivery |
+| Nomura Chip Supply Index | `src/data/chipSupplyIndex.json` | skill `chip-supply-index-refresh` | Nomura Global Economics, **public channels only** | Monthly |
+| Holdings English | `src/data/holdings.en.json` | `scripts/holdings_en_*.mjs` | Translation of the Russian payload | On new Russian prose |
+| DC roadmap English | `src/data/dc-details.en.json` | `scripts/dc_en_*.mjs` | same | On new Russian prose |
+
+> **The CSI has no feed and never will.** The index is Nomura's own construction
+> and the full series is subscription-only, so every point carries a `p` flag —
+> `published` (Nomura stated the figure openly) or `chart_read` (digitised off a
+> published Nomura chart, ±0.1 pt). A number Nomura has not published does not go
+> in the file. This is mandate 1 applied to a series that cannot be fetched.
+
+> **The English sidecars are a getter overlay, not a copy.** `holdings.en.json`
+> and `dc-details.en.json` mirror the Russian payload by path; the consuming data
+> module re-attaches them as getters so `node.label` stays a plain string. Spread
+> (`{ ...node }`) freezes the getter — mandate 10's third trap. Anything already
+> shipped as a `{ ru, en }` pair (all of `news[]`) stays out of the sidecar: two
+> sources for one sentence is how the sides go mismatched.
+
 ---
 
 ## 7. Standing mandates
@@ -466,6 +493,7 @@ dashboard.
 |---|---|---|
 | Weekly | Capital Flow map — agents, ingest, signals, handoff, deploy | Cloud routine + `run.sh` |
 | Weekly | Holdings news + prices; deal reads; RU gap check | Skills, Mon 08:00 UTC |
+| Monthly | Nomura Chip Supply Index — research pass over Nomura's public channels | Skill `chip-supply-index-refresh` |
 | Weekly | **This file** — reconcile against reality (§11) | Scheduled ops pass |
 | Monthly | Ecosystem map — core tier (top 30) dossiers, ~40 nodes in batches of 8 | `tools/make_dossier_batches.py --tier=due`, then `run_nvidia.py` + `run_network.py` |
 | Quarterly | Ecosystem map — mid tier dossiers | same, `--tier=due` picks them up by cadence |
@@ -486,8 +514,7 @@ dashboard.
 | Fund portfolios: the 7 that work are thin | Coatue 16/250, a16z 49/1458 — below the mandated 25 | Engine |
 | **Warnings do not block** | The audit gate blocks on errors only. W7 warned for weeks while runs shipped green — that is how the above stayed invisible | Engine |
 | `fundTracker.json` is a fixture | Real payload pending | Engine |
-| i18n incomplete | ~1,400 untranslated string sites across ~68 files; ecosystem map, funds, holdings, YC tracker, DC roadmap largely Russian-only | Dashboard |
-| Holdings news is Russian-only | `news[].title/text` are data, not UI — needs translated fields or a translation step | Both |
+| i18n incomplete | **Data is done** — every data module passes `npm run i18n:check`, Holdings at 15,429/15,429. What is left is **component copy**: 617 bare Cyrillic string literals across 66 files in `src/components` (was «~1,400 across ~68»). Worst: `dc/Roadmap.jsx` 153 (half-translated — 166 already in `t()`), `home/homeData.js` 72, `capitalflow/digest.js` 44 (a helper, so it needs `getLang()` not `useT()`). **Nothing gates this number** — `i18n:check` audits data modules, `i18n:lint` audits rules; neither counts component copy | Dashboard |
 | Ecosystem cycle-lens camera | Lit circuit can land off-screen on lens open; «Восстановить вид» fixes it | Dashboard |
 | Ecosystem: 10 of 108 profiles have no citation of their own | 2 have no publisher at all (`cfius`, `chips-act`) and never can; 8 are behind bot protection on their own sites | Engine |
 | Ecosystem: 34 of 108 nodes fail `min_confirmed_edges` | All held by an edge and marked, none retired. Half are simply nodes rotation has not reached | Engine |
@@ -578,3 +605,25 @@ boundary or rule. Newest last. Never edit a past entry.
   contract **stays `/4`**: `facts[]` is additive, and `/5` is already promised to the
   removal of `pivotal`, which the dashboard on `/3` still reads. §4b, §9 and §10 updated.
 
+- **2026-09-05** — New dashboard-owned source: the **Nomura Chip Supply Index** on
+  the home landing (`src/data/chipSupplyIndex.json`, schema `chip-supply-index/1`),
+  refreshed monthly by the skill `chip-supply-index-refresh`. There is no feed and
+  there will not be one — the index is Nomura Global Economics' own construction
+  and the full series is subscription-only, so the refresh is a research pass over
+  Nomura's public channels. Every point carries a provenance flag, `published` or
+  `chart_read`; anything Nomura has not published openly does not go in the file.
+  §6 gained a **Dashboard-owned** table — the chip index had nowhere to live,
+  and neither did holdings news, prices or the deal reads, which had been
+  dashboard-owned in §2 and undocumented in §6 since the file was written.
+- **2026-09-14** — **Holdings is bilingual: 15,429/15,429 strings.** News went
+  bilingual on 09-09 (`news[]` ships `{ru, en}` pairs, gated), and the dossiers,
+  portfolios, financials and comparison index followed on 09-14 through a new
+  sidecar `src/data/holdings.en.json` re-attached as a getter overlay — the same
+  pattern as `dc-details.en.json`, with `scripts/holdings_en_{common,status,merge}.mjs`
+  behind `npm run holdings:en` and `holdings:en:merge`. `i18n_audit` now gates
+  `holdingsV2.js` and `holdingsIndex.js` with an empty baseline, so Russian cannot
+  re-enter the English build. Closes the §10 gap «Holdings news is Russian-only».
+- **2026-09-14** — i18n gap re-measured. The data side is finished; what remains is
+  component copy, counted honestly for the first time: **617 bare Cyrillic literals
+  across 66 files**, down from the recalled «~1,400 across ~68». No build gate
+  counts it — recorded in §10 as an unmeasured surface, not a solved one.
