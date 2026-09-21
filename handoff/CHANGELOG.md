@@ -1,34 +1,233 @@
 # Handoff changelog — 2026-09-21
 
-- nodes: 58  flows: 42  sectors: 9
+- nodes: 283  flows: 353  sectors: 18
 
-## New entities (26)
-- target:Anderon (IBM subsidiary)
-- target:Ansaldo Energia
-- target:Blackstone Green Private Credit Fund IV
-- target:Brookfield Investment Solutions Group (Nuclear Liabilities Fund mandate)
-- target:Crusoe
-- target:D-Wave Quantum
-- target:EnduroSat
-- target:Factory
-- target:Harvey
-- target:Highstock
-- target:Integral
-- target:Mazama Energy
-- target:Mercor
-- target:Nara Health
-- target:Perplexity
-- target:Profound
-- target:PsiQuantum
-- target:Quantinuum
-- target:REGENT Craft
-- target:ST Telemedia Global Data Centres (STT GDC)
-- target:Savvy Wealth
-- target:SciFin
-- target:Split Pay
-- target:Stilla.ai
-- target:Voya Energy
-- target:West Street Capital Partners IX
+## New entities (225)
+- alloc:Anthropic
+- alloc:Azora
+- alloc:BlackRock
+- alloc:Brian Singerman
+- alloc:David Sacks
+- alloc:DigitalBridge
+- alloc:Dylan Field
+- alloc:Elon Musk
+- alloc:Empery Digital
+- alloc:Eric Schmidt
+- alloc:Garry Tan
+- alloc:Greenoaks
+- alloc:Korea Investment Corporation
+- alloc:MGX
+- alloc:Max Levchin
+- alloc:Microsoft
+- alloc:Palmer Luckey
+- alloc:Patrick Collison
+- alloc:Saudi PIF
+- alloc:SoftBank
+- alloc:Stanley Druckenmiller
+- alloc:Vinod Khosla
+- target:1X Technologies
+- target:ABB Robotics
+- target:ABB Robotics acquisition financing
+- target:AI Compute Infrastructure Financing Platform (NVIDIA-anchored)
+- target:AIR
+- target:APR Energy
+- target:AWS HUMAIN AI Zone
+- target:Aeluma
+- target:Aeluma Inc.
+- target:AirTrunk SYD3 (Western Sydney)
+- target:Akita 500MW AI data center (Japan)
+- target:Akita AI Data Center (BitGrid / S2 JV)
+- target:Akita AI Data Center (Bitgrit / S2 Group, Japan)
+- target:Akita AI Data Center (Bitgrit/S2)
+- target:Aligned Data Centers
+- target:Altimeter Himalaya Fund I, L.P.
+- target:Altimeter Kilauea Fund II, L.P.
+- target:Amazon
+- target:Amazon.com Inc.
+- target:Ambrook
+- target:American Electric Power
+- target:Andreessen Horowitz Fund X-B - AI Applications, L.P.
+- target:Andreessen Horowitz Fund X-B - AI Infrastructure, L.P.
+- target:Andreessen Horowitz Growth Fund V
+- target:Andreessen Horowitz LSV Fund V-B, L.P.
+- target:Anthropic
+- target:Arrive Logistics
+- target:Atoms
+- target:Aypa Power
+- target:Base Power
+- target:BlackRock (El Paso Data Center JV)
+- target:Blacksmith
+- target:Bloom Energy
+- target:Blue Origin
+- target:Blue Owl Data Center REIT (planned)
+- target:Boralex
+- target:Broadcom (AI chip / Anthropic compute financing)
+- target:Brookfield AI Infrastructure strategy
+- target:Brookfield Infrastructure Fund VI (flagship)
+- target:Brookfield Middle East Partners
+- target:Brookfield Middle East Partners (BMEP)
+- target:CMS Energy
+- target:Cardinal Data Power
+- target:Castelion
+- target:Cathedral
+- target:Chai Discovery
+- target:Cloverleaf Infrastructure
+- target:Coatue Growth Fund VI Private Investors Cayman, L.P.
+- target:Coatue Growth Fund VI Private Investors US, LLC
+- target:Coatue retail fund
+- target:Cognition
+- target:Convex
+- target:Corma
+- target:Craft Ventures V, LP
+- target:DOE Genesis Mission (SPARK)
+- target:DOE Paducah Site AI data center campus (Western Kentucky)
+- target:DTE Energy
+- target:Databricks
+- target:DigitalBridge Credit II
+- target:DigitalBridge Group
+- target:Dili
+- target:Discovery Loop
+- target:DuckLabs
+- target:EDF power solutions North America
+- target:El Paso AI Data Center Venture (with Meta)
+- target:Electronic Arts
+- target:Ellis
+- target:Erebor
+- target:Extropic
+- target:Firmus
+- target:Firmus Technologies
+- target:FirstEnergy
+- target:Flourish
+- target:Form Energy
+- target:France sovereign AI infrastructure framework
+- target:GPx TX LP
+- target:General Intuition
+- target:Generalist AI
+- target:Genesis Mission first project cohort (278 projects)
+- target:Gimlet Labs
+- target:GlobalFoundries
+- target:Glow
+- target:Gradium
+- target:Gravis Robotics
+- target:Gravis Robotics AG
+- target:Greenoaks Prime Radiant Founders LP
+- target:Greenoaks Prime Radiant Founders Offshore LP
+- target:HUMAIN Data Center Fund
+- target:Hadrian
+- target:HappyRobot
+- target:Humain Data Center Fund
+- target:Japan AI data centers (programme)
+- target:KIC strategic investment account (AI / data centers / strategic industries)
+- target:KKR Global Infrastructure Investors V
+- target:Kepler
+- target:Kepler Computing
+- target:Khosla Ventures (new fund family, unnamed)
+- target:Khosla Ventures 2026 fund family
+- target:Khosla Ventures MM SPV, LLC
+- target:Kirkwood Infrastructure Group
+- target:Kuwait Oil Company Pipeline JV (Project Peregrine)
+- target:Lancium
+- target:LifeMine Therapeutics
+- target:Lightfield
+- target:Lucid Group
+- target:MGX Fund I
+- target:MOZN
+- target:Machine Age Fund
+- target:Mariana Minerals
+- target:Mate Security
+- target:MediaTek
+- target:Mesh Optical Technologies
+- target:Meta Hyperion (Richland Parish, Louisiana)
+- target:Meta-BlackRock El Paso data center venture
+- target:Mexico private credit / infrastructure market
+- target:Microsoft Frontier Company
+- target:Midwest AI Data Center Acquisition Entity (Hunt Properties JV)
+- target:Mistral AI
+- target:Monogram
+- target:Moove
+- target:Mubadala Capital (credit platform)
+- target:Multibeam Corporation
+- target:NAVER Corporation
+- target:NAVER GAK Sejong AI Factory (South Korea)
+- target:NAVER GAK Sejong AI factory (Korea national AI factory)
+- target:NVIDIA AI Compute Infrastructure Financing Platform
+- target:NVIDIA AI Infrastructure Financing Platform
+- target:NavigateAI
+- target:Nebius Group N.V.
+- target:Neo Security
+- target:Neros Technologies
+- target:Network Bio
+- target:NextEra Energy (Duane Arnold Energy Center)
+- target:NextEra-Brookfield Paducah AI Data Center Campus
+- target:Nippon Gateway Infrastructure (NGI)
+- target:Niron Magnetics
+- target:Norm Ai
+- target:OBSIDIA Semiconductors
+- target:Oaktree Capital Management
+- target:Odyssey
+- target:OpenAI Group PBC
+- target:OpenAI southern Ohio 10GW data center
+- target:P-1 AI
+- target:PLUS ES
+- target:Paducah AI/HPC innovation campus
+- target:Paducah DOE Site AI Data Center Campus
+- target:Panthalassa
+- target:Performance Drone Works
+- target:Point2 Technology
+- target:Poolside
+- target:Preview
+- target:Prime Intellect
+- target:Project Sopaipilla Holdings (Meta El Paso data center JV)
+- target:Prometheus
+- target:Prometheus project (Idaho National Laboratory and partners)
+- target:Proxima Fusion
+- target:QTS Realty Trust
+- target:Quiet Select TX LP
+- target:Radical Numerics
+- target:Richland Parish / Hyperion data center (Louisiana)
+- target:Rigetti Computing
+- target:Rillet
+- target:SB Energy
+- target:SB Energy PORTS-Pike Technology Campus (Ohio)
+- target:SB Neo
+- target:SK-KKR Korea renewable energy platform
+- target:STACK Infrastructure Melbourne (third campus)
+- target:Safe Superintelligence
+- target:Saudi PIF strategic investments (US export credit facility)
+- target:Savannah River Site AI data center
+- target:Senra Systems
+- target:Sila Nanotechnologies
+- target:Singularity Defense
+- target:SkillBench
+- target:SpaceX
+- target:Stack Infrastructure (Melbourne data center)
+- target:Standard Bauxite
+- target:State Affairs
+- target:Strategic Bauxite USA
+- target:Strategic Bauxite USA, LLC (SBX)
+- target:Sturgeon County data center (Alberta, Canada)
+- target:Summit Ridge Energy
+- target:Sunrise Energy Metals
+- target:TeraWulf Justified Data Campus (Kentucky)
+- target:Thintronics
+- target:Thrive Holdings
+- target:Thrive Holdings Inc
+- target:TotalEnergies European renewables portfolio (Germany/Spain/France/Poland)
+- target:Trilogy Metals Inc
+- target:U.S. semiconductor fabrication facility (unnamed)
+- target:Valar Atomics
+- target:Valar Atomics Inc.
+- target:Vals AI
+- target:Veeda AI
+- target:Vista Energy
+- target:Vistra
+- target:Volta AI Infra Holdings
+- target:Volta AI Infrastructure Program
+- target:Volta Infra Holdings
+- target:Westinghouse nuclear reactor deployment (Brookfield/Cameco)
+- target:Whatnot
+- target:Williams Power Innovation JV (Socrates, Apollo, Aquila, Socrates the Younger, Neo)
+- target:X-Energy
 
-## Stale entities — no activity in 180d (0)
-_none_
+## Stale entities — no activity in 180d (1)
+- target:DigitalBridge Group
