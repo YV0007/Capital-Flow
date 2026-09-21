@@ -1,0 +1,16 @@
+allocator,target,event_type,disclosed_date,ticker,company,rationale,confidence
+US Government,D-Wave Quantum,grant,2026-09-08,QBTS,D-Wave Quantum Inc.,Direct CHIPS Act R&D award recipient; D-Wave is itself the publicly traded entity that received the $100M grant.,high
+US Government,Anderon (IBM subsidiary),grant,2026-09-16,IBM,International Business Machines,Anderon is a newly formed IBM subsidiary (quantum wafer foundry); the $1B CHIPS award funds R&D that sits on IBM's own balance sheet.,high
+US Government,Quantinuum,grant,2026-09-08,HON,Honeywell International,Quantinuum is majority-owned by Honeywell (formed from Honeywell Quantum Solutions plus Cambridge Quantum); Honeywell is the primary economic beneficiary of the $100M award.,medium
+Amazon,OpenAI,corporate_investment,2026-02-27,NVDA,NVIDIA Corporation,OpenAI's compute buildout funded by this $15B tranche overwhelmingly purchases NVIDIA GPUs and systems; the primary picks-and-shovels beneficiary of frontier AI training capex.,high
+Amazon,OpenAI,corporate_investment,2026-02-27,AMZN,Amazon.com Inc.,The investment is paired with a large OpenAI compute-purchase commitment on AWS; Amazon captures the resulting compute spend on its own cloud infrastructure.,high
+Amazon,OpenAI,follow_on,2026-07-31,NVDA,NVIDIA Corporation,The remaining $35B tranche continues to fund GPU-heavy compute buildout for OpenAI, chiefly on NVIDIA silicon.,medium
+Amazon,OpenAI,follow_on,2026-07-31,AMZN,Amazon.com Inc.,Continuation of the $50B compute-linked investment; the compute spend flows back onto AWS infrastructure.,medium
+Blue Owl,IREN Limited,project_finance,2026-08-28,NVDA,NVIDIA Corporation,The $2.4B debt package explicitly funds IREN's purchase of NVIDIA Blackwell Ultra GPUs for its Canada campus.,high
+KKR,ST Telemedia Global Data Centres (STT GDC),acquisition,2026-09-03,VRT,Vertiv Holdings,STT GDC's hyperscale/colo data center campuses require thermal and power infrastructure; Vertiv is a leading supplier of cooling and power systems to APAC data centers.,low
+KKR,SK Horizon,minority_stake,2026-08-27,NVDA,NVIDIA Corporation,SK Horizon is a new AI-data-center spinout; the hyperscale AI campuses being built with this capital are predominantly GPU-driven and a likely NVIDIA compute buyer.,low
+Founders Fund,Crusoe,funding_round,2026-09-17,NVDA,NVIDIA Corporation,Crusoe is a neocloud/GPU-cloud operator; new Series F capital funds further NVIDIA GPU deployment across its cloud buildout.,medium
+Altimeter,Crusoe,funding_round,2026-09-17,NVDA,NVIDIA Corporation,Same Crusoe Series F; GPU-cloud capacity expansion primarily purchases NVIDIA compute.,medium
+Andreessen Horowitz,Harvey,funding_round,2026-09-09,MSFT,Microsoft Corporation,Harvey's legal-AI platform runs on Azure OpenAI Service; new capital scales usage predominantly on Microsoft's cloud/compute stack.,medium
+Sequoia,Harvey,funding_round,2026-09-09,MSFT,Microsoft Corporation,Harvey's legal-AI platform runs on Azure OpenAI Service; new capital scales usage predominantly on Microsoft's cloud/compute stack.,medium
+Coatue,Harvey,funding_round,2026-09-09,MSFT,Microsoft Corporation,Harvey's legal-AI platform runs on Azure OpenAI Service; new capital scales usage predominantly on Microsoft's cloud/compute stack.,medium

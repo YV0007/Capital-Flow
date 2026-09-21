@@ -1,0 +1,240 @@
+[
+  {
+    "target": "OpenAI",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "Amazon"
+    ],
+    "last_event": "2026-07-31",
+    "capital_usd": 50000000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1018724/000110465926021050/tm267374d1_8k.htm",
+      "https://www.pymnts.com/news/artificial-intelligence/2026/amazon-completes-50-billion-dollar-investment-openai/"
+    ]
+  },
+  {
+    "target": "West Street Capital Partners IX",
+    "target_type": "fund",
+    "sector": "diversified-pe",
+    "allocators": [
+      "Goldman Sachs"
+    ],
+    "last_event": "2026-09-15",
+    "capital_usd": 9600000000.0,
+    "deal_source_urls": [
+      "https://am.gs.com/en-us/advisors/news/press-release/2026/goldman-sachs-alternatives-west-street-capital-partners-ix-final-close"
+    ]
+  },
+  {
+    "target": "IREN Limited",
+    "target_type": "public",
+    "sector": "neocloud",
+    "allocators": [
+      "Blue Owl"
+    ],
+    "last_event": "2026-08-28",
+    "capital_usd": 2400000000.0,
+    "deal_source_urls": [
+      "https://www.investing.com/news/company-news/blue-owl-leads-24-billion-ai-infrastructure-financing-for-iren-93CH-4881746"
+    ]
+  },
+  {
+    "target": "Anderon (IBM subsidiary)",
+    "target_type": "private",
+    "sector": "semiconductors",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-09-16",
+    "capital_usd": 1000000000.0,
+    "deal_source_urls": [
+      "https://www.nist.gov/news-events/news/2026/09/department-commerce-announces-finalization-chips-rd-award-anderon"
+    ]
+  },
+  {
+    "target": "PsiQuantum",
+    "target_type": "private",
+    "sector": "semiconductors",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-09-08",
+    "capital_usd": 100000000.0,
+    "deal_source_urls": [
+      "https://www.nist.gov/news-events/news/2026/09/department-commerce-announces-finalization-chips-rd-award-psiquantum"
+    ]
+  },
+  {
+    "target": "Voya Energy",
+    "target_type": "private",
+    "sector": "power-energy",
+    "allocators": [
+      "Founders Fund"
+    ],
+    "last_event": "2026-08-26",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.financialcontent.com/article/bizwire-2026-8-26-voya-energy-unveils-metal-fuels-energy-system-closes-35-million-series-a"
+    ]
+  },
+  {
+    "target": "Stilla.ai",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "Meta"
+    ],
+    "last_event": "2026-09-09",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.axios.com/2026/09/09/meta-acquires-swedish-ai-startup-stillaai"
+    ]
+  },
+  {
+    "target": "SciFin",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Altimeter"
+    ],
+    "last_event": "2026-09-01",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.morningstar.com/news/business-wire/20260901028252/scifin-emerges-from-stealth-with-44-million-in-seed-funding-to-help-revenue-teams-see-risk-earlier-and-act-faster"
+    ]
+  },
+  {
+    "target": "SK Horizon",
+    "target_type": "private",
+    "sector": "datacenters",
+    "allocators": [
+      "KKR"
+    ],
+    "last_event": "2026-08-27",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/sk-telecom-launches-ai-data-center-infrastructure-company-sk-horizon-and-secures-investments-from-kkr-and-imm-302861694.html"
+    ]
+  },
+  {
+    "target": "Profound",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Sequoia",
+      "Khosla Ventures"
+    ],
+    "last_event": "2026-09-15",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.globenewswire.com/news-release/2026/09/15/3362180/0/en/profound-raises-180m-series-d-at-1-8b-valuation-to-build-the-ai-platform-for-marketing-teams.html"
+    ]
+  },
+  {
+    "target": "Perplexity",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-08-23",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.theinformation.com/articles/nvidia-discusses-perplexity-investment-30-billion-plus-valuation-considered-tech-licensing-deal"
+    ]
+  },
+  {
+    "target": "Mercor",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Apollo"
+    ],
+    "last_event": "2026-09-16",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.pymnts.com/startups/2026/apollo-backs-ai-hardware-startups-to-win-future-infrastructure-financing/"
+    ]
+  },
+  {
+    "target": "Integral",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "Reid Hoffman"
+    ],
+    "last_event": "2026-09-16",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://tech.eu/2026/09/16/integral-lands-eur18m-series-a-for-ai-native-accounting-and-tax-services/"
+    ]
+  },
+  {
+    "target": "Harvey",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Sequoia",
+      "Andreessen Horowitz",
+      "Coatue"
+    ],
+    "last_event": "2026-09-09",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://techcrunch.com/2026/09/09/harvey-hits-15-5b-valuation-months-after-reaching-11b/"
+    ]
+  },
+  {
+    "target": "Etched",
+    "target_type": "private",
+    "sector": "semiconductors",
+    "allocators": [
+      "Peter Thiel"
+    ],
+    "last_event": "2026-08-18",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.globenewswire.com/news-release/2026/08/18/3347095/0/en/etched-raises-700m-at-a-21b-valuation-and-completes-first-customer-delivery-to-jane-street.html"
+    ]
+  },
+  {
+    "target": "CuspAI",
+    "target_type": "private",
+    "sector": "semiconductors",
+    "allocators": [
+      "Jeff Bezos"
+    ],
+    "last_event": "2026-07-20",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://medium.com/@CuspAI/launching-our-ai-materials-foundry-and-450-million-series-b-f5603d8259dd"
+    ]
+  },
+  {
+    "target": "Cambridge Aerospace",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "Elad Gil"
+    ],
+    "last_event": "2026-08-10",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.axios.com/2026/08/10/anti-drone-defense-cambridge-aerospace"
+    ]
+  },
+  {
+    "target": "Ansaldo Energia",
+    "target_type": "private",
+    "sector": "power-energy",
+    "allocators": [
+      "Mubadala"
+    ],
+    "last_event": "2026-09-20",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.bloomberg.com/news/articles/2026-09-20/mubadala-in-talks-to-invest-in-ansaldo-energia-corriere-reports"
+    ]
+  }
+]
