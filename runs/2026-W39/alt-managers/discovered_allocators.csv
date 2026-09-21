@@ -1,0 +1,4 @@
+name,suggested_class,seen_with,rationale
+PIMCO,alt_manager,Blue Owl (IREN $2.4B GPU-compute financing),"Major fixed-income/private-credit manager co-backing large AI-compute debt financings alongside tracked alt-managers; showing up repeatedly in neocloud/data-center private-credit deals this cycle (IREN deal 2026-08-28) - worth tracking as its own line given AI-debt origination scale."
+IMM Investment Corp,alt_manager,KKR (SK Horizon / SK Telecom AI data-center spinout),"Korean PE firm co-investing alongside KKR in the KRW 3.08tn SK Horizon deal (20% stake alongside KKR's 29%); part of a broader pattern of Korean PE consortiums (with Stonebridge Capital) financing Korea's AI data-center buildout."
+Stonebridge Capital,alt_manager,KKR (SK Horizon / SK Telecom AI data-center spinout),"Korean PE firm, consortium partner with IMM Investment Corp in the SK Horizon investment alongside KKR; same rationale as IMM Investment Corp."
