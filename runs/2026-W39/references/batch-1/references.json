@@ -107,7 +107,7 @@
   },
   {
     "target": "Profound",
-    "description": "AI-search analytics platform (founded 2024) that helps brands track and improve visibility in AI-generated answers (AEO), used by 1,000+ enterprise brands including a third of the Fortune 100. Raised a $180M Series D in September 2026 at a $1.8B valuation, co-led by Sequoia Capital and Kleiner Perkins, with Khosla Ventures among existing participants — seven months after its $96M Series C.",
+    "description": "AI-search analytics platform (founded 2024) helping brands track and improve visibility in AI-generated answers (AEO), used by 1,000+ enterprise brands including a third of the Fortune 100. Raised a $180M Series D in September 2026 at a $1.8B valuation, co-led by Sequoia and Kleiner Perkins, Khosla Ventures participating — 7 months after its $96M Series C.",
     "website": "https://www.tryprofound.com",
     "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/09/15/aeo-startup-profound-hits-unicorn-valuation-raises-180m-series-d-7-months-after-last-round/"},
     "sources": [
@@ -129,7 +129,7 @@
   },
   {
     "target": "Mercor",
-    "description": "San Francisco AI talent/data-labeling marketplace (founded 2023) matching expert contractors with AI labs like OpenAI to train models; raised a $350M Series C at a $10B valuation in late 2025. Apollo Global Management took a small (tens of millions) stake in Mercor's most recent round, reported to value the company near $20B, as part of Apollo's broader push into early equity checks on AI/hardware startups it may later lend to.",
+    "description": "San Francisco AI talent/data-labeling marketplace (founded 2023) matching expert contractors with AI labs like OpenAI to train models; raised a $350M Series C at a $10B valuation in late 2025. Apollo Global Management took a small stake in Mercor's latest round, reported to value the company near $20B.",
     "website": "https://www.mercor.com",
     "read_more": {"label": "PYMNTS", "url": "https://www.pymnts.com/startups/2026/apollo-backs-ai-hardware-startups-to-win-future-infrastructure-financing/"},
     "sources": [
@@ -186,7 +186,7 @@
   },
   {
     "target": "Cambridge Aerospace",
-    "description": "UK air-defense startup (founded 2024 by Steven Barrett with an ex-Anduril and former UK defense secretary co-founder), maker of the Skyhammer drone interceptor and the in-development Starhammer, Looking Glass radar and Nightstar rocket motor. Raised a $300M Series C in August 2026 at a $3.4B valuation led by DFJ Growth, with Elad Gil among participants — up from a $1.3B valuation four months prior.",
+    "description": "UK air-defense startup (founded 2024 by Steven Barrett with an ex-Anduril co-founder), maker of the Skyhammer drone interceptor plus in-development Starhammer, Looking Glass radar and Nightstar motor. Raised a $300M Series C in August 2026 at a $3.4B valuation led by DFJ Growth, Elad Gil participating — up from $1.3B four months prior.",
     "website": null,
     "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-08-10/anduril-backers-give-defense-startup-cambridge-aerospace-3-4-billion-valuation"},
     "sources": [
