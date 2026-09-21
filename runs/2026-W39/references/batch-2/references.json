@@ -1,0 +1,206 @@
+[
+  {
+    "target": "Hugging Face",
+    "description": "Open-source AI/ML platform hosting millions of models, datasets and Spaces used by 18M+ developers ($150M ARR). Agreed to be acquired by NVIDIA for $12.9B, Nvidia's second-largest purchase ever; Hugging Face is set to keep operating independently and supporting open-weight models.",
+    "website": "https://huggingface.co",
+    "read_more": {"label": "NVIDIA Blog", "url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/"},
+    "sources": [
+      "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/",
+      "https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/",
+      "https://www.cnbc.com/2026/09/03/nvidia-agrees-to-buy-hugging-face-for-almost-13-billion-ai-expansion.html"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "ST Telemedia Global Data Centres (STT GDC)",
+    "description": "Singapore-headquartered data-centre operator running a ~2.3GW platform across 12 global markets. A KKR-led consortium with Singtel acquired the remaining 82% stake from Temasek's ST Telemedia, taking full ownership at an implied enterprise value of ~S$13.8B (~$10.9B); KKR now holds 75%, Singtel 25%.",
+    "website": "https://www.sttelemediagdc.com",
+    "read_more": {"label": "STT GDC newsroom", "url": "https://www.sttelemediagdc.com/newsroom/kkr-led-consortium-to-fully-acquire-stt-gdc-13.8-billion-enterprise-value"},
+    "sources": [
+      "https://technode.global/2026/09/03/kkr-singtel-consortium-completes-takeover-of-singapores-stt-gdc-at-10-9b/",
+      "https://www.mingtiandi.com/real-estate/data-centres/kkr-singtel-complete-10-9b-stt-gdc-buyout-backed-by-3-9b-green-loan/",
+      "https://www.sttelemediagdc.com/newsroom/kkr-led-consortium-to-fully-acquire-stt-gdc-13.8-billion-enterprise-value"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "Brookfield Investment Solutions Group (Nuclear Liabilities Fund mandate)",
+    "description": "Brookfield's Investment Solutions Group manages outsourced multi-asset mandates for institutional clients. It was selected by the UK's Nuclear Liabilities Fund (which covers nuclear decommissioning costs) for a multi-decade investment mandate with an initial $1B (~£750M) commitment, announced September 8, 2026.",
+    "website": null,
+    "read_more": {"label": "GlobeNewswire", "url": "https://www.globenewswire.com/news-release/2026/09/08/3357335/0/en/brookfield-selected-by-nuclear-liabilities-fund-for-multi-decade-investment-mandate.html"},
+    "sources": [
+      "https://www.globenewswire.com/news-release/2026/09/08/3357335/0/en/brookfield-selected-by-nuclear-liabilities-fund-for-multi-decade-investment-mandate.html",
+      "https://www.bloomberg.com/news/articles/2026-09-08/brookfield-wins-1-billion-mandate-from-british-nuclear-fund",
+      "https://www.sec.gov/Archives/edgar/data/0001937926/000117184326005900/exh_991.htm"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "Quantinuum",
+    "description": "Trapped-ion quantum computing company (Honeywell/Cambridge Quantum lineage). Finalized a $100M CHIPS and Science Act R&D award from the US Department of Commerce to advance domestic manufacturing of ion-trap hardware, cryogenic semiconductors and optical components, working with GlobalFoundries on fabrication and NIST on metrology.",
+    "website": "https://www.quantinuum.com",
+    "read_more": {"label": "NIST", "url": "https://www.nist.gov/news-events/news/2026/09/department-commerce-announces-finalization-chips-rd-award-quantinuum"},
+    "sources": [
+      "https://www.nist.gov/news-events/news/2026/09/department-commerce-announces-finalization-chips-rd-award-quantinuum",
+      "https://ir.quantinuum.com/news-releases/news-release-details/quantinuum-finalizes-100-million-chips-rd-award-us-department",
+      "https://www.morningstar.com/news/pr-newswire/20260908ln41147/quantinuum-finalizes-100-million-chips-rd-award-with-us-department-of-commerce-to-advance-trapped-ion-quantum-computer-manufacturing-in-the-us"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "D-Wave Quantum",
+    "description": "Publicly traded (NASDAQ: QBTS) quantum computing company building annealing and gate-model systems. Finalized a $100M CHIPS Act R&D award from the US Department of Commerce for quantum-semiconductor process work toward a 100,000-qubit annealing system and a 10,000-qubit gate-model system; Commerce receives a minority equity stake as a funding condition.",
+    "website": "https://www.dwavequantum.com",
+    "read_more": {"label": "NIST", "url": "https://www.nist.gov/news-events/news/2026/09/department-commerce-announces-finalization-chips-rd-award-d-wave"},
+    "sources": [
+      "https://www.nist.gov/news-events/news/2026/09/department-commerce-announces-finalization-chips-rd-award-d-wave",
+      "https://www.sec.gov/Archives/edgar/data/0001907982/000190798226000141/chipsactpressrelease.htm",
+      "https://thequantuminsider.com/2026/09/08/d-wave-signs-100m-us-government-agreement-quantum-computing-rd/"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "Thinking Machines Lab",
+    "description": "AI research lab founded by former OpenAI CTO Mira Murati. As of early September 2026, NVIDIA was reportedly in talks to anchor roughly $2.5B of a $5-6B round at a ~$40B valuation, extending a partnership that already includes a multi-year deal to deploy at least 1GW of NVIDIA Vera Rubin systems. Deal was not yet confirmed closed at time of writing.",
+    "website": "https://thinkingmachines.ai",
+    "read_more": {"label": "The Information", "url": "https://www.theinformation.com/briefings/nvidia-discusses-2-5-billion-investment-mira-muratis-thinking-machines-lab"},
+    "sources": [
+      "https://www.theinformation.com/briefings/nvidia-discusses-2-5-billion-investment-mira-muratis-thinking-machines-lab",
+      "https://www.theinformation.com/articles/thinking-machines-lab-talks-raise-billions-roughly-40-billion-valuation",
+      "https://finance.yahoo.com/technology/ai/articles/nvidia-eyeing-2-5-billion-142916646.html"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "Split Pay",
+    "description": "Fintech (formerly Rent App) that splits a renter's, homeowner's or other biller's large monthly bill into two payments, fronting up to 50% for up to 30 days for a fee. Raised $125M across Series A and B, led by Khosla Ventures with Thrive Capital and Max Levchin participating; says usage grew 70x in the prior year.",
+    "website": "https://splitpay.com",
+    "read_more": {"label": "Axios", "url": "https://www.axios.com/2026/09/08/split-pay-khosla-125-million"},
+    "sources": [
+      "https://www.axios.com/2026/09/08/split-pay-khosla-125-million",
+      "https://alpha-maven.com/story/venture-capital/split-pay-raises-125-million-across-series-a-and-b-led-by-khosla-ventures-pulse-20",
+      "https://splitpay.com/"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "Savvy Wealth",
+    "description": "AI-native registered investment advisor (RIA) platform for independent financial advisors, overseeing ~$9B in client AUM across 150+ advisors. Closed a $100M Series C led by Ryan Smith and Ryan Sweeney's Halo Fund, with existing backer Thrive Capital and others participating, at a $600M valuation.",
+    "website": "https://www.savvywealth.com",
+    "read_more": {"label": "Morningstar", "url": "https://www.morningstar.com/news/business-wire/20260909746126/savvy-wealth-raises-100m-series-c-led-by-ryan-smith-and-ryan-sweeneys-halo-fund"},
+    "sources": [
+      "https://www.morningstar.com/news/business-wire/20260909746126/savvy-wealth-raises-100m-series-c-led-by-ryan-smith-and-ryan-sweeneys-halo-fund",
+      "https://fintech.global/2026/09/09/savvy-wealth-closes-100m-series-c-led-by-halo-fund/",
+      "https://www.citybiz.co/article/900253/savvy-wealth-raises-100-million-series-c-led-by-halo-fund/"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "REGENT Craft",
+    "description": "Rhode Island maker of the Viceroy 'Seaglider,' an electric flying boat that operates under maritime rather than aviation law, plus an autonomous military variant (Squire). Raised $240M Series B (half equity, half debt) co-led by Mare Liberum and AE Ventures, with Founders Fund, Lockheed Martin Ventures and Japan Airlines among backers.",
+    "website": "https://www.regentcraft.com",
+    "read_more": {"label": "REGENT", "url": "https://www.regentcraft.com/news/regent-secures-240-million-series-b-funding-to-scale-seaglider-manufacturing-and-transform-maritime-mobility"},
+    "sources": [
+      "https://www.regentcraft.com/news/regent-secures-240-million-series-b-funding-to-scale-seaglider-manufacturing-and-transform-maritime-mobility",
+      "https://techfundingnews.com/regent-raises-240m-for-flying-boat-startup/",
+      "https://pbn.com/regent-craft-raises-record-240m-in-series-b-funding/"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "Prentis",
+    "description": "AI research lab founded by Ritankar Das with Reid Hoffman and Mark Pincus, building 'computer-use' models that let AI agents operate office software directly; its Hive-32B model claims to beat larger rivals on computer-use benchmarks. As of July 2026, in talks to raise $100M at a ~$1B valuation.",
+    "website": "https://www.prentis.ai",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/07/24/prentis-new-ai-lab-co-founded-by-reid-hoffman-mark-pincus-in-talks-to-raise-100m/"},
+    "sources": [
+      "https://techcrunch.com/2026/07/24/prentis-new-ai-lab-co-founded-by-reid-hoffman-mark-pincus-in-talks-to-raise-100m/",
+      "https://app.dealroom.co/news/note/prentis-launches-ai-lab-for-computer-use-agents-in-talks-to-raise-100m",
+      "https://www.prentis.ai/"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "Nara Health",
+    "description": "AI-native third-party administrator (TPA) unifying benefits administration, claims processing, care orchestration and member support for self-insured employers; has processed $600M+ in claims across 25,000+ members. Raised $14M combined pre-seed/seed led by Khosla Ventures, with Long Journey Ventures and Superior Studios.",
+    "website": "https://www.narabenefits.com",
+    "read_more": {"label": "MedCity News", "url": "https://medcitynews.com/2026/09/nara-health-secures-14m-for-third-party-administration-platform/"},
+    "sources": [
+      "https://www.morningstar.com/news/business-wire/20260914180305/nara-health-raises-14m-to-reinvent-health-insurance-through-ai-benefits-administration-and-alternative-health-plans",
+      "https://medcitynews.com/2026/09/nara-health-secures-14m-for-third-party-administration-platform/",
+      "https://hitconsultant.net/2026/09/14/nara-health-raises-14m-khosla-ventures-ai-native-tpa-health-insurance/"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "Mazama Energy",
+    "description": "Superhot-rock engineered geothermal company; holds the record for the hottest engineered geothermal system built (629°F/331°C at Newberry, Oregon, 2025), targeting 15MW horizontal wells. Raised $135M led by Centaurus Capital and Doerr Capital, joined by ConocoPhillips, Shell Ventures and repeat backer Khosla Ventures.",
+    "website": "https://www.mazamaenergy.com",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/09/17/khosla-backed-mazama-energy-just-raised-135m-to-drill-deeper-into-super-hot-rock-geothermal/"},
+    "sources": [
+      "https://techcrunch.com/2026/09/17/khosla-backed-mazama-energy-just-raised-135m-to-drill-deeper-into-super-hot-rock-geothermal/",
+      "https://www.globenewswire.com/news-release/2026/09/17/3364060/0/en/mazama-energy-raises-135-million-to-scale-the-world-s-hottest-engineered-geothermal-system.html",
+      "https://www.canarymedia.com/articles/geothermal/mazama-energy-raises-135m-oregon-geothermal"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "Highstock",
+    "description": "AI-native B2B marketplace (New York, founded by ex-Instacart's Camille van Horne) that lets beauty brands discreetly resell surplus inventory to vetted buyers; has listed $1B+ in goods across 100+ brands. Raised $30M Series A led by Andreessen Horowitz, with plans to expand into apparel.",
+    "website": "https://www.highstock.com",
+    "read_more": {"label": "WWD", "url": "https://wwd.com/beauty-industry-news/beauty-features/highstock-b2b-marketplace-surplus-inventory-raises-30m-a16z-1239204407/"},
+    "sources": [
+      "https://wwd.com/beauty-industry-news/beauty-features/highstock-b2b-marketplace-surplus-inventory-raises-30m-a16z-1239204407/",
+      "https://a16z.com/announcement/investing-in-highstock/",
+      "https://dealroom.co/news/150077-highstock-lands-30m-series-a-from-a16z-to-clear-beautys-surplus-inventor/"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "Factory",
+    "description": "Enterprise AI platform ('Droids') for autonomous software development — code review, testing, debugging and incident response. Raised $200M at a $5B valuation (up from $1.5B in April 2026), with Sequoia, Khosla Ventures, Blackstone and Clearlake among backers, bringing total funding past $400M.",
+    "website": "https://factory.ai",
+    "read_more": {"label": "SiliconANGLE", "url": "https://siliconangle.com/2026/09/15/factory-raises-200m-for-its-self-improving-software-development-platform/"},
+    "sources": [
+      "https://siliconangle.com/2026/09/15/factory-raises-200m-for-its-self-improving-software-development-platform/",
+      "https://pulse2.com/factory-raises-200-million-at-5-billion-valuation-to-scale-self-improving-software-development-platform/",
+      "https://factory.ai/news/software-factory"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "EnduroSat",
+    "description": "Bulgaria-founded space company making standardized, software-flexible small satellites and offering constellations-as-a-service to 450+ customers. Raised $205M co-led by Riot Ventures and Atreides Management, with Google Ventures (GV), Founders Fund and Lux Capital among backers, to open a US manufacturing facility and an EU space/defense hub.",
+    "website": "https://www.endurosat.com",
+    "read_more": {"label": "GlobeNewswire", "url": "https://www.globenewswire.com/news-release/2026/09/16/3363367/0/en/endurosat-raises-205m-to-scale-next-generation-space-fleets.html"},
+    "sources": [
+      "https://www.globenewswire.com/news-release/2026/09/16/3363367/0/en/endurosat-raises-205m-to-scale-next-generation-space-fleets.html",
+      "https://www.endurosat.com/news/endurosat-raises-205m-to-scale-next-generation-space-fleets/",
+      "https://dealroom.co/news/151269-endurosat-raises-210m-to-scale-satellite-production-in-europe-and-us/"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "Crusoe",
+    "description": "Vertically integrated AI infrastructure company building large-scale data-center campuses and modular 'Crusoe Spark' AI factories (an OpenAI Stargate partner). Announced an oversubscribed $3.9B Series F initial close at a $30.9B valuation, co-led by Atreides Management, Mubadala Capital and Valor Equity, with NVIDIA, Founders Fund, GIC and Altimeter participating.",
+    "website": "https://www.crusoe.ai",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/09/17/crusoe-raises-3-9b-to-build-massive-data-centers-and-small-modular-ai-factories/"},
+    "sources": [
+      "https://techcrunch.com/2026/09/17/crusoe-raises-3-9b-to-build-massive-data-centers-and-small-modular-ai-factories/",
+      "https://www.crusoe.ai/resources/newsroom/crusoe-announces-series-f-funding",
+      "https://www.globenewswire.com/news-release/2026/09/17/3364326/0/en/crusoe-raises-3-9-billion-series-f-for-its-vertically-integrated-ai-infrastructure-platform.html"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "Blackstone Green Private Credit Fund IV",
+    "description": "Fourth vehicle in Blackstone's private-credit strategy lending to energy-transition and digital-infrastructure borrowers (power/utilities, data centers, chip financing). Reported to be targeting at least $8B, following predecessor Fund III's $7.1B close with a 15% net IRR as of mid-2026. Fundraising was still underway, not confirmed closed, at time of writing.",
+    "website": null,
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-09-15/blackstone-seeks-8-billion-for-green-infrastructure-credit-fund"},
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2026-09-15/blackstone-seeks-8-billion-for-green-infrastructure-credit-fund",
+      "https://www.privateequitywire.co.uk/blackstone-targets-8bn-for-energy-transition-and-digital-infrastructure-credit-strategy/",
+      "https://www.blackstone.com/news/press/blackstone-closes-record-energy-transition-private-credit-fund-at-over-7-billion/"
+    ],
+    "as_of": "2026-09-21"
+  }
+]

@@ -1,0 +1,211 @@
+[
+  {
+    "target": "OpenAI",
+    "description": "San Francisco AI research and product company behind ChatGPT and the GPT model family. Amazon completed its $50B investment in 2026 (paid in early, ahead of the IPO/breakthrough triggers originally set), taking roughly a 5% stake and becoming the exclusive third-party cloud provider for OpenAI's Frontier program via AWS.",
+    "website": "https://openai.com",
+    "read_more": {"label": "PYMNTS", "url": "https://www.pymnts.com/news/artificial-intelligence/2026/amazon-completes-50-billion-dollar-investment-openai/"},
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1018724/000110465926021050/tm267374d1_8k.htm",
+      "https://www.pymnts.com/news/artificial-intelligence/2026/amazon-completes-50-billion-dollar-investment-openai/",
+      "https://www.theinformation.com/briefings/amazon-completes-additional-35-billion-investment-openai"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "West Street Capital Partners IX",
+    "description": "The ninth flagship buyout fund of Goldman Sachs Alternatives' private-equity platform (\"West Street\" series, tracing to 1986). Held its final close in September 2026 at $9.6B, part of $11.7B raised across the platform alongside a $1.6B Asia vehicle and $500M in co-investment capital.",
+    "website": null,
+    "read_more": {"label": "Goldman Sachs Asset Management", "url": "https://am.gs.com/en-us/advisors/news/press-release/2026/goldman-sachs-alternatives-west-street-capital-partners-ix-final-close"},
+    "sources": [
+      "https://am.gs.com/en-us/advisors/news/press-release/2026/goldman-sachs-alternatives-west-street-capital-partners-ix-final-close",
+      "https://www.caproasia.com/2026/09/16/706-billion-goldman-sachs-alternatives-raised-11-7-billion-for-private-equity-strategies-with-9-6-billion-for-9th-flagship-buyout-platform-west-street-capital-partners-ix-1-6-billion-for-pan-ap/"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "IREN Limited",
+    "description": "Nasdaq-listed (IREN), Sydney-headquartered vertically integrated AI Cloud and data-center operator (formerly Iris Energy, pivoted from Bitcoin mining), with a 5GW+ global development pipeline. In August 2026 Blue Owl-managed funds led a $2.4B equipment financing (split between a term loan and secured notes) to fund NVIDIA Blackwell Ultra GPU purchases for its Mackenzie, BC campus.",
+    "website": "https://iren.com",
+    "read_more": {"label": "Blue Owl Capital", "url": "https://www.blueowl.com/news/blue-owl-managed-funds-lead-24-billion-ai-factory-financing-iren"},
+    "sources": [
+      "https://www.investing.com/news/company-news/blue-owl-leads-24-billion-ai-infrastructure-financing-for-iren-93CH-4881746",
+      "https://www.blueowl.com/news/blue-owl-managed-funds-lead-24-billion-ai-factory-financing-iren",
+      "https://en.wikipedia.org/wiki/IREN"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "Anderon (IBM subsidiary)",
+    "description": "Standalone quantum-hardware foundry spun off from IBM, headquartered at IBM's Albany, NY semiconductor campus. Operates a 300mm pure-play quantum wafer fab (superconducting qubit arrays, Josephson-junction tuning, cryogenic readout) open to quantum hardware vendors beyond IBM. Finalized a $1B CHIPS Act R&D award in September 2026, matched by $1B from IBM.",
+    "website": "https://anderon.com",
+    "read_more": {"label": "IBM Newsroom", "url": "https://newsroom.ibm.com/ibm-and-u-s-department-of-commerce-announce-americas-first-purpose-built-quantum-foundry"},
+    "sources": [
+      "https://www.nist.gov/news-events/news/2026/09/department-commerce-announces-finalization-chips-rd-award-anderon",
+      "https://newsroom.ibm.com/ibm-and-u-s-department-of-commerce-announce-americas-first-purpose-built-quantum-foundry",
+      "https://www.tomshardware.com/tech-industry/quantum-computing/ibm-spins-off-americas-first-quantum-chip-foundry-with-2-billion-in-federal-and-private-funding"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "PsiQuantum",
+    "description": "Palo Alto-based photonic quantum computing company building a fault-tolerant, utility-scale quantum computer using silicon-photonics fabrication. In September 2026 the US Department of Commerce finalized a $100M CHIPS Act R&D award (alongside similar awards to Quantinuum, Rigetti and D-Wave) to advance photonic component manufacturability and domestic supply chain.",
+    "website": "https://psiquantum.com",
+    "read_more": {"label": "The Quantum Insider", "url": "https://thequantuminsider.com/2026/09/08/psiquantum-finalizes-100m-us-government-award-quantum-computing-rd/"},
+    "sources": [
+      "https://www.nist.gov/news-events/news/2026/09/department-commerce-announces-finalization-chips-rd-award-psiquantum",
+      "https://thequantuminsider.com/2026/09/08/psiquantum-finalizes-100m-us-government-award-quantum-computing-rd/"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "Voya Energy",
+    "description": "Startup developing a metal-fuel energy system: proprietary aluminum fuel made from low-grade scrap, converted to electricity via a combustion-free electrochemical generator (up to 2MW per 20-foot container), aimed at data centers and other grid-constrained industrial users. Closed a $35M Series A in August 2026 led by Energy Impact Partners, with Founders Fund among participants.",
+    "website": "https://www.voya.energy",
+    "read_more": {"label": "Yahoo Finance / Business Wire", "url": "https://finance.yahoo.com/energy/articles/voya-energy-unveils-metal-fuels-120000709.html"},
+    "sources": [
+      "https://www.financialcontent.com/article/bizwire-2026-8-26-voya-energy-unveils-metal-fuels-energy-system-closes-35-million-series-a",
+      "https://finance.yahoo.com/energy/articles/voya-energy-unveils-metal-fuels-120000709.html",
+      "https://www.voya.energy/news/voya-energy-unveils-a-new-metal-fuels-energy-system-closes-35-million-series-a"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "Stilla.ai",
+    "description": "Stockholm-founded (2024) AI agent startup built by two former Shopify executives, giving AI systems the same organizational context as human teammates (integrating Slack, Linear, GitHub, Notion) to power commerce conversations. Acquired by Meta in September 2026 to accelerate Meta Business Agent, which handles transactions on WhatsApp, Instagram and Messenger; terms undisclosed.",
+    "website": "https://stilla.ai",
+    "read_more": {"label": "Axios", "url": "https://www.axios.com/2026/09/09/meta-acquires-swedish-ai-startup-stillaai"},
+    "sources": [
+      "https://www.axios.com/2026/09/09/meta-acquires-swedish-ai-startup-stillaai",
+      "https://arcticstartup.com/stilla-acquired-by-meta/",
+      "https://app.dealroom.co/news/note/meta-buys-swedish-ai-startup-stilla-ai-to-power-whatsapp-commerce-agents"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "SciFin",
+    "description": "Enterprise revenue-intelligence startup founded by Nutanix/Cohesity founder Mohit Aron, helping sales and RevOps teams reconcile fragmented CRM/pipeline data to surface deal risk earlier. Emerged from stealth in September 2026 with a $44M seed round co-led by Altimeter and Madrona.",
+    "website": null,
+    "read_more": {"label": "Morningstar / Business Wire", "url": "https://www.morningstar.com/news/business-wire/20260901028252/scifin-emerges-from-stealth-with-44-million-in-seed-funding-to-help-revenue-teams-see-risk-earlier-and-act-faster"},
+    "sources": [
+      "https://www.morningstar.com/news/business-wire/20260901028252/scifin-emerges-from-stealth-with-44-million-in-seed-funding-to-help-revenue-teams-see-risk-earlier-and-act-faster",
+      "https://www.madrona.com/our-investment-in-scifin/",
+      "https://siliconangle.com/2026/09/01/scifin-launches-with-44m-to-help-revenue-teams-close-the-context-gap/"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "SK Horizon",
+    "description": "New AI data-center infrastructure company spun out of SK Telecom's SK Broadband, operating/scaling ~318MW of existing Korean data-center capacity (Seocho, Ilsan, Bundang and others). In August 2026 KKR and the IMM-Stonebridge consortium agreed to a combined ~KRW3.08T ($2.23B) equity investment for 29% and 20% stakes respectively, with SK Telecom retaining 51% control.",
+    "website": null,
+    "read_more": {"label": "PR Newswire", "url": "https://www.prnewswire.com/news-releases/sk-telecom-launches-ai-data-center-infrastructure-company-sk-horizon-and-secures-investments-from-kkr-and-imm-302861694.html"},
+    "sources": [
+      "https://www.prnewswire.com/news-releases/sk-telecom-launches-ai-data-center-infrastructure-company-sk-horizon-and-secures-investments-from-kkr-and-imm-302861694.html",
+      "https://www.investmentmonitor.ai/news/kkr-imm-aidc-company-investment/",
+      "https://news.sktelecom.com/en/3290"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "Profound",
+    "description": "AI-search analytics platform (founded 2024) that helps brands track and improve visibility in AI-generated answers (AEO), used by 1,000+ enterprise brands including a third of the Fortune 100. Raised a $180M Series D in September 2026 at a $1.8B valuation, co-led by Sequoia Capital and Kleiner Perkins, with Khosla Ventures among existing participants — seven months after its $96M Series C.",
+    "website": "https://www.tryprofound.com",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/09/15/aeo-startup-profound-hits-unicorn-valuation-raises-180m-series-d-7-months-after-last-round/"},
+    "sources": [
+      "https://www.globenewswire.com/news-release/2026/09/15/3362180/0/en/profound-raises-180m-series-d-at-1-8b-valuation-to-build-the-ai-platform-for-marketing-teams.html",
+      "https://techcrunch.com/2026/09/15/aeo-startup-profound-hits-unicorn-valuation-raises-180m-series-d-7-months-after-last-round/"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "Perplexity",
+    "description": "AI answer-engine/search company (Perplexity AI) whose annualized revenue has climbed above $750M in 2026. NVIDIA, an existing investor since 2023, was in discussions as of August 2026 to lead or join a new equity round that would value Perplexity above $30B, roughly 50% higher than its prior ~$20B mark.",
+    "website": "https://www.perplexity.ai",
+    "read_more": {"label": "The Information", "url": "https://www.theinformation.com/articles/nvidia-discusses-perplexity-investment-30-billion-plus-valuation-considered-tech-licensing-deal"},
+    "sources": [
+      "https://www.theinformation.com/articles/nvidia-discusses-perplexity-investment-30-billion-plus-valuation-considered-tech-licensing-deal",
+      "https://finance.yahoo.com/technology/ai/articles/nvidia-discusses-perplexity-investment-30-031804276.html"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "Mercor",
+    "description": "San Francisco AI talent/data-labeling marketplace (founded 2023) matching expert contractors with AI labs like OpenAI to train models; raised a $350M Series C at a $10B valuation in late 2025. Apollo Global Management took a small (tens of millions) stake in Mercor's most recent round, reported to value the company near $20B, as part of Apollo's broader push into early equity checks on AI/hardware startups it may later lend to.",
+    "website": "https://www.mercor.com",
+    "read_more": {"label": "PYMNTS", "url": "https://www.pymnts.com/startups/2026/apollo-backs-ai-hardware-startups-to-win-future-infrastructure-financing/"},
+    "sources": [
+      "https://www.pymnts.com/startups/2026/apollo-backs-ai-hardware-startups-to-win-future-infrastructure-financing/",
+      "https://www.theinformation.com/articles/apollo-backs-ai-startups-bid-bankroll-hardware-boom",
+      "https://en.wikipedia.org/wiki/Mercor"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "Integral",
+    "description": "Berlin-based AI-native accounting firm (founded 2024) providing AI-agent-run bookkeeping, tax and payroll for SMEs, with licensed professionals reviewing agent output. Raised an €18M Series A in September 2026, co-led by Mosaic Ventures and Reid Hoffman, with Cherry Ventures and General Catalyst also participating; total funding now over €30M.",
+    "website": "https://group.integral.de",
+    "read_more": {"label": "Tech.eu", "url": "https://tech.eu/2026/09/16/integral-lands-eur18m-series-a-for-ai-native-accounting-and-tax-services/"},
+    "sources": [
+      "https://tech.eu/2026/09/16/integral-lands-eur18m-series-a-for-ai-native-accounting-and-tax-services/",
+      "https://www.eu-startups.com/2026/09/berlin-based-integral-raises-e18-million-to-deliver-ai-run-accounting-tax-and-payroll-services-to-smes"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "Harvey",
+    "description": "Legal AI platform used by 80% of the top 100 law firms and 20% of the Fortune 500, with ARR past $400M. Raised $550M in September 2026 at a $15.5B valuation (up from $11B six months earlier), co-led by Diffusion and Lightspeed, with Sequoia, a16z and Coatue among the broad investor group.",
+    "website": "https://www.harvey.ai",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/09/09/harvey-hits-15-5b-valuation-months-after-reaching-11b/"},
+    "sources": [
+      "https://techcrunch.com/2026/09/09/harvey-hits-15-5b-valuation-months-after-reaching-11b/",
+      "https://www.bloomberg.com/news/articles/2026-09-09/legal-ai-startup-harvey-hits-15-6-billion-value-with-550-million-round"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "Etched",
+    "description": "AI chip startup (~400 employees) building Sohu, an ASIC specialized for transformer inference, plus the Cluster Scale Memory pooling architecture. Raised $700M in August 2026 at a $21B valuation led by Jane Street (also its first hardware customer), doubling its valuation from $10.3B a month earlier; investor base includes Peter Thiel-linked capital, per the deal context.",
+    "website": "https://etched.com",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/"},
+    "sources": [
+      "https://www.globenewswire.com/news-release/2026/08/18/3347095/0/en/etched-raises-700m-at-a-21b-valuation-and-completes-first-customer-delivery-to-jane-street.html",
+      "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "CuspAI",
+    "description": "Cambridge, UK-based generative-AI materials-discovery company (founded 2024), whose MIRA platform designs and simulates new materials for semiconductors, energy and climate applications. Raised a $450M Series B in July 2026 at a $2.6B valuation, co-led by Kleiner Perkins and NEA with Jeff Bezos participating, alongside launching the 45+ member \"AI Materials Foundry\" coalition (NVIDIA, Meta, Samsung and others).",
+    "website": "https://cusp.ai",
+    "read_more": {"label": "citybiz", "url": "https://www.citybiz.co/article/876671/jeff-bezos-nea-join-cuspais-450m-series-b-to-accelerate-materials-discovery/"},
+    "sources": [
+      "https://medium.com/@CuspAI/launching-our-ai-materials-foundry-and-450-million-series-b-f5603d8259dd",
+      "https://www.citybiz.co/article/876671/jeff-bezos-nea-join-cuspais-450m-series-b-to-accelerate-materials-discovery/",
+      "https://cusp.ai/"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "Cambridge Aerospace",
+    "description": "UK air-defense startup (founded 2024 by Steven Barrett with an ex-Anduril and former UK defense secretary co-founder), maker of the Skyhammer drone interceptor and the in-development Starhammer, Looking Glass radar and Nightstar rocket motor. Raised a $300M Series C in August 2026 at a $3.4B valuation led by DFJ Growth, with Elad Gil among participants — up from a $1.3B valuation four months prior.",
+    "website": null,
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-08-10/anduril-backers-give-defense-startup-cambridge-aerospace-3-4-billion-valuation"},
+    "sources": [
+      "https://www.axios.com/2026/08/10/anti-drone-defense-cambridge-aerospace",
+      "https://www.bloomberg.com/news/articles/2026-08-10/anduril-backers-give-defense-startup-cambridge-aerospace-3-4-billion-valuation",
+      "https://en.wowtale.net/2026/08/11/234691/"
+    ],
+    "as_of": "2026-09-21"
+  },
+  {
+    "target": "Ansaldo Energia",
+    "description": "Italian power-generation-equipment maker (gas/steam turbines, nuclear components) based in Genoa, 99.6%-owned by state investor CDP Equity. As of September 2026, Abu Dhabi's Mubadala is the reported frontrunner among Gulf investors in talks for a minority stake, structured as a strategic partnership that would leave CDP in control, per Bloomberg citing Corriere della Sera; unconfirmed as a completed deal.",
+    "website": "https://www.ansaldoenergia.com",
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-09-20/mubadala-in-talks-to-invest-in-ansaldo-energia-corriere-reports"},
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2026-09-20/mubadala-in-talks-to-invest-in-ansaldo-energia-corriere-reports",
+      "https://finimize.com/content/mubadala-eyes-a-minority-stake-in-ansaldo-energia",
+      "https://en.wikipedia.org/wiki/Ansaldo_Energia"
+    ],
+    "as_of": "2026-09-21"
+  }
+]
