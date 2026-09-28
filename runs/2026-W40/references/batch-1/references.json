@@ -1,0 +1,149 @@
+[
+  {
+    "target": "Akita AI Data Center (Bitgrit / S2 Group, Japan)",
+    "description": "Planned 500MW AI data center in Akita Prefecture, Japan, developed by US startup Bitgrit and local firm S2, targeting operation in the early 2030s at a total build cost near ¥2 trillion (~$12.6B). Abu Dhabi's Mubadala (via its MGX vehicle) is weighing leading up to $6.3B of the financing.",
+    "website": "https://www.bitgrit.com/",
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-08-06/uae-fund-weighs-6-3-billion-ai-data-center-investment-in-japan"},
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2026-08-06/uae-fund-weighs-6-3-billion-ai-data-center-investment-in-japan",
+      "https://www.japantimes.co.jp/business/2026/08/17/companies/akita-data-center/",
+      "https://www.datacenterdynamics.com/en/news/uaes-mubadala-considers-investing-in-500mw-bitgrit-s2-data-center-in-akita-japan/",
+      "https://www.bitgrit.com/about/"
+    ],
+    "as_of": "2026-09-28"
+  },
+  {
+    "target": "DigitalBridge",
+    "description": "NYSE-listed digital infrastructure investment manager and operator spanning data centers, cell towers, fiber and edge assets. SoftBank Group agreed to acquire it for ~$4.0B ($16.00/share cash) to scale its AI infrastructure push; the deal cleared all regulatory approvals (FERC, CFIUS, antitrust) in September 2026 ahead of closing.",
+    "website": "https://www.digitalbridge.com",
+    "read_more": {"label": "DigitalBridge IR", "url": "https://ir.digitalbridge.com/news-releases/news-release-details/digitalbridge-receives-all-regulatory-approvals-required"},
+    "sources": [
+      "https://ir.digitalbridge.com/news-releases/news-release-details/digitalbridge-receives-all-regulatory-approvals-required",
+      "https://ir.digitalbridge.com/news-releases/news-release-details/softbank-group-acquire-digitalbridge-4-billion-scale-next-gen-ai",
+      "https://group.softbank/en/news/press/20251229",
+      "https://www.stocktitan.net/news/DBRG/digital-bridge-receives-all-regulatory-approvals-required-to-zgrv474lggvi.html"
+    ],
+    "as_of": "2026-09-28"
+  },
+  {
+    "target": "Brookfield Artificial Intelligence Infrastructure Fund",
+    "description": "Brookfield Asset Management's dedicated fund for AI-era infrastructure (compute, behind-the-meter power, factories), part of a broader ~$100B AI investment program targeting a $10B first close. NVIDIA and the Kuwait Investment Authority are anchor investors; NVIDIA's commitment was disclosed at $2B.",
+    "website": "https://www.brookfield.com",
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-09-17/nvidia-committed-2-billion-to-brookfield-ai-infrastructure-fund"},
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2026-09-17/nvidia-committed-2-billion-to-brookfield-ai-infrastructure-fund",
+      "https://finance.yahoo.com/technology/ai/articles/nvidia-committed-2-billion-brookfield-171728893.html",
+      "https://finance.yahoo.com/news/brookfield-seeks-10-billion-ai-055746643.html"
+    ],
+    "as_of": "2026-09-28"
+  },
+  {
+    "target": "DOE SPARK grid transmission initiative (31 projects, 26 states)",
+    "description": "US Department of Energy program (\"Speed to Power through Accelerated Reconductoring and other Key Advanced Transmission Technology Upgrades\") selecting 31 grid-upgrade projects across 26 states. $1.9B in federal funding within a $5.25B total (with recipient cost-share) is intended to reconductor/upgrade transmission lines and add over 23GW of capacity; formal award agreements expected Oct 2026–Jan 2027.",
+    "website": "https://www.energy.gov/oe/speed-power-through-accelerated-reconductoring-and-other-key-advanced-transmission",
+    "read_more": {"label": "US Department of Energy", "url": "https://www.energy.gov/articles/energy-department-announces-speed-power-investments-across-26-states-lower-electricity"},
+    "sources": [
+      "https://www.energy.gov/articles/energy-department-announces-speed-power-investments-across-26-states-lower-electricity",
+      "https://www.datacenterdynamics.com/en/news/doe-unveils-19bn-in-funding-for-31-grid-upgrade-projects-to-speed-data-center-connections/",
+      "https://www.tdworld.com/overhead-transmission/news/55407902/does-525b-spark-grid-initiative-selects-31-us-projects-to-accelerate-transmission-infrastructure-upgrades"
+    ],
+    "as_of": "2026-09-28"
+  },
+  {
+    "target": "Nscale",
+    "description": "London-based AI \"neocloud\" building vertically integrated AI data centers, power infrastructure and large-scale GPU clusters (reportedly $103B+ in total contract value). Ahead of a planned NYSE listing (ticker NSCL), it raised $3.36B in pre-IPO convertible financing led by Third Point, including a $1B tranche committed by NVIDIA (due ~mid-November 2026).",
+    "website": "https://www.nscale.com",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/"},
+    "sources": [
+      "https://www.nscale.com/press-releases/pre-ipo-convertible-financing",
+      "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/",
+      "https://finance.yahoo.com/technology/ai/articles/nscale-secures-3-36-billion-160923167.html"
+    ],
+    "as_of": "2026-09-28"
+  },
+  {
+    "target": "Cyera",
+    "description": "New York-headquartered (Tel Aviv R&D) AI-native data security company founded 2021 by Yotam Segev and Tamar Bar-Ilan; offers data discovery, classification, DSPM and access-governance for humans, machines and AI agents. Raised a $400M extension from Goldman Sachs Alternatives on its Series G, pushing its valuation above $12B.",
+    "website": "https://www.cyera.com",
+    "read_more": {"label": "Goldman Sachs Asset Management", "url": "https://am.gs.com/en-us/advisors/news/press-release/2026/cyera-goldman-sachs-400m-investment-agentic-enterprise"},
+    "sources": [
+      "https://am.gs.com/en-us/advisors/news/press-release/2026/cyera-goldman-sachs-400m-investment-agentic-enterprise",
+      "https://www.cyera.com/press-releases/cyera-announces-400-million-investment-from-goldman-sachs-to-build-the-trust-layer-for-the-agentic-enterprise",
+      "https://www.calcalistech.com/ctechnews/article/1zb4tfyot",
+      "https://en.wikipedia.org/wiki/Cyera"
+    ],
+    "as_of": "2026-09-28"
+  },
+  {
+    "target": "Autonomous Solutions Inc. (ASI)",
+    "description": "Utah-based industrial vehicle-automation company, maker of the Mobius fleet-orchestration platform for mining, defense and industrial equipment. SoftBank Group invested $225M and formed a joint venture with ASI to develop and commercialize autonomous heavy construction equipment (haul trucks, dozers, loaders) at scale.",
+    "website": "https://asirobots.com",
+    "read_more": {"label": "BusinessWire", "url": "https://www.businesswire.com/news/home/20260924920006/en/ASI-and-SoftBank-Group-Form-Joint-Venture-to-Advance-Autonomous-Construction-at-Scale"},
+    "sources": [
+      "https://www.businesswire.com/news/home/20260924920006/en/ASI-and-SoftBank-Group-Form-Joint-Venture-to-Advance-Autonomous-Construction-at-Scale",
+      "https://asirobots.com/asi-and-softbank-group-form-joint-venture-to-advance-autonomous-construction-at-scale",
+      "https://www.bisnow.com/news/national/construction-development/softbank-forms-jv-with-industrial-vehicle-automation-company"
+    ],
+    "as_of": "2026-09-28"
+  },
+  {
+    "target": "Snorkel AI",
+    "description": "AI data-labeling \"data factory\" startup supplying training data, tasks and rubrics for frontier and agentic AI labs. Raised $350M at a $3.5B valuation co-led by Insight Partners and S32; existing investor GV (Google Ventures, Alphabet's venture arm) participated alongside Greylock, Lightspeed and others. Note: the press release does not name Alphabet/Google directly, only its venture arm GV.",
+    "website": "https://snorkel.ai",
+    "read_more": {"label": "PR Newswire", "url": "https://www.prnewswire.com/news-releases/snorkel-ai-raises-350m-to-scale-the-data-factory-for-frontier-ai-302886796.html"},
+    "sources": [
+      "https://www.prnewswire.com/news-releases/snorkel-ai-raises-350m-to-scale-the-data-factory-for-frontier-ai-302886796.html",
+      "https://www.hpcwire.com/aiwire/2026/09/23/snorkel-ai-raises-350m-to-scale-the-data-factory-for-frontier-ai/",
+      "https://blumbergcapital.com/news-insights/blumberg-capital-invests-in-snorkel-ai/"
+    ],
+    "as_of": "2026-09-28"
+  },
+  {
+    "target": "Robotics and AI Institute (RAI)",
+    "description": "Cambridge, MA robotics/AI research institute founded in 2022 by Boston Dynamics founder Marc Raibert, spun out of Hyundai Motor Group with $400M+ in backing; works on robot control, perception, manipulation and \"athletic intelligence.\" SoftBank has agreed to acquire RAI from Hyundai; financial terms undisclosed, deal under CFIUS review as of late September 2026.",
+    "website": "https://rai-inst.com",
+    "read_more": {"label": "The Robot Report", "url": "https://www.therobotreport.com/softbank-agrees-to-acquire-robotics-and-ai-institute/"},
+    "sources": [
+      "https://www.therobotreport.com/softbank-agrees-to-acquire-robotics-and-ai-institute/",
+      "https://www.remio.ai/post/softbank-rai-institute-acquisition-splits-robotics-research-from-commercializati",
+      "https://rai-inst.com/about/"
+    ],
+    "as_of": "2026-09-28"
+  },
+  {
+    "target": "Rightway",
+    "description": "Pharmacy-benefit-management and AI-driven care-navigation company helping employers manage pharmacy spend and member support. Raised $155M Series E led by Francisco Partners, with existing investors Thrive Capital and Khosla Ventures participating; the round values Rightway at $1.75B and brings total funding to about $281M.",
+    "website": "https://www.rightwayhealthcare.com",
+    "read_more": {"label": "PR Newswire", "url": "http://www.prnewswire.com/news-releases/rightway-raises-155-million-as-it-leads-the-next-generation-of-pharmacy-benefits-302888382.html"},
+    "sources": [
+      "http://www.prnewswire.com/news-releases/rightway-raises-155-million-as-it-leads-the-next-generation-of-pharmacy-benefits-302888382.html",
+      "https://www.mobihealthnews.com/news/rightway-raises-155m-expand-pharmacy-benefits-technology",
+      "https://www.citybiz.co/article/909250/rightway-raises-155m-series-e-to-ease-pharmacy-benefit-claims/"
+    ],
+    "as_of": "2026-09-28"
+  },
+  {
+    "target": "Island",
+    "description": "Enterprise browser company ('Island Browser') repositioning as a control layer for employee and AI-agent activity inside organizations; customers include Pfizer, Chipotle, American Airlines and major banks. Raised $400M Series F led by Evolution Equity Partners, with Sequoia, Coatue, J.P. Morgan and others participating, at a $6.4B valuation (up from $4.8B in March 2025).",
+    "website": "https://www.island.io",
+    "read_more": {"label": "Island (press release)", "url": "https://www.island.io/press/island-announces-400-million-series-f-bringing-valuation-to-6-4-billion"},
+    "sources": [
+      "https://www.island.io/press/island-announces-400-million-series-f-bringing-valuation-to-6-4-billion",
+      "https://www.globenewswire.com/news-release/2026/09/24/3368154/0/en/island-announces-400-million-series-f-bringing-valuation-to-6-4-billion.html",
+      "https://forkast.news/islands-6-4b-valuation-validates-a-different-kind-of-agent-security-and-it-starts-in-the-browser/"
+    ],
+    "as_of": "2026-09-28"
+  },
+  {
+    "target": "HiddenLayer",
+    "description": "AI-security company protecting enterprise generative and agentic AI systems from poisoning, prompt injection and runtime attacks, including AI coding agents. Raised $100M Series B led by Delta-v Capital, with Ten Eleven Ventures, Morgan Stanley, M12 (Microsoft's venture fund) and Booz Allen Ventures participating, following a $6M seed and $50M Series A (total funding ~$156M).",
+    "website": "https://www.hiddenlayer.com",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/09/02/hiddenlayer-nabs-100m-as-enterprises-rush-to-secure-their-ai-deployments/"},
+    "sources": [
+      "https://www.hiddenlayer.com/news/hiddenlayer-100m-series-b-ai-security",
+      "https://techcrunch.com/2026/09/02/hiddenlayer-nabs-100m-as-enterprises-rush-to-secure-their-ai-deployments/",
+      "http://www.prnewswire.com/news-releases/hiddenlayer-raises-100m-series-b-to-advance-trustworthy-ai-302867783.html"
+    ],
+    "as_of": "2026-09-28"
+  }
+]
