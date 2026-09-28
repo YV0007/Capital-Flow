@@ -123,9 +123,16 @@
 | space | $0 | 1 | 1 |
 | defense_ai | $0 | 1 | 1 |
 
-## Public beneficiaries mapped (7)
+## Public beneficiaries mapped (14)
 | Ticker | Company | From flow | Confidence |
 |---|---|---|:-:|
+| NVDA | NVIDIA Corporation | NVIDIA→Nscale | high |
+| VRT | Vertiv Holdings Co | NVIDIA→Nscale | medium |
+| VRT | Vertiv Holdings Co | SoftBank→DigitalBridge | low |
+| ETN | Eaton Corporation plc | SoftBank→DigitalBridge | low |
+| PWR | Quanta Services Inc | US Government→DOE SPARK grid transmission initiative (31 projects, 26 states) | medium |
+| MYRG | MYR Group Inc | US Government→DOE SPARK grid transmission initiative (31 projects, 26 states) | medium |
+| ETN | Eaton Corporation plc | US Government→DOE SPARK grid transmission initiative (31 projects, 26 states) | low |
 | NVDA | NVIDIA Corporation | NVIDIA→Nscale | high |
 | VRT | Vertiv Holdings Co | NVIDIA→Nscale | medium |
 | VRT | Vertiv Holdings Co | SoftBank→DigitalBridge | low |

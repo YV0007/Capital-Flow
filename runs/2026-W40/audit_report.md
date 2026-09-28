@@ -1,28 +1,17 @@
 # Audit report — 2026-W40 (2026-09-28)
 
-**Verdict: FAIL — delivery blocked**
-Checked 368 events, 115 track-record rows, 43 profiles, 237 target references, 351 holdings, 0 classified targets.
+**Verdict: PASS**
+Checked 368 events, 115 track-record rows, 43 profiles, 249 target references, 351 holdings, 0 classified targets.
 
-## Errors (9)
-- E6 Autonomous Solutions Inc. (ASI): target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Cyera: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 DOE SPARK grid transmission initiative (31 projects, 26 states): target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 DigitalBridge: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 HiddenLayer: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Island: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Nscale: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Rightway: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Snorkel AI: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
+## Errors (0)
+_none_
 
-## Warnings (52)
+## Warnings (49)
 - W3 Apollo: key allocator with events but no profile
 - W3 Elon Musk: key allocator with events but no profile
 - W3 Goldman Sachs: key allocator with events but no profile
 - W3 Max Levchin: key allocator with events but no profile
 - W3 Palmer Luckey: key allocator with events but no profile
-- W6 DigitalBridge: $4.0B target with no reference
-- W6 DOE SPARK grid transmission initiative (31 projects, 26 states): $1.9B target with no reference
-- W6 Nscale: $1.0B target with no reference
 - W7 BlackRock: $49.8B fund/firm with no holdings collected
 - W7 MGX Fund I: $49.0B fund/firm with no holdings collected
 - W7 KKR: $29.8B fund/firm with no holdings collected
