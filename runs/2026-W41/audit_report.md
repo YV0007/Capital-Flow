@@ -1,78 +1,74 @@
 # Audit report — 2026-W41 (2026-10-05)
 
-**Verdict: FAIL — delivery blocked**
-Checked 40 events, 0 track-record rows, 0 profiles, 0 target references, 0 holdings, 0 classified targets.
+**Verdict: PASS**
+Checked 398 events, 115 track-record rows, 43 profiles, 260 target references, 351 holdings, 0 classified targets.
 
-## Errors (25)
-- E6 Blue Origin: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Brookfield Artificial Intelligence Infrastructure Fund (BAIIF): target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Cognition: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 D-Wave Quantum: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 DigitalBridge Group: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 EliseAI: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 EnduroSat: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Factory: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Fortell: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Gimlet Labs: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Harvey: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 HiddenLayer: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Mantic Technologies: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Mazama Energy: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 NextEra Energy (Duane Arnold Energy Center): target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Nscale: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 OpenAI: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Pilgrim: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Profound: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Quantinuum: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 RHAELM Holdings / JERA / Dell Technologies AI data center project (Chiba, Japan): target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Rigetti Computing: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 SB Energy: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Snorkel AI: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Stuut: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
+## Errors (0)
+_none_
 
-## Warnings (30)
-- W3 Alphabet: key allocator with events but no profile
-- W3 Andreessen Horowitz: key allocator with events but no profile
+## Warnings (50)
 - W3 Apollo: key allocator with events but no profile
-- W3 Brookfield: key allocator with events but no profile
-- W3 Coatue: key allocator with events but no profile
-- W3 Dylan Field: key allocator with events but no profile
-- W3 Elad Gil: key allocator with events but no profile
-- W3 Founders Fund: key allocator with events but no profile
+- W3 Elon Musk: key allocator with events but no profile
 - W3 Goldman Sachs: key allocator with events but no profile
-- W3 Jeff Bezos: key allocator with events but no profile
-- W3 Khosla Ventures: key allocator with events but no profile
-- W3 Microsoft: key allocator with events but no profile
-- W3 Mubadala: key allocator with events but no profile
-- W3 NVIDIA: key allocator with events but no profile
-- W3 Peter Thiel: key allocator with events but no profile
-- W3 Saudi PIF: key allocator with events but no profile
-- W3 Sequoia: key allocator with events but no profile
-- W3 SoftBank: key allocator with events but no profile
-- W3 Thrive Capital: key allocator with events but no profile
-- W6 OpenAI: $10.0B target with no reference
-- W6 DigitalBridge Group: $3.1B target with no reference
-- W6 Brookfield Artificial Intelligence Infrastructure Fund (BAIIF): $2.0B target with no reference
-- W6 Blue Origin: $2.0B target with no reference
-- W6 NextEra Energy (Duane Arnold Energy Center): $1.9B target with no reference
-- W6 SB Energy: $1.5B target with no reference
-- W6 Nscale: $1.0B target with no reference
-- W7 SoftBank: $13.1B fund/firm with no holdings collected
+- W3 Max Levchin: key allocator with events but no profile
+- W3 Palmer Luckey: key allocator with events but no profile
+- W7 BlackRock: $49.8B fund/firm with no holdings collected
+- W7 MGX Fund I: $49.0B fund/firm with no holdings collected
+- W7 SoftBank: $33.3B fund/firm with no holdings collected
+- W7 KKR: $29.8B fund/firm with no holdings collected
+- W7 KKR Global Infrastructure Investors V: $19.2B fund/firm with no holdings collected
+- W7 West Street Capital Partners IX: $9.6B fund/firm with no holdings collected
+- W7 Brookfield Infrastructure Fund VI (flagship): $7.9B fund/firm with no holdings collected
+- W7 Thrive Capital: $6.6B fund/firm with no holdings collected
+- W7 Azora: $5.0B fund/firm with no holdings collected
+- W7 Brookfield AI Infrastructure strategy: $5.0B fund/firm with no holdings collected
+- W7 Mubadala Capital (credit platform): $4.7B fund/firm with no holdings collected
+- W7 Sequoia: $2.8B fund/firm with no holdings collected
+- W7 Blue Owl: $2.4B fund/firm with no holdings collected
 - W7 Brookfield Artificial Intelligence Infrastructure Fund (BAIIF): $2.0B fund/firm with no holdings collected
-- W8 OpenAI: $10.0B investable target with no ai_posture
-- W8 Blue Origin: $2.0B investable target with no ai_posture
+- W7 Andreessen Horowitz Growth Fund V: $1.8B fund/firm with no holdings collected
+- W7 Machine Age Fund: $1.1B fund/firm with no holdings collected
+- W7 Brookfield Investment Solutions Group (Nuclear Liabilities Fund mandate): $1.0B fund/firm with no holdings collected
+- W9 Apollo: 15 of 190 holdings shipped — under the 25 floor; renders as 'top 15 of 190'
+- W9 Blackstone: 14 of 53 holdings shipped — under the 25 floor; renders as 'top 14 of 53'
+- W9 Brookfield: 20 of 60 holdings shipped — under the 25 floor; renders as 'top 20 of 60'
+- W9 Coatue: 16 of 250 holdings shipped — under the 25 floor; renders as 'top 16 of 250'
+- W8 OpenAI: $70.0B investable target with no ai_posture
+- W8 MGX Fund I: $49.0B investable target with no ai_posture
+- W8 SpaceX: $36.4B investable target with no ai_posture
+- W8 Electronic Arts: $33.6B investable target with no ai_posture
+- W8 Hugging Face: $25.8B investable target with no ai_posture
+- W8 OpenAI Group PBC: $21.3B investable target with no ai_posture
+- W8 Databricks: $15.0B investable target with no ai_posture
+- W8 Anthropic: $10.0B investable target with no ai_posture
+- W8 West Street Capital Partners IX: $9.6B investable target with no ai_posture
+- W8 Safe Superintelligence: $5.0B investable target with no ai_posture
+- W8 Mubadala Capital (credit platform): $4.7B investable target with no ai_posture
+- W8 Hadrian: $4.1B investable target with no ai_posture
+- W8 Blue Origin: $4.0B investable target with no ai_posture
+- W8 MediaTek: $3.5B investable target with no ai_posture
+- W8 Microsoft Frontier Company: $2.5B investable target with no ai_posture
+- W8 IREN Limited: $2.4B investable target with no ai_posture
+- W8 Thrive Holdings: $2.0B investable target with no ai_posture
+- W8 Andreessen Horowitz Growth Fund V: $1.8B investable target with no ai_posture
+- W8 Atoms: $1.7B investable target with no ai_posture
+- W8 Sila Nanotechnologies: $1.4B investable target with no ai_posture
+- W8 GlobalFoundries: $1.3B investable target with no ai_posture
+- W8 Machine Age Fund: $1.1B investable target with no ai_posture
+- W8 Poolside: $1.0B investable target with no ai_posture
+- W8 Anderon (IBM subsidiary): $1.0B investable target with no ai_posture
 
 ## Stats
 ```json
 {
-  "events": 40,
+  "events": 398,
   "by_status": {
-    "candidate": 4,
-    "verified": 29,
-    "verified_alpha": 7
+    "candidate": 71,
+    "verified": 250,
+    "verified_alpha": 77
   },
   "source_url_coverage": 1.0,
-  "estimated_amounts": 6,
-  "provisional_track_rows": 0
+  "estimated_amounts": 79,
+  "provisional_track_rows": 42
 }
 ```

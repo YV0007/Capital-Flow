@@ -1,22 +1,95 @@
 # Capital Flow — Weekly Report 2026-W41
 
 ## Signals fired
+- **NVDA (NVIDIA): 48 private flows converge**  _(rule: beneficiary_concentration, strength 48.0)_
+- **VRT (Vertiv): 33 private flows converge**  _(rule: beneficiary_concentration, strength 33.0)_
+- **datacenters: capital 25.4x vs prior 90d**  _(rule: capital_acceleration, strength 25.42)_
+- **ETN (Eaton): 17 private flows converge**  _(rule: beneficiary_concentration, strength 17.0)_
+- **GEV (GE Vernova): 16 private flows converge**  _(rule: beneficiary_concentration, strength 16.0)_
+- **TSM (Taiwan Semiconductor): 13 private flows converge**  _(rule: beneficiary_concentration, strength 13.0)_
+- **ai-labs: capital 11.7x vs prior 90d**  _(rule: capital_acceleration, strength 11.7)_
+- **PWR (Quanta Services): 10 private flows converge**  _(rule: beneficiary_concentration, strength 10.0)_
 - **ai_applications: 9 key allocators converge (30d)**  _(rule: theme_swarm, strength 9.0)_
+- **GOOGL (Alphabet): 9 private flows converge**  _(rule: beneficiary_concentration, strength 9.0)_
+- **MSFT (Microsoft Corporation): 9 private flows converge**  _(rule: beneficiary_concentration, strength 9.0)_
+- **datacenters: network + strategic capital converge (3 network, 6 strategic)**  _(rule: defense_network_convergence, strength 9.0)_
 - **ai-applications: 8 key allocators in 30d**  _(rule: sector_swarm, strength 8.0)_
-- **ai-applications: smart money — Microsoft led, 7 followed in 21d**  _(rule: smart_money_follow, strength 8.0)_
-- **ai-applications/enterprise-ai-agents: 5 key allocators converge**  _(rule: subsector_swarm, strength 5.0)_
-- **ai_infrastructure: 5 key allocators converge (30d)**  _(rule: theme_swarm, strength 5.0)_
+- **datacenters: smart money — Meta led, 7 followed in 21d**  _(rule: smart_money_follow, strength 8.0)_
+- **AMZN (Amazon.com Inc): 8 private flows converge**  _(rule: beneficiary_concentration, strength 8.0)_
+- **ai-applications/enterprise-ai-agents: 7 key allocators converge**  _(rule: subsector_swarm, strength 7.0)_
+- **Peter Thiel: repeat conviction — 7x into energy_for_ai**  _(rule: repeat_conviction, strength 7.0)_
+- **ai-labs: network + strategic capital converge (2 network, 5 strategic)**  _(rule: defense_network_convergence, strength 7.0)_
+- **ai-applications/legal-regulatory-ai: 6 key allocators converge**  _(rule: subsector_swarm, strength 6.0)_
+- **ai-data/data-platform: 6 key allocators converge**  _(rule: subsector_swarm, strength 6.0)_
+- **ai_infrastructure: 6 key allocators converge (30d)**  _(rule: theme_swarm, strength 6.0)_
+- **ai-applications: smart money — Khosla Ventures led, 5 followed in 21d**  _(rule: smart_money_follow, strength 6.0)_
+- **ai-compute: smart money — Microsoft led, 5 followed in 21d**  _(rule: smart_money_follow, strength 6.0)_
+- **power-energy: smart money — Blackstone led, 5 followed in 21d**  _(rule: smart_money_follow, strength 6.0)_
+- **defense-tech: 5 key allocators in 30d**  _(rule: sector_swarm, strength 5.0)_
+- **ai-compute/gpu-capacity: 5 key allocators converge**  _(rule: subsector_swarm, strength 5.0)_
+- **cybersecurity/agentic-security: 5 key allocators converge**  _(rule: subsector_swarm, strength 5.0)_
+- **cybersecurity: smart money — Andreessen Horowitz led, 4 followed in 21d**  _(rule: smart_money_follow, strength 5.0)_
+- **defense-tech: smart money — Jeff Bezos led, 4 followed in 21d**  _(rule: smart_money_follow, strength 5.0)_
+- **AVGO (Broadcom): 5 private flows converge**  _(rule: beneficiary_concentration, strength 5.0)_
+- **ai-applications: capital 4.9x vs prior 90d**  _(rule: capital_acceleration, strength 4.87)_
+- **ai-labs: 4 key allocators in 30d**  _(rule: sector_swarm, strength 4.0)_
 - **datacenters: 4 key allocators in 30d**  _(rule: sector_swarm, strength 4.0)_
-- **defense-tech: 4 key allocators in 30d**  _(rule: sector_swarm, strength 4.0)_
-- **ai-applications/legal-regulatory-ai: 4 key allocators converge**  _(rule: subsector_swarm, strength 4.0)_
+- **ai-applications/fintech-ai: 4 key allocators converge**  _(rule: subsector_swarm, strength 4.0)_
+- **ai-applications/vertical-saas-ai: 4 key allocators converge**  _(rule: subsector_swarm, strength 4.0)_
+- **ai-labs/world-models: 4 key allocators converge**  _(rule: subsector_swarm, strength 4.0)_
+- **datacenters/hyperscale-campus: 4 key allocators converge**  _(rule: subsector_swarm, strength 4.0)_
+- **neocloud/gpu-capacity: 4 key allocators converge**  _(rule: subsector_swarm, strength 4.0)_
+- **power-energy/grid-storage: 4 key allocators converge**  _(rule: subsector_swarm, strength 4.0)_
 - **defense_ai: 4 key allocators converge (30d)**  _(rule: theme_swarm, strength 4.0)_
-- **defense-tech: smart money — Alphabet led, 3 followed in 21d**  _(rule: smart_money_follow, strength 4.0)_
-- **ai-applications/vertical-saas-ai: 3 key allocators converge**  _(rule: subsector_swarm, strength 3.0)_
-- **datacenters: smart money — Brookfield led, 2 followed in 21d**  _(rule: smart_money_follow, strength 3.0)_
-- **Harvey: stealth accumulation — 3 stakes in 90d**  _(rule: stealth_accumulation, strength 3.0)_
-- **ai-applications/healthcare-ai: 2 key allocators converge**  _(rule: subsector_swarm, strength 2.0)_
+- **frontier_ai: 4 key allocators converge (30d)**  _(rule: theme_swarm, strength 4.0)_
+- **robotics: smart money — SoftBank led, 3 followed in 21d**  _(rule: smart_money_follow, strength 4.0)_
+- **Databricks: stealth accumulation — 4 stakes in 90d**  _(rule: stealth_accumulation, strength 4.0)_
+- **Harvey: stealth accumulation — 4 stakes in 90d**  _(rule: stealth_accumulation, strength 4.0)_
+- **DELL (Dell Technologies): 4 private flows converge**  _(rule: beneficiary_concentration, strength 4.0)_
+- **MU (Micron): 4 private flows converge**  _(rule: beneficiary_concentration, strength 4.0)_
+- **NEE (NextEra Energy): 4 private flows converge**  _(rule: beneficiary_concentration, strength 4.0)_
+- **Peter Thiel: repeat conviction — 4x into ai_infrastructure**  _(rule: repeat_conviction, strength 4.0)_
+- **defense-tech: network + strategic capital converge (2 network, 2 strategic)**  _(rule: defense_network_convergence, strength 4.0)_
+- **power-energy: network + strategic capital converge (2 network, 2 strategic)**  _(rule: defense_network_convergence, strength 4.0)_
+- **cybersecurity: 3 key allocators in 30d**  _(rule: sector_swarm, strength 3.0)_
+- **neocloud: 3 key allocators in 30d**  _(rule: sector_swarm, strength 3.0)_
+- **ai-applications/drug-discovery-ai: 3 key allocators converge**  _(rule: subsector_swarm, strength 3.0)_
+- **ai-applications/healthcare-ai: 3 key allocators converge**  _(rule: subsector_swarm, strength 3.0)_
+- **ai-data/ai-data-platform: 3 key allocators converge**  _(rule: subsector_swarm, strength 3.0)_
+- **ai-labs/frontier-models: 3 key allocators converge**  _(rule: subsector_swarm, strength 3.0)_
+- **datacenters/ocean-datacenter: 3 key allocators converge**  _(rule: subsector_swarm, strength 3.0)_
+- **defense-tech/autonomous-systems: 3 key allocators converge**  _(rule: subsector_swarm, strength 3.0)_
+- **defense-tech/defense-manufacturing: 3 key allocators converge**  _(rule: subsector_swarm, strength 3.0)_
+- **power-energy/baseload-generation: 3 key allocators converge**  _(rule: subsector_swarm, strength 3.0)_
+- **power-energy/energy-infrastructure: 3 key allocators converge**  _(rule: subsector_swarm, strength 3.0)_
+- **ai-labs: smart money — NVIDIA led, 2 followed in 21d**  _(rule: smart_money_follow, strength 3.0)_
+- **neocloud: smart money — NVIDIA led, 2 followed in 21d**  _(rule: smart_money_follow, strength 3.0)_
+- **Etched: stealth accumulation — 3 stakes in 90d**  _(rule: stealth_accumulation, strength 3.0)_
+- **Kuwait Oil Company Pipeline JV (Project Peregrine): stealth accumulation — 3 stakes in 90d**  _(rule: stealth_accumulation, strength 3.0)_
+- **ARM (Arm Holdings): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
+- **BWXT (BWX Technologies): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
+- **COHR (Coherent Corp.): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
+- **FANUY (FANUC): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
+- **FLNC (Fluence Energy): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
+- **GFS (GlobalFoundries): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
+- **KTOS (Kratos Defense & Security Solutions): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
+- **LEU (Centrus Energy): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
+- **SIEGY (Siemens): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
+- **ai-compute/space-based-ai-compute-infrastructure: 2 key allocators converge**  _(rule: subsector_swarm, strength 2.0)_
+- **cybersecurity/military-cyber: 2 key allocators converge**  _(rule: subsector_swarm, strength 2.0)_
 - **datacenters/ai-infrastructure-fund: 2 key allocators converge**  _(rule: subsector_swarm, strength 2.0)_
+- **datacenters/sovereign-ai-factory: 2 key allocators converge**  _(rule: subsector_swarm, strength 2.0)_
+- **defense-tech/air-missile-defense: 2 key allocators converge**  _(rule: subsector_swarm, strength 2.0)_
 - **defense-tech/biodefense: 2 key allocators converge**  _(rule: subsector_swarm, strength 2.0)_
+- **diversified-pe/middle-east-buyout-growth-equity: 2 key allocators converge**  _(rule: subsector_swarm, strength 2.0)_
+- **neocloud/gpu-cloud-financing: 2 key allocators converge**  _(rule: subsector_swarm, strength 2.0)_
+- **nuclear/smr: 2 key allocators converge**  _(rule: subsector_swarm, strength 2.0)_
+- **power-energy/oil-pipeline-lease-leaseback: 2 key allocators converge**  _(rule: subsector_swarm, strength 2.0)_
+- **robotics/critical-minerals-automation: 2 key allocators converge**  _(rule: subsector_swarm, strength 2.0)_
+- **robotics/industrial-automation: 2 key allocators converge**  _(rule: subsector_swarm, strength 2.0)_
+- **semiconductors/ai-chip-backed-debt-for-compute-buildout: 2 key allocators converge**  _(rule: subsector_swarm, strength 2.0)_
+- **semiconductors/custom-ai-silicon-/-advanced-packaging: 2 key allocators converge**  _(rule: subsector_swarm, strength 2.0)_
+- **semiconductors/inference-asic: 2 key allocators converge**  _(rule: subsector_swarm, strength 2.0)_
 
 ## New verified events (36)
 | Allocator | Target | Sector | Type | Amount | Status | Conf |
@@ -33,6 +106,7 @@
 | Apollo | RHAELM Holdings / JERA / Dell Technologies AI data center project (Chiba, Japan) | datacenters | project_finance | — | verified | A1·100 |
 | Brookfield | Brookfield Artificial Intelligence Infrastructure Fund (BAIIF) | datacenters | fund_launch | — | verified | A1·100 |
 | Alphabet | EnduroSat | defense-tech | funding_round | — | verified | A1·100 |
+| Alphabet | Snorkel AI | ai-data | follow_on | — | verified | A1·100 |
 | Microsoft | HiddenLayer | cybersecurity | funding_round | — | verified | A1·100 |
 | Microsoft | Gimlet Labs | ai-compute | funding_round | — | verified | A1·100 |
 | Microsoft | Mantic Technologies | ai-applications | funding_round | — | verified | A1·100 |
@@ -51,7 +125,6 @@
 | Andreessen Horowitz | EliseAI | ai-applications | funding_round | — | verified | A1·100 |
 | Khosla Ventures | Mazama Energy | power-energy | follow_on | — | verified | A1·100 |
 | Jeff Bezos | Blue Origin | defense-tech | funding_round | $2.0B | verified_alpha | C3·62 |
-| Alphabet | Snorkel AI | ai-data | follow_on | — | verified_alpha | C3·62 |
 | Peter Thiel | Pilgrim | defense-tech | funding_round | — | verified_alpha | C3·62 |
 | Dylan Field | Pilgrim | defense-tech | funding_round | — | verified_alpha | C3·62 |
 | Mubadala | Nscale | neocloud | minority_stake | — | verified_alpha | C3·62 |
@@ -61,24 +134,67 @@
 ## Top sectors — last 30 days
 | Sector | Capital | Deals | Distinct allocators |
 |---|--:|--:|--:|
-| ai-labs | $10.0B | 1 | 1 |
-| nuclear | $6.1B | 2 | 1 |
-| datacenters | $5.1B | 5 | 5 |
-| defense-tech | $2.0B | 4 | 4 |
-| power-energy | $1.5B | 2 | 2 |
-| neocloud | $1.0B | 2 | 2 |
-| semiconductors | $300M | 3 | 1 |
-| ai-applications | $0 | 15 | 9 |
-| ai-data | $0 | 1 | 1 |
+| ai-labs | $10.0B | 4 | 4 |
+| diversified-pe | $9.6B | 1 | 1 |
+| datacenters | $9.1B | 6 | 5 |
+| nuclear | $7.1B | 3 | 2 |
+| power-energy | $3.4B | 6 | 5 |
+| semiconductors | $2.1B | 9 | 1 |
+| ai-compute | $2.0B | 1 | 1 |
+| defense-tech | $2.0B | 5 | 5 |
+| neocloud | $1.0B | 4 | 4 |
+| cybersecurity | $400M | 3 | 3 |
 
 ## Themes — last 30 days
 | Theme | Capital | Deals | Distinct allocators |
 |---|--:|--:|--:|
-| frontier_ai | $10.0B | 1 | 1 |
-| energy_for_ai | $7.6B | 4 | 3 |
-| ai_infrastructure | $6.4B | 10 | 7 |
+| ai_infrastructure | $14.2B | 20 | 9 |
+| energy_for_ai | $10.5B | 9 | 6 |
+| frontier_ai | $10.0B | 4 | 4 |
 | defense_ai | $2.0B | 4 | 4 |
-| ai_applications | $0 | 16 | 10 |
+| cyber_security | $400M | 3 | 3 |
+| robotics_embodiment | $225M | 2 | 1 |
+| space | $0 | 1 | 1 |
+| ai_applications | $0 | 32 | 11 |
+
+## Public beneficiaries mapped (35)
+| Ticker | Company | From flow | Confidence |
+|---|---|---|:-:|
+| NVDA | NVIDIA Corporation | Andreessen Horowitz→Cognition | high |
+| NEE | NextEra Energy Inc. | US Government→NextEra Energy (Duane Arnold Energy Center) | high |
+| GOOGL | Alphabet Inc. | US Government→NextEra Energy (Duane Arnold Energy Center) | medium |
+| NVDA | NVIDIA Corporation | NVIDIA→Nscale | high |
+| VRT | Vertiv Holdings Co | NVIDIA→Nscale | medium |
+| MSFT | Microsoft | SoftBank→OpenAI | high |
+| ORCL | Oracle | SoftBank→OpenAI | medium |
+| NVDA | NVIDIA | SoftBank→OpenAI | medium |
+| NEE | NextEra Energy | US Government→NextEra Energy (Duane Arnold Energy Center) | high |
+| QBTS | D-Wave Quantum | US Government→D-Wave Quantum | high |
+| RGTI | Rigetti Computing | US Government→Rigetti Computing | high |
+| GFS | GlobalFoundries | US Government→Quantinuum | low |
+| DELL | Dell Technologies | Apollo→RHAELM Holdings / JERA / Dell Technologies AI data center project (Chiba, Japan) | medium |
+| GEV | GE Vernova | NVIDIA→Brookfield Artificial Intelligence Infrastructure Fund (BAIIF) | low |
+| VRT | Vertiv | NVIDIA→Brookfield Artificial Intelligence Infrastructure Fund (BAIIF) | low |
+| MSFT | Microsoft | SoftBank→OpenAI | high |
+| ORCL | Oracle | SoftBank→OpenAI | medium |
+| NVDA | NVIDIA | SoftBank→OpenAI | medium |
+| NEE | NextEra Energy | US Government→NextEra Energy (Duane Arnold Energy Center) | high |
+| QBTS | D-Wave Quantum | US Government→D-Wave Quantum | high |
+| RGTI | Rigetti Computing | US Government→Rigetti Computing | high |
+| GFS | GlobalFoundries | US Government→Quantinuum | low |
+| DELL | Dell Technologies | Apollo→RHAELM Holdings / JERA / Dell Technologies AI data center project (Chiba, Japan) | medium |
+| GEV | GE Vernova | NVIDIA→Brookfield Artificial Intelligence Infrastructure Fund (BAIIF) | low |
+| VRT | Vertiv | NVIDIA→Brookfield Artificial Intelligence Infrastructure Fund (BAIIF) | low |
+| MSFT | Microsoft | SoftBank→OpenAI | high |
+| ORCL | Oracle | SoftBank→OpenAI | medium |
+| NVDA | NVIDIA | SoftBank→OpenAI | medium |
+| NEE | NextEra Energy | US Government→NextEra Energy (Duane Arnold Energy Center) | high |
+| QBTS | D-Wave Quantum | US Government→D-Wave Quantum | high |
+| RGTI | Rigetti Computing | US Government→Rigetti Computing | high |
+| GFS | GlobalFoundries | US Government→Quantinuum | low |
+| DELL | Dell Technologies | Apollo→RHAELM Holdings / JERA / Dell Technologies AI data center project (Chiba, Japan) | medium |
+| GEV | GE Vernova | NVIDIA→Brookfield Artificial Intelligence Infrastructure Fund (BAIIF) | low |
+| VRT | Vertiv | NVIDIA→Brookfield Artificial Intelligence Infrastructure Fund (BAIIF) | low |
 
 ## Candidates to watch (4)
 - Goldman Sachs → Crux AI (Blackstone / Alphabet cloud joint venture) (datacenters, project_finance)
