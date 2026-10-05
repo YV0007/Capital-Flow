@@ -1,0 +1,188 @@
+[
+  {
+    "target": "Vistra Corp",
+    "target_type": "public",
+    "sector": "nuclear",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-10-03",
+    "capital_usd": 4200000000.0,
+    "deal_source_urls": [
+      "https://www.cnbc.com/2026/10/03/us-vistra-loan-nuclear-power.html"
+    ]
+  },
+  {
+    "target": "Humain Data Center Fund (via BSF Capital)",
+    "target_type": "fund",
+    "sector": "datacenters",
+    "allocators": [
+      "Saudi PIF"
+    ],
+    "last_event": "2026-09-03",
+    "capital_usd": 2500000000.0,
+    "deal_source_urls": [
+      "https://www.bloomberg.com/news/articles/2026-09-03/saudi-firm-humain-eyes-2-5-billion-fund-to-build-data-centers"
+    ]
+  },
+  {
+    "target": "Blue Origin",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "Jeff Bezos"
+    ],
+    "last_event": "2026-09-30",
+    "capital_usd": 2000000000.0,
+    "deal_source_urls": [
+      "https://www.cnbc.com/2026/09/30/blue-origin-funding-round.html"
+    ]
+  },
+  {
+    "target": "SB Energy",
+    "target_type": "private",
+    "sector": "power-energy",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-09-21",
+    "capital_usd": 1500000000.0,
+    "deal_source_urls": [
+      "https://www.bloomberg.com/news/articles/2026-09-21/nvidia-buying-an-additional-1-5-billion-in-sb-energy-shares-ahead-of-ipo"
+    ]
+  },
+  {
+    "target": "Rigetti Computing",
+    "target_type": "public",
+    "sector": "semiconductors",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-09-08",
+    "capital_usd": 100000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/0001838359/000110465926105662/tm2624940d1_8k.htm"
+    ]
+  },
+  {
+    "target": "D-Wave Quantum",
+    "target_type": "public",
+    "sector": "semiconductors",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-09-08",
+    "capital_usd": 100000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/0001907982/000190798226000141/chipsactpressrelease.htm"
+    ]
+  },
+  {
+    "target": "Snorkel AI",
+    "target_type": "private",
+    "sector": "ai-data",
+    "allocators": [
+      "Alphabet"
+    ],
+    "last_event": "2026-09-22",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://finance.yahoo.com/technology/ai/articles/snorkel-ai-raises-350m-scale-221500170.html"
+    ]
+  },
+  {
+    "target": "Profound",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Sequoia",
+      "Khosla Ventures"
+    ],
+    "last_event": "2026-09-15",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.tryprofound.com/blog/series-d"
+    ]
+  },
+  {
+    "target": "Mazama Energy",
+    "target_type": "private",
+    "sector": "power-energy",
+    "allocators": [
+      "Khosla Ventures"
+    ],
+    "last_event": "2026-09-17",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.manilatimes.net/2026/09/17/tmt-newswire/globenewswire/mazama-energy-raises-135-million-to-scale-the-worlds-hottest-engineered-geothermal-system/2427594"
+    ]
+  },
+  {
+    "target": "HiddenLayer",
+    "target_type": "private",
+    "sector": "cybersecurity",
+    "allocators": [
+      "Microsoft"
+    ],
+    "last_event": "2026-09-02",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.hiddenlayer.com/news/hiddenlayer-100m-series-b-ai-security"
+    ]
+  },
+  {
+    "target": "Gimlet Labs",
+    "target_type": "private",
+    "sector": "ai-compute",
+    "allocators": [
+      "Microsoft"
+    ],
+    "last_event": "2026-09-04",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://gimletlabs.ai/blog/announcing-series-b"
+    ]
+  },
+  {
+    "target": "Factory",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Sequoia",
+      "Khosla Ventures"
+    ],
+    "last_event": "2026-09-15",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://factory.com/news/5-billion-valuation"
+    ]
+  },
+  {
+    "target": "EliseAI",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Andreessen Horowitz"
+    ],
+    "last_event": "2026-09-29",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.globenewswire.com/news-release/2026/09/29/3370681/0/en/eliseai-raises-350-million-at-4-billion-valuation-to-bring-ai-deeper-into-housing-and-healthcare-operations.html"
+    ]
+  },
+  {
+    "target": "Cognition",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Andreessen Horowitz",
+      "Founders Fund",
+      "Altimeter"
+    ],
+    "last_event": "2026-09-08",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://cognition.com/blog/series-e"
+    ]
+  }
+]
