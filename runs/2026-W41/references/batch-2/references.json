@@ -1,0 +1,168 @@
+[
+  {
+    "target": "Vistra Corp",
+    "description": "Irving, Texas-based integrated power generator and retail electricity provider with a mixed nuclear, natural-gas, coal and solar fleet. In October 2026 the U.S. Department of Energy agreed to lend it $4.2B to uprate output at three of its four nuclear plants, amid AI-driven power demand growth.",
+    "website": "https://www.vistracorp.com/",
+    "read_more": {"label": "CNBC", "url": "https://www.cnbc.com/2026/10/03/us-vistra-loan-nuclear-power.html"},
+    "sources": [
+      "https://www.cnbc.com/2026/10/03/us-vistra-loan-nuclear-power.html",
+      "https://www.mining.com/web/us-to-lend-4-2-billion-to-vistra-to-boost-nuclear-power-output-source-says",
+      "https://en.wikipedia.org/wiki/Vistra_Corp."
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "Humain Data Center Fund (via BSF Capital)",
+    "description": "A $2.5B data-center financing vehicle being raised by Humain, the Saudi Public Investment Fund's AI company, and managed by BSF Capital (Banque Saudi Fransi's investment arm). Proceeds fund ~250MW (potentially up to 1GW) of Saudi data-center capacity built with Al Moammar Information Systems, shifting Humain's buildout toward outside capital.",
+    "website": "https://www.humain.ai/",
+    "read_more": {"label": "Bloomberg (via Investing.com)", "url": "https://www.investing.com/news/stock-market-news/humain-plans-25-billion-fund-for-saudi-data-center-projects--bloomberg-93CH-4888112"},
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2026-09-03/saudi-firm-humain-eyes-2-5-billion-fund-to-build-data-centers",
+      "https://www.investing.com/news/stock-market-news/humain-plans-25-billion-fund-for-saudi-data-center-projects--bloomberg-93CH-4888112",
+      "https://fortune.com/2026/09/09/saudis-humain-turns-to-outside-investment-as-the-kingdom-reins-in-fiscal-spending/"
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "Blue Origin",
+    "description": "Jeff Bezos's rocket and space-infrastructure company (New Glenn launch vehicle, satellites, lunar lander). In September 2026 it closed its first outside funding round — $10B led by Coatue plus other institutions, with Bezos himself adding $2B — at a reported ~$130-140B valuation, bringing his total personal investment to roughly $30B.",
+    "website": "https://www.blueorigin.com/",
+    "read_more": {"label": "CNBC", "url": "https://www.cnbc.com/2026/09/30/blue-origin-funding-round.html"},
+    "sources": [
+      "https://www.cnbc.com/2026/09/30/blue-origin-funding-round.html",
+      "https://www.fool.com/investing/2026/07/25/jeff-bezos-puts-2-billion-into-blue-origin/",
+      "https://www.cnbc.com/2026/07/08/blue-origin-bezos-fundraising.html"
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "SB Energy",
+    "description": "U.S. data-center and power infrastructure platform backed by SoftBank and OpenAI, building sites including a 1.2GW Texas campus for OpenAI and the PORTS-Pike Ohio campus hosting NVIDIA AI compute. NVIDIA agreed to buy an additional $1.5B of SB Energy pre-IPO shares (on top of an earlier $1.5B prepaid forward) ahead of its Nasdaq listing targeting a roughly $50B valuation.",
+    "website": "https://sbenergy.com/",
+    "read_more": {"label": "Yahoo Finance", "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-3b-bet-sb-energy-122734520.html"},
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2026-09-21/nvidia-buying-an-additional-1-5-billion-in-sb-energy-shares-ahead-of-ipo",
+      "https://www.briefs.co/news/nvidia-to-buy-another-1-5-billion-of-sb-energy-ahead-of-ipo/",
+      "https://sbenergy.com/openai-and-softbank-group-partner-with-sb-energy/"
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "Rigetti Computing",
+    "description": "Berkeley-based public superconducting quantum computing company (NASDAQ: RGTI). In September 2026 it finalized a $100M, five-year Other Transaction Agreement with the U.S. Department of Commerce under the CHIPS Act for quantum R&D (readout electronics, cryostat design, Fab-1 upgrades), issuing ~7.7M shares to the government as a minority equity stake.",
+    "website": "https://www.rigetti.com/",
+    "read_more": {"label": "The Quantum Insider", "url": "https://thequantuminsider.com/2026/09/08/us-department-commerce-awards-rigetti-100m-quantum-computing-rd/"},
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/0001838359/000110465926105662/tm2624940d1_8k.htm",
+      "https://thequantuminsider.com/2026/09/08/us-department-commerce-awards-rigetti-100m-quantum-computing-rd/",
+      "https://www.nist.gov/news-events/news/2026/09/department-commerce-announces-finalization-chips-rd-award-rigetti"
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "D-Wave Quantum",
+    "description": "Palo Alto-based public quantum computing company (NYSE: QBTS), the dual-platform (annealing and gate-model) quantum vendor. In September 2026 it finalized a definitive agreement giving it access to up to $100M in U.S. CHIPS Act funding to scale annealing and gate-model systems, in exchange for a minority government equity stake.",
+    "website": "https://www.dwavequantum.com/",
+    "read_more": {"label": "The Quantum Insider", "url": "https://thequantuminsider.com/2026/09/08/d-wave-signs-100m-us-government-agreement-quantum-computing-rd/"},
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1907982/000190798226000141/chipsactpressrelease.htm",
+      "https://thequantuminsider.com/2026/09/08/d-wave-signs-100m-us-government-agreement-quantum-computing-rd/",
+      "https://www.nist.gov/news-events/news/2026/09/department-commerce-announces-finalization-chips-rd-award-d-wave"
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "Snorkel AI",
+    "description": "San Francisco-based AI-data company founded in 2019 by Stanford AI Lab researchers, supplying training data and reinforcement-learning environments to AI labs. Raised a $350M Series E at a $3.5B valuation (September 2026) led by Insight Partners and S32, with Alphabet's GV participating alongside Addition, Lightspeed and Greylock.",
+    "website": "https://snorkel.ai/",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/09/22/snorkel-ai-triples-valuation-to-3-5b-as-demand-for-ai-training-data-booms/"},
+    "sources": [
+      "https://finance.yahoo.com/technology/ai/articles/snorkel-ai-raises-350m-scale-221500170.html",
+      "https://techcrunch.com/2026/09/22/snorkel-ai-triples-valuation-to-3-5b-as-demand-for-ai-training-data-booms/",
+      "https://www.unite.ai/snorkel-ai-raises-350m-series-e-at-3-5b-valuation-to-build-the-frontier-lab-for-ai-data/"
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "Profound",
+    "description": "Two-year-old startup helping brands increase visibility in AI-search answers (ChatGPT etc.), serving clients including Comcast, Estee Lauder and Walmart. Raised a $180M Series D at a $1.8B valuation (September 2026) led by Sequoia Capital and Kleiner Perkins, with Lightspeed and Khosla Ventures also participating.",
+    "website": "https://www.tryprofound.com/",
+    "read_more": {"label": "SiliconANGLE", "url": "https://siliconangle.com/2026/09/15/profound-raises-180m-to-boost-brands-visibility-in-ai-services/"},
+    "sources": [
+      "https://www.tryprofound.com/blog/series-d",
+      "https://www.tryprofound.com/newsroom/profound-raises-usd180m-series-d-at-usd1-8b-valuation-to-build-the-ai-platform-for-marketing-teams",
+      "https://siliconangle.com/2026/09/15/profound-raises-180m-to-boost-brands-visibility-in-ai-services/"
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "Mazama Energy",
+    "description": "Oregon-based superhot-rock enhanced geothermal developer, incubated at Khosla Ventures, drilling into the Newberry Volcano formation (temperatures over 375C) aiming for multi-gigawatt baseload power. Raised an oversubscribed $135M Series B (September 2026) led by Centaurus Capital and Doerr Capital, with ConocoPhillips, Shell Ventures, Khosla Ventures and Gates Frontier participating.",
+    "website": "https://mazamaenergy.com/",
+    "read_more": {"label": "Canary Media", "url": "https://www.canarymedia.com/articles/geothermal/mazama-energy-raises-135m-oregon-geothermal"},
+    "sources": [
+      "https://www.manilatimes.net/2026/09/17/tmt-newswire/globenewswire/mazama-energy-raises-135-million-to-scale-the-worlds-hottest-engineered-geothermal-system/2427594",
+      "https://www.canarymedia.com/articles/geothermal/mazama-energy-raises-135m-oregon-geothermal",
+      "https://www.thinkgeoenergy.com/mazama-energy-raises-135m-to-support-commercial-scale-superhot-geothermal-development/"
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "HiddenLayer",
+    "description": "AI-security company protecting models, agents and workflows across the AI lifecycle from adversarial attacks, prompt injection and supply-chain threats. Raised a $100M Series B (September 2026) led by Delta-v Capital, with Ten Eleven Ventures, Morgan Stanley, Microsoft's M12 fund and Booz Allen Ventures participating; total funding now ~$156M.",
+    "website": "https://hiddenlayer.com/",
+    "read_more": {"label": "HiddenLayer", "url": "https://www.hiddenlayer.com/news/hiddenlayer-100m-series-b-ai-security"},
+    "sources": [
+      "https://www.hiddenlayer.com/news/hiddenlayer-100m-series-b-ai-security",
+      "https://theaiinsider.tech/2026/09/07/hiddenlayer-announces-100m-series-b-as-ai-security-market-surges/"
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "Gimlet Labs",
+    "description": "AI-inference infrastructure startup building a 'multi-silicon' inference cloud that disaggregates workloads across GPUs and specialized accelerators (partnering with Cerebras, Arm, Samsung). Raised a $300M Series B at a $3B valuation (September 2026) led by Andreessen Horowitz, with Microsoft's M12 fund, Arm and Samsung Ventures also participating.",
+    "website": "https://gimletlabs.ai/",
+    "read_more": {"label": "SiliconANGLE", "url": "https://siliconangle.com/2026/09/04/gimlet-labs-nabs-300m-for-its-disaggregated-inference-platform/"},
+    "sources": [
+      "https://gimletlabs.ai/blog/announcing-series-b",
+      "https://siliconangle.com/2026/09/04/gimlet-labs-nabs-300m-for-its-disaggregated-inference-platform/",
+      "https://sapphireventures.com/blog/gimlet-labs-series-b-multi-silicon-inference/"
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "Factory",
+    "description": "Enterprise AI software company (founded 2023 by Matan Grinberg and Eno Reyes) building autonomous 'software factories' for self-improving code development. Raised $200M at a $5B valuation (September 2026, more than tripling from $1.5B in April), with Blackstone, Sequoia, Khosla Ventures, Insight Partners, NEA and Clearlake participating; total funding tops $400M.",
+    "website": "https://factory.com/",
+    "read_more": {"label": "TechFundingNews", "url": "https://techfundingnews.com/factory-jumps-to-5b-in-5-months-with-200m-for-its-ai-droids/"},
+    "sources": [
+      "https://factory.com/news/5-billion-valuation",
+      "https://pulse2.com/factory-raises-200-million-at-5-billion-valuation-to-scale-self-improving-software-development-platform/",
+      "https://techfundingnews.com/factory-jumps-to-5b-in-5-months-with-200m-for-its-ai-droids/"
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "EliseAI",
+    "description": "AI company automating operations for housing (apartment leasing/maintenance) and healthcare, used by roughly one in six U.S. apartments. Raised $350M (September 2026) at a $4B valuation — nearly double its 2025 Series E mark — led by Andreessen Horowitz and Bessemer Venture Partners, with Ontario Teachers' Pension Plan and Sapphire Ventures also participating.",
+    "website": "https://www.eliseai.com/",
+    "read_more": {"label": "GlobeNewswire", "url": "https://www.globenewswire.com/news-release/2026/09/29/3370681/0/en/eliseai-raises-350-million-at-4-billion-valuation-to-bring-ai-deeper-into-housing-and-healthcare-operations.html"},
+    "sources": [
+      "https://www.globenewswire.com/news-release/2026/09/29/3370681/0/en/eliseai-raises-350-million-at-4-billion-valuation-to-bring-ai-deeper-into-housing-and-healthcare-operations.html",
+      "https://hitconsultant.net/2026/09/29/eliseai-raises-350m-at-4-billion-valuation-agentic-ai-housing-healthcare-operations/"
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "Cognition",
+    "description": "Maker of Devin, the AI software-engineering agent, founded 2023 by Scott Wu. Raised a $2B+ Series E at a $48B valuation (September 2026, up from $25B in May) led by Andreessen Horowitz, Accel, Founders Fund, General Catalyst and Avenir, with Altimeter among many other participants; run-rate revenue rose from $492M to almost $900M over the period.",
+    "website": "https://cognition.com/",
+    "read_more": {"label": "PYMNTS", "url": "https://www.pymnts.com/news/artificial-intelligence/2026/cognition-secures-48-billion-valuation-as-demand-for-ai-coding-surges/"},
+    "sources": [
+      "https://cognition.com/blog/series-e",
+      "https://dealroom.co/news/149496-cognition-raises-2b-series-e-at-48b-valuation-to-scale-devin/",
+      "https://americanbazaaronline.com/2026/09/09/cognition-raises-2b-as-ai-coding-startup-hits-48-billion-valuation-487823/"
+    ],
+    "as_of": "2026-10-05"
+  }
+]
