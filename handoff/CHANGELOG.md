@@ -1,6 +1,6 @@
-# Handoff changelog — 2026-10-05
+# Handoff changelog — 2026-10-12
 
-- nodes: 305  flows: 398  sectors: 18
+- nodes: 314  flows: 411  sectors: 18
 
 ## New entities (0)
 _none_

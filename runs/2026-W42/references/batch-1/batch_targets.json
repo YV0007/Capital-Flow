@@ -1,0 +1,121 @@
+[
+  {
+    "target": "Hugging Face, Inc.",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-09-02",
+    "capital_usd": 11900000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000078/nvda-20260902.htm"
+    ]
+  },
+  {
+    "target": "HUMAIN AI Data Center Fund",
+    "target_type": "fund",
+    "sector": "datacenters",
+    "allocators": [
+      "Saudi PIF"
+    ],
+    "last_event": "2026-09-09",
+    "capital_usd": 2500000000.0,
+    "deal_source_urls": [
+      "https://fortune.com/2026/09/09/saudi-humain-planning-ipo-2-5-billion-fund-expansion-plans-moove-adgm/"
+    ]
+  },
+  {
+    "target": "Figure AI",
+    "target_type": "private",
+    "sector": "robotics",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-10-07",
+    "capital_usd": 1000000000.0,
+    "deal_source_urls": [
+      "https://www.eweek.com/news/nvidia-figure-ai-1-billion-investment-humanoid-robots/"
+    ]
+  },
+  {
+    "target": "TypeSafe AI",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "Sequoia",
+      "Andreessen Horowitz"
+    ],
+    "last_event": "2026-10-09",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://app.dealroom.co/news/note/jev-turning-smart-but-useless-ai-into-software-that-acts"
+    ]
+  },
+  {
+    "target": "STT GDC (ST Telemedia Global Data Centres)",
+    "target_type": "private",
+    "sector": "datacenters",
+    "allocators": [
+      "KKR"
+    ],
+    "last_event": "2026-09-02",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://sttelemedia.com/about-us/news/read/kkr-led-consortium-singtel-group-fully-acquire-st-telemedia-global-data-centres-s138-billion-enterprise-value"
+    ]
+  },
+  {
+    "target": "Mecka",
+    "target_type": "private",
+    "sector": "robotics",
+    "allocators": [
+      "Sequoia"
+    ],
+    "last_event": "2026-10-07",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://dealroom.co/news/160699-mecka-raises-60m-series-b-to-turn-human-motion-into-robot-training-data/"
+    ]
+  },
+  {
+    "target": "Instinct",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Sequoia",
+      "Coatue"
+    ],
+    "last_event": "2026-09-28",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://techcrunch.com/?p=3170483"
+    ]
+  },
+  {
+    "target": "Falcata (TSC + ASEI combination)",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "Blackstone"
+    ],
+    "last_event": "2026-10-01",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.alternativeswatch.com/2026/10/02/blackstone-falcata-missile-interceptor-supplier/"
+    ]
+  },
+  {
+    "target": "Catalyst",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Sequoia"
+    ],
+    "last_event": "2026-10-08",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://fortune.com/2026/10/08/sequoia-backed-catalyst-raises-30-million-build-ai-trading-agents-everyday-investors/"
+    ]
+  }
+]

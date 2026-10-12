@@ -1,0 +1,113 @@
+[
+  {
+    "target": "Hugging Face, Inc.",
+    "description": "Open-source AI model/dataset-hosting platform. NVIDIA filed an 8-K on September 2, 2026 for a ~$11.9B cash acquisition (plus ~$1B in employee retention equity), per The Information's earlier report of a $12.9B deal. Hugging Face's 2023 round had valued it at $4.5B; it reportedly turned down a $500M NVIDIA investment in 2025. Close expected H1 2027.",
+    "website": "https://huggingface.co",
+    "read_more": {"label": "TechRadar Pro", "url": "https://techradar.com/pro/nvidia-wants-to-buy-hugging-face-in-usd13-billion-blockbuster-ai-deal"},
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000078/nvda-20260902.htm",
+      "https://theenergymag.com/news/market-news/nvidia-reaches-11-9-billion-deal-acquire-ai",
+      "https://techradar.com/pro/nvidia-wants-to-buy-hugging-face-in-usd13-billion-blockbuster-ai-deal"
+    ],
+    "as_of": "2026-10-12"
+  },
+  {
+    "target": "HUMAIN AI Data Center Fund",
+    "description": "A ~$2.5B fund HUMAIN — Saudi Arabia's PIF-owned AI company — is raising from global and domestic investors, per Bloomberg sources, to finance Saudi data-center buildout (an initial 250MW site with Al Moammar Information Systems, scaling toward 1GW). To be managed by BSF Capital (Banque Saudi Fransi's investment arm); PIF's direct role in the fund itself is unconfirmed.",
+    "website": null,
+    "read_more": {"label": "Fortune", "url": "https://fortune.com/2026/09/09/saudi-humain-planning-ipo-2-5-billion-fund-expansion-plans-moove-adgm/"},
+    "sources": [
+      "https://fortune.com/2026/09/09/saudi-humain-planning-ipo-2-5-billion-fund-expansion-plans-moove-adgm/",
+      "https://aiweekly.co/alerts/humain-plans-25b-fund-under-bsf-capital-for-saudi-data-centers",
+      "https://www.briefs.co/news/humain-seeks-2-5-billion-to-back-saudi-data-center-buildout/",
+      "https://www.pif.gov.sa/en/our-investments/our-portfolio/humain/"
+    ],
+    "as_of": "2026-10-12"
+  },
+  {
+    "target": "Figure AI",
+    "description": "Humanoid-robotics company behind the Helix AI models. Per eWeek/The Information, NVIDIA is reportedly weighing a further ~$1B investment at a ~$38B pre-money valuation — not yet an announced deal. NVIDIA already backed Figure's September 2025 Series C (>$1B at a $39B post-money valuation, led by Parkway Venture Capital, with Brookfield).",
+    "website": "https://www.figure.ai",
+    "read_more": {"label": "eWeek", "url": "https://www.eweek.com/news/nvidia-figure-ai-1-billion-investment-humanoid-robots/"},
+    "sources": [
+      "https://www.eweek.com/news/nvidia-figure-ai-1-billion-investment-humanoid-robots/",
+      "https://www.eenewseurope.com/en/figure-secures-1b-funding-to-scale-humanoid-robots/",
+      "https://finance.yahoo.com/news/figure-valued-39-billion-latest-131115237.html"
+    ],
+    "as_of": "2026-10-12"
+  },
+  {
+    "target": "TypeSafe AI",
+    "description": "AI startup behind Jev, a model that returns typed values to code rather than prose, for routing, classification and verification workflows. Founded by ex-OpenAI researcher Diogo Almeida. Andreessen Horowitz led an $870M Series A (Oct 9, 2026) at a $7.5B valuation, joined by Sequoia and DCVC — three weeks after a $40M DCVC-led seed.",
+    "website": null,
+    "read_more": {"label": "Dealroom", "url": "https://app.dealroom.co/news/note/jev-turning-smart-but-useless-ai-into-software-that-acts"},
+    "sources": [
+      "https://app.dealroom.co/news/note/jev-turning-smart-but-useless-ai-into-software-that-acts",
+      "https://cryptobriefing.com/a16z-leads-typesafe-ai-series-a/",
+      "https://runtimewire.com/article/typesafe-jev-reported-870m-financing",
+      "https://www.allblogthings.com/2026/10/typesafe-ai-hits-75-billion-valuation-3-weeks-after-launch.html"
+    ],
+    "as_of": "2026-10-12"
+  },
+  {
+    "target": "STT GDC (ST Telemedia Global Data Centres)",
+    "description": "Asia-Pacific-focused data-center operator (2.3GW design capacity across 12 markets in APAC, the UK and Europe). A KKR-led consortium with Singtel agreed Feb 4, 2026 to buy the remaining 82% from founder ST Telemedia for S$6.6B (~S$13.8B enterprise value), leaving KKR with 75% and Singtel 25%; close expected H2 2026.",
+    "website": "https://www.sttelemediagdc.com",
+    "read_more": {"label": "Business Wire", "url": "https://www.businesswire.com/news/home/20260202441025/en/KKR-Led-Consortium-with-Singtel-Group-to-Fully-Acquire-ST-Telemedia-Global-Data-Centres-at-S%2413.8-Billion-Enterprise-Value"},
+    "sources": [
+      "https://sttelemedia.com/about-us/news/read/kkr-led-consortium-singtel-group-fully-acquire-st-telemedia-global-data-centres-s138-billion-enterprise-value",
+      "https://www.businesswire.com/news/home/20260202441025/en/KKR-Led-Consortium-with-Singtel-Group-to-Fully-Acquire-ST-Telemedia-Global-Data-Centres-at-S%2413.8-Billion-Enterprise-Value",
+      "https://pulse2.com/kkr-singtel-consortium-buying-stake-in-stt-gdc-at-s13-8-billion-value"
+    ],
+    "as_of": "2026-10-12"
+  },
+  {
+    "target": "Mecka",
+    "description": "Startup paying people to record everyday tasks via body sensors and smartphones, selling the resulting human-motion data (its \"Egoverse\" dataset) to humanoid-robot developers. Raised a $60M Series B led by Sequoia (announced Oct 7, 2026), joined by NVIDIA, Microsoft's and Qualcomm's venture arms, Samsung, and returning investors Kindred, Framework and Neo.",
+    "website": null,
+    "read_more": {"label": "BetaKit", "url": "https://betakit.com/mecka-ai-reveals-60-million-usd-series-b-round-backed-by-sequoia-nvidia/"},
+    "sources": [
+      "https://dealroom.co/news/160699-mecka-raises-60m-series-b-to-turn-human-motion-into-robot-training-data/",
+      "https://betakit.com/mecka-ai-reveals-60-million-usd-series-b-round-backed-by-sequoia-nvidia/",
+      "https://aiweekly.co/alerts/mecka-lands-60m-series-b-from-sequoia-for-robot-motion-data"
+    ],
+    "as_of": "2026-10-12"
+  },
+  {
+    "target": "Instinct",
+    "description": "San Francisco personal-AI-agent startup (legally Spear Street Technology, Inc.), reached by text or phone call, founded by Noah Shinn; still invite-only. Raised a $1B Series C at a $10B valuation led by Sequoia, Benchmark and Coatue (announced Sept 28, 2026) — roughly 4x the $2.5B mark from its $250M Series B just a month earlier.",
+    "website": null,
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/?p=3170483"},
+    "sources": [
+      "https://techcrunch.com/?p=3170483",
+      "https://aiweekly.co/alerts/instinct-raises-1b-series-c-at-10b-for-personal-ai-agent",
+      "https://www.vktr.com/ai-platforms/instinct-raises-1b-at-10b-valuation-to-scale-its-personal-ai-agent/",
+      "https://dealroom.co/news/157240-ai-startup-instinct-raises-1b-series-c-at-10b-valuation/"
+    ],
+    "as_of": "2026-10-12"
+  },
+  {
+    "target": "Falcata (TSC + ASEI combination)",
+    "description": "New missile-defense component supplier formed by Blackstone-managed funds combining TSC and Applied Systems Engineering (ASEI); makes seekers/radar, guidance electronics, control actuation and GPS-denied navigation for interceptor systems. Announced Oct 1, 2026. Financial terms undisclosed (one unconfirmed trade report cites roughly $1B). CEO: Brandon Wolfson; chairman: Jonathan Moneymaker, per press coverage.",
+    "website": null,
+    "read_more": {"label": "Blackstone", "url": "https://www.blackstone.com/?p=48747"},
+    "sources": [
+      "https://www.alternativeswatch.com/2026/10/02/blackstone-falcata-missile-interceptor-supplier/",
+      "https://www.blackstone.com/?p=48747",
+      "https://pulse2.com/blackstone-invests-in-falcata-combining-tsc-and-asei-to-expand-interceptor-technologies/"
+    ],
+    "as_of": "2026-10-12"
+  },
+  {
+    "target": "Catalyst",
+    "description": "AI-agent platform turning plain-language goals into retail trading plans (research, strategy, execution — always with user approval before a trade). Founded 2025 by Justin Zheng and Dylan Iskandar. Closed a $30M seed led by Sequoia (Oct 8, 2026), joined by Jump Trading, PeakXV, Lux Capital, AntiFund, Coinbase and Premji Invest.",
+    "website": null,
+    "read_more": {"label": "Fortune", "url": "https://fortune.com/2026/10/08/sequoia-backed-catalyst-raises-30-million-build-ai-trading-agents-everyday-investors/"},
+    "sources": [
+      "https://fortune.com/2026/10/08/sequoia-backed-catalyst-raises-30-million-build-ai-trading-agents-everyday-investors/",
+      "https://sequoiacap.com/article/partnering-with-catalyst-turning-ideas-into-trades",
+      "https://cryptobriefing.com/catalyst-raises-30m-ai-trading-agents/"
+    ],
+    "as_of": "2026-10-12"
+  }
+]
