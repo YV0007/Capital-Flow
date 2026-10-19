@@ -1,0 +1,172 @@
+[
+  {
+    "target": "DigitalBridge Group, Inc.",
+    "target_type": "public",
+    "sector": "datacenters",
+    "allocators": [
+      "SoftBank"
+    ],
+    "last_event": "2026-09-30",
+    "capital_usd": 3100000000.0,
+    "deal_source_urls": [
+      "https://group.softbank/en/news/press/20260930"
+    ]
+  },
+  {
+    "target": "HUMAIN",
+    "target_type": "private",
+    "sector": "datacenters",
+    "allocators": [
+      "Saudi PIF"
+    ],
+    "last_event": "2026-10-01",
+    "capital_usd": 2500000000.0,
+    "deal_source_urls": [
+      "https://enterpriseam.com/ksa/2026/10/01/humain-scales-up-2027-data-center-target-as-it-aims-for-a-self-funding-buildout/"
+    ]
+  },
+  {
+    "target": "U.S. universities / quantum computing & Genesis Mission research initiatives",
+    "target_type": "project",
+    "sector": "semiconductors",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-10-08",
+    "capital_usd": 1000000000.0,
+    "deal_source_urls": [
+      "https://www.morningstar.com/news/dow-jones/202610086073/nvidia-to-invest-1-billion-in-us-science-over-next-5-years"
+    ]
+  },
+  {
+    "target": "UK agentic AI safety research (Oxford BOLD / UCL SOFAIR / Imperial College)",
+    "target_type": "project",
+    "sector": "cybersecurity",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-10-14",
+    "capital_usd": 250000000.0,
+    "deal_source_urls": [
+      "https://www.hpcwire.com/aiwire/2026/10/14/nvidia-commits-250m-to-advance-uk-agentic-safety-and-security-research/"
+    ]
+  },
+  {
+    "target": "TBD -- additional European AI companies (unnamed)",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-10-13",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.azernews.az/region/265516.html"
+    ]
+  },
+  {
+    "target": "SharonAI Holdings Inc.",
+    "target_type": "public",
+    "sector": "neocloud",
+    "allocators": [
+      "Goldman Sachs"
+    ],
+    "last_event": "2026-10-01",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/0002068385/000149315226045368/ex99-1.htm"
+    ]
+  },
+  {
+    "target": "Pigment",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-10-13",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.thestar.com.my/tech/tech-news/2026/10/14/nvidia-buys-stakes-in-four-french-tech-startups-les-echos-reports"
+    ]
+  },
+  {
+    "target": "Genesis AI",
+    "target_type": "private",
+    "sector": "robotics",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-10-13",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.thestar.com.my/tech/tech-news/2026/10/14/nvidia-buys-stakes-in-four-french-tech-startups-les-echos-reports"
+    ]
+  },
+  {
+    "target": "Entalpic",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-10-13",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.thestar.com.my/tech/tech-news/2026/10/14/nvidia-buys-stakes-in-four-french-tech-startups-les-echos-reports"
+    ]
+  },
+  {
+    "target": "Doctolib",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-10-13",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.thestar.com.my/tech/tech-news/2026/10/14/nvidia-buys-stakes-in-four-french-tech-startups-les-echos-reports"
+    ]
+  },
+  {
+    "target": "Commonwealth Fusion Systems",
+    "target_type": "private",
+    "sector": "nuclear",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-10-08",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.energy.gov/node/4860580"
+    ]
+  },
+  {
+    "target": "Arena",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "Andreessen Horowitz",
+      "Khosla Ventures"
+    ],
+    "last_event": "2026-10-08",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://techcrunch.com/?p=3175734"
+    ]
+  },
+  {
+    "target": "Applied Compute",
+    "target_type": "private",
+    "sector": "ai-compute",
+    "allocators": [
+      "Elad Gil"
+    ],
+    "last_event": "2026-04-08",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://seedtable.com/investors/elad-gil"
+    ]
+  }
+]
