@@ -1,28 +1,17 @@
 # Audit report — 2026-W43 (2026-10-19)
 
-**Verdict: FAIL — delivery blocked**
-Checked 428 events, 115 track-record rows, 43 profiles, 269 target references, 351 holdings, 0 classified targets.
+**Verdict: PASS**
+Checked 429 events, 115 track-record rows, 43 profiles, 282 target references, 351 holdings, 0 classified targets.
 
-## Errors (10)
-- E6 Arena: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Commonwealth Fusion Systems: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 DigitalBridge Group, Inc.: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Doctolib: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Entalpic: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Genesis AI: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Pigment: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 SharonAI Holdings Inc.: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 U.S. universities / quantum computing & Genesis Mission research initiatives: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 UK agentic AI safety research (Oxford BOLD / UCL SOFAIR / Imperial College): target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
+## Errors (0)
+_none_
 
-## Warnings (53)
+## Warnings (51)
 - W3 Apollo: key allocator with events but no profile
 - W3 Elon Musk: key allocator with events but no profile
 - W3 Goldman Sachs: key allocator with events but no profile
 - W3 Max Levchin: key allocator with events but no profile
 - W3 Palmer Luckey: key allocator with events but no profile
-- W6 DigitalBridge Group, Inc.: $3.1B target with no reference
-- W6 U.S. universities / quantum computing & Genesis Mission research initiatives: $1.0B target with no reference
 - W7 BlackRock: $49.8B fund/firm with no holdings collected
 - W7 MGX Fund I: $49.0B fund/firm with no holdings collected
 - W7 SoftBank: $36.4B fund/firm with no holdings collected
@@ -73,14 +62,14 @@ Checked 428 events, 115 track-record rows, 43 profiles, 269 target references, 3
 ## Stats
 ```json
 {
-  "events": 428,
+  "events": 429,
   "by_status": {
-    "candidate": 80,
+    "candidate": 81,
     "verified": 259,
     "verified_alpha": 89
   },
   "source_url_coverage": 1.0,
-  "estimated_amounts": 83,
+  "estimated_amounts": 84,
   "provisional_track_rows": 42
 }
 ```

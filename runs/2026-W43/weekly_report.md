@@ -115,7 +115,7 @@
 ## Top sectors — last 30 days
 | Sector | Capital | Deals | Distinct allocators |
 |---|--:|--:|--:|
-| datacenters | $12.7B | 5 | 3 |
+| datacenters | $12.7B | 6 | 4 |
 | ai-labs | $10.0B | 5 | 4 |
 | nuclear | $4.2B | 2 | 1 |
 | power-energy | $3.4B | 3 | 3 |
@@ -129,7 +129,7 @@
 ## Themes — last 30 days
 | Theme | Capital | Deals | Distinct allocators |
 |---|--:|--:|--:|
-| ai_infrastructure | $14.7B | 10 | 7 |
+| ai_infrastructure | $14.7B | 11 | 8 |
 | frontier_ai | $10.0B | 5 | 4 |
 | energy_for_ai | $7.6B | 5 | 3 |
 | defense_ai | $2.0B | 4 | 4 |
@@ -137,18 +137,22 @@
 | cyber_security | $650M | 4 | 4 |
 | ai_applications | $0 | 11 | 7 |
 
-## Public beneficiaries mapped (3)
+## Public beneficiaries mapped (6)
 | Ticker | Company | From flow | Confidence |
 |---|---|---|:-:|
 | NVDA | NVIDIA Corporation | Meta→Firmus Technologies | high |
 | SHAZ | SharonAI Holdings Inc. | Goldman Sachs→SharonAI Holdings Inc. | high |
 | NVDA | NVIDIA Corporation | Goldman Sachs→SharonAI Holdings Inc. | medium |
+| NVDA | NVIDIA Corporation | Meta→Firmus Technologies | high |
+| SHAZ | SharonAI Holdings Inc. | Goldman Sachs→SharonAI Holdings Inc. | high |
+| NVDA | NVIDIA Corporation | Goldman Sachs→SharonAI Holdings Inc. | medium |
 
-## Candidates to watch (5)
+## Candidates to watch (6)
 - NVIDIA → TBD -- additional European AI companies (unnamed) (ai-applications, corporate_investment)
 - Elad Gil → Applied Compute (ai-compute, funding_round)
 - Elad Gil → Cognition (ai-labs, funding_round)
 - Saudi PIF → HUMAIN (datacenters, fund_launch)
+- Blue Owl → Stack Infrastructure (MEL02 campus, Melbourne) (datacenters, project_finance)
 - Jeff Bezos → Generalist AI (robotics, funding_round)
 
 ## Coverage — 9/48 key & core allocators produced events
