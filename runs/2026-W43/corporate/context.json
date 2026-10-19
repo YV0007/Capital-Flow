@@ -2,9 +2,9 @@
   "week": "2026-W43",
   "agent": "corporate",
   "feedback_from_runs": [
-    "2026-W40",
     "2026-W41",
-    "2026-W42"
+    "2026-W42",
+    "2026-W43"
   ],
   "how_to_use": "1) WHAT YOU ALREADY HAVE \u2014 search FORWARD from each entity's last_event_date; don't re-find old deals. Use the deterministic EDGAR path when cik is present (agents/CONTEXT.md \u2192 Tools) and run `engine.edgar exists` before writing a row. Aliases are the SAME entity \u2014 never file one as new. stale_candidates are existing rows needing a Tier-1 confirm, not new deals to re-file. 2) WHAT WORKED \u2014 check `check_first` sources before searching broadly. 3) WHAT YOU GOT WRONG \u2014 these are real rejects from recent runs; don't repeat them.",
   "what_you_already_have": {
@@ -15,9 +15,16 @@
         "tier": "key",
         "country": "US",
         "network": null,
-        "last_event_date": null,
-        "events_on_file": 0,
-        "sectors_active": [],
+        "last_event_date": "2026-09-22",
+        "events_on_file": 7,
+        "sectors_active": [
+          "ai-applications",
+          "ai-data",
+          "ai-labs",
+          "defense-tech",
+          "nuclear",
+          "semiconductors"
+        ],
         "known_vehicles": [],
         "aliases": [
           "alphabet (google)",
@@ -28,7 +35,14 @@
         "cik": "0001652044",
         "ticker": "GOOGL",
         "edgar_path": "deterministic",
-        "recent_targets": []
+        "recent_targets": [
+          "Snorkel AI",
+          "EnduroSat",
+          "MediaTek",
+          "MediaTek",
+          "Blacksmith",
+          "Discovery Loop"
+        ]
       },
       {
         "allocator": "Amazon",
@@ -36,9 +50,12 @@
         "tier": "key",
         "country": "US",
         "network": null,
-        "last_event_date": null,
-        "events_on_file": 0,
-        "sectors_active": [],
+        "last_event_date": "2026-08-26",
+        "events_on_file": 5,
+        "sectors_active": [
+          "ai-data",
+          "ai-labs"
+        ],
         "known_vehicles": [],
         "aliases": [
           "amazon / aws",
@@ -49,7 +66,54 @@
         "cik": "0001018724",
         "ticker": "AMZN",
         "edgar_path": "deterministic",
-        "recent_targets": []
+        "recent_targets": [
+          "DuckLabs",
+          "OpenAI",
+          "Anthropic",
+          "OpenAI Group PBC",
+          "OpenAI"
+        ]
+      },
+      {
+        "allocator": "Anthropic",
+        "class": "corporate",
+        "tier": "watch",
+        "country": null,
+        "network": null,
+        "last_event_date": "2026-08-05",
+        "events_on_file": 1,
+        "sectors_active": [
+          "datacenters"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": null,
+        "ticker": null,
+        "edgar_path": "search",
+        "recent_targets": [
+          "TeraWulf Justified Data Campus (Kentucky)"
+        ]
+      },
+      {
+        "allocator": "Empery Digital",
+        "class": "corporate",
+        "tier": "watch",
+        "country": null,
+        "network": null,
+        "last_event_date": "2026-07-23",
+        "events_on_file": 2,
+        "sectors_active": [
+          "datacenters"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": null,
+        "ticker": null,
+        "edgar_path": "search",
+        "recent_targets": [
+          "Cardinal Data Power",
+          "Midwest AI Data Center Acquisition Entity (Hunt Properties JV)"
+        ]
       },
       {
         "allocator": "Meta",
@@ -57,9 +121,12 @@
         "tier": "key",
         "country": "US",
         "network": null,
-        "last_event_date": null,
-        "events_on_file": 0,
-        "sectors_active": [],
+        "last_event_date": "2026-09-09",
+        "events_on_file": 5,
+        "sectors_active": [
+          "ai-labs",
+          "datacenters"
+        ],
         "known_vehicles": [],
         "aliases": [
           "facebook",
@@ -69,7 +136,13 @@
         "cik": "0001326801",
         "ticker": "META",
         "edgar_path": "deterministic",
-        "recent_targets": []
+        "recent_targets": [
+          "Stilla.ai",
+          "BlackRock (El Paso Data Center JV)",
+          "Meta-BlackRock El Paso data center venture",
+          "Richland Parish / Hyperion data center (Louisiana)",
+          "Sturgeon County data center (Alberta, Canada)"
+        ]
       },
       {
         "allocator": "Microsoft",
@@ -77,9 +150,14 @@
         "tier": "key",
         "country": "US",
         "network": null,
-        "last_event_date": null,
-        "events_on_file": 0,
-        "sectors_active": [],
+        "last_event_date": "2026-09-18",
+        "events_on_file": 9,
+        "sectors_active": [
+          "ai-applications",
+          "ai-compute",
+          "ai-labs",
+          "cybersecurity"
+        ],
         "known_vehicles": [],
         "aliases": [
           "microsoft corporation",
@@ -88,7 +166,14 @@
         "cik": "0000789019",
         "ticker": "MSFT",
         "edgar_path": "deterministic",
-        "recent_targets": []
+        "recent_targets": [
+          "Mantic Technologies",
+          "Gimlet Labs",
+          "Stuut",
+          "HiddenLayer",
+          "HiddenLayer",
+          "Mate Security"
+        ]
       },
       {
         "allocator": "NVIDIA",
@@ -96,9 +181,19 @@
         "tier": "key",
         "country": "US",
         "network": null,
-        "last_event_date": null,
-        "events_on_file": 0,
-        "sectors_active": [],
+        "last_event_date": "2026-10-07",
+        "events_on_file": 28,
+        "sectors_active": [
+          "ai-compute",
+          "ai-data",
+          "ai-labs",
+          "datacenters",
+          "neocloud",
+          "networking",
+          "power-energy",
+          "robotics",
+          "semiconductors"
+        ],
         "known_vehicles": [],
         "aliases": [
           "nvda",
@@ -107,7 +202,14 @@
         "cik": "0001045810",
         "ticker": "NVDA",
         "edgar_path": "deterministic",
-        "recent_targets": []
+        "recent_targets": [
+          "Figure AI",
+          "Nscale",
+          "SB Energy",
+          "Brookfield Artificial Intelligence Infrastructure Fund (BAIIF)",
+          "Mistral AI",
+          "Thinking Machines Lab"
+        ]
       },
       {
         "allocator": "Oracle",
@@ -128,11 +230,178 @@
         "recent_targets": []
       }
     ],
-    "stale_candidates": []
+    "stale_candidates": [
+      {
+        "allocator": "NVIDIA",
+        "target": "OpenAI southern Ohio 10GW data center",
+        "event_type": "corporate_investment",
+        "disclosed_date": "2026-07-27",
+        "source_tier": 3,
+        "source_url": "https://www.forbes.com/sites/tylerroush/2026/07/27/nvidia-and-openai-discussing-500-billion-data-center-heres-what-we-know/",
+        "why_still_candidate": "CANDIDATE - talks only, NO signed agreement, so no capital is committed yet. Origin is a single Wall Street Journal scoop of 2026-07-27 citing 'people familiar'; Forbes, Reuters, Al Jazeera, PYMNTS and Jerusalem Post all trace back to that one WSJ report, so this counts as ONE source, not five (circ"
+      },
+      {
+        "allocator": "NVIDIA",
+        "target": "Lancium",
+        "event_type": "corporate_investment",
+        "disclosed_date": "2026-08-08",
+        "source_tier": 3,
+        "source_url": "https://www.investing.com/news/stock-market-news/nvidia-to-invest-up-to-3-billion-in-lancium-the-information-reports-4847578",
+        "why_still_candidate": "CANDIDATE - single origin, neither party has confirmed on the record. The Information broke this 2026-08-08 ('people familiar with the matter'); Reuters, Bloomberg-adjacent wires, Seeking Alpha, DCD-tier outlets and dozens of aggregators all cite that one Information scoop, so per the circular-repor"
+      },
+      {
+        "allocator": "NVIDIA",
+        "target": "Perplexity",
+        "event_type": "minority_stake",
+        "disclosed_date": "2026-08-23",
+        "source_tier": 4,
+        "source_url": "https://www.theinformation.com/articles/nvidia-discusses-perplexity-investment-30-billion-plus-valuation-considered-tech-licensing-deal",
+        "why_still_candidate": "NOT a confirmed/closed deal -- The Information (2026-08-23) reports NVIDIA discussing an equity investment in Perplexity at a $30B+ valuation (up from ~$20B a year earlier); NVIDIA has held a stake in Perplexity since 2023, so this would be a follow_on if it closes. Talks reportedly shifted from a l"
+      },
+      {
+        "allocator": "NVIDIA",
+        "target": "Hugging Face",
+        "event_type": "acquisition",
+        "disclosed_date": "2026-08-27",
+        "source_tier": 3,
+        "source_url": "https://www.cnbc.com/2026/08/27/nvidia-hugging-face-acquisition.html",
+        "why_still_candidate": "CANDIDATE -- talks only, no signed agreement per CNBC ('the deal could still fall apart'); neither NVIDIA nor Hugging Face has confirmed on the record. Origin = The Information (2026-08-27 report, paywalled, citing people familiar); CNBC, TechCrunch, Yahoo Finance, Futurum Group, tech-insider.org an"
+      },
+      {
+        "allocator": "Alphabet",
+        "target": "MediaTek",
+        "event_type": "corporate_investment",
+        "disclosed_date": "2026-09-01",
+        "source_tier": 3,
+        "source_url": "https://focustaiwan.tw/business/202609010010",
+        "why_still_candidate": "Alphabet participated alongside NVIDIA in MediaTek's $3.9B offshore convertible bond offering (priced Aug 31, closes Sep 8); NVIDIA took $3.5B (~90%) of the total, Alphabet's exact slice was NOT disclosed by either MediaTek or Alphabet. Origin is MediaTek's own pricing announcement (via its official"
+      },
+      {
+        "allocator": "NVIDIA",
+        "target": "Thinking Machines Lab",
+        "event_type": "corporate_investment",
+        "disclosed_date": "2026-09-02",
+        "source_tier": 4,
+        "source_url": "https://www.theinformation.com/briefings/nvidia-discusses-2-5-billion-investment-mira-muratis-thinking-machines-lab",
+        "why_still_candidate": "NOT a confirmed/closed deal -- The Information (2026-09-02) reports NVIDIA in talks to put ~$2.5B into TML's $5-6B round at a ~$40B pre-money valuation (Accel reportedly leading). All other outlets carrying this figure (Yahoo, Inc., BigGo, EconoTimes, pagelens) trace to the same Information origin -"
+      },
+      {
+        "allocator": "NVIDIA",
+        "target": "Thinking Machines Lab",
+        "event_type": "minority_stake",
+        "disclosed_date": "2026-09-03",
+        "source_tier": 3,
+        "source_url": "https://finance.yahoo.com/technology/ai/articles/nvidia-eyeing-2-5-billion-142916646.html",
+        "why_still_candidate": "NVIDIA reportedly in talks to invest ~$2.5B as roughly half of a $5-6B round valuing Mira Murati's Thinking Machines Lab at ~$40B pre-money. As of 2026-09-06 reporting, deal not closed: no signed term sheet, final round size, ownership stake, or closing date confirmed by either party. Escalation run"
+      },
+      {
+        "allocator": "NVIDIA",
+        "target": "Thinking Machines Lab",
+        "event_type": "corporate_investment",
+        "disclosed_date": "2026-09-03",
+        "source_tier": 3,
+        "source_url": "https://forkast.news/thinking-machines-lab-seeks-40b-valuation-as-nvidia-extends-its-capital-allocator-role-into-model-space/",
+        "why_still_candidate": "The Information reported (Sept 3, 2026) NVIDIA in talks to put ~$2.5B into a $5-6B Thinking Machines Lab round at a >=$40B pre-money valuation, with Accel reportedly set to lead and a16z (board seat) saying NVIDIA would supply roughly half the round. Unclear whether this is the same 'significant' in"
+      }
+    ]
   },
   "what_worked": {
-    "check_first": [],
-    "detail": []
+    "check_first": [
+      "finance.yahoo.com",
+      "cryptobriefing.com",
+      "en.cryptonomist.ch",
+      "forkast.news",
+      "gimletlabs.ai",
+      "letsdatascience.com",
+      "renewablesnow.com",
+      "runtimewire.com"
+    ],
+    "detail": [
+      {
+        "source": "cryptobriefing.com",
+        "example_url": "https://cryptobriefing.com/nvidia-discusses-1-billion-figure-ai-investment/",
+        "tier": 5,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "en.cryptonomist.ch",
+        "example_url": "https://en.cryptonomist.ch/2026/09/21/nvidia-sb-energy-investment/",
+        "tier": 5,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "finance.yahoo.com",
+        "example_url": "https://finance.yahoo.com/technology/ai/articles/ai-startup-mantic-raises-25-101010662.html",
+        "tier": 3,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "finance.yahoo.com",
+        "example_url": "https://finance.yahoo.com/technology/ai/articles/snorkel-ai-raises-350m-scale-221500170.html",
+        "tier": 3,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "forkast.news",
+        "example_url": "https://forkast.news/thinking-machines-lab-seeks-40b-valuation-as-nvidia-extends-its-capital-allocator-role-into-model-space/",
+        "tier": 3,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "gimletlabs.ai",
+        "example_url": "https://gimletlabs.ai/blog/announcing-series-b",
+        "tier": 1,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "letsdatascience.com",
+        "example_url": "https://letsdatascience.com/news/thinking-machines-lab-pursues-5-6-billion-funding-round-19b69cd4",
+        "tier": 4,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "renewablesnow.com",
+        "example_url": "https://renewablesnow.com/news/nvidia-doubles-sb-energy-bet-to-usd-3bn-amid-ipo-delay-speculations-1301705/",
+        "tier": 5,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "runtimewire.com",
+        "example_url": "https://runtimewire.com/article/stuut-closes-67-6m-sec-filing-microsoft-m12",
+        "tier": 2,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "siliconangle.com",
+        "example_url": "https://siliconangle.com/2026/09/04/gimlet-labs-nabs-300m-for-its-disaggregated-inference-platform/",
+        "tier": 4,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "tech.eu",
+        "example_url": "https://tech.eu/2026/08/27/nvidia-agrees-to-buy-hugging-face-for-12-9bn-says-report/",
+        "tier": 3,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "unite.ai",
+        "example_url": "https://unite.ai/nvidia-signs-definitive-agreement-to-acquire-hugging-face-for-12-9b",
+        "tier": 3,
+        "hits": 1,
+        "checks": 1
+      }
+    ]
   },
   "what_you_got_wrong": {
     "this_class": [
@@ -148,9 +417,9 @@
       {
         "code": "W8",
         "lesson": "a >=$1B investable target has no ai_posture tag.",
-        "occurrences": 3,
+        "occurrences": 4,
         "examples": [
-          "Microsoft Frontier Company: $2.5B investable target with no ai_posture",
+          "Anthropic: $10.0B investable target with no ai_posture",
           "Microsoft Frontier Company: $2.5B investable target with no ai_posture"
         ]
       }
@@ -159,19 +428,19 @@
       {
         "code": "W8",
         "lesson": "a >=$1B investable target has no ai_posture tag.",
-        "occurrences": 61,
+        "occurrences": 39,
         "examples": [
-          "OpenAI: $60.0B investable target with no ai_posture",
+          "OpenAI: $70.0B investable target with no ai_posture",
           "SpaceX: $36.4B investable target with no ai_posture"
         ]
       },
       {
         "code": "W7",
         "lesson": "a >=$1B fund/firm has no holdings collected.",
-        "occurrences": 18,
+        "occurrences": 4,
         "examples": [
-          "KKR: $29.8B fund/firm with no holdings collected",
-          "KKR Global Infrastructure Investors V: $19.2B fund/firm with no holdings collected"
+          "West Street Capital Partners IX: $9.6B fund/firm with no holdings collected",
+          "Machine Age Fund: $1.1B fund/firm with no holdings collected"
         ]
       }
     ]
