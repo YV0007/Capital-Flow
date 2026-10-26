@@ -1,29 +1,17 @@
 # Audit report — 2026-W44 (2026-10-26)
 
-**Verdict: FAIL — delivery blocked**
-Checked 453 events, 115 track-record rows, 43 profiles, 282 target references, 351 holdings, 0 classified targets.
+**Verdict: PASS**
+Checked 453 events, 115 track-record rows, 43 profiles, 300 target references, 351 holdings, 0 classified targets.
 
-## Errors (11)
-- E6 Armadin: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Conway Research: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Digi Power X: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Eka Robotics: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Grand Ming Group Holdings (iTech Tower 3.1 & 3.2, Fanling, Hong Kong -- via subsidiaries Regal Development Ltd & Golden Ford Ltd): target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Idaho National Laboratory -- Project Prometheus (partners: NVIDIA, AWS, X-Energy): target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 NextEra Energy (Duane Arnold Energy Center restart): target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Preference Model: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 U.S. scientific research institutions / DOE Genesis Mission: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 UK AI safety research (BOLD at Oxford; SOFAIR at UCL; Imperial College London): target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 doxxnet: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
+## Errors (0)
+_none_
 
-## Warnings (53)
+## Warnings (51)
 - W3 Apollo: key allocator with events but no profile
 - W3 Elon Musk: key allocator with events but no profile
 - W3 Goldman Sachs: key allocator with events but no profile
 - W3 Max Levchin: key allocator with events but no profile
 - W3 Palmer Luckey: key allocator with events but no profile
-- W6 NextEra Energy (Duane Arnold Energy Center restart): $1.9B target with no reference
-- W6 U.S. scientific research institutions / DOE Genesis Mission: $1.0B target with no reference
 - W7 BlackRock: $49.8B fund/firm with no holdings collected
 - W7 MGX Fund I: $49.0B fund/firm with no holdings collected
 - W7 SoftBank: $36.4B fund/firm with no holdings collected

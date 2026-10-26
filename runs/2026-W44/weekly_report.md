@@ -141,9 +141,17 @@
 | robotics_embodiment | $1.0B | 5 | 3 |
 | cyber_security | $250M | 3 | 2 |
 
-## Public beneficiaries mapped (16)
+## Public beneficiaries mapped (24)
 | Ticker | Company | From flow | Confidence |
 |---|---|---|:-:|
+| AMAT | Applied Materials Inc. | US Government→GlobalFoundries | medium |
+| LRCX | Lam Research Corporation | US Government→GlobalFoundries | medium |
+| BESI | BE Semiconductor Industries N.V. | US Government→GlobalFoundries | low |
+| GEV | GE Vernova Inc. | US Government→NextEra Energy (Duane Arnold Energy Center restart) | medium |
+| GOOGL | Alphabet Inc. | US Government→NextEra Energy (Duane Arnold Energy Center restart) | low |
+| NVDA | NVIDIA Corporation | Andreessen Horowitz→Eka Robotics | medium |
+| VRT | Vertiv Holdings Co | Goldman Sachs→Digi Power X | low |
+| ETN | Eaton Corporation plc | Goldman Sachs→Digi Power X | low |
 | AMAT | Applied Materials Inc. | US Government→GlobalFoundries | medium |
 | LRCX | Lam Research Corporation | US Government→GlobalFoundries | medium |
 | BESI | BE Semiconductor Industries N.V. | US Government→GlobalFoundries | low |
