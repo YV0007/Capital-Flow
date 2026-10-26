@@ -1,0 +1,236 @@
+[
+  {
+    "target": "Akita AI data center (developer: BitGrid / S2)",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Mubadala"
+    ],
+    "last_event": "2026-08-06",
+    "capital_usd": 6300000000.0,
+    "deal_source_urls": [
+      "https://cryptobriefing.com/uae-mubadala-ai-data-center-japan/"
+    ]
+  },
+  {
+    "target": "Stack Infrastructure",
+    "target_type": "private",
+    "sector": "datacenters",
+    "allocators": [
+      "Blue Owl"
+    ],
+    "last_event": "2026-10-15",
+    "capital_usd": 6000000000.0,
+    "deal_source_urls": [
+      "https://news.bloomberglaw.com/mergers-and-acquisitions/blue-owls-stack-seeks-5-9-billion-loan-extending-ai-debt-boom"
+    ]
+  },
+  {
+    "target": "HUMAIN data centers (Riyadh)",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Saudi PIF (via HUMAIN)"
+    ],
+    "last_event": "2026-05-19",
+    "capital_usd": 5300000000.0,
+    "deal_source_urls": [
+      "https://sharikatmubasher.com/news/article/21552026/goldman-sachs-to-arrange-53bn-financing-for-humains-data-centers?lang=en"
+    ]
+  },
+  {
+    "target": "NextEra Energy (Duane Arnold Energy Center restart)",
+    "target_type": "project",
+    "sector": "nuclear",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-09-08",
+    "capital_usd": 1900000000.0,
+    "deal_source_urls": [
+      "https://www.energy.gov/index.php/articles/energy-department-closes-19-billion-loan-restart-duane-arnold-nuclear-plant"
+    ]
+  },
+  {
+    "target": "U.S. scientific research institutions / DOE Genesis Mission",
+    "target_type": "project",
+    "sector": "ai-applications",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-10-08",
+    "capital_usd": 1000000000.0,
+    "deal_source_urls": [
+      "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Commits-1-Billion-to-Advance-US-Science-Over-the-Next-Five-Years/default.aspx"
+    ]
+  },
+  {
+    "target": "Grand Ming Group Holdings (iTech Tower 3.1 & 3.2, Fanling, Hong Kong -- via subsidiaries Regal Development Ltd & Golden Ford Ltd)",
+    "target_type": "asset",
+    "sector": "datacenters",
+    "allocators": [
+      "Amazon"
+    ],
+    "last_event": "2026-09-29",
+    "capital_usd": 277880000.0,
+    "deal_source_urls": [
+      "https://datacenterdynamics.com/en/news/amazon-to-acquire-two-data-centers-in-hong-kong"
+    ]
+  },
+  {
+    "target": "UK AI safety research (BOLD at Oxford; SOFAIR at UCL; Imperial College London)",
+    "target_type": "project",
+    "sector": "ai-applications",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-10-14",
+    "capital_usd": 250000000.0,
+    "deal_source_urls": [
+      "https://www.ucl.ac.uk/news/2026/oct/nvidia-provides-sofair-lab-computing-resources-advance-ai-safety"
+    ]
+  },
+  {
+    "target": "Oklo / X-Energy (Project Prometheus / Genesis Mission)",
+    "target_type": "private",
+    "sector": "nuclear",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-07-21",
+    "capital_usd": 200000000.0,
+    "deal_source_urls": [
+      "https://aiweekly.co/alerts/oklo-x-energy-tapped-for-200m-us-nuclear-ai-program"
+    ]
+  },
+  {
+    "target": "Digi Power X",
+    "target_type": "public",
+    "sector": "datacenters",
+    "allocators": [
+      "Goldman Sachs"
+    ],
+    "last_event": "2026-10-13",
+    "capital_usd": 200000000.0,
+    "deal_source_urls": [
+      "https://via.tt.se/pressmeddelande/4594325/digi-power-x-announces-dollar200-million-debt-financing-commitment-to-support-completion-of-alabama-ai-data-center-and-provides-expansion-update?lang=en"
+    ]
+  },
+  {
+    "target": "Idaho National Laboratory -- Project Prometheus (partners: NVIDIA, AWS, X-Energy)",
+    "target_type": "project",
+    "sector": "nuclear",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-07-22",
+    "capital_usd": 60000000.0,
+    "deal_source_urls": [
+      "https://inl.gov/?p=146638"
+    ]
+  },
+  {
+    "target": "doxxnet",
+    "target_type": "private",
+    "sector": "cybersecurity",
+    "allocators": [
+      "Andreessen Horowitz"
+    ],
+    "last_event": "2026-10-02",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://a16z.com/announcement/investing-in-doxxnet/"
+    ]
+  },
+  {
+    "target": "Stack Infrastructure (MEL02 campus, Melbourne)",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Blue Owl"
+    ],
+    "last_event": "2026-10-15",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://runtimewire.com/article/stack-8-6-billion-melbourne-data-center-loan"
+    ]
+  },
+  {
+    "target": "Preference Model",
+    "target_type": "private",
+    "sector": "ai-data",
+    "allocators": [
+      "Andreessen Horowitz"
+    ],
+    "last_event": "2026-10-07",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://a16z.com/announcement/investing-in-preference-model/"
+    ]
+  },
+  {
+    "target": "Isomorphic Labs",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Alphabet"
+    ],
+    "last_event": "2026-10-08",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.bloomberg.com/news/articles/2026-05-08/google-s-isomorphic-labs-to-raise-over-2-billion-in-new-funding"
+    ]
+  },
+  {
+    "target": "Eka Robotics",
+    "target_type": "private",
+    "sector": "robotics",
+    "allocators": [
+      "Andreessen Horowitz"
+    ],
+    "last_event": "2026-10-20",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://a16z.com/announcement/investing-in-eka-robotics/"
+    ]
+  },
+  {
+    "target": "DayOne (data center operator)",
+    "target_type": "private",
+    "sector": "datacenters",
+    "allocators": [
+      "MGX"
+    ],
+    "last_event": "2026-06-23",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.dealstreetasia.com/stories/abu-dhabi-mgx-dayone-486230/"
+    ]
+  },
+  {
+    "target": "Conway Research",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Andreessen Horowitz"
+    ],
+    "last_event": "2026-10-02",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://a16z.com/announcement/investing-in-conway-the-creator-of-underdog/"
+    ]
+  },
+  {
+    "target": "Armadin",
+    "target_type": "private",
+    "sector": "cybersecurity",
+    "allocators": [
+      "Andreessen Horowitz"
+    ],
+    "last_event": "2026-10-01",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://a16z.com/announcement/investing-in-armadin/"
+    ]
+  }
+]
