@@ -1,0 +1,134 @@
+[
+  {
+    "target": "Alliant Energy",
+    "description": "Midwest investor-owned utility holding company (Interstate Power and Light in Iowa, Wisconsin Power and Light in Wisconsin). On Oct 28, 2026 the DOE closed a $5.1B loan package to fund new natural-gas plants, battery storage and grid upgrades adding 2.6+ GW, projected to save customers up to $1.2B.",
+    "website": "https://www.alliantenergy.com",
+    "read_more": {"label": "T&D World", "url": "https://www.tdworld.com/policy/article/55415095/doe-closes-51-billion-loan-to-help-alliant-energy-lower-bills-in-iowa-wisconsin"},
+    "sources": [
+      "https://www.energy.gov/articles/energy-department-closes-51-billion-loan-lower-electricity-costs-and-strengthen-grid",
+      "https://www.tdworld.com/policy/article/55415095/doe-closes-51-billion-loan-to-help-alliant-energy-lower-bills-in-iowa-wisconsin",
+      "https://www.powermag.com/doe-closes-5-1b-loan-package-for-alliants-iowa-wisconsin-gas-power-and-battery-storage-buildout/"
+    ],
+    "as_of": "2026-11-02"
+  },
+  {
+    "target": "Constellation Energy",
+    "description": "Largest U.S. nuclear generator (spun off from Exelon in 2022). On Oct 27, 2026 the DOE issued a conditional $5B loan commitment to fund uprates (~1.1 GW) across eight reactors in Illinois, Maryland and Pennsylvania; the output is partly pre-sold under long-term deals with Google and Amazon.",
+    "website": "https://www.constellationenergy.com",
+    "read_more": {"label": "Power Engineering", "url": "https://www.power-eng.com/?p=137243"},
+    "sources": [
+      "https://www.energy.gov/articles/energy-department-announces-5-billion-loan-boost-nuclear-power-and-help-lower-costs",
+      "https://www.constellationenergy.com/news/2026/10/constellation-secures-conditional-doe-loan-commitment-of-up-to-5-billion-to-expand-nuclear-output.html",
+      "https://www.power-eng.com/?p=137243"
+    ],
+    "as_of": "2026-11-02"
+  },
+  {
+    "target": "Meta Platforms",
+    "description": "Social-media and AI company. On Oct 26, 2026 Nvidia said it would invest $3B in Meta's equity offering (within a roughly $37.5B stock sale/~$95-97.5B financing program), as part of expanded AI collaboration to improve inference/training for Meta's Muse AI model family; AMD and Broadcom also showed interest in the broader raise.",
+    "website": "https://about.meta.com",
+    "read_more": {"label": "StockAnalysis", "url": "https://stockanalysis.com/news/nvidia-3-billion-meta-offering/"},
+    "sources": [
+      "https://stockanalysis.com/news/nvidia-3-billion-meta-offering/",
+      "https://stocktwits.com/news-articles/markets/equity/nvidia-picks-up-3-b-stock-in-meta-s-equity-offering-will-help-improve-muse-ai-platform/cZUeGE3RBzH",
+      "https://www.investingcube.com/shares/nvidia-stock-news-3-billion-meta-investment-deepens-ai-partnership/"
+    ],
+    "as_of": "2026-11-02"
+  },
+  {
+    "target": "Grand Ming Group Holdings (iTech Tower 3.1 / 3.2)",
+    "description": "Two adjacent data-center developments in Fanling, Hong Kong (branded iTech Tower 3.1/3.2), owned by HKEX-listed Grand Ming Group Holdings. Reported Sept 29, 2026: Amazon Data Services Hong Kong agreed to buy both for roughly US$278-312M (sources differ); Tower 3.1 is already leased to AWS, Tower 3.2 still under construction, completion targeted Feb 2027. Grand Ming is selling to cut debt.",
+    "website": null,
+    "read_more": {"label": "DatacenterDynamics", "url": "https://datacenterdynamics.com/en/news/amazon-to-acquire-two-data-centers-in-hong-kong"},
+    "sources": [
+      "https://datacenterdynamics.com/en/news/amazon-to-acquire-two-data-centers-in-hong-kong",
+      "https://thetechcapital.com/amazon-agrees-312-million-deal-for-two-hong-kong-data-centres/",
+      "https://www.mingtiandi.com/real-estate/data-centres/bain-capital-in-talks-to-buy-grand-ming-hong-kong-data-centres/"
+    ],
+    "as_of": "2026-11-02"
+  },
+  {
+    "target": "Serval",
+    "description": "San Francisco enterprise-AI startup (founders include Jake Stauch, Alex McLeod) building AI agents to automate IT service management as a challenger to ServiceNow, now expanding into HR, finance and legal. Raised a $150M Series C led by Sequoia at a $3B valuation (Oct 29, 2026), its third round in a year after a Sequoia-led $75M Series B ($1B valuation, Dec 2025) and a Redpoint-led $47M Series A (Oct 2025).",
+    "website": "https://www.serval.com",
+    "read_more": {"label": "Fortune", "url": "https://fortune.com/2026/10/29/serval-servicenow-fight-series-c-3-billion-valuation-sequoia/"},
+    "sources": [
+      "https://fourweekmba.com/ai-sequoia-leads-150m-for-servicenow-rival-serval-at-3b/",
+      "https://thenextweb.com/news/serval-series-c-150m-3bn-valuation-sequoia",
+      "https://fortune.com/2026/10/29/serval-servicenow-fight-series-c-3-billion-valuation-sequoia/"
+    ],
+    "as_of": "2026-11-02"
+  },
+  {
+    "target": "Riverlane",
+    "description": "Cambridge, UK quantum-computing startup building Deltaflow, a chip-plus-software stack for real-time quantum error correction (QEC). Nvidia announced a minority equity stake around Oct 14-22, 2026, as one of five UK AI/deep-tech startups it is backing, tied to work using Nvidia GPUs to accelerate QEC decoder calibration; Riverlane also collaborates with Nvidia and AMD on the Open Acceleration Stack.",
+    "website": "https://www.riverlane.com",
+    "read_more": {"label": "Quantum Computing Report", "url": "https://quantumcomputingreport.com/nvidia-takes-strategic-stake-in-riverlane-to-accelerate-real-time-quantum-error-correction-and-gpu-decoder-calibration/amp/"},
+    "sources": [
+      "https://sifted.eu/articles/nvidia-unveils-investments-in-five-more-uk-startups/",
+      "https://quantumcomputingreport.com/nvidia-takes-strategic-stake-in-riverlane-to-accelerate-real-time-quantum-error-correction-and-gpu-decoder-calibration/amp/",
+      "https://dealroom.co/news/162717-nvidia-backs-five-uk-startups-including-cambridge-quantum-firm-riverlane/"
+    ],
+    "as_of": "2026-11-02"
+  },
+  {
+    "target": "Prima Mente",
+    "description": "London AI-biology startup building \"Pleiades,\" a family of foundation models trained on human epigenome/methylation data, aimed at understanding and treating neurodegenerative disease (Alzheimer's, Parkinson's, ALS); piloting a clinical study (SANDBOX) across 15 UK sites. Nvidia announced a planned minority stake around Oct 14, 2026, as one of five UK AI startups it is backing. No official company website was confirmed in research.",
+    "website": null,
+    "read_more": {"label": "NVIDIA", "url": "https://www.nvidia.com/en-us/case-studies/primamente"},
+    "sources": [
+      "https://sifted.eu/articles/nvidia-unveils-investments-in-five-more-uk-startups/",
+      "https://www.nvidia.com/en-us/case-studies/primamente",
+      "https://pharmaphorum.com/news/neurology-biomanufacturing-start-ups-bag-uk-ai-funding"
+    ],
+    "as_of": "2026-11-02"
+  },
+  {
+    "target": "Kalshi",
+    "description": "U.S. federally regulated prediction-market exchange (CFTC-registered). Reportedly closed roughly a $1B round at a $40B valuation around Oct 29, 2026, led by Sequoia Capital and Wellington Management, following a $1B Series F in May 2026 ($22B valuation) that included Andreessen Horowitz. Reports on the new round's final close and investor list vary; CEO has floated a possible 2027 IPO.",
+    "website": "https://kalshi.com",
+    "read_more": {"label": "Unchained", "url": "https://unchainedcrypto.com/prediction-market-kalshi-now-worth-40-billion-after-1-billion-round-eyes-single-stock-perps"},
+    "sources": [
+      "https://unchainedcrypto.com/prediction-market-kalshi-now-worth-40-billion-after-1-billion-round-eyes-single-stock-perps",
+      "https://theblock.co/news/web3/2026-08-26-kalshi-latest-form-d-412749",
+      "https://theblock.co/post/406061/kalshi-40-billion-valuation"
+    ],
+    "as_of": "2026-11-02"
+  },
+  {
+    "target": "Hiverge",
+    "description": "Cambridge, UK \"algorithm factory\" startup founded by ex-Google DeepMind researchers (CEO Alhussein Fawzi, CTO Bernardino Romera-Paredes, from the AlphaTensor/FunSearch team). Its \"Hive\" platform uses AI to discover and optimize algorithms (e.g. faster AI training, logistics planning); raised a $5M seed led by Flying Fish Ventures (Sept 2025). Nvidia announced a planned minority stake around Oct 14, 2026, as one of five UK AI startups.",
+    "website": "https://hiverge.ai",
+    "read_more": {"label": "BusinessWire", "url": "https://www.businesswire.com/news/home/20250917268994/en/Google-DeepMind-Alumni-Launch-Hiverge-With-$5-Million-Seed-Funding-for-Algorithm-Factory-to-Discover-and-Deploy-Algorithms-Beyond-Human-Capabilities"},
+    "sources": [
+      "https://sifted.eu/articles/nvidia-unveils-investments-in-five-more-uk-startups/",
+      "https://www.businesswire.com/news/home/20250917268994/en/Google-DeepMind-Alumni-Launch-Hiverge-With-$5-Million-Seed-Funding-for-Algorithm-Factory-to-Discover-and-Deploy-Algorithms-Beyond-Human-Capabilities",
+      "https://techfundingnews.com/nvidia-pledges-250m-of-compute-to-uk-ai-safety-and-plans-stakes-in-boltz-foresight-and-hiverge/"
+    ],
+    "as_of": "2026-11-02"
+  },
+  {
+    "target": "Foresight",
+    "description": "London/New York/Tel Aviv infrastructure-delivery software startup (founded 2018) that forecasts completion risk and delays for large capital projects, including hyperscale data centers. Raised a $25M Series A led by Macquarie Capital Venture Capital (2026). Nvidia announced a planned minority stake around Oct 14, 2026, as one of five UK AI startups it is backing.",
+    "website": "https://foresight.works",
+    "read_more": {"label": "TechFundingNews", "url": "https://techfundingnews.com/nvidia-pledges-250m-of-compute-to-uk-ai-safety-and-plans-stakes-in-boltz-foresight-and-hiverge/"},
+    "sources": [
+      "https://sifted.eu/articles/nvidia-unveils-investments-in-five-more-uk-startups/",
+      "https://techfundingnews.com/nvidia-pledges-250m-of-compute-to-uk-ai-safety-and-plans-stakes-in-boltz-foresight-and-hiverge/",
+      "https://datacentremagazine.com/news/foresight-raises-25-million-to-tackle-data-centre-build-delays"
+    ],
+    "as_of": "2026-11-02"
+  },
+  {
+    "target": "Boltz",
+    "description": "Public-benefit AI company (boltz.bio) spun out of MIT CSAIL (co-founders Gabriele Corso, Jeremy Wohlwend, Saro Passaro, from Regina Barzilay's lab; Corso is CEO), building open-source and proprietary biomolecular structure-prediction models (Boltz-1/2, BoltzGen) with partnerships including Pfizer, Takeda and GSK. Raised a $28M seed (a16z, Zetta, Amplify; ~$125M valuation, Jan 2026) and now has a London presence; Nvidia announced a planned minority stake around Oct 14, 2026, as one of five UK AI startups it is backing.",
+    "website": "https://boltz.bio",
+    "read_more": {"label": "GEN", "url": "https://www.genengnews.com/topics/artificial-intelligence/boltz-pbc-launches-with-28m-to-democratize-ai-platforms-for-drug-discovery"},
+    "sources": [
+      "https://sifted.eu/articles/nvidia-unveils-investments-in-five-more-uk-startups/",
+      "https://www.genengnews.com/topics/artificial-intelligence/boltz-pbc-launches-with-28m-to-democratize-ai-platforms-for-drug-discovery",
+      "https://techfundingnews.com/nvidia-pledges-250m-of-compute-to-uk-ai-safety-and-plans-stakes-in-boltz-foresight-and-hiverge/"
+    ],
+    "as_of": "2026-11-02"
+  }
+]
