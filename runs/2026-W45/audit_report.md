@@ -1,30 +1,17 @@
 # Audit report — 2026-W45 (2026-11-02)
 
-**Verdict: FAIL — delivery blocked**
-Checked 472 events, 115 track-record rows, 43 profiles, 300 target references, 351 holdings, 0 classified targets.
+**Verdict: PASS**
+Checked 472 events, 115 track-record rows, 43 profiles, 311 target references, 351 holdings, 0 classified targets.
 
-## Errors (11)
-- E6 Alliant Energy: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Boltz: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Constellation Energy: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Foresight: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Grand Ming Group Holdings (iTech Tower 3.1 / 3.2): target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Hiverge: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Kalshi: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Meta Platforms: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Prima Mente: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Riverlane: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
-- E6 Serval: target on the map with no description — run tools/make_reference_batches.py + the target-profiler pass BEFORE delivering
+## Errors (0)
+_none_
 
-## Warnings (56)
+## Warnings (53)
 - W3 Apollo: key allocator with events but no profile
 - W3 Elon Musk: key allocator with events but no profile
 - W3 Goldman Sachs: key allocator with events but no profile
 - W3 Max Levchin: key allocator with events but no profile
 - W3 Palmer Luckey: key allocator with events but no profile
-- W6 Alliant Energy: $5.1B target with no reference
-- W6 Constellation Energy: $5.0B target with no reference
-- W6 Meta Platforms: $3.0B target with no reference
 - W7 BlackRock: $49.8B fund/firm with no holdings collected
 - W7 MGX Fund I: $49.0B fund/firm with no holdings collected
 - W7 SoftBank: $39.5B fund/firm with no holdings collected

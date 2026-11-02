@@ -1,19 +1,19 @@
 # Capital Flow — Weekly Report 2026-W45
 
 ## Signals fired
-- **NVDA (NVIDIA): 52 private flows converge**  _(rule: beneficiary_concentration, strength 52.0)_
-- **VRT (Vertiv): 34 private flows converge**  _(rule: beneficiary_concentration, strength 34.0)_
+- **NVDA (NVIDIA): 58 private flows converge**  _(rule: beneficiary_concentration, strength 58.0)_
+- **VRT (Vertiv): 35 private flows converge**  _(rule: beneficiary_concentration, strength 35.0)_
 - **nuclear: capital 23.9x vs prior 90d**  _(rule: capital_acceleration, strength 23.87)_
-- **ETN (Eaton): 18 private flows converge**  _(rule: beneficiary_concentration, strength 18.0)_
-- **GEV (GE Vernova): 17 private flows converge**  _(rule: beneficiary_concentration, strength 17.0)_
-- **TSM (Taiwan Semiconductor): 13 private flows converge**  _(rule: beneficiary_concentration, strength 13.0)_
-- **GOOGL (Alphabet): 10 private flows converge**  _(rule: beneficiary_concentration, strength 10.0)_
+- **ETN (Eaton): 20 private flows converge**  _(rule: beneficiary_concentration, strength 20.0)_
+- **GEV (GE Vernova): 19 private flows converge**  _(rule: beneficiary_concentration, strength 19.0)_
+- **TSM (Taiwan Semiconductor): 14 private flows converge**  _(rule: beneficiary_concentration, strength 14.0)_
+- **GOOGL (Alphabet): 11 private flows converge**  _(rule: beneficiary_concentration, strength 11.0)_
 - **PWR (Quanta Services): 10 private flows converge**  _(rule: beneficiary_concentration, strength 10.0)_
 - **ai-data: capital 9.3x vs prior 90d**  _(rule: capital_acceleration, strength 9.3)_
 - **ai-applications: smart money — Andreessen Horowitz led, 8 followed in 21d**  _(rule: smart_money_follow, strength 9.0)_
+- **AMZN (Amazon.com Inc): 9 private flows converge**  _(rule: beneficiary_concentration, strength 9.0)_
 - **MSFT (Microsoft Corporation): 9 private flows converge**  _(rule: beneficiary_concentration, strength 9.0)_
 - **ai-applications/enterprise-ai-agents: 8 key allocators converge**  _(rule: subsector_swarm, strength 8.0)_
-- **AMZN (Amazon.com Inc): 8 private flows converge**  _(rule: beneficiary_concentration, strength 8.0)_
 - **defense-tech: smart money — Andreessen Horowitz led, 6 followed in 21d**  _(rule: smart_money_follow, strength 7.0)_
 - **Peter Thiel: repeat conviction — 7x into energy_for_ai**  _(rule: repeat_conviction, strength 7.0)_
 - **ai-labs: network + strategic capital converge (2 network, 5 strategic)**  _(rule: defense_network_convergence, strength 7.0)_
@@ -44,7 +44,10 @@
 - **Databricks: stealth accumulation — 4 stakes in 90d**  _(rule: stealth_accumulation, strength 4.0)_
 - **Harvey: stealth accumulation — 4 stakes in 90d**  _(rule: stealth_accumulation, strength 4.0)_
 - **AMAT (Applied Materials): 4 private flows converge**  _(rule: beneficiary_concentration, strength 4.0)_
+- **BWXT (BWX Technologies): 4 private flows converge**  _(rule: beneficiary_concentration, strength 4.0)_
 - **DELL (Dell Technologies): 4 private flows converge**  _(rule: beneficiary_concentration, strength 4.0)_
+- **FLNC (Fluence Energy): 4 private flows converge**  _(rule: beneficiary_concentration, strength 4.0)_
+- **LEU (Centrus Energy): 4 private flows converge**  _(rule: beneficiary_concentration, strength 4.0)_
 - **MU (Micron): 4 private flows converge**  _(rule: beneficiary_concentration, strength 4.0)_
 - **NEE (NextEra Energy): 4 private flows converge**  _(rule: beneficiary_concentration, strength 4.0)_
 - **Peter Thiel: repeat conviction — 4x into ai_infrastructure**  _(rule: repeat_conviction, strength 4.0)_
@@ -63,14 +66,12 @@
 - **power-energy/energy-infrastructure: 3 key allocators converge**  _(rule: subsector_swarm, strength 3.0)_
 - **ai-labs: smart money — Alphabet led, 2 followed in 21d**  _(rule: smart_money_follow, strength 3.0)_
 - **Etched: stealth accumulation — 3 stakes in 90d**  _(rule: stealth_accumulation, strength 3.0)_
+- **AMD (Advanced Micro Devices): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
 - **ARM (Arm Holdings): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
-- **BWXT (BWX Technologies): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
 - **COHR (Coherent Corp.): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
 - **FANUY (FANUC): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
-- **FLNC (Fluence Energy): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
 - **GFS (GlobalFoundries): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
 - **KTOS (Kratos Defense & Security Solutions): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
-- **LEU (Centrus Energy): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
 - **SIEGY (Siemens): 3 private flows converge**  _(rule: beneficiary_concentration, strength 3.0)_
 - **diversified-pe: capital 2.8x vs prior 90d**  _(rule: capital_acceleration, strength 2.79)_
 - **defense-tech: capital 2.7x vs prior 90d**  _(rule: capital_acceleration, strength 2.7)_
@@ -136,6 +137,28 @@
 | robotics_embodiment | $1.0B | 5 | 3 |
 | cyber_security | $250M | 1 | 1 |
 | frontier_ai | $0 | 8 | 4 |
+
+## Public beneficiaries mapped (18)
+| Ticker | Company | From flow | Confidence |
+|---|---|---|:-:|
+| NVDA | NVIDIA Corporation | NVIDIA→Meta Platforms | high |
+| AMD | Advanced Micro Devices, Inc. | NVIDIA→Meta Platforms | medium |
+| VRT | Vertiv Holdings Co | Amazon→Grand Ming Group Holdings (iTech Tower 3.1 / 3.2) | low |
+| ETN | Eaton Corporation plc | Amazon→Grand Ming Group Holdings (iTech Tower 3.1 / 3.2) | low |
+| NVDA | NVIDIA Corporation | Khosla Ventures→General Intuition | medium |
+| NVDA | NVIDIA Corporation | Apollo→SpaceX | high |
+| TSM | Taiwan Semiconductor Manufacturing Co., Ltd. | Apollo→SpaceX | low |
+| NVDA | NVIDIA Corporation | BlackRock→SpaceX | high |
+| NVDA | NVIDIA Corporation | Goldman Sachs→SpaceX | high |
+| NVDA | NVIDIA Corporation | KKR→SpaceX | high |
+| GEV | GE Vernova Inc. | US Government→Constellation Energy | medium |
+| BWXT | BWX Technologies, Inc. | US Government→Constellation Energy | medium |
+| LEU | Centrus Energy Corp. | US Government→Constellation Energy | low |
+| GOOGL | Alphabet Inc. | US Government→Constellation Energy | low |
+| AMZN | Amazon.com, Inc. | US Government→Constellation Energy | low |
+| GEV | GE Vernova Inc. | US Government→Alliant Energy | medium |
+| FLNC | Fluence Energy Corporation | US Government→Alliant Energy | medium |
+| ETN | Eaton Corporation plc | US Government→Alliant Energy | low |
 
 ## Candidates to watch (0)
 _None._
