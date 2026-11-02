@@ -1,0 +1,146 @@
+[
+  {
+    "target": "Alliant Energy",
+    "target_type": "public",
+    "sector": "power-energy",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-10-28",
+    "capital_usd": 5100000000.0,
+    "deal_source_urls": [
+      "https://www.energy.gov/articles/energy-department-closes-51-billion-loan-lower-electricity-costs-and-strengthen-grid"
+    ]
+  },
+  {
+    "target": "Constellation Energy",
+    "target_type": "public",
+    "sector": "nuclear",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-10-27",
+    "capital_usd": 5000000000.0,
+    "deal_source_urls": [
+      "https://www.energy.gov/articles/energy-department-announces-5-billion-loan-boost-nuclear-power-and-help-lower-costs"
+    ]
+  },
+  {
+    "target": "Meta Platforms",
+    "target_type": "public",
+    "sector": "cloud-hyperscale",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-10-26",
+    "capital_usd": 3000000000.0,
+    "deal_source_urls": [
+      "https://stockanalysis.com/news/nvidia-3-billion-meta-offering/"
+    ]
+  },
+  {
+    "target": "Grand Ming Group Holdings (iTech Tower 3.1 / 3.2)",
+    "target_type": "asset",
+    "sector": "datacenters",
+    "allocators": [
+      "Amazon"
+    ],
+    "last_event": "2026-09-29",
+    "capital_usd": 277880000.0,
+    "deal_source_urls": [
+      "https://datacenterdynamics.com/en/news/amazon-to-acquire-two-data-centers-in-hong-kong"
+    ]
+  },
+  {
+    "target": "Serval",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Sequoia"
+    ],
+    "last_event": "2026-10-29",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://fourweekmba.com/ai-sequoia-leads-150m-for-servicenow-rival-serval-at-3b/"
+    ]
+  },
+  {
+    "target": "Riverlane",
+    "target_type": "private",
+    "sector": "semiconductors",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-10-14",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://sifted.eu/articles/nvidia-unveils-investments-in-five-more-uk-startups/"
+    ]
+  },
+  {
+    "target": "Prima Mente",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-10-14",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://sifted.eu/articles/nvidia-unveils-investments-in-five-more-uk-startups/"
+    ]
+  },
+  {
+    "target": "Kalshi",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Sequoia",
+      "Andreessen Horowitz"
+    ],
+    "last_event": "2026-10-29",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://unchainedcrypto.com/prediction-market-kalshi-now-worth-40-billion-after-1-billion-round-eyes-single-stock-perps"
+    ]
+  },
+  {
+    "target": "Hiverge",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-10-14",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://sifted.eu/articles/nvidia-unveils-investments-in-five-more-uk-startups/"
+    ]
+  },
+  {
+    "target": "Foresight",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-10-14",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://sifted.eu/articles/nvidia-unveils-investments-in-five-more-uk-startups/"
+    ]
+  },
+  {
+    "target": "Boltz",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-10-14",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://sifted.eu/articles/nvidia-unveils-investments-in-five-more-uk-startups/"
+    ]
+  }
+]
