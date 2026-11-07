@@ -5,3 +5,7 @@ __pycache__/
 # generated artifacts
 db/capital.db
 .DS_Store
+
+# Notion export bundles (regenerable)
+docs/notion*/
+*.zip
