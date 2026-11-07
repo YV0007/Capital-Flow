@@ -1,0 +1,2 @@
+name,suggested_class,seen_with,rationale
+OpenAI,corporate,NVIDIA; SoftBank (SB Energy investment, Aug 2026),"OpenAI is now co-investing as an anchor backer alongside NVIDIA and SoftBank in SB Energy (Ohio PORTS-Pike campus), not merely receiving capital. OpenAI Group PBC also increasingly appears as a capital allocator in other 2026 deals (e.g. compute/equity swaps with chip and cloud partners). Currently untracked as an allocator in config/allocators.yaml (it's usually seen as a target); worth adding so its own outbound deployments get tracked going forward."

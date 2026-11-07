@@ -1,0 +1,206 @@
+[
+  {
+    "target": "OpenAI",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "SoftBank"
+    ],
+    "last_event": "2026-10-01",
+    "capital_usd": 10000000000.0,
+    "deal_source_urls": [
+      "https://group.softbank/en/news/press/20261001"
+    ]
+  },
+  {
+    "target": "DigitalBridge Group",
+    "target_type": "public",
+    "sector": "datacenters",
+    "allocators": [
+      "SoftBank"
+    ],
+    "last_event": "2026-09-30",
+    "capital_usd": 3100000000.0,
+    "deal_source_urls": [
+      "https://group.softbank/en/news/press/20260930"
+    ]
+  },
+  {
+    "target": "Brookfield Artificial Intelligence Infrastructure Fund (BAIIF)",
+    "target_type": "fund",
+    "sector": "datacenters",
+    "allocators": [
+      "NVIDIA",
+      "Brookfield"
+    ],
+    "last_event": "2026-09-17",
+    "capital_usd": 2000000000.0,
+    "deal_source_urls": [
+      "https://bam.brookfield.com/sites/brookfield-bam-v2/files/brookfield-bam-v2/events-news/investor-day/bam-2026-investor-day-presentation-v2.pdf",
+      "https://www.bloomberg.com/news/articles/2026-09-17/nvidia-committed-2-billion-to-brookfield-ai-infrastructure-fund"
+    ]
+  },
+  {
+    "target": "NextEra Energy (Duane Arnold Energy Center)",
+    "target_type": "public",
+    "sector": "nuclear",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-09-08",
+    "capital_usd": 1900000000.0,
+    "deal_source_urls": [
+      "https://www.investor.nexteraenergy.com/news-and-events/news-releases/2026/09-08-2026-123110497"
+    ]
+  },
+  {
+    "target": "Nscale",
+    "target_type": "private",
+    "sector": "neocloud",
+    "allocators": [
+      "NVIDIA",
+      "Mubadala"
+    ],
+    "last_event": "2026-09-25",
+    "capital_usd": 1000000000.0,
+    "deal_source_urls": [
+      "https://www.nscale.com/press-releases/pre-ipo-convertible-financing",
+      "https://www.hpcwire.com/aiwire/2026/09/25/nscale-raises-3-36b-in-pre-ipo-convertible-financing/"
+    ]
+  },
+  {
+    "target": "Quantinuum",
+    "target_type": "public",
+    "sector": "semiconductors",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-09-08",
+    "capital_usd": 100000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/0002110105/000162828026060934/quantinuum-finalizesx100.htm"
+    ]
+  },
+  {
+    "target": "Stuut",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Microsoft"
+    ],
+    "last_event": "2026-09-03",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://runtimewire.com/article/stuut-closes-67-6m-sec-filing-microsoft-m12"
+    ]
+  },
+  {
+    "target": "RHAELM Holdings / JERA / Dell Technologies AI data center project (Chiba, Japan)",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Apollo"
+    ],
+    "last_event": "2026-10-02",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://rhaelm.com/news/jera-dell-rhaelm-mou-japan"
+    ]
+  },
+  {
+    "target": "Pilgrim",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "Peter Thiel",
+      "Dylan Field"
+    ],
+    "last_event": "2026-09-23",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.finsmes.com/2026/09/pilgrim-raises-usd25m-in-seed-funding-at-usd150m-valuation.html"
+    ]
+  },
+  {
+    "target": "Mantic Technologies",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Microsoft"
+    ],
+    "last_event": "2026-09-18",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://finance.yahoo.com/technology/ai/articles/ai-startup-mantic-raises-25-101010662.html"
+    ]
+  },
+  {
+    "target": "Harvey",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Sequoia",
+      "Andreessen Horowitz",
+      "Coatue",
+      "Elad Gil"
+    ],
+    "last_event": "2026-09-09",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.harvey.ai/blog/harvey-raises-dollar550m-at-a-dollar155b-valuation-to-help-legal-teams-own-their-intelligence"
+    ]
+  },
+  {
+    "target": "Fortell",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Thrive Capital",
+      "Founders Fund"
+    ],
+    "last_event": "2026-09-16",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.renascence.io/news/68272/fortell-raises-163m-to-bring-ai-to-hearing-aid-market"
+    ]
+  },
+  {
+    "target": "EnduroSat",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "Alphabet"
+    ],
+    "last_event": "2026-09-16",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.endurosat.com/news/endurosat-raises-205m-to-scale-next-generation-space-fleets/"
+    ]
+  },
+  {
+    "target": "Crux AI (Blackstone / Alphabet cloud joint venture)",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Goldman Sachs"
+    ],
+    "last_event": "2026-09-16",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.bloomberg.com/news/articles/2026-09-16/banks-line-up-22-billion-chip-loan-tied-to-blackstone-alphabet"
+    ]
+  },
+  {
+    "target": "Blue Owl Data Center REIT (proposed)",
+    "target_type": "fund",
+    "sector": "datacenters",
+    "allocators": [
+      "Blue Owl"
+    ],
+    "last_event": "2026-09-04",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.credaily.com/briefs/blue-owl-plans-6-5b-seed-for-data-center-reit/"
+    ]
+  }
+]

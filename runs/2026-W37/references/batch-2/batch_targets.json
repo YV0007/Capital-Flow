@@ -1,0 +1,191 @@
+[
+  {
+    "target": "Hugging Face",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-09-03",
+    "capital_usd": 12930000000.0,
+    "deal_source_urls": [
+      "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/"
+    ]
+  },
+  {
+    "target": "El Paso AI Data Center Venture (with Meta)",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "BlackRock"
+    ],
+    "last_event": "2026-07-28",
+    "capital_usd": 4900000000.0,
+    "deal_source_urls": [
+      "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-New-Strategic-Venture-with-BlackRock-to-Develop-Data-Center-in-El-Paso/default.aspx"
+    ]
+  },
+  {
+    "target": "HUMAIN Data Center Fund",
+    "target_type": "fund",
+    "sector": "datacenters",
+    "allocators": [
+      "Saudi PIF"
+    ],
+    "last_event": "2026-09-03",
+    "capital_usd": 2500000000.0,
+    "deal_source_urls": [
+      "https://www.bloomberg.com/news/articles/2026-09-03/saudi-firm-humain-eyes-2-5-billion-fund-to-build-data-centers"
+    ]
+  },
+  {
+    "target": "Andreessen Horowitz Growth Fund V",
+    "target_type": "fund",
+    "sector": "ai-applications",
+    "allocators": [
+      "Andreessen Horowitz"
+    ],
+    "last_event": "2026-08-31",
+    "capital_usd": 1750000000.0,
+    "deal_source_urls": [
+      "https://techcrunch.com/2026/08/31/a16z-brings-growth-fund-to-8-5b-days-after-launching-new-1-1b-fund/"
+    ]
+  },
+  {
+    "target": "Machine Age Fund",
+    "target_type": "fund",
+    "sector": "ai-compute",
+    "allocators": [
+      "Andreessen Horowitz"
+    ],
+    "last_event": "2026-08-28",
+    "capital_usd": 1100000000.0,
+    "deal_source_urls": [
+      "https://a16z.com/the-machine-age-fund/"
+    ]
+  },
+  {
+    "target": "Valar Atomics",
+    "target_type": "private",
+    "sector": "nuclear",
+    "allocators": [
+      "Sequoia"
+    ],
+    "last_event": "2026-08-03",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.valaratomics.com/docs/Announcing-our-1B-Series-B-Led-By-Sequoia"
+    ]
+  },
+  {
+    "target": "Prentis",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Reid Hoffman"
+    ],
+    "last_event": "2026-07-24",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://techcrunch.com/2026/07/24/prentis-new-ai-lab-co-founded-by-reid-hoffman-mark-pincus-in-talks-to-raise-100m/"
+    ]
+  },
+  {
+    "target": "Neros Technologies",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "Peter Thiel",
+      "Dylan Field"
+    ],
+    "last_event": "2026-08-11",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.neros.tech/articles/neros-raises-250m-series-c-at-2-5b-valuation-to-scale-autonomous-and-interceptor-drone-programs"
+    ]
+  },
+  {
+    "target": "Mariana Minerals",
+    "target_type": "private",
+    "sector": "robotics",
+    "allocators": [
+      "Andreessen Horowitz",
+      "Khosla Ventures"
+    ],
+    "last_event": "2026-08-03",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/mariana-minerals-raises-310-million-series-b-led-by-khosla-ventures-to-accelerate-critical-minerals-production-302840889.html"
+    ]
+  },
+  {
+    "target": "Etched",
+    "target_type": "private",
+    "sector": "semiconductors",
+    "allocators": [
+      "Peter Thiel"
+    ],
+    "last_event": "2026-08-18",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.unite.ai/etched-raises-700m-series-d-at-21b-valuation-to-ramp-inference-hardware-production/"
+    ]
+  },
+  {
+    "target": "Databricks",
+    "target_type": "private",
+    "sector": "ai-data",
+    "allocators": [
+      "Andreessen Horowitz",
+      "Thrive Capital",
+      "Coatue",
+      "MGX"
+    ],
+    "last_event": "2026-08-13",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.databricks.com/company/newsroom/press-releases/databricks-grows-80-yoy-surpasses-7b-revenue-run-rate-scales"
+    ]
+  },
+  {
+    "target": "Corma",
+    "target_type": "private",
+    "sector": "cybersecurity",
+    "allocators": [
+      "Sequoia",
+      "Khosla Ventures",
+      "Coatue"
+    ],
+    "last_event": "2026-08-10",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.newswire.com/news/corma-the-first-frontier-defensive-cybersecurity-ai-lab-raises-60m-as-ai"
+    ]
+  },
+  {
+    "target": "Cambridge Aerospace",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "Elad Gil"
+    ],
+    "last_event": "2026-08-10",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://tech.eu/2026/08/10/cambridge-aerospaces-valuation-leaps-to-34bn-as-raised-300m/"
+    ]
+  },
+  {
+    "target": "AWS HUMAIN AI Zone",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Saudi PIF"
+    ],
+    "last_event": "2026-09-02",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.aboutamazon.com/news/company-news/amazon-aws-humain-ai-investment-in-saudi-arabia"
+    ]
+  }
+]

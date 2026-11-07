@@ -1,0 +1,147 @@
+[
+  {
+    "target": "Humain Data Center Fund",
+    "description": "A $2.5B data-center investment vehicle being raised by Humain, the AI company wholly owned by Saudi Arabia's Public Investment Fund. Managed by BSF Capital (Banque Saudi Fransi's investment arm), it will fund ~250MW of Saudi AI data-center capacity (built with Al Moammar Information Systems), potentially scaling to 1GW, via a mix of debt and equity.",
+    "website": "https://www.humain.ai/",
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-09-03/saudi-firm-humain-eyes-2-5-billion-fund-to-build-data-centers"},
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2026-09-03/saudi-firm-humain-eyes-2-5-billion-fund-to-build-data-centers",
+      "https://fortune.com/2026/09/09/saudi-humain-planning-ipo-2-5-billion-fund-expansion-plans-moove-adgm/",
+      "https://aiweekly.co/alerts/humain-plans-initial-25b-fund-via-bsf-capital-to-finance-250mw-of-saudi-data"
+    ],
+    "as_of": "2026-09-14"
+  },
+  {
+    "target": "NextEra Energy (Duane Arnold Energy Center)",
+    "description": "Duane Arnold is a 615MW nuclear plant in Linn County, Iowa, owned by NextEra Energy, shut in 2020 and now being restarted (targeted Q1 2029) under a $1.9B DOE Office of Energy Dominance Financing loan closed September 8, 2026. Google holds a 25-year power purchase agreement for the plant's output.",
+    "website": "https://www.nexteraenergy.com/",
+    "read_more": {"label": "NextEra Energy newsroom", "url": "https://newsroom.nexteraenergy.com/2026-09-08-U-S-Department-of-Energy-Closes-Up-to-1-9-Billion-Loan-to-Restart-NextEra-Energys-Duane-Arnold-Energy-Center"},
+    "sources": [
+      "https://www.energy.gov/articles/energy-department-closes-19-billion-loan-restart-duane-arnold-nuclear-plant",
+      "https://newsroom.nexteraenergy.com/2026-09-08-U-S-Department-of-Energy-Closes-Up-to-1-9-Billion-Loan-to-Restart-NextEra-Energys-Duane-Arnold-Energy-Center",
+      "https://www.foxbusiness.com/fox-news-tech/us-loans-1-9b-restart-shuttered-iowa-nuclear-plant"
+    ],
+    "as_of": "2026-09-14"
+  },
+  {
+    "target": "Rigetti Computing",
+    "description": "Nasdaq-listed superconducting quantum-computing company (Berkeley, CA). On September 8, 2026 it signed a $100M agreement with the U.S. Department of Commerce under the CHIPS Act R&D program to advance quantum scaling (readout electronics, cryostats, chip fabrication); the government receives a minority, non-controlling equity stake in return.",
+    "website": "https://www.rigetti.com/",
+    "read_more": {"label": "NIST", "url": "https://www.nist.gov/news-events/news/2026/09/department-commerce-announces-finalization-chips-rd-award-rigetti"},
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/0001838359/000110465926105662/tm2624940d1_ex10-1.htm",
+      "https://www.nist.gov/news-events/news/2026/09/department-commerce-announces-finalization-chips-rd-award-rigetti",
+      "https://investors.rigetti.com/news-releases/news-release-details/rigetti-signs-definitive-agreement-100m-us-government-accelerate"
+    ],
+    "as_of": "2026-09-14"
+  },
+  {
+    "target": "Midwest AI Data Center Acquisition Entity (Hunt Properties JV)",
+    "description": "A private special-purpose entity, managed by an affiliate of Hunt Properties, formed to acquire a Midwest industrial facility (150MW available power, expandable to ~300MW) for conversion into an AI data center. Empery Digital took a $65M, 25% stake in the entity as part of a broader partnership with Hunt Properties to acquire powered land for AI/HPC data centers.",
+    "website": null,
+    "read_more": {"label": "Data Center Dynamics via Businesswire", "url": "https://www.businesswire.com/news/home/20260629894664/en/Empery-Digital-Announces-a-$65-Million-Strategic-Investment-in-Midwest-150-MW-AI-Data-Center-Property"},
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1829794/000168316826005178/empery_ex9901.htm",
+      "https://www.businesswire.com/news/home/20260629894664/en/Empery-Digital-Announces-a-$65-Million-Strategic-Investment-in-Midwest-150-MW-AI-Data-Center-Property",
+      "https://ir.emperydigital.com/news-events/press-releases/detail/186/empery-digital-announces-a-65-million-strategic-investment"
+    ],
+    "as_of": "2026-09-14"
+  },
+  {
+    "target": "Cardinal Data Power",
+    "description": "Dallas-based developer of behind-the-meter, gigawatt-scale data-center campuses for AI/HPC, founded by the Lyda Hunt Allred and Barbara Crow Hunt family offices (Cavallo Holdings, Stratford Bridge Holdings). Building its first campus in West Texas (750MW phase one, first power targeted 2027). Empery Digital invested $20M (~8% stake) as part of a $70M Series A led by Hood River Capital Management.",
+    "website": "https://cardinaldatapower.com/",
+    "read_more": {"label": "Data Center Dynamics", "url": "https://www.datacenterdynamics.com/en/news/empery-digital-invests-20m-in-cardinal-data-power/"},
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1829794/000168316826005723/empery_ex9901.htm",
+      "https://www.datacenterdynamics.com/en/news/empery-digital-invests-20m-in-cardinal-data-power/",
+      "https://cardinaldatapower.com/",
+      "https://ir.emperydigital.com/news-events/press-releases/detail/189/empery-digital-announces-20-million-strategic-investment"
+    ],
+    "as_of": "2026-09-14"
+  },
+  {
+    "target": "AIR",
+    "description": "Israeli cybersecurity startup (founded Feb 2026 by Yair Saban and Niv Hoffman, ex-Unit 8200) building an inline firewall for AI agents that inspects skills, plugins and MCP servers for malicious instructions or supply-chain risk. Emerged from stealth September 1, 2026 with a $50M seed: $10M led by Sequoia, plus $40M led by Greenoaks, with Swish Ventures, Netz and angels including Wiz's Yinon Costica.",
+    "website": "https://www.air.security/",
+    "read_more": {"label": "SecurityWeek", "url": "https://www.securityweek.com/ai-agent-firewall-startup-air-security-emerges-from-stealth-with-50-million/"},
+    "sources": [
+      "https://dealroom.co/news/148163-air-raises-50m-seed-to-build-a-firewall-for-ai-agents/",
+      "https://www.securityweek.com/ai-agent-firewall-startup-air-security-emerges-from-stealth-with-50-million/",
+      "https://www.air.security/blog-posts/out-of-stealth",
+      "https://www.calcalistech.com/ctechnews/article/r13apdnugg"
+    ],
+    "as_of": "2026-09-14"
+  },
+  {
+    "target": "Thinking Machines Lab",
+    "description": "AI lab founded by former OpenAI CTO Mira Murati. As of September 2026 Nvidia was in talks to invest roughly $2.5B (about half of a rumored $5-6B round) at a ~$40B valuation, with Accel reportedly leading; the deal was still under negotiation, not confirmed closed. Nvidia and the lab already have a separate multiyear deal to deploy 1GW+ of Vera Rubin systems.",
+    "website": "https://thinkingmachines.ai/",
+    "read_more": {"label": "The Information", "url": "https://www.theinformation.com/briefings/nvidia-discusses-2-5-billion-investment-mira-muratis-thinking-machines-lab"},
+    "sources": [
+      "https://www.theinformation.com/briefings/nvidia-discusses-2-5-billion-investment-mira-muratis-thinking-machines-lab",
+      "https://finance.yahoo.com/technology/ai/articles/nvidia-eyeing-2-5-billion-142916646.html",
+      "https://www.cnbc.com/2026/03/10/nvidia-mira-murati-thinking-machines-lab-ai.html"
+    ],
+    "as_of": "2026-09-14"
+  },
+  {
+    "target": "NavigateAI",
+    "description": "San Francisco AI startup founded by Opendoor co-founder Eric Wu, building an AI field copilot for construction and other physical-world labor (real-time task guidance via phone or smart glasses). Launched from stealth May 26, 2026 with $25M seed led by Elad Gil at a $225M post-money valuation, joined by Khosla Ventures, Fifth Wall, Tishman Speyer and angels including Tony Xu and Brian Armstrong.",
+    "website": "https://www.navigate.ai/",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/09/07/eric-wus-newest-company-out-of-stealth-since-may-is-going-after-constructions-labor-crunch/"},
+    "sources": [
+      "https://techcrunch.com/2026/09/07/eric-wus-newest-company-out-of-stealth-since-may-is-going-after-constructions-labor-crunch/",
+      "https://www.inman.com/2026/05/26/eric-wu-opendoor-navigateai-construction-copilot-startup/",
+      "https://www.globenewswire.com/news-release/2026/05/26/3301425/0/en/navigateai-launches-to-build-the-ai-copilot-for-the-physical-world.html"
+    ],
+    "as_of": "2026-09-14"
+  },
+  {
+    "target": "Lightfield",
+    "description": "AI-native CRM startup (launched Nov 2025) building a Salesforce/HubSpot alternative designed for companies whose workflows are run by AI agents, auto-structuring records from email, calendar, calls, Slack and LinkedIn. Raised a $47M Series A led by Andreessen Horowitz, with Coatue, Maverick Capital, Greylock, Lightspeed and others, announced September 9, 2026.",
+    "website": "https://www.lightfield.ai/",
+    "read_more": {"label": "SiliconANGLE", "url": "https://siliconangle.com/2026/09/09/ai-native-crm-startup-lightfield-raises-47m-to-build-an-ai-agent-ready-replacement-for-salesforce/"},
+    "sources": [
+      "https://siliconangle.com/2026/09/09/ai-native-crm-startup-lightfield-raises-47m-to-build-an-ai-agent-ready-replacement-for-salesforce/",
+      "https://www.prnewswire.com/news-releases/lightfield-raises-47-million-series-a-to-build-the-crm-for-companies-that-run-on-agents-302874024.html"
+    ],
+    "as_of": "2026-09-14"
+  },
+  {
+    "target": "Gimlet Labs",
+    "description": "San Francisco startup building a multi-silicon inference cloud for agentic AI, matching workloads across GPUs and purpose-built accelerators rather than a single chip type. Emerged from stealth October 2025; announced a $300M Series B led by Andreessen Horowitz on September 4-5, 2026 at a $3B valuation, with Sapphire Ventures, M12, Arm, Menlo Ventures and Factory participating.",
+    "website": "https://www.gimletlabs.ai/",
+    "read_more": {"label": "GlobeNewswire", "url": "https://www.globenewswire.com/news-release/2026/09/04/3356707/0/en/now-valued-at-3-billion-gimlet-labs-raises-300-million-in-series-b-led-by-andreessen-horowitz-for-industry-s-first-multi-silicon-inference-cloud-for-agentic-ai.html"},
+    "sources": [
+      "https://dealroom.co/news/148837-gimlet-labs-raises-300m-series-b-at-3b-valuation-to-rebuild-ai-inference/",
+      "https://www.globenewswire.com/news-release/2026/09/04/3356707/0/en/now-valued-at-3-billion-gimlet-labs-raises-300-million-in-series-b-led-by-andreessen-horowitz-for-industry-s-first-multi-silicon-inference-cloud-for-agentic-ai.html",
+      "https://pulse2.com/gimlet-labs-raises-300-million-series-b-led-by-andreessen-horowitz-at-3-billion-valuation/"
+    ],
+    "as_of": "2026-09-14"
+  },
+  {
+    "target": "Cognition",
+    "description": "Maker of AI coding agent Devin. Raised over $2B in a Series E on September 8, 2026 at a $48B valuation (nearly double its ~$25B tag from four months earlier), led by Andreessen Horowitz and Accel with Founders Fund, General Catalyst, Avenir, Altimeter and others; run-rate revenue grew from ~$492M to ~$900M over the period. New releases include Devin Auto-Triage and Devin Security Swarm.",
+    "website": "https://cognition.ai/",
+    "read_more": {"label": "TechFundingNews", "url": "https://techfundingnews.com/devin-maker-cognition-raises-over-2b-at-48b-valuation-nearly-doubling-its-price-tag-in-four-months/"},
+    "sources": [
+      "https://www.unite.ai/cognition-raises-over-2b-series-e-at-48b-valuation-to-scale-devin-agents/",
+      "https://techfundingnews.com/devin-maker-cognition-raises-over-2b-at-48b-valuation-nearly-doubling-its-price-tag-in-four-months/",
+      "https://dealroom.co/news/149496-cognition-raises-2b-series-e-at-48b-valuation-to-scale-devin/"
+    ],
+    "as_of": "2026-09-14"
+  },
+  {
+    "target": "Broadcom (AI chip / Anthropic compute financing)",
+    "description": "Refers to Broadcom's debt-financed AI chip program, not Broadcom's core business: Broadcom, Blackstone and Apollo are structuring $70-80B in debt (senior ~$45B, junior ~$35B) to fund custom chips and networking for Anthropic's compute buildout, extending a $35B partnership unveiled in June 2026 targeting 20GW+ of compute for AI labs by 2028. Investors, not Anthropic, own and lease the hardware.",
+    "website": "https://www.broadcom.com/",
+    "read_more": {"label": "CNBC", "url": "https://www.cnbc.com/2026/08/21/broadcom-debt-deal-expected-to-reach-upwards-of-70-billion-sources.html"},
+    "sources": [
+      "https://www.cnbc.com/2026/08/21/broadcom-debt-deal-expected-to-reach-upwards-of-70-billion-sources.html",
+      "https://finance.yahoo.com/technology/ai/articles/broadcom-seeks-80-billion-debt-171925920.html",
+      "https://fourweekmba.com/ai-broadcom-apollo-anthropic-ai-debt-vendor-guarantee/"
+    ],
+    "as_of": "2026-09-14"
+  }
+]

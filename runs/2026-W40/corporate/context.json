@@ -1,0 +1,435 @@
+{
+  "week": "2026-W40",
+  "agent": "corporate",
+  "feedback_from_runs": [
+    "2026-W38",
+    "2026-W39",
+    "2026-W40"
+  ],
+  "how_to_use": "1) WHAT YOU ALREADY HAVE \u2014 search FORWARD from each entity's last_event_date; don't re-find old deals. Use the deterministic EDGAR path when cik is present (agents/CONTEXT.md \u2192 Tools) and run `engine.edgar exists` before writing a row. Aliases are the SAME entity \u2014 never file one as new. stale_candidates are existing rows needing a Tier-1 confirm, not new deals to re-file. 2) WHAT WORKED \u2014 check `check_first` sources before searching broadly. 3) WHAT YOU GOT WRONG \u2014 these are real rejects from recent runs; don't repeat them.",
+  "what_you_already_have": {
+    "entities": [
+      {
+        "allocator": "Alphabet",
+        "class": "corporate",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-09-16",
+        "events_on_file": 6,
+        "sectors_active": [
+          "ai-applications",
+          "ai-labs",
+          "defense-tech",
+          "nuclear",
+          "semiconductors"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "alphabet (google)",
+          "alphabet / google",
+          "google",
+          "google / alphabet"
+        ],
+        "cik": "0001652044",
+        "ticker": "GOOGL",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "EnduroSat",
+          "MediaTek",
+          "MediaTek",
+          "Blacksmith",
+          "Discovery Loop",
+          "Proxima Fusion"
+        ]
+      },
+      {
+        "allocator": "Amazon",
+        "class": "corporate",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-26",
+        "events_on_file": 5,
+        "sectors_active": [
+          "ai-data",
+          "ai-labs"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "amazon / aws",
+          "amazon web services",
+          "amazon.com",
+          "aws"
+        ],
+        "cik": "0001018724",
+        "ticker": "AMZN",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "DuckLabs",
+          "OpenAI",
+          "Anthropic",
+          "OpenAI Group PBC",
+          "OpenAI"
+        ]
+      },
+      {
+        "allocator": "Anthropic",
+        "class": "corporate",
+        "tier": "watch",
+        "country": null,
+        "network": null,
+        "last_event_date": "2026-08-05",
+        "events_on_file": 1,
+        "sectors_active": [
+          "datacenters"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": null,
+        "ticker": null,
+        "edgar_path": "search",
+        "recent_targets": [
+          "TeraWulf Justified Data Campus (Kentucky)"
+        ]
+      },
+      {
+        "allocator": "Empery Digital",
+        "class": "corporate",
+        "tier": "watch",
+        "country": null,
+        "network": null,
+        "last_event_date": "2026-07-23",
+        "events_on_file": 2,
+        "sectors_active": [
+          "datacenters"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": null,
+        "ticker": null,
+        "edgar_path": "search",
+        "recent_targets": [
+          "Cardinal Data Power",
+          "Midwest AI Data Center Acquisition Entity (Hunt Properties JV)"
+        ]
+      },
+      {
+        "allocator": "Meta",
+        "class": "corporate",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-09-09",
+        "events_on_file": 5,
+        "sectors_active": [
+          "ai-labs",
+          "datacenters"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "facebook",
+          "meta / facebook",
+          "meta platforms"
+        ],
+        "cik": "0001326801",
+        "ticker": "META",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "Stilla.ai",
+          "BlackRock (El Paso Data Center JV)",
+          "Meta-BlackRock El Paso data center venture",
+          "Richland Parish / Hyperion data center (Louisiana)",
+          "Sturgeon County data center (Alberta, Canada)"
+        ]
+      },
+      {
+        "allocator": "Microsoft",
+        "class": "corporate",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-07-28",
+        "events_on_file": 4,
+        "sectors_active": [
+          "ai-applications",
+          "ai-compute",
+          "ai-labs",
+          "cybersecurity"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "microsoft corporation",
+          "msft"
+        ],
+        "cik": "0000789019",
+        "ticker": "MSFT",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "Mate Security",
+          "DOE Genesis Mission (SPARK)",
+          "Mistral AI",
+          "Microsoft Frontier Company"
+        ]
+      },
+      {
+        "allocator": "NVIDIA",
+        "class": "corporate",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-09-08",
+        "events_on_file": 22,
+        "sectors_active": [
+          "ai-compute",
+          "ai-data",
+          "ai-labs",
+          "datacenters",
+          "neocloud",
+          "networking",
+          "power-energy",
+          "semiconductors"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "nvda",
+          "nvidia corporation"
+        ],
+        "cik": "0001045810",
+        "ticker": "NVDA",
+        "edgar_path": "deterministic",
+        "recent_targets": [
+          "Mistral AI",
+          "Thinking Machines Lab",
+          "Hugging Face",
+          "Thinking Machines Lab",
+          "Hugging Face",
+          "MediaTek"
+        ]
+      },
+      {
+        "allocator": "Oracle",
+        "class": "corporate",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": null,
+        "events_on_file": 0,
+        "sectors_active": [],
+        "known_vehicles": [],
+        "aliases": [
+          "oracle corporation"
+        ],
+        "cik": "0001341439",
+        "ticker": "ORCL",
+        "edgar_path": "deterministic",
+        "recent_targets": []
+      }
+    ],
+    "stale_candidates": [
+      {
+        "allocator": "NVIDIA",
+        "target": "OpenAI southern Ohio 10GW data center",
+        "event_type": "corporate_investment",
+        "disclosed_date": "2026-07-27",
+        "source_tier": 3,
+        "source_url": "https://www.forbes.com/sites/tylerroush/2026/07/27/nvidia-and-openai-discussing-500-billion-data-center-heres-what-we-know/",
+        "why_still_candidate": "CANDIDATE - talks only, NO signed agreement, so no capital is committed yet. Origin is a single Wall Street Journal scoop of 2026-07-27 citing 'people familiar'; Forbes, Reuters, Al Jazeera, PYMNTS and Jerusalem Post all trace back to that one WSJ report, so this counts as ONE source, not five (circ"
+      },
+      {
+        "allocator": "NVIDIA",
+        "target": "Lancium",
+        "event_type": "corporate_investment",
+        "disclosed_date": "2026-08-08",
+        "source_tier": 3,
+        "source_url": "https://www.investing.com/news/stock-market-news/nvidia-to-invest-up-to-3-billion-in-lancium-the-information-reports-4847578",
+        "why_still_candidate": "CANDIDATE - single origin, neither party has confirmed on the record. The Information broke this 2026-08-08 ('people familiar with the matter'); Reuters, Bloomberg-adjacent wires, Seeking Alpha, DCD-tier outlets and dozens of aggregators all cite that one Information scoop, so per the circular-repor"
+      },
+      {
+        "allocator": "NVIDIA",
+        "target": "Perplexity",
+        "event_type": "minority_stake",
+        "disclosed_date": "2026-08-23",
+        "source_tier": 4,
+        "source_url": "https://www.theinformation.com/articles/nvidia-discusses-perplexity-investment-30-billion-plus-valuation-considered-tech-licensing-deal",
+        "why_still_candidate": "NOT a confirmed/closed deal -- The Information (2026-08-23) reports NVIDIA discussing an equity investment in Perplexity at a $30B+ valuation (up from ~$20B a year earlier); NVIDIA has held a stake in Perplexity since 2023, so this would be a follow_on if it closes. Talks reportedly shifted from a l"
+      },
+      {
+        "allocator": "NVIDIA",
+        "target": "Hugging Face",
+        "event_type": "acquisition",
+        "disclosed_date": "2026-08-27",
+        "source_tier": 3,
+        "source_url": "https://www.cnbc.com/2026/08/27/nvidia-hugging-face-acquisition.html",
+        "why_still_candidate": "CANDIDATE -- talks only, no signed agreement per CNBC ('the deal could still fall apart'); neither NVIDIA nor Hugging Face has confirmed on the record. Origin = The Information (2026-08-27 report, paywalled, citing people familiar); CNBC, TechCrunch, Yahoo Finance, Futurum Group, tech-insider.org an"
+      },
+      {
+        "allocator": "Alphabet",
+        "target": "MediaTek",
+        "event_type": "corporate_investment",
+        "disclosed_date": "2026-09-01",
+        "source_tier": 3,
+        "source_url": "https://focustaiwan.tw/business/202609010010",
+        "why_still_candidate": "Alphabet participated alongside NVIDIA in MediaTek's $3.9B offshore convertible bond offering (priced Aug 31, closes Sep 8); NVIDIA took $3.5B (~90%) of the total, Alphabet's exact slice was NOT disclosed by either MediaTek or Alphabet. Origin is MediaTek's own pricing announcement (via its official"
+      },
+      {
+        "allocator": "NVIDIA",
+        "target": "Thinking Machines Lab",
+        "event_type": "corporate_investment",
+        "disclosed_date": "2026-09-02",
+        "source_tier": 4,
+        "source_url": "https://www.theinformation.com/briefings/nvidia-discusses-2-5-billion-investment-mira-muratis-thinking-machines-lab",
+        "why_still_candidate": "NOT a confirmed/closed deal -- The Information (2026-09-02) reports NVIDIA in talks to put ~$2.5B into TML's $5-6B round at a ~$40B pre-money valuation (Accel reportedly leading). All other outlets carrying this figure (Yahoo, Inc., BigGo, EconoTimes, pagelens) trace to the same Information origin -"
+      },
+      {
+        "allocator": "NVIDIA",
+        "target": "Thinking Machines Lab",
+        "event_type": "minority_stake",
+        "disclosed_date": "2026-09-03",
+        "source_tier": 3,
+        "source_url": "https://finance.yahoo.com/technology/ai/articles/nvidia-eyeing-2-5-billion-142916646.html",
+        "why_still_candidate": "NVIDIA reportedly in talks to invest ~$2.5B as roughly half of a $5-6B round valuing Mira Murati's Thinking Machines Lab at ~$40B pre-money. As of 2026-09-06 reporting, deal not closed: no signed term sheet, final round size, ownership stake, or closing date confirmed by either party. Escalation run"
+      }
+    ]
+  },
+  "what_worked": {
+    "check_first": [
+      "techcrunch.com",
+      "arcticstartup.com",
+      "bebeez.eu",
+      "finance.yahoo.com",
+      "mistral.ai",
+      "satnews.com",
+      "sifted.eu",
+      "thehill.com"
+    ],
+    "detail": [
+      {
+        "source": "arcticstartup.com",
+        "example_url": "https://arcticstartup.com/stilla-acquired-by-meta/",
+        "tier": 3,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "bebeez.eu",
+        "example_url": "https://bebeez.eu/2026/09/10/stilla-acquired-by-meta/",
+        "tier": 3,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "finance.yahoo.com",
+        "example_url": "https://finance.yahoo.com/technology/ai/articles/nvidia-eyeing-2-5-billion-142916646.html",
+        "tier": 3,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "mistral.ai",
+        "example_url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
+        "tier": 1,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "satnews.com",
+        "example_url": "https://satnews.com/2026/09/17/endurosat-secures-205-million-funding-round-and-wins-24-bus-contract-for-vantor-earth-observation-constellation/",
+        "tier": 3,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "sifted.eu",
+        "example_url": "https://sifted.eu/articles/mistral-series-d-samsung-nvidia-asml",
+        "tier": 3,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "techcrunch.com",
+        "example_url": "https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/",
+        "tier": 3,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "techcrunch.com",
+        "example_url": "https://techcrunch.com/2026/09/08/mistral-raises-e3b-as-sovereign-ai-becomes-big-business/",
+        "tier": 3,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "thehill.com",
+        "example_url": "https://thehill.com/policy/technology/6068386-nvidia-acquires-hugging-face/",
+        "tier": 3,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "axios.com",
+        "example_url": "https://www.axios.com/2026/09/09/meta-acquires-swedish-ai-startup-stillaai",
+        "tier": 3,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "bta.bg",
+        "example_url": "https://www.bta.bg/en/news/economy/1205765-endurosat-raises-usd-205-mln-to-scale-satellite-production-in-europe-us",
+        "tier": 3,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "cnbc.com",
+        "example_url": "https://www.cnbc.com/2026/09/03/nvidia-agrees-to-buy-hugging-face-for-almost-13-billion-ai-expansion/",
+        "tier": 3,
+        "hits": 1,
+        "checks": 1
+      }
+    ]
+  },
+  "what_you_got_wrong": {
+    "this_class": [
+      {
+        "code": "WARN",
+        "lesson": "a row ingested but with a warning (usually a non-canonical sector or theme). Map to the canonical taxonomy in config/rules.yaml.",
+        "occurrences": 5,
+        "examples": [
+          "corporate/verified_events.csv:2 WARN theme 'ai-compute' not canonical",
+          "corporate/verified_events.csv:3 WARN theme 'space-defense' not canonical"
+        ]
+      },
+      {
+        "code": "W8",
+        "lesson": "a >=$1B investable target has no ai_posture tag.",
+        "occurrences": 4,
+        "examples": [
+          "Anthropic: $10.0B investable target with no ai_posture",
+          "Microsoft Frontier Company: $2.5B investable target with no ai_posture"
+        ]
+      }
+    ],
+    "all_classes": [
+      {
+        "code": "W8",
+        "lesson": "a >=$1B investable target has no ai_posture tag.",
+        "occurrences": 35,
+        "examples": [
+          "SpaceX: $36.4B investable target with no ai_posture",
+          "Electronic Arts: $33.6B investable target with no ai_posture"
+        ]
+      },
+      {
+        "code": "W7",
+        "lesson": "a >=$1B fund/firm has no holdings collected.",
+        "occurrences": 3,
+        "examples": [
+          "Machine Age Fund: $1.1B fund/firm with no holdings collected",
+          "West Street Capital Partners IX: $9.6B fund/firm with no holdings collected"
+        ]
+      }
+    ]
+  }
+}

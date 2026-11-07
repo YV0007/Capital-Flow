@@ -1,0 +1,4 @@
+allocator,target,event_type,disclosed_date,ticker,company,rationale,confidence
+Meta,Firmus Technologies,corporate_investment,2026-09-30,NVDA,NVIDIA Corporation,Firmus's expanded AI-factory capacity for Meta runs on Nvidia's GB300 NVL72 and DSX platform -- Nvidia is the direct silicon/platform supplier to the underlying infrastructure this deal expands.,high
+Goldman Sachs,SharonAI Holdings Inc.,project_finance,2026-10-01,SHAZ,SharonAI Holdings Inc.,The financed entity is itself a public company (Nasdaq: SHAZ) that directly raised the $356M GPU-backed debt facility -- a direct capital event on a tradeable name.,high
+Goldman Sachs,SharonAI Holdings Inc.,project_finance,2026-10-01,NVDA,NVIDIA Corporation,The facility is explicitly earmarked to fund purchase and deployment of 68,000+ Nvidia GPUs -- Nvidia is the direct silicon supplier to the financed buildout.,high

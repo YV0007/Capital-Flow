@@ -1,0 +1,159 @@
+[
+  {
+    "target": "Hugging Face",
+    "target_type": "private",
+    "sector": "ai-data",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-08-27",
+    "capital_usd": 12900000000.0,
+    "deal_source_urls": [
+      "https://www.cnbc.com/2026/08/27/nvidia-hugging-face-acquisition.html"
+    ]
+  },
+  {
+    "target": "DigitalBridge Group",
+    "target_type": "public",
+    "sector": "datacenters",
+    "allocators": [
+      "SoftBank"
+    ],
+    "last_event": "2025-12-29",
+    "capital_usd": 4000000000.0,
+    "deal_source_urls": [
+      "https://www.digitalbridge.com/news/2025-12-29-softbank-group-to-acquire-digitalbridge-for-4-billion-to-scale-next-gen-ai-infrastructure"
+    ]
+  },
+  {
+    "target": "SB Energy",
+    "target_type": "private",
+    "sector": "power-energy",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-08-17",
+    "capital_usd": 1500000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000069/sbeoainvidia-portsrelease.htm"
+    ]
+  },
+  {
+    "target": "Brookfield Middle East Partners",
+    "target_type": "fund",
+    "sector": "diversified-pe",
+    "allocators": [
+      "Brookfield",
+      "Saudi PIF"
+    ],
+    "last_event": "2026-07-27",
+    "capital_usd": 500000000.0,
+    "deal_source_urls": [
+      "https://www.pif.gov.sa/en/news-and-insights/press-releases/2026/brookfield-announces-approximately-2-billion-first-close-of-pif-anchored-middle-east-focused-fund/"
+    ]
+  },
+  {
+    "target": "Vista Energy",
+    "target_type": "public",
+    "sector": "power-energy",
+    "allocators": [
+      "Peter Thiel"
+    ],
+    "last_event": "2026-08-14",
+    "capital_usd": 75908730.0,
+    "deal_source_urls": [
+      "https://www.quiverquant.com/news/Peter+Thiel-Linked+Fund+Rebuilds+$400+Million+Portfolio+Around+Power"
+    ]
+  },
+  {
+    "target": "Vistra",
+    "target_type": "public",
+    "sector": "power-energy",
+    "allocators": [
+      "Peter Thiel"
+    ],
+    "last_event": "2026-08-14",
+    "capital_usd": 59130126.0,
+    "deal_source_urls": [
+      "https://www.quiverquant.com/news/Peter+Thiel-Linked+Fund+Rebuilds+$400+Million+Portfolio+Around+Power"
+    ]
+  },
+  {
+    "target": "DTE Energy",
+    "target_type": "public",
+    "sector": "power-energy",
+    "allocators": [
+      "Peter Thiel"
+    ],
+    "last_event": "2026-08-14",
+    "capital_usd": 40294247.0,
+    "deal_source_urls": [
+      "https://www.quiverquant.com/news/Peter+Thiel-Linked+Fund+Rebuilds+$400+Million+Portfolio+Around+Power"
+    ]
+  },
+  {
+    "target": "CMS Energy",
+    "target_type": "public",
+    "sector": "power-energy",
+    "allocators": [
+      "Peter Thiel"
+    ],
+    "last_event": "2026-08-14",
+    "capital_usd": 39559986.0,
+    "deal_source_urls": [
+      "https://www.quiverquant.com/news/Peter+Thiel-Linked+Fund+Rebuilds+$400+Million+Portfolio+Around+Power"
+    ]
+  },
+  {
+    "target": "X-Energy",
+    "target_type": "public",
+    "sector": "nuclear",
+    "allocators": [
+      "Peter Thiel"
+    ],
+    "last_event": "2026-08-14",
+    "capital_usd": 3672000.0,
+    "deal_source_urls": [
+      "https://www.quiverquant.com/news/Peter+Thiel-Linked+Fund+Rebuilds+$400+Million+Portfolio+Around+Power"
+    ]
+  },
+  {
+    "target": "PLUS ES",
+    "target_type": "private",
+    "sector": "power-energy",
+    "allocators": [
+      "DigitalBridge"
+    ],
+    "last_event": "2026-08-27",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.digitalbridge.com/news/2026-08-27-digitalbridge-to-acquire-plus-es-a-leading-australian-smart-metering-platform"
+    ]
+  },
+  {
+    "target": "Dili",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Garry Tan"
+    ],
+    "last_event": "2026-07-30",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.globenewswire.com/news-release/2026/07/30/3336377/0/en/dili-raises-21-7m-from-khosla-ventures-to-bring-ai-powered-assurance-to-america-s-infrastructure-boom.html"
+    ]
+  },
+  {
+    "target": "1X Technologies",
+    "target_type": "private",
+    "sector": "robotics",
+    "allocators": [
+      "SoftBank"
+    ],
+    "last_event": "2026-08-27",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.theinformation.com/articles/softbank-talks-buy-majority-stake-humanoid-maker-1x-6-billion-valuation"
+    ]
+  }
+]

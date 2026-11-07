@@ -1,0 +1,203 @@
+[
+  {
+    "target": "KKR Global Infrastructure Investors V",
+    "target_type": "fund",
+    "sector": "datacenters",
+    "allocators": [
+      "KKR"
+    ],
+    "last_event": "2026-08-03",
+    "capital_usd": 19200000000.0,
+    "deal_source_urls": [
+      "https://media.kkr.com/news-details?news_id=4231602b-5c20-4a0a-9e36-e797836bc1c7"
+    ]
+  },
+  {
+    "target": "Akita AI Data Center (Bitgrit/S2)",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Mubadala"
+    ],
+    "last_event": "2026-08-06",
+    "capital_usd": 6300000000.0,
+    "deal_source_urls": [
+      "https://www.bloomberg.com/news/articles/2026-08-06/uae-fund-weighs-6.3-billion-ai-data-center-investment-in-japan"
+    ]
+  },
+  {
+    "target": "MediaTek",
+    "target_type": "public",
+    "sector": "semiconductors",
+    "allocators": [
+      "Alphabet",
+      "NVIDIA"
+    ],
+    "last_event": "2026-09-01",
+    "capital_usd": 3500000000.0,
+    "deal_source_urls": [
+      "https://www.globenewswire.com/news-release/2026/08/31/3353306/0/en/nvidia-and-mediatek-deepen-long-standing-partnership-to-build-ai-edge-to-cloud-computing-platforms.html",
+      "https://focustaiwan.tw/business/202609010010",
+      "https://www.mediatek.com/press-room/nvidia-and-mediatek-deepen-long-standing-partnership-to-build-ai-edge-to-cloud-computing-platforms"
+    ]
+  },
+  {
+    "target": "IREN Limited",
+    "target_type": "public",
+    "sector": "neocloud",
+    "allocators": [
+      "Blue Owl"
+    ],
+    "last_event": "2026-08-28",
+    "capital_usd": 2400000000.0,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/blue-owl-managed-funds-lead-2-4-billion-ai-factory-financing-for-iren-302863057.html"
+    ]
+  },
+  {
+    "target": "SB Energy",
+    "target_type": "private",
+    "sector": "datacenters",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-08-17",
+    "capital_usd": 1500000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm"
+    ]
+  },
+  {
+    "target": "Trilogy Metals Inc",
+    "target_type": "public",
+    "sector": "defense-tech",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-08-28",
+    "capital_usd": 35600000.0,
+    "deal_source_urls": [
+      "https://www.war.gov/News/Releases/Release/Article/4585334/department-of-war-announces-356-million-strategic-equity-investment-in-trilogy/"
+    ]
+  },
+  {
+    "target": "Thrive Holdings",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Altimeter"
+    ],
+    "last_event": "2026-08-12",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.thriveholdings.com/thrive-holdings-fundraise"
+    ]
+  },
+  {
+    "target": "PLUS ES",
+    "target_type": "private",
+    "sector": "power-energy",
+    "allocators": [
+      "DigitalBridge"
+    ],
+    "last_event": "2026-08-27",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.digitalbridge.com/news/2026-08-27-digitalbridge-to-acquire-plus-es-a-leading-australian-smart-metering-platform"
+    ]
+  },
+  {
+    "target": "NVIDIA AI Compute Infrastructure Financing Platform",
+    "target_type": "project",
+    "sector": "ai-compute",
+    "allocators": [
+      "Blackstone",
+      "BlackRock",
+      "Brookfield",
+      "KKR"
+    ],
+    "last_event": "2026-08-10",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Partners-With-Apollo-BlackRock-Blackstone-Brookfield-Goldman-Sachs-and-KKR-to-Establish-AI-Compute-Infrastructure-Financing-Platforms-to-Mobilize-Over-500-Billion-of-Third-Party-Capital/default.aspx"
+    ]
+  },
+  {
+    "target": "Firmus Technologies",
+    "target_type": "private",
+    "sector": "neocloud",
+    "allocators": [
+      "Coatue"
+    ],
+    "last_event": "2026-08-07",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific"
+    ]
+  },
+  {
+    "target": "Discovery Loop",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Khosla Ventures"
+    ],
+    "last_event": "2026-08-05",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/"
+    ]
+  },
+  {
+    "target": "CuspAI",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Jeff Bezos"
+    ],
+    "last_event": "2026-07-20",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.cnbc.com/2026/07/20/bezos-cuspai-new-chip-materials-nvidia.html"
+    ]
+  },
+  {
+    "target": "Cloverleaf Infrastructure",
+    "target_type": "private",
+    "sector": "power-energy",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-08-21",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/cloverleaf-infrastructure-forms-strategic-partnership-with-nvidia-to-accelerate-data-center-infrastructure-development-302857329.html"
+    ]
+  },
+  {
+    "target": "Blue Owl Data Center REIT (planned)",
+    "target_type": "fund",
+    "sector": "datacenters",
+    "allocators": [
+      "Blue Owl"
+    ],
+    "last_event": "2026-09-04",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.bloomberg.com/news/articles/2026-09-04/blue-owl-is-said-to-plan-public-company-for-data-center-roll-up"
+    ]
+  },
+  {
+    "target": "1X Technologies",
+    "target_type": "private",
+    "sector": "robotics",
+    "allocators": [
+      "SoftBank"
+    ],
+    "last_event": "2026-08-27",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.theinformation.com/articles/softbank-talks-buy-majority-stake-humanoid-maker-1x-6-billion-valuation"
+    ]
+  }
+]

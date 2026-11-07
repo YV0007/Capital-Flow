@@ -1,0 +1,182 @@
+[
+  {
+    "target": "OpenAI",
+    "description": "AI research and product company behind ChatGPT and the GPT model family, led by CEO Sam Altman. SoftBank completed the third and final $10B tranche of its $30B follow-on commitment on Oct 1, 2026, taking cumulative SoftBank funding to roughly $64.6B and its stake to about 13%.",
+    "website": "https://openai.com",
+    "read_more": {"label": "TokenPost", "url": "https://www.tokenpost.com/news/business/26098"},
+    "sources": [
+      "https://group.softbank/en/news/press/20261001",
+      "https://www.tokenpost.com/news/business/26098",
+      "https://group.softbank/en/news/press/20260701"
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "DigitalBridge Group",
+    "description": "Global alternative asset manager focused on digital infrastructure — data centers, cell towers, fiber — led by CEO Marc Ganzi, with over $108B AUM. SoftBank completed a $3.1B acquisition of DigitalBridge on Sept 30, 2026, taking it private to help finance AI infrastructure; DigitalBridge keeps operating under Ganzi.",
+    "website": "https://www.digitalbridge.com",
+    "read_more": {"label": "DatacenterDynamics", "url": "https://www.datacenterdynamics.com/en/news/softbank-closes-digitalbridge-acquisition/"},
+    "sources": [
+      "https://group.softbank/en/news/press/20260930",
+      "https://www.datacenterdynamics.com/en/news/softbank-closes-digitalbridge-acquisition/",
+      "https://www.mobileeurope.co.uk/softbank-digitalbridge-deal/"
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "Brookfield Artificial Intelligence Infrastructure Fund (BAIIF)",
+    "description": "Brookfield Asset Management's AI-focused infrastructure fund, launched Nov 2025 and targeting $10B in equity commitments (up to $100B with leverage/co-investment) for AI data centers, power and compute. NVIDIA and the Kuwait Investment Authority are cornerstone investors; NVIDIA's $2B commitment was disclosed Sept 17, 2026.",
+    "website": "https://bam.brookfield.com",
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-09-17/nvidia-committed-2-billion-to-brookfield-ai-infrastructure-fund"},
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2026-09-17/nvidia-committed-2-billion-to-brookfield-ai-infrastructure-fund",
+      "https://bam.brookfield.com/sites/brookfield-bam-v2/files/brookfield-bam-v2/events-news/investor-day/bam-2026-investor-day-presentation-v2.pdf",
+      "https://panews.io/articles/01a0b22b-d01d-717b-942b-6ad2557ba02d"
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "NextEra Energy (Duane Arnold Energy Center)",
+    "description": "NextEra Energy, the Florida-based US utility, is restarting the Duane Arnold Energy Center, Iowa's only nuclear plant (615MW, shut since 2020), backed by a 25-year Google power-purchase agreement. The US Department of Energy closed a $1.9B federal loan on Sept 8, 2026 to finance the restart, targeted for 2029.",
+    "website": "https://www.nexteraenergy.com",
+    "read_more": {"label": "U.S. Department of Energy", "url": "https://www.energy.gov/articles/energy-department-closes-19-billion-loan-restart-duane-arnold-nuclear-plant"},
+    "sources": [
+      "https://www.investor.nexteraenergy.com/news-and-events/news-releases/2026/09-08-2026-123110497",
+      "https://www.energy.gov/articles/energy-department-closes-19-billion-loan-restart-duane-arnold-nuclear-plant",
+      "https://www.world-nuclear-news.org/articles/us-department-of-energy-closes-loan-for-duane-arnold-restart"
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "Nscale",
+    "description": "UK-based 'neocloud' — a full-stack AI cloud platform building GPU data-center capacity for hyperscalers and AI labs. Ahead of a planned NYSE IPO it raised $3.36B in pre-IPO convertible notes led by Third Point, including NVIDIA's $1B tranche and Mubadala's Abu Dhabi Investment Council, Apollo and Citadel.",
+    "website": "https://www.nscale.com",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/"},
+    "sources": [
+      "https://www.nscale.com/press-releases/pre-ipo-convertible-financing",
+      "https://www.hpcwire.com/aiwire/2026/09/25/nscale-raises-3-36b-in-pre-ipo-convertible-financing/",
+      "https://www.agbi.com/ai/2026/09/mubadala-unit-invests-in-uk-ai-infrastructure-company/"
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "Quantinuum",
+    "description": "Quantum-computing company (Honeywell / Cambridge Quantum lineage) building trapped-ion quantum computers, now public (ticker QNT) after a 2026 IPO. On Sept 8, 2026 it finalized a $100M CHIPS Act award from the US Dept of Commerce for quantum-semiconductor R&D with GlobalFoundries and Monarch Quantum, issuing the government ~2.37M shares.",
+    "website": "https://www.quantinuum.com",
+    "read_more": {"label": "The Quantum Insider", "url": "https://thequantuminsider.com/2026/09/08/quantinuum-finalizes-100m-us-government-award-quantum-manufacturing/"},
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/0002110105/000162828026060934/quantinuum-finalizesx100.htm",
+      "https://thequantuminsider.com/2026/09/08/quantinuum-finalizes-100m-us-government-award-quantum-manufacturing/",
+      "https://hoodline.com/2026/09/broomfield-s-quantinuum-grabs-100m-federal-award-hands-us-a-stock-stake/"
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "Stuut",
+    "description": "New York AI startup (founded 2023 by Tarek Alaruri) automating B2B accounts-receivable work — outreach, collections, disputes, cash application. A Sept 2026 Form D disclosed $67.6M in equity sold to 11 investors, alongside an investment and marketplace agreement from Microsoft's venture arm M12.",
+    "website": "https://www.stuut.ai",
+    "read_more": {"label": "RuntimeWire", "url": "https://runtimewire.com/article/stuut-closes-67-6m-sec-filing-microsoft-m12"},
+    "sources": [
+      "https://runtimewire.com/article/stuut-closes-67-6m-sec-filing-microsoft-m12",
+      "https://dealroom.co/news/151311-stuut-pulls-in-68m-to-automate-accounts-receivable-with-ai/",
+      "https://www.crunchbase.com/organization/stuut"
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "RHAELM Holdings / JERA / Dell Technologies AI data center project (Chiba, Japan)",
+    "description": "Proposed ~$15B, 400MW AI data center at JERA's Chiba thermal power site near Tokyo, drawing power behind-the-meter from JERA's gas plant. UK developer RHAELM Holdings, JERA (Japan's largest power generator) and Dell Technologies signed an MoU (Oct 2026); Apollo Global Management is slated as RHAELM's financing partner, phased operations targeted 2028-29.",
+    "website": "https://rhaelm.com",
+    "read_more": {"label": "Mingtiandi", "url": "https://www.mingtiandi.com/real-estate/data-centres/japans-jera-dell-plan-greater-tokyo-data-centre-campus/"},
+    "sources": [
+      "https://rhaelm.com/news/jera-dell-rhaelm-mou-japan",
+      "https://www.mingtiandi.com/real-estate/data-centres/japans-jera-dell-plan-greater-tokyo-data-centre-campus/",
+      "https://coinpaper.com/36622/japan-lands-15b-ai-data-center-as-dell-and-apollo-back-400mw-project"
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "Pilgrim",
+    "description": "Redwood City defense-biotech startup (founded by Thiel Fellow Jake Adler) building Argus, an air-sampling genomic sensor for real-time pathogen/biothreat detection, already deployed under a CDC biosurveillance agreement. Raised $25M seed at a $150M valuation (Sept 2026), led by Buckley Ventures, with backers including Peter Thiel and Dylan Field.",
+    "website": "https://pilgrimlabs.com",
+    "read_more": {"label": "FinSMEs", "url": "https://www.finsmes.com/2026/09/pilgrim-raises-usd25m-in-seed-funding-at-usd150m-valuation.html"},
+    "sources": [
+      "https://www.finsmes.com/2026/09/pilgrim-raises-usd25m-in-seed-funding-at-usd150m-valuation.html",
+      "https://en.wowtale.net/2026/09/28/235250/",
+      "https://runtimewire.com/article/pilgrim-jake-adler-25-million-biothreat-detection"
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "Mantic Technologies",
+    "description": "London AI startup (founded 2024 by ex-DeepMind researcher Toby Shevlane and Ben Day) building forecasting models that predict geopolitical, economic and cultural events; its system outperformed humans in the Summer 2026 Metaculus Cup. Raised $25M seed (Sept 2026) led by Radical Ventures, with Microsoft's M12 and Thinking Machines Lab participating.",
+    "website": "https://www.mantic.com",
+    "read_more": {"label": "Yahoo Finance", "url": "https://finance.yahoo.com/technology/ai/articles/ai-startup-mantic-raises-25-101010662.html"},
+    "sources": [
+      "https://finance.yahoo.com/technology/ai/articles/ai-startup-mantic-raises-25-101010662.html",
+      "https://cryptobriefing.com/mantic-raises-25m-superhuman-forecasting/",
+      "https://tech.eu/2025/08/27/mantic-which-claims-to-forecast-world-events-emerges-from-stealth/"
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "Harvey",
+    "description": "AI platform for legal teams (contracts, research, agents), building its own post-trained open-weight models. Raised $550M at a $15.5B valuation (Sept 2026), co-led by Diffusion and Lightspeed, with Sequoia, Andreessen Horowitz, Coatue and Elad Gil among existing backers; crossed $400M ARR with 3,000+ customers.",
+    "website": "https://www.harvey.ai",
+    "read_more": {"label": "Legal IT Insider", "url": "https://legaltechnology.com/harvey-raises-550m-at-15-5bn-valuation/"},
+    "sources": [
+      "https://www.harvey.ai/blog/harvey-raises-dollar550m-at-a-dollar155b-valuation-to-help-legal-teams-own-their-intelligence",
+      "https://legaltechnology.com/harvey-raises-550m-at-15-5bn-valuation/",
+      "https://techfundingnews.com/harvey-lands-550m-at-15-6b-valuation-as-it-builds-its-own-legal-ai-models/"
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "Fortell",
+    "description": "Consumer hearing-aid startup founded by Matthew de Jonge, using AI to redesign hearing aids as a consumer product rather than a purely clinical device, with a flagship NYC audiology clinic. Raised $163M (Sept 2026) at a $740M valuation from Founders Fund, Thrive Capital and Valor Equity Partners.",
+    "website": "https://www.fortell.com",
+    "read_more": {"label": "Forbes", "url": "https://www.forbes.com/sites/innovationrx/2026/07/29/the-startup-using-ai-to-make-hearing-aids-better/"},
+    "sources": [
+      "https://www.renascence.io/news/68272/fortell-raises-163m-to-bring-ai-to-hearing-aid-market",
+      "https://www.forbes.com/sites/innovationrx/2026/07/29/the-startup-using-ai-to-make-hearing-aids-better/",
+      "https://www.newsbreak.com/news/4889776922770-why-thrive-founders-fund-and-antonio-gracias-are-betting-on-hearing-aids"
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "EnduroSat",
+    "description": "Bulgarian satellite manufacturer building small and ESPA-class spacecraft for space and defense customers, with 103+ satellites already in orbit. Raised $205M (Sept 2026) led by Riot Ventures and Atreides Management, with GV (Alphabet's venture arm), Founders Fund and Lux Capital among backers, to fund US/EU manufacturing scale-up.",
+    "website": "https://www.endurosat.com",
+    "read_more": {"label": "SpaceNews", "url": "https://spacenews.com/endurosat-raises-205-million-to-accelerate-satellite-production-in-us-and-europe/"},
+    "sources": [
+      "https://www.endurosat.com/news/endurosat-raises-205m-to-scale-next-generation-space-fleets/",
+      "https://spacenews.com/endurosat-raises-205-million-to-accelerate-satellite-production-in-us-and-europe/",
+      "https://payloadspace.com/endurosat-raises-205m-notches-vantor-sat-win/"
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "Crux AI (Blackstone / Alphabet cloud joint venture)",
+    "description": "AI cloud joint venture between Alphabet's Google and Blackstone, launched May 2026 to rent out Google's TPU chips as cloud compute outside standard Google Cloud; Blackstone put in an initial $5B equity stake. A 10-bank group led by Goldman Sachs arranged a $22B loan (Sept 16, 2026) secured by the TPUs to fund chip purchases.",
+    "website": null,
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-09-16/banks-line-up-22-billion-chip-loan-tied-to-blackstone-alphabet"},
+    "sources": [
+      "https://www.bloomberg.com/news/articles/2026-09-16/banks-line-up-22-billion-chip-loan-tied-to-blackstone-alphabet",
+      "https://finimize.com/content/blackstone-and-googles-crux-ai-lines-up-a-22-billion-chip-loan",
+      "https://www.kucoin.com/news/flash/crux-ai-secures-22b-chip-backed-loan-from-10-banks"
+    ],
+    "as_of": "2026-10-05"
+  },
+  {
+    "target": "Blue Owl Data Center REIT (proposed)",
+    "description": "Proposed publicly traded REIT that alternative asset manager Blue Owl Capital plans to seed with about $6.5B of its own data-center assets, positioning for an eventual IPO as AI-driven data-center demand grows. Structure, timing and size remain under consideration as of the Sept 2026 report; follows similar listings backed by Blackstone and Brookfield.",
+    "website": null,
+    "read_more": {"label": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-09-04/blue-owl-is-said-to-plan-public-company-for-data-center-roll-up"},
+    "sources": [
+      "https://www.credaily.com/briefs/blue-owl-plans-6-5b-seed-for-data-center-reit/",
+      "https://www.bloomberg.com/news/articles/2026-09-04/blue-owl-is-said-to-plan-public-company-for-data-center-roll-up",
+      "https://therealdeal.com/national/2026/09/08/blue-owl-latest-data-center-reit-race-entrant/"
+    ],
+    "as_of": "2026-10-05"
+  }
+]

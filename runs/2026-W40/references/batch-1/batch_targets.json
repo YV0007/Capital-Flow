@@ -1,0 +1,160 @@
+[
+  {
+    "target": "Akita AI Data Center (Bitgrit / S2 Group, Japan)",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Mubadala"
+    ],
+    "last_event": "2026-08-06",
+    "capital_usd": 6300000000.0,
+    "deal_source_urls": [
+      "https://www.bloomberg.com/news/articles/2026-08-06/uae-fund-weighs-6-3-billion-ai-data-center-investment-in-japan"
+    ]
+  },
+  {
+    "target": "DigitalBridge",
+    "target_type": "public",
+    "sector": "datacenters",
+    "allocators": [
+      "SoftBank"
+    ],
+    "last_event": "2026-09-22",
+    "capital_usd": 4000000000.0,
+    "deal_source_urls": [
+      "https://ir.digitalbridge.com/news-releases/news-release-details/digitalbridge-receives-all-regulatory-approvals-required"
+    ]
+  },
+  {
+    "target": "Brookfield Artificial Intelligence Infrastructure Fund",
+    "target_type": "fund",
+    "sector": "ai-compute",
+    "allocators": [
+      "Brookfield"
+    ],
+    "last_event": "2026-09-17",
+    "capital_usd": 2000000000.0,
+    "deal_source_urls": [
+      "https://finance.yahoo.com/technology/ai/articles/nvidia-committed-2-billion-brookfield-171728893.html"
+    ]
+  },
+  {
+    "target": "DOE SPARK grid transmission initiative (31 projects, 26 states)",
+    "target_type": "project",
+    "sector": "power-energy",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-09-24",
+    "capital_usd": 1900000000.0,
+    "deal_source_urls": [
+      "https://www.energy.gov/articles/energy-department-announces-speed-power-investments-across-26-states-lower-electricity"
+    ]
+  },
+  {
+    "target": "Nscale",
+    "target_type": "private",
+    "sector": "neocloud",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-09-25",
+    "capital_usd": 1000000000.0,
+    "deal_source_urls": [
+      "https://www.nscale.com/press-releases/pre-ipo-convertible-financing"
+    ]
+  },
+  {
+    "target": "Cyera",
+    "target_type": "private",
+    "sector": "cybersecurity",
+    "allocators": [
+      "Goldman Sachs"
+    ],
+    "last_event": "2026-09-22",
+    "capital_usd": 400000000.0,
+    "deal_source_urls": [
+      "https://am.gs.com/en-us/advisors/news/press-release/2026/cyera-goldman-sachs-400m-investment-agentic-enterprise"
+    ]
+  },
+  {
+    "target": "Autonomous Solutions Inc. (ASI)",
+    "target_type": "private",
+    "sector": "robotics",
+    "allocators": [
+      "SoftBank"
+    ],
+    "last_event": "2026-09-24",
+    "capital_usd": 225000000.0,
+    "deal_source_urls": [
+      "https://www.businesswire.com/news/home/20260924920006/en/ASI-and-SoftBank-Group-Form-Joint-Venture-to-Advance-Autonomous-Construction-at-Scale"
+    ]
+  },
+  {
+    "target": "Snorkel AI",
+    "target_type": "private",
+    "sector": "ai-data",
+    "allocators": [
+      "Alphabet"
+    ],
+    "last_event": "2026-09-22",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/snorkel-ai-raises-350m-to-scale-the-data-factory-for-frontier-ai-302886796.html"
+    ]
+  },
+  {
+    "target": "Robotics and AI Institute (RAI)",
+    "target_type": "private",
+    "sector": "robotics",
+    "allocators": [
+      "SoftBank"
+    ],
+    "last_event": "2026-09-18",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.therobotreport.com/softbank-agrees-to-acquire-robotics-and-ai-institute/"
+    ]
+  },
+  {
+    "target": "Rightway",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Thrive Capital",
+      "Khosla Ventures"
+    ],
+    "last_event": "2026-09-24",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "http://www.prnewswire.com/news-releases/rightway-raises-155-million-as-it-leads-the-next-generation-of-pharmacy-benefits-302888382.html"
+    ]
+  },
+  {
+    "target": "Island",
+    "target_type": "private",
+    "sector": "cybersecurity",
+    "allocators": [
+      "Sequoia",
+      "Coatue"
+    ],
+    "last_event": "2026-09-24",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.island.io/press/island-announces-400-million-series-f-bringing-valuation-to-6-4-billion"
+    ]
+  },
+  {
+    "target": "HiddenLayer",
+    "target_type": "private",
+    "sector": "cybersecurity",
+    "allocators": [
+      "Microsoft"
+    ],
+    "last_event": "2026-09-02",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.hiddenlayer.com/news/hiddenlayer-100m-series-b-ai-security"
+    ]
+  }
+]

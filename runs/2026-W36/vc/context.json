@@ -1,0 +1,437 @@
+{
+  "week": "2026-W36",
+  "agent": "vc",
+  "feedback_from_runs": [
+    "2026-W33",
+    "2026-W34",
+    "2026-W35"
+  ],
+  "how_to_use": "1) WHAT YOU ALREADY HAVE \u2014 search FORWARD from each entity's last_event_date; don't re-find old deals. Use the deterministic EDGAR path when cik is present (agents/CONTEXT.md \u2192 Tools) and run `engine.edgar exists` before writing a row. Aliases are the SAME entity \u2014 never file one as new. stale_candidates are existing rows needing a Tier-1 confirm, not new deals to re-file. 2) WHAT WORKED \u2014 check `check_first` sources before searching broadly. 3) WHAT YOU GOT WRONG \u2014 these are real rejects from recent runs; don't repeat them.",
+  "what_you_already_have": {
+    "entities": [
+      {
+        "allocator": "Altimeter",
+        "class": "vc",
+        "tier": "watch",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-19",
+        "events_on_file": 10,
+        "sectors_active": [
+          "ai-applications",
+          "defense-tech",
+          "neocloud",
+          "power-energy"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": null,
+        "ticker": null,
+        "edgar_path": "search",
+        "recent_targets": [
+          "Castelion",
+          "Thrive Holdings Inc",
+          "Thrive Holdings",
+          "Hadrian",
+          "Volta AI Infra Holdings",
+          "Volta Infra Holdings"
+        ]
+      },
+      {
+        "allocator": "Andreessen Horowitz",
+        "class": "vc",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-19",
+        "events_on_file": 21,
+        "sectors_active": [
+          "ai-applications",
+          "ai-data",
+          "cybersecurity",
+          "datacenters",
+          "defense-tech",
+          "neocloud",
+          "power-energy",
+          "robotics",
+          "semiconductors"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "a16z",
+          "a16z (andreessen horowitz)",
+          "andreessen horowitz (a16z)"
+        ],
+        "cik": null,
+        "ticker": null,
+        "edgar_path": "search",
+        "recent_targets": [
+          "Rillet",
+          "Castelion",
+          "Etched",
+          "Vals AI",
+          "Databricks",
+          "Whatnot"
+        ]
+      },
+      {
+        "allocator": "Coatue",
+        "class": "vc",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-13",
+        "events_on_file": 10,
+        "sectors_active": [
+          "ai-applications",
+          "ai-data",
+          "cybersecurity",
+          "neocloud",
+          "power-energy"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": null,
+        "ticker": null,
+        "edgar_path": "search",
+        "recent_targets": [
+          "Databricks",
+          "Form Energy",
+          "Corma",
+          "Firmus",
+          "Base Power",
+          "Coatue retail fund"
+        ]
+      },
+      {
+        "allocator": "Founders Fund",
+        "class": "vc",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-19",
+        "events_on_file": 5,
+        "sectors_active": [
+          "ai-applications",
+          "defense-tech"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": null,
+        "ticker": null,
+        "edgar_path": "search",
+        "recent_targets": [
+          "Network Bio",
+          "Hadrian",
+          "P-1 AI",
+          "Senra Systems",
+          "State Affairs"
+        ]
+      },
+      {
+        "allocator": "Greenoaks",
+        "class": "vc",
+        "tier": "watch",
+        "country": null,
+        "network": null,
+        "last_event_date": "2026-07-14",
+        "events_on_file": 2,
+        "sectors_active": [
+          "ai-applications"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": null,
+        "ticker": null,
+        "edgar_path": "search",
+        "recent_targets": [
+          "Greenoaks Prime Radiant Founders Offshore LP",
+          "Greenoaks Prime Radiant Founders LP"
+        ]
+      },
+      {
+        "allocator": "Khosla Ventures",
+        "class": "vc",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-19",
+        "events_on_file": 9,
+        "sectors_active": [
+          "ai-applications",
+          "ai-labs",
+          "cybersecurity",
+          "defense-tech",
+          "robotics"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": null,
+        "ticker": null,
+        "edgar_path": "search",
+        "recent_targets": [
+          "Veeda AI",
+          "Corma",
+          "Mariana Minerals",
+          "Ellis",
+          "Khosla Ventures (new fund family, unnamed)",
+          "Khosla Ventures 2026 fund family"
+        ]
+      },
+      {
+        "allocator": "Sequoia",
+        "class": "vc",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-19",
+        "events_on_file": 14,
+        "sectors_active": [
+          "ai-applications",
+          "ai-labs",
+          "cybersecurity",
+          "defense-tech",
+          "nuclear",
+          "power-energy",
+          "semiconductors"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": null,
+        "ticker": null,
+        "edgar_path": "search",
+        "recent_targets": [
+          "Rillet",
+          "Etched",
+          "Form Energy",
+          "Form Energy",
+          "Neros Technologies",
+          "Corma"
+        ]
+      },
+      {
+        "allocator": "Thrive Capital",
+        "class": "vc",
+        "tier": "key",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-14",
+        "events_on_file": 6,
+        "sectors_active": [
+          "ai-applications",
+          "ai-data",
+          "cloud-hyperscale",
+          "power-energy"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": null,
+        "ticker": null,
+        "edgar_path": "search",
+        "recent_targets": [
+          "Amazon.com Inc.",
+          "Databricks",
+          "Ambrook",
+          "Ambrook",
+          "Base Power",
+          "Chai Discovery"
+        ]
+      }
+    ],
+    "stale_candidates": [
+      {
+        "allocator": "Altimeter",
+        "target": "Thrive Holdings",
+        "event_type": "minority_stake",
+        "disclosed_date": "2026-07-06",
+        "source_tier": 3,
+        "source_url": "https://www.theinformation.com/articles/softbank-altimeter-d1-invest-thrive-holdings-2-billion-financing",
+        "why_still_candidate": "FILINGS SWEEP FOUND NOTHING - candidate stands. EDGAR full-text search for 'Thrive Holdings' over 2026-06-01..2026-08-07 returns 6 documents, all false positives: four Fidelity NPORT-P holdings reports and two Morgan Stanley Direct Lending 424B2s. An EDGAR company-name search for 'Thrive Holdings' r"
+      },
+      {
+        "allocator": "Coatue",
+        "target": "Databricks",
+        "event_type": "funding_round",
+        "disclosed_date": "2026-07-16",
+        "source_tier": 1,
+        "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001587468&type=D&dateb=&owner=include&count=40",
+        "why_still_candidate": "FILINGS SWEEP FOUND NOTHING - candidate stands. Databricks, Inc. is CIK 0001587468 and files its own Form Ds. Its full filing history was pulled from data.sec.gov: the most recent Form D filings are TWO dated 2025-12-31, then 2025-09-23 (x2) and 2025-01-02 (x2). There is NO 2026 Form D and no Form D"
+      },
+      {
+        "allocator": "Coatue",
+        "target": "Coatue retail fund",
+        "event_type": "fund_launch",
+        "disclosed_date": "2026-07-17",
+        "source_tier": 3,
+        "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002044519&type=&dateb=&owner=include&count=40",
+        "why_still_candidate": "FILINGS SWEEP FOUND THE VEHICLE BUT NOT THE 8BN - candidate stands. Coatue Innovative Strategies Fund (CIK 0002044519) is the registered retail-facing vehicle and is actively filing: 424B3 supplement 2026-07-08, SC TO-I tender offer 2026-06-16 with an amendment 2026-07-23, NPORT-P/A 2026-06-16, and "
+      },
+      {
+        "allocator": "Khosla Ventures",
+        "target": "Khosla Ventures 2026 fund family",
+        "event_type": "fund_launch",
+        "disclosed_date": "2026-07-23",
+        "source_tier": 3,
+        "source_url": "https://www.sec.gov/Archives/edgar/data/2074230/000207423025000001/primary_doc.xml",
+        "why_still_candidate": "FILINGS SWEEP PARTIALLY CONTRADICTS THE HEADLINE - candidate stands at tier 3. Enumerated all 34 'Khosla Ventures' EDGAR entities and pulled the fund-level Form Ds. The current vintage vehicles are: Khosla Ventures IX, L.P. (CIK 0002074230, Form D 2025-07-02, offering 1,950,000,000), Khosla Ventures"
+      },
+      {
+        "allocator": "Khosla Ventures",
+        "target": "Khosla Ventures (new fund family, unnamed)",
+        "event_type": "fund_launch",
+        "disclosed_date": "2026-07-23",
+        "source_tier": 3,
+        "source_url": "https://www.bloomberg.com/news/articles/2026-07-23/khosla-ventures-in-talks-to-raise-5-5-billion-in-new-funds",
+        "why_still_candidate": "Reported 'in talks' to raise up to $5.5B across three vehicles (~$1B seed, ~$2B early-stage, ~$2.5B opportunity fund) -- would be the firm's largest-ever raise, ~40% bigger than its ~$4B fund closed ~17 months earlier. NOT yet a closed/committed fund as of this run; single-origin Bloomberg report, n"
+      },
+      {
+        "allocator": "Founders Fund",
+        "target": "P-1 AI",
+        "event_type": "funding_round",
+        "disclosed_date": "2026-07-29",
+        "source_tier": 3,
+        "source_url": "https://finance.yahoo.com/technology/ai/articles/engineering-ai-startup-p-1-123500705.html",
+        "why_still_candidate": "FILINGS SWEEP FOUND NOTHING - candidate stands. EDGAR full-text search for 'P-1 AI' over 2026-06-01..2026-08-07 returns zero documents, and an EDGAR company-name search for 'P-1 AI' returns no filer at all. The hyphenated short name also makes the company hard to index, so absence here is weaker evi"
+      },
+      {
+        "allocator": "Sequoia",
+        "target": "Anthropic",
+        "event_type": "follow_on",
+        "disclosed_date": "2026-08-05",
+        "source_tier": 3,
+        "source_url": "https://www.bloomberg.com/news/articles/2026-08-05/sequoia-aims-10-billion-at-ai-reindustrialization",
+        "why_still_candidate": "NOT A NEW DISCRETE TRANSACTION - a Bloomberg profile of new co-stewards Alfred Lin/Pat Grady reports Sequoia's cumulative Anthropic commitment now totals ~$10B, called 'the single largest investment in Sequoia's 54-year history,' built from its Jan-2026 entry (breaking its prior no-compete-with-port"
+      }
+    ]
+  },
+  "what_worked": {
+    "check_first": [
+      "bloomberg.com",
+      "techcrunch.com",
+      "firmus.co",
+      "formenergy.com",
+      "fortune.com",
+      "cnbc.com",
+      "theinformation.com",
+      "13f.info"
+    ],
+    "detail": [
+      {
+        "source": "firmus.co",
+        "example_url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+        "tier": 1,
+        "hits": 2,
+        "checks": 2
+      },
+      {
+        "source": "formenergy.com",
+        "example_url": "https://formenergy.com/form-energy-secures-750m-in-series-g-financing/",
+        "tier": 1,
+        "hits": 2,
+        "checks": 2
+      },
+      {
+        "source": "fortune.com",
+        "example_url": "https://fortune.com/2026/08/10/exclusive-corma-raises-60-million-from-sequoia-for-ai-trained-to-defend-against-cyberattacks/",
+        "tier": 3,
+        "hits": 2,
+        "checks": 2
+      },
+      {
+        "source": "techcrunch.com",
+        "example_url": "https://techcrunch.com/2026/08/12/form-energy-raises-750m-to-build-more-100-hour-batteries-for-the-grid/",
+        "tier": 3,
+        "hits": 2,
+        "checks": 2
+      },
+      {
+        "source": "techcrunch.com",
+        "example_url": "https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/",
+        "tier": 3,
+        "hits": 2,
+        "checks": 2
+      },
+      {
+        "source": "bloomberg.com",
+        "example_url": "https://www.bloomberg.com/news/articles/2026-08-07/ai-data-center-group-firmus-draws-2-billion-from-coatue-nvidia",
+        "tier": 3,
+        "hits": 2,
+        "checks": 2
+      },
+      {
+        "source": "bloomberg.com",
+        "example_url": "https://www.bloomberg.com/news/articles/2026-08-13/databricks-raises-5-billion-at-a-190-billion-valuation",
+        "tier": 3,
+        "hits": 2,
+        "checks": 2
+      },
+      {
+        "source": "cnbc.com",
+        "example_url": "https://www.cnbc.com/2026/08/13/databricks-funding-round-190-billion-valuation.html",
+        "tier": 3,
+        "hits": 2,
+        "checks": 2
+      },
+      {
+        "source": "bloomberg.com",
+        "example_url": "https://www.bloomberg.com/news/articles/2026-07-23/khosla-ventures-in-talks-to-raise-5-5-billion-in-new-funds",
+        "tier": 3,
+        "hits": 2,
+        "checks": 3
+      },
+      {
+        "source": "theinformation.com",
+        "example_url": "https://www.theinformation.com/articles/softbank-altimeter-d1-invest-thrive-holdings-2-billion-financing",
+        "tier": 3,
+        "hits": 2,
+        "checks": 3
+      },
+      {
+        "source": "13f.info",
+        "example_url": "https://13f.info/manager/0001845943-thrive-capital-management-llc",
+        "tier": 2,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "betakit.com",
+        "example_url": "https://betakit.com/former-nvidia-lab-leader-sanja-fidler-launches-veeda-ai-to-tackle-world-models/",
+        "tier": 3,
+        "hits": 1,
+        "checks": 1
+      }
+    ]
+  },
+  "what_you_got_wrong": {
+    "this_class": [
+      {
+        "code": "W7",
+        "lesson": "a >=$1B fund/firm has no holdings collected.",
+        "occurrences": 11,
+        "examples": [
+          "Andreessen Horowitz: $5.6B fund/firm with no holdings collected",
+          "Coatue: $4.4B fund/firm with no holdings collected"
+        ]
+      },
+      {
+        "code": "W9",
+        "lesson": "see audit_report.md",
+        "occurrences": 1,
+        "examples": [
+          "Coatue: 16 of 250 holdings shipped \u2014 under the 25 floor; renders as 'top 16 of 250'"
+        ]
+      }
+    ],
+    "all_classes": [
+      {
+        "code": "W8",
+        "lesson": "a >=$1B investable target has no ai_posture tag.",
+        "occurrences": 31,
+        "examples": [
+          "Electronic Arts: $33.6B investable target with no ai_posture",
+          "OpenAI Group PBC: $21.3B investable target with no ai_posture"
+        ]
+      }
+    ]
+  }
+}

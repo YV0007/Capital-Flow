@@ -1,0 +1,218 @@
+[
+  {
+    "target": "Akita AI data center (developer: BitGrid / S2)",
+    "description": "Planned ~500MW AI data centre in Akita, northern Japan, that would be the country's largest. Developed by US startup BitGrid and Akita-based IT firm S2. Mubadala (via its MGX platform) is in talks to invest up to ~$6.3B of a reported ~$12.6B total project cost. Not finalized; Mubadala has declined to comment.",
+    "website": null,
+    "read_more": {"label": "Cryptobriefing", "url": "https://cryptobriefing.com/uae-mubadala-ai-data-center-japan/"},
+    "sources": [
+      "https://cryptobriefing.com/uae-mubadala-ai-data-center-japan/",
+      "https://tbreak.com/mubadala-akita-ai-data-centre/",
+      "https://www.kucoin.com/news/flash/uae-s-mubadala-considers-6-3b-ai-data-center-in-japan"
+    ],
+    "as_of": "2026-10-26"
+  },
+  {
+    "target": "Stack Infrastructure",
+    "description": "Global data-center operator with ~4GW live/under development and 6GW planned, formed in 2019 from Infomart and T5 assets by IPI Partners; IPI was acquired by Blue Owl Capital in 2024. Pursuing multibillion-dollar debt deals (Australia, Melbourne) to fund AI-driven buildout; sold its European colocation business to Apollo-managed funds in 2025.",
+    "website": "https://stackinfra.com",
+    "read_more": {"label": "Bloomberg Law", "url": "https://news.bloomberglaw.com/mergers-and-acquisitions/blue-owls-stack-seeks-5-9-billion-loan-extending-ai-debt-boom"},
+    "sources": [
+      "https://news.bloomberglaw.com/mergers-and-acquisitions/blue-owls-stack-seeks-5-9-billion-loan-extending-ai-debt-boom",
+      "https://www.datacenterdynamics.com/en/news/stack-infrastructure-seeks-au13bn-for-australia-data-center-buildout/",
+      "https://www.apollo.com/institutional/insights-news/pressreleases/2025/04/apollo-funds-to-acquire-pan-european-highly-interconnected-colocation-data-center-business-from-stack-infrastructure-a-portfolio-company-of-blue-owl-digital-infrastructure-3069871"
+    ],
+    "as_of": "2026-10-26"
+  },
+  {
+    "target": "HUMAIN data centers (Riyadh)",
+    "description": "Data-center buildout by HUMAIN, the Saudi PIF-owned AI company (launched May 2025, chaired by Crown Prince Mohammed bin Salman) building the full AI stack. Unconfirmed sources report a ~$5.3B Goldman Sachs-arranged financing to fund ~2GW of Riyadh-area data centers and GPUs, part of a 2034 capacity target; HUMAIN and Goldman have not confirmed terms.",
+    "website": "https://www.humain.ai",
+    "read_more": {"label": "Reuters via Yahoo Finance", "url": "https://finance.yahoo.com/sectors/technology/articles/saudi-arabias-humain-picks-goldman-141120422.html"},
+    "sources": [
+      "https://finance.yahoo.com/sectors/technology/articles/saudi-arabias-humain-picks-goldman-141120422.html",
+      "https://sharikatmubasher.com/news/article/21552026/goldman-sachs-to-arrange-53bn-financing-for-humains-data-centers?lang=en",
+      "https://en.wikipedia.org/wiki/Humain"
+    ],
+    "as_of": "2026-10-26"
+  },
+  {
+    "target": "NextEra Energy (Duane Arnold Energy Center restart)",
+    "description": "NextEra Energy's 615MW Iowa nuclear plant, shut since 2020, is set for restart by Q1 2029 pending NRC licensing. The US DOE closed an up-to-$1.9B loan (announced Sept 8, 2026) to fund the restart; Google separately signed a 25-year agreement to buy the plant's power.",
+    "website": "https://www.nexteraenergy.com",
+    "read_more": {"label": "energy.gov", "url": "https://www.energy.gov/index.php/articles/energy-department-closes-19-billion-loan-restart-duane-arnold-nuclear-plant"},
+    "sources": [
+      "https://www.energy.gov/index.php/articles/energy-department-closes-19-billion-loan-restart-duane-arnold-nuclear-plant",
+      "https://world-nuclear-news.org/articles/us-department-of-energy-closes-loan-for-duane-arnold-restart",
+      "https://www.bnnbloomberg.ca/business/international/2026/09/08/nextera-secures-up-to-19b-us-loan-to-restart-duane-arnold-nuclear-center/"
+    ],
+    "as_of": "2026-10-26"
+  },
+  {
+    "target": "U.S. scientific research institutions / DOE Genesis Mission",
+    "description": "DOE's Genesis Mission (created by executive order, directed by Under Secretary for Science Darío Gil) links national labs, universities and industry on AI-for-science; 278 projects were selected in July 2026. NVIDIA pledged $1B over five years (Oct 8, 2026) toward university research, US quantum computing, and government-research cloud providers under the mission, with no public breakdown by institution.",
+    "website": "https://www.energy.gov/undersecretaryforscience/genesis-mission/genesis-mission",
+    "read_more": {"label": "NVIDIA", "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Commits-1-Billion-to-Advance-US-Science-Over-the-Next-Five-Years/default.aspx"},
+    "sources": [
+      "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Commits-1-Billion-to-Advance-US-Science-Over-the-Next-Five-Years/default.aspx",
+      "https://thequantuminsider.com/2026/10/08/nvidia-commits-1-billion-advance-us-science-next-five-years/",
+      "https://www.energy.gov/undersecretaryforscience/genesis-mission/genesis-mission"
+    ],
+    "as_of": "2026-10-26"
+  },
+  {
+    "target": "Grand Ming Group Holdings (iTech Tower 3.1 & 3.2, Fanling, Hong Kong -- via subsidiaries Regal Development Ltd & Golden Ford Ltd)",
+    "description": "Hong Kong-listed (HKEX:1271) construction/property group. Its subsidiaries Regal Development and Golden Ford agreed to sell the iTech Tower 3.1 & 3.2 data-center project in Fanling (~185,000 sq ft, ~1,000 racks) to Amazon Data Services Hong Kong for a minimum HK$2.18B (~$277.9M, up to ~$311.7M), after earlier talks with Bain Capital and Actis lapsed.",
+    "website": "https://www.grandming.com.hk",
+    "read_more": {"label": "DataCenterDynamics", "url": "https://datacenterdynamics.com/en/news/amazon-to-acquire-two-data-centers-in-hong-kong"},
+    "sources": [
+      "https://datacenterdynamics.com/en/news/amazon-to-acquire-two-data-centers-in-hong-kong",
+      "https://www.mingtiandi.com/real-estate/data-centres/bain-capital-in-talks-to-buy-grand-ming-hong-kong-data-centres/",
+      "https://thetechcapital.com/amazon-agrees-312-million-deal-for-two-hong-kong-data-centres/"
+    ],
+    "as_of": "2026-10-26"
+  },
+  {
+    "target": "UK AI safety research (BOLD at Oxford; SOFAIR at UCL; Imperial College London)",
+    "description": "NVIDIA's five-year, $250M compute-access commitment (announced Oct 14, 2026, delivered via UK-based NVIDIA Cloud Partners) to UK AI safety and security research. Supports Oxford-led BOLD (human-AI collaboration), UCL's SOFAIR (with Cambridge, Oxford and Edinburgh), and Imperial College's safety-engineering/robotics work. This is a compute donation, not cash; specific allocations are still to be announced.",
+    "website": null,
+    "read_more": {"label": "UCL News", "url": "https://www.ucl.ac.uk/news/2026/oct/nvidia-provides-sofair-lab-computing-resources-advance-ai-safety"},
+    "sources": [
+      "https://www.ucl.ac.uk/news/2026/oct/nvidia-provides-sofair-lab-computing-resources-advance-ai-safety",
+      "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Commits-250-Million-to-Advance-UK-Agentic-Safety-and-Security-Research-Over-the-Next-Five-Years/default.aspx",
+      "https://thenextweb.com/news/nvidia-250m-uk-ai-safety"
+    ],
+    "as_of": "2026-10-26"
+  },
+  {
+    "target": "Oklo / X-Energy (Project Prometheus / Genesis Mission)",
+    "description": "Advanced-nuclear developers named as partners in Project Prometheus, a DOE Genesis Mission initiative led by Idaho National Laboratory to apply AI to reactor design, licensing and operations. X-Energy is a Tier 1 partner contributing $10M in private capital and its Xe-100 small modular reactor design; the project's federal Phase II award is $60M, with ~$200M in industry cost-share cited by INL.",
+    "website": null,
+    "read_more": {"label": "Idaho National Laboratory", "url": "https://inl.gov/?p=146638"},
+    "sources": [
+      "https://inl.gov/?p=146638",
+      "https://aiweekly.co/alerts/oklo-x-energy-tapped-for-200m-us-nuclear-ai-program",
+      "https://www.datacenterdynamics.com/en/news/idaho-national-laboratory-nvidia-aws-x-energy-launch-prometheus-project-under-genesis-mission/"
+    ],
+    "as_of": "2026-10-26"
+  },
+  {
+    "target": "Digi Power X",
+    "description": "Nasdaq-listed (DGXX) AI data-center and crypto-mining company building a 40MW AI data center in Columbiana, Alabama, fully contracted to Cerebras. Received a $200M debt-financing commitment letter (Oct 13, 2026; Goldman Sachs syndicating) to complete the project — a project-SPV loan still subject to lender diligence and definitive documentation, not yet closed.",
+    "website": "https://digipowerx.com",
+    "read_more": {"label": "DataCenterDynamics", "url": "https://datacenterdynamics.com/en/news/digi-power-x-secures-200m-in-debt-financing-for-alabama-data-center-project"},
+    "sources": [
+      "https://datacenterdynamics.com/en/news/digi-power-x-secures-200m-in-debt-financing-for-alabama-data-center-project",
+      "https://www.sec.gov/Archives/edgar/data/0001854368/000121390026089450/ea030173001ex99-1.htm",
+      "https://via.tt.se/pressmeddelande/4594325/digi-power-x-announces-dollar200-million-debt-financing-commitment-to-support-completion-of-alabama-ai-data-center-and-provides-expansion-update?lang=en"
+    ],
+    "as_of": "2026-10-26"
+  },
+  {
+    "target": "Idaho National Laboratory -- Project Prometheus (partners: NVIDIA, AWS, X-Energy)",
+    "description": "DOE national lab leading Project Prometheus, the largest Phase II award ($60M over three years) under the Genesis Mission, aligning 32 labs, universities and companies — including NVIDIA, AWS, X-Energy, Oklo and other SMR developers — to apply AI to nuclear reactor design, licensing, manufacturing and semi-autonomous operation.",
+    "website": "https://inl.gov",
+    "read_more": {"label": "DataCenterDynamics", "url": "https://www.datacenterdynamics.com/en/news/idaho-national-laboratory-nvidia-aws-x-energy-launch-prometheus-project-under-genesis-mission/"},
+    "sources": [
+      "https://www.datacenterdynamics.com/en/news/idaho-national-laboratory-nvidia-aws-x-energy-launch-prometheus-project-under-genesis-mission/",
+      "https://inl.gov/?p=146638",
+      "https://x-energy.com/news/x-energy-joins-project-prometheus-for-ai-accelerated-advanced-nuclear-deployment/"
+    ],
+    "as_of": "2026-10-26"
+  },
+  {
+    "target": "doxxnet",
+    "description": "doxx.net, a privacy-focused networking startup founded by Barrett Lyon (previously Prolexic, BitGravity, Defense.net), raised a Series A — reported as $38M by most outlets, $24.6M per one source — led by a16z (Oct 2026), to launch its Agentic Defined Networking platform for private, policy-controlled connectivity for people and AI agents.",
+    "website": "https://doxx.net",
+    "read_more": {"label": "a16z", "url": "https://a16z.com/announcement/investing-in-doxxnet/"},
+    "sources": [
+      "https://a16z.com/announcement/investing-in-doxxnet/",
+      "https://runtimewire.com/article/barrett-lyon-doxxnet-38m-agentic-network",
+      "https://pulse2.com/doxx-net-raises-38-million-series-a-led-by-andreessen-horowitz/"
+    ],
+    "as_of": "2026-10-26"
+  },
+  {
+    "target": "Stack Infrastructure (MEL02 campus, Melbourne)",
+    "description": "Melbourne data-center campus (reported ~252MW, MEL02) operated by Blue Owl-owned Stack Infrastructure. Stack mandated banks (Oct 15, 2026) for a five-year A$8.6B (~$6B) syndicated loan, one of the largest reported AI data-center debt deals; sources disagree on whether proceeds target MEL02 or MEL01, and the financing is not yet closed.",
+    "website": "https://stackinfra.com",
+    "read_more": {"label": "Runtimewire", "url": "https://runtimewire.com/article/stack-8-6-billion-melbourne-data-center-loan"},
+    "sources": [
+      "https://runtimewire.com/article/stack-8-6-billion-melbourne-data-center-loan",
+      "https://news.bloomberglaw.com/mergers-and-acquisitions/blue-owls-stack-seeks-5-9-billion-loan-extending-ai-debt-boom",
+      "https://baxtel.com/campus/stack-truganina-mel02-campus"
+    ],
+    "as_of": "2026-10-26"
+  },
+  {
+    "target": "Preference Model",
+    "description": "San Francisco AI-research startup (roughly 14-17 people) building reinforcement-learning environments resistant to reward hacking, including an open-source framework called Karotte, for frontier AI labs. Emerged from stealth Oct 7, 2026 with a $16M seed round led by a16z; co-investor lists vary by source (SignalFire, South Park Commons, Scale Angels, or Manifund, MoE Capital), plus angels including Fei-Fei Li.",
+    "website": null,
+    "read_more": {"label": "Dealroom", "url": "https://dealroom.co/news/160734-a16z-leads-16m-seed-for-ai-data-startup-preference-model/"},
+    "sources": [
+      "https://dealroom.co/news/160734-a16z-leads-16m-seed-for-ai-data-startup-preference-model/",
+      "https://www.wsgr.com/print/v2/content/49078022/Wilson-Sonsini-Advises-Preference-Model-on-$16-Million-Seed-Funding-as-it-Emerges-from-Stealth.pdf",
+      "https://angelinvestorsnetwork.com/startups/preference-model-raises-16m-seed"
+    ],
+    "as_of": "2026-10-26"
+  },
+  {
+    "target": "Isomorphic Labs",
+    "description": "Alphabet-spun-out AI drug-discovery company developing the IsoDDE drug design engine, targeting first clinical trials by end of 2026. Closed a $2.1B Series B (May 12, 2026) led by Thrive Capital, with Alphabet, GV, MGX, Temasek, CapitalG and the UK Sovereign AI Fund participating; previously raised $600M in its first round, also led by Thrive.",
+    "website": "https://www.isomorphiclabs.com",
+    "read_more": {"label": "Isomorphic Labs", "url": "https://www.isomorphiclabs.com/press/isomorphic-labs-funding"},
+    "sources": [
+      "https://www.isomorphiclabs.com/press/isomorphic-labs-funding",
+      "https://news.bloomberglaw.com/private-equity/googles-isomorphic-labs-to-raise-over-2-billion-in-new-funding",
+      "https://www.aap.com.au/aapreleases/cision20260512ae57415/"
+    ],
+    "as_of": "2026-10-26"
+  },
+  {
+    "target": "Eka Robotics",
+    "description": "Cambridge, MA robotics startup co-founded by MIT's Pulkit Agrawal and Tuomas Haarnoja, building a 'Vision-Force-Action' model for dexterous manipulation, claiming superhuman pick rates on lab tasks. Raised a $150M Series A at a $1.45B valuation (Oct 20, 2026), led by a16z and F-Prime (one source names Fine Structure Ventures instead), with Samsung Next, Bison Ventures and others participating.",
+    "website": null,
+    "read_more": {"label": "TechFundingNews", "url": "https://techfundingnews.com/eka-robotics-raises-150m-at-1-45b-valuation-led-by-a16z-and-f-prime-for-dexterous-robots/"},
+    "sources": [
+      "https://techfundingnews.com/eka-robotics-raises-150m-at-1-45b-valuation-led-by-a16z-and-f-prime-for-dexterous-robots/",
+      "https://aiweekly.co/alerts/eka-robotics-raises-150m-series-a-at-145b-for-vision-force-action-robot-model",
+      "https://digg.com/tech/dza7kc87"
+    ],
+    "as_of": "2026-10-26"
+  },
+  {
+    "target": "DayOne (data center operator)",
+    "description": "Asia-Pacific data-center operator spun out of GDS Holdings (independent since Jan 2025; GDS retains ~35.6%), with ~480MW live/building and ~590MW planned across Hong Kong, Singapore, Malaysia, Indonesia and Japan. Abu Dhabi's MGX explored a multibillion-dollar acquisition (reported June 2026), but DayOne is also pursuing a US IPO targeting a ~$20B valuation; no deal confirmed.",
+    "website": null,
+    "read_more": {"label": "DealStreetAsia", "url": "https://www.dealstreetasia.com/stories/abu-dhabi-mgx-dayone-486230/"},
+    "sources": [
+      "https://www.dealstreetasia.com/stories/abu-dhabi-mgx-dayone-486230/",
+      "https://www.datacenterdynamics.com/en/news/mgx-could-purchase-apac-data-center-operator-dayone-report/",
+      "https://www.datacentermap.com/c/dayone/"
+    ],
+    "as_of": "2026-10-26"
+  },
+  {
+    "target": "Conway Research",
+    "description": "AI startup founded by Thiel Fellow Sigil Wen, maker of Underdog, an on-device personal-AI assistant (Mac/Windows invite-only beta) designed to keep user data off third-party AI clouds. a16z led its first funding round (Oct 2, 2026, undisclosed size), with Khosla Ventures, Hummingbird and the Anthropic/Menlo Anthology Fund also participating.",
+    "website": null,
+    "read_more": {"label": "a16z", "url": "https://a16z.com/announcement/investing-in-conway-the-creator-of-underdog/"},
+    "sources": [
+      "https://a16z.com/announcement/investing-in-conway-the-creator-of-underdog/",
+      "https://runtimewire.com/article/conway-underdog-on-device-ai-payment-fees",
+      "https://www.securities.io/andreessen-horowitz-leads-conway-researchs-first-funding-round/"
+    ],
+    "as_of": "2026-10-26"
+  },
+  {
+    "target": "Armadin",
+    "description": "AI-driven autonomous red-team/offensive-security startup founded Sept 2025 by Mandiant founder Kevin Mandia. Raised a $255.5M Series B (Oct 1, 2026) co-led by a16z and Accel at a valuation above $2.5B, following ~$190M in earlier seed/Series A funding (also led by Accel); total funding is roughly $445M. Serves enterprise and government customers.",
+    "website": "https://www.armadin.com",
+    "read_more": {"label": "SecurityWeek", "url": "https://www.securityweek.com/kevin-mandias-armadin-raises-255-million-at-2-5-billion-valuation/amp/"},
+    "sources": [
+      "https://www.securityweek.com/kevin-mandias-armadin-raises-255-million-at-2-5-billion-valuation/amp/",
+      "https://techfundingnews.com/mandiant-founders-ai-hacking-startup-armadin-raises-255-5m-from-a16z-and-accel-at-a-2-5b-valuation/",
+      "https://techcrunch.com/2026/03/10/mandiants-founder-just-raised-190m-for-his-autonomous-ai-agent-security-startup/"
+    ],
+    "as_of": "2026-10-26"
+  }
+]

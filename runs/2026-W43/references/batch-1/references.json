@@ -1,0 +1,158 @@
+[
+  {
+    "target": "DigitalBridge Group, Inc.",
+    "description": "Boca Raton-based global alternative asset manager focused on digital infrastructure (data centers, cell towers, fiber, small cells, edge), managing roughly $115B for LPs and shareholders. Formerly NYSE-listed (DBRG), it is being acquired and taken private by SoftBank Group Corp. at $16.00/share, with the deal closing and shares delisting in late September 2026.",
+    "website": "https://www.digitalbridge.com",
+    "read_more": {"label": "BusinessWire", "url": "https://secure.businesswire.com/news/home/20260921670540/en/DigitalBridge-Receives-All-Regulatory-Approvals-Required-to-Complete-Acquisition-by-SoftBank-Group-Corp."},
+    "sources": [
+      "https://secure.businesswire.com/news/home/20260921670540/en/DigitalBridge-Receives-All-Regulatory-Approvals-Required-to-Complete-Acquisition-by-SoftBank-Group-Corp.",
+      "https://www.digitalbridge.com/news/2026-02-25-digitalbridge-reports-fourth-quarter-and-full-year-2025-financial-results",
+      "https://dealroom.co/news/155391-softbank-clears-final-hurdles-to-buy-digitalbridge-at-16-per-share/"
+    ],
+    "as_of": "2026-10-19"
+  },
+  {
+    "target": "HUMAIN",
+    "description": "Riyadh-based AI company wholly owned by Saudi Arabia's Public Investment Fund, launched May 2025 and chaired by the Crown Prince. Led by CEO Tareq Amin, it is building a full AI stack — data centers, cloud, models and applications — including a $10B infrastructure push with AMD, and is scaling its data-center buildout toward a self-funding model by 2027.",
+    "website": "https://www.humain.ai",
+    "read_more": {"label": "PIF (Public Investment Fund)", "url": "https://www.pif.gov.sa/en/our-investments/our-portfolio/humain/"},
+    "sources": [
+      "https://www.pif.gov.sa/en/our-investments/our-portfolio/humain/",
+      "https://enterpriseam.com/ksa/2026/10/01/humain-scales-up-2027-data-center-target-as-it-aims-for-a-self-funding-buildout/",
+      "https://english.alarabiya.net/News/saudi-arabia/2025/05/12/saudi-crown-prince-launches-humain-to-position-saudi-arabia-as-a-global-ai-leader"
+    ],
+    "as_of": "2026-10-19"
+  },
+  {
+    "target": "U.S. universities / quantum computing & Genesis Mission research initiatives",
+    "description": "Not a company — a five-year, $1B research-funding commitment NVIDIA announced October 8, 2026 at a Washington, D.C. science event, to support U.S. university research, quantum computing, and cloud access for government-serving science. It is tied to the Department of Energy's Genesis Mission, where NVIDIA also collaborates on several Phase II awards (fusion, accelerator design, microelectronics).",
+    "website": null,
+    "read_more": {"label": "TechRepublic", "url": "https://www.techrepublic.com/article/news-nvidia-1-billion-us-science-ai-quantum-research/"},
+    "sources": [
+      "https://www.morningstar.com/news/dow-jones/202610086073/nvidia-to-invest-1-billion-in-us-science-over-next-5-years",
+      "https://www.techrepublic.com/article/news-nvidia-1-billion-us-science-ai-quantum-research/",
+      "https://quantumcomputingreport.com/nvidia-commits-1-billion-over-five-years-to-accelerate-u-s-scientific-computing-and-quantum-infrastructure/"
+    ],
+    "as_of": "2026-10-19"
+  },
+  {
+    "target": "UK agentic AI safety research (Oxford BOLD / UCL SOFAIR / Imperial College)",
+    "description": "Not a company — a five-year, roughly $250M (~$50M/year) NVIDIA compute commitment announced October 14, 2026 to UK agentic AI safety and security research. Most goes to the wider UK research community, with portions to Oxford-led BOLD, UCL-led SOFAIR, and Imperial College London, covering agentic model safety, robotics safety and secure-agent benchmarking.",
+    "website": null,
+    "read_more": {"label": "HPCwire / AIwire", "url": "https://www.hpcwire.com/aiwire/2026/10/14/nvidia-commits-250m-to-advance-uk-agentic-safety-and-security-research/"},
+    "sources": [
+      "https://www.hpcwire.com/aiwire/2026/10/14/nvidia-commits-250m-to-advance-uk-agentic-safety-and-security-research/",
+      "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Commits-250-Million-to-Advance-UK-Agentic-Safety-and-Security-Research-Over-the-Next-Five-Years/default.aspx",
+      "https://thenextweb.com/news/nvidia-250m-uk-ai-safety"
+    ],
+    "as_of": "2026-10-19"
+  },
+  {
+    "target": "TBD -- additional European AI companies (unnamed)",
+    "description": "Placeholder, not a named entity: during his October 13, 2026 Paris trip (where NVIDIA took stakes in Doctolib, Genesis AI, Pigment and Entalpic), Jensen Huang signaled further European AI investment to come, with reporting pointing to an additional ~$2B in European AI deals expected within the following week. No specific company has been named as of this writing.",
+    "website": null,
+    "read_more": {"label": "Sifted", "url": "https://sifted.eu/articles/nvidia-announces-billion-dollar-investments-in-european-tech/"},
+    "sources": [
+      "https://www.azernews.az/region/265516.html",
+      "https://sifted.eu/articles/nvidia-announces-billion-dollar-investments-in-european-tech/",
+      "https://letsdatascience.com/news/nvidia-plans-2-billion-european-ai-investment-push-ac1b72e4"
+    ],
+    "as_of": "2026-10-19"
+  },
+  {
+    "target": "SharonAI Holdings Inc.",
+    "description": "Nasdaq-listed (SHAZ) neocloud/AI-infrastructure company, formerly Roth CH Holding, operating GPU cloud compute platforms including an Australian/APAC-focused subsidiary. On October 1, 2026 it secured a $356M senior-secured, GPU-backed debt facility (via an SPV, 9.95% fixed rate) from a group including Goldman Sachs, to fund deployment of over 68,000 NVIDIA GPUs by mid-2027.",
+    "website": "http://www.sharonai.com",
+    "read_more": {"label": "Dealroom", "url": "https://dealroom.co/news/158280-sharon-ai-secures-356m-gpu-backed-debt-facility-led-by-goldman-sachs/"},
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/0002068385/000149315226045368/ex99-1.htm",
+      "https://dealroom.co/news/158280-sharon-ai-secures-356m-gpu-backed-debt-facility-led-by-goldman-sachs/",
+      "https://fourweekmba.com/ai-sharonai-356m-gpu-backed-debt-facility/"
+    ],
+    "as_of": "2026-10-19"
+  },
+  {
+    "target": "Pigment",
+    "description": "Paris-based enterprise SaaS company (founded 2019) providing an AI-powered business-planning and performance-management platform for FP&A, sales, workforce and supply-chain planning. NVIDIA took an undisclosed minority stake, announced by Jensen Huang in Paris on October 13, 2026 alongside stakes in Doctolib, Genesis AI and Entalpic.",
+    "website": "https://www.pigment.com",
+    "read_more": {"label": "The Star (Les Echos)", "url": "https://www.thestar.com.my/tech/tech-news/2026/10/14/nvidia-buys-stakes-in-four-french-tech-startups-les-echos-reports"},
+    "sources": [
+      "https://www.thestar.com.my/tech/tech-news/2026/10/14/nvidia-buys-stakes-in-four-french-tech-startups-les-echos-reports",
+      "https://www.pigment.com/ai-info-about-pigment",
+      "https://www.trendingtopics.eu/nvidia-takes-stakes-in-doctolib-pigment-genesis-ai-and-entalpic/"
+    ],
+    "as_of": "2026-10-19"
+  },
+  {
+    "target": "Genesis AI",
+    "description": "Paris/San Francisco Bay Area robot-foundation-model startup founded December 2024 by Zhou Xian (CMU robotics) and Théophile Gervet (ex-Mistral), building a universal robotics foundation model (GENE) and the Genesis simulation platform. Launched from stealth in July 2025 with a $105M seed co-led by Eclipse and Khosla Ventures; NVIDIA took an undisclosed minority stake announced in Paris on October 13, 2026.",
+    "website": "https://www.genesis-ai.company",
+    "read_more": {"label": "AIbusiness", "url": "https://aibusiness.com/foundation-models/robotics-startup-raises-105m-to-build-ai-model-for-robots"},
+    "sources": [
+      "https://www.thestar.com.my/tech/tech-news/2026/10/14/nvidia-buys-stakes-in-four-french-tech-startups-les-echos-reports",
+      "https://aibusiness.com/foundation-models/robotics-startup-raises-105m-to-build-ai-model-for-robots",
+      "https://cryptobriefing.com/nvidia-stakes-genesis-ai-pigment-entalpic/"
+    ],
+    "as_of": "2026-10-19"
+  },
+  {
+    "target": "Entalpic",
+    "description": "Paris-based startup (founded 2024 by Mila alumni Alexandre Duval, Victor Schmidt and ex-Owkin's Mathieu Galtier) applying generative AI — graph neural networks, active learning and LLMs — to discover materials and catalysts for decarbonizing chemical processes (batteries, carbon capture, green hydrogen). Raised an €8.5M seed in 2024 (Breega, Cathay Innovation, Felicis); NVIDIA took an undisclosed minority stake announced in Paris on October 13, 2026.",
+    "website": "https://entalpic.ai",
+    "read_more": {"label": "Les Echos via linfodurable.fr", "url": "https://www.linfodurable.fr/le-geant-americain-nvidia-investit-dans-doctolib-et-trois-start-francaises-dia-59353"},
+    "sources": [
+      "https://www.thestar.com.my/tech/tech-news/2026/10/14/nvidia-buys-stakes-in-four-french-tech-startups-les-echos-reports",
+      "https://www.linfodurable.fr/le-geant-americain-nvidia-investit-dans-doctolib-et-trois-start-francaises-dia-59353",
+      "https://www.cathaycapital.com/entalpic-raises-e8-5-million-to-pioneer-ai-solutions-for-decarbonizing-industrial-chemistry/"
+    ],
+    "as_of": "2026-10-19"
+  },
+  {
+    "target": "Doctolib",
+    "description": "French healthtech unicorn running Europe's largest healthcare-booking platform, used by ~520,000 practitioners and ~90M patients across five countries, last valued at €3.6B. NVIDIA took an undisclosed minority stake (no board seat) announced October 13, 2026 in Paris, to help fund in-house AI models and assistants for patients and doctors.",
+    "website": "https://www.doctolib.fr",
+    "read_more": {"label": "The Sun / AFP", "url": "https://thesun.my/news/nvidia-says-to-invest-in-french-medical-website/"},
+    "sources": [
+      "https://www.thestar.com.my/tech/tech-news/2026/10/14/nvidia-buys-stakes-in-four-french-tech-startups-les-echos-reports",
+      "https://thesun.my/news/nvidia-says-to-invest-in-french-medical-website/",
+      "https://next.ink/261549/nvidia-entre-au-capital-de-doctolib-pour-accelerer-dans-lia-en-sante/"
+    ],
+    "as_of": "2026-10-19"
+  },
+  {
+    "target": "Commonwealth Fusion Systems",
+    "description": "Devens, MA-based MIT spinout (founded 2018, CEO Bob Mumgaard) developing REBCO high-temperature-superconducting magnet fusion technology, building the SPARC demonstration tokamak toward operations in 2027 en route to the commercial ARC plant. On October 8, 2026 it was selected to lead a DOE Genesis Mission Phase II award (part of $159M across 12 projects) to build an AI-enabled digital twin of SPARC with national labs, Google DeepMind and NVIDIA.",
+    "website": "https://cfs.energy",
+    "read_more": {"label": "Securities.io", "url": "https://www.securities.io/doe-selects-cfs-to-lead-ai-digital-twin-project-for-sparc/"},
+    "sources": [
+      "https://www.energy.gov/node/4860580",
+      "https://www.securities.io/doe-selects-cfs-to-lead-ai-digital-twin-project-for-sparc/",
+      "https://datacenterdynamics.com/en/news/us-doe-funds-12-projects-under-genesis-mission-cloud-providers-sign-up-to-support-effort"
+    ],
+    "as_of": "2026-10-19"
+  },
+  {
+    "target": "Arena",
+    "description": "AI model evaluation and leaderboard platform founded 2025 by UC Berkeley researchers, formerly known as LMArena, where users compare anonymized model outputs; it also sells a paid AI Evaluations product to labs and enterprises (reported >$100M annualized revenue). On October 8, 2026 it raised a $200M Series B co-led by Lightspeed Venture Partners and Khosla Ventures at a $3.1B valuation, with a16z, Felicis, Salesforce Ventures and others participating.",
+    "website": "https://arena.ai",
+    "read_more": {"label": "Angel Investors Network", "url": "https://angelinvestorsnetwork.com/venture-capital/arena-raises-200m-in-series-b-funding-at-3-1b-valuation"},
+    "sources": [
+      "https://techcrunch.com/?p=3175734",
+      "https://angelinvestorsnetwork.com/venture-capital/arena-raises-200m-in-series-b-funding-at-3-1b-valuation",
+      "https://arena.ai/about"
+    ],
+    "as_of": "2026-10-19"
+  },
+  {
+    "target": "Applied Compute",
+    "description": "San Francisco enterprise-AI startup (founded 2025, CEO Yash Patil, ex-OpenAI) that helps companies train and run customized open-source models on their own data via its Agent Cloud platform, rather than building a frontier model itself. In April 2026 it raised $80M led by Kleiner Perkins (with Elad Gil participating) at a $1.3B post-money valuation, bringing total funding to ~$160M; by August it was reportedly in talks for a new round near $3B.",
+    "website": null,
+    "read_more": {"label": "Kleiner Perkins", "url": "https://www.kleinerperkins.com/perspectives/applied-compute-closing-the-gap-between-frontier-ai-and-real-world-impact/"},
+    "sources": [
+      "https://seedtable.com/investors/elad-gil",
+      "https://www.kleinerperkins.com/perspectives/applied-compute-closing-the-gap-between-frontier-ai-and-real-world-impact/",
+      "https://dealroom.co/news/144691-applied-compute-in-talks-to-double-valuation-to-3b-on-open-source-demand/"
+    ],
+    "as_of": "2026-10-19"
+  }
+]

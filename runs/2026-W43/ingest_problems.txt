@@ -1,0 +1,2 @@
+alt-managers/candidate_events.csv:2 WARN sector 'project' not in canonical taxonomy
+alt-managers/candidate_events.csv:2 SKIP bad event_type 'hyperscale data center campus financing (Melbourne AU)'; bad source_tier 'candidate'; bad status '1'; bad target_type 'Melbourne)'; bad amount_usd 'project_finance'

@@ -1,0 +1,226 @@
+[
+  {
+    "target": "Hugging Face",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-09-02",
+    "capital_usd": 12900000000.0,
+    "deal_source_urls": [
+      "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/"
+    ]
+  },
+  {
+    "target": "ST Telemedia Global Data Centres (STT GDC)",
+    "target_type": "private",
+    "sector": "datacenters",
+    "allocators": [
+      "KKR"
+    ],
+    "last_event": "2026-09-03",
+    "capital_usd": 5100000000.0,
+    "deal_source_urls": [
+      "https://technode.global/2026/09/03/kkr-singtel-consortium-completes-takeover-of-singapores-stt-gdc-at-10-9b/"
+    ]
+  },
+  {
+    "target": "Brookfield Investment Solutions Group (Nuclear Liabilities Fund mandate)",
+    "target_type": "fund",
+    "sector": "nuclear",
+    "allocators": [
+      "Brookfield"
+    ],
+    "last_event": "2026-09-08",
+    "capital_usd": 1000000000.0,
+    "deal_source_urls": [
+      "https://www.globenewswire.com/news-release/2026/09/08/3357335/0/en/brookfield-selected-by-nuclear-liabilities-fund-for-multi-decade-investment-mandate.html"
+    ]
+  },
+  {
+    "target": "Quantinuum",
+    "target_type": "private",
+    "sector": "semiconductors",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-09-08",
+    "capital_usd": 100000000.0,
+    "deal_source_urls": [
+      "https://www.nist.gov/news-events/news/2026/09/department-commerce-announces-finalization-chips-rd-award-quantinuum"
+    ]
+  },
+  {
+    "target": "D-Wave Quantum",
+    "target_type": "public",
+    "sector": "semiconductors",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-09-08",
+    "capital_usd": 100000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/0001907982/000190798226000141/chipsactpressrelease.htm"
+    ]
+  },
+  {
+    "target": "Thinking Machines Lab",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-09-02",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.theinformation.com/briefings/nvidia-discusses-2-5-billion-investment-mira-muratis-thinking-machines-lab"
+    ]
+  },
+  {
+    "target": "Split Pay",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Thrive Capital",
+      "Khosla Ventures"
+    ],
+    "last_event": "2026-09-08",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.axios.com/2026/09/08/split-pay-khosla-125-million"
+    ]
+  },
+  {
+    "target": "Savvy Wealth",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Thrive Capital"
+    ],
+    "last_event": "2026-09-09",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://fintech.global/2026/09/09/savvy-wealth-closes-100m-series-c-led-by-halo-fund/"
+    ]
+  },
+  {
+    "target": "REGENT Craft",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "Founders Fund"
+    ],
+    "last_event": "2026-08-27",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.regentcraft.com/news/regent-secures-240-million-series-b-funding-to-scale-seaglider-manufacturing-and-transform-maritime-mobility"
+    ]
+  },
+  {
+    "target": "Prentis",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "Reid Hoffman"
+    ],
+    "last_event": "2026-07-24",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://techcrunch.com/2026/07/24/prentis-new-ai-lab-co-founded-by-reid-hoffman-mark-pincus-in-talks-to-raise-100m/"
+    ]
+  },
+  {
+    "target": "Nara Health",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Khosla Ventures"
+    ],
+    "last_event": "2026-09-14",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.morningstar.com/news/business-wire/20260914180305/nara-health-raises-14m-to-reinvent-health-insurance-through-ai-benefits-administration-and-alternative-health-plans"
+    ]
+  },
+  {
+    "target": "Mazama Energy",
+    "target_type": "private",
+    "sector": "power-energy",
+    "allocators": [
+      "Khosla Ventures"
+    ],
+    "last_event": "2026-09-17",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.globenewswire.com/news-release/2026/09/17/3364060/0/en/mazama-energy-raises-135-million-to-scale-the-world-s-hottest-engineered-geothermal-system.html"
+    ]
+  },
+  {
+    "target": "Highstock",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Andreessen Horowitz"
+    ],
+    "last_event": "2026-09-11",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://dealroom.co/news/150077-highstock-lands-30m-series-a-from-a16z-to-clear-beautys-surplus-inventor/"
+    ]
+  },
+  {
+    "target": "Factory",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Sequoia",
+      "Khosla Ventures"
+    ],
+    "last_event": "2026-09-15",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://siliconangle.com/2026/09/15/factory-raises-200m-for-its-self-improving-software-development-platform/"
+    ]
+  },
+  {
+    "target": "EnduroSat",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "Alphabet"
+    ],
+    "last_event": "2026-09-16",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.endurosat.com/news/endurosat-raises-205m-to-scale-next-generation-space-fleets/"
+    ]
+  },
+  {
+    "target": "Crusoe",
+    "target_type": "private",
+    "sector": "neocloud",
+    "allocators": [
+      "Founders Fund",
+      "Altimeter"
+    ],
+    "last_event": "2026-09-17",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.globenewswire.com/news-release/2026/09/17/3364326/0/en/crusoe-raises-3-9-billion-series-f-for-its-vertically-integrated-ai-infrastructure-platform.html"
+    ]
+  },
+  {
+    "target": "Blackstone Green Private Credit Fund IV",
+    "target_type": "fund",
+    "sector": "power-energy",
+    "allocators": [
+      "Blackstone"
+    ],
+    "last_event": "2026-09-15",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.bloomberg.com/news/articles/2026-09-15/blackstone-seeks-8-billion-for-green-infrastructure-credit-fund"
+    ]
+  }
+]

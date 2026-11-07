@@ -1,0 +1,158 @@
+[
+  {
+    "target": "SB Energy PORTS-Pike Technology Campus (Ohio)",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-08-17",
+    "capital_usd": 105000000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm"
+    ]
+  },
+  {
+    "target": "NAVER GAK Sejong AI Factory (South Korea)",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Brookfield"
+    ],
+    "last_event": "2026-07-27",
+    "capital_usd": 9000000000.0,
+    "deal_source_urls": [
+      "https://bam.brookfield.com/press-releases/naver-nvidia-and-brookfield-expand-koreas-national-ai-factory-infrastructure"
+    ]
+  },
+  {
+    "target": "IREN Limited",
+    "target_type": "public",
+    "sector": "ai-compute",
+    "allocators": [
+      "Blue Owl"
+    ],
+    "last_event": "2026-08-28",
+    "capital_usd": 2400000000.0,
+    "deal_source_urls": [
+      "https://www.blueowl.com/news/blue-owl-managed-funds-lead-24-billion-ai-factory-financing-iren"
+    ]
+  },
+  {
+    "target": "Machine Age Fund",
+    "target_type": "fund",
+    "sector": "ai-compute",
+    "allocators": [
+      "Andreessen Horowitz"
+    ],
+    "last_event": "2026-08-28",
+    "capital_usd": 1100000000.0,
+    "deal_source_urls": [
+      "https://a16z.com/the-machine-age-fund/"
+    ]
+  },
+  {
+    "target": "Amazon",
+    "target_type": "public",
+    "sector": "cloud-hyperscale",
+    "allocators": [
+      "Peter Thiel"
+    ],
+    "last_event": "2026-08-14",
+    "capital_usd": 117978300.0,
+    "deal_source_urls": [
+      "https://www.quiverquant.com/news/Peter+Thiel-Linked+Fund+Rebuilds+$400+Million+Portfolio+Around+Power"
+    ]
+  },
+  {
+    "target": "DOE Genesis Mission (SPARK)",
+    "target_type": "project",
+    "sector": "ai-compute",
+    "allocators": [
+      "Microsoft"
+    ],
+    "last_event": "2026-07-22",
+    "capital_usd": 60000000.0,
+    "deal_source_urls": [
+      "https://blogs.microsoft.com/blog/2026/07/22/powering-americas-genesis-mission-microsofts-commitment-to-scientific-discovery/"
+    ]
+  },
+  {
+    "target": "American Electric Power",
+    "target_type": "public",
+    "sector": "power-energy",
+    "allocators": [
+      "Peter Thiel"
+    ],
+    "last_event": "2026-08-14",
+    "capital_usd": 42221892.0,
+    "deal_source_urls": [
+      "https://www.quiverquant.com/news/Peter+Thiel-Linked+Fund+Rebuilds+$400+Million+Portfolio+Around+Power"
+    ]
+  },
+  {
+    "target": "FirstEnergy",
+    "target_type": "public",
+    "sector": "power-energy",
+    "allocators": [
+      "Peter Thiel"
+    ],
+    "last_event": "2026-08-14",
+    "capital_usd": 39901225.0,
+    "deal_source_urls": [
+      "https://www.quiverquant.com/news/Peter+Thiel-Linked+Fund+Rebuilds+$400+Million+Portfolio+Around+Power"
+    ]
+  },
+  {
+    "target": "Preview",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Sequoia"
+    ],
+    "last_event": "2026-08-13",
+    "capital_usd": 10000000.0,
+    "deal_source_urls": [
+      "https://dealroom.co/investors/sequoia-capital/"
+    ]
+  },
+  {
+    "target": "SK Horizon",
+    "target_type": "private",
+    "sector": "datacenters",
+    "allocators": [
+      "KKR"
+    ],
+    "last_event": "2026-08-27",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.prnewswire.com/news-releases/sk-telecom-launches-ai-data-center-infrastructure-company-sk-horizon-and-secures-investments-from-kkr-and-imm-302861694.html"
+    ]
+  },
+  {
+    "target": "DuckLabs",
+    "target_type": "private",
+    "sector": "ai-data",
+    "allocators": [
+      "Amazon"
+    ],
+    "last_event": "2026-08-26",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://aws.amazon.com/blogs/big-data/aws-and-ducklabs-building-the-future-of-analytics-together/"
+    ]
+  },
+  {
+    "target": "Arrive Logistics",
+    "target_type": "private",
+    "sector": "diversified-pe",
+    "allocators": [
+      "Mubadala"
+    ],
+    "last_event": "2026-08-27",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.arrivelogistics.com/announcement/"
+    ]
+  }
+]

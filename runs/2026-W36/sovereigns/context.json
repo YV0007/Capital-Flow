@@ -1,0 +1,350 @@
+{
+  "week": "2026-W36",
+  "agent": "sovereigns",
+  "feedback_from_runs": [
+    "2026-W33",
+    "2026-W34",
+    "2026-W35"
+  ],
+  "how_to_use": "1) WHAT YOU ALREADY HAVE \u2014 search FORWARD from each entity's last_event_date; don't re-find old deals. Use the deterministic EDGAR path when cik is present (agents/CONTEXT.md \u2192 Tools) and run `engine.edgar exists` before writing a row. Aliases are the SAME entity \u2014 never file one as new. stale_candidates are existing rows needing a Tier-1 confirm, not new deals to re-file. 2) WHAT WORKED \u2014 check `check_first` sources before searching broadly. 3) WHAT YOU GOT WRONG \u2014 these are real rejects from recent runs; don't repeat them.",
+  "what_you_already_have": {
+    "entities": [
+      {
+        "allocator": "Korea Investment Corporation",
+        "class": "sovereign",
+        "tier": "watch",
+        "country": null,
+        "network": null,
+        "last_event_date": "2026-07-30",
+        "events_on_file": 1,
+        "sectors_active": [
+          "datacenters"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": null,
+        "ticker": null,
+        "edgar_path": "search",
+        "recent_targets": [
+          "KIC strategic investment account (AI / data centers / strategic industries)"
+        ]
+      },
+      {
+        "allocator": "MGX",
+        "class": "sovereign",
+        "tier": "key",
+        "country": "AE",
+        "network": null,
+        "last_event_date": "2026-08-13",
+        "events_on_file": 4,
+        "sectors_active": [
+          "ai-compute",
+          "ai-data",
+          "datacenters"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "mgx (abu dhabi)",
+          "mgx abu dhabi"
+        ],
+        "cik": null,
+        "ticker": null,
+        "edgar_path": "search",
+        "recent_targets": [
+          "Databricks",
+          "Aligned Data Centers",
+          "Aligned Data Centers",
+          "MGX Fund I"
+        ]
+      },
+      {
+        "allocator": "Mubadala",
+        "class": "sovereign",
+        "tier": "key",
+        "country": "AE",
+        "network": null,
+        "last_event_date": "2026-08-06",
+        "events_on_file": 4,
+        "sectors_active": [
+          "datacenters",
+          "private-credit",
+          "robotics"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "mubadala investment company"
+        ],
+        "cik": null,
+        "ticker": null,
+        "edgar_path": "search",
+        "recent_targets": [
+          "Akita AI Data Center (BitGrid / S2 JV)",
+          "Akita 500MW AI data center (Japan)",
+          "Moove",
+          "Mubadala Capital (credit platform)"
+        ]
+      },
+      {
+        "allocator": "Saudi PIF",
+        "class": "sovereign",
+        "tier": "key",
+        "country": "SA",
+        "network": null,
+        "last_event_date": "2026-08-14",
+        "events_on_file": 5,
+        "sectors_active": [
+          "ai-applications",
+          "ai-compute",
+          "diversified-pe",
+          "ev-automotive"
+        ],
+        "known_vehicles": [],
+        "aliases": [
+          "pif",
+          "public investment fund",
+          "saudi public investment fund"
+        ],
+        "cik": null,
+        "ticker": null,
+        "edgar_path": "search",
+        "recent_targets": [
+          "SpaceX",
+          "Electronic Arts",
+          "MOZN",
+          "Brookfield Middle East Partners (BMEP)",
+          "Lucid Group"
+        ]
+      },
+      {
+        "allocator": "US Government",
+        "class": "sovereign",
+        "tier": "watch",
+        "country": "US",
+        "network": null,
+        "last_event_date": "2026-08-07",
+        "events_on_file": 34,
+        "sectors_active": [
+          "ai-applications",
+          "ai-compute",
+          "cybersecurity",
+          "datacenters",
+          "defense-tech",
+          "diversified-pe",
+          "fab-equipment",
+          "networking",
+          "nuclear",
+          "semiconductors"
+        ],
+        "known_vehicles": [],
+        "aliases": [],
+        "cik": null,
+        "ticker": null,
+        "edgar_path": "search",
+        "recent_targets": [
+          "Strategic Bauxite USA",
+          "Standard Bauxite",
+          "Niron Magnetics",
+          "Sunrise Energy Metals",
+          "Sila Nanotechnologies",
+          "Strategic Bauxite USA, LLC (SBX)"
+        ]
+      }
+    ],
+    "stale_candidates": [
+      {
+        "allocator": "US Government",
+        "target": "Savannah River Site AI data center",
+        "event_type": "project_finance",
+        "disclosed_date": "2026-07-20",
+        "source_tier": 1,
+        "source_url": "https://www.energy.gov/nnsa/articles/nnsa-selects-amentum-ai-data-center-and-energy-project-savannah-river-site",
+        "why_still_candidate": "DOE/NNSA selected Amentum to ENTER NEGOTIATIONS for a phased lease to develop a 1GW AI data center plus ~2GW of dedicated on-site generation (natural gas bridging to nuclear) at the Savannah River Site, South Carolina. CANDIDATE: the release states explicitly that 'selection for negotiations does no"
+      },
+      {
+        "allocator": "US Government",
+        "target": "Saudi PIF strategic investments (US export credit facility)",
+        "event_type": "project_finance",
+        "disclosed_date": "2026-07-24",
+        "source_tier": 1,
+        "source_url": "https://www.pif.gov.sa/en/news-and-insights/press-releases/2026/pif-us-exim-15-billion-usd-mou-export-credit/",
+        "why_still_candidate": "NON-BINDING MoU between PIF and the Export-Import Bank of the United States for UP TO $15bn of US export credit to support PIF strategic investments. Textbook sovereign headline number: a CEILING with no named target, no drawn amount and no signed facility - amount_estimated=1 and status candidate p"
+      },
+      {
+        "allocator": "US Government",
+        "target": "Paducah AI/HPC innovation campus",
+        "event_type": "project_finance",
+        "disclosed_date": "2026-07-29",
+        "source_tier": 1,
+        "source_url": "https://www.energy.gov/articles/energy-department-announces-partnership-expand-reliable-affordable-energy-access-and-power",
+        "why_still_candidate": "DOE selected Brookfield, via a Request for Offers issued Nov 2025, to develop and operate an AI/HPC innovation campus on the government-owned Paducah Gaseous Diffusion Plant site in western Kentucky: a 1.8GW data center campus with 2GW of new NextEra gas-fired generation and up to 2.6GW of battery s"
+      },
+      {
+        "allocator": "Korea Investment Corporation",
+        "target": "KIC strategic investment account (AI / data centers / strategic industries)",
+        "event_type": "fund_launch",
+        "disclosed_date": "2026-07-30",
+        "source_tier": 3,
+        "source_url": "https://www.bloomberg.com/news/articles/2026-07-30/korea-plans-14-billion-for-wealth-fund-s-ai-bets-after-rout",
+        "why_still_candidate": "FILINGS SWEEP FOUND NOTHING - candidate stands. EDGAR full-text search for 'Korea Investment Corporation' over 2026-07-01..2026-08-07 returns 2 documents, both unrelated: an IHS Holding SC 13E3/A and a Woori Financial Group Form CB. KIC does file 13F-HRs for its US-listed holdings, but a new domesti"
+      },
+      {
+        "allocator": "Mubadala",
+        "target": "Akita 500MW AI data center (Japan)",
+        "event_type": "sovereign_investment",
+        "disclosed_date": "2026-08-06",
+        "source_tier": 3,
+        "source_url": "https://www.japantimes.co.jp/business/2026/08/06/uae-fund-data-center/",
+        "why_still_candidate": "FILINGS SWEEP FOUND NOTHING - candidate stands. EDGAR full-text search for 'Mubadala' over 2026-07-15..2026-08-07 returns 9 documents, none related: a China-UAE Investment Cooperation Fund 13F-HR, plus incidental mentions in Aris Mining, Clear Channel, Inseego, GlobalFoundries and NextDecade filings"
+      },
+      {
+        "allocator": "Mubadala",
+        "target": "Akita AI Data Center (BitGrid / S2 JV)",
+        "event_type": "sovereign_investment",
+        "disclosed_date": "2026-08-06",
+        "source_tier": 3,
+        "source_url": "https://www.japantimes.co.jp/business/2026/08/06/uae-fund-data-center/",
+        "why_still_candidate": "Mubadala reported to be 'weighing' up to JPY1tn (~US$6.3-7B) for a proposed 500MW AI data center in Akita Prefecture, Japan, developed by US startup BitGrid with Japanese IT firm S2. No commitment, financing timetable, or ownership structure has been announced. Several outlets (incl. GlobalSWF) say "
+      },
+      {
+        "allocator": "US Government",
+        "target": "Standard Bauxite",
+        "event_type": "project_finance",
+        "disclosed_date": "2026-08-07",
+        "source_tier": 1,
+        "source_url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-billions-in-new-deals-and-investments-to-power-american-mining/",
+        "why_still_candidate": "Department of War investment to secure a domestic refractory-grade bauxite supply chain for high-temperature-resistant materials used in defense components. Announced 7 Aug 2026 at the same State Dept mining roundtable as the Sila/Sunrise/Niron OSC loans, but THINNER SOURCING - unlike those three, n"
+      }
+    ]
+  },
+  "what_worked": {
+    "check_first": [
+      "war.gov",
+      "bloomberg.com",
+      "cnbc.com",
+      "databricks.com",
+      "mubadala.com",
+      "thenationalnews.com",
+      "whitehouse.gov",
+      "aligneddc.com"
+    ],
+    "detail": [
+      {
+        "source": "bloomberg.com",
+        "example_url": "https://www.bloomberg.com/news/articles/2026-08-05/moove-hits-2-1-billion-valuation-in-mubadala-led-fundraising",
+        "tier": 3,
+        "hits": 2,
+        "checks": 2
+      },
+      {
+        "source": "cnbc.com",
+        "example_url": "https://www.cnbc.com/2026/08/13/databricks-funding-round-190-billion-valuation.html",
+        "tier": 3,
+        "hits": 2,
+        "checks": 2
+      },
+      {
+        "source": "databricks.com",
+        "example_url": "https://www.databricks.com/company/newsroom/press-releases/databricks-grows-80-yoy-surpasses-7b-revenue-run-rate-scales",
+        "tier": 1,
+        "hits": 2,
+        "checks": 2
+      },
+      {
+        "source": "mubadala.com",
+        "example_url": "https://www.mubadala.com/en/news/moove-raises-250-million-at-2-1-billion-valuation-to-scale-the-global-infrastructure-layer-for-autonomous-mobility",
+        "tier": 1,
+        "hits": 2,
+        "checks": 2
+      },
+      {
+        "source": "thenationalnews.com",
+        "example_url": "https://www.thenationalnews.com/future/technology/2026/08/13/mgx-uae-databricks-ai/",
+        "tier": 3,
+        "hits": 2,
+        "checks": 2
+      },
+      {
+        "source": "war.gov",
+        "example_url": "https://www.war.gov/News/Releases/Release/Article/4566567/office-of-strategic-capital-signs-150-million-conditional-loan-commitment-with/",
+        "tier": 1,
+        "hits": 2,
+        "checks": 2
+      },
+      {
+        "source": "war.gov",
+        "example_url": "https://www.war.gov/News/Releases/Release/Article/4566579/the-office-of-strategic-capital-signs-14-billion-conditional-loan-commitment-wi/",
+        "tier": 1,
+        "hits": 2,
+        "checks": 2
+      },
+      {
+        "source": "war.gov",
+        "example_url": "https://www.war.gov/News/Releases/Release/Article/4566598/office-of-strategic-capital-signs-400-million-conditional-loan-commitment-with/",
+        "tier": 1,
+        "hits": 2,
+        "checks": 2
+      },
+      {
+        "source": "whitehouse.gov",
+        "example_url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-billions-in-new-deals-and-investments-to-power-american-mining/",
+        "tier": 1,
+        "hits": 2,
+        "checks": 2
+      },
+      {
+        "source": "aligneddc.com",
+        "example_url": "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/",
+        "tier": 1,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "aviationweek.com",
+        "example_url": "https://aviationweek.com/defense/aircraft-propulsion/dod-offers-pdw-820m-loan-drone-component-manufacturing",
+        "tier": 3,
+        "hits": 1,
+        "checks": 1
+      },
+      {
+        "source": "en.wikipedia.org",
+        "example_url": "https://en.wikipedia.org/wiki/Leveraged_buyout_of_Electronic_Arts",
+        "tier": 4,
+        "hits": 1,
+        "checks": 1
+      }
+    ]
+  },
+  "what_you_got_wrong": {
+    "this_class": [
+      {
+        "code": "W8",
+        "lesson": "a >=$1B investable target has no ai_posture tag.",
+        "occurrences": 6,
+        "examples": [
+          "MGX Fund I: $49.0B investable target with no ai_posture",
+          "Mubadala Capital (credit platform): $4.7B investable target with no ai_posture"
+        ]
+      },
+      {
+        "code": "W7",
+        "lesson": "a >=$1B fund/firm has no holdings collected.",
+        "occurrences": 5,
+        "examples": [
+          "MGX Fund I: $49.0B fund/firm with no holdings collected",
+          "Mubadala Capital (credit platform): $4.7B fund/firm with no holdings collected"
+        ]
+      }
+    ],
+    "all_classes": [
+      {
+        "code": "W8",
+        "lesson": "a >=$1B investable target has no ai_posture tag.",
+        "occurrences": 31,
+        "examples": [
+          "Electronic Arts: $33.6B investable target with no ai_posture",
+          "OpenAI Group PBC: $21.3B investable target with no ai_posture"
+        ]
+      }
+    ]
+  }
+}

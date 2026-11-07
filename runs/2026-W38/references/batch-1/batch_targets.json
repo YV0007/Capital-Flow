@@ -1,0 +1,162 @@
+[
+  {
+    "target": "Humain Data Center Fund",
+    "target_type": "fund",
+    "sector": "datacenters",
+    "allocators": [
+      "Saudi PIF"
+    ],
+    "last_event": "2026-09-03",
+    "capital_usd": 2500000000.0,
+    "deal_source_urls": [
+      "https://www.bloomberg.com/news/articles/2026-09-03/saudi-firm-humain-eyes-2-5-billion-fund-to-build-data-centers"
+    ]
+  },
+  {
+    "target": "NextEra Energy (Duane Arnold Energy Center)",
+    "target_type": "public",
+    "sector": "nuclear",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-09-08",
+    "capital_usd": 1900000000.0,
+    "deal_source_urls": [
+      "https://www.energy.gov/articles/energy-department-closes-19-billion-loan-restart-duane-arnold-nuclear-plant"
+    ]
+  },
+  {
+    "target": "Rigetti Computing",
+    "target_type": "public",
+    "sector": "semiconductors",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-09-08",
+    "capital_usd": 100000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/0001838359/000110465926105662/tm2624940d1_ex10-1.htm"
+    ]
+  },
+  {
+    "target": "Midwest AI Data Center Acquisition Entity (Hunt Properties JV)",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Empery Digital"
+    ],
+    "last_event": "2026-06-30",
+    "capital_usd": 65000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1829794/000168316826005178/empery_ex9901.htm"
+    ]
+  },
+  {
+    "target": "Cardinal Data Power",
+    "target_type": "private",
+    "sector": "datacenters",
+    "allocators": [
+      "Empery Digital"
+    ],
+    "last_event": "2026-07-23",
+    "capital_usd": 20000000.0,
+    "deal_source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1829794/000168316826005723/empery_ex9901.htm"
+    ]
+  },
+  {
+    "target": "AIR",
+    "target_type": "private",
+    "sector": "cybersecurity",
+    "allocators": [
+      "Sequoia"
+    ],
+    "last_event": "2026-09-01",
+    "capital_usd": 10000000.0,
+    "deal_source_urls": [
+      "https://dealroom.co/news/148163-air-raises-50m-seed-to-build-a-firewall-for-ai-agents/"
+    ]
+  },
+  {
+    "target": "Thinking Machines Lab",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-09-03",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://finance.yahoo.com/technology/ai/articles/nvidia-eyeing-2-5-billion-142916646.html"
+    ]
+  },
+  {
+    "target": "NavigateAI",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Elad Gil"
+    ],
+    "last_event": "2026-09-07",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://techcrunch.com/2026/09/07/eric-wus-newest-company-out-of-stealth-since-may-is-going-after-constructions-labor-crunch/"
+    ]
+  },
+  {
+    "target": "Lightfield",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Andreessen Horowitz",
+      "Coatue"
+    ],
+    "last_event": "2026-09-09",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://siliconangle.com/2026/09/09/ai-native-crm-startup-lightfield-raises-47m-to-build-an-ai-agent-ready-replacement-for-salesforce/"
+    ]
+  },
+  {
+    "target": "Gimlet Labs",
+    "target_type": "private",
+    "sector": "ai-compute",
+    "allocators": [
+      "Andreessen Horowitz"
+    ],
+    "last_event": "2026-09-04",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://dealroom.co/news/148837-gimlet-labs-raises-300m-series-b-at-3b-valuation-to-rebuild-ai-inference/"
+    ]
+  },
+  {
+    "target": "Cognition",
+    "target_type": "private",
+    "sector": "ai-applications",
+    "allocators": [
+      "Andreessen Horowitz",
+      "Founders Fund",
+      "Altimeter"
+    ],
+    "last_event": "2026-09-08",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.unite.ai/cognition-raises-over-2b-series-e-at-48b-valuation-to-scale-devin-agents/"
+    ]
+  },
+  {
+    "target": "Broadcom (AI chip / Anthropic compute financing)",
+    "target_type": "private",
+    "sector": "semiconductors",
+    "allocators": [
+      "Blackstone",
+      "Apollo"
+    ],
+    "last_event": "2026-08-21",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.cnbc.com/2026/08/21/broadcom-debt-deal-expected-to-reach-upwards-of-70-billion-sources.html"
+    ]
+  }
+]

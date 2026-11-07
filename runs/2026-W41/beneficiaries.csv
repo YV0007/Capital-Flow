@@ -1,0 +1,11 @@
+allocator,target,event_type,disclosed_date,ticker,company,rationale,confidence
+SoftBank,OpenAI,follow_on,2026-10-01,MSFT,Microsoft,"OpenAI's largest disclosed equity holder and primary Azure compute partner; fresh capital extends the buildout Microsoft's infrastructure spend underwrites.",high
+SoftBank,OpenAI,follow_on,2026-10-01,ORCL,Oracle,"OpenAI's Stargate compute buildout runs substantially on Oracle Cloud Infrastructure capacity under Oracle's multi-year compute contracts.",medium
+SoftBank,OpenAI,follow_on,2026-10-01,NVDA,NVIDIA,"OpenAI's training and inference compute across Azure/Oracle/Stargate capacity is built on NVIDIA GPUs.",medium
+US Government,NextEra Energy (Duane Arnold Energy Center),project_finance,2026-09-08,NEE,NextEra Energy,"NextEra Energy is the direct recipient of the DOE loan to restart the Duane Arnold nuclear plant it owns.",high
+US Government,D-Wave Quantum,equity,2026-09-08,QBTS,D-Wave Quantum,"D-Wave Quantum is itself the public company that received the CHIPS Act equity award.",high
+US Government,Rigetti Computing,equity,2026-09-08,RGTI,Rigetti Computing,"Rigetti Computing is itself the public company that received the CHIPS Act equity award.",high
+US Government,Quantinuum,equity,2026-09-08,GFS,GlobalFoundries,"The CHIPS award partly funds Quantinuum's ion-trap quantum-computer manufacturing partnership sited at GlobalFoundries' US fabs.",low
+Apollo,"RHAELM Holdings / JERA / Dell Technologies AI data center project (Chiba, Japan)",project_finance,2026-10-02,DELL,Dell Technologies,"Dell Technologies is named as the infrastructure/hardware provider for the >$15B Apollo-backed Chiba AI data-center project.",medium
+NVIDIA,Brookfield Artificial Intelligence Infrastructure Fund (BAIIF),fund_launch,2026-09-17,GEV,GE Vernova,"Thematic pick-and-shovel exposure: BAIIF's AI-datacenter buildout mandate is a tailwind for power-generation equipment suppliers; no specific deployment to GE Vernova disclosed yet.",low
+NVIDIA,Brookfield Artificial Intelligence Infrastructure Fund (BAIIF),fund_launch,2026-09-17,VRT,Vertiv,"Thematic pick-and-shovel exposure: BAIIF's AI-datacenter buildout mandate is a tailwind for datacenter power/cooling suppliers; no specific contract disclosed yet.",low

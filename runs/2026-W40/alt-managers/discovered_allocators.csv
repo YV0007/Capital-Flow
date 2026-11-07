@@ -1,0 +1,2 @@
+name,suggested_class,seen_with,rationale
+Kuwait Investment Authority,sovereign,Brookfield; NVIDIA,"Named (alongside NVIDIA) as a co-anchor LP in Brookfield's Artificial Intelligence Infrastructure Fund per 2026-09-17 reporting on NVIDIA's $2B commitment; not currently in config/allocators.yaml's sovereigns list (which has MGX, Mubadala, Saudi PIF, US Government). KIA appears repeatedly across Brookfield's AI-infra program (also named in the Nov-2025 $100B program with Brookfield + NVIDIA) -- worth adding to the sovereigns watchlist."

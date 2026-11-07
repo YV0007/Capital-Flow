@@ -1,0 +1,10 @@
+corporate/verified_events.csv:2 WARN theme 'ai-compute' not canonical
+corporate/verified_events.csv:3 WARN theme 'space-defense' not canonical
+corporate/candidate_events.csv:2 WARN theme 'ai-apps' not canonical
+corporate/candidate_events.csv:3 WARN theme 'ai-compute' not canonical
+corporate/candidate_events.csv:4 WARN theme 'ai-compute' not canonical
+individuals/verified_events.csv:2 WARN theme 'ai_infrastructure_supply_chain' not canonical
+individuals/verified_events.csv:3 WARN theme 'ai_compute_hardware' not canonical
+individuals/verified_events.csv:4 WARN theme 'defense_tech' not canonical
+individuals/verified_events.csv:5 WARN theme 'enterprise_ai_applications' not canonical
+individuals/candidate_events.csv:2 WARN theme 'enterprise_ai_applications' not canonical
