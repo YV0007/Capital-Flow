@@ -1,0 +1,227 @@
+[
+  {
+    "target": "Sequoia Capital Fund (new vehicles, unnamed)",
+    "target_type": "fund",
+    "sector": "ai-labs",
+    "allocators": [
+      "Sequoia"
+    ],
+    "last_event": "2026-11-04",
+    "capital_usd": 10000000000.0,
+    "deal_source_urls": [
+      "https://techcrunch.com/2026/11/04/sequoia-hits-rewind-undoing-20-years-of-expansion/"
+    ]
+  },
+  {
+    "target": "Blackstone Energy Transition Partners V",
+    "target_type": "fund",
+    "sector": "power-energy",
+    "allocators": [
+      "Blackstone"
+    ],
+    "last_event": "2026-10-19",
+    "capital_usd": 8700000000.0,
+    "deal_source_urls": [
+      "https://pulse2.com/blackstone-closes-8-7-billion-energy-transition-partners-v-at-hard-cap/"
+    ]
+  },
+  {
+    "target": "Meta Platforms, Inc.",
+    "target_type": "public",
+    "sector": "ai-compute",
+    "allocators": [
+      "NVIDIA"
+    ],
+    "last_event": "2026-10-26",
+    "capital_usd": 3000000000.0,
+    "deal_source_urls": [
+      "https://nvidianews.nvidia.com/news/nvidia-and-meta-to-expand-collaboration-on-muse-and-muse-family-of-models-amid-robust-growth"
+    ]
+  },
+  {
+    "target": "Alpha Wave III",
+    "target_type": "fund",
+    "sector": "ai-applications",
+    "allocators": [
+      "Alpha Dhabi Holding"
+    ],
+    "last_event": "2026-10-26",
+    "capital_usd": 1000000000.0,
+    "deal_source_urls": [
+      "https://www.thenationalnews.com/business/markets/2026/10/26/alpha-dhabi-commits-1bn-for-global-ai-investments/"
+    ]
+  },
+  {
+    "target": "Neros",
+    "target_type": "private",
+    "sector": "defense-tech",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-11-02",
+    "capital_usd": 450000000.0,
+    "deal_source_urls": [
+      "https://www.suasnews.com/2026/11/department-of-wars-office-of-strategic-capital-signs-conditional-loan-commitment-of-up-to-450-million-with-neros-inc/"
+    ]
+  },
+  {
+    "target": "Helion",
+    "target_type": "private",
+    "sector": "nuclear",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-10-22",
+    "capital_usd": 175000000.0,
+    "deal_source_urls": [
+      "https://www.nist.gov/document/energy-wave-chips-press-release"
+    ]
+  },
+  {
+    "target": "Vertical Semiconductor",
+    "target_type": "private",
+    "sector": "semiconductors",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-10-22",
+    "capital_usd": 73000000.0,
+    "deal_source_urls": [
+      "https://www.nist.gov/document/energy-wave-chips-press-release"
+    ]
+  },
+  {
+    "target": "Sibelco",
+    "target_type": "private",
+    "sector": "semiconductors",
+    "allocators": [
+      "US Government"
+    ],
+    "last_event": "2026-10-22",
+    "capital_usd": 56000000.0,
+    "deal_source_urls": [
+      "https://www.nist.gov/document/energy-wave-chips-press-release"
+    ]
+  },
+  {
+    "target": "Tutor Intelligence",
+    "target_type": "private",
+    "sector": "robotics",
+    "allocators": [
+      "Andreessen Horowitz"
+    ],
+    "last_event": "2026-11-02",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://a16z.com/announcement/investing-in-tutor-intelligence/"
+    ]
+  },
+  {
+    "target": "Sabi",
+    "target_type": "private",
+    "sector": "robotics",
+    "allocators": [
+      "Khosla Ventures"
+    ],
+    "last_event": "2026-10-09",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://cryptobriefing.com/sabi-raises-50m-brain-ai-interface/"
+    ]
+  },
+  {
+    "target": "Ramp",
+    "target_type": "private",
+    "sector": "cloud-hyperscale",
+    "allocators": [
+      "Thrive Capital",
+      "Founders Fund"
+    ],
+    "last_event": "2026-10-09",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://phemex.com/news/article/ramp-raises-185b-at-60b-valuation-four-months-after-previous-round-100096"
+    ]
+  },
+  {
+    "target": "Mubadala Capital Asset Management",
+    "target_type": "private",
+    "sector": "diversified-pe",
+    "allocators": [
+      "Apollo"
+    ],
+    "last_event": "2026-10-26",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://ir.apollo.com/news-events/press-releases/detail/656/mubadala-capital-announces-strategic-investment-from-apollo"
+    ]
+  },
+  {
+    "target": "Lambda",
+    "target_type": "private",
+    "sector": "neocloud",
+    "allocators": [
+      "Coatue"
+    ],
+    "last_event": "2026-10-06",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo/"
+    ]
+  },
+  {
+    "target": "Hertha Metals",
+    "target_type": "private",
+    "sector": "power-energy",
+    "allocators": [
+      "Khosla Ventures"
+    ],
+    "last_event": "2026-10-27",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.axios.com/pro/all-deals/2026/09/29/pro-rata-premium-first-look",
+      "https://www.sec.gov/Archives/edgar/data/2162096/000216209626000002/primary_doc.xml"
+    ]
+  },
+  {
+    "target": "Germany (energy / digital-infrastructure / industrial investment program)",
+    "target_type": "project",
+    "sector": "datacenters",
+    "allocators": [
+      "Brookfield"
+    ],
+    "last_event": "2026-10-19",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://www.brookfield.com/sites/default/files/documents/Press%20Release_%20Brookfield%20to%20Invest%20Tens%20of%20Billions%20in%20Germany%20Over%20the%20Next%20Five%20Years_0.pdf"
+    ]
+  },
+  {
+    "target": "Even Healthcare",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "Khosla Ventures"
+    ],
+    "last_event": "2026-10-19",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://techcrunch.com/2026/10/19/khosla-ventures-doubles-down-on-even-healthcare-to-challenge-indias-hospital-economics/"
+    ]
+  },
+  {
+    "target": "Abby Care",
+    "target_type": "private",
+    "sector": "ai-labs",
+    "allocators": [
+      "Sequoia",
+      "Thrive Capital",
+      "Khosla Ventures"
+    ],
+    "last_event": "2026-10-15",
+    "capital_usd": 0,
+    "deal_source_urls": [
+      "https://letsdatascience.com/news/abby-care-raises-82-million-series-c-31b65e67"
+    ]
+  }
+]

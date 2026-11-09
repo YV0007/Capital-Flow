@@ -1,0 +1,202 @@
+[
+  {
+    "target": "Sequoia Capital Fund (new vehicles, unnamed)",
+    "description": "Sequoia Capital's November 2026 restructuring memo, \"The Sequoia of Tomorrow,\" disclosed roughly $10B raised in new (unnamed) funds alongside cuts: closing its London office, ending the Arc accelerator and Scouts program, and refocusing on fewer, high-conviction bets in AI, space, biology and reindustrialization. No per-vehicle breakdown has been disclosed.",
+    "website": "https://www.sequoiacap.com",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/11/04/sequoia-hits-rewind-undoing-20-years-of-expansion/"},
+    "sources": [
+      "https://techcrunch.com/2026/11/04/sequoia-hits-rewind-undoing-20-years-of-expansion/",
+      "https://valueaddvc.com/pulse/sequoia-rewind-20-years-expansion-10b-funds-2026",
+      "https://aiweekly.co/alerts/sequoia-raises-10b-closes-arc-scouts-and-london-office"
+    ],
+    "as_of": "2026-11-09"
+  },
+  {
+    "target": "Blackstone Energy Transition Partners V",
+    "description": "Blackstone's energy-transition private equity fund, which held its final close on October 19, 2026 at $8.7 billion (hard cap), more than 50% larger than its predecessor. It invests in power generation/transmission and related infrastructure (platforms Kindle, Fisterra, Viridon), excluding hydrocarbon reserves and extraction.",
+    "website": "https://www.blackstone.com",
+    "read_more": {"label": "Blackstone (press release)", "url": "https://blackstone.com/news/press/blackstone-announces-8-7-billion-final-close-for-blackstone-energy-transition-partners-v"},
+    "sources": [
+      "https://pulse2.com/blackstone-closes-8-7-billion-energy-transition-partners-v-at-hard-cap/",
+      "https://blackstone.com/news/press/blackstone-announces-8-7-billion-final-close-for-blackstone-energy-transition-partners-v",
+      "https://datacenterdynamics.com/en/news/blackstone-closes-latest-energy-transition-fund-at-87bn-backs-several-data-center-focused-energy-firms"
+    ],
+    "as_of": "2026-11-09"
+  },
+  {
+    "target": "Meta Platforms, Inc.",
+    "description": "Public parent of Facebook, Instagram and WhatsApp. On October 26, 2026, NVIDIA and Meta announced an expanded partnership on Meta's Muse family of AI models, with NVIDIA investing $3 billion in Meta's equity offering; Meta also plans to expand its use of NVIDIA's Vera Rubin/Vera CPU hardware and networking.",
+    "website": "https://about.meta.com",
+    "read_more": {"label": "NVIDIA Newsroom", "url": "https://nvidianews.nvidia.com/news/nvidia-and-meta-to-expand-collaboration-on-muse-and-muse-family-of-models-amid-robust-growth"},
+    "sources": [
+      "https://nvidianews.nvidia.com/news/nvidia-and-meta-to-expand-collaboration-on-muse-and-muse-family-of-models-amid-robust-growth"
+    ],
+    "as_of": "2026-11-09"
+  },
+  {
+    "target": "Alpha Wave III",
+    "description": "A global investment fund managed by Alpha Wave Global (formerly Falcon Edge Capital), backing AI and high-growth tech worldwide. On October 26, 2026, Alpha Dhabi Holding (Abu Dhabi) committed $1 billion to it, funded via distributions from its earlier Alpha Wave Ventures II stake, which gave indirect exposure to SpaceX, OpenAI and Anthropic.",
+    "website": "https://alphawaveglobal.com",
+    "read_more": {"label": "The National", "url": "https://www.thenationalnews.com/business/markets/2026/10/26/alpha-dhabi-commits-1bn-for-global-ai-investments/"},
+    "sources": [
+      "https://www.thenationalnews.com/business/markets/2026/10/26/alpha-dhabi-commits-1bn-for-global-ai-investments/",
+      "https://www.khaleejtimes.com/uaes-alpha-dhabi-to-invest-1b-in-alpha-wave-iii-after-spacex-openai-anthropic-exposure",
+      "https://www.wam.ae/en/article/c2xrak6-alpha-dhabi-invest-us1-billion-alpha-wave-iii"
+    ],
+    "as_of": "2026-11-09"
+  },
+  {
+    "target": "Neros",
+    "description": "Torrance, CA maker of small FPV-style military drones (Archer), founded 2023 by former drone racers Soren Monroe-Anderson and Olaf Hichwa. On November 2, 2026, the Pentagon's Office of Strategic Capital signed a conditional loan commitment of up to $450 million to expand US drone and components manufacturing, alongside $165M of Neros's own equity.",
+    "website": "https://www.neros.tech",
+    "read_more": {"label": "DroneXL", "url": "https://dronexl.co/2026/11/02/neros-450m-osc-loan-taxpayer-ownership-stake/"},
+    "sources": [
+      "https://www.suasnews.com/2026/11/department-of-wars-office-of-strategic-capital-signs-conditional-loan-commitment-of-up-to-450-million-with-neros-inc/",
+      "https://dronexl.co/2026/11/02/neros-450m-osc-loan-taxpayer-ownership-stake/",
+      "https://www.manufacturingdive.com/news/dod-pentagon-neros-stoke-space-technologies-antheia-osc-loans/873504/"
+    ],
+    "as_of": "2026-11-09"
+  },
+  {
+    "target": "Helion",
+    "description": "Helion Energy, an Everett, WA private fusion-energy company (backed by Sam Altman, valued ~$15.5B after a $465M Series G in June 2026). On October 22, 2026, the Commerce Department's CHIPS R&D office signed a letter of intent for up to $175 million toward high-voltage power semiconductors/modules, with Commerce to receive a $175M nonvoting interest in Helion.",
+    "website": "https://helionenergy.com",
+    "read_more": {"label": "GeekWire", "url": "https://www.geekwire.com/2026/fusion-startup-helion-lines-up-potential-175m-chips-award-to-develop-advanced-semiconductors/"},
+    "sources": [
+      "https://www.nist.gov/news-events/news/2026/10/department-commerce-announces-letters-intent-4-companies-389-million-rd",
+      "https://www.geekwire.com/2026/fusion-startup-helion-lines-up-potential-175m-chips-award-to-develop-advanced-semiconductors/",
+      "https://www.nist.gov/document/energy-wave-chips-press-release"
+    ],
+    "as_of": "2026-11-09"
+  },
+  {
+    "target": "Vertical Semiconductor",
+    "description": "Cambridge, MA MIT spinout (founded 2024 out of the Palacios Group) building vertical gallium-nitride power transistors for AI data-center and grid power delivery, scaling from 40V to 2.3kV on one platform. Previously raised $11M seed led by Playground Global; on October 22, 2026 signed a CHIPS Act letter of intent for up to $73 million toward a 2.5MW data-center rack demonstration.",
+    "website": "https://verticalsemi.com",
+    "read_more": {"label": "Commerce Dept / NIST", "url": "https://www.nist.gov/news-events/news/2026/10/department-commerce-announces-letters-intent-4-companies-389-million-rd"},
+    "sources": [
+      "https://www.nist.gov/news-events/news/2026/10/department-commerce-announces-letters-intent-4-companies-389-million-rd",
+      "https://verticalsemi.com",
+      "https://datacenterdynamics.com/en/news/us-department-of-commerce-commits-up-to-389m-in-rd-funding-to-power-semiconductors-for-fusion-and-advanced-computing"
+    ],
+    "as_of": "2026-11-09"
+  },
+  {
+    "target": "Sibelco",
+    "description": "Global industrial minerals group that mines and processes silica/quartz and other materials used across glass, ceramics and semiconductor supply chains. On October 22, 2026, it signed a CHIPS Act letter of intent with the US Commerce Department for up to $56 million to develop ultra-high-purity quartz purification and finishing processes for crystal-growth crucibles and semiconductor hardware.",
+    "website": "https://www.sibelco.com",
+    "read_more": {"label": "Commerce Dept / NIST", "url": "https://www.nist.gov/news-events/news/2026/10/department-commerce-announces-letters-intent-4-companies-389-million-rd"},
+    "sources": [
+      "https://www.nist.gov/news-events/news/2026/10/department-commerce-announces-letters-intent-4-companies-389-million-rd",
+      "https://datacenterdynamics.com/en/news/us-department-of-commerce-commits-up-to-389m-in-rd-funding-to-power-semiconductors-for-fusion-and-advanced-computing"
+    ],
+    "as_of": "2026-11-09"
+  },
+  {
+    "target": "Tutor Intelligence",
+    "description": "Watertown, MA robotics company spun out of MIT CSAIL, building warehouse/factory robots (Sonny, Cassie) leased by the hour (~$14-18/hr) rather than sold outright, with remote human \"tutors\" assisting. Raised a $75M Series B led by Andreessen Horowitz on November 2, 2026 (total funding ~$117M), after a $34M Series A led by Union Square Ventures.",
+    "website": "https://tutorintelligence.com",
+    "read_more": {"label": "TechCrunch via TNW", "url": "https://thenextweb.com/news/tutor-intelligence-75m-series-b-a16z-robot-workers"},
+    "sources": [
+      "https://a16z.com/announcement/investing-in-tutor-intelligence/",
+      "https://thenextweb.com/news/tutor-intelligence-75m-series-b-a16z-robot-workers",
+      "https://dealroom.co/news/168993-tutor-intelligence-raises-75m-series-b-from-a16z-for-robot-workforce/"
+    ],
+    "as_of": "2026-11-09"
+  },
+  {
+    "target": "Sabi",
+    "description": "Palo Alto startup building a non-invasive, wearable brain-computer interface housed in a beanie/cap, using up to ~100,000 EEG-style sensors and a \"brain foundation model\" to turn internal speech into text. Raised a $50M seed on October 9, 2026 led by Khosla Ventures, with Accel, Initialized, Collaborative Fund, Ascend, DST Global and Kevin Weil participating; reported ~$600M valuation. Device not yet shipped. Note: deal-source labeled it \"robotics\"; coverage describes it as BCI/wearable, not robotics.",
+    "website": "https://sabi.com",
+    "read_more": {"label": "TechSpot", "url": "https://www.techspot.com/news/112116-scientists-chasing-thought-powered-typing-one-startup-betting.html"},
+    "sources": [
+      "https://cryptobriefing.com/sabi-raises-50m-brain-ai-interface/",
+      "https://www.techspot.com/news/112116-scientists-chasing-thought-powered-typing-one-startup-betting.html",
+      "https://officechai.com/startups/sabi-is-building-a-cap-that-allows-users-to-control-computers-with-their-thoughts/"
+    ],
+    "as_of": "2026-11-09"
+  },
+  {
+    "target": "Ramp",
+    "description": "US corporate-card and spend-management fintech. Reported (Bloomberg, Oct 9 2026) to have raised about $1.85 billion at a roughly $60 billion pre-money valuation, led by Dragoneer Investment Group and Thrive Capital, with Founders Fund among other participants; up from $44B four months earlier. Annualized revenue reportedly topped $2 billion.",
+    "website": "https://ramp.com",
+    "read_more": {"label": "TechCrunch via TNW", "url": "https://thenextweb.com/news/ramp-60bn-valuation-1-85bn-round"},
+    "sources": [
+      "https://phemex.com/news/article/ramp-raises-185b-at-60b-valuation-four-months-after-previous-round-100096",
+      "https://thenextweb.com/news/ramp-60bn-valuation-1-85bn-round",
+      "https://www.dakota.com/resources/blog/ramp-raises-1.85-billion-at-a-60-billion-valuation"
+    ],
+    "as_of": "2026-11-09"
+  },
+  {
+    "target": "Mubadala Capital Asset Management",
+    "description": "The alternative-asset-management arm of Abu Dhabi's Mubadala Investment Company, with $755B+ in assets managed/advised/administered (~$60B in core alternatives). On October 26, 2026, Apollo agreed to take a minority stake and commit capital across its strategies, alongside other minority investors expected to commit $5B at initial close; Mubadala retains majority ownership and operational control. Expected to close Q4 2026.",
+    "website": "https://www.mubadalacapital.com",
+    "read_more": {"label": "Apollo (press release)", "url": "https://ir.apollo.com/news-events/press-releases/detail/656/mubadala-capital-announces-strategic-investment-from-apollo"},
+    "sources": [
+      "https://ir.apollo.com/news-events/press-releases/detail/656/mubadala-capital-announces-strategic-investment-from-apollo",
+      "https://www.meed.com/apollo-takes-stake-in-mubadala-capital",
+      "https://www.thenationalnews.com/business/2026/10/26/mubadala-capital-apollo-minority-stake/"
+    ],
+    "as_of": "2026-11-09"
+  },
+  {
+    "target": "Lambda",
+    "description": "San Francisco GPU-cloud / AI-infrastructure provider (\"Superintelligence Cloud,\" formerly Lambda Labs), founded 2012, backed by NVIDIA. Reported (TechCrunch, Oct 6 2026) to be raising up to $4 billion led by Coatue and Blackstone at a ~$14.5B pre-money valuation ahead of a planned 2027 IPO, with its backlog boosted by a $35B Anthropic compute commitment.",
+    "website": "https://lambda.ai",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo"},
+    "sources": [
+      "https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo",
+      "https://aiweekly.co/alerts/nvidia-backed-lambda-raising-4b-at-145b-pre-money-as-blackstone-and-coatue-lead",
+      "https://dealroom.co/news/160600-lambda-to-raise-4b-pre-ipo-leaning-on-35b-anthropic-deal/"
+    ],
+    "as_of": "2026-11-09"
+  },
+  {
+    "target": "Hertha Metals",
+    "description": "Conroe, TX startup making high-purity iron via a single-step, lower-emission process (claimed 25% lower cost, up to 98% lower emissions with hydrogen), targeting steel and rare-earth-magnet supply chains. Closed a ~$133.65M Series A around September 30, 2026, co-led by Khosla Ventures and Doerr Capital, including a $65M US government equity investment via the Industrial Base Analysis and Sustainment program, to fund its Hertha Chalyx plant.",
+    "website": "https://www.herthametals.com",
+    "read_more": {"label": "Engineering News", "url": "https://www.engineeringnews.co.za/article/high-purity-iron-producer-hertha-secures-133m-in-venture-capital-funding-for-single-step-production-scaling-2026-09-30"},
+    "sources": [
+      "https://www.engineeringnews.co.za/article/high-purity-iron-producer-hertha-secures-133m-in-venture-capital-funding-for-single-step-production-scaling-2026-09-30",
+      "https://www.axios.com/pro/all-deals/2026/09/29/pro-rata-premium-first-look",
+      "https://www.sec.gov/Archives/edgar/data/2162096/000216209626000002/primary_doc.xml"
+    ],
+    "as_of": "2026-11-09"
+  },
+  {
+    "target": "Germany (energy / digital-infrastructure / industrial investment program)",
+    "description": "Not a single entity but Brookfield's October 19, 2026 pledge, made at the Invest in Germany Summit, to invest \"tens of billions\" of euros in Germany over five years across energy, digital infrastructure and industrial businesses. Brookfield already holds ~€30B there (incl. the GD Towers joint venture with Deutsche Telekom) since entering in 2013. Part of a wider €225B+ in summit pledges.",
+    "website": "https://www.brookfield.com",
+    "read_more": {"label": "Reuters (via WSAU)", "url": "https://wsau.com/2026/10/20/factbox-investments-pledged-during-2026-invest-in-germany-summit/"},
+    "sources": [
+      "https://www.brookfield.com/sites/default/files/documents/Press%20Release_%20Brookfield%20to%20Invest%20Tens%20of%20Billions%20in%20Germany%20Over%20the%20Next%20Five%20Years_0.pdf",
+      "https://wsau.com/2026/10/20/factbox-investments-pledged-during-2026-invest-in-germany-summit/"
+    ],
+    "as_of": "2026-11-09"
+  },
+  {
+    "target": "Even Healthcare",
+    "description": "Bengaluru, India managed-care/hospital startup paying doctors fixed salaries (not per-procedure) and operating its own hospitals, aiming for 25 facilities in three years. On October 19, 2026, raised a $50M round led by Khosla Ventures (which has backed it since a 2021 seed), following a $30M Series A in 2024; total funding reports vary (~$50-120M) across outlets.",
+    "website": "https://even.in",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/10/19/khosla-ventures-doubles-down-on-even-healthcare-to-challenge-indias-hospital-economics/"},
+    "sources": [
+      "https://techcrunch.com/2026/10/19/khosla-ventures-doubles-down-on-even-healthcare-to-challenge-indias-hospital-economics/",
+      "https://yourstory.com/2026/10/even-healthcare-raises-50m-in-series-b-round-led-by-khosla-ventures",
+      "https://inc42.com/buzz/even-healthcare-raises-50-mn-to-expand-hospital-network-across-bengaluru/"
+    ],
+    "as_of": "2026-11-09"
+  },
+  {
+    "target": "Abby Care",
+    "description": "San Francisco company (legal name Wellspring Care, Inc.) that trains and pays family members as certified caregivers for relatives needing home care, with clinical oversight and AI tooling; a Medicaid provider in 8 US states. Raised an $82M Series C around October 15-19, 2026 led by Transformation Capital, with new backers CVS Health Ventures, Frist Cressey Ventures and Pivotal Ventures, plus returning investors Khosla Ventures, Thrive Capital and Sequoia.",
+    "website": "https://www.abbycare.org",
+    "read_more": {"label": "Fortune", "url": "https://fortune.com/2026/10/15/startup-abby-care-raises-82-million-to-turn-family-members-into-paid-caregivers/"},
+    "sources": [
+      "https://letsdatascience.com/news/abby-care-raises-82-million-series-c-31b65e67",
+      "https://fortune.com/2026/10/15/startup-abby-care-raises-82-million-to-turn-family-members-into-paid-caregivers/",
+      "https://hlth.com/insights/news/abby-care-secures-82m-to-expand-family-caregiver-support-platform"
+    ],
+    "as_of": "2026-11-09"
+  }
+]

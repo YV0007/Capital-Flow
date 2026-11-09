@@ -60,3 +60,6 @@ flagged row-by-row in `notes`.
   semiconductor sectors this specific week — most hits were fintech, Indian healthtech and
   climate/industrial deals, which don't map cleanly to the canonical sector list (flagged
   throughout).
+
+## Correction (post-ingest)
+- This candidate Hertha Metals row was removed after ingest: it is the SAME Series A follow-on the filings agent independently confirmed at Tier 1 via Hertha Metals own SEC Form D (filed 2026-10-27), which superseded this row per its own merge note. Because the two rows carried different disclosed_date values (2026-10-19 here vs 2026-10-27 on the Form D), engine/ingest.py exact-match dedup could not merge them automatically, so the weaker candidate row was removed manually to avoid double-counting one round as two stakes. See filings/verified_events.csv for the surviving, Tier-1-confirmed row.

@@ -55,3 +55,6 @@ not allocating it outward — see "Checked and excluded" below.
 - Microsoft, Amazon, Alphabet and Oracle all just raised large amounts of fresh capital
   (debt + equity, ~$10-25B each) in late October/early November — worth watching for
   where that capital gets deployed outward in the next few weeks.
+
+## Correction (post-ingest)
+- The NVIDIA -> Meta $3B corporate_investment row above was found, on ingest, to duplicate an event already on file from run 2026-W45 under the target string "Meta Platforms" (this run filed it as "Meta Platforms, Inc.") — same allocator, amount, and disclosed_date (2026-10-26). The exact-match dedup in engine/ingest.py did not catch it because `target` is not alias-normalized the way allocator names are (config/aliases.yaml only covers allocators). The duplicate row was removed from verified_events.csv before delivery; the AMD $1B co-investor detail is preserved in discovered_allocators.csv. Flag for engine fix: target-name aliasing, or a looser dedup match on (allocator, amount, disclosed_date) with a manual-review step.
