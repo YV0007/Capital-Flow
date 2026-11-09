@@ -1,0 +1,68 @@
+source_url,source_tier,yielded
+https://www.wsj.com/tech/ai/anthropic-leaders-back-startup-developing-system-to-detect-biological-threats-88ef9f0a,3,0
+https://dealroom.co/news/155809-pilgrim-raises-25m-seed-to-detect-biological-threats-from-the-air,2,0
+https://runtimewire.com/article/pilgrim-jake-adler-25-million-biothreat-detection,5,1
+https://crunchbase.com/person/palmer-luckey,2,0
+https://ground.news/article/this-21-year-old-founder-cut-open-his-leg-to-show-off-his-biotech-then-he-raised-43-million-from-peter-thiel-and-others,5,0
+https://www.businessinsider.com/pilgrim-jake-adler-4-million-funding-biotech-product-bold-video-2025-8,3,0
+https://traded.co/vc/deal/pilgrim-secures-25-million-seed-funding-led-by-buckley-ventures-at-150-million-valuation/,4,0
+https://news.bgov.com/artificial-intelligence/thiels-founders-fund-raises-6-billion-in-its-largest-ever-haul,3,0
+https://www.pulse.bot/venture-capital/news/founders-fund-closes-6-billion-growth-fund-partners-commit-15-billion-1a545647-615b-490f-b3fc-741705d73628/,4,0
+https://www.hedgeco.net/news/08/2026/thiel-macro-rebuilds-an-eight-name-13f-around-power-and-amazon.html,4,0
+https://www.13radar.com/filer/thiel-macro/sec-filings,2,0
+https://www.sec.gov/cgi-bin/browse-edgar,1,0
+python -m engine.edgar filings "Peter Thiel" --forms 8-K,D,4,13D,13G --since 2026-08-01 (no CIK on file),1,0
+python -m engine.edgar filings "Elon Musk" --forms 8-K,D,4,13D,13G --since 2026-08-01 (no CIK on file),1,0
+python -m engine.edgar filings "Jeff Bezos" --forms 8-K,D,4,13D,13G --since 2026-08-01 (no CIK on file),1,0
+python -m engine.edgar filings "Eric Schmidt" --forms 8-K,D,4,13D,13G --since 2026-08-01 (no CIK on file),1,0
+python -m engine.edgar filings "Reid Hoffman" --forms 8-K,D,4,13D,13G --since 2026-08-01 (no CIK on file),1,0
+python -m engine.edgar filings "Vinod Khosla" --forms 8-K,D,4,13D,13G --since 2026-08-01 (no CIK on file),1,0
+python -m engine.edgar filings "Marc Andreessen" --forms 8-K,D,4,13D,13G --since 2026-08-01 (no CIK on file),1,0
+python -m engine.edgar filings "Masayoshi Son" --forms 8-K,D,4,13D,13G --since 2026-08-01 (no CIK on file),1,0
+python -m engine.edgar filings "Sam Altman" --forms 8-K,D,4,13D,13G --since 2026-08-01 (no CIK on file),1,0
+https://letsdatascience.com/news/bezos-expeditions-backs-five-ai-startups-in-june-b3af9cfa,4,0
+https://www.briefs.co/news/last-month-jeff-bezoss-family-office-put-money-into-five-ai-startups/,4,0
+https://officechai.com/ai/eric-schmidt-anthropic-stake/,4,0
+https://www.cbinsights.com/investor/elad-gil,2,0
+https://finder.techleap.nl/news/note/elad-gil-plots-1-5-billion-fund-redefining-the-solo-gp-model,4,0
+https://techstartups.com/2025/07/24/elad-gils-1-5-billion-fund-a-solo-vc-revolutionizing-the-future-of-tech/,4,0
+https://www.cbinsights.com/investor/nat-friedman-and-daniel-gross,2,0
+https://www.itiger.com/news/1152801411,4,0
+https://inforcapital.com/funds/granola-nfdg/,4,0
+https://en.wikipedia.org/wiki/8VC,5,0
+https://techcrunch.com/2025/01/29/joe-lonsdales-8vc-seeking-1b-for-new-fund,3,0
+https://yespress.io/8vc.md,5,0
+https://www.cbinsights.com/investor/keith-rabois,2,0
+https://www.cbinsights.com/investor/david-sacks,2,0
+https://www.cbinsights.com/investor/alexandr-wang,2,0
+https://www.cbinsights.com/investor/alex-wang,2,0
+https://www.hustlefund.vc/post/angel-squad-keith-rabois-investments-what-the-paypal-mafias-most-opinionated-operator-teaches-about-backing-founders,5,0
+https://seedtable.com/investors/backend-capital,5,0
+https://www.cbinsights.com/investor/backend-capital,2,0
+https://en.wikipedia.org/wiki/Luke_Nosek,5,0
+https://www.cbinsights.com/investor/max-levchin,2,0
+https://app.mergerlinks.com/companies/sci-fi-vc,4,0
+https://en.wikipedia.org/wiki/Daniel_Gross_(businessman),5,0
+https://www.itiger.com/news/2644229867,4,0
+https://stocktwits.com/news-articles/markets/equity/tesla-shares-surge-elon-musk-purchases-stock-first-time-since-2020/chwwIvpRdUG,4,0
+https://www.sec.gov/Archives/edgar/data/0001318605/000110465926047683/primary_doc.xml,1,0
+https://pulse2.com/forbes-acquisition-austin-russell-pulls-in-more-investors,4,0
+https://foxbusiness.com/markets/luminar-tech-ceo-acquire-majority-stake-in-forbes,3,0
+https://www.delo.si/gospodarstvo/novice/s-prodajo-forbesa-mlademu-ameriskemu-milijarderju-ne-bo-nic,4,0
+https://longevitynewsletter.beehiiv.com/p/laura-deming,5,0
+https://www.cbinsights.com/investor/ali-ghodsi,2,0
+https://www.cbinsights.com/investor/john-collison,2,0
+https://xraise.ai/blog/garry-tan-angel-investor/,5,0
+https://buttondown.com/AngelRegistry/archive/angel-registry-update-april-14-2026/,5,0
+https://pluang.com/en/news-feed/taruhan-besar-stanley-druckenmiller-broadcom-intel-dan-arm,4,0
+https://www.institutionalinvestor.com/article/b1hwsd741k08lx/ackman-down-in-october-has-a-new-position,3,0
+https://www.thestar.com.my/tech/tech-news/2026/08/13/ackman-unveils-six-new-investments-including-netflix-visa-mastercard-in-biggest-portfolio-overhaul-in-years,3,0
+https://contracts.eonetwork.org/josh-kushner-colossus-a2de.html,5,0
+https://www.benzinga.com/news/topics/25/09/47702095/trumps-son-in-law-jared-kushner-co-founds-brain-co-a-30m-ai-startup-partnered-with-openai-and-backed-,4,0
+https://productsafetyletter.com/first-dry/Nvidias-Jensen-Huang-Backs-British-AI-Startup-Ineffable-Intelligence-in-Record-11-Billion-Seed-Round-12-280,5,0
+https://old.andsimple.co/cases/larry-ellison-the-unconventional-billionaire-and-his-family-office/,5,0
+https://aifunding.me/insights/weekly-roundup-oct-26-30-2026,4,0
+https://aifunding.me/insights/weekly-roundup-oct-19-23-2026,4,0
+https://dagensps.se/teknik/innovationer/skar-upp-benet-far-miljoner-fran-silicon-valley/,5,0
+https://www.startuphub.ai/news/figure-ilya-sutskever-ssi-financial-breakdown-2026-06-06,4,0
+https://multiples.vc/private-comps/safe-superintelligence,4,0
