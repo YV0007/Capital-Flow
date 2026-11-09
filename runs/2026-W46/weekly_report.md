@@ -137,9 +137,20 @@
 | cyber_security | $250M | 1 | 1 |
 | robotics_embodiment | $0 | 4 | 2 |
 
-## Public beneficiaries mapped (11)
+## Public beneficiaries mapped (22)
 | Ticker | Company | From flow | Confidence |
 |---|---|---|:-:|
+| NVDA | NVIDIA Corporation | NVIDIA→Prima Mente | low |
+| NVDA | NVIDIA Corporation | NVIDIA→Boltz | low |
+| NVDA | NVIDIA Corporation | NVIDIA→Hiverge | low |
+| NVDA | NVIDIA Corporation | NVIDIA→Foresight | low |
+| NVDA | NVIDIA Corporation | NVIDIA→Riverlane | low |
+| AMAT | Applied Materials Inc. | US Government→GlobalFoundries | medium |
+| LRCX | Lam Research Corporation | US Government→GlobalFoundries | low |
+| BESI | BE Semiconductor Industries N.V. | US Government→GlobalFoundries | low |
+| GEV | GE Vernova Inc. | Blackstone→Blackstone Energy Transition Partners V | low |
+| AVAV | AeroVironment Inc. | US Government→Neros | low |
+| NVDA | NVIDIA Corporation | Andreessen Horowitz→Tutor Intelligence | medium |
 | NVDA | NVIDIA Corporation | NVIDIA→Prima Mente | low |
 | NVDA | NVIDIA Corporation | NVIDIA→Boltz | low |
 | NVDA | NVIDIA Corporation | NVIDIA→Hiverge | low |
@@ -169,6 +180,34 @@ _Silent this run (37) — verify these are genuinely quiet, not missed:_
 - **corporate**: Alphabet, Amazon, Meta, Microsoft, Oracle
 - **individual**: Alexandr Wang, Austin Russell, Daniel Gross, David Sacks, Delian Asparouhov, Dylan Field, Elon Musk, Joe Lonsdale, Keith Rabois, Laura Deming, Lucy Guo, Luke Nosek, Max Levchin, Nat Friedman, Palmer Luckey, Peter Thiel, Reid Hoffman, Roelof Botha, Trae Stephens, Elad Gil, Eric Schmidt, Jeff Bezos, Marc Andreessen, Masayoshi Son, Sam Altman, Vinod Khosla
 - **sovereign**: Mubadala, Saudi PIF
+
+## Open leads to chase (29)
+- `8-K` **Brookfield** (2026-11-06) — https://www.sec.gov/Archives/edgar/data/1937926/000117184326007210/f8k_110626.htm
+- `8-K` **Alphabet** (2026-11-05) — https://www.sec.gov/Archives/edgar/data/1652044/000119312526449835/d174184d8k.htm
+- `8-K` **Meta** (2026-11-05) — https://www.sec.gov/Archives/edgar/data/1326801/000119312526450074/d166273d8k.htm
+- `8-K` **Microsoft** (2026-11-05) — https://www.sec.gov/Archives/edgar/data/789019/000119312526448357/d177209d8k.htm
+- `8-K` **KKR** (2026-11-04) — https://www.sec.gov/Archives/edgar/data/1404912/000114036126041894/ef20084883_8k.htm
+- `8-K` **Microsoft** (2026-11-04) — https://www.sec.gov/Archives/edgar/data/789019/000119312526447173/d178557d8k.htm
+- `8-K` **Oracle** (2026-11-04) — https://www.sec.gov/Archives/edgar/data/1341439/000119312526447507/d131790d8k.htm
+- `8-K` **Blackstone** (2026-11-02) — https://www.sec.gov/Archives/edgar/data/1393818/000119312526443854/d377521d8k.htm
+- `8-K` **Amazon** (2026-10-29) — https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20261029.htm
+- `8-K` **Blue Owl** (2026-10-29) — https://www.sec.gov/Archives/edgar/data/1823945/000182394526000050/owl-20261029.htm
+- `8-K` **Meta** (2026-10-29) — https://www.sec.gov/Archives/edgar/data/1326801/000119312526438017/d183592d8k.htm
+- `8-K` **Alphabet** (2026-10-28) — https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/goog-20261028.htm
+- `8-K` **Microsoft** (2026-10-28) — https://www.sec.gov/Archives/edgar/data/789019/000119312526436149/msft-20261028.htm
+- `8-K` **Microsoft** (2026-10-28) — https://www.sec.gov/Archives/edgar/data/789019/000119312526436122/msft-20261028.htm
+- `8-K` **Oracle** (2026-10-28) — https://www.sec.gov/Archives/edgar/data/1341439/000119312526435853/d75538d8k.htm
+- `8-K` **Blackstone** (2026-10-27) — https://www.sec.gov/Archives/edgar/data/1393818/000119312526434438/d124611d8k.htm
+- `8-K` **Blackstone** (2026-10-27) — https://www.sec.gov/Archives/edgar/data/1393818/000119312526432970/d142119d8k.htm
+- `8-K` **KKR** (2026-10-26) — https://www.sec.gov/Archives/edgar/data/1404912/000114036126040706/ef20084337_8k.htm
+- `8-K` **Blackstone** (2026-10-22) — https://www.sec.gov/Archives/edgar/data/1393818/000119312526428297/d160590d8k.htm
+- `8-K` **Meta** (2026-10-21) — https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-20261019.htm
+- `8-K` **Blackstone** (2026-10-15) — https://www.sec.gov/Archives/edgar/data/1393818/000119312526422888/d59966d8k.htm
+- `8-K` **Blue Owl** (2026-10-15) — https://www.sec.gov/Archives/edgar/data/1823945/000119312526422905/d901314d8k.htm
+- `8-K` **BlackRock** (2026-10-14) — https://www.sec.gov/Archives/edgar/data/2012383/000119312526420979/blk-20261014.htm
+- `8-K` **Brookfield** (2026-10-13) — https://www.sec.gov/Archives/edgar/data/1937926/000117184326006587/f8k_101226.htm
+- `8-K` **Goldman Sachs** (2026-10-13) — https://www.sec.gov/Archives/edgar/data/886982/000088698226000529/gs-20261013.htm
+- _…and 4 more._
 
 ## Discovered allocators — promote to watchlist? (8)
 - **AMD** (corporate) — seen with NVIDIA, Meta. AMD committed $1B to Meta's October 2026 equity offering per AMD's own 2026-10-27 release (widely cited, e.g. https://www.vermoegenszentrum.ch/en/stock-exchange-and-markets/news/advanced-micro-devices-invest-usd1-billion-meta-equity-offer), announced alongside NVIDIA's $3B commitment to the same raise and tied to AMD's Helios rack-scale systems going live at Meta. Not currently on the corporate watchlist; now co-investing alongside tracked strategics in hyperscaler capital raises (Meta also flagged non-binding interest from Broadcom in the same raise, but that is unconfirmed/non-binding so not listed here as its own row).
