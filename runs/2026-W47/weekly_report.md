@@ -130,9 +130,15 @@
 | defense_ai | $450M | 1 | 1 |
 | robotics_embodiment | $0 | 3 | 2 |
 
-## Public beneficiaries mapped (12)
+## Public beneficiaries mapped (18)
 | Ticker | Company | From flow | Confidence |
 |---|---|---|:-:|
+| DRX.L | Drax Group plc | Brookfield→Drax Group plc | high |
+| 035420.KS | NAVER Corporation | Brookfield→NAVER (GAK Sejong AI factory, via 'Asset Co' SPV) | high |
+| 035420.KS | NAVER Corporation | Brookfield→NAVER | high |
+| PENG | Penguin Solutions Inc. | SK Hynix→Penguin Solutions | high |
+| NVDA | NVIDIA Corporation | Infra (Saudi National Infrastructure Fund)→HUMAIN | medium |
+| NVDA | NVIDIA Corporation | Sequoia→Trajectory | low |
 | DRX.L | Drax Group plc | Brookfield→Drax Group plc | high |
 | 035420.KS | NAVER Corporation | Brookfield→NAVER (GAK Sejong AI factory, via 'Asset Co' SPV) | high |
 | 035420.KS | NAVER Corporation | Brookfield→NAVER | high |
