@@ -1,0 +1,2 @@
+vc/verified_events.csv:5 WARN sector 'fund' not in canonical taxonomy
+vc/verified_events.csv:5 SKIP missing event_type; bad source_tier 'verified_alpha'; bad status '0'; bad target_type 'unspecified name)'; bad amount_usd 'fund_launch'

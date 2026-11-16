@@ -1,0 +1,23 @@
+[
+  {
+    "target": "Sequoia Capital Fund (new vintage, unspecified name)",
+    "description": "Sequoia Capital's newest fund vintage, raised under incoming co-stewards per the firm's Nov 4, 2026 memo 'The Sequoia of Tomorrow.' The firm says it has raised roughly $10B in new funds while closing its London office and ending the Arc and Scouts programs — no public breakdown by strategy or AI-specific earmark has been given.",
+    "website": "https://www.sequoiacap.com",
+    "read_more": {"label": "TechCrunch", "url": "https://techcrunch.com/2026/11/04/sequoia-hits-rewind-undoing-20-years-of-expansion/"},
+    "sources": [
+      "https://techcrunch.com/2026/11/04/sequoia-hits-rewind-undoing-20-years-of-expansion/",
+      "https://news.bgov.com/private-equity/sequoias-leaders-armed-with-10-billion-plan-for-its-new-era"
+    ],
+    "as_of": "2026-11-16"
+  },
+  {
+    "target": "HUMAIN (power infrastructure facility)",
+    "description": "Power-infrastructure financing facility of up to SAR1.4bn (~$373.3M) extended to PIF-owned AI company HUMAIN by Infra (Saudi Arabia's National Infrastructure Fund), signed 8 Nov 2026 in Riyadh. Funds substations, transmission and grid connections for HUMAIN's AI data centers, forward-provisioning grid capacity toward a stated 1GW target well ahead of near-term compute (a companion GPU-procurement facility, ~$293.3M, was signed the same day).",
+    "website": "https://www.humain.ai",
+    "read_more": {"label": "w.media", "url": "https://w.media/?p=45246"},
+    "sources": [
+      "https://w.media/?p=45246"
+    ],
+    "as_of": "2026-11-16"
+  }
+]

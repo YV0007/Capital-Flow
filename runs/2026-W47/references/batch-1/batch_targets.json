@@ -1,0 +1,28 @@
+[
+  {
+    "target": "Sequoia Capital Fund (new vintage, unspecified name)",
+    "target_type": "fund",
+    "sector": "ai-labs",
+    "allocators": [
+      "Sequoia"
+    ],
+    "last_event": "2026-11-04",
+    "capital_usd": 10000000000.0,
+    "deal_source_urls": [
+      "https://techcrunch.com/2026/11/04/sequoia-hits-rewind-undoing-20-years-of-expansion/"
+    ]
+  },
+  {
+    "target": "HUMAIN (power infrastructure facility)",
+    "target_type": "private",
+    "sector": "power-energy",
+    "allocators": [
+      "Infra (Saudi National Infrastructure Fund)"
+    ],
+    "last_event": "2026-11-09",
+    "capital_usd": 373300000.0,
+    "deal_source_urls": [
+      "https://w.media/?p=45246"
+    ]
+  }
+]
